@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         /// Max path
         /// </summary>
         [Input("maxPath")]
-        public Input<double>? MaxPath { get; set; }
+        public Input<int>? MaxPath { get; set; }
 
         /// <summary>
         /// Strict source path

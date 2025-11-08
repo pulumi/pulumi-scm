@@ -10,7 +10,7 @@ import com.pulumi.scm.inputs.LogicalRouterVrfOspfAreaInterfaceBfdArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfAreaInterfaceVrTimingArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,13 +86,13 @@ public final class LogicalRouterVrfOspfAreaInterfaceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="metric")
-    private @Nullable Output<Double> metric;
+    private @Nullable Output<Integer> metric;
 
     /**
      * @return Metric
      * 
      */
-    public Optional<Output<Double>> metric() {
+    public Optional<Output<Integer>> metric() {
         return Optional.ofNullable(this.metric);
     }
 
@@ -146,13 +146,13 @@ public final class LogicalRouterVrfOspfAreaInterfaceArgs extends com.pulumi.reso
      * 
      */
     @Import(name="priority")
-    private @Nullable Output<Double> priority;
+    private @Nullable Output<Integer> priority;
 
     /**
      * @return Priority
      * 
      */
-    public Optional<Output<Double>> priority() {
+    public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
 
@@ -310,7 +310,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder metric(@Nullable Output<Double> metric) {
+        public Builder metric(@Nullable Output<Integer> metric) {
             $.metric = metric;
             return this;
         }
@@ -321,7 +321,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             return metric(Output.of(metric));
         }
 
@@ -394,7 +394,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder priority(@Nullable Output<Double> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
@@ -405,7 +405,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceArgs extends com.pulumi.reso
          * @return builder
          * 
          */
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 

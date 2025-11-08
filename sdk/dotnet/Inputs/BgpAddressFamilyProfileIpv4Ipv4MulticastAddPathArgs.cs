@@ -21,8 +21,8 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// Tx bestpath per a s
         /// </summary>
-        [Input("txBestpathPerAS")]
-        public Input<bool>? TxBestpathPerAS { get; set; }
+        [Input("txBestpathPerAs")]
+        public Input<bool>? TxBestpathPerAs { get; set; }
 
         public BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathArgs()
         {

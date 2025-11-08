@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Metric
         /// </summary>
-        public readonly double Metric;
+        public readonly int Metric;
         /// <summary>
         /// Name
         /// </summary>
@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetLogicalRouterVrfOspfExportRuleResult(
-            double metric,
+            int metric,
 
             string name,
 

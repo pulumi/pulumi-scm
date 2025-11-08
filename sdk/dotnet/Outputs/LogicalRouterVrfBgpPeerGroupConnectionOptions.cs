@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Multihop
         /// </summary>
-        public readonly double? Multihop;
+        public readonly int? Multihop;
         /// <summary>
         /// Timers
         /// </summary>
@@ -36,7 +36,7 @@ namespace Pulumi.Scm.Outputs
 
             string? dampening,
 
-            double? multihop,
+            int? multihop,
 
             string? timers)
         {

@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -53,13 +53,13 @@ public final class LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgs extends c
      * 
      */
     @Import(name="routeTag")
-    private @Nullable Output<Double> routeTag;
+    private @Nullable Output<Integer> routeTag;
 
     /**
      * @return Route tag
      * 
      */
-    public Optional<Output<Double>> routeTag() {
+    public Optional<Output<Integer>> routeTag() {
         return Optional.ofNullable(this.routeTag);
     }
 
@@ -137,7 +137,7 @@ public final class LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgs extends c
          * @return builder
          * 
          */
-        public Builder routeTag(@Nullable Output<Double> routeTag) {
+        public Builder routeTag(@Nullable Output<Integer> routeTag) {
             $.routeTag = routeTag;
             return this;
         }
@@ -148,7 +148,7 @@ public final class LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgs extends c
          * @return builder
          * 
          */
-        public Builder routeTag(Double routeTag) {
+        public Builder routeTag(Integer routeTag) {
             return routeTag(Output.of(routeTag));
         }
 

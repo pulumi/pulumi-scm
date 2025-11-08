@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceListDataLayer3PppoeStaticAddressResult
     {
         /// <summary>
-        /// Ip
+        /// Static IP address
         /// </summary>
         public readonly string Ip;
 

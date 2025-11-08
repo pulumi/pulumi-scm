@@ -8,6 +8,50 @@ import * as utilities from "./utilities";
 
 /**
  * PbfRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const exampleTag = new scm.Tag("example_tag", {
+ *     folder: "All",
+ *     name: "pbf-rule-tag-ds-test-1",
+ *     color: "Red",
+ * });
+ * // --- PBF Rule Resource with discard action---
+ * const examplePbfRule = new scm.PbfRule("example_pbf_rule", {
+ *     name: "pbf-test-ds-rule-discard",
+ *     folder: "All",
+ *     description: "Data Source testing pbf rule.",
+ *     from: {
+ *         zones: ["zone-untrust"],
+ *     },
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     applications: ["any"],
+ *     services: ["service-http"],
+ *     sourceUsers: ["any"],
+ *     action: {
+ *         discard: {},
+ *     },
+ *     tags: [exampleTag.name],
+ *     enforceSymmetricReturn: {
+ *         enabled: false,
+ *     },
+ *     schedule: "non-work-hours",
+ * });
+ * // Define the data source (the item to be retrieved via API GET)
+ * const pbfExternalWebTestGet = scm.getPbfRuleOutput({
+ *     id: examplePbfRule.id,
+ * });
+ * export const retrievedIDAndName = {
+ *     id: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.id),
+ *     name: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.name),
+ * };
+ * export const recievedResponse = pbfExternalWebTestGet;
+ * ```
  */
 export function getPbfRule(args: GetPbfRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetPbfRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -103,6 +147,50 @@ export interface GetPbfRuleResult {
 }
 /**
  * PbfRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const exampleTag = new scm.Tag("example_tag", {
+ *     folder: "All",
+ *     name: "pbf-rule-tag-ds-test-1",
+ *     color: "Red",
+ * });
+ * // --- PBF Rule Resource with discard action---
+ * const examplePbfRule = new scm.PbfRule("example_pbf_rule", {
+ *     name: "pbf-test-ds-rule-discard",
+ *     folder: "All",
+ *     description: "Data Source testing pbf rule.",
+ *     from: {
+ *         zones: ["zone-untrust"],
+ *     },
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     applications: ["any"],
+ *     services: ["service-http"],
+ *     sourceUsers: ["any"],
+ *     action: {
+ *         discard: {},
+ *     },
+ *     tags: [exampleTag.name],
+ *     enforceSymmetricReturn: {
+ *         enabled: false,
+ *     },
+ *     schedule: "non-work-hours",
+ * });
+ * // Define the data source (the item to be retrieved via API GET)
+ * const pbfExternalWebTestGet = scm.getPbfRuleOutput({
+ *     id: examplePbfRule.id,
+ * });
+ * export const retrievedIDAndName = {
+ *     id: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.id),
+ *     name: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.name),
+ * };
+ * export const recievedResponse = pbfExternalWebTestGet;
+ * ```
  */
 export function getPbfRuleOutput(args: GetPbfRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPbfRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

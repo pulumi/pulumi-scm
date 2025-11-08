@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Access list
+        /// BGP Root OSPF Route maps ipv4 NextVr hop Access list
         /// </summary>
         [Input("accessList")]
         public Input<string>? AccessList { get; set; }
 
         /// <summary>
-        /// Prefix list
+        /// BGP Root OSPF Route maps ipv4 next hop Prefix list
         /// </summary>
         [Input("prefixList")]
         public Input<string>? PrefixList { get; set; }

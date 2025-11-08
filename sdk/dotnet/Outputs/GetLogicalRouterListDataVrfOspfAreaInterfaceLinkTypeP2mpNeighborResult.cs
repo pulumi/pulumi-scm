@@ -20,13 +20,13 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Priority
         /// </summary>
-        public readonly double Priority;
+        public readonly int Priority;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mpNeighborResult(
             string name,
 
-            double priority)
+            int priority)
         {
             Name = name;
             Priority = priority;

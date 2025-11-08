@@ -18,14 +18,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
     public static final BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args Empty = new BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args();
 
     /**
-     * bgp-route-map-redistributions ipv4 object address
+     * BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      * 
      */
     @Import(name="address")
     private @Nullable Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs> address;
 
     /**
-     * @return bgp-route-map-redistributions ipv4 object address
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs>> address() {
@@ -33,14 +33,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
     }
 
     /**
-     * bgp-route-map-redistributions ipv4 object next*hop
+     * BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      * 
      */
     @Import(name="nextHop")
     private @Nullable Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs> nextHop;
 
     /**
-     * @return bgp-route-map-redistributions ipv4 object next*hop
+     * @return BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs>> nextHop() {
@@ -48,14 +48,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
     }
 
     /**
-     * bgp-route-map-redistributions ipv4 object route*source
+     * BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      * 
      */
     @Import(name="routeSource")
     private @Nullable Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs> routeSource;
 
     /**
-     * @return bgp-route-map-redistributions ipv4 object route*source
+     * @return BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs>> routeSource() {
@@ -89,7 +89,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
         }
 
         /**
-         * @param address bgp-route-map-redistributions ipv4 object address
+         * @param address BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
         }
 
         /**
-         * @param address bgp-route-map-redistributions ipv4 object address
+         * @param address BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
         }
 
         /**
-         * @param nextHop bgp-route-map-redistributions ipv4 object next*hop
+         * @param nextHop BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
         }
 
         /**
-         * @param nextHop bgp-route-map-redistributions ipv4 object next*hop
+         * @param nextHop BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
         }
 
         /**
-         * @param routeSource bgp-route-map-redistributions ipv4 object route*source
+         * @param routeSource BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args extends
         }
 
         /**
-         * @param routeSource bgp-route-map-redistributions ipv4 object route*source
+         * @param routeSource BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
          * 
          * @return builder
          * 

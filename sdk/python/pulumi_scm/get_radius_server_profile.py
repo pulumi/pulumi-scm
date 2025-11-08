@@ -161,6 +161,30 @@ def get_radius_server_profile(id: Optional[_builtins.str] = None,
     """
     RadiusServerProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
+        name="CHAP_only_rsp_ds_1",
+        folder="All",
+        retries=5,
+        timeout=60,
+        protocol={
+            "c_hap": {},
+        },
+        servers=[{
+            "name": "Chap_Server_Primary",
+            "ip_address": "10.1.1.10",
+            "port": 1812,
+            "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+        }])
+    single_profile_by_id = scm.get_radius_server_profile_output(id=chap_radius_profile.id)
+    pulumi.export("singleRspDump", single_profile_by_id.name)
+    ```
+
 
     :param _builtins.str id: The UUID of the RADIUS server profile
     :param _builtins.str name: The name of the RADIUS server profile
@@ -187,6 +211,30 @@ def get_radius_server_profile_output(id: Optional[pulumi.Input[_builtins.str]] =
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRadiusServerProfileResult]:
     """
     RadiusServerProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
+        name="CHAP_only_rsp_ds_1",
+        folder="All",
+        retries=5,
+        timeout=60,
+        protocol={
+            "c_hap": {},
+        },
+        servers=[{
+            "name": "Chap_Server_Primary",
+            "ip_address": "10.1.1.10",
+            "port": 1812,
+            "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+        }])
+    single_profile_by_id = scm.get_radius_server_profile_output(id=chap_radius_profile.id)
+    pulumi.export("singleRspDump", single_profile_by_id.name)
+    ```
 
 
     :param _builtins.str id: The UUID of the RADIUS server profile

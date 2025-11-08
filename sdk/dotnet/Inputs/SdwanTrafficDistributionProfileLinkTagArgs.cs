@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class SdwanTrafficDistributionProfileLinkTagArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Name
+        /// Link-Tag used for identifying a set of interfaces
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Weight
+        /// Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
         /// </summary>
         [Input("weight")]
         public Input<int>? Weight { get; set; }

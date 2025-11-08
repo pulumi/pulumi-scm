@@ -5,8 +5,10 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetZoneListDataNetworkTunnel;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 
 @CustomType
@@ -17,10 +19,40 @@ public final class GetZoneListDataNetwork {
      */
     private Boolean enablePacketBufferProtection;
     /**
+     * @return External
+     * 
+     */
+    private List<String> externals;
+    /**
+     * @return Layer2
+     * 
+     */
+    private List<String> layer2s;
+    /**
+     * @return Layer3
+     * 
+     */
+    private List<String> layer3s;
+    /**
      * @return Log setting
      * 
      */
     private String logSetting;
+    /**
+     * @return Tap
+     * 
+     */
+    private List<String> taps;
+    /**
+     * @return Tunnel
+     * 
+     */
+    private GetZoneListDataNetworkTunnel tunnel;
+    /**
+     * @return Virtual wire
+     * 
+     */
+    private List<String> virtualWires;
     /**
      * @return Zone protection profile
      * 
@@ -36,11 +68,53 @@ public final class GetZoneListDataNetwork {
         return this.enablePacketBufferProtection;
     }
     /**
+     * @return External
+     * 
+     */
+    public List<String> externals() {
+        return this.externals;
+    }
+    /**
+     * @return Layer2
+     * 
+     */
+    public List<String> layer2s() {
+        return this.layer2s;
+    }
+    /**
+     * @return Layer3
+     * 
+     */
+    public List<String> layer3s() {
+        return this.layer3s;
+    }
+    /**
      * @return Log setting
      * 
      */
     public String logSetting() {
         return this.logSetting;
+    }
+    /**
+     * @return Tap
+     * 
+     */
+    public List<String> taps() {
+        return this.taps;
+    }
+    /**
+     * @return Tunnel
+     * 
+     */
+    public GetZoneListDataNetworkTunnel tunnel() {
+        return this.tunnel;
+    }
+    /**
+     * @return Virtual wire
+     * 
+     */
+    public List<String> virtualWires() {
+        return this.virtualWires;
     }
     /**
      * @return Zone protection profile
@@ -60,13 +134,25 @@ public final class GetZoneListDataNetwork {
     @CustomType.Builder
     public static final class Builder {
         private Boolean enablePacketBufferProtection;
+        private List<String> externals;
+        private List<String> layer2s;
+        private List<String> layer3s;
         private String logSetting;
+        private List<String> taps;
+        private GetZoneListDataNetworkTunnel tunnel;
+        private List<String> virtualWires;
         private String zoneProtectionProfile;
         public Builder() {}
         public Builder(GetZoneListDataNetwork defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.enablePacketBufferProtection = defaults.enablePacketBufferProtection;
+    	      this.externals = defaults.externals;
+    	      this.layer2s = defaults.layer2s;
+    	      this.layer3s = defaults.layer3s;
     	      this.logSetting = defaults.logSetting;
+    	      this.taps = defaults.taps;
+    	      this.tunnel = defaults.tunnel;
+    	      this.virtualWires = defaults.virtualWires;
     	      this.zoneProtectionProfile = defaults.zoneProtectionProfile;
         }
 
@@ -79,12 +165,75 @@ public final class GetZoneListDataNetwork {
             return this;
         }
         @CustomType.Setter
+        public Builder externals(List<String> externals) {
+            if (externals == null) {
+              throw new MissingRequiredPropertyException("GetZoneListDataNetwork", "externals");
+            }
+            this.externals = externals;
+            return this;
+        }
+        public Builder externals(String... externals) {
+            return externals(List.of(externals));
+        }
+        @CustomType.Setter
+        public Builder layer2s(List<String> layer2s) {
+            if (layer2s == null) {
+              throw new MissingRequiredPropertyException("GetZoneListDataNetwork", "layer2s");
+            }
+            this.layer2s = layer2s;
+            return this;
+        }
+        public Builder layer2s(String... layer2s) {
+            return layer2s(List.of(layer2s));
+        }
+        @CustomType.Setter
+        public Builder layer3s(List<String> layer3s) {
+            if (layer3s == null) {
+              throw new MissingRequiredPropertyException("GetZoneListDataNetwork", "layer3s");
+            }
+            this.layer3s = layer3s;
+            return this;
+        }
+        public Builder layer3s(String... layer3s) {
+            return layer3s(List.of(layer3s));
+        }
+        @CustomType.Setter
         public Builder logSetting(String logSetting) {
             if (logSetting == null) {
               throw new MissingRequiredPropertyException("GetZoneListDataNetwork", "logSetting");
             }
             this.logSetting = logSetting;
             return this;
+        }
+        @CustomType.Setter
+        public Builder taps(List<String> taps) {
+            if (taps == null) {
+              throw new MissingRequiredPropertyException("GetZoneListDataNetwork", "taps");
+            }
+            this.taps = taps;
+            return this;
+        }
+        public Builder taps(String... taps) {
+            return taps(List.of(taps));
+        }
+        @CustomType.Setter
+        public Builder tunnel(GetZoneListDataNetworkTunnel tunnel) {
+            if (tunnel == null) {
+              throw new MissingRequiredPropertyException("GetZoneListDataNetwork", "tunnel");
+            }
+            this.tunnel = tunnel;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder virtualWires(List<String> virtualWires) {
+            if (virtualWires == null) {
+              throw new MissingRequiredPropertyException("GetZoneListDataNetwork", "virtualWires");
+            }
+            this.virtualWires = virtualWires;
+            return this;
+        }
+        public Builder virtualWires(String... virtualWires) {
+            return virtualWires(List.of(virtualWires));
         }
         @CustomType.Setter
         public Builder zoneProtectionProfile(String zoneProtectionProfile) {
@@ -97,7 +246,13 @@ public final class GetZoneListDataNetwork {
         public GetZoneListDataNetwork build() {
             final var _resultValue = new GetZoneListDataNetwork();
             _resultValue.enablePacketBufferProtection = enablePacketBufferProtection;
+            _resultValue.externals = externals;
+            _resultValue.layer2s = layer2s;
+            _resultValue.layer3s = layer3s;
             _resultValue.logSetting = logSetting;
+            _resultValue.taps = taps;
+            _resultValue.tunnel = tunnel;
+            _resultValue.virtualWires = virtualWires;
             _resultValue.zoneProtectionProfile = zoneProtectionProfile;
             return _resultValue;
         }

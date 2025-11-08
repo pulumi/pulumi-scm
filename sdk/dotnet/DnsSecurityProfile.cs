@@ -11,6 +11,8 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// DnsSecurityProfile resource
+    /// 
+    /// ## Example Usage
     /// </summary>
     [ScmResourceType("scm:index/dnsSecurityProfile:DnsSecurityProfile")]
     public partial class DnsSecurityProfile : global::Pulumi.CustomResource

@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all loopback interfaces
+ * const allLoopbackInterfaces = scm.getLoopbackInterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmLoopbackInterfaceList = allLoopbackInterfaces.then(allLoopbackInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getLoopbackInterfaceList(args?: GetLoopbackInterfaceListArgs, opts?: pulumi.InvokeOptions): Promise<GetLoopbackInterfaceListResult> {
     args = args || {};
@@ -96,6 +109,19 @@ export interface GetLoopbackInterfaceListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all loopback interfaces
+ * const allLoopbackInterfaces = scm.getLoopbackInterfaceList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmLoopbackInterfaceList = allLoopbackInterfaces.then(allLoopbackInterfaces => .reduce((__obj, interface) => ({ ...__obj, [_interface.name]: _interface })));
+ * ```
  */
 export function getLoopbackInterfaceListOutput(args?: GetLoopbackInterfaceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLoopbackInterfaceListResult> {
     args = args || {};

@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,26 +15,26 @@ public final class LogicalRouterVrfOspfv3VrTimers {
      * @return Lsa interval
      * 
      */
-    private @Nullable Double lsaInterval;
+    private @Nullable Integer lsaInterval;
     /**
      * @return Spf calculation delay
      * 
      */
-    private @Nullable Double spfCalculationDelay;
+    private @Nullable Integer spfCalculationDelay;
 
     private LogicalRouterVrfOspfv3VrTimers() {}
     /**
      * @return Lsa interval
      * 
      */
-    public Optional<Double> lsaInterval() {
+    public Optional<Integer> lsaInterval() {
         return Optional.ofNullable(this.lsaInterval);
     }
     /**
      * @return Spf calculation delay
      * 
      */
-    public Optional<Double> spfCalculationDelay() {
+    public Optional<Integer> spfCalculationDelay() {
         return Optional.ofNullable(this.spfCalculationDelay);
     }
 
@@ -47,8 +47,8 @@ public final class LogicalRouterVrfOspfv3VrTimers {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double lsaInterval;
-        private @Nullable Double spfCalculationDelay;
+        private @Nullable Integer lsaInterval;
+        private @Nullable Integer spfCalculationDelay;
         public Builder() {}
         public Builder(LogicalRouterVrfOspfv3VrTimers defaults) {
     	      Objects.requireNonNull(defaults);
@@ -57,13 +57,13 @@ public final class LogicalRouterVrfOspfv3VrTimers {
         }
 
         @CustomType.Setter
-        public Builder lsaInterval(@Nullable Double lsaInterval) {
+        public Builder lsaInterval(@Nullable Integer lsaInterval) {
 
             this.lsaInterval = lsaInterval;
             return this;
         }
         @CustomType.Setter
-        public Builder spfCalculationDelay(@Nullable Double spfCalculationDelay) {
+        public Builder spfCalculationDelay(@Nullable Integer spfCalculationDelay) {
 
             this.spfCalculationDelay = spfCalculationDelay;
             return this;

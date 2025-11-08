@@ -17,12 +17,12 @@ type DnsProxy struct {
 	pulumi.CustomResourceState
 
 	// Cache
-	Cache DnsProxyCachePtrOutput `pulumi:"cache"`
+	Cache DnsProxyCacheOutput `pulumi:"cache"`
 	// Default
 	Default DnsProxyDefaultOutput `pulumi:"default"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// Domain servers
+	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayOutput `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrOutput `pulumi:"enabled"`
@@ -37,10 +37,10 @@ type DnsProxy struct {
 	// Static entries
 	StaticEntries DnsProxyStaticEntryArrayOutput `pulumi:"staticEntries"`
 	// Tcp queries
-	TcpQueries DnsProxyTcpQueriesPtrOutput `pulumi:"tcpQueries"`
-	Tfid       pulumi.StringOutput         `pulumi:"tfid"`
+	TcpQueries DnsProxyTcpQueriesOutput `pulumi:"tcpQueries"`
+	Tfid       pulumi.StringOutput      `pulumi:"tfid"`
 	// Udp queries
-	UdpQueries DnsProxyUdpQueriesPtrOutput `pulumi:"udpQueries"`
+	UdpQueries DnsProxyUdpQueriesOutput `pulumi:"udpQueries"`
 }
 
 // NewDnsProxy registers a new resource with the given unique name, arguments, and options.
@@ -82,7 +82,7 @@ type dnsProxyState struct {
 	Default *DnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Domain servers
+	// DNS proxy rules
 	DomainServers []DnsProxyDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
@@ -110,7 +110,7 @@ type DnsProxyState struct {
 	Default DnsProxyDefaultPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Domain servers
+	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayInput
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
@@ -142,7 +142,7 @@ type dnsProxyArgs struct {
 	Default DnsProxyDefault `pulumi:"default"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// Domain servers
+	// DNS proxy rules
 	DomainServers []DnsProxyDomainServer `pulumi:"domainServers"`
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
@@ -170,7 +170,7 @@ type DnsProxyArgs struct {
 	Default DnsProxyDefaultInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// Domain servers
+	// DNS proxy rules
 	DomainServers DnsProxyDomainServerArrayInput
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
@@ -278,8 +278,8 @@ func (o DnsProxyOutput) ToDnsProxyOutputWithContext(ctx context.Context) DnsProx
 }
 
 // Cache
-func (o DnsProxyOutput) Cache() DnsProxyCachePtrOutput {
-	return o.ApplyT(func(v *DnsProxy) DnsProxyCachePtrOutput { return v.Cache }).(DnsProxyCachePtrOutput)
+func (o DnsProxyOutput) Cache() DnsProxyCacheOutput {
+	return o.ApplyT(func(v *DnsProxy) DnsProxyCacheOutput { return v.Cache }).(DnsProxyCacheOutput)
 }
 
 // Default
@@ -292,7 +292,7 @@ func (o DnsProxyOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// Domain servers
+// DNS proxy rules
 func (o DnsProxyOutput) DomainServers() DnsProxyDomainServerArrayOutput {
 	return o.ApplyT(func(v *DnsProxy) DnsProxyDomainServerArrayOutput { return v.DomainServers }).(DnsProxyDomainServerArrayOutput)
 }
@@ -328,8 +328,8 @@ func (o DnsProxyOutput) StaticEntries() DnsProxyStaticEntryArrayOutput {
 }
 
 // Tcp queries
-func (o DnsProxyOutput) TcpQueries() DnsProxyTcpQueriesPtrOutput {
-	return o.ApplyT(func(v *DnsProxy) DnsProxyTcpQueriesPtrOutput { return v.TcpQueries }).(DnsProxyTcpQueriesPtrOutput)
+func (o DnsProxyOutput) TcpQueries() DnsProxyTcpQueriesOutput {
+	return o.ApplyT(func(v *DnsProxy) DnsProxyTcpQueriesOutput { return v.TcpQueries }).(DnsProxyTcpQueriesOutput)
 }
 
 func (o DnsProxyOutput) Tfid() pulumi.StringOutput {
@@ -337,8 +337,8 @@ func (o DnsProxyOutput) Tfid() pulumi.StringOutput {
 }
 
 // Udp queries
-func (o DnsProxyOutput) UdpQueries() DnsProxyUdpQueriesPtrOutput {
-	return o.ApplyT(func(v *DnsProxy) DnsProxyUdpQueriesPtrOutput { return v.UdpQueries }).(DnsProxyUdpQueriesPtrOutput)
+func (o DnsProxyOutput) UdpQueries() DnsProxyUdpQueriesOutput {
+	return o.ApplyT(func(v *DnsProxy) DnsProxyUdpQueriesOutput { return v.UdpQueries }).(DnsProxyUdpQueriesOutput)
 }
 
 type DnsProxyArrayOutput struct{ *pulumi.OutputState }

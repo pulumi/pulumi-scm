@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
     public static final BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs Empty = new BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs();
 
     /**
-     * Action
+     * Connected Static BGP Route maps Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Connected Static BGP Route maps Action
      * 
      */
     public Optional<Output<String>> action() {
@@ -34,14 +34,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
     }
 
     /**
-     * Description
+     * Connected Static BGP Route maps Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return Connected Static BGP Route maps Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -64,14 +64,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
     }
 
     /**
-     * Sequence number
+     * Connected Static BGP Route maps Sequence number
      * 
      */
     @Import(name="name")
     private @Nullable Output<Integer> name;
 
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Route maps Sequence number
      * 
      */
     public Optional<Output<Integer>> name() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
         }
 
         /**
-         * @param action Action
+         * @param action Connected Static BGP Route maps Action
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
         }
 
         /**
-         * @param action Action
+         * @param action Connected Static BGP Route maps Action
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
         }
 
         /**
-         * @param description Description
+         * @param description Connected Static BGP Route maps Description
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
         }
 
         /**
-         * @param description Description
+         * @param description Connected Static BGP Route maps Description
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
         }
 
         /**
-         * @param name Sequence number
+         * @param name Connected Static BGP Route maps Sequence number
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs exten
         }
 
         /**
-         * @param name Sequence number
+         * @param name Connected Static BGP Route maps Sequence number
          * 
          * @return builder
          * 

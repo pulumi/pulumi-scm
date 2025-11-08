@@ -18,9 +18,33 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool? EnablePacketBufferProtection;
         /// <summary>
+        /// External
+        /// </summary>
+        public readonly ImmutableArray<string> Externals;
+        /// <summary>
+        /// Layer2
+        /// </summary>
+        public readonly ImmutableArray<string> Layer2s;
+        /// <summary>
+        /// Layer3
+        /// </summary>
+        public readonly ImmutableArray<string> Layer3s;
+        /// <summary>
         /// Log setting
         /// </summary>
         public readonly string? LogSetting;
+        /// <summary>
+        /// Tap
+        /// </summary>
+        public readonly ImmutableArray<string> Taps;
+        /// <summary>
+        /// Tunnel
+        /// </summary>
+        public readonly Outputs.ZoneNetworkTunnel? Tunnel;
+        /// <summary>
+        /// Virtual wire
+        /// </summary>
+        public readonly ImmutableArray<string> VirtualWires;
         /// <summary>
         /// Zone protection profile
         /// </summary>
@@ -30,12 +54,30 @@ namespace Pulumi.Scm.Outputs
         private ZoneNetwork(
             bool? enablePacketBufferProtection,
 
+            ImmutableArray<string> externals,
+
+            ImmutableArray<string> layer2s,
+
+            ImmutableArray<string> layer3s,
+
             string? logSetting,
+
+            ImmutableArray<string> taps,
+
+            Outputs.ZoneNetworkTunnel? tunnel,
+
+            ImmutableArray<string> virtualWires,
 
             string? zoneProtectionProfile)
         {
             EnablePacketBufferProtection = enablePacketBufferProtection;
+            Externals = externals;
+            Layer2s = layer2s;
+            Layer3s = layer3s;
             LogSetting = logSetting;
+            Taps = taps;
+            Tunnel = tunnel;
+            VirtualWires = virtualWires;
             ZoneProtectionProfile = zoneProtectionProfile;
         }
     }

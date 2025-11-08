@@ -20,13 +20,13 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Remote port
         /// </summary>
-        public readonly double? RemotePort;
+        public readonly int? RemotePort;
 
         [OutputConstructor]
         private LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection(
             bool? allow,
 
-            double? remotePort)
+            int? remotePort)
         {
             Allow = allow;
             RemotePort = remotePort;

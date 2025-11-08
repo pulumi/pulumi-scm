@@ -18,7 +18,7 @@ public final class BgpRouteMapRedistributionBgp {
      */
     private @Nullable BgpRouteMapRedistributionBgpOspf ospf;
     /**
-     * @return Rib
+     * @return BGP Root RIB
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpRib rib;
@@ -32,7 +32,7 @@ public final class BgpRouteMapRedistributionBgp {
         return Optional.ofNullable(this.ospf);
     }
     /**
-     * @return Rib
+     * @return BGP Root RIB
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpRib> rib() {

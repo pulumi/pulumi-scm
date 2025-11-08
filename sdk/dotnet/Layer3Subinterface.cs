@@ -11,6 +11,92 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Layer3Subinterface resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a ethernet interface used as parent-interface for subsequent examples
+    ///     //
+    ///     var scmParentInterface = new Scm.EthernetInterface("scm_parent_interface", new()
+    ///     {
+    ///         Name = "$scm_parent_interface",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 sub-interface with static ip address
+    ///     //
+    ///     var scmL3Subinterface = new Scm.Layer3Subinterface("scm_l3_subinterface", new()
+    ///     {
+    ///         Name = "$scm_parent_interface.100",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Tag = 100,
+    ///         ParentInterface = "$scm_parent_interface",
+    ///         Ips = new[]
+    ///         {
+    ///             new Scm.Inputs.Layer3SubinterfaceIpArgs
+    ///             {
+    ///                 Name = "198.18.1.1/32",
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmParentInterface,
+    ///         },
+    ///     });
+    /// 
+    ///     var scmParentDhcpInterface = new Scm.EthernetInterface("scm_parent_dhcp_interface", new()
+    ///     {
+    ///         Name = "$scm_parent_dhcp_interface",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "All",
+    ///         Layer3 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 sub-interface with dhcp
+    ///     //
+    ///     var scmL3DhcpSubinterface = new Scm.Layer3Subinterface("scm_l3_dhcp_subinterface", new()
+    ///     {
+    ///         Name = "$scm_parent_dhcp_interface.100",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "All",
+    ///         Tag = 100,
+    ///         ParentInterface = "$scm_parent_dhcp_interface",
+    ///         DhcpClient = new Scm.Inputs.Layer3SubinterfaceDhcpClientArgs
+    ///         {
+    ///             Enable = true,
+    ///             CreateDefaultRoute = true,
+    ///             DefaultRouteMetric = 20,
+    ///             SendHostname = new Scm.Inputs.Layer3SubinterfaceDhcpClientSendHostnameArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 Hostname = "client-vlan50-host",
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmParentDhcpInterface,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/layer3Subinterface:Layer3Subinterface")]
     public partial class Layer3Subinterface : global::Pulumi.CustomResource
@@ -31,7 +117,7 @@ namespace Pulumi.Scm
         /// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         /// </summary>
         [Output("ddnsConfig")]
-        public Output<Outputs.Layer3SubinterfaceDdnsConfig?> DdnsConfig { get; private set; } = null!;
+        public Output<Outputs.Layer3SubinterfaceDdnsConfig> DdnsConfig { get; private set; } = null!;
 
         /// <summary>
         /// The device in which the resource is defined
@@ -40,10 +126,10 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// Dhcp client
+        /// Layer3 sub interfaces DHCP Client Object
         /// </summary>
         [Output("dhcpClient")]
-        public Output<Outputs.Layer3SubinterfaceDhcpClient?> DhcpClient { get; private set; } = null!;
+        public Output<Outputs.Layer3SubinterfaceDhcpClient> DhcpClient { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
@@ -58,16 +144,16 @@ namespace Pulumi.Scm
         public Output<string?> InterfaceManagementProfile { get; private set; } = null!;
 
         /// <summary>
-        /// Ip
+        /// L3 sub-interface IP Parent
         /// </summary>
         [Output("ips")]
-        public Output<ImmutableArray<string>> Ips { get; private set; } = null!;
+        public Output<ImmutableArray<Outputs.Layer3SubinterfaceIp>> Ips { get; private set; } = null!;
 
         /// <summary>
         /// MTU
         /// </summary>
         [Output("mtu")]
-        public Output<double?> Mtu { get; private set; } = null!;
+        public Output<int?> Mtu { get; private set; } = null!;
 
         /// <summary>
         /// L3 sub-interface name
@@ -91,7 +177,7 @@ namespace Pulumi.Scm
         /// VLAN tag
         /// </summary>
         [Output("tag")]
-        public Output<double?> Tag { get; private set; } = null!;
+        public Output<int?> Tag { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -173,7 +259,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Dhcp client
+        /// Layer3 sub interfaces DHCP Client Object
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.Layer3SubinterfaceDhcpClientArgs>? DhcpClient { get; set; }
@@ -191,14 +277,14 @@ namespace Pulumi.Scm
         public Input<string>? InterfaceManagementProfile { get; set; }
 
         [Input("ips")]
-        private InputList<string>? _ips;
+        private InputList<Inputs.Layer3SubinterfaceIpArgs>? _ips;
 
         /// <summary>
-        /// Ip
+        /// L3 sub-interface IP Parent
         /// </summary>
-        public InputList<string> Ips
+        public InputList<Inputs.Layer3SubinterfaceIpArgs> Ips
         {
-            get => _ips ?? (_ips = new InputList<string>());
+            get => _ips ?? (_ips = new InputList<Inputs.Layer3SubinterfaceIpArgs>());
             set => _ips = value;
         }
 
@@ -206,7 +292,7 @@ namespace Pulumi.Scm
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
         /// L3 sub-interface name
@@ -230,7 +316,7 @@ namespace Pulumi.Scm
         /// VLAN tag
         /// </summary>
         [Input("tag")]
-        public Input<double>? Tag { get; set; }
+        public Input<int>? Tag { get; set; }
 
         public Layer3SubinterfaceArgs()
         {
@@ -271,7 +357,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Dhcp client
+        /// Layer3 sub interfaces DHCP Client Object
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.Layer3SubinterfaceDhcpClientGetArgs>? DhcpClient { get; set; }
@@ -289,14 +375,14 @@ namespace Pulumi.Scm
         public Input<string>? InterfaceManagementProfile { get; set; }
 
         [Input("ips")]
-        private InputList<string>? _ips;
+        private InputList<Inputs.Layer3SubinterfaceIpGetArgs>? _ips;
 
         /// <summary>
-        /// Ip
+        /// L3 sub-interface IP Parent
         /// </summary>
-        public InputList<string> Ips
+        public InputList<Inputs.Layer3SubinterfaceIpGetArgs> Ips
         {
-            get => _ips ?? (_ips = new InputList<string>());
+            get => _ips ?? (_ips = new InputList<Inputs.Layer3SubinterfaceIpGetArgs>());
             set => _ips = value;
         }
 
@@ -304,7 +390,7 @@ namespace Pulumi.Scm
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
         /// L3 sub-interface name
@@ -328,7 +414,7 @@ namespace Pulumi.Scm
         /// VLAN tag
         /// </summary>
         [Input("tag")]
-        public Input<double>? Tag { get; set; }
+        public Input<int>? Tag { get; set; }
 
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }

@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -68,13 +68,13 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
      * 
      */
     @Import(name="idleHoldTime")
-    private @Nullable Output<Double> idleHoldTime;
+    private @Nullable Output<Integer> idleHoldTime;
 
     /**
      * @return Idle hold time
      * 
      */
-    public Optional<Output<Double>> idleHoldTime() {
+    public Optional<Output<Integer>> idleHoldTime() {
         return Optional.ofNullable(this.idleHoldTime);
     }
 
@@ -128,13 +128,13 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
      * 
      */
     @Import(name="minRouteAdvInterval")
-    private @Nullable Output<Double> minRouteAdvInterval;
+    private @Nullable Output<Integer> minRouteAdvInterval;
 
     /**
      * @return Min route adv interval
      * 
      */
-    public Optional<Output<Double>> minRouteAdvInterval() {
+    public Optional<Output<Integer>> minRouteAdvInterval() {
         return Optional.ofNullable(this.minRouteAdvInterval);
     }
 
@@ -158,13 +158,13 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
      * 
      */
     @Import(name="openDelayTime")
-    private @Nullable Output<Double> openDelayTime;
+    private @Nullable Output<Integer> openDelayTime;
 
     /**
      * @return Open delay time
      * 
      */
-    public Optional<Output<Double>> openDelayTime() {
+    public Optional<Output<Integer>> openDelayTime() {
         return Optional.ofNullable(this.openDelayTime);
     }
 
@@ -302,7 +302,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
          * @return builder
          * 
          */
-        public Builder idleHoldTime(@Nullable Output<Double> idleHoldTime) {
+        public Builder idleHoldTime(@Nullable Output<Integer> idleHoldTime) {
             $.idleHoldTime = idleHoldTime;
             return this;
         }
@@ -313,7 +313,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
          * @return builder
          * 
          */
-        public Builder idleHoldTime(Double idleHoldTime) {
+        public Builder idleHoldTime(Integer idleHoldTime) {
             return idleHoldTime(Output.of(idleHoldTime));
         }
 
@@ -386,7 +386,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
          * @return builder
          * 
          */
-        public Builder minRouteAdvInterval(@Nullable Output<Double> minRouteAdvInterval) {
+        public Builder minRouteAdvInterval(@Nullable Output<Integer> minRouteAdvInterval) {
             $.minRouteAdvInterval = minRouteAdvInterval;
             return this;
         }
@@ -397,7 +397,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
          * @return builder
          * 
          */
-        public Builder minRouteAdvInterval(Double minRouteAdvInterval) {
+        public Builder minRouteAdvInterval(Integer minRouteAdvInterval) {
             return minRouteAdvInterval(Output.of(minRouteAdvInterval));
         }
 
@@ -428,7 +428,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
          * @return builder
          * 
          */
-        public Builder openDelayTime(@Nullable Output<Double> openDelayTime) {
+        public Builder openDelayTime(@Nullable Output<Integer> openDelayTime) {
             $.openDelayTime = openDelayTime;
             return this;
         }
@@ -439,7 +439,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs extends
          * @return builder
          * 
          */
-        public Builder openDelayTime(Double openDelayTime) {
+        public Builder openDelayTime(Integer openDelayTime) {
             return openDelayTime(Output.of(openDelayTime));
         }
 

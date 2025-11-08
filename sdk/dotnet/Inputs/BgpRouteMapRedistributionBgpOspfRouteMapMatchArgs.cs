@@ -13,67 +13,67 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// AS path access list
+        /// BGP Root OSPF Route maps match AS path access list
         /// </summary>
         [Input("asPathAccessList")]
         public Input<string>? AsPathAccessList { get; set; }
 
         /// <summary>
-        /// Extended community
+        /// EBGP Root OSPF Route maps match xtended community
         /// </summary>
         [Input("extendedCommunity")]
         public Input<string>? ExtendedCommunity { get; set; }
 
         /// <summary>
-        /// Interface
+        /// BGP Root OSPF Route maps match Interface
         /// </summary>
         [Input("interface")]
         public Input<string>? Interface { get; set; }
 
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object
+        /// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
         /// </summary>
         [Input("ipv4")]
         public Input<Inputs.BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args>? Ipv4 { get; set; }
 
         /// <summary>
-        /// Large community
+        /// BGP Root OSPF Route maps match Large community
         /// </summary>
         [Input("largeCommunity")]
         public Input<string>? LargeCommunity { get; set; }
 
         /// <summary>
-        /// Local preference
+        /// BGP Root OSPF Route maps match Local preference
         /// </summary>
         [Input("localPreference")]
         public Input<int>? LocalPreference { get; set; }
 
         /// <summary>
-        /// Metric
+        /// BGP Root OSPF Route maps match Metric
         /// </summary>
         [Input("metric")]
         public Input<int>? Metric { get; set; }
 
         /// <summary>
-        /// Origin
+        /// BGP Root OSPF Route maps match Origin
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// Peer
+        /// BGP Root OSPF Route maps match Peer
         /// </summary>
         [Input("peer")]
         public Input<string>? Peer { get; set; }
 
         /// <summary>
-        /// Regular community
+        /// BGP Root OSPF Route maps match Regular community
         /// </summary>
         [Input("regularCommunity")]
         public Input<string>? RegularCommunity { get; set; }
 
         /// <summary>
-        /// Tag
+        /// BGP Root OSPF Route maps match Tag
         /// </summary>
         [Input("tag")]
         public Input<int>? Tag { get; set; }

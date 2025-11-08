@@ -21,7 +21,7 @@ public final class GetEthernetInterfaceListData {
      */
     private String comment;
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     private String defaultValue;
@@ -51,7 +51,7 @@ public final class GetEthernetInterfaceListData {
      */
     private GetEthernetInterfaceListDataLayer2 layer2;
     /**
-     * @return Layer3
+     * @return Ethernet Interface Layer 3 configuration
      * 
      */
     private GetEthernetInterfaceListDataLayer3 layer3;
@@ -101,7 +101,7 @@ public final class GetEthernetInterfaceListData {
         return this.comment;
     }
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     public String defaultValue() {
@@ -143,7 +143,7 @@ public final class GetEthernetInterfaceListData {
         return this.layer2;
     }
     /**
-     * @return Layer3
+     * @return Ethernet Interface Layer 3 configuration
      * 
      */
     public GetEthernetInterfaceListDataLayer3 layer3() {

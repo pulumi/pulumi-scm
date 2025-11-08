@@ -172,7 +172,7 @@ def get_anti_spyware_signature_list(device: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # Fetch a list of all anti-spyware profiles
-    all_anti_spyware_signatures = scm.get_anti_spyware_signature_list(folder="Shared")
+    all_anti_spyware_signatures = scm.get_anti_spyware_signature_list(folder="All")
     pulumi.export("scmAntiSpywareSignatureList", all_anti_spyware_signatures.datas)
     ```
 
@@ -222,7 +222,7 @@ def get_anti_spyware_signature_list_output(device: Optional[pulumi.Input[Optiona
     import pulumi_scm as scm
 
     # Fetch a list of all anti-spyware profiles
-    all_anti_spyware_signatures = scm.get_anti_spyware_signature_list(folder="Shared")
+    all_anti_spyware_signatures = scm.get_anti_spyware_signature_list(folder="All")
     pulumi.export("scmAntiSpywareSignatureList", all_anti_spyware_signatures.datas)
     ```
 

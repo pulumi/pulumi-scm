@@ -15,6 +15,108 @@ import (
 // IpsecTunnel resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// # 1. Define the IKE Crypto Profile (IKE Phase 1)
+//			// Note: The resource name is plural: "scm_ike_crypto_profile"
+//			example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
+//				Name:   pulumi.String("example-ike-crypto"),
+//				Folder: pulumi.String("Remote Networks"),
+//				Hashes: pulumi.StringArray{
+//					pulumi.String("sha256"),
+//				},
+//				DhGroups: pulumi.StringArray{
+//					pulumi.String("group14"),
+//				},
+//				Encryptions: pulumi.StringArray{
+//					pulumi.String("aes-256-cbc"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 2. Define the IPsec Crypto Profile (IKE Phase 2)
+//			// Note: The resource name is plural and nested blocks now use an equals sign (=).
+//			exampleIpsecCryptoProfile, err := scm.NewIpsecCryptoProfile(ctx, "example", &scm.IpsecCryptoProfileArgs{
+//				Name:   pulumi.String("PaloAlto-Networks-IPSec-Crypto"),
+//				Folder: pulumi.String("Remote Networks"),
+//				Esp: &scm.IpsecCryptoProfileEspArgs{
+//					Encryptions: pulumi.StringArray{
+//						pulumi.String("aes-256-gcm"),
+//					},
+//					Authentications: pulumi.StringArray{
+//						pulumi.String("sha256"),
+//					},
+//				},
+//				DhGroup: pulumi.String("group14"),
+//				Lifetime: &scm.IpsecCryptoProfileLifetimeArgs{
+//					Hours: pulumi.Int(8),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 3. Define the IKE Gateway
+//			// Note: The resource name is plural and nested blocks now use an equals sign (=).
+//			exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
+//				Name:   pulumi.String("example-gateway"),
+//				Folder: pulumi.String("Remote Networks"),
+//				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
+//					Ip: pulumi.String("1.1.1.1"),
+//				},
+//				Authentication: &scm.IkeGatewayAuthenticationArgs{
+//					PreSharedKey: &scm.IkeGatewayAuthenticationPreSharedKeyArgs{
+//						Key: pulumi.String("secret"),
+//					},
+//				},
+//				Protocol: &scm.IkeGatewayProtocolArgs{
+//					Ikev1: &scm.IkeGatewayProtocolIkev1Args{
+//						IkeCryptoProfile: example.Name,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// # 4. Define the IPsec Tunnel
+//			// Note: Nested 'auto_key' block uses an equals sign (=).
+//			_, err = scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
+//				Name:                   pulumi.String("example-tunnel"),
+//				Folder:                 pulumi.String("Remote Networks"),
+//				TunnelInterface:        pulumi.String("tunnel"),
+//				AntiReplay:             pulumi.Bool(true),
+//				CopyTos:                pulumi.Bool(false),
+//				EnableGreEncapsulation: pulumi.Bool(false),
+//				AutoKey: &scm.IpsecTunnelAutoKeyArgs{
+//					IkeGateways: scm.IpsecTunnelAutoKeyIkeGatewayArray{
+//						&scm.IpsecTunnelAutoKeyIkeGatewayArgs{
+//							Name: exampleIkeGateway.Name,
+//						},
+//					},
+//					IpsecCryptoProfile: exampleIpsecCryptoProfile.Name,
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				exampleIkeGateway,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type IpsecTunnel struct {
 	pulumi.CustomResourceState
 

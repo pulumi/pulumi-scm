@@ -99,7 +99,7 @@ class GetDnsProxyResult:
     @pulumi.getter(name="domainServers")
     def domain_servers(self) -> Sequence['outputs.GetDnsProxyDomainServerResult']:
         """
-        Domain servers
+        DNS proxy rules
         """
         return pulumi.get(self, "domain_servers")
 

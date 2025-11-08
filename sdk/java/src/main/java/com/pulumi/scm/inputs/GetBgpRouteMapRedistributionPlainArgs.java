@@ -16,14 +16,14 @@ public final class GetBgpRouteMapRedistributionPlainArgs extends com.pulumi.reso
     public static final GetBgpRouteMapRedistributionPlainArgs Empty = new GetBgpRouteMapRedistributionPlainArgs();
 
     /**
-     * UUID of the resource
+     * BGP Route Map Redistributions UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return UUID of the resource
+     * @return BGP Route Map Redistributions UUID of the resource
      * 
      */
     public String id() {
@@ -31,14 +31,14 @@ public final class GetBgpRouteMapRedistributionPlainArgs extends com.pulumi.reso
     }
 
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      * 
      */
     @Import(name="name")
     private @Nullable String name;
 
     /**
-     * @return Name
+     * @return BGP Route Map Redistributions Name
      * 
      */
     public Optional<String> name() {
@@ -71,7 +71,7 @@ public final class GetBgpRouteMapRedistributionPlainArgs extends com.pulumi.reso
         }
 
         /**
-         * @param id UUID of the resource
+         * @param id BGP Route Map Redistributions UUID of the resource
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class GetBgpRouteMapRedistributionPlainArgs extends com.pulumi.reso
         }
 
         /**
-         * @param name Name
+         * @param name BGP Route Map Redistributions Name
          * 
          * @return builder
          * 

@@ -18,12 +18,12 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteM
      */
     private GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteMapSetMetric metric;
     /**
-     * @return Metric type
+     * @return Connected Static BGP OSPF Route map set Metric type
      * 
      */
     private String metricType;
     /**
-     * @return Tag
+     * @return Connected Static BGP OSPF Route map set Tag
      * 
      */
     private Integer tag;
@@ -37,14 +37,14 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStaticOspfRouteM
         return this.metric;
     }
     /**
-     * @return Metric type
+     * @return Connected Static BGP OSPF Route map set Metric type
      * 
      */
     public String metricType() {
         return this.metricType;
     }
     /**
-     * @return Tag
+     * @return Connected Static BGP OSPF Route map set Tag
      * 
      */
     public Integer tag() {

@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * // Fetch a list of all application objects.
  * // This data source will call the "List" API endpoint.
  * const allTags = scm.getTagList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const tagsListRaw = allTags.then(allTags => allTags.datas);
  * ```
@@ -120,7 +120,7 @@ export interface GetTagListResult {
  * // Fetch a list of all application objects.
  * // This data source will call the "List" API endpoint.
  * const allTags = scm.getTagList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const tagsListRaw = allTags.then(allTags => allTags.datas);
  * ```

@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionOspfRibRouteMapSet {
     /**
-     * @return Source address
+     * @return OSPF RIB Route maps set Source address
      * 
      */
     private String sourceAddress;
 
     private GetBgpRouteMapRedistributionOspfRibRouteMapSet() {}
     /**
-     * @return Source address
+     * @return OSPF RIB Route maps set Source address
      * 
      */
     public String sourceAddress() {

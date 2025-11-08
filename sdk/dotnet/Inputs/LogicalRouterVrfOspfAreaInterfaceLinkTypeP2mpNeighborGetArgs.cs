@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Priority
         /// </summary>
         [Input("priority")]
-        public Input<double>? Priority { get; set; }
+        public Input<int>? Priority { get; set; }
 
         public LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighborGetArgs()
         {

@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetLoopbackInterfaceList(ctx *pulumi.Context, args *GetLoopbackInterfaceListArgs, opts ...pulumi.InvokeOption) (*GetLoopbackInterfaceListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetLoopbackInterfaceListResult

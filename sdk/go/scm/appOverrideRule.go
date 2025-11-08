@@ -13,6 +13,167 @@ import (
 )
 
 // AppOverrideRule resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// --- 1. TAG Resource ---
+//			appOverridePositionTag, err := scm.NewTag(ctx, "app_override_position_tag", &scm.TagArgs{
+//				Name:   pulumi.String("app-override-position-tag_1"),
+//				Folder: pulumi.String("All"),
+//				Color:  pulumi.String("Orange"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
+//			anchorAppOverride, err := scm.NewAppOverrideRule(ctx, "anchor_app_override", &scm.AppOverrideRuleArgs{
+//				Name:        pulumi.String("anchor-app-override-rule"),
+//				Description: pulumi.String("Base rule for testing 'before' and 'after' positioning. Updating"),
+//				Folder:      pulumi.String("All"),
+//				Position:    pulumi.String("pre"),
+//				Application: pulumi.String("ssl"),
+//				Protocol:    pulumi.String("tcp"),
+//				Port:        pulumi.String("112"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tags: pulumi.StringArray{
+//					appOverridePositionTag.Name,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+//			_, err = scm.NewAppOverrideRule(ctx, "rule_top_app_override", &scm.AppOverrideRuleArgs{
+//				Name:             pulumi.String("top-absolute-app-override"),
+//				Description:      pulumi.String("Placed at the very TOP of the App Override rulebase."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("bottom"),
+//				Application:      pulumi.String("ssl"),
+//				Protocol:         pulumi.String("tcp"),
+//				Port:             pulumi.String("443"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewAppOverrideRule(ctx, "rule_bottom_app_override", &scm.AppOverrideRuleArgs{
+//				Name:             pulumi.String("bottom-absolute-app-override"),
+//				Description:      pulumi.String("Placed at the very BOTTOM of the App Override rulebase."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("bottom"),
+//				Application:      pulumi.String("ssl"),
+//				Protocol:         pulumi.String("tcp"),
+//				Port:             pulumi.String("443"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+//			_, err = scm.NewAppOverrideRule(ctx, "rule_before_anchor_override", &scm.AppOverrideRuleArgs{
+//				Name:             pulumi.String("before-anchor-app-override"),
+//				Description:      pulumi.String("Positioned immediately BEFORE the anchor-app-override-rule."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("before"),
+//				TargetRule:       anchorAppOverride.ID(),
+//				Application:      pulumi.String("ssl"),
+//				Protocol:         pulumi.String("tcp"),
+//				Port:             pulumi.String("443"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewAppOverrideRule(ctx, "rule_after_anchor_override", &scm.AppOverrideRuleArgs{
+//				Name:             pulumi.String("after-anchor-app-override"),
+//				Description:      pulumi.String("Positioned immediately AFTER the anchor-app-override-rule."),
+//				Folder:           pulumi.String("All"),
+//				Position:         pulumi.String("pre"),
+//				RelativePosition: pulumi.String("before"),
+//				TargetRule:       anchorAppOverride.ID(),
+//				Application:      pulumi.String("ssl"),
+//				Protocol:         pulumi.String("tcp"),
+//				Port:             pulumi.String("443"),
+//				Froms: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type AppOverrideRule struct {
 	pulumi.CustomResourceState
 
@@ -39,16 +200,22 @@ type AppOverrideRule struct {
 	// Negate source
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
 	// Port
-	Port pulumi.IntOutput `pulumi:"port"`
+	Port pulumi.StringOutput `pulumi:"port"`
+	// The position of a security rule
+	Position pulumi.StringOutput `pulumi:"position"`
 	// Protocol
 	Protocol pulumi.StringOutput `pulumi:"protocol"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Source
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	// Tag
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrOutput `pulumi:"targetRule"`
+	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
 	// To
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 }
@@ -127,16 +294,22 @@ type appOverrideRuleState struct {
 	// Negate source
 	NegateSource *bool `pulumi:"negateSource"`
 	// Port
-	Port *int `pulumi:"port"`
+	Port *string `pulumi:"port"`
+	// The position of a security rule
+	Position *string `pulumi:"position"`
 	// Protocol
 	Protocol *string `pulumi:"protocol"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	// Source
 	Sources []string `pulumi:"sources"`
 	// Tag
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
+	Tfid       *string `pulumi:"tfid"`
 	// To
 	Tos []string `pulumi:"tos"`
 }
@@ -165,16 +338,22 @@ type AppOverrideRuleState struct {
 	// Negate source
 	NegateSource pulumi.BoolPtrInput
 	// Port
-	Port pulumi.IntPtrInput
+	Port pulumi.StringPtrInput
+	// The position of a security rule
+	Position pulumi.StringPtrInput
 	// Protocol
 	Protocol pulumi.StringPtrInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	// Source
 	Sources pulumi.StringArrayInput
 	// Tag
 	Tags pulumi.StringArrayInput
-	Tfid pulumi.StringPtrInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
+	Tfid       pulumi.StringPtrInput
 	// To
 	Tos pulumi.StringArrayInput
 }
@@ -207,15 +386,21 @@ type appOverrideRuleArgs struct {
 	// Negate source
 	NegateSource *bool `pulumi:"negateSource"`
 	// Port
-	Port int `pulumi:"port"`
+	Port string `pulumi:"port"`
+	// The position of a security rule
+	Position *string `pulumi:"position"`
 	// Protocol
 	Protocol string `pulumi:"protocol"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition *string `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	// Source
 	Sources []string `pulumi:"sources"`
 	// Tag
 	Tags []string `pulumi:"tags"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule *string `pulumi:"targetRule"`
 	// To
 	Tos []string `pulumi:"tos"`
 }
@@ -245,15 +430,21 @@ type AppOverrideRuleArgs struct {
 	// Negate source
 	NegateSource pulumi.BoolPtrInput
 	// Port
-	Port pulumi.IntInput
+	Port pulumi.StringInput
+	// The position of a security rule
+	Position pulumi.StringPtrInput
 	// Protocol
 	Protocol pulumi.StringInput
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition pulumi.StringPtrInput
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	// Source
 	Sources pulumi.StringArrayInput
 	// Tag
 	Tags pulumi.StringArrayInput
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule pulumi.StringPtrInput
 	// To
 	Tos pulumi.StringArrayInput
 }
@@ -401,13 +592,23 @@ func (o AppOverrideRuleOutput) NegateSource() pulumi.BoolOutput {
 }
 
 // Port
-func (o AppOverrideRuleOutput) Port() pulumi.IntOutput {
-	return o.ApplyT(func(v *AppOverrideRule) pulumi.IntOutput { return v.Port }).(pulumi.IntOutput)
+func (o AppOverrideRuleOutput) Port() pulumi.StringOutput {
+	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Port }).(pulumi.StringOutput)
+}
+
+// The position of a security rule
+func (o AppOverrideRuleOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
 // Protocol
 func (o AppOverrideRuleOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringOutput { return v.Protocol }).(pulumi.StringOutput)
+}
+
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o AppOverrideRuleOutput) RelativePosition() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.RelativePosition }).(pulumi.StringPtrOutput)
 }
 
 // The snippet in which the resource is defined
@@ -423,6 +624,11 @@ func (o AppOverrideRuleOutput) Sources() pulumi.StringArrayOutput {
 // Tag
 func (o AppOverrideRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o AppOverrideRuleOutput) TargetRule() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.TargetRule }).(pulumi.StringPtrOutput)
 }
 
 func (o AppOverrideRuleOutput) Tfid() pulumi.StringOutput {

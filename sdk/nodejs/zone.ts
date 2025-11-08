@@ -8,6 +8,77 @@ import * as utilities from "./utilities";
 
 /**
  * Zone resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates an empty layer3 zone
+ * //
+ * const scmLayer3Zone = new scm.Zone("scm_layer3_zone", {
+ *     name: "scm_layer3_zone",
+ *     folder: "ngfw-shared",
+ *     network: {
+ *         layer3s: [],
+ *     },
+ * });
+ * //
+ * // Creates an empty layer2 zone
+ * //
+ * const scmLayer2Zone = new scm.Zone("scm_layer2_zone", {
+ *     name: "scm_layer2_zone",
+ *     folder: "ngfw-shared",
+ *     network: {
+ *         layer2s: [],
+ *     },
+ * });
+ * //
+ * // Creates an empty tap zone
+ * //
+ * const scmTapZone = new scm.Zone("scm_tap_zone", {
+ *     name: "scm_tap_zone",
+ *     folder: "ngfw-shared",
+ *     network: {
+ *         taps: [],
+ *     },
+ * });
+ * //
+ * // Creates an empty vwire zone
+ * //
+ * const scmVwireZone = new scm.Zone("scm_vwire_zone", {
+ *     name: "scm_vwire_zone",
+ *     folder: "ngfw-shared",
+ *     network: {
+ *         virtualWires: [],
+ *     },
+ * });
+ * //
+ * // Creates a layer3 zone
+ * // Requires Interface $scm_l3_interface to exist
+ * //
+ * const scmLayer3ZoneComplex = new scm.Zone("scm_layer3_zone_complex", {
+ *     name: "scm_layer3_zone_complex",
+ *     folder: "ngfw-shared",
+ *     network: {
+ *         layer3s: ["$scm_l3_interface"],
+ *         zoneProtectionProfile: "best-practice",
+ *         enablePacketBufferProtection: true,
+ *     },
+ *     enableDeviceIdentification: true,
+ *     deviceAcl: {
+ *         includeLists: ["198.18.1.0/24"],
+ *         excludeLists: ["198.18.2.0/24"],
+ *     },
+ *     enableUserIdentification: true,
+ *     userAcl: {
+ *         includeLists: ["198.18.3.0/24"],
+ *         excludeLists: ["198.18.4.0/24"],
+ *     },
+ * });
+ * ```
  */
 export class Zone extends pulumi.CustomResource {
     /**

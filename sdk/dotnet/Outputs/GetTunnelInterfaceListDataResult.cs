@@ -18,9 +18,9 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
-        public readonly int DefaultValue;
+        public readonly string DefaultValue;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
@@ -38,13 +38,13 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// tunnel interfaces ip parent
+        /// Tunnel Interface IP Parent
         /// </summary>
-        public readonly Outputs.GetTunnelInterfaceListDataIpResult Ip;
+        public readonly ImmutableArray<Outputs.GetTunnelInterfaceListDataIpResult> Ips;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
         /// L3 sub-interface name
         /// </summary>
@@ -59,7 +59,7 @@ namespace Pulumi.Scm.Outputs
         private GetTunnelInterfaceListDataResult(
             string comment,
 
-            int defaultValue,
+            string defaultValue,
 
             string device,
 
@@ -69,9 +69,9 @@ namespace Pulumi.Scm.Outputs
 
             string interfaceManagementProfile,
 
-            Outputs.GetTunnelInterfaceListDataIpResult ip,
+            ImmutableArray<Outputs.GetTunnelInterfaceListDataIpResult> ips,
 
-            double mtu,
+            int mtu,
 
             string name,
 
@@ -85,7 +85,7 @@ namespace Pulumi.Scm.Outputs
             Folder = folder;
             Id = id;
             InterfaceManagementProfile = interfaceManagementProfile;
-            Ip = ip;
+            Ips = ips;
             Mtu = mtu;
             Name = name;
             Snippet = snippet;

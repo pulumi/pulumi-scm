@@ -23,6 +23,8 @@ import javax.annotation.Nullable;
 /**
  * EthernetInterface resource
  * 
+ * ## Example Usage
+ * 
  */
 @ResourceType(type="scm:index/ethernetInterface:EthernetInterface")
 public class EthernetInterface extends com.pulumi.resources.CustomResource {
@@ -41,14 +43,14 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.comment);
     }
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
     @Export(name="defaultValue", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     public Output<Optional<String>> defaultValue() {
@@ -111,14 +113,14 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.layer2);
     }
     /**
-     * Layer3
+     * Ethernet Interface Layer 3 configuration
      * 
      */
     @Export(name="layer3", refs={EthernetInterfaceLayer3.class}, tree="[0]")
     private Output<EthernetInterfaceLayer3> layer3;
 
     /**
-     * @return Layer3
+     * @return Ethernet Interface Layer 3 configuration
      * 
      */
     public Output<EthernetInterfaceLayer3> layer3() {
@@ -129,42 +131,42 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="linkDuplex", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> linkDuplex;
+    private Output<String> linkDuplex;
 
     /**
      * @return Link duplex
      * 
      */
-    public Output<Optional<String>> linkDuplex() {
-        return Codegen.optional(this.linkDuplex);
+    public Output<String> linkDuplex() {
+        return this.linkDuplex;
     }
     /**
      * Link speed
      * 
      */
     @Export(name="linkSpeed", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> linkSpeed;
+    private Output<String> linkSpeed;
 
     /**
      * @return Link speed
      * 
      */
-    public Output<Optional<String>> linkSpeed() {
-        return Codegen.optional(this.linkSpeed);
+    public Output<String> linkSpeed() {
+        return this.linkSpeed;
     }
     /**
      * Link state
      * 
      */
     @Export(name="linkState", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> linkState;
+    private Output<String> linkState;
 
     /**
      * @return Link state
      * 
      */
-    public Output<Optional<String>> linkState() {
-        return Codegen.optional(this.linkState);
+    public Output<String> linkState() {
+        return this.linkState;
     }
     /**
      * Interface name
@@ -185,14 +187,14 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="poe", refs={EthernetInterfacePoe.class}, tree="[0]")
-    private Output</* @Nullable */ EthernetInterfacePoe> poe;
+    private Output<EthernetInterfacePoe> poe;
 
     /**
      * @return Poe
      * 
      */
-    public Output<Optional<EthernetInterfacePoe>> poe() {
-        return Codegen.optional(this.poe);
+    public Output<EthernetInterfacePoe> poe() {
+        return this.poe;
     }
     /**
      * The snippet in which the resource is defined
@@ -213,14 +215,14 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="tap", refs={EthernetInterfaceTap.class}, tree="[0]")
-    private Output<EthernetInterfaceTap> tap;
+    private Output</* @Nullable */ EthernetInterfaceTap> tap;
 
     /**
      * @return Tap
      * 
      */
-    public Output<EthernetInterfaceTap> tap() {
-        return this.tap;
+    public Output<Optional<EthernetInterfaceTap>> tap() {
+        return Codegen.optional(this.tap);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;

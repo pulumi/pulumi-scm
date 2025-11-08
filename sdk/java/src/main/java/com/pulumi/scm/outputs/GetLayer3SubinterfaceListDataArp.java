@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetLayer3SubinterfaceListDataArp {
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     private String hwAddress;
@@ -23,7 +23,7 @@ public final class GetLayer3SubinterfaceListDataArp {
 
     private GetLayer3SubinterfaceListDataArp() {}
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public String hwAddress() {

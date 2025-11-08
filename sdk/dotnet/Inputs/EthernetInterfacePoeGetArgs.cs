@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class EthernetInterfacePoeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Poe enabled
+        /// Enabled PoE?
         /// </summary>
         [Input("poeEnabled")]
         public Input<bool>? PoeEnabled { get; set; }
 
         /// <summary>
-        /// Poe rsvd pwr
+        /// PoE reserved power
         /// </summary>
         [Input("poeRsvdPwr")]
         public Input<int>? PoeRsvdPwr { get; set; }

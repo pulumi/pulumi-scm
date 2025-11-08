@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupConnectionOptions {
      * @return Multihop
      * 
      */
-    private Double multihop;
+    private Integer multihop;
     /**
      * @return Timers
      * 
@@ -51,7 +51,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupConnectionOptions {
      * @return Multihop
      * 
      */
-    public Double multihop() {
+    public Integer multihop() {
         return this.multihop;
     }
     /**
@@ -73,7 +73,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupConnectionOptions {
     public static final class Builder {
         private String authentication;
         private String dampening;
-        private Double multihop;
+        private Integer multihop;
         private String timers;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfBgpPeerGroupConnectionOptions defaults) {
@@ -101,7 +101,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupConnectionOptions {
             return this;
         }
         @CustomType.Setter
-        public Builder multihop(Double multihop) {
+        public Builder multihop(Integer multihop) {
             if (multihop == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPeerGroupConnectionOptions", "multihop");
             }

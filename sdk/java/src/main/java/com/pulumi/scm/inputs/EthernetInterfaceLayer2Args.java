@@ -5,7 +5,8 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Integer;
+import com.pulumi.scm.inputs.EthernetInterfaceLayer2LldpArgs;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,23 +17,39 @@ public final class EthernetInterfaceLayer2Args extends com.pulumi.resources.Reso
     public static final EthernetInterfaceLayer2Args Empty = new EthernetInterfaceLayer2Args();
 
     /**
-     * Vlan tag
+     * LLDP Settings
+     * 
+     */
+    @Import(name="lldp")
+    private @Nullable Output<EthernetInterfaceLayer2LldpArgs> lldp;
+
+    /**
+     * @return LLDP Settings
+     * 
+     */
+    public Optional<Output<EthernetInterfaceLayer2LldpArgs>> lldp() {
+        return Optional.ofNullable(this.lldp);
+    }
+
+    /**
+     * Assign interface to VLAN tag
      * 
      */
     @Import(name="vlanTag")
-    private @Nullable Output<Integer> vlanTag;
+    private @Nullable Output<String> vlanTag;
 
     /**
-     * @return Vlan tag
+     * @return Assign interface to VLAN tag
      * 
      */
-    public Optional<Output<Integer>> vlanTag() {
+    public Optional<Output<String>> vlanTag() {
         return Optional.ofNullable(this.vlanTag);
     }
 
     private EthernetInterfaceLayer2Args() {}
 
     private EthernetInterfaceLayer2Args(EthernetInterfaceLayer2Args $) {
+        this.lldp = $.lldp;
         this.vlanTag = $.vlanTag;
     }
 
@@ -55,23 +72,44 @@ public final class EthernetInterfaceLayer2Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param lldp LLDP Settings
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(@Nullable Output<Integer> vlanTag) {
+        public Builder lldp(@Nullable Output<EthernetInterfaceLayer2LldpArgs> lldp) {
+            $.lldp = lldp;
+            return this;
+        }
+
+        /**
+         * @param lldp LLDP Settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder lldp(EthernetInterfaceLayer2LldpArgs lldp) {
+            return lldp(Output.of(lldp));
+        }
+
+        /**
+         * @param vlanTag Assign interface to VLAN tag
+         * 
+         * @return builder
+         * 
+         */
+        public Builder vlanTag(@Nullable Output<String> vlanTag) {
             $.vlanTag = vlanTag;
             return this;
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param vlanTag Assign interface to VLAN tag
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(Integer vlanTag) {
+        public Builder vlanTag(String vlanTag) {
             return vlanTag(Output.of(vlanTag));
         }
 

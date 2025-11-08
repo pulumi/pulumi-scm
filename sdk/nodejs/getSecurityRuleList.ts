@@ -8,9 +8,24 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedRulesList = scm.getSecurityRuleList({
+ *     folder: "All",
+ *     position: "pre",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: pagedRulesList.then(pagedRulesList => pagedRulesList.total),
+ *     firstRuleName: pagedRulesList.then(pagedRulesList => pagedRulesList.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getSecurityRuleList(args?: GetSecurityRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityRuleListResult> {
-    args = args || {};
+export function getSecurityRuleList(args: GetSecurityRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSecurityRuleList:getSecurityRuleList", {
         "device": args.device,
@@ -18,6 +33,7 @@ export function getSecurityRuleList(args?: GetSecurityRuleListArgs, opts?: pulum
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -46,6 +62,10 @@ export interface GetSecurityRuleListArgs {
      * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The position of a security rule
+     */
+    position: string;
     /**
      * The snippet of the item.
      */
@@ -85,6 +105,10 @@ export interface GetSecurityRuleListResult {
      */
     readonly offset?: number;
     /**
+     * The position of a security rule
+     */
+    readonly position: string;
+    /**
      * The snippet of the item.
      */
     readonly snippet?: string;
@@ -96,9 +120,24 @@ export interface GetSecurityRuleListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedRulesList = scm.getSecurityRuleList({
+ *     folder: "All",
+ *     position: "pre",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: pagedRulesList.then(pagedRulesList => pagedRulesList.total),
+ *     firstRuleName: pagedRulesList.then(pagedRulesList => pagedRulesList.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getSecurityRuleListOutput(args?: GetSecurityRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityRuleListResult> {
-    args = args || {};
+export function getSecurityRuleListOutput(args: GetSecurityRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSecurityRuleList:getSecurityRuleList", {
         "device": args.device,
@@ -106,6 +145,7 @@ export function getSecurityRuleListOutput(args?: GetSecurityRuleListOutputArgs, 
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -134,6 +174,10 @@ export interface GetSecurityRuleListOutputArgs {
      * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The position of a security rule
+     */
+    position: pulumi.Input<string>;
     /**
      * The snippet of the item.
      */

@@ -12,6 +12,43 @@ import (
 )
 
 // Zone data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up zone by its ID.
+//			scmZoneDs, err := scm.LookupZone(ctx, &scm.LookupZoneArgs{
+//				Id: "50f1f0f3-a420-4989-9770-c927f1467a9a",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("zoneDataSourceResults", pulumi.Map{
+//				"id":                         scmZoneDs.Id,
+//				"name":                       scmZoneDs.Name,
+//				"network":                    scmZoneDs.Network,
+//				"enableDeviceIdentification": scmZoneDs.EnableDeviceIdentification,
+//				"enableUserIdentification":   scmZoneDs.EnableUserIdentification,
+//				"userAcl":                    scmZoneDs.UserAcl,
+//				"deviceAcl":                  scmZoneDs.DeviceAcl,
+//				"folder":                     scmZoneDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupZone(ctx *pulumi.Context, args *LookupZoneArgs, opts ...pulumi.InvokeOption) (*LookupZoneResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupZoneResult

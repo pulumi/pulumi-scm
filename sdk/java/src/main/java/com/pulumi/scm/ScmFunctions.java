@@ -17,10 +17,10 @@ import com.pulumi.scm.inputs.GetAddressGroupPlainArgs;
 import com.pulumi.scm.inputs.GetAddressListArgs;
 import com.pulumi.scm.inputs.GetAddressListPlainArgs;
 import com.pulumi.scm.inputs.GetAddressPlainArgs;
-import com.pulumi.scm.inputs.GetAggregateEthernetInterfaceArgs;
-import com.pulumi.scm.inputs.GetAggregateEthernetInterfaceListArgs;
-import com.pulumi.scm.inputs.GetAggregateEthernetInterfaceListPlainArgs;
-import com.pulumi.scm.inputs.GetAggregateEthernetInterfacePlainArgs;
+import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
+import com.pulumi.scm.inputs.GetAggregateInterfaceListArgs;
+import com.pulumi.scm.inputs.GetAggregateInterfaceListPlainArgs;
+import com.pulumi.scm.inputs.GetAggregateInterfacePlainArgs;
 import com.pulumi.scm.inputs.GetAntiSpywareProfileArgs;
 import com.pulumi.scm.inputs.GetAntiSpywareProfileListArgs;
 import com.pulumi.scm.inputs.GetAntiSpywareProfileListPlainArgs;
@@ -393,8 +393,8 @@ import com.pulumi.scm.outputs.GetAddressGroupListResult;
 import com.pulumi.scm.outputs.GetAddressGroupResult;
 import com.pulumi.scm.outputs.GetAddressListResult;
 import com.pulumi.scm.outputs.GetAddressResult;
-import com.pulumi.scm.outputs.GetAggregateEthernetInterfaceListResult;
-import com.pulumi.scm.outputs.GetAggregateEthernetInterfaceResult;
+import com.pulumi.scm.outputs.GetAggregateInterfaceListResult;
+import com.pulumi.scm.outputs.GetAggregateInterfaceResult;
 import com.pulumi.scm.outputs.GetAntiSpywareProfileListResult;
 import com.pulumi.scm.outputs.GetAntiSpywareProfileResult;
 import com.pulumi.scm.outputs.GetAntiSpywareSignatureListResult;
@@ -1289,88 +1289,307 @@ public final class ScmFunctions {
         return Deployment.getInstance().invokeAsync("scm:index/getAddressList:getAddressList", TypeShape.of(GetAddressListResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * AggregateEthernetInterface data source
+     * AggregateInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up aggregate interface by its ID.
+     *         final var scmAggregateInterfaceDs = ScmFunctions.getAggregateInterface(GetAggregateInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199761a8f1")
+     *             .build());
+     * 
+     *         ctx.export("aggregateInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmAggregateInterfaceDs.id()),
+     *             Map.entry("name", scmAggregateInterfaceDs.name()),
+     *             Map.entry("comment", scmAggregateInterfaceDs.comment()),
+     *             Map.entry("layer3", scmAggregateInterfaceDs.layer3()),
+     *             Map.entry("folder", scmAggregateInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
-    public static Output<GetAggregateEthernetInterfaceResult> getAggregateEthernetInterface(GetAggregateEthernetInterfaceArgs args) {
-        return getAggregateEthernetInterface(args, InvokeOptions.Empty);
+    public static Output<GetAggregateInterfaceResult> getAggregateInterface(GetAggregateInterfaceArgs args) {
+        return getAggregateInterface(args, InvokeOptions.Empty);
     }
     /**
-     * AggregateEthernetInterface data source
+     * AggregateInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up aggregate interface by its ID.
+     *         final var scmAggregateInterfaceDs = ScmFunctions.getAggregateInterface(GetAggregateInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199761a8f1")
+     *             .build());
+     * 
+     *         ctx.export("aggregateInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmAggregateInterfaceDs.id()),
+     *             Map.entry("name", scmAggregateInterfaceDs.name()),
+     *             Map.entry("comment", scmAggregateInterfaceDs.comment()),
+     *             Map.entry("layer3", scmAggregateInterfaceDs.layer3()),
+     *             Map.entry("folder", scmAggregateInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
-    public static CompletableFuture<GetAggregateEthernetInterfaceResult> getAggregateEthernetInterfacePlain(GetAggregateEthernetInterfacePlainArgs args) {
-        return getAggregateEthernetInterfacePlain(args, InvokeOptions.Empty);
+    public static CompletableFuture<GetAggregateInterfaceResult> getAggregateInterfacePlain(GetAggregateInterfacePlainArgs args) {
+        return getAggregateInterfacePlain(args, InvokeOptions.Empty);
     }
     /**
-     * AggregateEthernetInterface data source
+     * AggregateInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up aggregate interface by its ID.
+     *         final var scmAggregateInterfaceDs = ScmFunctions.getAggregateInterface(GetAggregateInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199761a8f1")
+     *             .build());
+     * 
+     *         ctx.export("aggregateInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmAggregateInterfaceDs.id()),
+     *             Map.entry("name", scmAggregateInterfaceDs.name()),
+     *             Map.entry("comment", scmAggregateInterfaceDs.comment()),
+     *             Map.entry("layer3", scmAggregateInterfaceDs.layer3()),
+     *             Map.entry("folder", scmAggregateInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
-    public static Output<GetAggregateEthernetInterfaceResult> getAggregateEthernetInterface(GetAggregateEthernetInterfaceArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("scm:index/getAggregateEthernetInterface:getAggregateEthernetInterface", TypeShape.of(GetAggregateEthernetInterfaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAggregateInterfaceResult> getAggregateInterface(GetAggregateInterfaceArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAggregateInterface:getAggregateInterface", TypeShape.of(GetAggregateInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * AggregateEthernetInterface data source
+     * AggregateInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up aggregate interface by its ID.
+     *         final var scmAggregateInterfaceDs = ScmFunctions.getAggregateInterface(GetAggregateInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199761a8f1")
+     *             .build());
+     * 
+     *         ctx.export("aggregateInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmAggregateInterfaceDs.id()),
+     *             Map.entry("name", scmAggregateInterfaceDs.name()),
+     *             Map.entry("comment", scmAggregateInterfaceDs.comment()),
+     *             Map.entry("layer3", scmAggregateInterfaceDs.layer3()),
+     *             Map.entry("folder", scmAggregateInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
-    public static Output<GetAggregateEthernetInterfaceResult> getAggregateEthernetInterface(GetAggregateEthernetInterfaceArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("scm:index/getAggregateEthernetInterface:getAggregateEthernetInterface", TypeShape.of(GetAggregateEthernetInterfaceResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAggregateInterfaceResult> getAggregateInterface(GetAggregateInterfaceArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAggregateInterface:getAggregateInterface", TypeShape.of(GetAggregateInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
-     * AggregateEthernetInterface data source
+     * AggregateInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAggregateInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up aggregate interface by its ID.
+     *         final var scmAggregateInterfaceDs = ScmFunctions.getAggregateInterface(GetAggregateInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199761a8f1")
+     *             .build());
+     * 
+     *         ctx.export("aggregateInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmAggregateInterfaceDs.id()),
+     *             Map.entry("name", scmAggregateInterfaceDs.name()),
+     *             Map.entry("comment", scmAggregateInterfaceDs.comment()),
+     *             Map.entry("layer3", scmAggregateInterfaceDs.layer3()),
+     *             Map.entry("folder", scmAggregateInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
-    public static CompletableFuture<GetAggregateEthernetInterfaceResult> getAggregateEthernetInterfacePlain(GetAggregateEthernetInterfacePlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("scm:index/getAggregateEthernetInterface:getAggregateEthernetInterface", TypeShape.of(GetAggregateEthernetInterfaceResult.class), args, Utilities.withVersion(options));
+    public static CompletableFuture<GetAggregateInterfaceResult> getAggregateInterfacePlain(GetAggregateInterfacePlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getAggregateInterface:getAggregateInterface", TypeShape.of(GetAggregateInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
-    public static Output<GetAggregateEthernetInterfaceListResult> getAggregateEthernetInterfaceList() {
-        return getAggregateEthernetInterfaceList(GetAggregateEthernetInterfaceListArgs.Empty, InvokeOptions.Empty);
+    public static Output<GetAggregateInterfaceListResult> getAggregateInterfaceList() {
+        return getAggregateInterfaceList(GetAggregateInterfaceListArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
-    public static CompletableFuture<GetAggregateEthernetInterfaceListResult> getAggregateEthernetInterfaceListPlain() {
-        return getAggregateEthernetInterfaceListPlain(GetAggregateEthernetInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
+    public static CompletableFuture<GetAggregateInterfaceListResult> getAggregateInterfaceListPlain() {
+        return getAggregateInterfaceListPlain(GetAggregateInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
-    public static Output<GetAggregateEthernetInterfaceListResult> getAggregateEthernetInterfaceList(GetAggregateEthernetInterfaceListArgs args) {
-        return getAggregateEthernetInterfaceList(args, InvokeOptions.Empty);
+    public static Output<GetAggregateInterfaceListResult> getAggregateInterfaceList(GetAggregateInterfaceListArgs args) {
+        return getAggregateInterfaceList(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
-    public static CompletableFuture<GetAggregateEthernetInterfaceListResult> getAggregateEthernetInterfaceListPlain(GetAggregateEthernetInterfaceListPlainArgs args) {
-        return getAggregateEthernetInterfaceListPlain(args, InvokeOptions.Empty);
+    public static CompletableFuture<GetAggregateInterfaceListResult> getAggregateInterfaceListPlain(GetAggregateInterfaceListPlainArgs args) {
+        return getAggregateInterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
-    public static Output<GetAggregateEthernetInterfaceListResult> getAggregateEthernetInterfaceList(GetAggregateEthernetInterfaceListArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invoke("scm:index/getAggregateEthernetInterfaceList:getAggregateEthernetInterfaceList", TypeShape.of(GetAggregateEthernetInterfaceListResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAggregateInterfaceListResult> getAggregateInterfaceList(GetAggregateInterfaceListArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAggregateInterfaceList:getAggregateInterfaceList", TypeShape.of(GetAggregateInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
-    public static Output<GetAggregateEthernetInterfaceListResult> getAggregateEthernetInterfaceList(GetAggregateEthernetInterfaceListArgs args, InvokeOutputOptions options) {
-        return Deployment.getInstance().invoke("scm:index/getAggregateEthernetInterfaceList:getAggregateEthernetInterfaceList", TypeShape.of(GetAggregateEthernetInterfaceListResult.class), args, Utilities.withVersion(options));
+    public static Output<GetAggregateInterfaceListResult> getAggregateInterfaceList(GetAggregateInterfaceListArgs args, InvokeOutputOptions options) {
+        return Deployment.getInstance().invoke("scm:index/getAggregateInterfaceList:getAggregateInterfaceList", TypeShape.of(GetAggregateInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
-    public static CompletableFuture<GetAggregateEthernetInterfaceListResult> getAggregateEthernetInterfaceListPlain(GetAggregateEthernetInterfaceListPlainArgs args, InvokeOptions options) {
-        return Deployment.getInstance().invokeAsync("scm:index/getAggregateEthernetInterfaceList:getAggregateEthernetInterfaceList", TypeShape.of(GetAggregateEthernetInterfaceListResult.class), args, Utilities.withVersion(options));
+    public static CompletableFuture<GetAggregateInterfaceListResult> getAggregateInterfaceListPlain(GetAggregateInterfaceListPlainArgs args, InvokeOptions options) {
+        return Deployment.getInstance().invokeAsync("scm:index/getAggregateInterfaceList:getAggregateInterfaceList", TypeShape.of(GetAggregateInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AntiSpywareProfile data source
@@ -1641,7 +1860,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareProfiles = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareProfileList", allAntiSpywareProfiles.datas());
@@ -1683,7 +1902,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareProfiles = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareProfileList", allAntiSpywareProfiles.datas());
@@ -1725,7 +1944,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareProfiles = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareProfileList", allAntiSpywareProfiles.datas());
@@ -1767,7 +1986,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareProfiles = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareProfileList", allAntiSpywareProfiles.datas());
@@ -1809,7 +2028,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareProfiles = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareProfileList", allAntiSpywareProfiles.datas());
@@ -1851,7 +2070,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareProfiles = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareProfileList", allAntiSpywareProfiles.datas());
@@ -1893,7 +2112,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareProfiles = ScmFunctions.getAntiSpywareProfileList(GetAntiSpywareProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareProfileList", allAntiSpywareProfiles.datas());
@@ -1970,7 +2189,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareSignatures = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.datas());
@@ -2012,7 +2231,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareSignatures = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.datas());
@@ -2054,7 +2273,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareSignatures = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.datas());
@@ -2096,7 +2315,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareSignatures = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.datas());
@@ -2138,7 +2357,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareSignatures = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.datas());
@@ -2180,7 +2399,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareSignatures = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.datas());
@@ -2222,7 +2441,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all anti-spyware profiles
      *         final var allAntiSpywareSignatures = ScmFunctions.getAntiSpywareSignatureList(GetAntiSpywareSignatureListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmAntiSpywareSignatureList", allAntiSpywareSignatures.datas());
@@ -2238,12 +2457,114 @@ public final class ScmFunctions {
     /**
      * AppOverrideRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AppOverrideRule;
+     * import com.pulumi.scm.AppOverrideRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+     *         var testAppOverrideRule = new AppOverrideRule("testAppOverrideRule", AppOverrideRuleArgs.builder()
+     *             .name("data-source-app-override-test")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .application("ssl")
+     *             .protocol("tcp")
+     *             .port("8443")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
+     *             .id(testAppOverrideRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleAppOverrideRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAppOverrideRuleResult> getAppOverrideRule(GetAppOverrideRuleArgs args) {
         return getAppOverrideRule(args, InvokeOptions.Empty);
     }
     /**
      * AppOverrideRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AppOverrideRule;
+     * import com.pulumi.scm.AppOverrideRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+     *         var testAppOverrideRule = new AppOverrideRule("testAppOverrideRule", AppOverrideRuleArgs.builder()
+     *             .name("data-source-app-override-test")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .application("ssl")
+     *             .protocol("tcp")
+     *             .port("8443")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
+     *             .id(testAppOverrideRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleAppOverrideRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetAppOverrideRuleResult> getAppOverrideRulePlain(GetAppOverrideRulePlainArgs args) {
@@ -2252,12 +2573,114 @@ public final class ScmFunctions {
     /**
      * AppOverrideRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AppOverrideRule;
+     * import com.pulumi.scm.AppOverrideRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+     *         var testAppOverrideRule = new AppOverrideRule("testAppOverrideRule", AppOverrideRuleArgs.builder()
+     *             .name("data-source-app-override-test")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .application("ssl")
+     *             .protocol("tcp")
+     *             .port("8443")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
+     *             .id(testAppOverrideRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleAppOverrideRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAppOverrideRuleResult> getAppOverrideRule(GetAppOverrideRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getAppOverrideRule:getAppOverrideRule", TypeShape.of(GetAppOverrideRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AppOverrideRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AppOverrideRule;
+     * import com.pulumi.scm.AppOverrideRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+     *         var testAppOverrideRule = new AppOverrideRule("testAppOverrideRule", AppOverrideRuleArgs.builder()
+     *             .name("data-source-app-override-test")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .application("ssl")
+     *             .protocol("tcp")
+     *             .port("8443")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
+     *             .id(testAppOverrideRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleAppOverrideRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetAppOverrideRuleResult> getAppOverrideRule(GetAppOverrideRuleArgs args, InvokeOutputOptions options) {
@@ -2266,6 +2689,57 @@ public final class ScmFunctions {
     /**
      * AppOverrideRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AppOverrideRule;
+     * import com.pulumi.scm.AppOverrideRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+     *         var testAppOverrideRule = new AppOverrideRule("testAppOverrideRule", AppOverrideRuleArgs.builder()
+     *             .name("data-source-app-override-test")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .application("ssl")
+     *             .protocol("tcp")
+     *             .port("8443")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getAppOverrideRule(GetAppOverrideRuleArgs.builder()
+     *             .id(testAppOverrideRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleAppOverrideRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetAppOverrideRuleResult> getAppOverrideRulePlain(GetAppOverrideRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getAppOverrideRule:getAppOverrideRule", TypeShape.of(GetAppOverrideRuleResult.class), args, Utilities.withVersion(options));
@@ -2273,19 +2747,44 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
-     */
-    public static Output<GetAppOverrideRuleListResult> getAppOverrideRuleList() {
-        return getAppOverrideRuleList(GetAppOverrideRuleListArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * ## Example Usage
      * 
-     */
-    public static CompletableFuture<GetAppOverrideRuleListResult> getAppOverrideRuleListPlain() {
-        return getAppOverrideRuleListPlain(GetAppOverrideRuleListPlainArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
+     *             .offset(10)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetAppOverrideRuleListResult> getAppOverrideRuleList(GetAppOverrideRuleListArgs args) {
@@ -2294,12 +2793,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
+     *             .offset(10)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetAppOverrideRuleListResult> getAppOverrideRuleListPlain(GetAppOverrideRuleListPlainArgs args) {
         return getAppOverrideRuleListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
+     *             .offset(10)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetAppOverrideRuleListResult> getAppOverrideRuleList(GetAppOverrideRuleListArgs args, InvokeOptions options) {
@@ -2308,12 +2885,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
+     *             .offset(10)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAppOverrideRuleListResult> getAppOverrideRuleList(GetAppOverrideRuleListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getAppOverrideRuleList:getAppOverrideRuleList", TypeShape.of(GetAppOverrideRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAppOverrideRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAppOverrideRuleList(GetAppOverrideRuleListArgs.builder()
+     *             .offset(10)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetAppOverrideRuleListResult> getAppOverrideRuleListPlain(GetAppOverrideRuleListPlainArgs args, InvokeOptions options) {
@@ -3116,7 +3771,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("applicationsListRaw", allApps.datas());
@@ -3159,7 +3814,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("applicationsListRaw", allApps.datas());
@@ -3202,7 +3857,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("applicationsListRaw", allApps.datas());
@@ -3245,7 +3900,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("applicationsListRaw", allApps.datas());
@@ -3288,7 +3943,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("applicationsListRaw", allApps.datas());
@@ -3331,7 +3986,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("applicationsListRaw", allApps.datas());
@@ -3374,7 +4029,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allApps = ScmFunctions.getApplicationList(GetApplicationListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("applicationsListRaw", allApps.datas());
@@ -3474,12 +4129,122 @@ public final class ScmFunctions {
     /**
      * AuthenticationRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AuthenticationRule;
+     * import com.pulumi.scm.AuthenticationRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var ruleToFetch = new AuthenticationRule("ruleToFetch", AuthenticationRuleArgs.builder()
+     *             .name("rule-to-be-queried-scm-105")
+     *             .description("This rule is created purely to test the data source functionality.")
+     *             .position("pre")
+     *             .folder("All")
+     *             .destinations("any")
+     *             .froms("any")
+     *             .tos("any")
+     *             .sources("any")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .sourceUsers("any")
+     *             .timeout(1200)
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .build());
+     * 
+     *         final var ruleData = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
+     *             .id(ruleToFetch.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleId", ruleData.applyValue(_ruleData -> _ruleData.id()));
+     *         ctx.export("fetchedRuleTimeout", ruleData.applyValue(_ruleData -> _ruleData.timeout()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAuthenticationRuleResult> getAuthenticationRule(GetAuthenticationRuleArgs args) {
         return getAuthenticationRule(args, InvokeOptions.Empty);
     }
     /**
      * AuthenticationRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AuthenticationRule;
+     * import com.pulumi.scm.AuthenticationRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var ruleToFetch = new AuthenticationRule("ruleToFetch", AuthenticationRuleArgs.builder()
+     *             .name("rule-to-be-queried-scm-105")
+     *             .description("This rule is created purely to test the data source functionality.")
+     *             .position("pre")
+     *             .folder("All")
+     *             .destinations("any")
+     *             .froms("any")
+     *             .tos("any")
+     *             .sources("any")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .sourceUsers("any")
+     *             .timeout(1200)
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .build());
+     * 
+     *         final var ruleData = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
+     *             .id(ruleToFetch.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleId", ruleData.applyValue(_ruleData -> _ruleData.id()));
+     *         ctx.export("fetchedRuleTimeout", ruleData.applyValue(_ruleData -> _ruleData.timeout()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetAuthenticationRuleResult> getAuthenticationRulePlain(GetAuthenticationRulePlainArgs args) {
@@ -3488,12 +4253,122 @@ public final class ScmFunctions {
     /**
      * AuthenticationRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AuthenticationRule;
+     * import com.pulumi.scm.AuthenticationRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var ruleToFetch = new AuthenticationRule("ruleToFetch", AuthenticationRuleArgs.builder()
+     *             .name("rule-to-be-queried-scm-105")
+     *             .description("This rule is created purely to test the data source functionality.")
+     *             .position("pre")
+     *             .folder("All")
+     *             .destinations("any")
+     *             .froms("any")
+     *             .tos("any")
+     *             .sources("any")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .sourceUsers("any")
+     *             .timeout(1200)
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .build());
+     * 
+     *         final var ruleData = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
+     *             .id(ruleToFetch.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleId", ruleData.applyValue(_ruleData -> _ruleData.id()));
+     *         ctx.export("fetchedRuleTimeout", ruleData.applyValue(_ruleData -> _ruleData.timeout()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAuthenticationRuleResult> getAuthenticationRule(GetAuthenticationRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getAuthenticationRule:getAuthenticationRule", TypeShape.of(GetAuthenticationRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AuthenticationRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AuthenticationRule;
+     * import com.pulumi.scm.AuthenticationRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var ruleToFetch = new AuthenticationRule("ruleToFetch", AuthenticationRuleArgs.builder()
+     *             .name("rule-to-be-queried-scm-105")
+     *             .description("This rule is created purely to test the data source functionality.")
+     *             .position("pre")
+     *             .folder("All")
+     *             .destinations("any")
+     *             .froms("any")
+     *             .tos("any")
+     *             .sources("any")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .sourceUsers("any")
+     *             .timeout(1200)
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .build());
+     * 
+     *         final var ruleData = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
+     *             .id(ruleToFetch.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleId", ruleData.applyValue(_ruleData -> _ruleData.id()));
+     *         ctx.export("fetchedRuleTimeout", ruleData.applyValue(_ruleData -> _ruleData.timeout()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetAuthenticationRuleResult> getAuthenticationRule(GetAuthenticationRuleArgs args, InvokeOutputOptions options) {
@@ -3502,6 +4377,61 @@ public final class ScmFunctions {
     /**
      * AuthenticationRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.AuthenticationRule;
+     * import com.pulumi.scm.AuthenticationRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var ruleToFetch = new AuthenticationRule("ruleToFetch", AuthenticationRuleArgs.builder()
+     *             .name("rule-to-be-queried-scm-105")
+     *             .description("This rule is created purely to test the data source functionality.")
+     *             .position("pre")
+     *             .folder("All")
+     *             .destinations("any")
+     *             .froms("any")
+     *             .tos("any")
+     *             .sources("any")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .sourceUsers("any")
+     *             .timeout(1200)
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .build());
+     * 
+     *         final var ruleData = ScmFunctions.getAuthenticationRule(GetAuthenticationRuleArgs.builder()
+     *             .id(ruleToFetch.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleId", ruleData.applyValue(_ruleData -> _ruleData.id()));
+     *         ctx.export("fetchedRuleTimeout", ruleData.applyValue(_ruleData -> _ruleData.timeout()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetAuthenticationRuleResult> getAuthenticationRulePlain(GetAuthenticationRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getAuthenticationRule:getAuthenticationRule", TypeShape.of(GetAuthenticationRuleResult.class), args, Utilities.withVersion(options));
@@ -3509,19 +4439,45 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
-     */
-    public static Output<GetAuthenticationRuleListResult> getAuthenticationRuleList() {
-        return getAuthenticationRuleList(GetAuthenticationRuleListArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * ## Example Usage
      * 
-     */
-    public static CompletableFuture<GetAuthenticationRuleListResult> getAuthenticationRuleListPlain() {
-        return getAuthenticationRuleListPlain(GetAuthenticationRuleListPlainArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
+     *             .limit(10)
+     *             .offset(15)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetAuthenticationRuleListResult> getAuthenticationRuleList(GetAuthenticationRuleListArgs args) {
@@ -3530,12 +4486,92 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
+     *             .limit(10)
+     *             .offset(15)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetAuthenticationRuleListResult> getAuthenticationRuleListPlain(GetAuthenticationRuleListPlainArgs args) {
         return getAuthenticationRuleListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
+     *             .limit(10)
+     *             .offset(15)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetAuthenticationRuleListResult> getAuthenticationRuleList(GetAuthenticationRuleListArgs args, InvokeOptions options) {
@@ -3544,12 +4580,92 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
+     *             .limit(10)
+     *             .offset(15)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAuthenticationRuleListResult> getAuthenticationRuleList(GetAuthenticationRuleListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", TypeShape.of(GetAuthenticationRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAuthenticationRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allPreRules = ScmFunctions.getAuthenticationRuleList(GetAuthenticationRuleListArgs.builder()
+     *             .limit(10)
+     *             .offset(15)
+     *             .position("pre")
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", allPreRules.total()),
+     *             Map.entry("firstRuleName", allPreRules.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetAuthenticationRuleListResult> getAuthenticationRuleListPlain(GetAuthenticationRuleListPlainArgs args, InvokeOptions options) {
@@ -4387,7 +5503,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all certificate profile objects from the "Shared" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("certificateProfilesList", allProfiles.datas());
@@ -4429,7 +5545,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all certificate profile objects from the "Shared" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("certificateProfilesList", allProfiles.datas());
@@ -4471,7 +5587,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all certificate profile objects from the "Shared" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("certificateProfilesList", allProfiles.datas());
@@ -4513,7 +5629,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all certificate profile objects from the "Shared" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("certificateProfilesList", allProfiles.datas());
@@ -4555,7 +5671,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all certificate profile objects from the "Shared" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("certificateProfilesList", allProfiles.datas());
@@ -4597,7 +5713,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all certificate profile objects from the "Shared" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("certificateProfilesList", allProfiles.datas());
@@ -4639,7 +5755,7 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all certificate profile objects from the "Shared" folder.
      *         final var allProfiles = ScmFunctions.getCertificateProfileList(GetCertificateProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("certificateProfilesList", allProfiles.datas());
@@ -4739,12 +5855,96 @@ public final class ScmFunctions {
     /**
      * DecryptionProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Decryption Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+     *         final var scmDpProfile = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
+     *             .id("c7629092-d286-400b-ba3f-1d57b8065645")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDpProfile.id()),
+     *             Map.entry("folder", scmDpProfile.folder()),
+     *             Map.entry("name", scmDpProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDecryptionProfileResult> getDecryptionProfile(GetDecryptionProfileArgs args) {
         return getDecryptionProfile(args, InvokeOptions.Empty);
     }
     /**
      * DecryptionProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Decryption Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+     *         final var scmDpProfile = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
+     *             .id("c7629092-d286-400b-ba3f-1d57b8065645")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDpProfile.id()),
+     *             Map.entry("folder", scmDpProfile.folder()),
+     *             Map.entry("name", scmDpProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDecryptionProfileResult> getDecryptionProfilePlain(GetDecryptionProfilePlainArgs args) {
@@ -4753,12 +5953,96 @@ public final class ScmFunctions {
     /**
      * DecryptionProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Decryption Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+     *         final var scmDpProfile = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
+     *             .id("c7629092-d286-400b-ba3f-1d57b8065645")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDpProfile.id()),
+     *             Map.entry("folder", scmDpProfile.folder()),
+     *             Map.entry("name", scmDpProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDecryptionProfileResult> getDecryptionProfile(GetDecryptionProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDecryptionProfile:getDecryptionProfile", TypeShape.of(GetDecryptionProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DecryptionProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Decryption Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+     *         final var scmDpProfile = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
+     *             .id("c7629092-d286-400b-ba3f-1d57b8065645")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDpProfile.id()),
+     *             Map.entry("folder", scmDpProfile.folder()),
+     *             Map.entry("name", scmDpProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDecryptionProfileResult> getDecryptionProfile(GetDecryptionProfileArgs args, InvokeOutputOptions options) {
@@ -4767,12 +6051,92 @@ public final class ScmFunctions {
     /**
      * DecryptionProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Decryption Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+     *         final var scmDpProfile = ScmFunctions.getDecryptionProfile(GetDecryptionProfileArgs.builder()
+     *             .id("c7629092-d286-400b-ba3f-1d57b8065645")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDpProfile.id()),
+     *             Map.entry("folder", scmDpProfile.folder()),
+     *             Map.entry("name", scmDpProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDecryptionProfileResult> getDecryptionProfilePlain(GetDecryptionProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getDecryptionProfile:getDecryptionProfile", TypeShape.of(GetDecryptionProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Decryption Profile objects.
+     *         //
+     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDecryptionProfileListResult> getDecryptionProfileList() {
@@ -4781,12 +6145,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Decryption Profile objects.
+     *         //
+     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDecryptionProfileListResult> getDecryptionProfileListPlain() {
         return getDecryptionProfileListPlain(GetDecryptionProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Decryption Profile objects.
+     *         //
+     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDecryptionProfileListResult> getDecryptionProfileList(GetDecryptionProfileListArgs args) {
@@ -4795,12 +6235,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Decryption Profile objects.
+     *         //
+     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDecryptionProfileListResult> getDecryptionProfileListPlain(GetDecryptionProfileListPlainArgs args) {
         return getDecryptionProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Decryption Profile objects.
+     *         //
+     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDecryptionProfileListResult> getDecryptionProfileList(GetDecryptionProfileListArgs args, InvokeOptions options) {
@@ -4809,12 +6325,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Decryption Profile objects.
+     *         //
+     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDecryptionProfileListResult> getDecryptionProfileList(GetDecryptionProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDecryptionProfileList:getDecryptionProfileList", TypeShape.of(GetDecryptionProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Decryption Profile objects.
+     *         //
+     *         // Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDecryptionProfileList(GetDecryptionProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDecryptionProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDecryptionProfileListResult> getDecryptionProfileListPlain(GetDecryptionProfileListPlainArgs args, InvokeOptions options) {
@@ -4823,12 +6415,130 @@ public final class ScmFunctions {
     /**
      * DecryptionRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.DecryptionRule;
+     * import com.pulumi.scm.DecryptionRuleArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+     *         var testDecryptionRule = new DecryptionRule("testDecryptionRule", DecryptionRuleArgs.builder()
+     *             .name("data-source-test-rule")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .action("decrypt")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .services("service-https")
+     *             .categories("high-risk")
+     *             .sourceUsers("any")
+     *             .type(DecryptionRuleTypeArgs.builder()
+     *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // We use the ID from the resource created above.
+     *         final var singleRuleById = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
+     *             .id(testDecryptionRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleDecryptionRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDecryptionRuleResult> getDecryptionRule(GetDecryptionRuleArgs args) {
         return getDecryptionRule(args, InvokeOptions.Empty);
     }
     /**
      * DecryptionRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.DecryptionRule;
+     * import com.pulumi.scm.DecryptionRuleArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+     *         var testDecryptionRule = new DecryptionRule("testDecryptionRule", DecryptionRuleArgs.builder()
+     *             .name("data-source-test-rule")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .action("decrypt")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .services("service-https")
+     *             .categories("high-risk")
+     *             .sourceUsers("any")
+     *             .type(DecryptionRuleTypeArgs.builder()
+     *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // We use the ID from the resource created above.
+     *         final var singleRuleById = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
+     *             .id(testDecryptionRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleDecryptionRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDecryptionRuleResult> getDecryptionRulePlain(GetDecryptionRulePlainArgs args) {
@@ -4837,12 +6547,130 @@ public final class ScmFunctions {
     /**
      * DecryptionRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.DecryptionRule;
+     * import com.pulumi.scm.DecryptionRuleArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+     *         var testDecryptionRule = new DecryptionRule("testDecryptionRule", DecryptionRuleArgs.builder()
+     *             .name("data-source-test-rule")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .action("decrypt")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .services("service-https")
+     *             .categories("high-risk")
+     *             .sourceUsers("any")
+     *             .type(DecryptionRuleTypeArgs.builder()
+     *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // We use the ID from the resource created above.
+     *         final var singleRuleById = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
+     *             .id(testDecryptionRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleDecryptionRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDecryptionRuleResult> getDecryptionRule(GetDecryptionRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDecryptionRule:getDecryptionRule", TypeShape.of(GetDecryptionRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DecryptionRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.DecryptionRule;
+     * import com.pulumi.scm.DecryptionRuleArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+     *         var testDecryptionRule = new DecryptionRule("testDecryptionRule", DecryptionRuleArgs.builder()
+     *             .name("data-source-test-rule")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .action("decrypt")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .services("service-https")
+     *             .categories("high-risk")
+     *             .sourceUsers("any")
+     *             .type(DecryptionRuleTypeArgs.builder()
+     *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // We use the ID from the resource created above.
+     *         final var singleRuleById = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
+     *             .id(testDecryptionRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleDecryptionRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDecryptionRuleResult> getDecryptionRule(GetDecryptionRuleArgs args, InvokeOutputOptions options) {
@@ -4851,6 +6679,65 @@ public final class ScmFunctions {
     /**
      * DecryptionRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.DecryptionRule;
+     * import com.pulumi.scm.DecryptionRuleArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeArgs;
+     * import com.pulumi.scm.inputs.DecryptionRuleTypeSslForwardProxyArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+     *         var testDecryptionRule = new DecryptionRule("testDecryptionRule", DecryptionRuleArgs.builder()
+     *             .name("data-source-test-rule")
+     *             .description("Rule created specifically for data source testing.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .action("decrypt")
+     *             .froms("trust")
+     *             .tos("untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .services("service-https")
+     *             .categories("high-risk")
+     *             .sourceUsers("any")
+     *             .type(DecryptionRuleTypeArgs.builder()
+     *                 .sslForwardProxy(DecryptionRuleTypeSslForwardProxyArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // We use the ID from the resource created above.
+     *         final var singleRuleById = ScmFunctions.getDecryptionRule(GetDecryptionRuleArgs.builder()
+     *             .id(testDecryptionRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleDecryptionRuleName", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDecryptionRuleResult> getDecryptionRulePlain(GetDecryptionRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getDecryptionRule:getDecryptionRule", TypeShape.of(GetDecryptionRuleResult.class), args, Utilities.withVersion(options));
@@ -4858,19 +6745,44 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
-     */
-    public static Output<GetDecryptionRuleListResult> getDecryptionRuleList() {
-        return getDecryptionRuleList(GetDecryptionRuleListArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * ## Example Usage
      * 
-     */
-    public static CompletableFuture<GetDecryptionRuleListResult> getDecryptionRuleListPlain() {
-        return getDecryptionRuleListPlain(GetDecryptionRuleListPlainArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDecryptionRuleListResult> getDecryptionRuleList(GetDecryptionRuleListArgs args) {
@@ -4879,12 +6791,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDecryptionRuleListResult> getDecryptionRuleListPlain(GetDecryptionRuleListPlainArgs args) {
         return getDecryptionRuleListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDecryptionRuleListResult> getDecryptionRuleList(GetDecryptionRuleListArgs args, InvokeOptions options) {
@@ -4893,12 +6883,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDecryptionRuleListResult> getDecryptionRuleList(GetDecryptionRuleListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDecryptionRuleList:getDecryptionRuleList", TypeShape.of(GetDecryptionRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDecryptionRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getDecryptionRuleList(GetDecryptionRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDecryptionRuleListResult> getDecryptionRuleListPlain(GetDecryptionRuleListPlainArgs args, InvokeOptions options) {
@@ -5075,12 +7143,96 @@ public final class ScmFunctions {
     /**
      * DnsSecurityProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+     *         final var scmDnsProfile = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
+     *             .id("18607c90-22fa-4627-8741-f0584d1fa7d6")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDnsProfile.id()),
+     *             Map.entry("folder", scmDnsProfile.folder()),
+     *             Map.entry("name", scmDnsProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDnsSecurityProfileResult> getDnsSecurityProfile(GetDnsSecurityProfileArgs args) {
         return getDnsSecurityProfile(args, InvokeOptions.Empty);
     }
     /**
      * DnsSecurityProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+     *         final var scmDnsProfile = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
+     *             .id("18607c90-22fa-4627-8741-f0584d1fa7d6")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDnsProfile.id()),
+     *             Map.entry("folder", scmDnsProfile.folder()),
+     *             Map.entry("name", scmDnsProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDnsSecurityProfileResult> getDnsSecurityProfilePlain(GetDnsSecurityProfilePlainArgs args) {
@@ -5089,12 +7241,96 @@ public final class ScmFunctions {
     /**
      * DnsSecurityProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+     *         final var scmDnsProfile = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
+     *             .id("18607c90-22fa-4627-8741-f0584d1fa7d6")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDnsProfile.id()),
+     *             Map.entry("folder", scmDnsProfile.folder()),
+     *             Map.entry("name", scmDnsProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDnsSecurityProfileResult> getDnsSecurityProfile(GetDnsSecurityProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", TypeShape.of(GetDnsSecurityProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * DnsSecurityProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+     *         final var scmDnsProfile = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
+     *             .id("18607c90-22fa-4627-8741-f0584d1fa7d6")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDnsProfile.id()),
+     *             Map.entry("folder", scmDnsProfile.folder()),
+     *             Map.entry("name", scmDnsProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDnsSecurityProfileResult> getDnsSecurityProfile(GetDnsSecurityProfileArgs args, InvokeOutputOptions options) {
@@ -5103,12 +7339,92 @@ public final class ScmFunctions {
     /**
      * DnsSecurityProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM DNS Security Profile object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM DNS Profile you want to find.
+     *         final var scmDnsProfile = ScmFunctions.getDnsSecurityProfile(GetDnsSecurityProfileArgs.builder()
+     *             .id("18607c90-22fa-4627-8741-f0584d1fa7d6")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileDetails", Map.ofEntries(
+     *             Map.entry("profileId", scmDnsProfile.id()),
+     *             Map.entry("folder", scmDnsProfile.folder()),
+     *             Map.entry("name", scmDnsProfile.name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDnsSecurityProfileResult> getDnsSecurityProfilePlain(GetDnsSecurityProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", TypeShape.of(GetDnsSecurityProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM DNS Security Profile objects.
+     *         //
+     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDnsSecurityProfileListResult> getDnsSecurityProfileList() {
@@ -5117,12 +7433,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM DNS Security Profile objects.
+     *         //
+     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDnsSecurityProfileListResult> getDnsSecurityProfileListPlain() {
         return getDnsSecurityProfileListPlain(GetDnsSecurityProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM DNS Security Profile objects.
+     *         //
+     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDnsSecurityProfileListResult> getDnsSecurityProfileList(GetDnsSecurityProfileListArgs args) {
@@ -5131,12 +7523,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM DNS Security Profile objects.
+     *         //
+     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetDnsSecurityProfileListResult> getDnsSecurityProfileListPlain(GetDnsSecurityProfileListPlainArgs args) {
         return getDnsSecurityProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM DNS Security Profile objects.
+     *         //
+     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetDnsSecurityProfileListResult> getDnsSecurityProfileList(GetDnsSecurityProfileListArgs args, InvokeOptions options) {
@@ -5145,12 +7613,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM DNS Security Profile objects.
+     *         //
+     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetDnsSecurityProfileListResult> getDnsSecurityProfileList(GetDnsSecurityProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getDnsSecurityProfileList:getDnsSecurityProfileList", TypeShape.of(GetDnsSecurityProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetDnsSecurityProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM DNS Security Profile objects.
+     *         //
+     *         // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getDnsSecurityProfileList(GetDnsSecurityProfileListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmDnsSecurityProfileListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetDnsSecurityProfileListResult> getDnsSecurityProfileListPlain(GetDnsSecurityProfileListPlainArgs args, InvokeOptions options) {
@@ -5635,12 +8179,94 @@ public final class ScmFunctions {
     /**
      * EthernetInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up ethernet interface by its ID.
+     *         final var scmL3IntfStaticDs = ScmFunctions.getEthernetInterface(GetEthernetInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f2")
+     *             .build());
+     * 
+     *         ctx.export("ethernetInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3IntfStaticDs.id()),
+     *             Map.entry("name", scmL3IntfStaticDs.name()),
+     *             Map.entry("comment", scmL3IntfStaticDs.comment()),
+     *             Map.entry("layer3", scmL3IntfStaticDs.layer3()),
+     *             Map.entry("folder", scmL3IntfStaticDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetEthernetInterfaceResult> getEthernetInterface(GetEthernetInterfaceArgs args) {
         return getEthernetInterface(args, InvokeOptions.Empty);
     }
     /**
      * EthernetInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up ethernet interface by its ID.
+     *         final var scmL3IntfStaticDs = ScmFunctions.getEthernetInterface(GetEthernetInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f2")
+     *             .build());
+     * 
+     *         ctx.export("ethernetInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3IntfStaticDs.id()),
+     *             Map.entry("name", scmL3IntfStaticDs.name()),
+     *             Map.entry("comment", scmL3IntfStaticDs.comment()),
+     *             Map.entry("layer3", scmL3IntfStaticDs.layer3()),
+     *             Map.entry("folder", scmL3IntfStaticDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetEthernetInterfaceResult> getEthernetInterfacePlain(GetEthernetInterfacePlainArgs args) {
@@ -5649,12 +8275,94 @@ public final class ScmFunctions {
     /**
      * EthernetInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up ethernet interface by its ID.
+     *         final var scmL3IntfStaticDs = ScmFunctions.getEthernetInterface(GetEthernetInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f2")
+     *             .build());
+     * 
+     *         ctx.export("ethernetInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3IntfStaticDs.id()),
+     *             Map.entry("name", scmL3IntfStaticDs.name()),
+     *             Map.entry("comment", scmL3IntfStaticDs.comment()),
+     *             Map.entry("layer3", scmL3IntfStaticDs.layer3()),
+     *             Map.entry("folder", scmL3IntfStaticDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetEthernetInterfaceResult> getEthernetInterface(GetEthernetInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getEthernetInterface:getEthernetInterface", TypeShape.of(GetEthernetInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * EthernetInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up ethernet interface by its ID.
+     *         final var scmL3IntfStaticDs = ScmFunctions.getEthernetInterface(GetEthernetInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f2")
+     *             .build());
+     * 
+     *         ctx.export("ethernetInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3IntfStaticDs.id()),
+     *             Map.entry("name", scmL3IntfStaticDs.name()),
+     *             Map.entry("comment", scmL3IntfStaticDs.comment()),
+     *             Map.entry("layer3", scmL3IntfStaticDs.layer3()),
+     *             Map.entry("folder", scmL3IntfStaticDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetEthernetInterfaceResult> getEthernetInterface(GetEthernetInterfaceArgs args, InvokeOutputOptions options) {
@@ -5663,12 +8371,55 @@ public final class ScmFunctions {
     /**
      * EthernetInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetEthernetInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up ethernet interface by its ID.
+     *         final var scmL3IntfStaticDs = ScmFunctions.getEthernetInterface(GetEthernetInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f2")
+     *             .build());
+     * 
+     *         ctx.export("ethernetInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3IntfStaticDs.id()),
+     *             Map.entry("name", scmL3IntfStaticDs.name()),
+     *             Map.entry("comment", scmL3IntfStaticDs.comment()),
+     *             Map.entry("layer3", scmL3IntfStaticDs.layer3()),
+     *             Map.entry("folder", scmL3IntfStaticDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetEthernetInterfaceResult> getEthernetInterfacePlain(GetEthernetInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getEthernetInterface:getEthernetInterface", TypeShape.of(GetEthernetInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetEthernetInterfaceListResult> getEthernetInterfaceList() {
@@ -5677,12 +8428,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetEthernetInterfaceListResult> getEthernetInterfaceListPlain() {
         return getEthernetInterfaceListPlain(GetEthernetInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetEthernetInterfaceListResult> getEthernetInterfaceList(GetEthernetInterfaceListArgs args) {
@@ -5691,12 +8446,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetEthernetInterfaceListResult> getEthernetInterfaceListPlain(GetEthernetInterfaceListPlainArgs args) {
         return getEthernetInterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetEthernetInterfaceListResult> getEthernetInterfaceList(GetEthernetInterfaceListArgs args, InvokeOptions options) {
@@ -5705,12 +8464,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetEthernetInterfaceListResult> getEthernetInterfaceList(GetEthernetInterfaceListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getEthernetInterfaceList:getEthernetInterfaceList", TypeShape.of(GetEthernetInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetEthernetInterfaceListResult> getEthernetInterfaceListPlain(GetEthernetInterfaceListPlainArgs args, InvokeOptions options) {
@@ -5990,13 +8753,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to fetch all external dynamic lists in the "Shared" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("allSharedEdlsMap", allSharedEdls.datas());
      *         // Example of using pagination to get the first 5 EDLs.
      *         final var paginatedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -6044,13 +8807,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to fetch all external dynamic lists in the "Shared" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("allSharedEdlsMap", allSharedEdls.datas());
      *         // Example of using pagination to get the first 5 EDLs.
      *         final var paginatedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -6098,13 +8861,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to fetch all external dynamic lists in the "Shared" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("allSharedEdlsMap", allSharedEdls.datas());
      *         // Example of using pagination to get the first 5 EDLs.
      *         final var paginatedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -6152,13 +8915,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to fetch all external dynamic lists in the "Shared" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("allSharedEdlsMap", allSharedEdls.datas());
      *         // Example of using pagination to get the first 5 EDLs.
      *         final var paginatedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -6206,13 +8969,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to fetch all external dynamic lists in the "Shared" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("allSharedEdlsMap", allSharedEdls.datas());
      *         // Example of using pagination to get the first 5 EDLs.
      *         final var paginatedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -6260,13 +9023,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to fetch all external dynamic lists in the "Shared" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("allSharedEdlsMap", allSharedEdls.datas());
      *         // Example of using pagination to get the first 5 EDLs.
      *         final var paginatedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -6314,13 +9077,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Data source to fetch all external dynamic lists in the "Shared" folder.
      *         final var allSharedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("allSharedEdlsMap", allSharedEdls.datas());
      *         // Example of using pagination to get the first 5 EDLs.
      *         final var paginatedEdls = ScmFunctions.getExternalDynamicListList(GetExternalDynamicListListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -6426,12 +9189,92 @@ public final class ScmFunctions {
     /**
      * Folder data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a folder by id
+     *         final var scmFolderDs = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("0f11d0d9-df7c-45da-a60c-4d80f8422544")
+     *             .build());
+     * 
+     *         ctx.export("scmFolderOutput", Map.ofEntries(
+     *             Map.entry("id", scmFolderDs.id()),
+     *             Map.entry("name", scmFolderDs.name()),
+     *             Map.entry("description", scmFolderDs.description()),
+     *             Map.entry("parent", scmFolderDs.parent())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetFolderResult> getFolder(GetFolderArgs args) {
         return getFolder(args, InvokeOptions.Empty);
     }
     /**
      * Folder data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a folder by id
+     *         final var scmFolderDs = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("0f11d0d9-df7c-45da-a60c-4d80f8422544")
+     *             .build());
+     * 
+     *         ctx.export("scmFolderOutput", Map.ofEntries(
+     *             Map.entry("id", scmFolderDs.id()),
+     *             Map.entry("name", scmFolderDs.name()),
+     *             Map.entry("description", scmFolderDs.description()),
+     *             Map.entry("parent", scmFolderDs.parent())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetFolderResult> getFolderPlain(GetFolderPlainArgs args) {
@@ -6440,6 +9283,46 @@ public final class ScmFunctions {
     /**
      * Folder data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a folder by id
+     *         final var scmFolderDs = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("0f11d0d9-df7c-45da-a60c-4d80f8422544")
+     *             .build());
+     * 
+     *         ctx.export("scmFolderOutput", Map.ofEntries(
+     *             Map.entry("id", scmFolderDs.id()),
+     *             Map.entry("name", scmFolderDs.name()),
+     *             Map.entry("description", scmFolderDs.description()),
+     *             Map.entry("parent", scmFolderDs.parent())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetFolderResult> getFolder(GetFolderArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getFolder:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
@@ -6447,12 +9330,92 @@ public final class ScmFunctions {
     /**
      * Folder data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a folder by id
+     *         final var scmFolderDs = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("0f11d0d9-df7c-45da-a60c-4d80f8422544")
+     *             .build());
+     * 
+     *         ctx.export("scmFolderOutput", Map.ofEntries(
+     *             Map.entry("id", scmFolderDs.id()),
+     *             Map.entry("name", scmFolderDs.name()),
+     *             Map.entry("description", scmFolderDs.description()),
+     *             Map.entry("parent", scmFolderDs.parent())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetFolderResult> getFolder(GetFolderArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getFolder:getFolder", TypeShape.of(GetFolderResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Folder data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetFolderArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up a folder by id
+     *         final var scmFolderDs = ScmFunctions.getFolder(GetFolderArgs.builder()
+     *             .id("0f11d0d9-df7c-45da-a60c-4d80f8422544")
+     *             .build());
+     * 
+     *         ctx.export("scmFolderOutput", Map.ofEntries(
+     *             Map.entry("id", scmFolderDs.id()),
+     *             Map.entry("name", scmFolderDs.name()),
+     *             Map.entry("description", scmFolderDs.description()),
+     *             Map.entry("parent", scmFolderDs.parent())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetFolderResult> getFolderPlain(GetFolderPlainArgs args, InvokeOptions options) {
@@ -6746,13 +9709,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Object objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipObjectsListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP objects.
      *         final var paginated = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -6796,13 +9759,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Object objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipObjectsListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP objects.
      *         final var paginated = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -6846,13 +9809,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Object objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipObjectsListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP objects.
      *         final var paginated = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -6896,13 +9859,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Object objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipObjectsListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP objects.
      *         final var paginated = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -6946,13 +9909,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Object objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipObjectsListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP objects.
      *         final var paginated = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -6996,13 +9959,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Object objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipObjectsListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP objects.
      *         final var paginated = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7046,13 +10009,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Object objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipObjectsListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP objects.
      *         final var paginated = ScmFunctions.getHipObjectList(GetHipObjectListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7306,13 +10269,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Profile objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipProfilesListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP Profiles.
      *         final var paginated = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7356,13 +10319,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Profile objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipProfilesListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP Profiles.
      *         final var paginated = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7406,13 +10369,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Profile objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipProfilesListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP Profiles.
      *         final var paginated = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7456,13 +10419,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Profile objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipProfilesListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP Profiles.
      *         final var paginated = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7506,13 +10469,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Profile objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipProfilesListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP Profiles.
      *         final var paginated = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7556,13 +10519,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Profile objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipProfilesListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP Profiles.
      *         final var paginated = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -7606,13 +10569,13 @@ public final class ScmFunctions {
      *     public static void stack(Context ctx) {
      *         // Fetch a list of all HIP Profile objects in the Shared folder.
      *         final var allShared = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("hipProfilesListAllShared", allShared.datas());
      *         // Example of using pagination to get the first 10 HIP Profiles.
      *         final var paginated = ScmFunctions.getHipProfileList(GetHipProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(10)
      *             .offset(0)
      *             .build());
@@ -8839,12 +11802,142 @@ public final class ScmFunctions {
     /**
      * InterfaceManagementProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.InterfaceManagementProfile;
+     * import com.pulumi.scm.InterfaceManagementProfileArgs;
+     * import com.pulumi.scm.inputs.InterfaceManagementProfilePermittedIpArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. Resource: Create the Interface Management Profile
+     *         // This block creates the profile with your specified configuration.
+     *         var testInfMgmtProfile = new InterfaceManagementProfile("testInfMgmtProfile", InterfaceManagementProfileArgs.builder()
+     *             .name("test_inf_mgmt_profile_ds_1")
+     *             .folder("All")
+     *             .permittedIps(            
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/24")
+     *                     .build(),
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/32")
+     *                     .build())
+     *             .http(true)
+     *             .https(false)
+     *             .telnet(false)
+     *             .ssh(true)
+     *             .ping(false)
+     *             .httpOcsp(true)
+     *             .useridService(true)
+     *             .useridSyslogListenerSsl(true)
+     *             .useridSyslogListenerUdp(true)
+     *             .responsePages(false)
+     *             .build());
+     * 
+     *         // --------------------------------------------------------------------------------
+     *         // 2. Data Source: Retrieve the Interface Management Profile by ID
+     *         // We use the resource's generated 'id' attribute to fetch the profile.
+     *         final var singleProfileById = ScmFunctions.getInterfaceManagementProfile(GetInterfaceManagementProfileArgs.builder()
+     *             .id(testInfMgmtProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfileName", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *         ctx.export("fetchedProfile", singleProfileById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetInterfaceManagementProfileResult> getInterfaceManagementProfile(GetInterfaceManagementProfileArgs args) {
         return getInterfaceManagementProfile(args, InvokeOptions.Empty);
     }
     /**
      * InterfaceManagementProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.InterfaceManagementProfile;
+     * import com.pulumi.scm.InterfaceManagementProfileArgs;
+     * import com.pulumi.scm.inputs.InterfaceManagementProfilePermittedIpArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. Resource: Create the Interface Management Profile
+     *         // This block creates the profile with your specified configuration.
+     *         var testInfMgmtProfile = new InterfaceManagementProfile("testInfMgmtProfile", InterfaceManagementProfileArgs.builder()
+     *             .name("test_inf_mgmt_profile_ds_1")
+     *             .folder("All")
+     *             .permittedIps(            
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/24")
+     *                     .build(),
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/32")
+     *                     .build())
+     *             .http(true)
+     *             .https(false)
+     *             .telnet(false)
+     *             .ssh(true)
+     *             .ping(false)
+     *             .httpOcsp(true)
+     *             .useridService(true)
+     *             .useridSyslogListenerSsl(true)
+     *             .useridSyslogListenerUdp(true)
+     *             .responsePages(false)
+     *             .build());
+     * 
+     *         // --------------------------------------------------------------------------------
+     *         // 2. Data Source: Retrieve the Interface Management Profile by ID
+     *         // We use the resource's generated 'id' attribute to fetch the profile.
+     *         final var singleProfileById = ScmFunctions.getInterfaceManagementProfile(GetInterfaceManagementProfileArgs.builder()
+     *             .id(testInfMgmtProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfileName", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *         ctx.export("fetchedProfile", singleProfileById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetInterfaceManagementProfileResult> getInterfaceManagementProfilePlain(GetInterfaceManagementProfilePlainArgs args) {
@@ -8853,12 +11946,142 @@ public final class ScmFunctions {
     /**
      * InterfaceManagementProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.InterfaceManagementProfile;
+     * import com.pulumi.scm.InterfaceManagementProfileArgs;
+     * import com.pulumi.scm.inputs.InterfaceManagementProfilePermittedIpArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. Resource: Create the Interface Management Profile
+     *         // This block creates the profile with your specified configuration.
+     *         var testInfMgmtProfile = new InterfaceManagementProfile("testInfMgmtProfile", InterfaceManagementProfileArgs.builder()
+     *             .name("test_inf_mgmt_profile_ds_1")
+     *             .folder("All")
+     *             .permittedIps(            
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/24")
+     *                     .build(),
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/32")
+     *                     .build())
+     *             .http(true)
+     *             .https(false)
+     *             .telnet(false)
+     *             .ssh(true)
+     *             .ping(false)
+     *             .httpOcsp(true)
+     *             .useridService(true)
+     *             .useridSyslogListenerSsl(true)
+     *             .useridSyslogListenerUdp(true)
+     *             .responsePages(false)
+     *             .build());
+     * 
+     *         // --------------------------------------------------------------------------------
+     *         // 2. Data Source: Retrieve the Interface Management Profile by ID
+     *         // We use the resource's generated 'id' attribute to fetch the profile.
+     *         final var singleProfileById = ScmFunctions.getInterfaceManagementProfile(GetInterfaceManagementProfileArgs.builder()
+     *             .id(testInfMgmtProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfileName", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *         ctx.export("fetchedProfile", singleProfileById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetInterfaceManagementProfileResult> getInterfaceManagementProfile(GetInterfaceManagementProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getInterfaceManagementProfile:getInterfaceManagementProfile", TypeShape.of(GetInterfaceManagementProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * InterfaceManagementProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.InterfaceManagementProfile;
+     * import com.pulumi.scm.InterfaceManagementProfileArgs;
+     * import com.pulumi.scm.inputs.InterfaceManagementProfilePermittedIpArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. Resource: Create the Interface Management Profile
+     *         // This block creates the profile with your specified configuration.
+     *         var testInfMgmtProfile = new InterfaceManagementProfile("testInfMgmtProfile", InterfaceManagementProfileArgs.builder()
+     *             .name("test_inf_mgmt_profile_ds_1")
+     *             .folder("All")
+     *             .permittedIps(            
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/24")
+     *                     .build(),
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/32")
+     *                     .build())
+     *             .http(true)
+     *             .https(false)
+     *             .telnet(false)
+     *             .ssh(true)
+     *             .ping(false)
+     *             .httpOcsp(true)
+     *             .useridService(true)
+     *             .useridSyslogListenerSsl(true)
+     *             .useridSyslogListenerUdp(true)
+     *             .responsePages(false)
+     *             .build());
+     * 
+     *         // --------------------------------------------------------------------------------
+     *         // 2. Data Source: Retrieve the Interface Management Profile by ID
+     *         // We use the resource's generated 'id' attribute to fetch the profile.
+     *         final var singleProfileById = ScmFunctions.getInterfaceManagementProfile(GetInterfaceManagementProfileArgs.builder()
+     *             .id(testInfMgmtProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfileName", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *         ctx.export("fetchedProfile", singleProfileById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetInterfaceManagementProfileResult> getInterfaceManagementProfile(GetInterfaceManagementProfileArgs args, InvokeOutputOptions options) {
@@ -8867,12 +12090,120 @@ public final class ScmFunctions {
     /**
      * InterfaceManagementProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.InterfaceManagementProfile;
+     * import com.pulumi.scm.InterfaceManagementProfileArgs;
+     * import com.pulumi.scm.inputs.InterfaceManagementProfilePermittedIpArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // 1. Resource: Create the Interface Management Profile
+     *         // This block creates the profile with your specified configuration.
+     *         var testInfMgmtProfile = new InterfaceManagementProfile("testInfMgmtProfile", InterfaceManagementProfileArgs.builder()
+     *             .name("test_inf_mgmt_profile_ds_1")
+     *             .folder("All")
+     *             .permittedIps(            
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/24")
+     *                     .build(),
+     *                 InterfaceManagementProfilePermittedIpArgs.builder()
+     *                     .name("10.0.0.0/32")
+     *                     .build())
+     *             .http(true)
+     *             .https(false)
+     *             .telnet(false)
+     *             .ssh(true)
+     *             .ping(false)
+     *             .httpOcsp(true)
+     *             .useridService(true)
+     *             .useridSyslogListenerSsl(true)
+     *             .useridSyslogListenerUdp(true)
+     *             .responsePages(false)
+     *             .build());
+     * 
+     *         // --------------------------------------------------------------------------------
+     *         // 2. Data Source: Retrieve the Interface Management Profile by ID
+     *         // We use the resource's generated 'id' attribute to fetch the profile.
+     *         final var singleProfileById = ScmFunctions.getInterfaceManagementProfile(GetInterfaceManagementProfileArgs.builder()
+     *             .id(testInfMgmtProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedProfileName", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *         ctx.export("fetchedProfile", singleProfileById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetInterfaceManagementProfileResult> getInterfaceManagementProfilePlain(GetInterfaceManagementProfilePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getInterfaceManagementProfile:getInterfaceManagementProfile", TypeShape.of(GetInterfaceManagementProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // -----------------------------------------------------------------------------
+     *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // -----------------------------------------------------------------------------
+     *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
+     *             .limit(50)
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedMgmtProfileListSummary", Map.ofEntries(
+     *             Map.entry("countOfProfilesFetched", allMgmtProfiles.total()),
+     *             Map.entry("firstProfileName", allMgmtProfiles.datas()[0].name()),
+     *             Map.entry("data", allMgmtProfiles.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetInterfaceManagementProfileListResult> getInterfaceManagementProfileList() {
@@ -8881,12 +12212,98 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // -----------------------------------------------------------------------------
+     *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // -----------------------------------------------------------------------------
+     *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
+     *             .limit(50)
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedMgmtProfileListSummary", Map.ofEntries(
+     *             Map.entry("countOfProfilesFetched", allMgmtProfiles.total()),
+     *             Map.entry("firstProfileName", allMgmtProfiles.datas()[0].name()),
+     *             Map.entry("data", allMgmtProfiles.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetInterfaceManagementProfileListResult> getInterfaceManagementProfileListPlain() {
         return getInterfaceManagementProfileListPlain(GetInterfaceManagementProfileListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // -----------------------------------------------------------------------------
+     *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // -----------------------------------------------------------------------------
+     *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
+     *             .limit(50)
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedMgmtProfileListSummary", Map.ofEntries(
+     *             Map.entry("countOfProfilesFetched", allMgmtProfiles.total()),
+     *             Map.entry("firstProfileName", allMgmtProfiles.datas()[0].name()),
+     *             Map.entry("data", allMgmtProfiles.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetInterfaceManagementProfileListResult> getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs args) {
@@ -8895,12 +12312,98 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // -----------------------------------------------------------------------------
+     *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // -----------------------------------------------------------------------------
+     *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
+     *             .limit(50)
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedMgmtProfileListSummary", Map.ofEntries(
+     *             Map.entry("countOfProfilesFetched", allMgmtProfiles.total()),
+     *             Map.entry("firstProfileName", allMgmtProfiles.datas()[0].name()),
+     *             Map.entry("data", allMgmtProfiles.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetInterfaceManagementProfileListResult> getInterfaceManagementProfileListPlain(GetInterfaceManagementProfileListPlainArgs args) {
         return getInterfaceManagementProfileListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // -----------------------------------------------------------------------------
+     *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // -----------------------------------------------------------------------------
+     *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
+     *             .limit(50)
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedMgmtProfileListSummary", Map.ofEntries(
+     *             Map.entry("countOfProfilesFetched", allMgmtProfiles.total()),
+     *             Map.entry("firstProfileName", allMgmtProfiles.datas()[0].name()),
+     *             Map.entry("data", allMgmtProfiles.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetInterfaceManagementProfileListResult> getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs args, InvokeOptions options) {
@@ -8909,12 +12412,98 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // -----------------------------------------------------------------------------
+     *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // -----------------------------------------------------------------------------
+     *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
+     *             .limit(50)
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedMgmtProfileListSummary", Map.ofEntries(
+     *             Map.entry("countOfProfilesFetched", allMgmtProfiles.total()),
+     *             Map.entry("firstProfileName", allMgmtProfiles.datas()[0].name()),
+     *             Map.entry("data", allMgmtProfiles.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetInterfaceManagementProfileListResult> getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getInterfaceManagementProfileList:getInterfaceManagementProfileList", TypeShape.of(GetInterfaceManagementProfileListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetInterfaceManagementProfileListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // -----------------------------------------------------------------------------
+     *         // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+     *         // This data source retrieves multiple Interface Management Profiles from SCM.
+     *         // -----------------------------------------------------------------------------
+     *         final var allMgmtProfiles = ScmFunctions.getInterfaceManagementProfileList(GetInterfaceManagementProfileListArgs.builder()
+     *             .limit(50)
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("fetchedMgmtProfileListSummary", Map.ofEntries(
+     *             Map.entry("countOfProfilesFetched", allMgmtProfiles.total()),
+     *             Map.entry("firstProfileName", allMgmtProfiles.datas()[0].name()),
+     *             Map.entry("data", allMgmtProfiles.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetInterfaceManagementProfileListResult> getInterfaceManagementProfileListPlain(GetInterfaceManagementProfileListPlainArgs args, InvokeOptions options) {
@@ -10113,12 +13702,96 @@ public final class ScmFunctions {
     /**
      * Layer2Subinterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer2 sub-interface by its ID.
+     *         final var scmL2SubinterfaceDs = ScmFunctions.getLayer2Subinterface(GetLayer2SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer2SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL2SubinterfaceDs.id()),
+     *             Map.entry("name", scmL2SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL2SubinterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmL2SubinterfaceDs.vlanTag()),
+     *             Map.entry("parentInterface", scmL2SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL2SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLayer2SubinterfaceResult> getLayer2Subinterface(GetLayer2SubinterfaceArgs args) {
         return getLayer2Subinterface(args, InvokeOptions.Empty);
     }
     /**
      * Layer2Subinterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer2 sub-interface by its ID.
+     *         final var scmL2SubinterfaceDs = ScmFunctions.getLayer2Subinterface(GetLayer2SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer2SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL2SubinterfaceDs.id()),
+     *             Map.entry("name", scmL2SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL2SubinterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmL2SubinterfaceDs.vlanTag()),
+     *             Map.entry("parentInterface", scmL2SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL2SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLayer2SubinterfaceResult> getLayer2SubinterfacePlain(GetLayer2SubinterfacePlainArgs args) {
@@ -10127,12 +13800,96 @@ public final class ScmFunctions {
     /**
      * Layer2Subinterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer2 sub-interface by its ID.
+     *         final var scmL2SubinterfaceDs = ScmFunctions.getLayer2Subinterface(GetLayer2SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer2SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL2SubinterfaceDs.id()),
+     *             Map.entry("name", scmL2SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL2SubinterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmL2SubinterfaceDs.vlanTag()),
+     *             Map.entry("parentInterface", scmL2SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL2SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLayer2SubinterfaceResult> getLayer2Subinterface(GetLayer2SubinterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLayer2Subinterface:getLayer2Subinterface", TypeShape.of(GetLayer2SubinterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Layer2Subinterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer2 sub-interface by its ID.
+     *         final var scmL2SubinterfaceDs = ScmFunctions.getLayer2Subinterface(GetLayer2SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer2SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL2SubinterfaceDs.id()),
+     *             Map.entry("name", scmL2SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL2SubinterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmL2SubinterfaceDs.vlanTag()),
+     *             Map.entry("parentInterface", scmL2SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL2SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLayer2SubinterfaceResult> getLayer2Subinterface(GetLayer2SubinterfaceArgs args, InvokeOutputOptions options) {
@@ -10141,12 +13898,56 @@ public final class ScmFunctions {
     /**
      * Layer2Subinterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer2SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer2 sub-interface by its ID.
+     *         final var scmL2SubinterfaceDs = ScmFunctions.getLayer2Subinterface(GetLayer2SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer2SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL2SubinterfaceDs.id()),
+     *             Map.entry("name", scmL2SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL2SubinterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmL2SubinterfaceDs.vlanTag()),
+     *             Map.entry("parentInterface", scmL2SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL2SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLayer2SubinterfaceResult> getLayer2SubinterfacePlain(GetLayer2SubinterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLayer2Subinterface:getLayer2Subinterface", TypeShape.of(GetLayer2SubinterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLayer2SubinterfaceListResult> getLayer2SubinterfaceList() {
@@ -10155,12 +13956,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLayer2SubinterfaceListResult> getLayer2SubinterfaceListPlain() {
         return getLayer2SubinterfaceListPlain(GetLayer2SubinterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLayer2SubinterfaceListResult> getLayer2SubinterfaceList(GetLayer2SubinterfaceListArgs args) {
@@ -10169,12 +13974,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLayer2SubinterfaceListResult> getLayer2SubinterfaceListPlain(GetLayer2SubinterfaceListPlainArgs args) {
         return getLayer2SubinterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLayer2SubinterfaceListResult> getLayer2SubinterfaceList(GetLayer2SubinterfaceListArgs args, InvokeOptions options) {
@@ -10183,12 +13992,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetLayer2SubinterfaceListResult> getLayer2SubinterfaceList(GetLayer2SubinterfaceListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLayer2SubinterfaceList:getLayer2SubinterfaceList", TypeShape.of(GetLayer2SubinterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetLayer2SubinterfaceListResult> getLayer2SubinterfaceListPlain(GetLayer2SubinterfaceListPlainArgs args, InvokeOptions options) {
@@ -10197,12 +14010,98 @@ public final class ScmFunctions {
     /**
      * Layer3Subinterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer3 sub-interface by its ID.
+     *         final var scmL3SubinterfaceDs = ScmFunctions.getLayer3Subinterface(GetLayer3SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer3SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3SubinterfaceDs.id()),
+     *             Map.entry("name", scmL3SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL3SubinterfaceDs.comment()),
+     *             Map.entry("ip", scmL3SubinterfaceDs.ips()),
+     *             Map.entry("tag", scmL3SubinterfaceDs.tag()),
+     *             Map.entry("parentInterface", scmL3SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL3SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLayer3SubinterfaceResult> getLayer3Subinterface(GetLayer3SubinterfaceArgs args) {
         return getLayer3Subinterface(args, InvokeOptions.Empty);
     }
     /**
      * Layer3Subinterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer3 sub-interface by its ID.
+     *         final var scmL3SubinterfaceDs = ScmFunctions.getLayer3Subinterface(GetLayer3SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer3SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3SubinterfaceDs.id()),
+     *             Map.entry("name", scmL3SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL3SubinterfaceDs.comment()),
+     *             Map.entry("ip", scmL3SubinterfaceDs.ips()),
+     *             Map.entry("tag", scmL3SubinterfaceDs.tag()),
+     *             Map.entry("parentInterface", scmL3SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL3SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLayer3SubinterfaceResult> getLayer3SubinterfacePlain(GetLayer3SubinterfacePlainArgs args) {
@@ -10211,12 +14110,98 @@ public final class ScmFunctions {
     /**
      * Layer3Subinterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer3 sub-interface by its ID.
+     *         final var scmL3SubinterfaceDs = ScmFunctions.getLayer3Subinterface(GetLayer3SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer3SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3SubinterfaceDs.id()),
+     *             Map.entry("name", scmL3SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL3SubinterfaceDs.comment()),
+     *             Map.entry("ip", scmL3SubinterfaceDs.ips()),
+     *             Map.entry("tag", scmL3SubinterfaceDs.tag()),
+     *             Map.entry("parentInterface", scmL3SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL3SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLayer3SubinterfaceResult> getLayer3Subinterface(GetLayer3SubinterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLayer3Subinterface:getLayer3Subinterface", TypeShape.of(GetLayer3SubinterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Layer3Subinterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer3 sub-interface by its ID.
+     *         final var scmL3SubinterfaceDs = ScmFunctions.getLayer3Subinterface(GetLayer3SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer3SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3SubinterfaceDs.id()),
+     *             Map.entry("name", scmL3SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL3SubinterfaceDs.comment()),
+     *             Map.entry("ip", scmL3SubinterfaceDs.ips()),
+     *             Map.entry("tag", scmL3SubinterfaceDs.tag()),
+     *             Map.entry("parentInterface", scmL3SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL3SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLayer3SubinterfaceResult> getLayer3Subinterface(GetLayer3SubinterfaceArgs args, InvokeOutputOptions options) {
@@ -10225,12 +14210,57 @@ public final class ScmFunctions {
     /**
      * Layer3Subinterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLayer3SubinterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up layer3 sub-interface by its ID.
+     *         final var scmL3SubinterfaceDs = ScmFunctions.getLayer3Subinterface(GetLayer3SubinterfaceArgs.builder()
+     *             .id("88f730d1-6577-492b-88a6-73d4a513dc76")
+     *             .build());
+     * 
+     *         ctx.export("layer3SubinterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmL3SubinterfaceDs.id()),
+     *             Map.entry("name", scmL3SubinterfaceDs.name()),
+     *             Map.entry("comment", scmL3SubinterfaceDs.comment()),
+     *             Map.entry("ip", scmL3SubinterfaceDs.ips()),
+     *             Map.entry("tag", scmL3SubinterfaceDs.tag()),
+     *             Map.entry("parentInterface", scmL3SubinterfaceDs.parentInterface()),
+     *             Map.entry("folder", scmL3SubinterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLayer3SubinterfaceResult> getLayer3SubinterfacePlain(GetLayer3SubinterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLayer3Subinterface:getLayer3Subinterface", TypeShape.of(GetLayer3SubinterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLayer3SubinterfaceListResult> getLayer3SubinterfaceList() {
@@ -10239,12 +14269,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLayer3SubinterfaceListResult> getLayer3SubinterfaceListPlain() {
         return getLayer3SubinterfaceListPlain(GetLayer3SubinterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLayer3SubinterfaceListResult> getLayer3SubinterfaceList(GetLayer3SubinterfaceListArgs args) {
@@ -10253,12 +14287,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLayer3SubinterfaceListResult> getLayer3SubinterfaceListPlain(GetLayer3SubinterfaceListPlainArgs args) {
         return getLayer3SubinterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLayer3SubinterfaceListResult> getLayer3SubinterfaceList(GetLayer3SubinterfaceListArgs args, InvokeOptions options) {
@@ -10267,12 +14305,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetLayer3SubinterfaceListResult> getLayer3SubinterfaceList(GetLayer3SubinterfaceListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLayer3SubinterfaceList:getLayer3SubinterfaceList", TypeShape.of(GetLayer3SubinterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetLayer3SubinterfaceListResult> getLayer3SubinterfaceListPlain(GetLayer3SubinterfaceListPlainArgs args, InvokeOptions options) {
@@ -10701,12 +14743,94 @@ public final class ScmFunctions {
     /**
      * LogicalRouter data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the logical router by its ID.
+     *         final var scmLogicalRouterDs = ScmFunctions.getLogicalRouter(GetLogicalRouterArgs.builder()
+     *             .id("b7c6f00b-b20e-4073-af1c-1f42863a5983")
+     *             .build());
+     * 
+     *         ctx.export("scmLogicalRouterDataSourceOutput", Map.ofEntries(
+     *             Map.entry("id", scmLogicalRouterDs.id()),
+     *             Map.entry("name", scmLogicalRouterDs.name()),
+     *             Map.entry("routingStack", scmLogicalRouterDs.routingStack()),
+     *             Map.entry("vrf", scmLogicalRouterDs.vrves()),
+     *             Map.entry("folder", scmLogicalRouterDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLogicalRouterResult> getLogicalRouter(GetLogicalRouterArgs args) {
         return getLogicalRouter(args, InvokeOptions.Empty);
     }
     /**
      * LogicalRouter data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the logical router by its ID.
+     *         final var scmLogicalRouterDs = ScmFunctions.getLogicalRouter(GetLogicalRouterArgs.builder()
+     *             .id("b7c6f00b-b20e-4073-af1c-1f42863a5983")
+     *             .build());
+     * 
+     *         ctx.export("scmLogicalRouterDataSourceOutput", Map.ofEntries(
+     *             Map.entry("id", scmLogicalRouterDs.id()),
+     *             Map.entry("name", scmLogicalRouterDs.name()),
+     *             Map.entry("routingStack", scmLogicalRouterDs.routingStack()),
+     *             Map.entry("vrf", scmLogicalRouterDs.vrves()),
+     *             Map.entry("folder", scmLogicalRouterDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLogicalRouterResult> getLogicalRouterPlain(GetLogicalRouterPlainArgs args) {
@@ -10715,12 +14839,94 @@ public final class ScmFunctions {
     /**
      * LogicalRouter data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the logical router by its ID.
+     *         final var scmLogicalRouterDs = ScmFunctions.getLogicalRouter(GetLogicalRouterArgs.builder()
+     *             .id("b7c6f00b-b20e-4073-af1c-1f42863a5983")
+     *             .build());
+     * 
+     *         ctx.export("scmLogicalRouterDataSourceOutput", Map.ofEntries(
+     *             Map.entry("id", scmLogicalRouterDs.id()),
+     *             Map.entry("name", scmLogicalRouterDs.name()),
+     *             Map.entry("routingStack", scmLogicalRouterDs.routingStack()),
+     *             Map.entry("vrf", scmLogicalRouterDs.vrves()),
+     *             Map.entry("folder", scmLogicalRouterDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLogicalRouterResult> getLogicalRouter(GetLogicalRouterArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLogicalRouter:getLogicalRouter", TypeShape.of(GetLogicalRouterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * LogicalRouter data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the logical router by its ID.
+     *         final var scmLogicalRouterDs = ScmFunctions.getLogicalRouter(GetLogicalRouterArgs.builder()
+     *             .id("b7c6f00b-b20e-4073-af1c-1f42863a5983")
+     *             .build());
+     * 
+     *         ctx.export("scmLogicalRouterDataSourceOutput", Map.ofEntries(
+     *             Map.entry("id", scmLogicalRouterDs.id()),
+     *             Map.entry("name", scmLogicalRouterDs.name()),
+     *             Map.entry("routingStack", scmLogicalRouterDs.routingStack()),
+     *             Map.entry("vrf", scmLogicalRouterDs.vrves()),
+     *             Map.entry("folder", scmLogicalRouterDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLogicalRouterResult> getLogicalRouter(GetLogicalRouterArgs args, InvokeOutputOptions options) {
@@ -10729,12 +14935,55 @@ public final class ScmFunctions {
     /**
      * LogicalRouter data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLogicalRouterArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up the logical router by its ID.
+     *         final var scmLogicalRouterDs = ScmFunctions.getLogicalRouter(GetLogicalRouterArgs.builder()
+     *             .id("b7c6f00b-b20e-4073-af1c-1f42863a5983")
+     *             .build());
+     * 
+     *         ctx.export("scmLogicalRouterDataSourceOutput", Map.ofEntries(
+     *             Map.entry("id", scmLogicalRouterDs.id()),
+     *             Map.entry("name", scmLogicalRouterDs.name()),
+     *             Map.entry("routingStack", scmLogicalRouterDs.routingStack()),
+     *             Map.entry("vrf", scmLogicalRouterDs.vrves()),
+     *             Map.entry("folder", scmLogicalRouterDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLogicalRouterResult> getLogicalRouterPlain(GetLogicalRouterPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLogicalRouter:getLogicalRouter", TypeShape.of(GetLogicalRouterResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLogicalRouterListResult> getLogicalRouterList() {
@@ -10743,12 +14992,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLogicalRouterListResult> getLogicalRouterListPlain() {
         return getLogicalRouterListPlain(GetLogicalRouterListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLogicalRouterListResult> getLogicalRouterList(GetLogicalRouterListArgs args) {
@@ -10757,12 +15010,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLogicalRouterListResult> getLogicalRouterListPlain(GetLogicalRouterListPlainArgs args) {
         return getLogicalRouterListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLogicalRouterListResult> getLogicalRouterList(GetLogicalRouterListArgs args, InvokeOptions options) {
@@ -10771,12 +15028,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetLogicalRouterListResult> getLogicalRouterList(GetLogicalRouterListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLogicalRouterList:getLogicalRouterList", TypeShape.of(GetLogicalRouterListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetLogicalRouterListResult> getLogicalRouterListPlain(GetLogicalRouterListPlainArgs args, InvokeOptions options) {
@@ -10785,12 +15046,94 @@ public final class ScmFunctions {
     /**
      * LoopbackInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up loopback interface by its ID.
+     *         final var scmLoopbackIntfDs = ScmFunctions.getLoopbackInterface(GetLoopbackInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmLoopbackInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmLoopbackIntfDs.id()),
+     *             Map.entry("name", scmLoopbackIntfDs.name()),
+     *             Map.entry("comment", scmLoopbackIntfDs.comment()),
+     *             Map.entry("ip", scmLoopbackIntfDs.ips()),
+     *             Map.entry("folder", scmLoopbackIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLoopbackInterfaceResult> getLoopbackInterface(GetLoopbackInterfaceArgs args) {
         return getLoopbackInterface(args, InvokeOptions.Empty);
     }
     /**
      * LoopbackInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up loopback interface by its ID.
+     *         final var scmLoopbackIntfDs = ScmFunctions.getLoopbackInterface(GetLoopbackInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmLoopbackInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmLoopbackIntfDs.id()),
+     *             Map.entry("name", scmLoopbackIntfDs.name()),
+     *             Map.entry("comment", scmLoopbackIntfDs.comment()),
+     *             Map.entry("ip", scmLoopbackIntfDs.ips()),
+     *             Map.entry("folder", scmLoopbackIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetLoopbackInterfaceResult> getLoopbackInterfacePlain(GetLoopbackInterfacePlainArgs args) {
@@ -10799,12 +15142,94 @@ public final class ScmFunctions {
     /**
      * LoopbackInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up loopback interface by its ID.
+     *         final var scmLoopbackIntfDs = ScmFunctions.getLoopbackInterface(GetLoopbackInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmLoopbackInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmLoopbackIntfDs.id()),
+     *             Map.entry("name", scmLoopbackIntfDs.name()),
+     *             Map.entry("comment", scmLoopbackIntfDs.comment()),
+     *             Map.entry("ip", scmLoopbackIntfDs.ips()),
+     *             Map.entry("folder", scmLoopbackIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetLoopbackInterfaceResult> getLoopbackInterface(GetLoopbackInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLoopbackInterface:getLoopbackInterface", TypeShape.of(GetLoopbackInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * LoopbackInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up loopback interface by its ID.
+     *         final var scmLoopbackIntfDs = ScmFunctions.getLoopbackInterface(GetLoopbackInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmLoopbackInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmLoopbackIntfDs.id()),
+     *             Map.entry("name", scmLoopbackIntfDs.name()),
+     *             Map.entry("comment", scmLoopbackIntfDs.comment()),
+     *             Map.entry("ip", scmLoopbackIntfDs.ips()),
+     *             Map.entry("folder", scmLoopbackIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetLoopbackInterfaceResult> getLoopbackInterface(GetLoopbackInterfaceArgs args, InvokeOutputOptions options) {
@@ -10813,12 +15238,55 @@ public final class ScmFunctions {
     /**
      * LoopbackInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetLoopbackInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up loopback interface by its ID.
+     *         final var scmLoopbackIntfDs = ScmFunctions.getLoopbackInterface(GetLoopbackInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6199769a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmLoopbackInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmLoopbackIntfDs.id()),
+     *             Map.entry("name", scmLoopbackIntfDs.name()),
+     *             Map.entry("comment", scmLoopbackIntfDs.comment()),
+     *             Map.entry("ip", scmLoopbackIntfDs.ips()),
+     *             Map.entry("folder", scmLoopbackIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetLoopbackInterfaceResult> getLoopbackInterfacePlain(GetLoopbackInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getLoopbackInterface:getLoopbackInterface", TypeShape.of(GetLoopbackInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLoopbackInterfaceListResult> getLoopbackInterfaceList() {
@@ -10827,12 +15295,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLoopbackInterfaceListResult> getLoopbackInterfaceListPlain() {
         return getLoopbackInterfaceListPlain(GetLoopbackInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLoopbackInterfaceListResult> getLoopbackInterfaceList(GetLoopbackInterfaceListArgs args) {
@@ -10841,12 +15313,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetLoopbackInterfaceListResult> getLoopbackInterfaceListPlain(GetLoopbackInterfaceListPlainArgs args) {
         return getLoopbackInterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetLoopbackInterfaceListResult> getLoopbackInterfaceList(GetLoopbackInterfaceListArgs args, InvokeOptions options) {
@@ -10855,12 +15331,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetLoopbackInterfaceListResult> getLoopbackInterfaceList(GetLoopbackInterfaceListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getLoopbackInterfaceList:getLoopbackInterfaceList", TypeShape.of(GetLoopbackInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetLoopbackInterfaceListResult> getLoopbackInterfaceListPlain(GetLoopbackInterfaceListPlainArgs args, InvokeOptions options) {
@@ -10869,12 +15349,142 @@ public final class ScmFunctions {
     /**
      * NatRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.NatRule;
+     * import com.pulumi.scm.NatRuleArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationDnsRewriteArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define the resource (the item to be created via API POST/PUT)
+     *         var dnatExternalWebTestCreate = new NatRule("dnatExternalWebTestCreate", NatRuleArgs.builder()
+     *             .name("DNAT-External-data-src-test_1")
+     *             .description("Translate public VIP to internal web server.")
+     *             .froms("zone-untrust")
+     *             .tos("zone-untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .service("service-http")
+     *             .folder("All")
+     *             .natType("ipv4")
+     *             .position("pre")
+     *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+     *                 .translatedAddress("10.1.1.16")
+     *                 .translatedPort(112)
+     *                 .dnsRewrite(NatRuleDestinationTranslationDnsRewriteArgs.builder()
+     *                     .direction("reverse")
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
+     *             .id(dnatExternalWebTestCreate.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.id())),
+     *             Map.entry("name", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("retrievedDestinationTranslation", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.destinationTranslation()));
+     *         ctx.export("recievedResponse", dnatExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetNatRuleResult> getNatRule(GetNatRuleArgs args) {
         return getNatRule(args, InvokeOptions.Empty);
     }
     /**
      * NatRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.NatRule;
+     * import com.pulumi.scm.NatRuleArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationDnsRewriteArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define the resource (the item to be created via API POST/PUT)
+     *         var dnatExternalWebTestCreate = new NatRule("dnatExternalWebTestCreate", NatRuleArgs.builder()
+     *             .name("DNAT-External-data-src-test_1")
+     *             .description("Translate public VIP to internal web server.")
+     *             .froms("zone-untrust")
+     *             .tos("zone-untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .service("service-http")
+     *             .folder("All")
+     *             .natType("ipv4")
+     *             .position("pre")
+     *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+     *                 .translatedAddress("10.1.1.16")
+     *                 .translatedPort(112)
+     *                 .dnsRewrite(NatRuleDestinationTranslationDnsRewriteArgs.builder()
+     *                     .direction("reverse")
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
+     *             .id(dnatExternalWebTestCreate.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.id())),
+     *             Map.entry("name", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("retrievedDestinationTranslation", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.destinationTranslation()));
+     *         ctx.export("recievedResponse", dnatExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetNatRuleResult> getNatRulePlain(GetNatRulePlainArgs args) {
@@ -10883,12 +15493,142 @@ public final class ScmFunctions {
     /**
      * NatRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.NatRule;
+     * import com.pulumi.scm.NatRuleArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationDnsRewriteArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define the resource (the item to be created via API POST/PUT)
+     *         var dnatExternalWebTestCreate = new NatRule("dnatExternalWebTestCreate", NatRuleArgs.builder()
+     *             .name("DNAT-External-data-src-test_1")
+     *             .description("Translate public VIP to internal web server.")
+     *             .froms("zone-untrust")
+     *             .tos("zone-untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .service("service-http")
+     *             .folder("All")
+     *             .natType("ipv4")
+     *             .position("pre")
+     *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+     *                 .translatedAddress("10.1.1.16")
+     *                 .translatedPort(112)
+     *                 .dnsRewrite(NatRuleDestinationTranslationDnsRewriteArgs.builder()
+     *                     .direction("reverse")
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
+     *             .id(dnatExternalWebTestCreate.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.id())),
+     *             Map.entry("name", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("retrievedDestinationTranslation", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.destinationTranslation()));
+     *         ctx.export("recievedResponse", dnatExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetNatRuleResult> getNatRule(GetNatRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getNatRule:getNatRule", TypeShape.of(GetNatRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * NatRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.NatRule;
+     * import com.pulumi.scm.NatRuleArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationDnsRewriteArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define the resource (the item to be created via API POST/PUT)
+     *         var dnatExternalWebTestCreate = new NatRule("dnatExternalWebTestCreate", NatRuleArgs.builder()
+     *             .name("DNAT-External-data-src-test_1")
+     *             .description("Translate public VIP to internal web server.")
+     *             .froms("zone-untrust")
+     *             .tos("zone-untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .service("service-http")
+     *             .folder("All")
+     *             .natType("ipv4")
+     *             .position("pre")
+     *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+     *                 .translatedAddress("10.1.1.16")
+     *                 .translatedPort(112)
+     *                 .dnsRewrite(NatRuleDestinationTranslationDnsRewriteArgs.builder()
+     *                     .direction("reverse")
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
+     *             .id(dnatExternalWebTestCreate.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.id())),
+     *             Map.entry("name", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("retrievedDestinationTranslation", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.destinationTranslation()));
+     *         ctx.export("recievedResponse", dnatExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetNatRuleResult> getNatRule(GetNatRuleArgs args, InvokeOutputOptions options) {
@@ -10897,6 +15637,71 @@ public final class ScmFunctions {
     /**
      * NatRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.NatRule;
+     * import com.pulumi.scm.NatRuleArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
+     * import com.pulumi.scm.inputs.NatRuleDestinationTranslationDnsRewriteArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define the resource (the item to be created via API POST/PUT)
+     *         var dnatExternalWebTestCreate = new NatRule("dnatExternalWebTestCreate", NatRuleArgs.builder()
+     *             .name("DNAT-External-data-src-test_1")
+     *             .description("Translate public VIP to internal web server.")
+     *             .froms("zone-untrust")
+     *             .tos("zone-untrust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .service("service-http")
+     *             .folder("All")
+     *             .natType("ipv4")
+     *             .position("pre")
+     *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+     *                 .translatedAddress("10.1.1.16")
+     *                 .translatedPort(112)
+     *                 .dnsRewrite(NatRuleDestinationTranslationDnsRewriteArgs.builder()
+     *                     .direction("reverse")
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var dnatExternalWebTestGet = ScmFunctions.getNatRule(GetNatRuleArgs.builder()
+     *             .id(dnatExternalWebTestCreate.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.id())),
+     *             Map.entry("name", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("retrievedDestinationTranslation", dnatExternalWebTestGet.applyValue(_dnatExternalWebTestGet -> _dnatExternalWebTestGet.destinationTranslation()));
+     *         ctx.export("recievedResponse", dnatExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetNatRuleResult> getNatRulePlain(GetNatRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getNatRule:getNatRule", TypeShape.of(GetNatRuleResult.class), args, Utilities.withVersion(options));
@@ -10904,19 +15709,46 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
-     */
-    public static Output<GetNatRuleListResult> getNatRuleList() {
-        return getNatRuleList(GetNatRuleListArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * ## Example Usage
      * 
-     */
-    public static CompletableFuture<GetNatRuleListResult> getNatRuleListPlain() {
-        return getNatRuleListPlain(GetNatRuleListPlainArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing NAT rules
+     *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedNATRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedNatRulesList.total()),
+     *             Map.entry("allRules", pagedNatRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetNatRuleListResult> getNatRuleList(GetNatRuleListArgs args) {
@@ -10925,12 +15757,94 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing NAT rules
+     *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedNATRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedNatRulesList.total()),
+     *             Map.entry("allRules", pagedNatRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetNatRuleListResult> getNatRuleListPlain(GetNatRuleListPlainArgs args) {
         return getNatRuleListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing NAT rules
+     *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedNATRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedNatRulesList.total()),
+     *             Map.entry("allRules", pagedNatRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetNatRuleListResult> getNatRuleList(GetNatRuleListArgs args, InvokeOptions options) {
@@ -10939,12 +15853,94 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing NAT rules
+     *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedNATRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedNatRulesList.total()),
+     *             Map.entry("allRules", pagedNatRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetNatRuleListResult> getNatRuleList(GetNatRuleListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getNatRuleList:getNatRuleList", TypeShape.of(GetNatRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetNatRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing NAT rules
+     *         final var pagedNatRulesList = ScmFunctions.getNatRuleList(GetNatRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedNATRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedNatRulesList.total()),
+     *             Map.entry("allRules", pagedNatRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetNatRuleListResult> getNatRuleListPlain(GetNatRuleListPlainArgs args, InvokeOptions options) {
@@ -11037,12 +16033,166 @@ public final class ScmFunctions {
     /**
      * PbfRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Tag;
+     * import com.pulumi.scm.TagArgs;
+     * import com.pulumi.scm.PbfRule;
+     * import com.pulumi.scm.PbfRuleArgs;
+     * import com.pulumi.scm.inputs.PbfRuleFromArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionDiscardArgs;
+     * import com.pulumi.scm.inputs.PbfRuleEnforceSymmetricReturnArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
+     *             .folder("All")
+     *             .name("pbf-rule-tag-ds-test-1")
+     *             .color("Red")
+     *             .build());
+     * 
+     *         // --- PBF Rule Resource with discard action---
+     *         var examplePbfRule = new PbfRule("examplePbfRule", PbfRuleArgs.builder()
+     *             .name("pbf-test-ds-rule-discard")
+     *             .folder("All")
+     *             .description("Data Source testing pbf rule.")
+     *             .from(PbfRuleFromArgs.builder()
+     *                 .zones("zone-untrust")
+     *                 .build())
+     *             .sources("any")
+     *             .destinations("any")
+     *             .applications("any")
+     *             .services("service-http")
+     *             .sourceUsers("any")
+     *             .action(PbfRuleActionArgs.builder()
+     *                 .discard(PbfRuleActionDiscardArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .tags(exampleTag.name())
+     *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+     *                 .enabled(false)
+     *                 .build())
+     *             .schedule("non-work-hours")
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
+     *             .id(examplePbfRule.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.id())),
+     *             Map.entry("name", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("recievedResponse", pbfExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetPbfRuleResult> getPbfRule(GetPbfRuleArgs args) {
         return getPbfRule(args, InvokeOptions.Empty);
     }
     /**
      * PbfRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Tag;
+     * import com.pulumi.scm.TagArgs;
+     * import com.pulumi.scm.PbfRule;
+     * import com.pulumi.scm.PbfRuleArgs;
+     * import com.pulumi.scm.inputs.PbfRuleFromArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionDiscardArgs;
+     * import com.pulumi.scm.inputs.PbfRuleEnforceSymmetricReturnArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
+     *             .folder("All")
+     *             .name("pbf-rule-tag-ds-test-1")
+     *             .color("Red")
+     *             .build());
+     * 
+     *         // --- PBF Rule Resource with discard action---
+     *         var examplePbfRule = new PbfRule("examplePbfRule", PbfRuleArgs.builder()
+     *             .name("pbf-test-ds-rule-discard")
+     *             .folder("All")
+     *             .description("Data Source testing pbf rule.")
+     *             .from(PbfRuleFromArgs.builder()
+     *                 .zones("zone-untrust")
+     *                 .build())
+     *             .sources("any")
+     *             .destinations("any")
+     *             .applications("any")
+     *             .services("service-http")
+     *             .sourceUsers("any")
+     *             .action(PbfRuleActionArgs.builder()
+     *                 .discard(PbfRuleActionDiscardArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .tags(exampleTag.name())
+     *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+     *                 .enabled(false)
+     *                 .build())
+     *             .schedule("non-work-hours")
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
+     *             .id(examplePbfRule.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.id())),
+     *             Map.entry("name", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("recievedResponse", pbfExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetPbfRuleResult> getPbfRulePlain(GetPbfRulePlainArgs args) {
@@ -11051,12 +16201,166 @@ public final class ScmFunctions {
     /**
      * PbfRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Tag;
+     * import com.pulumi.scm.TagArgs;
+     * import com.pulumi.scm.PbfRule;
+     * import com.pulumi.scm.PbfRuleArgs;
+     * import com.pulumi.scm.inputs.PbfRuleFromArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionDiscardArgs;
+     * import com.pulumi.scm.inputs.PbfRuleEnforceSymmetricReturnArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
+     *             .folder("All")
+     *             .name("pbf-rule-tag-ds-test-1")
+     *             .color("Red")
+     *             .build());
+     * 
+     *         // --- PBF Rule Resource with discard action---
+     *         var examplePbfRule = new PbfRule("examplePbfRule", PbfRuleArgs.builder()
+     *             .name("pbf-test-ds-rule-discard")
+     *             .folder("All")
+     *             .description("Data Source testing pbf rule.")
+     *             .from(PbfRuleFromArgs.builder()
+     *                 .zones("zone-untrust")
+     *                 .build())
+     *             .sources("any")
+     *             .destinations("any")
+     *             .applications("any")
+     *             .services("service-http")
+     *             .sourceUsers("any")
+     *             .action(PbfRuleActionArgs.builder()
+     *                 .discard(PbfRuleActionDiscardArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .tags(exampleTag.name())
+     *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+     *                 .enabled(false)
+     *                 .build())
+     *             .schedule("non-work-hours")
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
+     *             .id(examplePbfRule.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.id())),
+     *             Map.entry("name", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("recievedResponse", pbfExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetPbfRuleResult> getPbfRule(GetPbfRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getPbfRule:getPbfRule", TypeShape.of(GetPbfRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * PbfRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Tag;
+     * import com.pulumi.scm.TagArgs;
+     * import com.pulumi.scm.PbfRule;
+     * import com.pulumi.scm.PbfRuleArgs;
+     * import com.pulumi.scm.inputs.PbfRuleFromArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionDiscardArgs;
+     * import com.pulumi.scm.inputs.PbfRuleEnforceSymmetricReturnArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
+     *             .folder("All")
+     *             .name("pbf-rule-tag-ds-test-1")
+     *             .color("Red")
+     *             .build());
+     * 
+     *         // --- PBF Rule Resource with discard action---
+     *         var examplePbfRule = new PbfRule("examplePbfRule", PbfRuleArgs.builder()
+     *             .name("pbf-test-ds-rule-discard")
+     *             .folder("All")
+     *             .description("Data Source testing pbf rule.")
+     *             .from(PbfRuleFromArgs.builder()
+     *                 .zones("zone-untrust")
+     *                 .build())
+     *             .sources("any")
+     *             .destinations("any")
+     *             .applications("any")
+     *             .services("service-http")
+     *             .sourceUsers("any")
+     *             .action(PbfRuleActionArgs.builder()
+     *                 .discard(PbfRuleActionDiscardArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .tags(exampleTag.name())
+     *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+     *                 .enabled(false)
+     *                 .build())
+     *             .schedule("non-work-hours")
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
+     *             .id(examplePbfRule.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.id())),
+     *             Map.entry("name", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("recievedResponse", pbfExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetPbfRuleResult> getPbfRule(GetPbfRuleArgs args, InvokeOutputOptions options) {
@@ -11065,12 +16369,128 @@ public final class ScmFunctions {
     /**
      * PbfRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Tag;
+     * import com.pulumi.scm.TagArgs;
+     * import com.pulumi.scm.PbfRule;
+     * import com.pulumi.scm.PbfRuleArgs;
+     * import com.pulumi.scm.inputs.PbfRuleFromArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionArgs;
+     * import com.pulumi.scm.inputs.PbfRuleActionDiscardArgs;
+     * import com.pulumi.scm.inputs.PbfRuleEnforceSymmetricReturnArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
+     *             .folder("All")
+     *             .name("pbf-rule-tag-ds-test-1")
+     *             .color("Red")
+     *             .build());
+     * 
+     *         // --- PBF Rule Resource with discard action---
+     *         var examplePbfRule = new PbfRule("examplePbfRule", PbfRuleArgs.builder()
+     *             .name("pbf-test-ds-rule-discard")
+     *             .folder("All")
+     *             .description("Data Source testing pbf rule.")
+     *             .from(PbfRuleFromArgs.builder()
+     *                 .zones("zone-untrust")
+     *                 .build())
+     *             .sources("any")
+     *             .destinations("any")
+     *             .applications("any")
+     *             .services("service-http")
+     *             .sourceUsers("any")
+     *             .action(PbfRuleActionArgs.builder()
+     *                 .discard(PbfRuleActionDiscardArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .tags(exampleTag.name())
+     *             .enforceSymmetricReturn(PbfRuleEnforceSymmetricReturnArgs.builder()
+     *                 .enabled(false)
+     *                 .build())
+     *             .schedule("non-work-hours")
+     *             .build());
+     * 
+     *         // Define the data source (the item to be retrieved via API GET)
+     *         final var pbfExternalWebTestGet = ScmFunctions.getPbfRule(GetPbfRuleArgs.builder()
+     *             .id(examplePbfRule.id())
+     *             .build());
+     * 
+     *         ctx.export("retrievedIDAndName", Map.ofEntries(
+     *             Map.entry("id", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.id())),
+     *             Map.entry("name", pbfExternalWebTestGet.applyValue(_pbfExternalWebTestGet -> _pbfExternalWebTestGet.name()))
+     *         ));
+     *         ctx.export("recievedResponse", pbfExternalWebTestGet);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetPbfRuleResult> getPbfRulePlain(GetPbfRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getPbfRule:getPbfRule", TypeShape.of(GetPbfRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing pbf rules
+     *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedPbfRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedPbfRulesList.total()),
+     *             Map.entry("allRules", pagedPbfRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetPbfRuleListResult> getPbfRuleList() {
@@ -11079,12 +16499,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing pbf rules
+     *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedPbfRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedPbfRulesList.total()),
+     *             Map.entry("allRules", pagedPbfRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetPbfRuleListResult> getPbfRuleListPlain() {
         return getPbfRuleListPlain(GetPbfRuleListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing pbf rules
+     *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedPbfRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedPbfRulesList.total()),
+     *             Map.entry("allRules", pagedPbfRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetPbfRuleListResult> getPbfRuleList(GetPbfRuleListArgs args) {
@@ -11093,12 +16591,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing pbf rules
+     *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedPbfRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedPbfRulesList.total()),
+     *             Map.entry("allRules", pagedPbfRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetPbfRuleListResult> getPbfRuleListPlain(GetPbfRuleListPlainArgs args) {
         return getPbfRuleListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing pbf rules
+     *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedPbfRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedPbfRulesList.total()),
+     *             Map.entry("allRules", pagedPbfRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetPbfRuleListResult> getPbfRuleList(GetPbfRuleListArgs args, InvokeOptions options) {
@@ -11107,12 +16683,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing pbf rules
+     *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedPbfRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedPbfRulesList.total()),
+     *             Map.entry("allRules", pagedPbfRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetPbfRuleListResult> getPbfRuleList(GetPbfRuleListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getPbfRuleList:getPbfRuleList", TypeShape.of(GetPbfRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetPbfRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Define a data source for listing pbf rules
+     *         final var pagedPbfRulesList = ScmFunctions.getPbfRuleList(GetPbfRuleListArgs.builder()
+     *             .folder("All")
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("fetchedPbfRuleListSummary", Map.ofEntries(
+     *             Map.entry("totalRulesInList", pagedPbfRulesList.total()),
+     *             Map.entry("allRules", pagedPbfRulesList.datas())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetPbfRuleListResult> getPbfRuleListPlain(GetPbfRuleListPlainArgs args, InvokeOptions options) {
@@ -11205,12 +16859,128 @@ public final class ScmFunctions {
     /**
      * QosPolicyRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.QosPolicyRule;
+     * import com.pulumi.scm.QosPolicyRuleArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleActionArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleDscpTosArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var testQosPolicyRule = new QosPolicyRule("testQosPolicyRule", QosPolicyRuleArgs.builder()
+     *             .name("data-source-qos-test")
+     *             .description("Rule created specifically for data source testing with DSCP/TOS.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .schedule("non-work-hours")
+     *             .action(QosPolicyRuleActionArgs.builder()
+     *                 .class_("1")
+     *                 .build())
+     *             .dscpTos(QosPolicyRuleDscpTosArgs.builder()
+     *                 .codepoints(QosPolicyRuleDscpTosCodepointArgs.builder()
+     *                     .name("Expedited Forwarding")
+     *                     .type(QosPolicyRuleDscpTosCodepointTypeArgs.builder()
+     *                         .ef(QosPolicyRuleDscpTosCodepointTypeEfArgs.builder()
+     *                             .build())
+     *                         .build())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
+     *             .id(testQosPolicyRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleQosPolicyRuleDump", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetQosPolicyRuleResult> getQosPolicyRule(GetQosPolicyRuleArgs args) {
         return getQosPolicyRule(args, InvokeOptions.Empty);
     }
     /**
      * QosPolicyRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.QosPolicyRule;
+     * import com.pulumi.scm.QosPolicyRuleArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleActionArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleDscpTosArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var testQosPolicyRule = new QosPolicyRule("testQosPolicyRule", QosPolicyRuleArgs.builder()
+     *             .name("data-source-qos-test")
+     *             .description("Rule created specifically for data source testing with DSCP/TOS.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .schedule("non-work-hours")
+     *             .action(QosPolicyRuleActionArgs.builder()
+     *                 .class_("1")
+     *                 .build())
+     *             .dscpTos(QosPolicyRuleDscpTosArgs.builder()
+     *                 .codepoints(QosPolicyRuleDscpTosCodepointArgs.builder()
+     *                     .name("Expedited Forwarding")
+     *                     .type(QosPolicyRuleDscpTosCodepointTypeArgs.builder()
+     *                         .ef(QosPolicyRuleDscpTosCodepointTypeEfArgs.builder()
+     *                             .build())
+     *                         .build())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
+     *             .id(testQosPolicyRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleQosPolicyRuleDump", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetQosPolicyRuleResult> getQosPolicyRulePlain(GetQosPolicyRulePlainArgs args) {
@@ -11219,12 +16989,128 @@ public final class ScmFunctions {
     /**
      * QosPolicyRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.QosPolicyRule;
+     * import com.pulumi.scm.QosPolicyRuleArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleActionArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleDscpTosArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var testQosPolicyRule = new QosPolicyRule("testQosPolicyRule", QosPolicyRuleArgs.builder()
+     *             .name("data-source-qos-test")
+     *             .description("Rule created specifically for data source testing with DSCP/TOS.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .schedule("non-work-hours")
+     *             .action(QosPolicyRuleActionArgs.builder()
+     *                 .class_("1")
+     *                 .build())
+     *             .dscpTos(QosPolicyRuleDscpTosArgs.builder()
+     *                 .codepoints(QosPolicyRuleDscpTosCodepointArgs.builder()
+     *                     .name("Expedited Forwarding")
+     *                     .type(QosPolicyRuleDscpTosCodepointTypeArgs.builder()
+     *                         .ef(QosPolicyRuleDscpTosCodepointTypeEfArgs.builder()
+     *                             .build())
+     *                         .build())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
+     *             .id(testQosPolicyRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleQosPolicyRuleDump", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetQosPolicyRuleResult> getQosPolicyRule(GetQosPolicyRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getQosPolicyRule:getQosPolicyRule", TypeShape.of(GetQosPolicyRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * QosPolicyRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.QosPolicyRule;
+     * import com.pulumi.scm.QosPolicyRuleArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleActionArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleDscpTosArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var testQosPolicyRule = new QosPolicyRule("testQosPolicyRule", QosPolicyRuleArgs.builder()
+     *             .name("data-source-qos-test")
+     *             .description("Rule created specifically for data source testing with DSCP/TOS.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .schedule("non-work-hours")
+     *             .action(QosPolicyRuleActionArgs.builder()
+     *                 .class_("1")
+     *                 .build())
+     *             .dscpTos(QosPolicyRuleDscpTosArgs.builder()
+     *                 .codepoints(QosPolicyRuleDscpTosCodepointArgs.builder()
+     *                     .name("Expedited Forwarding")
+     *                     .type(QosPolicyRuleDscpTosCodepointTypeArgs.builder()
+     *                         .ef(QosPolicyRuleDscpTosCodepointTypeEfArgs.builder()
+     *                             .build())
+     *                         .build())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
+     *             .id(testQosPolicyRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleQosPolicyRuleDump", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetQosPolicyRuleResult> getQosPolicyRule(GetQosPolicyRuleArgs args, InvokeOutputOptions options) {
@@ -11233,6 +17119,64 @@ public final class ScmFunctions {
     /**
      * QosPolicyRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.QosPolicyRule;
+     * import com.pulumi.scm.QosPolicyRuleArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleActionArgs;
+     * import com.pulumi.scm.inputs.QosPolicyRuleDscpTosArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var testQosPolicyRule = new QosPolicyRule("testQosPolicyRule", QosPolicyRuleArgs.builder()
+     *             .name("data-source-qos-test")
+     *             .description("Rule created specifically for data source testing with DSCP/TOS.")
+     *             .folder("All")
+     *             .position("pre")
+     *             .schedule("non-work-hours")
+     *             .action(QosPolicyRuleActionArgs.builder()
+     *                 .class_("1")
+     *                 .build())
+     *             .dscpTos(QosPolicyRuleDscpTosArgs.builder()
+     *                 .codepoints(QosPolicyRuleDscpTosCodepointArgs.builder()
+     *                     .name("Expedited Forwarding")
+     *                     .type(QosPolicyRuleDscpTosCodepointTypeArgs.builder()
+     *                         .ef(QosPolicyRuleDscpTosCodepointTypeEfArgs.builder()
+     *                             .build())
+     *                         .build())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleRuleById = ScmFunctions.getQosPolicyRule(GetQosPolicyRuleArgs.builder()
+     *             .id(testQosPolicyRule.id())
+     *             .build());
+     * 
+     *         ctx.export("singleQosPolicyRuleDump", singleRuleById);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetQosPolicyRuleResult> getQosPolicyRulePlain(GetQosPolicyRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getQosPolicyRule:getQosPolicyRule", TypeShape.of(GetQosPolicyRuleResult.class), args, Utilities.withVersion(options));
@@ -11240,19 +17184,44 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
-     */
-    public static Output<GetQosPolicyRuleListResult> getQosPolicyRuleList() {
-        return getQosPolicyRuleList(GetQosPolicyRuleListArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * ## Example Usage
      * 
-     */
-    public static CompletableFuture<GetQosPolicyRuleListResult> getQosPolicyRuleListPlain() {
-        return getQosPolicyRuleListPlain(GetQosPolicyRuleListPlainArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetQosPolicyRuleListResult> getQosPolicyRuleList(GetQosPolicyRuleListArgs args) {
@@ -11261,12 +17230,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetQosPolicyRuleListResult> getQosPolicyRuleListPlain(GetQosPolicyRuleListPlainArgs args) {
         return getQosPolicyRuleListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetQosPolicyRuleListResult> getQosPolicyRuleList(GetQosPolicyRuleListArgs args, InvokeOptions options) {
@@ -11275,12 +17322,90 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetQosPolicyRuleListResult> getQosPolicyRuleList(GetQosPolicyRuleListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", TypeShape.of(GetQosPolicyRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetQosPolicyRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getQosPolicyRuleList(GetQosPolicyRuleListArgs.builder()
+     *             .folder("All")
+     *             .offset(10)
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetQosPolicyRuleListResult> getQosPolicyRuleListPlain(GetQosPolicyRuleListPlainArgs args, InvokeOptions options) {
@@ -11373,12 +17498,122 @@ public final class ScmFunctions {
     /**
      * RadiusServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.RadiusServerProfile;
+     * import com.pulumi.scm.RadiusServerProfileArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
+     *             .name("CHAP_only_rsp_ds_1")
+     *             .folder("All")
+     *             .retries(5)
+     *             .timeout(60)
+     *             .protocol(RadiusServerProfileProtocolArgs.builder()
+     *                 .cHAP(RadiusServerProfileProtocolChapArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .servers(RadiusServerProfileServerArgs.builder()
+     *                 .name("Chap_Server_Primary")
+     *                 .ipAddress("10.1.1.10")
+     *                 .port(1812)
+     *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleProfileById = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
+     *             .id(chapRadiusProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("singleRspDump", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetRadiusServerProfileResult> getRadiusServerProfile(GetRadiusServerProfileArgs args) {
         return getRadiusServerProfile(args, InvokeOptions.Empty);
     }
     /**
      * RadiusServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.RadiusServerProfile;
+     * import com.pulumi.scm.RadiusServerProfileArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
+     *             .name("CHAP_only_rsp_ds_1")
+     *             .folder("All")
+     *             .retries(5)
+     *             .timeout(60)
+     *             .protocol(RadiusServerProfileProtocolArgs.builder()
+     *                 .cHAP(RadiusServerProfileProtocolChapArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .servers(RadiusServerProfileServerArgs.builder()
+     *                 .name("Chap_Server_Primary")
+     *                 .ipAddress("10.1.1.10")
+     *                 .port(1812)
+     *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleProfileById = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
+     *             .id(chapRadiusProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("singleRspDump", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetRadiusServerProfileResult> getRadiusServerProfilePlain(GetRadiusServerProfilePlainArgs args) {
@@ -11387,6 +17622,61 @@ public final class ScmFunctions {
     /**
      * RadiusServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.RadiusServerProfile;
+     * import com.pulumi.scm.RadiusServerProfileArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
+     *             .name("CHAP_only_rsp_ds_1")
+     *             .folder("All")
+     *             .retries(5)
+     *             .timeout(60)
+     *             .protocol(RadiusServerProfileProtocolArgs.builder()
+     *                 .cHAP(RadiusServerProfileProtocolChapArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .servers(RadiusServerProfileServerArgs.builder()
+     *                 .name("Chap_Server_Primary")
+     *                 .ipAddress("10.1.1.10")
+     *                 .port(1812)
+     *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleProfileById = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
+     *             .id(chapRadiusProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("singleRspDump", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetRadiusServerProfileResult> getRadiusServerProfile(GetRadiusServerProfileArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getRadiusServerProfile:getRadiusServerProfile", TypeShape.of(GetRadiusServerProfileResult.class), args, Utilities.withVersion(options));
@@ -11394,12 +17684,122 @@ public final class ScmFunctions {
     /**
      * RadiusServerProfile data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.RadiusServerProfile;
+     * import com.pulumi.scm.RadiusServerProfileArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
+     *             .name("CHAP_only_rsp_ds_1")
+     *             .folder("All")
+     *             .retries(5)
+     *             .timeout(60)
+     *             .protocol(RadiusServerProfileProtocolArgs.builder()
+     *                 .cHAP(RadiusServerProfileProtocolChapArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .servers(RadiusServerProfileServerArgs.builder()
+     *                 .name("Chap_Server_Primary")
+     *                 .ipAddress("10.1.1.10")
+     *                 .port(1812)
+     *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleProfileById = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
+     *             .id(chapRadiusProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("singleRspDump", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetRadiusServerProfileResult> getRadiusServerProfile(GetRadiusServerProfileArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getRadiusServerProfile:getRadiusServerProfile", TypeShape.of(GetRadiusServerProfileResult.class), args, Utilities.withVersion(options));
     }
     /**
      * RadiusServerProfile data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.RadiusServerProfile;
+     * import com.pulumi.scm.RadiusServerProfileArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+     * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetRadiusServerProfileArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var chapRadiusProfile = new RadiusServerProfile("chapRadiusProfile", RadiusServerProfileArgs.builder()
+     *             .name("CHAP_only_rsp_ds_1")
+     *             .folder("All")
+     *             .retries(5)
+     *             .timeout(60)
+     *             .protocol(RadiusServerProfileProtocolArgs.builder()
+     *                 .cHAP(RadiusServerProfileProtocolChapArgs.builder()
+     *                     .build())
+     *                 .build())
+     *             .servers(RadiusServerProfileServerArgs.builder()
+     *                 .name("Chap_Server_Primary")
+     *                 .ipAddress("10.1.1.10")
+     *                 .port(1812)
+     *                 .secret("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==")
+     *                 .build())
+     *             .build());
+     * 
+     *         final var singleProfileById = ScmFunctions.getRadiusServerProfile(GetRadiusServerProfileArgs.builder()
+     *             .id(chapRadiusProfile.id())
+     *             .build());
+     * 
+     *         ctx.export("singleRspDump", singleProfileById.applyValue(_singleProfileById -> _singleProfileById.name()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetRadiusServerProfileResult> getRadiusServerProfilePlain(GetRadiusServerProfilePlainArgs args, InvokeOptions options) {
@@ -12842,12 +19242,150 @@ public final class ScmFunctions {
     /**
      * SecurityRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.SecurityRule;
+     * import com.pulumi.scm.SecurityRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var standardWebAccess = new SecurityRule("standardWebAccess", SecurityRuleArgs.builder()
+     *             .folder("All")
+     *             .name("Allow Standard Web Access DS1")
+     *             .description("Allow outbound web traffic to any destination...")
+     *             .position("pre")
+     *             .action("allow")
+     *             .categories("any")
+     *             .applications(            
+     *                 "web-browsing",
+     *                 "ssl")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .froms(            
+     *                 "untrust",
+     *                 "trust")
+     *             .tos("trust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .sourceUsers("any")
+     *             .sourceHips("any")
+     *             .destinationHips("any")
+     *             .logStart(true)
+     *             .logEnd(true)
+     *             .disabled(false)
+     *             .build());
+     * 
+     *         // --- Data Source Calls to Fetch Existing Rules ---
+     *         // 1. Fetch by ID (Best for direct lookup)
+     *         final var standardWebAccessById = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
+     *             .id(standardWebAccess.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedStandardWebId", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.id()));
+     *         ctx.export("fetchedStandardWebName", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.name()));
+     *         ctx.export("fetchedStandardWebDescription", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.description()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSecurityRuleResult> getSecurityRule(GetSecurityRuleArgs args) {
         return getSecurityRule(args, InvokeOptions.Empty);
     }
     /**
      * SecurityRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.SecurityRule;
+     * import com.pulumi.scm.SecurityRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var standardWebAccess = new SecurityRule("standardWebAccess", SecurityRuleArgs.builder()
+     *             .folder("All")
+     *             .name("Allow Standard Web Access DS1")
+     *             .description("Allow outbound web traffic to any destination...")
+     *             .position("pre")
+     *             .action("allow")
+     *             .categories("any")
+     *             .applications(            
+     *                 "web-browsing",
+     *                 "ssl")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .froms(            
+     *                 "untrust",
+     *                 "trust")
+     *             .tos("trust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .sourceUsers("any")
+     *             .sourceHips("any")
+     *             .destinationHips("any")
+     *             .logStart(true)
+     *             .logEnd(true)
+     *             .disabled(false)
+     *             .build());
+     * 
+     *         // --- Data Source Calls to Fetch Existing Rules ---
+     *         // 1. Fetch by ID (Best for direct lookup)
+     *         final var standardWebAccessById = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
+     *             .id(standardWebAccess.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedStandardWebId", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.id()));
+     *         ctx.export("fetchedStandardWebName", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.name()));
+     *         ctx.export("fetchedStandardWebDescription", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.description()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSecurityRuleResult> getSecurityRulePlain(GetSecurityRulePlainArgs args) {
@@ -12856,12 +19394,150 @@ public final class ScmFunctions {
     /**
      * SecurityRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.SecurityRule;
+     * import com.pulumi.scm.SecurityRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var standardWebAccess = new SecurityRule("standardWebAccess", SecurityRuleArgs.builder()
+     *             .folder("All")
+     *             .name("Allow Standard Web Access DS1")
+     *             .description("Allow outbound web traffic to any destination...")
+     *             .position("pre")
+     *             .action("allow")
+     *             .categories("any")
+     *             .applications(            
+     *                 "web-browsing",
+     *                 "ssl")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .froms(            
+     *                 "untrust",
+     *                 "trust")
+     *             .tos("trust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .sourceUsers("any")
+     *             .sourceHips("any")
+     *             .destinationHips("any")
+     *             .logStart(true)
+     *             .logEnd(true)
+     *             .disabled(false)
+     *             .build());
+     * 
+     *         // --- Data Source Calls to Fetch Existing Rules ---
+     *         // 1. Fetch by ID (Best for direct lookup)
+     *         final var standardWebAccessById = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
+     *             .id(standardWebAccess.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedStandardWebId", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.id()));
+     *         ctx.export("fetchedStandardWebName", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.name()));
+     *         ctx.export("fetchedStandardWebDescription", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.description()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSecurityRuleResult> getSecurityRule(GetSecurityRuleArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSecurityRule:getSecurityRule", TypeShape.of(GetSecurityRuleResult.class), args, Utilities.withVersion(options));
     }
     /**
      * SecurityRule data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.SecurityRule;
+     * import com.pulumi.scm.SecurityRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var standardWebAccess = new SecurityRule("standardWebAccess", SecurityRuleArgs.builder()
+     *             .folder("All")
+     *             .name("Allow Standard Web Access DS1")
+     *             .description("Allow outbound web traffic to any destination...")
+     *             .position("pre")
+     *             .action("allow")
+     *             .categories("any")
+     *             .applications(            
+     *                 "web-browsing",
+     *                 "ssl")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .froms(            
+     *                 "untrust",
+     *                 "trust")
+     *             .tos("trust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .sourceUsers("any")
+     *             .sourceHips("any")
+     *             .destinationHips("any")
+     *             .logStart(true)
+     *             .logEnd(true)
+     *             .disabled(false)
+     *             .build());
+     * 
+     *         // --- Data Source Calls to Fetch Existing Rules ---
+     *         // 1. Fetch by ID (Best for direct lookup)
+     *         final var standardWebAccessById = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
+     *             .id(standardWebAccess.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedStandardWebId", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.id()));
+     *         ctx.export("fetchedStandardWebName", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.name()));
+     *         ctx.export("fetchedStandardWebDescription", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.description()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSecurityRuleResult> getSecurityRule(GetSecurityRuleArgs args, InvokeOutputOptions options) {
@@ -12870,6 +19546,75 @@ public final class ScmFunctions {
     /**
      * SecurityRule data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.SecurityRule;
+     * import com.pulumi.scm.SecurityRuleArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var standardWebAccess = new SecurityRule("standardWebAccess", SecurityRuleArgs.builder()
+     *             .folder("All")
+     *             .name("Allow Standard Web Access DS1")
+     *             .description("Allow outbound web traffic to any destination...")
+     *             .position("pre")
+     *             .action("allow")
+     *             .categories("any")
+     *             .applications(            
+     *                 "web-browsing",
+     *                 "ssl")
+     *             .services(            
+     *                 "service-http",
+     *                 "service-https")
+     *             .froms(            
+     *                 "untrust",
+     *                 "trust")
+     *             .tos("trust")
+     *             .sources("any")
+     *             .destinations("any")
+     *             .negateSource(false)
+     *             .negateDestination(false)
+     *             .sourceUsers("any")
+     *             .sourceHips("any")
+     *             .destinationHips("any")
+     *             .logStart(true)
+     *             .logEnd(true)
+     *             .disabled(false)
+     *             .build());
+     * 
+     *         // --- Data Source Calls to Fetch Existing Rules ---
+     *         // 1. Fetch by ID (Best for direct lookup)
+     *         final var standardWebAccessById = ScmFunctions.getSecurityRule(GetSecurityRuleArgs.builder()
+     *             .id(standardWebAccess.id())
+     *             .build());
+     * 
+     *         ctx.export("fetchedStandardWebId", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.id()));
+     *         ctx.export("fetchedStandardWebName", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.name()));
+     *         ctx.export("fetchedStandardWebDescription", standardWebAccessById.applyValue(_standardWebAccessById -> _standardWebAccessById.description()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSecurityRuleResult> getSecurityRulePlain(GetSecurityRulePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getSecurityRule:getSecurityRule", TypeShape.of(GetSecurityRuleResult.class), args, Utilities.withVersion(options));
@@ -12877,19 +19622,43 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
-     */
-    public static Output<GetSecurityRuleListResult> getSecurityRuleList() {
-        return getSecurityRuleList(GetSecurityRuleListArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * ## Example Usage
      * 
-     */
-    public static CompletableFuture<GetSecurityRuleListResult> getSecurityRuleListPlain() {
-        return getSecurityRuleListPlain(GetSecurityRuleListPlainArgs.Empty, InvokeOptions.Empty);
-    }
-    /**
-     * Retrieves a listing of config items.
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
+     *             .folder("All")
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSecurityRuleListResult> getSecurityRuleList(GetSecurityRuleListArgs args) {
@@ -12898,12 +19667,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
+     *             .folder("All")
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSecurityRuleListResult> getSecurityRuleListPlain(GetSecurityRuleListPlainArgs args) {
         return getSecurityRuleListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
+     *             .folder("All")
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSecurityRuleListResult> getSecurityRuleList(GetSecurityRuleListArgs args, InvokeOptions options) {
@@ -12912,12 +19757,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
+     *             .folder("All")
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSecurityRuleListResult> getSecurityRuleList(GetSecurityRuleListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSecurityRuleList:getSecurityRuleList", TypeShape.of(GetSecurityRuleListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSecurityRuleListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var pagedRulesList = ScmFunctions.getSecurityRuleList(GetSecurityRuleListArgs.builder()
+     *             .folder("All")
+     *             .position("pre")
+     *             .build());
+     * 
+     *         ctx.export("fetchedRuleListSummary", Map.ofEntries(
+     *             Map.entry("countOfRulesFetched", pagedRulesList.total()),
+     *             Map.entry("firstRuleName", pagedRulesList.datas()[0].name())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSecurityRuleListResult> getSecurityRuleListPlain(GetSecurityRuleListPlainArgs args, InvokeOptions options) {
@@ -13168,6 +20089,138 @@ public final class ScmFunctions {
      * 
      * ## Example Usage
      * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+     *         // Note: The resource name is plural: "scm_ike_crypto_profile"
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_data")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_data")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. Define the IKE Gateway
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_data")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. Define the IPsec Tunnel
+     *         // Note: Nested 'auto_key' block uses an equals sign (=).
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_data")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_data")
+     *             .region("us-west-1")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(true)
+     *             .build());
+     * 
+     *         //------------------------------------------------------
+     *         // Data Soruce
+     *         //------------------------------------------------------
+     *         final var createdConnLookup = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
+     *             .id(siteAVpnSc.id())
+     *             .build());
+     * 
+     *         ctx.export("createdServiceConnectionId", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.id()));
+     *         ctx.export("createdServiceConnectionRegion", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.region()));
+     *         ctx.export("createdServiceConnectionSubnets", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.subnets()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetServiceConnectionResult> getServiceConnection(GetServiceConnectionArgs args) {
         return getServiceConnection(args, InvokeOptions.Empty);
@@ -13176,6 +20229,138 @@ public final class ScmFunctions {
      * ServiceConnection data source
      * 
      * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+     *         // Note: The resource name is plural: "scm_ike_crypto_profile"
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_data")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_data")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. Define the IKE Gateway
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_data")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. Define the IPsec Tunnel
+     *         // Note: Nested 'auto_key' block uses an equals sign (=).
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_data")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_data")
+     *             .region("us-west-1")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(true)
+     *             .build());
+     * 
+     *         //------------------------------------------------------
+     *         // Data Soruce
+     *         //------------------------------------------------------
+     *         final var createdConnLookup = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
+     *             .id(siteAVpnSc.id())
+     *             .build());
+     * 
+     *         ctx.export("createdServiceConnectionId", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.id()));
+     *         ctx.export("createdServiceConnectionRegion", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.region()));
+     *         ctx.export("createdServiceConnectionSubnets", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.subnets()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetServiceConnectionResult> getServiceConnectionPlain(GetServiceConnectionPlainArgs args) {
@@ -13186,6 +20371,138 @@ public final class ScmFunctions {
      * 
      * ## Example Usage
      * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+     *         // Note: The resource name is plural: "scm_ike_crypto_profile"
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_data")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_data")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. Define the IKE Gateway
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_data")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. Define the IPsec Tunnel
+     *         // Note: Nested 'auto_key' block uses an equals sign (=).
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_data")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_data")
+     *             .region("us-west-1")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(true)
+     *             .build());
+     * 
+     *         //------------------------------------------------------
+     *         // Data Soruce
+     *         //------------------------------------------------------
+     *         final var createdConnLookup = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
+     *             .id(siteAVpnSc.id())
+     *             .build());
+     * 
+     *         ctx.export("createdServiceConnectionId", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.id()));
+     *         ctx.export("createdServiceConnectionRegion", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.region()));
+     *         ctx.export("createdServiceConnectionSubnets", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.subnets()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetServiceConnectionResult> getServiceConnection(GetServiceConnectionArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getServiceConnection:getServiceConnection", TypeShape.of(GetServiceConnectionResult.class), args, Utilities.withVersion(options));
@@ -13194,6 +20511,138 @@ public final class ScmFunctions {
      * ServiceConnection data source
      * 
      * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+     *         // Note: The resource name is plural: "scm_ike_crypto_profile"
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_data")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_data")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. Define the IKE Gateway
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_data")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. Define the IPsec Tunnel
+     *         // Note: Nested 'auto_key' block uses an equals sign (=).
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_data")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_data")
+     *             .region("us-west-1")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(true)
+     *             .build());
+     * 
+     *         //------------------------------------------------------
+     *         // Data Soruce
+     *         //------------------------------------------------------
+     *         final var createdConnLookup = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
+     *             .id(siteAVpnSc.id())
+     *             .build());
+     * 
+     *         ctx.export("createdServiceConnectionId", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.id()));
+     *         ctx.export("createdServiceConnectionRegion", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.region()));
+     *         ctx.export("createdServiceConnectionSubnets", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.subnets()));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetServiceConnectionResult> getServiceConnection(GetServiceConnectionArgs args, InvokeOutputOptions options) {
@@ -13204,6 +20653,138 @@ public final class ScmFunctions {
      * 
      * ## Example Usage
      * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+     *         // Note: The resource name is plural: "scm_ike_crypto_profile"
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_data")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_data")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. Define the IKE Gateway
+     *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_data")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. Define the IPsec Tunnel
+     *         // Note: Nested 'auto_key' block uses an equals sign (=).
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_data")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_data")
+     *             .region("us-west-1")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(true)
+     *             .build());
+     * 
+     *         //------------------------------------------------------
+     *         // Data Soruce
+     *         //------------------------------------------------------
+     *         final var createdConnLookup = ScmFunctions.getServiceConnection(GetServiceConnectionArgs.builder()
+     *             .id(siteAVpnSc.id())
+     *             .build());
+     * 
+     *         ctx.export("createdServiceConnectionId", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.id()));
+     *         ctx.export("createdServiceConnectionRegion", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.region()));
+     *         ctx.export("createdServiceConnectionSubnets", createdConnLookup.applyValue(_createdConnLookup -> _createdConnLookup.subnets()));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetServiceConnectionResult> getServiceConnectionPlain(GetServiceConnectionPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getServiceConnection:getServiceConnection", TypeShape.of(GetServiceConnectionResult.class), args, Utilities.withVersion(options));
@@ -13212,6 +20793,156 @@ public final class ScmFunctions {
      * ServiceConnectionGroup data source
      * 
      * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ServiceConnectionGroup;
+     * import com.pulumi.scm.ServiceConnectionGroupArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. IKE Crypto Profile (IKE Phase 1)
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. IPsec Crypto Profile (IKE Phase 2)
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. IKE Gateway
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_sc_grp")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. IPsec Tunnel
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_sc_grp")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc2 = new ServiceConnection("siteAVpnSc2", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp_2")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 6. Service Connection Group (Groups the Service Connection created above)
+     *         var exampleGroup = new ServiceConnectionGroup("exampleGroup", ServiceConnectionGroupArgs.builder()
+     *             .name("service-connection-group-app_sc_grp")
+     *             .targets(            
+     *                 siteAVpnSc.name(),
+     *                 siteAVpnSc2.name())
+     *             .disableSnat(false)
+     *             .pbfOnly(true)
+     *             .build());
+     * 
+     *         // ------------------------------------------------------------------
+     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // ------------------------------------------------------------------
+     *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
+     *             .id(exampleGroup.id())
+     *             .build());
+     * 
+     *         ctx.export("lookedUpServiceConnectionGroupDetails", groupLookup);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetServiceConnectionGroupResult> getServiceConnectionGroup(GetServiceConnectionGroupArgs args) {
@@ -13222,6 +20953,156 @@ public final class ScmFunctions {
      * 
      * ## Example Usage
      * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ServiceConnectionGroup;
+     * import com.pulumi.scm.ServiceConnectionGroupArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. IKE Crypto Profile (IKE Phase 1)
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. IPsec Crypto Profile (IKE Phase 2)
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. IKE Gateway
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_sc_grp")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. IPsec Tunnel
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_sc_grp")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc2 = new ServiceConnection("siteAVpnSc2", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp_2")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 6. Service Connection Group (Groups the Service Connection created above)
+     *         var exampleGroup = new ServiceConnectionGroup("exampleGroup", ServiceConnectionGroupArgs.builder()
+     *             .name("service-connection-group-app_sc_grp")
+     *             .targets(            
+     *                 siteAVpnSc.name(),
+     *                 siteAVpnSc2.name())
+     *             .disableSnat(false)
+     *             .pbfOnly(true)
+     *             .build());
+     * 
+     *         // ------------------------------------------------------------------
+     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // ------------------------------------------------------------------
+     *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
+     *             .id(exampleGroup.id())
+     *             .build());
+     * 
+     *         ctx.export("lookedUpServiceConnectionGroupDetails", groupLookup);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetServiceConnectionGroupResult> getServiceConnectionGroupPlain(GetServiceConnectionGroupPlainArgs args) {
         return getServiceConnectionGroupPlain(args, InvokeOptions.Empty);
@@ -13230,6 +21111,156 @@ public final class ScmFunctions {
      * ServiceConnectionGroup data source
      * 
      * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ServiceConnectionGroup;
+     * import com.pulumi.scm.ServiceConnectionGroupArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. IKE Crypto Profile (IKE Phase 1)
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. IPsec Crypto Profile (IKE Phase 2)
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. IKE Gateway
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_sc_grp")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. IPsec Tunnel
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_sc_grp")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc2 = new ServiceConnection("siteAVpnSc2", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp_2")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 6. Service Connection Group (Groups the Service Connection created above)
+     *         var exampleGroup = new ServiceConnectionGroup("exampleGroup", ServiceConnectionGroupArgs.builder()
+     *             .name("service-connection-group-app_sc_grp")
+     *             .targets(            
+     *                 siteAVpnSc.name(),
+     *                 siteAVpnSc2.name())
+     *             .disableSnat(false)
+     *             .pbfOnly(true)
+     *             .build());
+     * 
+     *         // ------------------------------------------------------------------
+     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // ------------------------------------------------------------------
+     *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
+     *             .id(exampleGroup.id())
+     *             .build());
+     * 
+     *         ctx.export("lookedUpServiceConnectionGroupDetails", groupLookup);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetServiceConnectionGroupResult> getServiceConnectionGroup(GetServiceConnectionGroupArgs args, InvokeOptions options) {
@@ -13240,6 +21271,156 @@ public final class ScmFunctions {
      * 
      * ## Example Usage
      * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ServiceConnectionGroup;
+     * import com.pulumi.scm.ServiceConnectionGroupArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. IKE Crypto Profile (IKE Phase 1)
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. IPsec Crypto Profile (IKE Phase 2)
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. IKE Gateway
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_sc_grp")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. IPsec Tunnel
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_sc_grp")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc2 = new ServiceConnection("siteAVpnSc2", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp_2")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 6. Service Connection Group (Groups the Service Connection created above)
+     *         var exampleGroup = new ServiceConnectionGroup("exampleGroup", ServiceConnectionGroupArgs.builder()
+     *             .name("service-connection-group-app_sc_grp")
+     *             .targets(            
+     *                 siteAVpnSc.name(),
+     *                 siteAVpnSc2.name())
+     *             .disableSnat(false)
+     *             .pbfOnly(true)
+     *             .build());
+     * 
+     *         // ------------------------------------------------------------------
+     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // ------------------------------------------------------------------
+     *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
+     *             .id(exampleGroup.id())
+     *             .build());
+     * 
+     *         ctx.export("lookedUpServiceConnectionGroupDetails", groupLookup);
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetServiceConnectionGroupResult> getServiceConnectionGroup(GetServiceConnectionGroupArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getServiceConnectionGroup:getServiceConnectionGroup", TypeShape.of(GetServiceConnectionGroupResult.class), args, Utilities.withVersion(options));
@@ -13248,6 +21429,156 @@ public final class ScmFunctions {
      * ServiceConnectionGroup data source
      * 
      * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.IkeCryptoProfile;
+     * import com.pulumi.scm.IkeCryptoProfileArgs;
+     * import com.pulumi.scm.IpsecCryptoProfile;
+     * import com.pulumi.scm.IpsecCryptoProfileArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+     * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+     * import com.pulumi.scm.IkeGateway;
+     * import com.pulumi.scm.IkeGatewayArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+     * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+     * import com.pulumi.scm.IpsecTunnel;
+     * import com.pulumi.scm.IpsecTunnelArgs;
+     * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+     * import com.pulumi.scm.ServiceConnection;
+     * import com.pulumi.scm.ServiceConnectionArgs;
+     * import com.pulumi.scm.ServiceConnectionGroup;
+     * import com.pulumi.scm.ServiceConnectionGroupArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetServiceConnectionGroupArgs;
+     * import com.pulumi.resources.CustomResourceOptions;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var config = ctx.config();
+     *         final var folderScope = config.get("folderScope").orElse("Service Connections");
+     *         //# 1. IKE Crypto Profile (IKE Phase 1)
+     *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+     *             .name("example-ike-crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .hashes("sha256")
+     *             .dhGroups("group14")
+     *             .encryptions("aes-256-cbc")
+     *             .build());
+     * 
+     *         //# 2. IPsec Crypto Profile (IKE Phase 2)
+     *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+     *             .name("panw-IPSec-Crypto_sc_grp")
+     *             .folder(folderScope)
+     *             .esp(IpsecCryptoProfileEspArgs.builder()
+     *                 .encryptions("aes-256-gcm")
+     *                 .authentications("sha256")
+     *                 .build())
+     *             .dhGroup("group14")
+     *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+     *                 .hours(8)
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 3. IKE Gateway
+     *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+     *             .name("example-gateway_sc_grp")
+     *             .folder(folderScope)
+     *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+     *                 .ip("1.1.1.1")
+     *                 .build())
+     *             .authentication(IkeGatewayAuthenticationArgs.builder()
+     *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+     *                     .key("secret")
+     *                     .build())
+     *                 .build())
+     *             .protocol(IkeGatewayProtocolArgs.builder()
+     *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+     *                     .ikeCryptoProfile(example.name())
+     *                     .build())
+     *                 .build())
+     *             .build());
+     * 
+     *         //# 4. IPsec Tunnel
+     *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+     *             .name("example-tunnel_sc_grp")
+     *             .folder(folderScope)
+     *             .tunnelInterface("tunnel")
+     *             .antiReplay(true)
+     *             .copyTos(false)
+     *             .enableGreEncapsulation(false)
+     *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+     *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+     *                     .name(exampleIkeGateway.name())
+     *                     .build())
+     *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+     *                 .build())
+     *             .build(), CustomResourceOptions.builder()
+     *                 .dependsOn(exampleIkeGateway)
+     *                 .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc = new ServiceConnection("siteAVpnSc", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 5. Service Connection (The target for the group)
+     *         var siteAVpnSc2 = new ServiceConnection("siteAVpnSc2", ServiceConnectionArgs.builder()
+     *             .name("creating_a_service_connection_sc_grp_2")
+     *             .region("us-west-1a")
+     *             .ipsecTunnel(exampleIpsecTunnel.name())
+     *             .subnets(            
+     *                 "10.1.0.0/16",
+     *                 "172.16.0.0/24")
+     *             .sourceNat(false)
+     *             .build());
+     * 
+     *         //# 6. Service Connection Group (Groups the Service Connection created above)
+     *         var exampleGroup = new ServiceConnectionGroup("exampleGroup", ServiceConnectionGroupArgs.builder()
+     *             .name("service-connection-group-app_sc_grp")
+     *             .targets(            
+     *                 siteAVpnSc.name(),
+     *                 siteAVpnSc2.name())
+     *             .disableSnat(false)
+     *             .pbfOnly(true)
+     *             .build());
+     * 
+     *         // ------------------------------------------------------------------
+     *         // Data Source: SCM Service Connection Group (Single Lookup)
+     *         // ------------------------------------------------------------------
+     *         final var groupLookup = ScmFunctions.getServiceConnectionGroup(GetServiceConnectionGroupArgs.builder()
+     *             .id(exampleGroup.id())
+     *             .build());
+     * 
+     *         ctx.export("lookedUpServiceConnectionGroupDetails", groupLookup);
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetServiceConnectionGroupResult> getServiceConnectionGroupPlain(GetServiceConnectionGroupPlainArgs args, InvokeOptions options) {
@@ -13624,7 +21955,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all service group objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("serviceGroupsListRaw", allServiceGroups.datas());
@@ -13667,7 +21998,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all service group objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("serviceGroupsListRaw", allServiceGroups.datas());
@@ -13710,7 +22041,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all service group objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("serviceGroupsListRaw", allServiceGroups.datas());
@@ -13753,7 +22084,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all service group objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("serviceGroupsListRaw", allServiceGroups.datas());
@@ -13796,7 +22127,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all service group objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("serviceGroupsListRaw", allServiceGroups.datas());
@@ -13839,7 +22170,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all service group objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("serviceGroupsListRaw", allServiceGroups.datas());
@@ -13882,7 +22213,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all service group objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allServiceGroups = ScmFunctions.getServiceGroupList(GetServiceGroupListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("serviceGroupsListRaw", allServiceGroups.datas());
@@ -14045,12 +22376,120 @@ public final class ScmFunctions {
     /**
      * Snippet data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Label;
+     * import com.pulumi.scm.LabelArgs;
+     * import com.pulumi.scm.Snippet;
+     * import com.pulumi.scm.SnippetArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var scmLabel1 = new Label("scmLabel1", LabelArgs.builder()
+     *             .name("scm_label")
+     *             .build());
+     * 
+     *         var scmSnippet1 = new Snippet("scmSnippet1", SnippetArgs.builder()
+     *             .name("scm_snippet")
+     *             .description("Adding a Description from Terraform")
+     *             .labels(scmLabel1.name())
+     *             .build());
+     * 
+     *         // Look up the "scm_snippet" tag by its id
+     *         final var scmSnippetOutputsDs = ScmFunctions.getSnippet(GetSnippetArgs.builder()
+     *             .id(scmSnippet1.id())
+     *             .build());
+     * 
+     *         ctx.export("snippetOutputs", Map.ofEntries(
+     *             Map.entry("productionId", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.id())),
+     *             Map.entry("productionName", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.name())),
+     *             Map.entry("productionDescription", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.description())),
+     *             Map.entry("productionLabels", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.labels()))
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSnippetResult> getSnippet(GetSnippetArgs args) {
         return getSnippet(args, InvokeOptions.Empty);
     }
     /**
      * Snippet data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Label;
+     * import com.pulumi.scm.LabelArgs;
+     * import com.pulumi.scm.Snippet;
+     * import com.pulumi.scm.SnippetArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var scmLabel1 = new Label("scmLabel1", LabelArgs.builder()
+     *             .name("scm_label")
+     *             .build());
+     * 
+     *         var scmSnippet1 = new Snippet("scmSnippet1", SnippetArgs.builder()
+     *             .name("scm_snippet")
+     *             .description("Adding a Description from Terraform")
+     *             .labels(scmLabel1.name())
+     *             .build());
+     * 
+     *         // Look up the "scm_snippet" tag by its id
+     *         final var scmSnippetOutputsDs = ScmFunctions.getSnippet(GetSnippetArgs.builder()
+     *             .id(scmSnippet1.id())
+     *             .build());
+     * 
+     *         ctx.export("snippetOutputs", Map.ofEntries(
+     *             Map.entry("productionId", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.id())),
+     *             Map.entry("productionName", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.name())),
+     *             Map.entry("productionDescription", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.description())),
+     *             Map.entry("productionLabels", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.labels()))
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSnippetResult> getSnippetPlain(GetSnippetPlainArgs args) {
@@ -14059,12 +22498,120 @@ public final class ScmFunctions {
     /**
      * Snippet data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Label;
+     * import com.pulumi.scm.LabelArgs;
+     * import com.pulumi.scm.Snippet;
+     * import com.pulumi.scm.SnippetArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var scmLabel1 = new Label("scmLabel1", LabelArgs.builder()
+     *             .name("scm_label")
+     *             .build());
+     * 
+     *         var scmSnippet1 = new Snippet("scmSnippet1", SnippetArgs.builder()
+     *             .name("scm_snippet")
+     *             .description("Adding a Description from Terraform")
+     *             .labels(scmLabel1.name())
+     *             .build());
+     * 
+     *         // Look up the "scm_snippet" tag by its id
+     *         final var scmSnippetOutputsDs = ScmFunctions.getSnippet(GetSnippetArgs.builder()
+     *             .id(scmSnippet1.id())
+     *             .build());
+     * 
+     *         ctx.export("snippetOutputs", Map.ofEntries(
+     *             Map.entry("productionId", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.id())),
+     *             Map.entry("productionName", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.name())),
+     *             Map.entry("productionDescription", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.description())),
+     *             Map.entry("productionLabels", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.labels()))
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSnippetResult> getSnippet(GetSnippetArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSnippet:getSnippet", TypeShape.of(GetSnippetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Snippet data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Label;
+     * import com.pulumi.scm.LabelArgs;
+     * import com.pulumi.scm.Snippet;
+     * import com.pulumi.scm.SnippetArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var scmLabel1 = new Label("scmLabel1", LabelArgs.builder()
+     *             .name("scm_label")
+     *             .build());
+     * 
+     *         var scmSnippet1 = new Snippet("scmSnippet1", SnippetArgs.builder()
+     *             .name("scm_snippet")
+     *             .description("Adding a Description from Terraform")
+     *             .labels(scmLabel1.name())
+     *             .build());
+     * 
+     *         // Look up the "scm_snippet" tag by its id
+     *         final var scmSnippetOutputsDs = ScmFunctions.getSnippet(GetSnippetArgs.builder()
+     *             .id(scmSnippet1.id())
+     *             .build());
+     * 
+     *         ctx.export("snippetOutputs", Map.ofEntries(
+     *             Map.entry("productionId", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.id())),
+     *             Map.entry("productionName", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.name())),
+     *             Map.entry("productionDescription", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.description())),
+     *             Map.entry("productionLabels", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.labels()))
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSnippetResult> getSnippet(GetSnippetArgs args, InvokeOutputOptions options) {
@@ -14073,12 +22620,100 @@ public final class ScmFunctions {
     /**
      * Snippet data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.Label;
+     * import com.pulumi.scm.LabelArgs;
+     * import com.pulumi.scm.Snippet;
+     * import com.pulumi.scm.SnippetArgs;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         var scmLabel1 = new Label("scmLabel1", LabelArgs.builder()
+     *             .name("scm_label")
+     *             .build());
+     * 
+     *         var scmSnippet1 = new Snippet("scmSnippet1", SnippetArgs.builder()
+     *             .name("scm_snippet")
+     *             .description("Adding a Description from Terraform")
+     *             .labels(scmLabel1.name())
+     *             .build());
+     * 
+     *         // Look up the "scm_snippet" tag by its id
+     *         final var scmSnippetOutputsDs = ScmFunctions.getSnippet(GetSnippetArgs.builder()
+     *             .id(scmSnippet1.id())
+     *             .build());
+     * 
+     *         ctx.export("snippetOutputs", Map.ofEntries(
+     *             Map.entry("productionId", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.id())),
+     *             Map.entry("productionName", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.name())),
+     *             Map.entry("productionDescription", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.description())),
+     *             Map.entry("productionLabels", scmSnippetOutputsDs.applyValue(_scmSnippetOutputsDs -> _scmSnippetOutputsDs.labels()))
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSnippetResult> getSnippetPlain(GetSnippetPlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getSnippet:getSnippet", TypeShape.of(GetSnippetResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSnippets = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("snippetsListRaw", allSnippets.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSnippetListResult> getSnippetList() {
@@ -14087,12 +22722,80 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSnippets = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("snippetsListRaw", allSnippets.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSnippetListResult> getSnippetListPlain() {
         return getSnippetListPlain(GetSnippetListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSnippets = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("snippetsListRaw", allSnippets.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSnippetListResult> getSnippetList(GetSnippetListArgs args) {
@@ -14101,12 +22804,80 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSnippets = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("snippetsListRaw", allSnippets.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetSnippetListResult> getSnippetListPlain(GetSnippetListPlainArgs args) {
         return getSnippetListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSnippets = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("snippetsListRaw", allSnippets.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetSnippetListResult> getSnippetList(GetSnippetListArgs args, InvokeOptions options) {
@@ -14115,12 +22886,80 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSnippets = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("snippetsListRaw", allSnippets.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetSnippetListResult> getSnippetList(GetSnippetListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getSnippetList:getSnippetList", TypeShape.of(GetSnippetListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetSnippetListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         final var allSnippets = ScmFunctions.getSnippetList(GetSnippetListArgs.builder()
+     *             .limit(10)
+     *             .build());
+     * 
+     *         ctx.export("snippetsListRaw", allSnippets.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetSnippetListResult> getSnippetListPlain(GetSnippetListPlainArgs args, InvokeOptions options) {
@@ -14564,7 +23403,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("tagsListRaw", allTags.datas());
@@ -14607,7 +23446,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("tagsListRaw", allTags.datas());
@@ -14650,7 +23489,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("tagsListRaw", allTags.datas());
@@ -14693,7 +23532,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("tagsListRaw", allTags.datas());
@@ -14736,7 +23575,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("tagsListRaw", allTags.datas());
@@ -14779,7 +23618,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("tagsListRaw", allTags.datas());
@@ -14822,7 +23661,7 @@ public final class ScmFunctions {
      *         // Fetch a list of all application objects.
      *         // This data source will call the "List" API endpoint.
      *         final var allTags = ScmFunctions.getTagList(GetTagListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("tagsListRaw", allTags.datas());
@@ -15006,12 +23845,94 @@ public final class ScmFunctions {
     /**
      * TunnelInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up tunnel interface by its ID.
+     *         final var scmTunnelIntfDs = ScmFunctions.getTunnelInterface(GetTunnelInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6191169a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmTunnelInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmTunnelIntfDs.id()),
+     *             Map.entry("name", scmTunnelIntfDs.name()),
+     *             Map.entry("comment", scmTunnelIntfDs.comment()),
+     *             Map.entry("ip", scmTunnelIntfDs.ips()),
+     *             Map.entry("folder", scmTunnelIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTunnelInterfaceResult> getTunnelInterface(GetTunnelInterfaceArgs args) {
         return getTunnelInterface(args, InvokeOptions.Empty);
     }
     /**
      * TunnelInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up tunnel interface by its ID.
+     *         final var scmTunnelIntfDs = ScmFunctions.getTunnelInterface(GetTunnelInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6191169a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmTunnelInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmTunnelIntfDs.id()),
+     *             Map.entry("name", scmTunnelIntfDs.name()),
+     *             Map.entry("comment", scmTunnelIntfDs.comment()),
+     *             Map.entry("ip", scmTunnelIntfDs.ips()),
+     *             Map.entry("folder", scmTunnelIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetTunnelInterfaceResult> getTunnelInterfacePlain(GetTunnelInterfacePlainArgs args) {
@@ -15020,12 +23941,94 @@ public final class ScmFunctions {
     /**
      * TunnelInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up tunnel interface by its ID.
+     *         final var scmTunnelIntfDs = ScmFunctions.getTunnelInterface(GetTunnelInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6191169a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmTunnelInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmTunnelIntfDs.id()),
+     *             Map.entry("name", scmTunnelIntfDs.name()),
+     *             Map.entry("comment", scmTunnelIntfDs.comment()),
+     *             Map.entry("ip", scmTunnelIntfDs.ips()),
+     *             Map.entry("folder", scmTunnelIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetTunnelInterfaceResult> getTunnelInterface(GetTunnelInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTunnelInterface:getTunnelInterface", TypeShape.of(GetTunnelInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * TunnelInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up tunnel interface by its ID.
+     *         final var scmTunnelIntfDs = ScmFunctions.getTunnelInterface(GetTunnelInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6191169a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmTunnelInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmTunnelIntfDs.id()),
+     *             Map.entry("name", scmTunnelIntfDs.name()),
+     *             Map.entry("comment", scmTunnelIntfDs.comment()),
+     *             Map.entry("ip", scmTunnelIntfDs.ips()),
+     *             Map.entry("folder", scmTunnelIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetTunnelInterfaceResult> getTunnelInterface(GetTunnelInterfaceArgs args, InvokeOutputOptions options) {
@@ -15034,12 +24037,55 @@ public final class ScmFunctions {
     /**
      * TunnelInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetTunnelInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up tunnel interface by its ID.
+     *         final var scmTunnelIntfDs = ScmFunctions.getTunnelInterface(GetTunnelInterfaceArgs.builder()
+     *             .id("ddad1e64-0b64-41a4-b361-c6191169a8f1")
+     *             .build());
+     * 
+     *         ctx.export("scmTunnelInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmTunnelIntfDs.id()),
+     *             Map.entry("name", scmTunnelIntfDs.name()),
+     *             Map.entry("comment", scmTunnelIntfDs.comment()),
+     *             Map.entry("ip", scmTunnelIntfDs.ips()),
+     *             Map.entry("folder", scmTunnelIntfDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetTunnelInterfaceResult> getTunnelInterfacePlain(GetTunnelInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getTunnelInterface:getTunnelInterface", TypeShape.of(GetTunnelInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetTunnelInterfaceListResult> getTunnelInterfaceList() {
@@ -15048,12 +24094,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetTunnelInterfaceListResult> getTunnelInterfaceListPlain() {
         return getTunnelInterfaceListPlain(GetTunnelInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetTunnelInterfaceListResult> getTunnelInterfaceList(GetTunnelInterfaceListArgs args) {
@@ -15062,12 +24112,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetTunnelInterfaceListResult> getTunnelInterfaceListPlain(GetTunnelInterfaceListPlainArgs args) {
         return getTunnelInterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetTunnelInterfaceListResult> getTunnelInterfaceList(GetTunnelInterfaceListArgs args, InvokeOptions options) {
@@ -15076,12 +24130,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetTunnelInterfaceListResult> getTunnelInterfaceList(GetTunnelInterfaceListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getTunnelInterfaceList:getTunnelInterfaceList", TypeShape.of(GetTunnelInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetTunnelInterfaceListResult> getTunnelInterfaceListPlain(GetTunnelInterfaceListPlainArgs args, InvokeOptions options) {
@@ -15344,7 +24402,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlAccessProfilesListAllShared", allShared.datas());
@@ -15389,7 +24447,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlAccessProfilesListAllShared", allShared.datas());
@@ -15434,7 +24492,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlAccessProfilesListAllShared", allShared.datas());
@@ -15479,7 +24537,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlAccessProfilesListAllShared", allShared.datas());
@@ -15524,7 +24582,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlAccessProfilesListAllShared", allShared.datas());
@@ -15569,7 +24627,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlAccessProfilesListAllShared", allShared.datas());
@@ -15614,7 +24672,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlAccessProfileList(GetUrlAccessProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlAccessProfilesListAllShared", allShared.datas());
@@ -15884,13 +24942,13 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlCategoriesListAllShared", allShared.datas());
      *         // Example 2: Use pagination to get the first 5 URL Categories by name.
      *         final var paginated = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -15937,13 +24995,13 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlCategoriesListAllShared", allShared.datas());
      *         // Example 2: Use pagination to get the first 5 URL Categories by name.
      *         final var paginated = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -15990,13 +25048,13 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlCategoriesListAllShared", allShared.datas());
      *         // Example 2: Use pagination to get the first 5 URL Categories by name.
      *         final var paginated = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -16043,13 +25101,13 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlCategoriesListAllShared", allShared.datas());
      *         // Example 2: Use pagination to get the first 5 URL Categories by name.
      *         final var paginated = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -16096,13 +25154,13 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlCategoriesListAllShared", allShared.datas());
      *         // Example 2: Use pagination to get the first 5 URL Categories by name.
      *         final var paginated = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -16149,13 +25207,13 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlCategoriesListAllShared", allShared.datas());
      *         // Example 2: Use pagination to get the first 5 URL Categories by name.
      *         final var paginated = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -16202,13 +25260,13 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
      *         final var allShared = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("urlCategoriesListAllShared", allShared.datas());
      *         // Example 2: Use pagination to get the first 5 URL Categories by name.
      *         final var paginated = ScmFunctions.getUrlCategoryList(GetUrlCategoryListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .limit(5)
      *             .offset(0)
      *             .build());
@@ -16832,12 +25890,96 @@ public final class ScmFunctions {
     /**
      * VlanInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up vlan interface by its ID.
+     *         final var scmVlanInterfaceDs = ScmFunctions.getVlanInterface(GetVlanInterfaceArgs.builder()
+     *             .id("3f9382a3-5c93-46d9-ae06-a632c2d9ce0c")
+     *             .build());
+     * 
+     *         ctx.export("vlanInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmVlanInterfaceDs.id()),
+     *             Map.entry("name", scmVlanInterfaceDs.name()),
+     *             Map.entry("comment", scmVlanInterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmVlanInterfaceDs.vlanTag()),
+     *             Map.entry("ip", scmVlanInterfaceDs.ips()),
+     *             Map.entry("folder", scmVlanInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetVlanInterfaceResult> getVlanInterface(GetVlanInterfaceArgs args) {
         return getVlanInterface(args, InvokeOptions.Empty);
     }
     /**
      * VlanInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up vlan interface by its ID.
+     *         final var scmVlanInterfaceDs = ScmFunctions.getVlanInterface(GetVlanInterfaceArgs.builder()
+     *             .id("3f9382a3-5c93-46d9-ae06-a632c2d9ce0c")
+     *             .build());
+     * 
+     *         ctx.export("vlanInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmVlanInterfaceDs.id()),
+     *             Map.entry("name", scmVlanInterfaceDs.name()),
+     *             Map.entry("comment", scmVlanInterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmVlanInterfaceDs.vlanTag()),
+     *             Map.entry("ip", scmVlanInterfaceDs.ips()),
+     *             Map.entry("folder", scmVlanInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetVlanInterfaceResult> getVlanInterfacePlain(GetVlanInterfacePlainArgs args) {
@@ -16846,12 +25988,96 @@ public final class ScmFunctions {
     /**
      * VlanInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up vlan interface by its ID.
+     *         final var scmVlanInterfaceDs = ScmFunctions.getVlanInterface(GetVlanInterfaceArgs.builder()
+     *             .id("3f9382a3-5c93-46d9-ae06-a632c2d9ce0c")
+     *             .build());
+     * 
+     *         ctx.export("vlanInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmVlanInterfaceDs.id()),
+     *             Map.entry("name", scmVlanInterfaceDs.name()),
+     *             Map.entry("comment", scmVlanInterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmVlanInterfaceDs.vlanTag()),
+     *             Map.entry("ip", scmVlanInterfaceDs.ips()),
+     *             Map.entry("folder", scmVlanInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetVlanInterfaceResult> getVlanInterface(GetVlanInterfaceArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getVlanInterface:getVlanInterface", TypeShape.of(GetVlanInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * VlanInterface data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up vlan interface by its ID.
+     *         final var scmVlanInterfaceDs = ScmFunctions.getVlanInterface(GetVlanInterfaceArgs.builder()
+     *             .id("3f9382a3-5c93-46d9-ae06-a632c2d9ce0c")
+     *             .build());
+     * 
+     *         ctx.export("vlanInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmVlanInterfaceDs.id()),
+     *             Map.entry("name", scmVlanInterfaceDs.name()),
+     *             Map.entry("comment", scmVlanInterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmVlanInterfaceDs.vlanTag()),
+     *             Map.entry("ip", scmVlanInterfaceDs.ips()),
+     *             Map.entry("folder", scmVlanInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetVlanInterfaceResult> getVlanInterface(GetVlanInterfaceArgs args, InvokeOutputOptions options) {
@@ -16860,12 +26086,56 @@ public final class ScmFunctions {
     /**
      * VlanInterface data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVlanInterfaceArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up vlan interface by its ID.
+     *         final var scmVlanInterfaceDs = ScmFunctions.getVlanInterface(GetVlanInterfaceArgs.builder()
+     *             .id("3f9382a3-5c93-46d9-ae06-a632c2d9ce0c")
+     *             .build());
+     * 
+     *         ctx.export("vlanInterfaceDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmVlanInterfaceDs.id()),
+     *             Map.entry("name", scmVlanInterfaceDs.name()),
+     *             Map.entry("comment", scmVlanInterfaceDs.comment()),
+     *             Map.entry("vlanTag", scmVlanInterfaceDs.vlanTag()),
+     *             Map.entry("ip", scmVlanInterfaceDs.ips()),
+     *             Map.entry("folder", scmVlanInterfaceDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetVlanInterfaceResult> getVlanInterfacePlain(GetVlanInterfacePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getVlanInterface:getVlanInterface", TypeShape.of(GetVlanInterfaceResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetVlanInterfaceListResult> getVlanInterfaceList() {
@@ -16874,12 +26144,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetVlanInterfaceListResult> getVlanInterfaceListPlain() {
         return getVlanInterfaceListPlain(GetVlanInterfaceListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetVlanInterfaceListResult> getVlanInterfaceList(GetVlanInterfaceListArgs args) {
@@ -16888,12 +26162,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetVlanInterfaceListResult> getVlanInterfaceListPlain(GetVlanInterfaceListPlainArgs args) {
         return getVlanInterfaceListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetVlanInterfaceListResult> getVlanInterfaceList(GetVlanInterfaceListArgs args, InvokeOptions options) {
@@ -16902,12 +26180,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetVlanInterfaceListResult> getVlanInterfaceList(GetVlanInterfaceListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getVlanInterfaceList:getVlanInterfaceList", TypeShape.of(GetVlanInterfaceListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetVlanInterfaceListResult> getVlanInterfaceListPlain(GetVlanInterfaceListPlainArgs args, InvokeOptions options) {
@@ -17190,7 +26472,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmVulnerabilityProtectionProfileListAllShared", allShared.datas());
@@ -17235,7 +26517,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmVulnerabilityProtectionProfileListAllShared", allShared.datas());
@@ -17280,7 +26562,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmVulnerabilityProtectionProfileListAllShared", allShared.datas());
@@ -17325,7 +26607,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmVulnerabilityProtectionProfileListAllShared", allShared.datas());
@@ -17370,7 +26652,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmVulnerabilityProtectionProfileListAllShared", allShared.datas());
@@ -17415,7 +26697,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmVulnerabilityProtectionProfileListAllShared", allShared.datas());
@@ -17460,7 +26742,7 @@ public final class ScmFunctions {
      *         //
      *         // Example 1: Fetch a list of all SCM Vulnerability Protection Profile in the "Shared" folder.
      *         final var allShared = ScmFunctions.getVulnerabilityProtectionProfileList(GetVulnerabilityProtectionProfileListArgs.builder()
-     *             .folder("Shared")
+     *             .folder("All")
      *             .build());
      * 
      *         ctx.export("scmVulnerabilityProtectionProfileListAllShared", allShared.datas());
@@ -17476,12 +26758,96 @@ public final class ScmFunctions {
     /**
      * VulnerabilityProtectionSignature data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Vulnerability Protection Signature object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Vulnerability Protection Signature you want to find.
+     *         final var scmVpSignature = ScmFunctions.getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs.builder()
+     *             .id("f2a337e2-f3a6-45aa-9273-de3d216f8d9c")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureDetails", Map.ofEntries(
+     *             Map.entry("signatureId", scmVpSignature.id()),
+     *             Map.entry("folder", scmVpSignature.folder()),
+     *             Map.entry("name", scmVpSignature.threatId())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetVulnerabilityProtectionSignatureResult> getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs args) {
         return getVulnerabilityProtectionSignature(args, InvokeOptions.Empty);
     }
     /**
      * VulnerabilityProtectionSignature data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Vulnerability Protection Signature object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Vulnerability Protection Signature you want to find.
+     *         final var scmVpSignature = ScmFunctions.getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs.builder()
+     *             .id("f2a337e2-f3a6-45aa-9273-de3d216f8d9c")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureDetails", Map.ofEntries(
+     *             Map.entry("signatureId", scmVpSignature.id()),
+     *             Map.entry("folder", scmVpSignature.folder()),
+     *             Map.entry("name", scmVpSignature.threatId())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetVulnerabilityProtectionSignatureResult> getVulnerabilityProtectionSignaturePlain(GetVulnerabilityProtectionSignaturePlainArgs args) {
@@ -17490,12 +26856,96 @@ public final class ScmFunctions {
     /**
      * VulnerabilityProtectionSignature data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Vulnerability Protection Signature object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Vulnerability Protection Signature you want to find.
+     *         final var scmVpSignature = ScmFunctions.getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs.builder()
+     *             .id("f2a337e2-f3a6-45aa-9273-de3d216f8d9c")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureDetails", Map.ofEntries(
+     *             Map.entry("signatureId", scmVpSignature.id()),
+     *             Map.entry("folder", scmVpSignature.folder()),
+     *             Map.entry("name", scmVpSignature.threatId())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetVulnerabilityProtectionSignatureResult> getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getVulnerabilityProtectionSignature:getVulnerabilityProtectionSignature", TypeShape.of(GetVulnerabilityProtectionSignatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * VulnerabilityProtectionSignature data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Vulnerability Protection Signature object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Vulnerability Protection Signature you want to find.
+     *         final var scmVpSignature = ScmFunctions.getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs.builder()
+     *             .id("f2a337e2-f3a6-45aa-9273-de3d216f8d9c")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureDetails", Map.ofEntries(
+     *             Map.entry("signatureId", scmVpSignature.id()),
+     *             Map.entry("folder", scmVpSignature.folder()),
+     *             Map.entry("name", scmVpSignature.threatId())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetVulnerabilityProtectionSignatureResult> getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs args, InvokeOutputOptions options) {
@@ -17504,12 +26954,92 @@ public final class ScmFunctions {
     /**
      * VulnerabilityProtectionSignature data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a single SCM Vulnerability Protection Signature object by its ID.
+     *         //
+     *         // Replace the ID with the UUID of the SCM Vulnerability Protection Signature you want to find.
+     *         final var scmVpSignature = ScmFunctions.getVulnerabilityProtectionSignature(GetVulnerabilityProtectionSignatureArgs.builder()
+     *             .id("f2a337e2-f3a6-45aa-9273-de3d216f8d9c")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureDetails", Map.ofEntries(
+     *             Map.entry("signatureId", scmVpSignature.id()),
+     *             Map.entry("folder", scmVpSignature.folder()),
+     *             Map.entry("name", scmVpSignature.threatId())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetVulnerabilityProtectionSignatureResult> getVulnerabilityProtectionSignaturePlain(GetVulnerabilityProtectionSignaturePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getVulnerabilityProtectionSignature:getVulnerabilityProtectionSignature", TypeShape.of(GetVulnerabilityProtectionSignatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetVulnerabilityProtectionSignatureListResult> getVulnerabilityProtectionSignatureList() {
@@ -17518,12 +27048,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetVulnerabilityProtectionSignatureListResult> getVulnerabilityProtectionSignatureListPlain() {
         return getVulnerabilityProtectionSignatureListPlain(GetVulnerabilityProtectionSignatureListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetVulnerabilityProtectionSignatureListResult> getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs args) {
@@ -17532,12 +27138,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetVulnerabilityProtectionSignatureListResult> getVulnerabilityProtectionSignatureListPlain(GetVulnerabilityProtectionSignatureListPlainArgs args) {
         return getVulnerabilityProtectionSignatureListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetVulnerabilityProtectionSignatureListResult> getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs args, InvokeOptions options) {
@@ -17546,12 +27228,88 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetVulnerabilityProtectionSignatureListResult> getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getVulnerabilityProtectionSignatureList:getVulnerabilityProtectionSignatureList", TypeShape.of(GetVulnerabilityProtectionSignatureListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetVulnerabilityProtectionSignatureListArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         //
+     *         // Data source to retrieve a list of SCM Vulnerability Protection Signature objects.
+     *         //
+     *         // Example 1: Fetch a list of all SCM Vulnerability Protection Signature in the "Shared" folder.
+     *         final var allShared = ScmFunctions.getVulnerabilityProtectionSignatureList(GetVulnerabilityProtectionSignatureListArgs.builder()
+     *             .folder("All")
+     *             .build());
+     * 
+     *         ctx.export("scmVulnerabilityProtectionSignatureListAllShared", allShared.datas());
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetVulnerabilityProtectionSignatureListResult> getVulnerabilityProtectionSignatureListPlain(GetVulnerabilityProtectionSignatureListPlainArgs args, InvokeOptions options) {
@@ -17644,12 +27402,100 @@ public final class ScmFunctions {
     /**
      * Zone data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up zone by its ID.
+     *         final var scmZoneDs = ScmFunctions.getZone(GetZoneArgs.builder()
+     *             .id("50f1f0f3-a420-4989-9770-c927f1467a9a")
+     *             .build());
+     * 
+     *         ctx.export("zoneDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmZoneDs.id()),
+     *             Map.entry("name", scmZoneDs.name()),
+     *             Map.entry("network", scmZoneDs.network()),
+     *             Map.entry("enableDeviceIdentification", scmZoneDs.enableDeviceIdentification()),
+     *             Map.entry("enableUserIdentification", scmZoneDs.enableUserIdentification()),
+     *             Map.entry("userAcl", scmZoneDs.userAcl()),
+     *             Map.entry("deviceAcl", scmZoneDs.deviceAcl()),
+     *             Map.entry("folder", scmZoneDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetZoneResult> getZone(GetZoneArgs args) {
         return getZone(args, InvokeOptions.Empty);
     }
     /**
      * Zone data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up zone by its ID.
+     *         final var scmZoneDs = ScmFunctions.getZone(GetZoneArgs.builder()
+     *             .id("50f1f0f3-a420-4989-9770-c927f1467a9a")
+     *             .build());
+     * 
+     *         ctx.export("zoneDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmZoneDs.id()),
+     *             Map.entry("name", scmZoneDs.name()),
+     *             Map.entry("network", scmZoneDs.network()),
+     *             Map.entry("enableDeviceIdentification", scmZoneDs.enableDeviceIdentification()),
+     *             Map.entry("enableUserIdentification", scmZoneDs.enableUserIdentification()),
+     *             Map.entry("userAcl", scmZoneDs.userAcl()),
+     *             Map.entry("deviceAcl", scmZoneDs.deviceAcl()),
+     *             Map.entry("folder", scmZoneDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetZoneResult> getZonePlain(GetZonePlainArgs args) {
@@ -17658,12 +27504,100 @@ public final class ScmFunctions {
     /**
      * Zone data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up zone by its ID.
+     *         final var scmZoneDs = ScmFunctions.getZone(GetZoneArgs.builder()
+     *             .id("50f1f0f3-a420-4989-9770-c927f1467a9a")
+     *             .build());
+     * 
+     *         ctx.export("zoneDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmZoneDs.id()),
+     *             Map.entry("name", scmZoneDs.name()),
+     *             Map.entry("network", scmZoneDs.network()),
+     *             Map.entry("enableDeviceIdentification", scmZoneDs.enableDeviceIdentification()),
+     *             Map.entry("enableUserIdentification", scmZoneDs.enableUserIdentification()),
+     *             Map.entry("userAcl", scmZoneDs.userAcl()),
+     *             Map.entry("deviceAcl", scmZoneDs.deviceAcl()),
+     *             Map.entry("folder", scmZoneDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetZoneResult> getZone(GetZoneArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getZone:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Zone data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up zone by its ID.
+     *         final var scmZoneDs = ScmFunctions.getZone(GetZoneArgs.builder()
+     *             .id("50f1f0f3-a420-4989-9770-c927f1467a9a")
+     *             .build());
+     * 
+     *         ctx.export("zoneDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmZoneDs.id()),
+     *             Map.entry("name", scmZoneDs.name()),
+     *             Map.entry("network", scmZoneDs.network()),
+     *             Map.entry("enableDeviceIdentification", scmZoneDs.enableDeviceIdentification()),
+     *             Map.entry("enableUserIdentification", scmZoneDs.enableUserIdentification()),
+     *             Map.entry("userAcl", scmZoneDs.userAcl()),
+     *             Map.entry("deviceAcl", scmZoneDs.deviceAcl()),
+     *             Map.entry("folder", scmZoneDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static Output<GetZoneResult> getZone(GetZoneArgs args, InvokeOutputOptions options) {
@@ -17672,12 +27606,58 @@ public final class ScmFunctions {
     /**
      * Zone data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetZoneArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up zone by its ID.
+     *         final var scmZoneDs = ScmFunctions.getZone(GetZoneArgs.builder()
+     *             .id("50f1f0f3-a420-4989-9770-c927f1467a9a")
+     *             .build());
+     * 
+     *         ctx.export("zoneDataSourceResults", Map.ofEntries(
+     *             Map.entry("id", scmZoneDs.id()),
+     *             Map.entry("name", scmZoneDs.name()),
+     *             Map.entry("network", scmZoneDs.network()),
+     *             Map.entry("enableDeviceIdentification", scmZoneDs.enableDeviceIdentification()),
+     *             Map.entry("enableUserIdentification", scmZoneDs.enableUserIdentification()),
+     *             Map.entry("userAcl", scmZoneDs.userAcl()),
+     *             Map.entry("deviceAcl", scmZoneDs.deviceAcl()),
+     *             Map.entry("folder", scmZoneDs.folder())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static CompletableFuture<GetZoneResult> getZonePlain(GetZonePlainArgs args, InvokeOptions options) {
         return Deployment.getInstance().invokeAsync("scm:index/getZone:getZone", TypeShape.of(GetZoneResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetZoneListResult> getZoneList() {
@@ -17686,12 +27666,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetZoneListResult> getZoneListPlain() {
         return getZoneListPlain(GetZoneListPlainArgs.Empty, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetZoneListResult> getZoneList(GetZoneListArgs args) {
@@ -17700,12 +27684,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static CompletableFuture<GetZoneListResult> getZoneListPlain(GetZoneListPlainArgs args) {
         return getZoneListPlain(args, InvokeOptions.Empty);
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static Output<GetZoneListResult> getZoneList(GetZoneListArgs args, InvokeOptions options) {
@@ -17714,12 +27702,16 @@ public final class ScmFunctions {
     /**
      * Retrieves a listing of config items.
      * 
+     * ## Example Usage
+     * 
      */
     public static Output<GetZoneListResult> getZoneList(GetZoneListArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getZoneList:getZoneList", TypeShape.of(GetZoneListResult.class), args, Utilities.withVersion(options));
     }
     /**
      * Retrieves a listing of config items.
+     * 
+     * ## Example Usage
      * 
      */
     public static CompletableFuture<GetZoneListResult> getZoneListPlain(GetZoneListPlainArgs args, InvokeOptions options) {

@@ -11,6 +11,254 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// DecryptionRule resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // --- 1. TAG Resource ---
+    ///     var decryptionPositionTag = new Scm.Tag("decryption_position_tag", new()
+    ///     {
+    ///         Name = "decryption-position-tag",
+    ///         Folder = "All",
+    ///         Color = "Purple",
+    ///     });
+    /// 
+    ///     // --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
+    ///     var anchorDecryptionRule = new Scm.DecryptionRule("anchor_decryption_rule", new()
+    ///     {
+    ///         Name = "anchor-decryption-rule",
+    ///         Description = "Base rule for testing 'before' and 'after' positioning.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Action = "decrypt",
+    ///         Froms = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "high-risk",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+    ///         {
+    ///             SslForwardProxy = null,
+    ///         },
+    ///         DestinationHips = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tags = new[]
+    ///         {
+    ///             decryptionPositionTag.Name,
+    ///         },
+    ///         LogSuccess = true,
+    ///         LogFail = true,
+    ///         Disabled = false,
+    ///         NegateSource = false,
+    ///         NegateDestination = false,
+    ///     });
+    /// 
+    ///     // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+    ///     var ruleTopDecryptionRule = new Scm.DecryptionRule("rule_top_decryption_rule", new()
+    ///     {
+    ///         Name = "top-absolute-decryption-rule",
+    ///         Description = "Placed at the very TOP of the Decryption rulebase.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Action = "no-decrypt",
+    ///         RelativePosition = "top",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "high-risk",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+    ///         {
+    ///             SslForwardProxy = null,
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleBottomDecryptionRule = new Scm.DecryptionRule("rule_bottom_decryption_rule", new()
+    ///     {
+    ///         Name = "bottom-absolute-decryption-rule",
+    ///         Description = "Placed at the very BOTTOM of the Decryption rulebase.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Action = "decrypt",
+    ///         RelativePosition = "bottom",
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "high-risk",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+    ///         {
+    ///             SslForwardProxy = null,
+    ///         },
+    ///     });
+    /// 
+    ///     // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+    ///     var ruleBeforeAnchorDecryption = new Scm.DecryptionRule("rule_before_anchor_decryption", new()
+    ///     {
+    ///         Name = "before-anchor-decryption-rule",
+    ///         Description = "Positioned immediately BEFORE the anchor-decryption-rule. Updating",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Action = "decrypt",
+    ///         RelativePosition = "before",
+    ///         TargetRule = anchorDecryptionRule.Id,
+    ///         Froms = new[]
+    ///         {
+    ///             "trust",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "10.1.1.0/24",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "high-risk",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+    ///         {
+    ///             SslForwardProxy = null,
+    ///         },
+    ///     });
+    /// 
+    ///     var ruleAfterAnchorDecryption = new Scm.DecryptionRule("rule_after_anchor_decryption", new()
+    ///     {
+    ///         Name = "after-anchor-decryption-rule_123",
+    ///         Description = "Positioned immediately AFTER the anchor-decryption-rule.",
+    ///         Folder = "All",
+    ///         Position = "pre",
+    ///         Action = "decrypt",
+    ///         RelativePosition = "after",
+    ///         TargetRule = anchorDecryptionRule.Id,
+    ///         Froms = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Tos = new[]
+    ///         {
+    ///             "untrust",
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "192.168.1.10",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         Categories = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
+    ///         {
+    ///             SslForwardProxy = null,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/decryptionRule:DecryptionRule")]
     public partial class DecryptionRule : global::Pulumi.CustomResource
@@ -118,6 +366,12 @@ namespace Pulumi.Scm
         public Output<string?> Profile { get; private set; } = null!;
 
         /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Output("relativePosition")]
+        public Output<string?> RelativePosition { get; private set; } = null!;
+
+        /// <summary>
         /// The destination services and/or service groups
         /// </summary>
         [Output("services")]
@@ -152,6 +406,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Output("targetRule")]
+        public Output<string?> TargetRule { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -340,6 +600,12 @@ namespace Pulumi.Scm
         [Input("profile")]
         public Input<string>? Profile { get; set; }
 
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
         [Input("services", required: true)]
         private InputList<string>? _services;
 
@@ -405,6 +671,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tos", required: true)]
         private InputList<string>? _tos;
@@ -558,6 +830,12 @@ namespace Pulumi.Scm
         [Input("profile")]
         public Input<string>? Profile { get; set; }
 
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        [Input("relativePosition")]
+        public Input<string>? RelativePosition { get; set; }
+
         [Input("services")]
         private InputList<string>? _services;
 
@@ -623,6 +901,12 @@ namespace Pulumi.Scm
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
         }
+
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        [Input("targetRule")]
+        public Input<string>? TargetRule { get; set; }
 
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }

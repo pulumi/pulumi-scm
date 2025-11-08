@@ -8,6 +8,27 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // -----------------------------------------------------------------------------
+ * // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+ * // This data source retrieves multiple Interface Management Profiles from SCM.
+ * // -----------------------------------------------------------------------------
+ * const allMgmtProfiles = scm.getInterfaceManagementProfileList({
+ *     limit: 50,
+ *     folder: "All",
+ * });
+ * export const fetchedMgmtProfileListSummary = {
+ *     countOfProfilesFetched: allMgmtProfiles.then(allMgmtProfiles => allMgmtProfiles.total),
+ *     firstProfileName: allMgmtProfiles.then(allMgmtProfiles => allMgmtProfiles.datas?.[0]?.name),
+ *     data: allMgmtProfiles.then(allMgmtProfiles => allMgmtProfiles.datas),
+ * };
+ * ```
  */
 export function getInterfaceManagementProfileList(args?: GetInterfaceManagementProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetInterfaceManagementProfileListResult> {
     args = args || {};
@@ -96,6 +117,27 @@ export interface GetInterfaceManagementProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // -----------------------------------------------------------------------------
+ * // 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+ * // This data source retrieves multiple Interface Management Profiles from SCM.
+ * // -----------------------------------------------------------------------------
+ * const allMgmtProfiles = scm.getInterfaceManagementProfileList({
+ *     limit: 50,
+ *     folder: "All",
+ * });
+ * export const fetchedMgmtProfileListSummary = {
+ *     countOfProfilesFetched: allMgmtProfiles.then(allMgmtProfiles => allMgmtProfiles.total),
+ *     firstProfileName: allMgmtProfiles.then(allMgmtProfiles => allMgmtProfiles.datas?.[0]?.name),
+ *     data: allMgmtProfiles.then(allMgmtProfiles => allMgmtProfiles.datas),
+ * };
+ * ```
  */
 export function getInterfaceManagementProfileListOutput(args?: GetInterfaceManagementProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetInterfaceManagementProfileListResult> {
     args = args || {};

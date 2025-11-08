@@ -19,23 +19,24 @@ __all__ = ['Layer2SubinterfaceArgs', 'Layer2Subinterface']
 @pulumi.input_type
 class Layer2SubinterfaceArgs:
     def __init__(__self__, *,
+                 vlan_tag: pulumi.Input[_builtins.str],
                  comment: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag: Optional[pulumi.Input[_builtins.float]] = None):
+                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Layer2Subinterface resource.
+        :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         :param pulumi.Input[_builtins.str] comment: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: L2 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[_builtins.float] vlan_tag: Vlan tag
         """
+        pulumi.set(__self__, "vlan_tag", vlan_tag)
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
         if device is not None:
@@ -48,8 +49,18 @@ class Layer2SubinterfaceArgs:
             pulumi.set(__self__, "parent_interface", parent_interface)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
-        if vlan_tag is not None:
-            pulumi.set(__self__, "vlan_tag", vlan_tag)
+
+    @_builtins.property
+    @pulumi.getter(name="vlanTag")
+    def vlan_tag(self) -> pulumi.Input[_builtins.str]:
+        """
+        VLAN tag
+        """
+        return pulumi.get(self, "vlan_tag")
+
+    @vlan_tag.setter
+    def vlan_tag(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "vlan_tag", value)
 
     @_builtins.property
     @pulumi.getter
@@ -123,18 +134,6 @@ class Layer2SubinterfaceArgs:
     def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
-    @_builtins.property
-    @pulumi.getter(name="vlanTag")
-    def vlan_tag(self) -> Optional[pulumi.Input[_builtins.float]]:
-        """
-        Vlan tag
-        """
-        return pulumi.get(self, "vlan_tag")
-
-    @vlan_tag.setter
-    def vlan_tag(self, value: Optional[pulumi.Input[_builtins.float]]):
-        pulumi.set(self, "vlan_tag", value)
-
 
 @pulumi.input_type
 class _Layer2SubinterfaceState:
@@ -146,7 +145,7 @@ class _Layer2SubinterfaceState:
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag: Optional[pulumi.Input[_builtins.float]] = None):
+                 vlan_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Layer2Subinterface resources.
         :param pulumi.Input[_builtins.str] comment: Description
@@ -155,7 +154,7 @@ class _Layer2SubinterfaceState:
         :param pulumi.Input[_builtins.str] name: L2 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[_builtins.float] vlan_tag: Vlan tag
+        :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
@@ -257,14 +256,14 @@ class _Layer2SubinterfaceState:
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
-    def vlan_tag(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def vlan_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Vlan tag
+        VLAN tag
         """
         return pulumi.get(self, "vlan_tag")
 
     @vlan_tag.setter
-    def vlan_tag(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def vlan_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "vlan_tag", value)
 
 
@@ -280,10 +279,36 @@ class Layer2Subinterface(pulumi.CustomResource):
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag: Optional[pulumi.Input[_builtins.float]] = None,
+                 vlan_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         Layer2Subinterface resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates a ethernet interface used as parent-interface for subsequent examples
+        #
+        scm_parent_interface = scm.EthernetInterface("scm_parent_interface",
+            name="$scm_parent_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer2={})
+        #
+        # Creates a layer2 sub-interface with vlan tag 100
+        #
+        scm_layer2_subinterface = scm.Layer2Subinterface("scm_layer2_subinterface",
+            name="$scm_parent_interface.100",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            vlan_tag="100",
+            parent_interface="$scm_parent_interface",
+            opts = pulumi.ResourceOptions(depends_on=[scm_parent_interface]))
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -293,16 +318,42 @@ class Layer2Subinterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: L2 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[_builtins.float] vlan_tag: Vlan tag
+        :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[Layer2SubinterfaceArgs] = None,
+                 args: Layer2SubinterfaceArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Layer2Subinterface resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates a ethernet interface used as parent-interface for subsequent examples
+        #
+        scm_parent_interface = scm.EthernetInterface("scm_parent_interface",
+            name="$scm_parent_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer2={})
+        #
+        # Creates a layer2 sub-interface with vlan tag 100
+        #
+        scm_layer2_subinterface = scm.Layer2Subinterface("scm_layer2_subinterface",
+            name="$scm_parent_interface.100",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            vlan_tag="100",
+            parent_interface="$scm_parent_interface",
+            opts = pulumi.ResourceOptions(depends_on=[scm_parent_interface]))
+        ```
 
         :param str resource_name: The name of the resource.
         :param Layer2SubinterfaceArgs args: The arguments to use to populate this resource's properties.
@@ -325,7 +376,7 @@ class Layer2Subinterface(pulumi.CustomResource):
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 vlan_tag: Optional[pulumi.Input[_builtins.float]] = None,
+                 vlan_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -341,6 +392,8 @@ class Layer2Subinterface(pulumi.CustomResource):
             __props__.__dict__["name"] = name
             __props__.__dict__["parent_interface"] = parent_interface
             __props__.__dict__["snippet"] = snippet
+            if vlan_tag is None and not opts.urn:
+                raise TypeError("Missing required property 'vlan_tag'")
             __props__.__dict__["vlan_tag"] = vlan_tag
             __props__.__dict__["tfid"] = None
         super(Layer2Subinterface, __self__).__init__(
@@ -360,7 +413,7 @@ class Layer2Subinterface(pulumi.CustomResource):
             parent_interface: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            vlan_tag: Optional[pulumi.Input[_builtins.float]] = None) -> 'Layer2Subinterface':
+            vlan_tag: Optional[pulumi.Input[_builtins.str]] = None) -> 'Layer2Subinterface':
         """
         Get an existing Layer2Subinterface resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -374,7 +427,7 @@ class Layer2Subinterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: L2 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[_builtins.float] vlan_tag: Vlan tag
+        :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -445,9 +498,9 @@ class Layer2Subinterface(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
-    def vlan_tag(self) -> pulumi.Output[Optional[_builtins.float]]:
+    def vlan_tag(self) -> pulumi.Output[_builtins.str]:
         """
-        Vlan tag
+        VLAN tag
         """
         return pulumi.get(self, "vlan_tag")
 

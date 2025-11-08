@@ -16,59 +16,59 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Ebgp
         /// </summary>
-        public readonly double? Ebgp;
+        public readonly int? Ebgp;
         /// <summary>
         /// Ibgp
         /// </summary>
-        public readonly double? Ibgp;
+        public readonly int? Ibgp;
         /// <summary>
         /// Ospf ext
         /// </summary>
-        public readonly double? OspfExt;
+        public readonly int? OspfExt;
         /// <summary>
         /// Ospf int
         /// </summary>
-        public readonly double? OspfInt;
+        public readonly int? OspfInt;
         /// <summary>
         /// Ospfv3 ext
         /// </summary>
-        public readonly double? Ospfv3Ext;
+        public readonly int? Ospfv3Ext;
         /// <summary>
         /// Ospfv3 int
         /// </summary>
-        public readonly double? Ospfv3Int;
+        public readonly int? Ospfv3Int;
         /// <summary>
         /// Rip
         /// </summary>
-        public readonly double? Rip;
+        public readonly int? Rip;
         /// <summary>
         /// Static
         /// </summary>
-        public readonly double? Static;
+        public readonly int? Static;
         /// <summary>
         /// Static ipv6
         /// </summary>
-        public readonly double? StaticIpv6;
+        public readonly int? StaticIpv6;
 
         [OutputConstructor]
         private LogicalRouterVrfVrAdminDists(
-            double? ebgp,
+            int? ebgp,
 
-            double? ibgp,
+            int? ibgp,
 
-            double? ospfExt,
+            int? ospfExt,
 
-            double? ospfInt,
+            int? ospfInt,
 
-            double? ospfv3Ext,
+            int? ospfv3Ext,
 
-            double? ospfv3Int,
+            int? ospfv3Int,
 
-            double? rip,
+            int? rip,
 
-            double? @static,
+            int? @static,
 
-            double? staticIpv6)
+            int? staticIpv6)
         {
             Ebgp = ebgp;
             Ibgp = ibgp;

@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapSet {
     /**
-     * @return Source address
+     * @return Connected Static BGP Rib Route Map Distribution Source address
      * 
      */
     private @Nullable String sourceAddress;
 
     private BgpRouteMapRedistributionConnectedStaticRibRouteMapSet() {}
     /**
-     * @return Source address
+     * @return Connected Static BGP Rib Route Map Distribution Source address
      * 
      */
     public Optional<String> sourceAddress() {

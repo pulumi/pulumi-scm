@@ -434,6 +434,53 @@ class IkeGateway(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
+        scm_ike_gw_crypto_profile1 = scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1",
+            folder="Remote Networks",
+            name="scm_ike_gw_crypto_profile_1",
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        # This is the main scm_ike_gateway resource.
+        scm_ike_gateway1 = scm.IkeGateway("scm_ike_gateway_1",
+            folder="Remote Networks",
+            name="scm_ike_gateway_1",
+            authentication={
+                "pre_shared_key": {
+                    "key": "123456",
+                },
+            },
+            peer_address={
+                "ip": "2.2.2.4",
+            },
+            peer_id={
+                "type": "ipaddr",
+                "id": "10.3.3.4",
+            },
+            local_id={
+                "type": "ipaddr",
+                "id": "10.3.4.4",
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": scm_ike_gw_crypto_profile1.name,
+                    "dpd": {
+                        "enable": True,
+                    },
+                },
+                "ikev2": {
+                    "ike_crypto_profile": scm_ike_gw_crypto_profile1.name,
+                    "dpd": {
+                        "enable": True,
+                    },
+                },
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']] authentication: Authentication
@@ -458,6 +505,53 @@ class IkeGateway(pulumi.CustomResource):
         IkeGateway resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
+        scm_ike_gw_crypto_profile1 = scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1",
+            folder="Remote Networks",
+            name="scm_ike_gw_crypto_profile_1",
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        # This is the main scm_ike_gateway resource.
+        scm_ike_gateway1 = scm.IkeGateway("scm_ike_gateway_1",
+            folder="Remote Networks",
+            name="scm_ike_gateway_1",
+            authentication={
+                "pre_shared_key": {
+                    "key": "123456",
+                },
+            },
+            peer_address={
+                "ip": "2.2.2.4",
+            },
+            peer_id={
+                "type": "ipaddr",
+                "id": "10.3.3.4",
+            },
+            local_id={
+                "type": "ipaddr",
+                "id": "10.3.4.4",
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": scm_ike_gw_crypto_profile1.name,
+                    "dpd": {
+                        "enable": True,
+                    },
+                },
+                "ikev2": {
+                    "ike_crypto_profile": scm_ike_gw_crypto_profile1.name,
+                    "dpd": {
+                        "enable": True,
+                    },
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param IkeGatewayArgs args: The arguments to use to populate this resource's properties.

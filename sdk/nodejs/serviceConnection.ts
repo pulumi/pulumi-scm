@@ -10,6 +10,85 @@ import * as utilities from "./utilities";
  * ServiceConnection resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const config = new pulumi.Config();
+ * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+ * const folderScope = config.get("folderScope") || "Service Connections";
+ * //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+ * // Note: The resource name is plural: "scm_ike_crypto_profile"
+ * const example = new scm.IkeCryptoProfile("example", {
+ *     name: "example-ike-crypto",
+ *     folder: folderScope,
+ *     hashes: ["sha256"],
+ *     dhGroups: ["group14"],
+ *     encryptions: ["aes-256-cbc"],
+ * });
+ * //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
+ *     name: "panw-IPSec-Crypto",
+ *     folder: folderScope,
+ *     esp: {
+ *         encryptions: ["aes-256-gcm"],
+ *         authentications: ["sha256"],
+ *     },
+ *     dhGroup: "group14",
+ *     lifetime: {
+ *         hours: 8,
+ *     },
+ * });
+ * //# 3. Define the IKE Gateway
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIkeGateway = new scm.IkeGateway("example", {
+ *     name: "example-gateway",
+ *     folder: folderScope,
+ *     peerAddress: {
+ *         ip: "1.1.1.1",
+ *     },
+ *     authentication: {
+ *         preSharedKey: {
+ *             key: "secret",
+ *         },
+ *     },
+ *     protocol: {
+ *         ikev1: {
+ *             ikeCryptoProfile: example.name,
+ *         },
+ *     },
+ * });
+ * //# 4. Define the IPsec Tunnel
+ * // Note: Nested 'auto_key' block uses an equals sign (=).
+ * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
+ *     name: "example-tunnel",
+ *     folder: folderScope,
+ *     tunnelInterface: "tunnel",
+ *     antiReplay: true,
+ *     copyTos: false,
+ *     enableGreEncapsulation: false,
+ *     autoKey: {
+ *         ikeGateways: [{
+ *             name: exampleIkeGateway.name,
+ *         }],
+ *         ipsecCryptoProfile: exampleIpsecCryptoProfile.name,
+ *     },
+ * }, {
+ *     dependsOn: [exampleIkeGateway],
+ * });
+ * const siteAVpnSc = new scm.ServiceConnection("site_a_vpn_sc", {
+ *     name: "creating_a_service_connection",
+ *     region: "us-west-1",
+ *     ipsecTunnel: exampleIpsecTunnel.name,
+ *     subnets: [
+ *         "10.1.0.0/16",
+ *         "172.16.0.0/24",
+ *     ],
+ *     sourceNat: true,
+ * });
+ * ```
  */
 export class ServiceConnection extends pulumi.CustomResource {
     /**
@@ -42,7 +121,7 @@ export class ServiceConnection extends pulumi.CustomResource {
     /**
      * Backup s c
      */
-    declare public readonly backupSC: pulumi.Output<string | undefined>;
+    declare public readonly backupSc: pulumi.Output<string | undefined>;
     /**
      * Bgp peer
      */
@@ -110,7 +189,7 @@ export class ServiceConnection extends pulumi.CustomResource {
         opts = opts || {};
         if (opts.id) {
             const state = argsOrState as ServiceConnectionState | undefined;
-            resourceInputs["backupSC"] = state?.backupSC;
+            resourceInputs["backupSc"] = state?.backupSc;
             resourceInputs["bgpPeer"] = state?.bgpPeer;
             resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["ipsecTunnel"] = state?.ipsecTunnel;
@@ -133,7 +212,7 @@ export class ServiceConnection extends pulumi.CustomResource {
             if (args?.region === undefined && !opts.urn) {
                 throw new Error("Missing required property 'region'");
             }
-            resourceInputs["backupSC"] = args?.backupSC;
+            resourceInputs["backupSc"] = args?.backupSc;
             resourceInputs["bgpPeer"] = args?.bgpPeer;
             resourceInputs["ipsecTunnel"] = args?.ipsecTunnel;
             resourceInputs["name"] = args?.name;
@@ -163,7 +242,7 @@ export interface ServiceConnectionState {
     /**
      * Backup s c
      */
-    backupSC?: pulumi.Input<string>;
+    backupSc?: pulumi.Input<string>;
     /**
      * Bgp peer
      */
@@ -226,7 +305,7 @@ export interface ServiceConnectionArgs {
     /**
      * Backup s c
      */
-    backupSC?: pulumi.Input<string>;
+    backupSc?: pulumi.Input<string>;
     /**
      * Bgp peer
      */

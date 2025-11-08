@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs>? _routeMaps;
 
         /// <summary>
-        /// Route maps
+        /// Connected Static BGP Route maps
         /// </summary>
         public InputList<Inputs.BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs> RouteMaps
         {

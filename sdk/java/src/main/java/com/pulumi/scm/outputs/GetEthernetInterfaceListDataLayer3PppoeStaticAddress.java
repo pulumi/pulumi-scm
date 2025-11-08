@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetEthernetInterfaceListDataLayer3PppoeStaticAddress {
     /**
-     * @return Ip
+     * @return Static IP address
      * 
      */
     private String ip;
 
     private GetEthernetInterfaceListDataLayer3PppoeStaticAddress() {}
     /**
-     * @return Ip
+     * @return Static IP address
      * 
      */
     public String ip() {

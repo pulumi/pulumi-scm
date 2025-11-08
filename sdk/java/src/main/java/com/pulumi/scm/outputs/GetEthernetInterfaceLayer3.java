@@ -8,6 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetEthernetInterfaceLayer3Arp;
 import com.pulumi.scm.outputs.GetEthernetInterfaceLayer3DdnsConfig;
 import com.pulumi.scm.outputs.GetEthernetInterfaceLayer3DhcpClient;
+import com.pulumi.scm.outputs.GetEthernetInterfaceLayer3Ip;
 import com.pulumi.scm.outputs.GetEthernetInterfaceLayer3Pppoe;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,12 +23,12 @@ public final class GetEthernetInterfaceLayer3 {
      */
     private List<GetEthernetInterfaceLayer3Arp> arps;
     /**
-     * @return Ddns config
+     * @return Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     private GetEthernetInterfaceLayer3DdnsConfig ddnsConfig;
     /**
-     * @return Dhcp client
+     * @return Ethernet Interfaces DHCP Client Object
      * 
      */
     private GetEthernetInterfaceLayer3DhcpClient dhcpClient;
@@ -37,10 +38,10 @@ public final class GetEthernetInterfaceLayer3 {
      */
     private String interfaceManagementProfile;
     /**
-     * @return Interface IP addresses
+     * @return Ethernet Interface IP addresses
      * 
      */
-    private List<String> ips;
+    private List<GetEthernetInterfaceLayer3Ip> ips;
     /**
      * @return MTU
      * 
@@ -61,14 +62,14 @@ public final class GetEthernetInterfaceLayer3 {
         return this.arps;
     }
     /**
-     * @return Ddns config
+     * @return Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     public GetEthernetInterfaceLayer3DdnsConfig ddnsConfig() {
         return this.ddnsConfig;
     }
     /**
-     * @return Dhcp client
+     * @return Ethernet Interfaces DHCP Client Object
      * 
      */
     public GetEthernetInterfaceLayer3DhcpClient dhcpClient() {
@@ -82,10 +83,10 @@ public final class GetEthernetInterfaceLayer3 {
         return this.interfaceManagementProfile;
     }
     /**
-     * @return Interface IP addresses
+     * @return Ethernet Interface IP addresses
      * 
      */
-    public List<String> ips() {
+    public List<GetEthernetInterfaceLayer3Ip> ips() {
         return this.ips;
     }
     /**
@@ -116,7 +117,7 @@ public final class GetEthernetInterfaceLayer3 {
         private GetEthernetInterfaceLayer3DdnsConfig ddnsConfig;
         private GetEthernetInterfaceLayer3DhcpClient dhcpClient;
         private String interfaceManagementProfile;
-        private List<String> ips;
+        private List<GetEthernetInterfaceLayer3Ip> ips;
         private Integer mtu;
         private GetEthernetInterfaceLayer3Pppoe pppoe;
         public Builder() {}
@@ -167,14 +168,14 @@ public final class GetEthernetInterfaceLayer3 {
             return this;
         }
         @CustomType.Setter
-        public Builder ips(List<String> ips) {
+        public Builder ips(List<GetEthernetInterfaceLayer3Ip> ips) {
             if (ips == null) {
               throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer3", "ips");
             }
             this.ips = ips;
             return this;
         }
-        public Builder ips(String... ips) {
+        public Builder ips(GetEthernetInterfaceLayer3Ip... ips) {
             return ips(List.of(ips));
         }
         @CustomType.Setter

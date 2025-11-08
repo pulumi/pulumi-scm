@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator {
     /**
-     * @return Aggregator AS
+     * @return OSPF BGP Route maps set Aggregator AS
      * 
      */
     private @Nullable Integer as;
     /**
-     * @return Router ID
+     * @return OSPF BGP Route maps set Router ID
      * 
      */
     private @Nullable String routerId;
 
     private BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator() {}
     /**
-     * @return Aggregator AS
+     * @return OSPF BGP Route maps set Aggregator AS
      * 
      */
     public Optional<Integer> as() {
         return Optional.ofNullable(this.as);
     }
     /**
-     * @return Router ID
+     * @return OSPF BGP Route maps set Router ID
      * 
      */
     public Optional<String> routerId() {

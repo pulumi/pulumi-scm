@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Max sa
         /// </summary>
-        public readonly double? MaxSa;
+        public readonly int? MaxSa;
         /// <summary>
         /// Name
         /// </summary>
@@ -60,7 +60,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.LogicalRouterVrfMulticastMsdpPeerLocalAddress? localAddress,
 
-            double? maxSa,
+            int? maxSa,
 
             string name,
 

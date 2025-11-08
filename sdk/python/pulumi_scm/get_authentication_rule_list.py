@@ -27,7 +27,7 @@ class GetAuthenticationRuleListResult:
     """
     A collection of values returned by getAuthenticationRuleList.
     """
-    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, snippet=None, tfid=None, total=None):
+    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, position=None, snippet=None, tfid=None, total=None):
         if datas and not isinstance(datas, list):
             raise TypeError("Expected argument 'datas' to be a list")
         pulumi.set(__self__, "datas", datas)
@@ -49,6 +49,9 @@ class GetAuthenticationRuleListResult:
         if offset and not isinstance(offset, int):
             raise TypeError("Expected argument 'offset' to be a int")
         pulumi.set(__self__, "offset", offset)
+        if position and not isinstance(position, str):
+            raise TypeError("Expected argument 'position' to be a str")
+        pulumi.set(__self__, "position", position)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -117,6 +120,14 @@ class GetAuthenticationRuleListResult:
 
     @_builtins.property
     @pulumi.getter
+    def position(self) -> _builtins.str:
+        """
+        The relative position of the rule
+        """
+        return pulumi.get(self, "position")
+
+    @_builtins.property
+    @pulumi.getter
     def snippet(self) -> Optional[_builtins.str]:
         """
         The snippet of the item.
@@ -150,6 +161,7 @@ class AwaitableGetAuthenticationRuleListResult(GetAuthenticationRuleListResult):
             limit=self.limit,
             name=self.name,
             offset=self.offset,
+            position=self.position,
             snippet=self.snippet,
             tfid=self.tfid,
             total=self.total)
@@ -160,10 +172,27 @@ def get_authentication_rule_list(device: Optional[_builtins.str] = None,
                                  limit: Optional[_builtins.int] = None,
                                  name: Optional[_builtins.str] = None,
                                  offset: Optional[_builtins.int] = None,
+                                 position: Optional[_builtins.str] = None,
                                  snippet: Optional[_builtins.str] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAuthenticationRuleListResult:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_pre_rules = scm.get_authentication_rule_list(limit=10,
+        offset=15,
+        position="pre",
+        folder="All")
+    pulumi.export("fetchedRuleListSummary", {
+        "countOfRulesFetched": all_pre_rules.total,
+        "firstRuleName": all_pre_rules.datas[0].name,
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.
@@ -171,6 +200,7 @@ def get_authentication_rule_list(device: Optional[_builtins.str] = None,
     :param _builtins.int limit: The max number of items to return. Default: 200.
     :param _builtins.str name: The name of the item.
     :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str position: The relative position of the rule
     :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
@@ -179,6 +209,7 @@ def get_authentication_rule_list(device: Optional[_builtins.str] = None,
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
+    __args__['position'] = position
     __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAuthenticationRuleList:getAuthenticationRuleList', __args__, opts=opts, typ=GetAuthenticationRuleListResult).value
@@ -191,6 +222,7 @@ def get_authentication_rule_list(device: Optional[_builtins.str] = None,
         limit=pulumi.get(__ret__, 'limit'),
         name=pulumi.get(__ret__, 'name'),
         offset=pulumi.get(__ret__, 'offset'),
+        position=pulumi.get(__ret__, 'position'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
@@ -199,10 +231,27 @@ def get_authentication_rule_list_output(device: Optional[pulumi.Input[Optional[_
                                         limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
                                         name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                         offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
+                                        position: Optional[pulumi.Input[_builtins.str]] = None,
                                         snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationRuleListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_pre_rules = scm.get_authentication_rule_list(limit=10,
+        offset=15,
+        position="pre",
+        folder="All")
+    pulumi.export("fetchedRuleListSummary", {
+        "countOfRulesFetched": all_pre_rules.total,
+        "firstRuleName": all_pre_rules.datas[0].name,
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.
@@ -210,6 +259,7 @@ def get_authentication_rule_list_output(device: Optional[pulumi.Input[Optional[_
     :param _builtins.int limit: The max number of items to return. Default: 200.
     :param _builtins.str name: The name of the item.
     :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str position: The relative position of the rule
     :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
@@ -218,6 +268,7 @@ def get_authentication_rule_list_output(device: Optional[pulumi.Input[Optional[_
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
+    __args__['position'] = position
     __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationRuleList:getAuthenticationRuleList', __args__, opts=opts, typ=GetAuthenticationRuleListResult)
@@ -229,6 +280,7 @@ def get_authentication_rule_list_output(device: Optional[pulumi.Input[Optional[_
         limit=pulumi.get(__response__, 'limit'),
         name=pulumi.get(__response__, 'name'),
         offset=pulumi.get(__response__, 'offset'),
+        position=pulumi.get(__response__, 'position'),
         snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         total=pulumi.get(__response__, 'total')))

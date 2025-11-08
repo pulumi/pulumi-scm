@@ -19,12 +19,12 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSet {
      */
     private @Nullable BgpRouteMapRedistributionBgpOspfRouteMapSetMetric metric;
     /**
-     * @return Metric type
+     * @return BGP Root OSPF Route maps set Metric type
      * 
      */
     private @Nullable String metricType;
     /**
-     * @return Tag
+     * @return BGP Root OSPF Route maps set Tag
      * 
      */
     private @Nullable Integer tag;
@@ -38,14 +38,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSet {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Metric type
+     * @return BGP Root OSPF Route maps set Metric type
      * 
      */
     public Optional<String> metricType() {
         return Optional.ofNullable(this.metricType);
     }
     /**
-     * @return Tag
+     * @return BGP Root OSPF Route maps set Tag
      * 
      */
     public Optional<Integer> tag() {

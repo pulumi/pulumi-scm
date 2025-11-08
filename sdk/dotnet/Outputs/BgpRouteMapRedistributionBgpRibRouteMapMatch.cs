@@ -14,47 +14,47 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionBgpRibRouteMapMatch
     {
         /// <summary>
-        /// AS path access list
+        /// BGP Root RIB Route maps match AS path access list
         /// </summary>
         public readonly string? AsPathAccessList;
         /// <summary>
-        /// Extended community
+        /// BGP Root RIB Route maps match Extended community
         /// </summary>
         public readonly string? ExtendedCommunity;
         /// <summary>
-        /// Interface
+        /// BGP Root RIB Route maps match Interface
         /// </summary>
         public readonly string? Interface;
         /// <summary>
-        /// Ipv4
+        /// BGP Route Map Redistributions Root BGP rib Route Map IPv4
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4? Ipv4;
         /// <summary>
-        /// Large community
+        /// BGP Root RIB Route maps match Large community
         /// </summary>
         public readonly string? LargeCommunity;
         /// <summary>
-        /// Local preference
+        /// BGP Root RIB Route maps match Local preference
         /// </summary>
         public readonly int? LocalPreference;
         /// <summary>
-        /// Metric
+        /// BGP Root RIB Route maps match Metric
         /// </summary>
         public readonly int? Metric;
         /// <summary>
-        /// Origin
+        /// BGP Root RIB Route maps match Origin
         /// </summary>
         public readonly string? Origin;
         /// <summary>
-        /// Peer
+        /// BGP Root RIB Route maps match Peer
         /// </summary>
         public readonly string? Peer;
         /// <summary>
-        /// Regular community
+        /// BGP Root RIB Route maps match Regular community
         /// </summary>
         public readonly string? RegularCommunity;
         /// <summary>
-        /// Tag
+        /// BGP Root RIB Route maps match Tag
         /// </summary>
         public readonly int? Tag;
 

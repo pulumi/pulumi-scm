@@ -218,6 +218,58 @@ class Folder(pulumi.CustomResource):
         """
         Folder resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates a folder under the "All Firewalls" aka "ngfw-shared" folder
+        #
+        scm_folder_example = scm.Folder("scm_folder_example",
+            name="scm_folder_example",
+            parent="ngfw-shared",
+            description="Managed by Pulumi")
+        #
+        # Creates a folder under the "scm_folder_example" folder created beforehand
+        #
+        scm_nested_folder_example = scm.Folder("scm_nested_folder_example",
+            name="scm_nested_folder_example",
+            parent="scm_folder_example",
+            description="Managed by Pulumi",
+            opts = pulumi.ResourceOptions(depends_on=[scm_folder_example]))
+        #
+        # Creates a snippet that will be associated to a folder
+        #
+        scm_snippet_example = scm.Snippet("scm_snippet_example",
+            name="scm_snippet_example",
+            description="Managed by Pulumi")
+        #
+        # Creates a folder with an attached snippet
+        #
+        scm_folder_with_snippets = scm.Folder("scm_folder_with_snippets",
+            name="scm_folder_with_snippets",
+            parent="ngfw-shared",
+            description="Managed by Pulumi",
+            snippets=[scm_snippet_example.name])
+        #
+        # Creates a label that will be associated to a folder
+        #
+        scm_label_example = scm.Label("scm_label_example",
+            name="scm_label_example",
+            description="Managed by Pulumi")
+        #
+        # Creates a folder with an attached label
+        #
+        scm_folder_with_label = scm.Folder("scm_folder_with_label",
+            name="scm_folder_with_label",
+            parent="ngfw-shared",
+            description="Managed by Pulumi",
+            labels=[scm_label_example.name],
+            opts = pulumi.ResourceOptions(depends_on=[scm_label_example]))
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the folder
@@ -234,6 +286,58 @@ class Folder(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Folder resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates a folder under the "All Firewalls" aka "ngfw-shared" folder
+        #
+        scm_folder_example = scm.Folder("scm_folder_example",
+            name="scm_folder_example",
+            parent="ngfw-shared",
+            description="Managed by Pulumi")
+        #
+        # Creates a folder under the "scm_folder_example" folder created beforehand
+        #
+        scm_nested_folder_example = scm.Folder("scm_nested_folder_example",
+            name="scm_nested_folder_example",
+            parent="scm_folder_example",
+            description="Managed by Pulumi",
+            opts = pulumi.ResourceOptions(depends_on=[scm_folder_example]))
+        #
+        # Creates a snippet that will be associated to a folder
+        #
+        scm_snippet_example = scm.Snippet("scm_snippet_example",
+            name="scm_snippet_example",
+            description="Managed by Pulumi")
+        #
+        # Creates a folder with an attached snippet
+        #
+        scm_folder_with_snippets = scm.Folder("scm_folder_with_snippets",
+            name="scm_folder_with_snippets",
+            parent="ngfw-shared",
+            description="Managed by Pulumi",
+            snippets=[scm_snippet_example.name])
+        #
+        # Creates a label that will be associated to a folder
+        #
+        scm_label_example = scm.Label("scm_label_example",
+            name="scm_label_example",
+            description="Managed by Pulumi")
+        #
+        # Creates a folder with an attached label
+        #
+        scm_folder_with_label = scm.Folder("scm_folder_with_label",
+            name="scm_folder_with_label",
+            parent="ngfw-shared",
+            description="Managed by Pulumi",
+            labels=[scm_label_example.name],
+            opts = pulumi.ResourceOptions(depends_on=[scm_label_example]))
+        ```
 
         :param str resource_name: The name of the resource.
         :param FolderArgs args: The arguments to use to populate this resource's properties.

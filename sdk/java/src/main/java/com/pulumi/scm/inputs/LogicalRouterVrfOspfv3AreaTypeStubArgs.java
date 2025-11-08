@@ -8,7 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfv3AreaTypeStubAbrArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -68,13 +68,13 @@ public final class LogicalRouterVrfOspfv3AreaTypeStubArgs extends com.pulumi.res
      * 
      */
     @Import(name="defaultRouteMetric")
-    private @Nullable Output<Double> defaultRouteMetric;
+    private @Nullable Output<Integer> defaultRouteMetric;
 
     /**
      * @return Default route metric
      * 
      */
-    public Optional<Output<Double>> defaultRouteMetric() {
+    public Optional<Output<Integer>> defaultRouteMetric() {
         return Optional.ofNullable(this.defaultRouteMetric);
     }
 
@@ -190,7 +190,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeStubArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder defaultRouteMetric(@Nullable Output<Double> defaultRouteMetric) {
+        public Builder defaultRouteMetric(@Nullable Output<Integer> defaultRouteMetric) {
             $.defaultRouteMetric = defaultRouteMetric;
             return this;
         }
@@ -201,7 +201,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeStubArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder defaultRouteMetric(Double defaultRouteMetric) {
+        public Builder defaultRouteMetric(Integer defaultRouteMetric) {
             return defaultRouteMetric(Output.of(defaultRouteMetric));
         }
 

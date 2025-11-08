@@ -48,6 +48,21 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs extends 
     }
 
     /**
+     * Ip address
+     * 
+     */
+    @Import(name="ipAddress")
+    private @Nullable Output<String> ipAddress;
+
+    /**
+     * @return Ip address
+     * 
+     */
+    public Optional<Output<String>> ipAddress() {
+        return Optional.ofNullable(this.ipAddress);
+    }
+
+    /**
      * Ipv6 address
      * 
      */
@@ -127,6 +142,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs extends 
     private LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs(LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs $) {
         this.discard = $.discard;
         this.fqdn = $.fqdn;
+        this.ipAddress = $.ipAddress;
         this.ipv6Address = $.ipv6Address;
         this.nextLr = $.nextLr;
         this.nextVr = $.nextVr;
@@ -192,6 +208,27 @@ public final class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs extends 
          */
         public Builder fqdn(String fqdn) {
             return fqdn(Output.of(fqdn));
+        }
+
+        /**
+         * @param ipAddress Ip address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddress(@Nullable Output<String> ipAddress) {
+            $.ipAddress = ipAddress;
+            return this;
+        }
+
+        /**
+         * @param ipAddress Ip address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipAddress(String ipAddress) {
+            return ipAddress(Output.of(ipAddress));
         }
 
         /**

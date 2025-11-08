@@ -14,13 +14,28 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetZoneProtectionProfileListDataScanWhiteListResult
     {
         /// <summary>
+        /// Ipv4
+        /// </summary>
+        public readonly string Ipv4;
+        /// <summary>
+        /// Ipv6
+        /// </summary>
+        public readonly string Ipv6;
+        /// <summary>
         /// A descriptive name for the address to exclude.
         /// </summary>
         public readonly string Name;
 
         [OutputConstructor]
-        private GetZoneProtectionProfileListDataScanWhiteListResult(string name)
+        private GetZoneProtectionProfileListDataScanWhiteListResult(
+            string ipv4,
+
+            string ipv6,
+
+            string name)
         {
+            Ipv4 = ipv4;
+            Ipv6 = ipv6;
             Name = name;
         }
     }

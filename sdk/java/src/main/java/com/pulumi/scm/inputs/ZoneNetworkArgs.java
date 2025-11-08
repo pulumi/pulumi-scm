@@ -5,8 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.ZoneNetworkTunnelArgs;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -32,6 +34,51 @@ public final class ZoneNetworkArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
+     * External
+     * 
+     */
+    @Import(name="externals")
+    private @Nullable Output<List<String>> externals;
+
+    /**
+     * @return External
+     * 
+     */
+    public Optional<Output<List<String>>> externals() {
+        return Optional.ofNullable(this.externals);
+    }
+
+    /**
+     * Layer2
+     * 
+     */
+    @Import(name="layer2s")
+    private @Nullable Output<List<String>> layer2s;
+
+    /**
+     * @return Layer2
+     * 
+     */
+    public Optional<Output<List<String>>> layer2s() {
+        return Optional.ofNullable(this.layer2s);
+    }
+
+    /**
+     * Layer3
+     * 
+     */
+    @Import(name="layer3s")
+    private @Nullable Output<List<String>> layer3s;
+
+    /**
+     * @return Layer3
+     * 
+     */
+    public Optional<Output<List<String>>> layer3s() {
+        return Optional.ofNullable(this.layer3s);
+    }
+
+    /**
      * Log setting
      * 
      */
@@ -44,6 +91,51 @@ public final class ZoneNetworkArgs extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> logSetting() {
         return Optional.ofNullable(this.logSetting);
+    }
+
+    /**
+     * Tap
+     * 
+     */
+    @Import(name="taps")
+    private @Nullable Output<List<String>> taps;
+
+    /**
+     * @return Tap
+     * 
+     */
+    public Optional<Output<List<String>>> taps() {
+        return Optional.ofNullable(this.taps);
+    }
+
+    /**
+     * Tunnel
+     * 
+     */
+    @Import(name="tunnel")
+    private @Nullable Output<ZoneNetworkTunnelArgs> tunnel;
+
+    /**
+     * @return Tunnel
+     * 
+     */
+    public Optional<Output<ZoneNetworkTunnelArgs>> tunnel() {
+        return Optional.ofNullable(this.tunnel);
+    }
+
+    /**
+     * Virtual wire
+     * 
+     */
+    @Import(name="virtualWires")
+    private @Nullable Output<List<String>> virtualWires;
+
+    /**
+     * @return Virtual wire
+     * 
+     */
+    public Optional<Output<List<String>>> virtualWires() {
+        return Optional.ofNullable(this.virtualWires);
     }
 
     /**
@@ -65,7 +157,13 @@ public final class ZoneNetworkArgs extends com.pulumi.resources.ResourceArgs {
 
     private ZoneNetworkArgs(ZoneNetworkArgs $) {
         this.enablePacketBufferProtection = $.enablePacketBufferProtection;
+        this.externals = $.externals;
+        this.layer2s = $.layer2s;
+        this.layer3s = $.layer3s;
         this.logSetting = $.logSetting;
+        this.taps = $.taps;
+        this.tunnel = $.tunnel;
+        this.virtualWires = $.virtualWires;
         this.zoneProtectionProfile = $.zoneProtectionProfile;
     }
 
@@ -109,6 +207,99 @@ public final class ZoneNetworkArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
+         * @param externals External
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externals(@Nullable Output<List<String>> externals) {
+            $.externals = externals;
+            return this;
+        }
+
+        /**
+         * @param externals External
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externals(List<String> externals) {
+            return externals(Output.of(externals));
+        }
+
+        /**
+         * @param externals External
+         * 
+         * @return builder
+         * 
+         */
+        public Builder externals(String... externals) {
+            return externals(List.of(externals));
+        }
+
+        /**
+         * @param layer2s Layer2
+         * 
+         * @return builder
+         * 
+         */
+        public Builder layer2s(@Nullable Output<List<String>> layer2s) {
+            $.layer2s = layer2s;
+            return this;
+        }
+
+        /**
+         * @param layer2s Layer2
+         * 
+         * @return builder
+         * 
+         */
+        public Builder layer2s(List<String> layer2s) {
+            return layer2s(Output.of(layer2s));
+        }
+
+        /**
+         * @param layer2s Layer2
+         * 
+         * @return builder
+         * 
+         */
+        public Builder layer2s(String... layer2s) {
+            return layer2s(List.of(layer2s));
+        }
+
+        /**
+         * @param layer3s Layer3
+         * 
+         * @return builder
+         * 
+         */
+        public Builder layer3s(@Nullable Output<List<String>> layer3s) {
+            $.layer3s = layer3s;
+            return this;
+        }
+
+        /**
+         * @param layer3s Layer3
+         * 
+         * @return builder
+         * 
+         */
+        public Builder layer3s(List<String> layer3s) {
+            return layer3s(Output.of(layer3s));
+        }
+
+        /**
+         * @param layer3s Layer3
+         * 
+         * @return builder
+         * 
+         */
+        public Builder layer3s(String... layer3s) {
+            return layer3s(List.of(layer3s));
+        }
+
+        /**
          * @param logSetting Log setting
          * 
          * @return builder
@@ -127,6 +318,89 @@ public final class ZoneNetworkArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder logSetting(String logSetting) {
             return logSetting(Output.of(logSetting));
+        }
+
+        /**
+         * @param taps Tap
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taps(@Nullable Output<List<String>> taps) {
+            $.taps = taps;
+            return this;
+        }
+
+        /**
+         * @param taps Tap
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taps(List<String> taps) {
+            return taps(Output.of(taps));
+        }
+
+        /**
+         * @param taps Tap
+         * 
+         * @return builder
+         * 
+         */
+        public Builder taps(String... taps) {
+            return taps(List.of(taps));
+        }
+
+        /**
+         * @param tunnel Tunnel
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnel(@Nullable Output<ZoneNetworkTunnelArgs> tunnel) {
+            $.tunnel = tunnel;
+            return this;
+        }
+
+        /**
+         * @param tunnel Tunnel
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnel(ZoneNetworkTunnelArgs tunnel) {
+            return tunnel(Output.of(tunnel));
+        }
+
+        /**
+         * @param virtualWires Virtual wire
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualWires(@Nullable Output<List<String>> virtualWires) {
+            $.virtualWires = virtualWires;
+            return this;
+        }
+
+        /**
+         * @param virtualWires Virtual wire
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualWires(List<String> virtualWires) {
+            return virtualWires(Output.of(virtualWires));
+        }
+
+        /**
+         * @param virtualWires Virtual wire
+         * 
+         * @return builder
+         * 
+         */
+        public Builder virtualWires(String... virtualWires) {
+            return virtualWires(List.of(virtualWires));
         }
 
         /**

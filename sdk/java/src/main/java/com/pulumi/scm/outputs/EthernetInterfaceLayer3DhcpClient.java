@@ -4,7 +4,9 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.scm.outputs.EthernetInterfaceLayer3DhcpClientDhcpClient;
+import com.pulumi.scm.outputs.EthernetInterfaceLayer3DhcpClientSendHostname;
+import java.lang.Boolean;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -12,18 +14,54 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EthernetInterfaceLayer3DhcpClient {
     /**
-     * @return Dhcp client
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
-    private @Nullable EthernetInterfaceLayer3DhcpClientDhcpClient dhcpClient;
+    private @Nullable Boolean createDefaultRoute;
+    /**
+     * @return Metric of the default route created
+     * 
+     */
+    private @Nullable Integer defaultRouteMetric;
+    /**
+     * @return Enable DHCP?
+     * 
+     */
+    private @Nullable Boolean enable;
+    /**
+     * @return Ethernet Interfaces DHCP ClientSend hostname
+     * 
+     */
+    private @Nullable EthernetInterfaceLayer3DhcpClientSendHostname sendHostname;
 
     private EthernetInterfaceLayer3DhcpClient() {}
     /**
-     * @return Dhcp client
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
-    public Optional<EthernetInterfaceLayer3DhcpClientDhcpClient> dhcpClient() {
-        return Optional.ofNullable(this.dhcpClient);
+    public Optional<Boolean> createDefaultRoute() {
+        return Optional.ofNullable(this.createDefaultRoute);
+    }
+    /**
+     * @return Metric of the default route created
+     * 
+     */
+    public Optional<Integer> defaultRouteMetric() {
+        return Optional.ofNullable(this.defaultRouteMetric);
+    }
+    /**
+     * @return Enable DHCP?
+     * 
+     */
+    public Optional<Boolean> enable() {
+        return Optional.ofNullable(this.enable);
+    }
+    /**
+     * @return Ethernet Interfaces DHCP ClientSend hostname
+     * 
+     */
+    public Optional<EthernetInterfaceLayer3DhcpClientSendHostname> sendHostname() {
+        return Optional.ofNullable(this.sendHostname);
     }
 
     public static Builder builder() {
@@ -35,22 +73,49 @@ public final class EthernetInterfaceLayer3DhcpClient {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable EthernetInterfaceLayer3DhcpClientDhcpClient dhcpClient;
+        private @Nullable Boolean createDefaultRoute;
+        private @Nullable Integer defaultRouteMetric;
+        private @Nullable Boolean enable;
+        private @Nullable EthernetInterfaceLayer3DhcpClientSendHostname sendHostname;
         public Builder() {}
         public Builder(EthernetInterfaceLayer3DhcpClient defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dhcpClient = defaults.dhcpClient;
+    	      this.createDefaultRoute = defaults.createDefaultRoute;
+    	      this.defaultRouteMetric = defaults.defaultRouteMetric;
+    	      this.enable = defaults.enable;
+    	      this.sendHostname = defaults.sendHostname;
         }
 
         @CustomType.Setter
-        public Builder dhcpClient(@Nullable EthernetInterfaceLayer3DhcpClientDhcpClient dhcpClient) {
+        public Builder createDefaultRoute(@Nullable Boolean createDefaultRoute) {
 
-            this.dhcpClient = dhcpClient;
+            this.createDefaultRoute = createDefaultRoute;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder defaultRouteMetric(@Nullable Integer defaultRouteMetric) {
+
+            this.defaultRouteMetric = defaultRouteMetric;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enable(@Nullable Boolean enable) {
+
+            this.enable = enable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sendHostname(@Nullable EthernetInterfaceLayer3DhcpClientSendHostname sendHostname) {
+
+            this.sendHostname = sendHostname;
             return this;
         }
         public EthernetInterfaceLayer3DhcpClient build() {
             final var _resultValue = new EthernetInterfaceLayer3DhcpClient();
-            _resultValue.dhcpClient = dhcpClient;
+            _resultValue.createDefaultRoute = createDefaultRoute;
+            _resultValue.defaultRouteMetric = defaultRouteMetric;
+            _resultValue.enable = enable;
+            _resultValue.sendHostname = sendHostname;
             return _resultValue;
         }
     }

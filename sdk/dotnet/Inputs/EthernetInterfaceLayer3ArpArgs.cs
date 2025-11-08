@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class EthernetInterfaceLayer3ArpArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Hw address
+        /// MAC address
         /// </summary>
         [Input("hwAddress")]
         public Input<string>? HwAddress { get; set; }

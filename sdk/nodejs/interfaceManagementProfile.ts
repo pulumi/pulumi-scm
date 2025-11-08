@@ -2,10 +2,42 @@
 // *** Do not edit by hand unless you're certain you know what you are doing! ***
 
 import * as pulumi from "@pulumi/pulumi";
+import * as inputs from "./types/input";
+import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
  * InterfaceManagementProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const dcPostmanProfile = new scm.InterfaceManagementProfile("dc_postman_profile", {
+ *     name: "test_inf_mgmt_profile_1_update",
+ *     folder: "All",
+ *     permittedIps: [
+ *         {
+ *             name: "10.0.0.0/24",
+ *         },
+ *         {
+ *             name: "10.0.0.0/32",
+ *         },
+ *     ],
+ *     http: true,
+ *     https: false,
+ *     telnet: false,
+ *     ssh: true,
+ *     ping: false,
+ *     httpOcsp: true,
+ *     useridService: true,
+ *     useridSyslogListenerSsl: true,
+ *     useridSyslogListenerUdp: true,
+ *     responsePages: false,
+ * });
+ * ```
  */
 export class InterfaceManagementProfile extends pulumi.CustomResource {
     /**
@@ -48,7 +80,7 @@ export class InterfaceManagementProfile extends pulumi.CustomResource {
      */
     declare public readonly http: pulumi.Output<boolean | undefined>;
     /**
-     * Http ocsp
+     * Allow HTTP OCSP?
      */
     declare public readonly httpOcsp: pulumi.Output<boolean | undefined>;
     /**
@@ -60,17 +92,17 @@ export class InterfaceManagementProfile extends pulumi.CustomResource {
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * Permitted ip
+     * Allowed IP address(es)
      */
-    declare public readonly permittedIps: pulumi.Output<string[] | undefined>;
+    declare public readonly permittedIps: pulumi.Output<outputs.InterfaceManagementProfilePermittedIp[] | undefined>;
     /**
      * Allow ping?
      */
     declare public readonly ping: pulumi.Output<boolean | undefined>;
     /**
-     * Response pages
+     * Allow response pages?
      */
-    declare public readonly responsePages: pulumi.Output<string | undefined>;
+    declare public readonly responsePages: pulumi.Output<boolean | undefined>;
     /**
      * The snippet in which the resource is defined
      */
@@ -85,15 +117,15 @@ export class InterfaceManagementProfile extends pulumi.CustomResource {
     declare public readonly telnet: pulumi.Output<boolean | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * Userid service
+     * Allow User-ID?
      */
     declare public readonly useridService: pulumi.Output<boolean | undefined>;
     /**
-     * Userid syslog listener ssl
+     * Allow User-ID syslog listener (SSL)?
      */
     declare public readonly useridSyslogListenerSsl: pulumi.Output<boolean | undefined>;
     /**
-     * Userid syslog listener udp
+     * Allow User-ID syslog listener (UDP)?
      */
     declare public readonly useridSyslogListenerUdp: pulumi.Output<boolean | undefined>;
 
@@ -167,7 +199,7 @@ export interface InterfaceManagementProfileState {
      */
     http?: pulumi.Input<boolean>;
     /**
-     * Http ocsp
+     * Allow HTTP OCSP?
      */
     httpOcsp?: pulumi.Input<boolean>;
     /**
@@ -179,17 +211,17 @@ export interface InterfaceManagementProfileState {
      */
     name?: pulumi.Input<string>;
     /**
-     * Permitted ip
+     * Allowed IP address(es)
      */
-    permittedIps?: pulumi.Input<pulumi.Input<string>[]>;
+    permittedIps?: pulumi.Input<pulumi.Input<inputs.InterfaceManagementProfilePermittedIp>[]>;
     /**
      * Allow ping?
      */
     ping?: pulumi.Input<boolean>;
     /**
-     * Response pages
+     * Allow response pages?
      */
-    responsePages?: pulumi.Input<string>;
+    responsePages?: pulumi.Input<boolean>;
     /**
      * The snippet in which the resource is defined
      */
@@ -204,15 +236,15 @@ export interface InterfaceManagementProfileState {
     telnet?: pulumi.Input<boolean>;
     tfid?: pulumi.Input<string>;
     /**
-     * Userid service
+     * Allow User-ID?
      */
     useridService?: pulumi.Input<boolean>;
     /**
-     * Userid syslog listener ssl
+     * Allow User-ID syslog listener (SSL)?
      */
     useridSyslogListenerSsl?: pulumi.Input<boolean>;
     /**
-     * Userid syslog listener udp
+     * Allow User-ID syslog listener (UDP)?
      */
     useridSyslogListenerUdp?: pulumi.Input<boolean>;
 }
@@ -234,7 +266,7 @@ export interface InterfaceManagementProfileArgs {
      */
     http?: pulumi.Input<boolean>;
     /**
-     * Http ocsp
+     * Allow HTTP OCSP?
      */
     httpOcsp?: pulumi.Input<boolean>;
     /**
@@ -246,17 +278,17 @@ export interface InterfaceManagementProfileArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Permitted ip
+     * Allowed IP address(es)
      */
-    permittedIps?: pulumi.Input<pulumi.Input<string>[]>;
+    permittedIps?: pulumi.Input<pulumi.Input<inputs.InterfaceManagementProfilePermittedIp>[]>;
     /**
      * Allow ping?
      */
     ping?: pulumi.Input<boolean>;
     /**
-     * Response pages
+     * Allow response pages?
      */
-    responsePages?: pulumi.Input<string>;
+    responsePages?: pulumi.Input<boolean>;
     /**
      * The snippet in which the resource is defined
      */
@@ -270,15 +302,15 @@ export interface InterfaceManagementProfileArgs {
      */
     telnet?: pulumi.Input<boolean>;
     /**
-     * Userid service
+     * Allow User-ID?
      */
     useridService?: pulumi.Input<boolean>;
     /**
-     * Userid syslog listener ssl
+     * Allow User-ID syslog listener (SSL)?
      */
     useridSyslogListenerSsl?: pulumi.Input<boolean>;
     /**
-     * Userid syslog listener udp
+     * Allow User-ID syslog listener (UDP)?
      */
     useridSyslogListenerUdp?: pulumi.Input<boolean>;
 }

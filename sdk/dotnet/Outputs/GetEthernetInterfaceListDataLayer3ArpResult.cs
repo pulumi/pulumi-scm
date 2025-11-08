@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceListDataLayer3ArpResult
     {
         /// <summary>
-        /// Hw address
+        /// MAC address
         /// </summary>
         public readonly string HwAddress;
         /// <summary>

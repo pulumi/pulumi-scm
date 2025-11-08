@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,13 +22,13 @@ public final class LogicalRouterVrfOspfExportRuleArgs extends com.pulumi.resourc
      * 
      */
     @Import(name="metric")
-    private @Nullable Output<Double> metric;
+    private @Nullable Output<Integer> metric;
 
     /**
      * @return Metric
      * 
      */
-    public Optional<Output<Double>> metric() {
+    public Optional<Output<Integer>> metric() {
         return Optional.ofNullable(this.metric);
     }
 
@@ -110,7 +110,7 @@ public final class LogicalRouterVrfOspfExportRuleArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder metric(@Nullable Output<Double> metric) {
+        public Builder metric(@Nullable Output<Integer> metric) {
             $.metric = metric;
             return this;
         }
@@ -121,7 +121,7 @@ public final class LogicalRouterVrfOspfExportRuleArgs extends com.pulumi.resourc
          * @return builder
          * 
          */
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             return metric(Output.of(metric));
         }
 

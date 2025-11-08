@@ -22,6 +22,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Fqdn;
         /// <summary>
+        /// Ip address
+        /// </summary>
+        public readonly string IpAddress;
+        /// <summary>
         /// Ipv6 address
         /// </summary>
         public readonly string Ipv6Address;
@@ -48,6 +52,8 @@ namespace Pulumi.Scm.Outputs
 
             string fqdn,
 
+            string ipAddress,
+
             string ipv6Address,
 
             string nextLr,
@@ -60,6 +66,7 @@ namespace Pulumi.Scm.Outputs
         {
             Discard = discard;
             Fqdn = fqdn;
+            IpAddress = ipAddress;
             Ipv6Address = ipv6Address;
             NextLr = nextLr;
             NextVr = nextVr;

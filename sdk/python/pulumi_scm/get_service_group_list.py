@@ -173,7 +173,7 @@ def get_service_group_list(device: Optional[_builtins.str] = None,
 
     # Fetch a list of all service group objects.
     # This data source will call the "List" API endpoint.
-    all_service_groups = scm.get_service_group_list(folder="Shared")
+    all_service_groups = scm.get_service_group_list(folder="All")
     pulumi.export("serviceGroupsListRaw", all_service_groups.datas)
     ```
 
@@ -224,7 +224,7 @@ def get_service_group_list_output(device: Optional[pulumi.Input[Optional[_builti
 
     # Fetch a list of all service group objects.
     # This data source will call the "List" API endpoint.
-    all_service_groups = scm.get_service_group_list(folder="Shared")
+    all_service_groups = scm.get_service_group_list(folder="All")
     pulumi.export("serviceGroupsListRaw", all_service_groups.datas)
     ```
 

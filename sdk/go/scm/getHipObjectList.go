@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Fetch a list of all HIP Object objects in the Shared folder.
 //			allShared, err := scm.GetHipObjectList(ctx, &scm.GetHipObjectListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //			}, nil)
 //			if err != nil {
 //				return err
@@ -37,7 +37,7 @@ import (
 //			ctx.Export("hipObjectsListAllShared", allShared.Datas)
 //			// Example of using pagination to get the first 10 HIP objects.
 //			paginated, err := scm.GetHipObjectList(ctx, &scm.GetHipObjectListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //				Limit:  pulumi.IntRef(10),
 //				Offset: pulumi.IntRef(0),
 //			}, nil)

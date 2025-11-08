@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDnsProxyListDataTcpQueriesResult
     {
         /// <summary>
-        /// Enabled
+        /// Turn on forwarding of TCP DNS queries?
         /// </summary>
         public readonly bool Enabled;
         /// <summary>
-        /// Max pending requests
+        /// Upper limit on number of concurrent TCP DNS requests
         /// </summary>
         public readonly int MaxPendingRequests;
 

@@ -22,6 +22,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Description;
         /// <summary>
+        /// Destination translation
+        /// </summary>
+        public readonly Outputs.GetNatRuleListDataDestinationTranslationResult DestinationTranslation;
+        /// <summary>
         /// Destination address(es) of the original packet
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
@@ -34,13 +38,9 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// Distribution method
+        /// Dynamic destination translation
         /// </summary>
-        public readonly string Distribution;
-        /// <summary>
-        /// DNS rewrite
-        /// </summary>
-        public readonly Outputs.GetNatRuleListDataDnsRewriteResult DnsRewrite;
+        public readonly Outputs.GetNatRuleListDataDynamicDestinationTranslationResult DynamicDestinationTranslation;
         /// <summary>
         /// The folder in which the resource is defined
         /// </summary>
@@ -61,6 +61,10 @@ namespace Pulumi.Scm.Outputs
         /// NAT type
         /// </summary>
         public readonly string NatType;
+        /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        public readonly string Position;
         /// <summary>
         /// The service of the original packet
         /// </summary>
@@ -90,14 +94,6 @@ namespace Pulumi.Scm.Outputs
         /// Destination zone of the original packet
         /// </summary>
         public readonly ImmutableArray<string> Tos;
-        /// <summary>
-        /// Translated destination IP address
-        /// </summary>
-        public readonly string TranslatedAddressSingle;
-        /// <summary>
-        /// Translated destination port
-        /// </summary>
-        public readonly int TranslatedPort;
 
         [OutputConstructor]
         private GetNatRuleListDataResult(
@@ -105,15 +101,15 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
+            Outputs.GetNatRuleListDataDestinationTranslationResult destinationTranslation,
+
             ImmutableArray<string> destinations,
 
             string device,
 
             bool disabled,
 
-            string distribution,
-
-            Outputs.GetNatRuleListDataDnsRewriteResult dnsRewrite,
+            Outputs.GetNatRuleListDataDynamicDestinationTranslationResult dynamicDestinationTranslation,
 
             string folder,
 
@@ -124,6 +120,8 @@ namespace Pulumi.Scm.Outputs
             string name,
 
             string natType,
+
+            string position,
 
             string service,
 
@@ -139,24 +137,21 @@ namespace Pulumi.Scm.Outputs
 
             string toInterface,
 
-            ImmutableArray<string> tos,
-
-            string translatedAddressSingle,
-
-            int translatedPort)
+            ImmutableArray<string> tos)
         {
             ActiveActiveDeviceBinding = activeActiveDeviceBinding;
             Description = description;
+            DestinationTranslation = destinationTranslation;
             Destinations = destinations;
             Device = device;
             Disabled = disabled;
-            Distribution = distribution;
-            DnsRewrite = dnsRewrite;
+            DynamicDestinationTranslation = dynamicDestinationTranslation;
             Folder = folder;
             Froms = froms;
             Id = id;
             Name = name;
             NatType = natType;
+            Position = position;
             Service = service;
             Snippet = snippet;
             SourceTranslation = sourceTranslation;
@@ -165,8 +160,6 @@ namespace Pulumi.Scm.Outputs
             Tfid = tfid;
             ToInterface = toInterface;
             Tos = tos;
-            TranslatedAddressSingle = translatedAddressSingle;
-            TranslatedPort = translatedPort;
         }
     }
 }

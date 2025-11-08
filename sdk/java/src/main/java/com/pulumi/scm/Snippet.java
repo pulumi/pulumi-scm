@@ -18,6 +18,58 @@ import javax.annotation.Nullable;
 /**
  * Snippet resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Label;
+ * import com.pulumi.scm.LabelArgs;
+ * import com.pulumi.scm.Snippet;
+ * import com.pulumi.scm.SnippetArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmLabel1 = new Label("scmLabel1", LabelArgs.builder()
+ *             .name("scm_label")
+ *             .build());
+ * 
+ *         //snippet with label
+ *         var scmSnippet1 = new Snippet("scmSnippet1", SnippetArgs.builder()
+ *             .name("scm_snippet")
+ *             .description("Adding a Description from Terraform")
+ *             .labels(scmLabel1.name())
+ *             .build());
+ * 
+ *         var scmSnippet2 = new Snippet("scmSnippet2", SnippetArgs.builder()
+ *             .name("scm_snippet_2")
+ *             .description("Adding a Description from Terraform")
+ *             .build());
+ * 
+ *         var scmSnippet3 = new Snippet("scmSnippet3", SnippetArgs.builder()
+ *             .name("scm_snippet_3")
+ *             .description("Adding a Description from Terraform")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/snippet:Snippet")
 public class Snippet extends com.pulumi.resources.CustomResource {

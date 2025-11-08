@@ -8,6 +8,36 @@ import * as utilities from "./utilities";
 
 /**
  * TunnelInterface resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates a tunnel interface with static ipv4 address
+ * //
+ * const scmTunnelIntf = new scm.TunnelInterface("scm_tunnel_intf", {
+ *     name: "$scm_tunnel_intf",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     ips: [{
+ *         name: "198.18.1.1/32",
+ *     }],
+ * });
+ * //
+ * // Creates a tunnel interface with static ipv4 address, with default value tunnel.123
+ * //
+ * const scmTunnelIntf2 = new scm.TunnelInterface("scm_tunnel_intf_2", {
+ *     name: "$scm_tunnel_intf_2",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     ips: [{
+ *         name: "198.18.1.2/32",
+ *     }],
+ * });
+ * ```
  */
 export class TunnelInterface extends pulumi.CustomResource {
     /**
@@ -42,9 +72,9 @@ export class TunnelInterface extends pulumi.CustomResource {
      */
     declare public readonly comment: pulumi.Output<string | undefined>;
     /**
-     * Default value
+     * Default interface assignment
      */
-    declare public readonly defaultValue: pulumi.Output<number | undefined>;
+    declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
      */
@@ -58,9 +88,9 @@ export class TunnelInterface extends pulumi.CustomResource {
      */
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
-     * tunnel interfaces ip parent
+     * Tunnel Interface IP Parent
      */
-    declare public readonly ip: pulumi.Output<outputs.TunnelInterfaceIp | undefined>;
+    declare public readonly ips: pulumi.Output<outputs.TunnelInterfaceIp[] | undefined>;
     /**
      * MTU
      */
@@ -93,7 +123,7 @@ export class TunnelInterface extends pulumi.CustomResource {
             resourceInputs["device"] = state?.device;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["interfaceManagementProfile"] = state?.interfaceManagementProfile;
-            resourceInputs["ip"] = state?.ip;
+            resourceInputs["ips"] = state?.ips;
             resourceInputs["mtu"] = state?.mtu;
             resourceInputs["name"] = state?.name;
             resourceInputs["snippet"] = state?.snippet;
@@ -105,7 +135,7 @@ export class TunnelInterface extends pulumi.CustomResource {
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["interfaceManagementProfile"] = args?.interfaceManagementProfile;
-            resourceInputs["ip"] = args?.ip;
+            resourceInputs["ips"] = args?.ips;
             resourceInputs["mtu"] = args?.mtu;
             resourceInputs["name"] = args?.name;
             resourceInputs["snippet"] = args?.snippet;
@@ -125,9 +155,9 @@ export interface TunnelInterfaceState {
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default value
+     * Default interface assignment
      */
-    defaultValue?: pulumi.Input<number>;
+    defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
      */
@@ -141,9 +171,9 @@ export interface TunnelInterfaceState {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * tunnel interfaces ip parent
+     * Tunnel Interface IP Parent
      */
-    ip?: pulumi.Input<inputs.TunnelInterfaceIp>;
+    ips?: pulumi.Input<pulumi.Input<inputs.TunnelInterfaceIp>[]>;
     /**
      * MTU
      */
@@ -168,9 +198,9 @@ export interface TunnelInterfaceArgs {
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default value
+     * Default interface assignment
      */
-    defaultValue?: pulumi.Input<number>;
+    defaultValue?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
      */
@@ -184,9 +214,9 @@ export interface TunnelInterfaceArgs {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * tunnel interfaces ip parent
+     * Tunnel Interface IP Parent
      */
-    ip?: pulumi.Input<inputs.TunnelInterfaceIp>;
+    ips?: pulumi.Input<pulumi.Input<inputs.TunnelInterfaceIp>[]>;
     /**
      * MTU
      */

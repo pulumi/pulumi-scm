@@ -8,9 +8,27 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Define a data source for listing NAT rules
+ * const pagedNatRulesList = scm.getNatRuleList({
+ *     folder: "All",
+ *     limit: 10,
+ *     offset: 10,
+ *     position: "pre",
+ * });
+ * export const fetchedNATRuleListSummary = {
+ *     totalRulesInList: pagedNatRulesList.then(pagedNatRulesList => pagedNatRulesList.total),
+ *     allRules: pagedNatRulesList.then(pagedNatRulesList => pagedNatRulesList.datas),
+ * };
+ * ```
  */
-export function getNatRuleList(args?: GetNatRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetNatRuleListResult> {
-    args = args || {};
+export function getNatRuleList(args: GetNatRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetNatRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getNatRuleList:getNatRuleList", {
         "device": args.device,
@@ -18,6 +36,7 @@ export function getNatRuleList(args?: GetNatRuleListArgs, opts?: pulumi.InvokeOp
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -46,6 +65,10 @@ export interface GetNatRuleListArgs {
      * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The relative position of the rule
+     */
+    position: string;
     /**
      * The snippet of the item.
      */
@@ -85,6 +108,10 @@ export interface GetNatRuleListResult {
      */
     readonly offset?: number;
     /**
+     * The relative position of the rule
+     */
+    readonly position: string;
+    /**
      * The snippet of the item.
      */
     readonly snippet?: string;
@@ -96,9 +123,27 @@ export interface GetNatRuleListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Define a data source for listing NAT rules
+ * const pagedNatRulesList = scm.getNatRuleList({
+ *     folder: "All",
+ *     limit: 10,
+ *     offset: 10,
+ *     position: "pre",
+ * });
+ * export const fetchedNATRuleListSummary = {
+ *     totalRulesInList: pagedNatRulesList.then(pagedNatRulesList => pagedNatRulesList.total),
+ *     allRules: pagedNatRulesList.then(pagedNatRulesList => pagedNatRulesList.datas),
+ * };
+ * ```
  */
-export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNatRuleListResult> {
-    args = args || {};
+export function getNatRuleListOutput(args: GetNatRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetNatRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getNatRuleList:getNatRuleList", {
         "device": args.device,
@@ -106,6 +151,7 @@ export function getNatRuleListOutput(args?: GetNatRuleListOutputArgs, opts?: pul
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -134,6 +180,10 @@ export interface GetNatRuleListOutputArgs {
      * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The relative position of the rule
+     */
+    position: pulumi.Input<string>;
     /**
      * The snippet of the item.
      */

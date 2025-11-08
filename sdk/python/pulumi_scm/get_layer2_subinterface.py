@@ -51,8 +51,8 @@ class GetLayer2SubinterfaceResult:
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
-        if vlan_tag and not isinstance(vlan_tag, float):
-            raise TypeError("Expected argument 'vlan_tag' to be a float")
+        if vlan_tag and not isinstance(vlan_tag, str):
+            raise TypeError("Expected argument 'vlan_tag' to be a str")
         pulumi.set(__self__, "vlan_tag", vlan_tag)
 
     @_builtins.property
@@ -118,9 +118,9 @@ class GetLayer2SubinterfaceResult:
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
-    def vlan_tag(self) -> _builtins.float:
+    def vlan_tag(self) -> _builtins.str:
         """
-        Vlan tag
+        VLAN tag
         """
         return pulumi.get(self, "vlan_tag")
 
@@ -148,6 +148,24 @@ def get_layer2_subinterface(id: Optional[_builtins.str] = None,
     """
     Layer2Subinterface data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up layer2 sub-interface by its ID.
+    scm_l2_subinterface_ds = scm.get_layer2_subinterface(id="88f730d1-6577-492b-88a6-73d4a513dc76")
+    pulumi.export("layer2SubinterfaceDataSourceResults", {
+        "id": scm_l2_subinterface_ds.id,
+        "name": scm_l2_subinterface_ds.name,
+        "comment": scm_l2_subinterface_ds.comment,
+        "vlanTag": scm_l2_subinterface_ds.vlan_tag,
+        "parentInterface": scm_l2_subinterface_ds.parent_interface,
+        "folder": scm_l2_subinterface_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: L2 sub-interface name
@@ -173,6 +191,24 @@ def get_layer2_subinterface_output(id: Optional[pulumi.Input[_builtins.str]] = N
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLayer2SubinterfaceResult]:
     """
     Layer2Subinterface data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up layer2 sub-interface by its ID.
+    scm_l2_subinterface_ds = scm.get_layer2_subinterface(id="88f730d1-6577-492b-88a6-73d4a513dc76")
+    pulumi.export("layer2SubinterfaceDataSourceResults", {
+        "id": scm_l2_subinterface_ds.id,
+        "name": scm_l2_subinterface_ds.name,
+        "comment": scm_l2_subinterface_ds.comment,
+        "vlanTag": scm_l2_subinterface_ds.vlan_tag,
+        "parentInterface": scm_l2_subinterface_ds.parent_interface,
+        "folder": scm_l2_subinterface_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

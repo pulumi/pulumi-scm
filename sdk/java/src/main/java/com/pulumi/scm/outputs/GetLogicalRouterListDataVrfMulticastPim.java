@@ -10,7 +10,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfMulticastPimRp;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfMulticastPimSptThreshold;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfMulticastPimSsmAddressSpace;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +41,7 @@ public final class GetLogicalRouterListDataVrfMulticastPim {
      * @return Route ageout time
      * 
      */
-    private Double routeAgeoutTime;
+    private Integer routeAgeoutTime;
     /**
      * @return Rp
      * 
@@ -96,7 +96,7 @@ public final class GetLogicalRouterListDataVrfMulticastPim {
      * @return Route ageout time
      * 
      */
-    public Double routeAgeoutTime() {
+    public Integer routeAgeoutTime() {
         return this.routeAgeoutTime;
     }
     /**
@@ -141,7 +141,7 @@ public final class GetLogicalRouterListDataVrfMulticastPim {
         private String groupPermission;
         private String ifTimerGlobal;
         private List<GetLogicalRouterListDataVrfMulticastPimInterface> interfaces;
-        private Double routeAgeoutTime;
+        private Integer routeAgeoutTime;
         private GetLogicalRouterListDataVrfMulticastPimRp rp;
         private String rpfLookupMode;
         private List<GetLogicalRouterListDataVrfMulticastPimSptThreshold> sptThresholds;
@@ -196,7 +196,7 @@ public final class GetLogicalRouterListDataVrfMulticastPim {
             return interfaces(List.of(interfaces));
         }
         @CustomType.Setter
-        public Builder routeAgeoutTime(Double routeAgeoutTime) {
+        public Builder routeAgeoutTime(Integer routeAgeoutTime) {
             if (routeAgeoutTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfMulticastPim", "routeAgeoutTime");
             }

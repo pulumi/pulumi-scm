@@ -13,18 +13,108 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// LogicalRouter data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the logical router by its ID.
+        ///     var scmLogicalRouterDs = Scm.GetLogicalRouter.Invoke(new()
+        ///     {
+        ///         Id = "b7c6f00b-b20e-4073-af1c-1f42863a5983",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogicalRouterDataSourceOutput"] = 
+        ///         {
+        ///             { "id", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id) },
+        ///             { "name", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name) },
+        ///             { "routingStack", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack) },
+        ///             { "vrf", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves) },
+        ///             { "folder", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLogicalRouterResult> InvokeAsync(GetLogicalRouterArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLogicalRouterResult>("scm:index/getLogicalRouter:getLogicalRouter", args ?? new GetLogicalRouterArgs(), options.WithDefaults());
 
         /// <summary>
         /// LogicalRouter data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the logical router by its ID.
+        ///     var scmLogicalRouterDs = Scm.GetLogicalRouter.Invoke(new()
+        ///     {
+        ///         Id = "b7c6f00b-b20e-4073-af1c-1f42863a5983",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogicalRouterDataSourceOutput"] = 
+        ///         {
+        ///             { "id", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id) },
+        ///             { "name", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name) },
+        ///             { "routingStack", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack) },
+        ///             { "vrf", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves) },
+        ///             { "folder", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogicalRouterResult> Invoke(GetLogicalRouterInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogicalRouterResult>("scm:index/getLogicalRouter:getLogicalRouter", args ?? new GetLogicalRouterInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// LogicalRouter data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up the logical router by its ID.
+        ///     var scmLogicalRouterDs = Scm.GetLogicalRouter.Invoke(new()
+        ///     {
+        ///         Id = "b7c6f00b-b20e-4073-af1c-1f42863a5983",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogicalRouterDataSourceOutput"] = 
+        ///         {
+        ///             { "id", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Id) },
+        ///             { "name", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Name) },
+        ///             { "routingStack", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.RoutingStack) },
+        ///             { "vrf", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Vrves) },
+        ///             { "folder", scmLogicalRouterDs.Apply(getLogicalRouterResult =&gt; getLogicalRouterResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogicalRouterResult> Invoke(GetLogicalRouterInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogicalRouterResult>("scm:index/getLogicalRouter:getLogicalRouter", args ?? new GetLogicalRouterInvokeArgs(), options.WithDefaults());

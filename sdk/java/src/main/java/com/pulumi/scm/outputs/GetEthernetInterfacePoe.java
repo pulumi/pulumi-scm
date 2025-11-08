@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetEthernetInterfacePoe {
     /**
-     * @return Poe enabled
+     * @return Enabled PoE?
      * 
      */
     private Boolean poeEnabled;
     /**
-     * @return Poe rsvd pwr
+     * @return PoE reserved power
      * 
      */
     private Integer poeRsvdPwr;
 
     private GetEthernetInterfacePoe() {}
     /**
-     * @return Poe enabled
+     * @return Enabled PoE?
      * 
      */
     public Boolean poeEnabled() {
         return this.poeEnabled;
     }
     /**
-     * @return Poe rsvd pwr
+     * @return PoE reserved power
      * 
      */
     public Integer poeRsvdPwr() {

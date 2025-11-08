@@ -5,7 +5,6 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 
@@ -48,10 +47,10 @@ public final class GetLayer2SubinterfaceListData {
     private String snippet;
     private String tfid;
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    private Double vlanTag;
+    private String vlanTag;
 
     private GetLayer2SubinterfaceListData() {}
     /**
@@ -107,10 +106,10 @@ public final class GetLayer2SubinterfaceListData {
         return this.tfid;
     }
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    public Double vlanTag() {
+    public String vlanTag() {
         return this.vlanTag;
     }
 
@@ -131,7 +130,7 @@ public final class GetLayer2SubinterfaceListData {
         private String parentInterface;
         private String snippet;
         private String tfid;
-        private Double vlanTag;
+        private String vlanTag;
         public Builder() {}
         public Builder(GetLayer2SubinterfaceListData defaults) {
     	      Objects.requireNonNull(defaults);
@@ -211,7 +210,7 @@ public final class GetLayer2SubinterfaceListData {
             return this;
         }
         @CustomType.Setter
-        public Builder vlanTag(Double vlanTag) {
+        public Builder vlanTag(String vlanTag) {
             if (vlanTag == null) {
               throw new MissingRequiredPropertyException("GetLayer2SubinterfaceListData", "vlanTag");
             }

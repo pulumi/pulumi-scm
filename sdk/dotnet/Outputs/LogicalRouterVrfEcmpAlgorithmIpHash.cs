@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Hash seed
         /// </summary>
-        public readonly double? HashSeed;
+        public readonly int? HashSeed;
         /// <summary>
         /// Src only
         /// </summary>
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private LogicalRouterVrfEcmpAlgorithmIpHash(
-            double? hashSeed,
+            int? hashSeed,
 
             bool? srcOnly,
 

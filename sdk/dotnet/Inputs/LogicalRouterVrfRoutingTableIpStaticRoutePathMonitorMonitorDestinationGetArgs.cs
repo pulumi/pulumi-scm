@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         /// Count
         /// </summary>
         [Input("count")]
-        public Input<double>? Count { get; set; }
+        public Input<int>? Count { get; set; }
 
         /// <summary>
         /// Destination
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         /// Interval
         /// </summary>
         [Input("interval")]
-        public Input<double>? Interval { get; set; }
+        public Input<int>? Interval { get; set; }
 
         /// <summary>
         /// Name

@@ -33,14 +33,14 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="cache", refs={DnsProxyCache.class}, tree="[0]")
-    private Output</* @Nullable */ DnsProxyCache> cache;
+    private Output<DnsProxyCache> cache;
 
     /**
      * @return Cache
      * 
      */
-    public Output<Optional<DnsProxyCache>> cache() {
-        return Codegen.optional(this.cache);
+    public Output<DnsProxyCache> cache() {
+        return this.cache;
     }
     /**
      * Default
@@ -71,14 +71,14 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.device);
     }
     /**
-     * Domain servers
+     * DNS proxy rules
      * 
      */
     @Export(name="domainServers", refs={List.class,DnsProxyDomainServer.class}, tree="[0,1]")
     private Output</* @Nullable */ List<DnsProxyDomainServer>> domainServers;
 
     /**
-     * @return Domain servers
+     * @return DNS proxy rules
      * 
      */
     public Output<Optional<List<DnsProxyDomainServer>>> domainServers() {
@@ -173,14 +173,14 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="tcpQueries", refs={DnsProxyTcpQueries.class}, tree="[0]")
-    private Output</* @Nullable */ DnsProxyTcpQueries> tcpQueries;
+    private Output<DnsProxyTcpQueries> tcpQueries;
 
     /**
      * @return Tcp queries
      * 
      */
-    public Output<Optional<DnsProxyTcpQueries>> tcpQueries() {
-        return Codegen.optional(this.tcpQueries);
+    public Output<DnsProxyTcpQueries> tcpQueries() {
+        return this.tcpQueries;
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
@@ -193,14 +193,14 @@ public class DnsProxy extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="udpQueries", refs={DnsProxyUdpQueries.class}, tree="[0]")
-    private Output</* @Nullable */ DnsProxyUdpQueries> udpQueries;
+    private Output<DnsProxyUdpQueries> udpQueries;
 
     /**
      * @return Udp queries
      * 
      */
-    public Output<Optional<DnsProxyUdpQueries>> udpQueries() {
-        return Codegen.optional(this.udpQueries);
+    public Output<DnsProxyUdpQueries> udpQueries() {
+        return this.udpQueries;
     }
 
     /**

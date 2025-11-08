@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 {
     /**
-     * @return Next hop
+     * @return Connected Static BGP Route maps set Next ipv4 hop
      * 
      */
     private String nextHop;
     /**
-     * @return Source address
+     * @return Connected Static BGP Route maps set ipv4 Source address
      * 
      */
     private String sourceAddress;
 
     private GetBgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4() {}
     /**
-     * @return Next hop
+     * @return Connected Static BGP Route maps set Next ipv4 hop
      * 
      */
     public String nextHop() {
         return this.nextHop;
     }
     /**
-     * @return Source address
+     * @return Connected Static BGP Route maps set ipv4 Source address
      * 
      */
     public String sourceAddress() {

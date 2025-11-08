@@ -20,13 +20,13 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Weight
         /// </summary>
-        public readonly double Weight;
+        public readonly int Weight;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobinInterfaceResult(
             string name,
 
-            double weight)
+            int weight)
         {
             Name = name;
             Weight = weight;

@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all tunnel interfaces
+        ///     var allTunnelInterfaces = Scm.GetTunnelInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTunnelInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetTunnelInterfaceListResult> InvokeAsync(GetTunnelInterfaceListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTunnelInterfaceListResult>("scm:index/getTunnelInterfaceList:getTunnelInterfaceList", args ?? new GetTunnelInterfaceListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all tunnel interfaces
+        ///     var allTunnelInterfaces = Scm.GetTunnelInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTunnelInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTunnelInterfaceListResult> Invoke(GetTunnelInterfaceListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTunnelInterfaceListResult>("scm:index/getTunnelInterfaceList:getTunnelInterfaceList", args ?? new GetTunnelInterfaceListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all tunnel interfaces
+        ///     var allTunnelInterfaces = Scm.GetTunnelInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTunnelInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTunnelInterfaceListResult> Invoke(GetTunnelInterfaceListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTunnelInterfaceListResult>("scm:index/getTunnelInterfaceList:getTunnelInterfaceList", args ?? new GetTunnelInterfaceListInvokeArgs(), options.WithDefaults());

@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnection;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -33,7 +33,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
      * @return Idle hold time
      * 
      */
-    private @Nullable Double idleHoldTime;
+    private @Nullable Integer idleHoldTime;
     /**
      * @return Incoming bgp connection
      * 
@@ -53,7 +53,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
      * @return Min route adv interval
      * 
      */
-    private @Nullable Double minRouteAdvInterval;
+    private @Nullable Integer minRouteAdvInterval;
     /**
      * @return Multihop
      * 
@@ -63,7 +63,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
      * @return Open delay time
      * 
      */
-    private @Nullable Double openDelayTime;
+    private @Nullable Integer openDelayTime;
     /**
      * @return Outgoing bgp connection
      * 
@@ -101,7 +101,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
      * @return Idle hold time
      * 
      */
-    public Optional<Double> idleHoldTime() {
+    public Optional<Integer> idleHoldTime() {
         return Optional.ofNullable(this.idleHoldTime);
     }
     /**
@@ -129,7 +129,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
      * @return Min route adv interval
      * 
      */
-    public Optional<Double> minRouteAdvInterval() {
+    public Optional<Integer> minRouteAdvInterval() {
         return Optional.ofNullable(this.minRouteAdvInterval);
     }
     /**
@@ -143,7 +143,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
      * @return Open delay time
      * 
      */
-    public Optional<Double> openDelayTime() {
+    public Optional<Integer> openDelayTime() {
         return Optional.ofNullable(this.openDelayTime);
     }
     /**
@@ -173,13 +173,13 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
         private @Nullable String authentication;
         private @Nullable String dampening;
         private @Nullable String holdTime;
-        private @Nullable Double idleHoldTime;
+        private @Nullable Integer idleHoldTime;
         private @Nullable LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnection incomingBgpConnection;
         private @Nullable String keepAliveInterval;
         private @Nullable String maxPrefixes;
-        private @Nullable Double minRouteAdvInterval;
+        private @Nullable Integer minRouteAdvInterval;
         private @Nullable String multihop;
-        private @Nullable Double openDelayTime;
+        private @Nullable Integer openDelayTime;
         private @Nullable LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnection outgoingBgpConnection;
         private @Nullable String timers;
         public Builder() {}
@@ -218,7 +218,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
             return this;
         }
         @CustomType.Setter
-        public Builder idleHoldTime(@Nullable Double idleHoldTime) {
+        public Builder idleHoldTime(@Nullable Integer idleHoldTime) {
 
             this.idleHoldTime = idleHoldTime;
             return this;
@@ -242,7 +242,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
             return this;
         }
         @CustomType.Setter
-        public Builder minRouteAdvInterval(@Nullable Double minRouteAdvInterval) {
+        public Builder minRouteAdvInterval(@Nullable Integer minRouteAdvInterval) {
 
             this.minRouteAdvInterval = minRouteAdvInterval;
             return this;
@@ -254,7 +254,7 @@ public final class LogicalRouterVrfBgpPeerGroupPeerConnectionOptions {
             return this;
         }
         @CustomType.Setter
-        public Builder openDelayTime(@Nullable Double openDelayTime) {
+        public Builder openDelayTime(@Nullable Integer openDelayTime) {
 
             this.openDelayTime = openDelayTime;
             return this;

@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM DNS Security Profile objects.
+ * //
+ * // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+ * const allShared = scm.getDnsSecurityProfileList({
+ *     folder: "All",
+ * });
+ * export const scmDnsSecurityProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getDnsSecurityProfileList(args?: GetDnsSecurityProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetDnsSecurityProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM DNS Security Profile objects.
+ * //
+ * // Fetch a list of all SCM DNS Security Profile in the "Shared" folder.
+ * const allShared = scm.getDnsSecurityProfileList({
+ *     folder: "All",
+ * });
+ * export const scmDnsSecurityProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getDnsSecurityProfileListOutput(args?: GetDnsSecurityProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityProfileListResult> {
     args = args || {};

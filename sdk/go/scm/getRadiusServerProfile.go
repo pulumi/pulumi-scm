@@ -12,6 +12,52 @@ import (
 )
 
 // RadiusServerProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			chapRadiusProfile, err := scm.NewRadiusServerProfile(ctx, "chap_radius_profile", &scm.RadiusServerProfileArgs{
+//				Name:    pulumi.String("CHAP_only_rsp_ds_1"),
+//				Folder:  pulumi.String("All"),
+//				Retries: pulumi.Int(5),
+//				Timeout: pulumi.Int(60),
+//				Protocol: &scm.RadiusServerProfileProtocolArgs{
+//					CHAP: &scm.RadiusServerProfileProtocolChapArgs{},
+//				},
+//				Servers: scm.RadiusServerProfileServerArray{
+//					&scm.RadiusServerProfileServerArgs{
+//						Name:      pulumi.String("Chap_Server_Primary"),
+//						IpAddress: pulumi.String("10.1.1.10"),
+//						Port:      pulumi.Int(1812),
+//						Secret:    pulumi.String("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g=="),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			singleProfileById := scm.LookupRadiusServerProfileOutput(ctx, scm.GetRadiusServerProfileOutputArgs{
+//				Id: chapRadiusProfile.ID(),
+//			}, nil)
+//			ctx.Export("singleRspDump", singleProfileById.ApplyT(func(singleProfileById scm.GetRadiusServerProfileResult) (*string, error) {
+//				return &singleProfileById.Name, nil
+//			}).(pulumi.StringPtrOutput))
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupRadiusServerProfile(ctx *pulumi.Context, args *LookupRadiusServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupRadiusServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupRadiusServerProfileResult

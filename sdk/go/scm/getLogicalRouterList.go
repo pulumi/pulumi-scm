@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetLogicalRouterList(ctx *pulumi.Context, args *GetLogicalRouterListArgs, opts ...pulumi.InvokeOption) (*GetLogicalRouterListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetLogicalRouterListResult
@@ -34,6 +36,8 @@ type GetLogicalRouterListArgs struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The parameter to mention if the response should be paginated. By default, its set to false
+	Pagination *bool `pulumi:"pagination"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -54,6 +58,8 @@ type GetLogicalRouterListResult struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The parameter to mention if the response should be paginated. By default, its set to false
+	Pagination *bool `pulumi:"pagination"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
@@ -82,6 +88,8 @@ type GetLogicalRouterListOutputArgs struct {
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The parameter to mention if the response should be paginated. By default, its set to false
+	Pagination pulumi.BoolPtrInput `pulumi:"pagination"`
 	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
@@ -138,6 +146,11 @@ func (o GetLogicalRouterListResultOutput) Name() pulumi.StringPtrOutput {
 // The offset of the first item to return.
 func (o GetLogicalRouterListResultOutput) Offset() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetLogicalRouterListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The parameter to mention if the response should be paginated. By default, its set to false
+func (o GetLogicalRouterListResultOutput) Pagination() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v GetLogicalRouterListResult) *bool { return v.Pagination }).(pulumi.BoolPtrOutput)
 }
 
 // The snippet of the item.

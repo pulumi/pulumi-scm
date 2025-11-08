@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         /// Assert interval
         /// </summary>
         [Input("assertInterval")]
-        public Input<double>? AssertInterval { get; set; }
+        public Input<int>? AssertInterval { get; set; }
 
         /// <summary>
         /// Bsr border
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         /// Dr priority
         /// </summary>
         [Input("drPriority")]
-        public Input<double>? DrPriority { get; set; }
+        public Input<int>? DrPriority { get; set; }
 
         /// <summary>
         /// Enable
@@ -52,13 +52,13 @@ namespace Pulumi.Scm.Inputs
         /// Hello interval
         /// </summary>
         [Input("helloInterval")]
-        public Input<double>? HelloInterval { get; set; }
+        public Input<int>? HelloInterval { get; set; }
 
         /// <summary>
         /// Join prune interval
         /// </summary>
         [Input("joinPruneInterval")]
-        public Input<double>? JoinPruneInterval { get; set; }
+        public Input<int>? JoinPruneInterval { get; set; }
 
         public LogicalRouterVrfMulticastInterfaceGroupPimArgs()
         {

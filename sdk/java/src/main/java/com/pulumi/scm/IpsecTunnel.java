@@ -22,6 +22,112 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.IkeCryptoProfile;
+ * import com.pulumi.scm.IkeCryptoProfileArgs;
+ * import com.pulumi.scm.IpsecCryptoProfile;
+ * import com.pulumi.scm.IpsecCryptoProfileArgs;
+ * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+ * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+ * import com.pulumi.scm.IkeGateway;
+ * import com.pulumi.scm.IkeGatewayArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayPeerAddressArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayAuthenticationPreSharedKeyArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolArgs;
+ * import com.pulumi.scm.inputs.IkeGatewayProtocolIkev1Args;
+ * import com.pulumi.scm.IpsecTunnel;
+ * import com.pulumi.scm.IpsecTunnelArgs;
+ * import com.pulumi.scm.inputs.IpsecTunnelAutoKeyArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+ *         // Note: The resource name is plural: "scm_ike_crypto_profile"
+ *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
+ *             .name("example-ike-crypto")
+ *             .folder("Remote Networks")
+ *             .hashes("sha256")
+ *             .dhGroups("group14")
+ *             .encryptions("aes-256-cbc")
+ *             .build());
+ * 
+ *         //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+ *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ *         var exampleIpsecCryptoProfile = new IpsecCryptoProfile("exampleIpsecCryptoProfile", IpsecCryptoProfileArgs.builder()
+ *             .name("PaloAlto-Networks-IPSec-Crypto")
+ *             .folder("Remote Networks")
+ *             .esp(IpsecCryptoProfileEspArgs.builder()
+ *                 .encryptions("aes-256-gcm")
+ *                 .authentications("sha256")
+ *                 .build())
+ *             .dhGroup("group14")
+ *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+ *                 .hours(8)
+ *                 .build())
+ *             .build());
+ * 
+ *         //# 3. Define the IKE Gateway
+ *         // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
+ *             .name("example-gateway")
+ *             .folder("Remote Networks")
+ *             .peerAddress(IkeGatewayPeerAddressArgs.builder()
+ *                 .ip("1.1.1.1")
+ *                 .build())
+ *             .authentication(IkeGatewayAuthenticationArgs.builder()
+ *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
+ *                     .key("secret")
+ *                     .build())
+ *                 .build())
+ *             .protocol(IkeGatewayProtocolArgs.builder()
+ *                 .ikev1(IkeGatewayProtocolIkev1Args.builder()
+ *                     .ikeCryptoProfile(example.name())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //# 4. Define the IPsec Tunnel
+ *         // Note: Nested 'auto_key' block uses an equals sign (=).
+ *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
+ *             .name("example-tunnel")
+ *             .folder("Remote Networks")
+ *             .tunnelInterface("tunnel")
+ *             .antiReplay(true)
+ *             .copyTos(false)
+ *             .enableGreEncapsulation(false)
+ *             .autoKey(IpsecTunnelAutoKeyArgs.builder()
+ *                 .ikeGateways(IpsecTunnelAutoKeyIkeGatewayArgs.builder()
+ *                     .name(exampleIkeGateway.name())
+ *                     .build())
+ *                 .ipsecCryptoProfile(exampleIpsecCryptoProfile.name())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(exampleIkeGateway)
+ *                 .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/ipsecTunnel:IpsecTunnel")
 public class IpsecTunnel extends com.pulumi.resources.CustomResource {

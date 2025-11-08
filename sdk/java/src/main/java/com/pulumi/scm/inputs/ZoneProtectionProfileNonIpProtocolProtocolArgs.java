@@ -34,9 +34,9 @@ public final class ZoneProtectionProfileNonIpProtocolProtocolArgs extends com.pu
 
     /**
      * Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-     * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-     * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+     * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+     * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
      * 
      */
     @Import(name="etherType", required=true)
@@ -44,9 +44,9 @@ public final class ZoneProtectionProfileNonIpProtocolProtocolArgs extends com.pu
 
     /**
      * @return Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-     * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-     * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+     * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+     * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+     * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
      * 
      */
     public Output<String> etherType() {
@@ -117,9 +117,9 @@ public final class ZoneProtectionProfileNonIpProtocolProtocolArgs extends com.pu
 
         /**
          * @param etherType Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-         * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-         * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-         * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+         * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+         * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+         * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
          * 
          * @return builder
          * 
@@ -131,9 +131,9 @@ public final class ZoneProtectionProfileNonIpProtocolProtocolArgs extends com.pu
 
         /**
          * @param etherType Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-         * * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-         * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-         * * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+         * * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+         * * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+         * * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
          * 
          * @return builder
          * 

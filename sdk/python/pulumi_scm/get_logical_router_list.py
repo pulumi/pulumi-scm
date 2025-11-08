@@ -27,7 +27,7 @@ class GetLogicalRouterListResult:
     """
     A collection of values returned by getLogicalRouterList.
     """
-    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, snippet=None, tfid=None, total=None):
+    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, pagination=None, snippet=None, tfid=None, total=None):
         if datas and not isinstance(datas, list):
             raise TypeError("Expected argument 'datas' to be a list")
         pulumi.set(__self__, "datas", datas)
@@ -49,6 +49,9 @@ class GetLogicalRouterListResult:
         if offset and not isinstance(offset, int):
             raise TypeError("Expected argument 'offset' to be a int")
         pulumi.set(__self__, "offset", offset)
+        if pagination and not isinstance(pagination, bool):
+            raise TypeError("Expected argument 'pagination' to be a bool")
+        pulumi.set(__self__, "pagination", pagination)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -117,6 +120,14 @@ class GetLogicalRouterListResult:
 
     @_builtins.property
     @pulumi.getter
+    def pagination(self) -> Optional[_builtins.bool]:
+        """
+        The parameter to mention if the response should be paginated. By default, its set to false
+        """
+        return pulumi.get(self, "pagination")
+
+    @_builtins.property
+    @pulumi.getter
     def snippet(self) -> Optional[_builtins.str]:
         """
         The snippet of the item.
@@ -150,6 +161,7 @@ class AwaitableGetLogicalRouterListResult(GetLogicalRouterListResult):
             limit=self.limit,
             name=self.name,
             offset=self.offset,
+            pagination=self.pagination,
             snippet=self.snippet,
             tfid=self.tfid,
             total=self.total)
@@ -160,10 +172,23 @@ def get_logical_router_list(device: Optional[_builtins.str] = None,
                             limit: Optional[_builtins.int] = None,
                             name: Optional[_builtins.str] = None,
                             offset: Optional[_builtins.int] = None,
+                            pagination: Optional[_builtins.bool] = None,
                             snippet: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetLogicalRouterListResult:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all logical routers
+    all_logical_routers = scm.get_logical_router_list(folder="ngfw-shared",
+        limit=100)
+    pulumi.export("scmLogicalRouterList", {router.name: router for router in all_logical_routers.datas})
+    ```
 
 
     :param _builtins.str device: The device of the item.
@@ -171,6 +196,7 @@ def get_logical_router_list(device: Optional[_builtins.str] = None,
     :param _builtins.int limit: The max number of items to return. Default: 200.
     :param _builtins.str name: The name of the item.
     :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.bool pagination: The parameter to mention if the response should be paginated. By default, its set to false
     :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
@@ -179,6 +205,7 @@ def get_logical_router_list(device: Optional[_builtins.str] = None,
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
+    __args__['pagination'] = pagination
     __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getLogicalRouterList:getLogicalRouterList', __args__, opts=opts, typ=GetLogicalRouterListResult).value
@@ -191,6 +218,7 @@ def get_logical_router_list(device: Optional[_builtins.str] = None,
         limit=pulumi.get(__ret__, 'limit'),
         name=pulumi.get(__ret__, 'name'),
         offset=pulumi.get(__ret__, 'offset'),
+        pagination=pulumi.get(__ret__, 'pagination'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
@@ -199,10 +227,23 @@ def get_logical_router_list_output(device: Optional[pulumi.Input[Optional[_built
                                    limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
                                    name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
+                                   pagination: Optional[pulumi.Input[Optional[_builtins.bool]]] = None,
                                    snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetLogicalRouterListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all logical routers
+    all_logical_routers = scm.get_logical_router_list(folder="ngfw-shared",
+        limit=100)
+    pulumi.export("scmLogicalRouterList", {router.name: router for router in all_logical_routers.datas})
+    ```
 
 
     :param _builtins.str device: The device of the item.
@@ -210,6 +251,7 @@ def get_logical_router_list_output(device: Optional[pulumi.Input[Optional[_built
     :param _builtins.int limit: The max number of items to return. Default: 200.
     :param _builtins.str name: The name of the item.
     :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.bool pagination: The parameter to mention if the response should be paginated. By default, its set to false
     :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
@@ -218,6 +260,7 @@ def get_logical_router_list_output(device: Optional[pulumi.Input[Optional[_built
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
+    __args__['pagination'] = pagination
     __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getLogicalRouterList:getLogicalRouterList', __args__, opts=opts, typ=GetLogicalRouterListResult)
@@ -229,6 +272,7 @@ def get_logical_router_list_output(device: Optional[pulumi.Input[Optional[_built
         limit=pulumi.get(__response__, 'limit'),
         name=pulumi.get(__response__, 'name'),
         offset=pulumi.get(__response__, 'offset'),
+        pagination=pulumi.get(__response__, 'pagination'),
         snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         total=pulumi.get(__response__, 'total')))

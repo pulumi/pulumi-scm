@@ -44,7 +44,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Default local preference
         /// </summary>
-        public readonly double DefaultLocalPreference;
+        public readonly int DefaultLocalPreference;
         /// <summary>
         /// Ecmp multi as
         /// </summary>
@@ -126,7 +126,7 @@ namespace Pulumi.Scm.Outputs
 
             string confederationMemberAs,
 
-            double defaultLocalPreference,
+            int defaultLocalPreference,
 
             bool ecmpMultiAs,
 

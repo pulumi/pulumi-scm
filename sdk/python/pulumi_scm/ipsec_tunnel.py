@@ -387,6 +387,67 @@ class IpsecTunnel(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        ## 1. Define the IKE Crypto Profile (IKE Phase 1)
+        # Note: The resource name is plural: "scm_ike_crypto_profile"
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto",
+            folder="Remote Networks",
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
+            name="PaloAlto-Networks-IPSec-Crypto",
+            folder="Remote Networks",
+            esp={
+                "encryptions": ["aes-256-gcm"],
+                "authentications": ["sha256"],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 8,
+            })
+        ## 3. Define the IKE Gateway
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-gateway",
+            folder="Remote Networks",
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            })
+        ## 4. Define the IPsec Tunnel
+        # Note: Nested 'auto_key' block uses an equals sign (=).
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-tunnel",
+            folder="Remote Networks",
+            tunnel_interface="tunnel",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] anti_replay: Enable Anti-Replay check on this tunnel
@@ -410,6 +471,67 @@ class IpsecTunnel(pulumi.CustomResource):
         IpsecTunnel resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        ## 1. Define the IKE Crypto Profile (IKE Phase 1)
+        # Note: The resource name is plural: "scm_ike_crypto_profile"
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto",
+            folder="Remote Networks",
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
+            name="PaloAlto-Networks-IPSec-Crypto",
+            folder="Remote Networks",
+            esp={
+                "encryptions": ["aes-256-gcm"],
+                "authentications": ["sha256"],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 8,
+            })
+        ## 3. Define the IKE Gateway
+        # Note: The resource name is plural and nested blocks now use an equals sign (=).
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-gateway",
+            folder="Remote Networks",
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            })
+        ## 4. Define the IPsec Tunnel
+        # Note: Nested 'auto_key' block uses an equals sign (=).
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-tunnel",
+            folder="Remote Networks",
+            tunnel_interface="tunnel",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        ```
 
         :param str resource_name: The name of the resource.
         :param IpsecTunnelArgs args: The arguments to use to populate this resource's properties.

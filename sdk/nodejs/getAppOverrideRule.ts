@@ -6,6 +6,32 @@ import * as utilities from "./utilities";
 
 /**
  * AppOverrideRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+ * const testAppOverrideRule = new scm.AppOverrideRule("test_app_override_rule", {
+ *     name: "data-source-app-override-test",
+ *     description: "Rule created specifically for data source testing.",
+ *     folder: "All",
+ *     position: "pre",
+ *     application: "ssl",
+ *     protocol: "tcp",
+ *     port: "8443",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ * });
+ * const singleRuleById = scm.getAppOverrideRuleOutput({
+ *     id: testAppOverrideRule.id,
+ * });
+ * export const singleAppOverrideRuleName = singleRuleById;
+ * ```
  */
 export function getAppOverrideRule(args: GetAppOverrideRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAppOverrideRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -84,11 +110,19 @@ export interface GetAppOverrideRuleResult {
     /**
      * Port
      */
-    readonly port: number;
+    readonly port: string;
+    /**
+     * The position of a security rule
+     */
+    readonly position: string;
     /**
      * Protocol
      */
     readonly protocol: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    readonly relativePosition: string;
     /**
      * The snippet in which the resource is defined
      */
@@ -101,6 +135,10 @@ export interface GetAppOverrideRuleResult {
      * Tag
      */
     readonly tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    readonly targetRule: string;
     readonly tfid: string;
     /**
      * To
@@ -109,6 +147,32 @@ export interface GetAppOverrideRuleResult {
 }
 /**
  * AppOverrideRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+ * const testAppOverrideRule = new scm.AppOverrideRule("test_app_override_rule", {
+ *     name: "data-source-app-override-test",
+ *     description: "Rule created specifically for data source testing.",
+ *     folder: "All",
+ *     position: "pre",
+ *     application: "ssl",
+ *     protocol: "tcp",
+ *     port: "8443",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ * });
+ * const singleRuleById = scm.getAppOverrideRuleOutput({
+ *     id: testAppOverrideRule.id,
+ * });
+ * export const singleAppOverrideRuleName = singleRuleById;
+ * ```
  */
 export function getAppOverrideRuleOutput(args: GetAppOverrideRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAppOverrideRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

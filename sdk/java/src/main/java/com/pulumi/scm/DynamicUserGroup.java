@@ -47,19 +47,19 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // First, create the tags that will be used in the dynamic user group's filter.
  *         var scmDugTag1 = new Tag("scmDugTag1", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_dug_tag_1")
  *             .color("Red")
  *             .build());
  * 
  *         var scmDugTag2 = new Tag("scmDugTag2", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_dug_tag_2")
  *             .color("Blue")
  *             .build());
  * 
  *         var scmDugTag3 = new Tag("scmDugTag3", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_dug_tag_3")
  *             .color("Green")
  *             .build());

@@ -18,11 +18,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchAddressResult Address;
         /// <summary>
-        /// Interface
+        /// OSPF BGP Route maps Interface
         /// </summary>
         public readonly string Interface;
         /// <summary>
-        /// Metric
+        /// OSPF BGP Route maps Metric
         /// </summary>
         public readonly int Metric;
         /// <summary>
@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchNextHopResult NextHop;
         /// <summary>
-        /// Tag
+        /// OSPF BGP Route maps Tag
         /// </summary>
         public readonly int Tag;
 

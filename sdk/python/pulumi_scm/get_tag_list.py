@@ -173,7 +173,7 @@ def get_tag_list(device: Optional[_builtins.str] = None,
 
     # Fetch a list of all application objects.
     # This data source will call the "List" API endpoint.
-    all_tags = scm.get_tag_list(folder="Shared")
+    all_tags = scm.get_tag_list(folder="All")
     pulumi.export("tagsListRaw", all_tags.datas)
     ```
 
@@ -224,7 +224,7 @@ def get_tag_list_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] 
 
     # Fetch a list of all application objects.
     # This data source will call the "List" API endpoint.
-    all_tags = scm.get_tag_list(folder="Shared")
+    all_tags = scm.get_tag_list(folder="All")
     pulumi.export("tagsListRaw", all_tags.datas)
     ```
 

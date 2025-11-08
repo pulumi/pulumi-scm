@@ -37,14 +37,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * AS numbers
+     * Connected Static BGP Route maps set AS numbers
      * 
      */
     @Import(name="aspathPrepends")
     private @Nullable Output<List<Integer>> aspathPrepends;
 
     /**
-     * @return AS numbers
+     * @return Connected Static BGP Route maps set AS numbers
      * 
      */
     public Optional<Output<List<Integer>>> aspathPrepends() {
@@ -52,14 +52,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Enable BGP atomic aggregate?
+     * Connected Static BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     @Import(name="atomicAggregate")
     private @Nullable Output<Boolean> atomicAggregate;
 
     /**
-     * @return Enable BGP atomic aggregate?
+     * @return Connected Static BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     public Optional<Output<Boolean>> atomicAggregate() {
@@ -82,14 +82,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Large communities
+     * Connected Static  BGP Route maps set Large communities
      * 
      */
     @Import(name="largeCommunities")
     private @Nullable Output<List<String>> largeCommunities;
 
     /**
-     * @return Large communities
+     * @return Connected Static  BGP Route maps set Large communities
      * 
      */
     public Optional<Output<List<String>>> largeCommunities() {
@@ -97,14 +97,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Local preference
+     * Connected Static BGP Route maps set Local preference
      * 
      */
     @Import(name="localPreference")
     private @Nullable Output<Integer> localPreference;
 
     /**
-     * @return Local preference
+     * @return Connected Static BGP Route maps set Local preference
      * 
      */
     public Optional<Output<Integer>> localPreference() {
@@ -127,14 +127,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Origin
+     * Connected Static BGP Route maps set Origin
      * 
      */
     @Import(name="origin")
     private @Nullable Output<String> origin;
 
     /**
-     * @return Origin
+     * @return Connected Static BGP Route maps set Origin
      * 
      */
     public Optional<Output<String>> origin() {
@@ -142,14 +142,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Originator ID
+     * Connected Static BGP Route maps set Originator ID
      * 
      */
     @Import(name="originatorId")
     private @Nullable Output<String> originatorId;
 
     /**
-     * @return Originator ID
+     * @return Connected Static BGP Route maps set Originator ID
      * 
      */
     public Optional<Output<String>> originatorId() {
@@ -157,14 +157,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Regular communities
+     * Connected Static  BGP Route maps set Regular communities
      * 
      */
     @Import(name="regularCommunities")
     private @Nullable Output<List<String>> regularCommunities;
 
     /**
-     * @return Regular communities
+     * @return Connected Static  BGP Route maps set Regular communities
      * 
      */
     public Optional<Output<List<String>>> regularCommunities() {
@@ -172,14 +172,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Tag
+     * Connected Static BGP Route maps set Tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<Integer> tag;
 
     /**
-     * @return Tag
+     * @return Connected Static BGP Route maps set Tag
      * 
      */
     public Optional<Output<Integer>> tag() {
@@ -187,14 +187,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
     }
 
     /**
-     * Weight
+     * Connected Static BGP Route maps set Weight
      * 
      */
     @Import(name="weight")
     private @Nullable Output<Integer> weight;
 
     /**
-     * @return Weight
+     * @return Connected Static BGP Route maps set Weight
      * 
      */
     public Optional<Output<Integer>> weight() {
@@ -258,7 +258,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param aspathPrepends AS numbers
+         * @param aspathPrepends Connected Static BGP Route maps set AS numbers
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param aspathPrepends AS numbers
+         * @param aspathPrepends Connected Static BGP Route maps set AS numbers
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param aspathPrepends AS numbers
+         * @param aspathPrepends Connected Static BGP Route maps set AS numbers
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param atomicAggregate Enable BGP atomic aggregate?
+         * @param atomicAggregate Connected Static BGP Route maps set Enable BGP atomic aggregate?
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param atomicAggregate Enable BGP atomic aggregate?
+         * @param atomicAggregate Connected Static BGP Route maps set Enable BGP atomic aggregate?
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param largeCommunities Large communities
+         * @param largeCommunities Connected Static  BGP Route maps set Large communities
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param largeCommunities Large communities
+         * @param largeCommunities Connected Static  BGP Route maps set Large communities
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param largeCommunities Large communities
+         * @param largeCommunities Connected Static  BGP Route maps set Large communities
          * 
          * @return builder
          * 
@@ -362,7 +362,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference Connected Static BGP Route maps set Local preference
          * 
          * @return builder
          * 
@@ -373,7 +373,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param localPreference Local preference
+         * @param localPreference Connected Static BGP Route maps set Local preference
          * 
          * @return builder
          * 
@@ -404,7 +404,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param origin Origin
+         * @param origin Connected Static BGP Route maps set Origin
          * 
          * @return builder
          * 
@@ -415,7 +415,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param origin Origin
+         * @param origin Connected Static BGP Route maps set Origin
          * 
          * @return builder
          * 
@@ -425,7 +425,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param originatorId Originator ID
+         * @param originatorId Connected Static BGP Route maps set Originator ID
          * 
          * @return builder
          * 
@@ -436,7 +436,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param originatorId Originator ID
+         * @param originatorId Connected Static BGP Route maps set Originator ID
          * 
          * @return builder
          * 
@@ -446,7 +446,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param regularCommunities Regular communities
+         * @param regularCommunities Connected Static  BGP Route maps set Regular communities
          * 
          * @return builder
          * 
@@ -457,7 +457,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param regularCommunities Regular communities
+         * @param regularCommunities Connected Static  BGP Route maps set Regular communities
          * 
          * @return builder
          * 
@@ -467,7 +467,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param regularCommunities Regular communities
+         * @param regularCommunities Connected Static  BGP Route maps set Regular communities
          * 
          * @return builder
          * 
@@ -477,7 +477,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param tag Tag
+         * @param tag Connected Static BGP Route maps set Tag
          * 
          * @return builder
          * 
@@ -488,7 +488,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param tag Tag
+         * @param tag Connected Static BGP Route maps set Tag
          * 
          * @return builder
          * 
@@ -498,7 +498,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param weight Weight
+         * @param weight Connected Static BGP Route maps set Weight
          * 
          * @return builder
          * 
@@ -509,7 +509,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs ex
         }
 
         /**
-         * @param weight Weight
+         * @param weight Connected Static BGP Route maps set Weight
          * 
          * @return builder
          * 

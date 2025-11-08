@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all ethernet interfaces
+        ///     var allEthernetInterfaces = Scm.GetEthernetInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmEthernetInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetEthernetInterfaceListResult> InvokeAsync(GetEthernetInterfaceListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetEthernetInterfaceListResult>("scm:index/getEthernetInterfaceList:getEthernetInterfaceList", args ?? new GetEthernetInterfaceListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all ethernet interfaces
+        ///     var allEthernetInterfaces = Scm.GetEthernetInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmEthernetInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetEthernetInterfaceListResult> Invoke(GetEthernetInterfaceListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetEthernetInterfaceListResult>("scm:index/getEthernetInterfaceList:getEthernetInterfaceList", args ?? new GetEthernetInterfaceListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all ethernet interfaces
+        ///     var allEthernetInterfaces = Scm.GetEthernetInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmEthernetInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetEthernetInterfaceListResult> Invoke(GetEthernetInterfaceListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetEthernetInterfaceListResult>("scm:index/getEthernetInterfaceList:getEthernetInterfaceList", args ?? new GetEthernetInterfaceListInvokeArgs(), options.WithDefaults());

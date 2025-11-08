@@ -14,12 +14,12 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMap {
     /**
-     * @return Action
+     * @return BGP Root OSPF Route maps Action
      * 
      */
     private String action;
     /**
-     * @return Description
+     * @return BGP Root OSPF Route maps Description
      * 
      */
     private String description;
@@ -29,26 +29,26 @@ public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMap {
      */
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return BGP Root OSPF Route maps Sequence number
      * 
      */
     private Integer name;
     /**
-     * @return Set
+     * @return BGP Root OSPF Set
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet set;
 
     private GetBgpRouteMapRedistributionListDataBgpOspfRouteMap() {}
     /**
-     * @return Action
+     * @return BGP Root OSPF Route maps Action
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return Description
+     * @return BGP Root OSPF Route maps Description
      * 
      */
     public String description() {
@@ -62,14 +62,14 @@ public final class GetBgpRouteMapRedistributionListDataBgpOspfRouteMap {
         return this.match;
     }
     /**
-     * @return Sequence number
+     * @return BGP Root OSPF Route maps Sequence number
      * 
      */
     public Integer name() {
         return this.name;
     }
     /**
-     * @return Set
+     * @return BGP Root OSPF Set
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpOspfRouteMapSet set() {

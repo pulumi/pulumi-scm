@@ -48,7 +48,7 @@ export interface GetDnsProxyResult {
      */
     readonly device: string;
     /**
-     * Domain servers
+     * DNS proxy rules
      */
     readonly domainServers: outputs.GetDnsProxyDomainServer[];
     /**

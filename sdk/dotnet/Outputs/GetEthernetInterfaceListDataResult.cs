@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Comment;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer2Result Layer2;
         /// <summary>
-        /// Layer3
+        /// Ethernet Interface Layer 3 configuration
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer3Result Layer3;
         /// <summary>

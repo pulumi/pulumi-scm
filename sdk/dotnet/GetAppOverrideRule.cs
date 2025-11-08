@@ -13,18 +13,168 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// AppOverrideRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+        ///     var testAppOverrideRule = new Scm.AppOverrideRule("test_app_override_rule", new()
+        ///     {
+        ///         Name = "data-source-app-override-test",
+        ///         Description = "Rule created specifically for data source testing.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Application = "ssl",
+        ///         Protocol = "tcp",
+        ///         Port = "8443",
+        ///         Froms = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "untrust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///     });
+        /// 
+        ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
+        ///     {
+        ///         Id = testAppOverrideRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleAppOverrideRuleName"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetAppOverrideRuleResult> InvokeAsync(GetAppOverrideRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleArgs(), options.WithDefaults());
 
         /// <summary>
         /// AppOverrideRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+        ///     var testAppOverrideRule = new Scm.AppOverrideRule("test_app_override_rule", new()
+        ///     {
+        ///         Name = "data-source-app-override-test",
+        ///         Description = "Rule created specifically for data source testing.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Application = "ssl",
+        ///         Protocol = "tcp",
+        ///         Port = "8443",
+        ///         Froms = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "untrust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///     });
+        /// 
+        ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
+        ///     {
+        ///         Id = testAppOverrideRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleAppOverrideRuleName"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAppOverrideRuleResult> Invoke(GetAppOverrideRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// AppOverrideRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
+        ///     var testAppOverrideRule = new Scm.AppOverrideRule("test_app_override_rule", new()
+        ///     {
+        ///         Name = "data-source-app-override-test",
+        ///         Description = "Rule created specifically for data source testing.",
+        ///         Folder = "All",
+        ///         Position = "pre",
+        ///         Application = "ssl",
+        ///         Protocol = "tcp",
+        ///         Port = "8443",
+        ///         Froms = new[]
+        ///         {
+        ///             "trust",
+        ///         },
+        ///         Tos = new[]
+        ///         {
+        ///             "untrust",
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///     });
+        /// 
+        ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
+        ///     {
+        ///         Id = testAppOverrideRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleAppOverrideRuleName"] = singleRuleById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAppOverrideRuleResult> Invoke(GetAppOverrideRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAppOverrideRuleResult>("scm:index/getAppOverrideRule:getAppOverrideRule", args ?? new GetAppOverrideRuleInvokeArgs(), options.WithDefaults());
@@ -126,11 +276,19 @@ namespace Pulumi.Scm
         /// <summary>
         /// Port
         /// </summary>
-        public readonly int Port;
+        public readonly string Port;
+        /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        public readonly string Position;
         /// <summary>
         /// Protocol
         /// </summary>
         public readonly string Protocol;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
         /// <summary>
         /// The snippet in which the resource is defined
         /// </summary>
@@ -143,6 +301,10 @@ namespace Pulumi.Scm
         /// Tag
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         public readonly string Tfid;
         /// <summary>
         /// To
@@ -175,15 +337,21 @@ namespace Pulumi.Scm
 
             bool negateSource,
 
-            int port,
+            string port,
+
+            string position,
 
             string protocol,
+
+            string relativePosition,
 
             string snippet,
 
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string targetRule,
 
             string tfid,
 
@@ -202,10 +370,13 @@ namespace Pulumi.Scm
             NegateDestination = negateDestination;
             NegateSource = negateSource;
             Port = port;
+            Position = position;
             Protocol = protocol;
+            RelativePosition = relativePosition;
             Snippet = snippet;
             Sources = sources;
             Tags = tags;
+            TargetRule = targetRule;
             Tfid = tfid;
             Tos = tos;
         }

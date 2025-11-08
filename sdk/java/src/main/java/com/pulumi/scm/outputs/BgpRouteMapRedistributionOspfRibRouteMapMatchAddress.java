@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionOspfRibRouteMapMatchAddress {
     /**
-     * @return Access list
+     * @return OSPF RIB Route maps address Access list
      * 
      */
     private @Nullable String accessList;
     /**
-     * @return Prefix list
+     * @return OSPF RIB Route maps address Prefix list
      * 
      */
     private @Nullable String prefixList;
 
     private BgpRouteMapRedistributionOspfRibRouteMapMatchAddress() {}
     /**
-     * @return Access list
+     * @return OSPF RIB Route maps address Access list
      * 
      */
     public Optional<String> accessList() {
         return Optional.ofNullable(this.accessList);
     }
     /**
-     * @return Prefix list
+     * @return OSPF RIB Route maps address Prefix list
      * 
      */
     public Optional<String> prefixList() {

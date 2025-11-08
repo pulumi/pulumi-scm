@@ -34,13 +34,13 @@ namespace Pulumi.Scm
     public sealed class GetBgpRouteMapRedistributionArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// UUID of the resource
+        /// BGP Route Map Redistributions UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
         /// <summary>
-        /// Name
+        /// BGP Route Map Redistributions Name
         /// </summary>
         [Input("name")]
         public string? Name { get; set; }
@@ -54,13 +54,13 @@ namespace Pulumi.Scm
     public sealed class GetBgpRouteMapRedistributionInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// UUID of the resource
+        /// BGP Route Map Redistributions UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
         /// <summary>
-        /// Name
+        /// BGP Route Map Redistributions Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -84,7 +84,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionConnectedStaticResult ConnectedStatic;
         /// <summary>
-        /// Description
+        /// BGP Route Map Redistributions Description
         /// </summary>
         public readonly string Description;
         /// <summary>
@@ -96,11 +96,11 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// UUID of the resource
+        /// BGP Route Map Redistributions UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Name
+        /// BGP Route Map Redistributions Name
         /// </summary>
         public readonly string Name;
         /// <summary>

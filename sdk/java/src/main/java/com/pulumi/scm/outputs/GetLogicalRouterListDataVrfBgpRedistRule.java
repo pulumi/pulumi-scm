@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      * @return Metric
      * 
      */
-    private Double metric;
+    private Integer metric;
     /**
      * @return Name
      * 
@@ -42,7 +42,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      * @return Set as path limit
      * 
      */
-    private Double setAsPathLimit;
+    private Integer setAsPathLimit;
     /**
      * @return Set community
      * 
@@ -57,12 +57,12 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      * @return Set local preference
      * 
      */
-    private Double setLocalPreference;
+    private Integer setLocalPreference;
     /**
      * @return Set med
      * 
      */
-    private Double setMed;
+    private Integer setMed;
     /**
      * @return Set origin
      * 
@@ -88,7 +88,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      * @return Metric
      * 
      */
-    public Double metric() {
+    public Integer metric() {
         return this.metric;
     }
     /**
@@ -109,7 +109,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      * @return Set as path limit
      * 
      */
-    public Double setAsPathLimit() {
+    public Integer setAsPathLimit() {
         return this.setAsPathLimit;
     }
     /**
@@ -130,14 +130,14 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
      * @return Set local preference
      * 
      */
-    public Double setLocalPreference() {
+    public Integer setLocalPreference() {
         return this.setLocalPreference;
     }
     /**
      * @return Set med
      * 
      */
-    public Double setMed() {
+    public Integer setMed() {
         return this.setMed;
     }
     /**
@@ -159,14 +159,14 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
     public static final class Builder {
         private String addressFamilyIdentifier;
         private Boolean enable;
-        private Double metric;
+        private Integer metric;
         private String name;
         private String routeTable;
-        private Double setAsPathLimit;
+        private Integer setAsPathLimit;
         private List<String> setCommunities;
         private List<String> setExtendedCommunities;
-        private Double setLocalPreference;
-        private Double setMed;
+        private Integer setLocalPreference;
+        private Integer setMed;
         private String setOrigin;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfBgpRedistRule defaults) {
@@ -201,7 +201,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             if (metric == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpRedistRule", "metric");
             }
@@ -225,7 +225,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
             return this;
         }
         @CustomType.Setter
-        public Builder setAsPathLimit(Double setAsPathLimit) {
+        public Builder setAsPathLimit(Integer setAsPathLimit) {
             if (setAsPathLimit == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpRedistRule", "setAsPathLimit");
             }
@@ -255,7 +255,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
             return setExtendedCommunities(List.of(setExtendedCommunities));
         }
         @CustomType.Setter
-        public Builder setLocalPreference(Double setLocalPreference) {
+        public Builder setLocalPreference(Integer setLocalPreference) {
             if (setLocalPreference == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpRedistRule", "setLocalPreference");
             }
@@ -263,7 +263,7 @@ public final class GetLogicalRouterListDataVrfBgpRedistRule {
             return this;
         }
         @CustomType.Setter
-        public Builder setMed(Double setMed) {
+        public Builder setMed(Integer setMed) {
             if (setMed == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpRedistRule", "setMed");
             }

@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Dhcp client
+        /// Layer3 sub interfaces DHCP Client Object
         /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceListDataDhcpClientResult DhcpClient;
         /// <summary>
@@ -46,13 +46,13 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// Ip
+        /// L3 sub-interface IP Parent
         /// </summary>
-        public readonly ImmutableArray<string> Ips;
+        public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceListDataIpResult> Ips;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
         /// L3 sub-interface name
         /// </summary>
@@ -68,7 +68,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// VLAN tag
         /// </summary>
-        public readonly double Tag;
+        public readonly int Tag;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -89,9 +89,9 @@ namespace Pulumi.Scm.Outputs
 
             string interfaceManagementProfile,
 
-            ImmutableArray<string> ips,
+            ImmutableArray<Outputs.GetLayer3SubinterfaceListDataIpResult> ips,
 
-            double mtu,
+            int mtu,
 
             string name,
 
@@ -99,7 +99,7 @@ namespace Pulumi.Scm.Outputs
 
             string snippet,
 
-            double tag,
+            int tag,
 
             string tfid)
         {

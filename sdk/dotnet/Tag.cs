@@ -26,21 +26,21 @@ namespace Pulumi.Scm
     ///     // Tags for organizing and categorizing resources
     ///     var scmTag1 = new Scm.Tag("scm_tag_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_tag_1",
     ///         Color = "Red",
     ///     });
     /// 
     ///     var scmTag2 = new Scm.Tag("scm_tag_2", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_tag_2",
     ///         Color = "Blue",
     ///     });
     /// 
     ///     var scmTag3 = new Scm.Tag("scm_tag_3", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_tag_3",
     ///         Color = "Orange",
     ///     });

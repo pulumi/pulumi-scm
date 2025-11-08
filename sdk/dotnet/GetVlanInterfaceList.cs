@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all vlan interfaces
+        ///     var allVlanInterfaces = Scm.GetVlanInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmVlanInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetVlanInterfaceListResult> InvokeAsync(GetVlanInterfaceListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetVlanInterfaceListResult>("scm:index/getVlanInterfaceList:getVlanInterfaceList", args ?? new GetVlanInterfaceListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all vlan interfaces
+        ///     var allVlanInterfaces = Scm.GetVlanInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmVlanInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetVlanInterfaceListResult> Invoke(GetVlanInterfaceListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetVlanInterfaceListResult>("scm:index/getVlanInterfaceList:getVlanInterfaceList", args ?? new GetVlanInterfaceListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all vlan interfaces
+        ///     var allVlanInterfaces = Scm.GetVlanInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmVlanInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetVlanInterfaceListResult> Invoke(GetVlanInterfaceListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetVlanInterfaceListResult>("scm:index/getVlanInterfaceList:getVlanInterfaceList", args ?? new GetVlanInterfaceListInvokeArgs(), options.WithDefaults());

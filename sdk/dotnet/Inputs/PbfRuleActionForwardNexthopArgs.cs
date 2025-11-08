@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Fqdn { get; set; }
 
         /// <summary>
-        /// Ip address
+        /// Next hop IP address
         /// </summary>
         [Input("ipAddress")]
         public Input<string>? IpAddress { get; set; }

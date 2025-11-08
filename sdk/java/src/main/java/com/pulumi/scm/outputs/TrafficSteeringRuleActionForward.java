@@ -4,7 +4,8 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.String;
+import com.pulumi.scm.outputs.TrafficSteeringRuleActionForwardForward;
+import com.pulumi.scm.outputs.TrafficSteeringRuleActionForwardNoPbf;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -12,18 +13,30 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrafficSteeringRuleActionForward {
     /**
-     * @return Target
+     * @return Forward
      * 
      */
-    private @Nullable String target;
+    private @Nullable TrafficSteeringRuleActionForwardForward forward;
+    /**
+     * @return No pbf
+     * 
+     */
+    private @Nullable TrafficSteeringRuleActionForwardNoPbf noPbf;
 
     private TrafficSteeringRuleActionForward() {}
     /**
-     * @return Target
+     * @return Forward
      * 
      */
-    public Optional<String> target() {
-        return Optional.ofNullable(this.target);
+    public Optional<TrafficSteeringRuleActionForwardForward> forward() {
+        return Optional.ofNullable(this.forward);
+    }
+    /**
+     * @return No pbf
+     * 
+     */
+    public Optional<TrafficSteeringRuleActionForwardNoPbf> noPbf() {
+        return Optional.ofNullable(this.noPbf);
     }
 
     public static Builder builder() {
@@ -35,22 +48,31 @@ public final class TrafficSteeringRuleActionForward {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String target;
+        private @Nullable TrafficSteeringRuleActionForwardForward forward;
+        private @Nullable TrafficSteeringRuleActionForwardNoPbf noPbf;
         public Builder() {}
         public Builder(TrafficSteeringRuleActionForward defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.target = defaults.target;
+    	      this.forward = defaults.forward;
+    	      this.noPbf = defaults.noPbf;
         }
 
         @CustomType.Setter
-        public Builder target(@Nullable String target) {
+        public Builder forward(@Nullable TrafficSteeringRuleActionForwardForward forward) {
 
-            this.target = target;
+            this.forward = forward;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder noPbf(@Nullable TrafficSteeringRuleActionForwardNoPbf noPbf) {
+
+            this.noPbf = noPbf;
             return this;
         }
         public TrafficSteeringRuleActionForward build() {
             final var _resultValue = new TrafficSteeringRuleActionForward();
-            _resultValue.target = target;
+            _resultValue.forward = forward;
+            _resultValue.noPbf = noPbf;
             return _resultValue;
         }
     }

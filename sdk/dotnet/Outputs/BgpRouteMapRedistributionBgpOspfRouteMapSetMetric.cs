@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionBgpOspfRouteMapSetMetric
     {
         /// <summary>
-        /// Metric action
+        /// BGP Root OSPF Route maps set Metric action
         /// </summary>
         public readonly string? Action;
         /// <summary>
-        /// Metric value
+        /// BGP Root OSPF Route maps set Metric value
         /// </summary>
         public readonly int? Value;
 

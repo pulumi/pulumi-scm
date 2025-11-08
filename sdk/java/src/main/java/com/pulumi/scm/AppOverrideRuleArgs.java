@@ -7,7 +7,6 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -189,14 +188,29 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      * 
      */
     @Import(name="port", required=true)
-    private Output<Integer> port;
+    private Output<String> port;
 
     /**
      * @return Port
      * 
      */
-    public Output<Integer> port() {
+    public Output<String> port() {
         return this.port;
+    }
+
+    /**
+     * The position of a security rule
+     * 
+     */
+    @Import(name="position")
+    private @Nullable Output<String> position;
+
+    /**
+     * @return The position of a security rule
+     * 
+     */
+    public Optional<Output<String>> position() {
+        return Optional.ofNullable(this.position);
     }
 
     /**
@@ -212,6 +226,21 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
      */
     public Output<String> protocol() {
         return this.protocol;
+    }
+
+    /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Import(name="relativePosition")
+    private @Nullable Output<String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Optional<Output<String>> relativePosition() {
+        return Optional.ofNullable(this.relativePosition);
     }
 
     /**
@@ -260,6 +289,21 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Import(name="targetRule")
+    private @Nullable Output<String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Optional<Output<String>> targetRule() {
+        return Optional.ofNullable(this.targetRule);
+    }
+
+    /**
      * To
      * 
      */
@@ -289,10 +333,13 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         this.negateDestination = $.negateDestination;
         this.negateSource = $.negateSource;
         this.port = $.port;
+        this.position = $.position;
         this.protocol = $.protocol;
+        this.relativePosition = $.relativePosition;
         this.snippet = $.snippet;
         this.sources = $.sources;
         this.tags = $.tags;
+        this.targetRule = $.targetRule;
         this.tos = $.tos;
     }
 
@@ -571,7 +618,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder port(Output<Integer> port) {
+        public Builder port(Output<String> port) {
             $.port = port;
             return this;
         }
@@ -582,8 +629,29 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          * @return builder
          * 
          */
-        public Builder port(Integer port) {
+        public Builder port(String port) {
             return port(Output.of(port));
+        }
+
+        /**
+         * @param position The position of a security rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(@Nullable Output<String> position) {
+            $.position = position;
+            return this;
+        }
+
+        /**
+         * @param position The position of a security rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(String position) {
+            return position(Output.of(position));
         }
 
         /**
@@ -605,6 +673,27 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
+        }
+
+        /**
+         * @param relativePosition Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativePosition(@Nullable Output<String> relativePosition) {
+            $.relativePosition = relativePosition;
+            return this;
+        }
+
+        /**
+         * @param relativePosition Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativePosition(String relativePosition) {
+            return relativePosition(Output.of(relativePosition));
         }
 
         /**
@@ -688,6 +777,27 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
          */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
+        }
+
+        /**
+         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetRule(@Nullable Output<String> targetRule) {
+            $.targetRule = targetRule;
+            return this;
+        }
+
+        /**
+         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetRule(String targetRule) {
+            return targetRule(Output.of(targetRule));
         }
 
         /**

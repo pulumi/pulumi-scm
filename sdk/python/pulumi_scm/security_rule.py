@@ -48,6 +48,7 @@ class SecurityRuleArgs:
                  policy_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_setting: Optional[pulumi.Input['SecurityRuleProfileSettingArgs']] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
                  security_settings: Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -56,6 +57,7 @@ class SecurityRuleArgs:
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
@@ -87,6 +89,7 @@ class SecurityRuleArgs:
         :param pulumi.Input[_builtins.str] policy_type: Policy type
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
         :param pulumi.Input['SecurityRuleSecuritySettingsArgs'] security_settings: Security settings
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
@@ -95,6 +98,7 @@ class SecurityRuleArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
@@ -152,6 +156,8 @@ class SecurityRuleArgs:
             pulumi.set(__self__, "position", position)
         if profile_setting is not None:
             pulumi.set(__self__, "profile_setting", profile_setting)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if schedule is not None:
             pulumi.set(__self__, "schedule", schedule)
         if security_settings is not None:
@@ -168,6 +174,8 @@ class SecurityRuleArgs:
             pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if tenant_restrictions is not None:
             pulumi.set(__self__, "tenant_restrictions", tenant_restrictions)
         if tos is not None:
@@ -498,6 +506,18 @@ class SecurityRuleArgs:
         pulumi.set(self, "profile_setting", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -594,6 +614,18 @@ class SecurityRuleArgs:
         pulumi.set(self, "tags", value)
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
+    @_builtins.property
     @pulumi.getter(name="tenantRestrictions")
     def tenant_restrictions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -648,6 +680,7 @@ class _SecurityRuleState:
                  policy_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_setting: Optional[pulumi.Input['SecurityRuleProfileSettingArgs']] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
                  security_settings: Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -656,6 +689,7 @@ class _SecurityRuleState:
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
@@ -688,6 +722,7 @@ class _SecurityRuleState:
         :param pulumi.Input[_builtins.str] policy_type: Policy type
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
         :param pulumi.Input['SecurityRuleSecuritySettingsArgs'] security_settings: Security settings
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
@@ -696,6 +731,7 @@ class _SecurityRuleState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
@@ -753,6 +789,8 @@ class _SecurityRuleState:
             pulumi.set(__self__, "position", position)
         if profile_setting is not None:
             pulumi.set(__self__, "profile_setting", profile_setting)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if schedule is not None:
             pulumi.set(__self__, "schedule", schedule)
         if security_settings is not None:
@@ -769,6 +807,8 @@ class _SecurityRuleState:
             pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if tenant_restrictions is not None:
             pulumi.set(__self__, "tenant_restrictions", tenant_restrictions)
         if tfid is not None:
@@ -1101,6 +1141,18 @@ class _SecurityRuleState:
         pulumi.set(self, "profile_setting", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -1197,6 +1249,18 @@ class _SecurityRuleState:
         pulumi.set(self, "tags", value)
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
+    @_builtins.property
     @pulumi.getter(name="tenantRestrictions")
     def tenant_restrictions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -1263,6 +1327,7 @@ class SecurityRule(pulumi.CustomResource):
                  policy_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
                  security_settings: Optional[pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1271,6 +1336,7 @@ class SecurityRule(pulumi.CustomResource):
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
@@ -1278,6 +1344,155 @@ class SecurityRule(pulumi.CustomResource):
         SecurityRule resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # First, create the tag objects that you will reference.
+        outbound_tag = scm.Tag("outbound_tag",
+            folder="All",
+            name="outbound143",
+            color="Red")
+        web_tag = scm.Tag("web_tag",
+            folder="All",
+            name="web143",
+            color="Blue")
+        # --- Existing Rules (Backward Compatibility) ---
+        standard_web_access = scm.SecurityRule("standard_web_access",
+            folder="All",
+            name="Allow Standard Web Access143",
+            description="Allow outbound web traffic to any destination...",
+            position="pre",
+            action="allow",
+            categories=["any"],
+            applications=[
+                "web-browsing",
+                "ssl",
+            ],
+            services=[
+                "service-http",
+                "service-https",
+            ],
+            froms=[
+                "untrust",
+                "trust",
+            ],
+            tos=["trust"],
+            sources=["any"],
+            destinations=["any"],
+            negate_source=False,
+            negate_destination=False,
+            source_users=["any"],
+            source_hips=["any"],
+            destination_hips=["any"],
+            log_start=True,
+            log_end=True,
+            disabled=False,
+            tags=[
+                outbound_tag.name,
+                web_tag.name,
+            ])
+        block_risky_saas = scm.SecurityRule("block_risky_saas",
+            folder="All",
+            name="Block Risky SaaS Applications143",
+            description="Prevent data exfiltration by blocking risky SaaS apps...",
+            action="deny",
+            policy_type="Internet",
+            security_settings={
+                "anti_spyware": "yes",
+                "vulnerability": "yes",
+                "virus_and_wildfire_analysis": "yes",
+            },
+            block_web_applications=["facebook-posting"],
+            log_settings={
+                "log_sessions": True,
+            },
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            disabled=False,
+            tags=[
+                outbound_tag.name,
+                web_tag.name,
+            ])
+        # --- NEW Examples Demonstrating Rule Ordering ---
+        # Example 1: Place a critical block rule at the absolute top
+        critical_block_top = scm.SecurityRule("critical_block_top",
+            folder="All",
+            name="CRITICAL Block Malicious IPs Top143",
+            description="Always block known malicious IPs first.",
+            relative_position="top",
+            action="deny",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=["any"],
+            services=["any"],
+            log_end=True,
+            tags=[outbound_tag.name])
+        # Example 2: Place a cleanup rule at the absolute bottom
+        cleanup_deny_bottom = scm.SecurityRule("cleanup_deny_bottom",
+            folder="All",
+            name="Cleanup Deny All Bottom143",
+            description="Deny any traffic not explicitly allowed.",
+            relative_position="bottom",
+            action="deny",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=["any"],
+            services=["any"],
+            log_end=True,
+            tags=[outbound_tag.name])
+        # Example 3: Place a rule *before* the standard web access rule
+        allow_updates_before_web = scm.SecurityRule("allow_updates_before_web",
+            folder="All",
+            name="Allow OS Updates Before Web143",
+            description="Allow specific OS update traffic before general web access.",
+            relative_position="before",
+            target_rule=standard_web_access.id,
+            action="allow",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=[
+                "ms-update",
+                "apple-update",
+            ],
+            services=["service-https"],
+            log_end=True,
+            tags=[outbound_tag.name])
+        # Example 4: Place a rule *after* the standard web access rule
+        allow_corp_apps_after_web = scm.SecurityRule("allow_corp_apps_after_web",
+            folder="All",
+            name="Allow Corp Apps After Web143",
+            description="Allow access to specific corporate apps after general web access.",
+            relative_position="after",
+            target_rule=standard_web_access.id,
+            action="allow",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=["ms-update"],
+            services=["service-https"],
+            log_end=True,
+            tags=[web_tag.name])
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -1308,6 +1523,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] policy_type: Policy type
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
         :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']] security_settings: Security settings
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
@@ -1316,6 +1532,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
@@ -1329,6 +1546,155 @@ class SecurityRule(pulumi.CustomResource):
         SecurityRule resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # First, create the tag objects that you will reference.
+        outbound_tag = scm.Tag("outbound_tag",
+            folder="All",
+            name="outbound143",
+            color="Red")
+        web_tag = scm.Tag("web_tag",
+            folder="All",
+            name="web143",
+            color="Blue")
+        # --- Existing Rules (Backward Compatibility) ---
+        standard_web_access = scm.SecurityRule("standard_web_access",
+            folder="All",
+            name="Allow Standard Web Access143",
+            description="Allow outbound web traffic to any destination...",
+            position="pre",
+            action="allow",
+            categories=["any"],
+            applications=[
+                "web-browsing",
+                "ssl",
+            ],
+            services=[
+                "service-http",
+                "service-https",
+            ],
+            froms=[
+                "untrust",
+                "trust",
+            ],
+            tos=["trust"],
+            sources=["any"],
+            destinations=["any"],
+            negate_source=False,
+            negate_destination=False,
+            source_users=["any"],
+            source_hips=["any"],
+            destination_hips=["any"],
+            log_start=True,
+            log_end=True,
+            disabled=False,
+            tags=[
+                outbound_tag.name,
+                web_tag.name,
+            ])
+        block_risky_saas = scm.SecurityRule("block_risky_saas",
+            folder="All",
+            name="Block Risky SaaS Applications143",
+            description="Prevent data exfiltration by blocking risky SaaS apps...",
+            action="deny",
+            policy_type="Internet",
+            security_settings={
+                "anti_spyware": "yes",
+                "vulnerability": "yes",
+                "virus_and_wildfire_analysis": "yes",
+            },
+            block_web_applications=["facebook-posting"],
+            log_settings={
+                "log_sessions": True,
+            },
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            disabled=False,
+            tags=[
+                outbound_tag.name,
+                web_tag.name,
+            ])
+        # --- NEW Examples Demonstrating Rule Ordering ---
+        # Example 1: Place a critical block rule at the absolute top
+        critical_block_top = scm.SecurityRule("critical_block_top",
+            folder="All",
+            name="CRITICAL Block Malicious IPs Top143",
+            description="Always block known malicious IPs first.",
+            relative_position="top",
+            action="deny",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=["any"],
+            services=["any"],
+            log_end=True,
+            tags=[outbound_tag.name])
+        # Example 2: Place a cleanup rule at the absolute bottom
+        cleanup_deny_bottom = scm.SecurityRule("cleanup_deny_bottom",
+            folder="All",
+            name="Cleanup Deny All Bottom143",
+            description="Deny any traffic not explicitly allowed.",
+            relative_position="bottom",
+            action="deny",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=["any"],
+            services=["any"],
+            log_end=True,
+            tags=[outbound_tag.name])
+        # Example 3: Place a rule *before* the standard web access rule
+        allow_updates_before_web = scm.SecurityRule("allow_updates_before_web",
+            folder="All",
+            name="Allow OS Updates Before Web143",
+            description="Allow specific OS update traffic before general web access.",
+            relative_position="before",
+            target_rule=standard_web_access.id,
+            action="allow",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=[
+                "ms-update",
+                "apple-update",
+            ],
+            services=["service-https"],
+            log_end=True,
+            tags=[outbound_tag.name])
+        # Example 4: Place a rule *after* the standard web access rule
+        allow_corp_apps_after_web = scm.SecurityRule("allow_corp_apps_after_web",
+            folder="All",
+            name="Allow Corp Apps After Web143",
+            description="Allow access to specific corporate apps after general web access.",
+            relative_position="after",
+            target_rule=standard_web_access.id,
+            action="allow",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            source_users=["any"],
+            categories=["any"],
+            applications=["ms-update"],
+            services=["service-https"],
+            log_end=True,
+            tags=[web_tag.name])
+        ```
 
         :param str resource_name: The name of the resource.
         :param SecurityRuleArgs args: The arguments to use to populate this resource's properties.
@@ -1372,6 +1738,7 @@ class SecurityRule(pulumi.CustomResource):
                  policy_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
                  security_settings: Optional[pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1380,6 +1747,7 @@ class SecurityRule(pulumi.CustomResource):
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
@@ -1418,6 +1786,7 @@ class SecurityRule(pulumi.CustomResource):
             __props__.__dict__["policy_type"] = policy_type
             __props__.__dict__["position"] = position
             __props__.__dict__["profile_setting"] = profile_setting
+            __props__.__dict__["relative_position"] = relative_position
             __props__.__dict__["schedule"] = schedule
             __props__.__dict__["security_settings"] = security_settings
             __props__.__dict__["services"] = services
@@ -1426,6 +1795,7 @@ class SecurityRule(pulumi.CustomResource):
             __props__.__dict__["source_users"] = source_users
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
+            __props__.__dict__["target_rule"] = target_rule
             __props__.__dict__["tenant_restrictions"] = tenant_restrictions
             __props__.__dict__["tos"] = tos
             __props__.__dict__["tfid"] = None
@@ -1466,6 +1836,7 @@ class SecurityRule(pulumi.CustomResource):
             policy_type: Optional[pulumi.Input[_builtins.str]] = None,
             position: Optional[pulumi.Input[_builtins.str]] = None,
             profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+            relative_position: Optional[pulumi.Input[_builtins.str]] = None,
             schedule: Optional[pulumi.Input[_builtins.str]] = None,
             security_settings: Optional[pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
             services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -1474,6 +1845,7 @@ class SecurityRule(pulumi.CustomResource):
             source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_rule: Optional[pulumi.Input[_builtins.str]] = None,
             tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'SecurityRule':
@@ -1511,6 +1883,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] policy_type: Policy type
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
         :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']] security_settings: Security settings
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
@@ -1519,6 +1892,7 @@ class SecurityRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
@@ -1553,6 +1927,7 @@ class SecurityRule(pulumi.CustomResource):
         __props__.__dict__["policy_type"] = policy_type
         __props__.__dict__["position"] = position
         __props__.__dict__["profile_setting"] = profile_setting
+        __props__.__dict__["relative_position"] = relative_position
         __props__.__dict__["schedule"] = schedule
         __props__.__dict__["security_settings"] = security_settings
         __props__.__dict__["services"] = services
@@ -1561,6 +1936,7 @@ class SecurityRule(pulumi.CustomResource):
         __props__.__dict__["source_users"] = source_users
         __props__.__dict__["sources"] = sources
         __props__.__dict__["tags"] = tags
+        __props__.__dict__["target_rule"] = target_rule
         __props__.__dict__["tenant_restrictions"] = tenant_restrictions
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["tos"] = tos
@@ -1783,6 +2159,14 @@ class SecurityRule(pulumi.CustomResource):
         return pulumi.get(self, "profile_setting")
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
@@ -1845,6 +2229,14 @@ class SecurityRule(pulumi.CustomResource):
         The tags associated with the security rule
         """
         return pulumi.get(self, "tags")
+
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
 
     @_builtins.property
     @pulumi.getter(name="tenantRestrictions")

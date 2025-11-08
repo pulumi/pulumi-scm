@@ -33,7 +33,7 @@ type LookupSdwanErrorCorrectionProfileArgs struct {
 // A collection of values returned by getSdwanErrorCorrectionProfile.
 type LookupSdwanErrorCorrectionProfileResult struct {
 	// Activation threshold
-	ActivationThreshold float64 `pulumi:"activationThreshold"`
+	ActivationThreshold int `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// The folder in which the resource is defined
@@ -86,8 +86,8 @@ func (o LookupSdwanErrorCorrectionProfileResultOutput) ToLookupSdwanErrorCorrect
 }
 
 // Activation threshold
-func (o LookupSdwanErrorCorrectionProfileResultOutput) ActivationThreshold() pulumi.Float64Output {
-	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) float64 { return v.ActivationThreshold }).(pulumi.Float64Output)
+func (o LookupSdwanErrorCorrectionProfileResultOutput) ActivationThreshold() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) int { return v.ActivationThreshold }).(pulumi.IntOutput)
 }
 
 // The device in which the resource is defined

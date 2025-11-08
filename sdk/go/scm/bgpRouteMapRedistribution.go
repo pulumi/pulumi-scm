@@ -19,13 +19,13 @@ type BgpRouteMapRedistribution struct {
 	Bgp BgpRouteMapRedistributionBgpPtrOutput `pulumi:"bgp"`
 	// Connected static
 	ConnectedStatic BgpRouteMapRedistributionConnectedStaticPtrOutput `pulumi:"connectedStatic"`
-	// Description
+	// BGP Route Map Redistributions Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Name
+	// BGP Route Map Redistributions Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Ospf
 	Ospf BgpRouteMapRedistributionOspfPtrOutput `pulumi:"ospf"`
@@ -68,13 +68,13 @@ type bgpRouteMapRedistributionState struct {
 	Bgp *BgpRouteMapRedistributionBgp `pulumi:"bgp"`
 	// Connected static
 	ConnectedStatic *BgpRouteMapRedistributionConnectedStatic `pulumi:"connectedStatic"`
-	// Description
+	// BGP Route Map Redistributions Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Name
+	// BGP Route Map Redistributions Name
 	Name *string `pulumi:"name"`
 	// Ospf
 	Ospf *BgpRouteMapRedistributionOspf `pulumi:"ospf"`
@@ -88,13 +88,13 @@ type BgpRouteMapRedistributionState struct {
 	Bgp BgpRouteMapRedistributionBgpPtrInput
 	// Connected static
 	ConnectedStatic BgpRouteMapRedistributionConnectedStaticPtrInput
-	// Description
+	// BGP Route Map Redistributions Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Name
+	// BGP Route Map Redistributions Name
 	Name pulumi.StringPtrInput
 	// Ospf
 	Ospf BgpRouteMapRedistributionOspfPtrInput
@@ -112,13 +112,13 @@ type bgpRouteMapRedistributionArgs struct {
 	Bgp *BgpRouteMapRedistributionBgp `pulumi:"bgp"`
 	// Connected static
 	ConnectedStatic *BgpRouteMapRedistributionConnectedStatic `pulumi:"connectedStatic"`
-	// Description
+	// BGP Route Map Redistributions Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Name
+	// BGP Route Map Redistributions Name
 	Name *string `pulumi:"name"`
 	// Ospf
 	Ospf *BgpRouteMapRedistributionOspf `pulumi:"ospf"`
@@ -132,13 +132,13 @@ type BgpRouteMapRedistributionArgs struct {
 	Bgp BgpRouteMapRedistributionBgpPtrInput
 	// Connected static
 	ConnectedStatic BgpRouteMapRedistributionConnectedStaticPtrInput
-	// Description
+	// BGP Route Map Redistributions Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Name
+	// BGP Route Map Redistributions Name
 	Name pulumi.StringPtrInput
 	// Ospf
 	Ospf BgpRouteMapRedistributionOspfPtrInput
@@ -245,7 +245,7 @@ func (o BgpRouteMapRedistributionOutput) ConnectedStatic() BgpRouteMapRedistribu
 	}).(BgpRouteMapRedistributionConnectedStaticPtrOutput)
 }
 
-// Description
+// BGP Route Map Redistributions Description
 func (o BgpRouteMapRedistributionOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
@@ -260,7 +260,7 @@ func (o BgpRouteMapRedistributionOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Name
+// BGP Route Map Redistributions Name
 func (o BgpRouteMapRedistributionOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }

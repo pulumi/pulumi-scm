@@ -8,6 +8,25 @@ import * as utilities from "./utilities";
 
 /**
  * LoopbackInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up loopback interface by its ID.
+ * const scmLoopbackIntfDs = scm.getLoopbackInterface({
+ *     id: "ddad1e64-0b64-41a4-b361-c6199769a8f1",
+ * });
+ * export const scmLoopbackInterfaceDataSourceResults = {
+ *     id: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.id),
+ *     name: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.name),
+ *     comment: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.comment),
+ *     ip: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.ips),
+ *     folder: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.folder),
+ * };
+ * ```
  */
 export function getLoopbackInterface(args: GetLoopbackInterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetLoopbackInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -26,7 +45,7 @@ export interface GetLoopbackInterfaceArgs {
      */
     id: string;
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      */
     name?: string;
 }
@@ -40,9 +59,9 @@ export interface GetLoopbackInterfaceResult {
      */
     readonly comment: string;
     /**
-     * Default value
+     * Default interface assignment
      */
-    readonly defaultValue: number;
+    readonly defaultValue: string;
     /**
      * The device in which the resource is defined
      */
@@ -60,15 +79,19 @@ export interface GetLoopbackInterfaceResult {
      */
     readonly interfaceManagementProfile: string;
     /**
-     * loopback ip parent
+     * Loopback IP Parent
      */
-    readonly ip: outputs.GetLoopbackInterfaceIp;
+    readonly ips: outputs.GetLoopbackInterfaceIp[];
+    /**
+     * Loopback IPv6 Configuration
+     */
+    readonly ipv6: outputs.GetLoopbackInterfaceIpv6;
     /**
      * MTU
      */
     readonly mtu: number;
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      */
     readonly name: string;
     /**
@@ -79,6 +102,25 @@ export interface GetLoopbackInterfaceResult {
 }
 /**
  * LoopbackInterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up loopback interface by its ID.
+ * const scmLoopbackIntfDs = scm.getLoopbackInterface({
+ *     id: "ddad1e64-0b64-41a4-b361-c6199769a8f1",
+ * });
+ * export const scmLoopbackInterfaceDataSourceResults = {
+ *     id: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.id),
+ *     name: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.name),
+ *     comment: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.comment),
+ *     ip: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.ips),
+ *     folder: scmLoopbackIntfDs.then(scmLoopbackIntfDs => scmLoopbackIntfDs.folder),
+ * };
+ * ```
  */
 export function getLoopbackInterfaceOutput(args: GetLoopbackInterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLoopbackInterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -97,7 +139,7 @@ export interface GetLoopbackInterfaceOutputArgs {
      */
     id: pulumi.Input<string>;
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      */
     name?: pulumi.Input<string>;
 }

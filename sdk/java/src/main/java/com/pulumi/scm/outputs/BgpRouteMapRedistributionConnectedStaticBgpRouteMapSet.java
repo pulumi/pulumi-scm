@@ -23,12 +23,12 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator aggregator;
     /**
-     * @return AS numbers
+     * @return Connected Static BGP Route maps set AS numbers
      * 
      */
     private @Nullable List<Integer> aspathPrepends;
     /**
-     * @return Enable BGP atomic aggregate?
+     * @return Connected Static BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     private @Nullable Boolean atomicAggregate;
@@ -38,12 +38,12 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 ipv4;
     /**
-     * @return Large communities
+     * @return Connected Static  BGP Route maps set Large communities
      * 
      */
     private @Nullable List<String> largeCommunities;
     /**
-     * @return Local preference
+     * @return Connected Static BGP Route maps set Local preference
      * 
      */
     private @Nullable Integer localPreference;
@@ -53,27 +53,27 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric metric;
     /**
-     * @return Origin
+     * @return Connected Static BGP Route maps set Origin
      * 
      */
     private @Nullable String origin;
     /**
-     * @return Originator ID
+     * @return Connected Static BGP Route maps set Originator ID
      * 
      */
     private @Nullable String originatorId;
     /**
-     * @return Regular communities
+     * @return Connected Static  BGP Route maps set Regular communities
      * 
      */
     private @Nullable List<String> regularCommunities;
     /**
-     * @return Tag
+     * @return Connected Static BGP Route maps set Tag
      * 
      */
     private @Nullable Integer tag;
     /**
-     * @return Weight
+     * @return Connected Static BGP Route maps set Weight
      * 
      */
     private @Nullable Integer weight;
@@ -87,14 +87,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
         return Optional.ofNullable(this.aggregator);
     }
     /**
-     * @return AS numbers
+     * @return Connected Static BGP Route maps set AS numbers
      * 
      */
     public List<Integer> aspathPrepends() {
         return this.aspathPrepends == null ? List.of() : this.aspathPrepends;
     }
     /**
-     * @return Enable BGP atomic aggregate?
+     * @return Connected Static BGP Route maps set Enable BGP atomic aggregate?
      * 
      */
     public Optional<Boolean> atomicAggregate() {
@@ -108,14 +108,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
         return Optional.ofNullable(this.ipv4);
     }
     /**
-     * @return Large communities
+     * @return Connected Static  BGP Route maps set Large communities
      * 
      */
     public List<String> largeCommunities() {
         return this.largeCommunities == null ? List.of() : this.largeCommunities;
     }
     /**
-     * @return Local preference
+     * @return Connected Static BGP Route maps set Local preference
      * 
      */
     public Optional<Integer> localPreference() {
@@ -129,35 +129,35 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Origin
+     * @return Connected Static BGP Route maps set Origin
      * 
      */
     public Optional<String> origin() {
         return Optional.ofNullable(this.origin);
     }
     /**
-     * @return Originator ID
+     * @return Connected Static BGP Route maps set Originator ID
      * 
      */
     public Optional<String> originatorId() {
         return Optional.ofNullable(this.originatorId);
     }
     /**
-     * @return Regular communities
+     * @return Connected Static  BGP Route maps set Regular communities
      * 
      */
     public List<String> regularCommunities() {
         return this.regularCommunities == null ? List.of() : this.regularCommunities;
     }
     /**
-     * @return Tag
+     * @return Connected Static BGP Route maps set Tag
      * 
      */
     public Optional<Integer> tag() {
         return Optional.ofNullable(this.tag);
     }
     /**
-     * @return Weight
+     * @return Connected Static BGP Route maps set Weight
      * 
      */
     public Optional<Integer> weight() {

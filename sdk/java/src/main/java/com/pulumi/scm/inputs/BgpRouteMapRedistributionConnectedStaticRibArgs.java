@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibArgs extends com.p
     public static final BgpRouteMapRedistributionConnectedStaticRibArgs Empty = new BgpRouteMapRedistributionConnectedStaticRibArgs();
 
     /**
-     * Route maps
+     * Connected Static BGP Rib Route maps
      * 
      */
     @Import(name="routeMaps")
     private @Nullable Output<List<BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs>> routeMaps;
 
     /**
-     * @return Route maps
+     * @return Connected Static BGP Rib Route maps
      * 
      */
     public Optional<Output<List<BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs>>> routeMaps() {
@@ -56,7 +56,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibArgs extends com.p
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps Connected Static BGP Rib Route maps
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibArgs extends com.p
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps Connected Static BGP Rib Route maps
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibArgs extends com.p
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps Connected Static BGP Rib Route maps
          * 
          * @return builder
          * 

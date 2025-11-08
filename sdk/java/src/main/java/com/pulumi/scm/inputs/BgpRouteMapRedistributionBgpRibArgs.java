@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionBgpRibArgs extends com.pulumi.resour
     public static final BgpRouteMapRedistributionBgpRibArgs Empty = new BgpRouteMapRedistributionBgpRibArgs();
 
     /**
-     * Route maps
+     * BGP Root RIB Route maps
      * 
      */
     @Import(name="routeMaps")
     private @Nullable Output<List<BgpRouteMapRedistributionBgpRibRouteMapArgs>> routeMaps;
 
     /**
-     * @return Route maps
+     * @return BGP Root RIB Route maps
      * 
      */
     public Optional<Output<List<BgpRouteMapRedistributionBgpRibRouteMapArgs>>> routeMaps() {
@@ -56,7 +56,7 @@ public final class BgpRouteMapRedistributionBgpRibArgs extends com.pulumi.resour
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps BGP Root RIB Route maps
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class BgpRouteMapRedistributionBgpRibArgs extends com.pulumi.resour
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps BGP Root RIB Route maps
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class BgpRouteMapRedistributionBgpRibArgs extends com.pulumi.resour
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps BGP Root RIB Route maps
          * 
          * @return builder
          * 

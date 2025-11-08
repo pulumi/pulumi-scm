@@ -12,6 +12,33 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			allSnippets, err := scm.GetSnippetList(ctx, &scm.GetSnippetListArgs{
+//				Limit: pulumi.IntRef(10),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("snippetsListRaw", allSnippets.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetSnippetList(ctx *pulumi.Context, args *GetSnippetListArgs, opts ...pulumi.InvokeOption) (*GetSnippetListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetSnippetListResult

@@ -7,9 +7,21 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class ZoneProtectionProfileScanWhiteList {
+    /**
+     * @return Ipv4
+     * 
+     */
+    private @Nullable String ipv4;
+    /**
+     * @return Ipv6
+     * 
+     */
+    private @Nullable String ipv6;
     /**
      * @return A descriptive name for the address to exclude.
      * 
@@ -17,6 +29,20 @@ public final class ZoneProtectionProfileScanWhiteList {
     private String name;
 
     private ZoneProtectionProfileScanWhiteList() {}
+    /**
+     * @return Ipv4
+     * 
+     */
+    public Optional<String> ipv4() {
+        return Optional.ofNullable(this.ipv4);
+    }
+    /**
+     * @return Ipv6
+     * 
+     */
+    public Optional<String> ipv6() {
+        return Optional.ofNullable(this.ipv6);
+    }
     /**
      * @return A descriptive name for the address to exclude.
      * 
@@ -34,13 +60,29 @@ public final class ZoneProtectionProfileScanWhiteList {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable String ipv4;
+        private @Nullable String ipv6;
         private String name;
         public Builder() {}
         public Builder(ZoneProtectionProfileScanWhiteList defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.ipv4 = defaults.ipv4;
+    	      this.ipv6 = defaults.ipv6;
     	      this.name = defaults.name;
         }
 
+        @CustomType.Setter
+        public Builder ipv4(@Nullable String ipv4) {
+
+            this.ipv4 = ipv4;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6(@Nullable String ipv6) {
+
+            this.ipv6 = ipv6;
+            return this;
+        }
         @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
@@ -51,6 +93,8 @@ public final class ZoneProtectionProfileScanWhiteList {
         }
         public ZoneProtectionProfileScanWhiteList build() {
             final var _resultValue = new ZoneProtectionProfileScanWhiteList();
+            _resultValue.ipv4 = ipv4;
+            _resultValue.ipv6 = ipv6;
             _resultValue.name = name;
             return _resultValue;
         }

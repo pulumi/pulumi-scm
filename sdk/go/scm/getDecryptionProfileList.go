@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM Decryption Profile objects.
+//			//
+//			// Fetch a list of all SCM Decryption Profile in the "Shared" folder.
+//			allShared, err := scm.GetDecryptionProfileList(ctx, &scm.GetDecryptionProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmDecryptionProfileListAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetDecryptionProfileList(ctx *pulumi.Context, args *GetDecryptionProfileListArgs, opts ...pulumi.InvokeOption) (*GetDecryptionProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetDecryptionProfileListResult

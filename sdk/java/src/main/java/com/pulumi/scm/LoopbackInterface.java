@@ -11,14 +11,68 @@ import com.pulumi.scm.LoopbackInterfaceArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.LoopbackInterfaceState;
 import com.pulumi.scm.outputs.LoopbackInterfaceIp;
-import java.lang.Double;
+import com.pulumi.scm.outputs.LoopbackInterfaceIpv6;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * LoopbackInterface resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.LoopbackInterface;
+ * import com.pulumi.scm.LoopbackInterfaceArgs;
+ * import com.pulumi.scm.inputs.LoopbackInterfaceIpArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a loopback interface with static ipv4 address
+ *         //
+ *         var scmLoopbackIntf = new LoopbackInterface("scmLoopbackIntf", LoopbackInterfaceArgs.builder()
+ *             .name("$scm_loopback_intf")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .ips(LoopbackInterfaceIpArgs.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))
+ *                 .build());
+ * 
+ *             //
+ *             // Creates a loopback interface with static ipv4 address, with default value loopback.123
+ *             //
+ *             var scmLoopbackIntf2 = new LoopbackInterface("scmLoopbackIntf2", LoopbackInterfaceArgs.builder()
+ *                 .name("$scm_loopback_intf_2")
+ *                 .comment("Managed by Pulumi")
+ *                 .folder("ngfw-shared")
+ *                 .defaultValue("loopback.123")
+ *                 .ips(LoopbackInterfaceIpArgs.builder()
+ * %!v(PANIC=Format method: interface conversion: model.Expression is *model.TemplateExpression, not *model.LiteralValueExpression))
+ *                     .build());
+ * 
+ *             }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/loopbackInterface:LoopbackInterface")
@@ -38,17 +92,17 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.comment);
     }
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
-    @Export(name="defaultValue", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> defaultValue;
+    @Export(name="defaultValue", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    public Output<Optional<Integer>> defaultValue() {
+    public Output<Optional<String>> defaultValue() {
         return Codegen.optional(this.defaultValue);
     }
     /**
@@ -94,42 +148,56 @@ public class LoopbackInterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.interfaceManagementProfile);
     }
     /**
-     * loopback ip parent
+     * Loopback IP Parent
      * 
      */
-    @Export(name="ip", refs={LoopbackInterfaceIp.class}, tree="[0]")
-    private Output</* @Nullable */ LoopbackInterfaceIp> ip;
+    @Export(name="ips", refs={List.class,LoopbackInterfaceIp.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<LoopbackInterfaceIp>> ips;
 
     /**
-     * @return loopback ip parent
+     * @return Loopback IP Parent
      * 
      */
-    public Output<Optional<LoopbackInterfaceIp>> ip() {
-        return Codegen.optional(this.ip);
+    public Output<Optional<List<LoopbackInterfaceIp>>> ips() {
+        return Codegen.optional(this.ips);
+    }
+    /**
+     * Loopback IPv6 Configuration
+     * 
+     */
+    @Export(name="ipv6", refs={LoopbackInterfaceIpv6.class}, tree="[0]")
+    private Output<LoopbackInterfaceIpv6> ipv6;
+
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
+    public Output<LoopbackInterfaceIpv6> ipv6() {
+        return this.ipv6;
     }
     /**
      * MTU
      * 
      */
-    @Export(name="mtu", refs={Double.class}, tree="[0]")
-    private Output</* @Nullable */ Double> mtu;
+    @Export(name="mtu", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Output<Optional<Double>> mtu() {
+    public Output<Optional<Integer>> mtu() {
         return Codegen.optional(this.mtu);
     }
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return L3 sub-interface name
+     * @return Loopback Interface name
      * 
      */
     public Output<String> name() {

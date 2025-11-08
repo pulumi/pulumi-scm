@@ -34,22 +34,22 @@ public final class BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs extends com
      * Tx bestpath per a s
      * 
      */
-    @Import(name="txBestpathPerAS")
-    private @Nullable Output<Boolean> txBestpathPerAS;
+    @Import(name="txBestpathPerAs")
+    private @Nullable Output<Boolean> txBestpathPerAs;
 
     /**
      * @return Tx bestpath per a s
      * 
      */
-    public Optional<Output<Boolean>> txBestpathPerAS() {
-        return Optional.ofNullable(this.txBestpathPerAS);
+    public Optional<Output<Boolean>> txBestpathPerAs() {
+        return Optional.ofNullable(this.txBestpathPerAs);
     }
 
     private BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs() {}
 
     private BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs(BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs $) {
         this.txAllPaths = $.txAllPaths;
-        this.txBestpathPerAS = $.txBestpathPerAS;
+        this.txBestpathPerAs = $.txBestpathPerAs;
     }
 
     public static Builder builder() {
@@ -92,24 +92,24 @@ public final class BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs extends com
         }
 
         /**
-         * @param txBestpathPerAS Tx bestpath per a s
+         * @param txBestpathPerAs Tx bestpath per a s
          * 
          * @return builder
          * 
          */
-        public Builder txBestpathPerAS(@Nullable Output<Boolean> txBestpathPerAS) {
-            $.txBestpathPerAS = txBestpathPerAS;
+        public Builder txBestpathPerAs(@Nullable Output<Boolean> txBestpathPerAs) {
+            $.txBestpathPerAs = txBestpathPerAs;
             return this;
         }
 
         /**
-         * @param txBestpathPerAS Tx bestpath per a s
+         * @param txBestpathPerAs Tx bestpath per a s
          * 
          * @return builder
          * 
          */
-        public Builder txBestpathPerAS(Boolean txBestpathPerAS) {
-            return txBestpathPerAS(Output.of(txBestpathPerAS));
+        public Builder txBestpathPerAs(Boolean txBestpathPerAs) {
+            return txBestpathPerAs(Output.of(txBestpathPerAs));
         }
 
         public BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs build() {

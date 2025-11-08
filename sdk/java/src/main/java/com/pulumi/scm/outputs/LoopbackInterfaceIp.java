@@ -4,10 +4,9 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
-import java.util.List;
 import java.util.Objects;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class LoopbackInterfaceIp {
@@ -15,15 +14,15 @@ public final class LoopbackInterfaceIp {
      * @return Loopback IP address(es)
      * 
      */
-    private @Nullable List<String> ips;
+    private String name;
 
     private LoopbackInterfaceIp() {}
     /**
      * @return Loopback IP address(es)
      * 
      */
-    public List<String> ips() {
-        return this.ips == null ? List.of() : this.ips;
+    public String name() {
+        return this.name;
     }
 
     public static Builder builder() {
@@ -35,25 +34,24 @@ public final class LoopbackInterfaceIp {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable List<String> ips;
+        private String name;
         public Builder() {}
         public Builder(LoopbackInterfaceIp defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.ips = defaults.ips;
+    	      this.name = defaults.name;
         }
 
         @CustomType.Setter
-        public Builder ips(@Nullable List<String> ips) {
-
-            this.ips = ips;
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("LoopbackInterfaceIp", "name");
+            }
+            this.name = name;
             return this;
-        }
-        public Builder ips(String... ips) {
-            return ips(List.of(ips));
         }
         public LoopbackInterfaceIp build() {
             final var _resultValue = new LoopbackInterfaceIp();
-            _resultValue.ips = ips;
+            _resultValue.name = name;
             return _resultValue;
         }
     }

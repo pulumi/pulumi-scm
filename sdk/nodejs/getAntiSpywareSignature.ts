@@ -82,7 +82,7 @@ export interface GetAntiSpywareSignatureResult {
     /**
      * threat id range \n\n and \n\n
      */
-    readonly threatId: number;
+    readonly threatId: string;
     /**
      * Threatname
      */

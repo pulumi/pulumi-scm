@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfEcmpAlgorithm;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -26,7 +26,7 @@ public final class GetLogicalRouterListDataVrfEcmp {
      * @return Max path
      * 
      */
-    private Double maxPath;
+    private Integer maxPath;
     /**
      * @return Strict source path
      * 
@@ -57,7 +57,7 @@ public final class GetLogicalRouterListDataVrfEcmp {
      * @return Max path
      * 
      */
-    public Double maxPath() {
+    public Integer maxPath() {
         return this.maxPath;
     }
     /**
@@ -86,7 +86,7 @@ public final class GetLogicalRouterListDataVrfEcmp {
     public static final class Builder {
         private GetLogicalRouterListDataVrfEcmpAlgorithm algorithm;
         private Boolean enable;
-        private Double maxPath;
+        private Integer maxPath;
         private Boolean strictSourcePath;
         private Boolean symmetricReturn;
         public Builder() {}
@@ -116,7 +116,7 @@ public final class GetLogicalRouterListDataVrfEcmp {
             return this;
         }
         @CustomType.Setter
-        public Builder maxPath(Double maxPath) {
+        public Builder maxPath(Integer maxPath) {
             if (maxPath == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfEcmp", "maxPath");
             }

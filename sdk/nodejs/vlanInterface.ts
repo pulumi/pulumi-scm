@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * VlanInterface resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates a vlan interface used as parent-interface for subsequent examples
+ * //
+ * const scmVlanInterfaceIpv4 = new scm.VlanInterface("scm_vlan_interface_ipv4", {
+ *     name: "$scm_vlan_interface_ipv4",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     vlanTag: "1234",
+ *     ips: [{
+ *         name: "198.18.1.1/24",
+ *     }],
+ * });
+ * ```
  */
 export class VlanInterface extends pulumi.CustomResource {
     /**
@@ -48,9 +68,9 @@ export class VlanInterface extends pulumi.CustomResource {
     /**
      * Dynamic DNS configuration specific to the Vlan Interfaces.
      */
-    declare public readonly ddnsConfig: pulumi.Output<outputs.VlanInterfaceDdnsConfig | undefined>;
+    declare public readonly ddnsConfig: pulumi.Output<outputs.VlanInterfaceDdnsConfig>;
     /**
-     * Default value
+     * Default interface assignment
      */
     declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
@@ -58,9 +78,9 @@ export class VlanInterface extends pulumi.CustomResource {
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * Dhcp client
+     * Vlan interfaces DHCP Client Object
      */
-    declare public readonly dhcpClient: pulumi.Output<outputs.VlanInterfaceDhcpClient | undefined>;
+    declare public readonly dhcpClient: pulumi.Output<outputs.VlanInterfaceDhcpClient>;
     /**
      * The folder in which the resource is defined
      */
@@ -70,9 +90,9 @@ export class VlanInterface extends pulumi.CustomResource {
      */
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
-     * Ip
+     * VLAN Interface IP Parent
      */
-    declare public readonly ips: pulumi.Output<string[] | undefined>;
+    declare public readonly ips: pulumi.Output<outputs.VlanInterfaceIp[] | undefined>;
     /**
      * MTU
      */
@@ -87,9 +107,9 @@ export class VlanInterface extends pulumi.CustomResource {
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    declare public readonly vlanTag: pulumi.Output<number | undefined>;
+    declare public readonly vlanTag: pulumi.Output<string | undefined>;
 
     /**
      * Create a VlanInterface resource with the given unique name, arguments, and options.
@@ -157,7 +177,7 @@ export interface VlanInterfaceState {
      */
     ddnsConfig?: pulumi.Input<inputs.VlanInterfaceDdnsConfig>;
     /**
-     * Default value
+     * Default interface assignment
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -165,7 +185,7 @@ export interface VlanInterfaceState {
      */
     device?: pulumi.Input<string>;
     /**
-     * Dhcp client
+     * Vlan interfaces DHCP Client Object
      */
     dhcpClient?: pulumi.Input<inputs.VlanInterfaceDhcpClient>;
     /**
@@ -177,9 +197,9 @@ export interface VlanInterfaceState {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * Ip
+     * VLAN Interface IP Parent
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceIp>[]>;
     /**
      * MTU
      */
@@ -194,9 +214,9 @@ export interface VlanInterfaceState {
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag?: pulumi.Input<number>;
+    vlanTag?: pulumi.Input<string>;
 }
 
 /**
@@ -216,7 +236,7 @@ export interface VlanInterfaceArgs {
      */
     ddnsConfig?: pulumi.Input<inputs.VlanInterfaceDdnsConfig>;
     /**
-     * Default value
+     * Default interface assignment
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -224,7 +244,7 @@ export interface VlanInterfaceArgs {
      */
     device?: pulumi.Input<string>;
     /**
-     * Dhcp client
+     * Vlan interfaces DHCP Client Object
      */
     dhcpClient?: pulumi.Input<inputs.VlanInterfaceDhcpClient>;
     /**
@@ -236,9 +256,9 @@ export interface VlanInterfaceArgs {
      */
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
-     * Ip
+     * VLAN Interface IP Parent
      */
-    ips?: pulumi.Input<pulumi.Input<string>[]>;
+    ips?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceIp>[]>;
     /**
      * MTU
      */
@@ -252,7 +272,7 @@ export interface VlanInterfaceArgs {
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    vlanTag?: pulumi.Input<number>;
+    vlanTag?: pulumi.Input<string>;
 }

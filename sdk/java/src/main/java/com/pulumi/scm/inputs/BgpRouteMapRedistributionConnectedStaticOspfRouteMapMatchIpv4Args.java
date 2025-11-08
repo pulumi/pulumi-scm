@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
     public static final BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args Empty = new BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args();
 
     /**
-     * Address
+     * Connected Static Root OSPF Address
      * 
      */
     @Import(name="address")
     private @Nullable Output<BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs> address;
 
     /**
-     * @return Address
+     * @return Connected Static Root OSPF Address
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs>> address() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
         }
 
         /**
-         * @param address Address
+         * @param address Connected Static Root OSPF Address
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4
         }
 
         /**
-         * @param address Address
+         * @param address Connected Static Root OSPF Address
          * 
          * @return builder
          * 

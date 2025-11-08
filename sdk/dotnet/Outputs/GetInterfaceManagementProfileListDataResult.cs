@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Http;
         /// <summary>
-        /// Http ocsp
+        /// Allow HTTP OCSP?
         /// </summary>
         public readonly bool HttpOcsp;
         /// <summary>
@@ -42,17 +42,17 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Permitted ip
+        /// Allowed IP address(es)
         /// </summary>
-        public readonly ImmutableArray<string> PermittedIps;
+        public readonly ImmutableArray<Outputs.GetInterfaceManagementProfileListDataPermittedIpResult> PermittedIps;
         /// <summary>
         /// Allow ping?
         /// </summary>
         public readonly bool Ping;
         /// <summary>
-        /// Response pages
+        /// Allow response pages?
         /// </summary>
-        public readonly string ResponsePages;
+        public readonly bool ResponsePages;
         /// <summary>
         /// The snippet in which the resource is defined
         /// </summary>
@@ -67,15 +67,15 @@ namespace Pulumi.Scm.Outputs
         public readonly bool Telnet;
         public readonly string Tfid;
         /// <summary>
-        /// Userid service
+        /// Allow User-ID?
         /// </summary>
         public readonly bool UseridService;
         /// <summary>
-        /// Userid syslog listener ssl
+        /// Allow User-ID syslog listener (SSL)?
         /// </summary>
         public readonly bool UseridSyslogListenerSsl;
         /// <summary>
-        /// Userid syslog listener udp
+        /// Allow User-ID syslog listener (UDP)?
         /// </summary>
         public readonly bool UseridSyslogListenerUdp;
 
@@ -95,11 +95,11 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
-            ImmutableArray<string> permittedIps,
+            ImmutableArray<Outputs.GetInterfaceManagementProfileListDataPermittedIpResult> permittedIps,
 
             bool ping,
 
-            string responsePages,
+            bool responsePages,
 
             string snippet,
 

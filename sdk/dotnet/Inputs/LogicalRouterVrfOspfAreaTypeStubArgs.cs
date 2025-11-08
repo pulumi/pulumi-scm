@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         /// Default route metric
         /// </summary>
         [Input("defaultRouteMetric")]
-        public Input<double>? DefaultRouteMetric { get; set; }
+        public Input<int>? DefaultRouteMetric { get; set; }
 
         /// <summary>
         /// No summary

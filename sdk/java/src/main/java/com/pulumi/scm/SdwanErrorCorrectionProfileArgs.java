@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.SdwanErrorCorrectionProfileModeArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,13 +23,13 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
      * 
      */
     @Import(name="activationThreshold", required=true)
-    private Output<Double> activationThreshold;
+    private Output<Integer> activationThreshold;
 
     /**
      * @return Activation threshold
      * 
      */
-    public Output<Double> activationThreshold() {
+    public Output<Integer> activationThreshold() {
         return this.activationThreshold;
     }
 
@@ -143,7 +143,7 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder activationThreshold(Output<Double> activationThreshold) {
+        public Builder activationThreshold(Output<Integer> activationThreshold) {
             $.activationThreshold = activationThreshold;
             return this;
         }
@@ -154,7 +154,7 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
          * @return builder
          * 
          */
-        public Builder activationThreshold(Double activationThreshold) {
+        public Builder activationThreshold(Integer activationThreshold) {
             return activationThreshold(Output.of(activationThreshold));
         }
 

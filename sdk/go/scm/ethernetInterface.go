@@ -12,12 +12,14 @@ import (
 )
 
 // EthernetInterface resource
+//
+// ## Example Usage
 type EthernetInterface struct {
 	pulumi.CustomResourceState
 
 	// Interface description
 	Comment pulumi.StringPtrOutput `pulumi:"comment"`
-	// Default value
+	// Default interface assignment
 	DefaultValue pulumi.StringPtrOutput `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
@@ -27,23 +29,23 @@ type EthernetInterface struct {
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Layer2
 	Layer2 EthernetInterfaceLayer2PtrOutput `pulumi:"layer2"`
-	// Layer3
+	// Ethernet Interface Layer 3 configuration
 	Layer3 EthernetInterfaceLayer3Output `pulumi:"layer3"`
 	// Link duplex
-	LinkDuplex pulumi.StringPtrOutput `pulumi:"linkDuplex"`
+	LinkDuplex pulumi.StringOutput `pulumi:"linkDuplex"`
 	// Link speed
-	LinkSpeed pulumi.StringPtrOutput `pulumi:"linkSpeed"`
+	LinkSpeed pulumi.StringOutput `pulumi:"linkSpeed"`
 	// Link state
-	LinkState pulumi.StringPtrOutput `pulumi:"linkState"`
+	LinkState pulumi.StringOutput `pulumi:"linkState"`
 	// Interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Poe
-	Poe EthernetInterfacePoePtrOutput `pulumi:"poe"`
+	Poe EthernetInterfacePoeOutput `pulumi:"poe"`
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tap
-	Tap  EthernetInterfaceTapOutput `pulumi:"tap"`
-	Tfid pulumi.StringOutput        `pulumi:"tfid"`
+	Tap  EthernetInterfaceTapPtrOutput `pulumi:"tap"`
+	Tfid pulumi.StringOutput           `pulumi:"tfid"`
 }
 
 // NewEthernetInterface registers a new resource with the given unique name, arguments, and options.
@@ -82,7 +84,7 @@ func GetEthernetInterface(ctx *pulumi.Context,
 type ethernetInterfaceState struct {
 	// Interface description
 	Comment *string `pulumi:"comment"`
-	// Default value
+	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
@@ -92,7 +94,7 @@ type ethernetInterfaceState struct {
 	Folder *string `pulumi:"folder"`
 	// Layer2
 	Layer2 *EthernetInterfaceLayer2 `pulumi:"layer2"`
-	// Layer3
+	// Ethernet Interface Layer 3 configuration
 	Layer3 *EthernetInterfaceLayer3 `pulumi:"layer3"`
 	// Link duplex
 	LinkDuplex *string `pulumi:"linkDuplex"`
@@ -114,7 +116,7 @@ type ethernetInterfaceState struct {
 type EthernetInterfaceState struct {
 	// Interface description
 	Comment pulumi.StringPtrInput
-	// Default value
+	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
@@ -124,7 +126,7 @@ type EthernetInterfaceState struct {
 	Folder pulumi.StringPtrInput
 	// Layer2
 	Layer2 EthernetInterfaceLayer2PtrInput
-	// Layer3
+	// Ethernet Interface Layer 3 configuration
 	Layer3 EthernetInterfaceLayer3PtrInput
 	// Link duplex
 	LinkDuplex pulumi.StringPtrInput
@@ -150,7 +152,7 @@ func (EthernetInterfaceState) ElementType() reflect.Type {
 type ethernetInterfaceArgs struct {
 	// Interface description
 	Comment *string `pulumi:"comment"`
-	// Default value
+	// Default interface assignment
 	DefaultValue *string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
@@ -158,7 +160,7 @@ type ethernetInterfaceArgs struct {
 	Folder *string `pulumi:"folder"`
 	// Layer2
 	Layer2 *EthernetInterfaceLayer2 `pulumi:"layer2"`
-	// Layer3
+	// Ethernet Interface Layer 3 configuration
 	Layer3 *EthernetInterfaceLayer3 `pulumi:"layer3"`
 	// Link duplex
 	LinkDuplex *string `pulumi:"linkDuplex"`
@@ -180,7 +182,7 @@ type ethernetInterfaceArgs struct {
 type EthernetInterfaceArgs struct {
 	// Interface description
 	Comment pulumi.StringPtrInput
-	// Default value
+	// Default interface assignment
 	DefaultValue pulumi.StringPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
@@ -188,7 +190,7 @@ type EthernetInterfaceArgs struct {
 	Folder pulumi.StringPtrInput
 	// Layer2
 	Layer2 EthernetInterfaceLayer2PtrInput
-	// Layer3
+	// Ethernet Interface Layer 3 configuration
 	Layer3 EthernetInterfaceLayer3PtrInput
 	// Link duplex
 	LinkDuplex pulumi.StringPtrInput
@@ -298,7 +300,7 @@ func (o EthernetInterfaceOutput) Comment() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.Comment }).(pulumi.StringPtrOutput)
 }
 
-// Default value
+// Default interface assignment
 func (o EthernetInterfaceOutput) DefaultValue() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.DefaultValue }).(pulumi.StringPtrOutput)
 }
@@ -323,24 +325,24 @@ func (o EthernetInterfaceOutput) Layer2() EthernetInterfaceLayer2PtrOutput {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceLayer2PtrOutput { return v.Layer2 }).(EthernetInterfaceLayer2PtrOutput)
 }
 
-// Layer3
+// Ethernet Interface Layer 3 configuration
 func (o EthernetInterfaceOutput) Layer3() EthernetInterfaceLayer3Output {
 	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceLayer3Output { return v.Layer3 }).(EthernetInterfaceLayer3Output)
 }
 
 // Link duplex
-func (o EthernetInterfaceOutput) LinkDuplex() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.LinkDuplex }).(pulumi.StringPtrOutput)
+func (o EthernetInterfaceOutput) LinkDuplex() pulumi.StringOutput {
+	return o.ApplyT(func(v *EthernetInterface) pulumi.StringOutput { return v.LinkDuplex }).(pulumi.StringOutput)
 }
 
 // Link speed
-func (o EthernetInterfaceOutput) LinkSpeed() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.LinkSpeed }).(pulumi.StringPtrOutput)
+func (o EthernetInterfaceOutput) LinkSpeed() pulumi.StringOutput {
+	return o.ApplyT(func(v *EthernetInterface) pulumi.StringOutput { return v.LinkSpeed }).(pulumi.StringOutput)
 }
 
 // Link state
-func (o EthernetInterfaceOutput) LinkState() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *EthernetInterface) pulumi.StringPtrOutput { return v.LinkState }).(pulumi.StringPtrOutput)
+func (o EthernetInterfaceOutput) LinkState() pulumi.StringOutput {
+	return o.ApplyT(func(v *EthernetInterface) pulumi.StringOutput { return v.LinkState }).(pulumi.StringOutput)
 }
 
 // Interface name
@@ -349,8 +351,8 @@ func (o EthernetInterfaceOutput) Name() pulumi.StringOutput {
 }
 
 // Poe
-func (o EthernetInterfaceOutput) Poe() EthernetInterfacePoePtrOutput {
-	return o.ApplyT(func(v *EthernetInterface) EthernetInterfacePoePtrOutput { return v.Poe }).(EthernetInterfacePoePtrOutput)
+func (o EthernetInterfaceOutput) Poe() EthernetInterfacePoeOutput {
+	return o.ApplyT(func(v *EthernetInterface) EthernetInterfacePoeOutput { return v.Poe }).(EthernetInterfacePoeOutput)
 }
 
 // The snippet in which the resource is defined
@@ -359,8 +361,8 @@ func (o EthernetInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 }
 
 // Tap
-func (o EthernetInterfaceOutput) Tap() EthernetInterfaceTapOutput {
-	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceTapOutput { return v.Tap }).(EthernetInterfaceTapOutput)
+func (o EthernetInterfaceOutput) Tap() EthernetInterfaceTapPtrOutput {
+	return o.ApplyT(func(v *EthernetInterface) EthernetInterfaceTapPtrOutput { return v.Tap }).(EthernetInterfaceTapPtrOutput)
 }
 
 func (o EthernetInterfaceOutput) Tfid() pulumi.StringOutput {

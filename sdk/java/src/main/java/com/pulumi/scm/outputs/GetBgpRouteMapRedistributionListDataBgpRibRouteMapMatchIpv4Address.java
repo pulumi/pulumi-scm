@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4Address {
     /**
-     * @return Access list
+     * @return BGP Root RIB Route maps match ipv Access list
      * 
      */
     private String accessList;
     /**
-     * @return Prefix list
+     * @return BGP Root RIB Route maps match ipv Prefix list
      * 
      */
     private String prefixList;
 
     private GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatchIpv4Address() {}
     /**
-     * @return Access list
+     * @return BGP Root RIB Route maps match ipv Access list
      * 
      */
     public String accessList() {
         return this.accessList;
     }
     /**
-     * @return Prefix list
+     * @return BGP Root RIB Route maps match ipv Prefix list
      * 
      */
     public String prefixList() {

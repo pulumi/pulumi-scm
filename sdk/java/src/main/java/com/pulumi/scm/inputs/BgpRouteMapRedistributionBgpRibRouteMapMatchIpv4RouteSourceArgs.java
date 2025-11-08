@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceAr
     public static final BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgs Empty = new BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgs();
 
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv route source Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return BGP Root RIB Route maps match ipv route source Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceAr
     }
 
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv route source Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return BGP Root RIB Route maps match ipv route source Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceAr
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root RIB Route maps match ipv route source Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceAr
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root RIB Route maps match ipv route source Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceAr
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root RIB Route maps match ipv route source Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceAr
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root RIB Route maps match ipv route source Prefix list
          * 
          * @return builder
          * 

@@ -15,62 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionOspfRibRouteMapMatch {
     /**
-     * @return Address
+     * @return OSPF RIB Route maps address
      * 
      */
     private @Nullable BgpRouteMapRedistributionOspfRibRouteMapMatchAddress address;
     /**
-     * @return Interface
+     * @return OSPF RIB Route maps Interface
      * 
      */
     private @Nullable String interface_;
     /**
-     * @return Metric
+     * @return OSPF RIB Route maps Metric
      * 
      */
     private @Nullable Integer metric;
     /**
-     * @return Next hop
+     * @return OSPF RIB Route maps next*hop
      * 
      */
     private @Nullable BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop nextHop;
     /**
-     * @return Tag
+     * @return OSPF RIB Route maps tag
      * 
      */
     private @Nullable Integer tag;
 
     private BgpRouteMapRedistributionOspfRibRouteMapMatch() {}
     /**
-     * @return Address
+     * @return OSPF RIB Route maps address
      * 
      */
     public Optional<BgpRouteMapRedistributionOspfRibRouteMapMatchAddress> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * @return Interface
+     * @return OSPF RIB Route maps Interface
      * 
      */
     public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }
     /**
-     * @return Metric
+     * @return OSPF RIB Route maps Metric
      * 
      */
     public Optional<Integer> metric() {
         return Optional.ofNullable(this.metric);
     }
     /**
-     * @return Next hop
+     * @return OSPF RIB Route maps next*hop
      * 
      */
     public Optional<BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop> nextHop() {
         return Optional.ofNullable(this.nextHop);
     }
     /**
-     * @return Tag
+     * @return OSPF RIB Route maps tag
      * 
      */
     public Optional<Integer> tag() {

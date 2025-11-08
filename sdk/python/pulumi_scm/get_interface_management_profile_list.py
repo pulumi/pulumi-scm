@@ -165,6 +165,25 @@ def get_interface_management_profile_list(device: Optional[_builtins.str] = None
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # -----------------------------------------------------------------------------
+    # 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+    # This data source retrieves multiple Interface Management Profiles from SCM.
+    # -----------------------------------------------------------------------------
+    all_mgmt_profiles = scm.get_interface_management_profile_list(limit=50,
+        folder="All")
+    pulumi.export("fetchedMgmtProfileListSummary", {
+        "countOfProfilesFetched": all_mgmt_profiles.total,
+        "firstProfileName": all_mgmt_profiles.datas[0].name,
+        "data": all_mgmt_profiles.datas,
+    })
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +222,25 @@ def get_interface_management_profile_list_output(device: Optional[pulumi.Input[O
                                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInterfaceManagementProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # -----------------------------------------------------------------------------
+    # 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+    # This data source retrieves multiple Interface Management Profiles from SCM.
+    # -----------------------------------------------------------------------------
+    all_mgmt_profiles = scm.get_interface_management_profile_list(limit=50,
+        folder="All")
+    pulumi.export("fetchedMgmtProfileListSummary", {
+        "countOfProfilesFetched": all_mgmt_profiles.total,
+        "firstProfileName": all_mgmt_profiles.datas[0].name,
+        "data": all_mgmt_profiles.datas,
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.

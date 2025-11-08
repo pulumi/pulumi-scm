@@ -18,14 +18,14 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
     public static final BgpRouteMapRedistributionConnectedStaticArgs Empty = new BgpRouteMapRedistributionConnectedStaticArgs();
 
     /**
-     * Bgp
+     * Connected Static Root BGP
      * 
      */
     @Import(name="bgp")
     private @Nullable Output<BgpRouteMapRedistributionConnectedStaticBgpArgs> bgp;
 
     /**
-     * @return Bgp
+     * @return Connected Static Root BGP
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionConnectedStaticBgpArgs>> bgp() {
@@ -89,7 +89,7 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
         }
 
         /**
-         * @param bgp Bgp
+         * @param bgp Connected Static Root BGP
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class BgpRouteMapRedistributionConnectedStaticArgs extends com.pulu
         }
 
         /**
-         * @param bgp Bgp
+         * @param bgp Connected Static Root BGP
          * 
          * @return builder
          * 

@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,29 +19,29 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
     public static final Layer3SubinterfaceDdnsConfigArgs Empty = new Layer3SubinterfaceDdnsConfigArgs();
 
     /**
-     * Ddns cert profile
+     * Certificate profile
      * 
      */
-    @Import(name="ddnsCertProfile")
-    private @Nullable Output<String> ddnsCertProfile;
+    @Import(name="ddnsCertProfile", required=true)
+    private Output<String> ddnsCertProfile;
 
     /**
-     * @return Ddns cert profile
+     * @return Certificate profile
      * 
      */
-    public Optional<Output<String>> ddnsCertProfile() {
-        return Optional.ofNullable(this.ddnsCertProfile);
+    public Output<String> ddnsCertProfile() {
+        return this.ddnsCertProfile;
     }
 
     /**
-     * Ddns enabled
+     * Enable DDNS?
      * 
      */
     @Import(name="ddnsEnabled")
     private @Nullable Output<Boolean> ddnsEnabled;
 
     /**
-     * @return Ddns enabled
+     * @return Enable DDNS?
      * 
      */
     public Optional<Output<Boolean>> ddnsEnabled() {
@@ -51,26 +52,26 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
      * Ddns hostname
      * 
      */
-    @Import(name="ddnsHostname")
-    private @Nullable Output<String> ddnsHostname;
+    @Import(name="ddnsHostname", required=true)
+    private Output<String> ddnsHostname;
 
     /**
      * @return Ddns hostname
      * 
      */
-    public Optional<Output<String>> ddnsHostname() {
-        return Optional.ofNullable(this.ddnsHostname);
+    public Output<String> ddnsHostname() {
+        return this.ddnsHostname;
     }
 
     /**
-     * Ddns ip
+     * IP to register (static only)
      * 
      */
     @Import(name="ddnsIp")
     private @Nullable Output<String> ddnsIp;
 
     /**
-     * @return Ddns ip
+     * @return IP to register (static only)
      * 
      */
     public Optional<Output<String>> ddnsIp() {
@@ -78,14 +79,14 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
     }
 
     /**
-     * Ddns update interval
+     * Update interval (days)
      * 
      */
     @Import(name="ddnsUpdateInterval")
     private @Nullable Output<Integer> ddnsUpdateInterval;
 
     /**
-     * @return Ddns update interval
+     * @return Update interval (days)
      * 
      */
     public Optional<Output<Integer>> ddnsUpdateInterval() {
@@ -93,33 +94,33 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
     }
 
     /**
-     * Ddns vendor
+     * DDNS vendor
      * 
      */
-    @Import(name="ddnsVendor")
-    private @Nullable Output<String> ddnsVendor;
+    @Import(name="ddnsVendor", required=true)
+    private Output<String> ddnsVendor;
 
     /**
-     * @return Ddns vendor
+     * @return DDNS vendor
      * 
      */
-    public Optional<Output<String>> ddnsVendor() {
-        return Optional.ofNullable(this.ddnsVendor);
+    public Output<String> ddnsVendor() {
+        return this.ddnsVendor;
     }
 
     /**
-     * Ddns vendor config
+     * DDNS vendor
      * 
      */
-    @Import(name="ddnsVendorConfig")
-    private @Nullable Output<String> ddnsVendorConfig;
+    @Import(name="ddnsVendorConfig", required=true)
+    private Output<String> ddnsVendorConfig;
 
     /**
-     * @return Ddns vendor config
+     * @return DDNS vendor
      * 
      */
-    public Optional<Output<String>> ddnsVendorConfig() {
-        return Optional.ofNullable(this.ddnsVendorConfig);
+    public Output<String> ddnsVendorConfig() {
+        return this.ddnsVendorConfig;
     }
 
     private Layer3SubinterfaceDdnsConfigArgs() {}
@@ -153,18 +154,18 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsCertProfile Ddns cert profile
+         * @param ddnsCertProfile Certificate profile
          * 
          * @return builder
          * 
          */
-        public Builder ddnsCertProfile(@Nullable Output<String> ddnsCertProfile) {
+        public Builder ddnsCertProfile(Output<String> ddnsCertProfile) {
             $.ddnsCertProfile = ddnsCertProfile;
             return this;
         }
 
         /**
-         * @param ddnsCertProfile Ddns cert profile
+         * @param ddnsCertProfile Certificate profile
          * 
          * @return builder
          * 
@@ -174,7 +175,7 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsEnabled Ddns enabled
+         * @param ddnsEnabled Enable DDNS?
          * 
          * @return builder
          * 
@@ -185,7 +186,7 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsEnabled Ddns enabled
+         * @param ddnsEnabled Enable DDNS?
          * 
          * @return builder
          * 
@@ -200,7 +201,7 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ddnsHostname(@Nullable Output<String> ddnsHostname) {
+        public Builder ddnsHostname(Output<String> ddnsHostname) {
             $.ddnsHostname = ddnsHostname;
             return this;
         }
@@ -216,7 +217,7 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsIp Ddns ip
+         * @param ddnsIp IP to register (static only)
          * 
          * @return builder
          * 
@@ -227,7 +228,7 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsIp Ddns ip
+         * @param ddnsIp IP to register (static only)
          * 
          * @return builder
          * 
@@ -237,7 +238,7 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsUpdateInterval Ddns update interval
+         * @param ddnsUpdateInterval Update interval (days)
          * 
          * @return builder
          * 
@@ -248,7 +249,7 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsUpdateInterval Ddns update interval
+         * @param ddnsUpdateInterval Update interval (days)
          * 
          * @return builder
          * 
@@ -258,18 +259,18 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsVendor Ddns vendor
+         * @param ddnsVendor DDNS vendor
          * 
          * @return builder
          * 
          */
-        public Builder ddnsVendor(@Nullable Output<String> ddnsVendor) {
+        public Builder ddnsVendor(Output<String> ddnsVendor) {
             $.ddnsVendor = ddnsVendor;
             return this;
         }
 
         /**
-         * @param ddnsVendor Ddns vendor
+         * @param ddnsVendor DDNS vendor
          * 
          * @return builder
          * 
@@ -279,18 +280,18 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         /**
-         * @param ddnsVendorConfig Ddns vendor config
+         * @param ddnsVendorConfig DDNS vendor
          * 
          * @return builder
          * 
          */
-        public Builder ddnsVendorConfig(@Nullable Output<String> ddnsVendorConfig) {
+        public Builder ddnsVendorConfig(Output<String> ddnsVendorConfig) {
             $.ddnsVendorConfig = ddnsVendorConfig;
             return this;
         }
 
         /**
-         * @param ddnsVendorConfig Ddns vendor config
+         * @param ddnsVendorConfig DDNS vendor
          * 
          * @return builder
          * 
@@ -300,6 +301,18 @@ public final class Layer3SubinterfaceDdnsConfigArgs extends com.pulumi.resources
         }
 
         public Layer3SubinterfaceDdnsConfigArgs build() {
+            if ($.ddnsCertProfile == null) {
+                throw new MissingRequiredPropertyException("Layer3SubinterfaceDdnsConfigArgs", "ddnsCertProfile");
+            }
+            if ($.ddnsHostname == null) {
+                throw new MissingRequiredPropertyException("Layer3SubinterfaceDdnsConfigArgs", "ddnsHostname");
+            }
+            if ($.ddnsVendor == null) {
+                throw new MissingRequiredPropertyException("Layer3SubinterfaceDdnsConfigArgs", "ddnsVendor");
+            }
+            if ($.ddnsVendorConfig == null) {
+                throw new MissingRequiredPropertyException("Layer3SubinterfaceDdnsConfigArgs", "ddnsVendorConfig");
+            }
             return $;
         }
     }

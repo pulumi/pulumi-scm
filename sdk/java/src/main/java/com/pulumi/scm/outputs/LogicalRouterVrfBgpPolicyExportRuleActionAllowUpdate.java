@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
      * @return As path limit
      * 
      */
-    private @Nullable Double asPathLimit;
+    private @Nullable Integer asPathLimit;
     /**
      * @return Community
      * 
@@ -39,12 +39,12 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
      * @return Local preference
      * 
      */
-    private @Nullable Double localPreference;
+    private @Nullable Integer localPreference;
     /**
      * @return Med
      * 
      */
-    private @Nullable Double med;
+    private @Nullable Integer med;
     /**
      * @return Nexthop
      * 
@@ -68,7 +68,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
      * @return As path limit
      * 
      */
-    public Optional<Double> asPathLimit() {
+    public Optional<Integer> asPathLimit() {
         return Optional.ofNullable(this.asPathLimit);
     }
     /**
@@ -89,14 +89,14 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
      * @return Local preference
      * 
      */
-    public Optional<Double> localPreference() {
+    public Optional<Integer> localPreference() {
         return Optional.ofNullable(this.localPreference);
     }
     /**
      * @return Med
      * 
      */
-    public Optional<Double> med() {
+    public Optional<Integer> med() {
         return Optional.ofNullable(this.med);
     }
     /**
@@ -124,11 +124,11 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath asPath;
-        private @Nullable Double asPathLimit;
+        private @Nullable Integer asPathLimit;
         private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity community;
         private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity extendedCommunity;
-        private @Nullable Double localPreference;
-        private @Nullable Double med;
+        private @Nullable Integer localPreference;
+        private @Nullable Integer med;
         private @Nullable String nexthop;
         private @Nullable String origin;
         public Builder() {}
@@ -151,7 +151,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
             return this;
         }
         @CustomType.Setter
-        public Builder asPathLimit(@Nullable Double asPathLimit) {
+        public Builder asPathLimit(@Nullable Integer asPathLimit) {
 
             this.asPathLimit = asPathLimit;
             return this;
@@ -169,13 +169,13 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdate {
             return this;
         }
         @CustomType.Setter
-        public Builder localPreference(@Nullable Double localPreference) {
+        public Builder localPreference(@Nullable Integer localPreference) {
 
             this.localPreference = localPreference;
             return this;
         }
         @CustomType.Setter
-        public Builder med(@Nullable Double med) {
+        public Builder med(@Nullable Integer med) {
 
             this.med = med;
             return this;

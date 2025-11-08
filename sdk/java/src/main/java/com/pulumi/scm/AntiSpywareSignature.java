@@ -12,7 +12,6 @@ import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.AntiSpywareSignatureState;
 import com.pulumi.scm.outputs.AntiSpywareSignatureDefaultAction;
 import com.pulumi.scm.outputs.AntiSpywareSignatureSignature;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -190,14 +189,14 @@ public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {
      * threat id range \n\n and \n\n
      * 
      */
-    @Export(name="threatId", refs={Integer.class}, tree="[0]")
-    private Output<Integer> threatId;
+    @Export(name="threatId", refs={String.class}, tree="[0]")
+    private Output<String> threatId;
 
     /**
      * @return threat id range \n\n and \n\n
      * 
      */
-    public Output<Integer> threatId() {
+    public Output<String> threatId() {
         return this.threatId;
     }
     /**

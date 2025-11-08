@@ -11,7 +11,7 @@ import com.pulumi.scm.inputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfv3AreaInterfaceNeighborArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -73,13 +73,13 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="instanceId")
-    private @Nullable Output<Double> instanceId;
+    private @Nullable Output<Integer> instanceId;
 
     /**
      * @return Instance id
      * 
      */
-    public Optional<Output<Double>> instanceId() {
+    public Optional<Output<Integer>> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
 
@@ -103,13 +103,13 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="metric")
-    private @Nullable Output<Double> metric;
+    private @Nullable Output<Integer> metric;
 
     /**
      * @return Metric
      * 
      */
-    public Optional<Output<Double>> metric() {
+    public Optional<Output<Integer>> metric() {
         return Optional.ofNullable(this.metric);
     }
 
@@ -178,13 +178,13 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
      * 
      */
     @Import(name="priority")
-    private @Nullable Output<Double> priority;
+    private @Nullable Output<Integer> priority;
 
     /**
      * @return Priority
      * 
      */
-    public Optional<Output<Double>> priority() {
+    public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
 
@@ -323,7 +323,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder instanceId(@Nullable Output<Double> instanceId) {
+        public Builder instanceId(@Nullable Output<Integer> instanceId) {
             $.instanceId = instanceId;
             return this;
         }
@@ -334,7 +334,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder instanceId(Double instanceId) {
+        public Builder instanceId(Integer instanceId) {
             return instanceId(Output.of(instanceId));
         }
 
@@ -365,7 +365,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder metric(@Nullable Output<Double> metric) {
+        public Builder metric(@Nullable Output<Integer> metric) {
             $.metric = metric;
             return this;
         }
@@ -376,7 +376,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             return metric(Output.of(metric));
         }
 
@@ -480,7 +480,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder priority(@Nullable Output<Double> priority) {
+        public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
@@ -491,7 +491,7 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceArgs extends com.pulumi.re
          * @return builder
          * 
          */
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 

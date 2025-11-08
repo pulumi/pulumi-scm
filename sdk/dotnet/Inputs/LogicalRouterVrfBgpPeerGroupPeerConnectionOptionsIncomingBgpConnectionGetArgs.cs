@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Remote port
         /// </summary>
         [Input("remotePort")]
-        public Input<double>? RemotePort { get; set; }
+        public Input<int>? RemotePort { get; set; }
 
         public LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionGetArgs()
         {

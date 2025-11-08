@@ -12,6 +12,178 @@ import (
 )
 
 // DecryptionProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewDecryptionProfile(ctx, "scm_decryption_profile_base", &scm.DecryptionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("dp_base"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionProfile(ctx, "scm_decryption_profile_forward_proxy", &scm.DecryptionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("dp_forward_proxy"),
+//				SslForwardProxy: &scm.DecryptionProfileSslForwardProxyArgs{
+//					AutoIncludeAltname:            pulumi.Bool(false),
+//					BlockClientCert:               pulumi.Bool(true),
+//					BlockExpiredCertificate:       pulumi.Bool(true),
+//					BlockTimeoutCert:              pulumi.Bool(true),
+//					BlockTls13DowngradeNoResource: pulumi.Bool(false),
+//					BlockUnknownCert:              pulumi.Bool(false),
+//					BlockUnsupportedCipher:        pulumi.Bool(true),
+//					BlockUnsupportedVersion:       pulumi.Bool(true),
+//					BlockUntrustedIssuer:          pulumi.Bool(true),
+//					RestrictCertExts:              pulumi.Bool(false),
+//					StripAlpn:                     pulumi.Bool(true),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionProfile(ctx, "scm_decryption_profile_inbound_proxy", &scm.DecryptionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("dp_inbound_proxy"),
+//				SslInboundProxy: &scm.DecryptionProfileSslInboundProxyArgs{
+//					BlockIfHsmUnavailable:   pulumi.Bool(true),
+//					BlockIfNoResource:       pulumi.Bool(true),
+//					BlockUnsupportedCipher:  pulumi.Bool(false),
+//					BlockUnsupportedVersion: pulumi.Bool(true),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionProfile(ctx, "scm_decryption_profile_no_proxy", &scm.DecryptionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("dp_no_proxy"),
+//				SslNoProxy: &scm.DecryptionProfileSslNoProxyArgs{
+//					BlockExpiredCertificate: pulumi.Bool(true),
+//					BlockUntrustedIssuer:    pulumi.Bool(false),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionProfile(ctx, "scm_decryption_profile_protocol_settings", &scm.DecryptionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("dp_protocol_settings"),
+//				SslProtocolSettings: &scm.DecryptionProfileSslProtocolSettingsArgs{
+//					AuthAlgoMd5:             pulumi.Bool(true),
+//					AuthAlgoSha1:            pulumi.Bool(true),
+//					AuthAlgoSha256:          pulumi.Bool(true),
+//					AuthAlgoSha384:          pulumi.Bool(false),
+//					EncAlgo3des:             pulumi.Bool(false),
+//					EncAlgoAes128Cbc:        pulumi.Bool(false),
+//					EncAlgoAes128Gcm:        pulumi.Bool(true),
+//					EncAlgoAes256Cbc:        pulumi.Bool(false),
+//					EncAlgoAes256Gcm:        pulumi.Bool(true),
+//					EncAlgoChacha20Poly1305: pulumi.Bool(false),
+//					EncAlgoRc4:              pulumi.Bool(false),
+//					KeyxchgAlgoDhe:          pulumi.Bool(true),
+//					KeyxchgAlgoEcdhe:        pulumi.Bool(true),
+//					KeyxchgAlgoRsa:          pulumi.Bool(false),
+//					MaxVersion:              pulumi.String("max"),
+//					MinVersion:              pulumi.String("tls1-2"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionProfile(ctx, "mixed_decryption_profile", &scm.DecryptionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("mixed_dp"),
+//				SslForwardProxy: &scm.DecryptionProfileSslForwardProxyArgs{
+//					AutoIncludeAltname:      pulumi.Bool(true),
+//					BlockClientCert:         pulumi.Bool(true),
+//					BlockExpiredCertificate: pulumi.Bool(false),
+//					RestrictCertExts:        pulumi.Bool(false),
+//					StripAlpn:               pulumi.Bool(true),
+//				},
+//				SslInboundProxy: &scm.DecryptionProfileSslInboundProxyArgs{
+//					BlockIfHsmUnavailable:   pulumi.Bool(true),
+//					BlockIfNoResource:       pulumi.Bool(true),
+//					BlockUnsupportedCipher:  pulumi.Bool(true),
+//					BlockUnsupportedVersion: pulumi.Bool(true),
+//				},
+//				SslProtocolSettings: &scm.DecryptionProfileSslProtocolSettingsArgs{
+//					AuthAlgoMd5:      pulumi.Bool(true),
+//					AuthAlgoSha1:     pulumi.Bool(true),
+//					AuthAlgoSha256:   pulumi.Bool(false),
+//					AuthAlgoSha384:   pulumi.Bool(true),
+//					EncAlgo3des:      pulumi.Bool(true),
+//					EncAlgoRc4:       pulumi.Bool(true),
+//					KeyxchgAlgoDhe:   pulumi.Bool(false),
+//					KeyxchgAlgoEcdhe: pulumi.Bool(false),
+//					MaxVersion:       pulumi.String("tls1-3"),
+//					MinVersion:       pulumi.String("tls1-1"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDecryptionProfile(ctx, "full_mixed_decryption_profile", &scm.DecryptionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("full_mixed_dp"),
+//				SslForwardProxy: &scm.DecryptionProfileSslForwardProxyArgs{
+//					AutoIncludeAltname:      pulumi.Bool(true),
+//					BlockClientCert:         pulumi.Bool(true),
+//					BlockExpiredCertificate: pulumi.Bool(false),
+//					BlockTimeoutCert:        pulumi.Bool(true),
+//					BlockUnknownCert:        pulumi.Bool(false),
+//					BlockUnsupportedCipher:  pulumi.Bool(true),
+//					BlockUntrustedIssuer:    pulumi.Bool(false),
+//					RestrictCertExts:        pulumi.Bool(false),
+//					StripAlpn:               pulumi.Bool(true),
+//				},
+//				SslInboundProxy: &scm.DecryptionProfileSslInboundProxyArgs{
+//					BlockIfHsmUnavailable:   pulumi.Bool(true),
+//					BlockIfNoResource:       pulumi.Bool(false),
+//					BlockUnsupportedCipher:  pulumi.Bool(true),
+//					BlockUnsupportedVersion: pulumi.Bool(false),
+//				},
+//				SslNoProxy: &scm.DecryptionProfileSslNoProxyArgs{
+//					BlockExpiredCertificate: pulumi.Bool(false),
+//					BlockUntrustedIssuer:    pulumi.Bool(true),
+//				},
+//				SslProtocolSettings: &scm.DecryptionProfileSslProtocolSettingsArgs{
+//					AuthAlgoMd5:      pulumi.Bool(false),
+//					AuthAlgoSha1:     pulumi.Bool(true),
+//					AuthAlgoSha256:   pulumi.Bool(false),
+//					AuthAlgoSha384:   pulumi.Bool(true),
+//					EncAlgo3des:      pulumi.Bool(false),
+//					EncAlgoAes128Gcm: pulumi.Bool(true),
+//					EncAlgoAes256Cbc: pulumi.Bool(false),
+//					EncAlgoAes256Gcm: pulumi.Bool(true),
+//					EncAlgoRc4:       pulumi.Bool(true),
+//					KeyxchgAlgoDhe:   pulumi.Bool(false),
+//					KeyxchgAlgoEcdhe: pulumi.Bool(true),
+//					KeyxchgAlgoRsa:   pulumi.Bool(false),
+//					MaxVersion:       pulumi.String("tls1-0"),
+//					MinVersion:       pulumi.String("sslv3"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type DecryptionProfile struct {
 	pulumi.CustomResourceState
 

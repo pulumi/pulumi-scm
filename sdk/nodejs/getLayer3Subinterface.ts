@@ -8,6 +8,27 @@ import * as utilities from "./utilities";
 
 /**
  * Layer3Subinterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up layer3 sub-interface by its ID.
+ * const scmL3SubinterfaceDs = scm.getLayer3Subinterface({
+ *     id: "88f730d1-6577-492b-88a6-73d4a513dc76",
+ * });
+ * export const layer3SubinterfaceDataSourceResults = {
+ *     id: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.id),
+ *     name: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.name),
+ *     comment: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.comment),
+ *     ip: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.ips),
+ *     tag: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.tag),
+ *     parentInterface: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.parentInterface),
+ *     folder: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.folder),
+ * };
+ * ```
  */
 export function getLayer3Subinterface(args: GetLayer3SubinterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetLayer3SubinterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -52,7 +73,7 @@ export interface GetLayer3SubinterfaceResult {
      */
     readonly device: string;
     /**
-     * Dhcp client
+     * Layer3 sub interfaces DHCP Client Object
      */
     readonly dhcpClient: outputs.GetLayer3SubinterfaceDhcpClient;
     /**
@@ -68,9 +89,9 @@ export interface GetLayer3SubinterfaceResult {
      */
     readonly interfaceManagementProfile: string;
     /**
-     * Ip
+     * L3 sub-interface IP Parent
      */
-    readonly ips: string[];
+    readonly ips: outputs.GetLayer3SubinterfaceIp[];
     /**
      * MTU
      */
@@ -95,6 +116,27 @@ export interface GetLayer3SubinterfaceResult {
 }
 /**
  * Layer3Subinterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up layer3 sub-interface by its ID.
+ * const scmL3SubinterfaceDs = scm.getLayer3Subinterface({
+ *     id: "88f730d1-6577-492b-88a6-73d4a513dc76",
+ * });
+ * export const layer3SubinterfaceDataSourceResults = {
+ *     id: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.id),
+ *     name: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.name),
+ *     comment: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.comment),
+ *     ip: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.ips),
+ *     tag: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.tag),
+ *     parentInterface: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.parentInterface),
+ *     folder: scmL3SubinterfaceDs.then(scmL3SubinterfaceDs => scmL3SubinterfaceDs.folder),
+ * };
+ * ```
  */
 export function getLayer3SubinterfaceOutput(args: GetLayer3SubinterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLayer3SubinterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

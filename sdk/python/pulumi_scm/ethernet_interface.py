@@ -37,11 +37,11 @@ class EthernetInterfaceArgs:
         """
         The set of arguments for constructing a EthernetInterface resource.
         :param pulumi.Input[_builtins.str] comment: Interface description
-        :param pulumi.Input[_builtins.str] default_value: Default value
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input['EthernetInterfaceLayer2Args'] layer2: Layer2
-        :param pulumi.Input['EthernetInterfaceLayer3Args'] layer3: Layer3
+        :param pulumi.Input['EthernetInterfaceLayer3Args'] layer3: Ethernet Interface Layer 3 configuration
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
         :param pulumi.Input[_builtins.str] link_state: Link state
@@ -93,7 +93,7 @@ class EthernetInterfaceArgs:
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default value
+        Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
@@ -141,7 +141,7 @@ class EthernetInterfaceArgs:
     @pulumi.getter
     def layer3(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3Args']]:
         """
-        Layer3
+        Ethernet Interface Layer 3 configuration
         """
         return pulumi.get(self, "layer3")
 
@@ -255,12 +255,12 @@ class _EthernetInterfaceState:
         """
         Input properties used for looking up and filtering EthernetInterface resources.
         :param pulumi.Input[_builtins.str] comment: Interface description
-        :param pulumi.Input[_builtins.str] default_value: Default value
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input['EthernetInterfaceLayer2Args'] layer2: Layer2
-        :param pulumi.Input['EthernetInterfaceLayer3Args'] layer3: Layer3
+        :param pulumi.Input['EthernetInterfaceLayer3Args'] layer3: Ethernet Interface Layer 3 configuration
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
         :param pulumi.Input[_builtins.str] link_state: Link state
@@ -316,7 +316,7 @@ class _EthernetInterfaceState:
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Default value
+        Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
@@ -376,7 +376,7 @@ class _EthernetInterfaceState:
     @pulumi.getter
     def layer3(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3Args']]:
         """
-        Layer3
+        Ethernet Interface Layer 3 configuration
         """
         return pulumi.get(self, "layer3")
 
@@ -501,14 +501,16 @@ class EthernetInterface(pulumi.CustomResource):
         """
         EthernetInterface resource
 
+        ## Example Usage
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] comment: Interface description
-        :param pulumi.Input[_builtins.str] default_value: Default value
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']] layer2: Layer2
-        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Layer3
+        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Ethernet Interface Layer 3 configuration
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
         :param pulumi.Input[_builtins.str] link_state: Link state
@@ -525,6 +527,8 @@ class EthernetInterface(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         EthernetInterface resource
+
+        ## Example Usage
 
         :param str resource_name: The name of the resource.
         :param EthernetInterfaceArgs args: The arguments to use to populate this resource's properties.
@@ -613,12 +617,12 @@ class EthernetInterface(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] comment: Interface description
-        :param pulumi.Input[_builtins.str] default_value: Default value
+        :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Union['EthernetInterfaceLayer2Args', 'EthernetInterfaceLayer2ArgsDict']] layer2: Layer2
-        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Layer3
+        :param pulumi.Input[Union['EthernetInterfaceLayer3Args', 'EthernetInterfaceLayer3ArgsDict']] layer3: Ethernet Interface Layer 3 configuration
         :param pulumi.Input[_builtins.str] link_duplex: Link duplex
         :param pulumi.Input[_builtins.str] link_speed: Link speed
         :param pulumi.Input[_builtins.str] link_state: Link state
@@ -660,7 +664,7 @@ class EthernetInterface(pulumi.CustomResource):
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Default value
+        Default interface assignment
         """
         return pulumi.get(self, "default_value")
 
@@ -700,13 +704,13 @@ class EthernetInterface(pulumi.CustomResource):
     @pulumi.getter
     def layer3(self) -> pulumi.Output['outputs.EthernetInterfaceLayer3']:
         """
-        Layer3
+        Ethernet Interface Layer 3 configuration
         """
         return pulumi.get(self, "layer3")
 
     @_builtins.property
     @pulumi.getter(name="linkDuplex")
-    def link_duplex(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def link_duplex(self) -> pulumi.Output[_builtins.str]:
         """
         Link duplex
         """
@@ -714,7 +718,7 @@ class EthernetInterface(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="linkSpeed")
-    def link_speed(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def link_speed(self) -> pulumi.Output[_builtins.str]:
         """
         Link speed
         """
@@ -722,7 +726,7 @@ class EthernetInterface(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="linkState")
-    def link_state(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def link_state(self) -> pulumi.Output[_builtins.str]:
         """
         Link state
         """
@@ -738,7 +742,7 @@ class EthernetInterface(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def poe(self) -> pulumi.Output[Optional['outputs.EthernetInterfacePoe']]:
+    def poe(self) -> pulumi.Output['outputs.EthernetInterfacePoe']:
         """
         Poe
         """
@@ -754,7 +758,7 @@ class EthernetInterface(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def tap(self) -> pulumi.Output['outputs.EthernetInterfaceTap']:
+    def tap(self) -> pulumi.Output[Optional['outputs.EthernetInterfaceTap']]:
         """
         Tap
         """

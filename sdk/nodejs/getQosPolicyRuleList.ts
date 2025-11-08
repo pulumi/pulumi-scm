@@ -8,9 +8,25 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedRulesList = scm.getQosPolicyRuleList({
+ *     folder: "All",
+ *     offset: 10,
+ *     position: "pre",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: pagedRulesList.then(pagedRulesList => pagedRulesList.total),
+ *     firstRuleName: pagedRulesList.then(pagedRulesList => pagedRulesList.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getQosPolicyRuleList(args?: GetQosPolicyRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetQosPolicyRuleListResult> {
-    args = args || {};
+export function getQosPolicyRuleList(args: GetQosPolicyRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetQosPolicyRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", {
         "device": args.device,
@@ -18,6 +34,7 @@ export function getQosPolicyRuleList(args?: GetQosPolicyRuleListArgs, opts?: pul
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -46,6 +63,10 @@ export interface GetQosPolicyRuleListArgs {
      * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The relative position of the rule
+     */
+    position: string;
     /**
      * The snippet of the item.
      */
@@ -85,6 +106,10 @@ export interface GetQosPolicyRuleListResult {
      */
     readonly offset?: number;
     /**
+     * The relative position of the rule
+     */
+    readonly position: string;
+    /**
      * The snippet of the item.
      */
     readonly snippet?: string;
@@ -96,9 +121,25 @@ export interface GetQosPolicyRuleListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const pagedRulesList = scm.getQosPolicyRuleList({
+ *     folder: "All",
+ *     offset: 10,
+ *     position: "pre",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: pagedRulesList.then(pagedRulesList => pagedRulesList.total),
+ *     firstRuleName: pagedRulesList.then(pagedRulesList => pagedRulesList.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getQosPolicyRuleListOutput(args?: GetQosPolicyRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosPolicyRuleListResult> {
-    args = args || {};
+export function getQosPolicyRuleListOutput(args: GetQosPolicyRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetQosPolicyRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getQosPolicyRuleList:getQosPolicyRuleList", {
         "device": args.device,
@@ -106,6 +147,7 @@ export function getQosPolicyRuleListOutput(args?: GetQosPolicyRuleListOutputArgs
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -134,6 +176,10 @@ export interface GetQosPolicyRuleListOutputArgs {
      * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The relative position of the rule
+     */
+    position: pulumi.Input<string>;
     /**
      * The snippet of the item.
      */

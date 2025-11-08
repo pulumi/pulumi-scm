@@ -11,6 +11,37 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// VlanInterface resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a vlan interface used as parent-interface for subsequent examples
+    ///     //
+    ///     var scmVlanInterfaceIpv4 = new Scm.VlanInterface("scm_vlan_interface_ipv4", new()
+    ///     {
+    ///         Name = "$scm_vlan_interface_ipv4",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         VlanTag = "1234",
+    ///         Ips = new[]
+    ///         {
+    ///             new Scm.Inputs.VlanInterfaceIpArgs
+    ///             {
+    ///                 Name = "198.18.1.1/24",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/vlanInterface:VlanInterface")]
     public partial class VlanInterface : global::Pulumi.CustomResource
@@ -31,10 +62,10 @@ namespace Pulumi.Scm
         /// Dynamic DNS configuration specific to the Vlan Interfaces.
         /// </summary>
         [Output("ddnsConfig")]
-        public Output<Outputs.VlanInterfaceDdnsConfig?> DdnsConfig { get; private set; } = null!;
+        public Output<Outputs.VlanInterfaceDdnsConfig> DdnsConfig { get; private set; } = null!;
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Output("defaultValue")]
         public Output<string?> DefaultValue { get; private set; } = null!;
@@ -46,10 +77,10 @@ namespace Pulumi.Scm
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// Dhcp client
+        /// Vlan interfaces DHCP Client Object
         /// </summary>
         [Output("dhcpClient")]
-        public Output<Outputs.VlanInterfaceDhcpClient?> DhcpClient { get; private set; } = null!;
+        public Output<Outputs.VlanInterfaceDhcpClient> DhcpClient { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
@@ -64,16 +95,16 @@ namespace Pulumi.Scm
         public Output<string?> InterfaceManagementProfile { get; private set; } = null!;
 
         /// <summary>
-        /// Ip
+        /// VLAN Interface IP Parent
         /// </summary>
         [Output("ips")]
-        public Output<ImmutableArray<string>> Ips { get; private set; } = null!;
+        public Output<ImmutableArray<Outputs.VlanInterfaceIp>> Ips { get; private set; } = null!;
 
         /// <summary>
         /// MTU
         /// </summary>
         [Output("mtu")]
-        public Output<double?> Mtu { get; private set; } = null!;
+        public Output<int?> Mtu { get; private set; } = null!;
 
         /// <summary>
         /// L3 sub-interface name
@@ -91,10 +122,10 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
         [Output("vlanTag")]
-        public Output<double?> VlanTag { get; private set; } = null!;
+        public Output<string?> VlanTag { get; private set; } = null!;
 
 
         /// <summary>
@@ -167,7 +198,7 @@ namespace Pulumi.Scm
         public Input<Inputs.VlanInterfaceDdnsConfigArgs>? DdnsConfig { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -179,7 +210,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Dhcp client
+        /// Vlan interfaces DHCP Client Object
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.VlanInterfaceDhcpClientArgs>? DhcpClient { get; set; }
@@ -197,14 +228,14 @@ namespace Pulumi.Scm
         public Input<string>? InterfaceManagementProfile { get; set; }
 
         [Input("ips")]
-        private InputList<string>? _ips;
+        private InputList<Inputs.VlanInterfaceIpArgs>? _ips;
 
         /// <summary>
-        /// Ip
+        /// VLAN Interface IP Parent
         /// </summary>
-        public InputList<string> Ips
+        public InputList<Inputs.VlanInterfaceIpArgs> Ips
         {
-            get => _ips ?? (_ips = new InputList<string>());
+            get => _ips ?? (_ips = new InputList<Inputs.VlanInterfaceIpArgs>());
             set => _ips = value;
         }
 
@@ -212,7 +243,7 @@ namespace Pulumi.Scm
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
         /// L3 sub-interface name
@@ -227,10 +258,10 @@ namespace Pulumi.Scm
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
         [Input("vlanTag")]
-        public Input<double>? VlanTag { get; set; }
+        public Input<string>? VlanTag { get; set; }
 
         public VlanInterfaceArgs()
         {
@@ -265,7 +296,7 @@ namespace Pulumi.Scm
         public Input<Inputs.VlanInterfaceDdnsConfigGetArgs>? DdnsConfig { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -277,7 +308,7 @@ namespace Pulumi.Scm
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// Dhcp client
+        /// Vlan interfaces DHCP Client Object
         /// </summary>
         [Input("dhcpClient")]
         public Input<Inputs.VlanInterfaceDhcpClientGetArgs>? DhcpClient { get; set; }
@@ -295,14 +326,14 @@ namespace Pulumi.Scm
         public Input<string>? InterfaceManagementProfile { get; set; }
 
         [Input("ips")]
-        private InputList<string>? _ips;
+        private InputList<Inputs.VlanInterfaceIpGetArgs>? _ips;
 
         /// <summary>
-        /// Ip
+        /// VLAN Interface IP Parent
         /// </summary>
-        public InputList<string> Ips
+        public InputList<Inputs.VlanInterfaceIpGetArgs> Ips
         {
-            get => _ips ?? (_ips = new InputList<string>());
+            get => _ips ?? (_ips = new InputList<Inputs.VlanInterfaceIpGetArgs>());
             set => _ips = value;
         }
 
@@ -310,7 +341,7 @@ namespace Pulumi.Scm
         /// MTU
         /// </summary>
         [Input("mtu")]
-        public Input<double>? Mtu { get; set; }
+        public Input<int>? Mtu { get; set; }
 
         /// <summary>
         /// L3 sub-interface name
@@ -328,10 +359,10 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
         [Input("vlanTag")]
-        public Input<double>? VlanTag { get; set; }
+        public Input<string>? VlanTag { get; set; }
 
         public VlanInterfaceState()
         {

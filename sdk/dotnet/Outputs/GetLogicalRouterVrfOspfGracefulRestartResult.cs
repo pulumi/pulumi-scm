@@ -20,7 +20,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Grace period
         /// </summary>
-        public readonly double GracePeriod;
+        public readonly int GracePeriod;
         /// <summary>
         /// Helper enable
         /// </summary>
@@ -28,29 +28,29 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Max neighbor restart time
         /// </summary>
-        public readonly double MaxNeighborRestartTime;
+        public readonly int MaxNeighborRestartTime;
         /// <summary>
         /// Strict l s a checking
         /// </summary>
-        public readonly bool StrictLSAChecking;
+        public readonly bool StrictLsaChecking;
 
         [OutputConstructor]
         private GetLogicalRouterVrfOspfGracefulRestartResult(
             bool enable,
 
-            double gracePeriod,
+            int gracePeriod,
 
             bool helperEnable,
 
-            double maxNeighborRestartTime,
+            int maxNeighborRestartTime,
 
-            bool strictLSAChecking)
+            bool strictLsaChecking)
         {
             Enable = enable;
             GracePeriod = gracePeriod;
             HelperEnable = helperEnable;
             MaxNeighborRestartTime = maxNeighborRestartTime;
-            StrictLSAChecking = strictLSAChecking;
+            StrictLsaChecking = strictLsaChecking;
         }
     }
 }

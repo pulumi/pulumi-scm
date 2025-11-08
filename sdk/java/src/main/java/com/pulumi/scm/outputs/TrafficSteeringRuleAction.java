@@ -5,7 +5,6 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.TrafficSteeringRuleActionForward;
-import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,11 +16,6 @@ public final class TrafficSteeringRuleAction {
      * 
      */
     private @Nullable TrafficSteeringRuleActionForward forward;
-    /**
-     * @return No pbf
-     * 
-     */
-    private @Nullable String noPbf;
 
     private TrafficSteeringRuleAction() {}
     /**
@@ -30,13 +24,6 @@ public final class TrafficSteeringRuleAction {
      */
     public Optional<TrafficSteeringRuleActionForward> forward() {
         return Optional.ofNullable(this.forward);
-    }
-    /**
-     * @return No pbf
-     * 
-     */
-    public Optional<String> noPbf() {
-        return Optional.ofNullable(this.noPbf);
     }
 
     public static Builder builder() {
@@ -49,12 +36,10 @@ public final class TrafficSteeringRuleAction {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable TrafficSteeringRuleActionForward forward;
-        private @Nullable String noPbf;
         public Builder() {}
         public Builder(TrafficSteeringRuleAction defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.forward = defaults.forward;
-    	      this.noPbf = defaults.noPbf;
         }
 
         @CustomType.Setter
@@ -63,16 +48,9 @@ public final class TrafficSteeringRuleAction {
             this.forward = forward;
             return this;
         }
-        @CustomType.Setter
-        public Builder noPbf(@Nullable String noPbf) {
-
-            this.noPbf = noPbf;
-            return this;
-        }
         public TrafficSteeringRuleAction build() {
             final var _resultValue = new TrafficSteeringRuleAction();
             _resultValue.forward = forward;
-            _resultValue.noPbf = noPbf;
             return _resultValue;
         }
     }

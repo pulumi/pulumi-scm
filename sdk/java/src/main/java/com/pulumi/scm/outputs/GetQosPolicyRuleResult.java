@@ -48,6 +48,16 @@ public final class GetQosPolicyRuleResult {
      */
     private String name;
     /**
+     * @return The relative position of the rule
+     * 
+     */
+    private String position;
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    private String relativePosition;
+    /**
      * @return Schedule
      * 
      */
@@ -57,6 +67,11 @@ public final class GetQosPolicyRuleResult {
      * 
      */
     private String snippet;
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    private String targetRule;
     private String tfid;
 
     private GetQosPolicyRuleResult() {}
@@ -110,6 +125,20 @@ public final class GetQosPolicyRuleResult {
         return this.name;
     }
     /**
+     * @return The relative position of the rule
+     * 
+     */
+    public String position() {
+        return this.position;
+    }
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public String relativePosition() {
+        return this.relativePosition;
+    }
+    /**
      * @return Schedule
      * 
      */
@@ -122,6 +151,13 @@ public final class GetQosPolicyRuleResult {
      */
     public String snippet() {
         return this.snippet;
+    }
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public String targetRule() {
+        return this.targetRule;
     }
     public String tfid() {
         return this.tfid;
@@ -143,8 +179,11 @@ public final class GetQosPolicyRuleResult {
         private String folder;
         private String id;
         private String name;
+        private String position;
+        private String relativePosition;
         private String schedule;
         private String snippet;
+        private String targetRule;
         private String tfid;
         public Builder() {}
         public Builder(GetQosPolicyRuleResult defaults) {
@@ -156,8 +195,11 @@ public final class GetQosPolicyRuleResult {
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.position = defaults.position;
+    	      this.relativePosition = defaults.relativePosition;
     	      this.schedule = defaults.schedule;
     	      this.snippet = defaults.snippet;
+    	      this.targetRule = defaults.targetRule;
     	      this.tfid = defaults.tfid;
         }
 
@@ -218,6 +260,22 @@ public final class GetQosPolicyRuleResult {
             return this;
         }
         @CustomType.Setter
+        public Builder position(String position) {
+            if (position == null) {
+              throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "position");
+            }
+            this.position = position;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder relativePosition(String relativePosition) {
+            if (relativePosition == null) {
+              throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "relativePosition");
+            }
+            this.relativePosition = relativePosition;
+            return this;
+        }
+        @CustomType.Setter
         public Builder schedule(String schedule) {
             if (schedule == null) {
               throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "schedule");
@@ -231,6 +289,14 @@ public final class GetQosPolicyRuleResult {
               throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "snippet");
             }
             this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder targetRule(String targetRule) {
+            if (targetRule == null) {
+              throw new MissingRequiredPropertyException("GetQosPolicyRuleResult", "targetRule");
+            }
+            this.targetRule = targetRule;
             return this;
         }
         @CustomType.Setter
@@ -250,8 +316,11 @@ public final class GetQosPolicyRuleResult {
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.position = position;
+            _resultValue.relativePosition = relativePosition;
             _resultValue.schedule = schedule;
             _resultValue.snippet = snippet;
+            _resultValue.targetRule = targetRule;
             _resultValue.tfid = tfid;
             return _resultValue;
         }

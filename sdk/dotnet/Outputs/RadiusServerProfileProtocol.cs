@@ -16,41 +16,41 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// C h a p
         /// </summary>
-        public readonly string? CHAP;
+        public readonly Outputs.RadiusServerProfileProtocolChap? Chap;
         /// <summary>
         /// E a p t t l s with p a p
         /// </summary>
-        public readonly Outputs.RadiusServerProfileProtocolEAPTTLSWithPAP? EAPTTLSWithPAP;
+        public readonly Outputs.RadiusServerProfileProtocolEapTtlsWithPap? EapTtlsWithPap;
         /// <summary>
         /// P a p
         /// </summary>
-        public readonly string? PAP;
+        public readonly Outputs.RadiusServerProfileProtocolPap? Pap;
         /// <summary>
         /// P e a p m s c h a pv2
         /// </summary>
-        public readonly Outputs.RadiusServerProfileProtocolPEAPMSCHAPv2? PEAPMSCHAPv2;
+        public readonly Outputs.RadiusServerProfileProtocolPeapMschaPv2? PeapMschaPv2;
         /// <summary>
         /// P e a p with g t c
         /// </summary>
-        public readonly Outputs.RadiusServerProfileProtocolPEAPWithGTC? PEAPWithGTC;
+        public readonly Outputs.RadiusServerProfileProtocolPeapWithGtc? PeapWithGtc;
 
         [OutputConstructor]
         private RadiusServerProfileProtocol(
-            string? cHAP,
+            Outputs.RadiusServerProfileProtocolChap? chap,
 
-            Outputs.RadiusServerProfileProtocolEAPTTLSWithPAP? eAPTTLSWithPAP,
+            Outputs.RadiusServerProfileProtocolEapTtlsWithPap? eapTtlsWithPap,
 
-            string? pAP,
+            Outputs.RadiusServerProfileProtocolPap? pap,
 
-            Outputs.RadiusServerProfileProtocolPEAPMSCHAPv2? pEAPMSCHAPv2,
+            Outputs.RadiusServerProfileProtocolPeapMschaPv2? peapMschaPv2,
 
-            Outputs.RadiusServerProfileProtocolPEAPWithGTC? pEAPWithGTC)
+            Outputs.RadiusServerProfileProtocolPeapWithGtc? peapWithGtc)
         {
-            CHAP = cHAP;
-            EAPTTLSWithPAP = eAPTTLSWithPAP;
-            PAP = pAP;
-            PEAPMSCHAPv2 = pEAPMSCHAPv2;
-            PEAPWithGTC = pEAPWithGTC;
+            Chap = chap;
+            EapTtlsWithPap = eapTtlsWithPap;
+            Pap = pap;
+            PeapMschaPv2 = peapMschaPv2;
+            PeapWithGtc = peapWithGtc;
         }
     }
 }

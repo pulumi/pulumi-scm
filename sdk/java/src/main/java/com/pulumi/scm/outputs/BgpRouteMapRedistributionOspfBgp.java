@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionOspfBgp {
     /**
-     * @return Route maps
+     * @return OSPF BGP Route maps
      * 
      */
     private @Nullable List<BgpRouteMapRedistributionOspfBgpRouteMap> routeMaps;
 
     private BgpRouteMapRedistributionOspfBgp() {}
     /**
-     * @return Route maps
+     * @return OSPF BGP Route maps
      * 
      */
     public List<BgpRouteMapRedistributionOspfBgpRouteMap> routeMaps() {

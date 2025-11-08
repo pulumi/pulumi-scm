@@ -13,18 +13,90 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all logical routers
+        ///     var allLogicalRouters = Scm.GetLogicalRouterList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///         Limit = 100,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogicalRouterList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLogicalRouterListResult> InvokeAsync(GetLogicalRouterListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLogicalRouterListResult>("scm:index/getLogicalRouterList:getLogicalRouterList", args ?? new GetLogicalRouterListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all logical routers
+        ///     var allLogicalRouters = Scm.GetLogicalRouterList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///         Limit = 100,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogicalRouterList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogicalRouterListResult> Invoke(GetLogicalRouterListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogicalRouterListResult>("scm:index/getLogicalRouterList:getLogicalRouterList", args ?? new GetLogicalRouterListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all logical routers
+        ///     var allLogicalRouters = Scm.GetLogicalRouterList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///         Limit = 100,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLogicalRouterList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLogicalRouterListResult> Invoke(GetLogicalRouterListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLogicalRouterListResult>("scm:index/getLogicalRouterList:getLogicalRouterList", args ?? new GetLogicalRouterListInvokeArgs(), options.WithDefaults());
@@ -62,6 +134,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("offset")]
         public int? Offset { get; set; }
+
+        /// <summary>
+        /// The parameter to mention if the response should be paginated. By default, its set to false
+        /// </summary>
+        [Input("pagination")]
+        public bool? Pagination { get; set; }
 
         /// <summary>
         /// The snippet of the item.
@@ -108,6 +186,12 @@ namespace Pulumi.Scm
         public Input<int>? Offset { get; set; }
 
         /// <summary>
+        /// The parameter to mention if the response should be paginated. By default, its set to false
+        /// </summary>
+        [Input("pagination")]
+        public Input<bool>? Pagination { get; set; }
+
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         [Input("snippet")]
@@ -152,6 +236,10 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly int? Offset;
         /// <summary>
+        /// The parameter to mention if the response should be paginated. By default, its set to false
+        /// </summary>
+        public readonly bool? Pagination;
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         public readonly string? Snippet;
@@ -177,6 +265,8 @@ namespace Pulumi.Scm
 
             int? offset,
 
+            bool? pagination,
+
             string? snippet,
 
             string tfid,
@@ -190,6 +280,7 @@ namespace Pulumi.Scm
             Limit = limit;
             Name = name;
             Offset = offset;
+            Pagination = pagination;
             Snippet = snippet;
             Tfid = tfid;
             Total = total;

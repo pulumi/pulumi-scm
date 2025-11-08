@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapResult
     {
         /// <summary>
-        /// Action
+        /// Connected Static BGP Route maps Action
         /// </summary>
         public readonly string Action;
         /// <summary>
-        /// Description
+        /// Connected Static BGP Route maps Description
         /// </summary>
         public readonly string Description;
         /// <summary>
@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapMatchResult Match;
         /// <summary>
-        /// Sequence number
+        /// Connected Static BGP Route maps Sequence number
         /// </summary>
         public readonly int Name;
         /// <summary>

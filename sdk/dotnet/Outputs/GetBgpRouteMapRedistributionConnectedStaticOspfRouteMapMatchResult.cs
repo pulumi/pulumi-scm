@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchResult
     {
         /// <summary>
-        /// Interface
+        /// Connected Static BGP OSPF Route map Interface
         /// </summary>
         public readonly string Interface;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Result Ipv4;
         /// <summary>
-        /// Metric
+        /// Connected Static BGP OSPF Route map Metric
         /// </summary>
         public readonly int Metric;
 

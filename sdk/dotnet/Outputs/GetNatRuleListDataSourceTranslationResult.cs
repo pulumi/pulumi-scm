@@ -14,43 +14,29 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetNatRuleListDataSourceTranslationResult
     {
         /// <summary>
-        /// Bi directional
+        /// Dynamic IP
         /// </summary>
-        public readonly bool BiDirectional;
+        public readonly Outputs.GetNatRuleListDataSourceTranslationDynamicIpResult DynamicIp;
         /// <summary>
-        /// Fallback
+        /// Dynamic IP and port
         /// </summary>
-        public readonly Outputs.GetNatRuleListDataSourceTranslationFallbackResult Fallback;
+        public readonly Outputs.GetNatRuleListDataSourceTranslationDynamicIpAndPortResult DynamicIpAndPort;
         /// <summary>
-        /// Interface name
+        /// Static IP
         /// </summary>
-        public readonly string Interface;
-        /// <summary>
-        /// Translated IP addresses
-        /// </summary>
-        public readonly ImmutableArray<string> TranslatedAddressArrays;
-        /// <summary>
-        /// Translated IP address
-        /// </summary>
-        public readonly string TranslatedAddressSingle;
+        public readonly Outputs.GetNatRuleListDataSourceTranslationStaticIpResult StaticIp;
 
         [OutputConstructor]
         private GetNatRuleListDataSourceTranslationResult(
-            bool biDirectional,
+            Outputs.GetNatRuleListDataSourceTranslationDynamicIpResult dynamicIp,
 
-            Outputs.GetNatRuleListDataSourceTranslationFallbackResult fallback,
+            Outputs.GetNatRuleListDataSourceTranslationDynamicIpAndPortResult dynamicIpAndPort,
 
-            string @interface,
-
-            ImmutableArray<string> translatedAddressArrays,
-
-            string translatedAddressSingle)
+            Outputs.GetNatRuleListDataSourceTranslationStaticIpResult staticIp)
         {
-            BiDirectional = biDirectional;
-            Fallback = fallback;
-            Interface = @interface;
-            TranslatedAddressArrays = translatedAddressArrays;
-            TranslatedAddressSingle = translatedAddressSingle;
+            DynamicIp = dynamicIp;
+            DynamicIpAndPort = dynamicIpAndPort;
+            StaticIp = staticIp;
         }
     }
 }

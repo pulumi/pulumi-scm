@@ -5,37 +5,63 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
-import java.lang.String;
+import com.pulumi.scm.outputs.GetZoneProtectionProfileListDataScanActionAlert;
+import com.pulumi.scm.outputs.GetZoneProtectionProfileListDataScanActionAllow;
+import com.pulumi.scm.outputs.GetZoneProtectionProfileListDataScanActionBlock;
+import com.pulumi.scm.outputs.GetZoneProtectionProfileListDataScanActionBlockIp;
 import java.util.Objects;
 
 @CustomType
 public final class GetZoneProtectionProfileListDataScanAction {
     /**
-     * @return Duration
+     * @return Alert
      * 
      */
-    private Integer duration;
+    private GetZoneProtectionProfileListDataScanActionAlert alert;
     /**
-     * @return Track by
+     * @return Allow
      * 
      */
-    private String trackBy;
+    private GetZoneProtectionProfileListDataScanActionAllow allow;
+    /**
+     * @return Block
+     * 
+     */
+    private GetZoneProtectionProfileListDataScanActionBlock block;
+    /**
+     * @return Block ip
+     * 
+     */
+    private GetZoneProtectionProfileListDataScanActionBlockIp blockIp;
 
     private GetZoneProtectionProfileListDataScanAction() {}
     /**
-     * @return Duration
+     * @return Alert
      * 
      */
-    public Integer duration() {
-        return this.duration;
+    public GetZoneProtectionProfileListDataScanActionAlert alert() {
+        return this.alert;
     }
     /**
-     * @return Track by
+     * @return Allow
      * 
      */
-    public String trackBy() {
-        return this.trackBy;
+    public GetZoneProtectionProfileListDataScanActionAllow allow() {
+        return this.allow;
+    }
+    /**
+     * @return Block
+     * 
+     */
+    public GetZoneProtectionProfileListDataScanActionBlock block() {
+        return this.block;
+    }
+    /**
+     * @return Block ip
+     * 
+     */
+    public GetZoneProtectionProfileListDataScanActionBlockIp blockIp() {
+        return this.blockIp;
     }
 
     public static Builder builder() {
@@ -47,35 +73,57 @@ public final class GetZoneProtectionProfileListDataScanAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Integer duration;
-        private String trackBy;
+        private GetZoneProtectionProfileListDataScanActionAlert alert;
+        private GetZoneProtectionProfileListDataScanActionAllow allow;
+        private GetZoneProtectionProfileListDataScanActionBlock block;
+        private GetZoneProtectionProfileListDataScanActionBlockIp blockIp;
         public Builder() {}
         public Builder(GetZoneProtectionProfileListDataScanAction defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.duration = defaults.duration;
-    	      this.trackBy = defaults.trackBy;
+    	      this.alert = defaults.alert;
+    	      this.allow = defaults.allow;
+    	      this.block = defaults.block;
+    	      this.blockIp = defaults.blockIp;
         }
 
         @CustomType.Setter
-        public Builder duration(Integer duration) {
-            if (duration == null) {
-              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataScanAction", "duration");
+        public Builder alert(GetZoneProtectionProfileListDataScanActionAlert alert) {
+            if (alert == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataScanAction", "alert");
             }
-            this.duration = duration;
+            this.alert = alert;
             return this;
         }
         @CustomType.Setter
-        public Builder trackBy(String trackBy) {
-            if (trackBy == null) {
-              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataScanAction", "trackBy");
+        public Builder allow(GetZoneProtectionProfileListDataScanActionAllow allow) {
+            if (allow == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataScanAction", "allow");
             }
-            this.trackBy = trackBy;
+            this.allow = allow;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder block(GetZoneProtectionProfileListDataScanActionBlock block) {
+            if (block == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataScanAction", "block");
+            }
+            this.block = block;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder blockIp(GetZoneProtectionProfileListDataScanActionBlockIp blockIp) {
+            if (blockIp == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileListDataScanAction", "blockIp");
+            }
+            this.blockIp = blockIp;
             return this;
         }
         public GetZoneProtectionProfileListDataScanAction build() {
             final var _resultValue = new GetZoneProtectionProfileListDataScanAction();
-            _resultValue.duration = duration;
-            _resultValue.trackBy = trackBy;
+            _resultValue.alert = alert;
+            _resultValue.allow = allow;
+            _resultValue.block = block;
+            _resultValue.blockIp = blockIp;
             return _resultValue;
         }
     }

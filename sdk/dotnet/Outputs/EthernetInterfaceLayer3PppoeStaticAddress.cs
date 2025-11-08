@@ -14,12 +14,12 @@ namespace Pulumi.Scm.Outputs
     public sealed class EthernetInterfaceLayer3PppoeStaticAddress
     {
         /// <summary>
-        /// Ip
+        /// Static IP address
         /// </summary>
-        public readonly string? Ip;
+        public readonly string Ip;
 
         [OutputConstructor]
-        private EthernetInterfaceLayer3PppoeStaticAddress(string? ip)
+        private EthernetInterfaceLayer3PppoeStaticAddress(string ip)
         {
             Ip = ip;
         }

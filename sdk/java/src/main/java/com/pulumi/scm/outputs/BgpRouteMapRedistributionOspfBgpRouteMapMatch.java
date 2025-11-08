@@ -20,12 +20,12 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     private @Nullable BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress address;
     /**
-     * @return Interface
+     * @return OSPF BGP Route maps Interface
      * 
      */
     private @Nullable String interface_;
     /**
-     * @return Metric
+     * @return OSPF BGP Route maps Metric
      * 
      */
     private @Nullable Integer metric;
@@ -35,7 +35,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatch {
      */
     private @Nullable BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop nextHop;
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps Tag
      * 
      */
     private @Nullable Integer tag;
@@ -49,14 +49,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatch {
         return Optional.ofNullable(this.address);
     }
     /**
-     * @return Interface
+     * @return OSPF BGP Route maps Interface
      * 
      */
     public Optional<String> interface_() {
         return Optional.ofNullable(this.interface_);
     }
     /**
-     * @return Metric
+     * @return OSPF BGP Route maps Metric
      * 
      */
     public Optional<Integer> metric() {
@@ -70,7 +70,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapMatch {
         return Optional.ofNullable(this.nextHop);
     }
     /**
-     * @return Tag
+     * @return OSPF BGP Route maps Tag
      * 
      */
     public Optional<Integer> tag() {

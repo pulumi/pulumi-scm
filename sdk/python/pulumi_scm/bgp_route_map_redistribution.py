@@ -33,10 +33,10 @@ class BgpRouteMapRedistributionArgs:
         The set of arguments for constructing a BgpRouteMapRedistribution resource.
         :param pulumi.Input['BgpRouteMapRedistributionBgpArgs'] bgp: Bgp
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs'] connected_static: Connected static
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input['BgpRouteMapRedistributionOspfArgs'] ospf: Ospf
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
@@ -85,7 +85,7 @@ class BgpRouteMapRedistributionArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        BGP Route Map Redistributions Description
         """
         return pulumi.get(self, "description")
 
@@ -121,7 +121,7 @@ class BgpRouteMapRedistributionArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Name
+        BGP Route Map Redistributions Name
         """
         return pulumi.get(self, "name")
 
@@ -170,10 +170,10 @@ class _BgpRouteMapRedistributionState:
         Input properties used for looking up and filtering BgpRouteMapRedistribution resources.
         :param pulumi.Input['BgpRouteMapRedistributionBgpArgs'] bgp: Bgp
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticArgs'] connected_static: Connected static
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input['BgpRouteMapRedistributionOspfArgs'] ospf: Ospf
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
@@ -224,7 +224,7 @@ class _BgpRouteMapRedistributionState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        BGP Route Map Redistributions Description
         """
         return pulumi.get(self, "description")
 
@@ -260,7 +260,7 @@ class _BgpRouteMapRedistributionState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Name
+        BGP Route Map Redistributions Name
         """
         return pulumi.get(self, "name")
 
@@ -324,10 +324,10 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']] bgp: Bgp
         :param pulumi.Input[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']] connected_static: Connected static
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']] ospf: Ospf
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
@@ -409,10 +409,10 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['BgpRouteMapRedistributionBgpArgs', 'BgpRouteMapRedistributionBgpArgsDict']] bgp: Bgp
         :param pulumi.Input[Union['BgpRouteMapRedistributionConnectedStaticArgs', 'BgpRouteMapRedistributionConnectedStaticArgsDict']] connected_static: Connected static
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] description: BGP Route Map Redistributions Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] name: BGP Route Map Redistributions Name
         :param pulumi.Input[Union['BgpRouteMapRedistributionOspfArgs', 'BgpRouteMapRedistributionOspfArgsDict']] ospf: Ospf
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
@@ -451,7 +451,7 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Description
+        BGP Route Map Redistributions Description
         """
         return pulumi.get(self, "description")
 
@@ -475,7 +475,7 @@ class BgpRouteMapRedistribution(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Name
+        BGP Route Map Redistributions Name
         """
         return pulumi.get(self, "name")
 

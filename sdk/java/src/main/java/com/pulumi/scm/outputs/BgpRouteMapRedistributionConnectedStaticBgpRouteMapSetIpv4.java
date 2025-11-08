@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 {
     /**
-     * @return Next hop
+     * @return Connected Static BGP Route maps set Next ipv4 hop
      * 
      */
     private @Nullable String nextHop;
     /**
-     * @return Source address
+     * @return Connected Static BGP Route maps set ipv4 Source address
      * 
      */
     private @Nullable String sourceAddress;
 
     private BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4() {}
     /**
-     * @return Next hop
+     * @return Connected Static BGP Route maps set Next ipv4 hop
      * 
      */
     public Optional<String> nextHop() {
         return Optional.ofNullable(this.nextHop);
     }
     /**
-     * @return Source address
+     * @return Connected Static BGP Route maps set ipv4 Source address
      * 
      */
     public Optional<String> sourceAddress() {

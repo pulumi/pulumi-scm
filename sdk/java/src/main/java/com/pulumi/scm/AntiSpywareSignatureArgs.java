@@ -8,7 +8,6 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.inputs.AntiSpywareSignatureDefaultActionArgs;
 import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureArgs;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -190,13 +189,13 @@ public final class AntiSpywareSignatureArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="threatId", required=true)
-    private Output<Integer> threatId;
+    private Output<String> threatId;
 
     /**
      * @return threat id range \n\n and \n\n
      * 
      */
-    public Output<Integer> threatId() {
+    public Output<String> threatId() {
         return this.threatId;
     }
 
@@ -534,7 +533,7 @@ public final class AntiSpywareSignatureArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder threatId(Output<Integer> threatId) {
+        public Builder threatId(Output<String> threatId) {
             $.threatId = threatId;
             return this;
         }
@@ -545,7 +544,7 @@ public final class AntiSpywareSignatureArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder threatId(Integer threatId) {
+        public Builder threatId(String threatId) {
             return threatId(Output.of(threatId));
         }
 

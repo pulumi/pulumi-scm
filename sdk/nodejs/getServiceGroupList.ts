@@ -18,7 +18,7 @@ import * as utilities from "./utilities";
  * // Fetch a list of all service group objects.
  * // This data source will call the "List" API endpoint.
  * const allServiceGroups = scm.getServiceGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const serviceGroupsListRaw = allServiceGroups.then(allServiceGroups => allServiceGroups.datas);
  * ```
@@ -120,7 +120,7 @@ export interface GetServiceGroupListResult {
  * // Fetch a list of all service group objects.
  * // This data source will call the "List" API endpoint.
  * const allServiceGroups = scm.getServiceGroupList({
- *     folder: "Shared",
+ *     folder: "All",
  * });
  * export const serviceGroupsListRaw = allServiceGroups.then(allServiceGroups => allServiceGroups.datas);
  * ```

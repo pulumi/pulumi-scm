@@ -8,6 +8,77 @@ import * as utilities from "./utilities";
 
 /**
  * QosPolicyRule resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // --- 2. ANCHOR QOS POLICY RULE (Used for relative positioning) ---
+ * const anchorQosRule = new scm.QosPolicyRule("anchor_qos_rule", {
+ *     name: "anchor-qos-rule",
+ *     description: "Base rule for testing 'before' and 'after' positioning.",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: {
+ *         "class": "2",
+ *     },
+ *     schedule: "non-work-hours",
+ *     dscpTos: {
+ *         codepoints: [{
+ *             name: "Set-EF",
+ *             type: {
+ *                 ef: {},
+ *             },
+ *         }],
+ *     },
+ * });
+ * // --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+ * const ruleTopQosRule = new scm.QosPolicyRule("rule_top_qos_rule", {
+ *     name: "top-absolute-qos-rule",
+ *     description: "Placed at the very TOP of the QoS rulebase (Highest Priority).",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "top",
+ *     action: {
+ *         "class": "2",
+ *     },
+ * });
+ * const ruleBottomQosRule = new scm.QosPolicyRule("rule_bottom_qos_rule", {
+ *     name: "bottom-absolute-qos-rule",
+ *     description: "Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "bottom",
+ *     action: {
+ *         "class": "3",
+ *     },
+ * });
+ * // --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+ * const ruleBeforeAnchorQos = new scm.QosPolicyRule("rule_before_anchor_qos", {
+ *     name: "before-anchor-qos-rule",
+ *     description: "Positioned immediately BEFORE the anchor-qos-rule.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "before",
+ *     targetRule: anchorQosRule.id,
+ *     action: {
+ *         "class": "5",
+ *     },
+ * });
+ * const ruleAfterAnchorQos = new scm.QosPolicyRule("rule_after_anchor_qos", {
+ *     name: "after-anchor-qos-rule",
+ *     description: "Positioned immediately AFTER the anchor-qos-rule.",
+ *     folder: "All",
+ *     position: "pre",
+ *     relativePosition: "after",
+ *     targetRule: anchorQosRule.id,
+ *     action: {
+ *         "class": "4",
+ *     },
+ * });
+ * ```
  */
 export class QosPolicyRule extends pulumi.CustomResource {
     /**
@@ -66,6 +137,10 @@ export class QosPolicyRule extends pulumi.CustomResource {
      */
     declare public readonly position: pulumi.Output<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    declare public readonly relativePosition: pulumi.Output<string | undefined>;
+    /**
      * Schedule
      */
     declare public readonly schedule: pulumi.Output<string | undefined>;
@@ -73,6 +148,10 @@ export class QosPolicyRule extends pulumi.CustomResource {
      * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    declare public readonly targetRule: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -95,8 +174,10 @@ export class QosPolicyRule extends pulumi.CustomResource {
             resourceInputs["folder"] = state?.folder;
             resourceInputs["name"] = state?.name;
             resourceInputs["position"] = state?.position;
+            resourceInputs["relativePosition"] = state?.relativePosition;
             resourceInputs["schedule"] = state?.schedule;
             resourceInputs["snippet"] = state?.snippet;
+            resourceInputs["targetRule"] = state?.targetRule;
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as QosPolicyRuleArgs | undefined;
@@ -110,8 +191,10 @@ export class QosPolicyRule extends pulumi.CustomResource {
             resourceInputs["folder"] = args?.folder;
             resourceInputs["name"] = args?.name;
             resourceInputs["position"] = args?.position;
+            resourceInputs["relativePosition"] = args?.relativePosition;
             resourceInputs["schedule"] = args?.schedule;
             resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["targetRule"] = args?.targetRule;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -152,6 +235,10 @@ export interface QosPolicyRuleState {
      */
     position?: pulumi.Input<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * Schedule
      */
     schedule?: pulumi.Input<string>;
@@ -159,6 +246,10 @@ export interface QosPolicyRuleState {
      * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
 }
 
@@ -195,6 +286,10 @@ export interface QosPolicyRuleArgs {
      */
     position?: pulumi.Input<string>;
     /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    relativePosition?: pulumi.Input<string>;
+    /**
      * Schedule
      */
     schedule?: pulumi.Input<string>;
@@ -202,4 +297,8 @@ export interface QosPolicyRuleArgs {
      * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    targetRule?: pulumi.Input<string>;
 }

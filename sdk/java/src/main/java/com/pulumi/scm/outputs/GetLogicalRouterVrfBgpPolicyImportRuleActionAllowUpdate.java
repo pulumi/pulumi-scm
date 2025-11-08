@@ -8,7 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      * @return As path limit
      * 
      */
-    private Double asPathLimit;
+    private Integer asPathLimit;
     /**
      * @return Community
      * 
@@ -38,12 +38,12 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      * @return Local preference
      * 
      */
-    private Double localPreference;
+    private Integer localPreference;
     /**
      * @return Med
      * 
      */
-    private Double med;
+    private Integer med;
     /**
      * @return Nexthop
      * 
@@ -58,7 +58,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      * @return Weight
      * 
      */
-    private Double weight;
+    private Integer weight;
 
     private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate() {}
     /**
@@ -72,7 +72,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      * @return As path limit
      * 
      */
-    public Double asPathLimit() {
+    public Integer asPathLimit() {
         return this.asPathLimit;
     }
     /**
@@ -93,14 +93,14 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      * @return Local preference
      * 
      */
-    public Double localPreference() {
+    public Integer localPreference() {
         return this.localPreference;
     }
     /**
      * @return Med
      * 
      */
-    public Double med() {
+    public Integer med() {
         return this.med;
     }
     /**
@@ -121,7 +121,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
      * @return Weight
      * 
      */
-    public Double weight() {
+    public Integer weight() {
         return this.weight;
     }
 
@@ -135,14 +135,14 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
     @CustomType.Builder
     public static final class Builder {
         private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath asPath;
-        private Double asPathLimit;
+        private Integer asPathLimit;
         private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity community;
         private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity extendedCommunity;
-        private Double localPreference;
-        private Double med;
+        private Integer localPreference;
+        private Integer med;
         private String nexthop;
         private String origin;
-        private Double weight;
+        private Integer weight;
         public Builder() {}
         public Builder(GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate defaults) {
     	      Objects.requireNonNull(defaults);
@@ -166,7 +166,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
             return this;
         }
         @CustomType.Setter
-        public Builder asPathLimit(Double asPathLimit) {
+        public Builder asPathLimit(Integer asPathLimit) {
             if (asPathLimit == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate", "asPathLimit");
             }
@@ -190,7 +190,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
             return this;
         }
         @CustomType.Setter
-        public Builder localPreference(Double localPreference) {
+        public Builder localPreference(Integer localPreference) {
             if (localPreference == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate", "localPreference");
             }
@@ -198,7 +198,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
             return this;
         }
         @CustomType.Setter
-        public Builder med(Double med) {
+        public Builder med(Integer med) {
             if (med == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate", "med");
             }
@@ -222,7 +222,7 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate {
             return this;
         }
         @CustomType.Setter
-        public Builder weight(Double weight) {
+        public Builder weight(Integer weight) {
             if (weight == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdate", "weight");
             }

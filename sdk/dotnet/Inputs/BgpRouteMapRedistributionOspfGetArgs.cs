@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionOspfGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Bgp
+        /// OSPF Root BGP
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.BgpRouteMapRedistributionOspfBgpGetArgs>? Bgp { get; set; }

@@ -16,14 +16,14 @@ public final class DnsProxyUdpQueriesRetriesArgs extends com.pulumi.resources.Re
     public static final DnsProxyUdpQueriesRetriesArgs Empty = new DnsProxyUdpQueriesRetriesArgs();
 
     /**
-     * Attempts
+     * Maximum number of retries before trying next name server
      * 
      */
     @Import(name="attempts")
     private @Nullable Output<Integer> attempts;
 
     /**
-     * @return Attempts
+     * @return Maximum number of retries before trying next name server
      * 
      */
     public Optional<Output<Integer>> attempts() {
@@ -31,14 +31,14 @@ public final class DnsProxyUdpQueriesRetriesArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Interval
+     * Time in seconds for another request to be sent
      * 
      */
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
     /**
-     * @return Interval
+     * @return Time in seconds for another request to be sent
      * 
      */
     public Optional<Output<Integer>> interval() {
@@ -71,7 +71,7 @@ public final class DnsProxyUdpQueriesRetriesArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param attempts Attempts
+         * @param attempts Maximum number of retries before trying next name server
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class DnsProxyUdpQueriesRetriesArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param attempts Attempts
+         * @param attempts Maximum number of retries before trying next name server
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class DnsProxyUdpQueriesRetriesArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param interval Interval
+         * @param interval Time in seconds for another request to be sent
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class DnsProxyUdpQueriesRetriesArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param interval Interval
+         * @param interval Time in seconds for another request to be sent
          * 
          * @return builder
          * 

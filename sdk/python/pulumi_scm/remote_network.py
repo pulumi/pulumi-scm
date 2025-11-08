@@ -434,6 +434,80 @@ class RemoteNetwork(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- DEPENDENCY 1: IKE Crypto Profile ---
+        # This profile defines the encryption and authentication algorithms for the IKE Gateway.
+        # The values are taken from the 'createTestIKECryptoProfile' helper function.
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto-prf-for-rn",
+            folder="Remote Networks",
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        # --- DEPENDENCY 2: IKE Gateway ---
+        # This defines the VPN peer. It depends on the IKE Crypto Profile created above.
+        # The values are taken from the 'createTestIKEGateway' helper function.
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-ike-gateway-for-rn",
+            folder="Remote Networks",
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example]))
+        # --- DEPENDENCY 3: IPsec Tunnel ---
+        # This defines the tunnel interface itself and uses the IKE Gateway.
+        # The values are taken from the 'createTestIPsecTunnel' helper function.
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-ipsec-tunnel-for-rn",
+            folder="Remote Networks",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": "PaloAlto-Networks-IPSec-Crypto",
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        # --- MAIN RESOURCE: Remote Network ---
+        # This is the final resource, which uses the IPsec Tunnel created above.
+        # The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
+        example_remote_network = scm.RemoteNetwork("example",
+            name="example-remote-network",
+            folder="Remote Networks",
+            license_type="FWAAS-AGGREGATE",
+            region="us-west-2",
+            spn_name="us-west-dakota",
+            subnets=["192.168.1.0/24"],
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            protocol={
+                "bgp": {
+                    "enable": True,
+                    "peer_as": "65000",
+                    "local_ip_address": "169.254.1.1",
+                    "peer_ip_address": "169.254.1.2",
+                    "do_not_export_routes": False,
+                    "originate_default_route": False,
+                    "summarize_mobile_user_routes": False,
+                },
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ipsec_tunnel]))
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] ecmp_load_balancing: Ecmp load balancing
@@ -458,6 +532,80 @@ class RemoteNetwork(pulumi.CustomResource):
         RemoteNetwork resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- DEPENDENCY 1: IKE Crypto Profile ---
+        # This profile defines the encryption and authentication algorithms for the IKE Gateway.
+        # The values are taken from the 'createTestIKECryptoProfile' helper function.
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto-prf-for-rn",
+            folder="Remote Networks",
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        # --- DEPENDENCY 2: IKE Gateway ---
+        # This defines the VPN peer. It depends on the IKE Crypto Profile created above.
+        # The values are taken from the 'createTestIKEGateway' helper function.
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-ike-gateway-for-rn",
+            folder="Remote Networks",
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example]))
+        # --- DEPENDENCY 3: IPsec Tunnel ---
+        # This defines the tunnel interface itself and uses the IKE Gateway.
+        # The values are taken from the 'createTestIPsecTunnel' helper function.
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-ipsec-tunnel-for-rn",
+            folder="Remote Networks",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": "PaloAlto-Networks-IPSec-Crypto",
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        # --- MAIN RESOURCE: Remote Network ---
+        # This is the final resource, which uses the IPsec Tunnel created above.
+        # The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
+        example_remote_network = scm.RemoteNetwork("example",
+            name="example-remote-network",
+            folder="Remote Networks",
+            license_type="FWAAS-AGGREGATE",
+            region="us-west-2",
+            spn_name="us-west-dakota",
+            subnets=["192.168.1.0/24"],
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            protocol={
+                "bgp": {
+                    "enable": True,
+                    "peer_as": "65000",
+                    "local_ip_address": "169.254.1.1",
+                    "peer_ip_address": "169.254.1.2",
+                    "do_not_export_routes": False,
+                    "originate_default_route": False,
+                    "summarize_mobile_user_routes": False,
+                },
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ipsec_tunnel]))
+        ```
 
         :param str resource_name: The name of the resource.
         :param RemoteNetworkArgs args: The arguments to use to populate this resource's properties.

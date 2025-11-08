@@ -59,7 +59,7 @@ namespace Pulumi.Scm
     ///     // Service Group containing multiple services
     ///     var scmServicegroup = new Scm.ServiceGroup("scm_servicegroup", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_servicegroup",
     ///         Members = new[]
     ///         {
@@ -71,7 +71,7 @@ namespace Pulumi.Scm
     ///     // Service Group containing multiple services and another servicegroup
     ///     var scmServicegroupNested = new Scm.ServiceGroup("scm_servicegroup_nested", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_servicegroup_nested",
     ///         Members = new[]
     ///         {

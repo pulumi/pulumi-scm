@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighbor {
      * @return Priority
      * 
      */
-    private @Nullable Double priority;
+    private @Nullable Integer priority;
 
     private LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighbor() {}
     /**
@@ -36,7 +36,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighbor {
      * @return Priority
      * 
      */
-    public Optional<Double> priority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
 
@@ -50,7 +50,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighbor {
     @CustomType.Builder
     public static final class Builder {
         private String name;
-        private @Nullable Double priority;
+        private @Nullable Integer priority;
         public Builder() {}
         public Builder(LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighbor defaults) {
     	      Objects.requireNonNull(defaults);
@@ -67,7 +67,7 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighbor {
             return this;
         }
         @CustomType.Setter
-        public Builder priority(@Nullable Double priority) {
+        public Builder priority(@Nullable Integer priority) {
 
             this.priority = priority;
             return this;

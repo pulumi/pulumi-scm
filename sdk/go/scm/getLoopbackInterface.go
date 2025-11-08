@@ -12,6 +12,40 @@ import (
 )
 
 // LoopbackInterface data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up loopback interface by its ID.
+//			scmLoopbackIntfDs, err := scm.LookupLoopbackInterface(ctx, &scm.LookupLoopbackInterfaceArgs{
+//				Id: "ddad1e64-0b64-41a4-b361-c6199769a8f1",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmLoopbackInterfaceDataSourceResults", pulumi.Map{
+//				"id":      scmLoopbackIntfDs.Id,
+//				"name":    scmLoopbackIntfDs.Name,
+//				"comment": scmLoopbackIntfDs.Comment,
+//				"ip":      scmLoopbackIntfDs.Ips,
+//				"folder":  scmLoopbackIntfDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupLoopbackInterface(ctx *pulumi.Context, args *LookupLoopbackInterfaceArgs, opts ...pulumi.InvokeOption) (*LookupLoopbackInterfaceResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLoopbackInterfaceResult
@@ -26,7 +60,7 @@ func LookupLoopbackInterface(ctx *pulumi.Context, args *LookupLoopbackInterfaceA
 type LookupLoopbackInterfaceArgs struct {
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// L3 sub-interface name
+	// Loopback Interface name
 	Name *string `pulumi:"name"`
 }
 
@@ -34,8 +68,8 @@ type LookupLoopbackInterfaceArgs struct {
 type LookupLoopbackInterfaceResult struct {
 	// Description
 	Comment string `pulumi:"comment"`
-	// Default value
-	DefaultValue int `pulumi:"defaultValue"`
+	// Default interface assignment
+	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// The folder in which the resource is defined
@@ -44,11 +78,13 @@ type LookupLoopbackInterfaceResult struct {
 	Id string `pulumi:"id"`
 	// Interface management profile
 	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
-	// loopback ip parent
-	Ip GetLoopbackInterfaceIp `pulumi:"ip"`
+	// Loopback IP Parent
+	Ips []GetLoopbackInterfaceIp `pulumi:"ips"`
+	// Loopback IPv6 Configuration
+	Ipv6 GetLoopbackInterfaceIpv6 `pulumi:"ipv6"`
 	// MTU
-	Mtu float64 `pulumi:"mtu"`
-	// L3 sub-interface name
+	Mtu int `pulumi:"mtu"`
+	// Loopback Interface name
 	Name string `pulumi:"name"`
 	// The snippet in which the resource is defined
 	Snippet string `pulumi:"snippet"`
@@ -68,7 +104,7 @@ func LookupLoopbackInterfaceOutput(ctx *pulumi.Context, args LookupLoopbackInter
 type LookupLoopbackInterfaceOutputArgs struct {
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// L3 sub-interface name
+	// Loopback Interface name
 	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
@@ -96,9 +132,9 @@ func (o LookupLoopbackInterfaceResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// Default value
-func (o LookupLoopbackInterfaceResultOutput) DefaultValue() pulumi.IntOutput {
-	return o.ApplyT(func(v LookupLoopbackInterfaceResult) int { return v.DefaultValue }).(pulumi.IntOutput)
+// Default interface assignment
+func (o LookupLoopbackInterfaceResultOutput) DefaultValue() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.DefaultValue }).(pulumi.StringOutput)
 }
 
 // The device in which the resource is defined
@@ -121,17 +157,22 @@ func (o LookupLoopbackInterfaceResultOutput) InterfaceManagementProfile() pulumi
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
-// loopback ip parent
-func (o LookupLoopbackInterfaceResultOutput) Ip() GetLoopbackInterfaceIpOutput {
-	return o.ApplyT(func(v LookupLoopbackInterfaceResult) GetLoopbackInterfaceIp { return v.Ip }).(GetLoopbackInterfaceIpOutput)
+// Loopback IP Parent
+func (o LookupLoopbackInterfaceResultOutput) Ips() GetLoopbackInterfaceIpArrayOutput {
+	return o.ApplyT(func(v LookupLoopbackInterfaceResult) []GetLoopbackInterfaceIp { return v.Ips }).(GetLoopbackInterfaceIpArrayOutput)
+}
+
+// Loopback IPv6 Configuration
+func (o LookupLoopbackInterfaceResultOutput) Ipv6() GetLoopbackInterfaceIpv6Output {
+	return o.ApplyT(func(v LookupLoopbackInterfaceResult) GetLoopbackInterfaceIpv6 { return v.Ipv6 }).(GetLoopbackInterfaceIpv6Output)
 }
 
 // MTU
-func (o LookupLoopbackInterfaceResultOutput) Mtu() pulumi.Float64Output {
-	return o.ApplyT(func(v LookupLoopbackInterfaceResult) float64 { return v.Mtu }).(pulumi.Float64Output)
+func (o LookupLoopbackInterfaceResultOutput) Mtu() pulumi.IntOutput {
+	return o.ApplyT(func(v LookupLoopbackInterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
 
-// L3 sub-interface name
+// Loopback Interface name
 func (o LookupLoopbackInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLoopbackInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }

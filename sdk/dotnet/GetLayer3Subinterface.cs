@@ -13,18 +13,114 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Layer3Subinterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up layer3 sub-interface by its ID.
+        ///     var scmL3SubinterfaceDs = Scm.GetLayer3Subinterface.Invoke(new()
+        ///     {
+        ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["layer3SubinterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id) },
+        ///             { "name", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name) },
+        ///             { "comment", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment) },
+        ///             { "ip", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips) },
+        ///             { "tag", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag) },
+        ///             { "parentInterface", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface) },
+        ///             { "folder", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLayer3SubinterfaceResult> InvokeAsync(GetLayer3SubinterfaceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLayer3SubinterfaceResult>("scm:index/getLayer3Subinterface:getLayer3Subinterface", args ?? new GetLayer3SubinterfaceArgs(), options.WithDefaults());
 
         /// <summary>
         /// Layer3Subinterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up layer3 sub-interface by its ID.
+        ///     var scmL3SubinterfaceDs = Scm.GetLayer3Subinterface.Invoke(new()
+        ///     {
+        ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["layer3SubinterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id) },
+        ///             { "name", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name) },
+        ///             { "comment", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment) },
+        ///             { "ip", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips) },
+        ///             { "tag", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag) },
+        ///             { "parentInterface", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface) },
+        ///             { "folder", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLayer3SubinterfaceResult> Invoke(GetLayer3SubinterfaceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLayer3SubinterfaceResult>("scm:index/getLayer3Subinterface:getLayer3Subinterface", args ?? new GetLayer3SubinterfaceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Layer3Subinterface data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up layer3 sub-interface by its ID.
+        ///     var scmL3SubinterfaceDs = Scm.GetLayer3Subinterface.Invoke(new()
+        ///     {
+        ///         Id = "88f730d1-6577-492b-88a6-73d4a513dc76",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["layer3SubinterfaceDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Id) },
+        ///             { "name", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Name) },
+        ///             { "comment", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Comment) },
+        ///             { "ip", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Ips) },
+        ///             { "tag", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Tag) },
+        ///             { "parentInterface", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.ParentInterface) },
+        ///             { "folder", scmL3SubinterfaceDs.Apply(getLayer3SubinterfaceResult =&gt; getLayer3SubinterfaceResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLayer3SubinterfaceResult> Invoke(GetLayer3SubinterfaceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLayer3SubinterfaceResult>("scm:index/getLayer3Subinterface:getLayer3Subinterface", args ?? new GetLayer3SubinterfaceInvokeArgs(), options.WithDefaults());
@@ -92,7 +188,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Dhcp client
+        /// Layer3 sub interfaces DHCP Client Object
         /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceDhcpClientResult DhcpClient;
         /// <summary>
@@ -108,13 +204,13 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// Ip
+        /// L3 sub-interface IP Parent
         /// </summary>
-        public readonly ImmutableArray<string> Ips;
+        public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceIpResult> Ips;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
         /// L3 sub-interface name
         /// </summary>
@@ -130,7 +226,7 @@ namespace Pulumi.Scm
         /// <summary>
         /// VLAN tag
         /// </summary>
-        public readonly double Tag;
+        public readonly int Tag;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -151,9 +247,9 @@ namespace Pulumi.Scm
 
             string interfaceManagementProfile,
 
-            ImmutableArray<string> ips,
+            ImmutableArray<Outputs.GetLayer3SubinterfaceIpResult> ips,
 
-            double mtu,
+            int mtu,
 
             string name,
 
@@ -161,7 +257,7 @@ namespace Pulumi.Scm
 
             string snippet,
 
-            double tag,
+            int tag,
 
             string tfid)
         {

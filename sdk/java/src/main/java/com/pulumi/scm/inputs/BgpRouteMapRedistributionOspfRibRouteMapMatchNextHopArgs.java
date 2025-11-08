@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs exte
     public static final BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs Empty = new BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs();
 
     /**
-     * Access list
+     * OSPF RIB Route maps nextHop Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return OSPF RIB Route maps nextHop Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs exte
     }
 
     /**
-     * Prefix list
+     * OSPF RIB Route maps nextHop Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return OSPF RIB Route maps nextHop Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs exte
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList OSPF RIB Route maps nextHop Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs exte
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList OSPF RIB Route maps nextHop Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs exte
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList OSPF RIB Route maps nextHop Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs exte
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList OSPF RIB Route maps nextHop Prefix list
          * 
          * @return builder
          * 

@@ -585,6 +585,34 @@ class CertificateProfile(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_cp1 = scm.CertificateProfile("scm_cp_1",
+            folder="Shared",
+            name="scm_cp_1",
+            domain="test",
+            use_crl=True,
+            use_ocsp=True,
+            block_unknown_cert=True,
+            block_timeout_cert=True,
+            block_unauthenticated_cert=True,
+            block_expired_cert=True,
+            crl_receive_timeout="5",
+            ocsp_receive_timeout="5",
+            cert_status_timeout="5",
+            ca_certificates=[{
+                "name": "Forward-Trust-CA",
+                "default_ocsp_url": "http://test.com",
+                "ocsp_verify_cert": "Forward-Trust-CA-ECDSA",
+                "template_name": "something",
+            }],
+            username_field={
+                "subject": "common-name",
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] block_expired_cert: Block sessions with expired certificates?
@@ -614,6 +642,34 @@ class CertificateProfile(pulumi.CustomResource):
         CertificateProfile resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_cp1 = scm.CertificateProfile("scm_cp_1",
+            folder="Shared",
+            name="scm_cp_1",
+            domain="test",
+            use_crl=True,
+            use_ocsp=True,
+            block_unknown_cert=True,
+            block_timeout_cert=True,
+            block_unauthenticated_cert=True,
+            block_expired_cert=True,
+            crl_receive_timeout="5",
+            ocsp_receive_timeout="5",
+            cert_status_timeout="5",
+            ca_certificates=[{
+                "name": "Forward-Trust-CA",
+                "default_ocsp_url": "http://test.com",
+                "ocsp_verify_cert": "Forward-Trust-CA-ECDSA",
+                "template_name": "something",
+            }],
+            username_field={
+                "subject": "common-name",
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param CertificateProfileArgs args: The arguments to use to populate this resource's properties.

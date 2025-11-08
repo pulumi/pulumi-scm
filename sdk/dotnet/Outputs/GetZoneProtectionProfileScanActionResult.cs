@@ -14,22 +14,36 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetZoneProtectionProfileScanActionResult
     {
         /// <summary>
-        /// Duration
+        /// Alert
         /// </summary>
-        public readonly int Duration;
+        public readonly Outputs.GetZoneProtectionProfileScanActionAlertResult Alert;
         /// <summary>
-        /// Track by
+        /// Allow
         /// </summary>
-        public readonly string TrackBy;
+        public readonly Outputs.GetZoneProtectionProfileScanActionAllowResult Allow;
+        /// <summary>
+        /// Block
+        /// </summary>
+        public readonly Outputs.GetZoneProtectionProfileScanActionBlockResult Block;
+        /// <summary>
+        /// Block ip
+        /// </summary>
+        public readonly Outputs.GetZoneProtectionProfileScanActionBlockIpResult BlockIp;
 
         [OutputConstructor]
         private GetZoneProtectionProfileScanActionResult(
-            int duration,
+            Outputs.GetZoneProtectionProfileScanActionAlertResult alert,
 
-            string trackBy)
+            Outputs.GetZoneProtectionProfileScanActionAllowResult allow,
+
+            Outputs.GetZoneProtectionProfileScanActionBlockResult block,
+
+            Outputs.GetZoneProtectionProfileScanActionBlockIpResult blockIp)
         {
-            Duration = duration;
-            TrackBy = trackBy;
+            Alert = alert;
+            Allow = allow;
+            Block = block;
+            BlockIp = blockIp;
         }
     }
 }

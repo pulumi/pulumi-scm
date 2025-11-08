@@ -11,7 +11,7 @@ import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopA
 import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableIpv6StaticRouteOptionArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,13 +27,13 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs extends com.p
      * 
      */
     @Import(name="adminDist")
-    private @Nullable Output<Double> adminDist;
+    private @Nullable Output<Integer> adminDist;
 
     /**
      * @return Admin dist
      * 
      */
-    public Optional<Output<Double>> adminDist() {
+    public Optional<Output<Integer>> adminDist() {
         return Optional.ofNullable(this.adminDist);
     }
 
@@ -87,13 +87,13 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs extends com.p
      * 
      */
     @Import(name="metric")
-    private @Nullable Output<Double> metric;
+    private @Nullable Output<Integer> metric;
 
     /**
      * @return Metric
      * 
      */
-    public Optional<Output<Double>> metric() {
+    public Optional<Output<Integer>> metric() {
         return Optional.ofNullable(this.metric);
     }
 
@@ -211,7 +211,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs extends com.p
          * @return builder
          * 
          */
-        public Builder adminDist(@Nullable Output<Double> adminDist) {
+        public Builder adminDist(@Nullable Output<Integer> adminDist) {
             $.adminDist = adminDist;
             return this;
         }
@@ -222,7 +222,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs extends com.p
          * @return builder
          * 
          */
-        public Builder adminDist(Double adminDist) {
+        public Builder adminDist(Integer adminDist) {
             return adminDist(Output.of(adminDist));
         }
 
@@ -295,7 +295,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs extends com.p
          * @return builder
          * 
          */
-        public Builder metric(@Nullable Output<Double> metric) {
+        public Builder metric(@Nullable Output<Integer> metric) {
             $.metric = metric;
             return this;
         }
@@ -306,7 +306,7 @@ public final class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs extends com.p
          * @return builder
          * 
          */
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             return metric(Output.of(metric));
         }
 

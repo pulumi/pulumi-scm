@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionBgpRibRouteMapSet
     {
         /// <summary>
-        /// Source address
+        /// BGP Root RIB Route maps set Source address
         /// </summary>
         public readonly string? SourceAddress;
 

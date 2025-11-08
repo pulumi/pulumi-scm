@@ -13,6 +13,88 @@ import (
 )
 
 // Folder resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a folder under the "All Firewalls" aka "ngfw-shared" folder
+//			scmFolderExample, err := scm.NewFolder(ctx, "scm_folder_example", &scm.FolderArgs{
+//				Name:        pulumi.String("scm_folder_example"),
+//				Parent:      pulumi.String("ngfw-shared"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a folder under the "scm_folder_example" folder created beforehand
+//			_, err = scm.NewFolder(ctx, "scm_nested_folder_example", &scm.FolderArgs{
+//				Name:        pulumi.String("scm_nested_folder_example"),
+//				Parent:      pulumi.String("scm_folder_example"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmFolderExample,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a snippet that will be associated to a folder
+//			scmSnippetExample, err := scm.NewSnippet(ctx, "scm_snippet_example", &scm.SnippetArgs{
+//				Name:        pulumi.String("scm_snippet_example"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a folder with an attached snippet
+//			_, err = scm.NewFolder(ctx, "scm_folder_with_snippets", &scm.FolderArgs{
+//				Name:        pulumi.String("scm_folder_with_snippets"),
+//				Parent:      pulumi.String("ngfw-shared"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Snippets: pulumi.StringArray{
+//					scmSnippetExample.Name,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a label that will be associated to a folder
+//			scmLabelExample, err := scm.NewLabel(ctx, "scm_label_example", &scm.LabelArgs{
+//				Name:        pulumi.String("scm_label_example"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a folder with an attached label
+//			_, err = scm.NewFolder(ctx, "scm_folder_with_label", &scm.FolderArgs{
+//				Name:        pulumi.String("scm_folder_with_label"),
+//				Parent:      pulumi.String("ngfw-shared"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Labels: pulumi.StringArray{
+//					scmLabelExample.Name,
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmLabelExample,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type Folder struct {
 	pulumi.CustomResourceState
 

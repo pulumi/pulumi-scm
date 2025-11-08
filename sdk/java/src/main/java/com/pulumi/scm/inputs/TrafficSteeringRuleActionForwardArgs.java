@@ -5,7 +5,8 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.String;
+import com.pulumi.scm.inputs.TrafficSteeringRuleActionForwardForwardArgs;
+import com.pulumi.scm.inputs.TrafficSteeringRuleActionForwardNoPbfArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,24 +17,40 @@ public final class TrafficSteeringRuleActionForwardArgs extends com.pulumi.resou
     public static final TrafficSteeringRuleActionForwardArgs Empty = new TrafficSteeringRuleActionForwardArgs();
 
     /**
-     * Target
+     * Forward
      * 
      */
-    @Import(name="target")
-    private @Nullable Output<String> target;
+    @Import(name="forward")
+    private @Nullable Output<TrafficSteeringRuleActionForwardForwardArgs> forward;
 
     /**
-     * @return Target
+     * @return Forward
      * 
      */
-    public Optional<Output<String>> target() {
-        return Optional.ofNullable(this.target);
+    public Optional<Output<TrafficSteeringRuleActionForwardForwardArgs>> forward() {
+        return Optional.ofNullable(this.forward);
+    }
+
+    /**
+     * No pbf
+     * 
+     */
+    @Import(name="noPbf")
+    private @Nullable Output<TrafficSteeringRuleActionForwardNoPbfArgs> noPbf;
+
+    /**
+     * @return No pbf
+     * 
+     */
+    public Optional<Output<TrafficSteeringRuleActionForwardNoPbfArgs>> noPbf() {
+        return Optional.ofNullable(this.noPbf);
     }
 
     private TrafficSteeringRuleActionForwardArgs() {}
 
     private TrafficSteeringRuleActionForwardArgs(TrafficSteeringRuleActionForwardArgs $) {
-        this.target = $.target;
+        this.forward = $.forward;
+        this.noPbf = $.noPbf;
     }
 
     public static Builder builder() {
@@ -55,24 +72,45 @@ public final class TrafficSteeringRuleActionForwardArgs extends com.pulumi.resou
         }
 
         /**
-         * @param target Target
+         * @param forward Forward
          * 
          * @return builder
          * 
          */
-        public Builder target(@Nullable Output<String> target) {
-            $.target = target;
+        public Builder forward(@Nullable Output<TrafficSteeringRuleActionForwardForwardArgs> forward) {
+            $.forward = forward;
             return this;
         }
 
         /**
-         * @param target Target
+         * @param forward Forward
          * 
          * @return builder
          * 
          */
-        public Builder target(String target) {
-            return target(Output.of(target));
+        public Builder forward(TrafficSteeringRuleActionForwardForwardArgs forward) {
+            return forward(Output.of(forward));
+        }
+
+        /**
+         * @param noPbf No pbf
+         * 
+         * @return builder
+         * 
+         */
+        public Builder noPbf(@Nullable Output<TrafficSteeringRuleActionForwardNoPbfArgs> noPbf) {
+            $.noPbf = noPbf;
+            return this;
+        }
+
+        /**
+         * @param noPbf No pbf
+         * 
+         * @return builder
+         * 
+         */
+        public Builder noPbf(TrafficSteeringRuleActionForwardNoPbfArgs noPbf) {
+            return noPbf(Output.of(noPbf));
         }
 
         public TrafficSteeringRuleActionForwardArgs build() {

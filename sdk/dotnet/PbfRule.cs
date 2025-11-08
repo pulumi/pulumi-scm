@@ -11,6 +11,183 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// PbfRule resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var exampleTag = new Scm.Tag("example_tag", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "pbf-rule-tag-test-1",
+    ///         Color = "Red",
+    ///     });
+    /// 
+    ///     // --- PBF Rule Resource with discard action---
+    ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
+    ///     {
+    ///         Name = "pbf-test-rule-discard",
+    ///         Folder = "All",
+    ///         Description = "PBF rule for forwarding specific traffic.",
+    ///         From = new Scm.Inputs.PbfRuleFromArgs
+    ///         {
+    ///             Zones = new[]
+    ///             {
+    ///                 "zone-untrust",
+    ///             },
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-http",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Action = new Scm.Inputs.PbfRuleActionArgs
+    ///         {
+    ///             Discard = null,
+    ///         },
+    ///         Tags = new[]
+    ///         {
+    ///             exampleTag.Name,
+    ///         },
+    ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
+    ///         {
+    ///             Enabled = false,
+    ///         },
+    ///         Schedule = "non-work-hours",
+    ///     });
+    /// 
+    ///     // --- PBF Rule Resource with no-pbf action---
+    ///     var exampleNoPbfRule = new Scm.PbfRule("example_no_pbf_rule", new()
+    ///     {
+    ///         Name = "pbf-test-rule-no-pbf",
+    ///         Folder = "All",
+    ///         Description = "PBF rule for forwarding specific traffic",
+    ///         From = new Scm.Inputs.PbfRuleFromArgs
+    ///         {
+    ///             Zones = new[]
+    ///             {
+    ///                 "zone-untrust",
+    ///             },
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-https",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Action = new Scm.Inputs.PbfRuleActionArgs
+    ///         {
+    ///             NoPbf = null,
+    ///         },
+    ///         Tags = new[]
+    ///         {
+    ///             exampleTag.Name,
+    ///         },
+    ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
+    ///         {
+    ///             Enabled = false,
+    ///         },
+    ///         Schedule = "non-work-hours",
+    ///     });
+    /// 
+    ///     // --- PBF Rule Resource with forward action---
+    ///     var exampleForwardPbfRule = new Scm.PbfRule("example_forward_pbf_rule", new()
+    ///     {
+    ///         Name = "pbf-test-rule-forward",
+    ///         Folder = "All",
+    ///         Description = "PBF rule for forwarding specific traffic",
+    ///         From = new Scm.Inputs.PbfRuleFromArgs
+    ///         {
+    ///             Zones = new[]
+    ///             {
+    ///                 "zone-untrust",
+    ///             },
+    ///         },
+    ///         Sources = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Destinations = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Applications = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Services = new[]
+    ///         {
+    ///             "service-http",
+    ///         },
+    ///         SourceUsers = new[]
+    ///         {
+    ///             "any",
+    ///         },
+    ///         Action = new Scm.Inputs.PbfRuleActionArgs
+    ///         {
+    ///             Forward = new Scm.Inputs.PbfRuleActionForwardArgs
+    ///             {
+    ///                 EgressInterface = "ethernet1/1",
+    ///                 Nexthop = new Scm.Inputs.PbfRuleActionForwardNexthopArgs
+    ///                 {
+    ///                     IpAddress = "192.168.1.254",
+    ///                 },
+    ///                 Monitor = new Scm.Inputs.PbfRuleActionForwardMonitorArgs
+    ///                 {
+    ///                     IpAddress = "8.8.8.10",
+    ///                     Profile = "test_tf_profile",
+    ///                     DisableIfUnreachable = true,
+    ///                 },
+    ///             },
+    ///         },
+    ///         Tags = new[]
+    ///         {
+    ///             exampleTag.Name,
+    ///         },
+    ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
+    ///         {
+    ///             Enabled = true,
+    ///         },
+    ///         Schedule = "non-work-hours",
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/pbfRule:PbfRule")]
     public partial class PbfRule : global::Pulumi.CustomResource

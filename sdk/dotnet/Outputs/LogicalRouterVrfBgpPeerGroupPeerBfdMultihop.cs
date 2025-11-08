@@ -16,10 +16,10 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Min received ttl
         /// </summary>
-        public readonly double? MinReceivedTtl;
+        public readonly int? MinReceivedTtl;
 
         [OutputConstructor]
-        private LogicalRouterVrfBgpPeerGroupPeerBfdMultihop(double? minReceivedTtl)
+        private LogicalRouterVrfBgpPeerGroupPeerBfdMultihop(int? minReceivedTtl)
         {
             MinReceivedTtl = minReceivedTtl;
         }

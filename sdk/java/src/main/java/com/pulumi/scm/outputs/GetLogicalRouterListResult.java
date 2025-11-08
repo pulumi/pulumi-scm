@@ -6,6 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterListData;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -50,6 +51,11 @@ public final class GetLogicalRouterListResult {
      * 
      */
     private @Nullable Integer offset;
+    /**
+     * @return The parameter to mention if the response should be paginated. By default, its set to false
+     * 
+     */
+    private @Nullable Boolean pagination;
     /**
      * @return The snippet of the item.
      * 
@@ -113,6 +119,13 @@ public final class GetLogicalRouterListResult {
         return Optional.ofNullable(this.offset);
     }
     /**
+     * @return The parameter to mention if the response should be paginated. By default, its set to false
+     * 
+     */
+    public Optional<Boolean> pagination() {
+        return Optional.ofNullable(this.pagination);
+    }
+    /**
      * @return The snippet of the item.
      * 
      */
@@ -146,6 +159,7 @@ public final class GetLogicalRouterListResult {
         private @Nullable Integer limit;
         private @Nullable String name;
         private @Nullable Integer offset;
+        private @Nullable Boolean pagination;
         private @Nullable String snippet;
         private String tfid;
         private Integer total;
@@ -159,6 +173,7 @@ public final class GetLogicalRouterListResult {
     	      this.limit = defaults.limit;
     	      this.name = defaults.name;
     	      this.offset = defaults.offset;
+    	      this.pagination = defaults.pagination;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.total = defaults.total;
@@ -214,6 +229,12 @@ public final class GetLogicalRouterListResult {
             return this;
         }
         @CustomType.Setter
+        public Builder pagination(@Nullable Boolean pagination) {
+
+            this.pagination = pagination;
+            return this;
+        }
+        @CustomType.Setter
         public Builder snippet(@Nullable String snippet) {
 
             this.snippet = snippet;
@@ -244,6 +265,7 @@ public final class GetLogicalRouterListResult {
             _resultValue.limit = limit;
             _resultValue.name = name;
             _resultValue.offset = offset;
+            _resultValue.pagination = pagination;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.total = total;

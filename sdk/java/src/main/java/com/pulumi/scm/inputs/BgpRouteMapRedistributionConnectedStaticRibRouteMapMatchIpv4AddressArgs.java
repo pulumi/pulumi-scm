@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
     public static final BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs Empty = new BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs();
 
     /**
-     * Access list
+     * Connected Static BGP Rib Route maps ipv4 Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return Connected Static BGP Rib Route maps ipv4 Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
     }
 
     /**
-     * Prefix list
+     * Connected Static BGP Rib Route maps ipv4 Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Rib Route maps ipv4 Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList Connected Static BGP Rib Route maps ipv4 Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList Connected Static BGP Rib Route maps ipv4 Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList Connected Static BGP Rib Route maps ipv4 Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList Connected Static BGP Rib Route maps ipv4 Prefix list
          * 
          * @return builder
          * 

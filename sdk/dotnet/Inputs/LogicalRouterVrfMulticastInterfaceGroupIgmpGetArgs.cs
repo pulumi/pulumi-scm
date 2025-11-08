@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         /// Last member query interval
         /// </summary>
         [Input("lastMemberQueryInterval")]
-        public Input<double>? LastMemberQueryInterval { get; set; }
+        public Input<int>? LastMemberQueryInterval { get; set; }
 
         /// <summary>
         /// Max groups
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         /// Max query response time
         /// </summary>
         [Input("maxQueryResponseTime")]
-        public Input<double>? MaxQueryResponseTime { get; set; }
+        public Input<int>? MaxQueryResponseTime { get; set; }
 
         /// <summary>
         /// Max sources
@@ -58,7 +58,7 @@ namespace Pulumi.Scm.Inputs
         /// Query interval
         /// </summary>
         [Input("queryInterval")]
-        public Input<double>? QueryInterval { get; set; }
+        public Input<int>? QueryInterval { get; set; }
 
         /// <summary>
         /// Robustness

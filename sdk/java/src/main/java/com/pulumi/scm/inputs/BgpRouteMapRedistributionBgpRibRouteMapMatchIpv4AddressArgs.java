@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs e
     public static final BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs Empty = new BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs();
 
     /**
-     * Access list
+     * BGP Root RIB Route maps match ipv Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return BGP Root RIB Route maps match ipv Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs e
     }
 
     /**
-     * Prefix list
+     * BGP Root RIB Route maps match ipv Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return BGP Root RIB Route maps match ipv Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs e
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root RIB Route maps match ipv Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs e
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root RIB Route maps match ipv Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs e
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root RIB Route maps match ipv Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs e
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root RIB Route maps match ipv Prefix list
          * 
          * @return builder
          * 

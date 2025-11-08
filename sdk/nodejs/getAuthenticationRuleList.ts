@@ -8,9 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allPreRules = scm.getAuthenticationRuleList({
+ *     limit: 10,
+ *     offset: 15,
+ *     position: "pre",
+ *     folder: "All",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: allPreRules.then(allPreRules => allPreRules.total),
+ *     firstRuleName: allPreRules.then(allPreRules => allPreRules.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getAuthenticationRuleList(args?: GetAuthenticationRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationRuleListResult> {
-    args = args || {};
+export function getAuthenticationRuleList(args: GetAuthenticationRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", {
         "device": args.device,
@@ -18,6 +35,7 @@ export function getAuthenticationRuleList(args?: GetAuthenticationRuleListArgs, 
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -46,6 +64,10 @@ export interface GetAuthenticationRuleListArgs {
      * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The relative position of the rule
+     */
+    position: string;
     /**
      * The snippet of the item.
      */
@@ -85,6 +107,10 @@ export interface GetAuthenticationRuleListResult {
      */
     readonly offset?: number;
     /**
+     * The relative position of the rule
+     */
+    readonly position: string;
+    /**
      * The snippet of the item.
      */
     readonly snippet?: string;
@@ -96,9 +122,26 @@ export interface GetAuthenticationRuleListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allPreRules = scm.getAuthenticationRuleList({
+ *     limit: 10,
+ *     offset: 15,
+ *     position: "pre",
+ *     folder: "All",
+ * });
+ * export const fetchedRuleListSummary = {
+ *     countOfRulesFetched: allPreRules.then(allPreRules => allPreRules.total),
+ *     firstRuleName: allPreRules.then(allPreRules => allPreRules.datas?.[0]?.name),
+ * };
+ * ```
  */
-export function getAuthenticationRuleListOutput(args?: GetAuthenticationRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleListResult> {
-    args = args || {};
+export function getAuthenticationRuleListOutput(args: GetAuthenticationRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", {
         "device": args.device,
@@ -106,6 +149,7 @@ export function getAuthenticationRuleListOutput(args?: GetAuthenticationRuleList
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "position": args.position,
         "snippet": args.snippet,
     }, opts);
 }
@@ -134,6 +178,10 @@ export interface GetAuthenticationRuleListOutputArgs {
      * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The relative position of the rule
+     */
+    position: pulumi.Input<string>;
     /**
      * The snippet of the item.
      */

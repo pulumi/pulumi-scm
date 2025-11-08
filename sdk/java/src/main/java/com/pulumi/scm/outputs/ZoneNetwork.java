@@ -4,8 +4,10 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.ZoneNetworkTunnel;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,10 +20,40 @@ public final class ZoneNetwork {
      */
     private @Nullable Boolean enablePacketBufferProtection;
     /**
+     * @return External
+     * 
+     */
+    private @Nullable List<String> externals;
+    /**
+     * @return Layer2
+     * 
+     */
+    private @Nullable List<String> layer2s;
+    /**
+     * @return Layer3
+     * 
+     */
+    private @Nullable List<String> layer3s;
+    /**
      * @return Log setting
      * 
      */
     private @Nullable String logSetting;
+    /**
+     * @return Tap
+     * 
+     */
+    private @Nullable List<String> taps;
+    /**
+     * @return Tunnel
+     * 
+     */
+    private @Nullable ZoneNetworkTunnel tunnel;
+    /**
+     * @return Virtual wire
+     * 
+     */
+    private @Nullable List<String> virtualWires;
     /**
      * @return Zone protection profile
      * 
@@ -37,11 +69,53 @@ public final class ZoneNetwork {
         return Optional.ofNullable(this.enablePacketBufferProtection);
     }
     /**
+     * @return External
+     * 
+     */
+    public List<String> externals() {
+        return this.externals == null ? List.of() : this.externals;
+    }
+    /**
+     * @return Layer2
+     * 
+     */
+    public List<String> layer2s() {
+        return this.layer2s == null ? List.of() : this.layer2s;
+    }
+    /**
+     * @return Layer3
+     * 
+     */
+    public List<String> layer3s() {
+        return this.layer3s == null ? List.of() : this.layer3s;
+    }
+    /**
      * @return Log setting
      * 
      */
     public Optional<String> logSetting() {
         return Optional.ofNullable(this.logSetting);
+    }
+    /**
+     * @return Tap
+     * 
+     */
+    public List<String> taps() {
+        return this.taps == null ? List.of() : this.taps;
+    }
+    /**
+     * @return Tunnel
+     * 
+     */
+    public Optional<ZoneNetworkTunnel> tunnel() {
+        return Optional.ofNullable(this.tunnel);
+    }
+    /**
+     * @return Virtual wire
+     * 
+     */
+    public List<String> virtualWires() {
+        return this.virtualWires == null ? List.of() : this.virtualWires;
     }
     /**
      * @return Zone protection profile
@@ -61,13 +135,25 @@ public final class ZoneNetwork {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable Boolean enablePacketBufferProtection;
+        private @Nullable List<String> externals;
+        private @Nullable List<String> layer2s;
+        private @Nullable List<String> layer3s;
         private @Nullable String logSetting;
+        private @Nullable List<String> taps;
+        private @Nullable ZoneNetworkTunnel tunnel;
+        private @Nullable List<String> virtualWires;
         private @Nullable String zoneProtectionProfile;
         public Builder() {}
         public Builder(ZoneNetwork defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.enablePacketBufferProtection = defaults.enablePacketBufferProtection;
+    	      this.externals = defaults.externals;
+    	      this.layer2s = defaults.layer2s;
+    	      this.layer3s = defaults.layer3s;
     	      this.logSetting = defaults.logSetting;
+    	      this.taps = defaults.taps;
+    	      this.tunnel = defaults.tunnel;
+    	      this.virtualWires = defaults.virtualWires;
     	      this.zoneProtectionProfile = defaults.zoneProtectionProfile;
         }
 
@@ -78,10 +164,61 @@ public final class ZoneNetwork {
             return this;
         }
         @CustomType.Setter
+        public Builder externals(@Nullable List<String> externals) {
+
+            this.externals = externals;
+            return this;
+        }
+        public Builder externals(String... externals) {
+            return externals(List.of(externals));
+        }
+        @CustomType.Setter
+        public Builder layer2s(@Nullable List<String> layer2s) {
+
+            this.layer2s = layer2s;
+            return this;
+        }
+        public Builder layer2s(String... layer2s) {
+            return layer2s(List.of(layer2s));
+        }
+        @CustomType.Setter
+        public Builder layer3s(@Nullable List<String> layer3s) {
+
+            this.layer3s = layer3s;
+            return this;
+        }
+        public Builder layer3s(String... layer3s) {
+            return layer3s(List.of(layer3s));
+        }
+        @CustomType.Setter
         public Builder logSetting(@Nullable String logSetting) {
 
             this.logSetting = logSetting;
             return this;
+        }
+        @CustomType.Setter
+        public Builder taps(@Nullable List<String> taps) {
+
+            this.taps = taps;
+            return this;
+        }
+        public Builder taps(String... taps) {
+            return taps(List.of(taps));
+        }
+        @CustomType.Setter
+        public Builder tunnel(@Nullable ZoneNetworkTunnel tunnel) {
+
+            this.tunnel = tunnel;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder virtualWires(@Nullable List<String> virtualWires) {
+
+            this.virtualWires = virtualWires;
+            return this;
+        }
+        public Builder virtualWires(String... virtualWires) {
+            return virtualWires(List.of(virtualWires));
         }
         @CustomType.Setter
         public Builder zoneProtectionProfile(@Nullable String zoneProtectionProfile) {
@@ -92,7 +229,13 @@ public final class ZoneNetwork {
         public ZoneNetwork build() {
             final var _resultValue = new ZoneNetwork();
             _resultValue.enablePacketBufferProtection = enablePacketBufferProtection;
+            _resultValue.externals = externals;
+            _resultValue.layer2s = layer2s;
+            _resultValue.layer3s = layer3s;
             _resultValue.logSetting = logSetting;
+            _resultValue.taps = taps;
+            _resultValue.tunnel = tunnel;
+            _resultValue.virtualWires = virtualWires;
             _resultValue.zoneProtectionProfile = zoneProtectionProfile;
             return _resultValue;
         }

@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Last member query interval
         /// </summary>
-        public readonly double LastMemberQueryInterval;
+        public readonly int LastMemberQueryInterval;
         /// <summary>
         /// Max groups
         /// </summary>
@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Max query response time
         /// </summary>
-        public readonly double MaxQueryResponseTime;
+        public readonly int MaxQueryResponseTime;
         /// <summary>
         /// Max sources
         /// </summary>
@@ -44,7 +44,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Query interval
         /// </summary>
-        public readonly double QueryInterval;
+        public readonly int QueryInterval;
         /// <summary>
         /// Robustness
         /// </summary>
@@ -64,17 +64,17 @@ namespace Pulumi.Scm.Outputs
 
             bool immediateLeave,
 
-            double lastMemberQueryInterval,
+            int lastMemberQueryInterval,
 
             string maxGroups,
 
-            double maxQueryResponseTime,
+            int maxQueryResponseTime,
 
             string maxSources,
 
             string mode,
 
-            double queryInterval,
+            int queryInterval,
 
             string robustness,
 

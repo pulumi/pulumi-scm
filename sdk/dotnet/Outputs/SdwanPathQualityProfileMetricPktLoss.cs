@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class SdwanPathQualityProfileMetricPktLoss
     {
         /// <summary>
-        /// Sensitivity
+        /// Packet loss sensitivity
         /// </summary>
-        public readonly string? Sensitivity;
+        public readonly string Sensitivity;
         /// <summary>
-        /// Threshold
+        /// Packet loss threshold (percentage)
         /// </summary>
-        public readonly int? Threshold;
+        public readonly int Threshold;
 
         [OutputConstructor]
         private SdwanPathQualityProfileMetricPktLoss(
-            string? sensitivity,
+            string sensitivity,
 
-            int? threshold)
+            int threshold)
         {
             Sensitivity = sensitivity;
             Threshold = threshold;

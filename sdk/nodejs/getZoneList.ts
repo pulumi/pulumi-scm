@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all zones
+ * const allZones = scm.getZoneList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmZoneList = allZones.then(allZones => .reduce((__obj, zone) => ({ ...__obj, [zone.name]: zone })));
+ * ```
  */
 export function getZoneList(args?: GetZoneListArgs, opts?: pulumi.InvokeOptions): Promise<GetZoneListResult> {
     args = args || {};
@@ -96,6 +109,19 @@ export interface GetZoneListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all zones
+ * const allZones = scm.getZoneList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmZoneList = allZones.then(allZones => .reduce((__obj, zone) => ({ ...__obj, [zone.name]: zone })));
+ * ```
  */
 export function getZoneListOutput(args?: GetZoneListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetZoneListResult> {
     args = args || {};

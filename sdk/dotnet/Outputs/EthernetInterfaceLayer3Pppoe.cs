@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? Authentication;
         /// <summary>
-        /// Default route metric
+        /// Metric of the default route created
         /// </summary>
         public readonly int? DefaultRouteMetric;
         /// <summary>
@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Passive
         /// </summary>
-        public readonly bool? Passive;
+        public readonly Outputs.EthernetInterfaceLayer3PppoePassive? Passive;
         /// <summary>
         /// Password
         /// </summary>
@@ -60,7 +60,7 @@ namespace Pulumi.Scm.Outputs
 
             bool? enable,
 
-            bool? passive,
+            Outputs.EthernetInterfaceLayer3PppoePassive? passive,
 
             string password,
 

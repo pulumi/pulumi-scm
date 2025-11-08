@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
     /**
-     * @return Action
+     * @return Connected Static BGP Route maps Action
      * 
      */
     private @Nullable String action;
     /**
-     * @return Description
+     * @return Connected Static BGP Route maps Description
      * 
      */
     private @Nullable String description;
@@ -30,7 +30,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Route maps Sequence number
      * 
      */
     private @Nullable Integer name;
@@ -42,14 +42,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 
     private BgpRouteMapRedistributionConnectedStaticBgpRouteMap() {}
     /**
-     * @return Action
+     * @return Connected Static BGP Route maps Action
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Description
+     * @return Connected Static BGP Route maps Description
      * 
      */
     public Optional<String> description() {
@@ -63,7 +63,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
         return Optional.ofNullable(this.match);
     }
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Route maps Sequence number
      * 
      */
     public Optional<Integer> name() {

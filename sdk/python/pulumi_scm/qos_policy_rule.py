@@ -28,8 +28,10 @@ class QosPolicyRuleArgs:
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a QosPolicyRule resource.
         :param pulumi.Input['QosPolicyRuleActionArgs'] action: Action
@@ -39,8 +41,10 @@ class QosPolicyRuleArgs:
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         pulumi.set(__self__, "action", action)
         if description is not None:
@@ -55,10 +59,14 @@ class QosPolicyRuleArgs:
             pulumi.set(__self__, "name", name)
         if position is not None:
             pulumi.set(__self__, "position", position)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if schedule is not None:
             pulumi.set(__self__, "schedule", schedule)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
 
     @_builtins.property
     @pulumi.getter
@@ -145,6 +153,18 @@ class QosPolicyRuleArgs:
         pulumi.set(self, "position", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -168,6 +188,18 @@ class QosPolicyRuleArgs:
     def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "snippet", value)
 
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
 
 @pulumi.input_type
 class _QosPolicyRuleState:
@@ -179,8 +211,10 @@ class _QosPolicyRuleState:
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering QosPolicyRule resources.
@@ -191,8 +225,10 @@ class _QosPolicyRuleState:
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -208,10 +244,14 @@ class _QosPolicyRuleState:
             pulumi.set(__self__, "name", name)
         if position is not None:
             pulumi.set(__self__, "position", position)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if schedule is not None:
             pulumi.set(__self__, "schedule", schedule)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
 
@@ -300,6 +340,18 @@ class _QosPolicyRuleState:
         pulumi.set(self, "position", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -324,6 +376,18 @@ class _QosPolicyRuleState:
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
+    @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
         return pulumi.get(self, "tfid")
@@ -346,11 +410,79 @@ class QosPolicyRule(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         QosPolicyRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- 2. ANCHOR QOS POLICY RULE (Used for relative positioning) ---
+        anchor_qos_rule = scm.QosPolicyRule("anchor_qos_rule",
+            name="anchor-qos-rule",
+            description="Base rule for testing 'before' and 'after' positioning.",
+            folder="All",
+            position="pre",
+            action={
+                "class_": "2",
+            },
+            schedule="non-work-hours",
+            dscp_tos={
+                "codepoints": [{
+                    "name": "Set-EF",
+                    "type": {
+                        "ef": {},
+                    },
+                }],
+            })
+        # --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+        rule_top_qos_rule = scm.QosPolicyRule("rule_top_qos_rule",
+            name="top-absolute-qos-rule",
+            description="Placed at the very TOP of the QoS rulebase (Highest Priority).",
+            folder="All",
+            position="pre",
+            relative_position="top",
+            action={
+                "class_": "2",
+            })
+        rule_bottom_qos_rule = scm.QosPolicyRule("rule_bottom_qos_rule",
+            name="bottom-absolute-qos-rule",
+            description="Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            action={
+                "class_": "3",
+            })
+        # --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+        rule_before_anchor_qos = scm.QosPolicyRule("rule_before_anchor_qos",
+            name="before-anchor-qos-rule",
+            description="Positioned immediately BEFORE the anchor-qos-rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_qos_rule.id,
+            action={
+                "class_": "5",
+            })
+        rule_after_anchor_qos = scm.QosPolicyRule("rule_after_anchor_qos",
+            name="after-anchor-qos-rule",
+            description="Positioned immediately AFTER the anchor-qos-rule.",
+            folder="All",
+            position="pre",
+            relative_position="after",
+            target_rule=anchor_qos_rule.id,
+            action={
+                "class_": "4",
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -361,8 +493,10 @@ class QosPolicyRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         ...
     @overload
@@ -372,6 +506,72 @@ class QosPolicyRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         QosPolicyRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- 2. ANCHOR QOS POLICY RULE (Used for relative positioning) ---
+        anchor_qos_rule = scm.QosPolicyRule("anchor_qos_rule",
+            name="anchor-qos-rule",
+            description="Base rule for testing 'before' and 'after' positioning.",
+            folder="All",
+            position="pre",
+            action={
+                "class_": "2",
+            },
+            schedule="non-work-hours",
+            dscp_tos={
+                "codepoints": [{
+                    "name": "Set-EF",
+                    "type": {
+                        "ef": {},
+                    },
+                }],
+            })
+        # --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+        rule_top_qos_rule = scm.QosPolicyRule("rule_top_qos_rule",
+            name="top-absolute-qos-rule",
+            description="Placed at the very TOP of the QoS rulebase (Highest Priority).",
+            folder="All",
+            position="pre",
+            relative_position="top",
+            action={
+                "class_": "2",
+            })
+        rule_bottom_qos_rule = scm.QosPolicyRule("rule_bottom_qos_rule",
+            name="bottom-absolute-qos-rule",
+            description="Placed at the very BOTTOM of the QoS rulebase (Lowest Priority)",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            action={
+                "class_": "3",
+            })
+        # --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+        rule_before_anchor_qos = scm.QosPolicyRule("rule_before_anchor_qos",
+            name="before-anchor-qos-rule",
+            description="Positioned immediately BEFORE the anchor-qos-rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_qos_rule.id,
+            action={
+                "class_": "5",
+            })
+        rule_after_anchor_qos = scm.QosPolicyRule("rule_after_anchor_qos",
+            name="after-anchor-qos-rule",
+            description="Positioned immediately AFTER the anchor-qos-rule.",
+            folder="All",
+            position="pre",
+            relative_position="after",
+            target_rule=anchor_qos_rule.id,
+            action={
+                "class_": "4",
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param QosPolicyRuleArgs args: The arguments to use to populate this resource's properties.
@@ -395,8 +595,10 @@ class QosPolicyRule(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  schedule: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -415,8 +617,10 @@ class QosPolicyRule(pulumi.CustomResource):
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
             __props__.__dict__["position"] = position
+            __props__.__dict__["relative_position"] = relative_position
             __props__.__dict__["schedule"] = schedule
             __props__.__dict__["snippet"] = snippet
+            __props__.__dict__["target_rule"] = target_rule
             __props__.__dict__["tfid"] = None
         super(QosPolicyRule, __self__).__init__(
             'scm:index/qosPolicyRule:QosPolicyRule',
@@ -435,8 +639,10 @@ class QosPolicyRule(pulumi.CustomResource):
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             position: Optional[pulumi.Input[_builtins.str]] = None,
+            relative_position: Optional[pulumi.Input[_builtins.str]] = None,
             schedule: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
+            target_rule: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'QosPolicyRule':
         """
         Get an existing QosPolicyRule resource's state with the given name, id, and optional extra
@@ -452,8 +658,10 @@ class QosPolicyRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] schedule: Schedule
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -466,8 +674,10 @@ class QosPolicyRule(pulumi.CustomResource):
         __props__.__dict__["folder"] = folder
         __props__.__dict__["name"] = name
         __props__.__dict__["position"] = position
+        __props__.__dict__["relative_position"] = relative_position
         __props__.__dict__["schedule"] = schedule
         __props__.__dict__["snippet"] = snippet
+        __props__.__dict__["target_rule"] = target_rule
         __props__.__dict__["tfid"] = tfid
         return QosPolicyRule(resource_name, opts=opts, __props__=__props__)
 
@@ -528,6 +738,14 @@ class QosPolicyRule(pulumi.CustomResource):
         return pulumi.get(self, "position")
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @_builtins.property
     @pulumi.getter
     def schedule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
@@ -542,6 +760,14 @@ class QosPolicyRule(pulumi.CustomResource):
         The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
 
     @_builtins.property
     @pulumi.getter

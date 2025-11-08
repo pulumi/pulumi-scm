@@ -30,7 +30,7 @@ import (
 //			// Fetch a list of all application objects.
 //			// This data source will call the "List" API endpoint.
 //			allApps, err := scm.GetApplicationList(ctx, &scm.GetApplicationListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //			}, nil)
 //			if err != nil {
 //				return err

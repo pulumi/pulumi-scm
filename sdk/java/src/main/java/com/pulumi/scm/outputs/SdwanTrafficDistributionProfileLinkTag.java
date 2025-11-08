@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -13,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SdwanTrafficDistributionProfileLinkTag {
     /**
-     * @return Name
+     * @return Link-Tag used for identifying a set of interfaces
      * 
      */
-    private @Nullable String name;
+    private String name;
     /**
-     * @return Weight
+     * @return Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      * 
      */
     private @Nullable Integer weight;
 
     private SdwanTrafficDistributionProfileLinkTag() {}
     /**
-     * @return Name
+     * @return Link-Tag used for identifying a set of interfaces
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
     }
     /**
-     * @return Weight
+     * @return Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
      * 
      */
     public Optional<Integer> weight() {
@@ -48,7 +49,7 @@ public final class SdwanTrafficDistributionProfileLinkTag {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String name;
+        private String name;
         private @Nullable Integer weight;
         public Builder() {}
         public Builder(SdwanTrafficDistributionProfileLinkTag defaults) {
@@ -58,8 +59,10 @@ public final class SdwanTrafficDistributionProfileLinkTag {
         }
 
         @CustomType.Setter
-        public Builder name(@Nullable String name) {
-
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("SdwanTrafficDistributionProfileLinkTag", "name");
+            }
             this.name = name;
             return this;
         }

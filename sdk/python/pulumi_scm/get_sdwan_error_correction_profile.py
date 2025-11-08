@@ -28,8 +28,8 @@ class GetSdwanErrorCorrectionProfileResult:
     A collection of values returned by getSdwanErrorCorrectionProfile.
     """
     def __init__(__self__, activation_threshold=None, device=None, folder=None, id=None, mode=None, name=None, snippet=None, tfid=None):
-        if activation_threshold and not isinstance(activation_threshold, float):
-            raise TypeError("Expected argument 'activation_threshold' to be a float")
+        if activation_threshold and not isinstance(activation_threshold, int):
+            raise TypeError("Expected argument 'activation_threshold' to be a int")
         pulumi.set(__self__, "activation_threshold", activation_threshold)
         if device and not isinstance(device, str):
             raise TypeError("Expected argument 'device' to be a str")
@@ -55,7 +55,7 @@ class GetSdwanErrorCorrectionProfileResult:
 
     @_builtins.property
     @pulumi.getter(name="activationThreshold")
-    def activation_threshold(self) -> _builtins.float:
+    def activation_threshold(self) -> _builtins.int:
         """
         Activation threshold
         """

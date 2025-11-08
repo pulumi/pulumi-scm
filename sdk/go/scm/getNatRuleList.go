@@ -12,6 +12,40 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Define a data source for listing NAT rules
+//			pagedNatRulesList, err := scm.GetNatRuleList(ctx, &scm.GetNatRuleListArgs{
+//				Folder:   pulumi.StringRef("All"),
+//				Limit:    pulumi.IntRef(10),
+//				Offset:   pulumi.IntRef(10),
+//				Position: "pre",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedNATRuleListSummary", pulumi.Map{
+//				"totalRulesInList": pagedNatRulesList.Total,
+//				"allRules":         pagedNatRulesList.Datas,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetNatRuleList(ctx *pulumi.Context, args *GetNatRuleListArgs, opts ...pulumi.InvokeOption) (*GetNatRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetNatRuleListResult
@@ -34,6 +68,8 @@ type GetNatRuleListArgs struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -54,6 +90,8 @@ type GetNatRuleListResult struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
@@ -82,6 +120,8 @@ type GetNatRuleListOutputArgs struct {
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The relative position of the rule
+	Position pulumi.StringInput `pulumi:"position"`
 	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
@@ -138,6 +178,11 @@ func (o GetNatRuleListResultOutput) Name() pulumi.StringPtrOutput {
 // The offset of the first item to return.
 func (o GetNatRuleListResultOutput) Offset() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetNatRuleListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The relative position of the rule
+func (o GetNatRuleListResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v GetNatRuleListResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
 // The snippet of the item.

@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRp {
      * @return Advertisement interval
      * 
      */
-    private @Nullable Double advertisementInterval;
+    private @Nullable Integer advertisementInterval;
     /**
      * @return Group addresses
      * 
@@ -37,7 +37,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRp {
      * @return Priority
      * 
      */
-    private @Nullable Double priority;
+    private @Nullable Integer priority;
 
     private LogicalRouterVrfMulticastRpLocalRpCandidateRp() {}
     /**
@@ -51,7 +51,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRp {
      * @return Advertisement interval
      * 
      */
-    public Optional<Double> advertisementInterval() {
+    public Optional<Integer> advertisementInterval() {
         return Optional.ofNullable(this.advertisementInterval);
     }
     /**
@@ -72,7 +72,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRp {
      * @return Priority
      * 
      */
-    public Optional<Double> priority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
 
@@ -86,10 +86,10 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRp {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String address;
-        private @Nullable Double advertisementInterval;
+        private @Nullable Integer advertisementInterval;
         private @Nullable List<String> groupAddresses;
         private @Nullable String interface_;
-        private @Nullable Double priority;
+        private @Nullable Integer priority;
         public Builder() {}
         public Builder(LogicalRouterVrfMulticastRpLocalRpCandidateRp defaults) {
     	      Objects.requireNonNull(defaults);
@@ -107,7 +107,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRp {
             return this;
         }
         @CustomType.Setter
-        public Builder advertisementInterval(@Nullable Double advertisementInterval) {
+        public Builder advertisementInterval(@Nullable Integer advertisementInterval) {
 
             this.advertisementInterval = advertisementInterval;
             return this;
@@ -128,7 +128,7 @@ public final class LogicalRouterVrfMulticastRpLocalRpCandidateRp {
             return this;
         }
         @CustomType.Setter
-        public Builder priority(@Nullable Double priority) {
+        public Builder priority(@Nullable Integer priority) {
 
             this.priority = priority;
             return this;

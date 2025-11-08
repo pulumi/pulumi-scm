@@ -8,6 +8,37 @@ import * as utilities from "./utilities";
 
 /**
  * DecryptionRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+ * const testDecryptionRule = new scm.DecryptionRule("test_decryption_rule", {
+ *     name: "data-source-test-rule",
+ *     description: "Rule created specifically for data source testing.",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: "decrypt",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     services: ["service-https"],
+ *     categories: ["high-risk"],
+ *     sourceUsers: ["any"],
+ *     type: {
+ *         sslForwardProxy: {},
+ *     },
+ * });
+ * // We use the ID from the resource created above.
+ * const singleRuleById = scm.getDecryptionRuleOutput({
+ *     id: testDecryptionRule.id,
+ * });
+ * export const singleDecryptionRuleName = singleRuleById;
+ * ```
  */
 export function getDecryptionRule(args: GetDecryptionRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -100,9 +131,17 @@ export interface GetDecryptionRuleResult {
      */
     readonly negateSource: boolean;
     /**
+     * The position of a security rule
+     */
+    readonly position: string;
+    /**
      * The decryption profile associated with the decryption rule
      */
     readonly profile: string;
+    /**
+     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+     */
+    readonly relativePosition: string;
     /**
      * The destination services and/or service groups
      */
@@ -127,6 +166,10 @@ export interface GetDecryptionRuleResult {
      * The tags associated with the decryption rule
      */
     readonly tags: string[];
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+     */
+    readonly targetRule: string;
     readonly tfid: string;
     /**
      * The destination security zone
@@ -139,6 +182,37 @@ export interface GetDecryptionRuleResult {
 }
 /**
  * DecryptionRule data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+ * const testDecryptionRule = new scm.DecryptionRule("test_decryption_rule", {
+ *     name: "data-source-test-rule",
+ *     description: "Rule created specifically for data source testing.",
+ *     folder: "All",
+ *     position: "pre",
+ *     action: "decrypt",
+ *     froms: ["trust"],
+ *     tos: ["untrust"],
+ *     sources: ["any"],
+ *     destinations: ["any"],
+ *     services: ["service-https"],
+ *     categories: ["high-risk"],
+ *     sourceUsers: ["any"],
+ *     type: {
+ *         sslForwardProxy: {},
+ *     },
+ * });
+ * // We use the ID from the resource created above.
+ * const singleRuleById = scm.getDecryptionRuleOutput({
+ *     id: testDecryptionRule.id,
+ * });
+ * export const singleDecryptionRuleName = singleRuleById;
+ * ```
  */
 export function getDecryptionRuleOutput(args: GetDecryptionRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

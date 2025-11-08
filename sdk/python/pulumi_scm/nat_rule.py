@@ -28,10 +28,10 @@ class NatRuleArgs:
                  tos: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_translation: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_rewrite: Optional[pulumi.Input['NatRuleDnsRewriteArgs']] = None,
+                 dynamic_destination_translation: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_type: Optional[pulumi.Input[_builtins.str]] = None,
@@ -39,9 +39,7 @@ class NatRuleArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_translation: Optional[pulumi.Input['NatRuleSourceTranslationArgs']] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
-                 translated_port: Optional[pulumi.Input[_builtins.int]] = None):
+                 to_interface: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a NatRule resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
@@ -51,10 +49,10 @@ class NatRuleArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
         :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Destination translation
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
-        :param pulumi.Input[_builtins.str] distribution: Distribution method
-        :param pulumi.Input['NatRuleDnsRewriteArgs'] dns_rewrite: DNS rewrite
+        :param pulumi.Input['NatRuleDynamicDestinationTranslationArgs'] dynamic_destination_translation: Dynamic destination translation
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[_builtins.str] name: NAT rule name
         :param pulumi.Input[_builtins.str] nat_type: NAT type
@@ -63,8 +61,6 @@ class NatRuleArgs:
         :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: Source translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
         :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
-        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
-        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         pulumi.set(__self__, "destinations", destinations)
         pulumi.set(__self__, "froms", froms)
@@ -75,14 +71,14 @@ class NatRuleArgs:
             pulumi.set(__self__, "active_active_device_binding", active_active_device_binding)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if destination_translation is not None:
+            pulumi.set(__self__, "destination_translation", destination_translation)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
-        if distribution is not None:
-            pulumi.set(__self__, "distribution", distribution)
-        if dns_rewrite is not None:
-            pulumi.set(__self__, "dns_rewrite", dns_rewrite)
+        if dynamic_destination_translation is not None:
+            pulumi.set(__self__, "dynamic_destination_translation", dynamic_destination_translation)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
@@ -99,10 +95,6 @@ class NatRuleArgs:
             pulumi.set(__self__, "tags", tags)
         if to_interface is not None:
             pulumi.set(__self__, "to_interface", to_interface)
-        if translated_address_single is not None:
-            pulumi.set(__self__, "translated_address_single", translated_address_single)
-        if translated_port is not None:
-            pulumi.set(__self__, "translated_port", translated_port)
 
     @_builtins.property
     @pulumi.getter
@@ -189,6 +181,18 @@ class NatRuleArgs:
         pulumi.set(self, "description", value)
 
     @_builtins.property
+    @pulumi.getter(name="destinationTranslation")
+    def destination_translation(self) -> Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]:
+        """
+        Destination translation
+        """
+        return pulumi.get(self, "destination_translation")
+
+    @destination_translation.setter
+    def destination_translation(self, value: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]):
+        pulumi.set(self, "destination_translation", value)
+
+    @_builtins.property
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -213,28 +217,16 @@ class NatRuleArgs:
         pulumi.set(self, "disabled", value)
 
     @_builtins.property
-    @pulumi.getter
-    def distribution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter(name="dynamicDestinationTranslation")
+    def dynamic_destination_translation(self) -> Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]:
         """
-        Distribution method
+        Dynamic destination translation
         """
-        return pulumi.get(self, "distribution")
+        return pulumi.get(self, "dynamic_destination_translation")
 
-    @distribution.setter
-    def distribution(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "distribution", value)
-
-    @_builtins.property
-    @pulumi.getter(name="dnsRewrite")
-    def dns_rewrite(self) -> Optional[pulumi.Input['NatRuleDnsRewriteArgs']]:
-        """
-        DNS rewrite
-        """
-        return pulumi.get(self, "dns_rewrite")
-
-    @dns_rewrite.setter
-    def dns_rewrite(self, value: Optional[pulumi.Input['NatRuleDnsRewriteArgs']]):
-        pulumi.set(self, "dns_rewrite", value)
+    @dynamic_destination_translation.setter
+    def dynamic_destination_translation(self, value: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]):
+        pulumi.set(self, "dynamic_destination_translation", value)
 
     @_builtins.property
     @pulumi.getter
@@ -332,41 +324,17 @@ class NatRuleArgs:
     def to_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "to_interface", value)
 
-    @_builtins.property
-    @pulumi.getter(name="translatedAddressSingle")
-    def translated_address_single(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Translated destination IP address
-        """
-        return pulumi.get(self, "translated_address_single")
-
-    @translated_address_single.setter
-    def translated_address_single(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "translated_address_single", value)
-
-    @_builtins.property
-    @pulumi.getter(name="translatedPort")
-    def translated_port(self) -> Optional[pulumi.Input[_builtins.int]]:
-        """
-        Translated destination port
-        """
-        return pulumi.get(self, "translated_port")
-
-    @translated_port.setter
-    def translated_port(self, value: Optional[pulumi.Input[_builtins.int]]):
-        pulumi.set(self, "translated_port", value)
-
 
 @pulumi.input_type
 class _NatRuleState:
     def __init__(__self__, *,
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_translation: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_rewrite: Optional[pulumi.Input['NatRuleDnsRewriteArgs']] = None,
+                 dynamic_destination_translation: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -379,18 +347,16 @@ class _NatRuleState:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
                  to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
-                 translated_port: Optional[pulumi.Input[_builtins.int]] = None):
+                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering NatRule resources.
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
         :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
-        :param pulumi.Input[_builtins.str] distribution: Distribution method
-        :param pulumi.Input['NatRuleDnsRewriteArgs'] dns_rewrite: DNS rewrite
+        :param pulumi.Input['NatRuleDynamicDestinationTranslationArgs'] dynamic_destination_translation: Dynamic destination translation
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
@@ -403,23 +369,21 @@ class _NatRuleState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
         :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
-        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
-        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         if active_active_device_binding is not None:
             pulumi.set(__self__, "active_active_device_binding", active_active_device_binding)
         if description is not None:
             pulumi.set(__self__, "description", description)
+        if destination_translation is not None:
+            pulumi.set(__self__, "destination_translation", destination_translation)
         if destinations is not None:
             pulumi.set(__self__, "destinations", destinations)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
-        if distribution is not None:
-            pulumi.set(__self__, "distribution", distribution)
-        if dns_rewrite is not None:
-            pulumi.set(__self__, "dns_rewrite", dns_rewrite)
+        if dynamic_destination_translation is not None:
+            pulumi.set(__self__, "dynamic_destination_translation", dynamic_destination_translation)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if froms is not None:
@@ -446,10 +410,6 @@ class _NatRuleState:
             pulumi.set(__self__, "to_interface", to_interface)
         if tos is not None:
             pulumi.set(__self__, "tos", tos)
-        if translated_address_single is not None:
-            pulumi.set(__self__, "translated_address_single", translated_address_single)
-        if translated_port is not None:
-            pulumi.set(__self__, "translated_port", translated_port)
 
     @_builtins.property
     @pulumi.getter(name="activeActiveDeviceBinding")
@@ -474,6 +434,18 @@ class _NatRuleState:
     @description.setter
     def description(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationTranslation")
+    def destination_translation(self) -> Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]:
+        """
+        Destination translation
+        """
+        return pulumi.get(self, "destination_translation")
+
+    @destination_translation.setter
+    def destination_translation(self, value: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]):
+        pulumi.set(self, "destination_translation", value)
 
     @_builtins.property
     @pulumi.getter
@@ -512,28 +484,16 @@ class _NatRuleState:
         pulumi.set(self, "disabled", value)
 
     @_builtins.property
-    @pulumi.getter
-    def distribution(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter(name="dynamicDestinationTranslation")
+    def dynamic_destination_translation(self) -> Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]:
         """
-        Distribution method
+        Dynamic destination translation
         """
-        return pulumi.get(self, "distribution")
+        return pulumi.get(self, "dynamic_destination_translation")
 
-    @distribution.setter
-    def distribution(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "distribution", value)
-
-    @_builtins.property
-    @pulumi.getter(name="dnsRewrite")
-    def dns_rewrite(self) -> Optional[pulumi.Input['NatRuleDnsRewriteArgs']]:
-        """
-        DNS rewrite
-        """
-        return pulumi.get(self, "dns_rewrite")
-
-    @dns_rewrite.setter
-    def dns_rewrite(self, value: Optional[pulumi.Input['NatRuleDnsRewriteArgs']]):
-        pulumi.set(self, "dns_rewrite", value)
+    @dynamic_destination_translation.setter
+    def dynamic_destination_translation(self, value: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]):
+        pulumi.set(self, "dynamic_destination_translation", value)
 
     @_builtins.property
     @pulumi.getter
@@ -688,30 +648,6 @@ class _NatRuleState:
     def tos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tos", value)
 
-    @_builtins.property
-    @pulumi.getter(name="translatedAddressSingle")
-    def translated_address_single(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Translated destination IP address
-        """
-        return pulumi.get(self, "translated_address_single")
-
-    @translated_address_single.setter
-    def translated_address_single(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "translated_address_single", value)
-
-    @_builtins.property
-    @pulumi.getter(name="translatedPort")
-    def translated_port(self) -> Optional[pulumi.Input[_builtins.int]]:
-        """
-        Translated destination port
-        """
-        return pulumi.get(self, "translated_port")
-
-    @translated_port.setter
-    def translated_port(self, value: Optional[pulumi.Input[_builtins.int]]):
-        pulumi.set(self, "translated_port", value)
-
 
 @pulumi.type_token("scm:index/natRule:NatRule")
 class NatRule(pulumi.CustomResource):
@@ -721,11 +657,11 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_rewrite: Optional[pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']]] = None,
+                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -738,21 +674,131 @@ class NatRule(pulumi.CustomResource):
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  to_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
-                 translated_port: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
         """
         NatRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example_tag = scm.Tag("example_tag",
+            folder="All",
+            name="example-tag",
+            color="Red")
+        #Source Translation (SNAT) - Dynamic IP and Port
+        example_nat_rule = scm.NatRule("example_nat_rule",
+            name="snat-to-internet-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "dynamic_ip_and_port": {
+                    "translated_addresses": [
+                        "1.1.1.1",
+                        "1.1.1.5",
+                    ],
+                },
+            },
+            destination_translation={
+                "translated_address": "192.168.1.10",
+                "translated_port": 8080,
+            },
+            active_active_device_binding="1")
+        #Source Translation (SNAT) - Static IP - Bidirectional - no
+        example_nat_static_rule = scm.NatRule("example_nat_static_rule",
+            name="snat-to-bid-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "static_ip": {
+                    "translated_address": "1.1.1.5",
+                    "bi_directional": "no",
+                },
+            },
+            destination_translation={
+                "translated_address": "192.168.1.10",
+                "translated_port": 8080,
+            },
+            active_active_device_binding="1")
+        #Source Translation (SNAT) - Static IP - Bidirectional - yes
+        example_nat_static_rule2 = scm.NatRule("example_nat_static_rule_2",
+            name="snat-to-bid-yes-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "static_ip": {
+                    "translated_address": "1.1.1.5",
+                    "bi_directional": "yes",
+                },
+            },
+            active_active_device_binding="1")
+        #Source Translation (SNAT) - Dynamic IP 
+        example_nat_dynamic_rule = scm.NatRule("example_nat_dynamic_rule",
+            name="snat-to-dyanamic-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "dynamic_ip": {
+                    "translated_addresses": ["1.1.1.0/24"],
+                    "fallback": {
+                        "translated_addresses": ["1.1.1.0"],
+                        "interface_address": {
+                            "interface": "ethernet1/1",
+                            "ip": "1.1.1.5",
+                        },
+                    },
+                },
+            },
+            destination_translation={
+                "translated_address": "192.168.1.10",
+                "translated_port": 8080,
+            },
+            active_active_device_binding="1")
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
         :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
-        :param pulumi.Input[_builtins.str] distribution: Distribution method
-        :param pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']] dns_rewrite: DNS rewrite
+        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
@@ -765,8 +811,6 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
         :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
-        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
-        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         ...
     @overload
@@ -776,6 +820,118 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         NatRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        example_tag = scm.Tag("example_tag",
+            folder="All",
+            name="example-tag",
+            color="Red")
+        #Source Translation (SNAT) - Dynamic IP and Port
+        example_nat_rule = scm.NatRule("example_nat_rule",
+            name="snat-to-internet-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "dynamic_ip_and_port": {
+                    "translated_addresses": [
+                        "1.1.1.1",
+                        "1.1.1.5",
+                    ],
+                },
+            },
+            destination_translation={
+                "translated_address": "192.168.1.10",
+                "translated_port": 8080,
+            },
+            active_active_device_binding="1")
+        #Source Translation (SNAT) - Static IP - Bidirectional - no
+        example_nat_static_rule = scm.NatRule("example_nat_static_rule",
+            name="snat-to-bid-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "static_ip": {
+                    "translated_address": "1.1.1.5",
+                    "bi_directional": "no",
+                },
+            },
+            destination_translation={
+                "translated_address": "192.168.1.10",
+                "translated_port": 8080,
+            },
+            active_active_device_binding="1")
+        #Source Translation (SNAT) - Static IP - Bidirectional - yes
+        example_nat_static_rule2 = scm.NatRule("example_nat_static_rule_2",
+            name="snat-to-bid-yes-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "static_ip": {
+                    "translated_address": "1.1.1.5",
+                    "bi_directional": "yes",
+                },
+            },
+            active_active_device_binding="1")
+        #Source Translation (SNAT) - Dynamic IP 
+        example_nat_dynamic_rule = scm.NatRule("example_nat_dynamic_rule",
+            name="snat-to-dyanamic-1",
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            service="service-https",
+            description="Dynamic SNAT for internal traffic accessing the internet. Updating",
+            disabled=False,
+            nat_type="ipv4",
+            folder="All",
+            tags=[example_tag.name],
+            source_translation={
+                "dynamic_ip": {
+                    "translated_addresses": ["1.1.1.0/24"],
+                    "fallback": {
+                        "translated_addresses": ["1.1.1.0"],
+                        "interface_address": {
+                            "interface": "ethernet1/1",
+                            "ip": "1.1.1.5",
+                        },
+                    },
+                },
+            },
+            destination_translation={
+                "translated_address": "192.168.1.10",
+                "translated_port": 8080,
+            },
+            active_active_device_binding="1")
+        ```
 
         :param str resource_name: The name of the resource.
         :param NatRuleArgs args: The arguments to use to populate this resource's properties.
@@ -794,11 +950,11 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
-                 dns_rewrite: Optional[pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']]] = None,
+                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -811,8 +967,6 @@ class NatRule(pulumi.CustomResource):
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  to_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
-                 translated_port: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -824,13 +978,13 @@ class NatRule(pulumi.CustomResource):
 
             __props__.__dict__["active_active_device_binding"] = active_active_device_binding
             __props__.__dict__["description"] = description
+            __props__.__dict__["destination_translation"] = destination_translation
             if destinations is None and not opts.urn:
                 raise TypeError("Missing required property 'destinations'")
             __props__.__dict__["destinations"] = destinations
             __props__.__dict__["device"] = device
             __props__.__dict__["disabled"] = disabled
-            __props__.__dict__["distribution"] = distribution
-            __props__.__dict__["dns_rewrite"] = dns_rewrite
+            __props__.__dict__["dynamic_destination_translation"] = dynamic_destination_translation
             __props__.__dict__["folder"] = folder
             if froms is None and not opts.urn:
                 raise TypeError("Missing required property 'froms'")
@@ -851,8 +1005,6 @@ class NatRule(pulumi.CustomResource):
             if tos is None and not opts.urn:
                 raise TypeError("Missing required property 'tos'")
             __props__.__dict__["tos"] = tos
-            __props__.__dict__["translated_address_single"] = translated_address_single
-            __props__.__dict__["translated_port"] = translated_port
             __props__.__dict__["tfid"] = None
         super(NatRule, __self__).__init__(
             'scm:index/natRule:NatRule',
@@ -866,11 +1018,11 @@ class NatRule(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
             description: Optional[pulumi.Input[_builtins.str]] = None,
+            destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
             destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
             disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            distribution: Optional[pulumi.Input[_builtins.str]] = None,
-            dns_rewrite: Optional[pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']]] = None,
+            dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
@@ -883,9 +1035,7 @@ class NatRule(pulumi.CustomResource):
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
-            translated_port: Optional[pulumi.Input[_builtins.int]] = None) -> 'NatRule':
+            tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'NatRule':
         """
         Get an existing NatRule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -895,11 +1045,11 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
         :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Destination translation
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
-        :param pulumi.Input[_builtins.str] distribution: Distribution method
-        :param pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']] dns_rewrite: DNS rewrite
+        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
         :param pulumi.Input[_builtins.str] name: NAT rule name
@@ -912,8 +1062,6 @@ class NatRule(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
         :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
-        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
-        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -921,11 +1069,11 @@ class NatRule(pulumi.CustomResource):
 
         __props__.__dict__["active_active_device_binding"] = active_active_device_binding
         __props__.__dict__["description"] = description
+        __props__.__dict__["destination_translation"] = destination_translation
         __props__.__dict__["destinations"] = destinations
         __props__.__dict__["device"] = device
         __props__.__dict__["disabled"] = disabled
-        __props__.__dict__["distribution"] = distribution
-        __props__.__dict__["dns_rewrite"] = dns_rewrite
+        __props__.__dict__["dynamic_destination_translation"] = dynamic_destination_translation
         __props__.__dict__["folder"] = folder
         __props__.__dict__["froms"] = froms
         __props__.__dict__["name"] = name
@@ -939,8 +1087,6 @@ class NatRule(pulumi.CustomResource):
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["to_interface"] = to_interface
         __props__.__dict__["tos"] = tos
-        __props__.__dict__["translated_address_single"] = translated_address_single
-        __props__.__dict__["translated_port"] = translated_port
         return NatRule(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
@@ -958,6 +1104,14 @@ class NatRule(pulumi.CustomResource):
         NAT rule description
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter(name="destinationTranslation")
+    def destination_translation(self) -> pulumi.Output[Optional['outputs.NatRuleDestinationTranslation']]:
+        """
+        Destination translation
+        """
+        return pulumi.get(self, "destination_translation")
 
     @_builtins.property
     @pulumi.getter
@@ -984,20 +1138,12 @@ class NatRule(pulumi.CustomResource):
         return pulumi.get(self, "disabled")
 
     @_builtins.property
-    @pulumi.getter
-    def distribution(self) -> pulumi.Output[Optional[_builtins.str]]:
+    @pulumi.getter(name="dynamicDestinationTranslation")
+    def dynamic_destination_translation(self) -> pulumi.Output[Optional['outputs.NatRuleDynamicDestinationTranslation']]:
         """
-        Distribution method
+        Dynamic destination translation
         """
-        return pulumi.get(self, "distribution")
-
-    @_builtins.property
-    @pulumi.getter(name="dnsRewrite")
-    def dns_rewrite(self) -> pulumi.Output[Optional['outputs.NatRuleDnsRewrite']]:
-        """
-        DNS rewrite
-        """
-        return pulumi.get(self, "dns_rewrite")
+        return pulumi.get(self, "dynamic_destination_translation")
 
     @_builtins.property
     @pulumi.getter
@@ -1099,20 +1245,4 @@ class NatRule(pulumi.CustomResource):
         Destination zone of the original packet
         """
         return pulumi.get(self, "tos")
-
-    @_builtins.property
-    @pulumi.getter(name="translatedAddressSingle")
-    def translated_address_single(self) -> pulumi.Output[Optional[_builtins.str]]:
-        """
-        Translated destination IP address
-        """
-        return pulumi.get(self, "translated_address_single")
-
-    @_builtins.property
-    @pulumi.getter(name="translatedPort")
-    def translated_port(self) -> pulumi.Output[Optional[_builtins.int]]:
-        """
-        Translated destination port
-        """
-        return pulumi.get(self, "translated_port")
 

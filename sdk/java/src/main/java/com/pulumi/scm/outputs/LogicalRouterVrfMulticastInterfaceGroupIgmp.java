@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Last member query interval
      * 
      */
-    private @Nullable Double lastMemberQueryInterval;
+    private @Nullable Integer lastMemberQueryInterval;
     /**
      * @return Max groups
      * 
@@ -37,7 +37,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Max query response time
      * 
      */
-    private @Nullable Double maxQueryResponseTime;
+    private @Nullable Integer maxQueryResponseTime;
     /**
      * @return Max sources
      * 
@@ -52,7 +52,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Query interval
      * 
      */
-    private @Nullable Double queryInterval;
+    private @Nullable Integer queryInterval;
     /**
      * @return Robustness
      * 
@@ -88,7 +88,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Last member query interval
      * 
      */
-    public Optional<Double> lastMemberQueryInterval() {
+    public Optional<Integer> lastMemberQueryInterval() {
         return Optional.ofNullable(this.lastMemberQueryInterval);
     }
     /**
@@ -102,7 +102,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Max query response time
      * 
      */
-    public Optional<Double> maxQueryResponseTime() {
+    public Optional<Integer> maxQueryResponseTime() {
         return Optional.ofNullable(this.maxQueryResponseTime);
     }
     /**
@@ -123,7 +123,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
      * @return Query interval
      * 
      */
-    public Optional<Double> queryInterval() {
+    public Optional<Integer> queryInterval() {
         return Optional.ofNullable(this.queryInterval);
     }
     /**
@@ -159,12 +159,12 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
     public static final class Builder {
         private @Nullable Boolean enable;
         private @Nullable Boolean immediateLeave;
-        private @Nullable Double lastMemberQueryInterval;
+        private @Nullable Integer lastMemberQueryInterval;
         private @Nullable String maxGroups;
-        private @Nullable Double maxQueryResponseTime;
+        private @Nullable Integer maxQueryResponseTime;
         private @Nullable String maxSources;
         private @Nullable String mode;
-        private @Nullable Double queryInterval;
+        private @Nullable Integer queryInterval;
         private @Nullable String robustness;
         private @Nullable Boolean routerAlertPolicing;
         private @Nullable String version;
@@ -197,7 +197,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
             return this;
         }
         @CustomType.Setter
-        public Builder lastMemberQueryInterval(@Nullable Double lastMemberQueryInterval) {
+        public Builder lastMemberQueryInterval(@Nullable Integer lastMemberQueryInterval) {
 
             this.lastMemberQueryInterval = lastMemberQueryInterval;
             return this;
@@ -209,7 +209,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
             return this;
         }
         @CustomType.Setter
-        public Builder maxQueryResponseTime(@Nullable Double maxQueryResponseTime) {
+        public Builder maxQueryResponseTime(@Nullable Integer maxQueryResponseTime) {
 
             this.maxQueryResponseTime = maxQueryResponseTime;
             return this;
@@ -227,7 +227,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmp {
             return this;
         }
         @CustomType.Setter
-        public Builder queryInterval(@Nullable Double queryInterval) {
+        public Builder queryInterval(@Nullable Integer queryInterval) {
 
             this.queryInterval = queryInterval;
             return this;

@@ -12,6 +12,57 @@ import (
 )
 
 // Snippet resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			scmLabel1, err := scm.NewLabel(ctx, "scm_label_1", &scm.LabelArgs{
+//				Name: pulumi.String("scm_label"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// snippet with label
+//			_, err = scm.NewSnippet(ctx, "scm_snippet_1", &scm.SnippetArgs{
+//				Name:        pulumi.String("scm_snippet"),
+//				Description: pulumi.String("Adding a Description from Terraform"),
+//				Labels: pulumi.StringArray{
+//					scmLabel1.Name,
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewSnippet(ctx, "scm_snippet_2", &scm.SnippetArgs{
+//				Name:        pulumi.String("scm_snippet_2"),
+//				Description: pulumi.String("Adding a Description from Terraform"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewSnippet(ctx, "scm_snippet_3", &scm.SnippetArgs{
+//				Name:        pulumi.String("scm_snippet_3"),
+//				Description: pulumi.String("Adding a Description from Terraform"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type Snippet struct {
 	pulumi.CustomResourceState
 

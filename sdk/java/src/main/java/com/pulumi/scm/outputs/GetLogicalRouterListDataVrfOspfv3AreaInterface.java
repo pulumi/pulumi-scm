@@ -10,7 +10,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfOspfv3AreaInterfaceLink
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfOspfv3AreaInterfaceNeighbor;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfOspfv3AreaInterfaceVrTiming;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -36,7 +36,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
      * @return Instance id
      * 
      */
-    private Double instanceId;
+    private Integer instanceId;
     /**
      * @return Link type
      * 
@@ -46,7 +46,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
      * @return Metric
      * 
      */
-    private Double metric;
+    private Integer metric;
     /**
      * @return Mtu ignore
      * 
@@ -71,7 +71,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
      * @return Priority
      * 
      */
-    private Double priority;
+    private Integer priority;
     /**
      * @return Timing
      * 
@@ -109,7 +109,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
      * @return Instance id
      * 
      */
-    public Double instanceId() {
+    public Integer instanceId() {
         return this.instanceId;
     }
     /**
@@ -123,7 +123,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
      * @return Metric
      * 
      */
-    public Double metric() {
+    public Integer metric() {
         return this.metric;
     }
     /**
@@ -158,7 +158,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
      * @return Priority
      * 
      */
-    public Double priority() {
+    public Integer priority() {
         return this.priority;
     }
     /**
@@ -188,14 +188,14 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
         private String authentication;
         private GetLogicalRouterListDataVrfOspfv3AreaInterfaceBfd bfd;
         private Boolean enable;
-        private Double instanceId;
+        private Integer instanceId;
         private GetLogicalRouterListDataVrfOspfv3AreaInterfaceLinkType linkType;
-        private Double metric;
+        private Integer metric;
         private Boolean mtuIgnore;
         private String name;
         private List<GetLogicalRouterListDataVrfOspfv3AreaInterfaceNeighbor> neighbors;
         private Boolean passive;
-        private Double priority;
+        private Integer priority;
         private String timing;
         private GetLogicalRouterListDataVrfOspfv3AreaInterfaceVrTiming vrTiming;
         public Builder() {}
@@ -241,7 +241,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder instanceId(Double instanceId) {
+        public Builder instanceId(Integer instanceId) {
             if (instanceId == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfv3AreaInterface", "instanceId");
             }
@@ -257,7 +257,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             if (metric == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfv3AreaInterface", "metric");
             }
@@ -300,7 +300,7 @@ public final class GetLogicalRouterListDataVrfOspfv3AreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder priority(Double priority) {
+        public Builder priority(Integer priority) {
             if (priority == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfv3AreaInterface", "priority");
             }

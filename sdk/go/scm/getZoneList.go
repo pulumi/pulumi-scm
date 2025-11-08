@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetZoneList(ctx *pulumi.Context, args *GetZoneListArgs, opts ...pulumi.InvokeOption) (*GetZoneListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetZoneListResult

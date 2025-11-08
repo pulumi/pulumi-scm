@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
     public static final BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs Empty = new BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs();
 
     /**
-     * Action
+     * Connected Static BGP OSPF Route map Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return Action
+     * @return Connected Static BGP OSPF Route map Action
      * 
      */
     public Optional<Output<String>> action() {
@@ -34,14 +34,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
     }
 
     /**
-     * Description
+     * Connected Static BGP OSPF Route map Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return Connected Static BGP OSPF Route map Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -64,14 +64,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
     }
 
     /**
-     * Sequence number
+     * Connected Static BGP OSPF Route map Sequence number
      * 
      */
     @Import(name="name")
     private @Nullable Output<Integer> name;
 
     /**
-     * @return Sequence number
+     * @return Connected Static BGP OSPF Route map Sequence number
      * 
      */
     public Optional<Output<Integer>> name() {
@@ -79,14 +79,14 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
     }
 
     /**
-     * Set
+     * Connected Static Root OSPF Set
      * 
      */
     @Import(name="set")
     private @Nullable Output<BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs> set;
 
     /**
-     * @return Set
+     * @return Connected Static Root OSPF Set
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs>> set() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param action Action
+         * @param action Connected Static BGP OSPF Route map Action
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param action Action
+         * @param action Connected Static BGP OSPF Route map Action
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param description Description
+         * @param description Connected Static BGP OSPF Route map Description
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param description Description
+         * @param description Connected Static BGP OSPF Route map Description
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param name Sequence number
+         * @param name Connected Static BGP OSPF Route map Sequence number
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param name Sequence number
+         * @param name Connected Static BGP OSPF Route map Sequence number
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param set Set
+         * @param set Connected Static Root OSPF Set
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs exte
         }
 
         /**
-         * @param set Set
+         * @param set Connected Static Root OSPF Set
          * 
          * @return builder
          * 

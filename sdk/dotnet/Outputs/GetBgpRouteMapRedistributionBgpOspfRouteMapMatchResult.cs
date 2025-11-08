@@ -14,47 +14,47 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionBgpOspfRouteMapMatchResult
     {
         /// <summary>
-        /// AS path access list
+        /// BGP Root OSPF Route maps match AS path access list
         /// </summary>
         public readonly string AsPathAccessList;
         /// <summary>
-        /// Extended community
+        /// EBGP Root OSPF Route maps match xtended community
         /// </summary>
         public readonly string ExtendedCommunity;
         /// <summary>
-        /// Interface
+        /// BGP Root OSPF Route maps match Interface
         /// </summary>
         public readonly string Interface;
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object
+        /// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Result Ipv4;
         /// <summary>
-        /// Large community
+        /// BGP Root OSPF Route maps match Large community
         /// </summary>
         public readonly string LargeCommunity;
         /// <summary>
-        /// Local preference
+        /// BGP Root OSPF Route maps match Local preference
         /// </summary>
         public readonly int LocalPreference;
         /// <summary>
-        /// Metric
+        /// BGP Root OSPF Route maps match Metric
         /// </summary>
         public readonly int Metric;
         /// <summary>
-        /// Origin
+        /// BGP Root OSPF Route maps match Origin
         /// </summary>
         public readonly string Origin;
         /// <summary>
-        /// Peer
+        /// BGP Root OSPF Route maps match Peer
         /// </summary>
         public readonly string Peer;
         /// <summary>
-        /// Regular community
+        /// BGP Root OSPF Route maps match Regular community
         /// </summary>
         public readonly string RegularCommunity;
         /// <summary>
-        /// Tag
+        /// BGP Root OSPF Route maps match Tag
         /// </summary>
         public readonly int Tag;
 

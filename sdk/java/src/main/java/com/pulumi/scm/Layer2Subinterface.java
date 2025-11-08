@@ -10,13 +10,69 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.Layer2SubinterfaceArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.Layer2SubinterfaceState;
-import java.lang.Double;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * Layer2Subinterface resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.EthernetInterface;
+ * import com.pulumi.scm.EthernetInterfaceArgs;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer2Args;
+ * import com.pulumi.scm.Layer2Subinterface;
+ * import com.pulumi.scm.Layer2SubinterfaceArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a ethernet interface used as parent-interface for subsequent examples
+ *         //
+ *         var scmParentInterface = new EthernetInterface("scmParentInterface", EthernetInterfaceArgs.builder()
+ *             .name("$scm_parent_interface")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer2(EthernetInterfaceLayer2Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer2 sub-interface with vlan tag 100
+ *         //
+ *         var scmLayer2Subinterface = new Layer2Subinterface("scmLayer2Subinterface", Layer2SubinterfaceArgs.builder()
+ *             .name("$scm_parent_interface.100")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .vlanTag("100")
+ *             .parentInterface("$scm_parent_interface")
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmParentInterface)
+ *                 .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/layer2Subinterface:Layer2Subinterface")
@@ -112,18 +168,18 @@ public class Layer2Subinterface extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * Vlan tag
+     * VLAN tag
      * 
      */
-    @Export(name="vlanTag", refs={Double.class}, tree="[0]")
-    private Output</* @Nullable */ Double> vlanTag;
+    @Export(name="vlanTag", refs={String.class}, tree="[0]")
+    private Output<String> vlanTag;
 
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    public Output<Optional<Double>> vlanTag() {
-        return Codegen.optional(this.vlanTag);
+    public Output<String> vlanTag() {
+        return this.vlanTag;
     }
 
     /**
@@ -138,7 +194,7 @@ public class Layer2Subinterface extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public Layer2Subinterface(java.lang.String name, @Nullable Layer2SubinterfaceArgs args) {
+    public Layer2Subinterface(java.lang.String name, Layer2SubinterfaceArgs args) {
         this(name, args, null);
     }
     /**
@@ -147,7 +203,7 @@ public class Layer2Subinterface extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public Layer2Subinterface(java.lang.String name, @Nullable Layer2SubinterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public Layer2Subinterface(java.lang.String name, Layer2SubinterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/layer2Subinterface:Layer2Subinterface", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -155,7 +211,7 @@ public class Layer2Subinterface extends com.pulumi.resources.CustomResource {
         super("scm:index/layer2Subinterface:Layer2Subinterface", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static Layer2SubinterfaceArgs makeArgs(@Nullable Layer2SubinterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static Layer2SubinterfaceArgs makeArgs(Layer2SubinterfaceArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

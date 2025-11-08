@@ -16,7 +16,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpPolicy;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpRedistRule;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfBgpRedistributionProfile;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,7 @@ public final class GetLogicalRouterVrfBgp {
      * @return Default local preference
      * 
      */
-    private Double defaultLocalPreference;
+    private Integer defaultLocalPreference;
     /**
      * @return Ecmp multi as
      * 
@@ -198,7 +198,7 @@ public final class GetLogicalRouterVrfBgp {
      * @return Default local preference
      * 
      */
-    public Double defaultLocalPreference() {
+    public Integer defaultLocalPreference() {
         return this.defaultLocalPreference;
     }
     /**
@@ -330,7 +330,7 @@ public final class GetLogicalRouterVrfBgp {
         private Boolean alwaysAdvertiseNetworkRoute;
         private String asFormat;
         private String confederationMemberAs;
-        private Double defaultLocalPreference;
+        private Integer defaultLocalPreference;
         private Boolean ecmpMultiAs;
         private Boolean enable;
         private Boolean enforceFirstAs;
@@ -436,7 +436,7 @@ public final class GetLogicalRouterVrfBgp {
             return this;
         }
         @CustomType.Setter
-        public Builder defaultLocalPreference(Double defaultLocalPreference) {
+        public Builder defaultLocalPreference(Integer defaultLocalPreference) {
             if (defaultLocalPreference == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfBgp", "defaultLocalPreference");
             }

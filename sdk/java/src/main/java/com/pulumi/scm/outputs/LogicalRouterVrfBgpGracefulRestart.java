@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,17 +21,17 @@ public final class LogicalRouterVrfBgpGracefulRestart {
      * @return Local restart time
      * 
      */
-    private @Nullable Double localRestartTime;
+    private @Nullable Integer localRestartTime;
     /**
      * @return Max peer restart time
      * 
      */
-    private @Nullable Double maxPeerRestartTime;
+    private @Nullable Integer maxPeerRestartTime;
     /**
      * @return Stale route time
      * 
      */
-    private @Nullable Double staleRouteTime;
+    private @Nullable Integer staleRouteTime;
 
     private LogicalRouterVrfBgpGracefulRestart() {}
     /**
@@ -45,21 +45,21 @@ public final class LogicalRouterVrfBgpGracefulRestart {
      * @return Local restart time
      * 
      */
-    public Optional<Double> localRestartTime() {
+    public Optional<Integer> localRestartTime() {
         return Optional.ofNullable(this.localRestartTime);
     }
     /**
      * @return Max peer restart time
      * 
      */
-    public Optional<Double> maxPeerRestartTime() {
+    public Optional<Integer> maxPeerRestartTime() {
         return Optional.ofNullable(this.maxPeerRestartTime);
     }
     /**
      * @return Stale route time
      * 
      */
-    public Optional<Double> staleRouteTime() {
+    public Optional<Integer> staleRouteTime() {
         return Optional.ofNullable(this.staleRouteTime);
     }
 
@@ -73,9 +73,9 @@ public final class LogicalRouterVrfBgpGracefulRestart {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable Boolean enable;
-        private @Nullable Double localRestartTime;
-        private @Nullable Double maxPeerRestartTime;
-        private @Nullable Double staleRouteTime;
+        private @Nullable Integer localRestartTime;
+        private @Nullable Integer maxPeerRestartTime;
+        private @Nullable Integer staleRouteTime;
         public Builder() {}
         public Builder(LogicalRouterVrfBgpGracefulRestart defaults) {
     	      Objects.requireNonNull(defaults);
@@ -92,19 +92,19 @@ public final class LogicalRouterVrfBgpGracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder localRestartTime(@Nullable Double localRestartTime) {
+        public Builder localRestartTime(@Nullable Integer localRestartTime) {
 
             this.localRestartTime = localRestartTime;
             return this;
         }
         @CustomType.Setter
-        public Builder maxPeerRestartTime(@Nullable Double maxPeerRestartTime) {
+        public Builder maxPeerRestartTime(@Nullable Integer maxPeerRestartTime) {
 
             this.maxPeerRestartTime = maxPeerRestartTime;
             return this;
         }
         @CustomType.Setter
-        public Builder staleRouteTime(@Nullable Double staleRouteTime) {
+        public Builder staleRouteTime(@Nullable Integer staleRouteTime) {
 
             this.staleRouteTime = staleRouteTime;
             return this;

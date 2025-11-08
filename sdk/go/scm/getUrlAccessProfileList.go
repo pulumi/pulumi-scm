@@ -31,7 +31,7 @@ import (
 //			//
 //			// Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
 //			allShared, err := scm.GetUrlAccessProfileList(ctx, &scm.GetUrlAccessProfileListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //			}, nil)
 //			if err != nil {
 //				return err

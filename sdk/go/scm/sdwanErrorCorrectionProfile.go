@@ -17,7 +17,7 @@ type SdwanErrorCorrectionProfile struct {
 	pulumi.CustomResourceState
 
 	// Activation threshold
-	ActivationThreshold pulumi.Float64Output `pulumi:"activationThreshold"`
+	ActivationThreshold pulumi.IntOutput `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
@@ -68,7 +68,7 @@ func GetSdwanErrorCorrectionProfile(ctx *pulumi.Context,
 // Input properties used for looking up and filtering SdwanErrorCorrectionProfile resources.
 type sdwanErrorCorrectionProfileState struct {
 	// Activation threshold
-	ActivationThreshold *float64 `pulumi:"activationThreshold"`
+	ActivationThreshold *int `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
@@ -84,7 +84,7 @@ type sdwanErrorCorrectionProfileState struct {
 
 type SdwanErrorCorrectionProfileState struct {
 	// Activation threshold
-	ActivationThreshold pulumi.Float64PtrInput
+	ActivationThreshold pulumi.IntPtrInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
@@ -104,7 +104,7 @@ func (SdwanErrorCorrectionProfileState) ElementType() reflect.Type {
 
 type sdwanErrorCorrectionProfileArgs struct {
 	// Activation threshold
-	ActivationThreshold float64 `pulumi:"activationThreshold"`
+	ActivationThreshold int `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
@@ -120,7 +120,7 @@ type sdwanErrorCorrectionProfileArgs struct {
 // The set of arguments for constructing a SdwanErrorCorrectionProfile resource.
 type SdwanErrorCorrectionProfileArgs struct {
 	// Activation threshold
-	ActivationThreshold pulumi.Float64Input
+	ActivationThreshold pulumi.IntInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
@@ -221,8 +221,8 @@ func (o SdwanErrorCorrectionProfileOutput) ToSdwanErrorCorrectionProfileOutputWi
 }
 
 // Activation threshold
-func (o SdwanErrorCorrectionProfileOutput) ActivationThreshold() pulumi.Float64Output {
-	return o.ApplyT(func(v *SdwanErrorCorrectionProfile) pulumi.Float64Output { return v.ActivationThreshold }).(pulumi.Float64Output)
+func (o SdwanErrorCorrectionProfileOutput) ActivationThreshold() pulumi.IntOutput {
+	return o.ApplyT(func(v *SdwanErrorCorrectionProfile) pulumi.IntOutput { return v.ActivationThreshold }).(pulumi.IntOutput)
 }
 
 // The device in which the resource is defined

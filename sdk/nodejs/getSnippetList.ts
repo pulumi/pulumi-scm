@@ -8,6 +8,18 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allSnippets = scm.getSnippetList({
+ *     limit: 10,
+ * });
+ * export const snippetsListRaw = allSnippets.then(allSnippets => allSnippets.datas);
+ * ```
  */
 export function getSnippetList(args?: GetSnippetListArgs, opts?: pulumi.InvokeOptions): Promise<GetSnippetListResult> {
     args = args || {};
@@ -96,6 +108,18 @@ export interface GetSnippetListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allSnippets = scm.getSnippetList({
+ *     limit: 10,
+ * });
+ * export const snippetsListRaw = allSnippets.then(allSnippets => allSnippets.datas);
+ * ```
  */
 export function getSnippetListOutput(args?: GetSnippetListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSnippetListResult> {
     args = args || {};

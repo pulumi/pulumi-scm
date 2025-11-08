@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -20,7 +20,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsO
      * @return Local port
      * 
      */
-    private Double localPort;
+    private Integer localPort;
 
     private GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnection() {}
     /**
@@ -34,7 +34,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsO
      * @return Local port
      * 
      */
-    public Double localPort() {
+    public Integer localPort() {
         return this.localPort;
     }
 
@@ -48,7 +48,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsO
     @CustomType.Builder
     public static final class Builder {
         private Boolean allow;
-        private Double localPort;
+        private Integer localPort;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnection defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,7 +65,7 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsO
             return this;
         }
         @CustomType.Setter
-        public Builder localPort(Double localPort) {
+        public Builder localPort(Integer localPort) {
             if (localPort == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnection", "localPort");
             }

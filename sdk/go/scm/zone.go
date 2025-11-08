@@ -12,6 +12,104 @@ import (
 )
 
 // Zone resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates an empty layer3 zone
+//			_, err := scm.NewZone(ctx, "scm_layer3_zone", &scm.ZoneArgs{
+//				Name:   pulumi.String("scm_layer3_zone"),
+//				Folder: pulumi.String("ngfw-shared"),
+//				Network: &scm.ZoneNetworkArgs{
+//					Layer3s: pulumi.StringArray{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates an empty layer2 zone
+//			_, err = scm.NewZone(ctx, "scm_layer2_zone", &scm.ZoneArgs{
+//				Name:   pulumi.String("scm_layer2_zone"),
+//				Folder: pulumi.String("ngfw-shared"),
+//				Network: &scm.ZoneNetworkArgs{
+//					Layer2s: pulumi.StringArray{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates an empty tap zone
+//			_, err = scm.NewZone(ctx, "scm_tap_zone", &scm.ZoneArgs{
+//				Name:   pulumi.String("scm_tap_zone"),
+//				Folder: pulumi.String("ngfw-shared"),
+//				Network: &scm.ZoneNetworkArgs{
+//					Taps: pulumi.StringArray{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates an empty vwire zone
+//			_, err = scm.NewZone(ctx, "scm_vwire_zone", &scm.ZoneArgs{
+//				Name:   pulumi.String("scm_vwire_zone"),
+//				Folder: pulumi.String("ngfw-shared"),
+//				Network: &scm.ZoneNetworkArgs{
+//					VirtualWires: pulumi.StringArray{},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 zone
+//			// Requires Interface $scm_l3_interface to exist
+//			_, err = scm.NewZone(ctx, "scm_layer3_zone_complex", &scm.ZoneArgs{
+//				Name:   pulumi.String("scm_layer3_zone_complex"),
+//				Folder: pulumi.String("ngfw-shared"),
+//				Network: &scm.ZoneNetworkArgs{
+//					Layer3s: pulumi.StringArray{
+//						pulumi.String("$scm_l3_interface"),
+//					},
+//					ZoneProtectionProfile:        pulumi.String("best-practice"),
+//					EnablePacketBufferProtection: pulumi.Bool(true),
+//				},
+//				EnableDeviceIdentification: pulumi.Bool(true),
+//				DeviceAcl: &scm.ZoneDeviceAclArgs{
+//					IncludeLists: pulumi.StringArray{
+//						pulumi.String("198.18.1.0/24"),
+//					},
+//					ExcludeLists: pulumi.StringArray{
+//						pulumi.String("198.18.2.0/24"),
+//					},
+//				},
+//				EnableUserIdentification: pulumi.Bool(true),
+//				UserAcl: &scm.ZoneUserAclArgs{
+//					IncludeLists: pulumi.StringArray{
+//						pulumi.String("198.18.3.0/24"),
+//					},
+//					ExcludeLists: pulumi.StringArray{
+//						pulumi.String("198.18.4.0/24"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type Zone struct {
 	pulumi.CustomResourceState
 

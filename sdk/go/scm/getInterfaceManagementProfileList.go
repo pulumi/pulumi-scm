@@ -12,6 +12,42 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// -----------------------------------------------------------------------------
+//			// 6. DATA SOURCE: Fetch a list of Interface Management Profiles
+//			// This data source retrieves multiple Interface Management Profiles from SCM.
+//			// -----------------------------------------------------------------------------
+//			allMgmtProfiles, err := scm.GetInterfaceManagementProfileList(ctx, &scm.GetInterfaceManagementProfileListArgs{
+//				Limit:  pulumi.IntRef(50),
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedMgmtProfileListSummary", pulumi.Map{
+//				"countOfProfilesFetched": allMgmtProfiles.Total,
+//				"firstProfileName":       allMgmtProfiles.Datas[0].Name,
+//				"data":                   allMgmtProfiles.Datas,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetInterfaceManagementProfileList(ctx *pulumi.Context, args *GetInterfaceManagementProfileListArgs, opts ...pulumi.InvokeOption) (*GetInterfaceManagementProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetInterfaceManagementProfileListResult

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsProxyDomainServerGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Cacheable
+        /// Enable caching for this DNS proxy rule?
         /// </summary>
         [Input("cacheable")]
         public Input<bool>? Cacheable { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _domainNames;
 
         /// <summary>
-        /// Domain name
+        /// Domain names(s) that will be matched
         /// </summary>
         public InputList<string> DomainNames
         {
@@ -31,19 +31,19 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Name
+        /// Proxy rule name
         /// </summary>
-        [Input("name")]
-        public Input<string>? Name { get; set; }
+        [Input("name", required: true)]
+        public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Primary
+        /// Primary DNS server IP address
         /// </summary>
-        [Input("primary")]
-        public Input<string>? Primary { get; set; }
+        [Input("primary", required: true)]
+        public Input<string> Primary { get; set; } = null!;
 
         /// <summary>
-        /// Secondary
+        /// Secondary DNS server IP address
         /// </summary>
         [Input("secondary")]
         public Input<string>? Secondary { get; set; }

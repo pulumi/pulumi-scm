@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Result
     {
         /// <summary>
-        /// Address
+        /// Connected Static BGP Rib Route maps ipv4 address
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressResult Address;
         /// <summary>

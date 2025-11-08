@@ -8,7 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.VlanInterfaceArpArgs;
 import com.pulumi.scm.inputs.VlanInterfaceDdnsConfigArgs;
 import com.pulumi.scm.inputs.VlanInterfaceDhcpClientArgs;
-import java.lang.Double;
+import com.pulumi.scm.inputs.VlanInterfaceIpArgs;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -66,14 +67,14 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
     public Optional<Output<String>> defaultValue() {
@@ -96,14 +97,14 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Dhcp client
+     * Vlan interfaces DHCP Client Object
      * 
      */
     @Import(name="dhcpClient")
     private @Nullable Output<VlanInterfaceDhcpClientArgs> dhcpClient;
 
     /**
-     * @return Dhcp client
+     * @return Vlan interfaces DHCP Client Object
      * 
      */
     public Optional<Output<VlanInterfaceDhcpClientArgs>> dhcpClient() {
@@ -141,17 +142,17 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Ip
+     * VLAN Interface IP Parent
      * 
      */
     @Import(name="ips")
-    private @Nullable Output<List<String>> ips;
+    private @Nullable Output<List<VlanInterfaceIpArgs>> ips;
 
     /**
-     * @return Ip
+     * @return VLAN Interface IP Parent
      * 
      */
-    public Optional<Output<List<String>>> ips() {
+    public Optional<Output<List<VlanInterfaceIpArgs>>> ips() {
         return Optional.ofNullable(this.ips);
     }
 
@@ -160,13 +161,13 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
      * 
      */
     @Import(name="mtu")
-    private @Nullable Output<Double> mtu;
+    private @Nullable Output<Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Optional<Output<Double>> mtu() {
+    public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
 
@@ -208,17 +209,17 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
-     * Vlan tag
+     * VLAN tag
      * 
      */
     @Import(name="vlanTag")
-    private @Nullable Output<Double> vlanTag;
+    private @Nullable Output<String> vlanTag;
 
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    public Optional<Output<Double>> vlanTag() {
+    public Optional<Output<String>> vlanTag() {
         return Optional.ofNullable(this.vlanTag);
     }
 
@@ -333,7 +334,7 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
@@ -344,7 +345,7 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
@@ -375,7 +376,7 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param dhcpClient Vlan interfaces DHCP Client Object
          * 
          * @return builder
          * 
@@ -386,7 +387,7 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param dhcpClient Vlan interfaces DHCP Client Object
          * 
          * @return builder
          * 
@@ -438,33 +439,33 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param ips Ip
+         * @param ips VLAN Interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ips(@Nullable Output<List<String>> ips) {
+        public Builder ips(@Nullable Output<List<VlanInterfaceIpArgs>> ips) {
             $.ips = ips;
             return this;
         }
 
         /**
-         * @param ips Ip
+         * @param ips VLAN Interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ips(List<String> ips) {
+        public Builder ips(List<VlanInterfaceIpArgs> ips) {
             return ips(Output.of(ips));
         }
 
         /**
-         * @param ips Ip
+         * @param ips VLAN Interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ips(String... ips) {
+        public Builder ips(VlanInterfaceIpArgs... ips) {
             return ips(List.of(ips));
         }
 
@@ -474,7 +475,7 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder mtu(@Nullable Output<Double> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             $.mtu = mtu;
             return this;
         }
@@ -485,7 +486,7 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
          * @return builder
          * 
          */
-        public Builder mtu(Double mtu) {
+        public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
         }
 
@@ -541,23 +542,23 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param vlanTag VLAN tag
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(@Nullable Output<Double> vlanTag) {
+        public Builder vlanTag(@Nullable Output<String> vlanTag) {
             $.vlanTag = vlanTag;
             return this;
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param vlanTag VLAN tag
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(Double vlanTag) {
+        public Builder vlanTag(String vlanTag) {
             return vlanTag(Output.of(vlanTag));
         }
 

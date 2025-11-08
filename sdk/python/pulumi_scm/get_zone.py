@@ -197,6 +197,26 @@ def get_zone(id: Optional[_builtins.str] = None,
     """
     Zone data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up zone by its ID.
+    scm_zone_ds = scm.get_zone(id="50f1f0f3-a420-4989-9770-c927f1467a9a")
+    pulumi.export("zoneDataSourceResults", {
+        "id": scm_zone_ds.id,
+        "name": scm_zone_ds.name,
+        "network": scm_zone_ds.network,
+        "enableDeviceIdentification": scm_zone_ds.enable_device_identification,
+        "enableUserIdentification": scm_zone_ds.enable_user_identification,
+        "userAcl": scm_zone_ds.user_acl,
+        "deviceAcl": scm_zone_ds.device_acl,
+        "folder": scm_zone_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -226,6 +246,26 @@ def get_zone_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetZoneResult]:
     """
     Zone data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up zone by its ID.
+    scm_zone_ds = scm.get_zone(id="50f1f0f3-a420-4989-9770-c927f1467a9a")
+    pulumi.export("zoneDataSourceResults", {
+        "id": scm_zone_ds.id,
+        "name": scm_zone_ds.name,
+        "network": scm_zone_ds.network,
+        "enableDeviceIdentification": scm_zone_ds.enable_device_identification,
+        "enableUserIdentification": scm_zone_ds.enable_user_identification,
+        "userAcl": scm_zone_ds.user_acl,
+        "deviceAcl": scm_zone_ds.device_acl,
+        "folder": scm_zone_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

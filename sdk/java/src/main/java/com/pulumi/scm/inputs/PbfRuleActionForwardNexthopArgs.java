@@ -31,14 +31,14 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
     }
 
     /**
-     * Ip address
+     * Next hop IP address
      * 
      */
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
     /**
-     * @return Ip address
+     * @return Next hop IP address
      * 
      */
     public Optional<Output<String>> ipAddress() {
@@ -92,7 +92,7 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param ipAddress Ip address
+         * @param ipAddress Next hop IP address
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param ipAddress Ip address
+         * @param ipAddress Next hop IP address
          * 
          * @return builder
          * 

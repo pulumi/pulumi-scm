@@ -20,7 +20,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// As path limit
         /// </summary>
-        public readonly double AsPathLimit;
+        public readonly int AsPathLimit;
         /// <summary>
         /// Community
         /// </summary>
@@ -32,11 +32,11 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Local preference
         /// </summary>
-        public readonly double LocalPreference;
+        public readonly int LocalPreference;
         /// <summary>
         /// Med
         /// </summary>
-        public readonly double Med;
+        public readonly int Med;
         /// <summary>
         /// Nexthop
         /// </summary>
@@ -48,27 +48,27 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Weight
         /// </summary>
-        public readonly double Weight;
+        public readonly int Weight;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesResult(
             Outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathResult asPath,
 
-            double asPathLimit,
+            int asPathLimit,
 
             Outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityResult community,
 
             Outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityResult extendedCommunity,
 
-            double localPreference,
+            int localPreference,
 
-            double med,
+            int med,
 
             string nexthop,
 
             string origin,
 
-            double weight)
+            int weight)
         {
             AsPath = asPath;
             AsPathLimit = asPathLimit;

@@ -8,7 +8,7 @@ import typing
 # Export this package's modules as members:
 from .address import *
 from .address_group import *
-from .aggregate_ethernet_interface import *
+from .aggregate_interface import *
 from .anti_spyware_profile import *
 from .anti_spyware_signature import *
 from .app_override_rule import *
@@ -42,8 +42,8 @@ from .get_address import *
 from .get_address_group import *
 from .get_address_group_list import *
 from .get_address_list import *
-from .get_aggregate_ethernet_interface import *
-from .get_aggregate_ethernet_interface_list import *
+from .get_aggregate_interface import *
+from .get_aggregate_interface_list import *
 from .get_anti_spyware_profile import *
 from .get_anti_spyware_profile_list import *
 from .get_anti_spyware_signature import *
@@ -324,10 +324,10 @@ _utilities.register(
  },
  {
   "pkg": "scm",
-  "mod": "index/aggregateEthernetInterface",
+  "mod": "index/aggregateInterface",
   "fqn": "pulumi_scm",
   "classes": {
-   "scm:index/aggregateEthernetInterface:AggregateEthernetInterface": "AggregateEthernetInterface"
+   "scm:index/aggregateInterface:AggregateInterface": "AggregateInterface"
   }
  },
  {

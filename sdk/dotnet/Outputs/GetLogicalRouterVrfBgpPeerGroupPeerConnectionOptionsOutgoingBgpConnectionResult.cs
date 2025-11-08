@@ -20,13 +20,13 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Local port
         /// </summary>
-        public readonly double LocalPort;
+        public readonly int LocalPort;
 
         [OutputConstructor]
         private GetLogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionResult(
             bool allow,
 
-            double localPort)
+            int localPort)
         {
             Allow = allow;
             LocalPort = localPort;

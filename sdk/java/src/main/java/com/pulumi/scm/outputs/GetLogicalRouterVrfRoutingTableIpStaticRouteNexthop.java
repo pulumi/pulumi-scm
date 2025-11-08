@@ -23,6 +23,11 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
      */
     private String fqdn;
     /**
+     * @return Ip address
+     * 
+     */
+    private String ipAddress;
+    /**
      * @return Ipv6 address
      * 
      */
@@ -62,6 +67,13 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
      */
     public String fqdn() {
         return this.fqdn;
+    }
+    /**
+     * @return Ip address
+     * 
+     */
+    public String ipAddress() {
+        return this.ipAddress;
     }
     /**
      * @return Ipv6 address
@@ -110,6 +122,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     public static final class Builder {
         private GetLogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard discard;
         private String fqdn;
+        private String ipAddress;
         private String ipv6Address;
         private String nextLr;
         private String nextVr;
@@ -120,6 +133,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
     	      Objects.requireNonNull(defaults);
     	      this.discard = defaults.discard;
     	      this.fqdn = defaults.fqdn;
+    	      this.ipAddress = defaults.ipAddress;
     	      this.ipv6Address = defaults.ipv6Address;
     	      this.nextLr = defaults.nextLr;
     	      this.nextVr = defaults.nextVr;
@@ -141,6 +155,14 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop", "fqdn");
             }
             this.fqdn = fqdn;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipAddress(String ipAddress) {
+            if (ipAddress == null) {
+              throw new MissingRequiredPropertyException("GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop", "ipAddress");
+            }
+            this.ipAddress = ipAddress;
             return this;
         }
         @CustomType.Setter
@@ -187,6 +209,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop {
             final var _resultValue = new GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop();
             _resultValue.discard = discard;
             _resultValue.fqdn = fqdn;
+            _resultValue.ipAddress = ipAddress;
             _resultValue.ipv6Address = ipv6Address;
             _resultValue.nextLr = nextLr;
             _resultValue.nextVr = nextVr;

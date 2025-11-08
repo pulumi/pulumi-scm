@@ -15,6 +15,121 @@ import (
 // RemoteNetwork resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// --- DEPENDENCY 1: IKE Crypto Profile ---
+//			// This profile defines the encryption and authentication algorithms for the IKE Gateway.
+//			// The values are taken from the 'createTestIKECryptoProfile' helper function.
+//			example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
+//				Name:   pulumi.String("example-ike-crypto-prf-for-rn"),
+//				Folder: pulumi.String("Remote Networks"),
+//				Hashes: pulumi.StringArray{
+//					pulumi.String("sha256"),
+//				},
+//				DhGroups: pulumi.StringArray{
+//					pulumi.String("group14"),
+//				},
+//				Encryptions: pulumi.StringArray{
+//					pulumi.String("aes-256-cbc"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- DEPENDENCY 2: IKE Gateway ---
+//			// This defines the VPN peer. It depends on the IKE Crypto Profile created above.
+//			// The values are taken from the 'createTestIKEGateway' helper function.
+//			exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
+//				Name:   pulumi.String("example-ike-gateway-for-rn"),
+//				Folder: pulumi.String("Remote Networks"),
+//				Authentication: &scm.IkeGatewayAuthenticationArgs{
+//					PreSharedKey: &scm.IkeGatewayAuthenticationPreSharedKeyArgs{
+//						Key: pulumi.String("secret"),
+//					},
+//				},
+//				PeerAddress: &scm.IkeGatewayPeerAddressArgs{
+//					Ip: pulumi.String("1.1.1.1"),
+//				},
+//				Protocol: &scm.IkeGatewayProtocolArgs{
+//					Ikev1: &scm.IkeGatewayProtocolIkev1Args{
+//						IkeCryptoProfile: example.Name,
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				example,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			// --- DEPENDENCY 3: IPsec Tunnel ---
+//			// This defines the tunnel interface itself and uses the IKE Gateway.
+//			// The values are taken from the 'createTestIPsecTunnel' helper function.
+//			exampleIpsecTunnel, err := scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
+//				Name:                   pulumi.String("example-ipsec-tunnel-for-rn"),
+//				Folder:                 pulumi.String("Remote Networks"),
+//				AntiReplay:             pulumi.Bool(true),
+//				CopyTos:                pulumi.Bool(false),
+//				EnableGreEncapsulation: pulumi.Bool(false),
+//				AutoKey: &scm.IpsecTunnelAutoKeyArgs{
+//					IkeGateways: scm.IpsecTunnelAutoKeyIkeGatewayArray{
+//						&scm.IpsecTunnelAutoKeyIkeGatewayArgs{
+//							Name: exampleIkeGateway.Name,
+//						},
+//					},
+//					IpsecCryptoProfile: pulumi.String("PaloAlto-Networks-IPSec-Crypto"),
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				exampleIkeGateway,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			// --- MAIN RESOURCE: Remote Network ---
+//			// This is the final resource, which uses the IPsec Tunnel created above.
+//			// The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
+//			_, err = scm.NewRemoteNetwork(ctx, "example", &scm.RemoteNetworkArgs{
+//				Name:        pulumi.String("example-remote-network"),
+//				Folder:      pulumi.String("Remote Networks"),
+//				LicenseType: pulumi.String("FWAAS-AGGREGATE"),
+//				Region:      pulumi.String("us-west-2"),
+//				SpnName:     pulumi.String("us-west-dakota"),
+//				Subnets: pulumi.StringArray{
+//					pulumi.String("192.168.1.0/24"),
+//				},
+//				IpsecTunnel: exampleIpsecTunnel.Name,
+//				Protocol: &scm.RemoteNetworkProtocolArgs{
+//					Bgp: &scm.RemoteNetworkProtocolBgpArgs{
+//						Enable:                    pulumi.Bool(true),
+//						PeerAs:                    pulumi.String("65000"),
+//						LocalIpAddress:            pulumi.String("169.254.1.1"),
+//						PeerIpAddress:             pulumi.String("169.254.1.2"),
+//						DoNotExportRoutes:         pulumi.Bool(false),
+//						OriginateDefaultRoute:     pulumi.Bool(false),
+//						SummarizeMobileUserRoutes: pulumi.Bool(false),
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				exampleIpsecTunnel,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type RemoteNetwork struct {
 	pulumi.CustomResourceState
 

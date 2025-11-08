@@ -13,18 +13,267 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// PbfRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var exampleTag = new Scm.Tag("example_tag", new()
+        ///     {
+        ///         Folder = "All",
+        ///         Name = "pbf-rule-tag-ds-test-1",
+        ///         Color = "Red",
+        ///     });
+        /// 
+        ///     // --- PBF Rule Resource with discard action---
+        ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
+        ///     {
+        ///         Name = "pbf-test-ds-rule-discard",
+        ///         Folder = "All",
+        ///         Description = "Data Source testing pbf rule.",
+        ///         From = new Scm.Inputs.PbfRuleFromArgs
+        ///         {
+        ///             Zones = new[]
+        ///             {
+        ///                 "zone-untrust",
+        ///             },
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Applications = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Action = new Scm.Inputs.PbfRuleActionArgs
+        ///         {
+        ///             Discard = null,
+        ///         },
+        ///         Tags = new[]
+        ///         {
+        ///             exampleTag.Name,
+        ///         },
+        ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
+        ///         {
+        ///             Enabled = false,
+        ///         },
+        ///         Schedule = "non-work-hours",
+        ///     });
+        /// 
+        ///     // Define the data source (the item to be retrieved via API GET)
+        ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
+        ///     {
+        ///         Id = examplePbfRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["retrievedIDAndName"] = 
+        ///         {
+        ///             { "id", pbfExternalWebTestGet.Apply(getPbfRuleResult =&gt; getPbfRuleResult.Id) },
+        ///             { "name", pbfExternalWebTestGet.Apply(getPbfRuleResult =&gt; getPbfRuleResult.Name) },
+        ///         },
+        ///         ["recievedResponse"] = pbfExternalWebTestGet,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetPbfRuleResult> InvokeAsync(GetPbfRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetPbfRuleResult>("scm:index/getPbfRule:getPbfRule", args ?? new GetPbfRuleArgs(), options.WithDefaults());
 
         /// <summary>
         /// PbfRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var exampleTag = new Scm.Tag("example_tag", new()
+        ///     {
+        ///         Folder = "All",
+        ///         Name = "pbf-rule-tag-ds-test-1",
+        ///         Color = "Red",
+        ///     });
+        /// 
+        ///     // --- PBF Rule Resource with discard action---
+        ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
+        ///     {
+        ///         Name = "pbf-test-ds-rule-discard",
+        ///         Folder = "All",
+        ///         Description = "Data Source testing pbf rule.",
+        ///         From = new Scm.Inputs.PbfRuleFromArgs
+        ///         {
+        ///             Zones = new[]
+        ///             {
+        ///                 "zone-untrust",
+        ///             },
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Applications = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Action = new Scm.Inputs.PbfRuleActionArgs
+        ///         {
+        ///             Discard = null,
+        ///         },
+        ///         Tags = new[]
+        ///         {
+        ///             exampleTag.Name,
+        ///         },
+        ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
+        ///         {
+        ///             Enabled = false,
+        ///         },
+        ///         Schedule = "non-work-hours",
+        ///     });
+        /// 
+        ///     // Define the data source (the item to be retrieved via API GET)
+        ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
+        ///     {
+        ///         Id = examplePbfRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["retrievedIDAndName"] = 
+        ///         {
+        ///             { "id", pbfExternalWebTestGet.Apply(getPbfRuleResult =&gt; getPbfRuleResult.Id) },
+        ///             { "name", pbfExternalWebTestGet.Apply(getPbfRuleResult =&gt; getPbfRuleResult.Name) },
+        ///         },
+        ///         ["recievedResponse"] = pbfExternalWebTestGet,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetPbfRuleResult> Invoke(GetPbfRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetPbfRuleResult>("scm:index/getPbfRule:getPbfRule", args ?? new GetPbfRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// PbfRule data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var exampleTag = new Scm.Tag("example_tag", new()
+        ///     {
+        ///         Folder = "All",
+        ///         Name = "pbf-rule-tag-ds-test-1",
+        ///         Color = "Red",
+        ///     });
+        /// 
+        ///     // --- PBF Rule Resource with discard action---
+        ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
+        ///     {
+        ///         Name = "pbf-test-ds-rule-discard",
+        ///         Folder = "All",
+        ///         Description = "Data Source testing pbf rule.",
+        ///         From = new Scm.Inputs.PbfRuleFromArgs
+        ///         {
+        ///             Zones = new[]
+        ///             {
+        ///                 "zone-untrust",
+        ///             },
+        ///         },
+        ///         Sources = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Destinations = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Applications = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Services = new[]
+        ///         {
+        ///             "service-http",
+        ///         },
+        ///         SourceUsers = new[]
+        ///         {
+        ///             "any",
+        ///         },
+        ///         Action = new Scm.Inputs.PbfRuleActionArgs
+        ///         {
+        ///             Discard = null,
+        ///         },
+        ///         Tags = new[]
+        ///         {
+        ///             exampleTag.Name,
+        ///         },
+        ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
+        ///         {
+        ///             Enabled = false,
+        ///         },
+        ///         Schedule = "non-work-hours",
+        ///     });
+        /// 
+        ///     // Define the data source (the item to be retrieved via API GET)
+        ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
+        ///     {
+        ///         Id = examplePbfRule.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["retrievedIDAndName"] = 
+        ///         {
+        ///             { "id", pbfExternalWebTestGet.Apply(getPbfRuleResult =&gt; getPbfRuleResult.Id) },
+        ///             { "name", pbfExternalWebTestGet.Apply(getPbfRuleResult =&gt; getPbfRuleResult.Name) },
+        ///         },
+        ///         ["recievedResponse"] = pbfExternalWebTestGet,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetPbfRuleResult> Invoke(GetPbfRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetPbfRuleResult>("scm:index/getPbfRule:getPbfRule", args ?? new GetPbfRuleInvokeArgs(), options.WithDefaults());

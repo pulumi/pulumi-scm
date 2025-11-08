@@ -6,9 +6,9 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.TunnelInterfaceIpArgs;
-import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,17 +34,17 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
     @Import(name="defaultValue")
-    private @Nullable Output<Integer> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    public Optional<Output<Integer>> defaultValue() {
+    public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
 
@@ -94,18 +94,18 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
     }
 
     /**
-     * tunnel interfaces ip parent
+     * Tunnel Interface IP Parent
      * 
      */
-    @Import(name="ip")
-    private @Nullable Output<TunnelInterfaceIpArgs> ip;
+    @Import(name="ips")
+    private @Nullable Output<List<TunnelInterfaceIpArgs>> ips;
 
     /**
-     * @return tunnel interfaces ip parent
+     * @return Tunnel Interface IP Parent
      * 
      */
-    public Optional<Output<TunnelInterfaceIpArgs>> ip() {
-        return Optional.ofNullable(this.ip);
+    public Optional<Output<List<TunnelInterfaceIpArgs>>> ips() {
+        return Optional.ofNullable(this.ips);
     }
 
     /**
@@ -113,13 +113,13 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
      * 
      */
     @Import(name="mtu")
-    private @Nullable Output<Double> mtu;
+    private @Nullable Output<Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Optional<Output<Double>> mtu() {
+    public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
 
@@ -168,7 +168,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         this.device = $.device;
         this.folder = $.folder;
         this.interfaceManagementProfile = $.interfaceManagementProfile;
-        this.ip = $.ip;
+        this.ips = $.ips;
         this.mtu = $.mtu;
         this.name = $.name;
         this.snippet = $.snippet;
@@ -215,23 +215,23 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
          */
-        public Builder defaultValue(@Nullable Output<Integer> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
          */
-        public Builder defaultValue(Integer defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
@@ -299,24 +299,34 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
         }
 
         /**
-         * @param ip tunnel interfaces ip parent
+         * @param ips Tunnel Interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ip(@Nullable Output<TunnelInterfaceIpArgs> ip) {
-            $.ip = ip;
+        public Builder ips(@Nullable Output<List<TunnelInterfaceIpArgs>> ips) {
+            $.ips = ips;
             return this;
         }
 
         /**
-         * @param ip tunnel interfaces ip parent
+         * @param ips Tunnel Interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ip(TunnelInterfaceIpArgs ip) {
-            return ip(Output.of(ip));
+        public Builder ips(List<TunnelInterfaceIpArgs> ips) {
+            return ips(Output.of(ips));
+        }
+
+        /**
+         * @param ips Tunnel Interface IP Parent
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ips(TunnelInterfaceIpArgs... ips) {
+            return ips(List.of(ips));
         }
 
         /**
@@ -325,7 +335,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder mtu(@Nullable Output<Double> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             $.mtu = mtu;
             return this;
         }
@@ -336,7 +346,7 @@ public final class TunnelInterfaceState extends com.pulumi.resources.ResourceArg
          * @return builder
          * 
          */
-        public Builder mtu(Double mtu) {
+        public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
         }
 

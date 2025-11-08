@@ -13,7 +13,8 @@ import com.pulumi.scm.inputs.Layer3SubinterfaceState;
 import com.pulumi.scm.outputs.Layer3SubinterfaceArp;
 import com.pulumi.scm.outputs.Layer3SubinterfaceDdnsConfig;
 import com.pulumi.scm.outputs.Layer3SubinterfaceDhcpClient;
-import java.lang.Double;
+import com.pulumi.scm.outputs.Layer3SubinterfaceIp;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +22,99 @@ import javax.annotation.Nullable;
 
 /**
  * Layer3Subinterface resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.EthernetInterface;
+ * import com.pulumi.scm.EthernetInterfaceArgs;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
+ * import com.pulumi.scm.Layer3Subinterface;
+ * import com.pulumi.scm.Layer3SubinterfaceArgs;
+ * import com.pulumi.scm.inputs.Layer3SubinterfaceIpArgs;
+ * import com.pulumi.scm.inputs.Layer3SubinterfaceDhcpClientArgs;
+ * import com.pulumi.scm.inputs.Layer3SubinterfaceDhcpClientSendHostnameArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a ethernet interface used as parent-interface for subsequent examples
+ *         //
+ *         var scmParentInterface = new EthernetInterface("scmParentInterface", EthernetInterfaceArgs.builder()
+ *             .name("$scm_parent_interface")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 sub-interface with static ip address
+ *         //
+ *         var scmL3Subinterface = new Layer3Subinterface("scmL3Subinterface", Layer3SubinterfaceArgs.builder()
+ *             .name("$scm_parent_interface.100")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .tag(100)
+ *             .parentInterface("$scm_parent_interface")
+ *             .ips(Layer3SubinterfaceIpArgs.builder()
+ *                 .name("198.18.1.1/32")
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmParentInterface)
+ *                 .build());
+ * 
+ *         var scmParentDhcpInterface = new EthernetInterface("scmParentDhcpInterface", EthernetInterfaceArgs.builder()
+ *             .name("$scm_parent_dhcp_interface")
+ *             .comment("Managed by Pulumi")
+ *             .folder("All")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 sub-interface with dhcp
+ *         //
+ *         var scmL3DhcpSubinterface = new Layer3Subinterface("scmL3DhcpSubinterface", Layer3SubinterfaceArgs.builder()
+ *             .name("$scm_parent_dhcp_interface.100")
+ *             .comment("Managed by Pulumi")
+ *             .folder("All")
+ *             .tag(100)
+ *             .parentInterface("$scm_parent_dhcp_interface")
+ *             .dhcpClient(Layer3SubinterfaceDhcpClientArgs.builder()
+ *                 .enable(true)
+ *                 .createDefaultRoute(true)
+ *                 .defaultRouteMetric(20)
+ *                 .sendHostname(Layer3SubinterfaceDhcpClientSendHostnameArgs.builder()
+ *                     .enable(true)
+ *                     .hostname("client-vlan50-host")
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmParentDhcpInterface)
+ *                 .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/layer3Subinterface:Layer3Subinterface")
@@ -58,14 +152,14 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
      * 
      */
     @Export(name="ddnsConfig", refs={Layer3SubinterfaceDdnsConfig.class}, tree="[0]")
-    private Output</* @Nullable */ Layer3SubinterfaceDdnsConfig> ddnsConfig;
+    private Output<Layer3SubinterfaceDdnsConfig> ddnsConfig;
 
     /**
      * @return Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
      * 
      */
-    public Output<Optional<Layer3SubinterfaceDdnsConfig>> ddnsConfig() {
-        return Codegen.optional(this.ddnsConfig);
+    public Output<Layer3SubinterfaceDdnsConfig> ddnsConfig() {
+        return this.ddnsConfig;
     }
     /**
      * The device in which the resource is defined
@@ -82,18 +176,18 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.device);
     }
     /**
-     * Dhcp client
+     * Layer3 sub interfaces DHCP Client Object
      * 
      */
     @Export(name="dhcpClient", refs={Layer3SubinterfaceDhcpClient.class}, tree="[0]")
-    private Output</* @Nullable */ Layer3SubinterfaceDhcpClient> dhcpClient;
+    private Output<Layer3SubinterfaceDhcpClient> dhcpClient;
 
     /**
-     * @return Dhcp client
+     * @return Layer3 sub interfaces DHCP Client Object
      * 
      */
-    public Output<Optional<Layer3SubinterfaceDhcpClient>> dhcpClient() {
-        return Codegen.optional(this.dhcpClient);
+    public Output<Layer3SubinterfaceDhcpClient> dhcpClient() {
+        return this.dhcpClient;
     }
     /**
      * The folder in which the resource is defined
@@ -124,31 +218,31 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
         return Codegen.optional(this.interfaceManagementProfile);
     }
     /**
-     * Ip
+     * L3 sub-interface IP Parent
      * 
      */
-    @Export(name="ips", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> ips;
+    @Export(name="ips", refs={List.class,Layer3SubinterfaceIp.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<Layer3SubinterfaceIp>> ips;
 
     /**
-     * @return Ip
+     * @return L3 sub-interface IP Parent
      * 
      */
-    public Output<Optional<List<String>>> ips() {
+    public Output<Optional<List<Layer3SubinterfaceIp>>> ips() {
         return Codegen.optional(this.ips);
     }
     /**
      * MTU
      * 
      */
-    @Export(name="mtu", refs={Double.class}, tree="[0]")
-    private Output</* @Nullable */ Double> mtu;
+    @Export(name="mtu", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Output<Optional<Double>> mtu() {
+    public Output<Optional<Integer>> mtu() {
         return Codegen.optional(this.mtu);
     }
     /**
@@ -197,14 +291,14 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
      * VLAN tag
      * 
      */
-    @Export(name="tag", refs={Double.class}, tree="[0]")
-    private Output</* @Nullable */ Double> tag;
+    @Export(name="tag", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> tag;
 
     /**
      * @return VLAN tag
      * 
      */
-    public Output<Optional<Double>> tag() {
+    public Output<Optional<Integer>> tag() {
         return Codegen.optional(this.tag);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")

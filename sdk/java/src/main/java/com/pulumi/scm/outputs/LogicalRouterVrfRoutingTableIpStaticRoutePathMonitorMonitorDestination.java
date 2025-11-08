@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,7 +18,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
      * @return Count
      * 
      */
-    private @Nullable Double count;
+    private @Nullable Integer count;
     /**
      * @return Destination
      * 
@@ -38,7 +38,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
      * @return Interval
      * 
      */
-    private @Nullable Double interval;
+    private @Nullable Integer interval;
     /**
      * @return Name
      * 
@@ -55,7 +55,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
      * @return Count
      * 
      */
-    public Optional<Double> count() {
+    public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
@@ -83,7 +83,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
      * @return Interval
      * 
      */
-    public Optional<Double> interval() {
+    public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
     /**
@@ -110,11 +110,11 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double count;
+        private @Nullable Integer count;
         private @Nullable String destination;
         private @Nullable String destinationFqdn;
         private @Nullable Boolean enable;
-        private @Nullable Double interval;
+        private @Nullable Integer interval;
         private String name;
         private @Nullable String source;
         public Builder() {}
@@ -130,7 +130,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
         }
 
         @CustomType.Setter
-        public Builder count(@Nullable Double count) {
+        public Builder count(@Nullable Integer count) {
 
             this.count = count;
             return this;
@@ -154,7 +154,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
             return this;
         }
         @CustomType.Setter
-        public Builder interval(@Nullable Double interval) {
+        public Builder interval(@Nullable Integer interval) {
 
             this.interval = interval;
             return this;

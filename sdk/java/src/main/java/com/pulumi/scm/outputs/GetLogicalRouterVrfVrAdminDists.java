@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -14,110 +14,110 @@ public final class GetLogicalRouterVrfVrAdminDists {
      * @return Ebgp
      * 
      */
-    private Double ebgp;
+    private Integer ebgp;
     /**
      * @return Ibgp
      * 
      */
-    private Double ibgp;
+    private Integer ibgp;
     /**
      * @return Ospf ext
      * 
      */
-    private Double ospfExt;
+    private Integer ospfExt;
     /**
      * @return Ospf int
      * 
      */
-    private Double ospfInt;
+    private Integer ospfInt;
     /**
      * @return Ospfv3 ext
      * 
      */
-    private Double ospfv3Ext;
+    private Integer ospfv3Ext;
     /**
      * @return Ospfv3 int
      * 
      */
-    private Double ospfv3Int;
+    private Integer ospfv3Int;
     /**
      * @return Rip
      * 
      */
-    private Double rip;
+    private Integer rip;
     /**
      * @return Static
      * 
      */
-    private Double static_;
+    private Integer static_;
     /**
      * @return Static ipv6
      * 
      */
-    private Double staticIpv6;
+    private Integer staticIpv6;
 
     private GetLogicalRouterVrfVrAdminDists() {}
     /**
      * @return Ebgp
      * 
      */
-    public Double ebgp() {
+    public Integer ebgp() {
         return this.ebgp;
     }
     /**
      * @return Ibgp
      * 
      */
-    public Double ibgp() {
+    public Integer ibgp() {
         return this.ibgp;
     }
     /**
      * @return Ospf ext
      * 
      */
-    public Double ospfExt() {
+    public Integer ospfExt() {
         return this.ospfExt;
     }
     /**
      * @return Ospf int
      * 
      */
-    public Double ospfInt() {
+    public Integer ospfInt() {
         return this.ospfInt;
     }
     /**
      * @return Ospfv3 ext
      * 
      */
-    public Double ospfv3Ext() {
+    public Integer ospfv3Ext() {
         return this.ospfv3Ext;
     }
     /**
      * @return Ospfv3 int
      * 
      */
-    public Double ospfv3Int() {
+    public Integer ospfv3Int() {
         return this.ospfv3Int;
     }
     /**
      * @return Rip
      * 
      */
-    public Double rip() {
+    public Integer rip() {
         return this.rip;
     }
     /**
      * @return Static
      * 
      */
-    public Double static_() {
+    public Integer static_() {
         return this.static_;
     }
     /**
      * @return Static ipv6
      * 
      */
-    public Double staticIpv6() {
+    public Integer staticIpv6() {
         return this.staticIpv6;
     }
 
@@ -130,15 +130,15 @@ public final class GetLogicalRouterVrfVrAdminDists {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double ebgp;
-        private Double ibgp;
-        private Double ospfExt;
-        private Double ospfInt;
-        private Double ospfv3Ext;
-        private Double ospfv3Int;
-        private Double rip;
-        private Double static_;
-        private Double staticIpv6;
+        private Integer ebgp;
+        private Integer ibgp;
+        private Integer ospfExt;
+        private Integer ospfInt;
+        private Integer ospfv3Ext;
+        private Integer ospfv3Int;
+        private Integer rip;
+        private Integer static_;
+        private Integer staticIpv6;
         public Builder() {}
         public Builder(GetLogicalRouterVrfVrAdminDists defaults) {
     	      Objects.requireNonNull(defaults);
@@ -154,7 +154,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
         }
 
         @CustomType.Setter
-        public Builder ebgp(Double ebgp) {
+        public Builder ebgp(Integer ebgp) {
             if (ebgp == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "ebgp");
             }
@@ -162,7 +162,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter
-        public Builder ibgp(Double ibgp) {
+        public Builder ibgp(Integer ibgp) {
             if (ibgp == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "ibgp");
             }
@@ -170,7 +170,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter
-        public Builder ospfExt(Double ospfExt) {
+        public Builder ospfExt(Integer ospfExt) {
             if (ospfExt == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "ospfExt");
             }
@@ -178,7 +178,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter
-        public Builder ospfInt(Double ospfInt) {
+        public Builder ospfInt(Integer ospfInt) {
             if (ospfInt == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "ospfInt");
             }
@@ -186,7 +186,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter
-        public Builder ospfv3Ext(Double ospfv3Ext) {
+        public Builder ospfv3Ext(Integer ospfv3Ext) {
             if (ospfv3Ext == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "ospfv3Ext");
             }
@@ -194,7 +194,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter
-        public Builder ospfv3Int(Double ospfv3Int) {
+        public Builder ospfv3Int(Integer ospfv3Int) {
             if (ospfv3Int == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "ospfv3Int");
             }
@@ -202,7 +202,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter
-        public Builder rip(Double rip) {
+        public Builder rip(Integer rip) {
             if (rip == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "rip");
             }
@@ -210,7 +210,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter("static")
-        public Builder static_(Double static_) {
+        public Builder static_(Integer static_) {
             if (static_ == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "static_");
             }
@@ -218,7 +218,7 @@ public final class GetLogicalRouterVrfVrAdminDists {
             return this;
         }
         @CustomType.Setter
-        public Builder staticIpv6(Double staticIpv6) {
+        public Builder staticIpv6(Integer staticIpv6) {
             if (staticIpv6 == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfVrAdminDists", "staticIpv6");
             }

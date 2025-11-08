@@ -18,14 +18,14 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
     public static final VlanInterfaceDhcpClientArgs Empty = new VlanInterfaceDhcpClientArgs();
 
     /**
-     * Create default route
+     * Automatically create default route pointing to default gateway provided by server
      * 
      */
     @Import(name="createDefaultRoute")
     private @Nullable Output<Boolean> createDefaultRoute;
 
     /**
-     * @return Create default route
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
     public Optional<Output<Boolean>> createDefaultRoute() {
@@ -33,14 +33,14 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Default route metric
+     * Metric of the default route created
      * 
      */
     @Import(name="defaultRouteMetric")
     private @Nullable Output<Integer> defaultRouteMetric;
 
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     public Optional<Output<Integer>> defaultRouteMetric() {
@@ -48,14 +48,14 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Enable
+     * Enable DHCP?
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return Enable
+     * @return Enable DHCP?
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -105,7 +105,7 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param createDefaultRoute Create default route
+         * @param createDefaultRoute Automatically create default route pointing to default gateway provided by server
          * 
          * @return builder
          * 
@@ -116,7 +116,7 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param createDefaultRoute Create default route
+         * @param createDefaultRoute Automatically create default route pointing to default gateway provided by server
          * 
          * @return builder
          * 
@@ -126,7 +126,7 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param defaultRouteMetric Default route metric
+         * @param defaultRouteMetric Metric of the default route created
          * 
          * @return builder
          * 
@@ -137,7 +137,7 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param defaultRouteMetric Default route metric
+         * @param defaultRouteMetric Metric of the default route created
          * 
          * @return builder
          * 
@@ -147,7 +147,7 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable DHCP?
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class VlanInterfaceDhcpClientArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param enable Enable
+         * @param enable Enable DHCP?
          * 
          * @return builder
          * 

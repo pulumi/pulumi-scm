@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataBgpOspfRouteMapMatchIpv4AddressResult
     {
         /// <summary>
-        /// Access list
+        /// BGP Root OSPF Route maps match ipv4 Access list
         /// </summary>
         public readonly string AccessList;
         /// <summary>
-        /// Prefix list
+        /// BGP Root OSPF Route maps match ipv4 Prefix list
         /// </summary>
         public readonly string PrefixList;
 

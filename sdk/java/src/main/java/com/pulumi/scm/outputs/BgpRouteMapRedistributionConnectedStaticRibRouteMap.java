@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticRibRouteMap {
     /**
-     * @return Action
+     * @return Connected Static BGP Rib Route maps Action
      * 
      */
     private @Nullable String action;
     /**
-     * @return Description
+     * @return Connected Static BGP Rib Route maps Description
      * 
      */
     private @Nullable String description;
@@ -30,26 +30,26 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMap {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Rib Route maps Sequence number
      * 
      */
     private @Nullable Integer name;
     /**
-     * @return Set
+     * @return Connected Static Root RIB set
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticRibRouteMapSet set;
 
     private BgpRouteMapRedistributionConnectedStaticRibRouteMap() {}
     /**
-     * @return Action
+     * @return Connected Static BGP Rib Route maps Action
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Description
+     * @return Connected Static BGP Rib Route maps Description
      * 
      */
     public Optional<String> description() {
@@ -63,14 +63,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMap {
         return Optional.ofNullable(this.match);
     }
     /**
-     * @return Sequence number
+     * @return Connected Static BGP Rib Route maps Sequence number
      * 
      */
     public Optional<Integer> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Set
+     * @return Connected Static Root RIB set
      * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticRibRouteMapSet> set() {

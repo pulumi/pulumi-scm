@@ -16,7 +16,7 @@ import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpRedistRuleArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpRedistributionProfileArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -138,13 +138,13 @@ public final class LogicalRouterVrfBgpArgs extends com.pulumi.resources.Resource
      * 
      */
     @Import(name="defaultLocalPreference")
-    private @Nullable Output<Double> defaultLocalPreference;
+    private @Nullable Output<Integer> defaultLocalPreference;
 
     /**
      * @return Default local preference
      * 
      */
-    public Optional<Output<Double>> defaultLocalPreference() {
+    public Optional<Output<Integer>> defaultLocalPreference() {
         return Optional.ofNullable(this.defaultLocalPreference);
     }
 
@@ -598,7 +598,7 @@ public final class LogicalRouterVrfBgpArgs extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder defaultLocalPreference(@Nullable Output<Double> defaultLocalPreference) {
+        public Builder defaultLocalPreference(@Nullable Output<Integer> defaultLocalPreference) {
             $.defaultLocalPreference = defaultLocalPreference;
             return this;
         }
@@ -609,7 +609,7 @@ public final class LogicalRouterVrfBgpArgs extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder defaultLocalPreference(Double defaultLocalPreference) {
+        public Builder defaultLocalPreference(Integer defaultLocalPreference) {
             return defaultLocalPreference(Output.of(defaultLocalPreference));
         }
 

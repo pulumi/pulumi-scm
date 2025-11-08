@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -92,6 +93,21 @@ public final class GetLogicalRouterListArgs extends com.pulumi.resources.InvokeA
     }
 
     /**
+     * The parameter to mention if the response should be paginated. By default, its set to false
+     * 
+     */
+    @Import(name="pagination")
+    private @Nullable Output<Boolean> pagination;
+
+    /**
+     * @return The parameter to mention if the response should be paginated. By default, its set to false
+     * 
+     */
+    public Optional<Output<Boolean>> pagination() {
+        return Optional.ofNullable(this.pagination);
+    }
+
+    /**
      * The snippet of the item.
      * 
      */
@@ -114,6 +130,7 @@ public final class GetLogicalRouterListArgs extends com.pulumi.resources.InvokeA
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.pagination = $.pagination;
         this.snippet = $.snippet;
     }
 
@@ -238,6 +255,27 @@ public final class GetLogicalRouterListArgs extends com.pulumi.resources.InvokeA
          */
         public Builder offset(Integer offset) {
             return offset(Output.of(offset));
+        }
+
+        /**
+         * @param pagination The parameter to mention if the response should be paginated. By default, its set to false
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pagination(@Nullable Output<Boolean> pagination) {
+            $.pagination = pagination;
+            return this;
+        }
+
+        /**
+         * @param pagination The parameter to mention if the response should be paginated. By default, its set to false
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pagination(Boolean pagination) {
+            return pagination(Output.of(pagination));
         }
 
         /**

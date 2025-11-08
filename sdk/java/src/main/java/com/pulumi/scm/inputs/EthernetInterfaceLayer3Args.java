@@ -8,6 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3ArpArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3DdnsConfigArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3DhcpClientArgs;
+import com.pulumi.scm.inputs.EthernetInterfaceLayer3IpArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3PppoeArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -37,14 +38,14 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     }
 
     /**
-     * Ddns config
+     * Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     @Import(name="ddnsConfig")
     private @Nullable Output<EthernetInterfaceLayer3DdnsConfigArgs> ddnsConfig;
 
     /**
-     * @return Ddns config
+     * @return Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     public Optional<Output<EthernetInterfaceLayer3DdnsConfigArgs>> ddnsConfig() {
@@ -52,14 +53,14 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     }
 
     /**
-     * Dhcp client
+     * Ethernet Interfaces DHCP Client Object
      * 
      */
     @Import(name="dhcpClient")
     private @Nullable Output<EthernetInterfaceLayer3DhcpClientArgs> dhcpClient;
 
     /**
-     * @return Dhcp client
+     * @return Ethernet Interfaces DHCP Client Object
      * 
      */
     public Optional<Output<EthernetInterfaceLayer3DhcpClientArgs>> dhcpClient() {
@@ -82,17 +83,17 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
     }
 
     /**
-     * Interface IP addresses
+     * Ethernet Interface IP addresses
      * 
      */
     @Import(name="ips")
-    private @Nullable Output<List<String>> ips;
+    private @Nullable Output<List<EthernetInterfaceLayer3IpArgs>> ips;
 
     /**
-     * @return Interface IP addresses
+     * @return Ethernet Interface IP addresses
      * 
      */
-    public Optional<Output<List<String>>> ips() {
+    public Optional<Output<List<EthernetInterfaceLayer3IpArgs>>> ips() {
         return Optional.ofNullable(this.ips);
     }
 
@@ -188,7 +189,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ddnsConfig Ddns config
+         * @param ddnsConfig Dynamic DNS configuration specific to the Ethernet Interfaces.
          * 
          * @return builder
          * 
@@ -199,7 +200,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ddnsConfig Ddns config
+         * @param ddnsConfig Dynamic DNS configuration specific to the Ethernet Interfaces.
          * 
          * @return builder
          * 
@@ -209,7 +210,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param dhcpClient Ethernet Interfaces DHCP Client Object
          * 
          * @return builder
          * 
@@ -220,7 +221,7 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param dhcpClient Ethernet Interfaces DHCP Client Object
          * 
          * @return builder
          * 
@@ -251,33 +252,33 @@ public final class EthernetInterfaceLayer3Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ips Interface IP addresses
+         * @param ips Ethernet Interface IP addresses
          * 
          * @return builder
          * 
          */
-        public Builder ips(@Nullable Output<List<String>> ips) {
+        public Builder ips(@Nullable Output<List<EthernetInterfaceLayer3IpArgs>> ips) {
             $.ips = ips;
             return this;
         }
 
         /**
-         * @param ips Interface IP addresses
+         * @param ips Ethernet Interface IP addresses
          * 
          * @return builder
          * 
          */
-        public Builder ips(List<String> ips) {
+        public Builder ips(List<EthernetInterfaceLayer3IpArgs> ips) {
             return ips(Output.of(ips));
         }
 
         /**
-         * @param ips Interface IP addresses
+         * @param ips Ethernet Interface IP addresses
          * 
          * @return builder
          * 
          */
-        public Builder ips(String... ips) {
+        public Builder ips(EthernetInterfaceLayer3IpArgs... ips) {
             return ips(List.of(ips));
         }
 

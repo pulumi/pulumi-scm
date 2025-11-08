@@ -21,6 +21,177 @@ import javax.annotation.Nullable;
 /**
  * DecryptionProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.DecryptionProfile;
+ * import com.pulumi.scm.DecryptionProfileArgs;
+ * import com.pulumi.scm.inputs.DecryptionProfileSslForwardProxyArgs;
+ * import com.pulumi.scm.inputs.DecryptionProfileSslInboundProxyArgs;
+ * import com.pulumi.scm.inputs.DecryptionProfileSslNoProxyArgs;
+ * import com.pulumi.scm.inputs.DecryptionProfileSslProtocolSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmDecryptionProfileBase = new DecryptionProfile("scmDecryptionProfileBase", DecryptionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("dp_base")
+ *             .build());
+ * 
+ *         var scmDecryptionProfileForwardProxy = new DecryptionProfile("scmDecryptionProfileForwardProxy", DecryptionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("dp_forward_proxy")
+ *             .sslForwardProxy(DecryptionProfileSslForwardProxyArgs.builder()
+ *                 .autoIncludeAltname(false)
+ *                 .blockClientCert(true)
+ *                 .blockExpiredCertificate(true)
+ *                 .blockTimeoutCert(true)
+ *                 .blockTls13DowngradeNoResource(false)
+ *                 .blockUnknownCert(false)
+ *                 .blockUnsupportedCipher(true)
+ *                 .blockUnsupportedVersion(true)
+ *                 .blockUntrustedIssuer(true)
+ *                 .restrictCertExts(false)
+ *                 .stripAlpn(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmDecryptionProfileInboundProxy = new DecryptionProfile("scmDecryptionProfileInboundProxy", DecryptionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("dp_inbound_proxy")
+ *             .sslInboundProxy(DecryptionProfileSslInboundProxyArgs.builder()
+ *                 .blockIfHsmUnavailable(true)
+ *                 .blockIfNoResource(true)
+ *                 .blockUnsupportedCipher(false)
+ *                 .blockUnsupportedVersion(true)
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmDecryptionProfileNoProxy = new DecryptionProfile("scmDecryptionProfileNoProxy", DecryptionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("dp_no_proxy")
+ *             .sslNoProxy(DecryptionProfileSslNoProxyArgs.builder()
+ *                 .blockExpiredCertificate(true)
+ *                 .blockUntrustedIssuer(false)
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmDecryptionProfileProtocolSettings = new DecryptionProfile("scmDecryptionProfileProtocolSettings", DecryptionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("dp_protocol_settings")
+ *             .sslProtocolSettings(DecryptionProfileSslProtocolSettingsArgs.builder()
+ *                 .authAlgoMd5(true)
+ *                 .authAlgoSha1(true)
+ *                 .authAlgoSha256(true)
+ *                 .authAlgoSha384(false)
+ *                 .encAlgo3des(false)
+ *                 .encAlgoAes128Cbc(false)
+ *                 .encAlgoAes128Gcm(true)
+ *                 .encAlgoAes256Cbc(false)
+ *                 .encAlgoAes256Gcm(true)
+ *                 .encAlgoChacha20Poly1305(false)
+ *                 .encAlgoRc4(false)
+ *                 .keyxchgAlgoDhe(true)
+ *                 .keyxchgAlgoEcdhe(true)
+ *                 .keyxchgAlgoRsa(false)
+ *                 .maxVersion("max")
+ *                 .minVersion("tls1-2")
+ *                 .build())
+ *             .build());
+ * 
+ *         var mixedDecryptionProfile = new DecryptionProfile("mixedDecryptionProfile", DecryptionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("mixed_dp")
+ *             .sslForwardProxy(DecryptionProfileSslForwardProxyArgs.builder()
+ *                 .autoIncludeAltname(true)
+ *                 .blockClientCert(true)
+ *                 .blockExpiredCertificate(false)
+ *                 .restrictCertExts(false)
+ *                 .stripAlpn(true)
+ *                 .build())
+ *             .sslInboundProxy(DecryptionProfileSslInboundProxyArgs.builder()
+ *                 .blockIfHsmUnavailable(true)
+ *                 .blockIfNoResource(true)
+ *                 .blockUnsupportedCipher(true)
+ *                 .blockUnsupportedVersion(true)
+ *                 .build())
+ *             .sslProtocolSettings(DecryptionProfileSslProtocolSettingsArgs.builder()
+ *                 .authAlgoMd5(true)
+ *                 .authAlgoSha1(true)
+ *                 .authAlgoSha256(false)
+ *                 .authAlgoSha384(true)
+ *                 .encAlgo3des(true)
+ *                 .encAlgoRc4(true)
+ *                 .keyxchgAlgoDhe(false)
+ *                 .keyxchgAlgoEcdhe(false)
+ *                 .maxVersion("tls1-3")
+ *                 .minVersion("tls1-1")
+ *                 .build())
+ *             .build());
+ * 
+ *         var fullMixedDecryptionProfile = new DecryptionProfile("fullMixedDecryptionProfile", DecryptionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("full_mixed_dp")
+ *             .sslForwardProxy(DecryptionProfileSslForwardProxyArgs.builder()
+ *                 .autoIncludeAltname(true)
+ *                 .blockClientCert(true)
+ *                 .blockExpiredCertificate(false)
+ *                 .blockTimeoutCert(true)
+ *                 .blockUnknownCert(false)
+ *                 .blockUnsupportedCipher(true)
+ *                 .blockUntrustedIssuer(false)
+ *                 .restrictCertExts(false)
+ *                 .stripAlpn(true)
+ *                 .build())
+ *             .sslInboundProxy(DecryptionProfileSslInboundProxyArgs.builder()
+ *                 .blockIfHsmUnavailable(true)
+ *                 .blockIfNoResource(false)
+ *                 .blockUnsupportedCipher(true)
+ *                 .blockUnsupportedVersion(false)
+ *                 .build())
+ *             .sslNoProxy(DecryptionProfileSslNoProxyArgs.builder()
+ *                 .blockExpiredCertificate(false)
+ *                 .blockUntrustedIssuer(true)
+ *                 .build())
+ *             .sslProtocolSettings(DecryptionProfileSslProtocolSettingsArgs.builder()
+ *                 .authAlgoMd5(false)
+ *                 .authAlgoSha1(true)
+ *                 .authAlgoSha256(false)
+ *                 .authAlgoSha384(true)
+ *                 .encAlgo3des(false)
+ *                 .encAlgoAes128Gcm(true)
+ *                 .encAlgoAes256Cbc(false)
+ *                 .encAlgoAes256Gcm(true)
+ *                 .encAlgoRc4(true)
+ *                 .keyxchgAlgoDhe(false)
+ *                 .keyxchgAlgoEcdhe(true)
+ *                 .keyxchgAlgoRsa(false)
+ *                 .maxVersion("tls1-0")
+ *                 .minVersion("sslv3")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/decryptionProfile:DecryptionProfile")
 public class DecryptionProfile extends com.pulumi.resources.CustomResource {

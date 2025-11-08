@@ -23,6 +23,45 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.ApplicationFilter;
+ * import com.pulumi.scm.ApplicationFilterArgs;
+ * import com.pulumi.scm.inputs.ApplicationFilterTaggingArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmApplicationFilter1 = new ApplicationFilter("scmApplicationFilter1", ApplicationFilterArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_application_filter_1")
+ *             .categories("business-systems")
+ *             .risks(1)
+ *             .evasive(true)
+ *             .tagging(ApplicationFilterTaggingArgs.builder()
+ *                 .noTag(true)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/applicationFilter:ApplicationFilter")
 public class ApplicationFilter extends com.pulumi.resources.CustomResource {

@@ -172,10 +172,10 @@ def get_hip_object_list(device: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # Fetch a list of all HIP Object objects in the Shared folder.
-    all_shared = scm.get_hip_object_list(folder="Shared")
+    all_shared = scm.get_hip_object_list(folder="All")
     pulumi.export("hipObjectsListAllShared", all_shared.datas)
     # Example of using pagination to get the first 10 HIP objects.
-    paginated = scm.get_hip_object_list(folder="Shared",
+    paginated = scm.get_hip_object_list(folder="All",
         limit=10,
         offset=0)
     pulumi.export("hipObjectsListPaginated", paginated.datas)
@@ -227,10 +227,10 @@ def get_hip_object_list_output(device: Optional[pulumi.Input[Optional[_builtins.
     import pulumi_scm as scm
 
     # Fetch a list of all HIP Object objects in the Shared folder.
-    all_shared = scm.get_hip_object_list(folder="Shared")
+    all_shared = scm.get_hip_object_list(folder="All")
     pulumi.export("hipObjectsListAllShared", all_shared.datas)
     # Example of using pagination to get the first 10 HIP objects.
-    paginated = scm.get_hip_object_list(folder="Shared",
+    paginated = scm.get_hip_object_list(folder="All",
         limit=10,
         offset=0)
     pulumi.export("hipObjectsListPaginated", paginated.datas)

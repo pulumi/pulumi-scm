@@ -5,75 +5,50 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetNatRuleListDataSourceTranslationFallback;
-import java.lang.Boolean;
-import java.lang.String;
-import java.util.List;
+import com.pulumi.scm.outputs.GetNatRuleListDataSourceTranslationDynamicIp;
+import com.pulumi.scm.outputs.GetNatRuleListDataSourceTranslationDynamicIpAndPort;
+import com.pulumi.scm.outputs.GetNatRuleListDataSourceTranslationStaticIp;
 import java.util.Objects;
 
 @CustomType
 public final class GetNatRuleListDataSourceTranslation {
     /**
-     * @return Bi directional
+     * @return Dynamic IP
      * 
      */
-    private Boolean biDirectional;
+    private GetNatRuleListDataSourceTranslationDynamicIp dynamicIp;
     /**
-     * @return Fallback
+     * @return Dynamic IP and port
      * 
      */
-    private GetNatRuleListDataSourceTranslationFallback fallback;
+    private GetNatRuleListDataSourceTranslationDynamicIpAndPort dynamicIpAndPort;
     /**
-     * @return Interface name
+     * @return Static IP
      * 
      */
-    private String interface_;
-    /**
-     * @return Translated IP addresses
-     * 
-     */
-    private List<String> translatedAddressArrays;
-    /**
-     * @return Translated IP address
-     * 
-     */
-    private String translatedAddressSingle;
+    private GetNatRuleListDataSourceTranslationStaticIp staticIp;
 
     private GetNatRuleListDataSourceTranslation() {}
     /**
-     * @return Bi directional
+     * @return Dynamic IP
      * 
      */
-    public Boolean biDirectional() {
-        return this.biDirectional;
+    public GetNatRuleListDataSourceTranslationDynamicIp dynamicIp() {
+        return this.dynamicIp;
     }
     /**
-     * @return Fallback
+     * @return Dynamic IP and port
      * 
      */
-    public GetNatRuleListDataSourceTranslationFallback fallback() {
-        return this.fallback;
+    public GetNatRuleListDataSourceTranslationDynamicIpAndPort dynamicIpAndPort() {
+        return this.dynamicIpAndPort;
     }
     /**
-     * @return Interface name
+     * @return Static IP
      * 
      */
-    public String interface_() {
-        return this.interface_;
-    }
-    /**
-     * @return Translated IP addresses
-     * 
-     */
-    public List<String> translatedAddressArrays() {
-        return this.translatedAddressArrays;
-    }
-    /**
-     * @return Translated IP address
-     * 
-     */
-    public String translatedAddressSingle() {
-        return this.translatedAddressSingle;
+    public GetNatRuleListDataSourceTranslationStaticIp staticIp() {
+        return this.staticIp;
     }
 
     public static Builder builder() {
@@ -85,71 +60,46 @@ public final class GetNatRuleListDataSourceTranslation {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean biDirectional;
-        private GetNatRuleListDataSourceTranslationFallback fallback;
-        private String interface_;
-        private List<String> translatedAddressArrays;
-        private String translatedAddressSingle;
+        private GetNatRuleListDataSourceTranslationDynamicIp dynamicIp;
+        private GetNatRuleListDataSourceTranslationDynamicIpAndPort dynamicIpAndPort;
+        private GetNatRuleListDataSourceTranslationStaticIp staticIp;
         public Builder() {}
         public Builder(GetNatRuleListDataSourceTranslation defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.biDirectional = defaults.biDirectional;
-    	      this.fallback = defaults.fallback;
-    	      this.interface_ = defaults.interface_;
-    	      this.translatedAddressArrays = defaults.translatedAddressArrays;
-    	      this.translatedAddressSingle = defaults.translatedAddressSingle;
+    	      this.dynamicIp = defaults.dynamicIp;
+    	      this.dynamicIpAndPort = defaults.dynamicIpAndPort;
+    	      this.staticIp = defaults.staticIp;
         }
 
         @CustomType.Setter
-        public Builder biDirectional(Boolean biDirectional) {
-            if (biDirectional == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "biDirectional");
+        public Builder dynamicIp(GetNatRuleListDataSourceTranslationDynamicIp dynamicIp) {
+            if (dynamicIp == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "dynamicIp");
             }
-            this.biDirectional = biDirectional;
+            this.dynamicIp = dynamicIp;
             return this;
         }
         @CustomType.Setter
-        public Builder fallback(GetNatRuleListDataSourceTranslationFallback fallback) {
-            if (fallback == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "fallback");
+        public Builder dynamicIpAndPort(GetNatRuleListDataSourceTranslationDynamicIpAndPort dynamicIpAndPort) {
+            if (dynamicIpAndPort == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "dynamicIpAndPort");
             }
-            this.fallback = fallback;
-            return this;
-        }
-        @CustomType.Setter("interface")
-        public Builder interface_(String interface_) {
-            if (interface_ == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "interface_");
-            }
-            this.interface_ = interface_;
+            this.dynamicIpAndPort = dynamicIpAndPort;
             return this;
         }
         @CustomType.Setter
-        public Builder translatedAddressArrays(List<String> translatedAddressArrays) {
-            if (translatedAddressArrays == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "translatedAddressArrays");
+        public Builder staticIp(GetNatRuleListDataSourceTranslationStaticIp staticIp) {
+            if (staticIp == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "staticIp");
             }
-            this.translatedAddressArrays = translatedAddressArrays;
-            return this;
-        }
-        public Builder translatedAddressArrays(String... translatedAddressArrays) {
-            return translatedAddressArrays(List.of(translatedAddressArrays));
-        }
-        @CustomType.Setter
-        public Builder translatedAddressSingle(String translatedAddressSingle) {
-            if (translatedAddressSingle == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleListDataSourceTranslation", "translatedAddressSingle");
-            }
-            this.translatedAddressSingle = translatedAddressSingle;
+            this.staticIp = staticIp;
             return this;
         }
         public GetNatRuleListDataSourceTranslation build() {
             final var _resultValue = new GetNatRuleListDataSourceTranslation();
-            _resultValue.biDirectional = biDirectional;
-            _resultValue.fallback = fallback;
-            _resultValue.interface_ = interface_;
-            _resultValue.translatedAddressArrays = translatedAddressArrays;
-            _resultValue.translatedAddressSingle = translatedAddressSingle;
+            _resultValue.dynamicIp = dynamicIp;
+            _resultValue.dynamicIpAndPort = dynamicIpAndPort;
+            _resultValue.staticIp = staticIp;
             return _resultValue;
         }
     }

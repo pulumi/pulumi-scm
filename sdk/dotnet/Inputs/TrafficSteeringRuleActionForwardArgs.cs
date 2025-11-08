@@ -13,10 +13,16 @@ namespace Pulumi.Scm.Inputs
     public sealed class TrafficSteeringRuleActionForwardArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Target
+        /// Forward
         /// </summary>
-        [Input("target")]
-        public Input<string>? Target { get; set; }
+        [Input("forward")]
+        public Input<Inputs.TrafficSteeringRuleActionForwardForwardArgs>? Forward { get; set; }
+
+        /// <summary>
+        /// No pbf
+        /// </summary>
+        [Input("noPbf")]
+        public Input<Inputs.TrafficSteeringRuleActionForwardNoPbfArgs>? NoPbf { get; set; }
 
         public TrafficSteeringRuleActionForwardArgs()
         {

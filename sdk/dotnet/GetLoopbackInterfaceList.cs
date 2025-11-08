@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all loopback interfaces
+        ///     var allLoopbackInterfaces = Scm.GetLoopbackInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLoopbackInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetLoopbackInterfaceListResult> InvokeAsync(GetLoopbackInterfaceListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLoopbackInterfaceListResult>("scm:index/getLoopbackInterfaceList:getLoopbackInterfaceList", args ?? new GetLoopbackInterfaceListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all loopback interfaces
+        ///     var allLoopbackInterfaces = Scm.GetLoopbackInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLoopbackInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLoopbackInterfaceListResult> Invoke(GetLoopbackInterfaceListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLoopbackInterfaceListResult>("scm:index/getLoopbackInterfaceList:getLoopbackInterfaceList", args ?? new GetLoopbackInterfaceListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all loopback interfaces
+        ///     var allLoopbackInterfaces = Scm.GetLoopbackInterfaceList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmLoopbackInterfaceList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetLoopbackInterfaceListResult> Invoke(GetLoopbackInterfaceListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLoopbackInterfaceListResult>("scm:index/getLoopbackInterfaceList:getLoopbackInterfaceList", args ?? new GetLoopbackInterfaceListInvokeArgs(), options.WithDefaults());

@@ -187,6 +187,100 @@ class ServiceConnectionGroup(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        config = pulumi.Config()
+        # The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+        folder_scope = config.get("folderScope")
+        if folder_scope is None:
+            folder_scope = "Service Connections"
+        ## 1. IKE Crypto Profile (IKE Phase 1)
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto_sc_grp",
+            folder=folder_scope,
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        ## 2. IPsec Crypto Profile (IKE Phase 2)
+        example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
+            name="panw-IPSec-Crypto_sc_grp",
+            folder=folder_scope,
+            esp={
+                "encryptions": ["aes-256-gcm"],
+                "authentications": ["sha256"],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 8,
+            })
+        ## 3. IKE Gateway
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-gateway_sc_grp",
+            folder=folder_scope,
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            })
+        ## 4. IPsec Tunnel
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-tunnel_sc_grp",
+            folder=folder_scope,
+            tunnel_interface="tunnel",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        ## 5. Service Connection (The target for the group)
+        site_a_vpn_sc = scm.ServiceConnection("site_a_vpn_sc",
+            name="creating_a_service_connection_sc_grp",
+            region="us-west-1a",
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            subnets=[
+                "10.1.0.0/16",
+                "172.16.0.0/24",
+            ],
+            source_nat=False)
+        ## 5. Service Connection (The target for the group)
+        site_a_vpn_sc2 = scm.ServiceConnection("site_a_vpn_sc_2",
+            name="creating_a_service_connection_sc_grp_2",
+            region="us-west-1a",
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            subnets=[
+                "10.1.0.0/16",
+                "172.16.0.0/24",
+            ],
+            source_nat=True)
+        # ------------------------------------------------------------------
+        # II. SERVICE CONNECTION GROUP RESOURCE
+        # ------------------------------------------------------------------
+        ## 6. Service Connection Group (Groups the Service Connection created above)
+        example_group = scm.ServiceConnectionGroup("example_group",
+            name="service-connection-group-app_sc_grp",
+            targets=[
+                site_a_vpn_sc.name,
+                site_a_vpn_sc2.name,
+            ],
+            disable_snat=True,
+            pbf_only=False)
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
@@ -204,6 +298,100 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         ServiceConnectionGroup resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        config = pulumi.Config()
+        # The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+        folder_scope = config.get("folderScope")
+        if folder_scope is None:
+            folder_scope = "Service Connections"
+        ## 1. IKE Crypto Profile (IKE Phase 1)
+        example = scm.IkeCryptoProfile("example",
+            name="example-ike-crypto_sc_grp",
+            folder=folder_scope,
+            hashes=["sha256"],
+            dh_groups=["group14"],
+            encryptions=["aes-256-cbc"])
+        ## 2. IPsec Crypto Profile (IKE Phase 2)
+        example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
+            name="panw-IPSec-Crypto_sc_grp",
+            folder=folder_scope,
+            esp={
+                "encryptions": ["aes-256-gcm"],
+                "authentications": ["sha256"],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 8,
+            })
+        ## 3. IKE Gateway
+        example_ike_gateway = scm.IkeGateway("example",
+            name="example-gateway_sc_grp",
+            folder=folder_scope,
+            peer_address={
+                "ip": "1.1.1.1",
+            },
+            authentication={
+                "pre_shared_key": {
+                    "key": "secret",
+                },
+            },
+            protocol={
+                "ikev1": {
+                    "ike_crypto_profile": example.name,
+                },
+            })
+        ## 4. IPsec Tunnel
+        example_ipsec_tunnel = scm.IpsecTunnel("example",
+            name="example-tunnel_sc_grp",
+            folder=folder_scope,
+            tunnel_interface="tunnel",
+            anti_replay=True,
+            copy_tos=False,
+            enable_gre_encapsulation=False,
+            auto_key={
+                "ike_gateways": [{
+                    "name": example_ike_gateway.name,
+                }],
+                "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
+            },
+            opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
+        ## 5. Service Connection (The target for the group)
+        site_a_vpn_sc = scm.ServiceConnection("site_a_vpn_sc",
+            name="creating_a_service_connection_sc_grp",
+            region="us-west-1a",
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            subnets=[
+                "10.1.0.0/16",
+                "172.16.0.0/24",
+            ],
+            source_nat=False)
+        ## 5. Service Connection (The target for the group)
+        site_a_vpn_sc2 = scm.ServiceConnection("site_a_vpn_sc_2",
+            name="creating_a_service_connection_sc_grp_2",
+            region="us-west-1a",
+            ipsec_tunnel=example_ipsec_tunnel.name,
+            subnets=[
+                "10.1.0.0/16",
+                "172.16.0.0/24",
+            ],
+            source_nat=True)
+        # ------------------------------------------------------------------
+        # II. SERVICE CONNECTION GROUP RESOURCE
+        # ------------------------------------------------------------------
+        ## 6. Service Connection Group (Groups the Service Connection created above)
+        example_group = scm.ServiceConnectionGroup("example_group",
+            name="service-connection-group-app_sc_grp",
+            targets=[
+                site_a_vpn_sc.name,
+                site_a_vpn_sc2.name,
+            ],
+            disable_snat=True,
+            pbf_only=False)
+        ```
 
         :param str resource_name: The name of the resource.
         :param ServiceConnectionGroupArgs args: The arguments to use to populate this resource's properties.

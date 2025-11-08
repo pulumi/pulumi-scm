@@ -17,12 +17,12 @@ public final class GetDnsProxyListDataStaticEntry {
      */
     private List<String> addresses;
     /**
-     * @return Domain
+     * @return Fully qualified domain name
      * 
      */
     private String domain;
     /**
-     * @return Name
+     * @return Static entry name
      * 
      */
     private String name;
@@ -36,14 +36,14 @@ public final class GetDnsProxyListDataStaticEntry {
         return this.addresses;
     }
     /**
-     * @return Domain
+     * @return Fully qualified domain name
      * 
      */
     public String domain() {
         return this.domain;
     }
     /**
-     * @return Name
+     * @return Static entry name
      * 
      */
     public String name() {

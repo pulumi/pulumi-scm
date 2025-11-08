@@ -18,6 +18,98 @@ import javax.annotation.Nullable;
 /**
  * Folder resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Folder;
+ * import com.pulumi.scm.FolderArgs;
+ * import com.pulumi.scm.Snippet;
+ * import com.pulumi.scm.SnippetArgs;
+ * import com.pulumi.scm.Label;
+ * import com.pulumi.scm.LabelArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a folder under the "All Firewalls" aka "ngfw-shared" folder
+ *         //
+ *         var scmFolderExample = new Folder("scmFolderExample", FolderArgs.builder()
+ *             .name("scm_folder_example")
+ *             .parent("ngfw-shared")
+ *             .description("Managed by Pulumi")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a folder under the "scm_folder_example" folder created beforehand
+ *         //
+ *         var scmNestedFolderExample = new Folder("scmNestedFolderExample", FolderArgs.builder()
+ *             .name("scm_nested_folder_example")
+ *             .parent("scm_folder_example")
+ *             .description("Managed by Pulumi")
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmFolderExample)
+ *                 .build());
+ * 
+ *         //
+ *         // Creates a snippet that will be associated to a folder
+ *         //
+ *         var scmSnippetExample = new Snippet("scmSnippetExample", SnippetArgs.builder()
+ *             .name("scm_snippet_example")
+ *             .description("Managed by Pulumi")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a folder with an attached snippet
+ *         //
+ *         var scmFolderWithSnippets = new Folder("scmFolderWithSnippets", FolderArgs.builder()
+ *             .name("scm_folder_with_snippets")
+ *             .parent("ngfw-shared")
+ *             .description("Managed by Pulumi")
+ *             .snippets(scmSnippetExample.name())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a label that will be associated to a folder
+ *         //
+ *         var scmLabelExample = new Label("scmLabelExample", LabelArgs.builder()
+ *             .name("scm_label_example")
+ *             .description("Managed by Pulumi")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a folder with an attached label
+ *         //
+ *         var scmFolderWithLabel = new Folder("scmFolderWithLabel", FolderArgs.builder()
+ *             .name("scm_folder_with_label")
+ *             .parent("ngfw-shared")
+ *             .description("Managed by Pulumi")
+ *             .labels(scmLabelExample.name())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmLabelExample)
+ *                 .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/folder:Folder")
 public class Folder extends com.pulumi.resources.CustomResource {

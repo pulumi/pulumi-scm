@@ -13,31 +13,31 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionBgpRibRouteMapArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Action
+        /// BGP Root RIB Route maps Action
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
 
         /// <summary>
-        /// Description
+        /// BGP Root RIB Route maps Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// Match
+        /// match attribute for BG Rib route map
         /// </summary>
         [Input("match")]
         public Input<Inputs.BgpRouteMapRedistributionBgpRibRouteMapMatchArgs>? Match { get; set; }
 
         /// <summary>
-        /// Sequence number
+        /// BGP Root RIB Route maps Sequence number
         /// </summary>
         [Input("name")]
         public Input<int>? Name { get; set; }
 
         /// <summary>
-        /// Set
+        /// Set attributes for BGP route map
         /// </summary>
         [Input("set")]
         public Input<Inputs.BgpRouteMapRedistributionBgpRibRouteMapSetArgs>? Set { get; set; }

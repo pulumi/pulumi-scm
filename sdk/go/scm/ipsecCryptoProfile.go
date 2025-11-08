@@ -15,6 +15,49 @@ import (
 // IpsecCryptoProfile resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// The resource block defines a new IPsec Crypto Profile.
+//			_, err := scm.NewIpsecCryptoProfile(ctx, "scm_ipsec_crypto_profile_2", &scm.IpsecCryptoProfileArgs{
+//				Name:   pulumi.String("scm_ipsec_crypto_profile_2"),
+//				Folder: pulumi.String("Prisma Access"),
+//				Esp: &scm.IpsecCryptoProfileEspArgs{
+//					Authentications: pulumi.StringArray{
+//						pulumi.String("sha256"),
+//						pulumi.String("sha384"),
+//					},
+//					Encryptions: pulumi.StringArray{
+//						pulumi.String("aes-256-gcm"),
+//						pulumi.String("aes-128-cbc"),
+//					},
+//				},
+//				DhGroup: pulumi.String("group14"),
+//				Lifetime: &scm.IpsecCryptoProfileLifetimeArgs{
+//					Hours: pulumi.Int(1),
+//				},
+//				Lifesize: &scm.IpsecCryptoProfileLifesizeArgs{
+//					Gb: pulumi.Int(10),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type IpsecCryptoProfile struct {
 	pulumi.CustomResourceState
 

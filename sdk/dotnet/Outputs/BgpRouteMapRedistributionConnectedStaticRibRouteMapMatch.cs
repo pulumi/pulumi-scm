@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch
     {
         /// <summary>
-        /// Interface
+        /// Connected Static BGP Rib Route maps Interface
         /// </summary>
         public readonly string? Interface;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4? Ipv4;
         /// <summary>
-        /// Metric
+        /// Connected Static BGP Rib Route maps Metric
         /// </summary>
         public readonly int? Metric;
 

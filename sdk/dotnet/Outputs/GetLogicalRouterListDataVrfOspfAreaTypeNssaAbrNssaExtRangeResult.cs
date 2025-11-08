@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Route tag
         /// </summary>
-        public readonly double RouteTag;
+        public readonly int RouteTag;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfOspfAreaTypeNssaAbrNssaExtRangeResult(
@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
 
             string name,
 
-            double routeTag)
+            int routeTag)
         {
             Advertise = advertise;
             Name = name;

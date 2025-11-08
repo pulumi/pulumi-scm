@@ -49,14 +49,14 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Description
+     * BGP Route Map Redistributions Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return Description
+     * @return BGP Route Map Redistributions Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -94,14 +94,14 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Name
+     * BGP Route Map Redistributions Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Name
+     * @return BGP Route Map Redistributions Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -212,7 +212,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param description Description
+         * @param description BGP Route Map Redistributions Description
          * 
          * @return builder
          * 
@@ -223,7 +223,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param description Description
+         * @param description BGP Route Map Redistributions Description
          * 
          * @return builder
          * 
@@ -275,7 +275,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name Name
+         * @param name BGP Route Map Redistributions Name
          * 
          * @return builder
          * 
@@ -286,7 +286,7 @@ public final class BgpRouteMapRedistributionArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name Name
+         * @param name BGP Route Map Redistributions Name
          * 
          * @return builder
          * 

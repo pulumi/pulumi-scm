@@ -13,6 +13,83 @@ namespace Pulumi.Scm
     /// IkeGateway resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // The scm_ike_crypto_profile resource is a prerequisite for the IKE gateway.
+    ///     var scmIkeGwCryptoProfile1 = new Scm.IkeCryptoProfile("scm_ike_gw_crypto_profile_1", new()
+    ///     {
+    ///         Folder = "Remote Networks",
+    ///         Name = "scm_ike_gw_crypto_profile_1",
+    ///         Hashes = new[]
+    ///         {
+    ///             "sha256",
+    ///         },
+    ///         DhGroups = new[]
+    ///         {
+    ///             "group14",
+    ///         },
+    ///         Encryptions = new[]
+    ///         {
+    ///             "aes-256-cbc",
+    ///         },
+    ///     });
+    /// 
+    ///     // This is the main scm_ike_gateway resource.
+    ///     var scmIkeGateway1 = new Scm.IkeGateway("scm_ike_gateway_1", new()
+    ///     {
+    ///         Folder = "Remote Networks",
+    ///         Name = "scm_ike_gateway_1",
+    ///         Authentication = new Scm.Inputs.IkeGatewayAuthenticationArgs
+    ///         {
+    ///             PreSharedKey = new Scm.Inputs.IkeGatewayAuthenticationPreSharedKeyArgs
+    ///             {
+    ///                 Key = "123456",
+    ///             },
+    ///         },
+    ///         PeerAddress = new Scm.Inputs.IkeGatewayPeerAddressArgs
+    ///         {
+    ///             Ip = "2.2.2.4",
+    ///         },
+    ///         PeerId = new Scm.Inputs.IkeGatewayPeerIdArgs
+    ///         {
+    ///             Type = "ipaddr",
+    ///             Id = "10.3.3.4",
+    ///         },
+    ///         LocalId = new Scm.Inputs.IkeGatewayLocalIdArgs
+    ///         {
+    ///             Type = "ipaddr",
+    ///             Id = "10.3.4.4",
+    ///         },
+    ///         Protocol = new Scm.Inputs.IkeGatewayProtocolArgs
+    ///         {
+    ///             Ikev1 = new Scm.Inputs.IkeGatewayProtocolIkev1Args
+    ///             {
+    ///                 IkeCryptoProfile = scmIkeGwCryptoProfile1.Name,
+    ///                 Dpd = new Scm.Inputs.IkeGatewayProtocolIkev1DpdArgs
+    ///                 {
+    ///                     Enable = true,
+    ///                 },
+    ///             },
+    ///             Ikev2 = new Scm.Inputs.IkeGatewayProtocolIkev2Args
+    ///             {
+    ///                 IkeCryptoProfile = scmIkeGwCryptoProfile1.Name,
+    ///                 Dpd = new Scm.Inputs.IkeGatewayProtocolIkev2DpdArgs
+    ///                 {
+    ///                     Enable = true,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ikeGateway:IkeGateway")]
     public partial class IkeGateway : global::Pulumi.CustomResource

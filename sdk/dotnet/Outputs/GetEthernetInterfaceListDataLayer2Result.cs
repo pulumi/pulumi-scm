@@ -14,13 +14,21 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceListDataLayer2Result
     {
         /// <summary>
-        /// Vlan tag
+        /// LLDP Settings
         /// </summary>
-        public readonly int VlanTag;
+        public readonly Outputs.GetEthernetInterfaceListDataLayer2LldpResult Lldp;
+        /// <summary>
+        /// Assign interface to VLAN tag
+        /// </summary>
+        public readonly string VlanTag;
 
         [OutputConstructor]
-        private GetEthernetInterfaceListDataLayer2Result(int vlanTag)
+        private GetEthernetInterfaceListDataLayer2Result(
+            Outputs.GetEthernetInterfaceListDataLayer2LldpResult lldp,
+
+            string vlanTag)
         {
+            Lldp = lldp;
             VlanTag = vlanTag;
         }
     }

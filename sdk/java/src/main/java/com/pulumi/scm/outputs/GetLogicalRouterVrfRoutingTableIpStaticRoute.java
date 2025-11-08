@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteBfd;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfRoutingTableIpStaticRoutePathMonitor;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfRoutingTableIpStaticRouteRouteTable;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Admin dist
      * 
      */
-    private Double adminDist;
+    private Integer adminDist;
     /**
      * @return Bfd
      * 
@@ -39,7 +39,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Metric
      * 
      */
-    private Double metric;
+    private Integer metric;
     /**
      * @return Name
      * 
@@ -66,7 +66,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Admin dist
      * 
      */
-    public Double adminDist() {
+    public Integer adminDist() {
         return this.adminDist;
     }
     /**
@@ -94,7 +94,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Metric
      * 
      */
-    public Double metric() {
+    public Integer metric() {
         return this.metric;
     }
     /**
@@ -135,11 +135,11 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Double adminDist;
+        private Integer adminDist;
         private GetLogicalRouterVrfRoutingTableIpStaticRouteBfd bfd;
         private String destination;
         private String interface_;
-        private Double metric;
+        private Integer metric;
         private String name;
         private GetLogicalRouterVrfRoutingTableIpStaticRouteNexthop nexthop;
         private GetLogicalRouterVrfRoutingTableIpStaticRoutePathMonitor pathMonitor;
@@ -159,7 +159,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoute {
         }
 
         @CustomType.Setter
-        public Builder adminDist(Double adminDist) {
+        public Builder adminDist(Integer adminDist) {
             if (adminDist == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfRoutingTableIpStaticRoute", "adminDist");
             }
@@ -191,7 +191,7 @@ public final class GetLogicalRouterVrfRoutingTableIpStaticRoute {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             if (metric == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfRoutingTableIpStaticRoute", "metric");
             }

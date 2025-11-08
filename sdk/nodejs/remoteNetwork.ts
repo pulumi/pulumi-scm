@@ -10,6 +10,87 @@ import * as utilities from "./utilities";
  * RemoteNetwork resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // --- DEPENDENCY 1: IKE Crypto Profile ---
+ * // This profile defines the encryption and authentication algorithms for the IKE Gateway.
+ * // The values are taken from the 'createTestIKECryptoProfile' helper function.
+ * const example = new scm.IkeCryptoProfile("example", {
+ *     name: "example-ike-crypto-prf-for-rn",
+ *     folder: "Remote Networks",
+ *     hashes: ["sha256"],
+ *     dhGroups: ["group14"],
+ *     encryptions: ["aes-256-cbc"],
+ * });
+ * // --- DEPENDENCY 2: IKE Gateway ---
+ * // This defines the VPN peer. It depends on the IKE Crypto Profile created above.
+ * // The values are taken from the 'createTestIKEGateway' helper function.
+ * const exampleIkeGateway = new scm.IkeGateway("example", {
+ *     name: "example-ike-gateway-for-rn",
+ *     folder: "Remote Networks",
+ *     authentication: {
+ *         preSharedKey: {
+ *             key: "secret",
+ *         },
+ *     },
+ *     peerAddress: {
+ *         ip: "1.1.1.1",
+ *     },
+ *     protocol: {
+ *         ikev1: {
+ *             ikeCryptoProfile: example.name,
+ *         },
+ *     },
+ * }, {
+ *     dependsOn: [example],
+ * });
+ * // --- DEPENDENCY 3: IPsec Tunnel ---
+ * // This defines the tunnel interface itself and uses the IKE Gateway.
+ * // The values are taken from the 'createTestIPsecTunnel' helper function.
+ * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
+ *     name: "example-ipsec-tunnel-for-rn",
+ *     folder: "Remote Networks",
+ *     antiReplay: true,
+ *     copyTos: false,
+ *     enableGreEncapsulation: false,
+ *     autoKey: {
+ *         ikeGateways: [{
+ *             name: exampleIkeGateway.name,
+ *         }],
+ *         ipsecCryptoProfile: "PaloAlto-Networks-IPSec-Crypto",
+ *     },
+ * }, {
+ *     dependsOn: [exampleIkeGateway],
+ * });
+ * // --- MAIN RESOURCE: Remote Network ---
+ * // This is the final resource, which uses the IPsec Tunnel created above.
+ * // The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
+ * const exampleRemoteNetwork = new scm.RemoteNetwork("example", {
+ *     name: "example-remote-network",
+ *     folder: "Remote Networks",
+ *     licenseType: "FWAAS-AGGREGATE",
+ *     region: "us-west-2",
+ *     spnName: "us-west-dakota",
+ *     subnets: ["192.168.1.0/24"],
+ *     ipsecTunnel: exampleIpsecTunnel.name,
+ *     protocol: {
+ *         bgp: {
+ *             enable: true,
+ *             peerAs: "65000",
+ *             localIpAddress: "169.254.1.1",
+ *             peerIpAddress: "169.254.1.2",
+ *             doNotExportRoutes: false,
+ *             originateDefaultRoute: false,
+ *             summarizeMobileUserRoutes: false,
+ *         },
+ *     },
+ * }, {
+ *     dependsOn: [exampleIpsecTunnel],
+ * });
+ * ```
  */
 export class RemoteNetwork extends pulumi.CustomResource {
     /**

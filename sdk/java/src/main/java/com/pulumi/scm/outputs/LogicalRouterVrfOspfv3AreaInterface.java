@@ -10,7 +10,7 @@ import com.pulumi.scm.outputs.LogicalRouterVrfOspfv3AreaInterfaceLinkType;
 import com.pulumi.scm.outputs.LogicalRouterVrfOspfv3AreaInterfaceNeighbor;
 import com.pulumi.scm.outputs.LogicalRouterVrfOspfv3AreaInterfaceVrTiming;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -38,7 +38,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
      * @return Instance id
      * 
      */
-    private @Nullable Double instanceId;
+    private @Nullable Integer instanceId;
     /**
      * @return Link type
      * 
@@ -48,7 +48,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
      * @return Metric
      * 
      */
-    private @Nullable Double metric;
+    private @Nullable Integer metric;
     /**
      * @return Mtu ignore
      * 
@@ -73,7 +73,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
      * @return Priority
      * 
      */
-    private @Nullable Double priority;
+    private @Nullable Integer priority;
     /**
      * @return Timing
      * 
@@ -111,7 +111,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
      * @return Instance id
      * 
      */
-    public Optional<Double> instanceId() {
+    public Optional<Integer> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
     /**
@@ -125,7 +125,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
      * @return Metric
      * 
      */
-    public Optional<Double> metric() {
+    public Optional<Integer> metric() {
         return Optional.ofNullable(this.metric);
     }
     /**
@@ -160,7 +160,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
      * @return Priority
      * 
      */
-    public Optional<Double> priority() {
+    public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
@@ -190,14 +190,14 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
         private @Nullable String authentication;
         private @Nullable LogicalRouterVrfOspfv3AreaInterfaceBfd bfd;
         private @Nullable Boolean enable;
-        private @Nullable Double instanceId;
+        private @Nullable Integer instanceId;
         private @Nullable LogicalRouterVrfOspfv3AreaInterfaceLinkType linkType;
-        private @Nullable Double metric;
+        private @Nullable Integer metric;
         private @Nullable Boolean mtuIgnore;
         private String name;
         private @Nullable List<LogicalRouterVrfOspfv3AreaInterfaceNeighbor> neighbors;
         private @Nullable Boolean passive;
-        private @Nullable Double priority;
+        private @Nullable Integer priority;
         private @Nullable String timing;
         private @Nullable LogicalRouterVrfOspfv3AreaInterfaceVrTiming vrTiming;
         public Builder() {}
@@ -237,7 +237,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder instanceId(@Nullable Double instanceId) {
+        public Builder instanceId(@Nullable Integer instanceId) {
 
             this.instanceId = instanceId;
             return this;
@@ -249,7 +249,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(@Nullable Double metric) {
+        public Builder metric(@Nullable Integer metric) {
 
             this.metric = metric;
             return this;
@@ -284,7 +284,7 @@ public final class LogicalRouterVrfOspfv3AreaInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder priority(@Nullable Double priority) {
+        public Builder priority(@Nullable Integer priority) {
 
             this.priority = priority;
             return this;

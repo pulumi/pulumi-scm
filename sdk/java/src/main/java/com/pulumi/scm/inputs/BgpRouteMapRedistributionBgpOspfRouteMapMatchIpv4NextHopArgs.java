@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs 
     public static final BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs Empty = new BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs();
 
     /**
-     * Access list
+     * BGP Root OSPF Route maps ipv4 nextVr hop Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return BGP Root OSPF Route maps ipv4 nextVr hop Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs 
     }
 
     /**
-     * Prefix list
+     * BGP Root OSPF Route maps ipv4 next hop Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return BGP Root OSPF Route maps ipv4 next hop Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs 
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root OSPF Route maps ipv4 nextVr hop Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs 
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList BGP Root OSPF Route maps ipv4 nextVr hop Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs 
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root OSPF Route maps ipv4 next hop Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs 
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList BGP Root OSPF Route maps ipv4 next hop Prefix list
          * 
          * @return builder
          * 

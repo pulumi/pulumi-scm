@@ -5,8 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Integer;
-import java.lang.String;
+import com.pulumi.scm.inputs.ZoneProtectionProfileScanActionAlertArgs;
+import com.pulumi.scm.inputs.ZoneProtectionProfileScanActionAllowArgs;
+import com.pulumi.scm.inputs.ZoneProtectionProfileScanActionBlockArgs;
+import com.pulumi.scm.inputs.ZoneProtectionProfileScanActionBlockIpArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -17,40 +19,72 @@ public final class ZoneProtectionProfileScanActionArgs extends com.pulumi.resour
     public static final ZoneProtectionProfileScanActionArgs Empty = new ZoneProtectionProfileScanActionArgs();
 
     /**
-     * Duration
+     * Alert
      * 
      */
-    @Import(name="duration")
-    private @Nullable Output<Integer> duration;
+    @Import(name="alert")
+    private @Nullable Output<ZoneProtectionProfileScanActionAlertArgs> alert;
 
     /**
-     * @return Duration
+     * @return Alert
      * 
      */
-    public Optional<Output<Integer>> duration() {
-        return Optional.ofNullable(this.duration);
+    public Optional<Output<ZoneProtectionProfileScanActionAlertArgs>> alert() {
+        return Optional.ofNullable(this.alert);
     }
 
     /**
-     * Track by
+     * Allow
      * 
      */
-    @Import(name="trackBy")
-    private @Nullable Output<String> trackBy;
+    @Import(name="allow")
+    private @Nullable Output<ZoneProtectionProfileScanActionAllowArgs> allow;
 
     /**
-     * @return Track by
+     * @return Allow
      * 
      */
-    public Optional<Output<String>> trackBy() {
-        return Optional.ofNullable(this.trackBy);
+    public Optional<Output<ZoneProtectionProfileScanActionAllowArgs>> allow() {
+        return Optional.ofNullable(this.allow);
+    }
+
+    /**
+     * Block
+     * 
+     */
+    @Import(name="block")
+    private @Nullable Output<ZoneProtectionProfileScanActionBlockArgs> block;
+
+    /**
+     * @return Block
+     * 
+     */
+    public Optional<Output<ZoneProtectionProfileScanActionBlockArgs>> block() {
+        return Optional.ofNullable(this.block);
+    }
+
+    /**
+     * Block ip
+     * 
+     */
+    @Import(name="blockIp")
+    private @Nullable Output<ZoneProtectionProfileScanActionBlockIpArgs> blockIp;
+
+    /**
+     * @return Block ip
+     * 
+     */
+    public Optional<Output<ZoneProtectionProfileScanActionBlockIpArgs>> blockIp() {
+        return Optional.ofNullable(this.blockIp);
     }
 
     private ZoneProtectionProfileScanActionArgs() {}
 
     private ZoneProtectionProfileScanActionArgs(ZoneProtectionProfileScanActionArgs $) {
-        this.duration = $.duration;
-        this.trackBy = $.trackBy;
+        this.alert = $.alert;
+        this.allow = $.allow;
+        this.block = $.block;
+        this.blockIp = $.blockIp;
     }
 
     public static Builder builder() {
@@ -72,45 +106,87 @@ public final class ZoneProtectionProfileScanActionArgs extends com.pulumi.resour
         }
 
         /**
-         * @param duration Duration
+         * @param alert Alert
          * 
          * @return builder
          * 
          */
-        public Builder duration(@Nullable Output<Integer> duration) {
-            $.duration = duration;
+        public Builder alert(@Nullable Output<ZoneProtectionProfileScanActionAlertArgs> alert) {
+            $.alert = alert;
             return this;
         }
 
         /**
-         * @param duration Duration
+         * @param alert Alert
          * 
          * @return builder
          * 
          */
-        public Builder duration(Integer duration) {
-            return duration(Output.of(duration));
+        public Builder alert(ZoneProtectionProfileScanActionAlertArgs alert) {
+            return alert(Output.of(alert));
         }
 
         /**
-         * @param trackBy Track by
+         * @param allow Allow
          * 
          * @return builder
          * 
          */
-        public Builder trackBy(@Nullable Output<String> trackBy) {
-            $.trackBy = trackBy;
+        public Builder allow(@Nullable Output<ZoneProtectionProfileScanActionAllowArgs> allow) {
+            $.allow = allow;
             return this;
         }
 
         /**
-         * @param trackBy Track by
+         * @param allow Allow
          * 
          * @return builder
          * 
          */
-        public Builder trackBy(String trackBy) {
-            return trackBy(Output.of(trackBy));
+        public Builder allow(ZoneProtectionProfileScanActionAllowArgs allow) {
+            return allow(Output.of(allow));
+        }
+
+        /**
+         * @param block Block
+         * 
+         * @return builder
+         * 
+         */
+        public Builder block(@Nullable Output<ZoneProtectionProfileScanActionBlockArgs> block) {
+            $.block = block;
+            return this;
+        }
+
+        /**
+         * @param block Block
+         * 
+         * @return builder
+         * 
+         */
+        public Builder block(ZoneProtectionProfileScanActionBlockArgs block) {
+            return block(Output.of(block));
+        }
+
+        /**
+         * @param blockIp Block ip
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockIp(@Nullable Output<ZoneProtectionProfileScanActionBlockIpArgs> blockIp) {
+            $.blockIp = blockIp;
+            return this;
+        }
+
+        /**
+         * @param blockIp Block ip
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockIp(ZoneProtectionProfileScanActionBlockIpArgs blockIp) {
+            return blockIp(Output.of(blockIp));
         }
 
         public ZoneProtectionProfileScanActionArgs build() {

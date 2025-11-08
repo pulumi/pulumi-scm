@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchAddress {
     /**
-     * @return Access list
+     * @return OSPF BGP Route maps match Access list
      * 
      */
     private String accessList;
     /**
-     * @return Prefix list
+     * @return OSPF BGP Route maps match Prefix list
      * 
      */
     private String prefixList;
 
     private GetBgpRouteMapRedistributionListDataOspfBgpRouteMapMatchAddress() {}
     /**
-     * @return Access list
+     * @return OSPF BGP Route maps match Access list
      * 
      */
     public String accessList() {
         return this.accessList;
     }
     /**
-     * @return Prefix list
+     * @return OSPF BGP Route maps match Prefix list
      * 
      */
     public String prefixList() {

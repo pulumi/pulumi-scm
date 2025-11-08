@@ -8,6 +8,8 @@ import * as utilities from "./utilities";
 
 /**
  * DnsSecurityProfile resource
+ *
+ * ## Example Usage
  */
 export class DnsSecurityProfile extends pulumi.CustomResource {
     /**

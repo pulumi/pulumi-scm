@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsProxyCache {
     /**
-     * @return Cache edns
+     * @return Cache EDNS UDP response
      * 
      */
     private @Nullable Boolean cacheEdns;
@@ -31,7 +31,7 @@ public final class DnsProxyCache {
 
     private DnsProxyCache() {}
     /**
-     * @return Cache edns
+     * @return Cache EDNS UDP response
      * 
      */
     public Optional<Boolean> cacheEdns() {

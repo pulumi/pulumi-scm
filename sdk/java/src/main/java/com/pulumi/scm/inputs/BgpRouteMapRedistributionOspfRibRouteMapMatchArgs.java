@@ -19,14 +19,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
     public static final BgpRouteMapRedistributionOspfRibRouteMapMatchArgs Empty = new BgpRouteMapRedistributionOspfRibRouteMapMatchArgs();
 
     /**
-     * Address
+     * OSPF RIB Route maps address
      * 
      */
     @Import(name="address")
     private @Nullable Output<BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs> address;
 
     /**
-     * @return Address
+     * @return OSPF RIB Route maps address
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs>> address() {
@@ -34,14 +34,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
     }
 
     /**
-     * Interface
+     * OSPF RIB Route maps Interface
      * 
      */
     @Import(name="interface")
     private @Nullable Output<String> interface_;
 
     /**
-     * @return Interface
+     * @return OSPF RIB Route maps Interface
      * 
      */
     public Optional<Output<String>> interface_() {
@@ -49,14 +49,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
     }
 
     /**
-     * Metric
+     * OSPF RIB Route maps Metric
      * 
      */
     @Import(name="metric")
     private @Nullable Output<Integer> metric;
 
     /**
-     * @return Metric
+     * @return OSPF RIB Route maps Metric
      * 
      */
     public Optional<Output<Integer>> metric() {
@@ -64,14 +64,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
     }
 
     /**
-     * Next hop
+     * OSPF RIB Route maps next*hop
      * 
      */
     @Import(name="nextHop")
     private @Nullable Output<BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs> nextHop;
 
     /**
-     * @return Next hop
+     * @return OSPF RIB Route maps next*hop
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs>> nextHop() {
@@ -79,14 +79,14 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
     }
 
     /**
-     * Tag
+     * OSPF RIB Route maps tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<Integer> tag;
 
     /**
-     * @return Tag
+     * @return OSPF RIB Route maps tag
      * 
      */
     public Optional<Output<Integer>> tag() {
@@ -122,7 +122,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param address Address
+         * @param address OSPF RIB Route maps address
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param address Address
+         * @param address OSPF RIB Route maps address
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ OSPF RIB Route maps Interface
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param interface_ Interface
+         * @param interface_ OSPF RIB Route maps Interface
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param metric Metric
+         * @param metric OSPF RIB Route maps Metric
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param metric Metric
+         * @param metric OSPF RIB Route maps Metric
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param nextHop Next hop
+         * @param nextHop OSPF RIB Route maps next*hop
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param nextHop Next hop
+         * @param nextHop OSPF RIB Route maps next*hop
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param tag Tag
+         * @param tag OSPF RIB Route maps tag
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs extends com
         }
 
         /**
-         * @param tag Tag
+         * @param tag OSPF RIB Route maps tag
          * 
          * @return builder
          * 

@@ -11,6 +11,46 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// InterfaceManagementProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var dcPostmanProfile = new Scm.InterfaceManagementProfile("dc_postman_profile", new()
+    ///     {
+    ///         Name = "test_inf_mgmt_profile_1_update",
+    ///         Folder = "All",
+    ///         PermittedIps = new[]
+    ///         {
+    ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+    ///             {
+    ///                 Name = "10.0.0.0/24",
+    ///             },
+    ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+    ///             {
+    ///                 Name = "10.0.0.0/32",
+    ///             },
+    ///         },
+    ///         Http = true,
+    ///         Https = false,
+    ///         Telnet = false,
+    ///         Ssh = true,
+    ///         Ping = false,
+    ///         HttpOcsp = true,
+    ///         UseridService = true,
+    ///         UseridSyslogListenerSsl = true,
+    ///         UseridSyslogListenerUdp = true,
+    ///         ResponsePages = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/interfaceManagementProfile:InterfaceManagementProfile")]
     public partial class InterfaceManagementProfile : global::Pulumi.CustomResource
@@ -34,7 +74,7 @@ namespace Pulumi.Scm
         public Output<bool?> Http { get; private set; } = null!;
 
         /// <summary>
-        /// Http ocsp
+        /// Allow HTTP OCSP?
         /// </summary>
         [Output("httpOcsp")]
         public Output<bool?> HttpOcsp { get; private set; } = null!;
@@ -52,10 +92,10 @@ namespace Pulumi.Scm
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Permitted ip
+        /// Allowed IP address(es)
         /// </summary>
         [Output("permittedIps")]
-        public Output<ImmutableArray<string>> PermittedIps { get; private set; } = null!;
+        public Output<ImmutableArray<Outputs.InterfaceManagementProfilePermittedIp>> PermittedIps { get; private set; } = null!;
 
         /// <summary>
         /// Allow ping?
@@ -64,10 +104,10 @@ namespace Pulumi.Scm
         public Output<bool?> Ping { get; private set; } = null!;
 
         /// <summary>
-        /// Response pages
+        /// Allow response pages?
         /// </summary>
         [Output("responsePages")]
-        public Output<string?> ResponsePages { get; private set; } = null!;
+        public Output<bool?> ResponsePages { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -91,19 +131,19 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// Userid service
+        /// Allow User-ID?
         /// </summary>
         [Output("useridService")]
         public Output<bool?> UseridService { get; private set; } = null!;
 
         /// <summary>
-        /// Userid syslog listener ssl
+        /// Allow User-ID syslog listener (SSL)?
         /// </summary>
         [Output("useridSyslogListenerSsl")]
         public Output<bool?> UseridSyslogListenerSsl { get; private set; } = null!;
 
         /// <summary>
-        /// Userid syslog listener udp
+        /// Allow User-ID syslog listener (UDP)?
         /// </summary>
         [Output("useridSyslogListenerUdp")]
         public Output<bool?> UseridSyslogListenerUdp { get; private set; } = null!;
@@ -173,7 +213,7 @@ namespace Pulumi.Scm
         public Input<bool>? Http { get; set; }
 
         /// <summary>
-        /// Http ocsp
+        /// Allow HTTP OCSP?
         /// </summary>
         [Input("httpOcsp")]
         public Input<bool>? HttpOcsp { get; set; }
@@ -191,14 +231,14 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         [Input("permittedIps")]
-        private InputList<string>? _permittedIps;
+        private InputList<Inputs.InterfaceManagementProfilePermittedIpArgs>? _permittedIps;
 
         /// <summary>
-        /// Permitted ip
+        /// Allowed IP address(es)
         /// </summary>
-        public InputList<string> PermittedIps
+        public InputList<Inputs.InterfaceManagementProfilePermittedIpArgs> PermittedIps
         {
-            get => _permittedIps ?? (_permittedIps = new InputList<string>());
+            get => _permittedIps ?? (_permittedIps = new InputList<Inputs.InterfaceManagementProfilePermittedIpArgs>());
             set => _permittedIps = value;
         }
 
@@ -209,10 +249,10 @@ namespace Pulumi.Scm
         public Input<bool>? Ping { get; set; }
 
         /// <summary>
-        /// Response pages
+        /// Allow response pages?
         /// </summary>
         [Input("responsePages")]
-        public Input<string>? ResponsePages { get; set; }
+        public Input<bool>? ResponsePages { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -233,19 +273,19 @@ namespace Pulumi.Scm
         public Input<bool>? Telnet { get; set; }
 
         /// <summary>
-        /// Userid service
+        /// Allow User-ID?
         /// </summary>
         [Input("useridService")]
         public Input<bool>? UseridService { get; set; }
 
         /// <summary>
-        /// Userid syslog listener ssl
+        /// Allow User-ID syslog listener (SSL)?
         /// </summary>
         [Input("useridSyslogListenerSsl")]
         public Input<bool>? UseridSyslogListenerSsl { get; set; }
 
         /// <summary>
-        /// Userid syslog listener udp
+        /// Allow User-ID syslog listener (UDP)?
         /// </summary>
         [Input("useridSyslogListenerUdp")]
         public Input<bool>? UseridSyslogListenerUdp { get; set; }
@@ -277,7 +317,7 @@ namespace Pulumi.Scm
         public Input<bool>? Http { get; set; }
 
         /// <summary>
-        /// Http ocsp
+        /// Allow HTTP OCSP?
         /// </summary>
         [Input("httpOcsp")]
         public Input<bool>? HttpOcsp { get; set; }
@@ -295,14 +335,14 @@ namespace Pulumi.Scm
         public Input<string>? Name { get; set; }
 
         [Input("permittedIps")]
-        private InputList<string>? _permittedIps;
+        private InputList<Inputs.InterfaceManagementProfilePermittedIpGetArgs>? _permittedIps;
 
         /// <summary>
-        /// Permitted ip
+        /// Allowed IP address(es)
         /// </summary>
-        public InputList<string> PermittedIps
+        public InputList<Inputs.InterfaceManagementProfilePermittedIpGetArgs> PermittedIps
         {
-            get => _permittedIps ?? (_permittedIps = new InputList<string>());
+            get => _permittedIps ?? (_permittedIps = new InputList<Inputs.InterfaceManagementProfilePermittedIpGetArgs>());
             set => _permittedIps = value;
         }
 
@@ -313,10 +353,10 @@ namespace Pulumi.Scm
         public Input<bool>? Ping { get; set; }
 
         /// <summary>
-        /// Response pages
+        /// Allow response pages?
         /// </summary>
         [Input("responsePages")]
-        public Input<string>? ResponsePages { get; set; }
+        public Input<bool>? ResponsePages { get; set; }
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -340,19 +380,19 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// Userid service
+        /// Allow User-ID?
         /// </summary>
         [Input("useridService")]
         public Input<bool>? UseridService { get; set; }
 
         /// <summary>
-        /// Userid syslog listener ssl
+        /// Allow User-ID syslog listener (SSL)?
         /// </summary>
         [Input("useridSyslogListenerSsl")]
         public Input<bool>? UseridSyslogListenerSsl { get; set; }
 
         /// <summary>
-        /// Userid syslog listener udp
+        /// Allow User-ID syslog listener (UDP)?
         /// </summary>
         [Input("useridSyslogListenerUdp")]
         public Input<bool>? UseridSyslogListenerUdp { get; set; }

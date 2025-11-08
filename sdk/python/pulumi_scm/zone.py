@@ -419,6 +419,72 @@ class Zone(pulumi.CustomResource):
         """
         Zone resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates an empty layer3 zone
+        #
+        scm_layer3_zone = scm.Zone("scm_layer3_zone",
+            name="scm_layer3_zone",
+            folder="ngfw-shared",
+            network={
+                "layer3s": [],
+            })
+        #
+        # Creates an empty layer2 zone
+        #
+        scm_layer2_zone = scm.Zone("scm_layer2_zone",
+            name="scm_layer2_zone",
+            folder="ngfw-shared",
+            network={
+                "layer2s": [],
+            })
+        #
+        # Creates an empty tap zone
+        #
+        scm_tap_zone = scm.Zone("scm_tap_zone",
+            name="scm_tap_zone",
+            folder="ngfw-shared",
+            network={
+                "taps": [],
+            })
+        #
+        # Creates an empty vwire zone
+        #
+        scm_vwire_zone = scm.Zone("scm_vwire_zone",
+            name="scm_vwire_zone",
+            folder="ngfw-shared",
+            network={
+                "virtual_wires": [],
+            })
+        #
+        # Creates a layer3 zone
+        # Requires Interface $scm_l3_interface to exist
+        #
+        scm_layer3_zone_complex = scm.Zone("scm_layer3_zone_complex",
+            name="scm_layer3_zone_complex",
+            folder="ngfw-shared",
+            network={
+                "layer3s": ["$scm_l3_interface"],
+                "zone_protection_profile": "best-practice",
+                "enable_packet_buffer_protection": True,
+            },
+            enable_device_identification=True,
+            device_acl={
+                "include_lists": ["198.18.1.0/24"],
+                "exclude_lists": ["198.18.2.0/24"],
+            },
+            enable_user_identification=True,
+            user_acl={
+                "include_lists": ["198.18.3.0/24"],
+                "exclude_lists": ["198.18.4.0/24"],
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -441,6 +507,72 @@ class Zone(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Zone resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates an empty layer3 zone
+        #
+        scm_layer3_zone = scm.Zone("scm_layer3_zone",
+            name="scm_layer3_zone",
+            folder="ngfw-shared",
+            network={
+                "layer3s": [],
+            })
+        #
+        # Creates an empty layer2 zone
+        #
+        scm_layer2_zone = scm.Zone("scm_layer2_zone",
+            name="scm_layer2_zone",
+            folder="ngfw-shared",
+            network={
+                "layer2s": [],
+            })
+        #
+        # Creates an empty tap zone
+        #
+        scm_tap_zone = scm.Zone("scm_tap_zone",
+            name="scm_tap_zone",
+            folder="ngfw-shared",
+            network={
+                "taps": [],
+            })
+        #
+        # Creates an empty vwire zone
+        #
+        scm_vwire_zone = scm.Zone("scm_vwire_zone",
+            name="scm_vwire_zone",
+            folder="ngfw-shared",
+            network={
+                "virtual_wires": [],
+            })
+        #
+        # Creates a layer3 zone
+        # Requires Interface $scm_l3_interface to exist
+        #
+        scm_layer3_zone_complex = scm.Zone("scm_layer3_zone_complex",
+            name="scm_layer3_zone_complex",
+            folder="ngfw-shared",
+            network={
+                "layer3s": ["$scm_l3_interface"],
+                "zone_protection_profile": "best-practice",
+                "enable_packet_buffer_protection": True,
+            },
+            enable_device_identification=True,
+            device_acl={
+                "include_lists": ["198.18.1.0/24"],
+                "exclude_lists": ["198.18.2.0/24"],
+            },
+            enable_user_identification=True,
+            user_acl={
+                "include_lists": ["198.18.3.0/24"],
+                "exclude_lists": ["198.18.4.0/24"],
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param ZoneArgs args: The arguments to use to populate this resource's properties.

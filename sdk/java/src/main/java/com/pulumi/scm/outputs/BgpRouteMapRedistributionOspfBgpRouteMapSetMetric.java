@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionOspfBgpRouteMapSetMetric {
     /**
-     * @return Metric action
+     * @return OSPF BGP Route maps set Metric action
      * 
      */
     private @Nullable String action;
     /**
-     * @return Metric value
+     * @return OSPF BGP Route maps set Metric value
      * 
      */
     private @Nullable Integer value;
 
     private BgpRouteMapRedistributionOspfBgpRouteMapSetMetric() {}
     /**
-     * @return Metric action
+     * @return OSPF BGP Route maps set Metric action
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Metric value
+     * @return OSPF BGP Route maps set Metric value
      * 
      */
     public Optional<Integer> value() {

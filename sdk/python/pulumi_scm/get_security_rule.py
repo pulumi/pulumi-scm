@@ -27,7 +27,7 @@ class GetSecurityRuleResult:
     """
     A collection of values returned by getSecurityRule.
     """
-    def __init__(__self__, action=None, allow_url_categories=None, allow_web_applications=None, applications=None, block_url_categories=None, block_web_applications=None, categories=None, default_profile_settings=None, description=None, destination_hips=None, destinations=None, device=None, devices=None, disabled=None, folder=None, froms=None, id=None, log_end=None, log_setting=None, log_settings=None, log_start=None, name=None, negate_destination=None, negate_source=None, negate_user=None, policy_type=None, profile_setting=None, schedule=None, security_settings=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, tenant_restrictions=None, tfid=None, tos=None):
+    def __init__(__self__, action=None, allow_url_categories=None, allow_web_applications=None, applications=None, block_url_categories=None, block_web_applications=None, categories=None, default_profile_settings=None, description=None, destination_hips=None, destinations=None, device=None, devices=None, disabled=None, folder=None, froms=None, id=None, log_end=None, log_setting=None, log_settings=None, log_start=None, name=None, negate_destination=None, negate_source=None, negate_user=None, policy_type=None, position=None, profile_setting=None, relative_position=None, schedule=None, security_settings=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, target_rule=None, tenant_restrictions=None, tfid=None, tos=None):
         if action and not isinstance(action, str):
             raise TypeError("Expected argument 'action' to be a str")
         pulumi.set(__self__, "action", action)
@@ -106,9 +106,15 @@ class GetSecurityRuleResult:
         if policy_type and not isinstance(policy_type, str):
             raise TypeError("Expected argument 'policy_type' to be a str")
         pulumi.set(__self__, "policy_type", policy_type)
+        if position and not isinstance(position, str):
+            raise TypeError("Expected argument 'position' to be a str")
+        pulumi.set(__self__, "position", position)
         if profile_setting and not isinstance(profile_setting, dict):
             raise TypeError("Expected argument 'profile_setting' to be a dict")
         pulumi.set(__self__, "profile_setting", profile_setting)
+        if relative_position and not isinstance(relative_position, str):
+            raise TypeError("Expected argument 'relative_position' to be a str")
+        pulumi.set(__self__, "relative_position", relative_position)
         if schedule and not isinstance(schedule, str):
             raise TypeError("Expected argument 'schedule' to be a str")
         pulumi.set(__self__, "schedule", schedule)
@@ -133,6 +139,9 @@ class GetSecurityRuleResult:
         if tags and not isinstance(tags, list):
             raise TypeError("Expected argument 'tags' to be a list")
         pulumi.set(__self__, "tags", tags)
+        if target_rule and not isinstance(target_rule, str):
+            raise TypeError("Expected argument 'target_rule' to be a str")
+        pulumi.set(__self__, "target_rule", target_rule)
         if tenant_restrictions and not isinstance(tenant_restrictions, list):
             raise TypeError("Expected argument 'tenant_restrictions' to be a list")
         pulumi.set(__self__, "tenant_restrictions", tenant_restrictions)
@@ -352,12 +361,28 @@ class GetSecurityRuleResult:
         return pulumi.get(self, "policy_type")
 
     @_builtins.property
+    @pulumi.getter
+    def position(self) -> _builtins.str:
+        """
+        The position of a security rule
+        """
+        return pulumi.get(self, "position")
+
+    @_builtins.property
     @pulumi.getter(name="profileSetting")
     def profile_setting(self) -> 'outputs.GetSecurityRuleProfileSettingResult':
         """
         The security profile object
         """
         return pulumi.get(self, "profile_setting")
+
+    @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> _builtins.str:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
@@ -424,6 +449,14 @@ class GetSecurityRuleResult:
         return pulumi.get(self, "tags")
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> _builtins.str:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @_builtins.property
     @pulumi.getter(name="tenantRestrictions")
     def tenant_restrictions(self) -> Sequence[_builtins.str]:
         """
@@ -477,7 +510,9 @@ class AwaitableGetSecurityRuleResult(GetSecurityRuleResult):
             negate_source=self.negate_source,
             negate_user=self.negate_user,
             policy_type=self.policy_type,
+            position=self.position,
             profile_setting=self.profile_setting,
+            relative_position=self.relative_position,
             schedule=self.schedule,
             security_settings=self.security_settings,
             services=self.services,
@@ -486,6 +521,7 @@ class AwaitableGetSecurityRuleResult(GetSecurityRuleResult):
             source_users=self.source_users,
             sources=self.sources,
             tags=self.tags,
+            target_rule=self.target_rule,
             tenant_restrictions=self.tenant_restrictions,
             tfid=self.tfid,
             tos=self.tos)
@@ -496,6 +532,50 @@ def get_security_rule(id: Optional[_builtins.str] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSecurityRuleResult:
     """
     SecurityRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    standard_web_access = scm.SecurityRule("standard_web_access",
+        folder="All",
+        name="Allow Standard Web Access DS1",
+        description="Allow outbound web traffic to any destination...",
+        position="pre",
+        action="allow",
+        categories=["any"],
+        applications=[
+            "web-browsing",
+            "ssl",
+        ],
+        services=[
+            "service-http",
+            "service-https",
+        ],
+        froms=[
+            "untrust",
+            "trust",
+        ],
+        tos=["trust"],
+        sources=["any"],
+        destinations=["any"],
+        negate_source=False,
+        negate_destination=False,
+        source_users=["any"],
+        source_hips=["any"],
+        destination_hips=["any"],
+        log_start=True,
+        log_end=True,
+        disabled=False)
+    # --- Data Source Calls to Fetch Existing Rules ---
+    # 1. Fetch by ID (Best for direct lookup)
+    standard_web_access_by_id = scm.get_security_rule_output(id=standard_web_access.id)
+    pulumi.export("fetchedStandardWebId", standard_web_access_by_id.id)
+    pulumi.export("fetchedStandardWebName", standard_web_access_by_id.name)
+    pulumi.export("fetchedStandardWebDescription", standard_web_access_by_id.description)
+    ```
 
 
     :param _builtins.str id: The UUID of the security rule
@@ -534,7 +614,9 @@ def get_security_rule(id: Optional[_builtins.str] = None,
         negate_source=pulumi.get(__ret__, 'negate_source'),
         negate_user=pulumi.get(__ret__, 'negate_user'),
         policy_type=pulumi.get(__ret__, 'policy_type'),
+        position=pulumi.get(__ret__, 'position'),
         profile_setting=pulumi.get(__ret__, 'profile_setting'),
+        relative_position=pulumi.get(__ret__, 'relative_position'),
         schedule=pulumi.get(__ret__, 'schedule'),
         security_settings=pulumi.get(__ret__, 'security_settings'),
         services=pulumi.get(__ret__, 'services'),
@@ -543,6 +625,7 @@ def get_security_rule(id: Optional[_builtins.str] = None,
         source_users=pulumi.get(__ret__, 'source_users'),
         sources=pulumi.get(__ret__, 'sources'),
         tags=pulumi.get(__ret__, 'tags'),
+        target_rule=pulumi.get(__ret__, 'target_rule'),
         tenant_restrictions=pulumi.get(__ret__, 'tenant_restrictions'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'))
@@ -551,6 +634,50 @@ def get_security_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSecurityRuleResult]:
     """
     SecurityRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    standard_web_access = scm.SecurityRule("standard_web_access",
+        folder="All",
+        name="Allow Standard Web Access DS1",
+        description="Allow outbound web traffic to any destination...",
+        position="pre",
+        action="allow",
+        categories=["any"],
+        applications=[
+            "web-browsing",
+            "ssl",
+        ],
+        services=[
+            "service-http",
+            "service-https",
+        ],
+        froms=[
+            "untrust",
+            "trust",
+        ],
+        tos=["trust"],
+        sources=["any"],
+        destinations=["any"],
+        negate_source=False,
+        negate_destination=False,
+        source_users=["any"],
+        source_hips=["any"],
+        destination_hips=["any"],
+        log_start=True,
+        log_end=True,
+        disabled=False)
+    # --- Data Source Calls to Fetch Existing Rules ---
+    # 1. Fetch by ID (Best for direct lookup)
+    standard_web_access_by_id = scm.get_security_rule_output(id=standard_web_access.id)
+    pulumi.export("fetchedStandardWebId", standard_web_access_by_id.id)
+    pulumi.export("fetchedStandardWebName", standard_web_access_by_id.name)
+    pulumi.export("fetchedStandardWebDescription", standard_web_access_by_id.description)
+    ```
 
 
     :param _builtins.str id: The UUID of the security rule
@@ -588,7 +715,9 @@ def get_security_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         negate_source=pulumi.get(__response__, 'negate_source'),
         negate_user=pulumi.get(__response__, 'negate_user'),
         policy_type=pulumi.get(__response__, 'policy_type'),
+        position=pulumi.get(__response__, 'position'),
         profile_setting=pulumi.get(__response__, 'profile_setting'),
+        relative_position=pulumi.get(__response__, 'relative_position'),
         schedule=pulumi.get(__response__, 'schedule'),
         security_settings=pulumi.get(__response__, 'security_settings'),
         services=pulumi.get(__response__, 'services'),
@@ -597,6 +726,7 @@ def get_security_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         source_users=pulumi.get(__response__, 'source_users'),
         sources=pulumi.get(__response__, 'sources'),
         tags=pulumi.get(__response__, 'tags'),
+        target_rule=pulumi.get(__response__, 'target_rule'),
         tenant_restrictions=pulumi.get(__response__, 'tenant_restrictions'),
         tfid=pulumi.get(__response__, 'tfid'),
         tos=pulumi.get(__response__, 'tos')))

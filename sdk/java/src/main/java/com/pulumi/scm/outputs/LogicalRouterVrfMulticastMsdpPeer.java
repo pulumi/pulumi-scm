@@ -8,7 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.LogicalRouterVrfMulticastMsdpPeerLocalAddress;
 import com.pulumi.scm.outputs.LogicalRouterVrfMulticastMsdpPeerPeerAddress;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -40,7 +40,7 @@ public final class LogicalRouterVrfMulticastMsdpPeer {
      * @return Max sa
      * 
      */
-    private @Nullable Double maxSa;
+    private @Nullable Integer maxSa;
     /**
      * @return Name
      * 
@@ -95,7 +95,7 @@ public final class LogicalRouterVrfMulticastMsdpPeer {
      * @return Max sa
      * 
      */
-    public Optional<Double> maxSa() {
+    public Optional<Integer> maxSa() {
         return Optional.ofNullable(this.maxSa);
     }
     /**
@@ -140,7 +140,7 @@ public final class LogicalRouterVrfMulticastMsdpPeer {
         private @Nullable Boolean enable;
         private @Nullable String inboundSaFilter;
         private @Nullable LogicalRouterVrfMulticastMsdpPeerLocalAddress localAddress;
-        private @Nullable Double maxSa;
+        private @Nullable Integer maxSa;
         private String name;
         private @Nullable String outboundSaFilter;
         private @Nullable LogicalRouterVrfMulticastMsdpPeerPeerAddress peerAddress;
@@ -184,7 +184,7 @@ public final class LogicalRouterVrfMulticastMsdpPeer {
             return this;
         }
         @CustomType.Setter
-        public Builder maxSa(@Nullable Double maxSa) {
+        public Builder maxSa(@Nullable Integer maxSa) {
 
             this.maxSa = maxSa;
             return this;

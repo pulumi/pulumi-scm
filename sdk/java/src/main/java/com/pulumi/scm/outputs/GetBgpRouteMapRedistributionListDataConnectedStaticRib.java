@@ -12,14 +12,14 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataConnectedStaticRib {
     /**
-     * @return Route maps
+     * @return Connected Static BGP Rib Route maps
      * 
      */
     private List<GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMap> routeMaps;
 
     private GetBgpRouteMapRedistributionListDataConnectedStaticRib() {}
     /**
-     * @return Route maps
+     * @return Connected Static BGP Rib Route maps
      * 
      */
     public List<GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMap> routeMaps() {

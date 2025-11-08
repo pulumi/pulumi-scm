@@ -5,11 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.resources.ResourceArgs {
@@ -17,33 +16,33 @@ public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.r
     public static final SdwanPathQualityProfileMetricPktLossArgs Empty = new SdwanPathQualityProfileMetricPktLossArgs();
 
     /**
-     * Sensitivity
+     * Packet loss sensitivity
      * 
      */
-    @Import(name="sensitivity")
-    private @Nullable Output<String> sensitivity;
+    @Import(name="sensitivity", required=true)
+    private Output<String> sensitivity;
 
     /**
-     * @return Sensitivity
+     * @return Packet loss sensitivity
      * 
      */
-    public Optional<Output<String>> sensitivity() {
-        return Optional.ofNullable(this.sensitivity);
+    public Output<String> sensitivity() {
+        return this.sensitivity;
     }
 
     /**
-     * Threshold
+     * Packet loss threshold (percentage)
      * 
      */
-    @Import(name="threshold")
-    private @Nullable Output<Integer> threshold;
+    @Import(name="threshold", required=true)
+    private Output<Integer> threshold;
 
     /**
-     * @return Threshold
+     * @return Packet loss threshold (percentage)
      * 
      */
-    public Optional<Output<Integer>> threshold() {
-        return Optional.ofNullable(this.threshold);
+    public Output<Integer> threshold() {
+        return this.threshold;
     }
 
     private SdwanPathQualityProfileMetricPktLossArgs() {}
@@ -72,18 +71,18 @@ public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.r
         }
 
         /**
-         * @param sensitivity Sensitivity
+         * @param sensitivity Packet loss sensitivity
          * 
          * @return builder
          * 
          */
-        public Builder sensitivity(@Nullable Output<String> sensitivity) {
+        public Builder sensitivity(Output<String> sensitivity) {
             $.sensitivity = sensitivity;
             return this;
         }
 
         /**
-         * @param sensitivity Sensitivity
+         * @param sensitivity Packet loss sensitivity
          * 
          * @return builder
          * 
@@ -93,18 +92,18 @@ public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.r
         }
 
         /**
-         * @param threshold Threshold
+         * @param threshold Packet loss threshold (percentage)
          * 
          * @return builder
          * 
          */
-        public Builder threshold(@Nullable Output<Integer> threshold) {
+        public Builder threshold(Output<Integer> threshold) {
             $.threshold = threshold;
             return this;
         }
 
         /**
-         * @param threshold Threshold
+         * @param threshold Packet loss threshold (percentage)
          * 
          * @return builder
          * 
@@ -114,6 +113,12 @@ public final class SdwanPathQualityProfileMetricPktLossArgs extends com.pulumi.r
         }
 
         public SdwanPathQualityProfileMetricPktLossArgs build() {
+            if ($.sensitivity == null) {
+                throw new MissingRequiredPropertyException("SdwanPathQualityProfileMetricPktLossArgs", "sensitivity");
+            }
+            if ($.threshold == null) {
+                throw new MissingRequiredPropertyException("SdwanPathQualityProfileMetricPktLossArgs", "threshold");
+            }
             return $;
         }
     }

@@ -30,13 +30,13 @@ namespace Pulumi.Scm
         ///     // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
         ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first 5 URL Categories by name.
         ///     var paginated = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -71,13 +71,13 @@ namespace Pulumi.Scm
         ///     // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
         ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first 5 URL Categories by name.
         ///     var paginated = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -112,13 +112,13 @@ namespace Pulumi.Scm
         ///     // Example 1: Fetch a list of all URL Categories in the "Shared" folder.
         ///     var allShared = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example 2: Use pagination to get the first 5 URL Categories by name.
         ///     var paginated = Scm.GetUrlCategoryList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });

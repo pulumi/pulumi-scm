@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetInterfaceManagementProfilePermittedIp;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +29,7 @@ public final class GetInterfaceManagementProfileResult {
      */
     private Boolean http;
     /**
-     * @return Http ocsp
+     * @return Allow HTTP OCSP?
      * 
      */
     private Boolean httpOcsp;
@@ -48,20 +49,20 @@ public final class GetInterfaceManagementProfileResult {
      */
     private String name;
     /**
-     * @return Permitted ip
+     * @return Allowed IP address(es)
      * 
      */
-    private List<String> permittedIps;
+    private List<GetInterfaceManagementProfilePermittedIp> permittedIps;
     /**
      * @return Allow ping?
      * 
      */
     private Boolean ping;
     /**
-     * @return Response pages
+     * @return Allow response pages?
      * 
      */
-    private String responsePages;
+    private Boolean responsePages;
     /**
      * @return The snippet in which the resource is defined
      * 
@@ -79,17 +80,17 @@ public final class GetInterfaceManagementProfileResult {
     private Boolean telnet;
     private String tfid;
     /**
-     * @return Userid service
+     * @return Allow User-ID?
      * 
      */
     private Boolean useridService;
     /**
-     * @return Userid syslog listener ssl
+     * @return Allow User-ID syslog listener (SSL)?
      * 
      */
     private Boolean useridSyslogListenerSsl;
     /**
-     * @return Userid syslog listener udp
+     * @return Allow User-ID syslog listener (UDP)?
      * 
      */
     private Boolean useridSyslogListenerUdp;
@@ -117,7 +118,7 @@ public final class GetInterfaceManagementProfileResult {
         return this.http;
     }
     /**
-     * @return Http ocsp
+     * @return Allow HTTP OCSP?
      * 
      */
     public Boolean httpOcsp() {
@@ -145,10 +146,10 @@ public final class GetInterfaceManagementProfileResult {
         return this.name;
     }
     /**
-     * @return Permitted ip
+     * @return Allowed IP address(es)
      * 
      */
-    public List<String> permittedIps() {
+    public List<GetInterfaceManagementProfilePermittedIp> permittedIps() {
         return this.permittedIps;
     }
     /**
@@ -159,10 +160,10 @@ public final class GetInterfaceManagementProfileResult {
         return this.ping;
     }
     /**
-     * @return Response pages
+     * @return Allow response pages?
      * 
      */
-    public String responsePages() {
+    public Boolean responsePages() {
         return this.responsePages;
     }
     /**
@@ -190,21 +191,21 @@ public final class GetInterfaceManagementProfileResult {
         return this.tfid;
     }
     /**
-     * @return Userid service
+     * @return Allow User-ID?
      * 
      */
     public Boolean useridService() {
         return this.useridService;
     }
     /**
-     * @return Userid syslog listener ssl
+     * @return Allow User-ID syslog listener (SSL)?
      * 
      */
     public Boolean useridSyslogListenerSsl() {
         return this.useridSyslogListenerSsl;
     }
     /**
-     * @return Userid syslog listener udp
+     * @return Allow User-ID syslog listener (UDP)?
      * 
      */
     public Boolean useridSyslogListenerUdp() {
@@ -227,9 +228,9 @@ public final class GetInterfaceManagementProfileResult {
         private Boolean https;
         private String id;
         private String name;
-        private List<String> permittedIps;
+        private List<GetInterfaceManagementProfilePermittedIp> permittedIps;
         private Boolean ping;
-        private String responsePages;
+        private Boolean responsePages;
         private String snippet;
         private Boolean ssh;
         private Boolean telnet;
@@ -316,14 +317,14 @@ public final class GetInterfaceManagementProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder permittedIps(List<String> permittedIps) {
+        public Builder permittedIps(List<GetInterfaceManagementProfilePermittedIp> permittedIps) {
             if (permittedIps == null) {
               throw new MissingRequiredPropertyException("GetInterfaceManagementProfileResult", "permittedIps");
             }
             this.permittedIps = permittedIps;
             return this;
         }
-        public Builder permittedIps(String... permittedIps) {
+        public Builder permittedIps(GetInterfaceManagementProfilePermittedIp... permittedIps) {
             return permittedIps(List.of(permittedIps));
         }
         @CustomType.Setter
@@ -335,7 +336,7 @@ public final class GetInterfaceManagementProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder responsePages(String responsePages) {
+        public Builder responsePages(Boolean responsePages) {
             if (responsePages == null) {
               throw new MissingRequiredPropertyException("GetInterfaceManagementProfileResult", "responsePages");
             }

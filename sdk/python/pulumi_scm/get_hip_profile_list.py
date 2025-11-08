@@ -172,10 +172,10 @@ def get_hip_profile_list(device: Optional[_builtins.str] = None,
     import pulumi_scm as scm
 
     # Fetch a list of all HIP Profile objects in the Shared folder.
-    all_shared = scm.get_hip_profile_list(folder="Shared")
+    all_shared = scm.get_hip_profile_list(folder="All")
     pulumi.export("hipProfilesListAllShared", all_shared.datas)
     # Example of using pagination to get the first 10 HIP Profiles.
-    paginated = scm.get_hip_profile_list(folder="Shared",
+    paginated = scm.get_hip_profile_list(folder="All",
         limit=10,
         offset=0)
     pulumi.export("hipProfilesListPaginated", paginated.datas)
@@ -227,10 +227,10 @@ def get_hip_profile_list_output(device: Optional[pulumi.Input[Optional[_builtins
     import pulumi_scm as scm
 
     # Fetch a list of all HIP Profile objects in the Shared folder.
-    all_shared = scm.get_hip_profile_list(folder="Shared")
+    all_shared = scm.get_hip_profile_list(folder="All")
     pulumi.export("hipProfilesListAllShared", all_shared.datas)
     # Example of using pagination to get the first 10 HIP Profiles.
-    paginated = scm.get_hip_profile_list(folder="Shared",
+    paginated = scm.get_hip_profile_list(folder="All",
         limit=10,
         offset=0)
     pulumi.export("hipProfilesListPaginated", paginated.datas)

@@ -19,7 +19,7 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? DisableIfUnreachable { get; set; }
 
         /// <summary>
-        /// Ip address
+        /// Monitor IP address
         /// </summary>
         [Input("ipAddress")]
         public Input<string>? IpAddress { get; set; }

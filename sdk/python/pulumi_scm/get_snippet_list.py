@@ -165,6 +165,16 @@ def get_snippet_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_snippets = scm.get_snippet_list(limit=10)
+    pulumi.export("snippetsListRaw", all_snippets.datas)
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +213,16 @@ def get_snippet_list_output(device: Optional[pulumi.Input[Optional[_builtins.str
                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSnippetListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_snippets = scm.get_snippet_list(limit=10)
+    pulumi.export("snippetsListRaw", all_snippets.datas)
+    ```
 
 
     :param _builtins.str device: The device of the item.

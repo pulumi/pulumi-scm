@@ -5,23 +5,36 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Integer;
+import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer2Lldp;
+import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetEthernetInterfaceListDataLayer2 {
     /**
-     * @return Vlan tag
+     * @return LLDP Settings
      * 
      */
-    private Integer vlanTag;
+    private GetEthernetInterfaceListDataLayer2Lldp lldp;
+    /**
+     * @return Assign interface to VLAN tag
+     * 
+     */
+    private String vlanTag;
 
     private GetEthernetInterfaceListDataLayer2() {}
     /**
-     * @return Vlan tag
+     * @return LLDP Settings
      * 
      */
-    public Integer vlanTag() {
+    public GetEthernetInterfaceListDataLayer2Lldp lldp() {
+        return this.lldp;
+    }
+    /**
+     * @return Assign interface to VLAN tag
+     * 
+     */
+    public String vlanTag() {
         return this.vlanTag;
     }
 
@@ -34,15 +47,25 @@ public final class GetEthernetInterfaceListDataLayer2 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Integer vlanTag;
+        private GetEthernetInterfaceListDataLayer2Lldp lldp;
+        private String vlanTag;
         public Builder() {}
         public Builder(GetEthernetInterfaceListDataLayer2 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.lldp = defaults.lldp;
     	      this.vlanTag = defaults.vlanTag;
         }
 
         @CustomType.Setter
-        public Builder vlanTag(Integer vlanTag) {
+        public Builder lldp(GetEthernetInterfaceListDataLayer2Lldp lldp) {
+            if (lldp == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer2", "lldp");
+            }
+            this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder vlanTag(String vlanTag) {
             if (vlanTag == null) {
               throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer2", "vlanTag");
             }
@@ -51,6 +74,7 @@ public final class GetEthernetInterfaceListDataLayer2 {
         }
         public GetEthernetInterfaceListDataLayer2 build() {
             final var _resultValue = new GetEthernetInterfaceListDataLayer2();
+            _resultValue.lldp = lldp;
             _resultValue.vlanTag = vlanTag;
             return _resultValue;
         }

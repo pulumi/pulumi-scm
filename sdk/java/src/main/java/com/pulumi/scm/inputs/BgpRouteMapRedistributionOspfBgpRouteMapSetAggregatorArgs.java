@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs ext
     public static final BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs Empty = new BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs();
 
     /**
-     * Aggregator AS
+     * OSPF BGP Route maps set Aggregator AS
      * 
      */
     @Import(name="as")
     private @Nullable Output<Integer> as;
 
     /**
-     * @return Aggregator AS
+     * @return OSPF BGP Route maps set Aggregator AS
      * 
      */
     public Optional<Output<Integer>> as() {
@@ -32,14 +32,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs ext
     }
 
     /**
-     * Router ID
+     * OSPF BGP Route maps set Router ID
      * 
      */
     @Import(name="routerId")
     private @Nullable Output<String> routerId;
 
     /**
-     * @return Router ID
+     * @return OSPF BGP Route maps set Router ID
      * 
      */
     public Optional<Output<String>> routerId() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs ext
         }
 
         /**
-         * @param as Aggregator AS
+         * @param as OSPF BGP Route maps set Aggregator AS
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs ext
         }
 
         /**
-         * @param as Aggregator AS
+         * @param as OSPF BGP Route maps set Aggregator AS
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs ext
         }
 
         /**
-         * @param routerId Router ID
+         * @param routerId OSPF BGP Route maps set Router ID
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs ext
         }
 
         /**
-         * @param routerId Router ID
+         * @param routerId OSPF BGP Route maps set Router ID
          * 
          * @return builder
          * 

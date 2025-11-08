@@ -21,7 +21,7 @@ __all__ = ['AntiSpywareSignatureArgs', 'AntiSpywareSignature']
 @pulumi.input_type
 class AntiSpywareSignatureArgs:
     def __init__(__self__, *,
-                 threat_id: pulumi.Input[_builtins.int],
+                 threat_id: pulumi.Input[_builtins.str],
                  threatname: pulumi.Input[_builtins.str],
                  bugtraqs: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  comment: Optional[pulumi.Input[_builtins.str]] = None,
@@ -37,7 +37,7 @@ class AntiSpywareSignatureArgs:
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AntiSpywareSignature resource.
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
         :param pulumi.Input[_builtins.str] comment: Comment
@@ -81,14 +81,14 @@ class AntiSpywareSignatureArgs:
 
     @_builtins.property
     @pulumi.getter(name="threatId")
-    def threat_id(self) -> pulumi.Input[_builtins.int]:
+    def threat_id(self) -> pulumi.Input[_builtins.str]:
         """
         threat id range \\n\\n and \\n\\n
         """
         return pulumi.get(self, "threat_id")
 
     @threat_id.setter
-    def threat_id(self, value: pulumi.Input[_builtins.int]):
+    def threat_id(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "threat_id", value)
 
     @_builtins.property
@@ -263,7 +263,7 @@ class _AntiSpywareSignatureState:
                  signature: Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 threat_id: Optional[pulumi.Input[_builtins.str]] = None,
                  threatname: Optional[pulumi.Input[_builtins.str]] = None,
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
@@ -279,7 +279,7 @@ class _AntiSpywareSignatureState:
         :param pulumi.Input[_builtins.str] severity: Severity
         :param pulumi.Input['AntiSpywareSignatureSignatureArgs'] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
@@ -457,14 +457,14 @@ class _AntiSpywareSignatureState:
 
     @_builtins.property
     @pulumi.getter(name="threatId")
-    def threat_id(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def threat_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         threat id range \\n\\n and \\n\\n
         """
         return pulumi.get(self, "threat_id")
 
     @threat_id.setter
-    def threat_id(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def threat_id(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "threat_id", value)
 
     @_builtins.property
@@ -509,7 +509,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  severity: Optional[pulumi.Input[_builtins.str]] = None,
                  signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 threat_id: Optional[pulumi.Input[_builtins.str]] = None,
                  threatname: Optional[pulumi.Input[_builtins.str]] = None,
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
@@ -531,7 +531,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] severity: Severity
         :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
@@ -572,7 +572,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  severity: Optional[pulumi.Input[_builtins.str]] = None,
                  signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 threat_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 threat_id: Optional[pulumi.Input[_builtins.str]] = None,
                  threatname: Optional[pulumi.Input[_builtins.str]] = None,
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
@@ -625,7 +625,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
             signature: Optional[pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
-            threat_id: Optional[pulumi.Input[_builtins.int]] = None,
+            threat_id: Optional[pulumi.Input[_builtins.str]] = None,
             threatname: Optional[pulumi.Input[_builtins.str]] = None,
             vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'AntiSpywareSignature':
         """
@@ -646,7 +646,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] severity: Severity
         :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threat_id: threat id range \\n\\n and \\n\\n
         :param pulumi.Input[_builtins.str] threatname: Threatname
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
@@ -766,7 +766,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="threatId")
-    def threat_id(self) -> pulumi.Output[_builtins.int]:
+    def threat_id(self) -> pulumi.Output[_builtins.str]:
         """
         threat id range \\n\\n and \\n\\n
         """

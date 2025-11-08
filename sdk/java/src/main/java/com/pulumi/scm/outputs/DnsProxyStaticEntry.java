@@ -4,11 +4,10 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class DnsProxyStaticEntry {
@@ -16,17 +15,17 @@ public final class DnsProxyStaticEntry {
      * @return Address
      * 
      */
-    private @Nullable List<String> addresses;
+    private List<String> addresses;
     /**
-     * @return Domain
+     * @return Fully qualified domain name
      * 
      */
-    private @Nullable String domain;
+    private String domain;
     /**
-     * @return Name
+     * @return Static entry name
      * 
      */
-    private @Nullable String name;
+    private String name;
 
     private DnsProxyStaticEntry() {}
     /**
@@ -34,21 +33,21 @@ public final class DnsProxyStaticEntry {
      * 
      */
     public List<String> addresses() {
-        return this.addresses == null ? List.of() : this.addresses;
+        return this.addresses;
     }
     /**
-     * @return Domain
+     * @return Fully qualified domain name
      * 
      */
-    public Optional<String> domain() {
-        return Optional.ofNullable(this.domain);
+    public String domain() {
+        return this.domain;
     }
     /**
-     * @return Name
+     * @return Static entry name
      * 
      */
-    public Optional<String> name() {
-        return Optional.ofNullable(this.name);
+    public String name() {
+        return this.name;
     }
 
     public static Builder builder() {
@@ -60,9 +59,9 @@ public final class DnsProxyStaticEntry {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable List<String> addresses;
-        private @Nullable String domain;
-        private @Nullable String name;
+        private List<String> addresses;
+        private String domain;
+        private String name;
         public Builder() {}
         public Builder(DnsProxyStaticEntry defaults) {
     	      Objects.requireNonNull(defaults);
@@ -72,8 +71,10 @@ public final class DnsProxyStaticEntry {
         }
 
         @CustomType.Setter
-        public Builder addresses(@Nullable List<String> addresses) {
-
+        public Builder addresses(List<String> addresses) {
+            if (addresses == null) {
+              throw new MissingRequiredPropertyException("DnsProxyStaticEntry", "addresses");
+            }
             this.addresses = addresses;
             return this;
         }
@@ -81,14 +82,18 @@ public final class DnsProxyStaticEntry {
             return addresses(List.of(addresses));
         }
         @CustomType.Setter
-        public Builder domain(@Nullable String domain) {
-
+        public Builder domain(String domain) {
+            if (domain == null) {
+              throw new MissingRequiredPropertyException("DnsProxyStaticEntry", "domain");
+            }
             this.domain = domain;
             return this;
         }
         @CustomType.Setter
-        public Builder name(@Nullable String name) {
-
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("DnsProxyStaticEntry", "name");
+            }
             this.name = name;
             return this;
         }

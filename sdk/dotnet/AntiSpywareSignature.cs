@@ -90,7 +90,7 @@ namespace Pulumi.Scm
         /// threat id range \n\n and \n\n
         /// </summary>
         [Output("threatId")]
-        public Output<int> ThreatId { get; private set; } = null!;
+        public Output<string> ThreatId { get; private set; } = null!;
 
         /// <summary>
         /// Threatname
@@ -238,7 +238,7 @@ namespace Pulumi.Scm
         /// threat id range \n\n and \n\n
         /// </summary>
         [Input("threatId", required: true)]
-        public Input<int> ThreatId { get; set; } = null!;
+        public Input<string> ThreatId { get; set; } = null!;
 
         /// <summary>
         /// Threatname
@@ -357,7 +357,7 @@ namespace Pulumi.Scm
         /// threat id range \n\n and \n\n
         /// </summary>
         [Input("threatId")]
-        public Input<int>? ThreatId { get; set; }
+        public Input<string>? ThreatId { get; set; }
 
         /// <summary>
         /// Threatname

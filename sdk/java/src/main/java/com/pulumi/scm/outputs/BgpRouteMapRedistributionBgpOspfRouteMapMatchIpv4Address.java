@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address {
     /**
-     * @return Access list
+     * @return BGP Root OSPF Route maps match ipv4 Access list
      * 
      */
     private @Nullable String accessList;
     /**
-     * @return Prefix list
+     * @return BGP Root OSPF Route maps match ipv4 Prefix list
      * 
      */
     private @Nullable String prefixList;
 
     private BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address() {}
     /**
-     * @return Access list
+     * @return BGP Root OSPF Route maps match ipv4 Access list
      * 
      */
     public Optional<String> accessList() {
         return Optional.ofNullable(this.accessList);
     }
     /**
-     * @return Prefix list
+     * @return BGP Root OSPF Route maps match ipv4 Prefix list
      * 
      */
     public Optional<String> prefixList() {

@@ -65,7 +65,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// threat id range \n\n and \n\n
         /// </summary>
-        public readonly int ThreatId;
+        public readonly string ThreatId;
         /// <summary>
         /// Threatname
         /// </summary>
@@ -103,7 +103,7 @@ namespace Pulumi.Scm.Outputs
 
             string tfid,
 
-            int threatId,
+            string threatId,
 
             string threatname,
 

@@ -16,10 +16,10 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Metric
         /// </summary>
-        public readonly double? Metric;
+        public readonly int? Metric;
 
         [OutputConstructor]
-        private LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise(double? metric)
+        private LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise(int? metric)
         {
             Metric = metric;
         }

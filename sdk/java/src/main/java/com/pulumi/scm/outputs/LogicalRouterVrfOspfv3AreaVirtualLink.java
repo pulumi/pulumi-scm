@@ -8,7 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.LogicalRouterVrfOspfv3AreaVirtualLinkBfd;
 import com.pulumi.scm.outputs.LogicalRouterVrfOspfv3AreaVirtualLinkVrTiming;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,12 +35,12 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLink {
      * @return Instance id
      * 
      */
-    private @Nullable Double instanceId;
+    private @Nullable Integer instanceId;
     /**
      * @return Interface id
      * 
      */
-    private @Nullable Double interfaceId;
+    private @Nullable Integer interfaceId;
     /**
      * @return Name
      * 
@@ -98,14 +98,14 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLink {
      * @return Instance id
      * 
      */
-    public Optional<Double> instanceId() {
+    public Optional<Integer> instanceId() {
         return Optional.ofNullable(this.instanceId);
     }
     /**
      * @return Interface id
      * 
      */
-    public Optional<Double> interfaceId() {
+    public Optional<Integer> interfaceId() {
         return Optional.ofNullable(this.interfaceId);
     }
     /**
@@ -163,8 +163,8 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLink {
         private @Nullable String authentication;
         private @Nullable LogicalRouterVrfOspfv3AreaVirtualLinkBfd bfd;
         private @Nullable Boolean enable;
-        private @Nullable Double instanceId;
-        private @Nullable Double interfaceId;
+        private @Nullable Integer instanceId;
+        private @Nullable Integer interfaceId;
         private String name;
         private @Nullable String neighborId;
         private @Nullable Boolean passive;
@@ -206,13 +206,13 @@ public final class LogicalRouterVrfOspfv3AreaVirtualLink {
             return this;
         }
         @CustomType.Setter
-        public Builder instanceId(@Nullable Double instanceId) {
+        public Builder instanceId(@Nullable Integer instanceId) {
 
             this.instanceId = instanceId;
             return this;
         }
         @CustomType.Setter
-        public Builder interfaceId(@Nullable Double interfaceId) {
+        public Builder interfaceId(@Nullable Integer interfaceId) {
 
             this.interfaceId = interfaceId;
             return this;

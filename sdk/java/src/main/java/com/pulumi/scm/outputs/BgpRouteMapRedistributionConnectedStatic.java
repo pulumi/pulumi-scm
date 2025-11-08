@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStatic {
     /**
-     * @return Bgp
+     * @return Connected Static Root BGP
      * 
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticBgp bgp;
@@ -31,7 +31,7 @@ public final class BgpRouteMapRedistributionConnectedStatic {
 
     private BgpRouteMapRedistributionConnectedStatic() {}
     /**
-     * @return Bgp
+     * @return Connected Static Root BGP
      * 
      */
     public Optional<BgpRouteMapRedistributionConnectedStaticBgp> bgp() {

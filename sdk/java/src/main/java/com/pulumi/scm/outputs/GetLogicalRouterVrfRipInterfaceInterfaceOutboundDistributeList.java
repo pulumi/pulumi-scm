@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeLis
      * @return Metric
      * 
      */
-    private Double metric;
+    private Integer metric;
 
     private GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList() {}
     /**
@@ -34,7 +34,7 @@ public final class GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeLis
      * @return Metric
      * 
      */
-    public Double metric() {
+    public Integer metric() {
         return this.metric;
     }
 
@@ -48,7 +48,7 @@ public final class GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeLis
     @CustomType.Builder
     public static final class Builder {
         private String accessList;
-        private Double metric;
+        private Integer metric;
         public Builder() {}
         public Builder(GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,7 +65,7 @@ public final class GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeLis
             return this;
         }
         @CustomType.Setter
-        public Builder metric(Double metric) {
+        public Builder metric(Integer metric) {
             if (metric == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList", "metric");
             }

@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetEthernetInterfaceList(ctx *pulumi.Context, args *GetEthernetInterfaceListArgs, opts ...pulumi.InvokeOption) (*GetEthernetInterfaceListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetEthernetInterfaceListResult

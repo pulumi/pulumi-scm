@@ -5,24 +5,62 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetEthernetInterfaceLayer3DhcpClientDhcpClient;
+import com.pulumi.scm.outputs.GetEthernetInterfaceLayer3DhcpClientSendHostname;
+import java.lang.Boolean;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
 public final class GetEthernetInterfaceLayer3DhcpClient {
     /**
-     * @return Dhcp client
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
-    private GetEthernetInterfaceLayer3DhcpClientDhcpClient dhcpClient;
+    private Boolean createDefaultRoute;
+    /**
+     * @return Metric of the default route created
+     * 
+     */
+    private Integer defaultRouteMetric;
+    /**
+     * @return Enable DHCP?
+     * 
+     */
+    private Boolean enable;
+    /**
+     * @return Ethernet Interfaces DHCP ClientSend hostname
+     * 
+     */
+    private GetEthernetInterfaceLayer3DhcpClientSendHostname sendHostname;
 
     private GetEthernetInterfaceLayer3DhcpClient() {}
     /**
-     * @return Dhcp client
+     * @return Automatically create default route pointing to default gateway provided by server
      * 
      */
-    public GetEthernetInterfaceLayer3DhcpClientDhcpClient dhcpClient() {
-        return this.dhcpClient;
+    public Boolean createDefaultRoute() {
+        return this.createDefaultRoute;
+    }
+    /**
+     * @return Metric of the default route created
+     * 
+     */
+    public Integer defaultRouteMetric() {
+        return this.defaultRouteMetric;
+    }
+    /**
+     * @return Enable DHCP?
+     * 
+     */
+    public Boolean enable() {
+        return this.enable;
+    }
+    /**
+     * @return Ethernet Interfaces DHCP ClientSend hostname
+     * 
+     */
+    public GetEthernetInterfaceLayer3DhcpClientSendHostname sendHostname() {
+        return this.sendHostname;
     }
 
     public static Builder builder() {
@@ -34,24 +72,57 @@ public final class GetEthernetInterfaceLayer3DhcpClient {
     }
     @CustomType.Builder
     public static final class Builder {
-        private GetEthernetInterfaceLayer3DhcpClientDhcpClient dhcpClient;
+        private Boolean createDefaultRoute;
+        private Integer defaultRouteMetric;
+        private Boolean enable;
+        private GetEthernetInterfaceLayer3DhcpClientSendHostname sendHostname;
         public Builder() {}
         public Builder(GetEthernetInterfaceLayer3DhcpClient defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dhcpClient = defaults.dhcpClient;
+    	      this.createDefaultRoute = defaults.createDefaultRoute;
+    	      this.defaultRouteMetric = defaults.defaultRouteMetric;
+    	      this.enable = defaults.enable;
+    	      this.sendHostname = defaults.sendHostname;
         }
 
         @CustomType.Setter
-        public Builder dhcpClient(GetEthernetInterfaceLayer3DhcpClientDhcpClient dhcpClient) {
-            if (dhcpClient == null) {
-              throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer3DhcpClient", "dhcpClient");
+        public Builder createDefaultRoute(Boolean createDefaultRoute) {
+            if (createDefaultRoute == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer3DhcpClient", "createDefaultRoute");
             }
-            this.dhcpClient = dhcpClient;
+            this.createDefaultRoute = createDefaultRoute;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder defaultRouteMetric(Integer defaultRouteMetric) {
+            if (defaultRouteMetric == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer3DhcpClient", "defaultRouteMetric");
+            }
+            this.defaultRouteMetric = defaultRouteMetric;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder enable(Boolean enable) {
+            if (enable == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer3DhcpClient", "enable");
+            }
+            this.enable = enable;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder sendHostname(GetEthernetInterfaceLayer3DhcpClientSendHostname sendHostname) {
+            if (sendHostname == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceLayer3DhcpClient", "sendHostname");
+            }
+            this.sendHostname = sendHostname;
             return this;
         }
         public GetEthernetInterfaceLayer3DhcpClient build() {
             final var _resultValue = new GetEthernetInterfaceLayer3DhcpClient();
-            _resultValue.dhcpClient = dhcpClient;
+            _resultValue.createDefaultRoute = createDefaultRoute;
+            _resultValue.defaultRouteMetric = defaultRouteMetric;
+            _resultValue.enable = enable;
+            _resultValue.sendHostname = sendHostname;
             return _resultValue;
         }
     }

@@ -14,14 +14,22 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTrafficSteeringRuleActionForwardResult
     {
         /// <summary>
-        /// Target
+        /// Forward
         /// </summary>
-        public readonly string Target;
+        public readonly Outputs.GetTrafficSteeringRuleActionForwardForwardResult Forward;
+        /// <summary>
+        /// No pbf
+        /// </summary>
+        public readonly Outputs.GetTrafficSteeringRuleActionForwardNoPbfResult NoPbf;
 
         [OutputConstructor]
-        private GetTrafficSteeringRuleActionForwardResult(string target)
+        private GetTrafficSteeringRuleActionForwardResult(
+            Outputs.GetTrafficSteeringRuleActionForwardForwardResult forward,
+
+            Outputs.GetTrafficSteeringRuleActionForwardNoPbfResult noPbf)
         {
-            Target = target;
+            Forward = forward;
+            NoPbf = noPbf;
         }
     }
 }

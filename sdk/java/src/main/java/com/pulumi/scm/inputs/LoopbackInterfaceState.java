@@ -6,9 +6,10 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LoopbackInterfaceIpArgs;
-import java.lang.Double;
+import com.pulumi.scm.inputs.LoopbackInterfaceIpv6Args;
 import java.lang.Integer;
 import java.lang.String;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -34,17 +35,17 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Default value
+     * Default interface assignment
      * 
      */
     @Import(name="defaultValue")
-    private @Nullable Output<Integer> defaultValue;
+    private @Nullable Output<String> defaultValue;
 
     /**
-     * @return Default value
+     * @return Default interface assignment
      * 
      */
-    public Optional<Output<Integer>> defaultValue() {
+    public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
 
@@ -94,18 +95,33 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * loopback ip parent
+     * Loopback IP Parent
      * 
      */
-    @Import(name="ip")
-    private @Nullable Output<LoopbackInterfaceIpArgs> ip;
+    @Import(name="ips")
+    private @Nullable Output<List<LoopbackInterfaceIpArgs>> ips;
 
     /**
-     * @return loopback ip parent
+     * @return Loopback IP Parent
      * 
      */
-    public Optional<Output<LoopbackInterfaceIpArgs>> ip() {
-        return Optional.ofNullable(this.ip);
+    public Optional<Output<List<LoopbackInterfaceIpArgs>>> ips() {
+        return Optional.ofNullable(this.ips);
+    }
+
+    /**
+     * Loopback IPv6 Configuration
+     * 
+     */
+    @Import(name="ipv6")
+    private @Nullable Output<LoopbackInterfaceIpv6Args> ipv6;
+
+    /**
+     * @return Loopback IPv6 Configuration
+     * 
+     */
+    public Optional<Output<LoopbackInterfaceIpv6Args>> ipv6() {
+        return Optional.ofNullable(this.ipv6);
     }
 
     /**
@@ -113,25 +129,25 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="mtu")
-    private @Nullable Output<Double> mtu;
+    private @Nullable Output<Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Optional<Output<Double>> mtu() {
+    public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
 
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return L3 sub-interface name
+     * @return Loopback Interface name
      * 
      */
     public Optional<Output<String>> name() {
@@ -168,7 +184,8 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
         this.device = $.device;
         this.folder = $.folder;
         this.interfaceManagementProfile = $.interfaceManagementProfile;
-        this.ip = $.ip;
+        this.ips = $.ips;
+        this.ipv6 = $.ipv6;
         this.mtu = $.mtu;
         this.name = $.name;
         this.snippet = $.snippet;
@@ -215,23 +232,23 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
          */
-        public Builder defaultValue(@Nullable Output<Integer> defaultValue) {
+        public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
         /**
-         * @param defaultValue Default value
+         * @param defaultValue Default interface assignment
          * 
          * @return builder
          * 
          */
-        public Builder defaultValue(Integer defaultValue) {
+        public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
@@ -299,24 +316,55 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ip loopback ip parent
+         * @param ips Loopback IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ip(@Nullable Output<LoopbackInterfaceIpArgs> ip) {
-            $.ip = ip;
+        public Builder ips(@Nullable Output<List<LoopbackInterfaceIpArgs>> ips) {
+            $.ips = ips;
             return this;
         }
 
         /**
-         * @param ip loopback ip parent
+         * @param ips Loopback IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ip(LoopbackInterfaceIpArgs ip) {
-            return ip(Output.of(ip));
+        public Builder ips(List<LoopbackInterfaceIpArgs> ips) {
+            return ips(Output.of(ips));
+        }
+
+        /**
+         * @param ips Loopback IP Parent
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ips(LoopbackInterfaceIpArgs... ips) {
+            return ips(List.of(ips));
+        }
+
+        /**
+         * @param ipv6 Loopback IPv6 Configuration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6(@Nullable Output<LoopbackInterfaceIpv6Args> ipv6) {
+            $.ipv6 = ipv6;
+            return this;
+        }
+
+        /**
+         * @param ipv6 Loopback IPv6 Configuration
+         * 
+         * @return builder
+         * 
+         */
+        public Builder ipv6(LoopbackInterfaceIpv6Args ipv6) {
+            return ipv6(Output.of(ipv6));
         }
 
         /**
@@ -325,7 +373,7 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder mtu(@Nullable Output<Double> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             $.mtu = mtu;
             return this;
         }
@@ -336,12 +384,12 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder mtu(Double mtu) {
+        public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
         }
 
         /**
-         * @param name L3 sub-interface name
+         * @param name Loopback Interface name
          * 
          * @return builder
          * 
@@ -352,7 +400,7 @@ public final class LoopbackInterfaceState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name L3 sub-interface name
+         * @param name Loopback Interface name
          * 
          * @return builder
          * 

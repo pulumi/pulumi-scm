@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Result
     {
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object address
+        /// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressResult Address;
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object next*hop
+        /// BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopResult NextHop;
         /// <summary>
-        /// bgp-route-map-redistributions ipv4 object route*source
+        /// BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceResult RouteSource;
 

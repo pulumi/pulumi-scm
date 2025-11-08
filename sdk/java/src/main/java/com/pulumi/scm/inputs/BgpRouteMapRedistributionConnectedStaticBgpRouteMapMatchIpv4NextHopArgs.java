@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4N
     public static final BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs Empty = new BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs();
 
     /**
-     * Access list
+     * Connected Static BGP Route maps match ip4 next hop Access list
      * 
      */
     @Import(name="accessList")
     private @Nullable Output<String> accessList;
 
     /**
-     * @return Access list
+     * @return Connected Static BGP Route maps match ip4 next hop Access list
      * 
      */
     public Optional<Output<String>> accessList() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4N
     }
 
     /**
-     * Prefix list
+     * Connected Static BGP Route maps match ip4 next hop Prefix list
      * 
      */
     @Import(name="prefixList")
     private @Nullable Output<String> prefixList;
 
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Route maps match ip4 next hop Prefix list
      * 
      */
     public Optional<Output<String>> prefixList() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4N
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList Connected Static BGP Route maps match ip4 next hop Access list
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4N
         }
 
         /**
-         * @param accessList Access list
+         * @param accessList Connected Static BGP Route maps match ip4 next hop Access list
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4N
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList Connected Static BGP Route maps match ip4 next hop Prefix list
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4N
         }
 
         /**
-         * @param prefixList Prefix list
+         * @param prefixList Connected Static BGP Route maps match ip4 next hop Prefix list
          * 
          * @return builder
          * 

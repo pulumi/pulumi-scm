@@ -13,7 +13,7 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
     /**
-     * @return Bgp
+     * @return Connected Static Root BGP
      * 
      */
     private GetBgpRouteMapRedistributionListDataConnectedStaticBgp bgp;
@@ -30,7 +30,7 @@ public final class GetBgpRouteMapRedistributionListDataConnectedStatic {
 
     private GetBgpRouteMapRedistributionListDataConnectedStatic() {}
     /**
-     * @return Bgp
+     * @return Connected Static Root BGP
      * 
      */
     public GetBgpRouteMapRedistributionListDataConnectedStaticBgp bgp() {

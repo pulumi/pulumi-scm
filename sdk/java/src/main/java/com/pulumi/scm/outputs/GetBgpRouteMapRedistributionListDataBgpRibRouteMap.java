@@ -14,62 +14,62 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionListDataBgpRibRouteMap {
     /**
-     * @return Action
+     * @return BGP Root RIB Route maps Action
      * 
      */
     private String action;
     /**
-     * @return Description
+     * @return BGP Root RIB Route maps Description
      * 
      */
     private String description;
     /**
-     * @return Match
+     * @return match attribute for BG Rib route map
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return BGP Root RIB Route maps Sequence number
      * 
      */
     private Integer name;
     /**
-     * @return Set
+     * @return Set attributes for BGP route map
      * 
      */
     private GetBgpRouteMapRedistributionListDataBgpRibRouteMapSet set;
 
     private GetBgpRouteMapRedistributionListDataBgpRibRouteMap() {}
     /**
-     * @return Action
+     * @return BGP Root RIB Route maps Action
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return Description
+     * @return BGP Root RIB Route maps Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return Match
+     * @return match attribute for BG Rib route map
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpRibRouteMapMatch match() {
         return this.match;
     }
     /**
-     * @return Sequence number
+     * @return BGP Root RIB Route maps Sequence number
      * 
      */
     public Integer name() {
         return this.name;
     }
     /**
-     * @return Set
+     * @return Set attributes for BGP route map
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpRibRouteMapSet set() {

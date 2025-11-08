@@ -14,43 +14,29 @@ namespace Pulumi.Scm.Outputs
     public sealed class NatRuleSourceTranslation
     {
         /// <summary>
-        /// Bi directional
+        /// Dynamic IP
         /// </summary>
-        public readonly bool? BiDirectional;
+        public readonly Outputs.NatRuleSourceTranslationDynamicIp? DynamicIp;
         /// <summary>
-        /// Fallback
+        /// Dynamic IP and port
         /// </summary>
-        public readonly Outputs.NatRuleSourceTranslationFallback? Fallback;
+        public readonly Outputs.NatRuleSourceTranslationDynamicIpAndPort? DynamicIpAndPort;
         /// <summary>
-        /// Interface name
+        /// Static IP
         /// </summary>
-        public readonly string? Interface;
-        /// <summary>
-        /// Translated IP addresses
-        /// </summary>
-        public readonly ImmutableArray<string> TranslatedAddressArrays;
-        /// <summary>
-        /// Translated IP address
-        /// </summary>
-        public readonly string? TranslatedAddressSingle;
+        public readonly Outputs.NatRuleSourceTranslationStaticIp? StaticIp;
 
         [OutputConstructor]
         private NatRuleSourceTranslation(
-            bool? biDirectional,
+            Outputs.NatRuleSourceTranslationDynamicIp? dynamicIp,
 
-            Outputs.NatRuleSourceTranslationFallback? fallback,
+            Outputs.NatRuleSourceTranslationDynamicIpAndPort? dynamicIpAndPort,
 
-            string? @interface,
-
-            ImmutableArray<string> translatedAddressArrays,
-
-            string? translatedAddressSingle)
+            Outputs.NatRuleSourceTranslationStaticIp? staticIp)
         {
-            BiDirectional = biDirectional;
-            Fallback = fallback;
-            Interface = @interface;
-            TranslatedAddressArrays = translatedAddressArrays;
-            TranslatedAddressSingle = translatedAddressSingle;
+            DynamicIp = dynamicIp;
+            DynamicIpAndPort = dynamicIpAndPort;
+            StaticIp = staticIp;
         }
     }
 }

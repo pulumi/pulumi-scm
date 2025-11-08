@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDnsProxyCacheMaxTtlResult
     {
         /// <summary>
-        /// Enabled
+        /// Enable max ttl for this DNS object
         /// </summary>
         public readonly bool Enabled;
         /// <summary>
-        /// Time to live
+        /// Time in seconds after which entry is cleared
         /// </summary>
         public readonly int TimeToLive;
 

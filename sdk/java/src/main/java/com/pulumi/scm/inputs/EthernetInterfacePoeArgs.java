@@ -17,14 +17,14 @@ public final class EthernetInterfacePoeArgs extends com.pulumi.resources.Resourc
     public static final EthernetInterfacePoeArgs Empty = new EthernetInterfacePoeArgs();
 
     /**
-     * Poe enabled
+     * Enabled PoE?
      * 
      */
     @Import(name="poeEnabled")
     private @Nullable Output<Boolean> poeEnabled;
 
     /**
-     * @return Poe enabled
+     * @return Enabled PoE?
      * 
      */
     public Optional<Output<Boolean>> poeEnabled() {
@@ -32,14 +32,14 @@ public final class EthernetInterfacePoeArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Poe rsvd pwr
+     * PoE reserved power
      * 
      */
     @Import(name="poeRsvdPwr")
     private @Nullable Output<Integer> poeRsvdPwr;
 
     /**
-     * @return Poe rsvd pwr
+     * @return PoE reserved power
      * 
      */
     public Optional<Output<Integer>> poeRsvdPwr() {
@@ -72,7 +72,7 @@ public final class EthernetInterfacePoeArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param poeEnabled Poe enabled
+         * @param poeEnabled Enabled PoE?
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class EthernetInterfacePoeArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param poeEnabled Poe enabled
+         * @param poeEnabled Enabled PoE?
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class EthernetInterfacePoeArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param poeRsvdPwr Poe rsvd pwr
+         * @param poeRsvdPwr PoE reserved power
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class EthernetInterfacePoeArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param poeRsvdPwr Poe rsvd pwr
+         * @param poeRsvdPwr PoE reserved power
          * 
          * @return builder
          * 

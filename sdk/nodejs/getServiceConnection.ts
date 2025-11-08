@@ -10,6 +10,94 @@ import * as utilities from "./utilities";
  * ServiceConnection data source
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const config = new pulumi.Config();
+ * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+ * const folderScope = config.get("folderScope") || "Service Connections";
+ * //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+ * // Note: The resource name is plural: "scm_ike_crypto_profile"
+ * const example = new scm.IkeCryptoProfile("example", {
+ *     name: "example-ike-crypto_data",
+ *     folder: folderScope,
+ *     hashes: ["sha256"],
+ *     dhGroups: ["group14"],
+ *     encryptions: ["aes-256-cbc"],
+ * });
+ * //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
+ *     name: "panw-IPSec-Crypto_data",
+ *     folder: folderScope,
+ *     esp: {
+ *         encryptions: ["aes-256-gcm"],
+ *         authentications: ["sha256"],
+ *     },
+ *     dhGroup: "group14",
+ *     lifetime: {
+ *         hours: 8,
+ *     },
+ * });
+ * //# 3. Define the IKE Gateway
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIkeGateway = new scm.IkeGateway("example", {
+ *     name: "example-gateway_data",
+ *     folder: folderScope,
+ *     peerAddress: {
+ *         ip: "1.1.1.1",
+ *     },
+ *     authentication: {
+ *         preSharedKey: {
+ *             key: "secret",
+ *         },
+ *     },
+ *     protocol: {
+ *         ikev1: {
+ *             ikeCryptoProfile: example.name,
+ *         },
+ *     },
+ * });
+ * //# 4. Define the IPsec Tunnel
+ * // Note: Nested 'auto_key' block uses an equals sign (=).
+ * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
+ *     name: "example-tunnel_data",
+ *     folder: folderScope,
+ *     tunnelInterface: "tunnel",
+ *     antiReplay: true,
+ *     copyTos: false,
+ *     enableGreEncapsulation: false,
+ *     autoKey: {
+ *         ikeGateways: [{
+ *             name: exampleIkeGateway.name,
+ *         }],
+ *         ipsecCryptoProfile: exampleIpsecCryptoProfile.name,
+ *     },
+ * }, {
+ *     dependsOn: [exampleIkeGateway],
+ * });
+ * const siteAVpnSc = new scm.ServiceConnection("site_a_vpn_sc", {
+ *     name: "creating_a_service_connection_data",
+ *     region: "us-west-1",
+ *     ipsecTunnel: exampleIpsecTunnel.name,
+ *     subnets: [
+ *         "10.1.0.0/16",
+ *         "172.16.0.0/24",
+ *     ],
+ *     sourceNat: true,
+ * });
+ * //------------------------------------------------------
+ * // Data Soruce
+ * //------------------------------------------------------
+ * const createdConnLookup = scm.getServiceConnectionOutput({
+ *     id: siteAVpnSc.id,
+ * });
+ * export const createdServiceConnectionId = createdConnLookup.apply(createdConnLookup => createdConnLookup.id);
+ * export const createdServiceConnectionRegion = createdConnLookup.apply(createdConnLookup => createdConnLookup.region);
+ * export const createdServiceConnectionSubnets = createdConnLookup.apply(createdConnLookup => createdConnLookup.subnets);
+ * ```
  */
 export function getServiceConnection(args: GetServiceConnectionArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -40,7 +128,7 @@ export interface GetServiceConnectionResult {
     /**
      * Backup s c
      */
-    readonly backupSC: string;
+    readonly backupSc: string;
     /**
      * Bgp peer
      */
@@ -103,6 +191,94 @@ export interface GetServiceConnectionResult {
  * ServiceConnection data source
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const config = new pulumi.Config();
+ * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
+ * const folderScope = config.get("folderScope") || "Service Connections";
+ * //# 1. Define the IKE Crypto Profile (IKE Phase 1)
+ * // Note: The resource name is plural: "scm_ike_crypto_profile"
+ * const example = new scm.IkeCryptoProfile("example", {
+ *     name: "example-ike-crypto_data",
+ *     folder: folderScope,
+ *     hashes: ["sha256"],
+ *     dhGroups: ["group14"],
+ *     encryptions: ["aes-256-cbc"],
+ * });
+ * //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
+ *     name: "panw-IPSec-Crypto_data",
+ *     folder: folderScope,
+ *     esp: {
+ *         encryptions: ["aes-256-gcm"],
+ *         authentications: ["sha256"],
+ *     },
+ *     dhGroup: "group14",
+ *     lifetime: {
+ *         hours: 8,
+ *     },
+ * });
+ * //# 3. Define the IKE Gateway
+ * // Note: The resource name is plural and nested blocks now use an equals sign (=).
+ * const exampleIkeGateway = new scm.IkeGateway("example", {
+ *     name: "example-gateway_data",
+ *     folder: folderScope,
+ *     peerAddress: {
+ *         ip: "1.1.1.1",
+ *     },
+ *     authentication: {
+ *         preSharedKey: {
+ *             key: "secret",
+ *         },
+ *     },
+ *     protocol: {
+ *         ikev1: {
+ *             ikeCryptoProfile: example.name,
+ *         },
+ *     },
+ * });
+ * //# 4. Define the IPsec Tunnel
+ * // Note: Nested 'auto_key' block uses an equals sign (=).
+ * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
+ *     name: "example-tunnel_data",
+ *     folder: folderScope,
+ *     tunnelInterface: "tunnel",
+ *     antiReplay: true,
+ *     copyTos: false,
+ *     enableGreEncapsulation: false,
+ *     autoKey: {
+ *         ikeGateways: [{
+ *             name: exampleIkeGateway.name,
+ *         }],
+ *         ipsecCryptoProfile: exampleIpsecCryptoProfile.name,
+ *     },
+ * }, {
+ *     dependsOn: [exampleIkeGateway],
+ * });
+ * const siteAVpnSc = new scm.ServiceConnection("site_a_vpn_sc", {
+ *     name: "creating_a_service_connection_data",
+ *     region: "us-west-1",
+ *     ipsecTunnel: exampleIpsecTunnel.name,
+ *     subnets: [
+ *         "10.1.0.0/16",
+ *         "172.16.0.0/24",
+ *     ],
+ *     sourceNat: true,
+ * });
+ * //------------------------------------------------------
+ * // Data Soruce
+ * //------------------------------------------------------
+ * const createdConnLookup = scm.getServiceConnectionOutput({
+ *     id: siteAVpnSc.id,
+ * });
+ * export const createdServiceConnectionId = createdConnLookup.apply(createdConnLookup => createdConnLookup.id);
+ * export const createdServiceConnectionRegion = createdConnLookup.apply(createdConnLookup => createdConnLookup.region);
+ * export const createdServiceConnectionSubnets = createdConnLookup.apply(createdConnLookup => createdConnLookup.subnets);
+ * ```
  */
 export function getServiceConnectionOutput(args: GetServiceConnectionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

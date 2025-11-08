@@ -5,10 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class EthernetInterfaceLayer3PppoeStaticAddressArgs extends com.pulumi.resources.ResourceArgs {
@@ -16,18 +15,18 @@ public final class EthernetInterfaceLayer3PppoeStaticAddressArgs extends com.pul
     public static final EthernetInterfaceLayer3PppoeStaticAddressArgs Empty = new EthernetInterfaceLayer3PppoeStaticAddressArgs();
 
     /**
-     * Ip
+     * Static IP address
      * 
      */
-    @Import(name="ip")
-    private @Nullable Output<String> ip;
+    @Import(name="ip", required=true)
+    private Output<String> ip;
 
     /**
-     * @return Ip
+     * @return Static IP address
      * 
      */
-    public Optional<Output<String>> ip() {
-        return Optional.ofNullable(this.ip);
+    public Output<String> ip() {
+        return this.ip;
     }
 
     private EthernetInterfaceLayer3PppoeStaticAddressArgs() {}
@@ -55,18 +54,18 @@ public final class EthernetInterfaceLayer3PppoeStaticAddressArgs extends com.pul
         }
 
         /**
-         * @param ip Ip
+         * @param ip Static IP address
          * 
          * @return builder
          * 
          */
-        public Builder ip(@Nullable Output<String> ip) {
+        public Builder ip(Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
         /**
-         * @param ip Ip
+         * @param ip Static IP address
          * 
          * @return builder
          * 
@@ -76,6 +75,9 @@ public final class EthernetInterfaceLayer3PppoeStaticAddressArgs extends com.pul
         }
 
         public EthernetInterfaceLayer3PppoeStaticAddressArgs build() {
+            if ($.ip == null) {
+                throw new MissingRequiredPropertyException("EthernetInterfaceLayer3PppoeStaticAddressArgs", "ip");
+            }
             return $;
         }
     }

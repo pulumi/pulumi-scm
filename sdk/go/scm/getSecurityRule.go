@@ -12,6 +12,87 @@ import (
 )
 
 // SecurityRule data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			standardWebAccess, err := scm.NewSecurityRule(ctx, "standard_web_access", &scm.SecurityRuleArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("Allow Standard Web Access DS1"),
+//				Description: pulumi.String("Allow outbound web traffic to any destination..."),
+//				Position:    pulumi.String("pre"),
+//				Action:      pulumi.String("allow"),
+//				Categories: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Applications: pulumi.StringArray{
+//					pulumi.String("web-browsing"),
+//					pulumi.String("ssl"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-http"),
+//					pulumi.String("service-https"),
+//				},
+//				Froms: pulumi.StringArray{
+//					pulumi.String("untrust"),
+//					pulumi.String("trust"),
+//				},
+//				Tos: pulumi.StringArray{
+//					pulumi.String("trust"),
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				NegateSource:      pulumi.Bool(false),
+//				NegateDestination: pulumi.Bool(false),
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				SourceHips: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				DestinationHips: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				LogStart: pulumi.Bool(true),
+//				LogEnd:   pulumi.Bool(true),
+//				Disabled: pulumi.Bool(false),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// 1. Fetch by ID (Best for direct lookup)
+//			standardWebAccessById := scm.LookupSecurityRuleOutput(ctx, scm.GetSecurityRuleOutputArgs{
+//				Id: standardWebAccess.ID(),
+//			}, nil)
+//			ctx.Export("fetchedStandardWebId", standardWebAccessById.ApplyT(func(standardWebAccessById scm.GetSecurityRuleResult) (*string, error) {
+//				return &standardWebAccessById.Id, nil
+//			}).(pulumi.StringPtrOutput))
+//			ctx.Export("fetchedStandardWebName", standardWebAccessById.ApplyT(func(standardWebAccessById scm.GetSecurityRuleResult) (*string, error) {
+//				return &standardWebAccessById.Name, nil
+//			}).(pulumi.StringPtrOutput))
+//			ctx.Export("fetchedStandardWebDescription", standardWebAccessById.ApplyT(func(standardWebAccessById scm.GetSecurityRuleResult) (*string, error) {
+//				return &standardWebAccessById.Description, nil
+//			}).(pulumi.StringPtrOutput))
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupSecurityRule(ctx *pulumi.Context, args *LookupSecurityRuleArgs, opts ...pulumi.InvokeOption) (*LookupSecurityRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupSecurityRuleResult
@@ -84,8 +165,12 @@ type LookupSecurityRuleResult struct {
 	NegateUser bool `pulumi:"negateUser"`
 	// Policy type
 	PolicyType string `pulumi:"policyType"`
+	// The position of a security rule
+	Position string `pulumi:"position"`
 	// The security profile object
 	ProfileSetting GetSecurityRuleProfileSetting `pulumi:"profileSetting"`
+	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+	RelativePosition string `pulumi:"relativePosition"`
 	// Schedule in which this rule will be applied
 	Schedule string `pulumi:"schedule"`
 	// Security settings
@@ -102,6 +187,8 @@ type LookupSecurityRuleResult struct {
 	Sources []string `pulumi:"sources"`
 	// The tags associated with the security rule
 	Tags []string `pulumi:"tags"`
+	// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+	TargetRule string `pulumi:"targetRule"`
 	// Tenant restrictions
 	TenantRestrictions []string `pulumi:"tenantRestrictions"`
 	Tfid               string   `pulumi:"tfid"`
@@ -277,9 +364,19 @@ func (o LookupSecurityRuleResultOutput) PolicyType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.PolicyType }).(pulumi.StringOutput)
 }
 
+// The position of a security rule
+func (o LookupSecurityRuleResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.Position }).(pulumi.StringOutput)
+}
+
 // The security profile object
 func (o LookupSecurityRuleResultOutput) ProfileSetting() GetSecurityRuleProfileSettingOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) GetSecurityRuleProfileSetting { return v.ProfileSetting }).(GetSecurityRuleProfileSettingOutput)
+}
+
+// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+func (o LookupSecurityRuleResultOutput) RelativePosition() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.RelativePosition }).(pulumi.StringOutput)
 }
 
 // Schedule in which this rule will be applied
@@ -320,6 +417,11 @@ func (o LookupSecurityRuleResultOutput) Sources() pulumi.StringArrayOutput {
 // The tags associated with the security rule
 func (o LookupSecurityRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupSecurityRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
+func (o LookupSecurityRuleResultOutput) TargetRule() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSecurityRuleResult) string { return v.TargetRule }).(pulumi.StringOutput)
 }
 
 // Tenant restrictions

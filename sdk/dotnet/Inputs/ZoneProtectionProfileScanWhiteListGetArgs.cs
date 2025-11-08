@@ -13,6 +13,18 @@ namespace Pulumi.Scm.Inputs
     public sealed class ZoneProtectionProfileScanWhiteListGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Ipv4
+        /// </summary>
+        [Input("ipv4")]
+        public Input<string>? Ipv4 { get; set; }
+
+        /// <summary>
+        /// Ipv6
+        /// </summary>
+        [Input("ipv6")]
+        public Input<string>? Ipv6 { get; set; }
+
+        /// <summary>
         /// A descriptive name for the address to exclude.
         /// </summary>
         [Input("name", required: true)]

@@ -8,7 +8,7 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -39,13 +39,13 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * 
      */
     @Import(name="asPathLimit")
-    private @Nullable Output<Double> asPathLimit;
+    private @Nullable Output<Integer> asPathLimit;
 
     /**
      * @return As path limit
      * 
      */
-    public Optional<Output<Double>> asPathLimit() {
+    public Optional<Output<Integer>> asPathLimit() {
         return Optional.ofNullable(this.asPathLimit);
     }
 
@@ -84,13 +84,13 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * 
      */
     @Import(name="localPreference")
-    private @Nullable Output<Double> localPreference;
+    private @Nullable Output<Integer> localPreference;
 
     /**
      * @return Local preference
      * 
      */
-    public Optional<Output<Double>> localPreference() {
+    public Optional<Output<Integer>> localPreference() {
         return Optional.ofNullable(this.localPreference);
     }
 
@@ -99,13 +99,13 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * 
      */
     @Import(name="med")
-    private @Nullable Output<Double> med;
+    private @Nullable Output<Integer> med;
 
     /**
      * @return Med
      * 
      */
-    public Optional<Output<Double>> med() {
+    public Optional<Output<Integer>> med() {
         return Optional.ofNullable(this.med);
     }
 
@@ -144,13 +144,13 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * 
      */
     @Import(name="weight")
-    private @Nullable Output<Double> weight;
+    private @Nullable Output<Integer> weight;
 
     /**
      * @return Weight
      * 
      */
-    public Optional<Output<Double>> weight() {
+    public Optional<Output<Integer>> weight() {
         return Optional.ofNullable(this.weight);
     }
 
@@ -213,7 +213,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder asPathLimit(@Nullable Output<Double> asPathLimit) {
+        public Builder asPathLimit(@Nullable Output<Integer> asPathLimit) {
             $.asPathLimit = asPathLimit;
             return this;
         }
@@ -224,7 +224,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder asPathLimit(Double asPathLimit) {
+        public Builder asPathLimit(Integer asPathLimit) {
             return asPathLimit(Output.of(asPathLimit));
         }
 
@@ -276,7 +276,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder localPreference(@Nullable Output<Double> localPreference) {
+        public Builder localPreference(@Nullable Output<Integer> localPreference) {
             $.localPreference = localPreference;
             return this;
         }
@@ -287,7 +287,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder localPreference(Double localPreference) {
+        public Builder localPreference(Integer localPreference) {
             return localPreference(Output.of(localPreference));
         }
 
@@ -297,7 +297,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder med(@Nullable Output<Double> med) {
+        public Builder med(@Nullable Output<Integer> med) {
             $.med = med;
             return this;
         }
@@ -308,7 +308,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder med(Double med) {
+        public Builder med(Integer med) {
             return med(Output.of(med));
         }
 
@@ -360,7 +360,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder weight(@Nullable Output<Double> weight) {
+        public Builder weight(@Nullable Output<Integer> weight) {
             $.weight = weight;
             return this;
         }
@@ -371,7 +371,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
          * @return builder
          * 
          */
-        public Builder weight(Double weight) {
+        public Builder weight(Integer weight) {
             return weight(Output.of(weight));
         }
 

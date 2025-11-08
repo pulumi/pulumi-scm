@@ -5,10 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.NatRuleSourceTranslationFallbackArgs;
-import java.lang.Boolean;
-import java.lang.String;
-import java.util.List;
+import com.pulumi.scm.inputs.NatRuleSourceTranslationDynamicIpAndPortArgs;
+import com.pulumi.scm.inputs.NatRuleSourceTranslationDynamicIpArgs;
+import com.pulumi.scm.inputs.NatRuleSourceTranslationStaticIpArgs;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,88 +18,56 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
     public static final NatRuleSourceTranslationArgs Empty = new NatRuleSourceTranslationArgs();
 
     /**
-     * Bi directional
+     * Dynamic IP
      * 
      */
-    @Import(name="biDirectional")
-    private @Nullable Output<Boolean> biDirectional;
+    @Import(name="dynamicIp")
+    private @Nullable Output<NatRuleSourceTranslationDynamicIpArgs> dynamicIp;
 
     /**
-     * @return Bi directional
+     * @return Dynamic IP
      * 
      */
-    public Optional<Output<Boolean>> biDirectional() {
-        return Optional.ofNullable(this.biDirectional);
+    public Optional<Output<NatRuleSourceTranslationDynamicIpArgs>> dynamicIp() {
+        return Optional.ofNullable(this.dynamicIp);
     }
 
     /**
-     * Fallback
+     * Dynamic IP and port
      * 
      */
-    @Import(name="fallback")
-    private @Nullable Output<NatRuleSourceTranslationFallbackArgs> fallback;
+    @Import(name="dynamicIpAndPort")
+    private @Nullable Output<NatRuleSourceTranslationDynamicIpAndPortArgs> dynamicIpAndPort;
 
     /**
-     * @return Fallback
+     * @return Dynamic IP and port
      * 
      */
-    public Optional<Output<NatRuleSourceTranslationFallbackArgs>> fallback() {
-        return Optional.ofNullable(this.fallback);
+    public Optional<Output<NatRuleSourceTranslationDynamicIpAndPortArgs>> dynamicIpAndPort() {
+        return Optional.ofNullable(this.dynamicIpAndPort);
     }
 
     /**
-     * Interface name
+     * Static IP
      * 
      */
-    @Import(name="interface")
-    private @Nullable Output<String> interface_;
+    @Import(name="staticIp")
+    private @Nullable Output<NatRuleSourceTranslationStaticIpArgs> staticIp;
 
     /**
-     * @return Interface name
+     * @return Static IP
      * 
      */
-    public Optional<Output<String>> interface_() {
-        return Optional.ofNullable(this.interface_);
-    }
-
-    /**
-     * Translated IP addresses
-     * 
-     */
-    @Import(name="translatedAddressArrays")
-    private @Nullable Output<List<String>> translatedAddressArrays;
-
-    /**
-     * @return Translated IP addresses
-     * 
-     */
-    public Optional<Output<List<String>>> translatedAddressArrays() {
-        return Optional.ofNullable(this.translatedAddressArrays);
-    }
-
-    /**
-     * Translated IP address
-     * 
-     */
-    @Import(name="translatedAddressSingle")
-    private @Nullable Output<String> translatedAddressSingle;
-
-    /**
-     * @return Translated IP address
-     * 
-     */
-    public Optional<Output<String>> translatedAddressSingle() {
-        return Optional.ofNullable(this.translatedAddressSingle);
+    public Optional<Output<NatRuleSourceTranslationStaticIpArgs>> staticIp() {
+        return Optional.ofNullable(this.staticIp);
     }
 
     private NatRuleSourceTranslationArgs() {}
 
     private NatRuleSourceTranslationArgs(NatRuleSourceTranslationArgs $) {
-        this.biDirectional = $.biDirectional;
-        this.fallback = $.fallback;
-        this.interface_ = $.interface_;
-        this.translatedAddressArrays = $.translatedAddressArrays;
-        this.translatedAddressSingle = $.translatedAddressSingle;
+        this.dynamicIp = $.dynamicIp;
+        this.dynamicIpAndPort = $.dynamicIpAndPort;
+        this.staticIp = $.staticIp;
     }
 
     public static Builder builder() {
@@ -122,118 +89,66 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param biDirectional Bi directional
+         * @param dynamicIp Dynamic IP
          * 
          * @return builder
          * 
          */
-        public Builder biDirectional(@Nullable Output<Boolean> biDirectional) {
-            $.biDirectional = biDirectional;
+        public Builder dynamicIp(@Nullable Output<NatRuleSourceTranslationDynamicIpArgs> dynamicIp) {
+            $.dynamicIp = dynamicIp;
             return this;
         }
 
         /**
-         * @param biDirectional Bi directional
+         * @param dynamicIp Dynamic IP
          * 
          * @return builder
          * 
          */
-        public Builder biDirectional(Boolean biDirectional) {
-            return biDirectional(Output.of(biDirectional));
+        public Builder dynamicIp(NatRuleSourceTranslationDynamicIpArgs dynamicIp) {
+            return dynamicIp(Output.of(dynamicIp));
         }
 
         /**
-         * @param fallback Fallback
+         * @param dynamicIpAndPort Dynamic IP and port
          * 
          * @return builder
          * 
          */
-        public Builder fallback(@Nullable Output<NatRuleSourceTranslationFallbackArgs> fallback) {
-            $.fallback = fallback;
+        public Builder dynamicIpAndPort(@Nullable Output<NatRuleSourceTranslationDynamicIpAndPortArgs> dynamicIpAndPort) {
+            $.dynamicIpAndPort = dynamicIpAndPort;
             return this;
         }
 
         /**
-         * @param fallback Fallback
+         * @param dynamicIpAndPort Dynamic IP and port
          * 
          * @return builder
          * 
          */
-        public Builder fallback(NatRuleSourceTranslationFallbackArgs fallback) {
-            return fallback(Output.of(fallback));
+        public Builder dynamicIpAndPort(NatRuleSourceTranslationDynamicIpAndPortArgs dynamicIpAndPort) {
+            return dynamicIpAndPort(Output.of(dynamicIpAndPort));
         }
 
         /**
-         * @param interface_ Interface name
+         * @param staticIp Static IP
          * 
          * @return builder
          * 
          */
-        public Builder interface_(@Nullable Output<String> interface_) {
-            $.interface_ = interface_;
+        public Builder staticIp(@Nullable Output<NatRuleSourceTranslationStaticIpArgs> staticIp) {
+            $.staticIp = staticIp;
             return this;
         }
 
         /**
-         * @param interface_ Interface name
+         * @param staticIp Static IP
          * 
          * @return builder
          * 
          */
-        public Builder interface_(String interface_) {
-            return interface_(Output.of(interface_));
-        }
-
-        /**
-         * @param translatedAddressArrays Translated IP addresses
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedAddressArrays(@Nullable Output<List<String>> translatedAddressArrays) {
-            $.translatedAddressArrays = translatedAddressArrays;
-            return this;
-        }
-
-        /**
-         * @param translatedAddressArrays Translated IP addresses
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedAddressArrays(List<String> translatedAddressArrays) {
-            return translatedAddressArrays(Output.of(translatedAddressArrays));
-        }
-
-        /**
-         * @param translatedAddressArrays Translated IP addresses
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedAddressArrays(String... translatedAddressArrays) {
-            return translatedAddressArrays(List.of(translatedAddressArrays));
-        }
-
-        /**
-         * @param translatedAddressSingle Translated IP address
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedAddressSingle(@Nullable Output<String> translatedAddressSingle) {
-            $.translatedAddressSingle = translatedAddressSingle;
-            return this;
-        }
-
-        /**
-         * @param translatedAddressSingle Translated IP address
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedAddressSingle(String translatedAddressSingle) {
-            return translatedAddressSingle(Output.of(translatedAddressSingle));
+        public Builder staticIp(NatRuleSourceTranslationStaticIpArgs staticIp) {
+            return staticIp(Output.of(staticIp));
         }
 
         public NatRuleSourceTranslationArgs build() {

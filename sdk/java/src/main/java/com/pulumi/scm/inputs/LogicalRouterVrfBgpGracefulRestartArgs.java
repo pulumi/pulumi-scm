@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -36,13 +36,13 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
      * 
      */
     @Import(name="localRestartTime")
-    private @Nullable Output<Double> localRestartTime;
+    private @Nullable Output<Integer> localRestartTime;
 
     /**
      * @return Local restart time
      * 
      */
-    public Optional<Output<Double>> localRestartTime() {
+    public Optional<Output<Integer>> localRestartTime() {
         return Optional.ofNullable(this.localRestartTime);
     }
 
@@ -51,13 +51,13 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
      * 
      */
     @Import(name="maxPeerRestartTime")
-    private @Nullable Output<Double> maxPeerRestartTime;
+    private @Nullable Output<Integer> maxPeerRestartTime;
 
     /**
      * @return Max peer restart time
      * 
      */
-    public Optional<Output<Double>> maxPeerRestartTime() {
+    public Optional<Output<Integer>> maxPeerRestartTime() {
         return Optional.ofNullable(this.maxPeerRestartTime);
     }
 
@@ -66,13 +66,13 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
      * 
      */
     @Import(name="staleRouteTime")
-    private @Nullable Output<Double> staleRouteTime;
+    private @Nullable Output<Integer> staleRouteTime;
 
     /**
      * @return Stale route time
      * 
      */
-    public Optional<Output<Double>> staleRouteTime() {
+    public Optional<Output<Integer>> staleRouteTime() {
         return Optional.ofNullable(this.staleRouteTime);
     }
 
@@ -130,7 +130,7 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder localRestartTime(@Nullable Output<Double> localRestartTime) {
+        public Builder localRestartTime(@Nullable Output<Integer> localRestartTime) {
             $.localRestartTime = localRestartTime;
             return this;
         }
@@ -141,7 +141,7 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder localRestartTime(Double localRestartTime) {
+        public Builder localRestartTime(Integer localRestartTime) {
             return localRestartTime(Output.of(localRestartTime));
         }
 
@@ -151,7 +151,7 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder maxPeerRestartTime(@Nullable Output<Double> maxPeerRestartTime) {
+        public Builder maxPeerRestartTime(@Nullable Output<Integer> maxPeerRestartTime) {
             $.maxPeerRestartTime = maxPeerRestartTime;
             return this;
         }
@@ -162,7 +162,7 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder maxPeerRestartTime(Double maxPeerRestartTime) {
+        public Builder maxPeerRestartTime(Integer maxPeerRestartTime) {
             return maxPeerRestartTime(Output.of(maxPeerRestartTime));
         }
 
@@ -172,7 +172,7 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder staleRouteTime(@Nullable Output<Double> staleRouteTime) {
+        public Builder staleRouteTime(@Nullable Output<Integer> staleRouteTime) {
             $.staleRouteTime = staleRouteTime;
             return this;
         }
@@ -183,7 +183,7 @@ public final class LogicalRouterVrfBgpGracefulRestartArgs extends com.pulumi.res
          * @return builder
          * 
          */
-        public Builder staleRouteTime(Double staleRouteTime) {
+        public Builder staleRouteTime(Integer staleRouteTime) {
             return staleRouteTime(Output.of(staleRouteTime));
         }
 

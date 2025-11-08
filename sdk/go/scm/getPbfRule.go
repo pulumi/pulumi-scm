@@ -12,6 +12,86 @@ import (
 )
 
 // PbfRule data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			exampleTag, err := scm.NewTag(ctx, "example_tag", &scm.TagArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("pbf-rule-tag-ds-test-1"),
+//				Color:  pulumi.String("Red"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- PBF Rule Resource with discard action---
+//			examplePbfRule, err := scm.NewPbfRule(ctx, "example_pbf_rule", &scm.PbfRuleArgs{
+//				Name:        pulumi.String("pbf-test-ds-rule-discard"),
+//				Folder:      pulumi.String("All"),
+//				Description: pulumi.String("Data Source testing pbf rule."),
+//				From: &scm.PbfRuleFromArgs{
+//					Zones: pulumi.StringArray{
+//						pulumi.String("zone-untrust"),
+//					},
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Applications: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-http"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Action: &scm.PbfRuleActionArgs{
+//					Discard: &scm.PbfRuleActionDiscardArgs{},
+//				},
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				EnforceSymmetricReturn: &scm.PbfRuleEnforceSymmetricReturnArgs{
+//					Enabled: pulumi.Bool(false),
+//				},
+//				Schedule: pulumi.String("non-work-hours"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Define the data source (the item to be retrieved via API GET)
+//			pbfExternalWebTestGet := scm.LookupPbfRuleOutput(ctx, scm.GetPbfRuleOutputArgs{
+//				Id: examplePbfRule.ID(),
+//			}, nil)
+//			ctx.Export("retrievedIDAndName", pulumi.StringMap{
+//				"id": pbfExternalWebTestGet.ApplyT(func(pbfExternalWebTestGet scm.GetPbfRuleResult) (*string, error) {
+//					return &pbfExternalWebTestGet.Id, nil
+//				}).(pulumi.StringPtrOutput),
+//				"name": pbfExternalWebTestGet.ApplyT(func(pbfExternalWebTestGet scm.GetPbfRuleResult) (*string, error) {
+//					return &pbfExternalWebTestGet.Name, nil
+//				}).(pulumi.StringPtrOutput),
+//			})
+//			ctx.Export("recievedResponse", pbfExternalWebTestGet)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupPbfRule(ctx *pulumi.Context, args *LookupPbfRuleArgs, opts ...pulumi.InvokeOption) (*LookupPbfRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupPbfRuleResult

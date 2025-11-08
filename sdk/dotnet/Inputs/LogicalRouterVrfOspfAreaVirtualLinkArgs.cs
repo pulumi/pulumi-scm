@@ -34,13 +34,13 @@ namespace Pulumi.Scm.Inputs
         /// Instance id
         /// </summary>
         [Input("instanceId")]
-        public Input<double>? InstanceId { get; set; }
+        public Input<int>? InstanceId { get; set; }
 
         /// <summary>
         /// Interface id
         /// </summary>
         [Input("interfaceId")]
-        public Input<double>? InterfaceId { get; set; }
+        public Input<int>? InterfaceId { get; set; }
 
         /// <summary>
         /// Name

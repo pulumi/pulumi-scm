@@ -32,14 +32,14 @@ public final class PbfRuleActionForwardMonitorArgs extends com.pulumi.resources.
     }
 
     /**
-     * Ip address
+     * Monitor IP address
      * 
      */
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
     /**
-     * @return Ip address
+     * @return Monitor IP address
      * 
      */
     public Optional<Output<String>> ipAddress() {
@@ -109,7 +109,7 @@ public final class PbfRuleActionForwardMonitorArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param ipAddress Ip address
+         * @param ipAddress Monitor IP address
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class PbfRuleActionForwardMonitorArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param ipAddress Ip address
+         * @param ipAddress Monitor IP address
          * 
          * @return builder
          * 

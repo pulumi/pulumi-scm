@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetBgpRouteMapRedistributionOspfBgpRouteMapSetAggregator {
     /**
-     * @return Aggregator AS
+     * @return OSPF BGP Route maps set Aggregator AS
      * 
      */
     private Integer as;
     /**
-     * @return Router ID
+     * @return OSPF BGP Route maps set Router ID
      * 
      */
     private String routerId;
 
     private GetBgpRouteMapRedistributionOspfBgpRouteMapSetAggregator() {}
     /**
-     * @return Aggregator AS
+     * @return OSPF BGP Route maps set Aggregator AS
      * 
      */
     public Integer as() {
         return this.as;
     }
     /**
-     * @return Router ID
+     * @return OSPF BGP Route maps set Router ID
      * 
      */
     public String routerId() {

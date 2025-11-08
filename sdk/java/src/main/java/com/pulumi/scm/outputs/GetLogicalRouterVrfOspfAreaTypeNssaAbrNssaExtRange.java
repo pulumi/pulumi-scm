@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +26,7 @@ public final class GetLogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRange {
      * @return Route tag
      * 
      */
-    private Double routeTag;
+    private Integer routeTag;
 
     private GetLogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRange() {}
     /**
@@ -47,7 +47,7 @@ public final class GetLogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRange {
      * @return Route tag
      * 
      */
-    public Double routeTag() {
+    public Integer routeTag() {
         return this.routeTag;
     }
 
@@ -62,7 +62,7 @@ public final class GetLogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRange {
     public static final class Builder {
         private Boolean advertise;
         private String name;
-        private Double routeTag;
+        private Integer routeTag;
         public Builder() {}
         public Builder(GetLogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRange defaults) {
     	      Objects.requireNonNull(defaults);
@@ -88,7 +88,7 @@ public final class GetLogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRange {
             return this;
         }
         @CustomType.Setter
-        public Builder routeTag(Double routeTag) {
+        public Builder routeTag(Integer routeTag) {
             if (routeTag == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRange", "routeTag");
             }

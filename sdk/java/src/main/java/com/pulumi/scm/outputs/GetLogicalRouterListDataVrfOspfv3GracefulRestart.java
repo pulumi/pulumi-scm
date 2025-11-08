@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -20,7 +20,7 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
      * @return Grace period
      * 
      */
-    private Double gracePeriod;
+    private Integer gracePeriod;
     /**
      * @return Helper enable
      * 
@@ -30,12 +30,12 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
      * @return Max neighbor restart time
      * 
      */
-    private Double maxNeighborRestartTime;
+    private Integer maxNeighborRestartTime;
     /**
      * @return Strict l s a checking
      * 
      */
-    private Boolean strictLSAChecking;
+    private Boolean strictLsaChecking;
 
     private GetLogicalRouterListDataVrfOspfv3GracefulRestart() {}
     /**
@@ -49,7 +49,7 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
      * @return Grace period
      * 
      */
-    public Double gracePeriod() {
+    public Integer gracePeriod() {
         return this.gracePeriod;
     }
     /**
@@ -63,15 +63,15 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
      * @return Max neighbor restart time
      * 
      */
-    public Double maxNeighborRestartTime() {
+    public Integer maxNeighborRestartTime() {
         return this.maxNeighborRestartTime;
     }
     /**
      * @return Strict l s a checking
      * 
      */
-    public Boolean strictLSAChecking() {
-        return this.strictLSAChecking;
+    public Boolean strictLsaChecking() {
+        return this.strictLsaChecking;
     }
 
     public static Builder builder() {
@@ -84,10 +84,10 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
     @CustomType.Builder
     public static final class Builder {
         private Boolean enable;
-        private Double gracePeriod;
+        private Integer gracePeriod;
         private Boolean helperEnable;
-        private Double maxNeighborRestartTime;
-        private Boolean strictLSAChecking;
+        private Integer maxNeighborRestartTime;
+        private Boolean strictLsaChecking;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfOspfv3GracefulRestart defaults) {
     	      Objects.requireNonNull(defaults);
@@ -95,7 +95,7 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
     	      this.gracePeriod = defaults.gracePeriod;
     	      this.helperEnable = defaults.helperEnable;
     	      this.maxNeighborRestartTime = defaults.maxNeighborRestartTime;
-    	      this.strictLSAChecking = defaults.strictLSAChecking;
+    	      this.strictLsaChecking = defaults.strictLsaChecking;
         }
 
         @CustomType.Setter
@@ -107,7 +107,7 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder gracePeriod(Double gracePeriod) {
+        public Builder gracePeriod(Integer gracePeriod) {
             if (gracePeriod == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfv3GracefulRestart", "gracePeriod");
             }
@@ -123,7 +123,7 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder maxNeighborRestartTime(Double maxNeighborRestartTime) {
+        public Builder maxNeighborRestartTime(Integer maxNeighborRestartTime) {
             if (maxNeighborRestartTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfv3GracefulRestart", "maxNeighborRestartTime");
             }
@@ -131,11 +131,11 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder strictLSAChecking(Boolean strictLSAChecking) {
-            if (strictLSAChecking == null) {
-              throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfv3GracefulRestart", "strictLSAChecking");
+        public Builder strictLsaChecking(Boolean strictLsaChecking) {
+            if (strictLsaChecking == null) {
+              throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfOspfv3GracefulRestart", "strictLsaChecking");
             }
-            this.strictLSAChecking = strictLSAChecking;
+            this.strictLsaChecking = strictLsaChecking;
             return this;
         }
         public GetLogicalRouterListDataVrfOspfv3GracefulRestart build() {
@@ -144,7 +144,7 @@ public final class GetLogicalRouterListDataVrfOspfv3GracefulRestart {
             _resultValue.gracePeriod = gracePeriod;
             _resultValue.helperEnable = helperEnable;
             _resultValue.maxNeighborRestartTime = maxNeighborRestartTime;
-            _resultValue.strictLSAChecking = strictLSAChecking;
+            _resultValue.strictLsaChecking = strictLsaChecking;
             return _resultValue;
         }
     }

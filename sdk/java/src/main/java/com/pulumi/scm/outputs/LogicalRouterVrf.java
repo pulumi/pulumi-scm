@@ -15,7 +15,7 @@ import com.pulumi.scm.outputs.LogicalRouterVrfRibFilter;
 import com.pulumi.scm.outputs.LogicalRouterVrfRip;
 import com.pulumi.scm.outputs.LogicalRouterVrfRoutingTable;
 import com.pulumi.scm.outputs.LogicalRouterVrfVrAdminDists;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,7 +43,7 @@ public final class LogicalRouterVrf {
      * @return Global vrid
      * 
      */
-    private @Nullable Double globalVrid;
+    private @Nullable Integer globalVrid;
     /**
      * @return Interface
      * 
@@ -126,7 +126,7 @@ public final class LogicalRouterVrf {
      * @return Global vrid
      * 
      */
-    public Optional<Double> globalVrid() {
+    public Optional<Integer> globalVrid() {
         return Optional.ofNullable(this.globalVrid);
     }
     /**
@@ -219,7 +219,7 @@ public final class LogicalRouterVrf {
         private @Nullable LogicalRouterVrfAdminDists adminDists;
         private @Nullable LogicalRouterVrfBgp bgp;
         private @Nullable LogicalRouterVrfEcmp ecmp;
-        private @Nullable Double globalVrid;
+        private @Nullable Integer globalVrid;
         private @Nullable List<String> interfaces;
         private @Nullable LogicalRouterVrfMulticast multicast;
         private String name;
@@ -270,7 +270,7 @@ public final class LogicalRouterVrf {
             return this;
         }
         @CustomType.Setter
-        public Builder globalVrid(@Nullable Double globalVrid) {
+        public Builder globalVrid(@Nullable Integer globalVrid) {
 
             this.globalVrid = globalVrid;
             return this;

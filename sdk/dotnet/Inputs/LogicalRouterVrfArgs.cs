@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         /// Global vrid
         /// </summary>
         [Input("globalVrid")]
-        public Input<double>? GlobalVrid { get; set; }
+        public Input<int>? GlobalVrid { get; set; }
 
         [Input("interfaces")]
         private InputList<string>? _interfaces;

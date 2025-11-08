@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
      * @return Metric
      * 
      */
-    private @Nullable Double metric;
+    private @Nullable Integer metric;
 
     private LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise() {}
     /**
      * @return Metric
      * 
      */
-    public Optional<Double> metric() {
+    public Optional<Integer> metric() {
         return Optional.ofNullable(this.metric);
     }
 
@@ -35,7 +35,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double metric;
+        private @Nullable Integer metric;
         public Builder() {}
         public Builder(LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise defaults) {
     	      Objects.requireNonNull(defaults);
@@ -43,7 +43,7 @@ public final class LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise {
         }
 
         @CustomType.Setter
-        public Builder metric(@Nullable Double metric) {
+        public Builder metric(@Nullable Integer metric) {
 
             this.metric = metric;
             return this;

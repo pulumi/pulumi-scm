@@ -9,7 +9,7 @@ import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyAggregationAddressAdvertis
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchAsPathArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchCommunityArgs;
 import com.pulumi.scm.inputs.LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchExtendedCommunityArgs;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -116,13 +116,13 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMat
      * 
      */
     @Import(name="med")
-    private @Nullable Output<Double> med;
+    private @Nullable Output<Integer> med;
 
     /**
      * @return Med
      * 
      */
-    public Optional<Output<Double>> med() {
+    public Optional<Output<Integer>> med() {
         return Optional.ofNullable(this.med);
     }
 
@@ -356,7 +356,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMat
          * @return builder
          * 
          */
-        public Builder med(@Nullable Output<Double> med) {
+        public Builder med(@Nullable Output<Integer> med) {
             $.med = med;
             return this;
         }
@@ -367,7 +367,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMat
          * @return builder
          * 
          */
-        public Builder med(Double med) {
+        public Builder med(Integer med) {
             return med(Output.of(med));
         }
 

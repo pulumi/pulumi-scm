@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighbor;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Assert interval
      * 
      */
-    private @Nullable Double assertInterval;
+    private @Nullable Integer assertInterval;
     /**
      * @return Bsr border
      * 
@@ -33,7 +33,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Dr priority
      * 
      */
-    private @Nullable Double drPriority;
+    private @Nullable Integer drPriority;
     /**
      * @return Enable
      * 
@@ -43,12 +43,12 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Hello interval
      * 
      */
-    private @Nullable Double helloInterval;
+    private @Nullable Integer helloInterval;
     /**
      * @return Join prune interval
      * 
      */
-    private @Nullable Double joinPruneInterval;
+    private @Nullable Integer joinPruneInterval;
 
     private LogicalRouterVrfMulticastInterfaceGroupPim() {}
     /**
@@ -62,7 +62,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Assert interval
      * 
      */
-    public Optional<Double> assertInterval() {
+    public Optional<Integer> assertInterval() {
         return Optional.ofNullable(this.assertInterval);
     }
     /**
@@ -76,7 +76,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Dr priority
      * 
      */
-    public Optional<Double> drPriority() {
+    public Optional<Integer> drPriority() {
         return Optional.ofNullable(this.drPriority);
     }
     /**
@@ -90,14 +90,14 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
      * @return Hello interval
      * 
      */
-    public Optional<Double> helloInterval() {
+    public Optional<Integer> helloInterval() {
         return Optional.ofNullable(this.helloInterval);
     }
     /**
      * @return Join prune interval
      * 
      */
-    public Optional<Double> joinPruneInterval() {
+    public Optional<Integer> joinPruneInterval() {
         return Optional.ofNullable(this.joinPruneInterval);
     }
 
@@ -111,12 +111,12 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable List<LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighbor> allowedNeighbors;
-        private @Nullable Double assertInterval;
+        private @Nullable Integer assertInterval;
         private @Nullable Boolean bsrBorder;
-        private @Nullable Double drPriority;
+        private @Nullable Integer drPriority;
         private @Nullable Boolean enable;
-        private @Nullable Double helloInterval;
-        private @Nullable Double joinPruneInterval;
+        private @Nullable Integer helloInterval;
+        private @Nullable Integer joinPruneInterval;
         public Builder() {}
         public Builder(LogicalRouterVrfMulticastInterfaceGroupPim defaults) {
     	      Objects.requireNonNull(defaults);
@@ -139,7 +139,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
             return allowedNeighbors(List.of(allowedNeighbors));
         }
         @CustomType.Setter
-        public Builder assertInterval(@Nullable Double assertInterval) {
+        public Builder assertInterval(@Nullable Integer assertInterval) {
 
             this.assertInterval = assertInterval;
             return this;
@@ -151,7 +151,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
             return this;
         }
         @CustomType.Setter
-        public Builder drPriority(@Nullable Double drPriority) {
+        public Builder drPriority(@Nullable Integer drPriority) {
 
             this.drPriority = drPriority;
             return this;
@@ -163,13 +163,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupPim {
             return this;
         }
         @CustomType.Setter
-        public Builder helloInterval(@Nullable Double helloInterval) {
+        public Builder helloInterval(@Nullable Integer helloInterval) {
 
             this.helloInterval = helloInterval;
             return this;
         }
         @CustomType.Setter
-        public Builder joinPruneInterval(@Nullable Double joinPruneInterval) {
+        public Builder joinPruneInterval(@Nullable Integer joinPruneInterval) {
 
             this.joinPruneInterval = joinPruneInterval;
             return this;

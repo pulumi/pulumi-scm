@@ -18,21 +18,21 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Addresses;
         /// <summary>
-        /// Domain
+        /// Fully qualified domain name
         /// </summary>
-        public readonly string? Domain;
+        public readonly string Domain;
         /// <summary>
-        /// Name
+        /// Static entry name
         /// </summary>
-        public readonly string? Name;
+        public readonly string Name;
 
         [OutputConstructor]
         private DnsProxyStaticEntry(
             ImmutableArray<string> addresses,
 
-            string? domain,
+            string domain,
 
-            string? name)
+            string name)
         {
             Addresses = addresses;
             Domain = domain;

@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataOspfRibRouteMapMatchNextHopResult
     {
         /// <summary>
-        /// Access list
+        /// OSPF RIB Route maps NextHop Access list
         /// </summary>
         public readonly string AccessList;
         /// <summary>
-        /// Prefix list
+        /// OSPF RIB Route maps NextHop Prefix list
         /// </summary>
         public readonly string PrefixList;
 

@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
     public static final BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args Empty = new BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args();
 
     /**
-     * Address
+     * Connected Static BGP Rib Route maps ipv4 address
      * 
      */
     @Import(name="address")
     private @Nullable Output<BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs> address;
 
     /**
-     * @return Address
+     * @return Connected Static BGP Rib Route maps ipv4 address
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs>> address() {
@@ -72,7 +72,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
         }
 
         /**
-         * @param address Address
+         * @param address Connected Static BGP Rib Route maps ipv4 address
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4A
         }
 
         /**
-         * @param address Address
+         * @param address Connected Static BGP Rib Route maps ipv4 address
          * 
          * @return builder
          * 

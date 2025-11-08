@@ -29,7 +29,7 @@ import (
 //		pulumi.Run(func(ctx *pulumi.Context) error {
 //			// Fetch a list of all anti-spyware profiles
 //			allAntiSpywareSignatures, err := scm.GetAntiSpywareSignatureList(ctx, &scm.GetAntiSpywareSignatureListArgs{
-//				Folder: pulumi.StringRef("Shared"),
+//				Folder: pulumi.StringRef("All"),
 //			}, nil)
 //			if err != nil {
 //				return err

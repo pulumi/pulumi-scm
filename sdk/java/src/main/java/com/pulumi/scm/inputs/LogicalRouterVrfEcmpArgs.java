@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.LogicalRouterVrfEcmpAlgorithmArgs;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -52,13 +52,13 @@ public final class LogicalRouterVrfEcmpArgs extends com.pulumi.resources.Resourc
      * 
      */
     @Import(name="maxPath")
-    private @Nullable Output<Double> maxPath;
+    private @Nullable Output<Integer> maxPath;
 
     /**
      * @return Max path
      * 
      */
-    public Optional<Output<Double>> maxPath() {
+    public Optional<Output<Integer>> maxPath() {
         return Optional.ofNullable(this.maxPath);
     }
 
@@ -168,7 +168,7 @@ public final class LogicalRouterVrfEcmpArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder maxPath(@Nullable Output<Double> maxPath) {
+        public Builder maxPath(@Nullable Output<Integer> maxPath) {
             $.maxPath = maxPath;
             return this;
         }
@@ -179,7 +179,7 @@ public final class LogicalRouterVrfEcmpArgs extends com.pulumi.resources.Resourc
          * @return builder
          * 
          */
-        public Builder maxPath(Double maxPath) {
+        public Builder maxPath(Integer maxPath) {
             return maxPath(Output.of(maxPath));
         }
 

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetVlanInterfaceListDataArpResult
     {
         /// <summary>
-        /// Hw address
+        /// MAC address
         /// </summary>
         public readonly string HwAddress;
         /// <summary>

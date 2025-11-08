@@ -24,9 +24,9 @@ func LookupBgpRouteMapRedistribution(ctx *pulumi.Context, args *LookupBgpRouteMa
 
 // A collection of arguments for invoking getBgpRouteMapRedistribution.
 type LookupBgpRouteMapRedistributionArgs struct {
-	// UUID of the resource
+	// BGP Route Map Redistributions UUID of the resource
 	Id string `pulumi:"id"`
-	// Name
+	// BGP Route Map Redistributions Name
 	Name *string `pulumi:"name"`
 }
 
@@ -36,15 +36,15 @@ type LookupBgpRouteMapRedistributionResult struct {
 	Bgp GetBgpRouteMapRedistributionBgp `pulumi:"bgp"`
 	// Connected static
 	ConnectedStatic GetBgpRouteMapRedistributionConnectedStatic `pulumi:"connectedStatic"`
-	// Description
+	// BGP Route Map Redistributions Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
 	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
-	// UUID of the resource
+	// BGP Route Map Redistributions UUID of the resource
 	Id string `pulumi:"id"`
-	// Name
+	// BGP Route Map Redistributions Name
 	Name string `pulumi:"name"`
 	// Ospf
 	Ospf GetBgpRouteMapRedistributionOspf `pulumi:"ospf"`
@@ -64,9 +64,9 @@ func LookupBgpRouteMapRedistributionOutput(ctx *pulumi.Context, args LookupBgpRo
 
 // A collection of arguments for invoking getBgpRouteMapRedistribution.
 type LookupBgpRouteMapRedistributionOutputArgs struct {
-	// UUID of the resource
+	// BGP Route Map Redistributions UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// Name
+	// BGP Route Map Redistributions Name
 	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
@@ -101,7 +101,7 @@ func (o LookupBgpRouteMapRedistributionResultOutput) ConnectedStatic() GetBgpRou
 	}).(GetBgpRouteMapRedistributionConnectedStaticOutput)
 }
 
-// Description
+// BGP Route Map Redistributions Description
 func (o LookupBgpRouteMapRedistributionResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Description }).(pulumi.StringOutput)
 }
@@ -116,12 +116,12 @@ func (o LookupBgpRouteMapRedistributionResultOutput) Folder() pulumi.StringOutpu
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// UUID of the resource
+// BGP Route Map Redistributions UUID of the resource
 func (o LookupBgpRouteMapRedistributionResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Name
+// BGP Route Map Redistributions Name
 func (o LookupBgpRouteMapRedistributionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpRouteMapRedistributionResult) string { return v.Name }).(pulumi.StringOutput)
 }

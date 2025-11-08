@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LogicalRouterVrfOspfAreaTypeStubAbr;
 import com.pulumi.scm.outputs.LogicalRouterVrfOspfAreaTypeStubDefaultRoute;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -33,7 +33,7 @@ public final class LogicalRouterVrfOspfAreaTypeStub {
      * @return Default route metric
      * 
      */
-    private @Nullable Double defaultRouteMetric;
+    private @Nullable Integer defaultRouteMetric;
     /**
      * @return No summary
      * 
@@ -66,7 +66,7 @@ public final class LogicalRouterVrfOspfAreaTypeStub {
      * @return Default route metric
      * 
      */
-    public Optional<Double> defaultRouteMetric() {
+    public Optional<Integer> defaultRouteMetric() {
         return Optional.ofNullable(this.defaultRouteMetric);
     }
     /**
@@ -89,7 +89,7 @@ public final class LogicalRouterVrfOspfAreaTypeStub {
         private @Nullable LogicalRouterVrfOspfAreaTypeStubAbr abr;
         private @Nullable Boolean acceptSummary;
         private @Nullable LogicalRouterVrfOspfAreaTypeStubDefaultRoute defaultRoute;
-        private @Nullable Double defaultRouteMetric;
+        private @Nullable Integer defaultRouteMetric;
         private @Nullable Boolean noSummary;
         public Builder() {}
         public Builder(LogicalRouterVrfOspfAreaTypeStub defaults) {
@@ -120,7 +120,7 @@ public final class LogicalRouterVrfOspfAreaTypeStub {
             return this;
         }
         @CustomType.Setter
-        public Builder defaultRouteMetric(@Nullable Double defaultRouteMetric) {
+        public Builder defaultRouteMetric(@Nullable Integer defaultRouteMetric) {
 
             this.defaultRouteMetric = defaultRouteMetric;
             return this;

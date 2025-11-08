@@ -20,7 +20,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Prepend
         /// </summary>
-        public readonly double Prepend;
+        public readonly int Prepend;
         /// <summary>
         /// Remove
         /// </summary>
@@ -28,17 +28,17 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Remove and prepend
         /// </summary>
-        public readonly double RemoveAndPrepend;
+        public readonly int RemoveAndPrepend;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathResult(
             Outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneResult none,
 
-            double prepend,
+            int prepend,
 
             Outputs.GetLogicalRouterListDataVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveResult remove,
 
-            double removeAndPrepend)
+            int removeAndPrepend)
         {
             None = none;
             Prepend = prepend;

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataConnectedStaticBgpResult
     {
         /// <summary>
-        /// Route maps
+        /// Connected Static BGP Route maps
         /// </summary>
         public readonly ImmutableArray<Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapResult> RouteMaps;
 

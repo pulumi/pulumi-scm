@@ -27,7 +27,7 @@ class GetDecryptionRuleResult:
     """
     A collection of values returned by getDecryptionRule.
     """
-    def __init__(__self__, action=None, categories=None, description=None, destination_hips=None, destinations=None, device=None, disabled=None, folder=None, froms=None, id=None, log_fail=None, log_setting=None, log_success=None, name=None, negate_destination=None, negate_source=None, profile=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, tfid=None, tos=None, type=None):
+    def __init__(__self__, action=None, categories=None, description=None, destination_hips=None, destinations=None, device=None, disabled=None, folder=None, froms=None, id=None, log_fail=None, log_setting=None, log_success=None, name=None, negate_destination=None, negate_source=None, position=None, profile=None, relative_position=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, target_rule=None, tfid=None, tos=None, type=None):
         if action and not isinstance(action, str):
             raise TypeError("Expected argument 'action' to be a str")
         pulumi.set(__self__, "action", action)
@@ -76,9 +76,15 @@ class GetDecryptionRuleResult:
         if negate_source and not isinstance(negate_source, bool):
             raise TypeError("Expected argument 'negate_source' to be a bool")
         pulumi.set(__self__, "negate_source", negate_source)
+        if position and not isinstance(position, str):
+            raise TypeError("Expected argument 'position' to be a str")
+        pulumi.set(__self__, "position", position)
         if profile and not isinstance(profile, str):
             raise TypeError("Expected argument 'profile' to be a str")
         pulumi.set(__self__, "profile", profile)
+        if relative_position and not isinstance(relative_position, str):
+            raise TypeError("Expected argument 'relative_position' to be a str")
+        pulumi.set(__self__, "relative_position", relative_position)
         if services and not isinstance(services, list):
             raise TypeError("Expected argument 'services' to be a list")
         pulumi.set(__self__, "services", services)
@@ -97,6 +103,9 @@ class GetDecryptionRuleResult:
         if tags and not isinstance(tags, list):
             raise TypeError("Expected argument 'tags' to be a list")
         pulumi.set(__self__, "tags", tags)
+        if target_rule and not isinstance(target_rule, str):
+            raise TypeError("Expected argument 'target_rule' to be a str")
+        pulumi.set(__self__, "target_rule", target_rule)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -237,11 +246,27 @@ class GetDecryptionRuleResult:
 
     @_builtins.property
     @pulumi.getter
+    def position(self) -> _builtins.str:
+        """
+        The position of a security rule
+        """
+        return pulumi.get(self, "position")
+
+    @_builtins.property
+    @pulumi.getter
     def profile(self) -> _builtins.str:
         """
         The decryption profile associated with the decryption rule
         """
         return pulumi.get(self, "profile")
+
+    @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> _builtins.str:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
@@ -292,6 +317,14 @@ class GetDecryptionRuleResult:
         return pulumi.get(self, "tags")
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> _builtins.str:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
         return pulumi.get(self, "tfid")
@@ -335,13 +368,16 @@ class AwaitableGetDecryptionRuleResult(GetDecryptionRuleResult):
             name=self.name,
             negate_destination=self.negate_destination,
             negate_source=self.negate_source,
+            position=self.position,
             profile=self.profile,
+            relative_position=self.relative_position,
             services=self.services,
             snippet=self.snippet,
             source_hips=self.source_hips,
             source_users=self.source_users,
             sources=self.sources,
             tags=self.tags,
+            target_rule=self.target_rule,
             tfid=self.tfid,
             tos=self.tos,
             type=self.type)
@@ -352,6 +388,34 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDecryptionRuleResult:
     """
     DecryptionRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+    test_decryption_rule = scm.DecryptionRule("test_decryption_rule",
+        name="data-source-test-rule",
+        description="Rule created specifically for data source testing.",
+        folder="All",
+        position="pre",
+        action="decrypt",
+        froms=["trust"],
+        tos=["untrust"],
+        sources=["any"],
+        destinations=["any"],
+        services=["service-https"],
+        categories=["high-risk"],
+        source_users=["any"],
+        type={
+            "ssl_forward_proxy": {},
+        })
+    # We use the ID from the resource created above.
+    single_rule_by_id = scm.get_decryption_rule_output(id=test_decryption_rule.id)
+    pulumi.export("singleDecryptionRuleName", single_rule_by_id)
+    ```
 
 
     :param _builtins.str id: The UUID of the decryption rule
@@ -380,13 +444,16 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         negate_destination=pulumi.get(__ret__, 'negate_destination'),
         negate_source=pulumi.get(__ret__, 'negate_source'),
+        position=pulumi.get(__ret__, 'position'),
         profile=pulumi.get(__ret__, 'profile'),
+        relative_position=pulumi.get(__ret__, 'relative_position'),
         services=pulumi.get(__ret__, 'services'),
         snippet=pulumi.get(__ret__, 'snippet'),
         source_hips=pulumi.get(__ret__, 'source_hips'),
         source_users=pulumi.get(__ret__, 'source_users'),
         sources=pulumi.get(__ret__, 'sources'),
         tags=pulumi.get(__ret__, 'tags'),
+        target_rule=pulumi.get(__ret__, 'target_rule'),
         tfid=pulumi.get(__ret__, 'tfid'),
         tos=pulumi.get(__ret__, 'tos'),
         type=pulumi.get(__ret__, 'type'))
@@ -395,6 +462,34 @@ def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionRuleResult]:
     """
     DecryptionRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # 1. RESOURCE: Create a rule to ensure a predictable target for lookups
+    test_decryption_rule = scm.DecryptionRule("test_decryption_rule",
+        name="data-source-test-rule",
+        description="Rule created specifically for data source testing.",
+        folder="All",
+        position="pre",
+        action="decrypt",
+        froms=["trust"],
+        tos=["untrust"],
+        sources=["any"],
+        destinations=["any"],
+        services=["service-https"],
+        categories=["high-risk"],
+        source_users=["any"],
+        type={
+            "ssl_forward_proxy": {},
+        })
+    # We use the ID from the resource created above.
+    single_rule_by_id = scm.get_decryption_rule_output(id=test_decryption_rule.id)
+    pulumi.export("singleDecryptionRuleName", single_rule_by_id)
+    ```
 
 
     :param _builtins.str id: The UUID of the decryption rule
@@ -422,13 +517,16 @@ def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         name=pulumi.get(__response__, 'name'),
         negate_destination=pulumi.get(__response__, 'negate_destination'),
         negate_source=pulumi.get(__response__, 'negate_source'),
+        position=pulumi.get(__response__, 'position'),
         profile=pulumi.get(__response__, 'profile'),
+        relative_position=pulumi.get(__response__, 'relative_position'),
         services=pulumi.get(__response__, 'services'),
         snippet=pulumi.get(__response__, 'snippet'),
         source_hips=pulumi.get(__response__, 'source_hips'),
         source_users=pulumi.get(__response__, 'source_users'),
         sources=pulumi.get(__response__, 'sources'),
         tags=pulumi.get(__response__, 'tags'),
+        target_rule=pulumi.get(__response__, 'target_rule'),
         tfid=pulumi.get(__response__, 'tfid'),
         tos=pulumi.get(__response__, 'tos'),
         type=pulumi.get(__response__, 'type')))

@@ -14,6 +14,41 @@ import (
 // ApplicationFilter resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewApplicationFilter(ctx, "scm_application_filter_1", &scm.ApplicationFilterArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_application_filter_1"),
+//				Categories: pulumi.StringArray{
+//					pulumi.String("business-systems"),
+//				},
+//				Risks: pulumi.IntArray{
+//					pulumi.Int(1),
+//				},
+//				Evasive: pulumi.Bool(true),
+//				Tagging: &scm.ApplicationFilterTaggingArgs{
+//					NoTag: pulumi.Bool(true),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type ApplicationFilter struct {
 	pulumi.CustomResourceState
 

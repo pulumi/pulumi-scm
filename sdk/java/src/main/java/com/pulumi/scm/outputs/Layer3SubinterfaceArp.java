@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Layer3SubinterfaceArp {
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     private @Nullable String hwAddress;
@@ -24,7 +24,7 @@ public final class Layer3SubinterfaceArp {
 
     private Layer3SubinterfaceArp() {}
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public Optional<String> hwAddress() {

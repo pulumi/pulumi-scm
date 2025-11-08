@@ -13,6 +13,7 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import NotRequired, TypedDict, TypeAlias
 from . import _utilities
+from . import outputs
 
 __all__ = [
     'GetInterfaceManagementProfileResult',
@@ -54,8 +55,8 @@ class GetInterfaceManagementProfileResult:
         if ping and not isinstance(ping, bool):
             raise TypeError("Expected argument 'ping' to be a bool")
         pulumi.set(__self__, "ping", ping)
-        if response_pages and not isinstance(response_pages, str):
-            raise TypeError("Expected argument 'response_pages' to be a str")
+        if response_pages and not isinstance(response_pages, bool):
+            raise TypeError("Expected argument 'response_pages' to be a bool")
         pulumi.set(__self__, "response_pages", response_pages)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
@@ -107,7 +108,7 @@ class GetInterfaceManagementProfileResult:
     @pulumi.getter(name="httpOcsp")
     def http_ocsp(self) -> _builtins.bool:
         """
-        Http ocsp
+        Allow HTTP OCSP?
         """
         return pulumi.get(self, "http_ocsp")
 
@@ -137,9 +138,9 @@ class GetInterfaceManagementProfileResult:
 
     @_builtins.property
     @pulumi.getter(name="permittedIps")
-    def permitted_ips(self) -> Sequence[_builtins.str]:
+    def permitted_ips(self) -> Sequence['outputs.GetInterfaceManagementProfilePermittedIpResult']:
         """
-        Permitted ip
+        Allowed IP address(es)
         """
         return pulumi.get(self, "permitted_ips")
 
@@ -153,9 +154,9 @@ class GetInterfaceManagementProfileResult:
 
     @_builtins.property
     @pulumi.getter(name="responsePages")
-    def response_pages(self) -> _builtins.str:
+    def response_pages(self) -> _builtins.bool:
         """
-        Response pages
+        Allow response pages?
         """
         return pulumi.get(self, "response_pages")
 
@@ -192,7 +193,7 @@ class GetInterfaceManagementProfileResult:
     @pulumi.getter(name="useridService")
     def userid_service(self) -> _builtins.bool:
         """
-        Userid service
+        Allow User-ID?
         """
         return pulumi.get(self, "userid_service")
 
@@ -200,7 +201,7 @@ class GetInterfaceManagementProfileResult:
     @pulumi.getter(name="useridSyslogListenerSsl")
     def userid_syslog_listener_ssl(self) -> _builtins.bool:
         """
-        Userid syslog listener ssl
+        Allow User-ID syslog listener (SSL)?
         """
         return pulumi.get(self, "userid_syslog_listener_ssl")
 
@@ -208,7 +209,7 @@ class GetInterfaceManagementProfileResult:
     @pulumi.getter(name="useridSyslogListenerUdp")
     def userid_syslog_listener_udp(self) -> _builtins.bool:
         """
-        Userid syslog listener udp
+        Allow User-ID syslog listener (UDP)?
         """
         return pulumi.get(self, "userid_syslog_listener_udp")
 
@@ -244,6 +245,43 @@ def get_interface_management_profile(id: Optional[_builtins.str] = None,
     """
     InterfaceManagementProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # 1. Resource: Create the Interface Management Profile
+    # This block creates the profile with your specified configuration.
+    test_inf_mgmt_profile = scm.InterfaceManagementProfile("test_inf_mgmt_profile",
+        name="test_inf_mgmt_profile_ds_1",
+        folder="All",
+        permitted_ips=[
+            {
+                "name": "10.0.0.0/24",
+            },
+            {
+                "name": "10.0.0.0/32",
+            },
+        ],
+        http=True,
+        https=False,
+        telnet=False,
+        ssh=True,
+        ping=False,
+        http_ocsp=True,
+        userid_service=True,
+        userid_syslog_listener_ssl=True,
+        userid_syslog_listener_udp=True,
+        response_pages=False)
+    # --------------------------------------------------------------------------------
+    # 2. Data Source: Retrieve the Interface Management Profile by ID
+    # We use the resource's generated 'id' attribute to fetch the profile.
+    single_profile_by_id = scm.get_interface_management_profile_output(id=test_inf_mgmt_profile.id)
+    pulumi.export("fetchedProfileName", single_profile_by_id.name)
+    pulumi.export("fetchedProfile", single_profile_by_id)
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Name
@@ -277,6 +315,43 @@ def get_interface_management_profile_output(id: Optional[pulumi.Input[_builtins.
                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetInterfaceManagementProfileResult]:
     """
     InterfaceManagementProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # 1. Resource: Create the Interface Management Profile
+    # This block creates the profile with your specified configuration.
+    test_inf_mgmt_profile = scm.InterfaceManagementProfile("test_inf_mgmt_profile",
+        name="test_inf_mgmt_profile_ds_1",
+        folder="All",
+        permitted_ips=[
+            {
+                "name": "10.0.0.0/24",
+            },
+            {
+                "name": "10.0.0.0/32",
+            },
+        ],
+        http=True,
+        https=False,
+        telnet=False,
+        ssh=True,
+        ping=False,
+        http_ocsp=True,
+        userid_service=True,
+        userid_syslog_listener_ssl=True,
+        userid_syslog_listener_udp=True,
+        response_pages=False)
+    # --------------------------------------------------------------------------------
+    # 2. Data Source: Retrieve the Interface Management Profile by ID
+    # We use the resource's generated 'id' attribute to fetch the profile.
+    single_profile_by_id = scm.get_interface_management_profile_output(id=test_inf_mgmt_profile.id)
+    pulumi.export("fetchedProfileName", single_profile_by_id.name)
+    pulumi.export("fetchedProfile", single_profile_by_id)
+    ```
 
 
     :param _builtins.str id: UUID of the resource

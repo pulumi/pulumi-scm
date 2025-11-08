@@ -32,14 +32,14 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
     }
 
     /**
-     * Rib
+     * BGP Root RIB
      * 
      */
     @Import(name="rib")
     private @Nullable Output<BgpRouteMapRedistributionBgpRibArgs> rib;
 
     /**
-     * @return Rib
+     * @return BGP Root RIB
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpRibArgs>> rib() {
@@ -93,7 +93,7 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param rib Rib
+         * @param rib BGP Root RIB
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
         }
 
         /**
-         * @param rib Rib
+         * @param rib BGP Root RIB
          * 
          * @return builder
          * 

@@ -11,12 +11,36 @@ import java.util.Objects;
 @CustomType
 public final class GetZoneProtectionProfileScanWhiteList {
     /**
+     * @return Ipv4
+     * 
+     */
+    private String ipv4;
+    /**
+     * @return Ipv6
+     * 
+     */
+    private String ipv6;
+    /**
      * @return A descriptive name for the address to exclude.
      * 
      */
     private String name;
 
     private GetZoneProtectionProfileScanWhiteList() {}
+    /**
+     * @return Ipv4
+     * 
+     */
+    public String ipv4() {
+        return this.ipv4;
+    }
+    /**
+     * @return Ipv6
+     * 
+     */
+    public String ipv6() {
+        return this.ipv6;
+    }
     /**
      * @return A descriptive name for the address to exclude.
      * 
@@ -34,13 +58,33 @@ public final class GetZoneProtectionProfileScanWhiteList {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String ipv4;
+        private String ipv6;
         private String name;
         public Builder() {}
         public Builder(GetZoneProtectionProfileScanWhiteList defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.ipv4 = defaults.ipv4;
+    	      this.ipv6 = defaults.ipv6;
     	      this.name = defaults.name;
         }
 
+        @CustomType.Setter
+        public Builder ipv4(String ipv4) {
+            if (ipv4 == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileScanWhiteList", "ipv4");
+            }
+            this.ipv4 = ipv4;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder ipv6(String ipv6) {
+            if (ipv6 == null) {
+              throw new MissingRequiredPropertyException("GetZoneProtectionProfileScanWhiteList", "ipv6");
+            }
+            this.ipv6 = ipv6;
+            return this;
+        }
         @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
@@ -51,6 +95,8 @@ public final class GetZoneProtectionProfileScanWhiteList {
         }
         public GetZoneProtectionProfileScanWhiteList build() {
             final var _resultValue = new GetZoneProtectionProfileScanWhiteList();
+            _resultValue.ipv4 = ipv4;
+            _resultValue.ipv6 = ipv6;
             _resultValue.name = name;
             return _resultValue;
         }

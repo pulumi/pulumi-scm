@@ -254,6 +254,8 @@ class DnsSecurityProfile(pulumi.CustomResource):
         """
         DnsSecurityProfile resource
 
+        ## Example Usage
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['DnsSecurityProfileBotnetDomainsArgs', 'DnsSecurityProfileBotnetDomainsArgsDict']] botnet_domains: Botnet domains
@@ -271,6 +273,8 @@ class DnsSecurityProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         DnsSecurityProfile resource
+
+        ## Example Usage
 
         :param str resource_name: The name of the resource.
         :param DnsSecurityProfileArgs args: The arguments to use to populate this resource's properties.

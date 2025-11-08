@@ -7,6 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3Arp;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3DdnsConfig;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3DhcpClient;
+import com.pulumi.scm.outputs.EthernetInterfaceLayer3Ip;
 import com.pulumi.scm.outputs.EthernetInterfaceLayer3Pppoe;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,12 +24,12 @@ public final class EthernetInterfaceLayer3 {
      */
     private @Nullable List<EthernetInterfaceLayer3Arp> arps;
     /**
-     * @return Ddns config
+     * @return Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     private @Nullable EthernetInterfaceLayer3DdnsConfig ddnsConfig;
     /**
-     * @return Dhcp client
+     * @return Ethernet Interfaces DHCP Client Object
      * 
      */
     private @Nullable EthernetInterfaceLayer3DhcpClient dhcpClient;
@@ -38,10 +39,10 @@ public final class EthernetInterfaceLayer3 {
      */
     private @Nullable String interfaceManagementProfile;
     /**
-     * @return Interface IP addresses
+     * @return Ethernet Interface IP addresses
      * 
      */
-    private @Nullable List<String> ips;
+    private @Nullable List<EthernetInterfaceLayer3Ip> ips;
     /**
      * @return MTU
      * 
@@ -62,14 +63,14 @@ public final class EthernetInterfaceLayer3 {
         return this.arps == null ? List.of() : this.arps;
     }
     /**
-     * @return Ddns config
+     * @return Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     public Optional<EthernetInterfaceLayer3DdnsConfig> ddnsConfig() {
         return Optional.ofNullable(this.ddnsConfig);
     }
     /**
-     * @return Dhcp client
+     * @return Ethernet Interfaces DHCP Client Object
      * 
      */
     public Optional<EthernetInterfaceLayer3DhcpClient> dhcpClient() {
@@ -83,10 +84,10 @@ public final class EthernetInterfaceLayer3 {
         return Optional.ofNullable(this.interfaceManagementProfile);
     }
     /**
-     * @return Interface IP addresses
+     * @return Ethernet Interface IP addresses
      * 
      */
-    public List<String> ips() {
+    public List<EthernetInterfaceLayer3Ip> ips() {
         return this.ips == null ? List.of() : this.ips;
     }
     /**
@@ -117,7 +118,7 @@ public final class EthernetInterfaceLayer3 {
         private @Nullable EthernetInterfaceLayer3DdnsConfig ddnsConfig;
         private @Nullable EthernetInterfaceLayer3DhcpClient dhcpClient;
         private @Nullable String interfaceManagementProfile;
-        private @Nullable List<String> ips;
+        private @Nullable List<EthernetInterfaceLayer3Ip> ips;
         private @Nullable Integer mtu;
         private @Nullable EthernetInterfaceLayer3Pppoe pppoe;
         public Builder() {}
@@ -160,12 +161,12 @@ public final class EthernetInterfaceLayer3 {
             return this;
         }
         @CustomType.Setter
-        public Builder ips(@Nullable List<String> ips) {
+        public Builder ips(@Nullable List<EthernetInterfaceLayer3Ip> ips) {
 
             this.ips = ips;
             return this;
         }
-        public Builder ips(String... ips) {
+        public Builder ips(EthernetInterfaceLayer3Ip... ips) {
             return ips(List.of(ips));
         }
         @CustomType.Setter

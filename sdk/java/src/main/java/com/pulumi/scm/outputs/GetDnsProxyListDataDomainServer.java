@@ -13,62 +13,62 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsProxyListDataDomainServer {
     /**
-     * @return Cacheable
+     * @return Enable caching for this DNS proxy rule?
      * 
      */
     private Boolean cacheable;
     /**
-     * @return Domain name
+     * @return Domain names(s) that will be matched
      * 
      */
     private List<String> domainNames;
     /**
-     * @return Name
+     * @return Proxy rule name
      * 
      */
     private String name;
     /**
-     * @return Primary
+     * @return Primary DNS server IP address
      * 
      */
     private String primary;
     /**
-     * @return Secondary
+     * @return Secondary DNS server IP address
      * 
      */
     private String secondary;
 
     private GetDnsProxyListDataDomainServer() {}
     /**
-     * @return Cacheable
+     * @return Enable caching for this DNS proxy rule?
      * 
      */
     public Boolean cacheable() {
         return this.cacheable;
     }
     /**
-     * @return Domain name
+     * @return Domain names(s) that will be matched
      * 
      */
     public List<String> domainNames() {
         return this.domainNames;
     }
     /**
-     * @return Name
+     * @return Proxy rule name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Primary
+     * @return Primary DNS server IP address
      * 
      */
     public String primary() {
         return this.primary;
     }
     /**
-     * @return Secondary
+     * @return Secondary DNS server IP address
      * 
      */
     public String secondary() {

@@ -18,11 +18,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.EthernetInterfaceLayer3Arp> Arps;
         /// <summary>
-        /// Ddns config
+        /// Dynamic DNS configuration specific to the Ethernet Interfaces.
         /// </summary>
         public readonly Outputs.EthernetInterfaceLayer3DdnsConfig? DdnsConfig;
         /// <summary>
-        /// Dhcp client
+        /// Ethernet Interfaces DHCP Client Object
         /// </summary>
         public readonly Outputs.EthernetInterfaceLayer3DhcpClient? DhcpClient;
         /// <summary>
@@ -30,9 +30,9 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? InterfaceManagementProfile;
         /// <summary>
-        /// Interface IP addresses
+        /// Ethernet Interface IP addresses
         /// </summary>
-        public readonly ImmutableArray<string> Ips;
+        public readonly ImmutableArray<Outputs.EthernetInterfaceLayer3Ip> Ips;
         /// <summary>
         /// MTU
         /// </summary>
@@ -52,7 +52,7 @@ namespace Pulumi.Scm.Outputs
 
             string? interfaceManagementProfile,
 
-            ImmutableArray<string> ips,
+            ImmutableArray<Outputs.EthernetInterfaceLayer3Ip> ips,
 
             int? mtu,
 

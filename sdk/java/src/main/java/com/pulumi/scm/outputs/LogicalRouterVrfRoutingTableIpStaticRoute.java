@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.LogicalRouterVrfRoutingTableIpStaticRouteBfd;
 import com.pulumi.scm.outputs.LogicalRouterVrfRoutingTableIpStaticRouteNexthop;
 import com.pulumi.scm.outputs.LogicalRouterVrfRoutingTableIpStaticRoutePathMonitor;
 import com.pulumi.scm.outputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTable;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Admin dist
      * 
      */
-    private @Nullable Double adminDist;
+    private @Nullable Integer adminDist;
     /**
      * @return Bfd
      * 
@@ -41,7 +41,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Metric
      * 
      */
-    private @Nullable Double metric;
+    private @Nullable Integer metric;
     /**
      * @return Name
      * 
@@ -68,7 +68,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Admin dist
      * 
      */
-    public Optional<Double> adminDist() {
+    public Optional<Integer> adminDist() {
         return Optional.ofNullable(this.adminDist);
     }
     /**
@@ -96,7 +96,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoute {
      * @return Metric
      * 
      */
-    public Optional<Double> metric() {
+    public Optional<Integer> metric() {
         return Optional.ofNullable(this.metric);
     }
     /**
@@ -137,11 +137,11 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoute {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double adminDist;
+        private @Nullable Integer adminDist;
         private @Nullable LogicalRouterVrfRoutingTableIpStaticRouteBfd bfd;
         private @Nullable String destination;
         private @Nullable String interface_;
-        private @Nullable Double metric;
+        private @Nullable Integer metric;
         private String name;
         private @Nullable LogicalRouterVrfRoutingTableIpStaticRouteNexthop nexthop;
         private @Nullable LogicalRouterVrfRoutingTableIpStaticRoutePathMonitor pathMonitor;
@@ -161,7 +161,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoute {
         }
 
         @CustomType.Setter
-        public Builder adminDist(@Nullable Double adminDist) {
+        public Builder adminDist(@Nullable Integer adminDist) {
 
             this.adminDist = adminDist;
             return this;
@@ -185,7 +185,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoute {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(@Nullable Double metric) {
+        public Builder metric(@Nullable Integer metric) {
 
             this.metric = metric;
             return this;

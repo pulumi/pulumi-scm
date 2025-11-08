@@ -25,21 +25,21 @@ namespace Pulumi.Scm
     ///     // First, create the tags that will be used in the dynamic user group's filter.
     ///     var scmDugTag1 = new Scm.Tag("scm_dug_tag_1", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_dug_tag_1",
     ///         Color = "Red",
     ///     });
     /// 
     ///     var scmDugTag2 = new Scm.Tag("scm_dug_tag_2", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_dug_tag_2",
     ///         Color = "Blue",
     ///     });
     /// 
     ///     var scmDugTag3 = new Scm.Tag("scm_dug_tag_3", new()
     ///     {
-    ///         Folder = "Shared",
+    ///         Folder = "All",
     ///         Name = "scm_dug_tag_3",
     ///         Color = "Green",
     ///     });

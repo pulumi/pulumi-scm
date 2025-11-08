@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,110 +15,110 @@ public final class LogicalRouterVrfVrAdminDists {
      * @return Ebgp
      * 
      */
-    private @Nullable Double ebgp;
+    private @Nullable Integer ebgp;
     /**
      * @return Ibgp
      * 
      */
-    private @Nullable Double ibgp;
+    private @Nullable Integer ibgp;
     /**
      * @return Ospf ext
      * 
      */
-    private @Nullable Double ospfExt;
+    private @Nullable Integer ospfExt;
     /**
      * @return Ospf int
      * 
      */
-    private @Nullable Double ospfInt;
+    private @Nullable Integer ospfInt;
     /**
      * @return Ospfv3 ext
      * 
      */
-    private @Nullable Double ospfv3Ext;
+    private @Nullable Integer ospfv3Ext;
     /**
      * @return Ospfv3 int
      * 
      */
-    private @Nullable Double ospfv3Int;
+    private @Nullable Integer ospfv3Int;
     /**
      * @return Rip
      * 
      */
-    private @Nullable Double rip;
+    private @Nullable Integer rip;
     /**
      * @return Static
      * 
      */
-    private @Nullable Double static_;
+    private @Nullable Integer static_;
     /**
      * @return Static ipv6
      * 
      */
-    private @Nullable Double staticIpv6;
+    private @Nullable Integer staticIpv6;
 
     private LogicalRouterVrfVrAdminDists() {}
     /**
      * @return Ebgp
      * 
      */
-    public Optional<Double> ebgp() {
+    public Optional<Integer> ebgp() {
         return Optional.ofNullable(this.ebgp);
     }
     /**
      * @return Ibgp
      * 
      */
-    public Optional<Double> ibgp() {
+    public Optional<Integer> ibgp() {
         return Optional.ofNullable(this.ibgp);
     }
     /**
      * @return Ospf ext
      * 
      */
-    public Optional<Double> ospfExt() {
+    public Optional<Integer> ospfExt() {
         return Optional.ofNullable(this.ospfExt);
     }
     /**
      * @return Ospf int
      * 
      */
-    public Optional<Double> ospfInt() {
+    public Optional<Integer> ospfInt() {
         return Optional.ofNullable(this.ospfInt);
     }
     /**
      * @return Ospfv3 ext
      * 
      */
-    public Optional<Double> ospfv3Ext() {
+    public Optional<Integer> ospfv3Ext() {
         return Optional.ofNullable(this.ospfv3Ext);
     }
     /**
      * @return Ospfv3 int
      * 
      */
-    public Optional<Double> ospfv3Int() {
+    public Optional<Integer> ospfv3Int() {
         return Optional.ofNullable(this.ospfv3Int);
     }
     /**
      * @return Rip
      * 
      */
-    public Optional<Double> rip() {
+    public Optional<Integer> rip() {
         return Optional.ofNullable(this.rip);
     }
     /**
      * @return Static
      * 
      */
-    public Optional<Double> static_() {
+    public Optional<Integer> static_() {
         return Optional.ofNullable(this.static_);
     }
     /**
      * @return Static ipv6
      * 
      */
-    public Optional<Double> staticIpv6() {
+    public Optional<Integer> staticIpv6() {
         return Optional.ofNullable(this.staticIpv6);
     }
 
@@ -131,15 +131,15 @@ public final class LogicalRouterVrfVrAdminDists {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double ebgp;
-        private @Nullable Double ibgp;
-        private @Nullable Double ospfExt;
-        private @Nullable Double ospfInt;
-        private @Nullable Double ospfv3Ext;
-        private @Nullable Double ospfv3Int;
-        private @Nullable Double rip;
-        private @Nullable Double static_;
-        private @Nullable Double staticIpv6;
+        private @Nullable Integer ebgp;
+        private @Nullable Integer ibgp;
+        private @Nullable Integer ospfExt;
+        private @Nullable Integer ospfInt;
+        private @Nullable Integer ospfv3Ext;
+        private @Nullable Integer ospfv3Int;
+        private @Nullable Integer rip;
+        private @Nullable Integer static_;
+        private @Nullable Integer staticIpv6;
         public Builder() {}
         public Builder(LogicalRouterVrfVrAdminDists defaults) {
     	      Objects.requireNonNull(defaults);
@@ -155,55 +155,55 @@ public final class LogicalRouterVrfVrAdminDists {
         }
 
         @CustomType.Setter
-        public Builder ebgp(@Nullable Double ebgp) {
+        public Builder ebgp(@Nullable Integer ebgp) {
 
             this.ebgp = ebgp;
             return this;
         }
         @CustomType.Setter
-        public Builder ibgp(@Nullable Double ibgp) {
+        public Builder ibgp(@Nullable Integer ibgp) {
 
             this.ibgp = ibgp;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfExt(@Nullable Double ospfExt) {
+        public Builder ospfExt(@Nullable Integer ospfExt) {
 
             this.ospfExt = ospfExt;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfInt(@Nullable Double ospfInt) {
+        public Builder ospfInt(@Nullable Integer ospfInt) {
 
             this.ospfInt = ospfInt;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfv3Ext(@Nullable Double ospfv3Ext) {
+        public Builder ospfv3Ext(@Nullable Integer ospfv3Ext) {
 
             this.ospfv3Ext = ospfv3Ext;
             return this;
         }
         @CustomType.Setter
-        public Builder ospfv3Int(@Nullable Double ospfv3Int) {
+        public Builder ospfv3Int(@Nullable Integer ospfv3Int) {
 
             this.ospfv3Int = ospfv3Int;
             return this;
         }
         @CustomType.Setter
-        public Builder rip(@Nullable Double rip) {
+        public Builder rip(@Nullable Integer rip) {
 
             this.rip = rip;
             return this;
         }
         @CustomType.Setter("static")
-        public Builder static_(@Nullable Double static_) {
+        public Builder static_(@Nullable Integer static_) {
 
             this.static_ = static_;
             return this;
         }
         @CustomType.Setter
-        public Builder staticIpv6(@Nullable Double staticIpv6) {
+        public Builder staticIpv6(@Nullable Integer staticIpv6) {
 
             this.staticIpv6 = staticIpv6;
             return this;

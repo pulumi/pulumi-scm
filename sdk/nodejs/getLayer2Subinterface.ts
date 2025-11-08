@@ -6,6 +6,26 @@ import * as utilities from "./utilities";
 
 /**
  * Layer2Subinterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up layer2 sub-interface by its ID.
+ * const scmL2SubinterfaceDs = scm.getLayer2Subinterface({
+ *     id: "88f730d1-6577-492b-88a6-73d4a513dc76",
+ * });
+ * export const layer2SubinterfaceDataSourceResults = {
+ *     id: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.id),
+ *     name: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.name),
+ *     comment: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.comment),
+ *     vlanTag: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.vlanTag),
+ *     parentInterface: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.parentInterface),
+ *     folder: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.folder),
+ * };
+ * ```
  */
 export function getLayer2Subinterface(args: GetLayer2SubinterfaceArgs, opts?: pulumi.InvokeOptions): Promise<GetLayer2SubinterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -63,12 +83,32 @@ export interface GetLayer2SubinterfaceResult {
     readonly snippet: string;
     readonly tfid: string;
     /**
-     * Vlan tag
+     * VLAN tag
      */
-    readonly vlanTag: number;
+    readonly vlanTag: string;
 }
 /**
  * Layer2Subinterface data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up layer2 sub-interface by its ID.
+ * const scmL2SubinterfaceDs = scm.getLayer2Subinterface({
+ *     id: "88f730d1-6577-492b-88a6-73d4a513dc76",
+ * });
+ * export const layer2SubinterfaceDataSourceResults = {
+ *     id: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.id),
+ *     name: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.name),
+ *     comment: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.comment),
+ *     vlanTag: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.vlanTag),
+ *     parentInterface: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.parentInterface),
+ *     folder: scmL2SubinterfaceDs.then(scmL2SubinterfaceDs => scmL2SubinterfaceDs.folder),
+ * };
+ * ```
  */
 export function getLayer2SubinterfaceOutput(args: GetLayer2SubinterfaceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLayer2SubinterfaceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Link tags
+        /// Link-Tags for interfaces identified by defined tags
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSdwanTrafficDistributionProfileListDataLinkTagResult> LinkTags;
         /// <summary>

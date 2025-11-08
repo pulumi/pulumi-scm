@@ -11,7 +11,7 @@ import com.pulumi.scm.SdwanErrorCorrectionProfileArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.SdwanErrorCorrectionProfileState;
 import com.pulumi.scm.outputs.SdwanErrorCorrectionProfileMode;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,14 +26,14 @@ public class SdwanErrorCorrectionProfile extends com.pulumi.resources.CustomReso
      * Activation threshold
      * 
      */
-    @Export(name="activationThreshold", refs={Double.class}, tree="[0]")
-    private Output<Double> activationThreshold;
+    @Export(name="activationThreshold", refs={Integer.class}, tree="[0]")
+    private Output<Integer> activationThreshold;
 
     /**
      * @return Activation threshold
      * 
      */
-    public Output<Double> activationThreshold() {
+    public Output<Integer> activationThreshold() {
         return this.activationThreshold;
     }
     /**

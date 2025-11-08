@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimInterface {
      * @return Dr priority
      * 
      */
-    private Double drPriority;
+    private Integer drPriority;
     /**
      * @return If timer
      * 
@@ -55,7 +55,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimInterface {
      * @return Dr priority
      * 
      */
-    public Double drPriority() {
+    public Integer drPriority() {
         return this.drPriority;
     }
     /**
@@ -97,7 +97,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimInterface {
     @CustomType.Builder
     public static final class Builder {
         private String description;
-        private Double drPriority;
+        private Integer drPriority;
         private String ifTimer;
         private String name;
         private String neighborFilter;
@@ -122,7 +122,7 @@ public final class GetLogicalRouterListDataVrfMulticastPimInterface {
             return this;
         }
         @CustomType.Setter
-        public Builder drPriority(Double drPriority) {
+        public Builder drPriority(Integer drPriority) {
             if (drPriority == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfMulticastPimInterface", "drPriority");
             }

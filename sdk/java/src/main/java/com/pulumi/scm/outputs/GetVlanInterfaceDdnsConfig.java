@@ -13,12 +13,12 @@ import java.util.Objects;
 @CustomType
 public final class GetVlanInterfaceDdnsConfig {
     /**
-     * @return Ddns cert profile
+     * @return Certificate profile
      * 
      */
     private String ddnsCertProfile;
     /**
-     * @return Ddns enabled
+     * @return Enable DDNS?
      * 
      */
     private Boolean ddnsEnabled;
@@ -28,36 +28,36 @@ public final class GetVlanInterfaceDdnsConfig {
      */
     private String ddnsHostname;
     /**
-     * @return Ddns ip
+     * @return IP to register (static only)
      * 
      */
     private String ddnsIp;
     /**
-     * @return Ddns update interval
+     * @return Update interval (days)
      * 
      */
     private Integer ddnsUpdateInterval;
     /**
-     * @return Ddns vendor
+     * @return DDNS vendor
      * 
      */
     private String ddnsVendor;
     /**
-     * @return Ddns vendor config
+     * @return DDNS vendor
      * 
      */
     private String ddnsVendorConfig;
 
     private GetVlanInterfaceDdnsConfig() {}
     /**
-     * @return Ddns cert profile
+     * @return Certificate profile
      * 
      */
     public String ddnsCertProfile() {
         return this.ddnsCertProfile;
     }
     /**
-     * @return Ddns enabled
+     * @return Enable DDNS?
      * 
      */
     public Boolean ddnsEnabled() {
@@ -71,28 +71,28 @@ public final class GetVlanInterfaceDdnsConfig {
         return this.ddnsHostname;
     }
     /**
-     * @return Ddns ip
+     * @return IP to register (static only)
      * 
      */
     public String ddnsIp() {
         return this.ddnsIp;
     }
     /**
-     * @return Ddns update interval
+     * @return Update interval (days)
      * 
      */
     public Integer ddnsUpdateInterval() {
         return this.ddnsUpdateInterval;
     }
     /**
-     * @return Ddns vendor
+     * @return DDNS vendor
      * 
      */
     public String ddnsVendor() {
         return this.ddnsVendor;
     }
     /**
-     * @return Ddns vendor config
+     * @return DDNS vendor
      * 
      */
     public String ddnsVendorConfig() {

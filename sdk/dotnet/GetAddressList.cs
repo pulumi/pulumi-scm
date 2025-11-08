@@ -29,12 +29,12 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
         ///     var allShared = Scm.GetAddressList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     var paginatedAddressesExample = Scm.GetAddressList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -73,12 +73,12 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
         ///     var allShared = Scm.GetAddressList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     var paginatedAddressesExample = Scm.GetAddressList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -117,12 +117,12 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
         ///     var allShared = Scm.GetAddressList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     var paginatedAddressesExample = Scm.GetAddressList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });

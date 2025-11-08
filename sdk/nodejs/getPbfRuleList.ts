@@ -8,6 +8,23 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Define a data source for listing pbf rules
+ * const pagedPbfRulesList = scm.getPbfRuleList({
+ *     folder: "All",
+ *     limit: 10,
+ * });
+ * export const fetchedPbfRuleListSummary = {
+ *     totalRulesInList: pagedPbfRulesList.then(pagedPbfRulesList => pagedPbfRulesList.total),
+ *     allRules: pagedPbfRulesList.then(pagedPbfRulesList => pagedPbfRulesList.datas),
+ * };
+ * ```
  */
 export function getPbfRuleList(args?: GetPbfRuleListArgs, opts?: pulumi.InvokeOptions): Promise<GetPbfRuleListResult> {
     args = args || {};
@@ -96,6 +113,23 @@ export interface GetPbfRuleListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Define a data source for listing pbf rules
+ * const pagedPbfRulesList = scm.getPbfRuleList({
+ *     folder: "All",
+ *     limit: 10,
+ * });
+ * export const fetchedPbfRuleListSummary = {
+ *     totalRulesInList: pagedPbfRulesList.then(pagedPbfRulesList => pagedPbfRulesList.total),
+ *     allRules: pagedPbfRulesList.then(pagedPbfRulesList => pagedPbfRulesList.datas),
+ * };
+ * ```
  */
 export function getPbfRuleListOutput(args?: GetPbfRuleListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetPbfRuleListResult> {
     args = args || {};

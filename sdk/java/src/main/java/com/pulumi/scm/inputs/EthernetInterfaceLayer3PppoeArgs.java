@@ -6,6 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.inputs.EthernetInterfaceLayer3PppoePassiveArgs;
 import com.pulumi.scm.inputs.EthernetInterfaceLayer3PppoeStaticAddressArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -50,14 +51,14 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
     }
 
     /**
-     * Default route metric
+     * Metric of the default route created
      * 
      */
     @Import(name="defaultRouteMetric")
     private @Nullable Output<Integer> defaultRouteMetric;
 
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     public Optional<Output<Integer>> defaultRouteMetric() {
@@ -84,13 +85,13 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
      * 
      */
     @Import(name="passive")
-    private @Nullable Output<Boolean> passive;
+    private @Nullable Output<EthernetInterfaceLayer3PppoePassiveArgs> passive;
 
     /**
      * @return Passive
      * 
      */
-    public Optional<Output<Boolean>> passive() {
+    public Optional<Output<EthernetInterfaceLayer3PppoePassiveArgs>> passive() {
         return Optional.ofNullable(this.passive);
     }
 
@@ -229,7 +230,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param defaultRouteMetric Default route metric
+         * @param defaultRouteMetric Metric of the default route created
          * 
          * @return builder
          * 
@@ -240,7 +241,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
         }
 
         /**
-         * @param defaultRouteMetric Default route metric
+         * @param defaultRouteMetric Metric of the default route created
          * 
          * @return builder
          * 
@@ -276,7 +277,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder passive(@Nullable Output<Boolean> passive) {
+        public Builder passive(@Nullable Output<EthernetInterfaceLayer3PppoePassiveArgs> passive) {
             $.passive = passive;
             return this;
         }
@@ -287,7 +288,7 @@ public final class EthernetInterfaceLayer3PppoeArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder passive(Boolean passive) {
+        public Builder passive(EthernetInterfaceLayer3PppoePassiveArgs passive) {
             return passive(Output.of(passive));
         }
 

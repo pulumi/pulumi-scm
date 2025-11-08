@@ -4,10 +4,11 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.scm.outputs.RadiusServerProfileProtocolEAPTTLSWithPAP;
-import com.pulumi.scm.outputs.RadiusServerProfileProtocolPEAPMSCHAPv2;
-import com.pulumi.scm.outputs.RadiusServerProfileProtocolPEAPWithGTC;
-import java.lang.String;
+import com.pulumi.scm.outputs.RadiusServerProfileProtocolChap;
+import com.pulumi.scm.outputs.RadiusServerProfileProtocolEapTtlsWithPap;
+import com.pulumi.scm.outputs.RadiusServerProfileProtocolPap;
+import com.pulumi.scm.outputs.RadiusServerProfileProtocolPeapMschaPv2;
+import com.pulumi.scm.outputs.RadiusServerProfileProtocolPeapWithGtc;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,63 +19,63 @@ public final class RadiusServerProfileProtocol {
      * @return C h a p
      * 
      */
-    private @Nullable String cHAP;
+    private @Nullable RadiusServerProfileProtocolChap chap;
     /**
      * @return E a p t t l s with p a p
      * 
      */
-    private @Nullable RadiusServerProfileProtocolEAPTTLSWithPAP eAPTTLSWithPAP;
+    private @Nullable RadiusServerProfileProtocolEapTtlsWithPap eapTtlsWithPap;
     /**
      * @return P a p
      * 
      */
-    private @Nullable String pAP;
+    private @Nullable RadiusServerProfileProtocolPap pap;
     /**
      * @return P e a p m s c h a pv2
      * 
      */
-    private @Nullable RadiusServerProfileProtocolPEAPMSCHAPv2 pEAPMSCHAPv2;
+    private @Nullable RadiusServerProfileProtocolPeapMschaPv2 peapMschaPv2;
     /**
      * @return P e a p with g t c
      * 
      */
-    private @Nullable RadiusServerProfileProtocolPEAPWithGTC pEAPWithGTC;
+    private @Nullable RadiusServerProfileProtocolPeapWithGtc peapWithGtc;
 
     private RadiusServerProfileProtocol() {}
     /**
      * @return C h a p
      * 
      */
-    public Optional<String> cHAP() {
-        return Optional.ofNullable(this.cHAP);
+    public Optional<RadiusServerProfileProtocolChap> chap() {
+        return Optional.ofNullable(this.chap);
     }
     /**
      * @return E a p t t l s with p a p
      * 
      */
-    public Optional<RadiusServerProfileProtocolEAPTTLSWithPAP> eAPTTLSWithPAP() {
-        return Optional.ofNullable(this.eAPTTLSWithPAP);
+    public Optional<RadiusServerProfileProtocolEapTtlsWithPap> eapTtlsWithPap() {
+        return Optional.ofNullable(this.eapTtlsWithPap);
     }
     /**
      * @return P a p
      * 
      */
-    public Optional<String> pAP() {
-        return Optional.ofNullable(this.pAP);
+    public Optional<RadiusServerProfileProtocolPap> pap() {
+        return Optional.ofNullable(this.pap);
     }
     /**
      * @return P e a p m s c h a pv2
      * 
      */
-    public Optional<RadiusServerProfileProtocolPEAPMSCHAPv2> pEAPMSCHAPv2() {
-        return Optional.ofNullable(this.pEAPMSCHAPv2);
+    public Optional<RadiusServerProfileProtocolPeapMschaPv2> peapMschaPv2() {
+        return Optional.ofNullable(this.peapMschaPv2);
     }
     /**
      * @return P e a p with g t c
      * 
      */
-    public Optional<RadiusServerProfileProtocolPEAPWithGTC> pEAPWithGTC() {
-        return Optional.ofNullable(this.pEAPWithGTC);
+    public Optional<RadiusServerProfileProtocolPeapWithGtc> peapWithGtc() {
+        return Optional.ofNullable(this.peapWithGtc);
     }
 
     public static Builder builder() {
@@ -86,58 +87,58 @@ public final class RadiusServerProfileProtocol {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String cHAP;
-        private @Nullable RadiusServerProfileProtocolEAPTTLSWithPAP eAPTTLSWithPAP;
-        private @Nullable String pAP;
-        private @Nullable RadiusServerProfileProtocolPEAPMSCHAPv2 pEAPMSCHAPv2;
-        private @Nullable RadiusServerProfileProtocolPEAPWithGTC pEAPWithGTC;
+        private @Nullable RadiusServerProfileProtocolChap chap;
+        private @Nullable RadiusServerProfileProtocolEapTtlsWithPap eapTtlsWithPap;
+        private @Nullable RadiusServerProfileProtocolPap pap;
+        private @Nullable RadiusServerProfileProtocolPeapMschaPv2 peapMschaPv2;
+        private @Nullable RadiusServerProfileProtocolPeapWithGtc peapWithGtc;
         public Builder() {}
         public Builder(RadiusServerProfileProtocol defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.cHAP = defaults.cHAP;
-    	      this.eAPTTLSWithPAP = defaults.eAPTTLSWithPAP;
-    	      this.pAP = defaults.pAP;
-    	      this.pEAPMSCHAPv2 = defaults.pEAPMSCHAPv2;
-    	      this.pEAPWithGTC = defaults.pEAPWithGTC;
+    	      this.chap = defaults.chap;
+    	      this.eapTtlsWithPap = defaults.eapTtlsWithPap;
+    	      this.pap = defaults.pap;
+    	      this.peapMschaPv2 = defaults.peapMschaPv2;
+    	      this.peapWithGtc = defaults.peapWithGtc;
         }
 
         @CustomType.Setter
-        public Builder cHAP(@Nullable String cHAP) {
+        public Builder chap(@Nullable RadiusServerProfileProtocolChap chap) {
 
-            this.cHAP = cHAP;
+            this.chap = chap;
             return this;
         }
         @CustomType.Setter
-        public Builder eAPTTLSWithPAP(@Nullable RadiusServerProfileProtocolEAPTTLSWithPAP eAPTTLSWithPAP) {
+        public Builder eapTtlsWithPap(@Nullable RadiusServerProfileProtocolEapTtlsWithPap eapTtlsWithPap) {
 
-            this.eAPTTLSWithPAP = eAPTTLSWithPAP;
+            this.eapTtlsWithPap = eapTtlsWithPap;
             return this;
         }
         @CustomType.Setter
-        public Builder pAP(@Nullable String pAP) {
+        public Builder pap(@Nullable RadiusServerProfileProtocolPap pap) {
 
-            this.pAP = pAP;
+            this.pap = pap;
             return this;
         }
         @CustomType.Setter
-        public Builder pEAPMSCHAPv2(@Nullable RadiusServerProfileProtocolPEAPMSCHAPv2 pEAPMSCHAPv2) {
+        public Builder peapMschaPv2(@Nullable RadiusServerProfileProtocolPeapMschaPv2 peapMschaPv2) {
 
-            this.pEAPMSCHAPv2 = pEAPMSCHAPv2;
+            this.peapMschaPv2 = peapMschaPv2;
             return this;
         }
         @CustomType.Setter
-        public Builder pEAPWithGTC(@Nullable RadiusServerProfileProtocolPEAPWithGTC pEAPWithGTC) {
+        public Builder peapWithGtc(@Nullable RadiusServerProfileProtocolPeapWithGtc peapWithGtc) {
 
-            this.pEAPWithGTC = pEAPWithGTC;
+            this.peapWithGtc = peapWithGtc;
             return this;
         }
         public RadiusServerProfileProtocol build() {
             final var _resultValue = new RadiusServerProfileProtocol();
-            _resultValue.cHAP = cHAP;
-            _resultValue.eAPTTLSWithPAP = eAPTTLSWithPAP;
-            _resultValue.pAP = pAP;
-            _resultValue.pEAPMSCHAPv2 = pEAPMSCHAPv2;
-            _resultValue.pEAPWithGTC = pEAPWithGTC;
+            _resultValue.chap = chap;
+            _resultValue.eapTtlsWithPap = eapTtlsWithPap;
+            _resultValue.pap = pap;
+            _resultValue.peapMschaPv2 = peapMschaPv2;
+            _resultValue.peapWithGtc = peapWithGtc;
             return _resultValue;
         }
     }

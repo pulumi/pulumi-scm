@@ -10,6 +10,22 @@ import * as utilities from "./utilities";
  * ApplicationFilter resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmApplicationFilter1 = new scm.ApplicationFilter("scm_application_filter_1", {
+ *     folder: "Shared",
+ *     name: "scm_application_filter_1",
+ *     categories: ["business-systems"],
+ *     risks: [1],
+ *     evasive: true,
+ *     tagging: {
+ *         noTag: true,
+ *     },
+ * });
+ * ```
  */
 export class ApplicationFilter extends pulumi.CustomResource {
     /**

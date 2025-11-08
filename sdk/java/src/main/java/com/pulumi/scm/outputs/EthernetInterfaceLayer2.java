@@ -4,7 +4,8 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Integer;
+import com.pulumi.scm.outputs.EthernetInterfaceLayer2Lldp;
+import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -12,17 +13,29 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EthernetInterfaceLayer2 {
     /**
-     * @return Vlan tag
+     * @return LLDP Settings
      * 
      */
-    private @Nullable Integer vlanTag;
+    private @Nullable EthernetInterfaceLayer2Lldp lldp;
+    /**
+     * @return Assign interface to VLAN tag
+     * 
+     */
+    private @Nullable String vlanTag;
 
     private EthernetInterfaceLayer2() {}
     /**
-     * @return Vlan tag
+     * @return LLDP Settings
      * 
      */
-    public Optional<Integer> vlanTag() {
+    public Optional<EthernetInterfaceLayer2Lldp> lldp() {
+        return Optional.ofNullable(this.lldp);
+    }
+    /**
+     * @return Assign interface to VLAN tag
+     * 
+     */
+    public Optional<String> vlanTag() {
         return Optional.ofNullable(this.vlanTag);
     }
 
@@ -35,21 +48,30 @@ public final class EthernetInterfaceLayer2 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Integer vlanTag;
+        private @Nullable EthernetInterfaceLayer2Lldp lldp;
+        private @Nullable String vlanTag;
         public Builder() {}
         public Builder(EthernetInterfaceLayer2 defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.lldp = defaults.lldp;
     	      this.vlanTag = defaults.vlanTag;
         }
 
         @CustomType.Setter
-        public Builder vlanTag(@Nullable Integer vlanTag) {
+        public Builder lldp(@Nullable EthernetInterfaceLayer2Lldp lldp) {
+
+            this.lldp = lldp;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder vlanTag(@Nullable String vlanTag) {
 
             this.vlanTag = vlanTag;
             return this;
         }
         public EthernetInterfaceLayer2 build() {
             final var _resultValue = new EthernetInterfaceLayer2();
+            _resultValue.lldp = lldp;
             _resultValue.vlanTag = vlanTag;
             return _resultValue;
         }

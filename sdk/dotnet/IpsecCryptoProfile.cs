@@ -13,6 +13,46 @@ namespace Pulumi.Scm
     /// IpsecCryptoProfile resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // The resource block defines a new IPsec Crypto Profile.
+    ///     var scmIpsecCryptoProfile2 = new Scm.IpsecCryptoProfile("scm_ipsec_crypto_profile_2", new()
+    ///     {
+    ///         Name = "scm_ipsec_crypto_profile_2",
+    ///         Folder = "Prisma Access",
+    ///         Esp = new Scm.Inputs.IpsecCryptoProfileEspArgs
+    ///         {
+    ///             Authentications = new[]
+    ///             {
+    ///                 "sha256",
+    ///                 "sha384",
+    ///             },
+    ///             Encryptions = new[]
+    ///             {
+    ///                 "aes-256-gcm",
+    ///                 "aes-128-cbc",
+    ///             },
+    ///         },
+    ///         DhGroup = "group14",
+    ///         Lifetime = new Scm.Inputs.IpsecCryptoProfileLifetimeArgs
+    ///         {
+    ///             Hours = 1,
+    ///         },
+    ///         Lifesize = new Scm.Inputs.IpsecCryptoProfileLifesizeArgs
+    ///         {
+    ///             Gb = 10,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ipsecCryptoProfile:IpsecCryptoProfile")]
     public partial class IpsecCryptoProfile : global::Pulumi.CustomResource

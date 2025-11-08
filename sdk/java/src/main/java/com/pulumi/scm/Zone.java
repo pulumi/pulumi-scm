@@ -21,6 +21,106 @@ import javax.annotation.Nullable;
 /**
  * Zone resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Zone;
+ * import com.pulumi.scm.ZoneArgs;
+ * import com.pulumi.scm.inputs.ZoneNetworkArgs;
+ * import com.pulumi.scm.inputs.ZoneDeviceAclArgs;
+ * import com.pulumi.scm.inputs.ZoneUserAclArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates an empty layer3 zone
+ *         //
+ *         var scmLayer3Zone = new Zone("scmLayer3Zone", ZoneArgs.builder()
+ *             .name("scm_layer3_zone")
+ *             .folder("ngfw-shared")
+ *             .network(ZoneNetworkArgs.builder()
+ *                 .layer3s()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates an empty layer2 zone
+ *         //
+ *         var scmLayer2Zone = new Zone("scmLayer2Zone", ZoneArgs.builder()
+ *             .name("scm_layer2_zone")
+ *             .folder("ngfw-shared")
+ *             .network(ZoneNetworkArgs.builder()
+ *                 .layer2s()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates an empty tap zone
+ *         //
+ *         var scmTapZone = new Zone("scmTapZone", ZoneArgs.builder()
+ *             .name("scm_tap_zone")
+ *             .folder("ngfw-shared")
+ *             .network(ZoneNetworkArgs.builder()
+ *                 .taps()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates an empty vwire zone
+ *         //
+ *         var scmVwireZone = new Zone("scmVwireZone", ZoneArgs.builder()
+ *             .name("scm_vwire_zone")
+ *             .folder("ngfw-shared")
+ *             .network(ZoneNetworkArgs.builder()
+ *                 .virtualWires()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 zone
+ *         // Requires Interface $scm_l3_interface to exist
+ *         //
+ *         var scmLayer3ZoneComplex = new Zone("scmLayer3ZoneComplex", ZoneArgs.builder()
+ *             .name("scm_layer3_zone_complex")
+ *             .folder("ngfw-shared")
+ *             .network(ZoneNetworkArgs.builder()
+ *                 .layer3s("$scm_l3_interface")
+ *                 .zoneProtectionProfile("best-practice")
+ *                 .enablePacketBufferProtection(true)
+ *                 .build())
+ *             .enableDeviceIdentification(true)
+ *             .deviceAcl(ZoneDeviceAclArgs.builder()
+ *                 .includeLists("198.18.1.0/24")
+ *                 .excludeLists("198.18.2.0/24")
+ *                 .build())
+ *             .enableUserIdentification(true)
+ *             .userAcl(ZoneUserAclArgs.builder()
+ *                 .includeLists("198.18.3.0/24")
+ *                 .excludeLists("198.18.4.0/24")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/zone:Zone")
 public class Zone extends com.pulumi.resources.CustomResource {

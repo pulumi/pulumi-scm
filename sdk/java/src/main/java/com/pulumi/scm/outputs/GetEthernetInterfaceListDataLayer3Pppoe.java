@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3PppoePassive;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3PppoeStaticAddress;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +25,7 @@ public final class GetEthernetInterfaceListDataLayer3Pppoe {
      */
     private String authentication;
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     private Integer defaultRouteMetric;
@@ -37,7 +38,7 @@ public final class GetEthernetInterfaceListDataLayer3Pppoe {
      * @return Passive
      * 
      */
-    private Boolean passive;
+    private GetEthernetInterfaceListDataLayer3PppoePassive passive;
     /**
      * @return Password
      * 
@@ -75,7 +76,7 @@ public final class GetEthernetInterfaceListDataLayer3Pppoe {
         return this.authentication;
     }
     /**
-     * @return Default route metric
+     * @return Metric of the default route created
      * 
      */
     public Integer defaultRouteMetric() {
@@ -92,7 +93,7 @@ public final class GetEthernetInterfaceListDataLayer3Pppoe {
      * @return Passive
      * 
      */
-    public Boolean passive() {
+    public GetEthernetInterfaceListDataLayer3PppoePassive passive() {
         return this.passive;
     }
     /**
@@ -137,7 +138,7 @@ public final class GetEthernetInterfaceListDataLayer3Pppoe {
         private String authentication;
         private Integer defaultRouteMetric;
         private Boolean enable;
-        private Boolean passive;
+        private GetEthernetInterfaceListDataLayer3PppoePassive passive;
         private String password;
         private String service;
         private GetEthernetInterfaceListDataLayer3PppoeStaticAddress staticAddress;
@@ -189,7 +190,7 @@ public final class GetEthernetInterfaceListDataLayer3Pppoe {
             return this;
         }
         @CustomType.Setter
-        public Builder passive(Boolean passive) {
+        public Builder passive(GetEthernetInterfaceListDataLayer3PppoePassive passive) {
             if (passive == null) {
               throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer3Pppoe", "passive");
             }

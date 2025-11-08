@@ -13,18 +13,84 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSnippets = Scm.GetSnippetList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["snippetsListRaw"] = allSnippets.Apply(getSnippetListResult =&gt; getSnippetListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSnippetListResult> InvokeAsync(GetSnippetListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSnippetListResult>("scm:index/getSnippetList:getSnippetList", args ?? new GetSnippetListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSnippets = Scm.GetSnippetList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["snippetsListRaw"] = allSnippets.Apply(getSnippetListResult =&gt; getSnippetListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSnippetListResult> Invoke(GetSnippetListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSnippetListResult>("scm:index/getSnippetList:getSnippetList", args ?? new GetSnippetListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSnippets = Scm.GetSnippetList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["snippetsListRaw"] = allSnippets.Apply(getSnippetListResult =&gt; getSnippetListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSnippetListResult> Invoke(GetSnippetListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSnippetListResult>("scm:index/getSnippetList:getSnippetList", args ?? new GetSnippetListInvokeArgs(), options.WithDefaults());

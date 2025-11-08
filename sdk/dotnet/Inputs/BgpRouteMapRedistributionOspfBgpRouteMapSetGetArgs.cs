@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<int>? _aspathPrepends;
 
         /// <summary>
-        /// AS numbers
+        /// OSPF BGP Route maps set AS numbers
         /// </summary>
         public InputList<int> AspathPrepends
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Enable BGP atomic aggregate?
+        /// OSPF BGP Route maps set Enable BGP atomic aggregate?
         /// </summary>
         [Input("atomicAggregate")]
         public Input<bool>? AtomicAggregate { get; set; }
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _largeCommunities;
 
         /// <summary>
-        /// Large communities
+        /// OSPF BGP Route maps set Large communities
         /// </summary>
         public InputList<string> LargeCommunities
         {
@@ -55,7 +55,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Local preference
+        /// OSPF BGP Route maps set Local preference
         /// </summary>
         [Input("localPreference")]
         public Input<int>? LocalPreference { get; set; }
@@ -67,13 +67,13 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionOspfBgpRouteMapSetMetricGetArgs>? Metric { get; set; }
 
         /// <summary>
-        /// Origin
+        /// OSPF BGP Route maps set Origin
         /// </summary>
         [Input("origin")]
         public Input<string>? Origin { get; set; }
 
         /// <summary>
-        /// Originator ID
+        /// OSPF BGP Route maps set Originator ID
         /// </summary>
         [Input("originatorId")]
         public Input<string>? OriginatorId { get; set; }
@@ -82,7 +82,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _regularCommunities;
 
         /// <summary>
-        /// Regular communities
+        /// OSPF BGP Route maps set Regular communities
         /// </summary>
         public InputList<string> RegularCommunities
         {
@@ -91,13 +91,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Tag
+        /// OSPF BGP Route maps set Tag
         /// </summary>
         [Input("tag")]
         public Input<int>? Tag { get; set; }
 
         /// <summary>
-        /// Weight
+        /// OSPF BGP Route maps set Weight
         /// </summary>
         [Input("weight")]
         public Input<int>? Weight { get; set; }

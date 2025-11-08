@@ -9,7 +9,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAdd
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressFilterMatchAsPath;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunity;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -50,7 +50,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppres
      * @return Med
      * 
      */
-    private Double med;
+    private Integer med;
     /**
      * @return Nexthop
      * 
@@ -114,7 +114,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppres
      * @return Med
      * 
      */
-    public Double med() {
+    public Integer med() {
         return this.med;
     }
     /**
@@ -154,7 +154,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppres
         private GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunity community;
         private GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunity extendedCommunity;
         private List<String> fromPeers;
-        private Double med;
+        private Integer med;
         private List<String> nexthops;
         private String routeTable;
         private String safi;
@@ -228,7 +228,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppres
             return fromPeers(List.of(fromPeers));
         }
         @CustomType.Setter
-        public Builder med(Double med) {
+        public Builder med(Integer med) {
             if (med == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPolicyAggregationAddressSuppressFilterMatch", "med");
             }

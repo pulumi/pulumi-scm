@@ -27,6 +27,190 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
+ * import com.pulumi.scm.SecurityRule;
+ * import com.pulumi.scm.SecurityRuleArgs;
+ * import com.pulumi.scm.inputs.SecurityRuleSecuritySettingsArgs;
+ * import com.pulumi.scm.inputs.SecurityRuleLogSettingsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // First, create the tag objects that you will reference.
+ *         var outboundTag = new Tag("outboundTag", TagArgs.builder()
+ *             .folder("All")
+ *             .name("outbound143")
+ *             .color("Red")
+ *             .build());
+ * 
+ *         var webTag = new Tag("webTag", TagArgs.builder()
+ *             .folder("All")
+ *             .name("web143")
+ *             .color("Blue")
+ *             .build());
+ * 
+ *         // --- Existing Rules (Backward Compatibility) ---
+ *         var standardWebAccess = new SecurityRule("standardWebAccess", SecurityRuleArgs.builder()
+ *             .folder("All")
+ *             .name("Allow Standard Web Access143")
+ *             .description("Allow outbound web traffic to any destination...")
+ *             .position("pre")
+ *             .action("allow")
+ *             .categories("any")
+ *             .applications(            
+ *                 "web-browsing",
+ *                 "ssl")
+ *             .services(            
+ *                 "service-http",
+ *                 "service-https")
+ *             .froms(            
+ *                 "untrust",
+ *                 "trust")
+ *             .tos("trust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .negateSource(false)
+ *             .negateDestination(false)
+ *             .sourceUsers("any")
+ *             .sourceHips("any")
+ *             .destinationHips("any")
+ *             .logStart(true)
+ *             .logEnd(true)
+ *             .disabled(false)
+ *             .tags(            
+ *                 outboundTag.name(),
+ *                 webTag.name())
+ *             .build());
+ * 
+ *         var blockRiskySaas = new SecurityRule("blockRiskySaas", SecurityRuleArgs.builder()
+ *             .folder("All")
+ *             .name("Block Risky SaaS Applications143")
+ *             .description("Prevent data exfiltration by blocking risky SaaS apps...")
+ *             .action("deny")
+ *             .policyType("Internet")
+ *             .securitySettings(SecurityRuleSecuritySettingsArgs.builder()
+ *                 .antiSpyware("yes")
+ *                 .vulnerability("yes")
+ *                 .virusAndWildfireAnalysis("yes")
+ *                 .build())
+ *             .blockWebApplications("facebook-posting")
+ *             .logSettings(SecurityRuleLogSettingsArgs.builder()
+ *                 .logSessions(true)
+ *                 .build())
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .sourceUsers("any")
+ *             .disabled(false)
+ *             .tags(            
+ *                 outboundTag.name(),
+ *                 webTag.name())
+ *             .build());
+ * 
+ *         // --- NEW Examples Demonstrating Rule Ordering ---
+ *         // Example 1: Place a critical block rule at the absolute top
+ *         var criticalBlockTop = new SecurityRule("criticalBlockTop", SecurityRuleArgs.builder()
+ *             .folder("All")
+ *             .name("CRITICAL Block Malicious IPs Top143")
+ *             .description("Always block known malicious IPs first.")
+ *             .relativePosition("top")
+ *             .action("deny")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .sourceUsers("any")
+ *             .categories("any")
+ *             .applications("any")
+ *             .services("any")
+ *             .logEnd(true)
+ *             .tags(outboundTag.name())
+ *             .build());
+ * 
+ *         // Example 2: Place a cleanup rule at the absolute bottom
+ *         var cleanupDenyBottom = new SecurityRule("cleanupDenyBottom", SecurityRuleArgs.builder()
+ *             .folder("All")
+ *             .name("Cleanup Deny All Bottom143")
+ *             .description("Deny any traffic not explicitly allowed.")
+ *             .relativePosition("bottom")
+ *             .action("deny")
+ *             .froms("any")
+ *             .tos("any")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .sourceUsers("any")
+ *             .categories("any")
+ *             .applications("any")
+ *             .services("any")
+ *             .logEnd(true)
+ *             .tags(outboundTag.name())
+ *             .build());
+ * 
+ *         // Example 3: Place a rule *before* the standard web access rule
+ *         var allowUpdatesBeforeWeb = new SecurityRule("allowUpdatesBeforeWeb", SecurityRuleArgs.builder()
+ *             .folder("All")
+ *             .name("Allow OS Updates Before Web143")
+ *             .description("Allow specific OS update traffic before general web access.")
+ *             .relativePosition("before")
+ *             .targetRule(standardWebAccess.id())
+ *             .action("allow")
+ *             .froms("trust")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .sourceUsers("any")
+ *             .categories("any")
+ *             .applications(            
+ *                 "ms-update",
+ *                 "apple-update")
+ *             .services("service-https")
+ *             .logEnd(true)
+ *             .tags(outboundTag.name())
+ *             .build());
+ * 
+ *         // Example 4: Place a rule *after* the standard web access rule
+ *         var allowCorpAppsAfterWeb = new SecurityRule("allowCorpAppsAfterWeb", SecurityRuleArgs.builder()
+ *             .folder("All")
+ *             .name("Allow Corp Apps After Web143")
+ *             .description("Allow access to specific corporate apps after general web access.")
+ *             .relativePosition("after")
+ *             .targetRule(standardWebAccess.id())
+ *             .action("allow")
+ *             .froms("trust")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .sourceUsers("any")
+ *             .categories("any")
+ *             .applications("ms-update")
+ *             .services("service-https")
+ *             .logEnd(true)
+ *             .tags(webTag.name())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/securityRule:SecurityRule")
 public class SecurityRule extends com.pulumi.resources.CustomResource {
@@ -409,6 +593,20 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return this.profileSetting;
     }
     /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Export(name="relativePosition", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Output<Optional<String>> relativePosition() {
+        return Codegen.optional(this.relativePosition);
+    }
+    /**
      * Schedule in which this rule will be applied
      * 
      */
@@ -519,6 +717,20 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<List<String>>> tags() {
         return Codegen.optional(this.tags);
+    }
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Export(name="targetRule", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Output<Optional<String>> targetRule() {
+        return Codegen.optional(this.targetRule);
     }
     /**
      * Tenant restrictions

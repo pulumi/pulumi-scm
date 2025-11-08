@@ -42,7 +42,7 @@ type AntiSpywareSignature struct {
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// threat id range \n\n and \n\n
-	ThreatId pulumi.IntOutput `pulumi:"threatId"`
+	ThreatId pulumi.StringOutput `pulumi:"threatId"`
 	// Threatname
 	Threatname pulumi.StringOutput `pulumi:"threatname"`
 	// Vendor
@@ -109,7 +109,7 @@ type antiSpywareSignatureState struct {
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// threat id range \n\n and \n\n
-	ThreatId *int `pulumi:"threatId"`
+	ThreatId *string `pulumi:"threatId"`
 	// Threatname
 	Threatname *string `pulumi:"threatname"`
 	// Vendor
@@ -141,7 +141,7 @@ type AntiSpywareSignatureState struct {
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// threat id range \n\n and \n\n
-	ThreatId pulumi.IntPtrInput
+	ThreatId pulumi.StringPtrInput
 	// Threatname
 	Threatname pulumi.StringPtrInput
 	// Vendor
@@ -176,7 +176,7 @@ type antiSpywareSignatureArgs struct {
 	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	// threat id range \n\n and \n\n
-	ThreatId int `pulumi:"threatId"`
+	ThreatId string `pulumi:"threatId"`
 	// Threatname
 	Threatname string `pulumi:"threatname"`
 	// Vendor
@@ -208,7 +208,7 @@ type AntiSpywareSignatureArgs struct {
 	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	// threat id range \n\n and \n\n
-	ThreatId pulumi.IntInput
+	ThreatId pulumi.StringInput
 	// Threatname
 	Threatname pulumi.StringInput
 	// Vendor
@@ -362,8 +362,8 @@ func (o AntiSpywareSignatureOutput) Tfid() pulumi.StringOutput {
 }
 
 // threat id range \n\n and \n\n
-func (o AntiSpywareSignatureOutput) ThreatId() pulumi.IntOutput {
-	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.IntOutput { return v.ThreatId }).(pulumi.IntOutput)
+func (o AntiSpywareSignatureOutput) ThreatId() pulumi.StringOutput {
+	return o.ApplyT(func(v *AntiSpywareSignature) pulumi.StringOutput { return v.ThreatId }).(pulumi.StringOutput)
 }
 
 // Threatname

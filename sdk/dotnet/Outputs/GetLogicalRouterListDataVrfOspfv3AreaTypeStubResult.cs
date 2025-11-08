@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Default route metric
         /// </summary>
-        public readonly double DefaultRouteMetric;
+        public readonly int DefaultRouteMetric;
         /// <summary>
         /// No summary
         /// </summary>
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetLogicalRouterListDataVrfOspfv3AreaTypeStubDefaultRouteResult defaultRoute,
 
-            double defaultRouteMetric,
+            int defaultRouteMetric,
 
             bool noSummary)
         {

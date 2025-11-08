@@ -11,6 +11,8 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// EthernetInterface resource
+    /// 
+    /// ## Example Usage
     /// </summary>
     [ScmResourceType("scm:index/ethernetInterface:EthernetInterface")]
     public partial class EthernetInterface : global::Pulumi.CustomResource
@@ -22,7 +24,7 @@ namespace Pulumi.Scm
         public Output<string?> Comment { get; private set; } = null!;
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Output("defaultValue")]
         public Output<string?> DefaultValue { get; private set; } = null!;
@@ -52,7 +54,7 @@ namespace Pulumi.Scm
         public Output<Outputs.EthernetInterfaceLayer2?> Layer2 { get; private set; } = null!;
 
         /// <summary>
-        /// Layer3
+        /// Ethernet Interface Layer 3 configuration
         /// </summary>
         [Output("layer3")]
         public Output<Outputs.EthernetInterfaceLayer3> Layer3 { get; private set; } = null!;
@@ -61,19 +63,19 @@ namespace Pulumi.Scm
         /// Link duplex
         /// </summary>
         [Output("linkDuplex")]
-        public Output<string?> LinkDuplex { get; private set; } = null!;
+        public Output<string> LinkDuplex { get; private set; } = null!;
 
         /// <summary>
         /// Link speed
         /// </summary>
         [Output("linkSpeed")]
-        public Output<string?> LinkSpeed { get; private set; } = null!;
+        public Output<string> LinkSpeed { get; private set; } = null!;
 
         /// <summary>
         /// Link state
         /// </summary>
         [Output("linkState")]
-        public Output<string?> LinkState { get; private set; } = null!;
+        public Output<string> LinkState { get; private set; } = null!;
 
         /// <summary>
         /// Interface name
@@ -85,7 +87,7 @@ namespace Pulumi.Scm
         /// Poe
         /// </summary>
         [Output("poe")]
-        public Output<Outputs.EthernetInterfacePoe?> Poe { get; private set; } = null!;
+        public Output<Outputs.EthernetInterfacePoe> Poe { get; private set; } = null!;
 
         /// <summary>
         /// The snippet in which the resource is defined
@@ -97,7 +99,7 @@ namespace Pulumi.Scm
         /// Tap
         /// </summary>
         [Output("tap")]
-        public Output<Outputs.EthernetInterfaceTap> Tap { get; private set; } = null!;
+        public Output<Outputs.EthernetInterfaceTap?> Tap { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -159,7 +161,7 @@ namespace Pulumi.Scm
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -183,7 +185,7 @@ namespace Pulumi.Scm
         public Input<Inputs.EthernetInterfaceLayer2Args>? Layer2 { get; set; }
 
         /// <summary>
-        /// Layer3
+        /// Ethernet Interface Layer 3 configuration
         /// </summary>
         [Input("layer3")]
         public Input<Inputs.EthernetInterfaceLayer3Args>? Layer3 { get; set; }
@@ -245,7 +247,7 @@ namespace Pulumi.Scm
         public Input<string>? Comment { get; set; }
 
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         [Input("defaultValue")]
         public Input<string>? DefaultValue { get; set; }
@@ -285,7 +287,7 @@ namespace Pulumi.Scm
         public Input<Inputs.EthernetInterfaceLayer2GetArgs>? Layer2 { get; set; }
 
         /// <summary>
-        /// Layer3
+        /// Ethernet Interface Layer 3 configuration
         /// </summary>
         [Input("layer3")]
         public Input<Inputs.EthernetInterfaceLayer3GetArgs>? Layer3 { get; set; }

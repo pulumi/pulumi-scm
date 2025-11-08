@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,14 +19,14 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
     public static final DnsProxyDomainServerArgs Empty = new DnsProxyDomainServerArgs();
 
     /**
-     * Cacheable
+     * Enable caching for this DNS proxy rule?
      * 
      */
     @Import(name="cacheable")
     private @Nullable Output<Boolean> cacheable;
 
     /**
-     * @return Cacheable
+     * @return Enable caching for this DNS proxy rule?
      * 
      */
     public Optional<Output<Boolean>> cacheable() {
@@ -33,14 +34,14 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Domain name
+     * Domain names(s) that will be matched
      * 
      */
     @Import(name="domainNames")
     private @Nullable Output<List<String>> domainNames;
 
     /**
-     * @return Domain name
+     * @return Domain names(s) that will be matched
      * 
      */
     public Optional<Output<List<String>>> domainNames() {
@@ -48,44 +49,44 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Name
+     * Proxy rule name
      * 
      */
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
-     * @return Name
+     * @return Proxy rule name
      * 
      */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    public Output<String> name() {
+        return this.name;
     }
 
     /**
-     * Primary
+     * Primary DNS server IP address
      * 
      */
-    @Import(name="primary")
-    private @Nullable Output<String> primary;
+    @Import(name="primary", required=true)
+    private Output<String> primary;
 
     /**
-     * @return Primary
+     * @return Primary DNS server IP address
      * 
      */
-    public Optional<Output<String>> primary() {
-        return Optional.ofNullable(this.primary);
+    public Output<String> primary() {
+        return this.primary;
     }
 
     /**
-     * Secondary
+     * Secondary DNS server IP address
      * 
      */
     @Import(name="secondary")
     private @Nullable Output<String> secondary;
 
     /**
-     * @return Secondary
+     * @return Secondary DNS server IP address
      * 
      */
     public Optional<Output<String>> secondary() {
@@ -121,7 +122,7 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param cacheable Cacheable
+         * @param cacheable Enable caching for this DNS proxy rule?
          * 
          * @return builder
          * 
@@ -132,7 +133,7 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param cacheable Cacheable
+         * @param cacheable Enable caching for this DNS proxy rule?
          * 
          * @return builder
          * 
@@ -142,7 +143,7 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param domainNames Domain name
+         * @param domainNames Domain names(s) that will be matched
          * 
          * @return builder
          * 
@@ -153,7 +154,7 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param domainNames Domain name
+         * @param domainNames Domain names(s) that will be matched
          * 
          * @return builder
          * 
@@ -163,7 +164,7 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param domainNames Domain name
+         * @param domainNames Domain names(s) that will be matched
          * 
          * @return builder
          * 
@@ -173,18 +174,18 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param name Name
+         * @param name Proxy rule name
          * 
          * @return builder
          * 
          */
-        public Builder name(@Nullable Output<String> name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
         /**
-         * @param name Name
+         * @param name Proxy rule name
          * 
          * @return builder
          * 
@@ -194,18 +195,18 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param primary Primary
+         * @param primary Primary DNS server IP address
          * 
          * @return builder
          * 
          */
-        public Builder primary(@Nullable Output<String> primary) {
+        public Builder primary(Output<String> primary) {
             $.primary = primary;
             return this;
         }
 
         /**
-         * @param primary Primary
+         * @param primary Primary DNS server IP address
          * 
          * @return builder
          * 
@@ -215,7 +216,7 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param secondary Secondary
+         * @param secondary Secondary DNS server IP address
          * 
          * @return builder
          * 
@@ -226,7 +227,7 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param secondary Secondary
+         * @param secondary Secondary DNS server IP address
          * 
          * @return builder
          * 
@@ -236,6 +237,12 @@ public final class DnsProxyDomainServerArgs extends com.pulumi.resources.Resourc
         }
 
         public DnsProxyDomainServerArgs build() {
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("DnsProxyDomainServerArgs", "name");
+            }
+            if ($.primary == null) {
+                throw new MissingRequiredPropertyException("DnsProxyDomainServerArgs", "primary");
+            }
             return $;
         }
     }

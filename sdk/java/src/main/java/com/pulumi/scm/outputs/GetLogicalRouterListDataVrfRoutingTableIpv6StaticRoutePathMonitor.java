@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestination;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMon
      * @return Hold time
      * 
      */
-    private Double holdTime;
+    private Integer holdTime;
     /**
      * @return Monitor destinations
      * 
@@ -54,7 +54,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMon
      * @return Hold time
      * 
      */
-    public Double holdTime() {
+    public Integer holdTime() {
         return this.holdTime;
     }
     /**
@@ -76,7 +76,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMon
     public static final class Builder {
         private Boolean enable;
         private String failureCondition;
-        private Double holdTime;
+        private Integer holdTime;
         private List<GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestination> monitorDestinations;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMonitor defaults) {
@@ -104,7 +104,7 @@ public final class GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMon
             return this;
         }
         @CustomType.Setter
-        public Builder holdTime(Double holdTime) {
+        public Builder holdTime(Integer holdTime) {
             if (holdTime == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMonitor", "holdTime");
             }

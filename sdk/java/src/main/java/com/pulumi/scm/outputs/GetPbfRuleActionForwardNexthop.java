@@ -16,7 +16,7 @@ public final class GetPbfRuleActionForwardNexthop {
      */
     private String fqdn;
     /**
-     * @return Ip address
+     * @return Next hop IP address
      * 
      */
     private String ipAddress;
@@ -30,7 +30,7 @@ public final class GetPbfRuleActionForwardNexthop {
         return this.fqdn;
     }
     /**
-     * @return Ip address
+     * @return Next hop IP address
      * 
      */
     public String ipAddress() {

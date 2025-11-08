@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionBgpRibRouteMapResult
     {
         /// <summary>
-        /// Action
+        /// BGP Root RIB Route maps Action
         /// </summary>
         public readonly string Action;
         /// <summary>
-        /// Description
+        /// BGP Root RIB Route maps Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Match
+        /// match attribute for BG Rib route map
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpRibRouteMapMatchResult Match;
         /// <summary>
-        /// Sequence number
+        /// BGP Root RIB Route maps Sequence number
         /// </summary>
         public readonly int Name;
         /// <summary>
-        /// Set
+        /// Set attributes for BGP route map
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpRibRouteMapSetResult Set;
 

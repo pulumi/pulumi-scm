@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList {
      * @return Metric
      * 
      */
-    private @Nullable Double metric;
+    private @Nullable Integer metric;
 
     private LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList() {}
     /**
@@ -35,7 +35,7 @@ public final class LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList {
      * @return Metric
      * 
      */
-    public Optional<Double> metric() {
+    public Optional<Integer> metric() {
         return Optional.ofNullable(this.metric);
     }
 
@@ -49,7 +49,7 @@ public final class LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable String accessList;
-        private @Nullable Double metric;
+        private @Nullable Integer metric;
         public Builder() {}
         public Builder(LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList defaults) {
     	      Objects.requireNonNull(defaults);
@@ -64,7 +64,7 @@ public final class LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeList {
             return this;
         }
         @CustomType.Setter
-        public Builder metric(@Nullable Double metric) {
+        public Builder metric(@Nullable Integer metric) {
 
             this.metric = metric;
             return this;

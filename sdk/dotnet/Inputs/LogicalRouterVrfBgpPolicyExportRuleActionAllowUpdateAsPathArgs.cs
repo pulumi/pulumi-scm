@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         /// Prepend
         /// </summary>
         [Input("prepend")]
-        public Input<double>? Prepend { get; set; }
+        public Input<int>? Prepend { get; set; }
 
         /// <summary>
         /// Remove
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         /// Remove and prepend
         /// </summary>
         [Input("removeAndPrepend")]
-        public Input<double>? RemoveAndPrepend { get; set; }
+        public Input<int>? RemoveAndPrepend { get; set; }
 
         public LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs()
         {

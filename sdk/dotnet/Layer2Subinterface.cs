@@ -11,6 +11,48 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// Layer2Subinterface resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a ethernet interface used as parent-interface for subsequent examples
+    ///     //
+    ///     var scmParentInterface = new Scm.EthernetInterface("scm_parent_interface", new()
+    ///     {
+    ///         Name = "$scm_parent_interface",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer2 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer2 sub-interface with vlan tag 100
+    ///     //
+    ///     var scmLayer2Subinterface = new Scm.Layer2Subinterface("scm_layer2_subinterface", new()
+    ///     {
+    ///         Name = "$scm_parent_interface.100",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         VlanTag = "100",
+    ///         ParentInterface = "$scm_parent_interface",
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmParentInterface,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/layer2Subinterface:Layer2Subinterface")]
     public partial class Layer2Subinterface : global::Pulumi.CustomResource
@@ -55,10 +97,10 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
         [Output("vlanTag")]
-        public Output<double?> VlanTag { get; private set; } = null!;
+        public Output<string> VlanTag { get; private set; } = null!;
 
 
         /// <summary>
@@ -68,7 +110,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public Layer2Subinterface(string name, Layer2SubinterfaceArgs? args = null, CustomResourceOptions? options = null)
+        public Layer2Subinterface(string name, Layer2SubinterfaceArgs args, CustomResourceOptions? options = null)
             : base("scm:index/layer2Subinterface:Layer2Subinterface", name, args ?? new Layer2SubinterfaceArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -143,10 +185,10 @@ namespace Pulumi.Scm
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
-        [Input("vlanTag")]
-        public Input<double>? VlanTag { get; set; }
+        [Input("vlanTag", required: true)]
+        public Input<string> VlanTag { get; set; } = null!;
 
         public Layer2SubinterfaceArgs()
         {
@@ -196,10 +238,10 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
         [Input("vlanTag")]
-        public Input<double>? VlanTag { get; set; }
+        public Input<string>? VlanTag { get; set; }
 
         public Layer2SubinterfaceState()
         {

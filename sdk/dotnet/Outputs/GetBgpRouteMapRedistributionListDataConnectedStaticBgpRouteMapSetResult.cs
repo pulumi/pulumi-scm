@@ -18,11 +18,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetAggregatorResult Aggregator;
         /// <summary>
-        /// AS numbers
+        /// Connected Static BGP Route maps set AS numbers
         /// </summary>
         public readonly ImmutableArray<int> AspathPrepends;
         /// <summary>
-        /// Enable BGP atomic aggregate?
+        /// Connected Static BGP Route maps set Enable BGP atomic aggregate?
         /// </summary>
         public readonly bool AtomicAggregate;
         /// <summary>
@@ -30,11 +30,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetIpv4Result Ipv4;
         /// <summary>
-        /// Large communities
+        /// Connected Static  BGP Route maps set Large communities
         /// </summary>
         public readonly ImmutableArray<string> LargeCommunities;
         /// <summary>
-        /// Local preference
+        /// Connected Static BGP Route maps set Local preference
         /// </summary>
         public readonly int LocalPreference;
         /// <summary>
@@ -42,23 +42,23 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpRouteMapSetMetricResult Metric;
         /// <summary>
-        /// Origin
+        /// Connected Static BGP Route maps set Origin
         /// </summary>
         public readonly string Origin;
         /// <summary>
-        /// Originator ID
+        /// Connected Static BGP Route maps set Originator ID
         /// </summary>
         public readonly string OriginatorId;
         /// <summary>
-        /// Regular communities
+        /// Connected Static  BGP Route maps set Regular communities
         /// </summary>
         public readonly ImmutableArray<string> RegularCommunities;
         /// <summary>
-        /// Tag
+        /// Connected Static BGP Route maps set Tag
         /// </summary>
         public readonly int Tag;
         /// <summary>
-        /// Weight
+        /// Connected Static BGP Route maps set Weight
         /// </summary>
         public readonly int Weight;
 

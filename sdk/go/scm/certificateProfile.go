@@ -15,6 +15,52 @@ import (
 // CertificateProfile resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewCertificateProfile(ctx, "scm_cp_1", &scm.CertificateProfileArgs{
+//				Folder:                   pulumi.String("Shared"),
+//				Name:                     pulumi.String("scm_cp_1"),
+//				Domain:                   pulumi.String("test"),
+//				UseCrl:                   pulumi.Bool(true),
+//				UseOcsp:                  pulumi.Bool(true),
+//				BlockUnknownCert:         pulumi.Bool(true),
+//				BlockTimeoutCert:         pulumi.Bool(true),
+//				BlockUnauthenticatedCert: pulumi.Bool(true),
+//				BlockExpiredCert:         pulumi.Bool(true),
+//				CrlReceiveTimeout:        pulumi.String("5"),
+//				OcspReceiveTimeout:       pulumi.String("5"),
+//				CertStatusTimeout:        pulumi.String("5"),
+//				CaCertificates: scm.CertificateProfileCaCertificateArray{
+//					&scm.CertificateProfileCaCertificateArgs{
+//						Name:           pulumi.String("Forward-Trust-CA"),
+//						DefaultOcspUrl: pulumi.String("http://test.com"),
+//						OcspVerifyCert: pulumi.String("Forward-Trust-CA-ECDSA"),
+//						TemplateName:   pulumi.String("something"),
+//					},
+//				},
+//				UsernameField: &scm.CertificateProfileUsernameFieldArgs{
+//					Subject: pulumi.String("common-name"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type CertificateProfile struct {
 	pulumi.CustomResourceState
 

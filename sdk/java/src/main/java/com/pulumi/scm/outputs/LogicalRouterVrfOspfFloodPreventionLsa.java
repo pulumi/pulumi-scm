@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class LogicalRouterVrfOspfFloodPreventionLsa {
      * @return Max packet
      * 
      */
-    private @Nullable Double maxPacket;
+    private @Nullable Integer maxPacket;
 
     private LogicalRouterVrfOspfFloodPreventionLsa() {}
     /**
@@ -35,7 +35,7 @@ public final class LogicalRouterVrfOspfFloodPreventionLsa {
      * @return Max packet
      * 
      */
-    public Optional<Double> maxPacket() {
+    public Optional<Integer> maxPacket() {
         return Optional.ofNullable(this.maxPacket);
     }
 
@@ -49,7 +49,7 @@ public final class LogicalRouterVrfOspfFloodPreventionLsa {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable Boolean enable;
-        private @Nullable Double maxPacket;
+        private @Nullable Integer maxPacket;
         public Builder() {}
         public Builder(LogicalRouterVrfOspfFloodPreventionLsa defaults) {
     	      Objects.requireNonNull(defaults);
@@ -64,7 +64,7 @@ public final class LogicalRouterVrfOspfFloodPreventionLsa {
             return this;
         }
         @CustomType.Setter
-        public Builder maxPacket(@Nullable Double maxPacket) {
+        public Builder maxPacket(@Nullable Integer maxPacket) {
 
             this.maxPacket = maxPacket;
             return this;

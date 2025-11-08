@@ -33,14 +33,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs extends com.p
     }
 
     /**
-     * Metric type
+     * BGP Root OSPF Route maps set Metric type
      * 
      */
     @Import(name="metricType")
     private @Nullable Output<String> metricType;
 
     /**
-     * @return Metric type
+     * @return BGP Root OSPF Route maps set Metric type
      * 
      */
     public Optional<Output<String>> metricType() {
@@ -48,14 +48,14 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs extends com.p
     }
 
     /**
-     * Tag
+     * BGP Root OSPF Route maps set Tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<Integer> tag;
 
     /**
-     * @return Tag
+     * @return BGP Root OSPF Route maps set Tag
      * 
      */
     public Optional<Output<Integer>> tag() {
@@ -110,7 +110,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType BGP Root OSPF Route maps set Metric type
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param metricType Metric type
+         * @param metricType BGP Root OSPF Route maps set Metric type
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param tag Tag
+         * @param tag BGP Root OSPF Route maps set Tag
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs extends com.p
         }
 
         /**
-         * @param tag Tag
+         * @param tag BGP Root OSPF Route maps set Tag
          * 
          * @return builder
          * 

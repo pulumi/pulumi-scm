@@ -28,7 +28,7 @@ namespace Pulumi.Scm
         public Output<Outputs.BgpRouteMapRedistributionConnectedStatic?> ConnectedStatic { get; private set; } = null!;
 
         /// <summary>
-        /// Description
+        /// BGP Route Map Redistributions Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
@@ -46,7 +46,7 @@ namespace Pulumi.Scm
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Name
+        /// BGP Route Map Redistributions Name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
@@ -125,7 +125,7 @@ namespace Pulumi.Scm
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticArgs>? ConnectedStatic { get; set; }
 
         /// <summary>
-        /// Description
+        /// BGP Route Map Redistributions Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -143,7 +143,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Name
+        /// BGP Route Map Redistributions Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -181,7 +181,7 @@ namespace Pulumi.Scm
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticGetArgs>? ConnectedStatic { get; set; }
 
         /// <summary>
-        /// Description
+        /// BGP Route Map Redistributions Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -199,7 +199,7 @@ namespace Pulumi.Scm
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Name
+        /// BGP Route Map Redistributions Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }

@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsProxyCacheMaxTtlArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enabled
+        /// Enable max ttl for this DNS object
         /// </summary>
-        [Input("enabled")]
-        public Input<bool>? Enabled { get; set; }
+        [Input("enabled", required: true)]
+        public Input<bool> Enabled { get; set; } = null!;
 
         /// <summary>
-        /// Time to live
+        /// Time in seconds after which entry is cleared
         /// </summary>
         [Input("timeToLive")]
         public Input<int>? TimeToLive { get; set; }

@@ -64,7 +64,7 @@ namespace Pulumi.Scm.Inputs
         /// Med
         /// </summary>
         [Input("med")]
-        public Input<double>? Med { get; set; }
+        public Input<int>? Med { get; set; }
 
         [Input("nexthops")]
         private InputList<string>? _nexthops;

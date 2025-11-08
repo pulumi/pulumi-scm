@@ -8,6 +8,20 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all logical routers
+ * const allLogicalRouters = scm.getLogicalRouterList({
+ *     folder: "ngfw-shared",
+ *     limit: 100,
+ * });
+ * export const scmLogicalRouterList = allLogicalRouters.then(allLogicalRouters => .reduce((__obj, router) => ({ ...__obj, [router.name]: router })));
+ * ```
  */
 export function getLogicalRouterList(args?: GetLogicalRouterListArgs, opts?: pulumi.InvokeOptions): Promise<GetLogicalRouterListResult> {
     args = args || {};
@@ -18,6 +32,7 @@ export function getLogicalRouterList(args?: GetLogicalRouterListArgs, opts?: pul
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "pagination": args.pagination,
         "snippet": args.snippet,
     }, opts);
 }
@@ -46,6 +61,10 @@ export interface GetLogicalRouterListArgs {
      * The offset of the first item to return.
      */
     offset?: number;
+    /**
+     * The parameter to mention if the response should be paginated. By default, its set to false
+     */
+    pagination?: boolean;
     /**
      * The snippet of the item.
      */
@@ -85,6 +104,10 @@ export interface GetLogicalRouterListResult {
      */
     readonly offset?: number;
     /**
+     * The parameter to mention if the response should be paginated. By default, its set to false
+     */
+    readonly pagination?: boolean;
+    /**
      * The snippet of the item.
      */
     readonly snippet?: string;
@@ -96,6 +119,20 @@ export interface GetLogicalRouterListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all logical routers
+ * const allLogicalRouters = scm.getLogicalRouterList({
+ *     folder: "ngfw-shared",
+ *     limit: 100,
+ * });
+ * export const scmLogicalRouterList = allLogicalRouters.then(allLogicalRouters => .reduce((__obj, router) => ({ ...__obj, [router.name]: router })));
+ * ```
  */
 export function getLogicalRouterListOutput(args?: GetLogicalRouterListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLogicalRouterListResult> {
     args = args || {};
@@ -106,6 +143,7 @@ export function getLogicalRouterListOutput(args?: GetLogicalRouterListOutputArgs
         "limit": args.limit,
         "name": args.name,
         "offset": args.offset,
+        "pagination": args.pagination,
         "snippet": args.snippet,
     }, opts);
 }
@@ -134,6 +172,10 @@ export interface GetLogicalRouterListOutputArgs {
      * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
+    /**
+     * The parameter to mention if the response should be paginated. By default, its set to false
+     */
+    pagination?: pulumi.Input<boolean>;
     /**
      * The snippet of the item.
      */

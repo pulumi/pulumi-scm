@@ -8,7 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.Layer3SubinterfaceArpArgs;
 import com.pulumi.scm.inputs.Layer3SubinterfaceDdnsConfigArgs;
 import com.pulumi.scm.inputs.Layer3SubinterfaceDhcpClientArgs;
-import java.lang.Double;
+import com.pulumi.scm.inputs.Layer3SubinterfaceIpArgs;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -81,14 +82,14 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Dhcp client
+     * Layer3 sub interfaces DHCP Client Object
      * 
      */
     @Import(name="dhcpClient")
     private @Nullable Output<Layer3SubinterfaceDhcpClientArgs> dhcpClient;
 
     /**
-     * @return Dhcp client
+     * @return Layer3 sub interfaces DHCP Client Object
      * 
      */
     public Optional<Output<Layer3SubinterfaceDhcpClientArgs>> dhcpClient() {
@@ -126,17 +127,17 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * Ip
+     * L3 sub-interface IP Parent
      * 
      */
     @Import(name="ips")
-    private @Nullable Output<List<String>> ips;
+    private @Nullable Output<List<Layer3SubinterfaceIpArgs>> ips;
 
     /**
-     * @return Ip
+     * @return L3 sub-interface IP Parent
      * 
      */
-    public Optional<Output<List<String>>> ips() {
+    public Optional<Output<List<Layer3SubinterfaceIpArgs>>> ips() {
         return Optional.ofNullable(this.ips);
     }
 
@@ -145,13 +146,13 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="mtu")
-    private @Nullable Output<Double> mtu;
+    private @Nullable Output<Integer> mtu;
 
     /**
      * @return MTU
      * 
      */
-    public Optional<Output<Double>> mtu() {
+    public Optional<Output<Integer>> mtu() {
         return Optional.ofNullable(this.mtu);
     }
 
@@ -205,13 +206,13 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
      * 
      */
     @Import(name="tag")
-    private @Nullable Output<Double> tag;
+    private @Nullable Output<Integer> tag;
 
     /**
      * @return VLAN tag
      * 
      */
-    public Optional<Output<Double>> tag() {
+    public Optional<Output<Integer>> tag() {
         return Optional.ofNullable(this.tag);
     }
 
@@ -346,7 +347,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param dhcpClient Layer3 sub interfaces DHCP Client Object
          * 
          * @return builder
          * 
@@ -357,7 +358,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param dhcpClient Dhcp client
+         * @param dhcpClient Layer3 sub interfaces DHCP Client Object
          * 
          * @return builder
          * 
@@ -409,33 +410,33 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ips Ip
+         * @param ips L3 sub-interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ips(@Nullable Output<List<String>> ips) {
+        public Builder ips(@Nullable Output<List<Layer3SubinterfaceIpArgs>> ips) {
             $.ips = ips;
             return this;
         }
 
         /**
-         * @param ips Ip
+         * @param ips L3 sub-interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ips(List<String> ips) {
+        public Builder ips(List<Layer3SubinterfaceIpArgs> ips) {
             return ips(Output.of(ips));
         }
 
         /**
-         * @param ips Ip
+         * @param ips L3 sub-interface IP Parent
          * 
          * @return builder
          * 
          */
-        public Builder ips(String... ips) {
+        public Builder ips(Layer3SubinterfaceIpArgs... ips) {
             return ips(List.of(ips));
         }
 
@@ -445,7 +446,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder mtu(@Nullable Output<Double> mtu) {
+        public Builder mtu(@Nullable Output<Integer> mtu) {
             $.mtu = mtu;
             return this;
         }
@@ -456,7 +457,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder mtu(Double mtu) {
+        public Builder mtu(Integer mtu) {
             return mtu(Output.of(mtu));
         }
 
@@ -529,7 +530,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder tag(@Nullable Output<Double> tag) {
+        public Builder tag(@Nullable Output<Integer> tag) {
             $.tag = tag;
             return this;
         }
@@ -540,7 +541,7 @@ public final class Layer3SubinterfaceArgs extends com.pulumi.resources.ResourceA
          * @return builder
          * 
          */
-        public Builder tag(Double tag) {
+        public Builder tag(Integer tag) {
             return tag(Output.of(tag));
         }
 

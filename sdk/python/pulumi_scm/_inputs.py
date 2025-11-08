@@ -17,22 +17,24 @@ from . import _utilities
 __all__ = [
     'AddressGroupDynamicArgs',
     'AddressGroupDynamicArgsDict',
-    'AggregateEthernetInterfaceLayer2Args',
-    'AggregateEthernetInterfaceLayer2ArgsDict',
-    'AggregateEthernetInterfaceLayer2LacpArgs',
-    'AggregateEthernetInterfaceLayer2LacpArgsDict',
-    'AggregateEthernetInterfaceLayer3Args',
-    'AggregateEthernetInterfaceLayer3ArgsDict',
-    'AggregateEthernetInterfaceLayer3ArpArgs',
-    'AggregateEthernetInterfaceLayer3ArpArgsDict',
-    'AggregateEthernetInterfaceLayer3DdnsConfigArgs',
-    'AggregateEthernetInterfaceLayer3DdnsConfigArgsDict',
-    'AggregateEthernetInterfaceLayer3DhcpClientArgs',
-    'AggregateEthernetInterfaceLayer3DhcpClientArgsDict',
-    'AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs',
-    'AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgsDict',
-    'AggregateEthernetInterfaceLayer3LacpArgs',
-    'AggregateEthernetInterfaceLayer3LacpArgsDict',
+    'AggregateInterfaceLayer2Args',
+    'AggregateInterfaceLayer2ArgsDict',
+    'AggregateInterfaceLayer2LacpArgs',
+    'AggregateInterfaceLayer2LacpArgsDict',
+    'AggregateInterfaceLayer3Args',
+    'AggregateInterfaceLayer3ArgsDict',
+    'AggregateInterfaceLayer3ArpArgs',
+    'AggregateInterfaceLayer3ArpArgsDict',
+    'AggregateInterfaceLayer3DdnsConfigArgs',
+    'AggregateInterfaceLayer3DdnsConfigArgsDict',
+    'AggregateInterfaceLayer3DhcpClientArgs',
+    'AggregateInterfaceLayer3DhcpClientArgsDict',
+    'AggregateInterfaceLayer3DhcpClientSendHostnameArgs',
+    'AggregateInterfaceLayer3DhcpClientSendHostnameArgsDict',
+    'AggregateInterfaceLayer3IpArgs',
+    'AggregateInterfaceLayer3IpArgsDict',
+    'AggregateInterfaceLayer3LacpArgs',
+    'AggregateInterfaceLayer3LacpArgsDict',
     'AntiSpywareProfileMicaEngineSpywareEnabledArgs',
     'AntiSpywareProfileMicaEngineSpywareEnabledArgsDict',
     'AntiSpywareProfileRuleArgs',
@@ -205,8 +207,12 @@ __all__ = [
     'BgpAddressFamilyProfileIpv4Ipv4MulticastNextHopSelfForceArgsDict',
     'BgpAddressFamilyProfileIpv4Ipv4MulticastOrfArgs',
     'BgpAddressFamilyProfileIpv4Ipv4MulticastOrfArgsDict',
-    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs',
-    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgsDict',
+    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs',
+    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgsDict',
+    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs',
+    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgsDict',
+    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs',
+    'BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgsDict',
     'BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityArgs',
     'BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityArgsDict',
     'BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityAllArgs',
@@ -243,8 +249,12 @@ __all__ = [
     'BgpAddressFamilyProfileIpv4Ipv4UnicastNextHopSelfForceArgsDict',
     'BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgs',
     'BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgsDict',
-    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs',
-    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgsDict',
+    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs',
+    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgsDict',
+    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs',
+    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgsDict',
+    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs',
+    'BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgsDict',
     'BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityArgs',
     'BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityArgsDict',
     'BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityAllArgs',
@@ -581,6 +591,8 @@ __all__ = [
     'DosProtectionRuleProtectionClassifiedClassificationCriteriaArgsDict',
     'EthernetInterfaceLayer2Args',
     'EthernetInterfaceLayer2ArgsDict',
+    'EthernetInterfaceLayer2LldpArgs',
+    'EthernetInterfaceLayer2LldpArgsDict',
     'EthernetInterfaceLayer3Args',
     'EthernetInterfaceLayer3ArgsDict',
     'EthernetInterfaceLayer3ArpArgs',
@@ -589,12 +601,14 @@ __all__ = [
     'EthernetInterfaceLayer3DdnsConfigArgsDict',
     'EthernetInterfaceLayer3DhcpClientArgs',
     'EthernetInterfaceLayer3DhcpClientArgsDict',
-    'EthernetInterfaceLayer3DhcpClientDhcpClientArgs',
-    'EthernetInterfaceLayer3DhcpClientDhcpClientArgsDict',
-    'EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs',
-    'EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgsDict',
+    'EthernetInterfaceLayer3DhcpClientSendHostnameArgs',
+    'EthernetInterfaceLayer3DhcpClientSendHostnameArgsDict',
+    'EthernetInterfaceLayer3IpArgs',
+    'EthernetInterfaceLayer3IpArgsDict',
     'EthernetInterfaceLayer3PppoeArgs',
     'EthernetInterfaceLayer3PppoeArgsDict',
+    'EthernetInterfaceLayer3PppoePassiveArgs',
+    'EthernetInterfaceLayer3PppoePassiveArgsDict',
     'EthernetInterfaceLayer3PppoeStaticAddressArgs',
     'EthernetInterfaceLayer3PppoeStaticAddressArgsDict',
     'EthernetInterfacePoeArgs',
@@ -1001,6 +1015,8 @@ __all__ = [
     'IkeGatewayProtocolIkev2ArgsDict',
     'IkeGatewayProtocolIkev2DpdArgs',
     'IkeGatewayProtocolIkev2DpdArgsDict',
+    'InterfaceManagementProfilePermittedIpArgs',
+    'InterfaceManagementProfilePermittedIpArgsDict',
     'IpsecCryptoProfileAhArgs',
     'IpsecCryptoProfileAhArgsDict',
     'IpsecCryptoProfileEspArgs',
@@ -1041,6 +1057,8 @@ __all__ = [
     'Layer3SubinterfaceDhcpClientArgsDict',
     'Layer3SubinterfaceDhcpClientSendHostnameArgs',
     'Layer3SubinterfaceDhcpClientSendHostnameArgsDict',
+    'Layer3SubinterfaceIpArgs',
+    'Layer3SubinterfaceIpArgsDict',
     'LdapServerProfileServerArgs',
     'LdapServerProfileServerArgsDict',
     'LogForwardingProfileMatchListArgs',
@@ -1675,6 +1693,10 @@ __all__ = [
     'LogicalRouterVrfVrAdminDistsArgsDict',
     'LoopbackInterfaceIpArgs',
     'LoopbackInterfaceIpArgsDict',
+    'LoopbackInterfaceIpv6Args',
+    'LoopbackInterfaceIpv6ArgsDict',
+    'LoopbackInterfaceIpv6AddressArgs',
+    'LoopbackInterfaceIpv6AddressArgsDict',
     'MfaServerMfaVendorTypeArgs',
     'MfaServerMfaVendorTypeArgsDict',
     'MfaServerMfaVendorTypeDuoSecurityV2Args',
@@ -1685,12 +1707,26 @@ __all__ = [
     'MfaServerMfaVendorTypePingIdentityV1ArgsDict',
     'MfaServerMfaVendorTypeRsaSecuridAccessV1Args',
     'MfaServerMfaVendorTypeRsaSecuridAccessV1ArgsDict',
-    'NatRuleDnsRewriteArgs',
-    'NatRuleDnsRewriteArgsDict',
+    'NatRuleDestinationTranslationArgs',
+    'NatRuleDestinationTranslationArgsDict',
+    'NatRuleDestinationTranslationDnsRewriteArgs',
+    'NatRuleDestinationTranslationDnsRewriteArgsDict',
+    'NatRuleDynamicDestinationTranslationArgs',
+    'NatRuleDynamicDestinationTranslationArgsDict',
     'NatRuleSourceTranslationArgs',
     'NatRuleSourceTranslationArgsDict',
-    'NatRuleSourceTranslationFallbackArgs',
-    'NatRuleSourceTranslationFallbackArgsDict',
+    'NatRuleSourceTranslationDynamicIpArgs',
+    'NatRuleSourceTranslationDynamicIpArgsDict',
+    'NatRuleSourceTranslationDynamicIpAndPortArgs',
+    'NatRuleSourceTranslationDynamicIpAndPortArgsDict',
+    'NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs',
+    'NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgsDict',
+    'NatRuleSourceTranslationDynamicIpFallbackArgs',
+    'NatRuleSourceTranslationDynamicIpFallbackArgsDict',
+    'NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs',
+    'NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgsDict',
+    'NatRuleSourceTranslationStaticIpArgs',
+    'NatRuleSourceTranslationStaticIpArgsDict',
     'OspfAuthProfileMd5Args',
     'OspfAuthProfileMd5ArgsDict',
     'PbfRuleActionArgs',
@@ -1749,12 +1785,16 @@ __all__ = [
     'QosProfileClassBandwidthTypePercentageClassClassBandwidthArgsDict',
     'RadiusServerProfileProtocolArgs',
     'RadiusServerProfileProtocolArgsDict',
-    'RadiusServerProfileProtocolEAPTTLSWithPAPArgs',
-    'RadiusServerProfileProtocolEAPTTLSWithPAPArgsDict',
-    'RadiusServerProfileProtocolPEAPMSCHAPv2Args',
-    'RadiusServerProfileProtocolPEAPMSCHAPv2ArgsDict',
-    'RadiusServerProfileProtocolPEAPWithGTCArgs',
-    'RadiusServerProfileProtocolPEAPWithGTCArgsDict',
+    'RadiusServerProfileProtocolChapArgs',
+    'RadiusServerProfileProtocolChapArgsDict',
+    'RadiusServerProfileProtocolEapTtlsWithPapArgs',
+    'RadiusServerProfileProtocolEapTtlsWithPapArgsDict',
+    'RadiusServerProfileProtocolPapArgs',
+    'RadiusServerProfileProtocolPapArgsDict',
+    'RadiusServerProfileProtocolPeapMschaPv2Args',
+    'RadiusServerProfileProtocolPeapMschaPv2ArgsDict',
+    'RadiusServerProfileProtocolPeapWithGtcArgs',
+    'RadiusServerProfileProtocolPeapWithGtcArgsDict',
     'RadiusServerProfileServerArgs',
     'RadiusServerProfileServerArgsDict',
     'RegionGeoLocationArgs',
@@ -1779,8 +1819,12 @@ __all__ = [
     'RouteAccessListTypeIpv4Ipv4EntryArgsDict',
     'RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs',
     'RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgsDict',
+    'RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs',
+    'RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgsDict',
     'RouteAccessListTypeIpv4Ipv4EntrySourceAddressArgs',
     'RouteAccessListTypeIpv4Ipv4EntrySourceAddressArgsDict',
+    'RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs',
+    'RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgsDict',
     'RouteCommunityListTypeArgs',
     'RouteCommunityListTypeArgsDict',
     'RouteCommunityListTypeExtendedArgs',
@@ -1909,6 +1953,10 @@ __all__ = [
     'TrafficSteeringRuleActionArgsDict',
     'TrafficSteeringRuleActionForwardArgs',
     'TrafficSteeringRuleActionForwardArgsDict',
+    'TrafficSteeringRuleActionForwardForwardArgs',
+    'TrafficSteeringRuleActionForwardForwardArgsDict',
+    'TrafficSteeringRuleActionForwardNoPbfArgs',
+    'TrafficSteeringRuleActionForwardNoPbfArgsDict',
     'TunnelInterfaceIpArgs',
     'TunnelInterfaceIpArgsDict',
     'UrlAccessProfileCredentialEnforcementArgs',
@@ -1929,6 +1977,8 @@ __all__ = [
     'VlanInterfaceDhcpClientArgsDict',
     'VlanInterfaceDhcpClientSendHostnameArgs',
     'VlanInterfaceDhcpClientSendHostnameArgsDict',
+    'VlanInterfaceIpArgs',
+    'VlanInterfaceIpArgsDict',
     'VulnerabilityProtectionProfileRuleArgs',
     'VulnerabilityProtectionProfileRuleArgsDict',
     'VulnerabilityProtectionProfileRuleActionArgs',
@@ -2035,6 +2085,8 @@ __all__ = [
     'ZoneDeviceAclArgsDict',
     'ZoneNetworkArgs',
     'ZoneNetworkArgsDict',
+    'ZoneNetworkTunnelArgs',
+    'ZoneNetworkTunnelArgsDict',
     'ZoneProtectionProfileFloodArgs',
     'ZoneProtectionProfileFloodArgsDict',
     'ZoneProtectionProfileFloodIcmpArgs',
@@ -2055,6 +2107,10 @@ __all__ = [
     'ZoneProtectionProfileFloodSctpInitRedArgsDict',
     'ZoneProtectionProfileFloodTcpSynArgs',
     'ZoneProtectionProfileFloodTcpSynArgsDict',
+    'ZoneProtectionProfileFloodTcpSynRedArgs',
+    'ZoneProtectionProfileFloodTcpSynRedArgsDict',
+    'ZoneProtectionProfileFloodTcpSynSynCookiesArgs',
+    'ZoneProtectionProfileFloodTcpSynSynCookiesArgsDict',
     'ZoneProtectionProfileFloodUdpArgs',
     'ZoneProtectionProfileFloodUdpArgsDict',
     'ZoneProtectionProfileFloodUdpRedArgs',
@@ -2077,6 +2133,14 @@ __all__ = [
     'ZoneProtectionProfileScanArgsDict',
     'ZoneProtectionProfileScanActionArgs',
     'ZoneProtectionProfileScanActionArgsDict',
+    'ZoneProtectionProfileScanActionAlertArgs',
+    'ZoneProtectionProfileScanActionAlertArgsDict',
+    'ZoneProtectionProfileScanActionAllowArgs',
+    'ZoneProtectionProfileScanActionAllowArgsDict',
+    'ZoneProtectionProfileScanActionBlockArgs',
+    'ZoneProtectionProfileScanActionBlockArgsDict',
+    'ZoneProtectionProfileScanActionBlockIpArgs',
+    'ZoneProtectionProfileScanActionBlockIpArgsDict',
     'ZoneProtectionProfileScanWhiteListArgs',
     'ZoneProtectionProfileScanWhiteListArgsDict',
     'ZoneUserAclArgs',
@@ -2117,26 +2181,26 @@ class AddressGroupDynamicArgs:
 
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer2ArgsDict(TypedDict):
-        lacp: NotRequired[pulumi.Input['AggregateEthernetInterfaceLayer2LacpArgsDict']]
+    class AggregateInterfaceLayer2ArgsDict(TypedDict):
+        lacp: NotRequired[pulumi.Input['AggregateInterfaceLayer2LacpArgsDict']]
         """
         Lacp
         """
-        vlan_tag: NotRequired[pulumi.Input[_builtins.int]]
+        vlan_tag: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Vlan tag
+        VLAN tag
         """
 elif False:
-    AggregateEthernetInterfaceLayer2ArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer2ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer2Args:
+class AggregateInterfaceLayer2Args:
     def __init__(__self__, *,
-                 lacp: Optional[pulumi.Input['AggregateEthernetInterfaceLayer2LacpArgs']] = None,
-                 vlan_tag: Optional[pulumi.Input[_builtins.int]] = None):
+                 lacp: Optional[pulumi.Input['AggregateInterfaceLayer2LacpArgs']] = None,
+                 vlan_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input['AggregateEthernetInterfaceLayer2LacpArgs'] lacp: Lacp
-        :param pulumi.Input[_builtins.int] vlan_tag: Vlan tag
+        :param pulumi.Input['AggregateInterfaceLayer2LacpArgs'] lacp: Lacp
+        :param pulumi.Input[_builtins.str] vlan_tag: VLAN tag
         """
         if lacp is not None:
             pulumi.set(__self__, "lacp", lacp)
@@ -2145,31 +2209,31 @@ class AggregateEthernetInterfaceLayer2Args:
 
     @_builtins.property
     @pulumi.getter
-    def lacp(self) -> Optional[pulumi.Input['AggregateEthernetInterfaceLayer2LacpArgs']]:
+    def lacp(self) -> Optional[pulumi.Input['AggregateInterfaceLayer2LacpArgs']]:
         """
         Lacp
         """
         return pulumi.get(self, "lacp")
 
     @lacp.setter
-    def lacp(self, value: Optional[pulumi.Input['AggregateEthernetInterfaceLayer2LacpArgs']]):
+    def lacp(self, value: Optional[pulumi.Input['AggregateInterfaceLayer2LacpArgs']]):
         pulumi.set(self, "lacp", value)
 
     @_builtins.property
     @pulumi.getter(name="vlanTag")
-    def vlan_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def vlan_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Vlan tag
+        VLAN tag
         """
         return pulumi.get(self, "vlan_tag")
 
     @vlan_tag.setter
-    def vlan_tag(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "vlan_tag", value)
 
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer2LacpArgsDict(TypedDict):
+    class AggregateInterfaceLayer2LacpArgsDict(TypedDict):
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Enable LACP?
@@ -2180,7 +2244,7 @@ if not MYPY:
         """
         max_ports: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Max ports
+        Maximum number of physical ports bundled in the LAG
         """
         mode: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -2188,17 +2252,17 @@ if not MYPY:
         """
         system_priority: NotRequired[pulumi.Input[_builtins.int]]
         """
-        System priority
+        LACP system priority in system ID
         """
         transmission_rate: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Transmission rate
+        Transmission mode
         """
 elif False:
-    AggregateEthernetInterfaceLayer2LacpArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer2LacpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer2LacpArgs:
+class AggregateInterfaceLayer2LacpArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  fast_failover: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -2209,10 +2273,10 @@ class AggregateEthernetInterfaceLayer2LacpArgs:
         """
         :param pulumi.Input[_builtins.bool] enable: Enable LACP?
         :param pulumi.Input[_builtins.bool] fast_failover: Fast failover
-        :param pulumi.Input[_builtins.int] max_ports: Max ports
+        :param pulumi.Input[_builtins.int] max_ports: Maximum number of physical ports bundled in the LAG
         :param pulumi.Input[_builtins.str] mode: Mode
-        :param pulumi.Input[_builtins.int] system_priority: System priority
-        :param pulumi.Input[_builtins.str] transmission_rate: Transmission rate
+        :param pulumi.Input[_builtins.int] system_priority: LACP system priority in system ID
+        :param pulumi.Input[_builtins.str] transmission_rate: Transmission mode
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -2255,7 +2319,7 @@ class AggregateEthernetInterfaceLayer2LacpArgs:
     @pulumi.getter(name="maxPorts")
     def max_ports(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Max ports
+        Maximum number of physical ports bundled in the LAG
         """
         return pulumi.get(self, "max_ports")
 
@@ -2279,7 +2343,7 @@ class AggregateEthernetInterfaceLayer2LacpArgs:
     @pulumi.getter(name="systemPriority")
     def system_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        System priority
+        LACP system priority in system ID
         """
         return pulumi.get(self, "system_priority")
 
@@ -2291,7 +2355,7 @@ class AggregateEthernetInterfaceLayer2LacpArgs:
     @pulumi.getter(name="transmissionRate")
     def transmission_rate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Transmission rate
+        Transmission mode
         """
         return pulumi.get(self, "transmission_rate")
 
@@ -2301,28 +2365,28 @@ class AggregateEthernetInterfaceLayer2LacpArgs:
 
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer3ArgsDict(TypedDict):
-        arps: NotRequired[pulumi.Input[Sequence[pulumi.Input['AggregateEthernetInterfaceLayer3ArpArgsDict']]]]
+    class AggregateInterfaceLayer3ArgsDict(TypedDict):
+        arps: NotRequired[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgsDict']]]]
         """
         Aggregate Ethernet ARP configuration
         """
-        ddns_config: NotRequired[pulumi.Input['AggregateEthernetInterfaceLayer3DdnsConfigArgsDict']]
+        ddns_config: NotRequired[pulumi.Input['AggregateInterfaceLayer3DdnsConfigArgsDict']]
         """
-        Ddns config
+        Dynamic DNS configuration specific to the Aggregate Interface.
         """
-        dhcp_client: NotRequired[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientArgsDict']]
+        dhcp_client: NotRequired[pulumi.Input['AggregateInterfaceLayer3DhcpClientArgsDict']]
         """
-        Dhcp client
+        Aggregate Ethernet DHCP Client Object
         """
         interface_management_profile: NotRequired[pulumi.Input[_builtins.str]]
         """
         Interface management profile
         """
-        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgsDict']]]]
         """
-        Interface IP addresses
+        Aggregate Interface IP addresses
         """
-        lacp: NotRequired[pulumi.Input['AggregateEthernetInterfaceLayer3LacpArgsDict']]
+        lacp: NotRequired[pulumi.Input['AggregateInterfaceLayer3LacpArgsDict']]
         """
         Lacp
         """
@@ -2331,25 +2395,25 @@ if not MYPY:
         MTU
         """
 elif False:
-    AggregateEthernetInterfaceLayer3ArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer3ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer3Args:
+class AggregateInterfaceLayer3Args:
     def __init__(__self__, *,
-                 arps: Optional[pulumi.Input[Sequence[pulumi.Input['AggregateEthernetInterfaceLayer3ArpArgs']]]] = None,
-                 ddns_config: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DdnsConfigArgs']] = None,
-                 dhcp_client: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientArgs']] = None,
+                 arps: Optional[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgs']]]] = None,
+                 ddns_config: Optional[pulumi.Input['AggregateInterfaceLayer3DdnsConfigArgs']] = None,
+                 dhcp_client: Optional[pulumi.Input['AggregateInterfaceLayer3DhcpClientArgs']] = None,
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 lacp: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3LacpArgs']] = None,
+                 ips: Optional[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgs']]]] = None,
+                 lacp: Optional[pulumi.Input['AggregateInterfaceLayer3LacpArgs']] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['AggregateEthernetInterfaceLayer3ArpArgs']]] arps: Aggregate Ethernet ARP configuration
-        :param pulumi.Input['AggregateEthernetInterfaceLayer3DdnsConfigArgs'] ddns_config: Ddns config
-        :param pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientArgs'] dhcp_client: Dhcp client
+        :param pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgs']]] arps: Aggregate Ethernet ARP configuration
+        :param pulumi.Input['AggregateInterfaceLayer3DdnsConfigArgs'] ddns_config: Dynamic DNS configuration specific to the Aggregate Interface.
+        :param pulumi.Input['AggregateInterfaceLayer3DhcpClientArgs'] dhcp_client: Aggregate Ethernet DHCP Client Object
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ips: Interface IP addresses
-        :param pulumi.Input['AggregateEthernetInterfaceLayer3LacpArgs'] lacp: Lacp
+        :param pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgs']]] ips: Aggregate Interface IP addresses
+        :param pulumi.Input['AggregateInterfaceLayer3LacpArgs'] lacp: Lacp
         :param pulumi.Input[_builtins.int] mtu: MTU
         """
         if arps is not None:
@@ -2369,38 +2433,38 @@ class AggregateEthernetInterfaceLayer3Args:
 
     @_builtins.property
     @pulumi.getter
-    def arps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AggregateEthernetInterfaceLayer3ArpArgs']]]]:
+    def arps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgs']]]]:
         """
         Aggregate Ethernet ARP configuration
         """
         return pulumi.get(self, "arps")
 
     @arps.setter
-    def arps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AggregateEthernetInterfaceLayer3ArpArgs']]]]):
+    def arps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3ArpArgs']]]]):
         pulumi.set(self, "arps", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsConfig")
-    def ddns_config(self) -> Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DdnsConfigArgs']]:
+    def ddns_config(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3DdnsConfigArgs']]:
         """
-        Ddns config
+        Dynamic DNS configuration specific to the Aggregate Interface.
         """
         return pulumi.get(self, "ddns_config")
 
     @ddns_config.setter
-    def ddns_config(self, value: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DdnsConfigArgs']]):
+    def ddns_config(self, value: Optional[pulumi.Input['AggregateInterfaceLayer3DdnsConfigArgs']]):
         pulumi.set(self, "ddns_config", value)
 
     @_builtins.property
     @pulumi.getter(name="dhcpClient")
-    def dhcp_client(self) -> Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientArgs']]:
+    def dhcp_client(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3DhcpClientArgs']]:
         """
-        Dhcp client
+        Aggregate Ethernet DHCP Client Object
         """
         return pulumi.get(self, "dhcp_client")
 
     @dhcp_client.setter
-    def dhcp_client(self, value: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientArgs']]):
+    def dhcp_client(self, value: Optional[pulumi.Input['AggregateInterfaceLayer3DhcpClientArgs']]):
         pulumi.set(self, "dhcp_client", value)
 
     @_builtins.property
@@ -2417,26 +2481,26 @@ class AggregateEthernetInterfaceLayer3Args:
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgs']]]]:
         """
-        Interface IP addresses
+        Aggregate Interface IP addresses
         """
         return pulumi.get(self, "ips")
 
     @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['AggregateInterfaceLayer3IpArgs']]]]):
         pulumi.set(self, "ips", value)
 
     @_builtins.property
     @pulumi.getter
-    def lacp(self) -> Optional[pulumi.Input['AggregateEthernetInterfaceLayer3LacpArgs']]:
+    def lacp(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3LacpArgs']]:
         """
         Lacp
         """
         return pulumi.get(self, "lacp")
 
     @lacp.setter
-    def lacp(self, value: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3LacpArgs']]):
+    def lacp(self, value: Optional[pulumi.Input['AggregateInterfaceLayer3LacpArgs']]):
         pulumi.set(self, "lacp", value)
 
     @_builtins.property
@@ -2453,25 +2517,25 @@ class AggregateEthernetInterfaceLayer3Args:
 
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer3ArpArgsDict(TypedDict):
+    class AggregateInterfaceLayer3ArpArgsDict(TypedDict):
         hw_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hw address
+        MAC address
         """
         name: NotRequired[pulumi.Input[_builtins.str]]
         """
         IP address
         """
 elif False:
-    AggregateEthernetInterfaceLayer3ArpArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer3ArpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer3ArpArgs:
+class AggregateInterfaceLayer3ArpArgs:
     def __init__(__self__, *,
                  hw_address: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] hw_address: Hw address
+        :param pulumi.Input[_builtins.str] hw_address: MAC address
         :param pulumi.Input[_builtins.str] name: IP address
         """
         if hw_address is not None:
@@ -2483,7 +2547,7 @@ class AggregateEthernetInterfaceLayer3ArpArgs:
     @pulumi.getter(name="hwAddress")
     def hw_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hw address
+        MAC address
         """
         return pulumi.get(self, "hw_address")
 
@@ -2505,89 +2569,121 @@ class AggregateEthernetInterfaceLayer3ArpArgs:
 
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer3DdnsConfigArgsDict(TypedDict):
-        ddns_cert_profile: NotRequired[pulumi.Input[_builtins.str]]
+    class AggregateInterfaceLayer3DdnsConfigArgsDict(TypedDict):
+        ddns_cert_profile: pulumi.Input[_builtins.str]
         """
-        Ddns cert profile
+        Certificate profile
         """
-        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Ddns enabled
-        """
-        ddns_hostname: NotRequired[pulumi.Input[_builtins.str]]
+        ddns_hostname: pulumi.Input[_builtins.str]
         """
         Ddns hostname
         """
+        ddns_vendor: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_vendor_config: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Enable DDNS?
+        """
         ddns_ip: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Ddns ip
+        IP to register (static only)
         """
         ddns_update_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Ddns update interval
-        """
-        ddns_vendor: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor
-        """
-        ddns_vendor_config: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor config
+        Update interval (days)
         """
 elif False:
-    AggregateEthernetInterfaceLayer3DdnsConfigArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer3DdnsConfigArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer3DdnsConfigArgs:
+class AggregateInterfaceLayer3DdnsConfigArgs:
     def __init__(__self__, *,
-                 ddns_cert_profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 ddns_cert_profile: pulumi.Input[_builtins.str],
+                 ddns_hostname: pulumi.Input[_builtins.str],
+                 ddns_vendor: pulumi.Input[_builtins.str],
+                 ddns_vendor_config: pulumi.Input[_builtins.str],
                  ddns_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ddns_hostname: Optional[pulumi.Input[_builtins.str]] = None,
                  ddns_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 ddns_vendor: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_vendor_config: Optional[pulumi.Input[_builtins.str]] = None):
+                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] ddns_cert_profile: Ddns cert profile
-        :param pulumi.Input[_builtins.bool] ddns_enabled: Ddns enabled
+        :param pulumi.Input[_builtins.str] ddns_cert_profile: Certificate profile
         :param pulumi.Input[_builtins.str] ddns_hostname: Ddns hostname
-        :param pulumi.Input[_builtins.str] ddns_ip: Ddns ip
-        :param pulumi.Input[_builtins.int] ddns_update_interval: Ddns update interval
-        :param pulumi.Input[_builtins.str] ddns_vendor: Ddns vendor
-        :param pulumi.Input[_builtins.str] ddns_vendor_config: Ddns vendor config
+        :param pulumi.Input[_builtins.str] ddns_vendor: DDNS vendor
+        :param pulumi.Input[_builtins.str] ddns_vendor_config: DDNS vendor
+        :param pulumi.Input[_builtins.bool] ddns_enabled: Enable DDNS?
+        :param pulumi.Input[_builtins.str] ddns_ip: IP to register (static only)
+        :param pulumi.Input[_builtins.int] ddns_update_interval: Update interval (days)
         """
-        if ddns_cert_profile is not None:
-            pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_hostname", ddns_hostname)
+        pulumi.set(__self__, "ddns_vendor", ddns_vendor)
+        pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
         if ddns_enabled is not None:
             pulumi.set(__self__, "ddns_enabled", ddns_enabled)
-        if ddns_hostname is not None:
-            pulumi.set(__self__, "ddns_hostname", ddns_hostname)
         if ddns_ip is not None:
             pulumi.set(__self__, "ddns_ip", ddns_ip)
         if ddns_update_interval is not None:
             pulumi.set(__self__, "ddns_update_interval", ddns_update_interval)
-        if ddns_vendor is not None:
-            pulumi.set(__self__, "ddns_vendor", ddns_vendor)
-        if ddns_vendor_config is not None:
-            pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
 
     @_builtins.property
     @pulumi.getter(name="ddnsCertProfile")
-    def ddns_cert_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ddns_cert_profile(self) -> pulumi.Input[_builtins.str]:
         """
-        Ddns cert profile
+        Certificate profile
         """
         return pulumi.get(self, "ddns_cert_profile")
 
     @ddns_cert_profile.setter
-    def ddns_cert_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ddns_cert_profile(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "ddns_cert_profile", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsHostname")
+    def ddns_hostname(self) -> pulumi.Input[_builtins.str]:
+        """
+        Ddns hostname
+        """
+        return pulumi.get(self, "ddns_hostname")
+
+    @ddns_hostname.setter
+    def ddns_hostname(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_hostname", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendor")
+    def ddns_vendor(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor")
+
+    @ddns_vendor.setter
+    def ddns_vendor(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendorConfig")
+    def ddns_vendor_config(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor_config")
+
+    @ddns_vendor_config.setter
+    def ddns_vendor_config(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor_config", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsEnabled")
     def ddns_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ddns enabled
+        Enable DDNS?
         """
         return pulumi.get(self, "ddns_enabled")
 
@@ -2596,22 +2692,10 @@ class AggregateEthernetInterfaceLayer3DdnsConfigArgs:
         pulumi.set(self, "ddns_enabled", value)
 
     @_builtins.property
-    @pulumi.getter(name="ddnsHostname")
-    def ddns_hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns hostname
-        """
-        return pulumi.get(self, "ddns_hostname")
-
-    @ddns_hostname.setter
-    def ddns_hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_hostname", value)
-
-    @_builtins.property
     @pulumi.getter(name="ddnsIp")
     def ddns_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Ddns ip
+        IP to register (static only)
         """
         return pulumi.get(self, "ddns_ip")
 
@@ -2623,7 +2707,7 @@ class AggregateEthernetInterfaceLayer3DdnsConfigArgs:
     @pulumi.getter(name="ddnsUpdateInterval")
     def ddns_update_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Ddns update interval
+        Update interval (days)
         """
         return pulumi.get(self, "ddns_update_interval")
 
@@ -2631,64 +2715,40 @@ class AggregateEthernetInterfaceLayer3DdnsConfigArgs:
     def ddns_update_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ddns_update_interval", value)
 
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendor")
-    def ddns_vendor(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor
-        """
-        return pulumi.get(self, "ddns_vendor")
-
-    @ddns_vendor.setter
-    def ddns_vendor(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor", value)
-
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendorConfig")
-    def ddns_vendor_config(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor config
-        """
-        return pulumi.get(self, "ddns_vendor_config")
-
-    @ddns_vendor_config.setter
-    def ddns_vendor_config(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor_config", value)
-
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer3DhcpClientArgsDict(TypedDict):
+    class AggregateInterfaceLayer3DhcpClientArgsDict(TypedDict):
         create_default_route: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Create default route
+        Automatically create default route pointing to default gateway provided by server
         """
         default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Default route metric
+        Metric of the default route created
         """
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Enable
+        Enable DHCP?
         """
-        send_hostname: NotRequired[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgsDict']]
+        send_hostname: NotRequired[pulumi.Input['AggregateInterfaceLayer3DhcpClientSendHostnameArgsDict']]
         """
-        Send hostname
+        Aggregate Ethernet DHCP Client Send hostname
         """
 elif False:
-    AggregateEthernetInterfaceLayer3DhcpClientArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer3DhcpClientArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer3DhcpClientArgs:
+class AggregateInterfaceLayer3DhcpClientArgs:
     def __init__(__self__, *,
                  create_default_route: Optional[pulumi.Input[_builtins.bool]] = None,
                  default_route_metric: Optional[pulumi.Input[_builtins.int]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 send_hostname: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs']] = None):
+                 send_hostname: Optional[pulumi.Input['AggregateInterfaceLayer3DhcpClientSendHostnameArgs']] = None):
         """
-        :param pulumi.Input[_builtins.bool] create_default_route: Create default route
-        :param pulumi.Input[_builtins.int] default_route_metric: Default route metric
-        :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs'] send_hostname: Send hostname
+        :param pulumi.Input[_builtins.bool] create_default_route: Automatically create default route pointing to default gateway provided by server
+        :param pulumi.Input[_builtins.int] default_route_metric: Metric of the default route created
+        :param pulumi.Input[_builtins.bool] enable: Enable DHCP?
+        :param pulumi.Input['AggregateInterfaceLayer3DhcpClientSendHostnameArgs'] send_hostname: Aggregate Ethernet DHCP Client Send hostname
         """
         if create_default_route is not None:
             pulumi.set(__self__, "create_default_route", create_default_route)
@@ -2703,7 +2763,7 @@ class AggregateEthernetInterfaceLayer3DhcpClientArgs:
     @pulumi.getter(name="createDefaultRoute")
     def create_default_route(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Create default route
+        Automatically create default route pointing to default gateway provided by server
         """
         return pulumi.get(self, "create_default_route")
 
@@ -2715,7 +2775,7 @@ class AggregateEthernetInterfaceLayer3DhcpClientArgs:
     @pulumi.getter(name="defaultRouteMetric")
     def default_route_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Default route metric
+        Metric of the default route created
         """
         return pulumi.get(self, "default_route_metric")
 
@@ -2727,7 +2787,7 @@ class AggregateEthernetInterfaceLayer3DhcpClientArgs:
     @pulumi.getter
     def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable
+        Enable DHCP?
         """
         return pulumi.get(self, "enable")
 
@@ -2737,38 +2797,38 @@ class AggregateEthernetInterfaceLayer3DhcpClientArgs:
 
     @_builtins.property
     @pulumi.getter(name="sendHostname")
-    def send_hostname(self) -> Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs']]:
+    def send_hostname(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3DhcpClientSendHostnameArgs']]:
         """
-        Send hostname
+        Aggregate Ethernet DHCP Client Send hostname
         """
         return pulumi.get(self, "send_hostname")
 
     @send_hostname.setter
-    def send_hostname(self, value: Optional[pulumi.Input['AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs']]):
+    def send_hostname(self, value: Optional[pulumi.Input['AggregateInterfaceLayer3DhcpClientSendHostnameArgs']]):
         pulumi.set(self, "send_hostname", value)
 
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgsDict(TypedDict):
+    class AggregateInterfaceLayer3DhcpClientSendHostnameArgsDict(TypedDict):
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Enable
         """
         hostname: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hostname
+        Set interface hostname
         """
 elif False:
-    AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer3DhcpClientSendHostnameArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs:
+class AggregateInterfaceLayer3DhcpClientSendHostnameArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  hostname: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.str] hostname: Hostname
+        :param pulumi.Input[_builtins.str] hostname: Set interface hostname
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -2791,7 +2851,7 @@ class AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs:
     @pulumi.getter
     def hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hostname
+        Set interface hostname
         """
         return pulumi.get(self, "hostname")
 
@@ -2801,7 +2861,38 @@ class AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs:
 
 
 if not MYPY:
-    class AggregateEthernetInterfaceLayer3LacpArgsDict(TypedDict):
+    class AggregateInterfaceLayer3IpArgsDict(TypedDict):
+        name: pulumi.Input[_builtins.str]
+        """
+        Aggregate Interface IP addresses name
+        """
+elif False:
+    AggregateInterfaceLayer3IpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class AggregateInterfaceLayer3IpArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] name: Aggregate Interface IP addresses name
+        """
+        pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        Aggregate Interface IP addresses name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+
+if not MYPY:
+    class AggregateInterfaceLayer3LacpArgsDict(TypedDict):
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Enable LACP?
@@ -2812,7 +2903,7 @@ if not MYPY:
         """
         max_ports: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Max ports
+        Maximum number of physical ports bundled in the LAG
         """
         mode: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -2820,17 +2911,17 @@ if not MYPY:
         """
         system_priority: NotRequired[pulumi.Input[_builtins.int]]
         """
-        System priority
+        LACP system priority in system ID
         """
         transmission_rate: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Transmission rate
+        Transmission mode
         """
 elif False:
-    AggregateEthernetInterfaceLayer3LacpArgsDict: TypeAlias = Mapping[str, Any]
+    AggregateInterfaceLayer3LacpArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class AggregateEthernetInterfaceLayer3LacpArgs:
+class AggregateInterfaceLayer3LacpArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  fast_failover: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -2841,10 +2932,10 @@ class AggregateEthernetInterfaceLayer3LacpArgs:
         """
         :param pulumi.Input[_builtins.bool] enable: Enable LACP?
         :param pulumi.Input[_builtins.bool] fast_failover: Fast failover
-        :param pulumi.Input[_builtins.int] max_ports: Max ports
+        :param pulumi.Input[_builtins.int] max_ports: Maximum number of physical ports bundled in the LAG
         :param pulumi.Input[_builtins.str] mode: Mode
-        :param pulumi.Input[_builtins.int] system_priority: System priority
-        :param pulumi.Input[_builtins.str] transmission_rate: Transmission rate
+        :param pulumi.Input[_builtins.int] system_priority: LACP system priority in system ID
+        :param pulumi.Input[_builtins.str] transmission_rate: Transmission mode
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -2887,7 +2978,7 @@ class AggregateEthernetInterfaceLayer3LacpArgs:
     @pulumi.getter(name="maxPorts")
     def max_ports(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Max ports
+        Maximum number of physical ports bundled in the LAG
         """
         return pulumi.get(self, "max_ports")
 
@@ -2911,7 +3002,7 @@ class AggregateEthernetInterfaceLayer3LacpArgs:
     @pulumi.getter(name="systemPriority")
     def system_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        System priority
+        LACP system priority in system ID
         """
         return pulumi.get(self, "system_priority")
 
@@ -2923,7 +3014,7 @@ class AggregateEthernetInterfaceLayer3LacpArgs:
     @pulumi.getter(name="transmissionRate")
     def transmission_rate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Transmission rate
+        Transmission mode
         """
         return pulumi.get(self, "transmission_rate")
 
@@ -7095,7 +7186,7 @@ if not MYPY:
         """
         Orf
         """
-        remove_private_as: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgsDict']]
+        remove_private_as: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgsDict']]
         """
         Remove private a s
         """
@@ -7126,7 +7217,7 @@ class BgpAddressFamilyProfileIpv4Ipv4MulticastArgs:
                  maximum_prefix: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastMaximumPrefixArgs']] = None,
                  next_hop: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastNextHopArgs']] = None,
                  orf: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastOrfArgs']] = None,
-                 remove_private_as: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs']] = None,
+                 remove_private_as: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs']] = None,
                  route_reflector_client: Optional[pulumi.Input[_builtins.bool]] = None,
                  send_community: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityArgs']] = None,
                  soft_reconfig_with_stored_info: Optional[pulumi.Input[_builtins.bool]] = None):
@@ -7140,7 +7231,7 @@ class BgpAddressFamilyProfileIpv4Ipv4MulticastArgs:
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastMaximumPrefixArgs'] maximum_prefix: Maximum prefix
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastNextHopArgs'] next_hop: Next hop
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastOrfArgs'] orf: Orf
-        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs'] remove_private_as: Remove private a s
+        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs'] remove_private_as: Remove private a s
         :param pulumi.Input[_builtins.bool] route_reflector_client: Route reflector client?
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityArgs'] send_community: Send community
         :param pulumi.Input[_builtins.bool] soft_reconfig_with_stored_info: Soft reconfiguration of peer with stored routes?
@@ -7281,15 +7372,15 @@ class BgpAddressFamilyProfileIpv4Ipv4MulticastArgs:
         pulumi.set(self, "orf", value)
 
     @_builtins.property
-    @pulumi.getter(name="removePrivateAS")
-    def remove_private_as(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs']]:
+    @pulumi.getter(name="removePrivateAs")
+    def remove_private_as(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs']]:
         """
         Remove private a s
         """
         return pulumi.get(self, "remove_private_as")
 
     @remove_private_as.setter
-    def remove_private_as(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs']]):
+    def remove_private_as(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs']]):
         pulumi.set(self, "remove_private_as", value)
 
     @_builtins.property
@@ -7369,7 +7460,7 @@ class BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathArgs:
         pulumi.set(self, "tx_all_paths", value)
 
     @_builtins.property
-    @pulumi.getter(name="txBestpathPerAS")
+    @pulumi.getter(name="txBestpathPerAs")
     def tx_bestpath_per_as(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Tx bestpath per a s
@@ -7722,26 +7813,26 @@ class BgpAddressFamilyProfileIpv4Ipv4MulticastOrfArgs:
 
 
 if not MYPY:
-    class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgsDict(TypedDict):
-        all: NotRequired[pulumi.Input[_builtins.str]]
+    class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgsDict(TypedDict):
+        all: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgsDict']]
         """
         All
         """
-        replace_as: NotRequired[pulumi.Input[_builtins.str]]
+        replace_as: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgsDict']]
         """
         Replace a s
         """
 elif False:
-    BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgsDict: TypeAlias = Mapping[str, Any]
+    BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs:
+class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs:
     def __init__(__self__, *,
-                 all: Optional[pulumi.Input[_builtins.str]] = None,
-                 replace_as: Optional[pulumi.Input[_builtins.str]] = None):
+                 all: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs']] = None,
+                 replace_as: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] all: All
-        :param pulumi.Input[_builtins.str] replace_as: Replace a s
+        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs'] all: All
+        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs'] replace_as: Replace a s
         """
         if all is not None:
             pulumi.set(__self__, "all", all)
@@ -7750,27 +7841,51 @@ class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs:
 
     @_builtins.property
     @pulumi.getter
-    def all(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def all(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs']]:
         """
         All
         """
         return pulumi.get(self, "all")
 
     @all.setter
-    def all(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def all(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs']]):
         pulumi.set(self, "all", value)
 
     @_builtins.property
-    @pulumi.getter(name="replaceAS")
-    def replace_as(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter(name="replaceAs")
+    def replace_as(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs']]:
         """
         Replace a s
         """
         return pulumi.get(self, "replace_as")
 
     @replace_as.setter
-    def replace_as(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def replace_as(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs']]):
         pulumi.set(self, "replace_as", value)
+
+
+if not MYPY:
+    class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgsDict(TypedDict):
+        pass
+elif False:
+    BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
+    class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgsDict(TypedDict):
+        pass
+elif False:
+    BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs:
+    def __init__(__self__):
+        pass
 
 
 if not MYPY:
@@ -7983,7 +8098,7 @@ if not MYPY:
         """
         Orf
         """
-        remove_private_as: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgsDict']]
+        remove_private_as: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgsDict']]
         """
         Remove private a s
         """
@@ -8014,7 +8129,7 @@ class BgpAddressFamilyProfileIpv4Ipv4UnicastArgs:
                  maximum_prefix: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastMaximumPrefixArgs']] = None,
                  next_hop: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastNextHopArgs']] = None,
                  orf: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgs']] = None,
-                 remove_private_as: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs']] = None,
+                 remove_private_as: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs']] = None,
                  route_reflector_client: Optional[pulumi.Input[_builtins.bool]] = None,
                  send_community: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityArgs']] = None,
                  soft_reconfig_with_stored_info: Optional[pulumi.Input[_builtins.bool]] = None):
@@ -8028,7 +8143,7 @@ class BgpAddressFamilyProfileIpv4Ipv4UnicastArgs:
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastMaximumPrefixArgs'] maximum_prefix: Maximum prefix
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastNextHopArgs'] next_hop: Next hop
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgs'] orf: Orf
-        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs'] remove_private_as: Remove private a s
+        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs'] remove_private_as: Remove private a s
         :param pulumi.Input[_builtins.bool] route_reflector_client: Route reflector client?
         :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityArgs'] send_community: Send community
         :param pulumi.Input[_builtins.bool] soft_reconfig_with_stored_info: Soft reconfiguration of peer with stored routes?
@@ -8169,15 +8284,15 @@ class BgpAddressFamilyProfileIpv4Ipv4UnicastArgs:
         pulumi.set(self, "orf", value)
 
     @_builtins.property
-    @pulumi.getter(name="removePrivateAS")
-    def remove_private_as(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs']]:
+    @pulumi.getter(name="removePrivateAs")
+    def remove_private_as(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs']]:
         """
         Remove private a s
         """
         return pulumi.get(self, "remove_private_as")
 
     @remove_private_as.setter
-    def remove_private_as(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs']]):
+    def remove_private_as(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs']]):
         pulumi.set(self, "remove_private_as", value)
 
     @_builtins.property
@@ -8257,7 +8372,7 @@ class BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs:
         pulumi.set(self, "tx_all_paths", value)
 
     @_builtins.property
-    @pulumi.getter(name="txBestpathPerAS")
+    @pulumi.getter(name="txBestpathPerAs")
     def tx_bestpath_per_as(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Tx bestpath per a s
@@ -8610,26 +8725,26 @@ class BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgs:
 
 
 if not MYPY:
-    class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgsDict(TypedDict):
-        all: NotRequired[pulumi.Input[_builtins.str]]
+    class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgsDict(TypedDict):
+        all: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgsDict']]
         """
         All
         """
-        replace_as: NotRequired[pulumi.Input[_builtins.str]]
+        replace_as: NotRequired[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgsDict']]
         """
         Replace a s
         """
 elif False:
-    BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgsDict: TypeAlias = Mapping[str, Any]
+    BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs:
+class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs:
     def __init__(__self__, *,
-                 all: Optional[pulumi.Input[_builtins.str]] = None,
-                 replace_as: Optional[pulumi.Input[_builtins.str]] = None):
+                 all: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs']] = None,
+                 replace_as: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] all: All
-        :param pulumi.Input[_builtins.str] replace_as: Replace a s
+        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs'] all: All
+        :param pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs'] replace_as: Replace a s
         """
         if all is not None:
             pulumi.set(__self__, "all", all)
@@ -8638,27 +8753,51 @@ class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs:
 
     @_builtins.property
     @pulumi.getter
-    def all(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def all(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs']]:
         """
         All
         """
         return pulumi.get(self, "all")
 
     @all.setter
-    def all(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def all(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs']]):
         pulumi.set(self, "all", value)
 
     @_builtins.property
-    @pulumi.getter(name="replaceAS")
-    def replace_as(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter(name="replaceAs")
+    def replace_as(self) -> Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs']]:
         """
         Replace a s
         """
         return pulumi.get(self, "replace_as")
 
     @replace_as.setter
-    def replace_as(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def replace_as(self, value: Optional[pulumi.Input['BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs']]):
         pulumi.set(self, "replace_as", value)
+
+
+if not MYPY:
+    class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgsDict(TypedDict):
+        pass
+elif False:
+    BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
+    class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgsDict(TypedDict):
+        pass
+elif False:
+    BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs:
+    def __init__(__self__):
+        pass
 
 
 if not MYPY:
@@ -10256,7 +10395,7 @@ if not MYPY:
         """
         rib: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpRibArgsDict']]
         """
-        Rib
+        BGP Root RIB
         """
 elif False:
     BgpRouteMapRedistributionBgpArgsDict: TypeAlias = Mapping[str, Any]
@@ -10268,7 +10407,7 @@ class BgpRouteMapRedistributionBgpArgs:
                  rib: Optional[pulumi.Input['BgpRouteMapRedistributionBgpRibArgs']] = None):
         """
         :param pulumi.Input['BgpRouteMapRedistributionBgpOspfArgs'] ospf: Ospf
-        :param pulumi.Input['BgpRouteMapRedistributionBgpRibArgs'] rib: Rib
+        :param pulumi.Input['BgpRouteMapRedistributionBgpRibArgs'] rib: BGP Root RIB
         """
         if ospf is not None:
             pulumi.set(__self__, "ospf", ospf)
@@ -10291,7 +10430,7 @@ class BgpRouteMapRedistributionBgpArgs:
     @pulumi.getter
     def rib(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpRibArgs']]:
         """
-        Rib
+        BGP Root RIB
         """
         return pulumi.get(self, "rib")
 
@@ -10304,7 +10443,7 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfArgsDict(TypedDict):
         route_maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapArgsDict']]]]
         """
-        Route maps
+        BGP Root OSPF Route maps
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfArgsDict: TypeAlias = Mapping[str, Any]
@@ -10314,7 +10453,7 @@ class BgpRouteMapRedistributionBgpOspfArgs:
     def __init__(__self__, *,
                  route_maps: Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapArgs']]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapArgs']]] route_maps: Route maps
+        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapArgs']]] route_maps: BGP Root OSPF Route maps
         """
         if route_maps is not None:
             pulumi.set(__self__, "route_maps", route_maps)
@@ -10323,7 +10462,7 @@ class BgpRouteMapRedistributionBgpOspfArgs:
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapArgs']]]]:
         """
-        Route maps
+        BGP Root OSPF Route maps
         """
         return pulumi.get(self, "route_maps")
 
@@ -10336,11 +10475,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfRouteMapArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Action
+        BGP Root OSPF Route maps Action
         """
         description: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Description
+        BGP Root OSPF Route maps Description
         """
         match: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchArgsDict']]
         """
@@ -10348,11 +10487,11 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Sequence number
+        BGP Root OSPF Route maps Sequence number
         """
         set: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapSetArgsDict']]
         """
-        Set
+        BGP Root OSPF Set
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapArgsDict: TypeAlias = Mapping[str, Any]
@@ -10366,11 +10505,11 @@ class BgpRouteMapRedistributionBgpOspfRouteMapArgs:
                  name: Optional[pulumi.Input[_builtins.int]] = None,
                  set: Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapSetArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Action
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] action: BGP Root OSPF Route maps Action
+        :param pulumi.Input[_builtins.str] description: BGP Root OSPF Route maps Description
         :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs'] match: Match
-        :param pulumi.Input[_builtins.int] name: Sequence number
-        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapSetArgs'] set: Set
+        :param pulumi.Input[_builtins.int] name: BGP Root OSPF Route maps Sequence number
+        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapSetArgs'] set: BGP Root OSPF Set
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -10387,7 +10526,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action
+        BGP Root OSPF Route maps Action
         """
         return pulumi.get(self, "action")
 
@@ -10399,7 +10538,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        BGP Root OSPF Route maps Description
         """
         return pulumi.get(self, "description")
 
@@ -10423,7 +10562,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Sequence number
+        BGP Root OSPF Route maps Sequence number
         """
         return pulumi.get(self, "name")
 
@@ -10435,7 +10574,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapArgs:
     @pulumi.getter
     def set(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapSetArgs']]:
         """
-        Set
+        BGP Root OSPF Set
         """
         return pulumi.get(self, "set")
 
@@ -10448,47 +10587,47 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgsDict(TypedDict):
         as_path_access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        AS path access list
+        BGP Root OSPF Route maps match AS path access list
         """
         extended_community: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Extended community
+        EBGP Root OSPF Route maps match xtended community
         """
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Interface
+        BGP Root OSPF Route maps match Interface
         """
         ipv4: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4ArgsDict']]
         """
-        bgp-route-map-redistributions ipv4 object
+        BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
         """
         large_community: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Large community
+        BGP Root OSPF Route maps match Large community
         """
         local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Local preference
+        BGP Root OSPF Route maps match Local preference
         """
         metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric
+        BGP Root OSPF Route maps match Metric
         """
         origin: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Origin
+        BGP Root OSPF Route maps match Origin
         """
         peer: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Peer
+        BGP Root OSPF Route maps match Peer
         """
         regular_community: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Regular community
+        BGP Root OSPF Route maps match Regular community
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        BGP Root OSPF Route maps match Tag
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapMatchArgsDict: TypeAlias = Mapping[str, Any]
@@ -10508,17 +10647,17 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
                  regular_community: Optional[pulumi.Input[_builtins.str]] = None,
                  tag: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] as_path_access_list: AS path access list
-        :param pulumi.Input[_builtins.str] extended_community: Extended community
-        :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args'] ipv4: bgp-route-map-redistributions ipv4 object
-        :param pulumi.Input[_builtins.str] large_community: Large community
-        :param pulumi.Input[_builtins.int] local_preference: Local preference
-        :param pulumi.Input[_builtins.int] metric: Metric
-        :param pulumi.Input[_builtins.str] origin: Origin
-        :param pulumi.Input[_builtins.str] peer: Peer
-        :param pulumi.Input[_builtins.str] regular_community: Regular community
-        :param pulumi.Input[_builtins.int] tag: Tag
+        :param pulumi.Input[_builtins.str] as_path_access_list: BGP Root OSPF Route maps match AS path access list
+        :param pulumi.Input[_builtins.str] extended_community: EBGP Root OSPF Route maps match xtended community
+        :param pulumi.Input[_builtins.str] interface: BGP Root OSPF Route maps match Interface
+        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args'] ipv4: BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
+        :param pulumi.Input[_builtins.str] large_community: BGP Root OSPF Route maps match Large community
+        :param pulumi.Input[_builtins.int] local_preference: BGP Root OSPF Route maps match Local preference
+        :param pulumi.Input[_builtins.int] metric: BGP Root OSPF Route maps match Metric
+        :param pulumi.Input[_builtins.str] origin: BGP Root OSPF Route maps match Origin
+        :param pulumi.Input[_builtins.str] peer: BGP Root OSPF Route maps match Peer
+        :param pulumi.Input[_builtins.str] regular_community: BGP Root OSPF Route maps match Regular community
+        :param pulumi.Input[_builtins.int] tag: BGP Root OSPF Route maps match Tag
         """
         if as_path_access_list is not None:
             pulumi.set(__self__, "as_path_access_list", as_path_access_list)
@@ -10547,7 +10686,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter(name="asPathAccessList")
     def as_path_access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        AS path access list
+        BGP Root OSPF Route maps match AS path access list
         """
         return pulumi.get(self, "as_path_access_list")
 
@@ -10559,7 +10698,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter(name="extendedCommunity")
     def extended_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Extended community
+        EBGP Root OSPF Route maps match xtended community
         """
         return pulumi.get(self, "extended_community")
 
@@ -10571,7 +10710,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter
     def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface
+        BGP Root OSPF Route maps match Interface
         """
         return pulumi.get(self, "interface")
 
@@ -10583,7 +10722,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter
     def ipv4(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args']]:
         """
-        bgp-route-map-redistributions ipv4 object
+        BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
         """
         return pulumi.get(self, "ipv4")
 
@@ -10595,7 +10734,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter(name="largeCommunity")
     def large_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Large community
+        BGP Root OSPF Route maps match Large community
         """
         return pulumi.get(self, "large_community")
 
@@ -10607,7 +10746,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter(name="localPreference")
     def local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Local preference
+        BGP Root OSPF Route maps match Local preference
         """
         return pulumi.get(self, "local_preference")
 
@@ -10619,7 +10758,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter
     def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric
+        BGP Root OSPF Route maps match Metric
         """
         return pulumi.get(self, "metric")
 
@@ -10631,7 +10770,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter
     def origin(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Origin
+        BGP Root OSPF Route maps match Origin
         """
         return pulumi.get(self, "origin")
 
@@ -10643,7 +10782,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter
     def peer(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Peer
+        BGP Root OSPF Route maps match Peer
         """
         return pulumi.get(self, "peer")
 
@@ -10655,7 +10794,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter(name="regularCommunity")
     def regular_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Regular community
+        BGP Root OSPF Route maps match Regular community
         """
         return pulumi.get(self, "regular_community")
 
@@ -10667,7 +10806,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        BGP Root OSPF Route maps match Tag
         """
         return pulumi.get(self, "tag")
 
@@ -10680,15 +10819,15 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4ArgsDict(TypedDict):
         address: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgsDict']]
         """
-        bgp-route-map-redistributions ipv4 object address
+        BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
         """
         next_hop: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgsDict']]
         """
-        bgp-route-map-redistributions ipv4 object next*hop
+        BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
         """
         route_source: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgsDict']]
         """
-        bgp-route-map-redistributions ipv4 object route*source
+        BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4ArgsDict: TypeAlias = Mapping[str, Any]
@@ -10700,9 +10839,9 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args:
                  next_hop: Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs']] = None,
                  route_source: Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs']] = None):
         """
-        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs'] address: bgp-route-map-redistributions ipv4 object address
-        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs'] next_hop: bgp-route-map-redistributions ipv4 object next*hop
-        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs'] route_source: bgp-route-map-redistributions ipv4 object route*source
+        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs'] address: BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
+        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs'] next_hop: BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
+        :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs'] route_source: BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
         """
         if address is not None:
             pulumi.set(__self__, "address", address)
@@ -10715,7 +10854,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args:
     @pulumi.getter
     def address(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs']]:
         """
-        bgp-route-map-redistributions ipv4 object address
+        BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
         """
         return pulumi.get(self, "address")
 
@@ -10727,7 +10866,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args:
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs']]:
         """
-        bgp-route-map-redistributions ipv4 object next*hop
+        BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
         """
         return pulumi.get(self, "next_hop")
 
@@ -10739,7 +10878,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args:
     @pulumi.getter(name="routeSource")
     def route_source(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs']]:
         """
-        bgp-route-map-redistributions ipv4 object route*source
+        BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
         """
         return pulumi.get(self, "route_source")
 
@@ -10752,11 +10891,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        BGP Root OSPF Route maps match ipv4 Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        BGP Root OSPF Route maps match ipv4 Prefix list
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -10767,8 +10906,8 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: BGP Root OSPF Route maps match ipv4 Access list
+        :param pulumi.Input[_builtins.str] prefix_list: BGP Root OSPF Route maps match ipv4 Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -10779,7 +10918,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        BGP Root OSPF Route maps match ipv4 Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -10791,7 +10930,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        BGP Root OSPF Route maps match ipv4 Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -10804,11 +10943,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        BGP Root OSPF Route maps ipv4 next_vr hop Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        BGP Root OSPF Route maps ipv4 next hop Prefix list
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgsDict: TypeAlias = Mapping[str, Any]
@@ -10819,8 +10958,8 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: BGP Root OSPF Route maps ipv4 next_vr hop Access list
+        :param pulumi.Input[_builtins.str] prefix_list: BGP Root OSPF Route maps ipv4 next hop Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -10831,7 +10970,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        BGP Root OSPF Route maps ipv4 next_vr hop Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -10843,7 +10982,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        BGP Root OSPF Route maps ipv4 next hop Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -10856,11 +10995,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        BGP Root OSPF Route maps ipv4 route source Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        BGP Root OSPF Route maps ipv4 route source Prefix list
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgsDict: TypeAlias = Mapping[str, Any]
@@ -10871,8 +11010,8 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: BGP Root OSPF Route maps ipv4 route source Access list
+        :param pulumi.Input[_builtins.str] prefix_list: BGP Root OSPF Route maps ipv4 route source Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -10883,7 +11022,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        BGP Root OSPF Route maps ipv4 route source Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -10895,7 +11034,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        BGP Root OSPF Route maps ipv4 route source Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -10912,11 +11051,11 @@ if not MYPY:
         """
         metric_type: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Metric type
+        BGP Root OSPF Route maps set Metric type
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        BGP Root OSPF Route maps set Tag
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapSetArgsDict: TypeAlias = Mapping[str, Any]
@@ -10929,8 +11068,8 @@ class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs:
                  tag: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs'] metric: Metric
-        :param pulumi.Input[_builtins.str] metric_type: Metric type
-        :param pulumi.Input[_builtins.int] tag: Tag
+        :param pulumi.Input[_builtins.str] metric_type: BGP Root OSPF Route maps set Metric type
+        :param pulumi.Input[_builtins.int] tag: BGP Root OSPF Route maps set Tag
         """
         if metric is not None:
             pulumi.set(__self__, "metric", metric)
@@ -10955,7 +11094,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs:
     @pulumi.getter(name="metricType")
     def metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Metric type
+        BGP Root OSPF Route maps set Metric type
         """
         return pulumi.get(self, "metric_type")
 
@@ -10967,7 +11106,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapSetArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        BGP Root OSPF Route maps set Tag
         """
         return pulumi.get(self, "tag")
 
@@ -10980,11 +11119,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Metric action
+        BGP Root OSPF Route maps set Metric action
         """
         value: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric value
+        BGP Root OSPF Route maps set Metric value
         """
 elif False:
     BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgsDict: TypeAlias = Mapping[str, Any]
@@ -10995,8 +11134,8 @@ class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs:
                  action: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Metric action
-        :param pulumi.Input[_builtins.int] value: Metric value
+        :param pulumi.Input[_builtins.str] action: BGP Root OSPF Route maps set Metric action
+        :param pulumi.Input[_builtins.int] value: BGP Root OSPF Route maps set Metric value
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -11007,7 +11146,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Metric action
+        BGP Root OSPF Route maps set Metric action
         """
         return pulumi.get(self, "action")
 
@@ -11019,7 +11158,7 @@ class BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs:
     @pulumi.getter
     def value(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric value
+        BGP Root OSPF Route maps set Metric value
         """
         return pulumi.get(self, "value")
 
@@ -11032,7 +11171,7 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpRibArgsDict(TypedDict):
         route_maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapArgsDict']]]]
         """
-        Route maps
+        BGP Root RIB Route maps
         """
 elif False:
     BgpRouteMapRedistributionBgpRibArgsDict: TypeAlias = Mapping[str, Any]
@@ -11042,7 +11181,7 @@ class BgpRouteMapRedistributionBgpRibArgs:
     def __init__(__self__, *,
                  route_maps: Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapArgs']]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapArgs']]] route_maps: Route maps
+        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapArgs']]] route_maps: BGP Root RIB Route maps
         """
         if route_maps is not None:
             pulumi.set(__self__, "route_maps", route_maps)
@@ -11051,7 +11190,7 @@ class BgpRouteMapRedistributionBgpRibArgs:
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapArgs']]]]:
         """
-        Route maps
+        BGP Root RIB Route maps
         """
         return pulumi.get(self, "route_maps")
 
@@ -11064,23 +11203,23 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpRibRouteMapArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Action
+        BGP Root RIB Route maps Action
         """
         description: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Description
+        BGP Root RIB Route maps Description
         """
         match: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchArgsDict']]
         """
-        Match
+        match attribute for BG Rib route map
         """
         name: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Sequence number
+        BGP Root RIB Route maps Sequence number
         """
         set: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapSetArgsDict']]
         """
-        Set
+        Set attributes for BGP route map
         """
 elif False:
     BgpRouteMapRedistributionBgpRibRouteMapArgsDict: TypeAlias = Mapping[str, Any]
@@ -11094,11 +11233,11 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgs:
                  name: Optional[pulumi.Input[_builtins.int]] = None,
                  set: Optional[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapSetArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Action
-        :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchArgs'] match: Match
-        :param pulumi.Input[_builtins.int] name: Sequence number
-        :param pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapSetArgs'] set: Set
+        :param pulumi.Input[_builtins.str] action: BGP Root RIB Route maps Action
+        :param pulumi.Input[_builtins.str] description: BGP Root RIB Route maps Description
+        :param pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchArgs'] match: match attribute for BG Rib route map
+        :param pulumi.Input[_builtins.int] name: BGP Root RIB Route maps Sequence number
+        :param pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapSetArgs'] set: Set attributes for BGP route map
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -11115,7 +11254,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action
+        BGP Root RIB Route maps Action
         """
         return pulumi.get(self, "action")
 
@@ -11127,7 +11266,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        BGP Root RIB Route maps Description
         """
         return pulumi.get(self, "description")
 
@@ -11139,7 +11278,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgs:
     @pulumi.getter
     def match(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchArgs']]:
         """
-        Match
+        match attribute for BG Rib route map
         """
         return pulumi.get(self, "match")
 
@@ -11151,7 +11290,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Sequence number
+        BGP Root RIB Route maps Sequence number
         """
         return pulumi.get(self, "name")
 
@@ -11163,7 +11302,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapArgs:
     @pulumi.getter
     def set(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapSetArgs']]:
         """
-        Set
+        Set attributes for BGP route map
         """
         return pulumi.get(self, "set")
 
@@ -11176,47 +11315,47 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpRibRouteMapMatchArgsDict(TypedDict):
         as_path_access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        AS path access list
+        BGP Root RIB Route maps match AS path access list
         """
         extended_community: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Extended community
+        BGP Root RIB Route maps match Extended community
         """
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Interface
+        BGP Root RIB Route maps match Interface
         """
         ipv4: NotRequired[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4ArgsDict']]
         """
-        Ipv4
+        BGP Route Map Redistributions Root BGP rib Route Map IPv4
         """
         large_community: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Large community
+        BGP Root RIB Route maps match Large community
         """
         local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Local preference
+        BGP Root RIB Route maps match Local preference
         """
         metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric
+        BGP Root RIB Route maps match Metric
         """
         origin: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Origin
+        BGP Root RIB Route maps match Origin
         """
         peer: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Peer
+        BGP Root RIB Route maps match Peer
         """
         regular_community: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Regular community
+        BGP Root RIB Route maps match Regular community
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        BGP Root RIB Route maps match Tag
         """
 elif False:
     BgpRouteMapRedistributionBgpRibRouteMapMatchArgsDict: TypeAlias = Mapping[str, Any]
@@ -11236,17 +11375,17 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
                  regular_community: Optional[pulumi.Input[_builtins.str]] = None,
                  tag: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] as_path_access_list: AS path access list
-        :param pulumi.Input[_builtins.str] extended_community: Extended community
-        :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Args'] ipv4: Ipv4
-        :param pulumi.Input[_builtins.str] large_community: Large community
-        :param pulumi.Input[_builtins.int] local_preference: Local preference
-        :param pulumi.Input[_builtins.int] metric: Metric
-        :param pulumi.Input[_builtins.str] origin: Origin
-        :param pulumi.Input[_builtins.str] peer: Peer
-        :param pulumi.Input[_builtins.str] regular_community: Regular community
-        :param pulumi.Input[_builtins.int] tag: Tag
+        :param pulumi.Input[_builtins.str] as_path_access_list: BGP Root RIB Route maps match AS path access list
+        :param pulumi.Input[_builtins.str] extended_community: BGP Root RIB Route maps match Extended community
+        :param pulumi.Input[_builtins.str] interface: BGP Root RIB Route maps match Interface
+        :param pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Args'] ipv4: BGP Route Map Redistributions Root BGP rib Route Map IPv4
+        :param pulumi.Input[_builtins.str] large_community: BGP Root RIB Route maps match Large community
+        :param pulumi.Input[_builtins.int] local_preference: BGP Root RIB Route maps match Local preference
+        :param pulumi.Input[_builtins.int] metric: BGP Root RIB Route maps match Metric
+        :param pulumi.Input[_builtins.str] origin: BGP Root RIB Route maps match Origin
+        :param pulumi.Input[_builtins.str] peer: BGP Root RIB Route maps match Peer
+        :param pulumi.Input[_builtins.str] regular_community: BGP Root RIB Route maps match Regular community
+        :param pulumi.Input[_builtins.int] tag: BGP Root RIB Route maps match Tag
         """
         if as_path_access_list is not None:
             pulumi.set(__self__, "as_path_access_list", as_path_access_list)
@@ -11275,7 +11414,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter(name="asPathAccessList")
     def as_path_access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        AS path access list
+        BGP Root RIB Route maps match AS path access list
         """
         return pulumi.get(self, "as_path_access_list")
 
@@ -11287,7 +11426,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter(name="extendedCommunity")
     def extended_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Extended community
+        BGP Root RIB Route maps match Extended community
         """
         return pulumi.get(self, "extended_community")
 
@@ -11299,7 +11438,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter
     def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface
+        BGP Root RIB Route maps match Interface
         """
         return pulumi.get(self, "interface")
 
@@ -11311,7 +11450,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter
     def ipv4(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Args']]:
         """
-        Ipv4
+        BGP Route Map Redistributions Root BGP rib Route Map IPv4
         """
         return pulumi.get(self, "ipv4")
 
@@ -11323,7 +11462,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter(name="largeCommunity")
     def large_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Large community
+        BGP Root RIB Route maps match Large community
         """
         return pulumi.get(self, "large_community")
 
@@ -11335,7 +11474,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter(name="localPreference")
     def local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Local preference
+        BGP Root RIB Route maps match Local preference
         """
         return pulumi.get(self, "local_preference")
 
@@ -11347,7 +11486,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter
     def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric
+        BGP Root RIB Route maps match Metric
         """
         return pulumi.get(self, "metric")
 
@@ -11359,7 +11498,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter
     def origin(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Origin
+        BGP Root RIB Route maps match Origin
         """
         return pulumi.get(self, "origin")
 
@@ -11371,7 +11510,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter
     def peer(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Peer
+        BGP Root RIB Route maps match Peer
         """
         return pulumi.get(self, "peer")
 
@@ -11383,7 +11522,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter(name="regularCommunity")
     def regular_community(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Regular community
+        BGP Root RIB Route maps match Regular community
         """
         return pulumi.get(self, "regular_community")
 
@@ -11395,7 +11534,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        BGP Root RIB Route maps match Tag
         """
         return pulumi.get(self, "tag")
 
@@ -11480,11 +11619,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        BGP Root RIB Route maps match ipv Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        BGP Root RIB Route maps match ipv Prefix list
         """
 elif False:
     BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -11495,8 +11634,8 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: BGP Root RIB Route maps match ipv Access list
+        :param pulumi.Input[_builtins.str] prefix_list: BGP Root RIB Route maps match ipv Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -11507,7 +11646,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        BGP Root RIB Route maps match ipv Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -11519,7 +11658,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        BGP Root RIB Route maps match ipv Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -11532,11 +11671,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        BGP Root RIB Route maps match ipv next hop Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        BGP Root RIB Route maps match ipv next hop Prefix list
         """
 elif False:
     BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgsDict: TypeAlias = Mapping[str, Any]
@@ -11547,8 +11686,8 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: BGP Root RIB Route maps match ipv next hop Access list
+        :param pulumi.Input[_builtins.str] prefix_list: BGP Root RIB Route maps match ipv next hop Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -11559,7 +11698,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        BGP Root RIB Route maps match ipv next hop Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -11571,7 +11710,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        BGP Root RIB Route maps match ipv next hop Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -11584,11 +11723,11 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        BGP Root RIB Route maps match ipv route source Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        BGP Root RIB Route maps match ipv route source Prefix list
         """
 elif False:
     BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgsDict: TypeAlias = Mapping[str, Any]
@@ -11599,8 +11738,8 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: BGP Root RIB Route maps match ipv route source Access list
+        :param pulumi.Input[_builtins.str] prefix_list: BGP Root RIB Route maps match ipv route source Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -11611,7 +11750,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        BGP Root RIB Route maps match ipv route source Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -11623,7 +11762,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        BGP Root RIB Route maps match ipv route source Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -11636,7 +11775,7 @@ if not MYPY:
     class BgpRouteMapRedistributionBgpRibRouteMapSetArgsDict(TypedDict):
         source_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Source address
+        BGP Root RIB Route maps set Source address
         """
 elif False:
     BgpRouteMapRedistributionBgpRibRouteMapSetArgsDict: TypeAlias = Mapping[str, Any]
@@ -11646,7 +11785,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapSetArgs:
     def __init__(__self__, *,
                  source_address: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] source_address: Source address
+        :param pulumi.Input[_builtins.str] source_address: BGP Root RIB Route maps set Source address
         """
         if source_address is not None:
             pulumi.set(__self__, "source_address", source_address)
@@ -11655,7 +11794,7 @@ class BgpRouteMapRedistributionBgpRibRouteMapSetArgs:
     @pulumi.getter(name="sourceAddress")
     def source_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Source address
+        BGP Root RIB Route maps set Source address
         """
         return pulumi.get(self, "source_address")
 
@@ -11668,7 +11807,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticArgsDict(TypedDict):
         bgp: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpArgsDict']]
         """
-        Bgp
+        Connected Static Root BGP
         """
         ospf: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfArgsDict']]
         """
@@ -11688,7 +11827,7 @@ class BgpRouteMapRedistributionConnectedStaticArgs:
                  ospf: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfArgs']] = None,
                  rib: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibArgs']] = None):
         """
-        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpArgs'] bgp: Bgp
+        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpArgs'] bgp: Connected Static Root BGP
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfArgs'] ospf: Ospf
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibArgs'] rib: Rib
         """
@@ -11703,7 +11842,7 @@ class BgpRouteMapRedistributionConnectedStaticArgs:
     @pulumi.getter
     def bgp(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpArgs']]:
         """
-        Bgp
+        Connected Static Root BGP
         """
         return pulumi.get(self, "bgp")
 
@@ -11740,7 +11879,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpArgsDict(TypedDict):
         route_maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgsDict']]]]
         """
-        Route maps
+        Connected Static BGP Route maps
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpArgsDict: TypeAlias = Mapping[str, Any]
@@ -11750,7 +11889,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpArgs:
     def __init__(__self__, *,
                  route_maps: Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs']]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs']]] route_maps: Route maps
+        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs']]] route_maps: Connected Static BGP Route maps
         """
         if route_maps is not None:
             pulumi.set(__self__, "route_maps", route_maps)
@@ -11759,7 +11898,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpArgs:
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs']]]]:
         """
-        Route maps
+        Connected Static BGP Route maps
         """
         return pulumi.get(self, "route_maps")
 
@@ -11772,11 +11911,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Action
+        Connected Static BGP Route maps Action
         """
         description: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Description
+        Connected Static BGP Route maps Description
         """
         match: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgsDict']]
         """
@@ -11784,7 +11923,7 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Sequence number
+        Connected Static BGP Route maps Sequence number
         """
         set: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgsDict']]
         """
@@ -11802,10 +11941,10 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs:
                  name: Optional[pulumi.Input[_builtins.int]] = None,
                  set: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Action
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] action: Connected Static BGP Route maps Action
+        :param pulumi.Input[_builtins.str] description: Connected Static BGP Route maps Description
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgs'] match: Match
-        :param pulumi.Input[_builtins.int] name: Sequence number
+        :param pulumi.Input[_builtins.int] name: Connected Static BGP Route maps Sequence number
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs'] set: Set
         """
         if action is not None:
@@ -11823,7 +11962,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action
+        Connected Static BGP Route maps Action
         """
         return pulumi.get(self, "action")
 
@@ -11835,7 +11974,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        Connected Static BGP Route maps Description
         """
         return pulumi.get(self, "description")
 
@@ -11859,7 +11998,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Sequence number
+        Connected Static BGP Route maps Sequence number
         """
         return pulumi.get(self, "name")
 
@@ -11884,7 +12023,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgsDict(TypedDict):
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Interface
+        Connected Static BGP Route maps match Interface
         """
         ipv4: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4ArgsDict']]
         """
@@ -11892,7 +12031,7 @@ if not MYPY:
         """
         metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric
+        Connected Static BGP Route maps match Metric
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgsDict: TypeAlias = Mapping[str, Any]
@@ -11904,9 +12043,9 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgs:
                  ipv4: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Args']] = None,
                  metric: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] interface: Interface
+        :param pulumi.Input[_builtins.str] interface: Connected Static BGP Route maps match Interface
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Args'] ipv4: bgp-route-map-redistributions connected-static ipv4
-        :param pulumi.Input[_builtins.int] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Connected Static BGP Route maps match Metric
         """
         if interface is not None:
             pulumi.set(__self__, "interface", interface)
@@ -11919,7 +12058,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgs:
     @pulumi.getter
     def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface
+        Connected Static BGP Route maps match Interface
         """
         return pulumi.get(self, "interface")
 
@@ -11943,7 +12082,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgs:
     @pulumi.getter
     def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric
+        Connected Static BGP Route maps match Metric
         """
         return pulumi.get(self, "metric")
 
@@ -12008,11 +12147,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        Connected Static BGP Route maps match ip4 Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        Connected Static BGP Route maps match ip4  Prefix list
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -12023,8 +12162,8 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: Connected Static BGP Route maps match ip4 Access list
+        :param pulumi.Input[_builtins.str] prefix_list: Connected Static BGP Route maps match ip4  Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -12035,7 +12174,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        Connected Static BGP Route maps match ip4 Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -12047,7 +12186,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        Connected Static BGP Route maps match ip4  Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -12060,11 +12199,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        Connected Static BGP Route maps match ip4 next hop Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        Connected Static BGP Route maps match ip4 next hop Prefix list
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgsDict: TypeAlias = Mapping[str, Any]
@@ -12075,8 +12214,8 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: Connected Static BGP Route maps match ip4 next hop Access list
+        :param pulumi.Input[_builtins.str] prefix_list: Connected Static BGP Route maps match ip4 next hop Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -12087,7 +12226,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        Connected Static BGP Route maps match ip4 next hop Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -12099,7 +12238,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        Connected Static BGP Route maps match ip4 next hop Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -12116,11 +12255,11 @@ if not MYPY:
         """
         aspath_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
         """
-        AS numbers
+        Connected Static BGP Route maps set AS numbers
         """
         atomic_aggregate: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Enable BGP atomic aggregate?
+        Connected Static BGP Route maps set Enable BGP atomic aggregate?
         """
         ipv4: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4ArgsDict']]
         """
@@ -12128,11 +12267,11 @@ if not MYPY:
         """
         large_communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
         """
-        Large communities
+        Connected Static  BGP Route maps set Large communities
         """
         local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Local preference
+        Connected Static BGP Route maps set Local preference
         """
         metric: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgsDict']]
         """
@@ -12140,23 +12279,23 @@ if not MYPY:
         """
         origin: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Origin
+        Connected Static BGP Route maps set Origin
         """
         originator_id: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Originator ID
+        Connected Static BGP Route maps set Originator ID
         """
         regular_communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
         """
-        Regular communities
+        Connected Static  BGP Route maps set Regular communities
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        Connected Static BGP Route maps set Tag
         """
         weight: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Weight
+        Connected Static BGP Route maps set Weight
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgsDict: TypeAlias = Mapping[str, Any]
@@ -12178,17 +12317,17 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
                  weight: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs'] aggregator: bgp-route-map-redistributions connected*static aggregator
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] aspath_prepends: AS numbers
-        :param pulumi.Input[_builtins.bool] atomic_aggregate: Enable BGP atomic aggregate?
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] aspath_prepends: Connected Static BGP Route maps set AS numbers
+        :param pulumi.Input[_builtins.bool] atomic_aggregate: Connected Static BGP Route maps set Enable BGP atomic aggregate?
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args'] ipv4: Ipv4
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] large_communities: Large communities
-        :param pulumi.Input[_builtins.int] local_preference: Local preference
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] large_communities: Connected Static  BGP Route maps set Large communities
+        :param pulumi.Input[_builtins.int] local_preference: Connected Static BGP Route maps set Local preference
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs'] metric: Metric
-        :param pulumi.Input[_builtins.str] origin: Origin
-        :param pulumi.Input[_builtins.str] originator_id: Originator ID
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] regular_communities: Regular communities
-        :param pulumi.Input[_builtins.int] tag: Tag
-        :param pulumi.Input[_builtins.int] weight: Weight
+        :param pulumi.Input[_builtins.str] origin: Connected Static BGP Route maps set Origin
+        :param pulumi.Input[_builtins.str] originator_id: Connected Static BGP Route maps set Originator ID
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] regular_communities: Connected Static  BGP Route maps set Regular communities
+        :param pulumi.Input[_builtins.int] tag: Connected Static BGP Route maps set Tag
+        :param pulumi.Input[_builtins.int] weight: Connected Static BGP Route maps set Weight
         """
         if aggregator is not None:
             pulumi.set(__self__, "aggregator", aggregator)
@@ -12231,7 +12370,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter(name="aspathPrepends")
     def aspath_prepends(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
         """
-        AS numbers
+        Connected Static BGP Route maps set AS numbers
         """
         return pulumi.get(self, "aspath_prepends")
 
@@ -12243,7 +12382,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter(name="atomicAggregate")
     def atomic_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable BGP atomic aggregate?
+        Connected Static BGP Route maps set Enable BGP atomic aggregate?
         """
         return pulumi.get(self, "atomic_aggregate")
 
@@ -12267,7 +12406,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter(name="largeCommunities")
     def large_communities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Large communities
+        Connected Static  BGP Route maps set Large communities
         """
         return pulumi.get(self, "large_communities")
 
@@ -12279,7 +12418,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter(name="localPreference")
     def local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Local preference
+        Connected Static BGP Route maps set Local preference
         """
         return pulumi.get(self, "local_preference")
 
@@ -12303,7 +12442,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter
     def origin(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Origin
+        Connected Static BGP Route maps set Origin
         """
         return pulumi.get(self, "origin")
 
@@ -12315,7 +12454,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter(name="originatorId")
     def originator_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Originator ID
+        Connected Static BGP Route maps set Originator ID
         """
         return pulumi.get(self, "originator_id")
 
@@ -12327,7 +12466,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter(name="regularCommunities")
     def regular_communities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Regular communities
+        Connected Static  BGP Route maps set Regular communities
         """
         return pulumi.get(self, "regular_communities")
 
@@ -12339,7 +12478,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        Connected Static BGP Route maps set Tag
         """
         return pulumi.get(self, "tag")
 
@@ -12351,7 +12490,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs:
     @pulumi.getter
     def weight(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Weight
+        Connected Static BGP Route maps set Weight
         """
         return pulumi.get(self, "weight")
 
@@ -12364,11 +12503,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgsDict(TypedDict):
         as_: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Aggregator AS
+        Connected Static BGP Route maps set Aggregator AS
         """
         router_id: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Router ID
+        Connected Static BGP Route maps set Router ID
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgsDict: TypeAlias = Mapping[str, Any]
@@ -12379,8 +12518,8 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs:
                  as_: Optional[pulumi.Input[_builtins.int]] = None,
                  router_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.int] as_: Aggregator AS
-        :param pulumi.Input[_builtins.str] router_id: Router ID
+        :param pulumi.Input[_builtins.int] as_: Connected Static BGP Route maps set Aggregator AS
+        :param pulumi.Input[_builtins.str] router_id: Connected Static BGP Route maps set Router ID
         """
         if as_ is not None:
             pulumi.set(__self__, "as_", as_)
@@ -12391,7 +12530,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs:
     @pulumi.getter(name="as")
     def as_(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Aggregator AS
+        Connected Static BGP Route maps set Aggregator AS
         """
         return pulumi.get(self, "as_")
 
@@ -12403,7 +12542,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs:
     @pulumi.getter(name="routerId")
     def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Router ID
+        Connected Static BGP Route maps set Router ID
         """
         return pulumi.get(self, "router_id")
 
@@ -12416,11 +12555,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4ArgsDict(TypedDict):
         next_hop: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Next hop
+        Connected Static BGP Route maps set Next ipv4 hop
         """
         source_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Source address
+        Connected Static BGP Route maps set ipv4 Source address
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4ArgsDict: TypeAlias = Mapping[str, Any]
@@ -12431,8 +12570,8 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args:
                  next_hop: Optional[pulumi.Input[_builtins.str]] = None,
                  source_address: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] next_hop: Next hop
-        :param pulumi.Input[_builtins.str] source_address: Source address
+        :param pulumi.Input[_builtins.str] next_hop: Connected Static BGP Route maps set Next ipv4 hop
+        :param pulumi.Input[_builtins.str] source_address: Connected Static BGP Route maps set ipv4 Source address
         """
         if next_hop is not None:
             pulumi.set(__self__, "next_hop", next_hop)
@@ -12443,7 +12582,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args:
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Next hop
+        Connected Static BGP Route maps set Next ipv4 hop
         """
         return pulumi.get(self, "next_hop")
 
@@ -12455,7 +12594,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args:
     @pulumi.getter(name="sourceAddress")
     def source_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Source address
+        Connected Static BGP Route maps set ipv4 Source address
         """
         return pulumi.get(self, "source_address")
 
@@ -12468,11 +12607,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Metric action
+        Connected Static BGP Route maps set Metric action
         """
         value: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric value
+        Connected Static BGP Route maps set Metric value
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgsDict: TypeAlias = Mapping[str, Any]
@@ -12483,8 +12622,8 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs:
                  action: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Metric action
-        :param pulumi.Input[_builtins.int] value: Metric value
+        :param pulumi.Input[_builtins.str] action: Connected Static BGP Route maps set Metric action
+        :param pulumi.Input[_builtins.int] value: Connected Static BGP Route maps set Metric value
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -12495,7 +12634,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Metric action
+        Connected Static BGP Route maps set Metric action
         """
         return pulumi.get(self, "action")
 
@@ -12507,7 +12646,7 @@ class BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs:
     @pulumi.getter
     def value(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric value
+        Connected Static BGP Route maps set Metric value
         """
         return pulumi.get(self, "value")
 
@@ -12520,7 +12659,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticOspfArgsDict(TypedDict):
         route_maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgsDict']]]]
         """
-        Route maps
+        Connected Static  BGP OSPF Route maps
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticOspfArgsDict: TypeAlias = Mapping[str, Any]
@@ -12530,7 +12669,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfArgs:
     def __init__(__self__, *,
                  route_maps: Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs']]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs']]] route_maps: Route maps
+        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs']]] route_maps: Connected Static  BGP OSPF Route maps
         """
         if route_maps is not None:
             pulumi.set(__self__, "route_maps", route_maps)
@@ -12539,7 +12678,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfArgs:
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs']]]]:
         """
-        Route maps
+        Connected Static  BGP OSPF Route maps
         """
         return pulumi.get(self, "route_maps")
 
@@ -12552,11 +12691,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Action
+        Connected Static BGP OSPF Route map Action
         """
         description: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Description
+        Connected Static BGP OSPF Route map Description
         """
         match: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgsDict']]
         """
@@ -12564,11 +12703,11 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Sequence number
+        Connected Static BGP OSPF Route map Sequence number
         """
         set: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgsDict']]
         """
-        Set
+        Connected Static Root OSPF Set
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgsDict: TypeAlias = Mapping[str, Any]
@@ -12582,11 +12721,11 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs:
                  name: Optional[pulumi.Input[_builtins.int]] = None,
                  set: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Action
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] action: Connected Static BGP OSPF Route map Action
+        :param pulumi.Input[_builtins.str] description: Connected Static BGP OSPF Route map Description
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs'] match: Match
-        :param pulumi.Input[_builtins.int] name: Sequence number
-        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs'] set: Set
+        :param pulumi.Input[_builtins.int] name: Connected Static BGP OSPF Route map Sequence number
+        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs'] set: Connected Static Root OSPF Set
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -12603,7 +12742,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action
+        Connected Static BGP OSPF Route map Action
         """
         return pulumi.get(self, "action")
 
@@ -12615,7 +12754,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        Connected Static BGP OSPF Route map Description
         """
         return pulumi.get(self, "description")
 
@@ -12639,7 +12778,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Sequence number
+        Connected Static BGP OSPF Route map Sequence number
         """
         return pulumi.get(self, "name")
 
@@ -12651,7 +12790,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs:
     @pulumi.getter
     def set(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs']]:
         """
-        Set
+        Connected Static Root OSPF Set
         """
         return pulumi.get(self, "set")
 
@@ -12664,7 +12803,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgsDict(TypedDict):
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Interface
+        Connected Static BGP OSPF Route map Interface
         """
         ipv4: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4ArgsDict']]
         """
@@ -12672,7 +12811,7 @@ if not MYPY:
         """
         metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric
+        Connected Static BGP OSPF Route map Metric
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgsDict: TypeAlias = Mapping[str, Any]
@@ -12684,9 +12823,9 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs:
                  ipv4: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args']] = None,
                  metric: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] interface: Interface
+        :param pulumi.Input[_builtins.str] interface: Connected Static BGP OSPF Route map Interface
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args'] ipv4: bgp-route-map-redistributions connected-static match ipv4
-        :param pulumi.Input[_builtins.int] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Connected Static BGP OSPF Route map Metric
         """
         if interface is not None:
             pulumi.set(__self__, "interface", interface)
@@ -12699,7 +12838,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs:
     @pulumi.getter
     def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface
+        Connected Static BGP OSPF Route map Interface
         """
         return pulumi.get(self, "interface")
 
@@ -12723,7 +12862,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs:
     @pulumi.getter
     def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric
+        Connected Static BGP OSPF Route map Metric
         """
         return pulumi.get(self, "metric")
 
@@ -12736,7 +12875,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4ArgsDict(TypedDict):
         address: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgsDict']]
         """
-        Address
+        Connected Static Root OSPF Address
         """
         next_hop: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgsDict']]
         """
@@ -12751,7 +12890,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args:
                  address: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs']] = None,
                  next_hop: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs']] = None):
         """
-        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs'] address: Address
+        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs'] address: Connected Static Root OSPF Address
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs'] next_hop: Next hop
         """
         if address is not None:
@@ -12763,7 +12902,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args:
     @pulumi.getter
     def address(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs']]:
         """
-        Address
+        Connected Static Root OSPF Address
         """
         return pulumi.get(self, "address")
 
@@ -12788,11 +12927,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        Connected Static BGP OSPF Route map ipv4 Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        Connected Static BGP OSPF Route map ipv4 Prefix list
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -12803,8 +12942,8 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: Connected Static BGP OSPF Route map ipv4 Access list
+        :param pulumi.Input[_builtins.str] prefix_list: Connected Static BGP OSPF Route map ipv4 Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -12815,7 +12954,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        Connected Static BGP OSPF Route map ipv4 Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -12827,7 +12966,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        Connected Static BGP OSPF Route map ipv4 Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -12840,11 +12979,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        Connected Static BGP OSPF Route map ipv4 next hop Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        Connected Static BGP OSPF Route map ipv4 next hop Prefix list
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgsDict: TypeAlias = Mapping[str, Any]
@@ -12855,8 +12994,8 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: Connected Static BGP OSPF Route map ipv4 next hop Access list
+        :param pulumi.Input[_builtins.str] prefix_list: Connected Static BGP OSPF Route map ipv4 next hop Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -12867,7 +13006,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        Connected Static BGP OSPF Route map ipv4 next hop Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -12879,7 +13018,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        Connected Static BGP OSPF Route map ipv4 next hop Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -12896,11 +13035,11 @@ if not MYPY:
         """
         metric_type: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Metric type
+        Connected Static BGP OSPF Route map set Metric type
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        Connected Static BGP OSPF Route map set Tag
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgsDict: TypeAlias = Mapping[str, Any]
@@ -12913,8 +13052,8 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs:
                  tag: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs'] metric: Metric
-        :param pulumi.Input[_builtins.str] metric_type: Metric type
-        :param pulumi.Input[_builtins.int] tag: Tag
+        :param pulumi.Input[_builtins.str] metric_type: Connected Static BGP OSPF Route map set Metric type
+        :param pulumi.Input[_builtins.int] tag: Connected Static BGP OSPF Route map set Tag
         """
         if metric is not None:
             pulumi.set(__self__, "metric", metric)
@@ -12939,7 +13078,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs:
     @pulumi.getter(name="metricType")
     def metric_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Metric type
+        Connected Static BGP OSPF Route map set Metric type
         """
         return pulumi.get(self, "metric_type")
 
@@ -12951,7 +13090,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        Connected Static BGP OSPF Route map set Tag
         """
         return pulumi.get(self, "tag")
 
@@ -12964,11 +13103,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Metric action
+        Connected Static BGP OSPF Route map set Metric action
         """
         value: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric value
+        Connected Static BGP OSPF Route map set Metric value
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgsDict: TypeAlias = Mapping[str, Any]
@@ -12979,8 +13118,8 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs:
                  action: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Metric action
-        :param pulumi.Input[_builtins.int] value: Metric value
+        :param pulumi.Input[_builtins.str] action: Connected Static BGP OSPF Route map set Metric action
+        :param pulumi.Input[_builtins.int] value: Connected Static BGP OSPF Route map set Metric value
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -12991,7 +13130,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Metric action
+        Connected Static BGP OSPF Route map set Metric action
         """
         return pulumi.get(self, "action")
 
@@ -13003,7 +13142,7 @@ class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs:
     @pulumi.getter
     def value(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric value
+        Connected Static BGP OSPF Route map set Metric value
         """
         return pulumi.get(self, "value")
 
@@ -13016,7 +13155,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticRibArgsDict(TypedDict):
         route_maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapArgsDict']]]]
         """
-        Route maps
+        Connected Static BGP Rib Route maps
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticRibArgsDict: TypeAlias = Mapping[str, Any]
@@ -13026,7 +13165,7 @@ class BgpRouteMapRedistributionConnectedStaticRibArgs:
     def __init__(__self__, *,
                  route_maps: Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs']]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs']]] route_maps: Route maps
+        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs']]] route_maps: Connected Static BGP Rib Route maps
         """
         if route_maps is not None:
             pulumi.set(__self__, "route_maps", route_maps)
@@ -13035,7 +13174,7 @@ class BgpRouteMapRedistributionConnectedStaticRibArgs:
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs']]]]:
         """
-        Route maps
+        Connected Static BGP Rib Route maps
         """
         return pulumi.get(self, "route_maps")
 
@@ -13048,11 +13187,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Action
+        Connected Static BGP Rib Route maps Action
         """
         description: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Description
+        Connected Static BGP Rib Route maps Description
         """
         match: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgsDict']]
         """
@@ -13060,11 +13199,11 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Sequence number
+        Connected Static BGP Rib Route maps Sequence number
         """
         set: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgsDict']]
         """
-        Set
+        Connected Static Root RIB set
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticRibRouteMapArgsDict: TypeAlias = Mapping[str, Any]
@@ -13078,11 +13217,11 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs:
                  name: Optional[pulumi.Input[_builtins.int]] = None,
                  set: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Action
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] action: Connected Static BGP Rib Route maps Action
+        :param pulumi.Input[_builtins.str] description: Connected Static BGP Rib Route maps Description
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs'] match: Match
-        :param pulumi.Input[_builtins.int] name: Sequence number
-        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs'] set: Set
+        :param pulumi.Input[_builtins.int] name: Connected Static BGP Rib Route maps Sequence number
+        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs'] set: Connected Static Root RIB set
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -13099,7 +13238,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action
+        Connected Static BGP Rib Route maps Action
         """
         return pulumi.get(self, "action")
 
@@ -13111,7 +13250,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        Connected Static BGP Rib Route maps Description
         """
         return pulumi.get(self, "description")
 
@@ -13135,7 +13274,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Sequence number
+        Connected Static BGP Rib Route maps Sequence number
         """
         return pulumi.get(self, "name")
 
@@ -13147,7 +13286,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs:
     @pulumi.getter
     def set(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs']]:
         """
-        Set
+        Connected Static Root RIB set
         """
         return pulumi.get(self, "set")
 
@@ -13160,7 +13299,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgsDict(TypedDict):
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Interface
+        Connected Static BGP Rib Route maps Interface
         """
         ipv4: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4ArgsDict']]
         """
@@ -13168,7 +13307,7 @@ if not MYPY:
         """
         metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric
+        Connected Static BGP Rib Route maps Metric
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgsDict: TypeAlias = Mapping[str, Any]
@@ -13180,9 +13319,9 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs:
                  ipv4: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args']] = None,
                  metric: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] interface: Interface
+        :param pulumi.Input[_builtins.str] interface: Connected Static BGP Rib Route maps Interface
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args'] ipv4: Ipv4
-        :param pulumi.Input[_builtins.int] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Connected Static BGP Rib Route maps Metric
         """
         if interface is not None:
             pulumi.set(__self__, "interface", interface)
@@ -13195,7 +13334,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs:
     @pulumi.getter
     def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface
+        Connected Static BGP Rib Route maps Interface
         """
         return pulumi.get(self, "interface")
 
@@ -13219,7 +13358,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs:
     @pulumi.getter
     def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric
+        Connected Static BGP Rib Route maps Metric
         """
         return pulumi.get(self, "metric")
 
@@ -13232,7 +13371,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4ArgsDict(TypedDict):
         address: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgsDict']]
         """
-        Address
+        Connected Static BGP Rib Route maps ipv4 address
         """
         next_hop: NotRequired[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgsDict']]
         """
@@ -13247,7 +13386,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args:
                  address: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs']] = None,
                  next_hop: Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgs']] = None):
         """
-        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs'] address: Address
+        :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs'] address: Connected Static BGP Rib Route maps ipv4 address
         :param pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgs'] next_hop: Next hop
         """
         if address is not None:
@@ -13259,7 +13398,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args:
     @pulumi.getter
     def address(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs']]:
         """
-        Address
+        Connected Static BGP Rib Route maps ipv4 address
         """
         return pulumi.get(self, "address")
 
@@ -13284,11 +13423,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        Connected Static BGP Rib Route maps ipv4 Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        Connected Static BGP Rib Route maps ipv4 Prefix list
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -13299,8 +13438,8 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: Connected Static BGP Rib Route maps ipv4 Access list
+        :param pulumi.Input[_builtins.str] prefix_list: Connected Static BGP Rib Route maps ipv4 Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -13311,7 +13450,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        Connected Static BGP Rib Route maps ipv4 Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -13323,7 +13462,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        Connected Static BGP Rib Route maps ipv4 Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -13336,11 +13475,11 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        Connected Static BGP Rib Route maps ipv4 nect hop Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        Connected Static BGP Rib Route maps ipv4 next hop Prefix list
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgsDict: TypeAlias = Mapping[str, Any]
@@ -13351,8 +13490,8 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: Connected Static BGP Rib Route maps ipv4 nect hop Access list
+        :param pulumi.Input[_builtins.str] prefix_list: Connected Static BGP Rib Route maps ipv4 next hop Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -13363,7 +13502,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        Connected Static BGP Rib Route maps ipv4 nect hop Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -13375,7 +13514,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        Connected Static BGP Rib Route maps ipv4 next hop Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -13388,7 +13527,7 @@ if not MYPY:
     class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgsDict(TypedDict):
         source_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Source address
+        Connected Static BGP Rib Route Map Distribution Source address
         """
 elif False:
     BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgsDict: TypeAlias = Mapping[str, Any]
@@ -13398,7 +13537,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs:
     def __init__(__self__, *,
                  source_address: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] source_address: Source address
+        :param pulumi.Input[_builtins.str] source_address: Connected Static BGP Rib Route Map Distribution Source address
         """
         if source_address is not None:
             pulumi.set(__self__, "source_address", source_address)
@@ -13407,7 +13546,7 @@ class BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs:
     @pulumi.getter(name="sourceAddress")
     def source_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Source address
+        Connected Static BGP Rib Route Map Distribution Source address
         """
         return pulumi.get(self, "source_address")
 
@@ -13420,7 +13559,7 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfArgsDict(TypedDict):
         bgp: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfBgpArgsDict']]
         """
-        Bgp
+        OSPF Root BGP
         """
         rib: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfRibArgsDict']]
         """
@@ -13435,7 +13574,7 @@ class BgpRouteMapRedistributionOspfArgs:
                  bgp: Optional[pulumi.Input['BgpRouteMapRedistributionOspfBgpArgs']] = None,
                  rib: Optional[pulumi.Input['BgpRouteMapRedistributionOspfRibArgs']] = None):
         """
-        :param pulumi.Input['BgpRouteMapRedistributionOspfBgpArgs'] bgp: Bgp
+        :param pulumi.Input['BgpRouteMapRedistributionOspfBgpArgs'] bgp: OSPF Root BGP
         :param pulumi.Input['BgpRouteMapRedistributionOspfRibArgs'] rib: Rib
         """
         if bgp is not None:
@@ -13447,7 +13586,7 @@ class BgpRouteMapRedistributionOspfArgs:
     @pulumi.getter
     def bgp(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfBgpArgs']]:
         """
-        Bgp
+        OSPF Root BGP
         """
         return pulumi.get(self, "bgp")
 
@@ -13472,7 +13611,7 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfBgpArgsDict(TypedDict):
         route_maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapArgsDict']]]]
         """
-        Route maps
+        OSPF BGP Route maps
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpArgsDict: TypeAlias = Mapping[str, Any]
@@ -13482,7 +13621,7 @@ class BgpRouteMapRedistributionOspfBgpArgs:
     def __init__(__self__, *,
                  route_maps: Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapArgs']]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapArgs']]] route_maps: Route maps
+        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapArgs']]] route_maps: OSPF BGP Route maps
         """
         if route_maps is not None:
             pulumi.set(__self__, "route_maps", route_maps)
@@ -13491,7 +13630,7 @@ class BgpRouteMapRedistributionOspfBgpArgs:
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapArgs']]]]:
         """
-        Route maps
+        OSPF BGP Route maps
         """
         return pulumi.get(self, "route_maps")
 
@@ -13504,11 +13643,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfBgpRouteMapArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Action
+        OSPF BGP Route maps Action
         """
         description: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Description
+        OSPF BGP Route maps Description
         """
         match: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapMatchArgsDict']]
         """
@@ -13516,11 +13655,11 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Sequence number
+        OSPF BGP Route maps Sequence number
         """
         set: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetArgsDict']]
         """
-        Set
+        OSPF Root Set
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapArgsDict: TypeAlias = Mapping[str, Any]
@@ -13534,11 +13673,11 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgs:
                  name: Optional[pulumi.Input[_builtins.int]] = None,
                  set: Optional[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Action
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] action: OSPF BGP Route maps Action
+        :param pulumi.Input[_builtins.str] description: OSPF BGP Route maps Description
         :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs'] match: Match
-        :param pulumi.Input[_builtins.int] name: Sequence number
-        :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetArgs'] set: Set
+        :param pulumi.Input[_builtins.int] name: OSPF BGP Route maps Sequence number
+        :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetArgs'] set: OSPF Root Set
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -13555,7 +13694,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action
+        OSPF BGP Route maps Action
         """
         return pulumi.get(self, "action")
 
@@ -13567,7 +13706,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        OSPF BGP Route maps Description
         """
         return pulumi.get(self, "description")
 
@@ -13591,7 +13730,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Sequence number
+        OSPF BGP Route maps Sequence number
         """
         return pulumi.get(self, "name")
 
@@ -13603,7 +13742,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapArgs:
     @pulumi.getter
     def set(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetArgs']]:
         """
-        Set
+        OSPF Root Set
         """
         return pulumi.get(self, "set")
 
@@ -13620,11 +13759,11 @@ if not MYPY:
         """
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Interface
+        OSPF BGP Route maps Interface
         """
         metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric
+        OSPF BGP Route maps Metric
         """
         next_hop: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgsDict']]
         """
@@ -13632,7 +13771,7 @@ if not MYPY:
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        OSPF BGP Route maps Tag
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapMatchArgsDict: TypeAlias = Mapping[str, Any]
@@ -13647,10 +13786,10 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs:
                  tag: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgs'] address: bgp-route-map-redistributions ospf address
-        :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input[_builtins.int] metric: Metric
+        :param pulumi.Input[_builtins.str] interface: OSPF BGP Route maps Interface
+        :param pulumi.Input[_builtins.int] metric: OSPF BGP Route maps Metric
         :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgs'] next_hop: bgp-route-map-redistributions ospf next*hop
-        :param pulumi.Input[_builtins.int] tag: Tag
+        :param pulumi.Input[_builtins.int] tag: OSPF BGP Route maps Tag
         """
         if address is not None:
             pulumi.set(__self__, "address", address)
@@ -13679,7 +13818,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs:
     @pulumi.getter
     def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface
+        OSPF BGP Route maps Interface
         """
         return pulumi.get(self, "interface")
 
@@ -13691,7 +13830,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs:
     @pulumi.getter
     def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric
+        OSPF BGP Route maps Metric
         """
         return pulumi.get(self, "metric")
 
@@ -13715,7 +13854,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        OSPF BGP Route maps Tag
         """
         return pulumi.get(self, "tag")
 
@@ -13728,11 +13867,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        OSPF BGP Route maps match Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        OSPF BGP Route maps match Prefix list
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -13743,8 +13882,8 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: OSPF BGP Route maps match Access list
+        :param pulumi.Input[_builtins.str] prefix_list: OSPF BGP Route maps match Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -13755,7 +13894,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        OSPF BGP Route maps match Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -13767,7 +13906,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        OSPF BGP Route maps match Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -13780,11 +13919,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        OSPF BGP Route maps next_hop Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        OSPF BGP Route maps next_hop Prefix list
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgsDict: TypeAlias = Mapping[str, Any]
@@ -13795,8 +13934,8 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: OSPF BGP Route maps next_hop Access list
+        :param pulumi.Input[_builtins.str] prefix_list: OSPF BGP Route maps next_hop Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -13807,7 +13946,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        OSPF BGP Route maps next_hop Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -13819,7 +13958,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        OSPF BGP Route maps next_hop Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -13836,11 +13975,11 @@ if not MYPY:
         """
         aspath_prepends: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]
         """
-        AS numbers
+        OSPF BGP Route maps set AS numbers
         """
         atomic_aggregate: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Enable BGP atomic aggregate?
+        OSPF BGP Route maps set Enable BGP atomic aggregate?
         """
         ipv4: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4ArgsDict']]
         """
@@ -13848,11 +13987,11 @@ if not MYPY:
         """
         large_communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
         """
-        Large communities
+        OSPF BGP Route maps set Large communities
         """
         local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Local preference
+        OSPF BGP Route maps set Local preference
         """
         metric: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgsDict']]
         """
@@ -13860,23 +13999,23 @@ if not MYPY:
         """
         origin: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Origin
+        OSPF BGP Route maps set Origin
         """
         originator_id: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Originator ID
+        OSPF BGP Route maps set Originator ID
         """
         regular_communities: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
         """
-        Regular communities
+        OSPF BGP Route maps set Regular communities
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        OSPF BGP Route maps set Tag
         """
         weight: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Weight
+        OSPF BGP Route maps set Weight
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapSetArgsDict: TypeAlias = Mapping[str, Any]
@@ -13898,17 +14037,17 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
                  weight: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs'] aggregator: bgp-route-map-redistributions set aggregator
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] aspath_prepends: AS numbers
-        :param pulumi.Input[_builtins.bool] atomic_aggregate: Enable BGP atomic aggregate?
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.int]]] aspath_prepends: OSPF BGP Route maps set AS numbers
+        :param pulumi.Input[_builtins.bool] atomic_aggregate: OSPF BGP Route maps set Enable BGP atomic aggregate?
         :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args'] ipv4: Ipv4
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] large_communities: Large communities
-        :param pulumi.Input[_builtins.int] local_preference: Local preference
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] large_communities: OSPF BGP Route maps set Large communities
+        :param pulumi.Input[_builtins.int] local_preference: OSPF BGP Route maps set Local preference
         :param pulumi.Input['BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs'] metric: Metric
-        :param pulumi.Input[_builtins.str] origin: Origin
-        :param pulumi.Input[_builtins.str] originator_id: Originator ID
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] regular_communities: Regular communities
-        :param pulumi.Input[_builtins.int] tag: Tag
-        :param pulumi.Input[_builtins.int] weight: Weight
+        :param pulumi.Input[_builtins.str] origin: OSPF BGP Route maps set Origin
+        :param pulumi.Input[_builtins.str] originator_id: OSPF BGP Route maps set Originator ID
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] regular_communities: OSPF BGP Route maps set Regular communities
+        :param pulumi.Input[_builtins.int] tag: OSPF BGP Route maps set Tag
+        :param pulumi.Input[_builtins.int] weight: OSPF BGP Route maps set Weight
         """
         if aggregator is not None:
             pulumi.set(__self__, "aggregator", aggregator)
@@ -13951,7 +14090,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter(name="aspathPrepends")
     def aspath_prepends(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.int]]]]:
         """
-        AS numbers
+        OSPF BGP Route maps set AS numbers
         """
         return pulumi.get(self, "aspath_prepends")
 
@@ -13963,7 +14102,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter(name="atomicAggregate")
     def atomic_aggregate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable BGP atomic aggregate?
+        OSPF BGP Route maps set Enable BGP atomic aggregate?
         """
         return pulumi.get(self, "atomic_aggregate")
 
@@ -13987,7 +14126,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter(name="largeCommunities")
     def large_communities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Large communities
+        OSPF BGP Route maps set Large communities
         """
         return pulumi.get(self, "large_communities")
 
@@ -13999,7 +14138,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter(name="localPreference")
     def local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Local preference
+        OSPF BGP Route maps set Local preference
         """
         return pulumi.get(self, "local_preference")
 
@@ -14023,7 +14162,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter
     def origin(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Origin
+        OSPF BGP Route maps set Origin
         """
         return pulumi.get(self, "origin")
 
@@ -14035,7 +14174,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter(name="originatorId")
     def originator_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Originator ID
+        OSPF BGP Route maps set Originator ID
         """
         return pulumi.get(self, "originator_id")
 
@@ -14047,7 +14186,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter(name="regularCommunities")
     def regular_communities(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Regular communities
+        OSPF BGP Route maps set Regular communities
         """
         return pulumi.get(self, "regular_communities")
 
@@ -14059,7 +14198,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        OSPF BGP Route maps set Tag
         """
         return pulumi.get(self, "tag")
 
@@ -14071,7 +14210,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetArgs:
     @pulumi.getter
     def weight(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Weight
+        OSPF BGP Route maps set Weight
         """
         return pulumi.get(self, "weight")
 
@@ -14084,11 +14223,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgsDict(TypedDict):
         as_: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Aggregator AS
+        OSPF BGP Route maps set Aggregator AS
         """
         router_id: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Router ID
+        OSPF BGP Route maps set Router ID
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgsDict: TypeAlias = Mapping[str, Any]
@@ -14099,8 +14238,8 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs:
                  as_: Optional[pulumi.Input[_builtins.int]] = None,
                  router_id: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.int] as_: Aggregator AS
-        :param pulumi.Input[_builtins.str] router_id: Router ID
+        :param pulumi.Input[_builtins.int] as_: OSPF BGP Route maps set Aggregator AS
+        :param pulumi.Input[_builtins.str] router_id: OSPF BGP Route maps set Router ID
         """
         if as_ is not None:
             pulumi.set(__self__, "as_", as_)
@@ -14111,7 +14250,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs:
     @pulumi.getter(name="as")
     def as_(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Aggregator AS
+        OSPF BGP Route maps set Aggregator AS
         """
         return pulumi.get(self, "as_")
 
@@ -14123,7 +14262,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs:
     @pulumi.getter(name="routerId")
     def router_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Router ID
+        OSPF BGP Route maps set Router ID
         """
         return pulumi.get(self, "router_id")
 
@@ -14136,11 +14275,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4ArgsDict(TypedDict):
         next_hop: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Next hop
+        OSPF BGP Route maps set ipv4 Next hop
         """
         source_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Source address
+        OSPF BGP Route maps set ipv4 Source address
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4ArgsDict: TypeAlias = Mapping[str, Any]
@@ -14151,8 +14290,8 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args:
                  next_hop: Optional[pulumi.Input[_builtins.str]] = None,
                  source_address: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] next_hop: Next hop
-        :param pulumi.Input[_builtins.str] source_address: Source address
+        :param pulumi.Input[_builtins.str] next_hop: OSPF BGP Route maps set ipv4 Next hop
+        :param pulumi.Input[_builtins.str] source_address: OSPF BGP Route maps set ipv4 Source address
         """
         if next_hop is not None:
             pulumi.set(__self__, "next_hop", next_hop)
@@ -14163,7 +14302,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args:
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Next hop
+        OSPF BGP Route maps set ipv4 Next hop
         """
         return pulumi.get(self, "next_hop")
 
@@ -14175,7 +14314,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args:
     @pulumi.getter(name="sourceAddress")
     def source_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Source address
+        OSPF BGP Route maps set ipv4 Source address
         """
         return pulumi.get(self, "source_address")
 
@@ -14188,11 +14327,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Metric action
+        OSPF BGP Route maps set Metric action
         """
         value: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric value
+        OSPF BGP Route maps set Metric value
         """
 elif False:
     BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgsDict: TypeAlias = Mapping[str, Any]
@@ -14203,8 +14342,8 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs:
                  action: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Metric action
-        :param pulumi.Input[_builtins.int] value: Metric value
+        :param pulumi.Input[_builtins.str] action: OSPF BGP Route maps set Metric action
+        :param pulumi.Input[_builtins.int] value: OSPF BGP Route maps set Metric value
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -14215,7 +14354,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Metric action
+        OSPF BGP Route maps set Metric action
         """
         return pulumi.get(self, "action")
 
@@ -14227,7 +14366,7 @@ class BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs:
     @pulumi.getter
     def value(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric value
+        OSPF BGP Route maps set Metric value
         """
         return pulumi.get(self, "value")
 
@@ -14240,7 +14379,7 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfRibArgsDict(TypedDict):
         route_maps: NotRequired[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapArgsDict']]]]
         """
-        Route maps
+        OSPF RIB Route maps set Route maps
         """
 elif False:
     BgpRouteMapRedistributionOspfRibArgsDict: TypeAlias = Mapping[str, Any]
@@ -14250,7 +14389,7 @@ class BgpRouteMapRedistributionOspfRibArgs:
     def __init__(__self__, *,
                  route_maps: Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapArgs']]]] = None):
         """
-        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapArgs']]] route_maps: Route maps
+        :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapArgs']]] route_maps: OSPF RIB Route maps set Route maps
         """
         if route_maps is not None:
             pulumi.set(__self__, "route_maps", route_maps)
@@ -14259,7 +14398,7 @@ class BgpRouteMapRedistributionOspfRibArgs:
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapArgs']]]]:
         """
-        Route maps
+        OSPF RIB Route maps set Route maps
         """
         return pulumi.get(self, "route_maps")
 
@@ -14272,11 +14411,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfRibRouteMapArgsDict(TypedDict):
         action: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Action
+        OSPF RIB Route maps Action
         """
         description: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Description
+        OSPF RIB Route maps Description
         """
         match: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchArgsDict']]
         """
@@ -14284,11 +14423,11 @@ if not MYPY:
         """
         name: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Sequence number
+        OSPF RIB Route mapsSequence number
         """
         set: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapSetArgsDict']]
         """
-        Set
+        OSPF RIB Route maps set
         """
 elif False:
     BgpRouteMapRedistributionOspfRibRouteMapArgsDict: TypeAlias = Mapping[str, Any]
@@ -14302,11 +14441,11 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgs:
                  name: Optional[pulumi.Input[_builtins.int]] = None,
                  set: Optional[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapSetArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] action: Action
-        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] action: OSPF RIB Route maps Action
+        :param pulumi.Input[_builtins.str] description: OSPF RIB Route maps Description
         :param pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchArgs'] match: Match
-        :param pulumi.Input[_builtins.int] name: Sequence number
-        :param pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapSetArgs'] set: Set
+        :param pulumi.Input[_builtins.int] name: OSPF RIB Route mapsSequence number
+        :param pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapSetArgs'] set: OSPF RIB Route maps set
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -14323,7 +14462,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgs:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Action
+        OSPF RIB Route maps Action
         """
         return pulumi.get(self, "action")
 
@@ -14335,7 +14474,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Description
+        OSPF RIB Route maps Description
         """
         return pulumi.get(self, "description")
 
@@ -14359,7 +14498,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Sequence number
+        OSPF RIB Route mapsSequence number
         """
         return pulumi.get(self, "name")
 
@@ -14371,7 +14510,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapArgs:
     @pulumi.getter
     def set(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapSetArgs']]:
         """
-        Set
+        OSPF RIB Route maps set
         """
         return pulumi.get(self, "set")
 
@@ -14384,23 +14523,23 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfRibRouteMapMatchArgsDict(TypedDict):
         address: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgsDict']]
         """
-        Address
+        OSPF RIB Route maps address
         """
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Interface
+        OSPF RIB Route maps Interface
         """
         metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Metric
+        OSPF RIB Route maps Metric
         """
         next_hop: NotRequired[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgsDict']]
         """
-        Next hop
+        OSPF RIB Route maps next*hop
         """
         tag: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Tag
+        OSPF RIB Route maps tag
         """
 elif False:
     BgpRouteMapRedistributionOspfRibRouteMapMatchArgsDict: TypeAlias = Mapping[str, Any]
@@ -14414,11 +14553,11 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs:
                  next_hop: Optional[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs']] = None,
                  tag: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs'] address: Address
-        :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input[_builtins.int] metric: Metric
-        :param pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs'] next_hop: Next hop
-        :param pulumi.Input[_builtins.int] tag: Tag
+        :param pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs'] address: OSPF RIB Route maps address
+        :param pulumi.Input[_builtins.str] interface: OSPF RIB Route maps Interface
+        :param pulumi.Input[_builtins.int] metric: OSPF RIB Route maps Metric
+        :param pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs'] next_hop: OSPF RIB Route maps next*hop
+        :param pulumi.Input[_builtins.int] tag: OSPF RIB Route maps tag
         """
         if address is not None:
             pulumi.set(__self__, "address", address)
@@ -14435,7 +14574,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs:
     @pulumi.getter
     def address(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs']]:
         """
-        Address
+        OSPF RIB Route maps address
         """
         return pulumi.get(self, "address")
 
@@ -14447,7 +14586,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs:
     @pulumi.getter
     def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Interface
+        OSPF RIB Route maps Interface
         """
         return pulumi.get(self, "interface")
 
@@ -14459,7 +14598,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs:
     @pulumi.getter
     def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Metric
+        OSPF RIB Route maps Metric
         """
         return pulumi.get(self, "metric")
 
@@ -14471,7 +14610,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs:
     @pulumi.getter(name="nextHop")
     def next_hop(self) -> Optional[pulumi.Input['BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs']]:
         """
-        Next hop
+        OSPF RIB Route maps next*hop
         """
         return pulumi.get(self, "next_hop")
 
@@ -14483,7 +14622,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchArgs:
     @pulumi.getter
     def tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Tag
+        OSPF RIB Route maps tag
         """
         return pulumi.get(self, "tag")
 
@@ -14496,11 +14635,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        OSPF RIB Route maps address Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        OSPF RIB Route maps address Prefix list
         """
 elif False:
     BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -14511,8 +14650,8 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: OSPF RIB Route maps address Access list
+        :param pulumi.Input[_builtins.str] prefix_list: OSPF RIB Route maps address Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -14523,7 +14662,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        OSPF RIB Route maps address Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -14535,7 +14674,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        OSPF RIB Route maps address Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -14548,11 +14687,11 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgsDict(TypedDict):
         access_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Access list
+        OSPF RIB Route maps next_hop Access list
         """
         prefix_list: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Prefix list
+        OSPF RIB Route maps next_hop Prefix list
         """
 elif False:
     BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgsDict: TypeAlias = Mapping[str, Any]
@@ -14563,8 +14702,8 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs:
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
                  prefix_list: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.str] prefix_list: Prefix list
+        :param pulumi.Input[_builtins.str] access_list: OSPF RIB Route maps next_hop Access list
+        :param pulumi.Input[_builtins.str] prefix_list: OSPF RIB Route maps next_hop Prefix list
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -14575,7 +14714,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs:
     @pulumi.getter(name="accessList")
     def access_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Access list
+        OSPF RIB Route maps next_hop Access list
         """
         return pulumi.get(self, "access_list")
 
@@ -14587,7 +14726,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs:
     @pulumi.getter(name="prefixList")
     def prefix_list(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Prefix list
+        OSPF RIB Route maps next_hop Prefix list
         """
         return pulumi.get(self, "prefix_list")
 
@@ -14600,7 +14739,7 @@ if not MYPY:
     class BgpRouteMapRedistributionOspfRibRouteMapSetArgsDict(TypedDict):
         source_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Source address
+        OSPF RIB Route maps set Source address
         """
 elif False:
     BgpRouteMapRedistributionOspfRibRouteMapSetArgsDict: TypeAlias = Mapping[str, Any]
@@ -14610,7 +14749,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapSetArgs:
     def __init__(__self__, *,
                  source_address: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] source_address: Source address
+        :param pulumi.Input[_builtins.str] source_address: OSPF RIB Route maps set Source address
         """
         if source_address is not None:
             pulumi.set(__self__, "source_address", source_address)
@@ -14619,7 +14758,7 @@ class BgpRouteMapRedistributionOspfRibRouteMapSetArgs:
     @pulumi.getter(name="sourceAddress")
     def source_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Source address
+        OSPF RIB Route maps set Source address
         """
         return pulumi.get(self, "source_address")
 
@@ -17582,7 +17721,7 @@ if not MYPY:
         """
         cache_edns: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Cache edns
+        Cache EDNS UDP response
         """
         max_ttl: NotRequired[pulumi.Input['DnsProxyCacheMaxTtlArgsDict']]
         """
@@ -17599,7 +17738,7 @@ class DnsProxyCacheArgs:
                  max_ttl: Optional[pulumi.Input['DnsProxyCacheMaxTtlArgs']] = None):
         """
         :param pulumi.Input[_builtins.bool] enabled: Turn on caching for this DNS object
-        :param pulumi.Input[_builtins.bool] cache_edns: Cache edns
+        :param pulumi.Input[_builtins.bool] cache_edns: Cache EDNS UDP response
         :param pulumi.Input['DnsProxyCacheMaxTtlArgs'] max_ttl: Max ttl
         """
         pulumi.set(__self__, "enabled", enabled)
@@ -17624,7 +17763,7 @@ class DnsProxyCacheArgs:
     @pulumi.getter(name="cacheEdns")
     def cache_edns(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Cache edns
+        Cache EDNS UDP response
         """
         return pulumi.get(self, "cache_edns")
 
@@ -17647,13 +17786,13 @@ class DnsProxyCacheArgs:
 
 if not MYPY:
     class DnsProxyCacheMaxTtlArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
+        enabled: pulumi.Input[_builtins.bool]
         """
-        Enabled
+        Enable max ttl for this DNS object
         """
         time_to_live: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Time to live
+        Time in seconds after which entry is cleared
         """
 elif False:
     DnsProxyCacheMaxTtlArgsDict: TypeAlias = Mapping[str, Any]
@@ -17661,34 +17800,33 @@ elif False:
 @pulumi.input_type
 class DnsProxyCacheMaxTtlArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enabled: pulumi.Input[_builtins.bool],
                  time_to_live: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.bool] enabled: Enabled
-        :param pulumi.Input[_builtins.int] time_to_live: Time to live
+        :param pulumi.Input[_builtins.bool] enabled: Enable max ttl for this DNS object
+        :param pulumi.Input[_builtins.int] time_to_live: Time in seconds after which entry is cleared
         """
-        if enabled is not None:
-            pulumi.set(__self__, "enabled", enabled)
+        pulumi.set(__self__, "enabled", enabled)
         if time_to_live is not None:
             pulumi.set(__self__, "time_to_live", time_to_live)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[_builtins.bool]:
         """
-        Enabled
+        Enable max ttl for this DNS object
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[_builtins.bool]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="timeToLive")
     def time_to_live(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Time to live
+        Time in seconds after which entry is cleared
         """
         return pulumi.get(self, "time_to_live")
 
@@ -17802,25 +17940,25 @@ class DnsProxyDefaultInheritanceArgs:
 
 if not MYPY:
     class DnsProxyDomainServerArgsDict(TypedDict):
+        name: pulumi.Input[_builtins.str]
+        """
+        Proxy rule name
+        """
+        primary: pulumi.Input[_builtins.str]
+        """
+        Primary DNS server IP address
+        """
         cacheable: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Cacheable
+        Enable caching for this DNS proxy rule?
         """
         domain_names: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
         """
-        Domain name
-        """
-        name: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Name
-        """
-        primary: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Primary
+        Domain names(s) that will be matched
         """
         secondary: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Secondary
+        Secondary DNS server IP address
         """
 elif False:
     DnsProxyDomainServerArgsDict: TypeAlias = Mapping[str, Any]
@@ -17828,34 +17966,56 @@ elif False:
 @pulumi.input_type
 class DnsProxyDomainServerArgs:
     def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str],
+                 primary: pulumi.Input[_builtins.str],
                  cacheable: Optional[pulumi.Input[_builtins.bool]] = None,
                  domain_names: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 primary: Optional[pulumi.Input[_builtins.str]] = None,
                  secondary: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.bool] cacheable: Cacheable
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: Domain name
-        :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.str] primary: Primary
-        :param pulumi.Input[_builtins.str] secondary: Secondary
+        :param pulumi.Input[_builtins.str] name: Proxy rule name
+        :param pulumi.Input[_builtins.str] primary: Primary DNS server IP address
+        :param pulumi.Input[_builtins.bool] cacheable: Enable caching for this DNS proxy rule?
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] domain_names: Domain names(s) that will be matched
+        :param pulumi.Input[_builtins.str] secondary: Secondary DNS server IP address
         """
+        pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "primary", primary)
         if cacheable is not None:
             pulumi.set(__self__, "cacheable", cacheable)
         if domain_names is not None:
             pulumi.set(__self__, "domain_names", domain_names)
-        if name is not None:
-            pulumi.set(__self__, "name", name)
-        if primary is not None:
-            pulumi.set(__self__, "primary", primary)
         if secondary is not None:
             pulumi.set(__self__, "secondary", secondary)
 
     @_builtins.property
     @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        Proxy rule name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def primary(self) -> pulumi.Input[_builtins.str]:
+        """
+        Primary DNS server IP address
+        """
+        return pulumi.get(self, "primary")
+
+    @primary.setter
+    def primary(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "primary", value)
+
+    @_builtins.property
+    @pulumi.getter
     def cacheable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Cacheable
+        Enable caching for this DNS proxy rule?
         """
         return pulumi.get(self, "cacheable")
 
@@ -17867,7 +18027,7 @@ class DnsProxyDomainServerArgs:
     @pulumi.getter(name="domainNames")
     def domain_names(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Domain name
+        Domain names(s) that will be matched
         """
         return pulumi.get(self, "domain_names")
 
@@ -17877,33 +18037,9 @@ class DnsProxyDomainServerArgs:
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Name
-        """
-        return pulumi.get(self, "name")
-
-    @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "name", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def primary(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Primary
-        """
-        return pulumi.get(self, "primary")
-
-    @primary.setter
-    def primary(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "primary", value)
-
-    @_builtins.property
-    @pulumi.getter
     def secondary(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Secondary
+        Secondary DNS server IP address
         """
         return pulumi.get(self, "secondary")
 
@@ -17914,17 +18050,17 @@ class DnsProxyDomainServerArgs:
 
 if not MYPY:
     class DnsProxyStaticEntryArgsDict(TypedDict):
-        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        addresses: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]
         """
         Address
         """
-        domain: NotRequired[pulumi.Input[_builtins.str]]
+        domain: pulumi.Input[_builtins.str]
         """
-        Domain
+        Fully qualified domain name
         """
-        name: NotRequired[pulumi.Input[_builtins.str]]
+        name: pulumi.Input[_builtins.str]
         """
-        Name
+        Static entry name
         """
 elif False:
     DnsProxyStaticEntryArgsDict: TypeAlias = Mapping[str, Any]
@@ -17932,67 +18068,64 @@ elif False:
 @pulumi.input_type
 class DnsProxyStaticEntryArgs:
     def __init__(__self__, *,
-                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 domain: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 addresses: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
+                 domain: pulumi.Input[_builtins.str],
+                 name: pulumi.Input[_builtins.str]):
         """
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Address
-        :param pulumi.Input[_builtins.str] domain: Domain
-        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] domain: Fully qualified domain name
+        :param pulumi.Input[_builtins.str] name: Static entry name
         """
-        if addresses is not None:
-            pulumi.set(__self__, "addresses", addresses)
-        if domain is not None:
-            pulumi.set(__self__, "domain", domain)
-        if name is not None:
-            pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "addresses", addresses)
+        pulumi.set(__self__, "domain", domain)
+        pulumi.set(__self__, "name", name)
 
     @_builtins.property
     @pulumi.getter
-    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def addresses(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
         Address
         """
         return pulumi.get(self, "addresses")
 
     @addresses.setter
-    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def addresses(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
         pulumi.set(self, "addresses", value)
 
     @_builtins.property
     @pulumi.getter
-    def domain(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def domain(self) -> pulumi.Input[_builtins.str]:
         """
-        Domain
+        Fully qualified domain name
         """
         return pulumi.get(self, "domain")
 
     @domain.setter
-    def domain(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def domain(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "domain", value)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[_builtins.str]:
         """
-        Name
+        Static entry name
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "name", value)
 
 
 if not MYPY:
     class DnsProxyTcpQueriesArgsDict(TypedDict):
-        enabled: NotRequired[pulumi.Input[_builtins.bool]]
+        enabled: pulumi.Input[_builtins.bool]
         """
-        Enabled
+        Turn on forwarding of TCP DNS queries?
         """
         max_pending_requests: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Max pending requests
+        Upper limit on number of concurrent TCP DNS requests
         """
 elif False:
     DnsProxyTcpQueriesArgsDict: TypeAlias = Mapping[str, Any]
@@ -18000,34 +18133,33 @@ elif False:
 @pulumi.input_type
 class DnsProxyTcpQueriesArgs:
     def __init__(__self__, *,
-                 enabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 enabled: pulumi.Input[_builtins.bool],
                  max_pending_requests: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.bool] enabled: Enabled
-        :param pulumi.Input[_builtins.int] max_pending_requests: Max pending requests
+        :param pulumi.Input[_builtins.bool] enabled: Turn on forwarding of TCP DNS queries?
+        :param pulumi.Input[_builtins.int] max_pending_requests: Upper limit on number of concurrent TCP DNS requests
         """
-        if enabled is not None:
-            pulumi.set(__self__, "enabled", enabled)
+        pulumi.set(__self__, "enabled", enabled)
         if max_pending_requests is not None:
             pulumi.set(__self__, "max_pending_requests", max_pending_requests)
 
     @_builtins.property
     @pulumi.getter
-    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def enabled(self) -> pulumi.Input[_builtins.bool]:
         """
-        Enabled
+        Turn on forwarding of TCP DNS queries?
         """
         return pulumi.get(self, "enabled")
 
     @enabled.setter
-    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def enabled(self, value: pulumi.Input[_builtins.bool]):
         pulumi.set(self, "enabled", value)
 
     @_builtins.property
     @pulumi.getter(name="maxPendingRequests")
     def max_pending_requests(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Max pending requests
+        Upper limit on number of concurrent TCP DNS requests
         """
         return pulumi.get(self, "max_pending_requests")
 
@@ -18072,11 +18204,11 @@ if not MYPY:
     class DnsProxyUdpQueriesRetriesArgsDict(TypedDict):
         attempts: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Attempts
+        Maximum number of retries before trying next name server
         """
         interval: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Interval
+        Time in seconds for another request to be sent
         """
 elif False:
     DnsProxyUdpQueriesRetriesArgsDict: TypeAlias = Mapping[str, Any]
@@ -18087,8 +18219,8 @@ class DnsProxyUdpQueriesRetriesArgs:
                  attempts: Optional[pulumi.Input[_builtins.int]] = None,
                  interval: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.int] attempts: Attempts
-        :param pulumi.Input[_builtins.int] interval: Interval
+        :param pulumi.Input[_builtins.int] attempts: Maximum number of retries before trying next name server
+        :param pulumi.Input[_builtins.int] interval: Time in seconds for another request to be sent
         """
         if attempts is not None:
             pulumi.set(__self__, "attempts", attempts)
@@ -18099,7 +18231,7 @@ class DnsProxyUdpQueriesRetriesArgs:
     @pulumi.getter
     def attempts(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Attempts
+        Maximum number of retries before trying next name server
         """
         return pulumi.get(self, "attempts")
 
@@ -18111,7 +18243,7 @@ class DnsProxyUdpQueriesRetriesArgs:
     @pulumi.getter
     def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Interval
+        Time in seconds for another request to be sent
         """
         return pulumi.get(self, "interval")
 
@@ -20114,9 +20246,13 @@ class DosProtectionRuleProtectionClassifiedClassificationCriteriaArgs:
 
 if not MYPY:
     class EthernetInterfaceLayer2ArgsDict(TypedDict):
-        vlan_tag: NotRequired[pulumi.Input[_builtins.int]]
+        lldp: NotRequired[pulumi.Input['EthernetInterfaceLayer2LldpArgsDict']]
         """
-        Vlan tag
+        LLDP Settings
+        """
+        vlan_tag: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Assign interface to VLAN tag
         """
 elif False:
     EthernetInterfaceLayer2ArgsDict: TypeAlias = Mapping[str, Any]
@@ -20124,24 +20260,71 @@ elif False:
 @pulumi.input_type
 class EthernetInterfaceLayer2Args:
     def __init__(__self__, *,
-                 vlan_tag: Optional[pulumi.Input[_builtins.int]] = None):
+                 lldp: Optional[pulumi.Input['EthernetInterfaceLayer2LldpArgs']] = None,
+                 vlan_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.int] vlan_tag: Vlan tag
+        :param pulumi.Input['EthernetInterfaceLayer2LldpArgs'] lldp: LLDP Settings
+        :param pulumi.Input[_builtins.str] vlan_tag: Assign interface to VLAN tag
         """
+        if lldp is not None:
+            pulumi.set(__self__, "lldp", lldp)
         if vlan_tag is not None:
             pulumi.set(__self__, "vlan_tag", vlan_tag)
 
     @_builtins.property
-    @pulumi.getter(name="vlanTag")
-    def vlan_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
+    @pulumi.getter
+    def lldp(self) -> Optional[pulumi.Input['EthernetInterfaceLayer2LldpArgs']]:
         """
-        Vlan tag
+        LLDP Settings
+        """
+        return pulumi.get(self, "lldp")
+
+    @lldp.setter
+    def lldp(self, value: Optional[pulumi.Input['EthernetInterfaceLayer2LldpArgs']]):
+        pulumi.set(self, "lldp", value)
+
+    @_builtins.property
+    @pulumi.getter(name="vlanTag")
+    def vlan_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Assign interface to VLAN tag
         """
         return pulumi.get(self, "vlan_tag")
 
     @vlan_tag.setter
-    def vlan_tag(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def vlan_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "vlan_tag", value)
+
+
+if not MYPY:
+    class EthernetInterfaceLayer2LldpArgsDict(TypedDict):
+        enable: pulumi.Input[_builtins.bool]
+        """
+        Enable LLDP on Interface
+        """
+elif False:
+    EthernetInterfaceLayer2LldpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class EthernetInterfaceLayer2LldpArgs:
+    def __init__(__self__, *,
+                 enable: pulumi.Input[_builtins.bool]):
+        """
+        :param pulumi.Input[_builtins.bool] enable: Enable LLDP on Interface
+        """
+        pulumi.set(__self__, "enable", enable)
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> pulumi.Input[_builtins.bool]:
+        """
+        Enable LLDP on Interface
+        """
+        return pulumi.get(self, "enable")
+
+    @enable.setter
+    def enable(self, value: pulumi.Input[_builtins.bool]):
+        pulumi.set(self, "enable", value)
 
 
 if not MYPY:
@@ -20152,19 +20335,19 @@ if not MYPY:
         """
         ddns_config: NotRequired[pulumi.Input['EthernetInterfaceLayer3DdnsConfigArgsDict']]
         """
-        Ddns config
+        Dynamic DNS configuration specific to the Ethernet Interfaces.
         """
         dhcp_client: NotRequired[pulumi.Input['EthernetInterfaceLayer3DhcpClientArgsDict']]
         """
-        Dhcp client
+        Ethernet Interfaces DHCP Client Object
         """
         interface_management_profile: NotRequired[pulumi.Input[_builtins.str]]
         """
         Interface management profile
         """
-        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgsDict']]]]
         """
-        Interface IP addresses
+        Ethernet Interface IP addresses
         """
         mtu: NotRequired[pulumi.Input[_builtins.int]]
         """
@@ -20184,15 +20367,15 @@ class EthernetInterfaceLayer3Args:
                  ddns_config: Optional[pulumi.Input['EthernetInterfaceLayer3DdnsConfigArgs']] = None,
                  dhcp_client: Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientArgs']] = None,
                  interface_management_profile: Optional[pulumi.Input[_builtins.str]] = None,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 ips: Optional[pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgs']]]] = None,
                  mtu: Optional[pulumi.Input[_builtins.int]] = None,
                  pppoe: Optional[pulumi.Input['EthernetInterfaceLayer3PppoeArgs']] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3ArpArgs']]] arps: Ethernet Interfaces ARP configuration
-        :param pulumi.Input['EthernetInterfaceLayer3DdnsConfigArgs'] ddns_config: Ddns config
-        :param pulumi.Input['EthernetInterfaceLayer3DhcpClientArgs'] dhcp_client: Dhcp client
+        :param pulumi.Input['EthernetInterfaceLayer3DdnsConfigArgs'] ddns_config: Dynamic DNS configuration specific to the Ethernet Interfaces.
+        :param pulumi.Input['EthernetInterfaceLayer3DhcpClientArgs'] dhcp_client: Ethernet Interfaces DHCP Client Object
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ips: Interface IP addresses
+        :param pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgs']]] ips: Ethernet Interface IP addresses
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input['EthernetInterfaceLayer3PppoeArgs'] pppoe: Pppoe
         """
@@ -20227,7 +20410,7 @@ class EthernetInterfaceLayer3Args:
     @pulumi.getter(name="ddnsConfig")
     def ddns_config(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3DdnsConfigArgs']]:
         """
-        Ddns config
+        Dynamic DNS configuration specific to the Ethernet Interfaces.
         """
         return pulumi.get(self, "ddns_config")
 
@@ -20239,7 +20422,7 @@ class EthernetInterfaceLayer3Args:
     @pulumi.getter(name="dhcpClient")
     def dhcp_client(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientArgs']]:
         """
-        Dhcp client
+        Ethernet Interfaces DHCP Client Object
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -20261,14 +20444,14 @@ class EthernetInterfaceLayer3Args:
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgs']]]]:
         """
-        Interface IP addresses
+        Ethernet Interface IP addresses
         """
         return pulumi.get(self, "ips")
 
     @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['EthernetInterfaceLayer3IpArgs']]]]):
         pulumi.set(self, "ips", value)
 
     @_builtins.property
@@ -20300,7 +20483,7 @@ if not MYPY:
     class EthernetInterfaceLayer3ArpArgsDict(TypedDict):
         hw_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hw address
+        MAC address
         """
         name: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -20315,7 +20498,7 @@ class EthernetInterfaceLayer3ArpArgs:
                  hw_address: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] hw_address: Hw address
+        :param pulumi.Input[_builtins.str] hw_address: MAC address
         :param pulumi.Input[_builtins.str] name: IP address
         """
         if hw_address is not None:
@@ -20327,7 +20510,7 @@ class EthernetInterfaceLayer3ArpArgs:
     @pulumi.getter(name="hwAddress")
     def hw_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hw address
+        MAC address
         """
         return pulumi.get(self, "hw_address")
 
@@ -20350,33 +20533,33 @@ class EthernetInterfaceLayer3ArpArgs:
 
 if not MYPY:
     class EthernetInterfaceLayer3DdnsConfigArgsDict(TypedDict):
-        ddns_cert_profile: NotRequired[pulumi.Input[_builtins.str]]
+        ddns_cert_profile: pulumi.Input[_builtins.str]
         """
-        Ddns cert profile
+        Certificate profile
         """
-        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Ddns enabled
-        """
-        ddns_hostname: NotRequired[pulumi.Input[_builtins.str]]
+        ddns_hostname: pulumi.Input[_builtins.str]
         """
         Ddns hostname
         """
+        ddns_vendor: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_vendor_config: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Enable DDNS?
+        """
         ddns_ip: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Ddns ip
+        IP to register (static only)
         """
         ddns_update_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Ddns update interval
-        """
-        ddns_vendor: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor
-        """
-        ddns_vendor_config: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor config
+        Update interval (days)
         """
 elif False:
     EthernetInterfaceLayer3DdnsConfigArgsDict: TypeAlias = Mapping[str, Any]
@@ -20384,54 +20567,86 @@ elif False:
 @pulumi.input_type
 class EthernetInterfaceLayer3DdnsConfigArgs:
     def __init__(__self__, *,
-                 ddns_cert_profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 ddns_cert_profile: pulumi.Input[_builtins.str],
+                 ddns_hostname: pulumi.Input[_builtins.str],
+                 ddns_vendor: pulumi.Input[_builtins.str],
+                 ddns_vendor_config: pulumi.Input[_builtins.str],
                  ddns_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ddns_hostname: Optional[pulumi.Input[_builtins.str]] = None,
                  ddns_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 ddns_vendor: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_vendor_config: Optional[pulumi.Input[_builtins.str]] = None):
+                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] ddns_cert_profile: Ddns cert profile
-        :param pulumi.Input[_builtins.bool] ddns_enabled: Ddns enabled
+        :param pulumi.Input[_builtins.str] ddns_cert_profile: Certificate profile
         :param pulumi.Input[_builtins.str] ddns_hostname: Ddns hostname
-        :param pulumi.Input[_builtins.str] ddns_ip: Ddns ip
-        :param pulumi.Input[_builtins.int] ddns_update_interval: Ddns update interval
-        :param pulumi.Input[_builtins.str] ddns_vendor: Ddns vendor
-        :param pulumi.Input[_builtins.str] ddns_vendor_config: Ddns vendor config
+        :param pulumi.Input[_builtins.str] ddns_vendor: DDNS vendor
+        :param pulumi.Input[_builtins.str] ddns_vendor_config: DDNS vendor
+        :param pulumi.Input[_builtins.bool] ddns_enabled: Enable DDNS?
+        :param pulumi.Input[_builtins.str] ddns_ip: IP to register (static only)
+        :param pulumi.Input[_builtins.int] ddns_update_interval: Update interval (days)
         """
-        if ddns_cert_profile is not None:
-            pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_hostname", ddns_hostname)
+        pulumi.set(__self__, "ddns_vendor", ddns_vendor)
+        pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
         if ddns_enabled is not None:
             pulumi.set(__self__, "ddns_enabled", ddns_enabled)
-        if ddns_hostname is not None:
-            pulumi.set(__self__, "ddns_hostname", ddns_hostname)
         if ddns_ip is not None:
             pulumi.set(__self__, "ddns_ip", ddns_ip)
         if ddns_update_interval is not None:
             pulumi.set(__self__, "ddns_update_interval", ddns_update_interval)
-        if ddns_vendor is not None:
-            pulumi.set(__self__, "ddns_vendor", ddns_vendor)
-        if ddns_vendor_config is not None:
-            pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
 
     @_builtins.property
     @pulumi.getter(name="ddnsCertProfile")
-    def ddns_cert_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ddns_cert_profile(self) -> pulumi.Input[_builtins.str]:
         """
-        Ddns cert profile
+        Certificate profile
         """
         return pulumi.get(self, "ddns_cert_profile")
 
     @ddns_cert_profile.setter
-    def ddns_cert_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ddns_cert_profile(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "ddns_cert_profile", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsHostname")
+    def ddns_hostname(self) -> pulumi.Input[_builtins.str]:
+        """
+        Ddns hostname
+        """
+        return pulumi.get(self, "ddns_hostname")
+
+    @ddns_hostname.setter
+    def ddns_hostname(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_hostname", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendor")
+    def ddns_vendor(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor")
+
+    @ddns_vendor.setter
+    def ddns_vendor(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendorConfig")
+    def ddns_vendor_config(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor_config")
+
+    @ddns_vendor_config.setter
+    def ddns_vendor_config(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor_config", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsEnabled")
     def ddns_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ddns enabled
+        Enable DDNS?
         """
         return pulumi.get(self, "ddns_enabled")
 
@@ -20440,22 +20655,10 @@ class EthernetInterfaceLayer3DdnsConfigArgs:
         pulumi.set(self, "ddns_enabled", value)
 
     @_builtins.property
-    @pulumi.getter(name="ddnsHostname")
-    def ddns_hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns hostname
-        """
-        return pulumi.get(self, "ddns_hostname")
-
-    @ddns_hostname.setter
-    def ddns_hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_hostname", value)
-
-    @_builtins.property
     @pulumi.getter(name="ddnsIp")
     def ddns_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Ddns ip
+        IP to register (static only)
         """
         return pulumi.get(self, "ddns_ip")
 
@@ -20467,7 +20670,7 @@ class EthernetInterfaceLayer3DdnsConfigArgs:
     @pulumi.getter(name="ddnsUpdateInterval")
     def ddns_update_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Ddns update interval
+        Update interval (days)
         """
         return pulumi.get(self, "ddns_update_interval")
 
@@ -20475,36 +20678,24 @@ class EthernetInterfaceLayer3DdnsConfigArgs:
     def ddns_update_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ddns_update_interval", value)
 
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendor")
-    def ddns_vendor(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor
-        """
-        return pulumi.get(self, "ddns_vendor")
-
-    @ddns_vendor.setter
-    def ddns_vendor(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor", value)
-
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendorConfig")
-    def ddns_vendor_config(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor config
-        """
-        return pulumi.get(self, "ddns_vendor_config")
-
-    @ddns_vendor_config.setter
-    def ddns_vendor_config(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor_config", value)
-
 
 if not MYPY:
     class EthernetInterfaceLayer3DhcpClientArgsDict(TypedDict):
-        dhcp_client: NotRequired[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientArgsDict']]
+        create_default_route: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Dhcp client
+        Automatically create default route pointing to default gateway provided by server
+        """
+        default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
+        """
+        Metric of the default route created
+        """
+        enable: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Enable DHCP?
+        """
+        send_hostname: NotRequired[pulumi.Input['EthernetInterfaceLayer3DhcpClientSendHostnameArgsDict']]
+        """
+        Ethernet Interfaces DHCP ClientSend hostname
         """
 elif False:
     EthernetInterfaceLayer3DhcpClientArgsDict: TypeAlias = Mapping[str, Any]
@@ -20512,59 +20703,15 @@ elif False:
 @pulumi.input_type
 class EthernetInterfaceLayer3DhcpClientArgs:
     def __init__(__self__, *,
-                 dhcp_client: Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientArgs']] = None):
-        """
-        :param pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientArgs'] dhcp_client: Dhcp client
-        """
-        if dhcp_client is not None:
-            pulumi.set(__self__, "dhcp_client", dhcp_client)
-
-    @_builtins.property
-    @pulumi.getter(name="dhcpClient")
-    def dhcp_client(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientArgs']]:
-        """
-        Dhcp client
-        """
-        return pulumi.get(self, "dhcp_client")
-
-    @dhcp_client.setter
-    def dhcp_client(self, value: Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientArgs']]):
-        pulumi.set(self, "dhcp_client", value)
-
-
-if not MYPY:
-    class EthernetInterfaceLayer3DhcpClientDhcpClientArgsDict(TypedDict):
-        create_default_route: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Create default route
-        """
-        default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        Default route metric
-        """
-        enable: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Enable
-        """
-        send_hostname: NotRequired[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgsDict']]
-        """
-        Send hostname
-        """
-elif False:
-    EthernetInterfaceLayer3DhcpClientDhcpClientArgsDict: TypeAlias = Mapping[str, Any]
-
-@pulumi.input_type
-class EthernetInterfaceLayer3DhcpClientDhcpClientArgs:
-    def __init__(__self__, *,
                  create_default_route: Optional[pulumi.Input[_builtins.bool]] = None,
                  default_route_metric: Optional[pulumi.Input[_builtins.int]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 send_hostname: Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs']] = None):
+                 send_hostname: Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientSendHostnameArgs']] = None):
         """
-        :param pulumi.Input[_builtins.bool] create_default_route: Create default route
-        :param pulumi.Input[_builtins.int] default_route_metric: Default route metric
-        :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs'] send_hostname: Send hostname
+        :param pulumi.Input[_builtins.bool] create_default_route: Automatically create default route pointing to default gateway provided by server
+        :param pulumi.Input[_builtins.int] default_route_metric: Metric of the default route created
+        :param pulumi.Input[_builtins.bool] enable: Enable DHCP?
+        :param pulumi.Input['EthernetInterfaceLayer3DhcpClientSendHostnameArgs'] send_hostname: Ethernet Interfaces DHCP ClientSend hostname
         """
         if create_default_route is not None:
             pulumi.set(__self__, "create_default_route", create_default_route)
@@ -20579,7 +20726,7 @@ class EthernetInterfaceLayer3DhcpClientDhcpClientArgs:
     @pulumi.getter(name="createDefaultRoute")
     def create_default_route(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Create default route
+        Automatically create default route pointing to default gateway provided by server
         """
         return pulumi.get(self, "create_default_route")
 
@@ -20591,7 +20738,7 @@ class EthernetInterfaceLayer3DhcpClientDhcpClientArgs:
     @pulumi.getter(name="defaultRouteMetric")
     def default_route_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Default route metric
+        Metric of the default route created
         """
         return pulumi.get(self, "default_route_metric")
 
@@ -20603,7 +20750,7 @@ class EthernetInterfaceLayer3DhcpClientDhcpClientArgs:
     @pulumi.getter
     def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable
+        Enable DHCP?
         """
         return pulumi.get(self, "enable")
 
@@ -20613,38 +20760,38 @@ class EthernetInterfaceLayer3DhcpClientDhcpClientArgs:
 
     @_builtins.property
     @pulumi.getter(name="sendHostname")
-    def send_hostname(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs']]:
+    def send_hostname(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientSendHostnameArgs']]:
         """
-        Send hostname
+        Ethernet Interfaces DHCP ClientSend hostname
         """
         return pulumi.get(self, "send_hostname")
 
     @send_hostname.setter
-    def send_hostname(self, value: Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs']]):
+    def send_hostname(self, value: Optional[pulumi.Input['EthernetInterfaceLayer3DhcpClientSendHostnameArgs']]):
         pulumi.set(self, "send_hostname", value)
 
 
 if not MYPY:
-    class EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgsDict(TypedDict):
+    class EthernetInterfaceLayer3DhcpClientSendHostnameArgsDict(TypedDict):
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Enable
         """
         hostname: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hostname
+        Set interface hostname
         """
 elif False:
-    EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgsDict: TypeAlias = Mapping[str, Any]
+    EthernetInterfaceLayer3DhcpClientSendHostnameArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs:
+class EthernetInterfaceLayer3DhcpClientSendHostnameArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  hostname: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.str] hostname: Hostname
+        :param pulumi.Input[_builtins.str] hostname: Set interface hostname
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -20667,13 +20814,44 @@ class EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs:
     @pulumi.getter
     def hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hostname
+        Set interface hostname
         """
         return pulumi.get(self, "hostname")
 
     @hostname.setter
     def hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "hostname", value)
+
+
+if not MYPY:
+    class EthernetInterfaceLayer3IpArgsDict(TypedDict):
+        name: pulumi.Input[_builtins.str]
+        """
+        Ethernet Interface IP addresses name
+        """
+elif False:
+    EthernetInterfaceLayer3IpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class EthernetInterfaceLayer3IpArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] name: Ethernet Interface IP addresses name
+        """
+        pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        Ethernet Interface IP addresses name
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
 
 
 if not MYPY:
@@ -20696,13 +20874,13 @@ if not MYPY:
         """
         default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Default route metric
+        Metric of the default route created
         """
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Enable
         """
-        passive: NotRequired[pulumi.Input[_builtins.bool]]
+        passive: NotRequired[pulumi.Input['EthernetInterfaceLayer3PppoePassiveArgsDict']]
         """
         Passive
         """
@@ -20726,7 +20904,7 @@ class EthernetInterfaceLayer3PppoeArgs:
                  authentication: Optional[pulumi.Input[_builtins.str]] = None,
                  default_route_metric: Optional[pulumi.Input[_builtins.int]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 passive: Optional[pulumi.Input[_builtins.bool]] = None,
+                 passive: Optional[pulumi.Input['EthernetInterfaceLayer3PppoePassiveArgs']] = None,
                  service: Optional[pulumi.Input[_builtins.str]] = None,
                  static_address: Optional[pulumi.Input['EthernetInterfaceLayer3PppoeStaticAddressArgs']] = None):
         """
@@ -20734,9 +20912,9 @@ class EthernetInterfaceLayer3PppoeArgs:
         :param pulumi.Input[_builtins.str] username: Username
         :param pulumi.Input[_builtins.str] access_concentrator: Access concentrator
         :param pulumi.Input[_builtins.str] authentication: Authentication protocol
-        :param pulumi.Input[_builtins.int] default_route_metric: Default route metric
+        :param pulumi.Input[_builtins.int] default_route_metric: Metric of the default route created
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.bool] passive: Passive
+        :param pulumi.Input['EthernetInterfaceLayer3PppoePassiveArgs'] passive: Passive
         :param pulumi.Input[_builtins.str] service: Service
         :param pulumi.Input['EthernetInterfaceLayer3PppoeStaticAddressArgs'] static_address: Static address
         """
@@ -20809,7 +20987,7 @@ class EthernetInterfaceLayer3PppoeArgs:
     @pulumi.getter(name="defaultRouteMetric")
     def default_route_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Default route metric
+        Metric of the default route created
         """
         return pulumi.get(self, "default_route_metric")
 
@@ -20831,14 +21009,14 @@ class EthernetInterfaceLayer3PppoeArgs:
 
     @_builtins.property
     @pulumi.getter
-    def passive(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    def passive(self) -> Optional[pulumi.Input['EthernetInterfaceLayer3PppoePassiveArgs']]:
         """
         Passive
         """
         return pulumi.get(self, "passive")
 
     @passive.setter
-    def passive(self, value: Optional[pulumi.Input[_builtins.bool]]):
+    def passive(self, value: Optional[pulumi.Input['EthernetInterfaceLayer3PppoePassiveArgs']]):
         pulumi.set(self, "passive", value)
 
     @_builtins.property
@@ -20867,10 +21045,41 @@ class EthernetInterfaceLayer3PppoeArgs:
 
 
 if not MYPY:
-    class EthernetInterfaceLayer3PppoeStaticAddressArgsDict(TypedDict):
-        ip: NotRequired[pulumi.Input[_builtins.str]]
+    class EthernetInterfaceLayer3PppoePassiveArgsDict(TypedDict):
+        enable: pulumi.Input[_builtins.bool]
         """
-        Ip
+        Passive Mode enabled
+        """
+elif False:
+    EthernetInterfaceLayer3PppoePassiveArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class EthernetInterfaceLayer3PppoePassiveArgs:
+    def __init__(__self__, *,
+                 enable: pulumi.Input[_builtins.bool]):
+        """
+        :param pulumi.Input[_builtins.bool] enable: Passive Mode enabled
+        """
+        pulumi.set(__self__, "enable", enable)
+
+    @_builtins.property
+    @pulumi.getter
+    def enable(self) -> pulumi.Input[_builtins.bool]:
+        """
+        Passive Mode enabled
+        """
+        return pulumi.get(self, "enable")
+
+    @enable.setter
+    def enable(self, value: pulumi.Input[_builtins.bool]):
+        pulumi.set(self, "enable", value)
+
+
+if not MYPY:
+    class EthernetInterfaceLayer3PppoeStaticAddressArgsDict(TypedDict):
+        ip: pulumi.Input[_builtins.str]
+        """
+        Static IP address
         """
 elif False:
     EthernetInterfaceLayer3PppoeStaticAddressArgsDict: TypeAlias = Mapping[str, Any]
@@ -20878,23 +21087,22 @@ elif False:
 @pulumi.input_type
 class EthernetInterfaceLayer3PppoeStaticAddressArgs:
     def __init__(__self__, *,
-                 ip: Optional[pulumi.Input[_builtins.str]] = None):
+                 ip: pulumi.Input[_builtins.str]):
         """
-        :param pulumi.Input[_builtins.str] ip: Ip
+        :param pulumi.Input[_builtins.str] ip: Static IP address
         """
-        if ip is not None:
-            pulumi.set(__self__, "ip", ip)
+        pulumi.set(__self__, "ip", ip)
 
     @_builtins.property
     @pulumi.getter
-    def ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ip(self) -> pulumi.Input[_builtins.str]:
         """
-        Ip
+        Static IP address
         """
         return pulumi.get(self, "ip")
 
     @ip.setter
-    def ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ip(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "ip", value)
 
 
@@ -20902,11 +21110,11 @@ if not MYPY:
     class EthernetInterfacePoeArgsDict(TypedDict):
         poe_enabled: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Poe enabled
+        Enabled PoE?
         """
         poe_rsvd_pwr: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Poe rsvd pwr
+        PoE reserved power
         """
 elif False:
     EthernetInterfacePoeArgsDict: TypeAlias = Mapping[str, Any]
@@ -20917,8 +21125,8 @@ class EthernetInterfacePoeArgs:
                  poe_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  poe_rsvd_pwr: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.bool] poe_enabled: Poe enabled
-        :param pulumi.Input[_builtins.int] poe_rsvd_pwr: Poe rsvd pwr
+        :param pulumi.Input[_builtins.bool] poe_enabled: Enabled PoE?
+        :param pulumi.Input[_builtins.int] poe_rsvd_pwr: PoE reserved power
         """
         if poe_enabled is not None:
             pulumi.set(__self__, "poe_enabled", poe_enabled)
@@ -20929,7 +21137,7 @@ class EthernetInterfacePoeArgs:
     @pulumi.getter(name="poeEnabled")
     def poe_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Poe enabled
+        Enabled PoE?
         """
         return pulumi.get(self, "poe_enabled")
 
@@ -20941,7 +21149,7 @@ class EthernetInterfacePoeArgs:
     @pulumi.getter(name="poeRsvdPwr")
     def poe_rsvd_pwr(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Poe rsvd pwr
+        PoE reserved power
         """
         return pulumi.get(self, "poe_rsvd_pwr")
 
@@ -33801,6 +34009,37 @@ class IkeGatewayProtocolIkev2DpdArgs:
 
 
 if not MYPY:
+    class InterfaceManagementProfilePermittedIpArgsDict(TypedDict):
+        name: pulumi.Input[_builtins.str]
+        """
+        The allowed IP address or CIDR block.
+        """
+elif False:
+    InterfaceManagementProfilePermittedIpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class InterfaceManagementProfilePermittedIpArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] name: The allowed IP address or CIDR block.
+        """
+        pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        The allowed IP address or CIDR block.
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+
+if not MYPY:
     class IpsecCryptoProfileAhArgsDict(TypedDict):
         authentications: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]
         """
@@ -34868,7 +35107,7 @@ if not MYPY:
     class Layer3SubinterfaceArpArgsDict(TypedDict):
         hw_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hw address
+        MAC address
         """
         name: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -34883,7 +35122,7 @@ class Layer3SubinterfaceArpArgs:
                  hw_address: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] hw_address: Hw address
+        :param pulumi.Input[_builtins.str] hw_address: MAC address
         :param pulumi.Input[_builtins.str] name: IP address
         """
         if hw_address is not None:
@@ -34895,7 +35134,7 @@ class Layer3SubinterfaceArpArgs:
     @pulumi.getter(name="hwAddress")
     def hw_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hw address
+        MAC address
         """
         return pulumi.get(self, "hw_address")
 
@@ -34918,33 +35157,33 @@ class Layer3SubinterfaceArpArgs:
 
 if not MYPY:
     class Layer3SubinterfaceDdnsConfigArgsDict(TypedDict):
-        ddns_cert_profile: NotRequired[pulumi.Input[_builtins.str]]
+        ddns_cert_profile: pulumi.Input[_builtins.str]
         """
-        Ddns cert profile
+        Certificate profile
         """
-        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Ddns enabled
-        """
-        ddns_hostname: NotRequired[pulumi.Input[_builtins.str]]
+        ddns_hostname: pulumi.Input[_builtins.str]
         """
         Ddns hostname
         """
+        ddns_vendor: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_vendor_config: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Enable DDNS?
+        """
         ddns_ip: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Ddns ip
+        IP to register (static only)
         """
         ddns_update_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Ddns update interval
-        """
-        ddns_vendor: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor
-        """
-        ddns_vendor_config: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor config
+        Update interval (days)
         """
 elif False:
     Layer3SubinterfaceDdnsConfigArgsDict: TypeAlias = Mapping[str, Any]
@@ -34952,54 +35191,86 @@ elif False:
 @pulumi.input_type
 class Layer3SubinterfaceDdnsConfigArgs:
     def __init__(__self__, *,
-                 ddns_cert_profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 ddns_cert_profile: pulumi.Input[_builtins.str],
+                 ddns_hostname: pulumi.Input[_builtins.str],
+                 ddns_vendor: pulumi.Input[_builtins.str],
+                 ddns_vendor_config: pulumi.Input[_builtins.str],
                  ddns_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ddns_hostname: Optional[pulumi.Input[_builtins.str]] = None,
                  ddns_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 ddns_vendor: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_vendor_config: Optional[pulumi.Input[_builtins.str]] = None):
+                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] ddns_cert_profile: Ddns cert profile
-        :param pulumi.Input[_builtins.bool] ddns_enabled: Ddns enabled
+        :param pulumi.Input[_builtins.str] ddns_cert_profile: Certificate profile
         :param pulumi.Input[_builtins.str] ddns_hostname: Ddns hostname
-        :param pulumi.Input[_builtins.str] ddns_ip: Ddns ip
-        :param pulumi.Input[_builtins.int] ddns_update_interval: Ddns update interval
-        :param pulumi.Input[_builtins.str] ddns_vendor: Ddns vendor
-        :param pulumi.Input[_builtins.str] ddns_vendor_config: Ddns vendor config
+        :param pulumi.Input[_builtins.str] ddns_vendor: DDNS vendor
+        :param pulumi.Input[_builtins.str] ddns_vendor_config: DDNS vendor
+        :param pulumi.Input[_builtins.bool] ddns_enabled: Enable DDNS?
+        :param pulumi.Input[_builtins.str] ddns_ip: IP to register (static only)
+        :param pulumi.Input[_builtins.int] ddns_update_interval: Update interval (days)
         """
-        if ddns_cert_profile is not None:
-            pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_hostname", ddns_hostname)
+        pulumi.set(__self__, "ddns_vendor", ddns_vendor)
+        pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
         if ddns_enabled is not None:
             pulumi.set(__self__, "ddns_enabled", ddns_enabled)
-        if ddns_hostname is not None:
-            pulumi.set(__self__, "ddns_hostname", ddns_hostname)
         if ddns_ip is not None:
             pulumi.set(__self__, "ddns_ip", ddns_ip)
         if ddns_update_interval is not None:
             pulumi.set(__self__, "ddns_update_interval", ddns_update_interval)
-        if ddns_vendor is not None:
-            pulumi.set(__self__, "ddns_vendor", ddns_vendor)
-        if ddns_vendor_config is not None:
-            pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
 
     @_builtins.property
     @pulumi.getter(name="ddnsCertProfile")
-    def ddns_cert_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ddns_cert_profile(self) -> pulumi.Input[_builtins.str]:
         """
-        Ddns cert profile
+        Certificate profile
         """
         return pulumi.get(self, "ddns_cert_profile")
 
     @ddns_cert_profile.setter
-    def ddns_cert_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ddns_cert_profile(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "ddns_cert_profile", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsHostname")
+    def ddns_hostname(self) -> pulumi.Input[_builtins.str]:
+        """
+        Ddns hostname
+        """
+        return pulumi.get(self, "ddns_hostname")
+
+    @ddns_hostname.setter
+    def ddns_hostname(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_hostname", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendor")
+    def ddns_vendor(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor")
+
+    @ddns_vendor.setter
+    def ddns_vendor(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendorConfig")
+    def ddns_vendor_config(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor_config")
+
+    @ddns_vendor_config.setter
+    def ddns_vendor_config(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor_config", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsEnabled")
     def ddns_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ddns enabled
+        Enable DDNS?
         """
         return pulumi.get(self, "ddns_enabled")
 
@@ -35008,22 +35279,10 @@ class Layer3SubinterfaceDdnsConfigArgs:
         pulumi.set(self, "ddns_enabled", value)
 
     @_builtins.property
-    @pulumi.getter(name="ddnsHostname")
-    def ddns_hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns hostname
-        """
-        return pulumi.get(self, "ddns_hostname")
-
-    @ddns_hostname.setter
-    def ddns_hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_hostname", value)
-
-    @_builtins.property
     @pulumi.getter(name="ddnsIp")
     def ddns_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Ddns ip
+        IP to register (static only)
         """
         return pulumi.get(self, "ddns_ip")
 
@@ -35035,7 +35294,7 @@ class Layer3SubinterfaceDdnsConfigArgs:
     @pulumi.getter(name="ddnsUpdateInterval")
     def ddns_update_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Ddns update interval
+        Update interval (days)
         """
         return pulumi.get(self, "ddns_update_interval")
 
@@ -35043,48 +35302,24 @@ class Layer3SubinterfaceDdnsConfigArgs:
     def ddns_update_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ddns_update_interval", value)
 
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendor")
-    def ddns_vendor(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor
-        """
-        return pulumi.get(self, "ddns_vendor")
-
-    @ddns_vendor.setter
-    def ddns_vendor(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor", value)
-
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendorConfig")
-    def ddns_vendor_config(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor config
-        """
-        return pulumi.get(self, "ddns_vendor_config")
-
-    @ddns_vendor_config.setter
-    def ddns_vendor_config(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor_config", value)
-
 
 if not MYPY:
     class Layer3SubinterfaceDhcpClientArgsDict(TypedDict):
         create_default_route: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Create default route
+        Automatically create default route pointing to default gateway provided by server
         """
         default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Default route metric
+        Metric of the default route created
         """
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Enable
+        Enable DHCP?
         """
         send_hostname: NotRequired[pulumi.Input['Layer3SubinterfaceDhcpClientSendHostnameArgsDict']]
         """
-        Send hostname
+        Layer3 sub interfaces DHCP Client Send hostname
         """
 elif False:
     Layer3SubinterfaceDhcpClientArgsDict: TypeAlias = Mapping[str, Any]
@@ -35097,10 +35332,10 @@ class Layer3SubinterfaceDhcpClientArgs:
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  send_hostname: Optional[pulumi.Input['Layer3SubinterfaceDhcpClientSendHostnameArgs']] = None):
         """
-        :param pulumi.Input[_builtins.bool] create_default_route: Create default route
-        :param pulumi.Input[_builtins.int] default_route_metric: Default route metric
-        :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input['Layer3SubinterfaceDhcpClientSendHostnameArgs'] send_hostname: Send hostname
+        :param pulumi.Input[_builtins.bool] create_default_route: Automatically create default route pointing to default gateway provided by server
+        :param pulumi.Input[_builtins.int] default_route_metric: Metric of the default route created
+        :param pulumi.Input[_builtins.bool] enable: Enable DHCP?
+        :param pulumi.Input['Layer3SubinterfaceDhcpClientSendHostnameArgs'] send_hostname: Layer3 sub interfaces DHCP Client Send hostname
         """
         if create_default_route is not None:
             pulumi.set(__self__, "create_default_route", create_default_route)
@@ -35115,7 +35350,7 @@ class Layer3SubinterfaceDhcpClientArgs:
     @pulumi.getter(name="createDefaultRoute")
     def create_default_route(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Create default route
+        Automatically create default route pointing to default gateway provided by server
         """
         return pulumi.get(self, "create_default_route")
 
@@ -35127,7 +35362,7 @@ class Layer3SubinterfaceDhcpClientArgs:
     @pulumi.getter(name="defaultRouteMetric")
     def default_route_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Default route metric
+        Metric of the default route created
         """
         return pulumi.get(self, "default_route_metric")
 
@@ -35139,7 +35374,7 @@ class Layer3SubinterfaceDhcpClientArgs:
     @pulumi.getter
     def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable
+        Enable DHCP?
         """
         return pulumi.get(self, "enable")
 
@@ -35151,7 +35386,7 @@ class Layer3SubinterfaceDhcpClientArgs:
     @pulumi.getter(name="sendHostname")
     def send_hostname(self) -> Optional[pulumi.Input['Layer3SubinterfaceDhcpClientSendHostnameArgs']]:
         """
-        Send hostname
+        Layer3 sub interfaces DHCP Client Send hostname
         """
         return pulumi.get(self, "send_hostname")
 
@@ -35168,7 +35403,7 @@ if not MYPY:
         """
         hostname: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hostname
+        Set interface hostname
         """
 elif False:
     Layer3SubinterfaceDhcpClientSendHostnameArgsDict: TypeAlias = Mapping[str, Any]
@@ -35180,7 +35415,7 @@ class Layer3SubinterfaceDhcpClientSendHostnameArgs:
                  hostname: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.str] hostname: Hostname
+        :param pulumi.Input[_builtins.str] hostname: Set interface hostname
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -35203,13 +35438,44 @@ class Layer3SubinterfaceDhcpClientSendHostnameArgs:
     @pulumi.getter
     def hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hostname
+        Set interface hostname
         """
         return pulumi.get(self, "hostname")
 
     @hostname.setter
     def hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "hostname", value)
+
+
+if not MYPY:
+    class Layer3SubinterfaceIpArgsDict(TypedDict):
+        name: pulumi.Input[_builtins.str]
+        """
+        L3 sub-interface IP address(es)
+        """
+elif False:
+    Layer3SubinterfaceIpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class Layer3SubinterfaceIpArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] name: L3 sub-interface IP address(es)
+        """
+        pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        L3 sub-interface IP address(es)
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
 
 
 if not MYPY:
@@ -35434,7 +35700,7 @@ if not MYPY:
         """
         Ecmp
         """
-        global_vrid: NotRequired[pulumi.Input[_builtins.float]]
+        global_vrid: NotRequired[pulumi.Input[_builtins.int]]
         """
         Global vrid
         """
@@ -35488,7 +35754,7 @@ class LogicalRouterVrfArgs:
                  admin_dists: Optional[pulumi.Input['LogicalRouterVrfAdminDistsArgs']] = None,
                  bgp: Optional[pulumi.Input['LogicalRouterVrfBgpArgs']] = None,
                  ecmp: Optional[pulumi.Input['LogicalRouterVrfEcmpArgs']] = None,
-                 global_vrid: Optional[pulumi.Input[_builtins.float]] = None,
+                 global_vrid: Optional[pulumi.Input[_builtins.int]] = None,
                  interfaces: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  multicast: Optional[pulumi.Input['LogicalRouterVrfMulticastArgs']] = None,
                  ospf: Optional[pulumi.Input['LogicalRouterVrfOspfArgs']] = None,
@@ -35504,7 +35770,7 @@ class LogicalRouterVrfArgs:
         :param pulumi.Input['LogicalRouterVrfAdminDistsArgs'] admin_dists: Admin dists
         :param pulumi.Input['LogicalRouterVrfBgpArgs'] bgp: Bgp
         :param pulumi.Input['LogicalRouterVrfEcmpArgs'] ecmp: Ecmp
-        :param pulumi.Input[_builtins.float] global_vrid: Global vrid
+        :param pulumi.Input[_builtins.int] global_vrid: Global vrid
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] interfaces: Interface
         :param pulumi.Input['LogicalRouterVrfMulticastArgs'] multicast: Multicast
         :param pulumi.Input['LogicalRouterVrfOspfArgs'] ospf: Ospf
@@ -35596,14 +35862,14 @@ class LogicalRouterVrfArgs:
 
     @_builtins.property
     @pulumi.getter(name="globalVrid")
-    def global_vrid(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def global_vrid(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Global vrid
         """
         return pulumi.get(self, "global_vrid")
 
     @global_vrid.setter
-    def global_vrid(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def global_vrid(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "global_vrid", value)
 
     @_builtins.property
@@ -35729,51 +35995,51 @@ class LogicalRouterVrfArgs:
 
 if not MYPY:
     class LogicalRouterVrfAdminDistsArgsDict(TypedDict):
-        bgp_external: NotRequired[pulumi.Input[_builtins.float]]
+        bgp_external: NotRequired[pulumi.Input[_builtins.int]]
         """
         Bgp external
         """
-        bgp_internal: NotRequired[pulumi.Input[_builtins.float]]
+        bgp_internal: NotRequired[pulumi.Input[_builtins.int]]
         """
         Bgp internal
         """
-        bgp_local: NotRequired[pulumi.Input[_builtins.float]]
+        bgp_local: NotRequired[pulumi.Input[_builtins.int]]
         """
         Bgp local
         """
-        ospf_ext: NotRequired[pulumi.Input[_builtins.float]]
+        ospf_ext: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospf ext
         """
-        ospf_inter: NotRequired[pulumi.Input[_builtins.float]]
+        ospf_inter: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospf inter
         """
-        ospf_intra: NotRequired[pulumi.Input[_builtins.float]]
+        ospf_intra: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospf intra
         """
-        ospfv3_ext: NotRequired[pulumi.Input[_builtins.float]]
+        ospfv3_ext: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospfv3 ext
         """
-        ospfv3_inter: NotRequired[pulumi.Input[_builtins.float]]
+        ospfv3_inter: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospfv3 inter
         """
-        ospfv3_intra: NotRequired[pulumi.Input[_builtins.float]]
+        ospfv3_intra: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospfv3 intra
         """
-        rip: NotRequired[pulumi.Input[_builtins.float]]
+        rip: NotRequired[pulumi.Input[_builtins.int]]
         """
         Rip
         """
-        static: NotRequired[pulumi.Input[_builtins.float]]
+        static: NotRequired[pulumi.Input[_builtins.int]]
         """
         Static
         """
-        static_ipv6: NotRequired[pulumi.Input[_builtins.float]]
+        static_ipv6: NotRequired[pulumi.Input[_builtins.int]]
         """
         Static ipv6
         """
@@ -35783,31 +36049,31 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfAdminDistsArgs:
     def __init__(__self__, *,
-                 bgp_external: Optional[pulumi.Input[_builtins.float]] = None,
-                 bgp_internal: Optional[pulumi.Input[_builtins.float]] = None,
-                 bgp_local: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospf_ext: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospf_inter: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospf_intra: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospfv3_ext: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospfv3_inter: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospfv3_intra: Optional[pulumi.Input[_builtins.float]] = None,
-                 rip: Optional[pulumi.Input[_builtins.float]] = None,
-                 static: Optional[pulumi.Input[_builtins.float]] = None,
-                 static_ipv6: Optional[pulumi.Input[_builtins.float]] = None):
+                 bgp_external: Optional[pulumi.Input[_builtins.int]] = None,
+                 bgp_internal: Optional[pulumi.Input[_builtins.int]] = None,
+                 bgp_local: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospf_ext: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospf_inter: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospf_intra: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospfv3_ext: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospfv3_inter: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospfv3_intra: Optional[pulumi.Input[_builtins.int]] = None,
+                 rip: Optional[pulumi.Input[_builtins.int]] = None,
+                 static: Optional[pulumi.Input[_builtins.int]] = None,
+                 static_ipv6: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] bgp_external: Bgp external
-        :param pulumi.Input[_builtins.float] bgp_internal: Bgp internal
-        :param pulumi.Input[_builtins.float] bgp_local: Bgp local
-        :param pulumi.Input[_builtins.float] ospf_ext: Ospf ext
-        :param pulumi.Input[_builtins.float] ospf_inter: Ospf inter
-        :param pulumi.Input[_builtins.float] ospf_intra: Ospf intra
-        :param pulumi.Input[_builtins.float] ospfv3_ext: Ospfv3 ext
-        :param pulumi.Input[_builtins.float] ospfv3_inter: Ospfv3 inter
-        :param pulumi.Input[_builtins.float] ospfv3_intra: Ospfv3 intra
-        :param pulumi.Input[_builtins.float] rip: Rip
-        :param pulumi.Input[_builtins.float] static: Static
-        :param pulumi.Input[_builtins.float] static_ipv6: Static ipv6
+        :param pulumi.Input[_builtins.int] bgp_external: Bgp external
+        :param pulumi.Input[_builtins.int] bgp_internal: Bgp internal
+        :param pulumi.Input[_builtins.int] bgp_local: Bgp local
+        :param pulumi.Input[_builtins.int] ospf_ext: Ospf ext
+        :param pulumi.Input[_builtins.int] ospf_inter: Ospf inter
+        :param pulumi.Input[_builtins.int] ospf_intra: Ospf intra
+        :param pulumi.Input[_builtins.int] ospfv3_ext: Ospfv3 ext
+        :param pulumi.Input[_builtins.int] ospfv3_inter: Ospfv3 inter
+        :param pulumi.Input[_builtins.int] ospfv3_intra: Ospfv3 intra
+        :param pulumi.Input[_builtins.int] rip: Rip
+        :param pulumi.Input[_builtins.int] static: Static
+        :param pulumi.Input[_builtins.int] static_ipv6: Static ipv6
         """
         if bgp_external is not None:
             pulumi.set(__self__, "bgp_external", bgp_external)
@@ -35836,146 +36102,146 @@ class LogicalRouterVrfAdminDistsArgs:
 
     @_builtins.property
     @pulumi.getter(name="bgpExternal")
-    def bgp_external(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def bgp_external(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Bgp external
         """
         return pulumi.get(self, "bgp_external")
 
     @bgp_external.setter
-    def bgp_external(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def bgp_external(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "bgp_external", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpInternal")
-    def bgp_internal(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def bgp_internal(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Bgp internal
         """
         return pulumi.get(self, "bgp_internal")
 
     @bgp_internal.setter
-    def bgp_internal(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def bgp_internal(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "bgp_internal", value)
 
     @_builtins.property
     @pulumi.getter(name="bgpLocal")
-    def bgp_local(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def bgp_local(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Bgp local
         """
         return pulumi.get(self, "bgp_local")
 
     @bgp_local.setter
-    def bgp_local(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def bgp_local(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "bgp_local", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfExt")
-    def ospf_ext(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospf_ext(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospf ext
         """
         return pulumi.get(self, "ospf_ext")
 
     @ospf_ext.setter
-    def ospf_ext(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospf_ext(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospf_ext", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfInter")
-    def ospf_inter(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospf_inter(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospf inter
         """
         return pulumi.get(self, "ospf_inter")
 
     @ospf_inter.setter
-    def ospf_inter(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospf_inter(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospf_inter", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfIntra")
-    def ospf_intra(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospf_intra(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospf intra
         """
         return pulumi.get(self, "ospf_intra")
 
     @ospf_intra.setter
-    def ospf_intra(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospf_intra(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospf_intra", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfv3Ext")
-    def ospfv3_ext(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospfv3_ext(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospfv3 ext
         """
         return pulumi.get(self, "ospfv3_ext")
 
     @ospfv3_ext.setter
-    def ospfv3_ext(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospfv3_ext(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospfv3_ext", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfv3Inter")
-    def ospfv3_inter(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospfv3_inter(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospfv3 inter
         """
         return pulumi.get(self, "ospfv3_inter")
 
     @ospfv3_inter.setter
-    def ospfv3_inter(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospfv3_inter(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospfv3_inter", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfv3Intra")
-    def ospfv3_intra(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospfv3_intra(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospfv3 intra
         """
         return pulumi.get(self, "ospfv3_intra")
 
     @ospfv3_intra.setter
-    def ospfv3_intra(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospfv3_intra(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospfv3_intra", value)
 
     @_builtins.property
     @pulumi.getter
-    def rip(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def rip(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Rip
         """
         return pulumi.get(self, "rip")
 
     @rip.setter
-    def rip(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def rip(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "rip", value)
 
     @_builtins.property
     @pulumi.getter
-    def static(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def static(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Static
         """
         return pulumi.get(self, "static")
 
     @static.setter
-    def static(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def static(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "static", value)
 
     @_builtins.property
     @pulumi.getter(name="staticIpv6")
-    def static_ipv6(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def static_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Static ipv6
         """
         return pulumi.get(self, "static_ipv6")
 
     @static_ipv6.setter
-    def static_ipv6(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def static_ipv6(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "static_ipv6", value)
 
 
@@ -36009,7 +36275,7 @@ if not MYPY:
         """
         Confederation member as
         """
-        default_local_preference: NotRequired[pulumi.Input[_builtins.float]]
+        default_local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
         Default local preference
         """
@@ -36090,7 +36356,7 @@ class LogicalRouterVrfBgpArgs:
                  always_advertise_network_route: Optional[pulumi.Input[_builtins.bool]] = None,
                  as_format: Optional[pulumi.Input[_builtins.str]] = None,
                  confederation_member_as: Optional[pulumi.Input[_builtins.str]] = None,
-                 default_local_preference: Optional[pulumi.Input[_builtins.float]] = None,
+                 default_local_preference: Optional[pulumi.Input[_builtins.int]] = None,
                  ecmp_multi_as: Optional[pulumi.Input[_builtins.bool]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  enforce_first_as: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -36115,7 +36381,7 @@ class LogicalRouterVrfBgpArgs:
         :param pulumi.Input[_builtins.bool] always_advertise_network_route: Always advertise network route
         :param pulumi.Input[_builtins.str] as_format: As format
         :param pulumi.Input[_builtins.str] confederation_member_as: Confederation member as
-        :param pulumi.Input[_builtins.float] default_local_preference: Default local preference
+        :param pulumi.Input[_builtins.int] default_local_preference: Default local preference
         :param pulumi.Input[_builtins.bool] ecmp_multi_as: Ecmp multi as
         :param pulumi.Input[_builtins.bool] enable: Enable
         :param pulumi.Input[_builtins.bool] enforce_first_as: Enforce first as
@@ -36268,14 +36534,14 @@ class LogicalRouterVrfBgpArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultLocalPreference")
-    def default_local_preference(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def default_local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Default local preference
         """
         return pulumi.get(self, "default_local_preference")
 
     @default_local_preference.setter
-    def default_local_preference(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def default_local_preference(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "default_local_preference", value)
 
     @_builtins.property
@@ -37146,15 +37412,15 @@ if not MYPY:
         """
         Enable
         """
-        local_restart_time: NotRequired[pulumi.Input[_builtins.float]]
+        local_restart_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Local restart time
         """
-        max_peer_restart_time: NotRequired[pulumi.Input[_builtins.float]]
+        max_peer_restart_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max peer restart time
         """
-        stale_route_time: NotRequired[pulumi.Input[_builtins.float]]
+        stale_route_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Stale route time
         """
@@ -37165,14 +37431,14 @@ elif False:
 class LogicalRouterVrfBgpGracefulRestartArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_restart_time: Optional[pulumi.Input[_builtins.float]] = None,
-                 max_peer_restart_time: Optional[pulumi.Input[_builtins.float]] = None,
-                 stale_route_time: Optional[pulumi.Input[_builtins.float]] = None):
+                 local_restart_time: Optional[pulumi.Input[_builtins.int]] = None,
+                 max_peer_restart_time: Optional[pulumi.Input[_builtins.int]] = None,
+                 stale_route_time: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] local_restart_time: Local restart time
-        :param pulumi.Input[_builtins.float] max_peer_restart_time: Max peer restart time
-        :param pulumi.Input[_builtins.float] stale_route_time: Stale route time
+        :param pulumi.Input[_builtins.int] local_restart_time: Local restart time
+        :param pulumi.Input[_builtins.int] max_peer_restart_time: Max peer restart time
+        :param pulumi.Input[_builtins.int] stale_route_time: Stale route time
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -37197,38 +37463,38 @@ class LogicalRouterVrfBgpGracefulRestartArgs:
 
     @_builtins.property
     @pulumi.getter(name="localRestartTime")
-    def local_restart_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def local_restart_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Local restart time
         """
         return pulumi.get(self, "local_restart_time")
 
     @local_restart_time.setter
-    def local_restart_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def local_restart_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "local_restart_time", value)
 
     @_builtins.property
     @pulumi.getter(name="maxPeerRestartTime")
-    def max_peer_restart_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_peer_restart_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max peer restart time
         """
         return pulumi.get(self, "max_peer_restart_time")
 
     @max_peer_restart_time.setter
-    def max_peer_restart_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_peer_restart_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_peer_restart_time", value)
 
     @_builtins.property
     @pulumi.getter(name="staleRouteTime")
-    def stale_route_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def stale_route_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Stale route time
         """
         return pulumi.get(self, "stale_route_time")
 
     @stale_route_time.setter
-    def stale_route_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def stale_route_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "stale_route_time", value)
 
 
@@ -37537,7 +37803,7 @@ if not MYPY:
         """
         Dampening
         """
-        multihop: NotRequired[pulumi.Input[_builtins.float]]
+        multihop: NotRequired[pulumi.Input[_builtins.int]]
         """
         Multihop
         """
@@ -37553,12 +37819,12 @@ class LogicalRouterVrfBgpPeerGroupConnectionOptionsArgs:
     def __init__(__self__, *,
                  authentication: Optional[pulumi.Input[_builtins.str]] = None,
                  dampening: Optional[pulumi.Input[_builtins.str]] = None,
-                 multihop: Optional[pulumi.Input[_builtins.float]] = None,
+                 multihop: Optional[pulumi.Input[_builtins.int]] = None,
                  timers: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] authentication: Authentication
         :param pulumi.Input[_builtins.str] dampening: Dampening
-        :param pulumi.Input[_builtins.float] multihop: Multihop
+        :param pulumi.Input[_builtins.int] multihop: Multihop
         :param pulumi.Input[_builtins.str] timers: Timers
         """
         if authentication is not None:
@@ -37596,14 +37862,14 @@ class LogicalRouterVrfBgpPeerGroupConnectionOptionsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def multihop(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def multihop(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Multihop
         """
         return pulumi.get(self, "multihop")
 
     @multihop.setter
-    def multihop(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def multihop(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "multihop", value)
 
     @_builtins.property
@@ -38016,7 +38282,7 @@ class LogicalRouterVrfBgpPeerGroupPeerBfdArgs:
 
 if not MYPY:
     class LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgsDict(TypedDict):
-        min_received_ttl: NotRequired[pulumi.Input[_builtins.float]]
+        min_received_ttl: NotRequired[pulumi.Input[_builtins.int]]
         """
         Min received ttl
         """
@@ -38026,23 +38292,23 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfBgpPeerGroupPeerBfdMultihopArgs:
     def __init__(__self__, *,
-                 min_received_ttl: Optional[pulumi.Input[_builtins.float]] = None):
+                 min_received_ttl: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] min_received_ttl: Min received ttl
+        :param pulumi.Input[_builtins.int] min_received_ttl: Min received ttl
         """
         if min_received_ttl is not None:
             pulumi.set(__self__, "min_received_ttl", min_received_ttl)
 
     @_builtins.property
     @pulumi.getter(name="minReceivedTtl")
-    def min_received_ttl(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def min_received_ttl(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Min received ttl
         """
         return pulumi.get(self, "min_received_ttl")
 
     @min_received_ttl.setter
-    def min_received_ttl(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def min_received_ttl(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "min_received_ttl", value)
 
 
@@ -38060,7 +38326,7 @@ if not MYPY:
         """
         Hold time
         """
-        idle_hold_time: NotRequired[pulumi.Input[_builtins.float]]
+        idle_hold_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Idle hold time
         """
@@ -38076,7 +38342,7 @@ if not MYPY:
         """
         Max prefixes
         """
-        min_route_adv_interval: NotRequired[pulumi.Input[_builtins.float]]
+        min_route_adv_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Min route adv interval
         """
@@ -38084,7 +38350,7 @@ if not MYPY:
         """
         Multihop
         """
-        open_delay_time: NotRequired[pulumi.Input[_builtins.float]]
+        open_delay_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Open delay time
         """
@@ -38105,26 +38371,26 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs:
                  authentication: Optional[pulumi.Input[_builtins.str]] = None,
                  dampening: Optional[pulumi.Input[_builtins.str]] = None,
                  hold_time: Optional[pulumi.Input[_builtins.str]] = None,
-                 idle_hold_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 idle_hold_time: Optional[pulumi.Input[_builtins.int]] = None,
                  incoming_bgp_connection: Optional[pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionArgs']] = None,
                  keep_alive_interval: Optional[pulumi.Input[_builtins.str]] = None,
                  max_prefixes: Optional[pulumi.Input[_builtins.str]] = None,
-                 min_route_adv_interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 min_route_adv_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  multihop: Optional[pulumi.Input[_builtins.str]] = None,
-                 open_delay_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 open_delay_time: Optional[pulumi.Input[_builtins.int]] = None,
                  outgoing_bgp_connection: Optional[pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgs']] = None,
                  timers: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] authentication: Authentication
         :param pulumi.Input[_builtins.str] dampening: Dampening
         :param pulumi.Input[_builtins.str] hold_time: Hold time
-        :param pulumi.Input[_builtins.float] idle_hold_time: Idle hold time
+        :param pulumi.Input[_builtins.int] idle_hold_time: Idle hold time
         :param pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionArgs'] incoming_bgp_connection: Incoming bgp connection
         :param pulumi.Input[_builtins.str] keep_alive_interval: Keep alive interval
         :param pulumi.Input[_builtins.str] max_prefixes: Max prefixes
-        :param pulumi.Input[_builtins.float] min_route_adv_interval: Min route adv interval
+        :param pulumi.Input[_builtins.int] min_route_adv_interval: Min route adv interval
         :param pulumi.Input[_builtins.str] multihop: Multihop
-        :param pulumi.Input[_builtins.float] open_delay_time: Open delay time
+        :param pulumi.Input[_builtins.int] open_delay_time: Open delay time
         :param pulumi.Input['LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgs'] outgoing_bgp_connection: Outgoing bgp connection
         :param pulumi.Input[_builtins.str] timers: Timers
         """
@@ -38191,14 +38457,14 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs:
 
     @_builtins.property
     @pulumi.getter(name="idleHoldTime")
-    def idle_hold_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def idle_hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Idle hold time
         """
         return pulumi.get(self, "idle_hold_time")
 
     @idle_hold_time.setter
-    def idle_hold_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def idle_hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "idle_hold_time", value)
 
     @_builtins.property
@@ -38239,14 +38505,14 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs:
 
     @_builtins.property
     @pulumi.getter(name="minRouteAdvInterval")
-    def min_route_adv_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def min_route_adv_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Min route adv interval
         """
         return pulumi.get(self, "min_route_adv_interval")
 
     @min_route_adv_interval.setter
-    def min_route_adv_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def min_route_adv_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "min_route_adv_interval", value)
 
     @_builtins.property
@@ -38263,14 +38529,14 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsArgs:
 
     @_builtins.property
     @pulumi.getter(name="openDelayTime")
-    def open_delay_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def open_delay_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Open delay time
         """
         return pulumi.get(self, "open_delay_time")
 
     @open_delay_time.setter
-    def open_delay_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def open_delay_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "open_delay_time", value)
 
     @_builtins.property
@@ -38304,7 +38570,7 @@ if not MYPY:
         """
         Allow
         """
-        remote_port: NotRequired[pulumi.Input[_builtins.float]]
+        remote_port: NotRequired[pulumi.Input[_builtins.int]]
         """
         Remote port
         """
@@ -38315,10 +38581,10 @@ elif False:
 class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionArgs:
     def __init__(__self__, *,
                  allow: Optional[pulumi.Input[_builtins.bool]] = None,
-                 remote_port: Optional[pulumi.Input[_builtins.float]] = None):
+                 remote_port: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] allow: Allow
-        :param pulumi.Input[_builtins.float] remote_port: Remote port
+        :param pulumi.Input[_builtins.int] remote_port: Remote port
         """
         if allow is not None:
             pulumi.set(__self__, "allow", allow)
@@ -38339,14 +38605,14 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsIncomingBgpConnectionArgs
 
     @_builtins.property
     @pulumi.getter(name="remotePort")
-    def remote_port(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def remote_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Remote port
         """
         return pulumi.get(self, "remote_port")
 
     @remote_port.setter
-    def remote_port(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def remote_port(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "remote_port", value)
 
 
@@ -38356,7 +38622,7 @@ if not MYPY:
         """
         Allow
         """
-        local_port: NotRequired[pulumi.Input[_builtins.float]]
+        local_port: NotRequired[pulumi.Input[_builtins.int]]
         """
         Local port
         """
@@ -38367,10 +38633,10 @@ elif False:
 class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgs:
     def __init__(__self__, *,
                  allow: Optional[pulumi.Input[_builtins.bool]] = None,
-                 local_port: Optional[pulumi.Input[_builtins.float]] = None):
+                 local_port: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] allow: Allow
-        :param pulumi.Input[_builtins.float] local_port: Local port
+        :param pulumi.Input[_builtins.int] local_port: Local port
         """
         if allow is not None:
             pulumi.set(__self__, "allow", allow)
@@ -38391,14 +38657,14 @@ class LogicalRouterVrfBgpPeerGroupPeerConnectionOptionsOutgoingBgpConnectionArgs
 
     @_builtins.property
     @pulumi.getter(name="localPort")
-    def local_port(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def local_port(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Local port
         """
         return pulumi.get(self, "local_port")
 
     @local_port.setter
-    def local_port(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def local_port(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "local_port", value)
 
 
@@ -39430,7 +39696,7 @@ if not MYPY:
         """
         From peer
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -39458,7 +39724,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchArgs:
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchExtendedCommunityArgs']] = None,
                  from_peers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthops: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  route_table: Optional[pulumi.Input[_builtins.str]] = None,
                  safi: Optional[pulumi.Input[_builtins.str]] = None):
@@ -39469,7 +39735,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchArgs:
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchExtendedCommunityArgs'] extended_community: Extended community
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] from_peers: From peer
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nexthops: Nexthop
         :param pulumi.Input[_builtins.str] route_table: Route table
         :param pulumi.Input[_builtins.str] safi: Safi
@@ -39569,14 +39835,14 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAdvertiseFilterMatchArgs:
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -39769,7 +40035,7 @@ if not MYPY:
         """
         As path
         """
-        as_path_limit: NotRequired[pulumi.Input[_builtins.float]]
+        as_path_limit: NotRequired[pulumi.Input[_builtins.int]]
         """
         As path limit
         """
@@ -39781,11 +40047,11 @@ if not MYPY:
         """
         Extended community
         """
-        local_preference: NotRequired[pulumi.Input[_builtins.float]]
+        local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
         Local preference
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -39797,7 +40063,7 @@ if not MYPY:
         """
         Origin
         """
-        weight: NotRequired[pulumi.Input[_builtins.float]]
+        weight: NotRequired[pulumi.Input[_builtins.int]]
         """
         Weight
         """
@@ -39808,24 +40074,24 @@ elif False:
 class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgs:
     def __init__(__self__, *,
                  as_path: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgs']] = None,
-                 as_path_limit: Optional[pulumi.Input[_builtins.float]] = None,
+                 as_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityArgs']] = None,
-                 local_preference: Optional[pulumi.Input[_builtins.float]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 local_preference: Optional[pulumi.Input[_builtins.int]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthop: Optional[pulumi.Input[_builtins.str]] = None,
                  origin: Optional[pulumi.Input[_builtins.str]] = None,
-                 weight: Optional[pulumi.Input[_builtins.float]] = None):
+                 weight: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgs'] as_path: As path
-        :param pulumi.Input[_builtins.float] as_path_limit: As path limit
+        :param pulumi.Input[_builtins.int] as_path_limit: As path limit
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityArgs'] extended_community: Extended community
-        :param pulumi.Input[_builtins.float] local_preference: Local preference
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] local_preference: Local preference
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[_builtins.str] nexthop: Nexthop
         :param pulumi.Input[_builtins.str] origin: Origin
-        :param pulumi.Input[_builtins.float] weight: Weight
+        :param pulumi.Input[_builtins.int] weight: Weight
         """
         if as_path is not None:
             pulumi.set(__self__, "as_path", as_path)
@@ -39860,14 +40126,14 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgs:
 
     @_builtins.property
     @pulumi.getter(name="asPathLimit")
-    def as_path_limit(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def as_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         As path limit
         """
         return pulumi.get(self, "as_path_limit")
 
     @as_path_limit.setter
-    def as_path_limit(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def as_path_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "as_path_limit", value)
 
     @_builtins.property
@@ -39896,26 +40162,26 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgs:
 
     @_builtins.property
     @pulumi.getter(name="localPreference")
-    def local_preference(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Local preference
         """
         return pulumi.get(self, "local_preference")
 
     @local_preference.setter
-    def local_preference(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def local_preference(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "local_preference", value)
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -39944,14 +40210,14 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesArgs:
 
     @_builtins.property
     @pulumi.getter
-    def weight(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def weight(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Weight
         """
         return pulumi.get(self, "weight")
 
     @weight.setter
-    def weight(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def weight(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "weight", value)
 
 
@@ -39961,7 +40227,7 @@ if not MYPY:
         """
         None
         """
-        prepend: NotRequired[pulumi.Input[_builtins.float]]
+        prepend: NotRequired[pulumi.Input[_builtins.int]]
         """
         Prepend
         """
@@ -39969,7 +40235,7 @@ if not MYPY:
         """
         Remove
         """
-        remove_and_prepend: NotRequired[pulumi.Input[_builtins.float]]
+        remove_and_prepend: NotRequired[pulumi.Input[_builtins.int]]
         """
         Remove and prepend
         """
@@ -39980,14 +40246,14 @@ elif False:
 class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathArgs:
     def __init__(__self__, *,
                  none: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneArgs']] = None,
-                 prepend: Optional[pulumi.Input[_builtins.float]] = None,
+                 prepend: Optional[pulumi.Input[_builtins.int]] = None,
                  remove: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveArgs']] = None,
-                 remove_and_prepend: Optional[pulumi.Input[_builtins.float]] = None):
+                 remove_and_prepend: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNoneArgs'] none: None
-        :param pulumi.Input[_builtins.float] prepend: Prepend
+        :param pulumi.Input[_builtins.int] prepend: Prepend
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemoveArgs'] remove: Remove
-        :param pulumi.Input[_builtins.float] remove_and_prepend: Remove and prepend
+        :param pulumi.Input[_builtins.int] remove_and_prepend: Remove and prepend
         """
         if none is not None:
             pulumi.set(__self__, "none", none)
@@ -40012,14 +40278,14 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathA
 
     @_builtins.property
     @pulumi.getter
-    def prepend(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def prepend(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Prepend
         """
         return pulumi.get(self, "prepend")
 
     @prepend.setter
-    def prepend(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def prepend(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "prepend", value)
 
     @_builtins.property
@@ -40036,14 +40302,14 @@ class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathA
 
     @_builtins.property
     @pulumi.getter(name="removeAndPrepend")
-    def remove_and_prepend(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def remove_and_prepend(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Remove and prepend
         """
         return pulumi.get(self, "remove_and_prepend")
 
     @remove_and_prepend.setter
-    def remove_and_prepend(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def remove_and_prepend(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "remove_and_prepend", value)
 
 
@@ -40440,7 +40706,7 @@ if not MYPY:
         """
         From peer
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -40468,7 +40734,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchArgs:
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunityArgs']] = None,
                  from_peers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthops: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  route_table: Optional[pulumi.Input[_builtins.str]] = None,
                  safi: Optional[pulumi.Input[_builtins.str]] = None):
@@ -40479,7 +40745,7 @@ class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchArgs:
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchExtendedCommunityArgs'] extended_community: Extended community
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] from_peers: From peer
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nexthops: Nexthop
         :param pulumi.Input[_builtins.str] route_table: Route table
         :param pulumi.Input[_builtins.str] safi: Safi
@@ -40579,14 +40845,14 @@ class LogicalRouterVrfBgpPolicyAggregationAddressSuppressFilterMatchArgs:
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -41013,7 +41279,7 @@ if not MYPY:
         """
         From peer
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -41041,7 +41307,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatc
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchExtendedCommunityArgs']] = None,
                  from_peers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthops: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  route_table: Optional[pulumi.Input[_builtins.str]] = None,
                  safi: Optional[pulumi.Input[_builtins.str]] = None):
@@ -41052,7 +41318,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatc
         :param pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatchExtendedCommunityArgs'] extended_community: Extended community
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] from_peers: From peer
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nexthops: Nexthop
         :param pulumi.Input[_builtins.str] route_table: Route table
         :param pulumi.Input[_builtins.str] safi: Safi
@@ -41152,14 +41418,14 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyAdvertiseFilterMatc
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -41443,7 +41709,7 @@ if not MYPY:
         """
         From peer
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -41471,7 +41737,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatch
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchExtendedCommunityArgs']] = None,
                  from_peers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthops: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  route_table: Optional[pulumi.Input[_builtins.str]] = None,
                  safi: Optional[pulumi.Input[_builtins.str]] = None):
@@ -41482,7 +41748,7 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatch
         :param pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatchExtendedCommunityArgs'] extended_community: Extended community
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] from_peers: From peer
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nexthops: Nexthop
         :param pulumi.Input[_builtins.str] route_table: Route table
         :param pulumi.Input[_builtins.str] safi: Safi
@@ -41582,14 +41848,14 @@ class LogicalRouterVrfBgpPolicyConditionalAdvertisementPolicyNonExistFilterMatch
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -42009,7 +42275,7 @@ if not MYPY:
         """
         As path
         """
-        as_path_limit: NotRequired[pulumi.Input[_builtins.float]]
+        as_path_limit: NotRequired[pulumi.Input[_builtins.int]]
         """
         As path limit
         """
@@ -42021,11 +42287,11 @@ if not MYPY:
         """
         Extended community
         """
-        local_preference: NotRequired[pulumi.Input[_builtins.float]]
+        local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
         Local preference
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -42044,20 +42310,20 @@ elif False:
 class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgs:
     def __init__(__self__, *,
                  as_path: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs']] = None,
-                 as_path_limit: Optional[pulumi.Input[_builtins.float]] = None,
+                 as_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgs']] = None,
-                 local_preference: Optional[pulumi.Input[_builtins.float]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 local_preference: Optional[pulumi.Input[_builtins.int]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthop: Optional[pulumi.Input[_builtins.str]] = None,
                  origin: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs'] as_path: As path
-        :param pulumi.Input[_builtins.float] as_path_limit: As path limit
+        :param pulumi.Input[_builtins.int] as_path_limit: As path limit
         :param pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgs'] extended_community: Extended community
-        :param pulumi.Input[_builtins.float] local_preference: Local preference
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] local_preference: Local preference
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[_builtins.str] nexthop: Nexthop
         :param pulumi.Input[_builtins.str] origin: Origin
         """
@@ -42092,14 +42358,14 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgs:
 
     @_builtins.property
     @pulumi.getter(name="asPathLimit")
-    def as_path_limit(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def as_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         As path limit
         """
         return pulumi.get(self, "as_path_limit")
 
     @as_path_limit.setter
-    def as_path_limit(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def as_path_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "as_path_limit", value)
 
     @_builtins.property
@@ -42128,26 +42394,26 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateArgs:
 
     @_builtins.property
     @pulumi.getter(name="localPreference")
-    def local_preference(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Local preference
         """
         return pulumi.get(self, "local_preference")
 
     @local_preference.setter
-    def local_preference(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def local_preference(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "local_preference", value)
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -42181,7 +42447,7 @@ if not MYPY:
         """
         None
         """
-        prepend: NotRequired[pulumi.Input[_builtins.float]]
+        prepend: NotRequired[pulumi.Input[_builtins.int]]
         """
         Prepend
         """
@@ -42189,7 +42455,7 @@ if not MYPY:
         """
         Remove
         """
-        remove_and_prepend: NotRequired[pulumi.Input[_builtins.float]]
+        remove_and_prepend: NotRequired[pulumi.Input[_builtins.int]]
         """
         Remove and prepend
         """
@@ -42200,14 +42466,14 @@ elif False:
 class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs:
     def __init__(__self__, *,
                  none: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneArgs']] = None,
-                 prepend: Optional[pulumi.Input[_builtins.float]] = None,
+                 prepend: Optional[pulumi.Input[_builtins.int]] = None,
                  remove: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveArgs']] = None,
-                 remove_and_prepend: Optional[pulumi.Input[_builtins.float]] = None):
+                 remove_and_prepend: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNoneArgs'] none: None
-        :param pulumi.Input[_builtins.float] prepend: Prepend
+        :param pulumi.Input[_builtins.int] prepend: Prepend
         :param pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemoveArgs'] remove: Remove
-        :param pulumi.Input[_builtins.float] remove_and_prepend: Remove and prepend
+        :param pulumi.Input[_builtins.int] remove_and_prepend: Remove and prepend
         """
         if none is not None:
             pulumi.set(__self__, "none", none)
@@ -42232,14 +42498,14 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs:
 
     @_builtins.property
     @pulumi.getter
-    def prepend(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def prepend(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Prepend
         """
         return pulumi.get(self, "prepend")
 
     @prepend.setter
-    def prepend(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def prepend(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "prepend", value)
 
     @_builtins.property
@@ -42256,14 +42522,14 @@ class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs:
 
     @_builtins.property
     @pulumi.getter(name="removeAndPrepend")
-    def remove_and_prepend(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def remove_and_prepend(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Remove and prepend
         """
         return pulumi.get(self, "remove_and_prepend")
 
     @remove_and_prepend.setter
-    def remove_and_prepend(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def remove_and_prepend(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "remove_and_prepend", value)
 
 
@@ -42601,7 +42867,7 @@ if not MYPY:
         """
         From peer
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -42629,7 +42895,7 @@ class LogicalRouterVrfBgpPolicyExportRuleMatchArgs:
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleMatchCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleMatchExtendedCommunityArgs']] = None,
                  from_peers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthops: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  route_table: Optional[pulumi.Input[_builtins.str]] = None,
                  safi: Optional[pulumi.Input[_builtins.str]] = None):
@@ -42640,7 +42906,7 @@ class LogicalRouterVrfBgpPolicyExportRuleMatchArgs:
         :param pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleMatchCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyExportRuleMatchExtendedCommunityArgs'] extended_community: Extended community
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] from_peers: From peer
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nexthops: Nexthop
         :param pulumi.Input[_builtins.str] route_table: Route table
         :param pulumi.Input[_builtins.str] safi: Safi
@@ -42740,14 +43006,14 @@ class LogicalRouterVrfBgpPolicyExportRuleMatchArgs:
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -43188,7 +43454,7 @@ if not MYPY:
         """
         As path
         """
-        as_path_limit: NotRequired[pulumi.Input[_builtins.float]]
+        as_path_limit: NotRequired[pulumi.Input[_builtins.int]]
         """
         As path limit
         """
@@ -43200,11 +43466,11 @@ if not MYPY:
         """
         Extended community
         """
-        local_preference: NotRequired[pulumi.Input[_builtins.float]]
+        local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
         Local preference
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -43216,7 +43482,7 @@ if not MYPY:
         """
         Origin
         """
-        weight: NotRequired[pulumi.Input[_builtins.float]]
+        weight: NotRequired[pulumi.Input[_builtins.int]]
         """
         Weight
         """
@@ -43227,24 +43493,24 @@ elif False:
 class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs:
     def __init__(__self__, *,
                  as_path: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs']] = None,
-                 as_path_limit: Optional[pulumi.Input[_builtins.float]] = None,
+                 as_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgs']] = None,
-                 local_preference: Optional[pulumi.Input[_builtins.float]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 local_preference: Optional[pulumi.Input[_builtins.int]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthop: Optional[pulumi.Input[_builtins.str]] = None,
                  origin: Optional[pulumi.Input[_builtins.str]] = None,
-                 weight: Optional[pulumi.Input[_builtins.float]] = None):
+                 weight: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs'] as_path: As path
-        :param pulumi.Input[_builtins.float] as_path_limit: As path limit
+        :param pulumi.Input[_builtins.int] as_path_limit: As path limit
         :param pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgs'] extended_community: Extended community
-        :param pulumi.Input[_builtins.float] local_preference: Local preference
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] local_preference: Local preference
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[_builtins.str] nexthop: Nexthop
         :param pulumi.Input[_builtins.str] origin: Origin
-        :param pulumi.Input[_builtins.float] weight: Weight
+        :param pulumi.Input[_builtins.int] weight: Weight
         """
         if as_path is not None:
             pulumi.set(__self__, "as_path", as_path)
@@ -43279,14 +43545,14 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs:
 
     @_builtins.property
     @pulumi.getter(name="asPathLimit")
-    def as_path_limit(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def as_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         As path limit
         """
         return pulumi.get(self, "as_path_limit")
 
     @as_path_limit.setter
-    def as_path_limit(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def as_path_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "as_path_limit", value)
 
     @_builtins.property
@@ -43315,26 +43581,26 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs:
 
     @_builtins.property
     @pulumi.getter(name="localPreference")
-    def local_preference(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Local preference
         """
         return pulumi.get(self, "local_preference")
 
     @local_preference.setter
-    def local_preference(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def local_preference(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "local_preference", value)
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -43363,14 +43629,14 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def weight(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def weight(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Weight
         """
         return pulumi.get(self, "weight")
 
     @weight.setter
-    def weight(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def weight(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "weight", value)
 
 
@@ -43380,7 +43646,7 @@ if not MYPY:
         """
         None
         """
-        prepend: NotRequired[pulumi.Input[_builtins.float]]
+        prepend: NotRequired[pulumi.Input[_builtins.int]]
         """
         Prepend
         """
@@ -43388,7 +43654,7 @@ if not MYPY:
         """
         Remove
         """
-        remove_and_prepend: NotRequired[pulumi.Input[_builtins.float]]
+        remove_and_prepend: NotRequired[pulumi.Input[_builtins.int]]
         """
         Remove and prepend
         """
@@ -43399,14 +43665,14 @@ elif False:
 class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs:
     def __init__(__self__, *,
                  none: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneArgs']] = None,
-                 prepend: Optional[pulumi.Input[_builtins.float]] = None,
+                 prepend: Optional[pulumi.Input[_builtins.int]] = None,
                  remove: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveArgs']] = None,
-                 remove_and_prepend: Optional[pulumi.Input[_builtins.float]] = None):
+                 remove_and_prepend: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNoneArgs'] none: None
-        :param pulumi.Input[_builtins.float] prepend: Prepend
+        :param pulumi.Input[_builtins.int] prepend: Prepend
         :param pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveArgs'] remove: Remove
-        :param pulumi.Input[_builtins.float] remove_and_prepend: Remove and prepend
+        :param pulumi.Input[_builtins.int] remove_and_prepend: Remove and prepend
         """
         if none is not None:
             pulumi.set(__self__, "none", none)
@@ -43431,14 +43697,14 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs:
 
     @_builtins.property
     @pulumi.getter
-    def prepend(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def prepend(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Prepend
         """
         return pulumi.get(self, "prepend")
 
     @prepend.setter
-    def prepend(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def prepend(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "prepend", value)
 
     @_builtins.property
@@ -43455,14 +43721,14 @@ class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs:
 
     @_builtins.property
     @pulumi.getter(name="removeAndPrepend")
-    def remove_and_prepend(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def remove_and_prepend(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Remove and prepend
         """
         return pulumi.get(self, "remove_and_prepend")
 
     @remove_and_prepend.setter
-    def remove_and_prepend(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def remove_and_prepend(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "remove_and_prepend", value)
 
 
@@ -43800,7 +44066,7 @@ if not MYPY:
         """
         From peer
         """
-        med: NotRequired[pulumi.Input[_builtins.float]]
+        med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Med
         """
@@ -43828,7 +44094,7 @@ class LogicalRouterVrfBgpPolicyImportRuleMatchArgs:
                  community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleMatchCommunityArgs']] = None,
                  extended_community: Optional[pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleMatchExtendedCommunityArgs']] = None,
                  from_peers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 med: Optional[pulumi.Input[_builtins.float]] = None,
+                 med: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthops: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  route_table: Optional[pulumi.Input[_builtins.str]] = None,
                  safi: Optional[pulumi.Input[_builtins.str]] = None):
@@ -43839,7 +44105,7 @@ class LogicalRouterVrfBgpPolicyImportRuleMatchArgs:
         :param pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleMatchCommunityArgs'] community: Community
         :param pulumi.Input['LogicalRouterVrfBgpPolicyImportRuleMatchExtendedCommunityArgs'] extended_community: Extended community
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] from_peers: From peer
-        :param pulumi.Input[_builtins.float] med: Med
+        :param pulumi.Input[_builtins.int] med: Med
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nexthops: Nexthop
         :param pulumi.Input[_builtins.str] route_table: Route table
         :param pulumi.Input[_builtins.str] safi: Safi
@@ -43939,14 +44205,14 @@ class LogicalRouterVrfBgpPolicyImportRuleMatchArgs:
 
     @_builtins.property
     @pulumi.getter
-    def med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Med
         """
         return pulumi.get(self, "med")
 
     @med.setter
-    def med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "med", value)
 
     @_builtins.property
@@ -44147,7 +44413,7 @@ if not MYPY:
         """
         Enable
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -44155,7 +44421,7 @@ if not MYPY:
         """
         Route table
         """
-        set_as_path_limit: NotRequired[pulumi.Input[_builtins.float]]
+        set_as_path_limit: NotRequired[pulumi.Input[_builtins.int]]
         """
         Set as path limit
         """
@@ -44167,11 +44433,11 @@ if not MYPY:
         """
         Set extended community
         """
-        set_local_preference: NotRequired[pulumi.Input[_builtins.float]]
+        set_local_preference: NotRequired[pulumi.Input[_builtins.int]]
         """
         Set local preference
         """
-        set_med: NotRequired[pulumi.Input[_builtins.float]]
+        set_med: NotRequired[pulumi.Input[_builtins.int]]
         """
         Set med
         """
@@ -44188,25 +44454,25 @@ class LogicalRouterVrfBgpRedistRuleArgs:
                  name: pulumi.Input[_builtins.str],
                  address_family_identifier: Optional[pulumi.Input[_builtins.str]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  route_table: Optional[pulumi.Input[_builtins.str]] = None,
-                 set_as_path_limit: Optional[pulumi.Input[_builtins.float]] = None,
+                 set_as_path_limit: Optional[pulumi.Input[_builtins.int]] = None,
                  set_communities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  set_extended_communities: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 set_local_preference: Optional[pulumi.Input[_builtins.float]] = None,
-                 set_med: Optional[pulumi.Input[_builtins.float]] = None,
+                 set_local_preference: Optional[pulumi.Input[_builtins.int]] = None,
+                 set_med: Optional[pulumi.Input[_builtins.int]] = None,
                  set_origin: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] address_family_identifier: Address family identifier
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.str] route_table: Route table
-        :param pulumi.Input[_builtins.float] set_as_path_limit: Set as path limit
+        :param pulumi.Input[_builtins.int] set_as_path_limit: Set as path limit
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] set_communities: Set community
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] set_extended_communities: Set extended community
-        :param pulumi.Input[_builtins.float] set_local_preference: Set local preference
-        :param pulumi.Input[_builtins.float] set_med: Set med
+        :param pulumi.Input[_builtins.int] set_local_preference: Set local preference
+        :param pulumi.Input[_builtins.int] set_med: Set med
         :param pulumi.Input[_builtins.str] set_origin: Set origin
         """
         pulumi.set(__self__, "name", name)
@@ -44269,14 +44535,14 @@ class LogicalRouterVrfBgpRedistRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -44293,14 +44559,14 @@ class LogicalRouterVrfBgpRedistRuleArgs:
 
     @_builtins.property
     @pulumi.getter(name="setAsPathLimit")
-    def set_as_path_limit(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def set_as_path_limit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Set as path limit
         """
         return pulumi.get(self, "set_as_path_limit")
 
     @set_as_path_limit.setter
-    def set_as_path_limit(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def set_as_path_limit(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "set_as_path_limit", value)
 
     @_builtins.property
@@ -44329,26 +44595,26 @@ class LogicalRouterVrfBgpRedistRuleArgs:
 
     @_builtins.property
     @pulumi.getter(name="setLocalPreference")
-    def set_local_preference(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def set_local_preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Set local preference
         """
         return pulumi.get(self, "set_local_preference")
 
     @set_local_preference.setter
-    def set_local_preference(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def set_local_preference(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "set_local_preference", value)
 
     @_builtins.property
     @pulumi.getter(name="setMed")
-    def set_med(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def set_med(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Set med
         """
         return pulumi.get(self, "set_med")
 
     @set_med.setter
-    def set_med(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def set_med(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "set_med", value)
 
     @_builtins.property
@@ -44490,7 +44756,7 @@ if not MYPY:
         """
         Enable
         """
-        max_path: NotRequired[pulumi.Input[_builtins.float]]
+        max_path: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max path
         """
@@ -44510,13 +44776,13 @@ class LogicalRouterVrfEcmpArgs:
     def __init__(__self__, *,
                  algorithm: Optional[pulumi.Input['LogicalRouterVrfEcmpAlgorithmArgs']] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_path: Optional[pulumi.Input[_builtins.float]] = None,
+                 max_path: Optional[pulumi.Input[_builtins.int]] = None,
                  strict_source_path: Optional[pulumi.Input[_builtins.bool]] = None,
                  symmetric_return: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfEcmpAlgorithmArgs'] algorithm: Algorithm
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] max_path: Max path
+        :param pulumi.Input[_builtins.int] max_path: Max path
         :param pulumi.Input[_builtins.bool] strict_source_path: Strict source path
         :param pulumi.Input[_builtins.bool] symmetric_return: Symmetric return
         """
@@ -44557,14 +44823,14 @@ class LogicalRouterVrfEcmpArgs:
 
     @_builtins.property
     @pulumi.getter(name="maxPath")
-    def max_path(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_path(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max path
         """
         return pulumi.get(self, "max_path")
 
     @max_path.setter
-    def max_path(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_path(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_path", value)
 
     @_builtins.property
@@ -44698,7 +44964,7 @@ class LogicalRouterVrfEcmpAlgorithmBalancedRoundRobinArgs:
 
 if not MYPY:
     class LogicalRouterVrfEcmpAlgorithmIpHashArgsDict(TypedDict):
-        hash_seed: NotRequired[pulumi.Input[_builtins.float]]
+        hash_seed: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hash seed
         """
@@ -44716,11 +44982,11 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfEcmpAlgorithmIpHashArgs:
     def __init__(__self__, *,
-                 hash_seed: Optional[pulumi.Input[_builtins.float]] = None,
+                 hash_seed: Optional[pulumi.Input[_builtins.int]] = None,
                  src_only: Optional[pulumi.Input[_builtins.bool]] = None,
                  use_port: Optional[pulumi.Input[_builtins.bool]] = None):
         """
-        :param pulumi.Input[_builtins.float] hash_seed: Hash seed
+        :param pulumi.Input[_builtins.int] hash_seed: Hash seed
         :param pulumi.Input[_builtins.bool] src_only: Src only
         :param pulumi.Input[_builtins.bool] use_port: Use port
         """
@@ -44733,14 +44999,14 @@ class LogicalRouterVrfEcmpAlgorithmIpHashArgs:
 
     @_builtins.property
     @pulumi.getter(name="hashSeed")
-    def hash_seed(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hash_seed(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hash seed
         """
         return pulumi.get(self, "hash_seed")
 
     @hash_seed.setter
-    def hash_seed(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hash_seed(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hash_seed", value)
 
     @_builtins.property
@@ -44818,7 +45084,7 @@ if not MYPY:
         """
         Name
         """
-        weight: NotRequired[pulumi.Input[_builtins.float]]
+        weight: NotRequired[pulumi.Input[_builtins.int]]
         """
         Weight
         """
@@ -44829,10 +45095,10 @@ elif False:
 class LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterfaceArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 weight: Optional[pulumi.Input[_builtins.float]] = None):
+                 weight: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] weight: Weight
+        :param pulumi.Input[_builtins.int] weight: Weight
         """
         pulumi.set(__self__, "name", name)
         if weight is not None:
@@ -44852,14 +45118,14 @@ class LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def weight(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def weight(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Weight
         """
         return pulumi.get(self, "weight")
 
     @weight.setter
-    def weight(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def weight(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "weight", value)
 
 
@@ -44893,7 +45159,7 @@ if not MYPY:
         """
         Pim
         """
-        route_ageout_time: NotRequired[pulumi.Input[_builtins.float]]
+        route_ageout_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Route ageout time
         """
@@ -44926,7 +45192,7 @@ class LogicalRouterVrfMulticastArgs:
                  mode: Optional[pulumi.Input[_builtins.str]] = None,
                  msdp: Optional[pulumi.Input['LogicalRouterVrfMulticastMsdpArgs']] = None,
                  pim: Optional[pulumi.Input['LogicalRouterVrfMulticastPimArgs']] = None,
-                 route_ageout_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 route_ageout_time: Optional[pulumi.Input[_builtins.int]] = None,
                  rp: Optional[pulumi.Input['LogicalRouterVrfMulticastRpArgs']] = None,
                  spt_thresholds: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastSptThresholdArgs']]]] = None,
                  ssm_address_spaces: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastSsmAddressSpaceArgs']]]] = None,
@@ -44939,7 +45205,7 @@ class LogicalRouterVrfMulticastArgs:
         :param pulumi.Input[_builtins.str] mode: Mode
         :param pulumi.Input['LogicalRouterVrfMulticastMsdpArgs'] msdp: Msdp
         :param pulumi.Input['LogicalRouterVrfMulticastPimArgs'] pim: Pim
-        :param pulumi.Input[_builtins.float] route_ageout_time: Route ageout time
+        :param pulumi.Input[_builtins.int] route_ageout_time: Route ageout time
         :param pulumi.Input['LogicalRouterVrfMulticastRpArgs'] rp: Rp
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastSptThresholdArgs']]] spt_thresholds: Spt threshold
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastSsmAddressSpaceArgs']]] ssm_address_spaces: Ssm address space
@@ -45056,14 +45322,14 @@ class LogicalRouterVrfMulticastArgs:
 
     @_builtins.property
     @pulumi.getter(name="routeAgeoutTime")
-    def route_ageout_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def route_ageout_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Route ageout time
         """
         return pulumi.get(self, "route_ageout_time")
 
     @route_ageout_time.setter
-    def route_ageout_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def route_ageout_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "route_ageout_time", value)
 
     @_builtins.property
@@ -45836,7 +46102,7 @@ if not MYPY:
         """
         Immediate leave
         """
-        last_member_query_interval: NotRequired[pulumi.Input[_builtins.float]]
+        last_member_query_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Last member query interval
         """
@@ -45844,7 +46110,7 @@ if not MYPY:
         """
         Max groups
         """
-        max_query_response_time: NotRequired[pulumi.Input[_builtins.float]]
+        max_query_response_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max query response time
         """
@@ -45856,7 +46122,7 @@ if not MYPY:
         """
         Mode
         """
-        query_interval: NotRequired[pulumi.Input[_builtins.float]]
+        query_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Query interval
         """
@@ -45880,24 +46146,24 @@ class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  immediate_leave: Optional[pulumi.Input[_builtins.bool]] = None,
-                 last_member_query_interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 last_member_query_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  max_groups: Optional[pulumi.Input[_builtins.str]] = None,
-                 max_query_response_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 max_query_response_time: Optional[pulumi.Input[_builtins.int]] = None,
                  max_sources: Optional[pulumi.Input[_builtins.str]] = None,
                  mode: Optional[pulumi.Input[_builtins.str]] = None,
-                 query_interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 query_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  robustness: Optional[pulumi.Input[_builtins.str]] = None,
                  router_alert_policing: Optional[pulumi.Input[_builtins.bool]] = None,
                  version: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
         :param pulumi.Input[_builtins.bool] immediate_leave: Immediate leave
-        :param pulumi.Input[_builtins.float] last_member_query_interval: Last member query interval
+        :param pulumi.Input[_builtins.int] last_member_query_interval: Last member query interval
         :param pulumi.Input[_builtins.str] max_groups: Max groups
-        :param pulumi.Input[_builtins.float] max_query_response_time: Max query response time
+        :param pulumi.Input[_builtins.int] max_query_response_time: Max query response time
         :param pulumi.Input[_builtins.str] max_sources: Max sources
         :param pulumi.Input[_builtins.str] mode: Mode
-        :param pulumi.Input[_builtins.float] query_interval: Query interval
+        :param pulumi.Input[_builtins.int] query_interval: Query interval
         :param pulumi.Input[_builtins.str] robustness: Robustness
         :param pulumi.Input[_builtins.bool] router_alert_policing: Router alert policing
         :param pulumi.Input[_builtins.str] version: Version
@@ -45951,14 +46217,14 @@ class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs:
 
     @_builtins.property
     @pulumi.getter(name="lastMemberQueryInterval")
-    def last_member_query_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def last_member_query_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Last member query interval
         """
         return pulumi.get(self, "last_member_query_interval")
 
     @last_member_query_interval.setter
-    def last_member_query_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def last_member_query_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "last_member_query_interval", value)
 
     @_builtins.property
@@ -45975,14 +46241,14 @@ class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs:
 
     @_builtins.property
     @pulumi.getter(name="maxQueryResponseTime")
-    def max_query_response_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_query_response_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max query response time
         """
         return pulumi.get(self, "max_query_response_time")
 
     @max_query_response_time.setter
-    def max_query_response_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_query_response_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_query_response_time", value)
 
     @_builtins.property
@@ -46011,14 +46277,14 @@ class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs:
 
     @_builtins.property
     @pulumi.getter(name="queryInterval")
-    def query_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def query_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Query interval
         """
         return pulumi.get(self, "query_interval")
 
     @query_interval.setter
-    def query_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def query_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "query_interval", value)
 
     @_builtins.property
@@ -46064,7 +46330,7 @@ if not MYPY:
         """
         Allowed neighbors
         """
-        assert_interval: NotRequired[pulumi.Input[_builtins.float]]
+        assert_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Assert interval
         """
@@ -46072,7 +46338,7 @@ if not MYPY:
         """
         Bsr border
         """
-        dr_priority: NotRequired[pulumi.Input[_builtins.float]]
+        dr_priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Dr priority
         """
@@ -46080,11 +46346,11 @@ if not MYPY:
         """
         Enable
         """
-        hello_interval: NotRequired[pulumi.Input[_builtins.float]]
+        hello_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hello interval
         """
-        join_prune_interval: NotRequired[pulumi.Input[_builtins.float]]
+        join_prune_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Join prune interval
         """
@@ -46095,20 +46361,20 @@ elif False:
 class LogicalRouterVrfMulticastInterfaceGroupPimArgs:
     def __init__(__self__, *,
                  allowed_neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighborArgs']]]] = None,
-                 assert_interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 assert_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  bsr_border: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dr_priority: Optional[pulumi.Input[_builtins.float]] = None,
+                 dr_priority: Optional[pulumi.Input[_builtins.int]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 join_prune_interval: Optional[pulumi.Input[_builtins.float]] = None):
+                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 join_prune_interval: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastInterfaceGroupPimAllowedNeighborArgs']]] allowed_neighbors: Allowed neighbors
-        :param pulumi.Input[_builtins.float] assert_interval: Assert interval
+        :param pulumi.Input[_builtins.int] assert_interval: Assert interval
         :param pulumi.Input[_builtins.bool] bsr_border: Bsr border
-        :param pulumi.Input[_builtins.float] dr_priority: Dr priority
+        :param pulumi.Input[_builtins.int] dr_priority: Dr priority
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] hello_interval: Hello interval
-        :param pulumi.Input[_builtins.float] join_prune_interval: Join prune interval
+        :param pulumi.Input[_builtins.int] hello_interval: Hello interval
+        :param pulumi.Input[_builtins.int] join_prune_interval: Join prune interval
         """
         if allowed_neighbors is not None:
             pulumi.set(__self__, "allowed_neighbors", allowed_neighbors)
@@ -46139,14 +46405,14 @@ class LogicalRouterVrfMulticastInterfaceGroupPimArgs:
 
     @_builtins.property
     @pulumi.getter(name="assertInterval")
-    def assert_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def assert_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Assert interval
         """
         return pulumi.get(self, "assert_interval")
 
     @assert_interval.setter
-    def assert_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def assert_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "assert_interval", value)
 
     @_builtins.property
@@ -46163,14 +46429,14 @@ class LogicalRouterVrfMulticastInterfaceGroupPimArgs:
 
     @_builtins.property
     @pulumi.getter(name="drPriority")
-    def dr_priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def dr_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Dr priority
         """
         return pulumi.get(self, "dr_priority")
 
     @dr_priority.setter
-    def dr_priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def dr_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "dr_priority", value)
 
     @_builtins.property
@@ -46187,26 +46453,26 @@ class LogicalRouterVrfMulticastInterfaceGroupPimArgs:
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hello interval
         """
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="joinPruneInterval")
-    def join_prune_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def join_prune_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Join prune interval
         """
         return pulumi.get(self, "join_prune_interval")
 
     @join_prune_interval.setter
-    def join_prune_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def join_prune_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "join_prune_interval", value)
 
 
@@ -46427,7 +46693,7 @@ if not MYPY:
         """
         Local address
         """
-        max_sa: NotRequired[pulumi.Input[_builtins.float]]
+        max_sa: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max sa
         """
@@ -46454,7 +46720,7 @@ class LogicalRouterVrfMulticastMsdpPeerArgs:
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  inbound_sa_filter: Optional[pulumi.Input[_builtins.str]] = None,
                  local_address: Optional[pulumi.Input['LogicalRouterVrfMulticastMsdpPeerLocalAddressArgs']] = None,
-                 max_sa: Optional[pulumi.Input[_builtins.float]] = None,
+                 max_sa: Optional[pulumi.Input[_builtins.int]] = None,
                  outbound_sa_filter: Optional[pulumi.Input[_builtins.str]] = None,
                  peer_address: Optional[pulumi.Input['LogicalRouterVrfMulticastMsdpPeerPeerAddressArgs']] = None,
                  peer_as: Optional[pulumi.Input[_builtins.str]] = None):
@@ -46464,7 +46730,7 @@ class LogicalRouterVrfMulticastMsdpPeerArgs:
         :param pulumi.Input[_builtins.bool] enable: Enable
         :param pulumi.Input[_builtins.str] inbound_sa_filter: Inbound sa filter
         :param pulumi.Input['LogicalRouterVrfMulticastMsdpPeerLocalAddressArgs'] local_address: Local address
-        :param pulumi.Input[_builtins.float] max_sa: Max sa
+        :param pulumi.Input[_builtins.int] max_sa: Max sa
         :param pulumi.Input[_builtins.str] outbound_sa_filter: Outbound sa filter
         :param pulumi.Input['LogicalRouterVrfMulticastMsdpPeerPeerAddressArgs'] peer_address: Peer address
         :param pulumi.Input[_builtins.str] peer_as: Peer as
@@ -46549,14 +46815,14 @@ class LogicalRouterVrfMulticastMsdpPeerArgs:
 
     @_builtins.property
     @pulumi.getter(name="maxSa")
-    def max_sa(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_sa(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max sa
         """
         return pulumi.get(self, "max_sa")
 
     @max_sa.setter
-    def max_sa(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_sa(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_sa", value)
 
     @_builtins.property
@@ -46718,7 +46984,7 @@ if not MYPY:
         """
         Interface
         """
-        route_ageout_time: NotRequired[pulumi.Input[_builtins.float]]
+        route_ageout_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Route ageout time
         """
@@ -46748,7 +47014,7 @@ class LogicalRouterVrfMulticastPimArgs:
                  group_permission: Optional[pulumi.Input[_builtins.str]] = None,
                  if_timer_global: Optional[pulumi.Input[_builtins.str]] = None,
                  interfaces: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimInterfaceArgs']]]] = None,
-                 route_ageout_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 route_ageout_time: Optional[pulumi.Input[_builtins.int]] = None,
                  rp: Optional[pulumi.Input['LogicalRouterVrfMulticastPimRpArgs']] = None,
                  rpf_lookup_mode: Optional[pulumi.Input[_builtins.str]] = None,
                  spt_thresholds: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimSptThresholdArgs']]]] = None,
@@ -46758,7 +47024,7 @@ class LogicalRouterVrfMulticastPimArgs:
         :param pulumi.Input[_builtins.str] group_permission: Group permission
         :param pulumi.Input[_builtins.str] if_timer_global: If timer global
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimInterfaceArgs']]] interfaces: Interface
-        :param pulumi.Input[_builtins.float] route_ageout_time: Route ageout time
+        :param pulumi.Input[_builtins.int] route_ageout_time: Route ageout time
         :param pulumi.Input['LogicalRouterVrfMulticastPimRpArgs'] rp: Rp
         :param pulumi.Input[_builtins.str] rpf_lookup_mode: Rpf lookup mode
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfMulticastPimSptThresholdArgs']]] spt_thresholds: Spt threshold
@@ -46833,14 +47099,14 @@ class LogicalRouterVrfMulticastPimArgs:
 
     @_builtins.property
     @pulumi.getter(name="routeAgeoutTime")
-    def route_ageout_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def route_ageout_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Route ageout time
         """
         return pulumi.get(self, "route_ageout_time")
 
     @route_ageout_time.setter
-    def route_ageout_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def route_ageout_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "route_ageout_time", value)
 
     @_builtins.property
@@ -46902,7 +47168,7 @@ if not MYPY:
         """
         Description
         """
-        dr_priority: NotRequired[pulumi.Input[_builtins.float]]
+        dr_priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Dr priority
         """
@@ -46926,14 +47192,14 @@ class LogicalRouterVrfMulticastPimInterfaceArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
                  description: Optional[pulumi.Input[_builtins.str]] = None,
-                 dr_priority: Optional[pulumi.Input[_builtins.float]] = None,
+                 dr_priority: Optional[pulumi.Input[_builtins.int]] = None,
                  if_timer: Optional[pulumi.Input[_builtins.str]] = None,
                  neighbor_filter: Optional[pulumi.Input[_builtins.str]] = None,
                  send_bsm: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] description: Description
-        :param pulumi.Input[_builtins.float] dr_priority: Dr priority
+        :param pulumi.Input[_builtins.int] dr_priority: Dr priority
         :param pulumi.Input[_builtins.str] if_timer: If timer
         :param pulumi.Input[_builtins.str] neighbor_filter: Neighbor filter
         :param pulumi.Input[_builtins.bool] send_bsm: Send bsm
@@ -46976,14 +47242,14 @@ class LogicalRouterVrfMulticastPimInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter(name="drPriority")
-    def dr_priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def dr_priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Dr priority
         """
         return pulumi.get(self, "dr_priority")
 
     @dr_priority.setter
-    def dr_priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def dr_priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "dr_priority", value)
 
     @_builtins.property
@@ -47205,7 +47471,7 @@ if not MYPY:
         """
         Address
         """
-        advertisement_interval: NotRequired[pulumi.Input[_builtins.float]]
+        advertisement_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Advertisement interval
         """
@@ -47217,7 +47483,7 @@ if not MYPY:
         """
         Interface
         """
-        priority: NotRequired[pulumi.Input[_builtins.float]]
+        priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Priority
         """
@@ -47228,16 +47494,16 @@ elif False:
 class LogicalRouterVrfMulticastPimRpLocalRpCandidateRpArgs:
     def __init__(__self__, *,
                  address: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  group_list: Optional[pulumi.Input[_builtins.str]] = None,
                  interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 priority: Optional[pulumi.Input[_builtins.float]] = None):
+                 priority: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] address: Address
-        :param pulumi.Input[_builtins.float] advertisement_interval: Advertisement interval
+        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement interval
         :param pulumi.Input[_builtins.str] group_list: Group list
         :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input[_builtins.float] priority: Priority
+        :param pulumi.Input[_builtins.int] priority: Priority
         """
         if address is not None:
             pulumi.set(__self__, "address", address)
@@ -47264,14 +47530,14 @@ class LogicalRouterVrfMulticastPimRpLocalRpCandidateRpArgs:
 
     @_builtins.property
     @pulumi.getter(name="advertisementInterval")
-    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Advertisement interval
         """
         return pulumi.get(self, "advertisement_interval")
 
     @advertisement_interval.setter
-    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "advertisement_interval", value)
 
     @_builtins.property
@@ -47300,14 +47566,14 @@ class LogicalRouterVrfMulticastPimRpLocalRpCandidateRpArgs:
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Priority
         """
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
 
@@ -47667,7 +47933,7 @@ if not MYPY:
         """
         Address
         """
-        advertisement_interval: NotRequired[pulumi.Input[_builtins.float]]
+        advertisement_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Advertisement interval
         """
@@ -47679,7 +47945,7 @@ if not MYPY:
         """
         Interface
         """
-        priority: NotRequired[pulumi.Input[_builtins.float]]
+        priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Priority
         """
@@ -47690,16 +47956,16 @@ elif False:
 class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs:
     def __init__(__self__, *,
                  address: Optional[pulumi.Input[_builtins.str]] = None,
-                 advertisement_interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 advertisement_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  group_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 priority: Optional[pulumi.Input[_builtins.float]] = None):
+                 priority: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] address: Address
-        :param pulumi.Input[_builtins.float] advertisement_interval: Advertisement interval
+        :param pulumi.Input[_builtins.int] advertisement_interval: Advertisement interval
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] group_addresses: Group addresses
         :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input[_builtins.float] priority: Priority
+        :param pulumi.Input[_builtins.int] priority: Priority
         """
         if address is not None:
             pulumi.set(__self__, "address", address)
@@ -47726,14 +47992,14 @@ class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs:
 
     @_builtins.property
     @pulumi.getter(name="advertisementInterval")
-    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def advertisement_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Advertisement interval
         """
         return pulumi.get(self, "advertisement_interval")
 
     @advertisement_interval.setter
-    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def advertisement_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "advertisement_interval", value)
 
     @_builtins.property
@@ -47762,14 +48028,14 @@ class LogicalRouterVrfMulticastRpLocalRpCandidateRpArgs:
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Priority
         """
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
 
@@ -48005,7 +48271,7 @@ if not MYPY:
         """
         Nexthop
         """
-        preference: NotRequired[pulumi.Input[_builtins.float]]
+        preference: NotRequired[pulumi.Input[_builtins.int]]
         """
         Preference
         """
@@ -48019,13 +48285,13 @@ class LogicalRouterVrfMulticastStaticRouteArgs:
                  destination: Optional[pulumi.Input[_builtins.str]] = None,
                  interface: Optional[pulumi.Input[_builtins.str]] = None,
                  nexthop: Optional[pulumi.Input['LogicalRouterVrfMulticastStaticRouteNexthopArgs']] = None,
-                 preference: Optional[pulumi.Input[_builtins.float]] = None):
+                 preference: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] destination: Destination
         :param pulumi.Input[_builtins.str] interface: Interface
         :param pulumi.Input['LogicalRouterVrfMulticastStaticRouteNexthopArgs'] nexthop: Nexthop
-        :param pulumi.Input[_builtins.float] preference: Preference
+        :param pulumi.Input[_builtins.int] preference: Preference
         """
         pulumi.set(__self__, "name", name)
         if destination is not None:
@@ -48087,14 +48353,14 @@ class LogicalRouterVrfMulticastStaticRouteArgs:
 
     @_builtins.property
     @pulumi.getter
-    def preference(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def preference(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Preference
         """
         return pulumi.get(self, "preference")
 
     @preference.setter
-    def preference(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def preference(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "preference", value)
 
 
@@ -48615,7 +48881,7 @@ if not MYPY:
         """
         Link type
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -48627,7 +48893,7 @@ if not MYPY:
         """
         Passive
         """
-        priority: NotRequired[pulumi.Input[_builtins.float]]
+        priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Priority
         """
@@ -48650,10 +48916,10 @@ class LogicalRouterVrfOspfAreaInterfaceArgs:
                  bfd: Optional[pulumi.Input['LogicalRouterVrfOspfAreaInterfaceBfdArgs']] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  link_type: Optional[pulumi.Input['LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs']] = None,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  mtu_ignore: Optional[pulumi.Input[_builtins.bool]] = None,
                  passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 priority: Optional[pulumi.Input[_builtins.float]] = None,
+                 priority: Optional[pulumi.Input[_builtins.int]] = None,
                  timing: Optional[pulumi.Input[_builtins.str]] = None,
                  vr_timing: Optional[pulumi.Input['LogicalRouterVrfOspfAreaInterfaceVrTimingArgs']] = None):
         """
@@ -48662,10 +48928,10 @@ class LogicalRouterVrfOspfAreaInterfaceArgs:
         :param pulumi.Input['LogicalRouterVrfOspfAreaInterfaceBfdArgs'] bfd: Bfd
         :param pulumi.Input[_builtins.bool] enable: Enable
         :param pulumi.Input['LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs'] link_type: Link type
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.bool] mtu_ignore: Mtu ignore
         :param pulumi.Input[_builtins.bool] passive: Passive
-        :param pulumi.Input[_builtins.float] priority: Priority
+        :param pulumi.Input[_builtins.int] priority: Priority
         :param pulumi.Input[_builtins.str] timing: Timing
         :param pulumi.Input['LogicalRouterVrfOspfAreaInterfaceVrTimingArgs'] vr_timing: Vr timing
         """
@@ -48753,14 +49019,14 @@ class LogicalRouterVrfOspfAreaInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -48789,14 +49055,14 @@ class LogicalRouterVrfOspfAreaInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Priority
         """
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
     @_builtins.property
@@ -48978,7 +49244,7 @@ if not MYPY:
         """
         Name
         """
-        priority: NotRequired[pulumi.Input[_builtins.float]]
+        priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Priority
         """
@@ -48989,10 +49255,10 @@ elif False:
 class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighborArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 priority: Optional[pulumi.Input[_builtins.float]] = None):
+                 priority: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] priority: Priority
+        :param pulumi.Input[_builtins.int] priority: Priority
         """
         pulumi.set(__self__, "name", name)
         if priority is not None:
@@ -49012,14 +49278,14 @@ class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpNeighborArgs:
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Priority
         """
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
 
@@ -49037,23 +49303,23 @@ class LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfAreaInterfaceVrTimingArgsDict(TypedDict):
-        dead_counts: NotRequired[pulumi.Input[_builtins.float]]
+        dead_counts: NotRequired[pulumi.Input[_builtins.int]]
         """
         Dead counts
         """
-        gr_delay: NotRequired[pulumi.Input[_builtins.float]]
+        gr_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Gr delay
         """
-        hello_interval: NotRequired[pulumi.Input[_builtins.float]]
+        hello_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hello interval
         """
-        retransmit_interval: NotRequired[pulumi.Input[_builtins.float]]
+        retransmit_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Retransmit interval
         """
-        transit_delay: NotRequired[pulumi.Input[_builtins.float]]
+        transit_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Transit delay
         """
@@ -49063,17 +49329,17 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfAreaInterfaceVrTimingArgs:
     def __init__(__self__, *,
-                 dead_counts: Optional[pulumi.Input[_builtins.float]] = None,
-                 gr_delay: Optional[pulumi.Input[_builtins.float]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 retransmit_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 transit_delay: Optional[pulumi.Input[_builtins.float]] = None):
+                 dead_counts: Optional[pulumi.Input[_builtins.int]] = None,
+                 gr_delay: Optional[pulumi.Input[_builtins.int]] = None,
+                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 retransmit_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 transit_delay: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] dead_counts: Dead counts
-        :param pulumi.Input[_builtins.float] gr_delay: Gr delay
-        :param pulumi.Input[_builtins.float] hello_interval: Hello interval
-        :param pulumi.Input[_builtins.float] retransmit_interval: Retransmit interval
-        :param pulumi.Input[_builtins.float] transit_delay: Transit delay
+        :param pulumi.Input[_builtins.int] dead_counts: Dead counts
+        :param pulumi.Input[_builtins.int] gr_delay: Gr delay
+        :param pulumi.Input[_builtins.int] hello_interval: Hello interval
+        :param pulumi.Input[_builtins.int] retransmit_interval: Retransmit interval
+        :param pulumi.Input[_builtins.int] transit_delay: Transit delay
         """
         if dead_counts is not None:
             pulumi.set(__self__, "dead_counts", dead_counts)
@@ -49088,62 +49354,62 @@ class LogicalRouterVrfOspfAreaInterfaceVrTimingArgs:
 
     @_builtins.property
     @pulumi.getter(name="deadCounts")
-    def dead_counts(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def dead_counts(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Dead counts
         """
         return pulumi.get(self, "dead_counts")
 
     @dead_counts.setter
-    def dead_counts(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def dead_counts(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "dead_counts", value)
 
     @_builtins.property
     @pulumi.getter(name="grDelay")
-    def gr_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def gr_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Gr delay
         """
         return pulumi.get(self, "gr_delay")
 
     @gr_delay.setter
-    def gr_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def gr_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "gr_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hello interval
         """
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="retransmitInterval")
-    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Retransmit interval
         """
         return pulumi.get(self, "retransmit_interval")
 
     @retransmit_interval.setter
-    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "retransmit_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="transitDelay")
-    def transit_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def transit_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Transit delay
         """
         return pulumi.get(self, "transit_delay")
 
     @transit_delay.setter
-    def transit_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def transit_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "transit_delay", value)
 
 
@@ -49668,7 +49934,7 @@ if not MYPY:
         """
         Advertise
         """
-        route_tag: NotRequired[pulumi.Input[_builtins.float]]
+        route_tag: NotRequired[pulumi.Input[_builtins.int]]
         """
         Route tag
         """
@@ -49680,11 +49946,11 @@ class LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
                  advertise: Optional[pulumi.Input[_builtins.bool]] = None,
-                 route_tag: Optional[pulumi.Input[_builtins.float]] = None):
+                 route_tag: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] advertise: Advertise
-        :param pulumi.Input[_builtins.float] route_tag: Route tag
+        :param pulumi.Input[_builtins.int] route_tag: Route tag
         """
         pulumi.set(__self__, "name", name)
         if advertise is not None:
@@ -49718,20 +49984,20 @@ class LogicalRouterVrfOspfAreaTypeNssaAbrNssaExtRangeArgs:
 
     @_builtins.property
     @pulumi.getter(name="routeTag")
-    def route_tag(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def route_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Route tag
         """
         return pulumi.get(self, "route_tag")
 
     @route_tag.setter
-    def route_tag(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def route_tag(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "route_tag", value)
 
 
 if not MYPY:
     class LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateArgsDict(TypedDict):
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -49745,10 +50011,10 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateArgs:
     def __init__(__self__, *,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  metric_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.str] metric_type: Metric type
         """
         if metric is not None:
@@ -49758,14 +50024,14 @@ class LogicalRouterVrfOspfAreaTypeNssaDefaultInformationOriginateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -49835,7 +50101,7 @@ class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertiseArgsDict(TypedDict):
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -49849,10 +50115,10 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertiseArgs:
     def __init__(__self__, *,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.str] type: Type
         """
         if metric is not None:
@@ -49862,14 +50128,14 @@ class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertiseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -50006,7 +50272,7 @@ if not MYPY:
         """
         Default route
         """
-        default_route_metric: NotRequired[pulumi.Input[_builtins.float]]
+        default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Default route metric
         """
@@ -50023,13 +50289,13 @@ class LogicalRouterVrfOspfAreaTypeStubArgs:
                  abr: Optional[pulumi.Input['LogicalRouterVrfOspfAreaTypeStubAbrArgs']] = None,
                  accept_summary: Optional[pulumi.Input[_builtins.bool]] = None,
                  default_route: Optional[pulumi.Input['LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs']] = None,
-                 default_route_metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 default_route_metric: Optional[pulumi.Input[_builtins.int]] = None,
                  no_summary: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfOspfAreaTypeStubAbrArgs'] abr: Abr
         :param pulumi.Input[_builtins.bool] accept_summary: Accept summary
         :param pulumi.Input['LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs'] default_route: Default route
-        :param pulumi.Input[_builtins.float] default_route_metric: Default route metric
+        :param pulumi.Input[_builtins.int] default_route_metric: Default route metric
         :param pulumi.Input[_builtins.bool] no_summary: No summary
         """
         if abr is not None:
@@ -50081,14 +50347,14 @@ class LogicalRouterVrfOspfAreaTypeStubArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultRouteMetric")
-    def default_route_metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def default_route_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Default route metric
         """
         return pulumi.get(self, "default_route_metric")
 
     @default_route_metric.setter
-    def default_route_metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def default_route_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "default_route_metric", value)
 
     @_builtins.property
@@ -50250,7 +50516,7 @@ class LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertiseArgsDict(TypedDict):
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -50260,23 +50526,23 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertiseArgs:
     def __init__(__self__, *,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None):
+                 metric: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         """
         if metric is not None:
             pulumi.set(__self__, "metric", metric)
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
 
@@ -50310,11 +50576,11 @@ if not MYPY:
         """
         Enable
         """
-        instance_id: NotRequired[pulumi.Input[_builtins.float]]
+        instance_id: NotRequired[pulumi.Input[_builtins.int]]
         """
         Instance id
         """
-        interface_id: NotRequired[pulumi.Input[_builtins.float]]
+        interface_id: NotRequired[pulumi.Input[_builtins.int]]
         """
         Interface id
         """
@@ -50348,8 +50614,8 @@ class LogicalRouterVrfOspfAreaVirtualLinkArgs:
                  authentication: Optional[pulumi.Input[_builtins.str]] = None,
                  bfd: Optional[pulumi.Input['LogicalRouterVrfOspfAreaVirtualLinkBfdArgs']] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 instance_id: Optional[pulumi.Input[_builtins.float]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.float]] = None,
+                 instance_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 interface_id: Optional[pulumi.Input[_builtins.int]] = None,
                  neighbor_id: Optional[pulumi.Input[_builtins.str]] = None,
                  passive: Optional[pulumi.Input[_builtins.bool]] = None,
                  timing: Optional[pulumi.Input[_builtins.str]] = None,
@@ -50360,8 +50626,8 @@ class LogicalRouterVrfOspfAreaVirtualLinkArgs:
         :param pulumi.Input[_builtins.str] authentication: Authentication
         :param pulumi.Input['LogicalRouterVrfOspfAreaVirtualLinkBfdArgs'] bfd: Bfd
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] instance_id: Instance id
-        :param pulumi.Input[_builtins.float] interface_id: Interface id
+        :param pulumi.Input[_builtins.int] instance_id: Instance id
+        :param pulumi.Input[_builtins.int] interface_id: Interface id
         :param pulumi.Input[_builtins.str] neighbor_id: Neighbor id
         :param pulumi.Input[_builtins.bool] passive: Passive
         :param pulumi.Input[_builtins.str] timing: Timing
@@ -50440,26 +50706,26 @@ class LogicalRouterVrfOspfAreaVirtualLinkArgs:
 
     @_builtins.property
     @pulumi.getter(name="instanceId")
-    def instance_id(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def instance_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Instance id
         """
         return pulumi.get(self, "instance_id")
 
     @instance_id.setter
-    def instance_id(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def instance_id(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "instance_id", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
-    def interface_id(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def interface_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Interface id
         """
         return pulumi.get(self, "interface_id")
 
     @interface_id.setter
-    def interface_id(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def interface_id(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "interface_id", value)
 
     @_builtins.property
@@ -50557,19 +50823,19 @@ class LogicalRouterVrfOspfAreaVirtualLinkBfdArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgsDict(TypedDict):
-        dead_counts: NotRequired[pulumi.Input[_builtins.float]]
+        dead_counts: NotRequired[pulumi.Input[_builtins.int]]
         """
         Dead counts
         """
-        hello_interval: NotRequired[pulumi.Input[_builtins.float]]
+        hello_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hello interval
         """
-        retransmit_interval: NotRequired[pulumi.Input[_builtins.float]]
+        retransmit_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Retransmit interval
         """
-        transit_delay: NotRequired[pulumi.Input[_builtins.float]]
+        transit_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Transit delay
         """
@@ -50579,15 +50845,15 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs:
     def __init__(__self__, *,
-                 dead_counts: Optional[pulumi.Input[_builtins.float]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 retransmit_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 transit_delay: Optional[pulumi.Input[_builtins.float]] = None):
+                 dead_counts: Optional[pulumi.Input[_builtins.int]] = None,
+                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 retransmit_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 transit_delay: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] dead_counts: Dead counts
-        :param pulumi.Input[_builtins.float] hello_interval: Hello interval
-        :param pulumi.Input[_builtins.float] retransmit_interval: Retransmit interval
-        :param pulumi.Input[_builtins.float] transit_delay: Transit delay
+        :param pulumi.Input[_builtins.int] dead_counts: Dead counts
+        :param pulumi.Input[_builtins.int] hello_interval: Hello interval
+        :param pulumi.Input[_builtins.int] retransmit_interval: Retransmit interval
+        :param pulumi.Input[_builtins.int] transit_delay: Transit delay
         """
         if dead_counts is not None:
             pulumi.set(__self__, "dead_counts", dead_counts)
@@ -50600,50 +50866,50 @@ class LogicalRouterVrfOspfAreaVirtualLinkVrTimingArgs:
 
     @_builtins.property
     @pulumi.getter(name="deadCounts")
-    def dead_counts(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def dead_counts(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Dead counts
         """
         return pulumi.get(self, "dead_counts")
 
     @dead_counts.setter
-    def dead_counts(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def dead_counts(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "dead_counts", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hello interval
         """
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="retransmitInterval")
-    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Retransmit interval
         """
         return pulumi.get(self, "retransmit_interval")
 
     @retransmit_interval.setter
-    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "retransmit_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="transitDelay")
-    def transit_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def transit_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Transit delay
         """
         return pulumi.get(self, "transit_delay")
 
     @transit_delay.setter
-    def transit_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def transit_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "transit_delay", value)
 
 
@@ -50890,7 +51156,7 @@ if not MYPY:
         """
         Name
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -50909,12 +51175,12 @@ elif False:
 class LogicalRouterVrfOspfExportRuleArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  new_path_type: Optional[pulumi.Input[_builtins.str]] = None,
                  new_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.str] new_path_type: New path type
         :param pulumi.Input[_builtins.str] new_tag: New tag
         """
@@ -50940,14 +51206,14 @@ class LogicalRouterVrfOspfExportRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -51033,7 +51299,7 @@ if not MYPY:
         """
         Enable
         """
-        max_packet: NotRequired[pulumi.Input[_builtins.float]]
+        max_packet: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max packet
         """
@@ -51044,10 +51310,10 @@ elif False:
 class LogicalRouterVrfOspfFloodPreventionHelloArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_packet: Optional[pulumi.Input[_builtins.float]] = None):
+                 max_packet: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] max_packet: Max packet
+        :param pulumi.Input[_builtins.int] max_packet: Max packet
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -51068,14 +51334,14 @@ class LogicalRouterVrfOspfFloodPreventionHelloArgs:
 
     @_builtins.property
     @pulumi.getter(name="maxPacket")
-    def max_packet(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_packet(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max packet
         """
         return pulumi.get(self, "max_packet")
 
     @max_packet.setter
-    def max_packet(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_packet(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_packet", value)
 
 
@@ -51085,7 +51351,7 @@ if not MYPY:
         """
         Enable
         """
-        max_packet: NotRequired[pulumi.Input[_builtins.float]]
+        max_packet: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max packet
         """
@@ -51096,10 +51362,10 @@ elif False:
 class LogicalRouterVrfOspfFloodPreventionLsaArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_packet: Optional[pulumi.Input[_builtins.float]] = None):
+                 max_packet: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] max_packet: Max packet
+        :param pulumi.Input[_builtins.int] max_packet: Max packet
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -51120,14 +51386,14 @@ class LogicalRouterVrfOspfFloodPreventionLsaArgs:
 
     @_builtins.property
     @pulumi.getter(name="maxPacket")
-    def max_packet(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_packet(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max packet
         """
         return pulumi.get(self, "max_packet")
 
     @max_packet.setter
-    def max_packet(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_packet(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_packet", value)
 
 
@@ -51169,7 +51435,7 @@ if not MYPY:
         """
         Enable
         """
-        grace_period: NotRequired[pulumi.Input[_builtins.float]]
+        grace_period: NotRequired[pulumi.Input[_builtins.int]]
         """
         Grace period
         """
@@ -51177,7 +51443,7 @@ if not MYPY:
         """
         Helper enable
         """
-        max_neighbor_restart_time: NotRequired[pulumi.Input[_builtins.float]]
+        max_neighbor_restart_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max neighbor restart time
         """
@@ -51192,15 +51458,15 @@ elif False:
 class LogicalRouterVrfOspfGracefulRestartArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 grace_period: Optional[pulumi.Input[_builtins.float]] = None,
+                 grace_period: Optional[pulumi.Input[_builtins.int]] = None,
                  helper_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_neighbor_restart_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 max_neighbor_restart_time: Optional[pulumi.Input[_builtins.int]] = None,
                  strict_lsa_checking: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] grace_period: Grace period
+        :param pulumi.Input[_builtins.int] grace_period: Grace period
         :param pulumi.Input[_builtins.bool] helper_enable: Helper enable
-        :param pulumi.Input[_builtins.float] max_neighbor_restart_time: Max neighbor restart time
+        :param pulumi.Input[_builtins.int] max_neighbor_restart_time: Max neighbor restart time
         :param pulumi.Input[_builtins.bool] strict_lsa_checking: Strict l s a checking
         """
         if enable is not None:
@@ -51228,14 +51494,14 @@ class LogicalRouterVrfOspfGracefulRestartArgs:
 
     @_builtins.property
     @pulumi.getter(name="gracePeriod")
-    def grace_period(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def grace_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Grace period
         """
         return pulumi.get(self, "grace_period")
 
     @grace_period.setter
-    def grace_period(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def grace_period(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "grace_period", value)
 
     @_builtins.property
@@ -51252,18 +51518,18 @@ class LogicalRouterVrfOspfGracefulRestartArgs:
 
     @_builtins.property
     @pulumi.getter(name="maxNeighborRestartTime")
-    def max_neighbor_restart_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_neighbor_restart_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max neighbor restart time
         """
         return pulumi.get(self, "max_neighbor_restart_time")
 
     @max_neighbor_restart_time.setter
-    def max_neighbor_restart_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_neighbor_restart_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_neighbor_restart_time", value)
 
     @_builtins.property
-    @pulumi.getter(name="strictLSAChecking")
+    @pulumi.getter(name="strictLsaChecking")
     def strict_lsa_checking(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Strict l s a checking
@@ -51277,11 +51543,11 @@ class LogicalRouterVrfOspfGracefulRestartArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfVrTimersArgsDict(TypedDict):
-        lsa_interval: NotRequired[pulumi.Input[_builtins.float]]
+        lsa_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Lsa interval
         """
-        spf_calculation_delay: NotRequired[pulumi.Input[_builtins.float]]
+        spf_calculation_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Spf calculation delay
         """
@@ -51291,11 +51557,11 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfVrTimersArgs:
     def __init__(__self__, *,
-                 lsa_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 spf_calculation_delay: Optional[pulumi.Input[_builtins.float]] = None):
+                 lsa_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 spf_calculation_delay: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] lsa_interval: Lsa interval
-        :param pulumi.Input[_builtins.float] spf_calculation_delay: Spf calculation delay
+        :param pulumi.Input[_builtins.int] lsa_interval: Lsa interval
+        :param pulumi.Input[_builtins.int] spf_calculation_delay: Spf calculation delay
         """
         if lsa_interval is not None:
             pulumi.set(__self__, "lsa_interval", lsa_interval)
@@ -51304,26 +51570,26 @@ class LogicalRouterVrfOspfVrTimersArgs:
 
     @_builtins.property
     @pulumi.getter(name="lsaInterval")
-    def lsa_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def lsa_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Lsa interval
         """
         return pulumi.get(self, "lsa_interval")
 
     @lsa_interval.setter
-    def lsa_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def lsa_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "lsa_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="spfCalculationDelay")
-    def spf_calculation_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def spf_calculation_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Spf calculation delay
         """
         return pulumi.get(self, "spf_calculation_delay")
 
     @spf_calculation_delay.setter
-    def spf_calculation_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def spf_calculation_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "spf_calculation_delay", value)
 
 
@@ -51788,7 +52054,7 @@ if not MYPY:
         """
         Enable
         """
-        instance_id: NotRequired[pulumi.Input[_builtins.float]]
+        instance_id: NotRequired[pulumi.Input[_builtins.int]]
         """
         Instance id
         """
@@ -51796,7 +52062,7 @@ if not MYPY:
         """
         Link type
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -51812,7 +52078,7 @@ if not MYPY:
         """
         Passive
         """
-        priority: NotRequired[pulumi.Input[_builtins.float]]
+        priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Priority
         """
@@ -51834,13 +52100,13 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgs:
                  authentication: Optional[pulumi.Input[_builtins.str]] = None,
                  bfd: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceBfdArgs']] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 instance_id: Optional[pulumi.Input[_builtins.float]] = None,
+                 instance_id: Optional[pulumi.Input[_builtins.int]] = None,
                  link_type: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgs']] = None,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  mtu_ignore: Optional[pulumi.Input[_builtins.bool]] = None,
                  neighbors: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceNeighborArgs']]]] = None,
                  passive: Optional[pulumi.Input[_builtins.bool]] = None,
-                 priority: Optional[pulumi.Input[_builtins.float]] = None,
+                 priority: Optional[pulumi.Input[_builtins.int]] = None,
                  timing: Optional[pulumi.Input[_builtins.str]] = None,
                  vr_timing: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgs']] = None):
         """
@@ -51848,13 +52114,13 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgs:
         :param pulumi.Input[_builtins.str] authentication: Authentication
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceBfdArgs'] bfd: Bfd
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] instance_id: Instance id
+        :param pulumi.Input[_builtins.int] instance_id: Instance id
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgs'] link_type: Link type
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.bool] mtu_ignore: Mtu ignore
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceNeighborArgs']]] neighbors: Neighbor
         :param pulumi.Input[_builtins.bool] passive: Passive
-        :param pulumi.Input[_builtins.float] priority: Priority
+        :param pulumi.Input[_builtins.int] priority: Priority
         :param pulumi.Input[_builtins.str] timing: Timing
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgs'] vr_timing: Vr timing
         """
@@ -51934,14 +52200,14 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter(name="instanceId")
-    def instance_id(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def instance_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Instance id
         """
         return pulumi.get(self, "instance_id")
 
     @instance_id.setter
-    def instance_id(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def instance_id(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "instance_id", value)
 
     @_builtins.property
@@ -51958,14 +52224,14 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -52006,14 +52272,14 @@ class LogicalRouterVrfOspfv3AreaInterfaceArgs:
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Priority
         """
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
     @_builtins.property
@@ -52195,7 +52461,7 @@ if not MYPY:
         """
         Name
         """
-        priority: NotRequired[pulumi.Input[_builtins.float]]
+        priority: NotRequired[pulumi.Input[_builtins.int]]
         """
         Priority
         """
@@ -52206,10 +52472,10 @@ elif False:
 class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpNeighborArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 priority: Optional[pulumi.Input[_builtins.float]] = None):
+                 priority: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] priority: Priority
+        :param pulumi.Input[_builtins.int] priority: Priority
         """
         pulumi.set(__self__, "name", name)
         if priority is not None:
@@ -52229,14 +52495,14 @@ class LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpNeighborArgs:
 
     @_builtins.property
     @pulumi.getter
-    def priority(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def priority(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Priority
         """
         return pulumi.get(self, "priority")
 
     @priority.setter
-    def priority(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def priority(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "priority", value)
 
 
@@ -52285,23 +52551,23 @@ class LogicalRouterVrfOspfv3AreaInterfaceNeighborArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgsDict(TypedDict):
-        dead_counts: NotRequired[pulumi.Input[_builtins.float]]
+        dead_counts: NotRequired[pulumi.Input[_builtins.int]]
         """
         Dead counts
         """
-        gr_delay: NotRequired[pulumi.Input[_builtins.float]]
+        gr_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Gr delay
         """
-        hello_interval: NotRequired[pulumi.Input[_builtins.float]]
+        hello_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hello interval
         """
-        retransmit_interval: NotRequired[pulumi.Input[_builtins.float]]
+        retransmit_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Retransmit interval
         """
-        transit_delay: NotRequired[pulumi.Input[_builtins.float]]
+        transit_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Transit delay
         """
@@ -52311,17 +52577,17 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgs:
     def __init__(__self__, *,
-                 dead_counts: Optional[pulumi.Input[_builtins.float]] = None,
-                 gr_delay: Optional[pulumi.Input[_builtins.float]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 retransmit_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 transit_delay: Optional[pulumi.Input[_builtins.float]] = None):
+                 dead_counts: Optional[pulumi.Input[_builtins.int]] = None,
+                 gr_delay: Optional[pulumi.Input[_builtins.int]] = None,
+                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 retransmit_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 transit_delay: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] dead_counts: Dead counts
-        :param pulumi.Input[_builtins.float] gr_delay: Gr delay
-        :param pulumi.Input[_builtins.float] hello_interval: Hello interval
-        :param pulumi.Input[_builtins.float] retransmit_interval: Retransmit interval
-        :param pulumi.Input[_builtins.float] transit_delay: Transit delay
+        :param pulumi.Input[_builtins.int] dead_counts: Dead counts
+        :param pulumi.Input[_builtins.int] gr_delay: Gr delay
+        :param pulumi.Input[_builtins.int] hello_interval: Hello interval
+        :param pulumi.Input[_builtins.int] retransmit_interval: Retransmit interval
+        :param pulumi.Input[_builtins.int] transit_delay: Transit delay
         """
         if dead_counts is not None:
             pulumi.set(__self__, "dead_counts", dead_counts)
@@ -52336,62 +52602,62 @@ class LogicalRouterVrfOspfv3AreaInterfaceVrTimingArgs:
 
     @_builtins.property
     @pulumi.getter(name="deadCounts")
-    def dead_counts(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def dead_counts(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Dead counts
         """
         return pulumi.get(self, "dead_counts")
 
     @dead_counts.setter
-    def dead_counts(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def dead_counts(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "dead_counts", value)
 
     @_builtins.property
     @pulumi.getter(name="grDelay")
-    def gr_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def gr_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Gr delay
         """
         return pulumi.get(self, "gr_delay")
 
     @gr_delay.setter
-    def gr_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def gr_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "gr_delay", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hello interval
         """
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="retransmitInterval")
-    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Retransmit interval
         """
         return pulumi.get(self, "retransmit_interval")
 
     @retransmit_interval.setter
-    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "retransmit_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="transitDelay")
-    def transit_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def transit_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Transit delay
         """
         return pulumi.get(self, "transit_delay")
 
     @transit_delay.setter
-    def transit_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def transit_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "transit_delay", value)
 
 
@@ -52896,7 +53162,7 @@ if not MYPY:
         """
         Advertise
         """
-        route_tag: NotRequired[pulumi.Input[_builtins.float]]
+        route_tag: NotRequired[pulumi.Input[_builtins.int]]
         """
         Route tag
         """
@@ -52912,12 +53178,12 @@ class LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
                  advertise: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeAdvertiseArgs']] = None,
-                 route_tag: Optional[pulumi.Input[_builtins.float]] = None,
+                 route_tag: Optional[pulumi.Input[_builtins.int]] = None,
                  suppress: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeSuppressArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeAdvertiseArgs'] advertise: Advertise
-        :param pulumi.Input[_builtins.float] route_tag: Route tag
+        :param pulumi.Input[_builtins.int] route_tag: Route tag
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeSuppressArgs'] suppress: Suppress
         """
         pulumi.set(__self__, "name", name)
@@ -52954,14 +53220,14 @@ class LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeArgs:
 
     @_builtins.property
     @pulumi.getter(name="routeTag")
-    def route_tag(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def route_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Route tag
         """
         return pulumi.get(self, "route_tag")
 
     @route_tag.setter
-    def route_tag(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def route_tag(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "route_tag", value)
 
     @_builtins.property
@@ -53003,7 +53269,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaAbrNssaExtRangeSuppressArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginateArgsDict(TypedDict):
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -53017,10 +53283,10 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginateArgs:
     def __init__(__self__, *,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  metric_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.str] metric_type: Metric type
         """
         if metric is not None:
@@ -53030,14 +53296,14 @@ class LogicalRouterVrfOspfv3AreaTypeNssaDefaultInformationOriginateArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -53107,7 +53373,7 @@ class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgsDict(TypedDict):
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -53121,10 +53387,10 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgs:
     def __init__(__self__, *,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.str] type: Type
         """
         if metric is not None:
@@ -53134,14 +53400,14 @@ class LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertiseArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -53179,7 +53445,7 @@ if not MYPY:
         """
         Advertise
         """
-        route_tag: NotRequired[pulumi.Input[_builtins.float]]
+        route_tag: NotRequired[pulumi.Input[_builtins.int]]
         """
         Route tag
         """
@@ -53195,12 +53461,12 @@ class LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
                  advertise: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeAdvertiseArgs']] = None,
-                 route_tag: Optional[pulumi.Input[_builtins.float]] = None,
+                 route_tag: Optional[pulumi.Input[_builtins.int]] = None,
                  suppress: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeSuppressArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeAdvertiseArgs'] advertise: Advertise
-        :param pulumi.Input[_builtins.float] route_tag: Route tag
+        :param pulumi.Input[_builtins.int] route_tag: Route tag
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeSuppressArgs'] suppress: Suppress
         """
         pulumi.set(__self__, "name", name)
@@ -53237,14 +53503,14 @@ class LogicalRouterVrfOspfv3AreaTypeNssaNssaExtRangeArgs:
 
     @_builtins.property
     @pulumi.getter(name="routeTag")
-    def route_tag(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def route_tag(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Route tag
         """
         return pulumi.get(self, "route_tag")
 
     @route_tag.setter
-    def route_tag(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def route_tag(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "route_tag", value)
 
     @_builtins.property
@@ -53298,7 +53564,7 @@ if not MYPY:
         """
         Default route
         """
-        default_route_metric: NotRequired[pulumi.Input[_builtins.float]]
+        default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Default route metric
         """
@@ -53315,13 +53581,13 @@ class LogicalRouterVrfOspfv3AreaTypeStubArgs:
                  abr: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeStubAbrArgs']] = None,
                  accept_summary: Optional[pulumi.Input[_builtins.bool]] = None,
                  default_route: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgs']] = None,
-                 default_route_metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 default_route_metric: Optional[pulumi.Input[_builtins.int]] = None,
                  no_summary: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaTypeStubAbrArgs'] abr: Abr
         :param pulumi.Input[_builtins.bool] accept_summary: Accept summary
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgs'] default_route: Default route
-        :param pulumi.Input[_builtins.float] default_route_metric: Default route metric
+        :param pulumi.Input[_builtins.int] default_route_metric: Default route metric
         :param pulumi.Input[_builtins.bool] no_summary: No summary
         """
         if abr is not None:
@@ -53373,14 +53639,14 @@ class LogicalRouterVrfOspfv3AreaTypeStubArgs:
 
     @_builtins.property
     @pulumi.getter(name="defaultRouteMetric")
-    def default_route_metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def default_route_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Default route metric
         """
         return pulumi.get(self, "default_route_metric")
 
     @default_route_metric.setter
-    def default_route_metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def default_route_metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "default_route_metric", value)
 
     @_builtins.property
@@ -53542,7 +53808,7 @@ class LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertiseArgsDict(TypedDict):
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -53552,23 +53818,23 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertiseArgs:
     def __init__(__self__, *,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None):
+                 metric: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         """
         if metric is not None:
             pulumi.set(__self__, "metric", metric)
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
 
@@ -53602,11 +53868,11 @@ if not MYPY:
         """
         Enable
         """
-        instance_id: NotRequired[pulumi.Input[_builtins.float]]
+        instance_id: NotRequired[pulumi.Input[_builtins.int]]
         """
         Instance id
         """
-        interface_id: NotRequired[pulumi.Input[_builtins.float]]
+        interface_id: NotRequired[pulumi.Input[_builtins.int]]
         """
         Interface id
         """
@@ -53640,8 +53906,8 @@ class LogicalRouterVrfOspfv3AreaVirtualLinkArgs:
                  authentication: Optional[pulumi.Input[_builtins.str]] = None,
                  bfd: Optional[pulumi.Input['LogicalRouterVrfOspfv3AreaVirtualLinkBfdArgs']] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 instance_id: Optional[pulumi.Input[_builtins.float]] = None,
-                 interface_id: Optional[pulumi.Input[_builtins.float]] = None,
+                 instance_id: Optional[pulumi.Input[_builtins.int]] = None,
+                 interface_id: Optional[pulumi.Input[_builtins.int]] = None,
                  neighbor_id: Optional[pulumi.Input[_builtins.str]] = None,
                  passive: Optional[pulumi.Input[_builtins.bool]] = None,
                  timing: Optional[pulumi.Input[_builtins.str]] = None,
@@ -53652,8 +53918,8 @@ class LogicalRouterVrfOspfv3AreaVirtualLinkArgs:
         :param pulumi.Input[_builtins.str] authentication: Authentication
         :param pulumi.Input['LogicalRouterVrfOspfv3AreaVirtualLinkBfdArgs'] bfd: Bfd
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] instance_id: Instance id
-        :param pulumi.Input[_builtins.float] interface_id: Interface id
+        :param pulumi.Input[_builtins.int] instance_id: Instance id
+        :param pulumi.Input[_builtins.int] interface_id: Interface id
         :param pulumi.Input[_builtins.str] neighbor_id: Neighbor id
         :param pulumi.Input[_builtins.bool] passive: Passive
         :param pulumi.Input[_builtins.str] timing: Timing
@@ -53732,26 +53998,26 @@ class LogicalRouterVrfOspfv3AreaVirtualLinkArgs:
 
     @_builtins.property
     @pulumi.getter(name="instanceId")
-    def instance_id(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def instance_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Instance id
         """
         return pulumi.get(self, "instance_id")
 
     @instance_id.setter
-    def instance_id(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def instance_id(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "instance_id", value)
 
     @_builtins.property
     @pulumi.getter(name="interfaceId")
-    def interface_id(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def interface_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Interface id
         """
         return pulumi.get(self, "interface_id")
 
     @interface_id.setter
-    def interface_id(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def interface_id(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "interface_id", value)
 
     @_builtins.property
@@ -53849,19 +54115,19 @@ class LogicalRouterVrfOspfv3AreaVirtualLinkBfdArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfv3AreaVirtualLinkVrTimingArgsDict(TypedDict):
-        dead_counts: NotRequired[pulumi.Input[_builtins.float]]
+        dead_counts: NotRequired[pulumi.Input[_builtins.int]]
         """
         Dead counts
         """
-        hello_interval: NotRequired[pulumi.Input[_builtins.float]]
+        hello_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hello interval
         """
-        retransmit_interval: NotRequired[pulumi.Input[_builtins.float]]
+        retransmit_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Retransmit interval
         """
-        transit_delay: NotRequired[pulumi.Input[_builtins.float]]
+        transit_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Transit delay
         """
@@ -53871,15 +54137,15 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfv3AreaVirtualLinkVrTimingArgs:
     def __init__(__self__, *,
-                 dead_counts: Optional[pulumi.Input[_builtins.float]] = None,
-                 hello_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 retransmit_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 transit_delay: Optional[pulumi.Input[_builtins.float]] = None):
+                 dead_counts: Optional[pulumi.Input[_builtins.int]] = None,
+                 hello_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 retransmit_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 transit_delay: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] dead_counts: Dead counts
-        :param pulumi.Input[_builtins.float] hello_interval: Hello interval
-        :param pulumi.Input[_builtins.float] retransmit_interval: Retransmit interval
-        :param pulumi.Input[_builtins.float] transit_delay: Transit delay
+        :param pulumi.Input[_builtins.int] dead_counts: Dead counts
+        :param pulumi.Input[_builtins.int] hello_interval: Hello interval
+        :param pulumi.Input[_builtins.int] retransmit_interval: Retransmit interval
+        :param pulumi.Input[_builtins.int] transit_delay: Transit delay
         """
         if dead_counts is not None:
             pulumi.set(__self__, "dead_counts", dead_counts)
@@ -53892,50 +54158,50 @@ class LogicalRouterVrfOspfv3AreaVirtualLinkVrTimingArgs:
 
     @_builtins.property
     @pulumi.getter(name="deadCounts")
-    def dead_counts(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def dead_counts(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Dead counts
         """
         return pulumi.get(self, "dead_counts")
 
     @dead_counts.setter
-    def dead_counts(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def dead_counts(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "dead_counts", value)
 
     @_builtins.property
     @pulumi.getter(name="helloInterval")
-    def hello_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hello_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hello interval
         """
         return pulumi.get(self, "hello_interval")
 
     @hello_interval.setter
-    def hello_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hello_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hello_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="retransmitInterval")
-    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def retransmit_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Retransmit interval
         """
         return pulumi.get(self, "retransmit_interval")
 
     @retransmit_interval.setter
-    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def retransmit_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "retransmit_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="transitDelay")
-    def transit_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def transit_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Transit delay
         """
         return pulumi.get(self, "transit_delay")
 
     @transit_delay.setter
-    def transit_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def transit_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "transit_delay", value)
 
 
@@ -54811,7 +55077,7 @@ if not MYPY:
         """
         Name
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -54830,12 +55096,12 @@ elif False:
 class LogicalRouterVrfOspfv3ExportRuleArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  new_path_type: Optional[pulumi.Input[_builtins.str]] = None,
                  new_tag: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input[_builtins.str] new_path_type: New path type
         :param pulumi.Input[_builtins.str] new_tag: New tag
         """
@@ -54861,14 +55127,14 @@ class LogicalRouterVrfOspfv3ExportRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -54934,7 +55200,7 @@ if not MYPY:
         """
         Enable
         """
-        grace_period: NotRequired[pulumi.Input[_builtins.float]]
+        grace_period: NotRequired[pulumi.Input[_builtins.int]]
         """
         Grace period
         """
@@ -54942,7 +55208,7 @@ if not MYPY:
         """
         Helper enable
         """
-        max_neighbor_restart_time: NotRequired[pulumi.Input[_builtins.float]]
+        max_neighbor_restart_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Max neighbor restart time
         """
@@ -54957,15 +55223,15 @@ elif False:
 class LogicalRouterVrfOspfv3GracefulRestartArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 grace_period: Optional[pulumi.Input[_builtins.float]] = None,
+                 grace_period: Optional[pulumi.Input[_builtins.int]] = None,
                  helper_enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 max_neighbor_restart_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 max_neighbor_restart_time: Optional[pulumi.Input[_builtins.int]] = None,
                  strict_lsa_checking: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] grace_period: Grace period
+        :param pulumi.Input[_builtins.int] grace_period: Grace period
         :param pulumi.Input[_builtins.bool] helper_enable: Helper enable
-        :param pulumi.Input[_builtins.float] max_neighbor_restart_time: Max neighbor restart time
+        :param pulumi.Input[_builtins.int] max_neighbor_restart_time: Max neighbor restart time
         :param pulumi.Input[_builtins.bool] strict_lsa_checking: Strict l s a checking
         """
         if enable is not None:
@@ -54993,14 +55259,14 @@ class LogicalRouterVrfOspfv3GracefulRestartArgs:
 
     @_builtins.property
     @pulumi.getter(name="gracePeriod")
-    def grace_period(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def grace_period(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Grace period
         """
         return pulumi.get(self, "grace_period")
 
     @grace_period.setter
-    def grace_period(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def grace_period(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "grace_period", value)
 
     @_builtins.property
@@ -55017,18 +55283,18 @@ class LogicalRouterVrfOspfv3GracefulRestartArgs:
 
     @_builtins.property
     @pulumi.getter(name="maxNeighborRestartTime")
-    def max_neighbor_restart_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def max_neighbor_restart_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Max neighbor restart time
         """
         return pulumi.get(self, "max_neighbor_restart_time")
 
     @max_neighbor_restart_time.setter
-    def max_neighbor_restart_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def max_neighbor_restart_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "max_neighbor_restart_time", value)
 
     @_builtins.property
-    @pulumi.getter(name="strictLSAChecking")
+    @pulumi.getter(name="strictLsaChecking")
     def strict_lsa_checking(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
         Strict l s a checking
@@ -55042,11 +55308,11 @@ class LogicalRouterVrfOspfv3GracefulRestartArgs:
 
 if not MYPY:
     class LogicalRouterVrfOspfv3VrTimersArgsDict(TypedDict):
-        lsa_interval: NotRequired[pulumi.Input[_builtins.float]]
+        lsa_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Lsa interval
         """
-        spf_calculation_delay: NotRequired[pulumi.Input[_builtins.float]]
+        spf_calculation_delay: NotRequired[pulumi.Input[_builtins.int]]
         """
         Spf calculation delay
         """
@@ -55056,11 +55322,11 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfOspfv3VrTimersArgs:
     def __init__(__self__, *,
-                 lsa_interval: Optional[pulumi.Input[_builtins.float]] = None,
-                 spf_calculation_delay: Optional[pulumi.Input[_builtins.float]] = None):
+                 lsa_interval: Optional[pulumi.Input[_builtins.int]] = None,
+                 spf_calculation_delay: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] lsa_interval: Lsa interval
-        :param pulumi.Input[_builtins.float] spf_calculation_delay: Spf calculation delay
+        :param pulumi.Input[_builtins.int] lsa_interval: Lsa interval
+        :param pulumi.Input[_builtins.int] spf_calculation_delay: Spf calculation delay
         """
         if lsa_interval is not None:
             pulumi.set(__self__, "lsa_interval", lsa_interval)
@@ -55069,26 +55335,26 @@ class LogicalRouterVrfOspfv3VrTimersArgs:
 
     @_builtins.property
     @pulumi.getter(name="lsaInterval")
-    def lsa_interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def lsa_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Lsa interval
         """
         return pulumi.get(self, "lsa_interval")
 
     @lsa_interval.setter
-    def lsa_interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def lsa_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "lsa_interval", value)
 
     @_builtins.property
     @pulumi.getter(name="spfCalculationDelay")
-    def spf_calculation_delay(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def spf_calculation_delay(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Spf calculation delay
         """
         return pulumi.get(self, "spf_calculation_delay")
 
     @spf_calculation_delay.setter
-    def spf_calculation_delay(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def spf_calculation_delay(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "spf_calculation_delay", value)
 
 
@@ -56029,7 +56295,7 @@ if not MYPY:
         """
         Access list
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -56040,10 +56306,10 @@ elif False:
 class LogicalRouterVrfRipInterfaceInterfaceInboundDistributeListArgs:
     def __init__(__self__, *,
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None):
+                 metric: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -56064,14 +56330,14 @@ class LogicalRouterVrfRipInterfaceInterfaceInboundDistributeListArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
 
@@ -56081,7 +56347,7 @@ if not MYPY:
         """
         Access list
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -56092,10 +56358,10 @@ elif False:
 class LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeListArgs:
     def __init__(__self__, *,
                  access_list: Optional[pulumi.Input[_builtins.str]] = None,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None):
+                 metric: Optional[pulumi.Input[_builtins.int]] = None):
         """
         :param pulumi.Input[_builtins.str] access_list: Access list
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         """
         if access_list is not None:
             pulumi.set(__self__, "access_list", access_list)
@@ -56116,14 +56382,14 @@ class LogicalRouterVrfRipInterfaceInterfaceOutboundDistributeListArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
 
@@ -56217,7 +56483,7 @@ if not MYPY:
         """
         Name
         """
-        admin_dist: NotRequired[pulumi.Input[_builtins.float]]
+        admin_dist: NotRequired[pulumi.Input[_builtins.int]]
         """
         Admin dist
         """
@@ -56233,7 +56499,7 @@ if not MYPY:
         """
         Interface
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -56256,21 +56522,21 @@ elif False:
 class LogicalRouterVrfRoutingTableIpStaticRouteArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 admin_dist: Optional[pulumi.Input[_builtins.float]] = None,
+                 admin_dist: Optional[pulumi.Input[_builtins.int]] = None,
                  bfd: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteBfdArgs']] = None,
                  destination: Optional[pulumi.Input[_builtins.str]] = None,
                  interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthop: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs']] = None,
                  path_monitor: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs']] = None,
                  route_table: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] admin_dist: Admin dist
+        :param pulumi.Input[_builtins.int] admin_dist: Admin dist
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteBfdArgs'] bfd: Bfd
         :param pulumi.Input[_builtins.str] destination: Destination
         :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs'] nexthop: Nexthop
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs'] path_monitor: Path monitor
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs'] route_table: Route table
@@ -56307,14 +56573,14 @@ class LogicalRouterVrfRoutingTableIpStaticRouteArgs:
 
     @_builtins.property
     @pulumi.getter(name="adminDist")
-    def admin_dist(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def admin_dist(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Admin dist
         """
         return pulumi.get(self, "admin_dist")
 
     @admin_dist.setter
-    def admin_dist(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def admin_dist(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "admin_dist", value)
 
     @_builtins.property
@@ -56355,14 +56621,14 @@ class LogicalRouterVrfRoutingTableIpStaticRouteArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -56444,6 +56710,10 @@ if not MYPY:
         """
         Fqdn
         """
+        ip_address: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Ip address
+        """
         ipv6_address: NotRequired[pulumi.Input[_builtins.str]]
         """
         Ipv6 address
@@ -56472,6 +56742,7 @@ class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs:
     def __init__(__self__, *,
                  discard: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardArgs']] = None,
                  fqdn: Optional[pulumi.Input[_builtins.str]] = None,
+                 ip_address: Optional[pulumi.Input[_builtins.str]] = None,
                  ipv6_address: Optional[pulumi.Input[_builtins.str]] = None,
                  next_lr: Optional[pulumi.Input[_builtins.str]] = None,
                  next_vr: Optional[pulumi.Input[_builtins.str]] = None,
@@ -56480,6 +56751,7 @@ class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs:
         """
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardArgs'] discard: Discard
         :param pulumi.Input[_builtins.str] fqdn: Fqdn
+        :param pulumi.Input[_builtins.str] ip_address: Ip address
         :param pulumi.Input[_builtins.str] ipv6_address: Ipv6 address
         :param pulumi.Input[_builtins.str] next_lr: Next lr
         :param pulumi.Input[_builtins.str] next_vr: Next vr
@@ -56490,6 +56762,8 @@ class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs:
             pulumi.set(__self__, "discard", discard)
         if fqdn is not None:
             pulumi.set(__self__, "fqdn", fqdn)
+        if ip_address is not None:
+            pulumi.set(__self__, "ip_address", ip_address)
         if ipv6_address is not None:
             pulumi.set(__self__, "ipv6_address", ipv6_address)
         if next_lr is not None:
@@ -56524,6 +56798,18 @@ class LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs:
     @fqdn.setter
     def fqdn(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "fqdn", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ipAddress")
+    def ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Ip address
+        """
+        return pulumi.get(self, "ip_address")
+
+    @ip_address.setter
+    def ip_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ip_address", value)
 
     @_builtins.property
     @pulumi.getter(name="ipv6Address")
@@ -56620,7 +56906,7 @@ if not MYPY:
         """
         Failure condition
         """
-        hold_time: NotRequired[pulumi.Input[_builtins.float]]
+        hold_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hold time
         """
@@ -56636,12 +56922,12 @@ class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  failure_condition: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
                  monitor_destinations: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs']]]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
         :param pulumi.Input[_builtins.str] failure_condition: Failure condition
-        :param pulumi.Input[_builtins.float] hold_time: Hold time
+        :param pulumi.Input[_builtins.int] hold_time: Hold time
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs']]] monitor_destinations: Monitor destinations
         """
         if enable is not None:
@@ -56679,14 +56965,14 @@ class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorArgs:
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hold time
         """
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
@@ -56708,7 +56994,7 @@ if not MYPY:
         """
         Name
         """
-        count: NotRequired[pulumi.Input[_builtins.float]]
+        count: NotRequired[pulumi.Input[_builtins.int]]
         """
         Count
         """
@@ -56724,7 +57010,7 @@ if not MYPY:
         """
         Enable
         """
-        interval: NotRequired[pulumi.Input[_builtins.float]]
+        interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Interval
         """
@@ -56739,19 +57025,19 @@ elif False:
 class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 count: Optional[pulumi.Input[_builtins.float]] = None,
+                 count: Optional[pulumi.Input[_builtins.int]] = None,
                  destination: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_fqdn: Optional[pulumi.Input[_builtins.str]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 interval: Optional[pulumi.Input[_builtins.int]] = None,
                  source: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] count: Count
+        :param pulumi.Input[_builtins.int] count: Count
         :param pulumi.Input[_builtins.str] destination: Destination
         :param pulumi.Input[_builtins.str] destination_fqdn: Destination fqdn
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] interval: Interval
+        :param pulumi.Input[_builtins.int] interval: Interval
         :param pulumi.Input[_builtins.str] source: Source
         """
         pulumi.set(__self__, "name", name)
@@ -56782,14 +57068,14 @@ class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Count
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
@@ -56830,14 +57116,14 @@ class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDestinationArgs
 
     @_builtins.property
     @pulumi.getter
-    def interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Interval
         """
         return pulumi.get(self, "interval")
 
     @interval.setter
-    def interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "interval", value)
 
     @_builtins.property
@@ -57031,7 +57317,7 @@ if not MYPY:
         """
         Name
         """
-        admin_dist: NotRequired[pulumi.Input[_builtins.float]]
+        admin_dist: NotRequired[pulumi.Input[_builtins.int]]
         """
         Admin dist
         """
@@ -57047,7 +57333,7 @@ if not MYPY:
         """
         Interface
         """
-        metric: NotRequired[pulumi.Input[_builtins.float]]
+        metric: NotRequired[pulumi.Input[_builtins.int]]
         """
         Metric
         """
@@ -57074,22 +57360,22 @@ elif False:
 class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 admin_dist: Optional[pulumi.Input[_builtins.float]] = None,
+                 admin_dist: Optional[pulumi.Input[_builtins.int]] = None,
                  bfd: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteBfdArgs']] = None,
                  destination: Optional[pulumi.Input[_builtins.str]] = None,
                  interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 metric: Optional[pulumi.Input[_builtins.float]] = None,
+                 metric: Optional[pulumi.Input[_builtins.int]] = None,
                  nexthop: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgs']] = None,
                  option: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteOptionArgs']] = None,
                  path_monitor: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgs']] = None,
                  route_table: Optional[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableArgs']] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] admin_dist: Admin dist
+        :param pulumi.Input[_builtins.int] admin_dist: Admin dist
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteBfdArgs'] bfd: Bfd
         :param pulumi.Input[_builtins.str] destination: Destination
         :param pulumi.Input[_builtins.str] interface: Interface
-        :param pulumi.Input[_builtins.float] metric: Metric
+        :param pulumi.Input[_builtins.int] metric: Metric
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgs'] nexthop: Nexthop
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRouteOptionArgs'] option: Option
         :param pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgs'] path_monitor: Path monitor
@@ -57129,14 +57415,14 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs:
 
     @_builtins.property
     @pulumi.getter(name="adminDist")
-    def admin_dist(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def admin_dist(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Admin dist
         """
         return pulumi.get(self, "admin_dist")
 
     @admin_dist.setter
-    def admin_dist(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def admin_dist(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "admin_dist", value)
 
     @_builtins.property
@@ -57177,14 +57463,14 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteArgs:
 
     @_builtins.property
     @pulumi.getter
-    def metric(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Metric
         """
         return pulumi.get(self, "metric")
 
     @metric.setter
-    def metric(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def metric(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "metric", value)
 
     @_builtins.property
@@ -57498,7 +57784,7 @@ if not MYPY:
         """
         Failure condition
         """
-        hold_time: NotRequired[pulumi.Input[_builtins.float]]
+        hold_time: NotRequired[pulumi.Input[_builtins.int]]
         """
         Hold time
         """
@@ -57514,12 +57800,12 @@ class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgs:
     def __init__(__self__, *,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  failure_condition: Optional[pulumi.Input[_builtins.str]] = None,
-                 hold_time: Optional[pulumi.Input[_builtins.float]] = None,
+                 hold_time: Optional[pulumi.Input[_builtins.int]] = None,
                  monitor_destinations: Optional[pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationArgs']]]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
         :param pulumi.Input[_builtins.str] failure_condition: Failure condition
-        :param pulumi.Input[_builtins.float] hold_time: Hold time
+        :param pulumi.Input[_builtins.int] hold_time: Hold time
         :param pulumi.Input[Sequence[pulumi.Input['LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationArgs']]] monitor_destinations: Monitor destinations
         """
         if enable is not None:
@@ -57557,14 +57843,14 @@ class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorArgs:
 
     @_builtins.property
     @pulumi.getter(name="holdTime")
-    def hold_time(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def hold_time(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Hold time
         """
         return pulumi.get(self, "hold_time")
 
     @hold_time.setter
-    def hold_time(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def hold_time(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "hold_time", value)
 
     @_builtins.property
@@ -57586,7 +57872,7 @@ if not MYPY:
         """
         Name
         """
-        count: NotRequired[pulumi.Input[_builtins.float]]
+        count: NotRequired[pulumi.Input[_builtins.int]]
         """
         Count
         """
@@ -57602,7 +57888,7 @@ if not MYPY:
         """
         Enable
         """
-        interval: NotRequired[pulumi.Input[_builtins.float]]
+        interval: NotRequired[pulumi.Input[_builtins.int]]
         """
         Interval
         """
@@ -57617,19 +57903,19 @@ elif False:
 class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationArgs:
     def __init__(__self__, *,
                  name: pulumi.Input[_builtins.str],
-                 count: Optional[pulumi.Input[_builtins.float]] = None,
+                 count: Optional[pulumi.Input[_builtins.int]] = None,
                  destination: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_fqdn: Optional[pulumi.Input[_builtins.str]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 interval: Optional[pulumi.Input[_builtins.float]] = None,
+                 interval: Optional[pulumi.Input[_builtins.int]] = None,
                  source: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.float] count: Count
+        :param pulumi.Input[_builtins.int] count: Count
         :param pulumi.Input[_builtins.str] destination: Destination
         :param pulumi.Input[_builtins.str] destination_fqdn: Destination fqdn
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.float] interval: Interval
+        :param pulumi.Input[_builtins.int] interval: Interval
         :param pulumi.Input[_builtins.str] source: Source
         """
         pulumi.set(__self__, "name", name)
@@ -57660,14 +57946,14 @@ class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationAr
 
     @_builtins.property
     @pulumi.getter
-    def count(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def count(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Count
         """
         return pulumi.get(self, "count")
 
     @count.setter
-    def count(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def count(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "count", value)
 
     @_builtins.property
@@ -57708,14 +57994,14 @@ class LogicalRouterVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationAr
 
     @_builtins.property
     @pulumi.getter
-    def interval(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Interval
         """
         return pulumi.get(self, "interval")
 
     @interval.setter
-    def interval(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "interval", value)
 
     @_builtins.property
@@ -57873,39 +58159,39 @@ class LogicalRouterVrfRoutingTableIpv6StaticRouteRouteTableUnicastArgs:
 
 if not MYPY:
     class LogicalRouterVrfVrAdminDistsArgsDict(TypedDict):
-        ebgp: NotRequired[pulumi.Input[_builtins.float]]
+        ebgp: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ebgp
         """
-        ibgp: NotRequired[pulumi.Input[_builtins.float]]
+        ibgp: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ibgp
         """
-        ospf_ext: NotRequired[pulumi.Input[_builtins.float]]
+        ospf_ext: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospf ext
         """
-        ospf_int: NotRequired[pulumi.Input[_builtins.float]]
+        ospf_int: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospf int
         """
-        ospfv3_ext: NotRequired[pulumi.Input[_builtins.float]]
+        ospfv3_ext: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospfv3 ext
         """
-        ospfv3_int: NotRequired[pulumi.Input[_builtins.float]]
+        ospfv3_int: NotRequired[pulumi.Input[_builtins.int]]
         """
         Ospfv3 int
         """
-        rip: NotRequired[pulumi.Input[_builtins.float]]
+        rip: NotRequired[pulumi.Input[_builtins.int]]
         """
         Rip
         """
-        static: NotRequired[pulumi.Input[_builtins.float]]
+        static: NotRequired[pulumi.Input[_builtins.int]]
         """
         Static
         """
-        static_ipv6: NotRequired[pulumi.Input[_builtins.float]]
+        static_ipv6: NotRequired[pulumi.Input[_builtins.int]]
         """
         Static ipv6
         """
@@ -57915,25 +58201,25 @@ elif False:
 @pulumi.input_type
 class LogicalRouterVrfVrAdminDistsArgs:
     def __init__(__self__, *,
-                 ebgp: Optional[pulumi.Input[_builtins.float]] = None,
-                 ibgp: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospf_ext: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospf_int: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospfv3_ext: Optional[pulumi.Input[_builtins.float]] = None,
-                 ospfv3_int: Optional[pulumi.Input[_builtins.float]] = None,
-                 rip: Optional[pulumi.Input[_builtins.float]] = None,
-                 static: Optional[pulumi.Input[_builtins.float]] = None,
-                 static_ipv6: Optional[pulumi.Input[_builtins.float]] = None):
+                 ebgp: Optional[pulumi.Input[_builtins.int]] = None,
+                 ibgp: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospf_ext: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospf_int: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospfv3_ext: Optional[pulumi.Input[_builtins.int]] = None,
+                 ospfv3_int: Optional[pulumi.Input[_builtins.int]] = None,
+                 rip: Optional[pulumi.Input[_builtins.int]] = None,
+                 static: Optional[pulumi.Input[_builtins.int]] = None,
+                 static_ipv6: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.float] ebgp: Ebgp
-        :param pulumi.Input[_builtins.float] ibgp: Ibgp
-        :param pulumi.Input[_builtins.float] ospf_ext: Ospf ext
-        :param pulumi.Input[_builtins.float] ospf_int: Ospf int
-        :param pulumi.Input[_builtins.float] ospfv3_ext: Ospfv3 ext
-        :param pulumi.Input[_builtins.float] ospfv3_int: Ospfv3 int
-        :param pulumi.Input[_builtins.float] rip: Rip
-        :param pulumi.Input[_builtins.float] static: Static
-        :param pulumi.Input[_builtins.float] static_ipv6: Static ipv6
+        :param pulumi.Input[_builtins.int] ebgp: Ebgp
+        :param pulumi.Input[_builtins.int] ibgp: Ibgp
+        :param pulumi.Input[_builtins.int] ospf_ext: Ospf ext
+        :param pulumi.Input[_builtins.int] ospf_int: Ospf int
+        :param pulumi.Input[_builtins.int] ospfv3_ext: Ospfv3 ext
+        :param pulumi.Input[_builtins.int] ospfv3_int: Ospfv3 int
+        :param pulumi.Input[_builtins.int] rip: Rip
+        :param pulumi.Input[_builtins.int] static: Static
+        :param pulumi.Input[_builtins.int] static_ipv6: Static ipv6
         """
         if ebgp is not None:
             pulumi.set(__self__, "ebgp", ebgp)
@@ -57956,116 +58242,116 @@ class LogicalRouterVrfVrAdminDistsArgs:
 
     @_builtins.property
     @pulumi.getter
-    def ebgp(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ebgp(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ebgp
         """
         return pulumi.get(self, "ebgp")
 
     @ebgp.setter
-    def ebgp(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ebgp(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ebgp", value)
 
     @_builtins.property
     @pulumi.getter
-    def ibgp(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ibgp(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ibgp
         """
         return pulumi.get(self, "ibgp")
 
     @ibgp.setter
-    def ibgp(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ibgp(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ibgp", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfExt")
-    def ospf_ext(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospf_ext(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospf ext
         """
         return pulumi.get(self, "ospf_ext")
 
     @ospf_ext.setter
-    def ospf_ext(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospf_ext(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospf_ext", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfInt")
-    def ospf_int(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospf_int(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospf int
         """
         return pulumi.get(self, "ospf_int")
 
     @ospf_int.setter
-    def ospf_int(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospf_int(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospf_int", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfv3Ext")
-    def ospfv3_ext(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospfv3_ext(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospfv3 ext
         """
         return pulumi.get(self, "ospfv3_ext")
 
     @ospfv3_ext.setter
-    def ospfv3_ext(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospfv3_ext(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospfv3_ext", value)
 
     @_builtins.property
     @pulumi.getter(name="ospfv3Int")
-    def ospfv3_int(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def ospfv3_int(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Ospfv3 int
         """
         return pulumi.get(self, "ospfv3_int")
 
     @ospfv3_int.setter
-    def ospfv3_int(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def ospfv3_int(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ospfv3_int", value)
 
     @_builtins.property
     @pulumi.getter
-    def rip(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def rip(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Rip
         """
         return pulumi.get(self, "rip")
 
     @rip.setter
-    def rip(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def rip(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "rip", value)
 
     @_builtins.property
     @pulumi.getter
-    def static(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def static(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Static
         """
         return pulumi.get(self, "static")
 
     @static.setter
-    def static(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def static(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "static", value)
 
     @_builtins.property
     @pulumi.getter(name="staticIpv6")
-    def static_ipv6(self) -> Optional[pulumi.Input[_builtins.float]]:
+    def static_ipv6(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
         Static ipv6
         """
         return pulumi.get(self, "static_ipv6")
 
     @static_ipv6.setter
-    def static_ipv6(self, value: Optional[pulumi.Input[_builtins.float]]):
+    def static_ipv6(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "static_ipv6", value)
 
 
 if not MYPY:
     class LoopbackInterfaceIpArgsDict(TypedDict):
-        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        name: pulumi.Input[_builtins.str]
         """
         Loopback IP address(es)
         """
@@ -58075,24 +58361,147 @@ elif False:
 @pulumi.input_type
 class LoopbackInterfaceIpArgs:
     def __init__(__self__, *,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 name: pulumi.Input[_builtins.str]):
         """
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ips: Loopback IP address(es)
+        :param pulumi.Input[_builtins.str] name: Loopback IP address(es)
         """
-        if ips is not None:
-            pulumi.set(__self__, "ips", ips)
+        pulumi.set(__self__, "name", name)
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def name(self) -> pulumi.Input[_builtins.str]:
         """
         Loopback IP address(es)
         """
-        return pulumi.get(self, "ips")
+        return pulumi.get(self, "name")
 
-    @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "ips", value)
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
+
+
+if not MYPY:
+    class LoopbackInterfaceIpv6ArgsDict(TypedDict):
+        addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgsDict']]]]
+        """
+        IPv6 Address Parent
+        """
+        enabled: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Enable IPv6
+        """
+elif False:
+    LoopbackInterfaceIpv6ArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class LoopbackInterfaceIpv6Args:
+    def __init__(__self__, *,
+                 addresses: Optional[pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]]] = None,
+                 enabled: Optional[pulumi.Input[_builtins.bool]] = None):
+        """
+        :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]] addresses: IPv6 Address Parent
+        :param pulumi.Input[_builtins.bool] enabled: Enable IPv6
+        """
+        if addresses is not None:
+            pulumi.set(__self__, "addresses", addresses)
+        if enabled is not None:
+            pulumi.set(__self__, "enabled", enabled)
+
+    @_builtins.property
+    @pulumi.getter
+    def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]]]:
+        """
+        IPv6 Address Parent
+        """
+        return pulumi.get(self, "addresses")
+
+    @addresses.setter
+    def addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpv6AddressArgs']]]]):
+        pulumi.set(self, "addresses", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable IPv6
+        """
+        return pulumi.get(self, "enabled")
+
+    @enabled.setter
+    def enabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enabled", value)
+
+
+if not MYPY:
+    class LoopbackInterfaceIpv6AddressArgsDict(TypedDict):
+        enable_on_interface: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Enable Address on Interface
+        """
+        interface_id: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Interface ID
+        """
+        name: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        IPv6 Address
+        """
+elif False:
+    LoopbackInterfaceIpv6AddressArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class LoopbackInterfaceIpv6AddressArgs:
+    def __init__(__self__, *,
+                 enable_on_interface: Optional[pulumi.Input[_builtins.bool]] = None,
+                 interface_id: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.bool] enable_on_interface: Enable Address on Interface
+        :param pulumi.Input[_builtins.str] interface_id: Interface ID
+        :param pulumi.Input[_builtins.str] name: IPv6 Address
+        """
+        if enable_on_interface is not None:
+            pulumi.set(__self__, "enable_on_interface", enable_on_interface)
+        if interface_id is not None:
+            pulumi.set(__self__, "interface_id", interface_id)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter(name="enableOnInterface")
+    def enable_on_interface(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Enable Address on Interface
+        """
+        return pulumi.get(self, "enable_on_interface")
+
+    @enable_on_interface.setter
+    def enable_on_interface(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "enable_on_interface", value)
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceId")
+    def interface_id(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Interface ID
+        """
+        return pulumi.get(self, "interface_id")
+
+    @interface_id.setter
+    def interface_id(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "interface_id", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        IPv6 Address
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
 
 
 if not MYPY:
@@ -58661,16 +59070,88 @@ class MfaServerMfaVendorTypeRsaSecuridAccessV1Args:
 
 
 if not MYPY:
-    class NatRuleDnsRewriteArgsDict(TypedDict):
+    class NatRuleDestinationTranslationArgsDict(TypedDict):
+        dns_rewrite: NotRequired[pulumi.Input['NatRuleDestinationTranslationDnsRewriteArgsDict']]
+        """
+        DNS rewrite
+        """
+        translated_address: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Translated destination IP address
+        """
+        translated_port: NotRequired[pulumi.Input[_builtins.int]]
+        """
+        Translated destination port
+        """
+elif False:
+    NatRuleDestinationTranslationArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class NatRuleDestinationTranslationArgs:
+    def __init__(__self__, *,
+                 dns_rewrite: Optional[pulumi.Input['NatRuleDestinationTranslationDnsRewriteArgs']] = None,
+                 translated_address: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_port: Optional[pulumi.Input[_builtins.int]] = None):
+        """
+        :param pulumi.Input['NatRuleDestinationTranslationDnsRewriteArgs'] dns_rewrite: DNS rewrite
+        :param pulumi.Input[_builtins.str] translated_address: Translated destination IP address
+        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
+        """
+        if dns_rewrite is not None:
+            pulumi.set(__self__, "dns_rewrite", dns_rewrite)
+        if translated_address is not None:
+            pulumi.set(__self__, "translated_address", translated_address)
+        if translated_port is not None:
+            pulumi.set(__self__, "translated_port", translated_port)
+
+    @_builtins.property
+    @pulumi.getter(name="dnsRewrite")
+    def dns_rewrite(self) -> Optional[pulumi.Input['NatRuleDestinationTranslationDnsRewriteArgs']]:
+        """
+        DNS rewrite
+        """
+        return pulumi.get(self, "dns_rewrite")
+
+    @dns_rewrite.setter
+    def dns_rewrite(self, value: Optional[pulumi.Input['NatRuleDestinationTranslationDnsRewriteArgs']]):
+        pulumi.set(self, "dns_rewrite", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedAddress")
+    def translated_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Translated destination IP address
+        """
+        return pulumi.get(self, "translated_address")
+
+    @translated_address.setter
+    def translated_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translated_address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedPort")
+    def translated_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Translated destination port
+        """
+        return pulumi.get(self, "translated_port")
+
+    @translated_port.setter
+    def translated_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "translated_port", value)
+
+
+if not MYPY:
+    class NatRuleDestinationTranslationDnsRewriteArgsDict(TypedDict):
         direction: NotRequired[pulumi.Input[_builtins.str]]
         """
         Direction
         """
 elif False:
-    NatRuleDnsRewriteArgsDict: TypeAlias = Mapping[str, Any]
+    NatRuleDestinationTranslationDnsRewriteArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class NatRuleDnsRewriteArgs:
+class NatRuleDestinationTranslationDnsRewriteArgs:
     def __init__(__self__, *,
                  direction: Optional[pulumi.Input[_builtins.str]] = None):
         """
@@ -58693,26 +59174,90 @@ class NatRuleDnsRewriteArgs:
 
 
 if not MYPY:
+    class NatRuleDynamicDestinationTranslationArgsDict(TypedDict):
+        distribution: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Distribution method
+        """
+        translated_address: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Translated destination IP address
+        """
+        translated_port: NotRequired[pulumi.Input[_builtins.int]]
+        """
+        Translated destination port
+        """
+elif False:
+    NatRuleDynamicDestinationTranslationArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class NatRuleDynamicDestinationTranslationArgs:
+    def __init__(__self__, *,
+                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_address: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_port: Optional[pulumi.Input[_builtins.int]] = None):
+        """
+        :param pulumi.Input[_builtins.str] distribution: Distribution method
+        :param pulumi.Input[_builtins.str] translated_address: Translated destination IP address
+        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
+        """
+        if distribution is not None:
+            pulumi.set(__self__, "distribution", distribution)
+        if translated_address is not None:
+            pulumi.set(__self__, "translated_address", translated_address)
+        if translated_port is not None:
+            pulumi.set(__self__, "translated_port", translated_port)
+
+    @_builtins.property
+    @pulumi.getter
+    def distribution(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Distribution method
+        """
+        return pulumi.get(self, "distribution")
+
+    @distribution.setter
+    def distribution(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "distribution", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedAddress")
+    def translated_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Translated destination IP address
+        """
+        return pulumi.get(self, "translated_address")
+
+    @translated_address.setter
+    def translated_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translated_address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedPort")
+    def translated_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Translated destination port
+        """
+        return pulumi.get(self, "translated_port")
+
+    @translated_port.setter
+    def translated_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "translated_port", value)
+
+
+if not MYPY:
     class NatRuleSourceTranslationArgsDict(TypedDict):
-        bi_directional: NotRequired[pulumi.Input[_builtins.bool]]
+        dynamic_ip: NotRequired[pulumi.Input['NatRuleSourceTranslationDynamicIpArgsDict']]
         """
-        Bi directional
+        Dynamic IP
         """
-        fallback: NotRequired[pulumi.Input['NatRuleSourceTranslationFallbackArgsDict']]
+        dynamic_ip_and_port: NotRequired[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortArgsDict']]
         """
-        Fallback
+        Dynamic IP and port
         """
-        interface: NotRequired[pulumi.Input[_builtins.str]]
+        static_ip: NotRequired[pulumi.Input['NatRuleSourceTranslationStaticIpArgsDict']]
         """
-        Interface name
-        """
-        translated_address_arrays: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
-        """
-        Translated IP addresses
-        """
-        translated_address_single: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Translated IP address
+        Static IP
         """
 elif False:
     NatRuleSourceTranslationArgsDict: TypeAlias = Mapping[str, Any]
@@ -58720,108 +59265,208 @@ elif False:
 @pulumi.input_type
 class NatRuleSourceTranslationArgs:
     def __init__(__self__, *,
-                 bi_directional: Optional[pulumi.Input[_builtins.bool]] = None,
-                 fallback: Optional[pulumi.Input['NatRuleSourceTranslationFallbackArgs']] = None,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 translated_address_arrays: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None):
+                 dynamic_ip: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpArgs']] = None,
+                 dynamic_ip_and_port: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortArgs']] = None,
+                 static_ip: Optional[pulumi.Input['NatRuleSourceTranslationStaticIpArgs']] = None):
         """
-        :param pulumi.Input[_builtins.bool] bi_directional: Bi directional
-        :param pulumi.Input['NatRuleSourceTranslationFallbackArgs'] fallback: Fallback
-        :param pulumi.Input[_builtins.str] interface: Interface name
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] translated_address_arrays: Translated IP addresses
-        :param pulumi.Input[_builtins.str] translated_address_single: Translated IP address
+        :param pulumi.Input['NatRuleSourceTranslationDynamicIpArgs'] dynamic_ip: Dynamic IP
+        :param pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortArgs'] dynamic_ip_and_port: Dynamic IP and port
+        :param pulumi.Input['NatRuleSourceTranslationStaticIpArgs'] static_ip: Static IP
         """
-        if bi_directional is not None:
-            pulumi.set(__self__, "bi_directional", bi_directional)
-        if fallback is not None:
-            pulumi.set(__self__, "fallback", fallback)
-        if interface is not None:
-            pulumi.set(__self__, "interface", interface)
-        if translated_address_arrays is not None:
-            pulumi.set(__self__, "translated_address_arrays", translated_address_arrays)
-        if translated_address_single is not None:
-            pulumi.set(__self__, "translated_address_single", translated_address_single)
+        if dynamic_ip is not None:
+            pulumi.set(__self__, "dynamic_ip", dynamic_ip)
+        if dynamic_ip_and_port is not None:
+            pulumi.set(__self__, "dynamic_ip_and_port", dynamic_ip_and_port)
+        if static_ip is not None:
+            pulumi.set(__self__, "static_ip", static_ip)
 
     @_builtins.property
-    @pulumi.getter(name="biDirectional")
-    def bi_directional(self) -> Optional[pulumi.Input[_builtins.bool]]:
+    @pulumi.getter(name="dynamicIp")
+    def dynamic_ip(self) -> Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpArgs']]:
         """
-        Bi directional
+        Dynamic IP
         """
-        return pulumi.get(self, "bi_directional")
+        return pulumi.get(self, "dynamic_ip")
 
-    @bi_directional.setter
-    def bi_directional(self, value: Optional[pulumi.Input[_builtins.bool]]):
-        pulumi.set(self, "bi_directional", value)
+    @dynamic_ip.setter
+    def dynamic_ip(self, value: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpArgs']]):
+        pulumi.set(self, "dynamic_ip", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dynamicIpAndPort")
+    def dynamic_ip_and_port(self) -> Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortArgs']]:
+        """
+        Dynamic IP and port
+        """
+        return pulumi.get(self, "dynamic_ip_and_port")
+
+    @dynamic_ip_and_port.setter
+    def dynamic_ip_and_port(self, value: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortArgs']]):
+        pulumi.set(self, "dynamic_ip_and_port", value)
+
+    @_builtins.property
+    @pulumi.getter(name="staticIp")
+    def static_ip(self) -> Optional[pulumi.Input['NatRuleSourceTranslationStaticIpArgs']]:
+        """
+        Static IP
+        """
+        return pulumi.get(self, "static_ip")
+
+    @static_ip.setter
+    def static_ip(self, value: Optional[pulumi.Input['NatRuleSourceTranslationStaticIpArgs']]):
+        pulumi.set(self, "static_ip", value)
+
+
+if not MYPY:
+    class NatRuleSourceTranslationDynamicIpArgsDict(TypedDict):
+        fallback: NotRequired[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackArgsDict']]
+        """
+        Fallback
+        """
+        translated_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        Translated IP addresses
+        """
+elif False:
+    NatRuleSourceTranslationDynamicIpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class NatRuleSourceTranslationDynamicIpArgs:
+    def __init__(__self__, *,
+                 fallback: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackArgs']] = None,
+                 translated_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackArgs'] fallback: Fallback
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] translated_addresses: Translated IP addresses
+        """
+        if fallback is not None:
+            pulumi.set(__self__, "fallback", fallback)
+        if translated_addresses is not None:
+            pulumi.set(__self__, "translated_addresses", translated_addresses)
 
     @_builtins.property
     @pulumi.getter
-    def fallback(self) -> Optional[pulumi.Input['NatRuleSourceTranslationFallbackArgs']]:
+    def fallback(self) -> Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackArgs']]:
         """
         Fallback
         """
         return pulumi.get(self, "fallback")
 
     @fallback.setter
-    def fallback(self, value: Optional[pulumi.Input['NatRuleSourceTranslationFallbackArgs']]):
+    def fallback(self, value: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackArgs']]):
         pulumi.set(self, "fallback", value)
 
     @_builtins.property
-    @pulumi.getter
-    def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Interface name
-        """
-        return pulumi.get(self, "interface")
-
-    @interface.setter
-    def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "interface", value)
-
-    @_builtins.property
-    @pulumi.getter(name="translatedAddressArrays")
-    def translated_address_arrays(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    @pulumi.getter(name="translatedAddresses")
+    def translated_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
         Translated IP addresses
         """
-        return pulumi.get(self, "translated_address_arrays")
+        return pulumi.get(self, "translated_addresses")
 
-    @translated_address_arrays.setter
-    def translated_address_arrays(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "translated_address_arrays", value)
-
-    @_builtins.property
-    @pulumi.getter(name="translatedAddressSingle")
-    def translated_address_single(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Translated IP address
-        """
-        return pulumi.get(self, "translated_address_single")
-
-    @translated_address_single.setter
-    def translated_address_single(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "translated_address_single", value)
+    @translated_addresses.setter
+    def translated_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "translated_addresses", value)
 
 
 if not MYPY:
-    class NatRuleSourceTranslationFallbackArgsDict(TypedDict):
+    class NatRuleSourceTranslationDynamicIpAndPortArgsDict(TypedDict):
+        interface_address: NotRequired[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgsDict']]
+        """
+        Translated source interface
+        """
+        translated_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        Translated source IP addresses
+        """
+elif False:
+    NatRuleSourceTranslationDynamicIpAndPortArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class NatRuleSourceTranslationDynamicIpAndPortArgs:
+    def __init__(__self__, *,
+                 interface_address: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs']] = None,
+                 translated_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs'] interface_address: Translated source interface
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] translated_addresses: Translated source IP addresses
+        """
+        if interface_address is not None:
+            pulumi.set(__self__, "interface_address", interface_address)
+        if translated_addresses is not None:
+            pulumi.set(__self__, "translated_addresses", translated_addresses)
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceAddress")
+    def interface_address(self) -> Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs']]:
+        """
+        Translated source interface
+        """
+        return pulumi.get(self, "interface_address")
+
+    @interface_address.setter
+    def interface_address(self, value: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs']]):
+        pulumi.set(self, "interface_address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedAddresses")
+    def translated_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Translated source IP addresses
+        """
+        return pulumi.get(self, "translated_addresses")
+
+    @translated_addresses.setter
+    def translated_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "translated_addresses", value)
+
+
+if not MYPY:
+    class NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgsDict(TypedDict):
+        floating_ip: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Floating IP address
+        """
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
         Interface name
         """
+        ip: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Translated source IP address
+        """
 elif False:
-    NatRuleSourceTranslationFallbackArgsDict: TypeAlias = Mapping[str, Any]
+    NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class NatRuleSourceTranslationFallbackArgs:
+class NatRuleSourceTranslationDynamicIpAndPortInterfaceAddressArgs:
     def __init__(__self__, *,
-                 interface: Optional[pulumi.Input[_builtins.str]] = None):
+                 floating_ip: Optional[pulumi.Input[_builtins.str]] = None,
+                 interface: Optional[pulumi.Input[_builtins.str]] = None,
+                 ip: Optional[pulumi.Input[_builtins.str]] = None):
         """
+        :param pulumi.Input[_builtins.str] floating_ip: Floating IP address
         :param pulumi.Input[_builtins.str] interface: Interface name
+        :param pulumi.Input[_builtins.str] ip: Translated source IP address
         """
+        if floating_ip is not None:
+            pulumi.set(__self__, "floating_ip", floating_ip)
         if interface is not None:
             pulumi.set(__self__, "interface", interface)
+        if ip is not None:
+            pulumi.set(__self__, "ip", ip)
+
+    @_builtins.property
+    @pulumi.getter(name="floatingIp")
+    def floating_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Floating IP address
+        """
+        return pulumi.get(self, "floating_ip")
+
+    @floating_ip.setter
+    def floating_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "floating_ip", value)
 
     @_builtins.property
     @pulumi.getter
@@ -58834,6 +59479,194 @@ class NatRuleSourceTranslationFallbackArgs:
     @interface.setter
     def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "interface", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Translated source IP address
+        """
+        return pulumi.get(self, "ip")
+
+    @ip.setter
+    def ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ip", value)
+
+
+if not MYPY:
+    class NatRuleSourceTranslationDynamicIpFallbackArgsDict(TypedDict):
+        interface_address: NotRequired[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgsDict']]
+        """
+        Fallback interface
+        """
+        translated_addresses: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        Fallback IP addresses
+        """
+elif False:
+    NatRuleSourceTranslationDynamicIpFallbackArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class NatRuleSourceTranslationDynamicIpFallbackArgs:
+    def __init__(__self__, *,
+                 interface_address: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs']] = None,
+                 translated_addresses: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        :param pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs'] interface_address: Fallback interface
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] translated_addresses: Fallback IP addresses
+        """
+        if interface_address is not None:
+            pulumi.set(__self__, "interface_address", interface_address)
+        if translated_addresses is not None:
+            pulumi.set(__self__, "translated_addresses", translated_addresses)
+
+    @_builtins.property
+    @pulumi.getter(name="interfaceAddress")
+    def interface_address(self) -> Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs']]:
+        """
+        Fallback interface
+        """
+        return pulumi.get(self, "interface_address")
+
+    @interface_address.setter
+    def interface_address(self, value: Optional[pulumi.Input['NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs']]):
+        pulumi.set(self, "interface_address", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedAddresses")
+    def translated_addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Fallback IP addresses
+        """
+        return pulumi.get(self, "translated_addresses")
+
+    @translated_addresses.setter
+    def translated_addresses(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "translated_addresses", value)
+
+
+if not MYPY:
+    class NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgsDict(TypedDict):
+        floating_ip: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Floating IP address
+        """
+        interface: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Interface name
+        """
+        ip: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        IP address
+        """
+elif False:
+    NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs:
+    def __init__(__self__, *,
+                 floating_ip: Optional[pulumi.Input[_builtins.str]] = None,
+                 interface: Optional[pulumi.Input[_builtins.str]] = None,
+                 ip: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] floating_ip: Floating IP address
+        :param pulumi.Input[_builtins.str] interface: Interface name
+        :param pulumi.Input[_builtins.str] ip: IP address
+        """
+        if floating_ip is not None:
+            pulumi.set(__self__, "floating_ip", floating_ip)
+        if interface is not None:
+            pulumi.set(__self__, "interface", interface)
+        if ip is not None:
+            pulumi.set(__self__, "ip", ip)
+
+    @_builtins.property
+    @pulumi.getter(name="floatingIp")
+    def floating_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Floating IP address
+        """
+        return pulumi.get(self, "floating_ip")
+
+    @floating_ip.setter
+    def floating_ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "floating_ip", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def interface(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Interface name
+        """
+        return pulumi.get(self, "interface")
+
+    @interface.setter
+    def interface(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "interface", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def ip(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        IP address
+        """
+        return pulumi.get(self, "ip")
+
+    @ip.setter
+    def ip(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ip", value)
+
+
+if not MYPY:
+    class NatRuleSourceTranslationStaticIpArgsDict(TypedDict):
+        bi_directional: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Bi directional
+        """
+        translated_address: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Translated IP address
+        """
+elif False:
+    NatRuleSourceTranslationStaticIpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class NatRuleSourceTranslationStaticIpArgs:
+    def __init__(__self__, *,
+                 bi_directional: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_address: Optional[pulumi.Input[_builtins.str]] = None):
+        """
+        :param pulumi.Input[_builtins.str] bi_directional: Bi directional
+        :param pulumi.Input[_builtins.str] translated_address: Translated IP address
+        """
+        if bi_directional is not None:
+            pulumi.set(__self__, "bi_directional", bi_directional)
+        if translated_address is not None:
+            pulumi.set(__self__, "translated_address", translated_address)
+
+    @_builtins.property
+    @pulumi.getter(name="biDirectional")
+    def bi_directional(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Bi directional
+        """
+        return pulumi.get(self, "bi_directional")
+
+    @bi_directional.setter
+    def bi_directional(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "bi_directional", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedAddress")
+    def translated_address(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Translated IP address
+        """
+        return pulumi.get(self, "translated_address")
+
+    @translated_address.setter
+    def translated_address(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translated_address", value)
 
 
 if not MYPY:
@@ -59072,7 +59905,7 @@ if not MYPY:
         """
         ip_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Ip address
+        Monitor IP address
         """
         profile: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -59089,7 +59922,7 @@ class PbfRuleActionForwardMonitorArgs:
                  profile: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] disable_if_unreachable: Disable this rule if nexthop/monitor ip is unreachable?
-        :param pulumi.Input[_builtins.str] ip_address: Ip address
+        :param pulumi.Input[_builtins.str] ip_address: Monitor IP address
         :param pulumi.Input[_builtins.str] profile: Monitoring profile
         """
         if disable_if_unreachable is not None:
@@ -59115,7 +59948,7 @@ class PbfRuleActionForwardMonitorArgs:
     @pulumi.getter(name="ipAddress")
     def ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Ip address
+        Monitor IP address
         """
         return pulumi.get(self, "ip_address")
 
@@ -59144,7 +59977,7 @@ if not MYPY:
         """
         ip_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Ip address
+        Next hop IP address
         """
 elif False:
     PbfRuleActionForwardNexthopArgsDict: TypeAlias = Mapping[str, Any]
@@ -59156,7 +59989,7 @@ class PbfRuleActionForwardNexthopArgs:
                  ip_address: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] fqdn: Next hop FQDN
-        :param pulumi.Input[_builtins.str] ip_address: Ip address
+        :param pulumi.Input[_builtins.str] ip_address: Next hop IP address
         """
         if fqdn is not None:
             pulumi.set(__self__, "fqdn", fqdn)
@@ -59179,7 +60012,7 @@ class PbfRuleActionForwardNexthopArgs:
     @pulumi.getter(name="ipAddress")
     def ip_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Ip address
+        Next hop IP address
         """
         return pulumi.get(self, "ip_address")
 
@@ -60174,23 +61007,23 @@ class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs:
 
 if not MYPY:
     class RadiusServerProfileProtocolArgsDict(TypedDict):
-        c_hap: NotRequired[pulumi.Input[_builtins.str]]
+        chap: NotRequired[pulumi.Input['RadiusServerProfileProtocolChapArgsDict']]
         """
         C h a p
         """
-        e_apttls_with_pap: NotRequired[pulumi.Input['RadiusServerProfileProtocolEAPTTLSWithPAPArgsDict']]
+        eap_ttls_with_pap: NotRequired[pulumi.Input['RadiusServerProfileProtocolEapTtlsWithPapArgsDict']]
         """
         E a p t t l s with p a p
         """
-        p_ap: NotRequired[pulumi.Input[_builtins.str]]
+        pap: NotRequired[pulumi.Input['RadiusServerProfileProtocolPapArgsDict']]
         """
         P a p
         """
-        p_eapmscha_pv2: NotRequired[pulumi.Input['RadiusServerProfileProtocolPEAPMSCHAPv2ArgsDict']]
+        peap_mscha_pv2: NotRequired[pulumi.Input['RadiusServerProfileProtocolPeapMschaPv2ArgsDict']]
         """
         P e a p m s c h a pv2
         """
-        p_eap_with_gtc: NotRequired[pulumi.Input['RadiusServerProfileProtocolPEAPWithGTCArgsDict']]
+        peap_with_gtc: NotRequired[pulumi.Input['RadiusServerProfileProtocolPeapWithGtcArgsDict']]
         """
         P e a p with g t c
         """
@@ -60200,92 +61033,104 @@ elif False:
 @pulumi.input_type
 class RadiusServerProfileProtocolArgs:
     def __init__(__self__, *,
-                 c_hap: Optional[pulumi.Input[_builtins.str]] = None,
-                 e_apttls_with_pap: Optional[pulumi.Input['RadiusServerProfileProtocolEAPTTLSWithPAPArgs']] = None,
-                 p_ap: Optional[pulumi.Input[_builtins.str]] = None,
-                 p_eapmscha_pv2: Optional[pulumi.Input['RadiusServerProfileProtocolPEAPMSCHAPv2Args']] = None,
-                 p_eap_with_gtc: Optional[pulumi.Input['RadiusServerProfileProtocolPEAPWithGTCArgs']] = None):
+                 chap: Optional[pulumi.Input['RadiusServerProfileProtocolChapArgs']] = None,
+                 eap_ttls_with_pap: Optional[pulumi.Input['RadiusServerProfileProtocolEapTtlsWithPapArgs']] = None,
+                 pap: Optional[pulumi.Input['RadiusServerProfileProtocolPapArgs']] = None,
+                 peap_mscha_pv2: Optional[pulumi.Input['RadiusServerProfileProtocolPeapMschaPv2Args']] = None,
+                 peap_with_gtc: Optional[pulumi.Input['RadiusServerProfileProtocolPeapWithGtcArgs']] = None):
         """
-        :param pulumi.Input[_builtins.str] c_hap: C h a p
-        :param pulumi.Input['RadiusServerProfileProtocolEAPTTLSWithPAPArgs'] e_apttls_with_pap: E a p t t l s with p a p
-        :param pulumi.Input[_builtins.str] p_ap: P a p
-        :param pulumi.Input['RadiusServerProfileProtocolPEAPMSCHAPv2Args'] p_eapmscha_pv2: P e a p m s c h a pv2
-        :param pulumi.Input['RadiusServerProfileProtocolPEAPWithGTCArgs'] p_eap_with_gtc: P e a p with g t c
+        :param pulumi.Input['RadiusServerProfileProtocolChapArgs'] chap: C h a p
+        :param pulumi.Input['RadiusServerProfileProtocolEapTtlsWithPapArgs'] eap_ttls_with_pap: E a p t t l s with p a p
+        :param pulumi.Input['RadiusServerProfileProtocolPapArgs'] pap: P a p
+        :param pulumi.Input['RadiusServerProfileProtocolPeapMschaPv2Args'] peap_mscha_pv2: P e a p m s c h a pv2
+        :param pulumi.Input['RadiusServerProfileProtocolPeapWithGtcArgs'] peap_with_gtc: P e a p with g t c
         """
-        if c_hap is not None:
-            pulumi.set(__self__, "c_hap", c_hap)
-        if e_apttls_with_pap is not None:
-            pulumi.set(__self__, "e_apttls_with_pap", e_apttls_with_pap)
-        if p_ap is not None:
-            pulumi.set(__self__, "p_ap", p_ap)
-        if p_eapmscha_pv2 is not None:
-            pulumi.set(__self__, "p_eapmscha_pv2", p_eapmscha_pv2)
-        if p_eap_with_gtc is not None:
-            pulumi.set(__self__, "p_eap_with_gtc", p_eap_with_gtc)
+        if chap is not None:
+            pulumi.set(__self__, "chap", chap)
+        if eap_ttls_with_pap is not None:
+            pulumi.set(__self__, "eap_ttls_with_pap", eap_ttls_with_pap)
+        if pap is not None:
+            pulumi.set(__self__, "pap", pap)
+        if peap_mscha_pv2 is not None:
+            pulumi.set(__self__, "peap_mscha_pv2", peap_mscha_pv2)
+        if peap_with_gtc is not None:
+            pulumi.set(__self__, "peap_with_gtc", peap_with_gtc)
 
     @_builtins.property
-    @pulumi.getter(name="cHAP")
-    def c_hap(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter
+    def chap(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolChapArgs']]:
         """
         C h a p
         """
-        return pulumi.get(self, "c_hap")
+        return pulumi.get(self, "chap")
 
-    @c_hap.setter
-    def c_hap(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "c_hap", value)
+    @chap.setter
+    def chap(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolChapArgs']]):
+        pulumi.set(self, "chap", value)
 
     @_builtins.property
-    @pulumi.getter(name="eAPTTLSWithPAP")
-    def e_apttls_with_pap(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolEAPTTLSWithPAPArgs']]:
+    @pulumi.getter(name="eapTtlsWithPap")
+    def eap_ttls_with_pap(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolEapTtlsWithPapArgs']]:
         """
         E a p t t l s with p a p
         """
-        return pulumi.get(self, "e_apttls_with_pap")
+        return pulumi.get(self, "eap_ttls_with_pap")
 
-    @e_apttls_with_pap.setter
-    def e_apttls_with_pap(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolEAPTTLSWithPAPArgs']]):
-        pulumi.set(self, "e_apttls_with_pap", value)
+    @eap_ttls_with_pap.setter
+    def eap_ttls_with_pap(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolEapTtlsWithPapArgs']]):
+        pulumi.set(self, "eap_ttls_with_pap", value)
 
     @_builtins.property
-    @pulumi.getter(name="pAP")
-    def p_ap(self) -> Optional[pulumi.Input[_builtins.str]]:
+    @pulumi.getter
+    def pap(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolPapArgs']]:
         """
         P a p
         """
-        return pulumi.get(self, "p_ap")
+        return pulumi.get(self, "pap")
 
-    @p_ap.setter
-    def p_ap(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "p_ap", value)
+    @pap.setter
+    def pap(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolPapArgs']]):
+        pulumi.set(self, "pap", value)
 
     @_builtins.property
-    @pulumi.getter(name="pEAPMSCHAPv2")
-    def p_eapmscha_pv2(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolPEAPMSCHAPv2Args']]:
+    @pulumi.getter(name="peapMschaPv2")
+    def peap_mscha_pv2(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolPeapMschaPv2Args']]:
         """
         P e a p m s c h a pv2
         """
-        return pulumi.get(self, "p_eapmscha_pv2")
+        return pulumi.get(self, "peap_mscha_pv2")
 
-    @p_eapmscha_pv2.setter
-    def p_eapmscha_pv2(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolPEAPMSCHAPv2Args']]):
-        pulumi.set(self, "p_eapmscha_pv2", value)
+    @peap_mscha_pv2.setter
+    def peap_mscha_pv2(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolPeapMschaPv2Args']]):
+        pulumi.set(self, "peap_mscha_pv2", value)
 
     @_builtins.property
-    @pulumi.getter(name="pEAPWithGTC")
-    def p_eap_with_gtc(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolPEAPWithGTCArgs']]:
+    @pulumi.getter(name="peapWithGtc")
+    def peap_with_gtc(self) -> Optional[pulumi.Input['RadiusServerProfileProtocolPeapWithGtcArgs']]:
         """
         P e a p with g t c
         """
-        return pulumi.get(self, "p_eap_with_gtc")
+        return pulumi.get(self, "peap_with_gtc")
 
-    @p_eap_with_gtc.setter
-    def p_eap_with_gtc(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolPEAPWithGTCArgs']]):
-        pulumi.set(self, "p_eap_with_gtc", value)
+    @peap_with_gtc.setter
+    def peap_with_gtc(self, value: Optional[pulumi.Input['RadiusServerProfileProtocolPeapWithGtcArgs']]):
+        pulumi.set(self, "peap_with_gtc", value)
 
 
 if not MYPY:
-    class RadiusServerProfileProtocolEAPTTLSWithPAPArgsDict(TypedDict):
+    class RadiusServerProfileProtocolChapArgsDict(TypedDict):
+        pass
+elif False:
+    RadiusServerProfileProtocolChapArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class RadiusServerProfileProtocolChapArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
+    class RadiusServerProfileProtocolEapTtlsWithPapArgsDict(TypedDict):
         anon_outer_id: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Anon outer id
@@ -60295,10 +61140,10 @@ if not MYPY:
         Radius cert profile
         """
 elif False:
-    RadiusServerProfileProtocolEAPTTLSWithPAPArgsDict: TypeAlias = Mapping[str, Any]
+    RadiusServerProfileProtocolEapTtlsWithPapArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class RadiusServerProfileProtocolEAPTTLSWithPAPArgs:
+class RadiusServerProfileProtocolEapTtlsWithPapArgs:
     def __init__(__self__, *,
                  anon_outer_id: Optional[pulumi.Input[_builtins.bool]] = None,
                  radius_cert_profile: Optional[pulumi.Input[_builtins.str]] = None):
@@ -60337,7 +61182,19 @@ class RadiusServerProfileProtocolEAPTTLSWithPAPArgs:
 
 
 if not MYPY:
-    class RadiusServerProfileProtocolPEAPMSCHAPv2ArgsDict(TypedDict):
+    class RadiusServerProfileProtocolPapArgsDict(TypedDict):
+        pass
+elif False:
+    RadiusServerProfileProtocolPapArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class RadiusServerProfileProtocolPapArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
+    class RadiusServerProfileProtocolPeapMschaPv2ArgsDict(TypedDict):
         allow_pwd_change: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Allow pwd change
@@ -60351,10 +61208,10 @@ if not MYPY:
         Radius cert profile
         """
 elif False:
-    RadiusServerProfileProtocolPEAPMSCHAPv2ArgsDict: TypeAlias = Mapping[str, Any]
+    RadiusServerProfileProtocolPeapMschaPv2ArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class RadiusServerProfileProtocolPEAPMSCHAPv2Args:
+class RadiusServerProfileProtocolPeapMschaPv2Args:
     def __init__(__self__, *,
                  allow_pwd_change: Optional[pulumi.Input[_builtins.bool]] = None,
                  anon_outer_id: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -60409,7 +61266,7 @@ class RadiusServerProfileProtocolPEAPMSCHAPv2Args:
 
 
 if not MYPY:
-    class RadiusServerProfileProtocolPEAPWithGTCArgsDict(TypedDict):
+    class RadiusServerProfileProtocolPeapWithGtcArgsDict(TypedDict):
         anon_outer_id: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Anon outer id
@@ -60419,10 +61276,10 @@ if not MYPY:
         Radius cert profile
         """
 elif False:
-    RadiusServerProfileProtocolPEAPWithGTCArgsDict: TypeAlias = Mapping[str, Any]
+    RadiusServerProfileProtocolPeapWithGtcArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
-class RadiusServerProfileProtocolPEAPWithGTCArgs:
+class RadiusServerProfileProtocolPeapWithGtcArgs:
     def __init__(__self__, *,
                  anon_outer_id: Optional[pulumi.Input[_builtins.bool]] = None,
                  radius_cert_profile: Optional[pulumi.Input[_builtins.str]] = None):
@@ -61373,15 +62230,67 @@ if not MYPY:
         """
         Destination IP address
         """
-        wildcard: NotRequired[pulumi.Input[_builtins.str]]
+        entry: NotRequired[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgsDict']]
         """
-        Destination IP wildcard
+        Entry
         """
 elif False:
     RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RouteAccessListTypeIpv4Ipv4EntryDestinationAddressArgs:
+    def __init__(__self__, *,
+                 address: Optional[pulumi.Input[_builtins.str]] = None,
+                 entry: Optional[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs']] = None):
+        """
+        :param pulumi.Input[_builtins.str] address: Destination IP address
+        :param pulumi.Input['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs'] entry: Entry
+        """
+        if address is not None:
+            pulumi.set(__self__, "address", address)
+        if entry is not None:
+            pulumi.set(__self__, "entry", entry)
+
+    @_builtins.property
+    @pulumi.getter
+    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Destination IP address
+        """
+        return pulumi.get(self, "address")
+
+    @address.setter
+    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "address", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def entry(self) -> Optional[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs']]:
+        """
+        Entry
+        """
+        return pulumi.get(self, "entry")
+
+    @entry.setter
+    def entry(self, value: Optional[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs']]):
+        pulumi.set(self, "entry", value)
+
+
+if not MYPY:
+    class RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Destination IP address
+        """
+        wildcard: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Destination IP wildcard
+        """
+elif False:
+    RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class RouteAccessListTypeIpv4Ipv4EntryDestinationAddressEntryArgs:
     def __init__(__self__, *,
                  address: Optional[pulumi.Input[_builtins.str]] = None,
                  wildcard: Optional[pulumi.Input[_builtins.str]] = None):
@@ -61425,15 +62334,67 @@ if not MYPY:
         """
         Source IP address
         """
-        wildcard: NotRequired[pulumi.Input[_builtins.str]]
+        entry: NotRequired[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgsDict']]
         """
-        Source IP wildcard
+        Entry
         """
 elif False:
     RouteAccessListTypeIpv4Ipv4EntrySourceAddressArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class RouteAccessListTypeIpv4Ipv4EntrySourceAddressArgs:
+    def __init__(__self__, *,
+                 address: Optional[pulumi.Input[_builtins.str]] = None,
+                 entry: Optional[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs']] = None):
+        """
+        :param pulumi.Input[_builtins.str] address: Source IP address
+        :param pulumi.Input['RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs'] entry: Entry
+        """
+        if address is not None:
+            pulumi.set(__self__, "address", address)
+        if entry is not None:
+            pulumi.set(__self__, "entry", entry)
+
+    @_builtins.property
+    @pulumi.getter
+    def address(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Source IP address
+        """
+        return pulumi.get(self, "address")
+
+    @address.setter
+    def address(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "address", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def entry(self) -> Optional[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs']]:
+        """
+        Entry
+        """
+        return pulumi.get(self, "entry")
+
+    @entry.setter
+    def entry(self, value: Optional[pulumi.Input['RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs']]):
+        pulumi.set(self, "entry", value)
+
+
+if not MYPY:
+    class RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgsDict(TypedDict):
+        address: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Source IP address
+        """
+        wildcard: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Source IP wildcard
+        """
+elif False:
+    RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntryArgs:
     def __init__(__self__, *,
                  address: Optional[pulumi.Input[_builtins.str]] = None,
                  wildcard: Optional[pulumi.Input[_builtins.str]] = None):
@@ -62749,7 +63710,7 @@ if not MYPY:
         """
         Ratio
         """
-        recovery_duration: pulumi.Input[_builtins.float]
+        recovery_duration: pulumi.Input[_builtins.int]
         """
         Recovery duration
         """
@@ -62760,10 +63721,10 @@ elif False:
 class SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs:
     def __init__(__self__, *,
                  ratio: pulumi.Input[_builtins.str],
-                 recovery_duration: pulumi.Input[_builtins.float]):
+                 recovery_duration: pulumi.Input[_builtins.int]):
         """
         :param pulumi.Input[_builtins.str] ratio: Ratio
-        :param pulumi.Input[_builtins.float] recovery_duration: Recovery duration
+        :param pulumi.Input[_builtins.int] recovery_duration: Recovery duration
         """
         pulumi.set(__self__, "ratio", ratio)
         pulumi.set(__self__, "recovery_duration", recovery_duration)
@@ -62782,20 +63743,20 @@ class SdwanErrorCorrectionProfileModeForwardErrorCorrectionArgs:
 
     @_builtins.property
     @pulumi.getter(name="recoveryDuration")
-    def recovery_duration(self) -> pulumi.Input[_builtins.float]:
+    def recovery_duration(self) -> pulumi.Input[_builtins.int]:
         """
         Recovery duration
         """
         return pulumi.get(self, "recovery_duration")
 
     @recovery_duration.setter
-    def recovery_duration(self, value: pulumi.Input[_builtins.float]):
+    def recovery_duration(self, value: pulumi.Input[_builtins.int]):
         pulumi.set(self, "recovery_duration", value)
 
 
 if not MYPY:
     class SdwanErrorCorrectionProfileModePacketDuplicationArgsDict(TypedDict):
-        recovery_duration_pd: pulumi.Input[_builtins.float]
+        recovery_duration_pd: pulumi.Input[_builtins.int]
         """
         Recovery duration pd
         """
@@ -62805,22 +63766,22 @@ elif False:
 @pulumi.input_type
 class SdwanErrorCorrectionProfileModePacketDuplicationArgs:
     def __init__(__self__, *,
-                 recovery_duration_pd: pulumi.Input[_builtins.float]):
+                 recovery_duration_pd: pulumi.Input[_builtins.int]):
         """
-        :param pulumi.Input[_builtins.float] recovery_duration_pd: Recovery duration pd
+        :param pulumi.Input[_builtins.int] recovery_duration_pd: Recovery duration pd
         """
         pulumi.set(__self__, "recovery_duration_pd", recovery_duration_pd)
 
     @_builtins.property
     @pulumi.getter(name="recoveryDurationPd")
-    def recovery_duration_pd(self) -> pulumi.Input[_builtins.float]:
+    def recovery_duration_pd(self) -> pulumi.Input[_builtins.int]:
         """
         Recovery duration pd
         """
         return pulumi.get(self, "recovery_duration_pd")
 
     @recovery_duration_pd.setter
-    def recovery_duration_pd(self, value: pulumi.Input[_builtins.float]):
+    def recovery_duration_pd(self, value: pulumi.Input[_builtins.int]):
         pulumi.set(self, "recovery_duration_pd", value)
 
 
@@ -62996,13 +63957,13 @@ class SdwanPathQualityProfileMetricLatencyArgs:
 
 if not MYPY:
     class SdwanPathQualityProfileMetricPktLossArgsDict(TypedDict):
-        sensitivity: NotRequired[pulumi.Input[_builtins.str]]
+        sensitivity: pulumi.Input[_builtins.str]
         """
-        Sensitivity
+        Packet loss sensitivity
         """
-        threshold: NotRequired[pulumi.Input[_builtins.int]]
+        threshold: pulumi.Input[_builtins.int]
         """
-        Threshold
+        Packet loss threshold (percentage)
         """
 elif False:
     SdwanPathQualityProfileMetricPktLossArgsDict: TypeAlias = Mapping[str, Any]
@@ -63010,39 +63971,37 @@ elif False:
 @pulumi.input_type
 class SdwanPathQualityProfileMetricPktLossArgs:
     def __init__(__self__, *,
-                 sensitivity: Optional[pulumi.Input[_builtins.str]] = None,
-                 threshold: Optional[pulumi.Input[_builtins.int]] = None):
+                 sensitivity: pulumi.Input[_builtins.str],
+                 threshold: pulumi.Input[_builtins.int]):
         """
-        :param pulumi.Input[_builtins.str] sensitivity: Sensitivity
-        :param pulumi.Input[_builtins.int] threshold: Threshold
+        :param pulumi.Input[_builtins.str] sensitivity: Packet loss sensitivity
+        :param pulumi.Input[_builtins.int] threshold: Packet loss threshold (percentage)
         """
-        if sensitivity is not None:
-            pulumi.set(__self__, "sensitivity", sensitivity)
-        if threshold is not None:
-            pulumi.set(__self__, "threshold", threshold)
+        pulumi.set(__self__, "sensitivity", sensitivity)
+        pulumi.set(__self__, "threshold", threshold)
 
     @_builtins.property
     @pulumi.getter
-    def sensitivity(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def sensitivity(self) -> pulumi.Input[_builtins.str]:
         """
-        Sensitivity
+        Packet loss sensitivity
         """
         return pulumi.get(self, "sensitivity")
 
     @sensitivity.setter
-    def sensitivity(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def sensitivity(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "sensitivity", value)
 
     @_builtins.property
     @pulumi.getter
-    def threshold(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def threshold(self) -> pulumi.Input[_builtins.int]:
         """
-        Threshold
+        Packet loss threshold (percentage)
         """
         return pulumi.get(self, "threshold")
 
     @threshold.setter
-    def threshold(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def threshold(self, value: pulumi.Input[_builtins.int]):
         pulumi.set(self, "threshold", value)
 
 
@@ -63365,13 +64324,13 @@ class SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArgs:
 
 if not MYPY:
     class SdwanTrafficDistributionProfileLinkTagArgsDict(TypedDict):
-        name: NotRequired[pulumi.Input[_builtins.str]]
+        name: pulumi.Input[_builtins.str]
         """
-        Name
+        Link-Tag used for identifying a set of interfaces
         """
         weight: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Weight
+        Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
         """
 elif False:
     SdwanTrafficDistributionProfileLinkTagArgsDict: TypeAlias = Mapping[str, Any]
@@ -63379,34 +64338,33 @@ elif False:
 @pulumi.input_type
 class SdwanTrafficDistributionProfileLinkTagArgs:
     def __init__(__self__, *,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: pulumi.Input[_builtins.str],
                  weight: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] name: Name
-        :param pulumi.Input[_builtins.int] weight: Weight
+        :param pulumi.Input[_builtins.str] name: Link-Tag used for identifying a set of interfaces
+        :param pulumi.Input[_builtins.int] weight: Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
         """
-        if name is not None:
-            pulumi.set(__self__, "name", name)
+        pulumi.set(__self__, "name", name)
         if weight is not None:
             pulumi.set(__self__, "weight", weight)
 
     @_builtins.property
     @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def name(self) -> pulumi.Input[_builtins.str]:
         """
-        Name
+        Link-Tag used for identifying a set of interfaces
         """
         return pulumi.get(self, "name")
 
     @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def name(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "name", value)
 
     @_builtins.property
     @pulumi.getter
     def weight(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Weight
+        Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
         """
         return pulumi.get(self, "weight")
 
@@ -65963,26 +66921,18 @@ if not MYPY:
         """
         Forward
         """
-        no_pbf: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        No pbf
-        """
 elif False:
     TrafficSteeringRuleActionArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TrafficSteeringRuleActionArgs:
     def __init__(__self__, *,
-                 forward: Optional[pulumi.Input['TrafficSteeringRuleActionForwardArgs']] = None,
-                 no_pbf: Optional[pulumi.Input[_builtins.str]] = None):
+                 forward: Optional[pulumi.Input['TrafficSteeringRuleActionForwardArgs']] = None):
         """
         :param pulumi.Input['TrafficSteeringRuleActionForwardArgs'] forward: Forward
-        :param pulumi.Input[_builtins.str] no_pbf: No pbf
         """
         if forward is not None:
             pulumi.set(__self__, "forward", forward)
-        if no_pbf is not None:
-            pulumi.set(__self__, "no_pbf", no_pbf)
 
     @_builtins.property
     @pulumi.getter
@@ -65996,30 +66946,70 @@ class TrafficSteeringRuleActionArgs:
     def forward(self, value: Optional[pulumi.Input['TrafficSteeringRuleActionForwardArgs']]):
         pulumi.set(self, "forward", value)
 
-    @_builtins.property
-    @pulumi.getter(name="noPbf")
-    def no_pbf(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        No pbf
-        """
-        return pulumi.get(self, "no_pbf")
-
-    @no_pbf.setter
-    def no_pbf(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "no_pbf", value)
-
 
 if not MYPY:
     class TrafficSteeringRuleActionForwardArgsDict(TypedDict):
-        target: NotRequired[pulumi.Input[_builtins.str]]
+        forward: NotRequired[pulumi.Input['TrafficSteeringRuleActionForwardForwardArgsDict']]
         """
-        Target
+        Forward
+        """
+        no_pbf: NotRequired[pulumi.Input['TrafficSteeringRuleActionForwardNoPbfArgsDict']]
+        """
+        No pbf
         """
 elif False:
     TrafficSteeringRuleActionForwardArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class TrafficSteeringRuleActionForwardArgs:
+    def __init__(__self__, *,
+                 forward: Optional[pulumi.Input['TrafficSteeringRuleActionForwardForwardArgs']] = None,
+                 no_pbf: Optional[pulumi.Input['TrafficSteeringRuleActionForwardNoPbfArgs']] = None):
+        """
+        :param pulumi.Input['TrafficSteeringRuleActionForwardForwardArgs'] forward: Forward
+        :param pulumi.Input['TrafficSteeringRuleActionForwardNoPbfArgs'] no_pbf: No pbf
+        """
+        if forward is not None:
+            pulumi.set(__self__, "forward", forward)
+        if no_pbf is not None:
+            pulumi.set(__self__, "no_pbf", no_pbf)
+
+    @_builtins.property
+    @pulumi.getter
+    def forward(self) -> Optional[pulumi.Input['TrafficSteeringRuleActionForwardForwardArgs']]:
+        """
+        Forward
+        """
+        return pulumi.get(self, "forward")
+
+    @forward.setter
+    def forward(self, value: Optional[pulumi.Input['TrafficSteeringRuleActionForwardForwardArgs']]):
+        pulumi.set(self, "forward", value)
+
+    @_builtins.property
+    @pulumi.getter(name="noPbf")
+    def no_pbf(self) -> Optional[pulumi.Input['TrafficSteeringRuleActionForwardNoPbfArgs']]:
+        """
+        No pbf
+        """
+        return pulumi.get(self, "no_pbf")
+
+    @no_pbf.setter
+    def no_pbf(self, value: Optional[pulumi.Input['TrafficSteeringRuleActionForwardNoPbfArgs']]):
+        pulumi.set(self, "no_pbf", value)
+
+
+if not MYPY:
+    class TrafficSteeringRuleActionForwardForwardArgsDict(TypedDict):
+        target: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Target
+        """
+elif False:
+    TrafficSteeringRuleActionForwardForwardArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TrafficSteeringRuleActionForwardForwardArgs:
     def __init__(__self__, *,
                  target: Optional[pulumi.Input[_builtins.str]] = None):
         """
@@ -66042,10 +67032,22 @@ class TrafficSteeringRuleActionForwardArgs:
 
 
 if not MYPY:
+    class TrafficSteeringRuleActionForwardNoPbfArgsDict(TypedDict):
+        pass
+elif False:
+    TrafficSteeringRuleActionForwardNoPbfArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class TrafficSteeringRuleActionForwardNoPbfArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
     class TunnelInterfaceIpArgsDict(TypedDict):
-        ips: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        name: pulumi.Input[_builtins.str]
         """
-        tunnel interfaces IP address(es)
+        Tunnel Interface IP address(es)
         """
 elif False:
     TunnelInterfaceIpArgsDict: TypeAlias = Mapping[str, Any]
@@ -66053,24 +67055,23 @@ elif False:
 @pulumi.input_type
 class TunnelInterfaceIpArgs:
     def __init__(__self__, *,
-                 ips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 name: pulumi.Input[_builtins.str]):
         """
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] ips: tunnel interfaces IP address(es)
+        :param pulumi.Input[_builtins.str] name: Tunnel Interface IP address(es)
         """
-        if ips is not None:
-            pulumi.set(__self__, "ips", ips)
+        pulumi.set(__self__, "name", name)
 
     @_builtins.property
     @pulumi.getter
-    def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    def name(self) -> pulumi.Input[_builtins.str]:
         """
-        tunnel interfaces IP address(es)
+        Tunnel Interface IP address(es)
         """
-        return pulumi.get(self, "ips")
+        return pulumi.get(self, "name")
 
-    @ips.setter
-    def ips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "ips", value)
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
 
 
 if not MYPY:
@@ -66337,7 +67338,7 @@ if not MYPY:
     class VlanInterfaceArpArgsDict(TypedDict):
         hw_address: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hw address
+        MAC address
         """
         interface: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -66357,7 +67358,7 @@ class VlanInterfaceArpArgs:
                  interface: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
-        :param pulumi.Input[_builtins.str] hw_address: Hw address
+        :param pulumi.Input[_builtins.str] hw_address: MAC address
         :param pulumi.Input[_builtins.str] interface: ARP interface
         :param pulumi.Input[_builtins.str] name: IP address
         """
@@ -66372,7 +67373,7 @@ class VlanInterfaceArpArgs:
     @pulumi.getter(name="hwAddress")
     def hw_address(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hw address
+        MAC address
         """
         return pulumi.get(self, "hw_address")
 
@@ -66407,33 +67408,33 @@ class VlanInterfaceArpArgs:
 
 if not MYPY:
     class VlanInterfaceDdnsConfigArgsDict(TypedDict):
-        ddns_cert_profile: NotRequired[pulumi.Input[_builtins.str]]
+        ddns_cert_profile: pulumi.Input[_builtins.str]
         """
-        Ddns cert profile
+        Certificate profile
         """
-        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Ddns enabled
-        """
-        ddns_hostname: NotRequired[pulumi.Input[_builtins.str]]
+        ddns_hostname: pulumi.Input[_builtins.str]
         """
         Ddns hostname
         """
+        ddns_vendor: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_vendor_config: pulumi.Input[_builtins.str]
+        """
+        DDNS vendor
+        """
+        ddns_enabled: NotRequired[pulumi.Input[_builtins.bool]]
+        """
+        Enable DDNS?
+        """
         ddns_ip: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Ddns ip
+        IP to register (static only)
         """
         ddns_update_interval: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Ddns update interval
-        """
-        ddns_vendor: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor
-        """
-        ddns_vendor_config: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        Ddns vendor config
+        Update interval (days)
         """
 elif False:
     VlanInterfaceDdnsConfigArgsDict: TypeAlias = Mapping[str, Any]
@@ -66441,54 +67442,86 @@ elif False:
 @pulumi.input_type
 class VlanInterfaceDdnsConfigArgs:
     def __init__(__self__, *,
-                 ddns_cert_profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 ddns_cert_profile: pulumi.Input[_builtins.str],
+                 ddns_hostname: pulumi.Input[_builtins.str],
+                 ddns_vendor: pulumi.Input[_builtins.str],
+                 ddns_vendor_config: pulumi.Input[_builtins.str],
                  ddns_enabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 ddns_hostname: Optional[pulumi.Input[_builtins.str]] = None,
                  ddns_ip: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None,
-                 ddns_vendor: Optional[pulumi.Input[_builtins.str]] = None,
-                 ddns_vendor_config: Optional[pulumi.Input[_builtins.str]] = None):
+                 ddns_update_interval: Optional[pulumi.Input[_builtins.int]] = None):
         """
-        :param pulumi.Input[_builtins.str] ddns_cert_profile: Ddns cert profile
-        :param pulumi.Input[_builtins.bool] ddns_enabled: Ddns enabled
+        :param pulumi.Input[_builtins.str] ddns_cert_profile: Certificate profile
         :param pulumi.Input[_builtins.str] ddns_hostname: Ddns hostname
-        :param pulumi.Input[_builtins.str] ddns_ip: Ddns ip
-        :param pulumi.Input[_builtins.int] ddns_update_interval: Ddns update interval
-        :param pulumi.Input[_builtins.str] ddns_vendor: Ddns vendor
-        :param pulumi.Input[_builtins.str] ddns_vendor_config: Ddns vendor config
+        :param pulumi.Input[_builtins.str] ddns_vendor: DDNS vendor
+        :param pulumi.Input[_builtins.str] ddns_vendor_config: DDNS vendor
+        :param pulumi.Input[_builtins.bool] ddns_enabled: Enable DDNS?
+        :param pulumi.Input[_builtins.str] ddns_ip: IP to register (static only)
+        :param pulumi.Input[_builtins.int] ddns_update_interval: Update interval (days)
         """
-        if ddns_cert_profile is not None:
-            pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_cert_profile", ddns_cert_profile)
+        pulumi.set(__self__, "ddns_hostname", ddns_hostname)
+        pulumi.set(__self__, "ddns_vendor", ddns_vendor)
+        pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
         if ddns_enabled is not None:
             pulumi.set(__self__, "ddns_enabled", ddns_enabled)
-        if ddns_hostname is not None:
-            pulumi.set(__self__, "ddns_hostname", ddns_hostname)
         if ddns_ip is not None:
             pulumi.set(__self__, "ddns_ip", ddns_ip)
         if ddns_update_interval is not None:
             pulumi.set(__self__, "ddns_update_interval", ddns_update_interval)
-        if ddns_vendor is not None:
-            pulumi.set(__self__, "ddns_vendor", ddns_vendor)
-        if ddns_vendor_config is not None:
-            pulumi.set(__self__, "ddns_vendor_config", ddns_vendor_config)
 
     @_builtins.property
     @pulumi.getter(name="ddnsCertProfile")
-    def ddns_cert_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def ddns_cert_profile(self) -> pulumi.Input[_builtins.str]:
         """
-        Ddns cert profile
+        Certificate profile
         """
         return pulumi.get(self, "ddns_cert_profile")
 
     @ddns_cert_profile.setter
-    def ddns_cert_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def ddns_cert_profile(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "ddns_cert_profile", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsHostname")
+    def ddns_hostname(self) -> pulumi.Input[_builtins.str]:
+        """
+        Ddns hostname
+        """
+        return pulumi.get(self, "ddns_hostname")
+
+    @ddns_hostname.setter
+    def ddns_hostname(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_hostname", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendor")
+    def ddns_vendor(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor")
+
+    @ddns_vendor.setter
+    def ddns_vendor(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ddnsVendorConfig")
+    def ddns_vendor_config(self) -> pulumi.Input[_builtins.str]:
+        """
+        DDNS vendor
+        """
+        return pulumi.get(self, "ddns_vendor_config")
+
+    @ddns_vendor_config.setter
+    def ddns_vendor_config(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "ddns_vendor_config", value)
 
     @_builtins.property
     @pulumi.getter(name="ddnsEnabled")
     def ddns_enabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Ddns enabled
+        Enable DDNS?
         """
         return pulumi.get(self, "ddns_enabled")
 
@@ -66497,22 +67530,10 @@ class VlanInterfaceDdnsConfigArgs:
         pulumi.set(self, "ddns_enabled", value)
 
     @_builtins.property
-    @pulumi.getter(name="ddnsHostname")
-    def ddns_hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns hostname
-        """
-        return pulumi.get(self, "ddns_hostname")
-
-    @ddns_hostname.setter
-    def ddns_hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_hostname", value)
-
-    @_builtins.property
     @pulumi.getter(name="ddnsIp")
     def ddns_ip(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Ddns ip
+        IP to register (static only)
         """
         return pulumi.get(self, "ddns_ip")
 
@@ -66524,7 +67545,7 @@ class VlanInterfaceDdnsConfigArgs:
     @pulumi.getter(name="ddnsUpdateInterval")
     def ddns_update_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Ddns update interval
+        Update interval (days)
         """
         return pulumi.get(self, "ddns_update_interval")
 
@@ -66532,44 +67553,20 @@ class VlanInterfaceDdnsConfigArgs:
     def ddns_update_interval(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "ddns_update_interval", value)
 
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendor")
-    def ddns_vendor(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor
-        """
-        return pulumi.get(self, "ddns_vendor")
-
-    @ddns_vendor.setter
-    def ddns_vendor(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor", value)
-
-    @_builtins.property
-    @pulumi.getter(name="ddnsVendorConfig")
-    def ddns_vendor_config(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        Ddns vendor config
-        """
-        return pulumi.get(self, "ddns_vendor_config")
-
-    @ddns_vendor_config.setter
-    def ddns_vendor_config(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "ddns_vendor_config", value)
-
 
 if not MYPY:
     class VlanInterfaceDhcpClientArgsDict(TypedDict):
         create_default_route: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Create default route
+        Automatically create default route pointing to default gateway provided by server
         """
         default_route_metric: NotRequired[pulumi.Input[_builtins.int]]
         """
-        Default route metric
+        Metric of the default route created
         """
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
-        Enable
+        Enable DHCP?
         """
         send_hostname: NotRequired[pulumi.Input['VlanInterfaceDhcpClientSendHostnameArgsDict']]
         """
@@ -66586,9 +67583,9 @@ class VlanInterfaceDhcpClientArgs:
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
                  send_hostname: Optional[pulumi.Input['VlanInterfaceDhcpClientSendHostnameArgs']] = None):
         """
-        :param pulumi.Input[_builtins.bool] create_default_route: Create default route
-        :param pulumi.Input[_builtins.int] default_route_metric: Default route metric
-        :param pulumi.Input[_builtins.bool] enable: Enable
+        :param pulumi.Input[_builtins.bool] create_default_route: Automatically create default route pointing to default gateway provided by server
+        :param pulumi.Input[_builtins.int] default_route_metric: Metric of the default route created
+        :param pulumi.Input[_builtins.bool] enable: Enable DHCP?
         :param pulumi.Input['VlanInterfaceDhcpClientSendHostnameArgs'] send_hostname: Send hostname
         """
         if create_default_route is not None:
@@ -66604,7 +67601,7 @@ class VlanInterfaceDhcpClientArgs:
     @pulumi.getter(name="createDefaultRoute")
     def create_default_route(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Create default route
+        Automatically create default route pointing to default gateway provided by server
         """
         return pulumi.get(self, "create_default_route")
 
@@ -66616,7 +67613,7 @@ class VlanInterfaceDhcpClientArgs:
     @pulumi.getter(name="defaultRouteMetric")
     def default_route_metric(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        Default route metric
+        Metric of the default route created
         """
         return pulumi.get(self, "default_route_metric")
 
@@ -66628,7 +67625,7 @@ class VlanInterfaceDhcpClientArgs:
     @pulumi.getter
     def enable(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Enable
+        Enable DHCP?
         """
         return pulumi.get(self, "enable")
 
@@ -66657,7 +67654,7 @@ if not MYPY:
         """
         hostname: NotRequired[pulumi.Input[_builtins.str]]
         """
-        Hostname
+        Set interface hostname
         """
 elif False:
     VlanInterfaceDhcpClientSendHostnameArgsDict: TypeAlias = Mapping[str, Any]
@@ -66669,7 +67666,7 @@ class VlanInterfaceDhcpClientSendHostnameArgs:
                  hostname: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable: Enable
-        :param pulumi.Input[_builtins.str] hostname: Hostname
+        :param pulumi.Input[_builtins.str] hostname: Set interface hostname
         """
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
@@ -66692,13 +67689,44 @@ class VlanInterfaceDhcpClientSendHostnameArgs:
     @pulumi.getter
     def hostname(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Hostname
+        Set interface hostname
         """
         return pulumi.get(self, "hostname")
 
     @hostname.setter
     def hostname(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "hostname", value)
+
+
+if not MYPY:
+    class VlanInterfaceIpArgsDict(TypedDict):
+        name: pulumi.Input[_builtins.str]
+        """
+        VLAN Interface IP address(es)
+        """
+elif False:
+    VlanInterfaceIpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class VlanInterfaceIpArgs:
+    def __init__(__self__, *,
+                 name: pulumi.Input[_builtins.str]):
+        """
+        :param pulumi.Input[_builtins.str] name: VLAN Interface IP address(es)
+        """
+        pulumi.set(__self__, "name", name)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Input[_builtins.str]:
+        """
+        VLAN Interface IP address(es)
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "name", value)
 
 
 if not MYPY:
@@ -69509,9 +70537,33 @@ if not MYPY:
         """
         Enable packet buffer protection
         """
+        externals: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        External
+        """
+        layer2s: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        Layer2
+        """
+        layer3s: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        Layer3
+        """
         log_setting: NotRequired[pulumi.Input[_builtins.str]]
         """
         Log setting
+        """
+        taps: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        Tap
+        """
+        tunnel: NotRequired[pulumi.Input['ZoneNetworkTunnelArgsDict']]
+        """
+        Tunnel
+        """
+        virtual_wires: NotRequired[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]
+        """
+        Virtual wire
         """
         zone_protection_profile: NotRequired[pulumi.Input[_builtins.str]]
         """
@@ -69524,17 +70576,41 @@ elif False:
 class ZoneNetworkArgs:
     def __init__(__self__, *,
                  enable_packet_buffer_protection: Optional[pulumi.Input[_builtins.bool]] = None,
+                 externals: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 layer2s: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 layer3s: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  log_setting: Optional[pulumi.Input[_builtins.str]] = None,
+                 taps: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tunnel: Optional[pulumi.Input['ZoneNetworkTunnelArgs']] = None,
+                 virtual_wires: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  zone_protection_profile: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.bool] enable_packet_buffer_protection: Enable packet buffer protection
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] externals: External
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] layer2s: Layer2
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] layer3s: Layer3
         :param pulumi.Input[_builtins.str] log_setting: Log setting
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] taps: Tap
+        :param pulumi.Input['ZoneNetworkTunnelArgs'] tunnel: Tunnel
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] virtual_wires: Virtual wire
         :param pulumi.Input[_builtins.str] zone_protection_profile: Zone protection profile
         """
         if enable_packet_buffer_protection is not None:
             pulumi.set(__self__, "enable_packet_buffer_protection", enable_packet_buffer_protection)
+        if externals is not None:
+            pulumi.set(__self__, "externals", externals)
+        if layer2s is not None:
+            pulumi.set(__self__, "layer2s", layer2s)
+        if layer3s is not None:
+            pulumi.set(__self__, "layer3s", layer3s)
         if log_setting is not None:
             pulumi.set(__self__, "log_setting", log_setting)
+        if taps is not None:
+            pulumi.set(__self__, "taps", taps)
+        if tunnel is not None:
+            pulumi.set(__self__, "tunnel", tunnel)
+        if virtual_wires is not None:
+            pulumi.set(__self__, "virtual_wires", virtual_wires)
         if zone_protection_profile is not None:
             pulumi.set(__self__, "zone_protection_profile", zone_protection_profile)
 
@@ -69551,6 +70627,42 @@ class ZoneNetworkArgs:
         pulumi.set(self, "enable_packet_buffer_protection", value)
 
     @_builtins.property
+    @pulumi.getter
+    def externals(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        External
+        """
+        return pulumi.get(self, "externals")
+
+    @externals.setter
+    def externals(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "externals", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def layer2s(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Layer2
+        """
+        return pulumi.get(self, "layer2s")
+
+    @layer2s.setter
+    def layer2s(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "layer2s", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def layer3s(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Layer3
+        """
+        return pulumi.get(self, "layer3s")
+
+    @layer3s.setter
+    def layer3s(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "layer3s", value)
+
+    @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -69563,6 +70675,42 @@ class ZoneNetworkArgs:
         pulumi.set(self, "log_setting", value)
 
     @_builtins.property
+    @pulumi.getter
+    def taps(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Tap
+        """
+        return pulumi.get(self, "taps")
+
+    @taps.setter
+    def taps(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "taps", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def tunnel(self) -> Optional[pulumi.Input['ZoneNetworkTunnelArgs']]:
+        """
+        Tunnel
+        """
+        return pulumi.get(self, "tunnel")
+
+    @tunnel.setter
+    def tunnel(self, value: Optional[pulumi.Input['ZoneNetworkTunnelArgs']]):
+        pulumi.set(self, "tunnel", value)
+
+    @_builtins.property
+    @pulumi.getter(name="virtualWires")
+    def virtual_wires(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Virtual wire
+        """
+        return pulumi.get(self, "virtual_wires")
+
+    @virtual_wires.setter
+    def virtual_wires(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "virtual_wires", value)
+
+    @_builtins.property
     @pulumi.getter(name="zoneProtectionProfile")
     def zone_protection_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -69573,6 +70721,18 @@ class ZoneNetworkArgs:
     @zone_protection_profile.setter
     def zone_protection_profile(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "zone_protection_profile", value)
+
+
+if not MYPY:
+    class ZoneNetworkTunnelArgsDict(TypedDict):
+        pass
+elif False:
+    ZoneNetworkTunnelArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ZoneNetworkTunnelArgs:
+    def __init__(__self__):
+        pass
 
 
 if not MYPY:
@@ -70193,21 +71353,17 @@ class ZoneProtectionProfileFloodSctpInitRedArgs:
 
 if not MYPY:
     class ZoneProtectionProfileFloodTcpSynArgsDict(TypedDict):
-        activate_rate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-        """
-        alarm_rate: NotRequired[pulumi.Input[_builtins.int]]
-        """
-        When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
-        """
         enable: NotRequired[pulumi.Input[_builtins.bool]]
         """
         Enable protection against SYN floods?
         """
-        maximal_rate: NotRequired[pulumi.Input[_builtins.int]]
+        red: NotRequired[pulumi.Input['ZoneProtectionProfileFloodTcpSynRedArgsDict']]
         """
-        When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
+        Red
+        """
+        syn_cookies: NotRequired[pulumi.Input['ZoneProtectionProfileFloodTcpSynSynCookiesArgsDict']]
+        """
+        Syn cookies
         """
 elif False:
     ZoneProtectionProfileFloodTcpSynArgsDict: TypeAlias = Mapping[str, Any]
@@ -70215,48 +71371,20 @@ elif False:
 @pulumi.input_type
 class ZoneProtectionProfileFloodTcpSynArgs:
     def __init__(__self__, *,
-                 activate_rate: Optional[pulumi.Input[_builtins.int]] = None,
-                 alarm_rate: Optional[pulumi.Input[_builtins.int]] = None,
                  enable: Optional[pulumi.Input[_builtins.bool]] = None,
-                 maximal_rate: Optional[pulumi.Input[_builtins.int]] = None):
+                 red: Optional[pulumi.Input['ZoneProtectionProfileFloodTcpSynRedArgs']] = None,
+                 syn_cookies: Optional[pulumi.Input['ZoneProtectionProfileFloodTcpSynSynCookiesArgs']] = None):
         """
-        :param pulumi.Input[_builtins.int] activate_rate: When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-        :param pulumi.Input[_builtins.int] alarm_rate: When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
         :param pulumi.Input[_builtins.bool] enable: Enable protection against SYN floods?
-        :param pulumi.Input[_builtins.int] maximal_rate: When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
+        :param pulumi.Input['ZoneProtectionProfileFloodTcpSynRedArgs'] red: Red
+        :param pulumi.Input['ZoneProtectionProfileFloodTcpSynSynCookiesArgs'] syn_cookies: Syn cookies
         """
-        if activate_rate is not None:
-            pulumi.set(__self__, "activate_rate", activate_rate)
-        if alarm_rate is not None:
-            pulumi.set(__self__, "alarm_rate", alarm_rate)
         if enable is not None:
             pulumi.set(__self__, "enable", enable)
-        if maximal_rate is not None:
-            pulumi.set(__self__, "maximal_rate", maximal_rate)
-
-    @_builtins.property
-    @pulumi.getter(name="activateRate")
-    def activate_rate(self) -> Optional[pulumi.Input[_builtins.int]]:
-        """
-        When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
-        """
-        return pulumi.get(self, "activate_rate")
-
-    @activate_rate.setter
-    def activate_rate(self, value: Optional[pulumi.Input[_builtins.int]]):
-        pulumi.set(self, "activate_rate", value)
-
-    @_builtins.property
-    @pulumi.getter(name="alarmRate")
-    def alarm_rate(self) -> Optional[pulumi.Input[_builtins.int]]:
-        """
-        When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
-        """
-        return pulumi.get(self, "alarm_rate")
-
-    @alarm_rate.setter
-    def alarm_rate(self, value: Optional[pulumi.Input[_builtins.int]]):
-        pulumi.set(self, "alarm_rate", value)
+        if red is not None:
+            pulumi.set(__self__, "red", red)
+        if syn_cookies is not None:
+            pulumi.set(__self__, "syn_cookies", syn_cookies)
 
     @_builtins.property
     @pulumi.getter
@@ -70271,15 +71399,165 @@ class ZoneProtectionProfileFloodTcpSynArgs:
         pulumi.set(self, "enable", value)
 
     @_builtins.property
+    @pulumi.getter
+    def red(self) -> Optional[pulumi.Input['ZoneProtectionProfileFloodTcpSynRedArgs']]:
+        """
+        Red
+        """
+        return pulumi.get(self, "red")
+
+    @red.setter
+    def red(self, value: Optional[pulumi.Input['ZoneProtectionProfileFloodTcpSynRedArgs']]):
+        pulumi.set(self, "red", value)
+
+    @_builtins.property
+    @pulumi.getter(name="synCookies")
+    def syn_cookies(self) -> Optional[pulumi.Input['ZoneProtectionProfileFloodTcpSynSynCookiesArgs']]:
+        """
+        Syn cookies
+        """
+        return pulumi.get(self, "syn_cookies")
+
+    @syn_cookies.setter
+    def syn_cookies(self, value: Optional[pulumi.Input['ZoneProtectionProfileFloodTcpSynSynCookiesArgs']]):
+        pulumi.set(self, "syn_cookies", value)
+
+
+if not MYPY:
+    class ZoneProtectionProfileFloodTcpSynRedArgsDict(TypedDict):
+        activate_rate: pulumi.Input[_builtins.int]
+        """
+        When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+        """
+        alarm_rate: pulumi.Input[_builtins.int]
+        """
+        When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
+        """
+        maximal_rate: pulumi.Input[_builtins.int]
+        """
+        When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
+        """
+elif False:
+    ZoneProtectionProfileFloodTcpSynRedArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ZoneProtectionProfileFloodTcpSynRedArgs:
+    def __init__(__self__, *,
+                 activate_rate: pulumi.Input[_builtins.int],
+                 alarm_rate: pulumi.Input[_builtins.int],
+                 maximal_rate: pulumi.Input[_builtins.int]):
+        """
+        :param pulumi.Input[_builtins.int] activate_rate: When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+        :param pulumi.Input[_builtins.int] alarm_rate: When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
+        :param pulumi.Input[_builtins.int] maximal_rate: When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
+        """
+        pulumi.set(__self__, "activate_rate", activate_rate)
+        pulumi.set(__self__, "alarm_rate", alarm_rate)
+        pulumi.set(__self__, "maximal_rate", maximal_rate)
+
+    @_builtins.property
+    @pulumi.getter(name="activateRate")
+    def activate_rate(self) -> pulumi.Input[_builtins.int]:
+        """
+        When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+        """
+        return pulumi.get(self, "activate_rate")
+
+    @activate_rate.setter
+    def activate_rate(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "activate_rate", value)
+
+    @_builtins.property
+    @pulumi.getter(name="alarmRate")
+    def alarm_rate(self) -> pulumi.Input[_builtins.int]:
+        """
+        When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
+        """
+        return pulumi.get(self, "alarm_rate")
+
+    @alarm_rate.setter
+    def alarm_rate(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "alarm_rate", value)
+
+    @_builtins.property
     @pulumi.getter(name="maximalRate")
-    def maximal_rate(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def maximal_rate(self) -> pulumi.Input[_builtins.int]:
         """
         When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
         """
         return pulumi.get(self, "maximal_rate")
 
     @maximal_rate.setter
-    def maximal_rate(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def maximal_rate(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "maximal_rate", value)
+
+
+if not MYPY:
+    class ZoneProtectionProfileFloodTcpSynSynCookiesArgsDict(TypedDict):
+        activate_rate: pulumi.Input[_builtins.int]
+        """
+        When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+        """
+        alarm_rate: pulumi.Input[_builtins.int]
+        """
+        When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
+        """
+        maximal_rate: pulumi.Input[_builtins.int]
+        """
+        When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
+        """
+elif False:
+    ZoneProtectionProfileFloodTcpSynSynCookiesArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ZoneProtectionProfileFloodTcpSynSynCookiesArgs:
+    def __init__(__self__, *,
+                 activate_rate: pulumi.Input[_builtins.int],
+                 alarm_rate: pulumi.Input[_builtins.int],
+                 maximal_rate: pulumi.Input[_builtins.int]):
+        """
+        :param pulumi.Input[_builtins.int] activate_rate: When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+        :param pulumi.Input[_builtins.int] alarm_rate: When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
+        :param pulumi.Input[_builtins.int] maximal_rate: When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
+        """
+        pulumi.set(__self__, "activate_rate", activate_rate)
+        pulumi.set(__self__, "alarm_rate", alarm_rate)
+        pulumi.set(__self__, "maximal_rate", maximal_rate)
+
+    @_builtins.property
+    @pulumi.getter(name="activateRate")
+    def activate_rate(self) -> pulumi.Input[_builtins.int]:
+        """
+        When the flow exceeds the `activate_rate`` threshold, the firewall drops individual SYN packets randomly to restrict the flow.
+        """
+        return pulumi.get(self, "activate_rate")
+
+    @activate_rate.setter
+    def activate_rate(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "activate_rate", value)
+
+    @_builtins.property
+    @pulumi.getter(name="alarmRate")
+    def alarm_rate(self) -> pulumi.Input[_builtins.int]:
+        """
+        When the flow exceeds the `alert_rate`` threshold, an alarm is generated.
+        """
+        return pulumi.get(self, "alarm_rate")
+
+    @alarm_rate.setter
+    def alarm_rate(self, value: pulumi.Input[_builtins.int]):
+        pulumi.set(self, "alarm_rate", value)
+
+    @_builtins.property
+    @pulumi.getter(name="maximalRate")
+    def maximal_rate(self) -> pulumi.Input[_builtins.int]:
+        """
+        When the flow exceeds the `maximal_rate` threshold, 100% of incoming SYN packets are dropped.
+        """
+        return pulumi.get(self, "maximal_rate")
+
+    @maximal_rate.setter
+    def maximal_rate(self, value: pulumi.Input[_builtins.int]):
         pulumi.set(self, "maximal_rate", value)
 
 
@@ -71065,9 +72343,9 @@ if not MYPY:
         ether_type: pulumi.Input[_builtins.str]
         """
         Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-        * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-        * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-        * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+        * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+        * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+        * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
         """
         name: pulumi.Input[_builtins.str]
         """
@@ -71088,9 +72366,9 @@ class ZoneProtectionProfileNonIpProtocolProtocolArgs:
                  enable: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         :param pulumi.Input[_builtins.str] ether_type: Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-               * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-               * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-               * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+               * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+               * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+               * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
         :param pulumi.Input[_builtins.str] name: Enter the protocol name that corresponds to the Ethertype code you are adding to the list. The firewall does not verify that the protocol name matches the Ethertype code but the Ethertype code does determine the protocol filter.
         :param pulumi.Input[_builtins.bool] enable: Enable the Ethertype code on the list.
         """
@@ -71104,9 +72382,9 @@ class ZoneProtectionProfileNonIpProtocolProtocolArgs:
     def ether_type(self) -> pulumi.Input[_builtins.str]:
         """
         Enter an Ethertype code (protocol) preceded by 0x to indicate hexadecimal (range is 0x0000 to 0xFFFF). A list can have a maximum of 64 Ethertypes. Some sources of Ethertype codes are:
-        * [IEEE hexadecimal Ethertype](http://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
-        * [standards.ieee.org/develop/regauth/ethertype/eth.txt](http://standards-oui.ieee.org/ethertype/eth.txt)
-        * [http://www.cavebear.com/archive/cavebear/Ethernet/type.html](http://www.cavebear.com/archive/cavebear/Ethernet/type.html)
+        * [IEEE hexadecimal Ethertype](https://www.iana.org/assignments/ieee-802-numbers/ieee-802-numbers.xhtml)
+        * [standards.ieee.org/develop/regauth/ethertype/eth.txt](https://standards-oui.ieee.org/ethertype/eth.txt)
+        * [www.cavebear.com/archive/cavebear/Ethernet/type.html](https://www.cavebear.com/archive/cavebear/Ethernet/type.html)
         """
         return pulumi.get(self, "ether_type")
 
@@ -71244,13 +72522,21 @@ class ZoneProtectionProfileScanArgs:
 
 if not MYPY:
     class ZoneProtectionProfileScanActionArgsDict(TypedDict):
-        duration: NotRequired[pulumi.Input[_builtins.int]]
+        alert: NotRequired[pulumi.Input['ZoneProtectionProfileScanActionAlertArgsDict']]
         """
-        Duration
+        Alert
         """
-        track_by: NotRequired[pulumi.Input[_builtins.str]]
+        allow: NotRequired[pulumi.Input['ZoneProtectionProfileScanActionAllowArgsDict']]
         """
-        Track by
+        Allow
+        """
+        block: NotRequired[pulumi.Input['ZoneProtectionProfileScanActionBlockArgsDict']]
+        """
+        Block
+        """
+        block_ip: NotRequired[pulumi.Input['ZoneProtectionProfileScanActionBlockIpArgsDict']]
+        """
+        Block ip
         """
 elif False:
     ZoneProtectionProfileScanActionArgsDict: TypeAlias = Mapping[str, Any]
@@ -71258,39 +72544,157 @@ elif False:
 @pulumi.input_type
 class ZoneProtectionProfileScanActionArgs:
     def __init__(__self__, *,
-                 duration: Optional[pulumi.Input[_builtins.int]] = None,
-                 track_by: Optional[pulumi.Input[_builtins.str]] = None):
+                 alert: Optional[pulumi.Input['ZoneProtectionProfileScanActionAlertArgs']] = None,
+                 allow: Optional[pulumi.Input['ZoneProtectionProfileScanActionAllowArgs']] = None,
+                 block: Optional[pulumi.Input['ZoneProtectionProfileScanActionBlockArgs']] = None,
+                 block_ip: Optional[pulumi.Input['ZoneProtectionProfileScanActionBlockIpArgs']] = None):
+        """
+        :param pulumi.Input['ZoneProtectionProfileScanActionAlertArgs'] alert: Alert
+        :param pulumi.Input['ZoneProtectionProfileScanActionAllowArgs'] allow: Allow
+        :param pulumi.Input['ZoneProtectionProfileScanActionBlockArgs'] block: Block
+        :param pulumi.Input['ZoneProtectionProfileScanActionBlockIpArgs'] block_ip: Block ip
+        """
+        if alert is not None:
+            pulumi.set(__self__, "alert", alert)
+        if allow is not None:
+            pulumi.set(__self__, "allow", allow)
+        if block is not None:
+            pulumi.set(__self__, "block", block)
+        if block_ip is not None:
+            pulumi.set(__self__, "block_ip", block_ip)
+
+    @_builtins.property
+    @pulumi.getter
+    def alert(self) -> Optional[pulumi.Input['ZoneProtectionProfileScanActionAlertArgs']]:
+        """
+        Alert
+        """
+        return pulumi.get(self, "alert")
+
+    @alert.setter
+    def alert(self, value: Optional[pulumi.Input['ZoneProtectionProfileScanActionAlertArgs']]):
+        pulumi.set(self, "alert", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def allow(self) -> Optional[pulumi.Input['ZoneProtectionProfileScanActionAllowArgs']]:
+        """
+        Allow
+        """
+        return pulumi.get(self, "allow")
+
+    @allow.setter
+    def allow(self, value: Optional[pulumi.Input['ZoneProtectionProfileScanActionAllowArgs']]):
+        pulumi.set(self, "allow", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def block(self) -> Optional[pulumi.Input['ZoneProtectionProfileScanActionBlockArgs']]:
+        """
+        Block
+        """
+        return pulumi.get(self, "block")
+
+    @block.setter
+    def block(self, value: Optional[pulumi.Input['ZoneProtectionProfileScanActionBlockArgs']]):
+        pulumi.set(self, "block", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockIp")
+    def block_ip(self) -> Optional[pulumi.Input['ZoneProtectionProfileScanActionBlockIpArgs']]:
+        """
+        Block ip
+        """
+        return pulumi.get(self, "block_ip")
+
+    @block_ip.setter
+    def block_ip(self, value: Optional[pulumi.Input['ZoneProtectionProfileScanActionBlockIpArgs']]):
+        pulumi.set(self, "block_ip", value)
+
+
+if not MYPY:
+    class ZoneProtectionProfileScanActionAlertArgsDict(TypedDict):
+        pass
+elif False:
+    ZoneProtectionProfileScanActionAlertArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ZoneProtectionProfileScanActionAlertArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
+    class ZoneProtectionProfileScanActionAllowArgsDict(TypedDict):
+        pass
+elif False:
+    ZoneProtectionProfileScanActionAllowArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ZoneProtectionProfileScanActionAllowArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
+    class ZoneProtectionProfileScanActionBlockArgsDict(TypedDict):
+        pass
+elif False:
+    ZoneProtectionProfileScanActionBlockArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ZoneProtectionProfileScanActionBlockArgs:
+    def __init__(__self__):
+        pass
+
+
+if not MYPY:
+    class ZoneProtectionProfileScanActionBlockIpArgsDict(TypedDict):
+        duration: pulumi.Input[_builtins.int]
+        """
+        Duration
+        """
+        track_by: pulumi.Input[_builtins.str]
+        """
+        Track by
+        """
+elif False:
+    ZoneProtectionProfileScanActionBlockIpArgsDict: TypeAlias = Mapping[str, Any]
+
+@pulumi.input_type
+class ZoneProtectionProfileScanActionBlockIpArgs:
+    def __init__(__self__, *,
+                 duration: pulumi.Input[_builtins.int],
+                 track_by: pulumi.Input[_builtins.str]):
         """
         :param pulumi.Input[_builtins.int] duration: Duration
         :param pulumi.Input[_builtins.str] track_by: Track by
         """
-        if duration is not None:
-            pulumi.set(__self__, "duration", duration)
-        if track_by is not None:
-            pulumi.set(__self__, "track_by", track_by)
+        pulumi.set(__self__, "duration", duration)
+        pulumi.set(__self__, "track_by", track_by)
 
     @_builtins.property
     @pulumi.getter
-    def duration(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def duration(self) -> pulumi.Input[_builtins.int]:
         """
         Duration
         """
         return pulumi.get(self, "duration")
 
     @duration.setter
-    def duration(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def duration(self, value: pulumi.Input[_builtins.int]):
         pulumi.set(self, "duration", value)
 
     @_builtins.property
     @pulumi.getter(name="trackBy")
-    def track_by(self) -> Optional[pulumi.Input[_builtins.str]]:
+    def track_by(self) -> pulumi.Input[_builtins.str]:
         """
         Track by
         """
         return pulumi.get(self, "track_by")
 
     @track_by.setter
-    def track_by(self, value: Optional[pulumi.Input[_builtins.str]]):
+    def track_by(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "track_by", value)
 
 
@@ -71300,17 +72704,33 @@ if not MYPY:
         """
         A descriptive name for the address to exclude.
         """
+        ipv4: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Ipv4
+        """
+        ipv6: NotRequired[pulumi.Input[_builtins.str]]
+        """
+        Ipv6
+        """
 elif False:
     ZoneProtectionProfileScanWhiteListArgsDict: TypeAlias = Mapping[str, Any]
 
 @pulumi.input_type
 class ZoneProtectionProfileScanWhiteListArgs:
     def __init__(__self__, *,
-                 name: pulumi.Input[_builtins.str]):
+                 name: pulumi.Input[_builtins.str],
+                 ipv4: Optional[pulumi.Input[_builtins.str]] = None,
+                 ipv6: Optional[pulumi.Input[_builtins.str]] = None):
         """
         :param pulumi.Input[_builtins.str] name: A descriptive name for the address to exclude.
+        :param pulumi.Input[_builtins.str] ipv4: Ipv4
+        :param pulumi.Input[_builtins.str] ipv6: Ipv6
         """
         pulumi.set(__self__, "name", name)
+        if ipv4 is not None:
+            pulumi.set(__self__, "ipv4", ipv4)
+        if ipv6 is not None:
+            pulumi.set(__self__, "ipv6", ipv6)
 
     @_builtins.property
     @pulumi.getter
@@ -71323,6 +72743,30 @@ class ZoneProtectionProfileScanWhiteListArgs:
     @name.setter
     def name(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def ipv4(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Ipv4
+        """
+        return pulumi.get(self, "ipv4")
+
+    @ipv4.setter
+    def ipv4(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ipv4", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def ipv6(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Ipv6
+        """
+        return pulumi.get(self, "ipv6")
+
+    @ipv6.setter
+    def ipv6(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "ipv6", value)
 
 
 if not MYPY:

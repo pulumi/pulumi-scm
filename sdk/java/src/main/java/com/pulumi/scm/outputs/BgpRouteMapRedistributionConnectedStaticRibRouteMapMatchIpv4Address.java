@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address {
     /**
-     * @return Access list
+     * @return Connected Static BGP Rib Route maps ipv4 Access list
      * 
      */
     private @Nullable String accessList;
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Rib Route maps ipv4 Prefix list
      * 
      */
     private @Nullable String prefixList;
 
     private BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address() {}
     /**
-     * @return Access list
+     * @return Connected Static BGP Rib Route maps ipv4 Access list
      * 
      */
     public Optional<String> accessList() {
         return Optional.ofNullable(this.accessList);
     }
     /**
-     * @return Prefix list
+     * @return Connected Static BGP Rib Route maps ipv4 Prefix list
      * 
      */
     public Optional<String> prefixList() {

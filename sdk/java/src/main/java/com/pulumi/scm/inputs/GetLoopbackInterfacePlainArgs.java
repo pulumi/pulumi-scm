@@ -31,14 +31,14 @@ public final class GetLoopbackInterfacePlainArgs extends com.pulumi.resources.In
     }
 
     /**
-     * L3 sub-interface name
+     * Loopback Interface name
      * 
      */
     @Import(name="name")
     private @Nullable String name;
 
     /**
-     * @return L3 sub-interface name
+     * @return Loopback Interface name
      * 
      */
     public Optional<String> name() {
@@ -82,7 +82,7 @@ public final class GetLoopbackInterfacePlainArgs extends com.pulumi.resources.In
         }
 
         /**
-         * @param name L3 sub-interface name
+         * @param name Loopback Interface name
          * 
          * @return builder
          * 

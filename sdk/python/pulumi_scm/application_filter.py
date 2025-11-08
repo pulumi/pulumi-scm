@@ -784,6 +784,21 @@ class ApplicationFilter(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_application_filter1 = scm.ApplicationFilter("scm_application_filter_1",
+            folder="Shared",
+            name="scm_application_filter_1",
+            categories=["business-systems"],
+            risks=[1],
+            evasive=True,
+            tagging={
+                "no_tag": True,
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: Category
@@ -819,6 +834,21 @@ class ApplicationFilter(pulumi.CustomResource):
         ApplicationFilter resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_application_filter1 = scm.ApplicationFilter("scm_application_filter_1",
+            folder="Shared",
+            name="scm_application_filter_1",
+            categories=["business-systems"],
+            risks=[1],
+            evasive=True,
+            tagging={
+                "no_tag": True,
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param ApplicationFilterArgs args: The arguments to use to populate this resource's properties.

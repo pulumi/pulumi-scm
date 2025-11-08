@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Admin dist
         /// </summary>
-        public readonly double? AdminDist;
+        public readonly int? AdminDist;
         /// <summary>
         /// Bfd
         /// </summary>
@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Metric
         /// </summary>
-        public readonly double? Metric;
+        public readonly int? Metric;
         /// <summary>
         /// Name
         /// </summary>
@@ -52,7 +52,7 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private LogicalRouterVrfRoutingTableIpStaticRoute(
-            double? adminDist,
+            int? adminDist,
 
             Outputs.LogicalRouterVrfRoutingTableIpStaticRouteBfd? bfd,
 
@@ -60,7 +60,7 @@ namespace Pulumi.Scm.Outputs
 
             string? @interface,
 
-            double? metric,
+            int? metric,
 
             string name,
 

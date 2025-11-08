@@ -27,13 +27,13 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
         ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get a subset of application groups.
         ///     var paginatedExample = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -70,13 +70,13 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
         ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get a subset of application groups.
         ///     var paginatedExample = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });
@@ -113,13 +113,13 @@ namespace Pulumi.Scm
         ///     // 1. Use a single data block to fetch ALL application groups in the "Shared" folder.
         ///     var allShared = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///     });
         /// 
         ///     // Example of using pagination to get a subset of application groups.
         ///     var paginatedExample = Scm.GetApplicationGroupList.Invoke(new()
         ///     {
-        ///         Folder = "Shared",
+        ///         Folder = "All",
         ///         Limit = 5,
         ///         Offset = 0,
         ///     });

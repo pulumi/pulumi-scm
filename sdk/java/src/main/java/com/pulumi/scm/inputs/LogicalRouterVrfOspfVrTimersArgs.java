@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,13 +20,13 @@ public final class LogicalRouterVrfOspfVrTimersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="lsaInterval")
-    private @Nullable Output<Double> lsaInterval;
+    private @Nullable Output<Integer> lsaInterval;
 
     /**
      * @return Lsa interval
      * 
      */
-    public Optional<Output<Double>> lsaInterval() {
+    public Optional<Output<Integer>> lsaInterval() {
         return Optional.ofNullable(this.lsaInterval);
     }
 
@@ -35,13 +35,13 @@ public final class LogicalRouterVrfOspfVrTimersArgs extends com.pulumi.resources
      * 
      */
     @Import(name="spfCalculationDelay")
-    private @Nullable Output<Double> spfCalculationDelay;
+    private @Nullable Output<Integer> spfCalculationDelay;
 
     /**
      * @return Spf calculation delay
      * 
      */
-    public Optional<Output<Double>> spfCalculationDelay() {
+    public Optional<Output<Integer>> spfCalculationDelay() {
         return Optional.ofNullable(this.spfCalculationDelay);
     }
 
@@ -76,7 +76,7 @@ public final class LogicalRouterVrfOspfVrTimersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder lsaInterval(@Nullable Output<Double> lsaInterval) {
+        public Builder lsaInterval(@Nullable Output<Integer> lsaInterval) {
             $.lsaInterval = lsaInterval;
             return this;
         }
@@ -87,7 +87,7 @@ public final class LogicalRouterVrfOspfVrTimersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder lsaInterval(Double lsaInterval) {
+        public Builder lsaInterval(Integer lsaInterval) {
             return lsaInterval(Output.of(lsaInterval));
         }
 
@@ -97,7 +97,7 @@ public final class LogicalRouterVrfOspfVrTimersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder spfCalculationDelay(@Nullable Output<Double> spfCalculationDelay) {
+        public Builder spfCalculationDelay(@Nullable Output<Integer> spfCalculationDelay) {
             $.spfCalculationDelay = spfCalculationDelay;
             return this;
         }
@@ -108,7 +108,7 @@ public final class LogicalRouterVrfOspfVrTimersArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder spfCalculationDelay(Double spfCalculationDelay) {
+        public Builder spfCalculationDelay(Integer spfCalculationDelay) {
             return spfCalculationDelay(Output.of(spfCalculationDelay));
         }
 

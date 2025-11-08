@@ -15,7 +15,7 @@ import com.pulumi.scm.outputs.GetLogicalRouterVrfRibFilter;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfRip;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfRoutingTable;
 import com.pulumi.scm.outputs.GetLogicalRouterVrfVrAdminDists;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -41,7 +41,7 @@ public final class GetLogicalRouterVrf {
      * @return Global vrid
      * 
      */
-    private Double globalVrid;
+    private Integer globalVrid;
     /**
      * @return Interface
      * 
@@ -124,7 +124,7 @@ public final class GetLogicalRouterVrf {
      * @return Global vrid
      * 
      */
-    public Double globalVrid() {
+    public Integer globalVrid() {
         return this.globalVrid;
     }
     /**
@@ -217,7 +217,7 @@ public final class GetLogicalRouterVrf {
         private GetLogicalRouterVrfAdminDists adminDists;
         private GetLogicalRouterVrfBgp bgp;
         private GetLogicalRouterVrfEcmp ecmp;
-        private Double globalVrid;
+        private Integer globalVrid;
         private List<String> interfaces;
         private GetLogicalRouterVrfMulticast multicast;
         private String name;
@@ -274,7 +274,7 @@ public final class GetLogicalRouterVrf {
             return this;
         }
         @CustomType.Setter
-        public Builder globalVrid(Double globalVrid) {
+        public Builder globalVrid(Integer globalVrid) {
             if (globalVrid == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrf", "globalVrid");
             }

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Interface
+        /// Connected Static BGP Rib Route maps Interface
         /// </summary>
         [Input("interface")]
         public Input<string>? Interface { get; set; }
@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args>? Ipv4 { get; set; }
 
         /// <summary>
-        /// Metric
+        /// Connected Static BGP Rib Route maps Metric
         /// </summary>
         [Input("metric")]
         public Input<int>? Metric { get; set; }

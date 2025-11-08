@@ -4,6 +4,7 @@
 package com.pulumi.scm.inputs;
 
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -91,6 +92,21 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
     }
 
     /**
+     * The position of a security rule
+     * 
+     */
+    @Import(name="position", required=true)
+    private String position;
+
+    /**
+     * @return The position of a security rule
+     * 
+     */
+    public String position() {
+        return this.position;
+    }
+
+    /**
      * The snippet of the item.
      * 
      */
@@ -113,6 +129,7 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.position = $.position;
         this.snippet = $.snippet;
     }
 
@@ -190,6 +207,17 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         /**
+         * @param position The position of a security rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder position(String position) {
+            $.position = position;
+            return this;
+        }
+
+        /**
          * @param snippet The snippet of the item.
          * 
          * @return builder
@@ -201,6 +229,9 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         public GetDecryptionRuleListPlainArgs build() {
+            if ($.position == null) {
+                throw new MissingRequiredPropertyException("GetDecryptionRuleListPlainArgs", "position");
+            }
             return $;
         }
     }

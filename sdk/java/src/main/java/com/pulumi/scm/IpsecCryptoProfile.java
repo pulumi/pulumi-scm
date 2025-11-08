@@ -23,6 +23,57 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.IpsecCryptoProfile;
+ * import com.pulumi.scm.IpsecCryptoProfileArgs;
+ * import com.pulumi.scm.inputs.IpsecCryptoProfileEspArgs;
+ * import com.pulumi.scm.inputs.IpsecCryptoProfileLifetimeArgs;
+ * import com.pulumi.scm.inputs.IpsecCryptoProfileLifesizeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // The resource block defines a new IPsec Crypto Profile.
+ *         var scmIpsecCryptoProfile2 = new IpsecCryptoProfile("scmIpsecCryptoProfile2", IpsecCryptoProfileArgs.builder()
+ *             .name("scm_ipsec_crypto_profile_2")
+ *             .folder("Prisma Access")
+ *             .esp(IpsecCryptoProfileEspArgs.builder()
+ *                 .authentications(                
+ *                     "sha256",
+ *                     "sha384")
+ *                 .encryptions(                
+ *                     "aes-256-gcm",
+ *                     "aes-128-cbc")
+ *                 .build())
+ *             .dhGroup("group14")
+ *             .lifetime(IpsecCryptoProfileLifetimeArgs.builder()
+ *                 .hours(1)
+ *                 .build())
+ *             .lifesize(IpsecCryptoProfileLifesizeArgs.builder()
+ *                 .gb(10)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/ipsecCryptoProfile:IpsecCryptoProfile")
 public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {

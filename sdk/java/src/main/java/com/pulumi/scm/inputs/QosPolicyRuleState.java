@@ -123,6 +123,21 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
     }
 
     /**
+     * Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    @Import(name="relativePosition")
+    private @Nullable Output<String> relativePosition;
+
+    /**
+     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+     * 
+     */
+    public Optional<Output<String>> relativePosition() {
+        return Optional.ofNullable(this.relativePosition);
+    }
+
+    /**
      * Schedule
      * 
      */
@@ -152,6 +167,21 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         return Optional.ofNullable(this.snippet);
     }
 
+    /**
+     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    @Import(name="targetRule")
+    private @Nullable Output<String> targetRule;
+
+    /**
+     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+     * 
+     */
+    public Optional<Output<String>> targetRule() {
+        return Optional.ofNullable(this.targetRule);
+    }
+
     @Import(name="tfid")
     private @Nullable Output<String> tfid;
 
@@ -169,8 +199,10 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         this.folder = $.folder;
         this.name = $.name;
         this.position = $.position;
+        this.relativePosition = $.relativePosition;
         this.schedule = $.schedule;
         this.snippet = $.snippet;
+        this.targetRule = $.targetRule;
         this.tfid = $.tfid;
     }
 
@@ -340,6 +372,27 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
         }
 
         /**
+         * @param relativePosition Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativePosition(@Nullable Output<String> relativePosition) {
+            $.relativePosition = relativePosition;
+            return this;
+        }
+
+        /**
+         * @param relativePosition Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder relativePosition(String relativePosition) {
+            return relativePosition(Output.of(relativePosition));
+        }
+
+        /**
          * @param schedule Schedule
          * 
          * @return builder
@@ -379,6 +432,27 @@ public final class QosPolicyRuleState extends com.pulumi.resources.ResourceArgs 
          */
         public Builder snippet(String snippet) {
             return snippet(Output.of(snippet));
+        }
+
+        /**
+         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetRule(@Nullable Output<String> targetRule) {
+            $.targetRule = targetRule;
+            return this;
+        }
+
+        /**
+         * @param targetRule The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder targetRule(String targetRule) {
+            return targetRule(Output.of(targetRule));
         }
 
         public Builder tfid(@Nullable Output<String> tfid) {

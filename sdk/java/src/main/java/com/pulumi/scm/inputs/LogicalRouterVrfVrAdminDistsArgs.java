@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,13 +20,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ebgp")
-    private @Nullable Output<Double> ebgp;
+    private @Nullable Output<Integer> ebgp;
 
     /**
      * @return Ebgp
      * 
      */
-    public Optional<Output<Double>> ebgp() {
+    public Optional<Output<Integer>> ebgp() {
         return Optional.ofNullable(this.ebgp);
     }
 
@@ -35,13 +35,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ibgp")
-    private @Nullable Output<Double> ibgp;
+    private @Nullable Output<Integer> ibgp;
 
     /**
      * @return Ibgp
      * 
      */
-    public Optional<Output<Double>> ibgp() {
+    public Optional<Output<Integer>> ibgp() {
         return Optional.ofNullable(this.ibgp);
     }
 
@@ -50,13 +50,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ospfExt")
-    private @Nullable Output<Double> ospfExt;
+    private @Nullable Output<Integer> ospfExt;
 
     /**
      * @return Ospf ext
      * 
      */
-    public Optional<Output<Double>> ospfExt() {
+    public Optional<Output<Integer>> ospfExt() {
         return Optional.ofNullable(this.ospfExt);
     }
 
@@ -65,13 +65,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ospfInt")
-    private @Nullable Output<Double> ospfInt;
+    private @Nullable Output<Integer> ospfInt;
 
     /**
      * @return Ospf int
      * 
      */
-    public Optional<Output<Double>> ospfInt() {
+    public Optional<Output<Integer>> ospfInt() {
         return Optional.ofNullable(this.ospfInt);
     }
 
@@ -80,13 +80,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ospfv3Ext")
-    private @Nullable Output<Double> ospfv3Ext;
+    private @Nullable Output<Integer> ospfv3Ext;
 
     /**
      * @return Ospfv3 ext
      * 
      */
-    public Optional<Output<Double>> ospfv3Ext() {
+    public Optional<Output<Integer>> ospfv3Ext() {
         return Optional.ofNullable(this.ospfv3Ext);
     }
 
@@ -95,13 +95,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="ospfv3Int")
-    private @Nullable Output<Double> ospfv3Int;
+    private @Nullable Output<Integer> ospfv3Int;
 
     /**
      * @return Ospfv3 int
      * 
      */
-    public Optional<Output<Double>> ospfv3Int() {
+    public Optional<Output<Integer>> ospfv3Int() {
         return Optional.ofNullable(this.ospfv3Int);
     }
 
@@ -110,13 +110,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="rip")
-    private @Nullable Output<Double> rip;
+    private @Nullable Output<Integer> rip;
 
     /**
      * @return Rip
      * 
      */
-    public Optional<Output<Double>> rip() {
+    public Optional<Output<Integer>> rip() {
         return Optional.ofNullable(this.rip);
     }
 
@@ -125,13 +125,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="static")
-    private @Nullable Output<Double> static_;
+    private @Nullable Output<Integer> static_;
 
     /**
      * @return Static
      * 
      */
-    public Optional<Output<Double>> static_() {
+    public Optional<Output<Integer>> static_() {
         return Optional.ofNullable(this.static_);
     }
 
@@ -140,13 +140,13 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
      * 
      */
     @Import(name="staticIpv6")
-    private @Nullable Output<Double> staticIpv6;
+    private @Nullable Output<Integer> staticIpv6;
 
     /**
      * @return Static ipv6
      * 
      */
-    public Optional<Output<Double>> staticIpv6() {
+    public Optional<Output<Integer>> staticIpv6() {
         return Optional.ofNullable(this.staticIpv6);
     }
 
@@ -188,7 +188,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ebgp(@Nullable Output<Double> ebgp) {
+        public Builder ebgp(@Nullable Output<Integer> ebgp) {
             $.ebgp = ebgp;
             return this;
         }
@@ -199,7 +199,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ebgp(Double ebgp) {
+        public Builder ebgp(Integer ebgp) {
             return ebgp(Output.of(ebgp));
         }
 
@@ -209,7 +209,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ibgp(@Nullable Output<Double> ibgp) {
+        public Builder ibgp(@Nullable Output<Integer> ibgp) {
             $.ibgp = ibgp;
             return this;
         }
@@ -220,7 +220,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ibgp(Double ibgp) {
+        public Builder ibgp(Integer ibgp) {
             return ibgp(Output.of(ibgp));
         }
 
@@ -230,7 +230,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfExt(@Nullable Output<Double> ospfExt) {
+        public Builder ospfExt(@Nullable Output<Integer> ospfExt) {
             $.ospfExt = ospfExt;
             return this;
         }
@@ -241,7 +241,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfExt(Double ospfExt) {
+        public Builder ospfExt(Integer ospfExt) {
             return ospfExt(Output.of(ospfExt));
         }
 
@@ -251,7 +251,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfInt(@Nullable Output<Double> ospfInt) {
+        public Builder ospfInt(@Nullable Output<Integer> ospfInt) {
             $.ospfInt = ospfInt;
             return this;
         }
@@ -262,7 +262,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfInt(Double ospfInt) {
+        public Builder ospfInt(Integer ospfInt) {
             return ospfInt(Output.of(ospfInt));
         }
 
@@ -272,7 +272,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfv3Ext(@Nullable Output<Double> ospfv3Ext) {
+        public Builder ospfv3Ext(@Nullable Output<Integer> ospfv3Ext) {
             $.ospfv3Ext = ospfv3Ext;
             return this;
         }
@@ -283,7 +283,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfv3Ext(Double ospfv3Ext) {
+        public Builder ospfv3Ext(Integer ospfv3Ext) {
             return ospfv3Ext(Output.of(ospfv3Ext));
         }
 
@@ -293,7 +293,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfv3Int(@Nullable Output<Double> ospfv3Int) {
+        public Builder ospfv3Int(@Nullable Output<Integer> ospfv3Int) {
             $.ospfv3Int = ospfv3Int;
             return this;
         }
@@ -304,7 +304,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder ospfv3Int(Double ospfv3Int) {
+        public Builder ospfv3Int(Integer ospfv3Int) {
             return ospfv3Int(Output.of(ospfv3Int));
         }
 
@@ -314,7 +314,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder rip(@Nullable Output<Double> rip) {
+        public Builder rip(@Nullable Output<Integer> rip) {
             $.rip = rip;
             return this;
         }
@@ -325,7 +325,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder rip(Double rip) {
+        public Builder rip(Integer rip) {
             return rip(Output.of(rip));
         }
 
@@ -335,7 +335,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder static_(@Nullable Output<Double> static_) {
+        public Builder static_(@Nullable Output<Integer> static_) {
             $.static_ = static_;
             return this;
         }
@@ -346,7 +346,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder static_(Double static_) {
+        public Builder static_(Integer static_) {
             return static_(Output.of(static_));
         }
 
@@ -356,7 +356,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder staticIpv6(@Nullable Output<Double> staticIpv6) {
+        public Builder staticIpv6(@Nullable Output<Integer> staticIpv6) {
             $.staticIpv6 = staticIpv6;
             return this;
         }
@@ -367,7 +367,7 @@ public final class LogicalRouterVrfVrAdminDistsArgs extends com.pulumi.resources
          * @return builder
          * 
          */
-        public Builder staticIpv6(Double staticIpv6) {
+        public Builder staticIpv6(Integer staticIpv6) {
             return staticIpv6(Output.of(staticIpv6));
         }
 

@@ -14,17 +14,17 @@ namespace Pulumi.Scm.Outputs
     public sealed class SdwanTrafficDistributionProfileLinkTag
     {
         /// <summary>
-        /// Name
+        /// Link-Tag used for identifying a set of interfaces
         /// </summary>
-        public readonly string? Name;
+        public readonly string Name;
         /// <summary>
-        /// Weight
+        /// Weight (percentage) (only used when `traffic-distribution` is `Weighted Session Distribution`)
         /// </summary>
         public readonly int? Weight;
 
         [OutputConstructor]
         private SdwanTrafficDistributionProfileLinkTag(
-            string? name,
+            string name,
 
             int? weight)
         {

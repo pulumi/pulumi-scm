@@ -6,7 +6,6 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.TrafficSteeringRuleActionForwardArgs;
-import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -31,26 +30,10 @@ public final class TrafficSteeringRuleActionArgs extends com.pulumi.resources.Re
         return Optional.ofNullable(this.forward);
     }
 
-    /**
-     * No pbf
-     * 
-     */
-    @Import(name="noPbf")
-    private @Nullable Output<String> noPbf;
-
-    /**
-     * @return No pbf
-     * 
-     */
-    public Optional<Output<String>> noPbf() {
-        return Optional.ofNullable(this.noPbf);
-    }
-
     private TrafficSteeringRuleActionArgs() {}
 
     private TrafficSteeringRuleActionArgs(TrafficSteeringRuleActionArgs $) {
         this.forward = $.forward;
-        this.noPbf = $.noPbf;
     }
 
     public static Builder builder() {
@@ -90,27 +73,6 @@ public final class TrafficSteeringRuleActionArgs extends com.pulumi.resources.Re
          */
         public Builder forward(TrafficSteeringRuleActionForwardArgs forward) {
             return forward(Output.of(forward));
-        }
-
-        /**
-         * @param noPbf No pbf
-         * 
-         * @return builder
-         * 
-         */
-        public Builder noPbf(@Nullable Output<String> noPbf) {
-            $.noPbf = noPbf;
-            return this;
-        }
-
-        /**
-         * @param noPbf No pbf
-         * 
-         * @return builder
-         * 
-         */
-        public Builder noPbf(String noPbf) {
-            return noPbf(Output.of(noPbf));
         }
 
         public TrafficSteeringRuleActionArgs build() {

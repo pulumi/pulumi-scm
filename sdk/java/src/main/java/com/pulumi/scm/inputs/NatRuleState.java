@@ -5,10 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.NatRuleDnsRewriteArgs;
+import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
+import com.pulumi.scm.inputs.NatRuleDynamicDestinationTranslationArgs;
 import com.pulumi.scm.inputs.NatRuleSourceTranslationArgs;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -48,6 +48,21 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
      */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
+    }
+
+    /**
+     * Destination translation
+     * 
+     */
+    @Import(name="destinationTranslation")
+    private @Nullable Output<NatRuleDestinationTranslationArgs> destinationTranslation;
+
+    /**
+     * @return Destination translation
+     * 
+     */
+    public Optional<Output<NatRuleDestinationTranslationArgs>> destinationTranslation() {
+        return Optional.ofNullable(this.destinationTranslation);
     }
 
     /**
@@ -96,33 +111,18 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Distribution method
+     * Dynamic destination translation
      * 
      */
-    @Import(name="distribution")
-    private @Nullable Output<String> distribution;
+    @Import(name="dynamicDestinationTranslation")
+    private @Nullable Output<NatRuleDynamicDestinationTranslationArgs> dynamicDestinationTranslation;
 
     /**
-     * @return Distribution method
+     * @return Dynamic destination translation
      * 
      */
-    public Optional<Output<String>> distribution() {
-        return Optional.ofNullable(this.distribution);
-    }
-
-    /**
-     * DNS rewrite
-     * 
-     */
-    @Import(name="dnsRewrite")
-    private @Nullable Output<NatRuleDnsRewriteArgs> dnsRewrite;
-
-    /**
-     * @return DNS rewrite
-     * 
-     */
-    public Optional<Output<NatRuleDnsRewriteArgs>> dnsRewrite() {
-        return Optional.ofNullable(this.dnsRewrite);
+    public Optional<Output<NatRuleDynamicDestinationTranslationArgs>> dynamicDestinationTranslation() {
+        return Optional.ofNullable(this.dynamicDestinationTranslation);
     }
 
     /**
@@ -312,46 +312,16 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.tos);
     }
 
-    /**
-     * Translated destination IP address
-     * 
-     */
-    @Import(name="translatedAddressSingle")
-    private @Nullable Output<String> translatedAddressSingle;
-
-    /**
-     * @return Translated destination IP address
-     * 
-     */
-    public Optional<Output<String>> translatedAddressSingle() {
-        return Optional.ofNullable(this.translatedAddressSingle);
-    }
-
-    /**
-     * Translated destination port
-     * 
-     */
-    @Import(name="translatedPort")
-    private @Nullable Output<Integer> translatedPort;
-
-    /**
-     * @return Translated destination port
-     * 
-     */
-    public Optional<Output<Integer>> translatedPort() {
-        return Optional.ofNullable(this.translatedPort);
-    }
-
     private NatRuleState() {}
 
     private NatRuleState(NatRuleState $) {
         this.activeActiveDeviceBinding = $.activeActiveDeviceBinding;
         this.description = $.description;
+        this.destinationTranslation = $.destinationTranslation;
         this.destinations = $.destinations;
         this.device = $.device;
         this.disabled = $.disabled;
-        this.distribution = $.distribution;
-        this.dnsRewrite = $.dnsRewrite;
+        this.dynamicDestinationTranslation = $.dynamicDestinationTranslation;
         this.folder = $.folder;
         this.froms = $.froms;
         this.name = $.name;
@@ -365,8 +335,6 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         this.tfid = $.tfid;
         this.toInterface = $.toInterface;
         this.tos = $.tos;
-        this.translatedAddressSingle = $.translatedAddressSingle;
-        this.translatedPort = $.translatedPort;
     }
 
     public static Builder builder() {
@@ -427,6 +395,27 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder description(String description) {
             return description(Output.of(description));
+        }
+
+        /**
+         * @param destinationTranslation Destination translation
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationTranslation(@Nullable Output<NatRuleDestinationTranslationArgs> destinationTranslation) {
+            $.destinationTranslation = destinationTranslation;
+            return this;
+        }
+
+        /**
+         * @param destinationTranslation Destination translation
+         * 
+         * @return builder
+         * 
+         */
+        public Builder destinationTranslation(NatRuleDestinationTranslationArgs destinationTranslation) {
+            return destinationTranslation(Output.of(destinationTranslation));
         }
 
         /**
@@ -503,45 +492,24 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param distribution Distribution method
+         * @param dynamicDestinationTranslation Dynamic destination translation
          * 
          * @return builder
          * 
          */
-        public Builder distribution(@Nullable Output<String> distribution) {
-            $.distribution = distribution;
+        public Builder dynamicDestinationTranslation(@Nullable Output<NatRuleDynamicDestinationTranslationArgs> dynamicDestinationTranslation) {
+            $.dynamicDestinationTranslation = dynamicDestinationTranslation;
             return this;
         }
 
         /**
-         * @param distribution Distribution method
+         * @param dynamicDestinationTranslation Dynamic destination translation
          * 
          * @return builder
          * 
          */
-        public Builder distribution(String distribution) {
-            return distribution(Output.of(distribution));
-        }
-
-        /**
-         * @param dnsRewrite DNS rewrite
-         * 
-         * @return builder
-         * 
-         */
-        public Builder dnsRewrite(@Nullable Output<NatRuleDnsRewriteArgs> dnsRewrite) {
-            $.dnsRewrite = dnsRewrite;
-            return this;
-        }
-
-        /**
-         * @param dnsRewrite DNS rewrite
-         * 
-         * @return builder
-         * 
-         */
-        public Builder dnsRewrite(NatRuleDnsRewriteArgs dnsRewrite) {
-            return dnsRewrite(Output.of(dnsRewrite));
+        public Builder dynamicDestinationTranslation(NatRuleDynamicDestinationTranslationArgs dynamicDestinationTranslation) {
+            return dynamicDestinationTranslation(Output.of(dynamicDestinationTranslation));
         }
 
         /**
@@ -843,48 +811,6 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
          */
         public Builder tos(String... tos) {
             return tos(List.of(tos));
-        }
-
-        /**
-         * @param translatedAddressSingle Translated destination IP address
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedAddressSingle(@Nullable Output<String> translatedAddressSingle) {
-            $.translatedAddressSingle = translatedAddressSingle;
-            return this;
-        }
-
-        /**
-         * @param translatedAddressSingle Translated destination IP address
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedAddressSingle(String translatedAddressSingle) {
-            return translatedAddressSingle(Output.of(translatedAddressSingle));
-        }
-
-        /**
-         * @param translatedPort Translated destination port
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedPort(@Nullable Output<Integer> translatedPort) {
-            $.translatedPort = translatedPort;
-            return this;
-        }
-
-        /**
-         * @param translatedPort Translated destination port
-         * 
-         * @return builder
-         * 
-         */
-        public Builder translatedPort(Integer translatedPort) {
-            return translatedPort(Output.of(translatedPort));
         }
 
         public NatRuleState build() {

@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.LogicalRouterVrfMulticastStaticRouteNexthop;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -38,7 +38,7 @@ public final class LogicalRouterVrfMulticastStaticRoute {
      * @return Preference
      * 
      */
-    private @Nullable Double preference;
+    private @Nullable Integer preference;
 
     private LogicalRouterVrfMulticastStaticRoute() {}
     /**
@@ -73,7 +73,7 @@ public final class LogicalRouterVrfMulticastStaticRoute {
      * @return Preference
      * 
      */
-    public Optional<Double> preference() {
+    public Optional<Integer> preference() {
         return Optional.ofNullable(this.preference);
     }
 
@@ -90,7 +90,7 @@ public final class LogicalRouterVrfMulticastStaticRoute {
         private @Nullable String interface_;
         private String name;
         private @Nullable LogicalRouterVrfMulticastStaticRouteNexthop nexthop;
-        private @Nullable Double preference;
+        private @Nullable Integer preference;
         public Builder() {}
         public Builder(LogicalRouterVrfMulticastStaticRoute defaults) {
     	      Objects.requireNonNull(defaults);
@@ -128,7 +128,7 @@ public final class LogicalRouterVrfMulticastStaticRoute {
             return this;
         }
         @CustomType.Setter
-        public Builder preference(@Nullable Double preference) {
+        public Builder preference(@Nullable Integer preference) {
 
             this.preference = preference;
             return this;

@@ -22,7 +22,7 @@ class AppOverrideRuleArgs:
                  application: pulumi.Input[_builtins.str],
                  destinations: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  froms: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 port: pulumi.Input[_builtins.int],
+                 port: pulumi.Input[_builtins.str],
                  protocol: pulumi.Input[_builtins.str],
                  sources: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  tos: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
@@ -34,14 +34,17 @@ class AppOverrideRuleArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
+                 position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AppOverrideRule resource.
         :param pulumi.Input[_builtins.str] application: Application
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: From
-        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] port: Port
         :param pulumi.Input[_builtins.str] protocol: Protocol
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
@@ -53,8 +56,11 @@ class AppOverrideRuleArgs:
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
         :param pulumi.Input[_builtins.bool] negate_source: Negate source
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         """
         pulumi.set(__self__, "application", application)
         pulumi.set(__self__, "destinations", destinations)
@@ -79,10 +85,16 @@ class AppOverrideRuleArgs:
             pulumi.set(__self__, "negate_destination", negate_destination)
         if negate_source is not None:
             pulumi.set(__self__, "negate_source", negate_source)
+        if position is not None:
+            pulumi.set(__self__, "position", position)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
 
     @_builtins.property
     @pulumi.getter
@@ -122,14 +134,14 @@ class AppOverrideRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> pulumi.Input[_builtins.int]:
+    def port(self) -> pulumi.Input[_builtins.str]:
         """
         Port
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: pulumi.Input[_builtins.int]):
+    def port(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "port", value)
 
     @_builtins.property
@@ -266,6 +278,30 @@ class AppOverrideRuleArgs:
 
     @_builtins.property
     @pulumi.getter
+    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The position of a security rule
+        """
+        return pulumi.get(self, "position")
+
+    @position.setter
+    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "position", value)
+
+    @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
+    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
@@ -288,6 +324,18 @@ class AppOverrideRuleArgs:
     def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
 
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
 
 @pulumi.input_type
 class _AppOverrideRuleState:
@@ -303,11 +351,14 @@ class _AppOverrideRuleState:
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
+                 port: Optional[pulumi.Input[_builtins.str]] = None,
+                 position: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
@@ -323,11 +374,14 @@ class _AppOverrideRuleState:
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
         :param pulumi.Input[_builtins.bool] negate_source: Negate source
-        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] port: Port
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[_builtins.str] protocol: Protocol
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
         """
         if application is not None:
@@ -354,14 +408,20 @@ class _AppOverrideRuleState:
             pulumi.set(__self__, "negate_source", negate_source)
         if port is not None:
             pulumi.set(__self__, "port", port)
+        if position is not None:
+            pulumi.set(__self__, "position", position)
         if protocol is not None:
             pulumi.set(__self__, "protocol", protocol)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if sources is not None:
             pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
         if tos is not None:
@@ -501,15 +561,27 @@ class _AppOverrideRuleState:
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def port(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Port
         """
         return pulumi.get(self, "port")
 
     @port.setter
-    def port(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def port(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "port", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The position of a security rule
+        """
+        return pulumi.get(self, "position")
+
+    @position.setter
+    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "position", value)
 
     @_builtins.property
     @pulumi.getter
@@ -522,6 +594,18 @@ class _AppOverrideRuleState:
     @protocol.setter
     def protocol(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "protocol", value)
+
+    @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
 
     @_builtins.property
     @pulumi.getter
@@ -558,6 +642,18 @@ class _AppOverrideRuleState:
     @tags.setter
     def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
+
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
 
     @_builtins.property
     @pulumi.getter
@@ -598,15 +694,101 @@ class AppOverrideRule(pulumi.CustomResource):
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
+                 port: Optional[pulumi.Input[_builtins.str]] = None,
+                 position: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         AppOverrideRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- 1. TAG Resource ---
+        app_override_position_tag = scm.Tag("app_override_position_tag",
+            name="app-override-position-tag_1",
+            folder="All",
+            color="Orange")
+        # --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
+        anchor_app_override = scm.AppOverrideRule("anchor_app_override",
+            name="anchor-app-override-rule",
+            description="Base rule for testing 'before' and 'after' positioning. Updating",
+            folder="All",
+            position="pre",
+            application="ssl",
+            protocol="tcp",
+            port="112",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            tags=[app_override_position_tag.name])
+        # --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+        rule_top_app_override = scm.AppOverrideRule("rule_top_app_override",
+            name="top-absolute-app-override",
+            description="Placed at the very TOP of the App Override rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["untrust"],
+            tos=["trust"],
+            sources=["any"],
+            destinations=["any"])
+        rule_bottom_app_override = scm.AppOverrideRule("rule_bottom_app_override",
+            name="bottom-absolute-app-override",
+            description="Placed at the very BOTTOM of the App Override rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"])
+        #--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+        rule_before_anchor_override = scm.AppOverrideRule("rule_before_anchor_override",
+            name="before-anchor-app-override",
+            description="Positioned immediately BEFORE the anchor-app-override-rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_app_override.id,
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"])
+        rule_after_anchor_override = scm.AppOverrideRule("rule_after_anchor_override",
+            name="after-anchor-app-override",
+            description="Positioned immediately AFTER the anchor-app-override-rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_app_override.id,
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["untrust"],
+            tos=["trust"],
+            sources=["any"],
+            destinations=["any"])
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -621,11 +803,14 @@ class AppOverrideRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
         :param pulumi.Input[_builtins.bool] negate_source: Negate source
-        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] port: Port
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[_builtins.str] protocol: Protocol
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
         """
         ...
@@ -636,6 +821,89 @@ class AppOverrideRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         AppOverrideRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- 1. TAG Resource ---
+        app_override_position_tag = scm.Tag("app_override_position_tag",
+            name="app-override-position-tag_1",
+            folder="All",
+            color="Orange")
+        # --- 2. ANCHOR RULE (Used for relative positioning by other rules) ---
+        anchor_app_override = scm.AppOverrideRule("anchor_app_override",
+            name="anchor-app-override-rule",
+            description="Base rule for testing 'before' and 'after' positioning. Updating",
+            folder="All",
+            position="pre",
+            application="ssl",
+            protocol="tcp",
+            port="112",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            tags=[app_override_position_tag.name])
+        # --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+        rule_top_app_override = scm.AppOverrideRule("rule_top_app_override",
+            name="top-absolute-app-override",
+            description="Placed at the very TOP of the App Override rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["untrust"],
+            tos=["trust"],
+            sources=["any"],
+            destinations=["any"])
+        rule_bottom_app_override = scm.AppOverrideRule("rule_bottom_app_override",
+            name="bottom-absolute-app-override",
+            description="Placed at the very BOTTOM of the App Override rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"])
+        #--- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+        rule_before_anchor_override = scm.AppOverrideRule("rule_before_anchor_override",
+            name="before-anchor-app-override",
+            description="Positioned immediately BEFORE the anchor-app-override-rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_app_override.id,
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"])
+        rule_after_anchor_override = scm.AppOverrideRule("rule_after_anchor_override",
+            name="after-anchor-app-override",
+            description="Positioned immediately AFTER the anchor-app-override-rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_app_override.id,
+            application="ssl",
+            protocol="tcp",
+            port="443",
+            froms=["untrust"],
+            tos=["trust"],
+            sources=["any"],
+            destinations=["any"])
+        ```
 
         :param str resource_name: The name of the resource.
         :param AppOverrideRuleArgs args: The arguments to use to populate this resource's properties.
@@ -663,11 +931,14 @@ class AppOverrideRule(pulumi.CustomResource):
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
-                 port: Optional[pulumi.Input[_builtins.int]] = None,
+                 port: Optional[pulumi.Input[_builtins.str]] = None,
+                 position: Optional[pulumi.Input[_builtins.str]] = None,
                  protocol: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -698,14 +969,17 @@ class AppOverrideRule(pulumi.CustomResource):
             if port is None and not opts.urn:
                 raise TypeError("Missing required property 'port'")
             __props__.__dict__["port"] = port
+            __props__.__dict__["position"] = position
             if protocol is None and not opts.urn:
                 raise TypeError("Missing required property 'protocol'")
             __props__.__dict__["protocol"] = protocol
+            __props__.__dict__["relative_position"] = relative_position
             __props__.__dict__["snippet"] = snippet
             if sources is None and not opts.urn:
                 raise TypeError("Missing required property 'sources'")
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
+            __props__.__dict__["target_rule"] = target_rule
             if tos is None and not opts.urn:
                 raise TypeError("Missing required property 'tos'")
             __props__.__dict__["tos"] = tos
@@ -731,11 +1005,14 @@ class AppOverrideRule(pulumi.CustomResource):
             name: Optional[pulumi.Input[_builtins.str]] = None,
             negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
             negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
-            port: Optional[pulumi.Input[_builtins.int]] = None,
+            port: Optional[pulumi.Input[_builtins.str]] = None,
+            position: Optional[pulumi.Input[_builtins.str]] = None,
             protocol: Optional[pulumi.Input[_builtins.str]] = None,
+            relative_position: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_rule: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'AppOverrideRule':
         """
@@ -756,11 +1033,14 @@ class AppOverrideRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] negate_destination: Negate destination
         :param pulumi.Input[_builtins.bool] negate_source: Negate source
-        :param pulumi.Input[_builtins.int] port: Port
+        :param pulumi.Input[_builtins.str] port: Port
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[_builtins.str] protocol: Protocol
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tag
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: To
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -779,10 +1059,13 @@ class AppOverrideRule(pulumi.CustomResource):
         __props__.__dict__["negate_destination"] = negate_destination
         __props__.__dict__["negate_source"] = negate_source
         __props__.__dict__["port"] = port
+        __props__.__dict__["position"] = position
         __props__.__dict__["protocol"] = protocol
+        __props__.__dict__["relative_position"] = relative_position
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["sources"] = sources
         __props__.__dict__["tags"] = tags
+        __props__.__dict__["target_rule"] = target_rule
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["tos"] = tos
         return AppOverrideRule(resource_name, opts=opts, __props__=__props__)
@@ -877,11 +1160,19 @@ class AppOverrideRule(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def port(self) -> pulumi.Output[_builtins.int]:
+    def port(self) -> pulumi.Output[_builtins.str]:
         """
         Port
         """
         return pulumi.get(self, "port")
+
+    @_builtins.property
+    @pulumi.getter
+    def position(self) -> pulumi.Output[_builtins.str]:
+        """
+        The position of a security rule
+        """
+        return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
@@ -890,6 +1181,14 @@ class AppOverrideRule(pulumi.CustomResource):
         Protocol
         """
         return pulumi.get(self, "protocol")
+
+    @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
@@ -914,6 +1213,14 @@ class AppOverrideRule(pulumi.CustomResource):
         Tag
         """
         return pulumi.get(self, "tags")
+
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
 
     @_builtins.property
     @pulumi.getter

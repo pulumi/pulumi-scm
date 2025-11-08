@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,62 +15,62 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceVrTiming {
      * @return Dead counts
      * 
      */
-    private @Nullable Double deadCounts;
+    private @Nullable Integer deadCounts;
     /**
      * @return Gr delay
      * 
      */
-    private @Nullable Double grDelay;
+    private @Nullable Integer grDelay;
     /**
      * @return Hello interval
      * 
      */
-    private @Nullable Double helloInterval;
+    private @Nullable Integer helloInterval;
     /**
      * @return Retransmit interval
      * 
      */
-    private @Nullable Double retransmitInterval;
+    private @Nullable Integer retransmitInterval;
     /**
      * @return Transit delay
      * 
      */
-    private @Nullable Double transitDelay;
+    private @Nullable Integer transitDelay;
 
     private LogicalRouterVrfOspfv3AreaInterfaceVrTiming() {}
     /**
      * @return Dead counts
      * 
      */
-    public Optional<Double> deadCounts() {
+    public Optional<Integer> deadCounts() {
         return Optional.ofNullable(this.deadCounts);
     }
     /**
      * @return Gr delay
      * 
      */
-    public Optional<Double> grDelay() {
+    public Optional<Integer> grDelay() {
         return Optional.ofNullable(this.grDelay);
     }
     /**
      * @return Hello interval
      * 
      */
-    public Optional<Double> helloInterval() {
+    public Optional<Integer> helloInterval() {
         return Optional.ofNullable(this.helloInterval);
     }
     /**
      * @return Retransmit interval
      * 
      */
-    public Optional<Double> retransmitInterval() {
+    public Optional<Integer> retransmitInterval() {
         return Optional.ofNullable(this.retransmitInterval);
     }
     /**
      * @return Transit delay
      * 
      */
-    public Optional<Double> transitDelay() {
+    public Optional<Integer> transitDelay() {
         return Optional.ofNullable(this.transitDelay);
     }
 
@@ -83,11 +83,11 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceVrTiming {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Double deadCounts;
-        private @Nullable Double grDelay;
-        private @Nullable Double helloInterval;
-        private @Nullable Double retransmitInterval;
-        private @Nullable Double transitDelay;
+        private @Nullable Integer deadCounts;
+        private @Nullable Integer grDelay;
+        private @Nullable Integer helloInterval;
+        private @Nullable Integer retransmitInterval;
+        private @Nullable Integer transitDelay;
         public Builder() {}
         public Builder(LogicalRouterVrfOspfv3AreaInterfaceVrTiming defaults) {
     	      Objects.requireNonNull(defaults);
@@ -99,31 +99,31 @@ public final class LogicalRouterVrfOspfv3AreaInterfaceVrTiming {
         }
 
         @CustomType.Setter
-        public Builder deadCounts(@Nullable Double deadCounts) {
+        public Builder deadCounts(@Nullable Integer deadCounts) {
 
             this.deadCounts = deadCounts;
             return this;
         }
         @CustomType.Setter
-        public Builder grDelay(@Nullable Double grDelay) {
+        public Builder grDelay(@Nullable Integer grDelay) {
 
             this.grDelay = grDelay;
             return this;
         }
         @CustomType.Setter
-        public Builder helloInterval(@Nullable Double helloInterval) {
+        public Builder helloInterval(@Nullable Integer helloInterval) {
 
             this.helloInterval = helloInterval;
             return this;
         }
         @CustomType.Setter
-        public Builder retransmitInterval(@Nullable Double retransmitInterval) {
+        public Builder retransmitInterval(@Nullable Integer retransmitInterval) {
 
             this.retransmitInterval = retransmitInterval;
             return this;
         }
         @CustomType.Setter
-        public Builder transitDelay(@Nullable Double transitDelay) {
+        public Builder transitDelay(@Nullable Integer transitDelay) {
 
             this.transitDelay = transitDelay;
             return this;

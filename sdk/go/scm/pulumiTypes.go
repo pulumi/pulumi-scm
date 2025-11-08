@@ -150,337 +150,337 @@ func (o AddressGroupDynamicPtrOutput) Filter() pulumi.StringPtrOutput {
 	}).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer2 struct {
+type AggregateInterfaceLayer2 struct {
 	// Lacp
-	Lacp *AggregateEthernetInterfaceLayer2Lacp `pulumi:"lacp"`
-	// Vlan tag
-	VlanTag *int `pulumi:"vlanTag"`
+	Lacp *AggregateInterfaceLayer2Lacp `pulumi:"lacp"`
+	// VLAN tag
+	VlanTag *string `pulumi:"vlanTag"`
 }
 
-// AggregateEthernetInterfaceLayer2Input is an input type that accepts AggregateEthernetInterfaceLayer2Args and AggregateEthernetInterfaceLayer2Output values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer2Input` via:
+// AggregateInterfaceLayer2Input is an input type that accepts AggregateInterfaceLayer2Args and AggregateInterfaceLayer2Output values.
+// You can construct a concrete instance of `AggregateInterfaceLayer2Input` via:
 //
-//	AggregateEthernetInterfaceLayer2Args{...}
-type AggregateEthernetInterfaceLayer2Input interface {
+//	AggregateInterfaceLayer2Args{...}
+type AggregateInterfaceLayer2Input interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer2Output() AggregateEthernetInterfaceLayer2Output
-	ToAggregateEthernetInterfaceLayer2OutputWithContext(context.Context) AggregateEthernetInterfaceLayer2Output
+	ToAggregateInterfaceLayer2Output() AggregateInterfaceLayer2Output
+	ToAggregateInterfaceLayer2OutputWithContext(context.Context) AggregateInterfaceLayer2Output
 }
 
-type AggregateEthernetInterfaceLayer2Args struct {
+type AggregateInterfaceLayer2Args struct {
 	// Lacp
-	Lacp AggregateEthernetInterfaceLayer2LacpPtrInput `pulumi:"lacp"`
-	// Vlan tag
-	VlanTag pulumi.IntPtrInput `pulumi:"vlanTag"`
+	Lacp AggregateInterfaceLayer2LacpPtrInput `pulumi:"lacp"`
+	// VLAN tag
+	VlanTag pulumi.StringPtrInput `pulumi:"vlanTag"`
 }
 
-func (AggregateEthernetInterfaceLayer2Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer2)(nil)).Elem()
+func (AggregateInterfaceLayer2Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer2)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer2Args) ToAggregateEthernetInterfaceLayer2Output() AggregateEthernetInterfaceLayer2Output {
-	return i.ToAggregateEthernetInterfaceLayer2OutputWithContext(context.Background())
+func (i AggregateInterfaceLayer2Args) ToAggregateInterfaceLayer2Output() AggregateInterfaceLayer2Output {
+	return i.ToAggregateInterfaceLayer2OutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer2Args) ToAggregateEthernetInterfaceLayer2OutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2Output {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer2Output)
+func (i AggregateInterfaceLayer2Args) ToAggregateInterfaceLayer2OutputWithContext(ctx context.Context) AggregateInterfaceLayer2Output {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer2Output)
 }
 
-func (i AggregateEthernetInterfaceLayer2Args) ToAggregateEthernetInterfaceLayer2PtrOutput() AggregateEthernetInterfaceLayer2PtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer2Args) ToAggregateInterfaceLayer2PtrOutput() AggregateInterfaceLayer2PtrOutput {
+	return i.ToAggregateInterfaceLayer2PtrOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer2Args) ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2PtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer2Output).ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(ctx)
+func (i AggregateInterfaceLayer2Args) ToAggregateInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer2Output).ToAggregateInterfaceLayer2PtrOutputWithContext(ctx)
 }
 
-// AggregateEthernetInterfaceLayer2PtrInput is an input type that accepts AggregateEthernetInterfaceLayer2Args, AggregateEthernetInterfaceLayer2Ptr and AggregateEthernetInterfaceLayer2PtrOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer2PtrInput` via:
+// AggregateInterfaceLayer2PtrInput is an input type that accepts AggregateInterfaceLayer2Args, AggregateInterfaceLayer2Ptr and AggregateInterfaceLayer2PtrOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer2PtrInput` via:
 //
-//	        AggregateEthernetInterfaceLayer2Args{...}
+//	        AggregateInterfaceLayer2Args{...}
 //
 //	or:
 //
 //	        nil
-type AggregateEthernetInterfaceLayer2PtrInput interface {
+type AggregateInterfaceLayer2PtrInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer2PtrOutput() AggregateEthernetInterfaceLayer2PtrOutput
-	ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(context.Context) AggregateEthernetInterfaceLayer2PtrOutput
+	ToAggregateInterfaceLayer2PtrOutput() AggregateInterfaceLayer2PtrOutput
+	ToAggregateInterfaceLayer2PtrOutputWithContext(context.Context) AggregateInterfaceLayer2PtrOutput
 }
 
-type aggregateEthernetInterfaceLayer2PtrType AggregateEthernetInterfaceLayer2Args
+type aggregateInterfaceLayer2PtrType AggregateInterfaceLayer2Args
 
-func AggregateEthernetInterfaceLayer2Ptr(v *AggregateEthernetInterfaceLayer2Args) AggregateEthernetInterfaceLayer2PtrInput {
-	return (*aggregateEthernetInterfaceLayer2PtrType)(v)
+func AggregateInterfaceLayer2Ptr(v *AggregateInterfaceLayer2Args) AggregateInterfaceLayer2PtrInput {
+	return (*aggregateInterfaceLayer2PtrType)(v)
 }
 
-func (*aggregateEthernetInterfaceLayer2PtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer2)(nil)).Elem()
+func (*aggregateInterfaceLayer2PtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer2)(nil)).Elem()
 }
 
-func (i *aggregateEthernetInterfaceLayer2PtrType) ToAggregateEthernetInterfaceLayer2PtrOutput() AggregateEthernetInterfaceLayer2PtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(context.Background())
+func (i *aggregateInterfaceLayer2PtrType) ToAggregateInterfaceLayer2PtrOutput() AggregateInterfaceLayer2PtrOutput {
+	return i.ToAggregateInterfaceLayer2PtrOutputWithContext(context.Background())
 }
 
-func (i *aggregateEthernetInterfaceLayer2PtrType) ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2PtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer2PtrOutput)
+func (i *aggregateInterfaceLayer2PtrType) ToAggregateInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer2PtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer2Output struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer2Output struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer2Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer2)(nil)).Elem()
+func (AggregateInterfaceLayer2Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer2)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer2Output) ToAggregateEthernetInterfaceLayer2Output() AggregateEthernetInterfaceLayer2Output {
+func (o AggregateInterfaceLayer2Output) ToAggregateInterfaceLayer2Output() AggregateInterfaceLayer2Output {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2Output) ToAggregateEthernetInterfaceLayer2OutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2Output {
+func (o AggregateInterfaceLayer2Output) ToAggregateInterfaceLayer2OutputWithContext(ctx context.Context) AggregateInterfaceLayer2Output {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2Output) ToAggregateEthernetInterfaceLayer2PtrOutput() AggregateEthernetInterfaceLayer2PtrOutput {
-	return o.ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(context.Background())
+func (o AggregateInterfaceLayer2Output) ToAggregateInterfaceLayer2PtrOutput() AggregateInterfaceLayer2PtrOutput {
+	return o.ToAggregateInterfaceLayer2PtrOutputWithContext(context.Background())
 }
 
-func (o AggregateEthernetInterfaceLayer2Output) ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2PtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateEthernetInterfaceLayer2) *AggregateEthernetInterfaceLayer2 {
+func (o AggregateInterfaceLayer2Output) ToAggregateInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2PtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateInterfaceLayer2) *AggregateInterfaceLayer2 {
 		return &v
-	}).(AggregateEthernetInterfaceLayer2PtrOutput)
+	}).(AggregateInterfaceLayer2PtrOutput)
 }
 
 // Lacp
-func (o AggregateEthernetInterfaceLayer2Output) Lacp() AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2) *AggregateEthernetInterfaceLayer2Lacp { return v.Lacp }).(AggregateEthernetInterfaceLayer2LacpPtrOutput)
+func (o AggregateInterfaceLayer2Output) Lacp() AggregateInterfaceLayer2LacpPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2) *AggregateInterfaceLayer2Lacp { return v.Lacp }).(AggregateInterfaceLayer2LacpPtrOutput)
 }
 
-// Vlan tag
-func (o AggregateEthernetInterfaceLayer2Output) VlanTag() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2) *int { return v.VlanTag }).(pulumi.IntPtrOutput)
+// VLAN tag
+func (o AggregateInterfaceLayer2Output) VlanTag() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2) *string { return v.VlanTag }).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer2PtrOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer2PtrOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer2PtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer2)(nil)).Elem()
+func (AggregateInterfaceLayer2PtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer2)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer2PtrOutput) ToAggregateEthernetInterfaceLayer2PtrOutput() AggregateEthernetInterfaceLayer2PtrOutput {
+func (o AggregateInterfaceLayer2PtrOutput) ToAggregateInterfaceLayer2PtrOutput() AggregateInterfaceLayer2PtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2PtrOutput) ToAggregateEthernetInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2PtrOutput {
+func (o AggregateInterfaceLayer2PtrOutput) ToAggregateInterfaceLayer2PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2PtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2PtrOutput) Elem() AggregateEthernetInterfaceLayer2Output {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2) AggregateEthernetInterfaceLayer2 {
+func (o AggregateInterfaceLayer2PtrOutput) Elem() AggregateInterfaceLayer2Output {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2) AggregateInterfaceLayer2 {
 		if v != nil {
 			return *v
 		}
-		var ret AggregateEthernetInterfaceLayer2
+		var ret AggregateInterfaceLayer2
 		return ret
-	}).(AggregateEthernetInterfaceLayer2Output)
+	}).(AggregateInterfaceLayer2Output)
 }
 
 // Lacp
-func (o AggregateEthernetInterfaceLayer2PtrOutput) Lacp() AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2) *AggregateEthernetInterfaceLayer2Lacp {
+func (o AggregateInterfaceLayer2PtrOutput) Lacp() AggregateInterfaceLayer2LacpPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2) *AggregateInterfaceLayer2Lacp {
 		if v == nil {
 			return nil
 		}
 		return v.Lacp
-	}).(AggregateEthernetInterfaceLayer2LacpPtrOutput)
+	}).(AggregateInterfaceLayer2LacpPtrOutput)
 }
 
-// Vlan tag
-func (o AggregateEthernetInterfaceLayer2PtrOutput) VlanTag() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2) *int {
+// VLAN tag
+func (o AggregateInterfaceLayer2PtrOutput) VlanTag() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2) *string {
 		if v == nil {
 			return nil
 		}
 		return v.VlanTag
-	}).(pulumi.IntPtrOutput)
+	}).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer2Lacp struct {
+type AggregateInterfaceLayer2Lacp struct {
 	// Enable LACP?
 	Enable *bool `pulumi:"enable"`
 	// Fast failover
 	FastFailover *bool `pulumi:"fastFailover"`
-	// Max ports
+	// Maximum number of physical ports bundled in the LAG
 	MaxPorts *int `pulumi:"maxPorts"`
 	// Mode
 	Mode *string `pulumi:"mode"`
-	// System priority
+	// LACP system priority in system ID
 	SystemPriority *int `pulumi:"systemPriority"`
-	// Transmission rate
+	// Transmission mode
 	TransmissionRate *string `pulumi:"transmissionRate"`
 }
 
-// AggregateEthernetInterfaceLayer2LacpInput is an input type that accepts AggregateEthernetInterfaceLayer2LacpArgs and AggregateEthernetInterfaceLayer2LacpOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer2LacpInput` via:
+// AggregateInterfaceLayer2LacpInput is an input type that accepts AggregateInterfaceLayer2LacpArgs and AggregateInterfaceLayer2LacpOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer2LacpInput` via:
 //
-//	AggregateEthernetInterfaceLayer2LacpArgs{...}
-type AggregateEthernetInterfaceLayer2LacpInput interface {
+//	AggregateInterfaceLayer2LacpArgs{...}
+type AggregateInterfaceLayer2LacpInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer2LacpOutput() AggregateEthernetInterfaceLayer2LacpOutput
-	ToAggregateEthernetInterfaceLayer2LacpOutputWithContext(context.Context) AggregateEthernetInterfaceLayer2LacpOutput
+	ToAggregateInterfaceLayer2LacpOutput() AggregateInterfaceLayer2LacpOutput
+	ToAggregateInterfaceLayer2LacpOutputWithContext(context.Context) AggregateInterfaceLayer2LacpOutput
 }
 
-type AggregateEthernetInterfaceLayer2LacpArgs struct {
+type AggregateInterfaceLayer2LacpArgs struct {
 	// Enable LACP?
 	Enable pulumi.BoolPtrInput `pulumi:"enable"`
 	// Fast failover
 	FastFailover pulumi.BoolPtrInput `pulumi:"fastFailover"`
-	// Max ports
+	// Maximum number of physical ports bundled in the LAG
 	MaxPorts pulumi.IntPtrInput `pulumi:"maxPorts"`
 	// Mode
 	Mode pulumi.StringPtrInput `pulumi:"mode"`
-	// System priority
+	// LACP system priority in system ID
 	SystemPriority pulumi.IntPtrInput `pulumi:"systemPriority"`
-	// Transmission rate
+	// Transmission mode
 	TransmissionRate pulumi.StringPtrInput `pulumi:"transmissionRate"`
 }
 
-func (AggregateEthernetInterfaceLayer2LacpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer2Lacp)(nil)).Elem()
+func (AggregateInterfaceLayer2LacpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer2Lacp)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer2LacpArgs) ToAggregateEthernetInterfaceLayer2LacpOutput() AggregateEthernetInterfaceLayer2LacpOutput {
-	return i.ToAggregateEthernetInterfaceLayer2LacpOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer2LacpArgs) ToAggregateInterfaceLayer2LacpOutput() AggregateInterfaceLayer2LacpOutput {
+	return i.ToAggregateInterfaceLayer2LacpOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer2LacpArgs) ToAggregateEthernetInterfaceLayer2LacpOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2LacpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer2LacpOutput)
+func (i AggregateInterfaceLayer2LacpArgs) ToAggregateInterfaceLayer2LacpOutputWithContext(ctx context.Context) AggregateInterfaceLayer2LacpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer2LacpOutput)
 }
 
-func (i AggregateEthernetInterfaceLayer2LacpArgs) ToAggregateEthernetInterfaceLayer2LacpPtrOutput() AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer2LacpArgs) ToAggregateInterfaceLayer2LacpPtrOutput() AggregateInterfaceLayer2LacpPtrOutput {
+	return i.ToAggregateInterfaceLayer2LacpPtrOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer2LacpArgs) ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer2LacpOutput).ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(ctx)
+func (i AggregateInterfaceLayer2LacpArgs) ToAggregateInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2LacpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer2LacpOutput).ToAggregateInterfaceLayer2LacpPtrOutputWithContext(ctx)
 }
 
-// AggregateEthernetInterfaceLayer2LacpPtrInput is an input type that accepts AggregateEthernetInterfaceLayer2LacpArgs, AggregateEthernetInterfaceLayer2LacpPtr and AggregateEthernetInterfaceLayer2LacpPtrOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer2LacpPtrInput` via:
+// AggregateInterfaceLayer2LacpPtrInput is an input type that accepts AggregateInterfaceLayer2LacpArgs, AggregateInterfaceLayer2LacpPtr and AggregateInterfaceLayer2LacpPtrOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer2LacpPtrInput` via:
 //
-//	        AggregateEthernetInterfaceLayer2LacpArgs{...}
+//	        AggregateInterfaceLayer2LacpArgs{...}
 //
 //	or:
 //
 //	        nil
-type AggregateEthernetInterfaceLayer2LacpPtrInput interface {
+type AggregateInterfaceLayer2LacpPtrInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer2LacpPtrOutput() AggregateEthernetInterfaceLayer2LacpPtrOutput
-	ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(context.Context) AggregateEthernetInterfaceLayer2LacpPtrOutput
+	ToAggregateInterfaceLayer2LacpPtrOutput() AggregateInterfaceLayer2LacpPtrOutput
+	ToAggregateInterfaceLayer2LacpPtrOutputWithContext(context.Context) AggregateInterfaceLayer2LacpPtrOutput
 }
 
-type aggregateEthernetInterfaceLayer2LacpPtrType AggregateEthernetInterfaceLayer2LacpArgs
+type aggregateInterfaceLayer2LacpPtrType AggregateInterfaceLayer2LacpArgs
 
-func AggregateEthernetInterfaceLayer2LacpPtr(v *AggregateEthernetInterfaceLayer2LacpArgs) AggregateEthernetInterfaceLayer2LacpPtrInput {
-	return (*aggregateEthernetInterfaceLayer2LacpPtrType)(v)
+func AggregateInterfaceLayer2LacpPtr(v *AggregateInterfaceLayer2LacpArgs) AggregateInterfaceLayer2LacpPtrInput {
+	return (*aggregateInterfaceLayer2LacpPtrType)(v)
 }
 
-func (*aggregateEthernetInterfaceLayer2LacpPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer2Lacp)(nil)).Elem()
+func (*aggregateInterfaceLayer2LacpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer2Lacp)(nil)).Elem()
 }
 
-func (i *aggregateEthernetInterfaceLayer2LacpPtrType) ToAggregateEthernetInterfaceLayer2LacpPtrOutput() AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(context.Background())
+func (i *aggregateInterfaceLayer2LacpPtrType) ToAggregateInterfaceLayer2LacpPtrOutput() AggregateInterfaceLayer2LacpPtrOutput {
+	return i.ToAggregateInterfaceLayer2LacpPtrOutputWithContext(context.Background())
 }
 
-func (i *aggregateEthernetInterfaceLayer2LacpPtrType) ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer2LacpPtrOutput)
+func (i *aggregateInterfaceLayer2LacpPtrType) ToAggregateInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2LacpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer2LacpPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer2LacpOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer2LacpOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer2LacpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer2Lacp)(nil)).Elem()
+func (AggregateInterfaceLayer2LacpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer2Lacp)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer2LacpOutput) ToAggregateEthernetInterfaceLayer2LacpOutput() AggregateEthernetInterfaceLayer2LacpOutput {
+func (o AggregateInterfaceLayer2LacpOutput) ToAggregateInterfaceLayer2LacpOutput() AggregateInterfaceLayer2LacpOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2LacpOutput) ToAggregateEthernetInterfaceLayer2LacpOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2LacpOutput {
+func (o AggregateInterfaceLayer2LacpOutput) ToAggregateInterfaceLayer2LacpOutputWithContext(ctx context.Context) AggregateInterfaceLayer2LacpOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2LacpOutput) ToAggregateEthernetInterfaceLayer2LacpPtrOutput() AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return o.ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(context.Background())
+func (o AggregateInterfaceLayer2LacpOutput) ToAggregateInterfaceLayer2LacpPtrOutput() AggregateInterfaceLayer2LacpPtrOutput {
+	return o.ToAggregateInterfaceLayer2LacpPtrOutputWithContext(context.Background())
 }
 
-func (o AggregateEthernetInterfaceLayer2LacpOutput) ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2LacpPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateEthernetInterfaceLayer2Lacp) *AggregateEthernetInterfaceLayer2Lacp {
+func (o AggregateInterfaceLayer2LacpOutput) ToAggregateInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2LacpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateInterfaceLayer2Lacp) *AggregateInterfaceLayer2Lacp {
 		return &v
-	}).(AggregateEthernetInterfaceLayer2LacpPtrOutput)
+	}).(AggregateInterfaceLayer2LacpPtrOutput)
 }
 
 // Enable LACP?
-func (o AggregateEthernetInterfaceLayer2LacpOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2Lacp) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+func (o AggregateInterfaceLayer2LacpOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2Lacp) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
 }
 
 // Fast failover
-func (o AggregateEthernetInterfaceLayer2LacpOutput) FastFailover() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2Lacp) *bool { return v.FastFailover }).(pulumi.BoolPtrOutput)
+func (o AggregateInterfaceLayer2LacpOutput) FastFailover() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2Lacp) *bool { return v.FastFailover }).(pulumi.BoolPtrOutput)
 }
 
-// Max ports
-func (o AggregateEthernetInterfaceLayer2LacpOutput) MaxPorts() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2Lacp) *int { return v.MaxPorts }).(pulumi.IntPtrOutput)
+// Maximum number of physical ports bundled in the LAG
+func (o AggregateInterfaceLayer2LacpOutput) MaxPorts() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2Lacp) *int { return v.MaxPorts }).(pulumi.IntPtrOutput)
 }
 
 // Mode
-func (o AggregateEthernetInterfaceLayer2LacpOutput) Mode() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2Lacp) *string { return v.Mode }).(pulumi.StringPtrOutput)
+func (o AggregateInterfaceLayer2LacpOutput) Mode() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2Lacp) *string { return v.Mode }).(pulumi.StringPtrOutput)
 }
 
-// System priority
-func (o AggregateEthernetInterfaceLayer2LacpOutput) SystemPriority() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2Lacp) *int { return v.SystemPriority }).(pulumi.IntPtrOutput)
+// LACP system priority in system ID
+func (o AggregateInterfaceLayer2LacpOutput) SystemPriority() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2Lacp) *int { return v.SystemPriority }).(pulumi.IntPtrOutput)
 }
 
-// Transmission rate
-func (o AggregateEthernetInterfaceLayer2LacpOutput) TransmissionRate() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer2Lacp) *string { return v.TransmissionRate }).(pulumi.StringPtrOutput)
+// Transmission mode
+func (o AggregateInterfaceLayer2LacpOutput) TransmissionRate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer2Lacp) *string { return v.TransmissionRate }).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer2LacpPtrOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer2LacpPtrOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer2LacpPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer2Lacp)(nil)).Elem()
+func (AggregateInterfaceLayer2LacpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer2Lacp)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) ToAggregateEthernetInterfaceLayer2LacpPtrOutput() AggregateEthernetInterfaceLayer2LacpPtrOutput {
+func (o AggregateInterfaceLayer2LacpPtrOutput) ToAggregateInterfaceLayer2LacpPtrOutput() AggregateInterfaceLayer2LacpPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) ToAggregateEthernetInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer2LacpPtrOutput {
+func (o AggregateInterfaceLayer2LacpPtrOutput) ToAggregateInterfaceLayer2LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer2LacpPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) Elem() AggregateEthernetInterfaceLayer2LacpOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2Lacp) AggregateEthernetInterfaceLayer2Lacp {
+func (o AggregateInterfaceLayer2LacpPtrOutput) Elem() AggregateInterfaceLayer2LacpOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2Lacp) AggregateInterfaceLayer2Lacp {
 		if v != nil {
 			return *v
 		}
-		var ret AggregateEthernetInterfaceLayer2Lacp
+		var ret AggregateInterfaceLayer2Lacp
 		return ret
-	}).(AggregateEthernetInterfaceLayer2LacpOutput)
+	}).(AggregateInterfaceLayer2LacpOutput)
 }
 
 // Enable LACP?
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2Lacp) *bool {
+func (o AggregateInterfaceLayer2LacpPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2Lacp) *bool {
 		if v == nil {
 			return nil
 		}
@@ -489,8 +489,8 @@ func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) Enable() pulumi.BoolPtrOu
 }
 
 // Fast failover
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) FastFailover() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2Lacp) *bool {
+func (o AggregateInterfaceLayer2LacpPtrOutput) FastFailover() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2Lacp) *bool {
 		if v == nil {
 			return nil
 		}
@@ -498,9 +498,9 @@ func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) FastFailover() pulumi.Boo
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Max ports
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) MaxPorts() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2Lacp) *int {
+// Maximum number of physical ports bundled in the LAG
+func (o AggregateInterfaceLayer2LacpPtrOutput) MaxPorts() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2Lacp) *int {
 		if v == nil {
 			return nil
 		}
@@ -509,8 +509,8 @@ func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) MaxPorts() pulumi.IntPtrO
 }
 
 // Mode
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) Mode() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2Lacp) *string {
+func (o AggregateInterfaceLayer2LacpPtrOutput) Mode() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2Lacp) *string {
 		if v == nil {
 			return nil
 		}
@@ -518,9 +518,9 @@ func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) Mode() pulumi.StringPtrOu
 	}).(pulumi.StringPtrOutput)
 }
 
-// System priority
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) SystemPriority() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2Lacp) *int {
+// LACP system priority in system ID
+func (o AggregateInterfaceLayer2LacpPtrOutput) SystemPriority() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2Lacp) *int {
 		if v == nil {
 			return nil
 		}
@@ -528,9 +528,9 @@ func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) SystemPriority() pulumi.I
 	}).(pulumi.IntPtrOutput)
 }
 
-// Transmission rate
-func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) TransmissionRate() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer2Lacp) *string {
+// Transmission mode
+func (o AggregateInterfaceLayer2LacpPtrOutput) TransmissionRate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer2Lacp) *string {
 		if v == nil {
 			return nil
 		}
@@ -538,224 +538,220 @@ func (o AggregateEthernetInterfaceLayer2LacpPtrOutput) TransmissionRate() pulumi
 	}).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3 struct {
+type AggregateInterfaceLayer3 struct {
 	// Aggregate Ethernet ARP configuration
-	Arps []AggregateEthernetInterfaceLayer3Arp `pulumi:"arps"`
-	// Ddns config
-	DdnsConfig *AggregateEthernetInterfaceLayer3DdnsConfig `pulumi:"ddnsConfig"`
-	// Dhcp client
-	DhcpClient *AggregateEthernetInterfaceLayer3DhcpClient `pulumi:"dhcpClient"`
+	Arps []AggregateInterfaceLayer3Arp `pulumi:"arps"`
+	// Dynamic DNS configuration specific to the Aggregate Interface.
+	DdnsConfig *AggregateInterfaceLayer3DdnsConfig `pulumi:"ddnsConfig"`
+	// Aggregate Ethernet DHCP Client Object
+	DhcpClient *AggregateInterfaceLayer3DhcpClient `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
-	// Interface IP addresses
-	Ips []string `pulumi:"ips"`
+	// Aggregate Interface IP addresses
+	Ips []AggregateInterfaceLayer3Ip `pulumi:"ips"`
 	// Lacp
-	Lacp *AggregateEthernetInterfaceLayer3Lacp `pulumi:"lacp"`
+	Lacp *AggregateInterfaceLayer3Lacp `pulumi:"lacp"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
 }
 
-// AggregateEthernetInterfaceLayer3Input is an input type that accepts AggregateEthernetInterfaceLayer3Args and AggregateEthernetInterfaceLayer3Output values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3Input` via:
+// AggregateInterfaceLayer3Input is an input type that accepts AggregateInterfaceLayer3Args and AggregateInterfaceLayer3Output values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3Input` via:
 //
-//	AggregateEthernetInterfaceLayer3Args{...}
-type AggregateEthernetInterfaceLayer3Input interface {
+//	AggregateInterfaceLayer3Args{...}
+type AggregateInterfaceLayer3Input interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3Output() AggregateEthernetInterfaceLayer3Output
-	ToAggregateEthernetInterfaceLayer3OutputWithContext(context.Context) AggregateEthernetInterfaceLayer3Output
+	ToAggregateInterfaceLayer3Output() AggregateInterfaceLayer3Output
+	ToAggregateInterfaceLayer3OutputWithContext(context.Context) AggregateInterfaceLayer3Output
 }
 
-type AggregateEthernetInterfaceLayer3Args struct {
+type AggregateInterfaceLayer3Args struct {
 	// Aggregate Ethernet ARP configuration
-	Arps AggregateEthernetInterfaceLayer3ArpArrayInput `pulumi:"arps"`
-	// Ddns config
-	DdnsConfig AggregateEthernetInterfaceLayer3DdnsConfigPtrInput `pulumi:"ddnsConfig"`
-	// Dhcp client
-	DhcpClient AggregateEthernetInterfaceLayer3DhcpClientPtrInput `pulumi:"dhcpClient"`
+	Arps AggregateInterfaceLayer3ArpArrayInput `pulumi:"arps"`
+	// Dynamic DNS configuration specific to the Aggregate Interface.
+	DdnsConfig AggregateInterfaceLayer3DdnsConfigPtrInput `pulumi:"ddnsConfig"`
+	// Aggregate Ethernet DHCP Client Object
+	DhcpClient AggregateInterfaceLayer3DhcpClientPtrInput `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput `pulumi:"interfaceManagementProfile"`
-	// Interface IP addresses
-	Ips pulumi.StringArrayInput `pulumi:"ips"`
+	// Aggregate Interface IP addresses
+	Ips AggregateInterfaceLayer3IpArrayInput `pulumi:"ips"`
 	// Lacp
-	Lacp AggregateEthernetInterfaceLayer3LacpPtrInput `pulumi:"lacp"`
+	Lacp AggregateInterfaceLayer3LacpPtrInput `pulumi:"lacp"`
 	// MTU
 	Mtu pulumi.IntPtrInput `pulumi:"mtu"`
 }
 
-func (AggregateEthernetInterfaceLayer3Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3)(nil)).Elem()
+func (AggregateInterfaceLayer3Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer3Args) ToAggregateEthernetInterfaceLayer3Output() AggregateEthernetInterfaceLayer3Output {
-	return i.ToAggregateEthernetInterfaceLayer3OutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3Args) ToAggregateInterfaceLayer3Output() AggregateInterfaceLayer3Output {
+	return i.ToAggregateInterfaceLayer3OutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3Args) ToAggregateEthernetInterfaceLayer3OutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3Output {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3Output)
+func (i AggregateInterfaceLayer3Args) ToAggregateInterfaceLayer3OutputWithContext(ctx context.Context) AggregateInterfaceLayer3Output {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3Output)
 }
 
-func (i AggregateEthernetInterfaceLayer3Args) ToAggregateEthernetInterfaceLayer3PtrOutput() AggregateEthernetInterfaceLayer3PtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3Args) ToAggregateInterfaceLayer3PtrOutput() AggregateInterfaceLayer3PtrOutput {
+	return i.ToAggregateInterfaceLayer3PtrOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3Args) ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3PtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3Output).ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(ctx)
+func (i AggregateInterfaceLayer3Args) ToAggregateInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3Output).ToAggregateInterfaceLayer3PtrOutputWithContext(ctx)
 }
 
-// AggregateEthernetInterfaceLayer3PtrInput is an input type that accepts AggregateEthernetInterfaceLayer3Args, AggregateEthernetInterfaceLayer3Ptr and AggregateEthernetInterfaceLayer3PtrOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3PtrInput` via:
+// AggregateInterfaceLayer3PtrInput is an input type that accepts AggregateInterfaceLayer3Args, AggregateInterfaceLayer3Ptr and AggregateInterfaceLayer3PtrOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3PtrInput` via:
 //
-//	        AggregateEthernetInterfaceLayer3Args{...}
+//	        AggregateInterfaceLayer3Args{...}
 //
 //	or:
 //
 //	        nil
-type AggregateEthernetInterfaceLayer3PtrInput interface {
+type AggregateInterfaceLayer3PtrInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3PtrOutput() AggregateEthernetInterfaceLayer3PtrOutput
-	ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3PtrOutput
+	ToAggregateInterfaceLayer3PtrOutput() AggregateInterfaceLayer3PtrOutput
+	ToAggregateInterfaceLayer3PtrOutputWithContext(context.Context) AggregateInterfaceLayer3PtrOutput
 }
 
-type aggregateEthernetInterfaceLayer3PtrType AggregateEthernetInterfaceLayer3Args
+type aggregateInterfaceLayer3PtrType AggregateInterfaceLayer3Args
 
-func AggregateEthernetInterfaceLayer3Ptr(v *AggregateEthernetInterfaceLayer3Args) AggregateEthernetInterfaceLayer3PtrInput {
-	return (*aggregateEthernetInterfaceLayer3PtrType)(v)
+func AggregateInterfaceLayer3Ptr(v *AggregateInterfaceLayer3Args) AggregateInterfaceLayer3PtrInput {
+	return (*aggregateInterfaceLayer3PtrType)(v)
 }
 
-func (*aggregateEthernetInterfaceLayer3PtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3)(nil)).Elem()
+func (*aggregateInterfaceLayer3PtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3)(nil)).Elem()
 }
 
-func (i *aggregateEthernetInterfaceLayer3PtrType) ToAggregateEthernetInterfaceLayer3PtrOutput() AggregateEthernetInterfaceLayer3PtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(context.Background())
+func (i *aggregateInterfaceLayer3PtrType) ToAggregateInterfaceLayer3PtrOutput() AggregateInterfaceLayer3PtrOutput {
+	return i.ToAggregateInterfaceLayer3PtrOutputWithContext(context.Background())
 }
 
-func (i *aggregateEthernetInterfaceLayer3PtrType) ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3PtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3PtrOutput)
+func (i *aggregateInterfaceLayer3PtrType) ToAggregateInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3PtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3Output struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3Output struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3)(nil)).Elem()
+func (AggregateInterfaceLayer3Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3Output) ToAggregateEthernetInterfaceLayer3Output() AggregateEthernetInterfaceLayer3Output {
+func (o AggregateInterfaceLayer3Output) ToAggregateInterfaceLayer3Output() AggregateInterfaceLayer3Output {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3Output) ToAggregateEthernetInterfaceLayer3OutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3Output {
+func (o AggregateInterfaceLayer3Output) ToAggregateInterfaceLayer3OutputWithContext(ctx context.Context) AggregateInterfaceLayer3Output {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3Output) ToAggregateEthernetInterfaceLayer3PtrOutput() AggregateEthernetInterfaceLayer3PtrOutput {
-	return o.ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(context.Background())
+func (o AggregateInterfaceLayer3Output) ToAggregateInterfaceLayer3PtrOutput() AggregateInterfaceLayer3PtrOutput {
+	return o.ToAggregateInterfaceLayer3PtrOutputWithContext(context.Background())
 }
 
-func (o AggregateEthernetInterfaceLayer3Output) ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3PtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateEthernetInterfaceLayer3) *AggregateEthernetInterfaceLayer3 {
+func (o AggregateInterfaceLayer3Output) ToAggregateInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3PtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateInterfaceLayer3) *AggregateInterfaceLayer3 {
 		return &v
-	}).(AggregateEthernetInterfaceLayer3PtrOutput)
+	}).(AggregateInterfaceLayer3PtrOutput)
 }
 
 // Aggregate Ethernet ARP configuration
-func (o AggregateEthernetInterfaceLayer3Output) Arps() AggregateEthernetInterfaceLayer3ArpArrayOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3) []AggregateEthernetInterfaceLayer3Arp { return v.Arps }).(AggregateEthernetInterfaceLayer3ArpArrayOutput)
+func (o AggregateInterfaceLayer3Output) Arps() AggregateInterfaceLayer3ArpArrayOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) []AggregateInterfaceLayer3Arp { return v.Arps }).(AggregateInterfaceLayer3ArpArrayOutput)
 }
 
-// Ddns config
-func (o AggregateEthernetInterfaceLayer3Output) DdnsConfig() AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3) *AggregateEthernetInterfaceLayer3DdnsConfig {
-		return v.DdnsConfig
-	}).(AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput)
+// Dynamic DNS configuration specific to the Aggregate Interface.
+func (o AggregateInterfaceLayer3Output) DdnsConfig() AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) *AggregateInterfaceLayer3DdnsConfig { return v.DdnsConfig }).(AggregateInterfaceLayer3DdnsConfigPtrOutput)
 }
 
-// Dhcp client
-func (o AggregateEthernetInterfaceLayer3Output) DhcpClient() AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3) *AggregateEthernetInterfaceLayer3DhcpClient {
-		return v.DhcpClient
-	}).(AggregateEthernetInterfaceLayer3DhcpClientPtrOutput)
+// Aggregate Ethernet DHCP Client Object
+func (o AggregateInterfaceLayer3Output) DhcpClient() AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) *AggregateInterfaceLayer3DhcpClient { return v.DhcpClient }).(AggregateInterfaceLayer3DhcpClientPtrOutput)
 }
 
 // Interface management profile
-func (o AggregateEthernetInterfaceLayer3Output) InterfaceManagementProfile() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3) *string { return v.InterfaceManagementProfile }).(pulumi.StringPtrOutput)
+func (o AggregateInterfaceLayer3Output) InterfaceManagementProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) *string { return v.InterfaceManagementProfile }).(pulumi.StringPtrOutput)
 }
 
-// Interface IP addresses
-func (o AggregateEthernetInterfaceLayer3Output) Ips() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3) []string { return v.Ips }).(pulumi.StringArrayOutput)
+// Aggregate Interface IP addresses
+func (o AggregateInterfaceLayer3Output) Ips() AggregateInterfaceLayer3IpArrayOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) []AggregateInterfaceLayer3Ip { return v.Ips }).(AggregateInterfaceLayer3IpArrayOutput)
 }
 
 // Lacp
-func (o AggregateEthernetInterfaceLayer3Output) Lacp() AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3) *AggregateEthernetInterfaceLayer3Lacp { return v.Lacp }).(AggregateEthernetInterfaceLayer3LacpPtrOutput)
+func (o AggregateInterfaceLayer3Output) Lacp() AggregateInterfaceLayer3LacpPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) *AggregateInterfaceLayer3Lacp { return v.Lacp }).(AggregateInterfaceLayer3LacpPtrOutput)
 }
 
 // MTU
-func (o AggregateEthernetInterfaceLayer3Output) Mtu() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3) *int { return v.Mtu }).(pulumi.IntPtrOutput)
+func (o AggregateInterfaceLayer3Output) Mtu() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3) *int { return v.Mtu }).(pulumi.IntPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3PtrOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3PtrOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3PtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3)(nil)).Elem()
+func (AggregateInterfaceLayer3PtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3PtrOutput) ToAggregateEthernetInterfaceLayer3PtrOutput() AggregateEthernetInterfaceLayer3PtrOutput {
+func (o AggregateInterfaceLayer3PtrOutput) ToAggregateInterfaceLayer3PtrOutput() AggregateInterfaceLayer3PtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3PtrOutput) ToAggregateEthernetInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3PtrOutput {
+func (o AggregateInterfaceLayer3PtrOutput) ToAggregateInterfaceLayer3PtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3PtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3PtrOutput) Elem() AggregateEthernetInterfaceLayer3Output {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) AggregateEthernetInterfaceLayer3 {
+func (o AggregateInterfaceLayer3PtrOutput) Elem() AggregateInterfaceLayer3Output {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) AggregateInterfaceLayer3 {
 		if v != nil {
 			return *v
 		}
-		var ret AggregateEthernetInterfaceLayer3
+		var ret AggregateInterfaceLayer3
 		return ret
-	}).(AggregateEthernetInterfaceLayer3Output)
+	}).(AggregateInterfaceLayer3Output)
 }
 
 // Aggregate Ethernet ARP configuration
-func (o AggregateEthernetInterfaceLayer3PtrOutput) Arps() AggregateEthernetInterfaceLayer3ArpArrayOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) []AggregateEthernetInterfaceLayer3Arp {
+func (o AggregateInterfaceLayer3PtrOutput) Arps() AggregateInterfaceLayer3ArpArrayOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) []AggregateInterfaceLayer3Arp {
 		if v == nil {
 			return nil
 		}
 		return v.Arps
-	}).(AggregateEthernetInterfaceLayer3ArpArrayOutput)
+	}).(AggregateInterfaceLayer3ArpArrayOutput)
 }
 
-// Ddns config
-func (o AggregateEthernetInterfaceLayer3PtrOutput) DdnsConfig() AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) *AggregateEthernetInterfaceLayer3DdnsConfig {
+// Dynamic DNS configuration specific to the Aggregate Interface.
+func (o AggregateInterfaceLayer3PtrOutput) DdnsConfig() AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) *AggregateInterfaceLayer3DdnsConfig {
 		if v == nil {
 			return nil
 		}
 		return v.DdnsConfig
-	}).(AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput)
+	}).(AggregateInterfaceLayer3DdnsConfigPtrOutput)
 }
 
-// Dhcp client
-func (o AggregateEthernetInterfaceLayer3PtrOutput) DhcpClient() AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) *AggregateEthernetInterfaceLayer3DhcpClient {
+// Aggregate Ethernet DHCP Client Object
+func (o AggregateInterfaceLayer3PtrOutput) DhcpClient() AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) *AggregateInterfaceLayer3DhcpClient {
 		if v == nil {
 			return nil
 		}
 		return v.DhcpClient
-	}).(AggregateEthernetInterfaceLayer3DhcpClientPtrOutput)
+	}).(AggregateInterfaceLayer3DhcpClientPtrOutput)
 }
 
 // Interface management profile
-func (o AggregateEthernetInterfaceLayer3PtrOutput) InterfaceManagementProfile() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) *string {
+func (o AggregateInterfaceLayer3PtrOutput) InterfaceManagementProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) *string {
 		if v == nil {
 			return nil
 		}
@@ -763,29 +759,29 @@ func (o AggregateEthernetInterfaceLayer3PtrOutput) InterfaceManagementProfile() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface IP addresses
-func (o AggregateEthernetInterfaceLayer3PtrOutput) Ips() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) []string {
+// Aggregate Interface IP addresses
+func (o AggregateInterfaceLayer3PtrOutput) Ips() AggregateInterfaceLayer3IpArrayOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) []AggregateInterfaceLayer3Ip {
 		if v == nil {
 			return nil
 		}
 		return v.Ips
-	}).(pulumi.StringArrayOutput)
+	}).(AggregateInterfaceLayer3IpArrayOutput)
 }
 
 // Lacp
-func (o AggregateEthernetInterfaceLayer3PtrOutput) Lacp() AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) *AggregateEthernetInterfaceLayer3Lacp {
+func (o AggregateInterfaceLayer3PtrOutput) Lacp() AggregateInterfaceLayer3LacpPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) *AggregateInterfaceLayer3Lacp {
 		if v == nil {
 			return nil
 		}
 		return v.Lacp
-	}).(AggregateEthernetInterfaceLayer3LacpPtrOutput)
+	}).(AggregateInterfaceLayer3LacpPtrOutput)
 }
 
 // MTU
-func (o AggregateEthernetInterfaceLayer3PtrOutput) Mtu() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3) *int {
+func (o AggregateInterfaceLayer3PtrOutput) Mtu() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3) *int {
 		if v == nil {
 			return nil
 		}
@@ -793,306 +789,306 @@ func (o AggregateEthernetInterfaceLayer3PtrOutput) Mtu() pulumi.IntPtrOutput {
 	}).(pulumi.IntPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3Arp struct {
-	// Hw address
+type AggregateInterfaceLayer3Arp struct {
+	// MAC address
 	HwAddress *string `pulumi:"hwAddress"`
 	// IP address
 	Name *string `pulumi:"name"`
 }
 
-// AggregateEthernetInterfaceLayer3ArpInput is an input type that accepts AggregateEthernetInterfaceLayer3ArpArgs and AggregateEthernetInterfaceLayer3ArpOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3ArpInput` via:
+// AggregateInterfaceLayer3ArpInput is an input type that accepts AggregateInterfaceLayer3ArpArgs and AggregateInterfaceLayer3ArpOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3ArpInput` via:
 //
-//	AggregateEthernetInterfaceLayer3ArpArgs{...}
-type AggregateEthernetInterfaceLayer3ArpInput interface {
+//	AggregateInterfaceLayer3ArpArgs{...}
+type AggregateInterfaceLayer3ArpInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3ArpOutput() AggregateEthernetInterfaceLayer3ArpOutput
-	ToAggregateEthernetInterfaceLayer3ArpOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3ArpOutput
+	ToAggregateInterfaceLayer3ArpOutput() AggregateInterfaceLayer3ArpOutput
+	ToAggregateInterfaceLayer3ArpOutputWithContext(context.Context) AggregateInterfaceLayer3ArpOutput
 }
 
-type AggregateEthernetInterfaceLayer3ArpArgs struct {
-	// Hw address
+type AggregateInterfaceLayer3ArpArgs struct {
+	// MAC address
 	HwAddress pulumi.StringPtrInput `pulumi:"hwAddress"`
 	// IP address
 	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
-func (AggregateEthernetInterfaceLayer3ArpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3Arp)(nil)).Elem()
+func (AggregateInterfaceLayer3ArpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3Arp)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer3ArpArgs) ToAggregateEthernetInterfaceLayer3ArpOutput() AggregateEthernetInterfaceLayer3ArpOutput {
-	return i.ToAggregateEthernetInterfaceLayer3ArpOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3ArpArgs) ToAggregateInterfaceLayer3ArpOutput() AggregateInterfaceLayer3ArpOutput {
+	return i.ToAggregateInterfaceLayer3ArpOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3ArpArgs) ToAggregateEthernetInterfaceLayer3ArpOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3ArpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3ArpOutput)
+func (i AggregateInterfaceLayer3ArpArgs) ToAggregateInterfaceLayer3ArpOutputWithContext(ctx context.Context) AggregateInterfaceLayer3ArpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3ArpOutput)
 }
 
-// AggregateEthernetInterfaceLayer3ArpArrayInput is an input type that accepts AggregateEthernetInterfaceLayer3ArpArray and AggregateEthernetInterfaceLayer3ArpArrayOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3ArpArrayInput` via:
+// AggregateInterfaceLayer3ArpArrayInput is an input type that accepts AggregateInterfaceLayer3ArpArray and AggregateInterfaceLayer3ArpArrayOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3ArpArrayInput` via:
 //
-//	AggregateEthernetInterfaceLayer3ArpArray{ AggregateEthernetInterfaceLayer3ArpArgs{...} }
-type AggregateEthernetInterfaceLayer3ArpArrayInput interface {
+//	AggregateInterfaceLayer3ArpArray{ AggregateInterfaceLayer3ArpArgs{...} }
+type AggregateInterfaceLayer3ArpArrayInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3ArpArrayOutput() AggregateEthernetInterfaceLayer3ArpArrayOutput
-	ToAggregateEthernetInterfaceLayer3ArpArrayOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3ArpArrayOutput
+	ToAggregateInterfaceLayer3ArpArrayOutput() AggregateInterfaceLayer3ArpArrayOutput
+	ToAggregateInterfaceLayer3ArpArrayOutputWithContext(context.Context) AggregateInterfaceLayer3ArpArrayOutput
 }
 
-type AggregateEthernetInterfaceLayer3ArpArray []AggregateEthernetInterfaceLayer3ArpInput
+type AggregateInterfaceLayer3ArpArray []AggregateInterfaceLayer3ArpInput
 
-func (AggregateEthernetInterfaceLayer3ArpArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]AggregateEthernetInterfaceLayer3Arp)(nil)).Elem()
+func (AggregateInterfaceLayer3ArpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AggregateInterfaceLayer3Arp)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer3ArpArray) ToAggregateEthernetInterfaceLayer3ArpArrayOutput() AggregateEthernetInterfaceLayer3ArpArrayOutput {
-	return i.ToAggregateEthernetInterfaceLayer3ArpArrayOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3ArpArray) ToAggregateInterfaceLayer3ArpArrayOutput() AggregateInterfaceLayer3ArpArrayOutput {
+	return i.ToAggregateInterfaceLayer3ArpArrayOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3ArpArray) ToAggregateEthernetInterfaceLayer3ArpArrayOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3ArpArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3ArpArrayOutput)
+func (i AggregateInterfaceLayer3ArpArray) ToAggregateInterfaceLayer3ArpArrayOutputWithContext(ctx context.Context) AggregateInterfaceLayer3ArpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3ArpArrayOutput)
 }
 
-type AggregateEthernetInterfaceLayer3ArpOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3ArpOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3ArpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3Arp)(nil)).Elem()
+func (AggregateInterfaceLayer3ArpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3Arp)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3ArpOutput) ToAggregateEthernetInterfaceLayer3ArpOutput() AggregateEthernetInterfaceLayer3ArpOutput {
+func (o AggregateInterfaceLayer3ArpOutput) ToAggregateInterfaceLayer3ArpOutput() AggregateInterfaceLayer3ArpOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3ArpOutput) ToAggregateEthernetInterfaceLayer3ArpOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3ArpOutput {
+func (o AggregateInterfaceLayer3ArpOutput) ToAggregateInterfaceLayer3ArpOutputWithContext(ctx context.Context) AggregateInterfaceLayer3ArpOutput {
 	return o
 }
 
-// Hw address
-func (o AggregateEthernetInterfaceLayer3ArpOutput) HwAddress() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Arp) *string { return v.HwAddress }).(pulumi.StringPtrOutput)
+// MAC address
+func (o AggregateInterfaceLayer3ArpOutput) HwAddress() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Arp) *string { return v.HwAddress }).(pulumi.StringPtrOutput)
 }
 
 // IP address
-func (o AggregateEthernetInterfaceLayer3ArpOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Arp) *string { return v.Name }).(pulumi.StringPtrOutput)
+func (o AggregateInterfaceLayer3ArpOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Arp) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3ArpArrayOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3ArpArrayOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3ArpArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]AggregateEthernetInterfaceLayer3Arp)(nil)).Elem()
+func (AggregateInterfaceLayer3ArpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AggregateInterfaceLayer3Arp)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3ArpArrayOutput) ToAggregateEthernetInterfaceLayer3ArpArrayOutput() AggregateEthernetInterfaceLayer3ArpArrayOutput {
+func (o AggregateInterfaceLayer3ArpArrayOutput) ToAggregateInterfaceLayer3ArpArrayOutput() AggregateInterfaceLayer3ArpArrayOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3ArpArrayOutput) ToAggregateEthernetInterfaceLayer3ArpArrayOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3ArpArrayOutput {
+func (o AggregateInterfaceLayer3ArpArrayOutput) ToAggregateInterfaceLayer3ArpArrayOutputWithContext(ctx context.Context) AggregateInterfaceLayer3ArpArrayOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3ArpArrayOutput) Index(i pulumi.IntInput) AggregateEthernetInterfaceLayer3ArpOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AggregateEthernetInterfaceLayer3Arp {
-		return vs[0].([]AggregateEthernetInterfaceLayer3Arp)[vs[1].(int)]
-	}).(AggregateEthernetInterfaceLayer3ArpOutput)
+func (o AggregateInterfaceLayer3ArpArrayOutput) Index(i pulumi.IntInput) AggregateInterfaceLayer3ArpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AggregateInterfaceLayer3Arp {
+		return vs[0].([]AggregateInterfaceLayer3Arp)[vs[1].(int)]
+	}).(AggregateInterfaceLayer3ArpOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DdnsConfig struct {
-	// Ddns cert profile
-	DdnsCertProfile *string `pulumi:"ddnsCertProfile"`
-	// Ddns enabled
+type AggregateInterfaceLayer3DdnsConfig struct {
+	// Certificate profile
+	DdnsCertProfile string `pulumi:"ddnsCertProfile"`
+	// Enable DDNS?
 	DdnsEnabled *bool `pulumi:"ddnsEnabled"`
 	// Ddns hostname
-	DdnsHostname *string `pulumi:"ddnsHostname"`
-	// Ddns ip
+	DdnsHostname string `pulumi:"ddnsHostname"`
+	// IP to register (static only)
 	DdnsIp *string `pulumi:"ddnsIp"`
-	// Ddns update interval
+	// Update interval (days)
 	DdnsUpdateInterval *int `pulumi:"ddnsUpdateInterval"`
-	// Ddns vendor
-	DdnsVendor *string `pulumi:"ddnsVendor"`
-	// Ddns vendor config
-	DdnsVendorConfig *string `pulumi:"ddnsVendorConfig"`
+	// DDNS vendor
+	DdnsVendor string `pulumi:"ddnsVendor"`
+	// DDNS vendor
+	DdnsVendorConfig string `pulumi:"ddnsVendorConfig"`
 }
 
-// AggregateEthernetInterfaceLayer3DdnsConfigInput is an input type that accepts AggregateEthernetInterfaceLayer3DdnsConfigArgs and AggregateEthernetInterfaceLayer3DdnsConfigOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3DdnsConfigInput` via:
+// AggregateInterfaceLayer3DdnsConfigInput is an input type that accepts AggregateInterfaceLayer3DdnsConfigArgs and AggregateInterfaceLayer3DdnsConfigOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3DdnsConfigInput` via:
 //
-//	AggregateEthernetInterfaceLayer3DdnsConfigArgs{...}
-type AggregateEthernetInterfaceLayer3DdnsConfigInput interface {
+//	AggregateInterfaceLayer3DdnsConfigArgs{...}
+type AggregateInterfaceLayer3DdnsConfigInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3DdnsConfigOutput() AggregateEthernetInterfaceLayer3DdnsConfigOutput
-	ToAggregateEthernetInterfaceLayer3DdnsConfigOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3DdnsConfigOutput
+	ToAggregateInterfaceLayer3DdnsConfigOutput() AggregateInterfaceLayer3DdnsConfigOutput
+	ToAggregateInterfaceLayer3DdnsConfigOutputWithContext(context.Context) AggregateInterfaceLayer3DdnsConfigOutput
 }
 
-type AggregateEthernetInterfaceLayer3DdnsConfigArgs struct {
-	// Ddns cert profile
-	DdnsCertProfile pulumi.StringPtrInput `pulumi:"ddnsCertProfile"`
-	// Ddns enabled
+type AggregateInterfaceLayer3DdnsConfigArgs struct {
+	// Certificate profile
+	DdnsCertProfile pulumi.StringInput `pulumi:"ddnsCertProfile"`
+	// Enable DDNS?
 	DdnsEnabled pulumi.BoolPtrInput `pulumi:"ddnsEnabled"`
 	// Ddns hostname
-	DdnsHostname pulumi.StringPtrInput `pulumi:"ddnsHostname"`
-	// Ddns ip
+	DdnsHostname pulumi.StringInput `pulumi:"ddnsHostname"`
+	// IP to register (static only)
 	DdnsIp pulumi.StringPtrInput `pulumi:"ddnsIp"`
-	// Ddns update interval
+	// Update interval (days)
 	DdnsUpdateInterval pulumi.IntPtrInput `pulumi:"ddnsUpdateInterval"`
-	// Ddns vendor
-	DdnsVendor pulumi.StringPtrInput `pulumi:"ddnsVendor"`
-	// Ddns vendor config
-	DdnsVendorConfig pulumi.StringPtrInput `pulumi:"ddnsVendorConfig"`
+	// DDNS vendor
+	DdnsVendor pulumi.StringInput `pulumi:"ddnsVendor"`
+	// DDNS vendor
+	DdnsVendorConfig pulumi.StringInput `pulumi:"ddnsVendorConfig"`
 }
 
-func (AggregateEthernetInterfaceLayer3DdnsConfigArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3DdnsConfig)(nil)).Elem()
+func (AggregateInterfaceLayer3DdnsConfigArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3DdnsConfig)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer3DdnsConfigArgs) ToAggregateEthernetInterfaceLayer3DdnsConfigOutput() AggregateEthernetInterfaceLayer3DdnsConfigOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DdnsConfigOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3DdnsConfigArgs) ToAggregateInterfaceLayer3DdnsConfigOutput() AggregateInterfaceLayer3DdnsConfigOutput {
+	return i.ToAggregateInterfaceLayer3DdnsConfigOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3DdnsConfigArgs) ToAggregateEthernetInterfaceLayer3DdnsConfigOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DdnsConfigOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DdnsConfigOutput)
+func (i AggregateInterfaceLayer3DdnsConfigArgs) ToAggregateInterfaceLayer3DdnsConfigOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DdnsConfigOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DdnsConfigOutput)
 }
 
-func (i AggregateEthernetInterfaceLayer3DdnsConfigArgs) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutput() AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3DdnsConfigArgs) ToAggregateInterfaceLayer3DdnsConfigPtrOutput() AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return i.ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3DdnsConfigArgs) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DdnsConfigOutput).ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx)
+func (i AggregateInterfaceLayer3DdnsConfigArgs) ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DdnsConfigOutput).ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx)
 }
 
-// AggregateEthernetInterfaceLayer3DdnsConfigPtrInput is an input type that accepts AggregateEthernetInterfaceLayer3DdnsConfigArgs, AggregateEthernetInterfaceLayer3DdnsConfigPtr and AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3DdnsConfigPtrInput` via:
+// AggregateInterfaceLayer3DdnsConfigPtrInput is an input type that accepts AggregateInterfaceLayer3DdnsConfigArgs, AggregateInterfaceLayer3DdnsConfigPtr and AggregateInterfaceLayer3DdnsConfigPtrOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3DdnsConfigPtrInput` via:
 //
-//	        AggregateEthernetInterfaceLayer3DdnsConfigArgs{...}
+//	        AggregateInterfaceLayer3DdnsConfigArgs{...}
 //
 //	or:
 //
 //	        nil
-type AggregateEthernetInterfaceLayer3DdnsConfigPtrInput interface {
+type AggregateInterfaceLayer3DdnsConfigPtrInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutput() AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput
-	ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput
+	ToAggregateInterfaceLayer3DdnsConfigPtrOutput() AggregateInterfaceLayer3DdnsConfigPtrOutput
+	ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Context) AggregateInterfaceLayer3DdnsConfigPtrOutput
 }
 
-type aggregateEthernetInterfaceLayer3DdnsConfigPtrType AggregateEthernetInterfaceLayer3DdnsConfigArgs
+type aggregateInterfaceLayer3DdnsConfigPtrType AggregateInterfaceLayer3DdnsConfigArgs
 
-func AggregateEthernetInterfaceLayer3DdnsConfigPtr(v *AggregateEthernetInterfaceLayer3DdnsConfigArgs) AggregateEthernetInterfaceLayer3DdnsConfigPtrInput {
-	return (*aggregateEthernetInterfaceLayer3DdnsConfigPtrType)(v)
+func AggregateInterfaceLayer3DdnsConfigPtr(v *AggregateInterfaceLayer3DdnsConfigArgs) AggregateInterfaceLayer3DdnsConfigPtrInput {
+	return (*aggregateInterfaceLayer3DdnsConfigPtrType)(v)
 }
 
-func (*aggregateEthernetInterfaceLayer3DdnsConfigPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3DdnsConfig)(nil)).Elem()
+func (*aggregateInterfaceLayer3DdnsConfigPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3DdnsConfig)(nil)).Elem()
 }
 
-func (i *aggregateEthernetInterfaceLayer3DdnsConfigPtrType) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutput() AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Background())
+func (i *aggregateInterfaceLayer3DdnsConfigPtrType) ToAggregateInterfaceLayer3DdnsConfigPtrOutput() AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return i.ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Background())
 }
 
-func (i *aggregateEthernetInterfaceLayer3DdnsConfigPtrType) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput)
+func (i *aggregateInterfaceLayer3DdnsConfigPtrType) ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DdnsConfigPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DdnsConfigOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3DdnsConfigOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3DdnsConfigOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3DdnsConfig)(nil)).Elem()
+func (AggregateInterfaceLayer3DdnsConfigOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3DdnsConfig)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) ToAggregateEthernetInterfaceLayer3DdnsConfigOutput() AggregateEthernetInterfaceLayer3DdnsConfigOutput {
+func (o AggregateInterfaceLayer3DdnsConfigOutput) ToAggregateInterfaceLayer3DdnsConfigOutput() AggregateInterfaceLayer3DdnsConfigOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) ToAggregateEthernetInterfaceLayer3DdnsConfigOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DdnsConfigOutput {
+func (o AggregateInterfaceLayer3DdnsConfigOutput) ToAggregateInterfaceLayer3DdnsConfigOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DdnsConfigOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutput() AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return o.ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Background())
+func (o AggregateInterfaceLayer3DdnsConfigOutput) ToAggregateInterfaceLayer3DdnsConfigPtrOutput() AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return o.ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(context.Background())
 }
 
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateEthernetInterfaceLayer3DdnsConfig) *AggregateEthernetInterfaceLayer3DdnsConfig {
+func (o AggregateInterfaceLayer3DdnsConfigOutput) ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DdnsConfigPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateInterfaceLayer3DdnsConfig) *AggregateInterfaceLayer3DdnsConfig {
 		return &v
-	}).(AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput)
+	}).(AggregateInterfaceLayer3DdnsConfigPtrOutput)
 }
 
-// Ddns cert profile
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) DdnsCertProfile() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsCertProfile }).(pulumi.StringPtrOutput)
+// Certificate profile
+func (o AggregateInterfaceLayer3DdnsConfigOutput) DdnsCertProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DdnsConfig) string { return v.DdnsCertProfile }).(pulumi.StringOutput)
 }
 
-// Ddns enabled
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) DdnsEnabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DdnsConfig) *bool { return v.DdnsEnabled }).(pulumi.BoolPtrOutput)
+// Enable DDNS?
+func (o AggregateInterfaceLayer3DdnsConfigOutput) DdnsEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DdnsConfig) *bool { return v.DdnsEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // Ddns hostname
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) DdnsHostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsHostname }).(pulumi.StringPtrOutput)
+func (o AggregateInterfaceLayer3DdnsConfigOutput) DdnsHostname() pulumi.StringOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DdnsConfig) string { return v.DdnsHostname }).(pulumi.StringOutput)
 }
 
-// Ddns ip
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) DdnsIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsIp }).(pulumi.StringPtrOutput)
+// IP to register (static only)
+func (o AggregateInterfaceLayer3DdnsConfigOutput) DdnsIp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DdnsConfig) *string { return v.DdnsIp }).(pulumi.StringPtrOutput)
 }
 
-// Ddns update interval
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DdnsConfig) *int { return v.DdnsUpdateInterval }).(pulumi.IntPtrOutput)
+// Update interval (days)
+func (o AggregateInterfaceLayer3DdnsConfigOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DdnsConfig) *int { return v.DdnsUpdateInterval }).(pulumi.IntPtrOutput)
 }
 
-// Ddns vendor
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) DdnsVendor() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsVendor }).(pulumi.StringPtrOutput)
+// DDNS vendor
+func (o AggregateInterfaceLayer3DdnsConfigOutput) DdnsVendor() pulumi.StringOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DdnsConfig) string { return v.DdnsVendor }).(pulumi.StringOutput)
 }
 
-// Ddns vendor config
-func (o AggregateEthernetInterfaceLayer3DdnsConfigOutput) DdnsVendorConfig() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsVendorConfig }).(pulumi.StringPtrOutput)
+// DDNS vendor
+func (o AggregateInterfaceLayer3DdnsConfigOutput) DdnsVendorConfig() pulumi.StringOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DdnsConfig) string { return v.DdnsVendorConfig }).(pulumi.StringOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3DdnsConfigPtrOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3DdnsConfig)(nil)).Elem()
+func (AggregateInterfaceLayer3DdnsConfigPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3DdnsConfig)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutput() AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) ToAggregateInterfaceLayer3DdnsConfigPtrOutput() AggregateInterfaceLayer3DdnsConfigPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) ToAggregateEthernetInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput {
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) ToAggregateInterfaceLayer3DdnsConfigPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DdnsConfigPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) Elem() AggregateEthernetInterfaceLayer3DdnsConfigOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) AggregateEthernetInterfaceLayer3DdnsConfig {
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) Elem() AggregateInterfaceLayer3DdnsConfigOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) AggregateInterfaceLayer3DdnsConfig {
 		if v != nil {
 			return *v
 		}
-		var ret AggregateEthernetInterfaceLayer3DdnsConfig
+		var ret AggregateInterfaceLayer3DdnsConfig
 		return ret
-	}).(AggregateEthernetInterfaceLayer3DdnsConfigOutput)
+	}).(AggregateInterfaceLayer3DdnsConfigOutput)
 }
 
-// Ddns cert profile
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsCertProfile() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) *string {
+// Certificate profile
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) DdnsCertProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
-		return v.DdnsCertProfile
+		return &v.DdnsCertProfile
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns enabled
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsEnabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) *bool {
+// Enable DDNS?
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) DdnsEnabled() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) *bool {
 		if v == nil {
 			return nil
 		}
@@ -1101,18 +1097,18 @@ func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsEnabled() pulum
 }
 
 // Ddns hostname
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsHostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) *string {
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) DdnsHostname() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
-		return v.DdnsHostname
+		return &v.DdnsHostname
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns ip
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) *string {
+// IP to register (static only)
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) DdnsIp() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
@@ -1120,9 +1116,9 @@ func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsIp() pulumi.Str
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns update interval
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) *int {
+// Update interval (days)
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) *int {
 		if v == nil {
 			return nil
 		}
@@ -1130,185 +1126,185 @@ func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsUpdateInterval(
 	}).(pulumi.IntPtrOutput)
 }
 
-// Ddns vendor
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsVendor() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) *string {
+// DDNS vendor
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) DdnsVendor() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
-		return v.DdnsVendor
+		return &v.DdnsVendor
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns vendor config
-func (o AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsVendorConfig() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DdnsConfig) *string {
+// DDNS vendor
+func (o AggregateInterfaceLayer3DdnsConfigPtrOutput) DdnsVendorConfig() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
-		return v.DdnsVendorConfig
+		return &v.DdnsVendorConfig
 	}).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClient struct {
-	// Create default route
+type AggregateInterfaceLayer3DhcpClient struct {
+	// Automatically create default route pointing to default gateway provided by server
 	CreateDefaultRoute *bool `pulumi:"createDefaultRoute"`
-	// Default route metric
+	// Metric of the default route created
 	DefaultRouteMetric *int `pulumi:"defaultRouteMetric"`
-	// Enable
+	// Enable DHCP?
 	Enable *bool `pulumi:"enable"`
-	// Send hostname
-	SendHostname *AggregateEthernetInterfaceLayer3DhcpClientSendHostname `pulumi:"sendHostname"`
+	// Aggregate Ethernet DHCP Client Send hostname
+	SendHostname *AggregateInterfaceLayer3DhcpClientSendHostname `pulumi:"sendHostname"`
 }
 
-// AggregateEthernetInterfaceLayer3DhcpClientInput is an input type that accepts AggregateEthernetInterfaceLayer3DhcpClientArgs and AggregateEthernetInterfaceLayer3DhcpClientOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3DhcpClientInput` via:
+// AggregateInterfaceLayer3DhcpClientInput is an input type that accepts AggregateInterfaceLayer3DhcpClientArgs and AggregateInterfaceLayer3DhcpClientOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3DhcpClientInput` via:
 //
-//	AggregateEthernetInterfaceLayer3DhcpClientArgs{...}
-type AggregateEthernetInterfaceLayer3DhcpClientInput interface {
+//	AggregateInterfaceLayer3DhcpClientArgs{...}
+type AggregateInterfaceLayer3DhcpClientInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3DhcpClientOutput() AggregateEthernetInterfaceLayer3DhcpClientOutput
-	ToAggregateEthernetInterfaceLayer3DhcpClientOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3DhcpClientOutput
+	ToAggregateInterfaceLayer3DhcpClientOutput() AggregateInterfaceLayer3DhcpClientOutput
+	ToAggregateInterfaceLayer3DhcpClientOutputWithContext(context.Context) AggregateInterfaceLayer3DhcpClientOutput
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClientArgs struct {
-	// Create default route
+type AggregateInterfaceLayer3DhcpClientArgs struct {
+	// Automatically create default route pointing to default gateway provided by server
 	CreateDefaultRoute pulumi.BoolPtrInput `pulumi:"createDefaultRoute"`
-	// Default route metric
+	// Metric of the default route created
 	DefaultRouteMetric pulumi.IntPtrInput `pulumi:"defaultRouteMetric"`
-	// Enable
+	// Enable DHCP?
 	Enable pulumi.BoolPtrInput `pulumi:"enable"`
-	// Send hostname
-	SendHostname AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrInput `pulumi:"sendHostname"`
+	// Aggregate Ethernet DHCP Client Send hostname
+	SendHostname AggregateInterfaceLayer3DhcpClientSendHostnamePtrInput `pulumi:"sendHostname"`
 }
 
-func (AggregateEthernetInterfaceLayer3DhcpClientArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClient)(nil)).Elem()
+func (AggregateInterfaceLayer3DhcpClientArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3DhcpClient)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientArgs) ToAggregateEthernetInterfaceLayer3DhcpClientOutput() AggregateEthernetInterfaceLayer3DhcpClientOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DhcpClientOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3DhcpClientArgs) ToAggregateInterfaceLayer3DhcpClientOutput() AggregateInterfaceLayer3DhcpClientOutput {
+	return i.ToAggregateInterfaceLayer3DhcpClientOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientArgs) ToAggregateEthernetInterfaceLayer3DhcpClientOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DhcpClientOutput)
+func (i AggregateInterfaceLayer3DhcpClientArgs) ToAggregateInterfaceLayer3DhcpClientOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DhcpClientOutput)
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientArgs) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutput() AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3DhcpClientArgs) ToAggregateInterfaceLayer3DhcpClientPtrOutput() AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return i.ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientArgs) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DhcpClientOutput).ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(ctx)
+func (i AggregateInterfaceLayer3DhcpClientArgs) ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DhcpClientOutput).ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(ctx)
 }
 
-// AggregateEthernetInterfaceLayer3DhcpClientPtrInput is an input type that accepts AggregateEthernetInterfaceLayer3DhcpClientArgs, AggregateEthernetInterfaceLayer3DhcpClientPtr and AggregateEthernetInterfaceLayer3DhcpClientPtrOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3DhcpClientPtrInput` via:
+// AggregateInterfaceLayer3DhcpClientPtrInput is an input type that accepts AggregateInterfaceLayer3DhcpClientArgs, AggregateInterfaceLayer3DhcpClientPtr and AggregateInterfaceLayer3DhcpClientPtrOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3DhcpClientPtrInput` via:
 //
-//	        AggregateEthernetInterfaceLayer3DhcpClientArgs{...}
+//	        AggregateInterfaceLayer3DhcpClientArgs{...}
 //
 //	or:
 //
 //	        nil
-type AggregateEthernetInterfaceLayer3DhcpClientPtrInput interface {
+type AggregateInterfaceLayer3DhcpClientPtrInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutput() AggregateEthernetInterfaceLayer3DhcpClientPtrOutput
-	ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3DhcpClientPtrOutput
+	ToAggregateInterfaceLayer3DhcpClientPtrOutput() AggregateInterfaceLayer3DhcpClientPtrOutput
+	ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(context.Context) AggregateInterfaceLayer3DhcpClientPtrOutput
 }
 
-type aggregateEthernetInterfaceLayer3DhcpClientPtrType AggregateEthernetInterfaceLayer3DhcpClientArgs
+type aggregateInterfaceLayer3DhcpClientPtrType AggregateInterfaceLayer3DhcpClientArgs
 
-func AggregateEthernetInterfaceLayer3DhcpClientPtr(v *AggregateEthernetInterfaceLayer3DhcpClientArgs) AggregateEthernetInterfaceLayer3DhcpClientPtrInput {
-	return (*aggregateEthernetInterfaceLayer3DhcpClientPtrType)(v)
+func AggregateInterfaceLayer3DhcpClientPtr(v *AggregateInterfaceLayer3DhcpClientArgs) AggregateInterfaceLayer3DhcpClientPtrInput {
+	return (*aggregateInterfaceLayer3DhcpClientPtrType)(v)
 }
 
-func (*aggregateEthernetInterfaceLayer3DhcpClientPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3DhcpClient)(nil)).Elem()
+func (*aggregateInterfaceLayer3DhcpClientPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3DhcpClient)(nil)).Elem()
 }
 
-func (i *aggregateEthernetInterfaceLayer3DhcpClientPtrType) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutput() AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(context.Background())
+func (i *aggregateInterfaceLayer3DhcpClientPtrType) ToAggregateInterfaceLayer3DhcpClientPtrOutput() AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return i.ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(context.Background())
 }
 
-func (i *aggregateEthernetInterfaceLayer3DhcpClientPtrType) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DhcpClientPtrOutput)
+func (i *aggregateInterfaceLayer3DhcpClientPtrType) ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DhcpClientPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClientOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3DhcpClientOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3DhcpClientOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClient)(nil)).Elem()
+func (AggregateInterfaceLayer3DhcpClientOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3DhcpClient)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) ToAggregateEthernetInterfaceLayer3DhcpClientOutput() AggregateEthernetInterfaceLayer3DhcpClientOutput {
+func (o AggregateInterfaceLayer3DhcpClientOutput) ToAggregateInterfaceLayer3DhcpClientOutput() AggregateInterfaceLayer3DhcpClientOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) ToAggregateEthernetInterfaceLayer3DhcpClientOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientOutput {
+func (o AggregateInterfaceLayer3DhcpClientOutput) ToAggregateInterfaceLayer3DhcpClientOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutput() AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return o.ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(context.Background())
+func (o AggregateInterfaceLayer3DhcpClientOutput) ToAggregateInterfaceLayer3DhcpClientPtrOutput() AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return o.ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(context.Background())
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateEthernetInterfaceLayer3DhcpClient) *AggregateEthernetInterfaceLayer3DhcpClient {
+func (o AggregateInterfaceLayer3DhcpClientOutput) ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateInterfaceLayer3DhcpClient) *AggregateInterfaceLayer3DhcpClient {
 		return &v
-	}).(AggregateEthernetInterfaceLayer3DhcpClientPtrOutput)
+	}).(AggregateInterfaceLayer3DhcpClientPtrOutput)
 }
 
-// Create default route
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DhcpClient) *bool { return v.CreateDefaultRoute }).(pulumi.BoolPtrOutput)
+// Automatically create default route pointing to default gateway provided by server
+func (o AggregateInterfaceLayer3DhcpClientOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DhcpClient) *bool { return v.CreateDefaultRoute }).(pulumi.BoolPtrOutput)
 }
 
-// Default route metric
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DhcpClient) *int { return v.DefaultRouteMetric }).(pulumi.IntPtrOutput)
+// Metric of the default route created
+func (o AggregateInterfaceLayer3DhcpClientOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DhcpClient) *int { return v.DefaultRouteMetric }).(pulumi.IntPtrOutput)
 }
 
-// Enable
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DhcpClient) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+// Enable DHCP?
+func (o AggregateInterfaceLayer3DhcpClientOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DhcpClient) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
 }
 
-// Send hostname
-func (o AggregateEthernetInterfaceLayer3DhcpClientOutput) SendHostname() AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DhcpClient) *AggregateEthernetInterfaceLayer3DhcpClientSendHostname {
+// Aggregate Ethernet DHCP Client Send hostname
+func (o AggregateInterfaceLayer3DhcpClientOutput) SendHostname() AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DhcpClient) *AggregateInterfaceLayer3DhcpClientSendHostname {
 		return v.SendHostname
-	}).(AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
+	}).(AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClientPtrOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3DhcpClientPtrOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3DhcpClient)(nil)).Elem()
+func (AggregateInterfaceLayer3DhcpClientPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3DhcpClient)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutput() AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
+func (o AggregateInterfaceLayer3DhcpClientPtrOutput) ToAggregateInterfaceLayer3DhcpClientPtrOutput() AggregateInterfaceLayer3DhcpClientPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) ToAggregateEthernetInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientPtrOutput {
+func (o AggregateInterfaceLayer3DhcpClientPtrOutput) ToAggregateInterfaceLayer3DhcpClientPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) Elem() AggregateEthernetInterfaceLayer3DhcpClientOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClient) AggregateEthernetInterfaceLayer3DhcpClient {
+func (o AggregateInterfaceLayer3DhcpClientPtrOutput) Elem() AggregateInterfaceLayer3DhcpClientOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClient) AggregateInterfaceLayer3DhcpClient {
 		if v != nil {
 			return *v
 		}
-		var ret AggregateEthernetInterfaceLayer3DhcpClient
+		var ret AggregateInterfaceLayer3DhcpClient
 		return ret
-	}).(AggregateEthernetInterfaceLayer3DhcpClientOutput)
+	}).(AggregateInterfaceLayer3DhcpClientOutput)
 }
 
-// Create default route
-func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClient) *bool {
+// Automatically create default route pointing to default gateway provided by server
+func (o AggregateInterfaceLayer3DhcpClientPtrOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClient) *bool {
 		if v == nil {
 			return nil
 		}
@@ -1316,9 +1312,9 @@ func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) CreateDefaultRoute(
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Default route metric
-func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClient) *int {
+// Metric of the default route created
+func (o AggregateInterfaceLayer3DhcpClientPtrOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClient) *int {
 		if v == nil {
 			return nil
 		}
@@ -1326,9 +1322,9 @@ func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) DefaultRouteMetric(
 	}).(pulumi.IntPtrOutput)
 }
 
-// Enable
-func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClient) *bool {
+// Enable DHCP?
+func (o AggregateInterfaceLayer3DhcpClientPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClient) *bool {
 		if v == nil {
 			return nil
 		}
@@ -1336,155 +1332,155 @@ func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) Enable() pulumi.Boo
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Send hostname
-func (o AggregateEthernetInterfaceLayer3DhcpClientPtrOutput) SendHostname() AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClient) *AggregateEthernetInterfaceLayer3DhcpClientSendHostname {
+// Aggregate Ethernet DHCP Client Send hostname
+func (o AggregateInterfaceLayer3DhcpClientPtrOutput) SendHostname() AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClient) *AggregateInterfaceLayer3DhcpClientSendHostname {
 		if v == nil {
 			return nil
 		}
 		return v.SendHostname
-	}).(AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
+	}).(AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClientSendHostname struct {
+type AggregateInterfaceLayer3DhcpClientSendHostname struct {
 	// Enable
 	Enable *bool `pulumi:"enable"`
-	// Hostname
+	// Set interface hostname
 	Hostname *string `pulumi:"hostname"`
 }
 
-// AggregateEthernetInterfaceLayer3DhcpClientSendHostnameInput is an input type that accepts AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs and AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3DhcpClientSendHostnameInput` via:
+// AggregateInterfaceLayer3DhcpClientSendHostnameInput is an input type that accepts AggregateInterfaceLayer3DhcpClientSendHostnameArgs and AggregateInterfaceLayer3DhcpClientSendHostnameOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3DhcpClientSendHostnameInput` via:
 //
-//	AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs{...}
-type AggregateEthernetInterfaceLayer3DhcpClientSendHostnameInput interface {
+//	AggregateInterfaceLayer3DhcpClientSendHostnameArgs{...}
+type AggregateInterfaceLayer3DhcpClientSendHostnameInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput
-	ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput
+	ToAggregateInterfaceLayer3DhcpClientSendHostnameOutput() AggregateInterfaceLayer3DhcpClientSendHostnameOutput
+	ToAggregateInterfaceLayer3DhcpClientSendHostnameOutputWithContext(context.Context) AggregateInterfaceLayer3DhcpClientSendHostnameOutput
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs struct {
+type AggregateInterfaceLayer3DhcpClientSendHostnameArgs struct {
 	// Enable
 	Enable pulumi.BoolPtrInput `pulumi:"enable"`
-	// Hostname
+	// Set interface hostname
 	Hostname pulumi.StringPtrInput `pulumi:"hostname"`
 }
 
-func (AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
+func (AggregateInterfaceLayer3DhcpClientSendHostnameArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateInterfaceLayer3DhcpClientSendHostnameOutput() AggregateInterfaceLayer3DhcpClientSendHostnameOutput {
+	return i.ToAggregateInterfaceLayer3DhcpClientSendHostnameOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput)
+func (i AggregateInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateInterfaceLayer3DhcpClientSendHostnameOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientSendHostnameOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DhcpClientSendHostnameOutput)
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return i.ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput).ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx)
+func (i AggregateInterfaceLayer3DhcpClientSendHostnameArgs) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DhcpClientSendHostnameOutput).ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx)
 }
 
-// AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrInput is an input type that accepts AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs, AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtr and AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrInput` via:
+// AggregateInterfaceLayer3DhcpClientSendHostnamePtrInput is an input type that accepts AggregateInterfaceLayer3DhcpClientSendHostnameArgs, AggregateInterfaceLayer3DhcpClientSendHostnamePtr and AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3DhcpClientSendHostnamePtrInput` via:
 //
-//	        AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs{...}
+//	        AggregateInterfaceLayer3DhcpClientSendHostnameArgs{...}
 //
 //	or:
 //
 //	        nil
-type AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrInput interface {
+type AggregateInterfaceLayer3DhcpClientSendHostnamePtrInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput
-	ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput
+	ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput
+	ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Context) AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput
 }
 
-type aggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrType AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs
+type aggregateInterfaceLayer3DhcpClientSendHostnamePtrType AggregateInterfaceLayer3DhcpClientSendHostnameArgs
 
-func AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtr(v *AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs) AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrInput {
-	return (*aggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrType)(v)
+func AggregateInterfaceLayer3DhcpClientSendHostnamePtr(v *AggregateInterfaceLayer3DhcpClientSendHostnameArgs) AggregateInterfaceLayer3DhcpClientSendHostnamePtrInput {
+	return (*aggregateInterfaceLayer3DhcpClientSendHostnamePtrType)(v)
 }
 
-func (*aggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
+func (*aggregateInterfaceLayer3DhcpClientSendHostnamePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (i *aggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrType) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
+func (i *aggregateInterfaceLayer3DhcpClientSendHostnamePtrType) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return i.ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
 }
 
-func (i *aggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrType) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
+func (i *aggregateInterfaceLayer3DhcpClientSendHostnamePtrType) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3DhcpClientSendHostnameOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
+func (AggregateInterfaceLayer3DhcpClientSendHostnameOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput {
+func (o AggregateInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateInterfaceLayer3DhcpClientSendHostnameOutput() AggregateInterfaceLayer3DhcpClientSendHostnameOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput {
+func (o AggregateInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateInterfaceLayer3DhcpClientSendHostnameOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientSendHostnameOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return o.ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
+func (o AggregateInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateEthernetInterfaceLayer3DhcpClientSendHostname) *AggregateEthernetInterfaceLayer3DhcpClientSendHostname {
+func (o AggregateInterfaceLayer3DhcpClientSendHostnameOutput) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateInterfaceLayer3DhcpClientSendHostname) *AggregateInterfaceLayer3DhcpClientSendHostname {
 		return &v
-	}).(AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
+	}).(AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
 // Enable
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DhcpClientSendHostname) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+func (o AggregateInterfaceLayer3DhcpClientSendHostnameOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DhcpClientSendHostname) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
 }
 
-// Hostname
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput) Hostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3DhcpClientSendHostname) *string { return v.Hostname }).(pulumi.StringPtrOutput)
+// Set interface hostname
+func (o AggregateInterfaceLayer3DhcpClientSendHostnameOutput) Hostname() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3DhcpClientSendHostname) *string { return v.Hostname }).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
+func (AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+func (o AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput() AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) ToAggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+func (o AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput) ToAggregateInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Elem() AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClientSendHostname) AggregateEthernetInterfaceLayer3DhcpClientSendHostname {
+func (o AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput) Elem() AggregateInterfaceLayer3DhcpClientSendHostnameOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClientSendHostname) AggregateInterfaceLayer3DhcpClientSendHostname {
 		if v != nil {
 			return *v
 		}
-		var ret AggregateEthernetInterfaceLayer3DhcpClientSendHostname
+		var ret AggregateInterfaceLayer3DhcpClientSendHostname
 		return ret
-	}).(AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput)
+	}).(AggregateInterfaceLayer3DhcpClientSendHostnameOutput)
 }
 
 // Enable
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClientSendHostname) *bool {
+func (o AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClientSendHostname) *bool {
 		if v == nil {
 			return nil
 		}
@@ -1492,9 +1488,9 @@ func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Enable(
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Hostname
-func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Hostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3DhcpClientSendHostname) *string {
+// Set interface hostname
+func (o AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput) Hostname() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3DhcpClientSendHostname) *string {
 		if v == nil {
 			return nil
 		}
@@ -1502,181 +1498,278 @@ func (o AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Hostnam
 	}).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3Lacp struct {
+type AggregateInterfaceLayer3Ip struct {
+	// Aggregate Interface IP addresses name
+	Name string `pulumi:"name"`
+}
+
+// AggregateInterfaceLayer3IpInput is an input type that accepts AggregateInterfaceLayer3IpArgs and AggregateInterfaceLayer3IpOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3IpInput` via:
+//
+//	AggregateInterfaceLayer3IpArgs{...}
+type AggregateInterfaceLayer3IpInput interface {
+	pulumi.Input
+
+	ToAggregateInterfaceLayer3IpOutput() AggregateInterfaceLayer3IpOutput
+	ToAggregateInterfaceLayer3IpOutputWithContext(context.Context) AggregateInterfaceLayer3IpOutput
+}
+
+type AggregateInterfaceLayer3IpArgs struct {
+	// Aggregate Interface IP addresses name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (AggregateInterfaceLayer3IpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (i AggregateInterfaceLayer3IpArgs) ToAggregateInterfaceLayer3IpOutput() AggregateInterfaceLayer3IpOutput {
+	return i.ToAggregateInterfaceLayer3IpOutputWithContext(context.Background())
+}
+
+func (i AggregateInterfaceLayer3IpArgs) ToAggregateInterfaceLayer3IpOutputWithContext(ctx context.Context) AggregateInterfaceLayer3IpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3IpOutput)
+}
+
+// AggregateInterfaceLayer3IpArrayInput is an input type that accepts AggregateInterfaceLayer3IpArray and AggregateInterfaceLayer3IpArrayOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3IpArrayInput` via:
+//
+//	AggregateInterfaceLayer3IpArray{ AggregateInterfaceLayer3IpArgs{...} }
+type AggregateInterfaceLayer3IpArrayInput interface {
+	pulumi.Input
+
+	ToAggregateInterfaceLayer3IpArrayOutput() AggregateInterfaceLayer3IpArrayOutput
+	ToAggregateInterfaceLayer3IpArrayOutputWithContext(context.Context) AggregateInterfaceLayer3IpArrayOutput
+}
+
+type AggregateInterfaceLayer3IpArray []AggregateInterfaceLayer3IpInput
+
+func (AggregateInterfaceLayer3IpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AggregateInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (i AggregateInterfaceLayer3IpArray) ToAggregateInterfaceLayer3IpArrayOutput() AggregateInterfaceLayer3IpArrayOutput {
+	return i.ToAggregateInterfaceLayer3IpArrayOutputWithContext(context.Background())
+}
+
+func (i AggregateInterfaceLayer3IpArray) ToAggregateInterfaceLayer3IpArrayOutputWithContext(ctx context.Context) AggregateInterfaceLayer3IpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3IpArrayOutput)
+}
+
+type AggregateInterfaceLayer3IpOutput struct{ *pulumi.OutputState }
+
+func (AggregateInterfaceLayer3IpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (o AggregateInterfaceLayer3IpOutput) ToAggregateInterfaceLayer3IpOutput() AggregateInterfaceLayer3IpOutput {
+	return o
+}
+
+func (o AggregateInterfaceLayer3IpOutput) ToAggregateInterfaceLayer3IpOutputWithContext(ctx context.Context) AggregateInterfaceLayer3IpOutput {
+	return o
+}
+
+// Aggregate Interface IP addresses name
+func (o AggregateInterfaceLayer3IpOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Ip) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type AggregateInterfaceLayer3IpArrayOutput struct{ *pulumi.OutputState }
+
+func (AggregateInterfaceLayer3IpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]AggregateInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (o AggregateInterfaceLayer3IpArrayOutput) ToAggregateInterfaceLayer3IpArrayOutput() AggregateInterfaceLayer3IpArrayOutput {
+	return o
+}
+
+func (o AggregateInterfaceLayer3IpArrayOutput) ToAggregateInterfaceLayer3IpArrayOutputWithContext(ctx context.Context) AggregateInterfaceLayer3IpArrayOutput {
+	return o
+}
+
+func (o AggregateInterfaceLayer3IpArrayOutput) Index(i pulumi.IntInput) AggregateInterfaceLayer3IpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) AggregateInterfaceLayer3Ip {
+		return vs[0].([]AggregateInterfaceLayer3Ip)[vs[1].(int)]
+	}).(AggregateInterfaceLayer3IpOutput)
+}
+
+type AggregateInterfaceLayer3Lacp struct {
 	// Enable LACP?
 	Enable *bool `pulumi:"enable"`
 	// Fast failover
 	FastFailover *bool `pulumi:"fastFailover"`
-	// Max ports
+	// Maximum number of physical ports bundled in the LAG
 	MaxPorts *int `pulumi:"maxPorts"`
 	// Mode
 	Mode *string `pulumi:"mode"`
-	// System priority
+	// LACP system priority in system ID
 	SystemPriority *int `pulumi:"systemPriority"`
-	// Transmission rate
+	// Transmission mode
 	TransmissionRate *string `pulumi:"transmissionRate"`
 }
 
-// AggregateEthernetInterfaceLayer3LacpInput is an input type that accepts AggregateEthernetInterfaceLayer3LacpArgs and AggregateEthernetInterfaceLayer3LacpOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3LacpInput` via:
+// AggregateInterfaceLayer3LacpInput is an input type that accepts AggregateInterfaceLayer3LacpArgs and AggregateInterfaceLayer3LacpOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3LacpInput` via:
 //
-//	AggregateEthernetInterfaceLayer3LacpArgs{...}
-type AggregateEthernetInterfaceLayer3LacpInput interface {
+//	AggregateInterfaceLayer3LacpArgs{...}
+type AggregateInterfaceLayer3LacpInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3LacpOutput() AggregateEthernetInterfaceLayer3LacpOutput
-	ToAggregateEthernetInterfaceLayer3LacpOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3LacpOutput
+	ToAggregateInterfaceLayer3LacpOutput() AggregateInterfaceLayer3LacpOutput
+	ToAggregateInterfaceLayer3LacpOutputWithContext(context.Context) AggregateInterfaceLayer3LacpOutput
 }
 
-type AggregateEthernetInterfaceLayer3LacpArgs struct {
+type AggregateInterfaceLayer3LacpArgs struct {
 	// Enable LACP?
 	Enable pulumi.BoolPtrInput `pulumi:"enable"`
 	// Fast failover
 	FastFailover pulumi.BoolPtrInput `pulumi:"fastFailover"`
-	// Max ports
+	// Maximum number of physical ports bundled in the LAG
 	MaxPorts pulumi.IntPtrInput `pulumi:"maxPorts"`
 	// Mode
 	Mode pulumi.StringPtrInput `pulumi:"mode"`
-	// System priority
+	// LACP system priority in system ID
 	SystemPriority pulumi.IntPtrInput `pulumi:"systemPriority"`
-	// Transmission rate
+	// Transmission mode
 	TransmissionRate pulumi.StringPtrInput `pulumi:"transmissionRate"`
 }
 
-func (AggregateEthernetInterfaceLayer3LacpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3Lacp)(nil)).Elem()
+func (AggregateInterfaceLayer3LacpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3Lacp)(nil)).Elem()
 }
 
-func (i AggregateEthernetInterfaceLayer3LacpArgs) ToAggregateEthernetInterfaceLayer3LacpOutput() AggregateEthernetInterfaceLayer3LacpOutput {
-	return i.ToAggregateEthernetInterfaceLayer3LacpOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3LacpArgs) ToAggregateInterfaceLayer3LacpOutput() AggregateInterfaceLayer3LacpOutput {
+	return i.ToAggregateInterfaceLayer3LacpOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3LacpArgs) ToAggregateEthernetInterfaceLayer3LacpOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3LacpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3LacpOutput)
+func (i AggregateInterfaceLayer3LacpArgs) ToAggregateInterfaceLayer3LacpOutputWithContext(ctx context.Context) AggregateInterfaceLayer3LacpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3LacpOutput)
 }
 
-func (i AggregateEthernetInterfaceLayer3LacpArgs) ToAggregateEthernetInterfaceLayer3LacpPtrOutput() AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(context.Background())
+func (i AggregateInterfaceLayer3LacpArgs) ToAggregateInterfaceLayer3LacpPtrOutput() AggregateInterfaceLayer3LacpPtrOutput {
+	return i.ToAggregateInterfaceLayer3LacpPtrOutputWithContext(context.Background())
 }
 
-func (i AggregateEthernetInterfaceLayer3LacpArgs) ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3LacpOutput).ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(ctx)
+func (i AggregateInterfaceLayer3LacpArgs) ToAggregateInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3LacpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3LacpOutput).ToAggregateInterfaceLayer3LacpPtrOutputWithContext(ctx)
 }
 
-// AggregateEthernetInterfaceLayer3LacpPtrInput is an input type that accepts AggregateEthernetInterfaceLayer3LacpArgs, AggregateEthernetInterfaceLayer3LacpPtr and AggregateEthernetInterfaceLayer3LacpPtrOutput values.
-// You can construct a concrete instance of `AggregateEthernetInterfaceLayer3LacpPtrInput` via:
+// AggregateInterfaceLayer3LacpPtrInput is an input type that accepts AggregateInterfaceLayer3LacpArgs, AggregateInterfaceLayer3LacpPtr and AggregateInterfaceLayer3LacpPtrOutput values.
+// You can construct a concrete instance of `AggregateInterfaceLayer3LacpPtrInput` via:
 //
-//	        AggregateEthernetInterfaceLayer3LacpArgs{...}
+//	        AggregateInterfaceLayer3LacpArgs{...}
 //
 //	or:
 //
 //	        nil
-type AggregateEthernetInterfaceLayer3LacpPtrInput interface {
+type AggregateInterfaceLayer3LacpPtrInput interface {
 	pulumi.Input
 
-	ToAggregateEthernetInterfaceLayer3LacpPtrOutput() AggregateEthernetInterfaceLayer3LacpPtrOutput
-	ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(context.Context) AggregateEthernetInterfaceLayer3LacpPtrOutput
+	ToAggregateInterfaceLayer3LacpPtrOutput() AggregateInterfaceLayer3LacpPtrOutput
+	ToAggregateInterfaceLayer3LacpPtrOutputWithContext(context.Context) AggregateInterfaceLayer3LacpPtrOutput
 }
 
-type aggregateEthernetInterfaceLayer3LacpPtrType AggregateEthernetInterfaceLayer3LacpArgs
+type aggregateInterfaceLayer3LacpPtrType AggregateInterfaceLayer3LacpArgs
 
-func AggregateEthernetInterfaceLayer3LacpPtr(v *AggregateEthernetInterfaceLayer3LacpArgs) AggregateEthernetInterfaceLayer3LacpPtrInput {
-	return (*aggregateEthernetInterfaceLayer3LacpPtrType)(v)
+func AggregateInterfaceLayer3LacpPtr(v *AggregateInterfaceLayer3LacpArgs) AggregateInterfaceLayer3LacpPtrInput {
+	return (*aggregateInterfaceLayer3LacpPtrType)(v)
 }
 
-func (*aggregateEthernetInterfaceLayer3LacpPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3Lacp)(nil)).Elem()
+func (*aggregateInterfaceLayer3LacpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3Lacp)(nil)).Elem()
 }
 
-func (i *aggregateEthernetInterfaceLayer3LacpPtrType) ToAggregateEthernetInterfaceLayer3LacpPtrOutput() AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return i.ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(context.Background())
+func (i *aggregateInterfaceLayer3LacpPtrType) ToAggregateInterfaceLayer3LacpPtrOutput() AggregateInterfaceLayer3LacpPtrOutput {
+	return i.ToAggregateInterfaceLayer3LacpPtrOutputWithContext(context.Background())
 }
 
-func (i *aggregateEthernetInterfaceLayer3LacpPtrType) ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(AggregateEthernetInterfaceLayer3LacpPtrOutput)
+func (i *aggregateInterfaceLayer3LacpPtrType) ToAggregateInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3LacpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(AggregateInterfaceLayer3LacpPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3LacpOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3LacpOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3LacpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*AggregateEthernetInterfaceLayer3Lacp)(nil)).Elem()
+func (AggregateInterfaceLayer3LacpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*AggregateInterfaceLayer3Lacp)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3LacpOutput) ToAggregateEthernetInterfaceLayer3LacpOutput() AggregateEthernetInterfaceLayer3LacpOutput {
+func (o AggregateInterfaceLayer3LacpOutput) ToAggregateInterfaceLayer3LacpOutput() AggregateInterfaceLayer3LacpOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3LacpOutput) ToAggregateEthernetInterfaceLayer3LacpOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3LacpOutput {
+func (o AggregateInterfaceLayer3LacpOutput) ToAggregateInterfaceLayer3LacpOutputWithContext(ctx context.Context) AggregateInterfaceLayer3LacpOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3LacpOutput) ToAggregateEthernetInterfaceLayer3LacpPtrOutput() AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return o.ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(context.Background())
+func (o AggregateInterfaceLayer3LacpOutput) ToAggregateInterfaceLayer3LacpPtrOutput() AggregateInterfaceLayer3LacpPtrOutput {
+	return o.ToAggregateInterfaceLayer3LacpPtrOutputWithContext(context.Background())
 }
 
-func (o AggregateEthernetInterfaceLayer3LacpOutput) ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3LacpPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateEthernetInterfaceLayer3Lacp) *AggregateEthernetInterfaceLayer3Lacp {
+func (o AggregateInterfaceLayer3LacpOutput) ToAggregateInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3LacpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v AggregateInterfaceLayer3Lacp) *AggregateInterfaceLayer3Lacp {
 		return &v
-	}).(AggregateEthernetInterfaceLayer3LacpPtrOutput)
+	}).(AggregateInterfaceLayer3LacpPtrOutput)
 }
 
 // Enable LACP?
-func (o AggregateEthernetInterfaceLayer3LacpOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Lacp) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+func (o AggregateInterfaceLayer3LacpOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Lacp) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
 }
 
 // Fast failover
-func (o AggregateEthernetInterfaceLayer3LacpOutput) FastFailover() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Lacp) *bool { return v.FastFailover }).(pulumi.BoolPtrOutput)
+func (o AggregateInterfaceLayer3LacpOutput) FastFailover() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Lacp) *bool { return v.FastFailover }).(pulumi.BoolPtrOutput)
 }
 
-// Max ports
-func (o AggregateEthernetInterfaceLayer3LacpOutput) MaxPorts() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Lacp) *int { return v.MaxPorts }).(pulumi.IntPtrOutput)
+// Maximum number of physical ports bundled in the LAG
+func (o AggregateInterfaceLayer3LacpOutput) MaxPorts() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Lacp) *int { return v.MaxPorts }).(pulumi.IntPtrOutput)
 }
 
 // Mode
-func (o AggregateEthernetInterfaceLayer3LacpOutput) Mode() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Lacp) *string { return v.Mode }).(pulumi.StringPtrOutput)
+func (o AggregateInterfaceLayer3LacpOutput) Mode() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Lacp) *string { return v.Mode }).(pulumi.StringPtrOutput)
 }
 
-// System priority
-func (o AggregateEthernetInterfaceLayer3LacpOutput) SystemPriority() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Lacp) *int { return v.SystemPriority }).(pulumi.IntPtrOutput)
+// LACP system priority in system ID
+func (o AggregateInterfaceLayer3LacpOutput) SystemPriority() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Lacp) *int { return v.SystemPriority }).(pulumi.IntPtrOutput)
 }
 
-// Transmission rate
-func (o AggregateEthernetInterfaceLayer3LacpOutput) TransmissionRate() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v AggregateEthernetInterfaceLayer3Lacp) *string { return v.TransmissionRate }).(pulumi.StringPtrOutput)
+// Transmission mode
+func (o AggregateInterfaceLayer3LacpOutput) TransmissionRate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v AggregateInterfaceLayer3Lacp) *string { return v.TransmissionRate }).(pulumi.StringPtrOutput)
 }
 
-type AggregateEthernetInterfaceLayer3LacpPtrOutput struct{ *pulumi.OutputState }
+type AggregateInterfaceLayer3LacpPtrOutput struct{ *pulumi.OutputState }
 
-func (AggregateEthernetInterfaceLayer3LacpPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**AggregateEthernetInterfaceLayer3Lacp)(nil)).Elem()
+func (AggregateInterfaceLayer3LacpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**AggregateInterfaceLayer3Lacp)(nil)).Elem()
 }
 
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) ToAggregateEthernetInterfaceLayer3LacpPtrOutput() AggregateEthernetInterfaceLayer3LacpPtrOutput {
+func (o AggregateInterfaceLayer3LacpPtrOutput) ToAggregateInterfaceLayer3LacpPtrOutput() AggregateInterfaceLayer3LacpPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) ToAggregateEthernetInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateEthernetInterfaceLayer3LacpPtrOutput {
+func (o AggregateInterfaceLayer3LacpPtrOutput) ToAggregateInterfaceLayer3LacpPtrOutputWithContext(ctx context.Context) AggregateInterfaceLayer3LacpPtrOutput {
 	return o
 }
 
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) Elem() AggregateEthernetInterfaceLayer3LacpOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3Lacp) AggregateEthernetInterfaceLayer3Lacp {
+func (o AggregateInterfaceLayer3LacpPtrOutput) Elem() AggregateInterfaceLayer3LacpOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3Lacp) AggregateInterfaceLayer3Lacp {
 		if v != nil {
 			return *v
 		}
-		var ret AggregateEthernetInterfaceLayer3Lacp
+		var ret AggregateInterfaceLayer3Lacp
 		return ret
-	}).(AggregateEthernetInterfaceLayer3LacpOutput)
+	}).(AggregateInterfaceLayer3LacpOutput)
 }
 
 // Enable LACP?
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3Lacp) *bool {
+func (o AggregateInterfaceLayer3LacpPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3Lacp) *bool {
 		if v == nil {
 			return nil
 		}
@@ -1685,8 +1778,8 @@ func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) Enable() pulumi.BoolPtrOu
 }
 
 // Fast failover
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) FastFailover() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3Lacp) *bool {
+func (o AggregateInterfaceLayer3LacpPtrOutput) FastFailover() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3Lacp) *bool {
 		if v == nil {
 			return nil
 		}
@@ -1694,9 +1787,9 @@ func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) FastFailover() pulumi.Boo
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Max ports
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) MaxPorts() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3Lacp) *int {
+// Maximum number of physical ports bundled in the LAG
+func (o AggregateInterfaceLayer3LacpPtrOutput) MaxPorts() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3Lacp) *int {
 		if v == nil {
 			return nil
 		}
@@ -1705,8 +1798,8 @@ func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) MaxPorts() pulumi.IntPtrO
 }
 
 // Mode
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) Mode() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3Lacp) *string {
+func (o AggregateInterfaceLayer3LacpPtrOutput) Mode() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3Lacp) *string {
 		if v == nil {
 			return nil
 		}
@@ -1714,9 +1807,9 @@ func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) Mode() pulumi.StringPtrOu
 	}).(pulumi.StringPtrOutput)
 }
 
-// System priority
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) SystemPriority() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3Lacp) *int {
+// LACP system priority in system ID
+func (o AggregateInterfaceLayer3LacpPtrOutput) SystemPriority() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3Lacp) *int {
 		if v == nil {
 			return nil
 		}
@@ -1724,9 +1817,9 @@ func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) SystemPriority() pulumi.I
 	}).(pulumi.IntPtrOutput)
 }
 
-// Transmission rate
-func (o AggregateEthernetInterfaceLayer3LacpPtrOutput) TransmissionRate() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *AggregateEthernetInterfaceLayer3Lacp) *string {
+// Transmission mode
+func (o AggregateInterfaceLayer3LacpPtrOutput) TransmissionRate() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *AggregateInterfaceLayer3Lacp) *string {
 		if v == nil {
 			return nil
 		}
@@ -12506,7 +12599,7 @@ type BgpAddressFamilyProfileIpv4Ipv4Multicast struct {
 	// Orf
 	Orf *BgpAddressFamilyProfileIpv4Ipv4MulticastOrf `pulumi:"orf"`
 	// Remove private a s
-	RemovePrivateAS *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS `pulumi:"removePrivateAS"`
+	RemovePrivateAs *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs `pulumi:"removePrivateAs"`
 	// Route reflector client?
 	RouteReflectorClient *bool `pulumi:"routeReflectorClient"`
 	// Send community
@@ -12546,7 +12639,7 @@ type BgpAddressFamilyProfileIpv4Ipv4MulticastArgs struct {
 	// Orf
 	Orf BgpAddressFamilyProfileIpv4Ipv4MulticastOrfPtrInput `pulumi:"orf"`
 	// Remove private a s
-	RemovePrivateAS BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrInput `pulumi:"removePrivateAS"`
+	RemovePrivateAs BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrInput `pulumi:"removePrivateAs"`
 	// Route reflector client?
 	RouteReflectorClient pulumi.BoolPtrInput `pulumi:"routeReflectorClient"`
 	// Send community
@@ -12688,10 +12781,10 @@ func (o BgpAddressFamilyProfileIpv4Ipv4MulticastOutput) Orf() BgpAddressFamilyPr
 }
 
 // Remove private a s
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastOutput) RemovePrivateAS() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4Multicast) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS {
-		return v.RemovePrivateAS
-	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastOutput) RemovePrivateAs() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4Multicast) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs {
+		return v.RemovePrivateAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput)
 }
 
 // Route reflector client?
@@ -12826,13 +12919,13 @@ func (o BgpAddressFamilyProfileIpv4Ipv4MulticastPtrOutput) Orf() BgpAddressFamil
 }
 
 // Remove private a s
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastPtrOutput) RemovePrivateAS() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4Multicast) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastPtrOutput) RemovePrivateAs() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4Multicast) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs {
 		if v == nil {
 			return nil
 		}
-		return v.RemovePrivateAS
-	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput)
+		return v.RemovePrivateAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput)
 }
 
 // Route reflector client?
@@ -12869,7 +12962,7 @@ type BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath struct {
 	// Advertise all paths to peer?
 	TxAllPaths *bool `pulumi:"txAllPaths"`
 	// Tx bestpath per a s
-	TxBestpathPerAS *bool `pulumi:"txBestpathPerAS"`
+	TxBestpathPerAs *bool `pulumi:"txBestpathPerAs"`
 }
 
 // BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathArgs and BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathOutput values.
@@ -12887,7 +12980,7 @@ type BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathArgs struct {
 	// Advertise all paths to peer?
 	TxAllPaths pulumi.BoolPtrInput `pulumi:"txAllPaths"`
 	// Tx bestpath per a s
-	TxBestpathPerAS pulumi.BoolPtrInput `pulumi:"txBestpathPerAS"`
+	TxBestpathPerAs pulumi.BoolPtrInput `pulumi:"txBestpathPerAs"`
 }
 
 func (BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathArgs) ElementType() reflect.Type {
@@ -12973,8 +13066,8 @@ func (o BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathOutput) TxAllPaths() pulu
 }
 
 // Tx bestpath per a s
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathOutput) TxBestpathPerAS() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath) *bool { return v.TxBestpathPerAS }).(pulumi.BoolPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathOutput) TxBestpathPerAs() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath) *bool { return v.TxBestpathPerAs }).(pulumi.BoolPtrOutput)
 }
 
 type BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathPtrOutput struct{ *pulumi.OutputState }
@@ -13012,12 +13105,12 @@ func (o BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathPtrOutput) TxAllPaths() p
 }
 
 // Tx bestpath per a s
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathPtrOutput) TxBestpathPerAS() pulumi.BoolPtrOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastAddPathPtrOutput) TxBestpathPerAs() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastAddPath) *bool {
 		if v == nil {
 			return nil
 		}
-		return v.TxBestpathPerAS
+		return v.TxBestpathPerAs
 	}).(pulumi.BoolPtrOutput)
 }
 
@@ -14422,160 +14515,400 @@ func (o BgpAddressFamilyProfileIpv4Ipv4MulticastOrfPtrOutput) OrfPrefixList() pu
 	}).(pulumi.StringPtrOutput)
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS struct {
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs struct {
 	// All
-	All *string `pulumi:"all"`
+	All *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll `pulumi:"all"`
 	// Replace a s
-	ReplaceAS *string `pulumi:"replaceAS"`
+	ReplaceAs *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs `pulumi:"replaceAs"`
 }
 
-// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput values.
-// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASInput` via:
+// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsInput` via:
 //
-//	BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs{...}
-type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASInput interface {
+//	BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs{...}
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsInput interface {
 	pulumi.Input
 
-	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput
-	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs struct {
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs struct {
 	// All
-	All pulumi.StringPtrInput `pulumi:"all"`
+	All BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrInput `pulumi:"all"`
 	// Replace a s
-	ReplaceAS pulumi.StringPtrInput `pulumi:"replaceAS"`
+	ReplaceAs BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrInput `pulumi:"replaceAs"`
 }
 
-func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS)(nil)).Elem()
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs)(nil)).Elem()
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput {
-	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutputWithContext(context.Background())
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutputWithContext(context.Background())
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput)
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput)
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(context.Background())
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(context.Background())
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput).ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(ctx)
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput).ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(ctx)
 }
 
-// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs, BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtr and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput values.
-// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrInput` via:
+// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs, BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtr and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrInput` via:
 //
-//	        BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs{...}
+//	        BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs{...}
 //
 //	or:
 //
 //	        nil
-type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrInput interface {
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrInput interface {
 	pulumi.Input
 
-	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput
-	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput
 }
 
-type bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrType BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs
+type bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrType BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs
 
-func BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtr(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrInput {
-	return (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrType)(v)
+func BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtr(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrInput {
+	return (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrType)(v)
 }
 
-func (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS)(nil)).Elem()
+func (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs)(nil)).Elem()
 }
 
-func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(context.Background())
+func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(context.Background())
 }
 
-func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput)
+func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput)
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput struct{ *pulumi.OutputState }
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput struct{ *pulumi.OutputState }
 
-func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS)(nil)).Elem()
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs)(nil)).Elem()
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return o.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(context.Background())
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return o.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(context.Background())
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs {
 		return &v
-	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput)
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput)
 }
 
 // All
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput) All() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS) *string { return v.All }).(pulumi.StringPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput) All() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll {
+		return v.All
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput)
 }
 
 // Replace a s
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput) ReplaceAS() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS) *string { return v.ReplaceAS }).(pulumi.StringPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput) ReplaceAs() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
+		return v.ReplaceAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput)
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput struct{ *pulumi.OutputState }
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput struct{ *pulumi.OutputState }
 
-func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS)(nil)).Elem()
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs)(nil)).Elem()
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs {
 		if v != nil {
 			return *v
 		}
-		var ret BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS
+		var ret BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs
 		return ret
-	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput)
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput)
 }
 
 // All
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput) All() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS) *string {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput) All() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll {
 		if v == nil {
 			return nil
 		}
 		return v.All
-	}).(pulumi.StringPtrOutput)
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput)
 }
 
 // Replace a s
-func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput) ReplaceAS() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAS) *string {
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput) ReplaceAs() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
 		if v == nil {
 			return nil
 		}
-		return v.ReplaceAS
-	}).(pulumi.StringPtrOutput)
+		return v.ReplaceAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll struct {
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllInput` via:
+//
+//	BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs{...}
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs struct {
+}
+
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput)
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput).ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(ctx)
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs, BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtr and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrInput` via:
+//
+//	        BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs{...}
+//
+//	or:
+//
+//	        nil
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput
+}
+
+type bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrType BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs
+
+func BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtr(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrInput {
+	return (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrType)(v)
+}
+
+func (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(context.Background())
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return o.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(context.Background())
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll {
+		return &v
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll {
+		if v != nil {
+			return *v
+		}
+		var ret BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAll
+		return ret
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs struct {
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsInput` via:
+//
+//	BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs{...}
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs struct {
+}
+
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput)
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput).ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx)
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs, BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtr and BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrInput` via:
+//
+//	        BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs{...}
+//
+//	or:
+//
+//	        nil
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput
+}
+
+type bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrType BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs
+
+func BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtr(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrInput {
+	return (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrType)(v)
+}
+
+func (*bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Background())
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Background())
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs) *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
+		return &v
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs) BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs {
+		if v != nil {
+			return *v
+		}
+		var ret BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAs
+		return ret
+	}).(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput)
 }
 
 type BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunity struct {
@@ -15411,7 +15744,7 @@ type BgpAddressFamilyProfileIpv4Ipv4Unicast struct {
 	// Orf
 	Orf *BgpAddressFamilyProfileIpv4Ipv4UnicastOrf `pulumi:"orf"`
 	// Remove private a s
-	RemovePrivateAS *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS `pulumi:"removePrivateAS"`
+	RemovePrivateAs *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs `pulumi:"removePrivateAs"`
 	// Route reflector client?
 	RouteReflectorClient *bool `pulumi:"routeReflectorClient"`
 	// Send community
@@ -15451,7 +15784,7 @@ type BgpAddressFamilyProfileIpv4Ipv4UnicastArgs struct {
 	// Orf
 	Orf BgpAddressFamilyProfileIpv4Ipv4UnicastOrfPtrInput `pulumi:"orf"`
 	// Remove private a s
-	RemovePrivateAS BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrInput `pulumi:"removePrivateAS"`
+	RemovePrivateAs BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrInput `pulumi:"removePrivateAs"`
 	// Route reflector client?
 	RouteReflectorClient pulumi.BoolPtrInput `pulumi:"routeReflectorClient"`
 	// Send community
@@ -15593,10 +15926,10 @@ func (o BgpAddressFamilyProfileIpv4Ipv4UnicastOutput) Orf() BgpAddressFamilyProf
 }
 
 // Remove private a s
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastOutput) RemovePrivateAS() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4Unicast) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS {
-		return v.RemovePrivateAS
-	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastOutput) RemovePrivateAs() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4Unicast) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs {
+		return v.RemovePrivateAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput)
 }
 
 // Route reflector client?
@@ -15731,13 +16064,13 @@ func (o BgpAddressFamilyProfileIpv4Ipv4UnicastPtrOutput) Orf() BgpAddressFamilyP
 }
 
 // Remove private a s
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastPtrOutput) RemovePrivateAS() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4Unicast) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastPtrOutput) RemovePrivateAs() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4Unicast) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs {
 		if v == nil {
 			return nil
 		}
-		return v.RemovePrivateAS
-	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput)
+		return v.RemovePrivateAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput)
 }
 
 // Route reflector client?
@@ -15774,7 +16107,7 @@ type BgpAddressFamilyProfileIpv4Ipv4UnicastAddPath struct {
 	// Advertise all paths to peer?
 	TxAllPaths *bool `pulumi:"txAllPaths"`
 	// Tx bestpath per a s
-	TxBestpathPerAS *bool `pulumi:"txBestpathPerAS"`
+	TxBestpathPerAs *bool `pulumi:"txBestpathPerAs"`
 }
 
 // BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs and BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathOutput values.
@@ -15792,7 +16125,7 @@ type BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs struct {
 	// Advertise all paths to peer?
 	TxAllPaths pulumi.BoolPtrInput `pulumi:"txAllPaths"`
 	// Tx bestpath per a s
-	TxBestpathPerAS pulumi.BoolPtrInput `pulumi:"txBestpathPerAS"`
+	TxBestpathPerAs pulumi.BoolPtrInput `pulumi:"txBestpathPerAs"`
 }
 
 func (BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathArgs) ElementType() reflect.Type {
@@ -15878,8 +16211,8 @@ func (o BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathOutput) TxAllPaths() pulumi
 }
 
 // Tx bestpath per a s
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathOutput) TxBestpathPerAS() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4UnicastAddPath) *bool { return v.TxBestpathPerAS }).(pulumi.BoolPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathOutput) TxBestpathPerAs() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4UnicastAddPath) *bool { return v.TxBestpathPerAs }).(pulumi.BoolPtrOutput)
 }
 
 type BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathPtrOutput struct{ *pulumi.OutputState }
@@ -15917,12 +16250,12 @@ func (o BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathPtrOutput) TxAllPaths() pul
 }
 
 // Tx bestpath per a s
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathPtrOutput) TxBestpathPerAS() pulumi.BoolPtrOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastAddPathPtrOutput) TxBestpathPerAs() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastAddPath) *bool {
 		if v == nil {
 			return nil
 		}
-		return v.TxBestpathPerAS
+		return v.TxBestpathPerAs
 	}).(pulumi.BoolPtrOutput)
 }
 
@@ -17327,160 +17660,400 @@ func (o BgpAddressFamilyProfileIpv4Ipv4UnicastOrfPtrOutput) OrfPrefixList() pulu
 	}).(pulumi.StringPtrOutput)
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS struct {
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs struct {
 	// All
-	All *string `pulumi:"all"`
+	All *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll `pulumi:"all"`
 	// Replace a s
-	ReplaceAS *string `pulumi:"replaceAS"`
+	ReplaceAs *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs `pulumi:"replaceAs"`
 }
 
-// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput values.
-// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASInput` via:
+// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsInput` via:
 //
-//	BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs{...}
-type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASInput interface {
+//	BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs{...}
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsInput interface {
 	pulumi.Input
 
-	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput
-	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs struct {
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs struct {
 	// All
-	All pulumi.StringPtrInput `pulumi:"all"`
+	All BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrInput `pulumi:"all"`
 	// Replace a s
-	ReplaceAS pulumi.StringPtrInput `pulumi:"replaceAS"`
+	ReplaceAs BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrInput `pulumi:"replaceAs"`
 }
 
-func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS)(nil)).Elem()
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs)(nil)).Elem()
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput {
-	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutputWithContext(context.Background())
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutputWithContext(context.Background())
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput)
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput)
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(context.Background())
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(context.Background())
 }
 
-func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput).ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(ctx)
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput).ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(ctx)
 }
 
-// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs, BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtr and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput values.
-// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrInput` via:
+// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs, BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtr and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrInput` via:
 //
-//	        BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs{...}
+//	        BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs{...}
 //
 //	or:
 //
 //	        nil
-type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrInput interface {
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrInput interface {
 	pulumi.Input
 
-	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput
-	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput
 }
 
-type bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrType BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs
+type bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrType BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs
 
-func BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtr(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrInput {
-	return (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrType)(v)
+func BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtr(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrInput {
+	return (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrType)(v)
 }
 
-func (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS)(nil)).Elem()
+func (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs)(nil)).Elem()
 }
 
-func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(context.Background())
+func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(context.Background())
 }
 
-func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput)
+func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput)
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput struct{ *pulumi.OutputState }
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput struct{ *pulumi.OutputState }
 
-func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS)(nil)).Elem()
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs)(nil)).Elem()
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return o.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(context.Background())
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return o.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(context.Background())
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs {
 		return &v
-	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput)
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput)
 }
 
 // All
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput) All() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS) *string { return v.All }).(pulumi.StringPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput) All() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll {
+		return v.All
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput)
 }
 
 // Replace a s
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput) ReplaceAS() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS) *string { return v.ReplaceAS }).(pulumi.StringPtrOutput)
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput) ReplaceAs() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ApplyT(func(v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
+		return v.ReplaceAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput)
 }
 
-type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput struct{ *pulumi.OutputState }
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput struct{ *pulumi.OutputState }
 
-func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS)(nil)).Elem()
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs)(nil)).Elem()
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput {
 	return o
 }
 
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs {
 		if v != nil {
 			return *v
 		}
-		var ret BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS
+		var ret BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs
 		return ret
-	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput)
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput)
 }
 
 // All
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput) All() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS) *string {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput) All() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll {
 		if v == nil {
 			return nil
 		}
 		return v.All
-	}).(pulumi.StringPtrOutput)
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput)
 }
 
 // Replace a s
-func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput) ReplaceAS() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAS) *string {
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput) ReplaceAs() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAs) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
 		if v == nil {
 			return nil
 		}
-		return v.ReplaceAS
-	}).(pulumi.StringPtrOutput)
+		return v.ReplaceAs
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll struct {
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllInput` via:
+//
+//	BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs{...}
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs struct {
+}
+
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput)
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput).ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(ctx)
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs, BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtr and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrInput` via:
+//
+//	        BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs{...}
+//
+//	or:
+//
+//	        nil
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput
+}
+
+type bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrType BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs
+
+func BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtr(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrInput {
+	return (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrType)(v)
+}
+
+func (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(context.Background())
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return o.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(context.Background())
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll {
+		return &v
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll {
+		if v != nil {
+			return *v
+		}
+		var ret BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAll
+		return ret
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs struct {
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsInput` via:
+//
+//	BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs{...}
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs struct {
+}
+
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput)
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Background())
+}
+
+func (i BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput).ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx)
+}
+
+// BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrInput is an input type that accepts BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs, BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtr and BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput values.
+// You can construct a concrete instance of `BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrInput` via:
+//
+//	        BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs{...}
+//
+//	or:
+//
+//	        nil
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrInput interface {
+	pulumi.Input
+
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput
+	ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput
+}
+
+type bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrType BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs
+
+func BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtr(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrInput {
+	return (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrType)(v)
+}
+
+func (*bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return i.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Background())
+}
+
+func (i *bgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrType) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(context.Background())
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs) *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
+		return &v
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput)
+}
+
+type BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput struct{ *pulumi.OutputState }
+
+func (BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs)(nil)).Elem()
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput) ToBgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutputWithContext(ctx context.Context) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput {
+	return o
+}
+
+func (o BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput) Elem() BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput {
+	return o.ApplyT(func(v *BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs) BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs {
+		if v != nil {
+			return *v
+		}
+		var ret BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAs
+		return ret
+	}).(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput)
 }
 
 type BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunity struct {
@@ -22138,7 +22711,7 @@ func (o BgpRedistributionProfileIpv4UnicastStaticPtrOutput) RouteMap() pulumi.St
 type BgpRouteMapRedistributionBgp struct {
 	// Ospf
 	Ospf *BgpRouteMapRedistributionBgpOspf `pulumi:"ospf"`
-	// Rib
+	// BGP Root RIB
 	Rib *BgpRouteMapRedistributionBgpRib `pulumi:"rib"`
 }
 
@@ -22156,7 +22729,7 @@ type BgpRouteMapRedistributionBgpInput interface {
 type BgpRouteMapRedistributionBgpArgs struct {
 	// Ospf
 	Ospf BgpRouteMapRedistributionBgpOspfPtrInput `pulumi:"ospf"`
-	// Rib
+	// BGP Root RIB
 	Rib BgpRouteMapRedistributionBgpRibPtrInput `pulumi:"rib"`
 }
 
@@ -22242,7 +22815,7 @@ func (o BgpRouteMapRedistributionBgpOutput) Ospf() BgpRouteMapRedistributionBgpO
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgp) *BgpRouteMapRedistributionBgpOspf { return v.Ospf }).(BgpRouteMapRedistributionBgpOspfPtrOutput)
 }
 
-// Rib
+// BGP Root RIB
 func (o BgpRouteMapRedistributionBgpOutput) Rib() BgpRouteMapRedistributionBgpRibPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgp) *BgpRouteMapRedistributionBgpRib { return v.Rib }).(BgpRouteMapRedistributionBgpRibPtrOutput)
 }
@@ -22281,7 +22854,7 @@ func (o BgpRouteMapRedistributionBgpPtrOutput) Ospf() BgpRouteMapRedistributionB
 	}).(BgpRouteMapRedistributionBgpOspfPtrOutput)
 }
 
-// Rib
+// BGP Root RIB
 func (o BgpRouteMapRedistributionBgpPtrOutput) Rib() BgpRouteMapRedistributionBgpRibPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgp) *BgpRouteMapRedistributionBgpRib {
 		if v == nil {
@@ -22292,7 +22865,7 @@ func (o BgpRouteMapRedistributionBgpPtrOutput) Rib() BgpRouteMapRedistributionBg
 }
 
 type BgpRouteMapRedistributionBgpOspf struct {
-	// Route maps
+	// BGP Root OSPF Route maps
 	RouteMaps []BgpRouteMapRedistributionBgpOspfRouteMap `pulumi:"routeMaps"`
 }
 
@@ -22308,7 +22881,7 @@ type BgpRouteMapRedistributionBgpOspfInput interface {
 }
 
 type BgpRouteMapRedistributionBgpOspfArgs struct {
-	// Route maps
+	// BGP Root OSPF Route maps
 	RouteMaps BgpRouteMapRedistributionBgpOspfRouteMapArrayInput `pulumi:"routeMaps"`
 }
 
@@ -22389,7 +22962,7 @@ func (o BgpRouteMapRedistributionBgpOspfOutput) ToBgpRouteMapRedistributionBgpOs
 	}).(BgpRouteMapRedistributionBgpOspfPtrOutput)
 }
 
-// Route maps
+// BGP Root OSPF Route maps
 func (o BgpRouteMapRedistributionBgpOspfOutput) RouteMaps() BgpRouteMapRedistributionBgpOspfRouteMapArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspf) []BgpRouteMapRedistributionBgpOspfRouteMap {
 		return v.RouteMaps
@@ -22420,7 +22993,7 @@ func (o BgpRouteMapRedistributionBgpOspfPtrOutput) Elem() BgpRouteMapRedistribut
 	}).(BgpRouteMapRedistributionBgpOspfOutput)
 }
 
-// Route maps
+// BGP Root OSPF Route maps
 func (o BgpRouteMapRedistributionBgpOspfPtrOutput) RouteMaps() BgpRouteMapRedistributionBgpOspfRouteMapArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspf) []BgpRouteMapRedistributionBgpOspfRouteMap {
 		if v == nil {
@@ -22431,15 +23004,15 @@ func (o BgpRouteMapRedistributionBgpOspfPtrOutput) RouteMaps() BgpRouteMapRedist
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMap struct {
-	// Action
+	// BGP Root OSPF Route maps Action
 	Action *string `pulumi:"action"`
-	// Description
+	// BGP Root OSPF Route maps Description
 	Description *string `pulumi:"description"`
 	// Match
 	Match *BgpRouteMapRedistributionBgpOspfRouteMapMatch `pulumi:"match"`
-	// Sequence number
+	// BGP Root OSPF Route maps Sequence number
 	Name *int `pulumi:"name"`
-	// Set
+	// BGP Root OSPF Set
 	Set *BgpRouteMapRedistributionBgpOspfRouteMapSet `pulumi:"set"`
 }
 
@@ -22455,15 +23028,15 @@ type BgpRouteMapRedistributionBgpOspfRouteMapInput interface {
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapArgs struct {
-	// Action
+	// BGP Root OSPF Route maps Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Description
+	// BGP Root OSPF Route maps Description
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	// Match
 	Match BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrInput `pulumi:"match"`
-	// Sequence number
+	// BGP Root OSPF Route maps Sequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
-	// Set
+	// BGP Root OSPF Set
 	Set BgpRouteMapRedistributionBgpOspfRouteMapSetPtrInput `pulumi:"set"`
 }
 
@@ -22518,12 +23091,12 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapOutput) ToBgpRouteMapRedistribut
 	return o
 }
 
-// Action
+// BGP Root OSPF Route maps Action
 func (o BgpRouteMapRedistributionBgpOspfRouteMapOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMap) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Description
+// BGP Root OSPF Route maps Description
 func (o BgpRouteMapRedistributionBgpOspfRouteMapOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMap) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
@@ -22535,12 +23108,12 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapOutput) Match() BgpRouteMapRedis
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput)
 }
 
-// Sequence number
+// BGP Root OSPF Route maps Sequence number
 func (o BgpRouteMapRedistributionBgpOspfRouteMapOutput) Name() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMap) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
 
-// Set
+// BGP Root OSPF Set
 func (o BgpRouteMapRedistributionBgpOspfRouteMapOutput) Set() BgpRouteMapRedistributionBgpOspfRouteMapSetPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMap) *BgpRouteMapRedistributionBgpOspfRouteMapSet {
 		return v.Set
@@ -22568,27 +23141,27 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapArrayOutput) Index(i pulumi.IntI
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatch struct {
-	// AS path access list
+	// BGP Root OSPF Route maps match AS path access list
 	AsPathAccessList *string `pulumi:"asPathAccessList"`
-	// Extended community
+	// EBGP Root OSPF Route maps match xtended community
 	ExtendedCommunity *string `pulumi:"extendedCommunity"`
-	// Interface
+	// BGP Root OSPF Route maps match Interface
 	Interface *string `pulumi:"interface"`
-	// bgp-route-map-redistributions ipv4 object
+	// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
 	Ipv4 *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 `pulumi:"ipv4"`
-	// Large community
+	// BGP Root OSPF Route maps match Large community
 	LargeCommunity *string `pulumi:"largeCommunity"`
-	// Local preference
+	// BGP Root OSPF Route maps match Local preference
 	LocalPreference *int `pulumi:"localPreference"`
-	// Metric
+	// BGP Root OSPF Route maps match Metric
 	Metric *int `pulumi:"metric"`
-	// Origin
+	// BGP Root OSPF Route maps match Origin
 	Origin *string `pulumi:"origin"`
-	// Peer
+	// BGP Root OSPF Route maps match Peer
 	Peer *string `pulumi:"peer"`
-	// Regular community
+	// BGP Root OSPF Route maps match Regular community
 	RegularCommunity *string `pulumi:"regularCommunity"`
-	// Tag
+	// BGP Root OSPF Route maps match Tag
 	Tag *int `pulumi:"tag"`
 }
 
@@ -22604,27 +23177,27 @@ type BgpRouteMapRedistributionBgpOspfRouteMapMatchInput interface {
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchArgs struct {
-	// AS path access list
+	// BGP Root OSPF Route maps match AS path access list
 	AsPathAccessList pulumi.StringPtrInput `pulumi:"asPathAccessList"`
-	// Extended community
+	// EBGP Root OSPF Route maps match xtended community
 	ExtendedCommunity pulumi.StringPtrInput `pulumi:"extendedCommunity"`
-	// Interface
+	// BGP Root OSPF Route maps match Interface
 	Interface pulumi.StringPtrInput `pulumi:"interface"`
-	// bgp-route-map-redistributions ipv4 object
+	// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
 	Ipv4 BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrInput `pulumi:"ipv4"`
-	// Large community
+	// BGP Root OSPF Route maps match Large community
 	LargeCommunity pulumi.StringPtrInput `pulumi:"largeCommunity"`
-	// Local preference
+	// BGP Root OSPF Route maps match Local preference
 	LocalPreference pulumi.IntPtrInput `pulumi:"localPreference"`
-	// Metric
+	// BGP Root OSPF Route maps match Metric
 	Metric pulumi.IntPtrInput `pulumi:"metric"`
-	// Origin
+	// BGP Root OSPF Route maps match Origin
 	Origin pulumi.StringPtrInput `pulumi:"origin"`
-	// Peer
+	// BGP Root OSPF Route maps match Peer
 	Peer pulumi.StringPtrInput `pulumi:"peer"`
-	// Regular community
+	// BGP Root OSPF Route maps match Regular community
 	RegularCommunity pulumi.StringPtrInput `pulumi:"regularCommunity"`
-	// Tag
+	// BGP Root OSPF Route maps match Tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
 }
 
@@ -22705,59 +23278,59 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) ToBgpRouteMapRedist
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput)
 }
 
-// AS path access list
+// BGP Root OSPF Route maps match AS path access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) AsPathAccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string { return v.AsPathAccessList }).(pulumi.StringPtrOutput)
 }
 
-// Extended community
+// EBGP Root OSPF Route maps match xtended community
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) ExtendedCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string { return v.ExtendedCommunity }).(pulumi.StringPtrOutput)
 }
 
-// Interface
+// BGP Root OSPF Route maps match Interface
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string { return v.Interface }).(pulumi.StringPtrOutput)
 }
 
-// bgp-route-map-redistributions ipv4 object
+// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) Ipv4() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 {
 		return v.Ipv4
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput)
 }
 
-// Large community
+// BGP Root OSPF Route maps match Large community
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) LargeCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string { return v.LargeCommunity }).(pulumi.StringPtrOutput)
 }
 
-// Local preference
+// BGP Root OSPF Route maps match Local preference
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *int { return v.LocalPreference }).(pulumi.IntPtrOutput)
 }
 
-// Metric
+// BGP Root OSPF Route maps match Metric
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *int { return v.Metric }).(pulumi.IntPtrOutput)
 }
 
-// Origin
+// BGP Root OSPF Route maps match Origin
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string { return v.Origin }).(pulumi.StringPtrOutput)
 }
 
-// Peer
+// BGP Root OSPF Route maps match Peer
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) Peer() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string { return v.Peer }).(pulumi.StringPtrOutput)
 }
 
-// Regular community
+// BGP Root OSPF Route maps match Regular community
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) RegularCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string { return v.RegularCommunity }).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// BGP Root OSPF Route maps match Tag
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatch) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
@@ -22786,7 +23359,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Elem() BgpRouteM
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchOutput)
 }
 
-// AS path access list
+// BGP Root OSPF Route maps match AS path access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) AsPathAccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string {
 		if v == nil {
@@ -22796,7 +23369,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) AsPathAccessList
 	}).(pulumi.StringPtrOutput)
 }
 
-// Extended community
+// EBGP Root OSPF Route maps match xtended community
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) ExtendedCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string {
 		if v == nil {
@@ -22806,7 +23379,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) ExtendedCommunit
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface
+// BGP Root OSPF Route maps match Interface
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string {
 		if v == nil {
@@ -22816,7 +23389,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Interface() pulu
 	}).(pulumi.StringPtrOutput)
 }
 
-// bgp-route-map-redistributions ipv4 object
+// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Ipv4() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 {
 		if v == nil {
@@ -22826,7 +23399,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Ipv4() BgpRouteM
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput)
 }
 
-// Large community
+// BGP Root OSPF Route maps match Large community
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) LargeCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string {
 		if v == nil {
@@ -22836,7 +23409,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) LargeCommunity()
 	}).(pulumi.StringPtrOutput)
 }
 
-// Local preference
+// BGP Root OSPF Route maps match Local preference
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *int {
 		if v == nil {
@@ -22846,7 +23419,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) LocalPreference(
 	}).(pulumi.IntPtrOutput)
 }
 
-// Metric
+// BGP Root OSPF Route maps match Metric
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *int {
 		if v == nil {
@@ -22856,7 +23429,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Metric() pulumi.
 	}).(pulumi.IntPtrOutput)
 }
 
-// Origin
+// BGP Root OSPF Route maps match Origin
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string {
 		if v == nil {
@@ -22866,7 +23439,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Origin() pulumi.
 	}).(pulumi.StringPtrOutput)
 }
 
-// Peer
+// BGP Root OSPF Route maps match Peer
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Peer() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string {
 		if v == nil {
@@ -22876,7 +23449,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Peer() pulumi.St
 	}).(pulumi.StringPtrOutput)
 }
 
-// Regular community
+// BGP Root OSPF Route maps match Regular community
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) RegularCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *string {
 		if v == nil {
@@ -22886,7 +23459,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) RegularCommunity
 	}).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// BGP Root OSPF Route maps match Tag
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatch) *int {
 		if v == nil {
@@ -22897,11 +23470,11 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchPtrOutput) Tag() pulumi.Int
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 struct {
-	// bgp-route-map-redistributions ipv4 object address
+	// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
 	Address *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address `pulumi:"address"`
-	// bgp-route-map-redistributions ipv4 object next*hop
+	// BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
 	NextHop *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop `pulumi:"nextHop"`
-	// bgp-route-map-redistributions ipv4 object route*source
+	// BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
 	RouteSource *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource `pulumi:"routeSource"`
 }
 
@@ -22917,11 +23490,11 @@ type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Input interface {
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Args struct {
-	// bgp-route-map-redistributions ipv4 object address
+	// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
 	Address BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrInput `pulumi:"address"`
-	// bgp-route-map-redistributions ipv4 object next*hop
+	// BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
 	NextHop BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrInput `pulumi:"nextHop"`
-	// bgp-route-map-redistributions ipv4 object route*source
+	// BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
 	RouteSource BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrInput `pulumi:"routeSource"`
 }
 
@@ -23002,21 +23575,21 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Output) ToBgpRouteMapRe
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput)
 }
 
-// bgp-route-map-redistributions ipv4 object address
+// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Output) Address() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address {
 		return v.Address
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput)
 }
 
-// bgp-route-map-redistributions ipv4 object next*hop
+// BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Output) NextHop() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop {
 		return v.NextHop
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput)
 }
 
-// bgp-route-map-redistributions ipv4 object route*source
+// BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Output) RouteSource() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource {
 		return v.RouteSource
@@ -23047,7 +23620,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput) Elem() BgpRo
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Output)
 }
 
-// bgp-route-map-redistributions ipv4 object address
+// BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput) Address() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address {
 		if v == nil {
@@ -23057,7 +23630,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput) Address() Bg
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput)
 }
 
-// bgp-route-map-redistributions ipv4 object next*hop
+// BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput) NextHop() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop {
 		if v == nil {
@@ -23067,7 +23640,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput) NextHop() Bg
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput)
 }
 
-// bgp-route-map-redistributions ipv4 object route*source
+// BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput) RouteSource() BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource {
 		if v == nil {
@@ -23078,9 +23651,9 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4PtrOutput) RouteSource(
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address struct {
-	// Access list
+	// BGP Root OSPF Route maps match ipv4 Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root OSPF Route maps match ipv4 Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -23096,9 +23669,9 @@ type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressInput interface {
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressArgs struct {
-	// Access list
+	// BGP Root OSPF Route maps match ipv4 Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root OSPF Route maps match ipv4 Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -23179,12 +23752,12 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressOutput) ToBgpRou
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput)
 }
 
-// Access list
+// BGP Root OSPF Route maps match ipv4 Access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root OSPF Route maps match ipv4 Prefix list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -23213,7 +23786,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput) Elem(
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressOutput)
 }
 
-// Access list
+// BGP Root OSPF Route maps match ipv4 Access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -23223,7 +23796,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput) Acces
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root OSPF Route maps match ipv4 Prefix list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -23234,9 +23807,9 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4AddressPtrOutput) Prefi
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop struct {
-	// Access list
+	// BGP Root OSPF Route maps ipv4 nextVr hop Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root OSPF Route maps ipv4 next hop Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -23252,9 +23825,9 @@ type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopInput interface {
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopArgs struct {
-	// Access list
+	// BGP Root OSPF Route maps ipv4 nextVr hop Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root OSPF Route maps ipv4 next hop Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -23335,12 +23908,12 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopOutput) ToBgpRou
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput)
 }
 
-// Access list
+// BGP Root OSPF Route maps ipv4 nextVr hop Access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root OSPF Route maps ipv4 next hop Prefix list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -23369,7 +23942,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput) Elem(
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopOutput)
 }
 
-// Access list
+// BGP Root OSPF Route maps ipv4 nextVr hop Access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -23379,7 +23952,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput) Acces
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root OSPF Route maps ipv4 next hop Prefix list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -23390,9 +23963,9 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHopPtrOutput) Prefi
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource struct {
-	// Access list
+	// BGP Root OSPF Route maps ipv4 route source Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root OSPF Route maps ipv4 route source Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -23408,9 +23981,9 @@ type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceInput interface
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceArgs struct {
-	// Access list
+	// BGP Root OSPF Route maps ipv4 route source Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root OSPF Route maps ipv4 route source Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -23491,12 +24064,12 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceOutput) ToBg
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput)
 }
 
-// Access list
+// BGP Root OSPF Route maps ipv4 route source Access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root OSPF Route maps ipv4 route source Prefix list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -23525,7 +24098,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput) E
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourceOutput)
 }
 
-// Access list
+// BGP Root OSPF Route maps ipv4 route source Access list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource) *string {
 		if v == nil {
@@ -23535,7 +24108,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput) A
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root OSPF Route maps ipv4 route source Prefix list
 func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource) *string {
 		if v == nil {
@@ -23548,9 +24121,9 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSourcePtrOutput) P
 type BgpRouteMapRedistributionBgpOspfRouteMapSet struct {
 	// Metric
 	Metric *BgpRouteMapRedistributionBgpOspfRouteMapSetMetric `pulumi:"metric"`
-	// Metric type
+	// BGP Root OSPF Route maps set Metric type
 	MetricType *string `pulumi:"metricType"`
-	// Tag
+	// BGP Root OSPF Route maps set Tag
 	Tag *int `pulumi:"tag"`
 }
 
@@ -23568,9 +24141,9 @@ type BgpRouteMapRedistributionBgpOspfRouteMapSetInput interface {
 type BgpRouteMapRedistributionBgpOspfRouteMapSetArgs struct {
 	// Metric
 	Metric BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrInput `pulumi:"metric"`
-	// Metric type
+	// BGP Root OSPF Route maps set Metric type
 	MetricType pulumi.StringPtrInput `pulumi:"metricType"`
-	// Tag
+	// BGP Root OSPF Route maps set Tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
 }
 
@@ -23658,12 +24231,12 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetOutput) Metric() BgpRouteMapR
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput)
 }
 
-// Metric type
+// BGP Root OSPF Route maps set Metric type
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetOutput) MetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapSet) *string { return v.MetricType }).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// BGP Root OSPF Route maps set Tag
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapSet) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
@@ -23702,7 +24275,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetPtrOutput) Metric() BgpRouteM
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput)
 }
 
-// Metric type
+// BGP Root OSPF Route maps set Metric type
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetPtrOutput) MetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapSet) *string {
 		if v == nil {
@@ -23712,7 +24285,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetPtrOutput) MetricType() pulum
 	}).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// BGP Root OSPF Route maps set Tag
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapSet) *int {
 		if v == nil {
@@ -23723,9 +24296,9 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetPtrOutput) Tag() pulumi.IntPt
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapSetMetric struct {
-	// Metric action
+	// BGP Root OSPF Route maps set Metric action
 	Action *string `pulumi:"action"`
-	// Metric value
+	// BGP Root OSPF Route maps set Metric value
 	Value *int `pulumi:"value"`
 }
 
@@ -23741,9 +24314,9 @@ type BgpRouteMapRedistributionBgpOspfRouteMapSetMetricInput interface {
 }
 
 type BgpRouteMapRedistributionBgpOspfRouteMapSetMetricArgs struct {
-	// Metric action
+	// BGP Root OSPF Route maps set Metric action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Metric value
+	// BGP Root OSPF Route maps set Metric value
 	Value pulumi.IntPtrInput `pulumi:"value"`
 }
 
@@ -23824,12 +24397,12 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricOutput) ToBgpRouteMapRe
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput)
 }
 
-// Metric action
+// BGP Root OSPF Route maps set Metric action
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapSetMetric) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// BGP Root OSPF Route maps set Metric value
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpOspfRouteMapSetMetric) *int { return v.Value }).(pulumi.IntPtrOutput)
 }
@@ -23858,7 +24431,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput) Elem() BgpRo
 	}).(BgpRouteMapRedistributionBgpOspfRouteMapSetMetricOutput)
 }
 
-// Metric action
+// BGP Root OSPF Route maps set Metric action
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapSetMetric) *string {
 		if v == nil {
@@ -23868,7 +24441,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput) Action() pul
 	}).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// BGP Root OSPF Route maps set Metric value
 func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpOspfRouteMapSetMetric) *int {
 		if v == nil {
@@ -23879,7 +24452,7 @@ func (o BgpRouteMapRedistributionBgpOspfRouteMapSetMetricPtrOutput) Value() pulu
 }
 
 type BgpRouteMapRedistributionBgpRib struct {
-	// Route maps
+	// BGP Root RIB Route maps
 	RouteMaps []BgpRouteMapRedistributionBgpRibRouteMap `pulumi:"routeMaps"`
 }
 
@@ -23895,7 +24468,7 @@ type BgpRouteMapRedistributionBgpRibInput interface {
 }
 
 type BgpRouteMapRedistributionBgpRibArgs struct {
-	// Route maps
+	// BGP Root RIB Route maps
 	RouteMaps BgpRouteMapRedistributionBgpRibRouteMapArrayInput `pulumi:"routeMaps"`
 }
 
@@ -23976,7 +24549,7 @@ func (o BgpRouteMapRedistributionBgpRibOutput) ToBgpRouteMapRedistributionBgpRib
 	}).(BgpRouteMapRedistributionBgpRibPtrOutput)
 }
 
-// Route maps
+// BGP Root RIB Route maps
 func (o BgpRouteMapRedistributionBgpRibOutput) RouteMaps() BgpRouteMapRedistributionBgpRibRouteMapArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRib) []BgpRouteMapRedistributionBgpRibRouteMap { return v.RouteMaps }).(BgpRouteMapRedistributionBgpRibRouteMapArrayOutput)
 }
@@ -24005,7 +24578,7 @@ func (o BgpRouteMapRedistributionBgpRibPtrOutput) Elem() BgpRouteMapRedistributi
 	}).(BgpRouteMapRedistributionBgpRibOutput)
 }
 
-// Route maps
+// BGP Root RIB Route maps
 func (o BgpRouteMapRedistributionBgpRibPtrOutput) RouteMaps() BgpRouteMapRedistributionBgpRibRouteMapArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRib) []BgpRouteMapRedistributionBgpRibRouteMap {
 		if v == nil {
@@ -24016,15 +24589,15 @@ func (o BgpRouteMapRedistributionBgpRibPtrOutput) RouteMaps() BgpRouteMapRedistr
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMap struct {
-	// Action
+	// BGP Root RIB Route maps Action
 	Action *string `pulumi:"action"`
-	// Description
+	// BGP Root RIB Route maps Description
 	Description *string `pulumi:"description"`
-	// Match
+	// match attribute for BG Rib route map
 	Match *BgpRouteMapRedistributionBgpRibRouteMapMatch `pulumi:"match"`
-	// Sequence number
+	// BGP Root RIB Route maps Sequence number
 	Name *int `pulumi:"name"`
-	// Set
+	// Set attributes for BGP route map
 	Set *BgpRouteMapRedistributionBgpRibRouteMapSet `pulumi:"set"`
 }
 
@@ -24040,15 +24613,15 @@ type BgpRouteMapRedistributionBgpRibRouteMapInput interface {
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapArgs struct {
-	// Action
+	// BGP Root RIB Route maps Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Description
+	// BGP Root RIB Route maps Description
 	Description pulumi.StringPtrInput `pulumi:"description"`
-	// Match
+	// match attribute for BG Rib route map
 	Match BgpRouteMapRedistributionBgpRibRouteMapMatchPtrInput `pulumi:"match"`
-	// Sequence number
+	// BGP Root RIB Route maps Sequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
-	// Set
+	// Set attributes for BGP route map
 	Set BgpRouteMapRedistributionBgpRibRouteMapSetPtrInput `pulumi:"set"`
 }
 
@@ -24103,29 +24676,29 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapOutput) ToBgpRouteMapRedistributi
 	return o
 }
 
-// Action
+// BGP Root RIB Route maps Action
 func (o BgpRouteMapRedistributionBgpRibRouteMapOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMap) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Description
+// BGP Root RIB Route maps Description
 func (o BgpRouteMapRedistributionBgpRibRouteMapOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMap) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// Match
+// match attribute for BG Rib route map
 func (o BgpRouteMapRedistributionBgpRibRouteMapOutput) Match() BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMap) *BgpRouteMapRedistributionBgpRibRouteMapMatch {
 		return v.Match
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput)
 }
 
-// Sequence number
+// BGP Root RIB Route maps Sequence number
 func (o BgpRouteMapRedistributionBgpRibRouteMapOutput) Name() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMap) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
 
-// Set
+// Set attributes for BGP route map
 func (o BgpRouteMapRedistributionBgpRibRouteMapOutput) Set() BgpRouteMapRedistributionBgpRibRouteMapSetPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMap) *BgpRouteMapRedistributionBgpRibRouteMapSet {
 		return v.Set
@@ -24153,27 +24726,27 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapArrayOutput) Index(i pulumi.IntIn
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatch struct {
-	// AS path access list
+	// BGP Root RIB Route maps match AS path access list
 	AsPathAccessList *string `pulumi:"asPathAccessList"`
-	// Extended community
+	// BGP Root RIB Route maps match Extended community
 	ExtendedCommunity *string `pulumi:"extendedCommunity"`
-	// Interface
+	// BGP Root RIB Route maps match Interface
 	Interface *string `pulumi:"interface"`
-	// Ipv4
+	// BGP Route Map Redistributions Root BGP rib Route Map IPv4
 	Ipv4 *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4 `pulumi:"ipv4"`
-	// Large community
+	// BGP Root RIB Route maps match Large community
 	LargeCommunity *string `pulumi:"largeCommunity"`
-	// Local preference
+	// BGP Root RIB Route maps match Local preference
 	LocalPreference *int `pulumi:"localPreference"`
-	// Metric
+	// BGP Root RIB Route maps match Metric
 	Metric *int `pulumi:"metric"`
-	// Origin
+	// BGP Root RIB Route maps match Origin
 	Origin *string `pulumi:"origin"`
-	// Peer
+	// BGP Root RIB Route maps match Peer
 	Peer *string `pulumi:"peer"`
-	// Regular community
+	// BGP Root RIB Route maps match Regular community
 	RegularCommunity *string `pulumi:"regularCommunity"`
-	// Tag
+	// BGP Root RIB Route maps match Tag
 	Tag *int `pulumi:"tag"`
 }
 
@@ -24189,27 +24762,27 @@ type BgpRouteMapRedistributionBgpRibRouteMapMatchInput interface {
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatchArgs struct {
-	// AS path access list
+	// BGP Root RIB Route maps match AS path access list
 	AsPathAccessList pulumi.StringPtrInput `pulumi:"asPathAccessList"`
-	// Extended community
+	// BGP Root RIB Route maps match Extended community
 	ExtendedCommunity pulumi.StringPtrInput `pulumi:"extendedCommunity"`
-	// Interface
+	// BGP Root RIB Route maps match Interface
 	Interface pulumi.StringPtrInput `pulumi:"interface"`
-	// Ipv4
+	// BGP Route Map Redistributions Root BGP rib Route Map IPv4
 	Ipv4 BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4PtrInput `pulumi:"ipv4"`
-	// Large community
+	// BGP Root RIB Route maps match Large community
 	LargeCommunity pulumi.StringPtrInput `pulumi:"largeCommunity"`
-	// Local preference
+	// BGP Root RIB Route maps match Local preference
 	LocalPreference pulumi.IntPtrInput `pulumi:"localPreference"`
-	// Metric
+	// BGP Root RIB Route maps match Metric
 	Metric pulumi.IntPtrInput `pulumi:"metric"`
-	// Origin
+	// BGP Root RIB Route maps match Origin
 	Origin pulumi.StringPtrInput `pulumi:"origin"`
-	// Peer
+	// BGP Root RIB Route maps match Peer
 	Peer pulumi.StringPtrInput `pulumi:"peer"`
-	// Regular community
+	// BGP Root RIB Route maps match Regular community
 	RegularCommunity pulumi.StringPtrInput `pulumi:"regularCommunity"`
-	// Tag
+	// BGP Root RIB Route maps match Tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
 }
 
@@ -24290,59 +24863,59 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) ToBgpRouteMapRedistr
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput)
 }
 
-// AS path access list
+// BGP Root RIB Route maps match AS path access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) AsPathAccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *string { return v.AsPathAccessList }).(pulumi.StringPtrOutput)
 }
 
-// Extended community
+// BGP Root RIB Route maps match Extended community
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) ExtendedCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *string { return v.ExtendedCommunity }).(pulumi.StringPtrOutput)
 }
 
-// Interface
+// BGP Root RIB Route maps match Interface
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *string { return v.Interface }).(pulumi.StringPtrOutput)
 }
 
-// Ipv4
+// BGP Route Map Redistributions Root BGP rib Route Map IPv4
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) Ipv4() BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4PtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4 {
 		return v.Ipv4
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4PtrOutput)
 }
 
-// Large community
+// BGP Root RIB Route maps match Large community
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) LargeCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *string { return v.LargeCommunity }).(pulumi.StringPtrOutput)
 }
 
-// Local preference
+// BGP Root RIB Route maps match Local preference
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *int { return v.LocalPreference }).(pulumi.IntPtrOutput)
 }
 
-// Metric
+// BGP Root RIB Route maps match Metric
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *int { return v.Metric }).(pulumi.IntPtrOutput)
 }
 
-// Origin
+// BGP Root RIB Route maps match Origin
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *string { return v.Origin }).(pulumi.StringPtrOutput)
 }
 
-// Peer
+// BGP Root RIB Route maps match Peer
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) Peer() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *string { return v.Peer }).(pulumi.StringPtrOutput)
 }
 
-// Regular community
+// BGP Root RIB Route maps match Regular community
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) RegularCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *string { return v.RegularCommunity }).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// BGP Root RIB Route maps match Tag
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatch) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
@@ -24371,7 +24944,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Elem() BgpRouteMa
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchOutput)
 }
 
-// AS path access list
+// BGP Root RIB Route maps match AS path access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) AsPathAccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *string {
 		if v == nil {
@@ -24381,7 +24954,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) AsPathAccessList(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Extended community
+// BGP Root RIB Route maps match Extended community
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) ExtendedCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *string {
 		if v == nil {
@@ -24391,7 +24964,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) ExtendedCommunity
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface
+// BGP Root RIB Route maps match Interface
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *string {
 		if v == nil {
@@ -24401,7 +24974,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Interface() pulum
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ipv4
+// BGP Route Map Redistributions Root BGP rib Route Map IPv4
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Ipv4() BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4PtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4 {
 		if v == nil {
@@ -24411,7 +24984,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Ipv4() BgpRouteMa
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4PtrOutput)
 }
 
-// Large community
+// BGP Root RIB Route maps match Large community
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) LargeCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *string {
 		if v == nil {
@@ -24421,7 +24994,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) LargeCommunity() 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Local preference
+// BGP Root RIB Route maps match Local preference
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *int {
 		if v == nil {
@@ -24431,7 +25004,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) LocalPreference()
 	}).(pulumi.IntPtrOutput)
 }
 
-// Metric
+// BGP Root RIB Route maps match Metric
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *int {
 		if v == nil {
@@ -24441,7 +25014,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Metric() pulumi.I
 	}).(pulumi.IntPtrOutput)
 }
 
-// Origin
+// BGP Root RIB Route maps match Origin
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *string {
 		if v == nil {
@@ -24451,7 +25024,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Origin() pulumi.S
 	}).(pulumi.StringPtrOutput)
 }
 
-// Peer
+// BGP Root RIB Route maps match Peer
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Peer() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *string {
 		if v == nil {
@@ -24461,7 +25034,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Peer() pulumi.Str
 	}).(pulumi.StringPtrOutput)
 }
 
-// Regular community
+// BGP Root RIB Route maps match Regular community
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) RegularCommunity() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *string {
 		if v == nil {
@@ -24471,7 +25044,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) RegularCommunity(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// BGP Root RIB Route maps match Tag
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatch) *int {
 		if v == nil {
@@ -24663,9 +25236,9 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4PtrOutput) RouteSource()
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address struct {
-	// Access list
+	// BGP Root RIB Route maps match ipv Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root RIB Route maps match ipv Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -24681,9 +25254,9 @@ type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressInput interface {
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressArgs struct {
-	// Access list
+	// BGP Root RIB Route maps match ipv Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root RIB Route maps match ipv Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -24764,12 +25337,12 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressOutput) ToBgpRout
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressPtrOutput)
 }
 
-// Access list
+// BGP Root RIB Route maps match ipv Access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root RIB Route maps match ipv Prefix list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -24798,7 +25371,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressPtrOutput) Elem()
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressOutput)
 }
 
-// Access list
+// BGP Root RIB Route maps match ipv Access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -24808,7 +25381,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressPtrOutput) Access
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root RIB Route maps match ipv Prefix list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -24819,9 +25392,9 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4AddressPtrOutput) Prefix
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop struct {
-	// Access list
+	// BGP Root RIB Route maps match ipv next hop Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root RIB Route maps match ipv next hop Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -24837,9 +25410,9 @@ type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopInput interface {
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopArgs struct {
-	// Access list
+	// BGP Root RIB Route maps match ipv next hop Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root RIB Route maps match ipv next hop Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -24920,12 +25493,12 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopOutput) ToBgpRout
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopPtrOutput)
 }
 
-// Access list
+// BGP Root RIB Route maps match ipv next hop Access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root RIB Route maps match ipv next hop Prefix list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -24954,7 +25527,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopPtrOutput) Elem()
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopOutput)
 }
 
-// Access list
+// BGP Root RIB Route maps match ipv next hop Access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -24964,7 +25537,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopPtrOutput) Access
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root RIB Route maps match ipv next hop Prefix list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -24975,9 +25548,9 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4NextHopPtrOutput) Prefix
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource struct {
-	// Access list
+	// BGP Root RIB Route maps match ipv route source Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root RIB Route maps match ipv route source Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -24993,9 +25566,9 @@ type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceInput interface 
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceArgs struct {
-	// Access list
+	// BGP Root RIB Route maps match ipv route source Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// BGP Root RIB Route maps match ipv route source Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -25076,12 +25649,12 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceOutput) ToBgp
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourcePtrOutput)
 }
 
-// Access list
+// BGP Root RIB Route maps match ipv route source Access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root RIB Route maps match ipv route source Prefix list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -25110,7 +25683,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourcePtrOutput) El
 	}).(BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourceOutput)
 }
 
-// Access list
+// BGP Root RIB Route maps match ipv route source Access list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourcePtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource) *string {
 		if v == nil {
@@ -25120,7 +25693,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourcePtrOutput) Ac
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// BGP Root RIB Route maps match ipv route source Prefix list
 func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourcePtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSource) *string {
 		if v == nil {
@@ -25131,7 +25704,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapMatchIpv4RouteSourcePtrOutput) Pr
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapSet struct {
-	// Source address
+	// BGP Root RIB Route maps set Source address
 	SourceAddress *string `pulumi:"sourceAddress"`
 }
 
@@ -25147,7 +25720,7 @@ type BgpRouteMapRedistributionBgpRibRouteMapSetInput interface {
 }
 
 type BgpRouteMapRedistributionBgpRibRouteMapSetArgs struct {
-	// Source address
+	// BGP Root RIB Route maps set Source address
 	SourceAddress pulumi.StringPtrInput `pulumi:"sourceAddress"`
 }
 
@@ -25228,7 +25801,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapSetOutput) ToBgpRouteMapRedistrib
 	}).(BgpRouteMapRedistributionBgpRibRouteMapSetPtrOutput)
 }
 
-// Source address
+// BGP Root RIB Route maps set Source address
 func (o BgpRouteMapRedistributionBgpRibRouteMapSetOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionBgpRibRouteMapSet) *string { return v.SourceAddress }).(pulumi.StringPtrOutput)
 }
@@ -25257,7 +25830,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapSetPtrOutput) Elem() BgpRouteMapR
 	}).(BgpRouteMapRedistributionBgpRibRouteMapSetOutput)
 }
 
-// Source address
+// BGP Root RIB Route maps set Source address
 func (o BgpRouteMapRedistributionBgpRibRouteMapSetPtrOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionBgpRibRouteMapSet) *string {
 		if v == nil {
@@ -25268,7 +25841,7 @@ func (o BgpRouteMapRedistributionBgpRibRouteMapSetPtrOutput) SourceAddress() pul
 }
 
 type BgpRouteMapRedistributionConnectedStatic struct {
-	// Bgp
+	// Connected Static Root BGP
 	Bgp *BgpRouteMapRedistributionConnectedStaticBgp `pulumi:"bgp"`
 	// Ospf
 	Ospf *BgpRouteMapRedistributionConnectedStaticOspf `pulumi:"ospf"`
@@ -25288,7 +25861,7 @@ type BgpRouteMapRedistributionConnectedStaticInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticArgs struct {
-	// Bgp
+	// Connected Static Root BGP
 	Bgp BgpRouteMapRedistributionConnectedStaticBgpPtrInput `pulumi:"bgp"`
 	// Ospf
 	Ospf BgpRouteMapRedistributionConnectedStaticOspfPtrInput `pulumi:"ospf"`
@@ -25373,7 +25946,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOutput) ToBgpRouteMapRedistribut
 	}).(BgpRouteMapRedistributionConnectedStaticPtrOutput)
 }
 
-// Bgp
+// Connected Static Root BGP
 func (o BgpRouteMapRedistributionConnectedStaticOutput) Bgp() BgpRouteMapRedistributionConnectedStaticBgpPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticBgp {
 		return v.Bgp
@@ -25418,7 +25991,7 @@ func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Elem() BgpRouteMapRed
 	}).(BgpRouteMapRedistributionConnectedStaticOutput)
 }
 
-// Bgp
+// Connected Static Root BGP
 func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Bgp() BgpRouteMapRedistributionConnectedStaticBgpPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStatic) *BgpRouteMapRedistributionConnectedStaticBgp {
 		if v == nil {
@@ -25449,7 +26022,7 @@ func (o BgpRouteMapRedistributionConnectedStaticPtrOutput) Rib() BgpRouteMapRedi
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgp struct {
-	// Route maps
+	// Connected Static BGP Route maps
 	RouteMaps []BgpRouteMapRedistributionConnectedStaticBgpRouteMap `pulumi:"routeMaps"`
 }
 
@@ -25465,7 +26038,7 @@ type BgpRouteMapRedistributionConnectedStaticBgpInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpArgs struct {
-	// Route maps
+	// Connected Static BGP Route maps
 	RouteMaps BgpRouteMapRedistributionConnectedStaticBgpRouteMapArrayInput `pulumi:"routeMaps"`
 }
 
@@ -25546,7 +26119,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpOutput) ToBgpRouteMapRedistri
 	}).(BgpRouteMapRedistributionConnectedStaticBgpPtrOutput)
 }
 
-// Route maps
+// Connected Static BGP Route maps
 func (o BgpRouteMapRedistributionConnectedStaticBgpOutput) RouteMaps() BgpRouteMapRedistributionConnectedStaticBgpRouteMapArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgp) []BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 		return v.RouteMaps
@@ -25577,7 +26150,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpPtrOutput) Elem() BgpRouteMap
 	}).(BgpRouteMapRedistributionConnectedStaticBgpOutput)
 }
 
-// Route maps
+// Connected Static BGP Route maps
 func (o BgpRouteMapRedistributionConnectedStaticBgpPtrOutput) RouteMaps() BgpRouteMapRedistributionConnectedStaticBgpRouteMapArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgp) []BgpRouteMapRedistributionConnectedStaticBgpRouteMap {
 		if v == nil {
@@ -25588,13 +26161,13 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpPtrOutput) RouteMaps() BgpRou
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMap struct {
-	// Action
+	// Connected Static BGP Route maps Action
 	Action *string `pulumi:"action"`
-	// Description
+	// Connected Static BGP Route maps Description
 	Description *string `pulumi:"description"`
 	// Match
 	Match *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch `pulumi:"match"`
-	// Sequence number
+	// Connected Static BGP Route maps Sequence number
 	Name *int `pulumi:"name"`
 	// Set
 	Set *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet `pulumi:"set"`
@@ -25612,13 +26185,13 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapArgs struct {
-	// Action
+	// Connected Static BGP Route maps Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Description
+	// Connected Static BGP Route maps Description
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	// Match
 	Match BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchPtrInput `pulumi:"match"`
-	// Sequence number
+	// Connected Static BGP Route maps Sequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
 	// Set
 	Set BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrInput `pulumi:"set"`
@@ -25675,12 +26248,12 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapOutput) ToBgpRouteMap
 	return o
 }
 
-// Action
+// Connected Static BGP Route maps Action
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMap) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Description
+// Connected Static BGP Route maps Description
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMap) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
@@ -25692,7 +26265,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapOutput) Match() BgpRo
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchPtrOutput)
 }
 
-// Sequence number
+// Connected Static BGP Route maps Sequence number
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapOutput) Name() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMap) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
@@ -25725,11 +26298,11 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapArrayOutput) Index(i 
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch struct {
-	// Interface
+	// Connected Static BGP Route maps match Interface
 	Interface *string `pulumi:"interface"`
 	// bgp-route-map-redistributions connected-static ipv4
 	Ipv4 *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4 `pulumi:"ipv4"`
-	// Metric
+	// Connected Static BGP Route maps match Metric
 	Metric *int `pulumi:"metric"`
 }
 
@@ -25745,11 +26318,11 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchArgs struct {
-	// Interface
+	// Connected Static BGP Route maps match Interface
 	Interface pulumi.StringPtrInput `pulumi:"interface"`
 	// bgp-route-map-redistributions connected-static ipv4
 	Ipv4 BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4PtrInput `pulumi:"ipv4"`
-	// Metric
+	// Connected Static BGP Route maps match Metric
 	Metric pulumi.IntPtrInput `pulumi:"metric"`
 }
 
@@ -25830,7 +26403,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchOutput) ToBgpRou
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchPtrOutput)
 }
 
-// Interface
+// Connected Static BGP Route maps match Interface
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch) *string { return v.Interface }).(pulumi.StringPtrOutput)
 }
@@ -25842,7 +26415,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchOutput) Ipv4() B
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4PtrOutput)
 }
 
-// Metric
+// Connected Static BGP Route maps match Metric
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch) *int { return v.Metric }).(pulumi.IntPtrOutput)
 }
@@ -25871,7 +26444,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchPtrOutput) Elem(
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchOutput)
 }
 
-// Interface
+// Connected Static BGP Route maps match Interface
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchPtrOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch) *string {
 		if v == nil {
@@ -25891,7 +26464,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchPtrOutput) Ipv4(
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4PtrOutput)
 }
 
-// Metric
+// Connected Static BGP Route maps match Metric
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchPtrOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatch) *int {
 		if v == nil {
@@ -26062,9 +26635,9 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4PtrOutput) N
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address struct {
-	// Access list
+	// Connected Static BGP Route maps match ip4 Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Route maps match ip4  Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -26080,9 +26653,9 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressInput in
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressArgs struct {
-	// Access list
+	// Connected Static BGP Route maps match ip4 Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Route maps match ip4  Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -26163,14 +26736,14 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressOutpu
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressPtrOutput)
 }
 
-// Access list
+// Connected Static BGP Route maps match ip4 Access list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address) *string {
 		return v.AccessList
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Route maps match ip4  Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address) *string {
 		return v.PrefixList
@@ -26201,7 +26774,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressPtrOu
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressOutput)
 }
 
-// Access list
+// Connected Static BGP Route maps match ip4 Access list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -26211,7 +26784,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressPtrOu
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Route maps match ip4  Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -26222,9 +26795,9 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4AddressPtrOu
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop struct {
-	// Access list
+	// Connected Static BGP Route maps match ip4 next hop Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Route maps match ip4 next hop Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -26240,9 +26813,9 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopInput in
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopArgs struct {
-	// Access list
+	// Connected Static BGP Route maps match ip4 next hop Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Route maps match ip4 next hop Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -26323,14 +26896,14 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopOutpu
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopPtrOutput)
 }
 
-// Access list
+// Connected Static BGP Route maps match ip4 next hop Access list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop) *string {
 		return v.AccessList
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Route maps match ip4 next hop Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop) *string {
 		return v.PrefixList
@@ -26361,7 +26934,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopPtrOu
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopOutput)
 }
 
-// Access list
+// Connected Static BGP Route maps match ip4 next hop Access list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -26371,7 +26944,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopPtrOu
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Route maps match ip4 next hop Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -26384,27 +26957,27 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapMatchIpv4NextHopPtrOu
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet struct {
 	// bgp-route-map-redistributions connected*static aggregator
 	Aggregator *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator `pulumi:"aggregator"`
-	// AS numbers
+	// Connected Static BGP Route maps set AS numbers
 	AspathPrepends []int `pulumi:"aspathPrepends"`
-	// Enable BGP atomic aggregate?
+	// Connected Static BGP Route maps set Enable BGP atomic aggregate?
 	AtomicAggregate *bool `pulumi:"atomicAggregate"`
 	// Ipv4
 	Ipv4 *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 `pulumi:"ipv4"`
-	// Large communities
+	// Connected Static  BGP Route maps set Large communities
 	LargeCommunities []string `pulumi:"largeCommunities"`
-	// Local preference
+	// Connected Static BGP Route maps set Local preference
 	LocalPreference *int `pulumi:"localPreference"`
 	// Metric
 	Metric *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric `pulumi:"metric"`
-	// Origin
+	// Connected Static BGP Route maps set Origin
 	Origin *string `pulumi:"origin"`
-	// Originator ID
+	// Connected Static BGP Route maps set Originator ID
 	OriginatorId *string `pulumi:"originatorId"`
-	// Regular communities
+	// Connected Static  BGP Route maps set Regular communities
 	RegularCommunities []string `pulumi:"regularCommunities"`
-	// Tag
+	// Connected Static BGP Route maps set Tag
 	Tag *int `pulumi:"tag"`
-	// Weight
+	// Connected Static BGP Route maps set Weight
 	Weight *int `pulumi:"weight"`
 }
 
@@ -26422,27 +26995,27 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetInput interface {
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetArgs struct {
 	// bgp-route-map-redistributions connected*static aggregator
 	Aggregator BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrInput `pulumi:"aggregator"`
-	// AS numbers
+	// Connected Static BGP Route maps set AS numbers
 	AspathPrepends pulumi.IntArrayInput `pulumi:"aspathPrepends"`
-	// Enable BGP atomic aggregate?
+	// Connected Static BGP Route maps set Enable BGP atomic aggregate?
 	AtomicAggregate pulumi.BoolPtrInput `pulumi:"atomicAggregate"`
 	// Ipv4
 	Ipv4 BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrInput `pulumi:"ipv4"`
-	// Large communities
+	// Connected Static  BGP Route maps set Large communities
 	LargeCommunities pulumi.StringArrayInput `pulumi:"largeCommunities"`
-	// Local preference
+	// Connected Static BGP Route maps set Local preference
 	LocalPreference pulumi.IntPtrInput `pulumi:"localPreference"`
 	// Metric
 	Metric BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrInput `pulumi:"metric"`
-	// Origin
+	// Connected Static BGP Route maps set Origin
 	Origin pulumi.StringPtrInput `pulumi:"origin"`
-	// Originator ID
+	// Connected Static BGP Route maps set Originator ID
 	OriginatorId pulumi.StringPtrInput `pulumi:"originatorId"`
-	// Regular communities
+	// Connected Static  BGP Route maps set Regular communities
 	RegularCommunities pulumi.StringArrayInput `pulumi:"regularCommunities"`
-	// Tag
+	// Connected Static BGP Route maps set Tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
-	// Weight
+	// Connected Static BGP Route maps set Weight
 	Weight pulumi.IntPtrInput `pulumi:"weight"`
 }
 
@@ -26530,12 +27103,12 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) Aggregator
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutput)
 }
 
-// AS numbers
+// Connected Static BGP Route maps set AS numbers
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) AspathPrepends() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) []int { return v.AspathPrepends }).(pulumi.IntArrayOutput)
 }
 
-// Enable BGP atomic aggregate?
+// Connected Static BGP Route maps set Enable BGP atomic aggregate?
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) AtomicAggregate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *bool { return v.AtomicAggregate }).(pulumi.BoolPtrOutput)
 }
@@ -26547,12 +27120,12 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) Ipv4() Bgp
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput)
 }
 
-// Large communities
+// Connected Static  BGP Route maps set Large communities
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) LargeCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) []string { return v.LargeCommunities }).(pulumi.StringArrayOutput)
 }
 
-// Local preference
+// Connected Static BGP Route maps set Local preference
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *int { return v.LocalPreference }).(pulumi.IntPtrOutput)
 }
@@ -26564,27 +27137,27 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) Metric() B
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput)
 }
 
-// Origin
+// Connected Static BGP Route maps set Origin
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *string { return v.Origin }).(pulumi.StringPtrOutput)
 }
 
-// Originator ID
+// Connected Static BGP Route maps set Originator ID
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) OriginatorId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *string { return v.OriginatorId }).(pulumi.StringPtrOutput)
 }
 
-// Regular communities
+// Connected Static  BGP Route maps set Regular communities
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) RegularCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) []string { return v.RegularCommunities }).(pulumi.StringArrayOutput)
 }
 
-// Tag
+// Connected Static BGP Route maps set Tag
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
 
-// Weight
+// Connected Static BGP Route maps set Weight
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetOutput) Weight() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *int { return v.Weight }).(pulumi.IntPtrOutput)
 }
@@ -26623,7 +27196,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Aggrega
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutput)
 }
 
-// AS numbers
+// Connected Static BGP Route maps set AS numbers
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) AspathPrepends() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) []int {
 		if v == nil {
@@ -26633,7 +27206,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) AspathP
 	}).(pulumi.IntArrayOutput)
 }
 
-// Enable BGP atomic aggregate?
+// Connected Static BGP Route maps set Enable BGP atomic aggregate?
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) AtomicAggregate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *bool {
 		if v == nil {
@@ -26653,7 +27226,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Ipv4() 
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput)
 }
 
-// Large communities
+// Connected Static  BGP Route maps set Large communities
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) LargeCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) []string {
 		if v == nil {
@@ -26663,7 +27236,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) LargeCo
 	}).(pulumi.StringArrayOutput)
 }
 
-// Local preference
+// Connected Static BGP Route maps set Local preference
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *int {
 		if v == nil {
@@ -26683,7 +27256,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Metric(
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput)
 }
 
-// Origin
+// Connected Static BGP Route maps set Origin
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *string {
 		if v == nil {
@@ -26693,7 +27266,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Origin(
 	}).(pulumi.StringPtrOutput)
 }
 
-// Originator ID
+// Connected Static BGP Route maps set Originator ID
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) OriginatorId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *string {
 		if v == nil {
@@ -26703,7 +27276,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Origina
 	}).(pulumi.StringPtrOutput)
 }
 
-// Regular communities
+// Connected Static  BGP Route maps set Regular communities
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) RegularCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) []string {
 		if v == nil {
@@ -26713,7 +27286,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Regular
 	}).(pulumi.StringArrayOutput)
 }
 
-// Tag
+// Connected Static BGP Route maps set Tag
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *int {
 		if v == nil {
@@ -26723,7 +27296,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Tag() p
 	}).(pulumi.IntPtrOutput)
 }
 
-// Weight
+// Connected Static BGP Route maps set Weight
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Weight() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSet) *int {
 		if v == nil {
@@ -26734,9 +27307,9 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetPtrOutput) Weight(
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator struct {
-	// Aggregator AS
+	// Connected Static BGP Route maps set Aggregator AS
 	As *int `pulumi:"as"`
-	// Router ID
+	// Connected Static BGP Route maps set Router ID
 	RouterId *string `pulumi:"routerId"`
 }
 
@@ -26752,9 +27325,9 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorInput inter
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorArgs struct {
-	// Aggregator AS
+	// Connected Static BGP Route maps set Aggregator AS
 	As pulumi.IntPtrInput `pulumi:"as"`
-	// Router ID
+	// Connected Static BGP Route maps set Router ID
 	RouterId pulumi.StringPtrInput `pulumi:"routerId"`
 }
 
@@ -26835,12 +27408,12 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorOutput) 
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutput)
 }
 
-// Aggregator AS
+// Connected Static BGP Route maps set Aggregator AS
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorOutput) As() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator) *int { return v.As }).(pulumi.IntPtrOutput)
 }
 
-// Router ID
+// Connected Static BGP Route maps set Router ID
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorOutput) RouterId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator) *string { return v.RouterId }).(pulumi.StringPtrOutput)
 }
@@ -26869,7 +27442,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutpu
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorOutput)
 }
 
-// Aggregator AS
+// Connected Static BGP Route maps set Aggregator AS
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutput) As() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator) *int {
 		if v == nil {
@@ -26879,7 +27452,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutpu
 	}).(pulumi.IntPtrOutput)
 }
 
-// Router ID
+// Connected Static BGP Route maps set Router ID
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutput) RouterId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregator) *string {
 		if v == nil {
@@ -26890,9 +27463,9 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetAggregatorPtrOutpu
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4 struct {
-	// Next hop
+	// Connected Static BGP Route maps set Next ipv4 hop
 	NextHop *string `pulumi:"nextHop"`
-	// Source address
+	// Connected Static BGP Route maps set ipv4 Source address
 	SourceAddress *string `pulumi:"sourceAddress"`
 }
 
@@ -26908,9 +27481,9 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Input interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Args struct {
-	// Next hop
+	// Connected Static BGP Route maps set Next ipv4 hop
 	NextHop pulumi.StringPtrInput `pulumi:"nextHop"`
-	// Source address
+	// Connected Static BGP Route maps set ipv4 Source address
 	SourceAddress pulumi.StringPtrInput `pulumi:"sourceAddress"`
 }
 
@@ -26991,12 +27564,12 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Output) ToBgpR
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput)
 }
 
-// Next hop
+// Connected Static BGP Route maps set Next ipv4 hop
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Output) NextHop() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4) *string { return v.NextHop }).(pulumi.StringPtrOutput)
 }
 
-// Source address
+// Connected Static BGP Route maps set ipv4 Source address
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Output) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4) *string { return v.SourceAddress }).(pulumi.StringPtrOutput)
 }
@@ -27025,7 +27598,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput) Ele
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4Output)
 }
 
-// Next hop
+// Connected Static BGP Route maps set Next ipv4 hop
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput) NextHop() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4) *string {
 		if v == nil {
@@ -27035,7 +27608,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput) Nex
 	}).(pulumi.StringPtrOutput)
 }
 
-// Source address
+// Connected Static BGP Route maps set ipv4 Source address
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4) *string {
 		if v == nil {
@@ -27046,9 +27619,9 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetIpv4PtrOutput) Sou
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric struct {
-	// Metric action
+	// Connected Static BGP Route maps set Metric action
 	Action *string `pulumi:"action"`
-	// Metric value
+	// Connected Static BGP Route maps set Metric value
 	Value *int `pulumi:"value"`
 }
 
@@ -27064,9 +27637,9 @@ type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricInput interface
 }
 
 type BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricArgs struct {
-	// Metric action
+	// Connected Static BGP Route maps set Metric action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Metric value
+	// Connected Static BGP Route maps set Metric value
 	Value pulumi.IntPtrInput `pulumi:"value"`
 }
 
@@ -27147,12 +27720,12 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricOutput) ToBg
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput)
 }
 
-// Metric action
+// Connected Static BGP Route maps set Metric action
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// Connected Static BGP Route maps set Metric value
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric) *int { return v.Value }).(pulumi.IntPtrOutput)
 }
@@ -27181,7 +27754,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput) E
 	}).(BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricOutput)
 }
 
-// Metric action
+// Connected Static BGP Route maps set Metric action
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric) *string {
 		if v == nil {
@@ -27191,7 +27764,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput) A
 	}).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// Connected Static BGP Route maps set Metric value
 func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetric) *int {
 		if v == nil {
@@ -27202,7 +27775,7 @@ func (o BgpRouteMapRedistributionConnectedStaticBgpRouteMapSetMetricPtrOutput) V
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspf struct {
-	// Route maps
+	// Connected Static  BGP OSPF Route maps
 	RouteMaps []BgpRouteMapRedistributionConnectedStaticOspfRouteMap `pulumi:"routeMaps"`
 }
 
@@ -27218,7 +27791,7 @@ type BgpRouteMapRedistributionConnectedStaticOspfInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfArgs struct {
-	// Route maps
+	// Connected Static  BGP OSPF Route maps
 	RouteMaps BgpRouteMapRedistributionConnectedStaticOspfRouteMapArrayInput `pulumi:"routeMaps"`
 }
 
@@ -27299,7 +27872,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfOutput) ToBgpRouteMapRedistr
 	}).(BgpRouteMapRedistributionConnectedStaticOspfPtrOutput)
 }
 
-// Route maps
+// Connected Static  BGP OSPF Route maps
 func (o BgpRouteMapRedistributionConnectedStaticOspfOutput) RouteMaps() BgpRouteMapRedistributionConnectedStaticOspfRouteMapArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspf) []BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
 		return v.RouteMaps
@@ -27330,7 +27903,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfPtrOutput) Elem() BgpRouteMa
 	}).(BgpRouteMapRedistributionConnectedStaticOspfOutput)
 }
 
-// Route maps
+// Connected Static  BGP OSPF Route maps
 func (o BgpRouteMapRedistributionConnectedStaticOspfPtrOutput) RouteMaps() BgpRouteMapRedistributionConnectedStaticOspfRouteMapArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspf) []BgpRouteMapRedistributionConnectedStaticOspfRouteMap {
 		if v == nil {
@@ -27341,15 +27914,15 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfPtrOutput) RouteMaps() BgpRo
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMap struct {
-	// Action
+	// Connected Static BGP OSPF Route map Action
 	Action *string `pulumi:"action"`
-	// Description
+	// Connected Static BGP OSPF Route map Description
 	Description *string `pulumi:"description"`
 	// Match
 	Match *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch `pulumi:"match"`
-	// Sequence number
+	// Connected Static BGP OSPF Route map Sequence number
 	Name *int `pulumi:"name"`
-	// Set
+	// Connected Static Root OSPF Set
 	Set *BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet `pulumi:"set"`
 }
 
@@ -27365,15 +27938,15 @@ type BgpRouteMapRedistributionConnectedStaticOspfRouteMapInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapArgs struct {
-	// Action
+	// Connected Static BGP OSPF Route map Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Description
+	// Connected Static BGP OSPF Route map Description
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	// Match
 	Match BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrInput `pulumi:"match"`
-	// Sequence number
+	// Connected Static BGP OSPF Route map Sequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
-	// Set
+	// Connected Static Root OSPF Set
 	Set BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetPtrInput `pulumi:"set"`
 }
 
@@ -27428,12 +28001,12 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapOutput) ToBgpRouteMa
 	return o
 }
 
-// Action
+// Connected Static BGP OSPF Route map Action
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMap) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Description
+// Connected Static BGP OSPF Route map Description
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMap) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
@@ -27445,12 +28018,12 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapOutput) Match() BgpR
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrOutput)
 }
 
-// Sequence number
+// Connected Static BGP OSPF Route map Sequence number
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapOutput) Name() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMap) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
 
-// Set
+// Connected Static Root OSPF Set
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapOutput) Set() BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMap) *BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet {
 		return v.Set
@@ -27478,11 +28051,11 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapArrayOutput) Index(i
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch struct {
-	// Interface
+	// Connected Static BGP OSPF Route map Interface
 	Interface *string `pulumi:"interface"`
 	// bgp-route-map-redistributions connected-static match ipv4
 	Ipv4 *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 `pulumi:"ipv4"`
-	// Metric
+	// Connected Static BGP OSPF Route map Metric
 	Metric *int `pulumi:"metric"`
 }
 
@@ -27498,11 +28071,11 @@ type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchArgs struct {
-	// Interface
+	// Connected Static BGP OSPF Route map Interface
 	Interface pulumi.StringPtrInput `pulumi:"interface"`
 	// bgp-route-map-redistributions connected-static match ipv4
 	Ipv4 BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4PtrInput `pulumi:"ipv4"`
-	// Metric
+	// Connected Static BGP OSPF Route map Metric
 	Metric pulumi.IntPtrInput `pulumi:"metric"`
 }
 
@@ -27583,7 +28156,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchOutput) ToBgpRo
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrOutput)
 }
 
-// Interface
+// Connected Static BGP OSPF Route map Interface
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch) *string { return v.Interface }).(pulumi.StringPtrOutput)
 }
@@ -27595,7 +28168,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchOutput) Ipv4() 
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4PtrOutput)
 }
 
-// Metric
+// Connected Static BGP OSPF Route map Metric
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch) *int { return v.Metric }).(pulumi.IntPtrOutput)
 }
@@ -27624,7 +28197,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrOutput) Elem
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchOutput)
 }
 
-// Interface
+// Connected Static BGP OSPF Route map Interface
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch) *string {
 		if v == nil {
@@ -27644,7 +28217,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrOutput) Ipv4
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4PtrOutput)
 }
 
-// Metric
+// Connected Static BGP OSPF Route map Metric
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatch) *int {
 		if v == nil {
@@ -27655,7 +28228,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchPtrOutput) Metr
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4 struct {
-	// Address
+	// Connected Static Root OSPF Address
 	Address *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address `pulumi:"address"`
 	// Next hop
 	NextHop *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop `pulumi:"nextHop"`
@@ -27673,7 +28246,7 @@ type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Input interfac
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Args struct {
-	// Address
+	// Connected Static Root OSPF Address
 	Address BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrInput `pulumi:"address"`
 	// Next hop
 	NextHop BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopPtrInput `pulumi:"nextHop"`
@@ -27756,7 +28329,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Output) ToB
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4PtrOutput)
 }
 
-// Address
+// Connected Static Root OSPF Address
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Output) Address() BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address {
 		return v.Address
@@ -27794,7 +28367,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4PtrOutput) 
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Output)
 }
 
-// Address
+// Connected Static Root OSPF Address
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4PtrOutput) Address() BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4) *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address {
 		if v == nil {
@@ -27815,9 +28388,9 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4PtrOutput) 
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address struct {
-	// Access list
+	// Connected Static BGP OSPF Route map ipv4 Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP OSPF Route map ipv4 Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -27833,9 +28406,9 @@ type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressInput i
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressArgs struct {
-	// Access list
+	// Connected Static BGP OSPF Route map ipv4 Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP OSPF Route map ipv4 Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -27916,14 +28489,14 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressOutp
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrOutput)
 }
 
-// Access list
+// Connected Static BGP OSPF Route map ipv4 Access list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address) *string {
 		return v.AccessList
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP OSPF Route map ipv4 Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address) *string {
 		return v.PrefixList
@@ -27954,7 +28527,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrO
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressOutput)
 }
 
-// Access list
+// Connected Static BGP OSPF Route map ipv4 Access list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -27964,7 +28537,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrO
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP OSPF Route map ipv4 Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -27975,9 +28548,9 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4AddressPtrO
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop struct {
-	// Access list
+	// Connected Static BGP OSPF Route map ipv4 next hop Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP OSPF Route map ipv4 next hop Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -27993,9 +28566,9 @@ type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopInput i
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopArgs struct {
-	// Access list
+	// Connected Static BGP OSPF Route map ipv4 next hop Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP OSPF Route map ipv4 next hop Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -28076,14 +28649,14 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopOutp
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopPtrOutput)
 }
 
-// Access list
+// Connected Static BGP OSPF Route map ipv4 next hop Access list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop) *string {
 		return v.AccessList
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP OSPF Route map ipv4 next hop Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop) *string {
 		return v.PrefixList
@@ -28114,7 +28687,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopPtrO
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopOutput)
 }
 
-// Access list
+// Connected Static BGP OSPF Route map ipv4 next hop Access list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -28124,7 +28697,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopPtrO
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP OSPF Route map ipv4 next hop Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -28137,9 +28710,9 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapMatchIpv4NextHopPtrO
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet struct {
 	// Metric
 	Metric *BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric `pulumi:"metric"`
-	// Metric type
+	// Connected Static BGP OSPF Route map set Metric type
 	MetricType *string `pulumi:"metricType"`
-	// Tag
+	// Connected Static BGP OSPF Route map set Tag
 	Tag *int `pulumi:"tag"`
 }
 
@@ -28157,9 +28730,9 @@ type BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetInput interface {
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetArgs struct {
 	// Metric
 	Metric BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrInput `pulumi:"metric"`
-	// Metric type
+	// Connected Static BGP OSPF Route map set Metric type
 	MetricType pulumi.StringPtrInput `pulumi:"metricType"`
-	// Tag
+	// Connected Static BGP OSPF Route map set Tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
 }
 
@@ -28247,12 +28820,12 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetOutput) Metric() 
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput)
 }
 
-// Metric type
+// Connected Static BGP OSPF Route map set Metric type
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetOutput) MetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet) *string { return v.MetricType }).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// Connected Static BGP OSPF Route map set Tag
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
@@ -28291,7 +28864,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetPtrOutput) Metric
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput)
 }
 
-// Metric type
+// Connected Static BGP OSPF Route map set Metric type
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetPtrOutput) MetricType() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet) *string {
 		if v == nil {
@@ -28301,7 +28874,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetPtrOutput) Metric
 	}).(pulumi.StringPtrOutput)
 }
 
-// Tag
+// Connected Static BGP OSPF Route map set Tag
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapSet) *int {
 		if v == nil {
@@ -28312,9 +28885,9 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetPtrOutput) Tag() 
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric struct {
-	// Metric action
+	// Connected Static BGP OSPF Route map set Metric action
 	Action *string `pulumi:"action"`
-	// Metric value
+	// Connected Static BGP OSPF Route map set Metric value
 	Value *int `pulumi:"value"`
 }
 
@@ -28330,9 +28903,9 @@ type BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricInput interfac
 }
 
 type BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs struct {
-	// Metric action
+	// Connected Static BGP OSPF Route map set Metric action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Metric value
+	// Connected Static BGP OSPF Route map set Metric value
 	Value pulumi.IntPtrInput `pulumi:"value"`
 }
 
@@ -28413,12 +28986,12 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricOutput) ToB
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput)
 }
 
-// Metric action
+// Connected Static BGP OSPF Route map set Metric action
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// Connected Static BGP OSPF Route map set Metric value
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric) *int { return v.Value }).(pulumi.IntPtrOutput)
 }
@@ -28447,7 +29020,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput) 
 	}).(BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricOutput)
 }
 
-// Metric action
+// Connected Static BGP OSPF Route map set Metric action
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric) *string {
 		if v == nil {
@@ -28457,7 +29030,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput) 
 	}).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// Connected Static BGP OSPF Route map set Metric value
 func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetric) *int {
 		if v == nil {
@@ -28468,7 +29041,7 @@ func (o BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricPtrOutput) 
 }
 
 type BgpRouteMapRedistributionConnectedStaticRib struct {
-	// Route maps
+	// Connected Static BGP Rib Route maps
 	RouteMaps []BgpRouteMapRedistributionConnectedStaticRibRouteMap `pulumi:"routeMaps"`
 }
 
@@ -28484,7 +29057,7 @@ type BgpRouteMapRedistributionConnectedStaticRibInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibArgs struct {
-	// Route maps
+	// Connected Static BGP Rib Route maps
 	RouteMaps BgpRouteMapRedistributionConnectedStaticRibRouteMapArrayInput `pulumi:"routeMaps"`
 }
 
@@ -28565,7 +29138,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibOutput) ToBgpRouteMapRedistri
 	}).(BgpRouteMapRedistributionConnectedStaticRibPtrOutput)
 }
 
-// Route maps
+// Connected Static BGP Rib Route maps
 func (o BgpRouteMapRedistributionConnectedStaticRibOutput) RouteMaps() BgpRouteMapRedistributionConnectedStaticRibRouteMapArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRib) []BgpRouteMapRedistributionConnectedStaticRibRouteMap {
 		return v.RouteMaps
@@ -28596,7 +29169,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibPtrOutput) Elem() BgpRouteMap
 	}).(BgpRouteMapRedistributionConnectedStaticRibOutput)
 }
 
-// Route maps
+// Connected Static BGP Rib Route maps
 func (o BgpRouteMapRedistributionConnectedStaticRibPtrOutput) RouteMaps() BgpRouteMapRedistributionConnectedStaticRibRouteMapArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRib) []BgpRouteMapRedistributionConnectedStaticRibRouteMap {
 		if v == nil {
@@ -28607,15 +29180,15 @@ func (o BgpRouteMapRedistributionConnectedStaticRibPtrOutput) RouteMaps() BgpRou
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMap struct {
-	// Action
+	// Connected Static BGP Rib Route maps Action
 	Action *string `pulumi:"action"`
-	// Description
+	// Connected Static BGP Rib Route maps Description
 	Description *string `pulumi:"description"`
 	// Match
 	Match *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch `pulumi:"match"`
-	// Sequence number
+	// Connected Static BGP Rib Route maps Sequence number
 	Name *int `pulumi:"name"`
-	// Set
+	// Connected Static Root RIB set
 	Set *BgpRouteMapRedistributionConnectedStaticRibRouteMapSet `pulumi:"set"`
 }
 
@@ -28631,15 +29204,15 @@ type BgpRouteMapRedistributionConnectedStaticRibRouteMapInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapArgs struct {
-	// Action
+	// Connected Static BGP Rib Route maps Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Description
+	// Connected Static BGP Rib Route maps Description
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	// Match
 	Match BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrInput `pulumi:"match"`
-	// Sequence number
+	// Connected Static BGP Rib Route maps Sequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
-	// Set
+	// Connected Static Root RIB set
 	Set BgpRouteMapRedistributionConnectedStaticRibRouteMapSetPtrInput `pulumi:"set"`
 }
 
@@ -28694,12 +29267,12 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapOutput) ToBgpRouteMap
 	return o
 }
 
-// Action
+// Connected Static BGP Rib Route maps Action
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMap) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Description
+// Connected Static BGP Rib Route maps Description
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMap) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
@@ -28711,12 +29284,12 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapOutput) Match() BgpRo
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrOutput)
 }
 
-// Sequence number
+// Connected Static BGP Rib Route maps Sequence number
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapOutput) Name() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMap) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
 
-// Set
+// Connected Static Root RIB set
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapOutput) Set() BgpRouteMapRedistributionConnectedStaticRibRouteMapSetPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMap) *BgpRouteMapRedistributionConnectedStaticRibRouteMapSet {
 		return v.Set
@@ -28744,11 +29317,11 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapArrayOutput) Index(i 
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch struct {
-	// Interface
+	// Connected Static BGP Rib Route maps Interface
 	Interface *string `pulumi:"interface"`
 	// Ipv4
 	Ipv4 *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 `pulumi:"ipv4"`
-	// Metric
+	// Connected Static BGP Rib Route maps Metric
 	Metric *int `pulumi:"metric"`
 }
 
@@ -28764,11 +29337,11 @@ type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchArgs struct {
-	// Interface
+	// Connected Static BGP Rib Route maps Interface
 	Interface pulumi.StringPtrInput `pulumi:"interface"`
 	// Ipv4
 	Ipv4 BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4PtrInput `pulumi:"ipv4"`
-	// Metric
+	// Connected Static BGP Rib Route maps Metric
 	Metric pulumi.IntPtrInput `pulumi:"metric"`
 }
 
@@ -28849,7 +29422,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchOutput) ToBgpRou
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrOutput)
 }
 
-// Interface
+// Connected Static BGP Rib Route maps Interface
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch) *string { return v.Interface }).(pulumi.StringPtrOutput)
 }
@@ -28861,7 +29434,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchOutput) Ipv4() B
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4PtrOutput)
 }
 
-// Metric
+// Connected Static BGP Rib Route maps Metric
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch) *int { return v.Metric }).(pulumi.IntPtrOutput)
 }
@@ -28890,7 +29463,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrOutput) Elem(
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchOutput)
 }
 
-// Interface
+// Connected Static BGP Rib Route maps Interface
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch) *string {
 		if v == nil {
@@ -28910,7 +29483,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrOutput) Ipv4(
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4PtrOutput)
 }
 
-// Metric
+// Connected Static BGP Rib Route maps Metric
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch) *int {
 		if v == nil {
@@ -28921,7 +29494,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchPtrOutput) Metri
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 struct {
-	// Address
+	// Connected Static BGP Rib Route maps ipv4 address
 	Address *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address `pulumi:"address"`
 	// Next hop
 	NextHop *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop `pulumi:"nextHop"`
@@ -28939,7 +29512,7 @@ type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Input interface
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Args struct {
-	// Address
+	// Connected Static BGP Rib Route maps ipv4 address
 	Address BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrInput `pulumi:"address"`
 	// Next hop
 	NextHop BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopPtrInput `pulumi:"nextHop"`
@@ -29022,7 +29595,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Output) ToBg
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4PtrOutput)
 }
 
-// Address
+// Connected Static BGP Rib Route maps ipv4 address
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Output) Address() BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4) *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address {
 		return v.Address
@@ -29060,7 +29633,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4PtrOutput) E
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Output)
 }
 
-// Address
+// Connected Static BGP Rib Route maps ipv4 address
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4PtrOutput) Address() BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4) *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address {
 		if v == nil {
@@ -29081,9 +29654,9 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4PtrOutput) N
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address struct {
-	// Access list
+	// Connected Static BGP Rib Route maps ipv4 Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Rib Route maps ipv4 Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -29099,9 +29672,9 @@ type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressInput in
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressArgs struct {
-	// Access list
+	// Connected Static BGP Rib Route maps ipv4 Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Rib Route maps ipv4 Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -29182,14 +29755,14 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressOutpu
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOutput)
 }
 
-// Access list
+// Connected Static BGP Rib Route maps ipv4 Access list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address) *string {
 		return v.AccessList
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Rib Route maps ipv4 Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address) *string {
 		return v.PrefixList
@@ -29220,7 +29793,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOu
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressOutput)
 }
 
-// Access list
+// Connected Static BGP Rib Route maps ipv4 Access list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -29230,7 +29803,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOu
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Rib Route maps ipv4 Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4Address) *string {
 		if v == nil {
@@ -29241,9 +29814,9 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4AddressPtrOu
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop struct {
-	// Access list
+	// Connected Static BGP Rib Route maps ipv4 nect hop Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Rib Route maps ipv4 next hop Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -29259,9 +29832,9 @@ type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopInput in
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopArgs struct {
-	// Access list
+	// Connected Static BGP Rib Route maps ipv4 nect hop Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// Connected Static BGP Rib Route maps ipv4 next hop Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -29342,14 +29915,14 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopOutpu
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopPtrOutput)
 }
 
-// Access list
+// Connected Static BGP Rib Route maps ipv4 nect hop Access list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop) *string {
 		return v.AccessList
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Rib Route maps ipv4 next hop Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop) *string {
 		return v.PrefixList
@@ -29380,7 +29953,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopPtrOu
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopOutput)
 }
 
-// Access list
+// Connected Static BGP Rib Route maps ipv4 nect hop Access list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -29390,7 +29963,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopPtrOu
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// Connected Static BGP Rib Route maps ipv4 next hop Prefix list
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHop) *string {
 		if v == nil {
@@ -29401,7 +29974,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4NextHopPtrOu
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapSet struct {
-	// Source address
+	// Connected Static BGP Rib Route Map Distribution Source address
 	SourceAddress *string `pulumi:"sourceAddress"`
 }
 
@@ -29417,7 +29990,7 @@ type BgpRouteMapRedistributionConnectedStaticRibRouteMapSetInput interface {
 }
 
 type BgpRouteMapRedistributionConnectedStaticRibRouteMapSetArgs struct {
-	// Source address
+	// Connected Static BGP Rib Route Map Distribution Source address
 	SourceAddress pulumi.StringPtrInput `pulumi:"sourceAddress"`
 }
 
@@ -29498,7 +30071,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapSetOutput) ToBgpRoute
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapSetPtrOutput)
 }
 
-// Source address
+// Connected Static BGP Rib Route Map Distribution Source address
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapSetOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionConnectedStaticRibRouteMapSet) *string { return v.SourceAddress }).(pulumi.StringPtrOutput)
 }
@@ -29527,7 +30100,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapSetPtrOutput) Elem() 
 	}).(BgpRouteMapRedistributionConnectedStaticRibRouteMapSetOutput)
 }
 
-// Source address
+// Connected Static BGP Rib Route Map Distribution Source address
 func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapSetPtrOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionConnectedStaticRibRouteMapSet) *string {
 		if v == nil {
@@ -29538,7 +30111,7 @@ func (o BgpRouteMapRedistributionConnectedStaticRibRouteMapSetPtrOutput) SourceA
 }
 
 type BgpRouteMapRedistributionOspf struct {
-	// Bgp
+	// OSPF Root BGP
 	Bgp *BgpRouteMapRedistributionOspfBgp `pulumi:"bgp"`
 	// Rib
 	Rib *BgpRouteMapRedistributionOspfRib `pulumi:"rib"`
@@ -29556,7 +30129,7 @@ type BgpRouteMapRedistributionOspfInput interface {
 }
 
 type BgpRouteMapRedistributionOspfArgs struct {
-	// Bgp
+	// OSPF Root BGP
 	Bgp BgpRouteMapRedistributionOspfBgpPtrInput `pulumi:"bgp"`
 	// Rib
 	Rib BgpRouteMapRedistributionOspfRibPtrInput `pulumi:"rib"`
@@ -29639,7 +30212,7 @@ func (o BgpRouteMapRedistributionOspfOutput) ToBgpRouteMapRedistributionOspfPtrO
 	}).(BgpRouteMapRedistributionOspfPtrOutput)
 }
 
-// Bgp
+// OSPF Root BGP
 func (o BgpRouteMapRedistributionOspfOutput) Bgp() BgpRouteMapRedistributionOspfBgpPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspf) *BgpRouteMapRedistributionOspfBgp { return v.Bgp }).(BgpRouteMapRedistributionOspfBgpPtrOutput)
 }
@@ -29673,7 +30246,7 @@ func (o BgpRouteMapRedistributionOspfPtrOutput) Elem() BgpRouteMapRedistribution
 	}).(BgpRouteMapRedistributionOspfOutput)
 }
 
-// Bgp
+// OSPF Root BGP
 func (o BgpRouteMapRedistributionOspfPtrOutput) Bgp() BgpRouteMapRedistributionOspfBgpPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspf) *BgpRouteMapRedistributionOspfBgp {
 		if v == nil {
@@ -29694,7 +30267,7 @@ func (o BgpRouteMapRedistributionOspfPtrOutput) Rib() BgpRouteMapRedistributionO
 }
 
 type BgpRouteMapRedistributionOspfBgp struct {
-	// Route maps
+	// OSPF BGP Route maps
 	RouteMaps []BgpRouteMapRedistributionOspfBgpRouteMap `pulumi:"routeMaps"`
 }
 
@@ -29710,7 +30283,7 @@ type BgpRouteMapRedistributionOspfBgpInput interface {
 }
 
 type BgpRouteMapRedistributionOspfBgpArgs struct {
-	// Route maps
+	// OSPF BGP Route maps
 	RouteMaps BgpRouteMapRedistributionOspfBgpRouteMapArrayInput `pulumi:"routeMaps"`
 }
 
@@ -29791,7 +30364,7 @@ func (o BgpRouteMapRedistributionOspfBgpOutput) ToBgpRouteMapRedistributionOspfB
 	}).(BgpRouteMapRedistributionOspfBgpPtrOutput)
 }
 
-// Route maps
+// OSPF BGP Route maps
 func (o BgpRouteMapRedistributionOspfBgpOutput) RouteMaps() BgpRouteMapRedistributionOspfBgpRouteMapArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgp) []BgpRouteMapRedistributionOspfBgpRouteMap {
 		return v.RouteMaps
@@ -29822,7 +30395,7 @@ func (o BgpRouteMapRedistributionOspfBgpPtrOutput) Elem() BgpRouteMapRedistribut
 	}).(BgpRouteMapRedistributionOspfBgpOutput)
 }
 
-// Route maps
+// OSPF BGP Route maps
 func (o BgpRouteMapRedistributionOspfBgpPtrOutput) RouteMaps() BgpRouteMapRedistributionOspfBgpRouteMapArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgp) []BgpRouteMapRedistributionOspfBgpRouteMap {
 		if v == nil {
@@ -29833,15 +30406,15 @@ func (o BgpRouteMapRedistributionOspfBgpPtrOutput) RouteMaps() BgpRouteMapRedist
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMap struct {
-	// Action
+	// OSPF BGP Route maps Action
 	Action *string `pulumi:"action"`
-	// Description
+	// OSPF BGP Route maps Description
 	Description *string `pulumi:"description"`
 	// Match
 	Match *BgpRouteMapRedistributionOspfBgpRouteMapMatch `pulumi:"match"`
-	// Sequence number
+	// OSPF BGP Route maps Sequence number
 	Name *int `pulumi:"name"`
-	// Set
+	// OSPF Root Set
 	Set *BgpRouteMapRedistributionOspfBgpRouteMapSet `pulumi:"set"`
 }
 
@@ -29857,15 +30430,15 @@ type BgpRouteMapRedistributionOspfBgpRouteMapInput interface {
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapArgs struct {
-	// Action
+	// OSPF BGP Route maps Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Description
+	// OSPF BGP Route maps Description
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	// Match
 	Match BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrInput `pulumi:"match"`
-	// Sequence number
+	// OSPF BGP Route maps Sequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
-	// Set
+	// OSPF Root Set
 	Set BgpRouteMapRedistributionOspfBgpRouteMapSetPtrInput `pulumi:"set"`
 }
 
@@ -29920,12 +30493,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapOutput) ToBgpRouteMapRedistribut
 	return o
 }
 
-// Action
+// OSPF BGP Route maps Action
 func (o BgpRouteMapRedistributionOspfBgpRouteMapOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMap) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Description
+// OSPF BGP Route maps Description
 func (o BgpRouteMapRedistributionOspfBgpRouteMapOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMap) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
@@ -29937,12 +30510,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapOutput) Match() BgpRouteMapRedis
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput)
 }
 
-// Sequence number
+// OSPF BGP Route maps Sequence number
 func (o BgpRouteMapRedistributionOspfBgpRouteMapOutput) Name() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMap) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
 
-// Set
+// OSPF Root Set
 func (o BgpRouteMapRedistributionOspfBgpRouteMapOutput) Set() BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMap) *BgpRouteMapRedistributionOspfBgpRouteMapSet {
 		return v.Set
@@ -29972,13 +30545,13 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapArrayOutput) Index(i pulumi.IntI
 type BgpRouteMapRedistributionOspfBgpRouteMapMatch struct {
 	// bgp-route-map-redistributions ospf address
 	Address *BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress `pulumi:"address"`
-	// Interface
+	// OSPF BGP Route maps Interface
 	Interface *string `pulumi:"interface"`
-	// Metric
+	// OSPF BGP Route maps Metric
 	Metric *int `pulumi:"metric"`
 	// bgp-route-map-redistributions ospf next*hop
 	NextHop *BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop `pulumi:"nextHop"`
-	// Tag
+	// OSPF BGP Route maps Tag
 	Tag *int `pulumi:"tag"`
 }
 
@@ -29996,13 +30569,13 @@ type BgpRouteMapRedistributionOspfBgpRouteMapMatchInput interface {
 type BgpRouteMapRedistributionOspfBgpRouteMapMatchArgs struct {
 	// bgp-route-map-redistributions ospf address
 	Address BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrInput `pulumi:"address"`
-	// Interface
+	// OSPF BGP Route maps Interface
 	Interface pulumi.StringPtrInput `pulumi:"interface"`
-	// Metric
+	// OSPF BGP Route maps Metric
 	Metric pulumi.IntPtrInput `pulumi:"metric"`
 	// bgp-route-map-redistributions ospf next*hop
 	NextHop BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrInput `pulumi:"nextHop"`
-	// Tag
+	// OSPF BGP Route maps Tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
 }
 
@@ -30090,12 +30663,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchOutput) Address() BgpRouteM
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput)
 }
 
-// Interface
+// OSPF BGP Route maps Interface
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapMatch) *string { return v.Interface }).(pulumi.StringPtrOutput)
 }
 
-// Metric
+// OSPF BGP Route maps Metric
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapMatch) *int { return v.Metric }).(pulumi.IntPtrOutput)
 }
@@ -30107,7 +30680,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchOutput) NextHop() BgpRouteM
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput)
 }
 
-// Tag
+// OSPF BGP Route maps Tag
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapMatch) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
@@ -30146,7 +30719,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput) Address() BgpRou
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput)
 }
 
-// Interface
+// OSPF BGP Route maps Interface
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapMatch) *string {
 		if v == nil {
@@ -30156,7 +30729,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput) Interface() pulu
 	}).(pulumi.StringPtrOutput)
 }
 
-// Metric
+// OSPF BGP Route maps Metric
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapMatch) *int {
 		if v == nil {
@@ -30176,7 +30749,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput) NextHop() BgpRou
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput)
 }
 
-// Tag
+// OSPF BGP Route maps Tag
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapMatch) *int {
 		if v == nil {
@@ -30187,9 +30760,9 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchPtrOutput) Tag() pulumi.Int
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress struct {
-	// Access list
+	// OSPF BGP Route maps match Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// OSPF BGP Route maps match Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -30205,9 +30778,9 @@ type BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressInput interface {
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressArgs struct {
-	// Access list
+	// OSPF BGP Route maps match Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// OSPF BGP Route maps match Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -30288,12 +30861,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressOutput) ToBgpRouteMa
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput)
 }
 
-// Access list
+// OSPF BGP Route maps match Access list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF BGP Route maps match Prefix list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -30322,7 +30895,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput) Elem() Bg
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressOutput)
 }
 
-// Access list
+// OSPF BGP Route maps match Access list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress) *string {
 		if v == nil {
@@ -30332,7 +30905,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput) AccessLis
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF BGP Route maps match Prefix list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapMatchAddress) *string {
 		if v == nil {
@@ -30343,9 +30916,9 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchAddressPtrOutput) PrefixLis
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop struct {
-	// Access list
+	// OSPF BGP Route maps nextHop Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// OSPF BGP Route maps nextHop Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -30361,9 +30934,9 @@ type BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopInput interface {
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopArgs struct {
-	// Access list
+	// OSPF BGP Route maps nextHop Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// OSPF BGP Route maps nextHop Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -30444,12 +31017,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopOutput) ToBgpRouteMa
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput)
 }
 
-// Access list
+// OSPF BGP Route maps nextHop Access list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF BGP Route maps nextHop Prefix list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -30478,7 +31051,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput) Elem() Bg
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopOutput)
 }
 
-// Access list
+// OSPF BGP Route maps nextHop Access list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop) *string {
 		if v == nil {
@@ -30488,7 +31061,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput) AccessLis
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF BGP Route maps nextHop Prefix list
 func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHop) *string {
 		if v == nil {
@@ -30501,27 +31074,27 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapMatchNextHopPtrOutput) PrefixLis
 type BgpRouteMapRedistributionOspfBgpRouteMapSet struct {
 	// bgp-route-map-redistributions set aggregator
 	Aggregator *BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator `pulumi:"aggregator"`
-	// AS numbers
+	// OSPF BGP Route maps set AS numbers
 	AspathPrepends []int `pulumi:"aspathPrepends"`
-	// Enable BGP atomic aggregate?
+	// OSPF BGP Route maps set Enable BGP atomic aggregate?
 	AtomicAggregate *bool `pulumi:"atomicAggregate"`
 	// Ipv4
 	Ipv4 *BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 `pulumi:"ipv4"`
-	// Large communities
+	// OSPF BGP Route maps set Large communities
 	LargeCommunities []string `pulumi:"largeCommunities"`
-	// Local preference
+	// OSPF BGP Route maps set Local preference
 	LocalPreference *int `pulumi:"localPreference"`
 	// Metric
 	Metric *BgpRouteMapRedistributionOspfBgpRouteMapSetMetric `pulumi:"metric"`
-	// Origin
+	// OSPF BGP Route maps set Origin
 	Origin *string `pulumi:"origin"`
-	// Originator ID
+	// OSPF BGP Route maps set Originator ID
 	OriginatorId *string `pulumi:"originatorId"`
-	// Regular communities
+	// OSPF BGP Route maps set Regular communities
 	RegularCommunities []string `pulumi:"regularCommunities"`
-	// Tag
+	// OSPF BGP Route maps set Tag
 	Tag *int `pulumi:"tag"`
-	// Weight
+	// OSPF BGP Route maps set Weight
 	Weight *int `pulumi:"weight"`
 }
 
@@ -30539,27 +31112,27 @@ type BgpRouteMapRedistributionOspfBgpRouteMapSetInput interface {
 type BgpRouteMapRedistributionOspfBgpRouteMapSetArgs struct {
 	// bgp-route-map-redistributions set aggregator
 	Aggregator BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrInput `pulumi:"aggregator"`
-	// AS numbers
+	// OSPF BGP Route maps set AS numbers
 	AspathPrepends pulumi.IntArrayInput `pulumi:"aspathPrepends"`
-	// Enable BGP atomic aggregate?
+	// OSPF BGP Route maps set Enable BGP atomic aggregate?
 	AtomicAggregate pulumi.BoolPtrInput `pulumi:"atomicAggregate"`
 	// Ipv4
 	Ipv4 BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrInput `pulumi:"ipv4"`
-	// Large communities
+	// OSPF BGP Route maps set Large communities
 	LargeCommunities pulumi.StringArrayInput `pulumi:"largeCommunities"`
-	// Local preference
+	// OSPF BGP Route maps set Local preference
 	LocalPreference pulumi.IntPtrInput `pulumi:"localPreference"`
 	// Metric
 	Metric BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrInput `pulumi:"metric"`
-	// Origin
+	// OSPF BGP Route maps set Origin
 	Origin pulumi.StringPtrInput `pulumi:"origin"`
-	// Originator ID
+	// OSPF BGP Route maps set Originator ID
 	OriginatorId pulumi.StringPtrInput `pulumi:"originatorId"`
-	// Regular communities
+	// OSPF BGP Route maps set Regular communities
 	RegularCommunities pulumi.StringArrayInput `pulumi:"regularCommunities"`
-	// Tag
+	// OSPF BGP Route maps set Tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
-	// Weight
+	// OSPF BGP Route maps set Weight
 	Weight pulumi.IntPtrInput `pulumi:"weight"`
 }
 
@@ -30647,12 +31220,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) Aggregator() BgpRoute
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput)
 }
 
-// AS numbers
+// OSPF BGP Route maps set AS numbers
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) AspathPrepends() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) []int { return v.AspathPrepends }).(pulumi.IntArrayOutput)
 }
 
-// Enable BGP atomic aggregate?
+// OSPF BGP Route maps set Enable BGP atomic aggregate?
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) AtomicAggregate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) *bool { return v.AtomicAggregate }).(pulumi.BoolPtrOutput)
 }
@@ -30664,12 +31237,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) Ipv4() BgpRouteMapRed
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput)
 }
 
-// Large communities
+// OSPF BGP Route maps set Large communities
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) LargeCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) []string { return v.LargeCommunities }).(pulumi.StringArrayOutput)
 }
 
-// Local preference
+// OSPF BGP Route maps set Local preference
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) *int { return v.LocalPreference }).(pulumi.IntPtrOutput)
 }
@@ -30681,27 +31254,27 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) Metric() BgpRouteMapR
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput)
 }
 
-// Origin
+// OSPF BGP Route maps set Origin
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) *string { return v.Origin }).(pulumi.StringPtrOutput)
 }
 
-// Originator ID
+// OSPF BGP Route maps set Originator ID
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) OriginatorId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) *string { return v.OriginatorId }).(pulumi.StringPtrOutput)
 }
 
-// Regular communities
+// OSPF BGP Route maps set Regular communities
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) RegularCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) []string { return v.RegularCommunities }).(pulumi.StringArrayOutput)
 }
 
-// Tag
+// OSPF BGP Route maps set Tag
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
 
-// Weight
+// OSPF BGP Route maps set Weight
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetOutput) Weight() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSet) *int { return v.Weight }).(pulumi.IntPtrOutput)
 }
@@ -30740,7 +31313,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Aggregator() BgpRo
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput)
 }
 
-// AS numbers
+// OSPF BGP Route maps set AS numbers
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) AspathPrepends() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) []int {
 		if v == nil {
@@ -30750,7 +31323,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) AspathPrepends() p
 	}).(pulumi.IntArrayOutput)
 }
 
-// Enable BGP atomic aggregate?
+// OSPF BGP Route maps set Enable BGP atomic aggregate?
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) AtomicAggregate() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) *bool {
 		if v == nil {
@@ -30770,7 +31343,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Ipv4() BgpRouteMap
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput)
 }
 
-// Large communities
+// OSPF BGP Route maps set Large communities
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) LargeCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) []string {
 		if v == nil {
@@ -30780,7 +31353,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) LargeCommunities()
 	}).(pulumi.StringArrayOutput)
 }
 
-// Local preference
+// OSPF BGP Route maps set Local preference
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) LocalPreference() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) *int {
 		if v == nil {
@@ -30800,7 +31373,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Metric() BgpRouteM
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput)
 }
 
-// Origin
+// OSPF BGP Route maps set Origin
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Origin() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) *string {
 		if v == nil {
@@ -30810,7 +31383,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Origin() pulumi.St
 	}).(pulumi.StringPtrOutput)
 }
 
-// Originator ID
+// OSPF BGP Route maps set Originator ID
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) OriginatorId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) *string {
 		if v == nil {
@@ -30820,7 +31393,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) OriginatorId() pul
 	}).(pulumi.StringPtrOutput)
 }
 
-// Regular communities
+// OSPF BGP Route maps set Regular communities
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) RegularCommunities() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) []string {
 		if v == nil {
@@ -30830,7 +31403,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) RegularCommunities
 	}).(pulumi.StringArrayOutput)
 }
 
-// Tag
+// OSPF BGP Route maps set Tag
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) *int {
 		if v == nil {
@@ -30840,7 +31413,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Tag() pulumi.IntPt
 	}).(pulumi.IntPtrOutput)
 }
 
-// Weight
+// OSPF BGP Route maps set Weight
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Weight() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSet) *int {
 		if v == nil {
@@ -30851,9 +31424,9 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetPtrOutput) Weight() pulumi.In
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator struct {
-	// Aggregator AS
+	// OSPF BGP Route maps set Aggregator AS
 	As *int `pulumi:"as"`
-	// Router ID
+	// OSPF BGP Route maps set Router ID
 	RouterId *string `pulumi:"routerId"`
 }
 
@@ -30869,9 +31442,9 @@ type BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorInput interface {
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorArgs struct {
-	// Aggregator AS
+	// OSPF BGP Route maps set Aggregator AS
 	As pulumi.IntPtrInput `pulumi:"as"`
-	// Router ID
+	// OSPF BGP Route maps set Router ID
 	RouterId pulumi.StringPtrInput `pulumi:"routerId"`
 }
 
@@ -30952,12 +31525,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorOutput) ToBgpRouteM
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput)
 }
 
-// Aggregator AS
+// OSPF BGP Route maps set Aggregator AS
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorOutput) As() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator) *int { return v.As }).(pulumi.IntPtrOutput)
 }
 
-// Router ID
+// OSPF BGP Route maps set Router ID
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorOutput) RouterId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator) *string { return v.RouterId }).(pulumi.StringPtrOutput)
 }
@@ -30986,7 +31559,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput) Elem() B
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorOutput)
 }
 
-// Aggregator AS
+// OSPF BGP Route maps set Aggregator AS
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput) As() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator) *int {
 		if v == nil {
@@ -30996,7 +31569,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput) As() pul
 	}).(pulumi.IntPtrOutput)
 }
 
-// Router ID
+// OSPF BGP Route maps set Router ID
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput) RouterId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSetAggregator) *string {
 		if v == nil {
@@ -31007,9 +31580,9 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetAggregatorPtrOutput) RouterId
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4 struct {
-	// Next hop
+	// OSPF BGP Route maps set ipv4 Next hop
 	NextHop *string `pulumi:"nextHop"`
-	// Source address
+	// OSPF BGP Route maps set ipv4 Source address
 	SourceAddress *string `pulumi:"sourceAddress"`
 }
 
@@ -31025,9 +31598,9 @@ type BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Input interface {
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args struct {
-	// Next hop
+	// OSPF BGP Route maps set ipv4 Next hop
 	NextHop pulumi.StringPtrInput `pulumi:"nextHop"`
-	// Source address
+	// OSPF BGP Route maps set ipv4 Source address
 	SourceAddress pulumi.StringPtrInput `pulumi:"sourceAddress"`
 }
 
@@ -31108,12 +31681,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Output) ToBgpRouteMapRedi
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput)
 }
 
-// Next hop
+// OSPF BGP Route maps set ipv4 Next hop
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Output) NextHop() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4) *string { return v.NextHop }).(pulumi.StringPtrOutput)
 }
 
-// Source address
+// OSPF BGP Route maps set ipv4 Source address
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Output) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4) *string { return v.SourceAddress }).(pulumi.StringPtrOutput)
 }
@@ -31142,7 +31715,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput) Elem() BgpRout
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Output)
 }
 
-// Next hop
+// OSPF BGP Route maps set ipv4 Next hop
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput) NextHop() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4) *string {
 		if v == nil {
@@ -31152,7 +31725,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput) NextHop() pulu
 	}).(pulumi.StringPtrOutput)
 }
 
-// Source address
+// OSPF BGP Route maps set ipv4 Source address
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4) *string {
 		if v == nil {
@@ -31163,9 +31736,9 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4PtrOutput) SourceAddress(
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapSetMetric struct {
-	// Metric action
+	// OSPF BGP Route maps set Metric action
 	Action *string `pulumi:"action"`
-	// Metric value
+	// OSPF BGP Route maps set Metric value
 	Value *int `pulumi:"value"`
 }
 
@@ -31181,9 +31754,9 @@ type BgpRouteMapRedistributionOspfBgpRouteMapSetMetricInput interface {
 }
 
 type BgpRouteMapRedistributionOspfBgpRouteMapSetMetricArgs struct {
-	// Metric action
+	// OSPF BGP Route maps set Metric action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Metric value
+	// OSPF BGP Route maps set Metric value
 	Value pulumi.IntPtrInput `pulumi:"value"`
 }
 
@@ -31264,12 +31837,12 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricOutput) ToBgpRouteMapRe
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput)
 }
 
-// Metric action
+// OSPF BGP Route maps set Metric action
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSetMetric) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// OSPF BGP Route maps set Metric value
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfBgpRouteMapSetMetric) *int { return v.Value }).(pulumi.IntPtrOutput)
 }
@@ -31298,7 +31871,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput) Elem() BgpRo
 	}).(BgpRouteMapRedistributionOspfBgpRouteMapSetMetricOutput)
 }
 
-// Metric action
+// OSPF BGP Route maps set Metric action
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSetMetric) *string {
 		if v == nil {
@@ -31308,7 +31881,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput) Action() pul
 	}).(pulumi.StringPtrOutput)
 }
 
-// Metric value
+// OSPF BGP Route maps set Metric value
 func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput) Value() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfBgpRouteMapSetMetric) *int {
 		if v == nil {
@@ -31319,7 +31892,7 @@ func (o BgpRouteMapRedistributionOspfBgpRouteMapSetMetricPtrOutput) Value() pulu
 }
 
 type BgpRouteMapRedistributionOspfRib struct {
-	// Route maps
+	// OSPF RIB Route maps set Route maps
 	RouteMaps []BgpRouteMapRedistributionOspfRibRouteMap `pulumi:"routeMaps"`
 }
 
@@ -31335,7 +31908,7 @@ type BgpRouteMapRedistributionOspfRibInput interface {
 }
 
 type BgpRouteMapRedistributionOspfRibArgs struct {
-	// Route maps
+	// OSPF RIB Route maps set Route maps
 	RouteMaps BgpRouteMapRedistributionOspfRibRouteMapArrayInput `pulumi:"routeMaps"`
 }
 
@@ -31416,7 +31989,7 @@ func (o BgpRouteMapRedistributionOspfRibOutput) ToBgpRouteMapRedistributionOspfR
 	}).(BgpRouteMapRedistributionOspfRibPtrOutput)
 }
 
-// Route maps
+// OSPF RIB Route maps set Route maps
 func (o BgpRouteMapRedistributionOspfRibOutput) RouteMaps() BgpRouteMapRedistributionOspfRibRouteMapArrayOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRib) []BgpRouteMapRedistributionOspfRibRouteMap {
 		return v.RouteMaps
@@ -31447,7 +32020,7 @@ func (o BgpRouteMapRedistributionOspfRibPtrOutput) Elem() BgpRouteMapRedistribut
 	}).(BgpRouteMapRedistributionOspfRibOutput)
 }
 
-// Route maps
+// OSPF RIB Route maps set Route maps
 func (o BgpRouteMapRedistributionOspfRibPtrOutput) RouteMaps() BgpRouteMapRedistributionOspfRibRouteMapArrayOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRib) []BgpRouteMapRedistributionOspfRibRouteMap {
 		if v == nil {
@@ -31458,15 +32031,15 @@ func (o BgpRouteMapRedistributionOspfRibPtrOutput) RouteMaps() BgpRouteMapRedist
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMap struct {
-	// Action
+	// OSPF RIB Route maps Action
 	Action *string `pulumi:"action"`
-	// Description
+	// OSPF RIB Route maps Description
 	Description *string `pulumi:"description"`
 	// Match
 	Match *BgpRouteMapRedistributionOspfRibRouteMapMatch `pulumi:"match"`
-	// Sequence number
+	// OSPF RIB Route mapsSequence number
 	Name *int `pulumi:"name"`
-	// Set
+	// OSPF RIB Route maps set
 	Set *BgpRouteMapRedistributionOspfRibRouteMapSet `pulumi:"set"`
 }
 
@@ -31482,15 +32055,15 @@ type BgpRouteMapRedistributionOspfRibRouteMapInput interface {
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapArgs struct {
-	// Action
+	// OSPF RIB Route maps Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
-	// Description
+	// OSPF RIB Route maps Description
 	Description pulumi.StringPtrInput `pulumi:"description"`
 	// Match
 	Match BgpRouteMapRedistributionOspfRibRouteMapMatchPtrInput `pulumi:"match"`
-	// Sequence number
+	// OSPF RIB Route mapsSequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
-	// Set
+	// OSPF RIB Route maps set
 	Set BgpRouteMapRedistributionOspfRibRouteMapSetPtrInput `pulumi:"set"`
 }
 
@@ -31545,12 +32118,12 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapOutput) ToBgpRouteMapRedistribut
 	return o
 }
 
-// Action
+// OSPF RIB Route maps Action
 func (o BgpRouteMapRedistributionOspfRibRouteMapOutput) Action() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMap) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// Description
+// OSPF RIB Route maps Description
 func (o BgpRouteMapRedistributionOspfRibRouteMapOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMap) *string { return v.Description }).(pulumi.StringPtrOutput)
 }
@@ -31562,12 +32135,12 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapOutput) Match() BgpRouteMapRedis
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput)
 }
 
-// Sequence number
+// OSPF RIB Route mapsSequence number
 func (o BgpRouteMapRedistributionOspfRibRouteMapOutput) Name() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMap) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
 
-// Set
+// OSPF RIB Route maps set
 func (o BgpRouteMapRedistributionOspfRibRouteMapOutput) Set() BgpRouteMapRedistributionOspfRibRouteMapSetPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMap) *BgpRouteMapRedistributionOspfRibRouteMapSet {
 		return v.Set
@@ -31595,15 +32168,15 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapArrayOutput) Index(i pulumi.IntI
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapMatch struct {
-	// Address
+	// OSPF RIB Route maps address
 	Address *BgpRouteMapRedistributionOspfRibRouteMapMatchAddress `pulumi:"address"`
-	// Interface
+	// OSPF RIB Route maps Interface
 	Interface *string `pulumi:"interface"`
-	// Metric
+	// OSPF RIB Route maps Metric
 	Metric *int `pulumi:"metric"`
-	// Next hop
+	// OSPF RIB Route maps next*hop
 	NextHop *BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop `pulumi:"nextHop"`
-	// Tag
+	// OSPF RIB Route maps tag
 	Tag *int `pulumi:"tag"`
 }
 
@@ -31619,15 +32192,15 @@ type BgpRouteMapRedistributionOspfRibRouteMapMatchInput interface {
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapMatchArgs struct {
-	// Address
+	// OSPF RIB Route maps address
 	Address BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrInput `pulumi:"address"`
-	// Interface
+	// OSPF RIB Route maps Interface
 	Interface pulumi.StringPtrInput `pulumi:"interface"`
-	// Metric
+	// OSPF RIB Route maps Metric
 	Metric pulumi.IntPtrInput `pulumi:"metric"`
-	// Next hop
+	// OSPF RIB Route maps next*hop
 	NextHop BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrInput `pulumi:"nextHop"`
-	// Tag
+	// OSPF RIB Route maps tag
 	Tag pulumi.IntPtrInput `pulumi:"tag"`
 }
 
@@ -31708,31 +32281,31 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchOutput) ToBgpRouteMapRedist
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput)
 }
 
-// Address
+// OSPF RIB Route maps address
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchOutput) Address() BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatch) *BgpRouteMapRedistributionOspfRibRouteMapMatchAddress {
 		return v.Address
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput)
 }
 
-// Interface
+// OSPF RIB Route maps Interface
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatch) *string { return v.Interface }).(pulumi.StringPtrOutput)
 }
 
-// Metric
+// OSPF RIB Route maps Metric
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatch) *int { return v.Metric }).(pulumi.IntPtrOutput)
 }
 
-// Next hop
+// OSPF RIB Route maps next*hop
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchOutput) NextHop() BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatch) *BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop {
 		return v.NextHop
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput)
 }
 
-// Tag
+// OSPF RIB Route maps tag
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatch) *int { return v.Tag }).(pulumi.IntPtrOutput)
 }
@@ -31761,7 +32334,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Elem() BgpRouteM
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchOutput)
 }
 
-// Address
+// OSPF RIB Route maps address
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Address() BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatch) *BgpRouteMapRedistributionOspfRibRouteMapMatchAddress {
 		if v == nil {
@@ -31771,7 +32344,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Address() BgpRou
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput)
 }
 
-// Interface
+// OSPF RIB Route maps Interface
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Interface() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatch) *string {
 		if v == nil {
@@ -31781,7 +32354,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Interface() pulu
 	}).(pulumi.StringPtrOutput)
 }
 
-// Metric
+// OSPF RIB Route maps Metric
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Metric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatch) *int {
 		if v == nil {
@@ -31791,7 +32364,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Metric() pulumi.
 	}).(pulumi.IntPtrOutput)
 }
 
-// Next hop
+// OSPF RIB Route maps next*hop
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) NextHop() BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatch) *BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop {
 		if v == nil {
@@ -31801,7 +32374,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) NextHop() BgpRou
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput)
 }
 
-// Tag
+// OSPF RIB Route maps tag
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Tag() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatch) *int {
 		if v == nil {
@@ -31812,9 +32385,9 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchPtrOutput) Tag() pulumi.Int
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapMatchAddress struct {
-	// Access list
+	// OSPF RIB Route maps address Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// OSPF RIB Route maps address Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -31830,9 +32403,9 @@ type BgpRouteMapRedistributionOspfRibRouteMapMatchAddressInput interface {
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapMatchAddressArgs struct {
-	// Access list
+	// OSPF RIB Route maps address Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// OSPF RIB Route maps address Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -31913,12 +32486,12 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressOutput) ToBgpRouteMa
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput)
 }
 
-// Access list
+// OSPF RIB Route maps address Access list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatchAddress) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF RIB Route maps address Prefix list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatchAddress) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -31947,7 +32520,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput) Elem() Bg
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchAddressOutput)
 }
 
-// Access list
+// OSPF RIB Route maps address Access list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatchAddress) *string {
 		if v == nil {
@@ -31957,7 +32530,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput) AccessLis
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF RIB Route maps address Prefix list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatchAddress) *string {
 		if v == nil {
@@ -31968,9 +32541,9 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchAddressPtrOutput) PrefixLis
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop struct {
-	// Access list
+	// OSPF RIB Route maps nextHop Access list
 	AccessList *string `pulumi:"accessList"`
-	// Prefix list
+	// OSPF RIB Route maps nextHop Prefix list
 	PrefixList *string `pulumi:"prefixList"`
 }
 
@@ -31986,9 +32559,9 @@ type BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopInput interface {
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopArgs struct {
-	// Access list
+	// OSPF RIB Route maps nextHop Access list
 	AccessList pulumi.StringPtrInput `pulumi:"accessList"`
-	// Prefix list
+	// OSPF RIB Route maps nextHop Prefix list
 	PrefixList pulumi.StringPtrInput `pulumi:"prefixList"`
 }
 
@@ -32069,12 +32642,12 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopOutput) ToBgpRouteMa
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput)
 }
 
-// Access list
+// OSPF RIB Route maps nextHop Access list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop) *string { return v.AccessList }).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF RIB Route maps nextHop Prefix list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop) *string { return v.PrefixList }).(pulumi.StringPtrOutput)
 }
@@ -32103,7 +32676,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput) Elem() Bg
 	}).(BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopOutput)
 }
 
-// Access list
+// OSPF RIB Route maps nextHop Access list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput) AccessList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop) *string {
 		if v == nil {
@@ -32113,7 +32686,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput) AccessLis
 	}).(pulumi.StringPtrOutput)
 }
 
-// Prefix list
+// OSPF RIB Route maps nextHop Prefix list
 func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput) PrefixList() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapMatchNextHop) *string {
 		if v == nil {
@@ -32124,7 +32697,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapMatchNextHopPtrOutput) PrefixLis
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapSet struct {
-	// Source address
+	// OSPF RIB Route maps set Source address
 	SourceAddress *string `pulumi:"sourceAddress"`
 }
 
@@ -32140,7 +32713,7 @@ type BgpRouteMapRedistributionOspfRibRouteMapSetInput interface {
 }
 
 type BgpRouteMapRedistributionOspfRibRouteMapSetArgs struct {
-	// Source address
+	// OSPF RIB Route maps set Source address
 	SourceAddress pulumi.StringPtrInput `pulumi:"sourceAddress"`
 }
 
@@ -32221,7 +32794,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapSetOutput) ToBgpRouteMapRedistri
 	}).(BgpRouteMapRedistributionOspfRibRouteMapSetPtrOutput)
 }
 
-// Source address
+// OSPF RIB Route maps set Source address
 func (o BgpRouteMapRedistributionOspfRibRouteMapSetOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v BgpRouteMapRedistributionOspfRibRouteMapSet) *string { return v.SourceAddress }).(pulumi.StringPtrOutput)
 }
@@ -32250,7 +32823,7 @@ func (o BgpRouteMapRedistributionOspfRibRouteMapSetPtrOutput) Elem() BgpRouteMap
 	}).(BgpRouteMapRedistributionOspfRibRouteMapSetOutput)
 }
 
-// Source address
+// OSPF RIB Route maps set Source address
 func (o BgpRouteMapRedistributionOspfRibRouteMapSetPtrOutput) SourceAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistributionOspfRibRouteMapSet) *string {
 		if v == nil {
@@ -38070,7 +38643,7 @@ func (o DhcpInterfaceServerReservedArrayOutput) Index(i pulumi.IntInput) DhcpInt
 }
 
 type DnsProxyCache struct {
-	// Cache edns
+	// Cache EDNS UDP response
 	CacheEdns *bool `pulumi:"cacheEdns"`
 	// Turn on caching for this DNS object
 	Enabled bool `pulumi:"enabled"`
@@ -38090,7 +38663,7 @@ type DnsProxyCacheInput interface {
 }
 
 type DnsProxyCacheArgs struct {
-	// Cache edns
+	// Cache EDNS UDP response
 	CacheEdns pulumi.BoolPtrInput `pulumi:"cacheEdns"`
 	// Turn on caching for this DNS object
 	Enabled pulumi.BoolInput `pulumi:"enabled"`
@@ -38175,7 +38748,7 @@ func (o DnsProxyCacheOutput) ToDnsProxyCachePtrOutputWithContext(ctx context.Con
 	}).(DnsProxyCachePtrOutput)
 }
 
-// Cache edns
+// Cache EDNS UDP response
 func (o DnsProxyCacheOutput) CacheEdns() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v DnsProxyCache) *bool { return v.CacheEdns }).(pulumi.BoolPtrOutput)
 }
@@ -38214,7 +38787,7 @@ func (o DnsProxyCachePtrOutput) Elem() DnsProxyCacheOutput {
 	}).(DnsProxyCacheOutput)
 }
 
-// Cache edns
+// Cache EDNS UDP response
 func (o DnsProxyCachePtrOutput) CacheEdns() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DnsProxyCache) *bool {
 		if v == nil {
@@ -38245,9 +38818,9 @@ func (o DnsProxyCachePtrOutput) MaxTtl() DnsProxyCacheMaxTtlPtrOutput {
 }
 
 type DnsProxyCacheMaxTtl struct {
-	// Enabled
-	Enabled *bool `pulumi:"enabled"`
-	// Time to live
+	// Enable max ttl for this DNS object
+	Enabled bool `pulumi:"enabled"`
+	// Time in seconds after which entry is cleared
 	TimeToLive *int `pulumi:"timeToLive"`
 }
 
@@ -38263,9 +38836,9 @@ type DnsProxyCacheMaxTtlInput interface {
 }
 
 type DnsProxyCacheMaxTtlArgs struct {
-	// Enabled
-	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
-	// Time to live
+	// Enable max ttl for this DNS object
+	Enabled pulumi.BoolInput `pulumi:"enabled"`
+	// Time in seconds after which entry is cleared
 	TimeToLive pulumi.IntPtrInput `pulumi:"timeToLive"`
 }
 
@@ -38346,12 +38919,12 @@ func (o DnsProxyCacheMaxTtlOutput) ToDnsProxyCacheMaxTtlPtrOutputWithContext(ctx
 	}).(DnsProxyCacheMaxTtlPtrOutput)
 }
 
-// Enabled
-func (o DnsProxyCacheMaxTtlOutput) Enabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v DnsProxyCacheMaxTtl) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+// Enable max ttl for this DNS object
+func (o DnsProxyCacheMaxTtlOutput) Enabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v DnsProxyCacheMaxTtl) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
-// Time to live
+// Time in seconds after which entry is cleared
 func (o DnsProxyCacheMaxTtlOutput) TimeToLive() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v DnsProxyCacheMaxTtl) *int { return v.TimeToLive }).(pulumi.IntPtrOutput)
 }
@@ -38380,17 +38953,17 @@ func (o DnsProxyCacheMaxTtlPtrOutput) Elem() DnsProxyCacheMaxTtlOutput {
 	}).(DnsProxyCacheMaxTtlOutput)
 }
 
-// Enabled
+// Enable max ttl for this DNS object
 func (o DnsProxyCacheMaxTtlPtrOutput) Enabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DnsProxyCacheMaxTtl) *bool {
 		if v == nil {
 			return nil
 		}
-		return v.Enabled
+		return &v.Enabled
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Time to live
+// Time in seconds after which entry is cleared
 func (o DnsProxyCacheMaxTtlPtrOutput) TimeToLive() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *DnsProxyCacheMaxTtl) *int {
 		if v == nil {
@@ -38713,15 +39286,15 @@ func (o DnsProxyDefaultInheritancePtrOutput) Source() pulumi.StringPtrOutput {
 }
 
 type DnsProxyDomainServer struct {
-	// Cacheable
+	// Enable caching for this DNS proxy rule?
 	Cacheable *bool `pulumi:"cacheable"`
-	// Domain name
+	// Domain names(s) that will be matched
 	DomainNames []string `pulumi:"domainNames"`
-	// Name
-	Name *string `pulumi:"name"`
-	// Primary
-	Primary *string `pulumi:"primary"`
-	// Secondary
+	// Proxy rule name
+	Name string `pulumi:"name"`
+	// Primary DNS server IP address
+	Primary string `pulumi:"primary"`
+	// Secondary DNS server IP address
 	Secondary *string `pulumi:"secondary"`
 }
 
@@ -38737,15 +39310,15 @@ type DnsProxyDomainServerInput interface {
 }
 
 type DnsProxyDomainServerArgs struct {
-	// Cacheable
+	// Enable caching for this DNS proxy rule?
 	Cacheable pulumi.BoolPtrInput `pulumi:"cacheable"`
-	// Domain name
+	// Domain names(s) that will be matched
 	DomainNames pulumi.StringArrayInput `pulumi:"domainNames"`
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Primary
-	Primary pulumi.StringPtrInput `pulumi:"primary"`
-	// Secondary
+	// Proxy rule name
+	Name pulumi.StringInput `pulumi:"name"`
+	// Primary DNS server IP address
+	Primary pulumi.StringInput `pulumi:"primary"`
+	// Secondary DNS server IP address
 	Secondary pulumi.StringPtrInput `pulumi:"secondary"`
 }
 
@@ -38800,27 +39373,27 @@ func (o DnsProxyDomainServerOutput) ToDnsProxyDomainServerOutputWithContext(ctx 
 	return o
 }
 
-// Cacheable
+// Enable caching for this DNS proxy rule?
 func (o DnsProxyDomainServerOutput) Cacheable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v DnsProxyDomainServer) *bool { return v.Cacheable }).(pulumi.BoolPtrOutput)
 }
 
-// Domain name
+// Domain names(s) that will be matched
 func (o DnsProxyDomainServerOutput) DomainNames() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v DnsProxyDomainServer) []string { return v.DomainNames }).(pulumi.StringArrayOutput)
 }
 
-// Name
-func (o DnsProxyDomainServerOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v DnsProxyDomainServer) *string { return v.Name }).(pulumi.StringPtrOutput)
+// Proxy rule name
+func (o DnsProxyDomainServerOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v DnsProxyDomainServer) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Primary
-func (o DnsProxyDomainServerOutput) Primary() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v DnsProxyDomainServer) *string { return v.Primary }).(pulumi.StringPtrOutput)
+// Primary DNS server IP address
+func (o DnsProxyDomainServerOutput) Primary() pulumi.StringOutput {
+	return o.ApplyT(func(v DnsProxyDomainServer) string { return v.Primary }).(pulumi.StringOutput)
 }
 
-// Secondary
+// Secondary DNS server IP address
 func (o DnsProxyDomainServerOutput) Secondary() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v DnsProxyDomainServer) *string { return v.Secondary }).(pulumi.StringPtrOutput)
 }
@@ -38848,10 +39421,10 @@ func (o DnsProxyDomainServerArrayOutput) Index(i pulumi.IntInput) DnsProxyDomain
 type DnsProxyStaticEntry struct {
 	// Address
 	Addresses []string `pulumi:"addresses"`
-	// Domain
-	Domain *string `pulumi:"domain"`
-	// Name
-	Name *string `pulumi:"name"`
+	// Fully qualified domain name
+	Domain string `pulumi:"domain"`
+	// Static entry name
+	Name string `pulumi:"name"`
 }
 
 // DnsProxyStaticEntryInput is an input type that accepts DnsProxyStaticEntryArgs and DnsProxyStaticEntryOutput values.
@@ -38868,10 +39441,10 @@ type DnsProxyStaticEntryInput interface {
 type DnsProxyStaticEntryArgs struct {
 	// Address
 	Addresses pulumi.StringArrayInput `pulumi:"addresses"`
-	// Domain
-	Domain pulumi.StringPtrInput `pulumi:"domain"`
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Fully qualified domain name
+	Domain pulumi.StringInput `pulumi:"domain"`
+	// Static entry name
+	Name pulumi.StringInput `pulumi:"name"`
 }
 
 func (DnsProxyStaticEntryArgs) ElementType() reflect.Type {
@@ -38930,14 +39503,14 @@ func (o DnsProxyStaticEntryOutput) Addresses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v DnsProxyStaticEntry) []string { return v.Addresses }).(pulumi.StringArrayOutput)
 }
 
-// Domain
-func (o DnsProxyStaticEntryOutput) Domain() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v DnsProxyStaticEntry) *string { return v.Domain }).(pulumi.StringPtrOutput)
+// Fully qualified domain name
+func (o DnsProxyStaticEntryOutput) Domain() pulumi.StringOutput {
+	return o.ApplyT(func(v DnsProxyStaticEntry) string { return v.Domain }).(pulumi.StringOutput)
 }
 
-// Name
-func (o DnsProxyStaticEntryOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v DnsProxyStaticEntry) *string { return v.Name }).(pulumi.StringPtrOutput)
+// Static entry name
+func (o DnsProxyStaticEntryOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v DnsProxyStaticEntry) string { return v.Name }).(pulumi.StringOutput)
 }
 
 type DnsProxyStaticEntryArrayOutput struct{ *pulumi.OutputState }
@@ -38961,9 +39534,9 @@ func (o DnsProxyStaticEntryArrayOutput) Index(i pulumi.IntInput) DnsProxyStaticE
 }
 
 type DnsProxyTcpQueries struct {
-	// Enabled
-	Enabled *bool `pulumi:"enabled"`
-	// Max pending requests
+	// Turn on forwarding of TCP DNS queries?
+	Enabled bool `pulumi:"enabled"`
+	// Upper limit on number of concurrent TCP DNS requests
 	MaxPendingRequests *int `pulumi:"maxPendingRequests"`
 }
 
@@ -38979,9 +39552,9 @@ type DnsProxyTcpQueriesInput interface {
 }
 
 type DnsProxyTcpQueriesArgs struct {
-	// Enabled
-	Enabled pulumi.BoolPtrInput `pulumi:"enabled"`
-	// Max pending requests
+	// Turn on forwarding of TCP DNS queries?
+	Enabled pulumi.BoolInput `pulumi:"enabled"`
+	// Upper limit on number of concurrent TCP DNS requests
 	MaxPendingRequests pulumi.IntPtrInput `pulumi:"maxPendingRequests"`
 }
 
@@ -39062,12 +39635,12 @@ func (o DnsProxyTcpQueriesOutput) ToDnsProxyTcpQueriesPtrOutputWithContext(ctx c
 	}).(DnsProxyTcpQueriesPtrOutput)
 }
 
-// Enabled
-func (o DnsProxyTcpQueriesOutput) Enabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v DnsProxyTcpQueries) *bool { return v.Enabled }).(pulumi.BoolPtrOutput)
+// Turn on forwarding of TCP DNS queries?
+func (o DnsProxyTcpQueriesOutput) Enabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v DnsProxyTcpQueries) bool { return v.Enabled }).(pulumi.BoolOutput)
 }
 
-// Max pending requests
+// Upper limit on number of concurrent TCP DNS requests
 func (o DnsProxyTcpQueriesOutput) MaxPendingRequests() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v DnsProxyTcpQueries) *int { return v.MaxPendingRequests }).(pulumi.IntPtrOutput)
 }
@@ -39096,17 +39669,17 @@ func (o DnsProxyTcpQueriesPtrOutput) Elem() DnsProxyTcpQueriesOutput {
 	}).(DnsProxyTcpQueriesOutput)
 }
 
-// Enabled
+// Turn on forwarding of TCP DNS queries?
 func (o DnsProxyTcpQueriesPtrOutput) Enabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DnsProxyTcpQueries) *bool {
 		if v == nil {
 			return nil
 		}
-		return v.Enabled
+		return &v.Enabled
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Max pending requests
+// Upper limit on number of concurrent TCP DNS requests
 func (o DnsProxyTcpQueriesPtrOutput) MaxPendingRequests() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *DnsProxyTcpQueries) *int {
 		if v == nil {
@@ -39254,9 +39827,9 @@ func (o DnsProxyUdpQueriesPtrOutput) Retries() DnsProxyUdpQueriesRetriesPtrOutpu
 }
 
 type DnsProxyUdpQueriesRetries struct {
-	// Attempts
+	// Maximum number of retries before trying next name server
 	Attempts *int `pulumi:"attempts"`
-	// Interval
+	// Time in seconds for another request to be sent
 	Interval *int `pulumi:"interval"`
 }
 
@@ -39272,9 +39845,9 @@ type DnsProxyUdpQueriesRetriesInput interface {
 }
 
 type DnsProxyUdpQueriesRetriesArgs struct {
-	// Attempts
+	// Maximum number of retries before trying next name server
 	Attempts pulumi.IntPtrInput `pulumi:"attempts"`
-	// Interval
+	// Time in seconds for another request to be sent
 	Interval pulumi.IntPtrInput `pulumi:"interval"`
 }
 
@@ -39355,12 +39928,12 @@ func (o DnsProxyUdpQueriesRetriesOutput) ToDnsProxyUdpQueriesRetriesPtrOutputWit
 	}).(DnsProxyUdpQueriesRetriesPtrOutput)
 }
 
-// Attempts
+// Maximum number of retries before trying next name server
 func (o DnsProxyUdpQueriesRetriesOutput) Attempts() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v DnsProxyUdpQueriesRetries) *int { return v.Attempts }).(pulumi.IntPtrOutput)
 }
 
-// Interval
+// Time in seconds for another request to be sent
 func (o DnsProxyUdpQueriesRetriesOutput) Interval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v DnsProxyUdpQueriesRetries) *int { return v.Interval }).(pulumi.IntPtrOutput)
 }
@@ -39389,7 +39962,7 @@ func (o DnsProxyUdpQueriesRetriesPtrOutput) Elem() DnsProxyUdpQueriesRetriesOutp
 	}).(DnsProxyUdpQueriesRetriesOutput)
 }
 
-// Attempts
+// Maximum number of retries before trying next name server
 func (o DnsProxyUdpQueriesRetriesPtrOutput) Attempts() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *DnsProxyUdpQueriesRetries) *int {
 		if v == nil {
@@ -39399,7 +39972,7 @@ func (o DnsProxyUdpQueriesRetriesPtrOutput) Attempts() pulumi.IntPtrOutput {
 	}).(pulumi.IntPtrOutput)
 }
 
-// Interval
+// Time in seconds for another request to be sent
 func (o DnsProxyUdpQueriesRetriesPtrOutput) Interval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *DnsProxyUdpQueriesRetries) *int {
 		if v == nil {
@@ -45197,8 +45770,10 @@ func (o DosProtectionRuleProtectionClassifiedClassificationCriteriaPtrOutput) Ad
 }
 
 type EthernetInterfaceLayer2 struct {
-	// Vlan tag
-	VlanTag *int `pulumi:"vlanTag"`
+	// LLDP Settings
+	Lldp *EthernetInterfaceLayer2Lldp `pulumi:"lldp"`
+	// Assign interface to VLAN tag
+	VlanTag *string `pulumi:"vlanTag"`
 }
 
 // EthernetInterfaceLayer2Input is an input type that accepts EthernetInterfaceLayer2Args and EthernetInterfaceLayer2Output values.
@@ -45213,8 +45788,10 @@ type EthernetInterfaceLayer2Input interface {
 }
 
 type EthernetInterfaceLayer2Args struct {
-	// Vlan tag
-	VlanTag pulumi.IntPtrInput `pulumi:"vlanTag"`
+	// LLDP Settings
+	Lldp EthernetInterfaceLayer2LldpPtrInput `pulumi:"lldp"`
+	// Assign interface to VLAN tag
+	VlanTag pulumi.StringPtrInput `pulumi:"vlanTag"`
 }
 
 func (EthernetInterfaceLayer2Args) ElementType() reflect.Type {
@@ -45294,9 +45871,14 @@ func (o EthernetInterfaceLayer2Output) ToEthernetInterfaceLayer2PtrOutputWithCon
 	}).(EthernetInterfaceLayer2PtrOutput)
 }
 
-// Vlan tag
-func (o EthernetInterfaceLayer2Output) VlanTag() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer2) *int { return v.VlanTag }).(pulumi.IntPtrOutput)
+// LLDP Settings
+func (o EthernetInterfaceLayer2Output) Lldp() EthernetInterfaceLayer2LldpPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer2) *EthernetInterfaceLayer2Lldp { return v.Lldp }).(EthernetInterfaceLayer2LldpPtrOutput)
+}
+
+// Assign interface to VLAN tag
+func (o EthernetInterfaceLayer2Output) VlanTag() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer2) *string { return v.VlanTag }).(pulumi.StringPtrOutput)
 }
 
 type EthernetInterfaceLayer2PtrOutput struct{ *pulumi.OutputState }
@@ -45323,27 +45905,174 @@ func (o EthernetInterfaceLayer2PtrOutput) Elem() EthernetInterfaceLayer2Output {
 	}).(EthernetInterfaceLayer2Output)
 }
 
-// Vlan tag
-func (o EthernetInterfaceLayer2PtrOutput) VlanTag() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer2) *int {
+// LLDP Settings
+func (o EthernetInterfaceLayer2PtrOutput) Lldp() EthernetInterfaceLayer2LldpPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer2) *EthernetInterfaceLayer2Lldp {
+		if v == nil {
+			return nil
+		}
+		return v.Lldp
+	}).(EthernetInterfaceLayer2LldpPtrOutput)
+}
+
+// Assign interface to VLAN tag
+func (o EthernetInterfaceLayer2PtrOutput) VlanTag() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer2) *string {
 		if v == nil {
 			return nil
 		}
 		return v.VlanTag
-	}).(pulumi.IntPtrOutput)
+	}).(pulumi.StringPtrOutput)
+}
+
+type EthernetInterfaceLayer2Lldp struct {
+	// Enable LLDP on Interface
+	Enable bool `pulumi:"enable"`
+}
+
+// EthernetInterfaceLayer2LldpInput is an input type that accepts EthernetInterfaceLayer2LldpArgs and EthernetInterfaceLayer2LldpOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer2LldpInput` via:
+//
+//	EthernetInterfaceLayer2LldpArgs{...}
+type EthernetInterfaceLayer2LldpInput interface {
+	pulumi.Input
+
+	ToEthernetInterfaceLayer2LldpOutput() EthernetInterfaceLayer2LldpOutput
+	ToEthernetInterfaceLayer2LldpOutputWithContext(context.Context) EthernetInterfaceLayer2LldpOutput
+}
+
+type EthernetInterfaceLayer2LldpArgs struct {
+	// Enable LLDP on Interface
+	Enable pulumi.BoolInput `pulumi:"enable"`
+}
+
+func (EthernetInterfaceLayer2LldpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer2Lldp)(nil)).Elem()
+}
+
+func (i EthernetInterfaceLayer2LldpArgs) ToEthernetInterfaceLayer2LldpOutput() EthernetInterfaceLayer2LldpOutput {
+	return i.ToEthernetInterfaceLayer2LldpOutputWithContext(context.Background())
+}
+
+func (i EthernetInterfaceLayer2LldpArgs) ToEthernetInterfaceLayer2LldpOutputWithContext(ctx context.Context) EthernetInterfaceLayer2LldpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer2LldpOutput)
+}
+
+func (i EthernetInterfaceLayer2LldpArgs) ToEthernetInterfaceLayer2LldpPtrOutput() EthernetInterfaceLayer2LldpPtrOutput {
+	return i.ToEthernetInterfaceLayer2LldpPtrOutputWithContext(context.Background())
+}
+
+func (i EthernetInterfaceLayer2LldpArgs) ToEthernetInterfaceLayer2LldpPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer2LldpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer2LldpOutput).ToEthernetInterfaceLayer2LldpPtrOutputWithContext(ctx)
+}
+
+// EthernetInterfaceLayer2LldpPtrInput is an input type that accepts EthernetInterfaceLayer2LldpArgs, EthernetInterfaceLayer2LldpPtr and EthernetInterfaceLayer2LldpPtrOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer2LldpPtrInput` via:
+//
+//	        EthernetInterfaceLayer2LldpArgs{...}
+//
+//	or:
+//
+//	        nil
+type EthernetInterfaceLayer2LldpPtrInput interface {
+	pulumi.Input
+
+	ToEthernetInterfaceLayer2LldpPtrOutput() EthernetInterfaceLayer2LldpPtrOutput
+	ToEthernetInterfaceLayer2LldpPtrOutputWithContext(context.Context) EthernetInterfaceLayer2LldpPtrOutput
+}
+
+type ethernetInterfaceLayer2LldpPtrType EthernetInterfaceLayer2LldpArgs
+
+func EthernetInterfaceLayer2LldpPtr(v *EthernetInterfaceLayer2LldpArgs) EthernetInterfaceLayer2LldpPtrInput {
+	return (*ethernetInterfaceLayer2LldpPtrType)(v)
+}
+
+func (*ethernetInterfaceLayer2LldpPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**EthernetInterfaceLayer2Lldp)(nil)).Elem()
+}
+
+func (i *ethernetInterfaceLayer2LldpPtrType) ToEthernetInterfaceLayer2LldpPtrOutput() EthernetInterfaceLayer2LldpPtrOutput {
+	return i.ToEthernetInterfaceLayer2LldpPtrOutputWithContext(context.Background())
+}
+
+func (i *ethernetInterfaceLayer2LldpPtrType) ToEthernetInterfaceLayer2LldpPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer2LldpPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer2LldpPtrOutput)
+}
+
+type EthernetInterfaceLayer2LldpOutput struct{ *pulumi.OutputState }
+
+func (EthernetInterfaceLayer2LldpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer2Lldp)(nil)).Elem()
+}
+
+func (o EthernetInterfaceLayer2LldpOutput) ToEthernetInterfaceLayer2LldpOutput() EthernetInterfaceLayer2LldpOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer2LldpOutput) ToEthernetInterfaceLayer2LldpOutputWithContext(ctx context.Context) EthernetInterfaceLayer2LldpOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer2LldpOutput) ToEthernetInterfaceLayer2LldpPtrOutput() EthernetInterfaceLayer2LldpPtrOutput {
+	return o.ToEthernetInterfaceLayer2LldpPtrOutputWithContext(context.Background())
+}
+
+func (o EthernetInterfaceLayer2LldpOutput) ToEthernetInterfaceLayer2LldpPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer2LldpPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v EthernetInterfaceLayer2Lldp) *EthernetInterfaceLayer2Lldp {
+		return &v
+	}).(EthernetInterfaceLayer2LldpPtrOutput)
+}
+
+// Enable LLDP on Interface
+func (o EthernetInterfaceLayer2LldpOutput) Enable() pulumi.BoolOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer2Lldp) bool { return v.Enable }).(pulumi.BoolOutput)
+}
+
+type EthernetInterfaceLayer2LldpPtrOutput struct{ *pulumi.OutputState }
+
+func (EthernetInterfaceLayer2LldpPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**EthernetInterfaceLayer2Lldp)(nil)).Elem()
+}
+
+func (o EthernetInterfaceLayer2LldpPtrOutput) ToEthernetInterfaceLayer2LldpPtrOutput() EthernetInterfaceLayer2LldpPtrOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer2LldpPtrOutput) ToEthernetInterfaceLayer2LldpPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer2LldpPtrOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer2LldpPtrOutput) Elem() EthernetInterfaceLayer2LldpOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer2Lldp) EthernetInterfaceLayer2Lldp {
+		if v != nil {
+			return *v
+		}
+		var ret EthernetInterfaceLayer2Lldp
+		return ret
+	}).(EthernetInterfaceLayer2LldpOutput)
+}
+
+// Enable LLDP on Interface
+func (o EthernetInterfaceLayer2LldpPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer2Lldp) *bool {
+		if v == nil {
+			return nil
+		}
+		return &v.Enable
+	}).(pulumi.BoolPtrOutput)
 }
 
 type EthernetInterfaceLayer3 struct {
 	// Ethernet Interfaces ARP configuration
 	Arps []EthernetInterfaceLayer3Arp `pulumi:"arps"`
-	// Ddns config
+	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig *EthernetInterfaceLayer3DdnsConfig `pulumi:"ddnsConfig"`
-	// Dhcp client
+	// Ethernet Interfaces DHCP Client Object
 	DhcpClient *EthernetInterfaceLayer3DhcpClient `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile *string `pulumi:"interfaceManagementProfile"`
-	// Interface IP addresses
-	Ips []string `pulumi:"ips"`
+	// Ethernet Interface IP addresses
+	Ips []EthernetInterfaceLayer3Ip `pulumi:"ips"`
 	// MTU
 	Mtu *int `pulumi:"mtu"`
 	// Pppoe
@@ -45364,14 +46093,14 @@ type EthernetInterfaceLayer3Input interface {
 type EthernetInterfaceLayer3Args struct {
 	// Ethernet Interfaces ARP configuration
 	Arps EthernetInterfaceLayer3ArpArrayInput `pulumi:"arps"`
-	// Ddns config
+	// Dynamic DNS configuration specific to the Ethernet Interfaces.
 	DdnsConfig EthernetInterfaceLayer3DdnsConfigPtrInput `pulumi:"ddnsConfig"`
-	// Dhcp client
+	// Ethernet Interfaces DHCP Client Object
 	DhcpClient EthernetInterfaceLayer3DhcpClientPtrInput `pulumi:"dhcpClient"`
 	// Interface management profile
 	InterfaceManagementProfile pulumi.StringPtrInput `pulumi:"interfaceManagementProfile"`
-	// Interface IP addresses
-	Ips pulumi.StringArrayInput `pulumi:"ips"`
+	// Ethernet Interface IP addresses
+	Ips EthernetInterfaceLayer3IpArrayInput `pulumi:"ips"`
 	// MTU
 	Mtu pulumi.IntPtrInput `pulumi:"mtu"`
 	// Pppoe
@@ -45460,12 +46189,12 @@ func (o EthernetInterfaceLayer3Output) Arps() EthernetInterfaceLayer3ArpArrayOut
 	return o.ApplyT(func(v EthernetInterfaceLayer3) []EthernetInterfaceLayer3Arp { return v.Arps }).(EthernetInterfaceLayer3ArpArrayOutput)
 }
 
-// Ddns config
+// Dynamic DNS configuration specific to the Ethernet Interfaces.
 func (o EthernetInterfaceLayer3Output) DdnsConfig() EthernetInterfaceLayer3DdnsConfigPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3) *EthernetInterfaceLayer3DdnsConfig { return v.DdnsConfig }).(EthernetInterfaceLayer3DdnsConfigPtrOutput)
 }
 
-// Dhcp client
+// Ethernet Interfaces DHCP Client Object
 func (o EthernetInterfaceLayer3Output) DhcpClient() EthernetInterfaceLayer3DhcpClientPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3) *EthernetInterfaceLayer3DhcpClient { return v.DhcpClient }).(EthernetInterfaceLayer3DhcpClientPtrOutput)
 }
@@ -45475,9 +46204,9 @@ func (o EthernetInterfaceLayer3Output) InterfaceManagementProfile() pulumi.Strin
 	return o.ApplyT(func(v EthernetInterfaceLayer3) *string { return v.InterfaceManagementProfile }).(pulumi.StringPtrOutput)
 }
 
-// Interface IP addresses
-func (o EthernetInterfaceLayer3Output) Ips() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3) []string { return v.Ips }).(pulumi.StringArrayOutput)
+// Ethernet Interface IP addresses
+func (o EthernetInterfaceLayer3Output) Ips() EthernetInterfaceLayer3IpArrayOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3) []EthernetInterfaceLayer3Ip { return v.Ips }).(EthernetInterfaceLayer3IpArrayOutput)
 }
 
 // MTU
@@ -45524,7 +46253,7 @@ func (o EthernetInterfaceLayer3PtrOutput) Arps() EthernetInterfaceLayer3ArpArray
 	}).(EthernetInterfaceLayer3ArpArrayOutput)
 }
 
-// Ddns config
+// Dynamic DNS configuration specific to the Ethernet Interfaces.
 func (o EthernetInterfaceLayer3PtrOutput) DdnsConfig() EthernetInterfaceLayer3DdnsConfigPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3) *EthernetInterfaceLayer3DdnsConfig {
 		if v == nil {
@@ -45534,7 +46263,7 @@ func (o EthernetInterfaceLayer3PtrOutput) DdnsConfig() EthernetInterfaceLayer3Dd
 	}).(EthernetInterfaceLayer3DdnsConfigPtrOutput)
 }
 
-// Dhcp client
+// Ethernet Interfaces DHCP Client Object
 func (o EthernetInterfaceLayer3PtrOutput) DhcpClient() EthernetInterfaceLayer3DhcpClientPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3) *EthernetInterfaceLayer3DhcpClient {
 		if v == nil {
@@ -45554,14 +46283,14 @@ func (o EthernetInterfaceLayer3PtrOutput) InterfaceManagementProfile() pulumi.St
 	}).(pulumi.StringPtrOutput)
 }
 
-// Interface IP addresses
-func (o EthernetInterfaceLayer3PtrOutput) Ips() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3) []string {
+// Ethernet Interface IP addresses
+func (o EthernetInterfaceLayer3PtrOutput) Ips() EthernetInterfaceLayer3IpArrayOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3) []EthernetInterfaceLayer3Ip {
 		if v == nil {
 			return nil
 		}
 		return v.Ips
-	}).(pulumi.StringArrayOutput)
+	}).(EthernetInterfaceLayer3IpArrayOutput)
 }
 
 // MTU
@@ -45585,7 +46314,7 @@ func (o EthernetInterfaceLayer3PtrOutput) Pppoe() EthernetInterfaceLayer3PppoePt
 }
 
 type EthernetInterfaceLayer3Arp struct {
-	// Hw address
+	// MAC address
 	HwAddress *string `pulumi:"hwAddress"`
 	// IP address
 	Name *string `pulumi:"name"`
@@ -45603,7 +46332,7 @@ type EthernetInterfaceLayer3ArpInput interface {
 }
 
 type EthernetInterfaceLayer3ArpArgs struct {
-	// Hw address
+	// MAC address
 	HwAddress pulumi.StringPtrInput `pulumi:"hwAddress"`
 	// IP address
 	Name pulumi.StringPtrInput `pulumi:"name"`
@@ -45660,7 +46389,7 @@ func (o EthernetInterfaceLayer3ArpOutput) ToEthernetInterfaceLayer3ArpOutputWith
 	return o
 }
 
-// Hw address
+// MAC address
 func (o EthernetInterfaceLayer3ArpOutput) HwAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3Arp) *string { return v.HwAddress }).(pulumi.StringPtrOutput)
 }
@@ -45691,20 +46420,20 @@ func (o EthernetInterfaceLayer3ArpArrayOutput) Index(i pulumi.IntInput) Ethernet
 }
 
 type EthernetInterfaceLayer3DdnsConfig struct {
-	// Ddns cert profile
-	DdnsCertProfile *string `pulumi:"ddnsCertProfile"`
-	// Ddns enabled
+	// Certificate profile
+	DdnsCertProfile string `pulumi:"ddnsCertProfile"`
+	// Enable DDNS?
 	DdnsEnabled *bool `pulumi:"ddnsEnabled"`
 	// Ddns hostname
-	DdnsHostname *string `pulumi:"ddnsHostname"`
-	// Ddns ip
+	DdnsHostname string `pulumi:"ddnsHostname"`
+	// IP to register (static only)
 	DdnsIp *string `pulumi:"ddnsIp"`
-	// Ddns update interval
+	// Update interval (days)
 	DdnsUpdateInterval *int `pulumi:"ddnsUpdateInterval"`
-	// Ddns vendor
-	DdnsVendor *string `pulumi:"ddnsVendor"`
-	// Ddns vendor config
-	DdnsVendorConfig *string `pulumi:"ddnsVendorConfig"`
+	// DDNS vendor
+	DdnsVendor string `pulumi:"ddnsVendor"`
+	// DDNS vendor
+	DdnsVendorConfig string `pulumi:"ddnsVendorConfig"`
 }
 
 // EthernetInterfaceLayer3DdnsConfigInput is an input type that accepts EthernetInterfaceLayer3DdnsConfigArgs and EthernetInterfaceLayer3DdnsConfigOutput values.
@@ -45719,20 +46448,20 @@ type EthernetInterfaceLayer3DdnsConfigInput interface {
 }
 
 type EthernetInterfaceLayer3DdnsConfigArgs struct {
-	// Ddns cert profile
-	DdnsCertProfile pulumi.StringPtrInput `pulumi:"ddnsCertProfile"`
-	// Ddns enabled
+	// Certificate profile
+	DdnsCertProfile pulumi.StringInput `pulumi:"ddnsCertProfile"`
+	// Enable DDNS?
 	DdnsEnabled pulumi.BoolPtrInput `pulumi:"ddnsEnabled"`
 	// Ddns hostname
-	DdnsHostname pulumi.StringPtrInput `pulumi:"ddnsHostname"`
-	// Ddns ip
+	DdnsHostname pulumi.StringInput `pulumi:"ddnsHostname"`
+	// IP to register (static only)
 	DdnsIp pulumi.StringPtrInput `pulumi:"ddnsIp"`
-	// Ddns update interval
+	// Update interval (days)
 	DdnsUpdateInterval pulumi.IntPtrInput `pulumi:"ddnsUpdateInterval"`
-	// Ddns vendor
-	DdnsVendor pulumi.StringPtrInput `pulumi:"ddnsVendor"`
-	// Ddns vendor config
-	DdnsVendorConfig pulumi.StringPtrInput `pulumi:"ddnsVendorConfig"`
+	// DDNS vendor
+	DdnsVendor pulumi.StringInput `pulumi:"ddnsVendor"`
+	// DDNS vendor
+	DdnsVendorConfig pulumi.StringInput `pulumi:"ddnsVendorConfig"`
 }
 
 func (EthernetInterfaceLayer3DdnsConfigArgs) ElementType() reflect.Type {
@@ -45812,39 +46541,39 @@ func (o EthernetInterfaceLayer3DdnsConfigOutput) ToEthernetInterfaceLayer3DdnsCo
 	}).(EthernetInterfaceLayer3DdnsConfigPtrOutput)
 }
 
-// Ddns cert profile
-func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsCertProfile() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsCertProfile }).(pulumi.StringPtrOutput)
+// Certificate profile
+func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsCertProfile() pulumi.StringOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) string { return v.DdnsCertProfile }).(pulumi.StringOutput)
 }
 
-// Ddns enabled
+// Enable DDNS?
 func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) *bool { return v.DdnsEnabled }).(pulumi.BoolPtrOutput)
 }
 
 // Ddns hostname
-func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsHostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsHostname }).(pulumi.StringPtrOutput)
+func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsHostname() pulumi.StringOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) string { return v.DdnsHostname }).(pulumi.StringOutput)
 }
 
-// Ddns ip
+// IP to register (static only)
 func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsIp() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsIp }).(pulumi.StringPtrOutput)
 }
 
-// Ddns update interval
+// Update interval (days)
 func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) *int { return v.DdnsUpdateInterval }).(pulumi.IntPtrOutput)
 }
 
-// Ddns vendor
-func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsVendor() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsVendor }).(pulumi.StringPtrOutput)
+// DDNS vendor
+func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsVendor() pulumi.StringOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) string { return v.DdnsVendor }).(pulumi.StringOutput)
 }
 
-// Ddns vendor config
-func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsVendorConfig() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) *string { return v.DdnsVendorConfig }).(pulumi.StringPtrOutput)
+// DDNS vendor
+func (o EthernetInterfaceLayer3DdnsConfigOutput) DdnsVendorConfig() pulumi.StringOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DdnsConfig) string { return v.DdnsVendorConfig }).(pulumi.StringOutput)
 }
 
 type EthernetInterfaceLayer3DdnsConfigPtrOutput struct{ *pulumi.OutputState }
@@ -45871,17 +46600,17 @@ func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) Elem() EthernetInterfaceLaye
 	}).(EthernetInterfaceLayer3DdnsConfigOutput)
 }
 
-// Ddns cert profile
+// Certificate profile
 func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsCertProfile() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
-		return v.DdnsCertProfile
+		return &v.DdnsCertProfile
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns enabled
+// Enable DDNS?
 func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3DdnsConfig) *bool {
 		if v == nil {
@@ -45897,11 +46626,11 @@ func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsHostname() pulumi.String
 		if v == nil {
 			return nil
 		}
-		return v.DdnsHostname
+		return &v.DdnsHostname
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns ip
+// IP to register (static only)
 func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsIp() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
@@ -45911,7 +46640,7 @@ func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsIp() pulumi.StringPtrOut
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns update interval
+// Update interval (days)
 func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3DdnsConfig) *int {
 		if v == nil {
@@ -45921,29 +46650,35 @@ func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsUpdateInterval() pulumi.
 	}).(pulumi.IntPtrOutput)
 }
 
-// Ddns vendor
+// DDNS vendor
 func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsVendor() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
-		return v.DdnsVendor
+		return &v.DdnsVendor
 	}).(pulumi.StringPtrOutput)
 }
 
-// Ddns vendor config
+// DDNS vendor
 func (o EthernetInterfaceLayer3DdnsConfigPtrOutput) DdnsVendorConfig() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3DdnsConfig) *string {
 		if v == nil {
 			return nil
 		}
-		return v.DdnsVendorConfig
+		return &v.DdnsVendorConfig
 	}).(pulumi.StringPtrOutput)
 }
 
 type EthernetInterfaceLayer3DhcpClient struct {
-	// Dhcp client
-	DhcpClient *EthernetInterfaceLayer3DhcpClientDhcpClient `pulumi:"dhcpClient"`
+	// Automatically create default route pointing to default gateway provided by server
+	CreateDefaultRoute *bool `pulumi:"createDefaultRoute"`
+	// Metric of the default route created
+	DefaultRouteMetric *int `pulumi:"defaultRouteMetric"`
+	// Enable DHCP?
+	Enable *bool `pulumi:"enable"`
+	// Ethernet Interfaces DHCP ClientSend hostname
+	SendHostname *EthernetInterfaceLayer3DhcpClientSendHostname `pulumi:"sendHostname"`
 }
 
 // EthernetInterfaceLayer3DhcpClientInput is an input type that accepts EthernetInterfaceLayer3DhcpClientArgs and EthernetInterfaceLayer3DhcpClientOutput values.
@@ -45958,8 +46693,14 @@ type EthernetInterfaceLayer3DhcpClientInput interface {
 }
 
 type EthernetInterfaceLayer3DhcpClientArgs struct {
-	// Dhcp client
-	DhcpClient EthernetInterfaceLayer3DhcpClientDhcpClientPtrInput `pulumi:"dhcpClient"`
+	// Automatically create default route pointing to default gateway provided by server
+	CreateDefaultRoute pulumi.BoolPtrInput `pulumi:"createDefaultRoute"`
+	// Metric of the default route created
+	DefaultRouteMetric pulumi.IntPtrInput `pulumi:"defaultRouteMetric"`
+	// Enable DHCP?
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+	// Ethernet Interfaces DHCP ClientSend hostname
+	SendHostname EthernetInterfaceLayer3DhcpClientSendHostnamePtrInput `pulumi:"sendHostname"`
 }
 
 func (EthernetInterfaceLayer3DhcpClientArgs) ElementType() reflect.Type {
@@ -46039,11 +46780,26 @@ func (o EthernetInterfaceLayer3DhcpClientOutput) ToEthernetInterfaceLayer3DhcpCl
 	}).(EthernetInterfaceLayer3DhcpClientPtrOutput)
 }
 
-// Dhcp client
-func (o EthernetInterfaceLayer3DhcpClientOutput) DhcpClient() EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClient) *EthernetInterfaceLayer3DhcpClientDhcpClient {
-		return v.DhcpClient
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput)
+// Automatically create default route pointing to default gateway provided by server
+func (o EthernetInterfaceLayer3DhcpClientOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClient) *bool { return v.CreateDefaultRoute }).(pulumi.BoolPtrOutput)
+}
+
+// Metric of the default route created
+func (o EthernetInterfaceLayer3DhcpClientOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClient) *int { return v.DefaultRouteMetric }).(pulumi.IntPtrOutput)
+}
+
+// Enable DHCP?
+func (o EthernetInterfaceLayer3DhcpClientOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClient) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+// Ethernet Interfaces DHCP ClientSend hostname
+func (o EthernetInterfaceLayer3DhcpClientOutput) SendHostname() EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClient) *EthernetInterfaceLayer3DhcpClientSendHostname {
+		return v.SendHostname
+	}).(EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
 type EthernetInterfaceLayer3DhcpClientPtrOutput struct{ *pulumi.OutputState }
@@ -46070,175 +46826,9 @@ func (o EthernetInterfaceLayer3DhcpClientPtrOutput) Elem() EthernetInterfaceLaye
 	}).(EthernetInterfaceLayer3DhcpClientOutput)
 }
 
-// Dhcp client
-func (o EthernetInterfaceLayer3DhcpClientPtrOutput) DhcpClient() EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClient) *EthernetInterfaceLayer3DhcpClientDhcpClient {
-		if v == nil {
-			return nil
-		}
-		return v.DhcpClient
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput)
-}
-
-type EthernetInterfaceLayer3DhcpClientDhcpClient struct {
-	// Create default route
-	CreateDefaultRoute *bool `pulumi:"createDefaultRoute"`
-	// Default route metric
-	DefaultRouteMetric *int `pulumi:"defaultRouteMetric"`
-	// Enable
-	Enable *bool `pulumi:"enable"`
-	// Send hostname
-	SendHostname *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname `pulumi:"sendHostname"`
-}
-
-// EthernetInterfaceLayer3DhcpClientDhcpClientInput is an input type that accepts EthernetInterfaceLayer3DhcpClientDhcpClientArgs and EthernetInterfaceLayer3DhcpClientDhcpClientOutput values.
-// You can construct a concrete instance of `EthernetInterfaceLayer3DhcpClientDhcpClientInput` via:
-//
-//	EthernetInterfaceLayer3DhcpClientDhcpClientArgs{...}
-type EthernetInterfaceLayer3DhcpClientDhcpClientInput interface {
-	pulumi.Input
-
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientOutput() EthernetInterfaceLayer3DhcpClientDhcpClientOutput
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientOutputWithContext(context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientOutput
-}
-
-type EthernetInterfaceLayer3DhcpClientDhcpClientArgs struct {
-	// Create default route
-	CreateDefaultRoute pulumi.BoolPtrInput `pulumi:"createDefaultRoute"`
-	// Default route metric
-	DefaultRouteMetric pulumi.IntPtrInput `pulumi:"defaultRouteMetric"`
-	// Enable
-	Enable pulumi.BoolPtrInput `pulumi:"enable"`
-	// Send hostname
-	SendHostname EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrInput `pulumi:"sendHostname"`
-}
-
-func (EthernetInterfaceLayer3DhcpClientDhcpClientArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClient)(nil)).Elem()
-}
-
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientOutput() EthernetInterfaceLayer3DhcpClientDhcpClientOutput {
-	return i.ToEthernetInterfaceLayer3DhcpClientDhcpClientOutputWithContext(context.Background())
-}
-
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientDhcpClientOutput)
-}
-
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return i.ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(context.Background())
-}
-
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientDhcpClientOutput).ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(ctx)
-}
-
-// EthernetInterfaceLayer3DhcpClientDhcpClientPtrInput is an input type that accepts EthernetInterfaceLayer3DhcpClientDhcpClientArgs, EthernetInterfaceLayer3DhcpClientDhcpClientPtr and EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput values.
-// You can construct a concrete instance of `EthernetInterfaceLayer3DhcpClientDhcpClientPtrInput` via:
-//
-//	        EthernetInterfaceLayer3DhcpClientDhcpClientArgs{...}
-//
-//	or:
-//
-//	        nil
-type EthernetInterfaceLayer3DhcpClientDhcpClientPtrInput interface {
-	pulumi.Input
-
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput
-}
-
-type ethernetInterfaceLayer3DhcpClientDhcpClientPtrType EthernetInterfaceLayer3DhcpClientDhcpClientArgs
-
-func EthernetInterfaceLayer3DhcpClientDhcpClientPtr(v *EthernetInterfaceLayer3DhcpClientDhcpClientArgs) EthernetInterfaceLayer3DhcpClientDhcpClientPtrInput {
-	return (*ethernetInterfaceLayer3DhcpClientDhcpClientPtrType)(v)
-}
-
-func (*ethernetInterfaceLayer3DhcpClientDhcpClientPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**EthernetInterfaceLayer3DhcpClientDhcpClient)(nil)).Elem()
-}
-
-func (i *ethernetInterfaceLayer3DhcpClientDhcpClientPtrType) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return i.ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(context.Background())
-}
-
-func (i *ethernetInterfaceLayer3DhcpClientDhcpClientPtrType) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput)
-}
-
-type EthernetInterfaceLayer3DhcpClientDhcpClientOutput struct{ *pulumi.OutputState }
-
-func (EthernetInterfaceLayer3DhcpClientDhcpClientOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClient)(nil)).Elem()
-}
-
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientOutput() EthernetInterfaceLayer3DhcpClientDhcpClientOutput {
-	return o
-}
-
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientOutput {
-	return o
-}
-
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return o.ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(context.Background())
-}
-
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v EthernetInterfaceLayer3DhcpClientDhcpClient) *EthernetInterfaceLayer3DhcpClientDhcpClient {
-		return &v
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput)
-}
-
-// Create default route
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientDhcpClient) *bool { return v.CreateDefaultRoute }).(pulumi.BoolPtrOutput)
-}
-
-// Default route metric
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientDhcpClient) *int { return v.DefaultRouteMetric }).(pulumi.IntPtrOutput)
-}
-
-// Enable
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientDhcpClient) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
-}
-
-// Send hostname
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientOutput) SendHostname() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientDhcpClient) *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname {
-		return v.SendHostname
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput)
-}
-
-type EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput struct{ *pulumi.OutputState }
-
-func (EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**EthernetInterfaceLayer3DhcpClientDhcpClient)(nil)).Elem()
-}
-
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return o
-}
-
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientPtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput {
-	return o
-}
-
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) Elem() EthernetInterfaceLayer3DhcpClientDhcpClientOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClient) EthernetInterfaceLayer3DhcpClientDhcpClient {
-		if v != nil {
-			return *v
-		}
-		var ret EthernetInterfaceLayer3DhcpClientDhcpClient
-		return ret
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientOutput)
-}
-
-// Create default route
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClient) *bool {
+// Automatically create default route pointing to default gateway provided by server
+func (o EthernetInterfaceLayer3DhcpClientPtrOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClient) *bool {
 		if v == nil {
 			return nil
 		}
@@ -46246,9 +46836,9 @@ func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) CreateDefaultRoute
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Default route metric
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClient) *int {
+// Metric of the default route created
+func (o EthernetInterfaceLayer3DhcpClientPtrOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClient) *int {
 		if v == nil {
 			return nil
 		}
@@ -46256,9 +46846,9 @@ func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) DefaultRouteMetric
 	}).(pulumi.IntPtrOutput)
 }
 
-// Enable
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClient) *bool {
+// Enable DHCP?
+func (o EthernetInterfaceLayer3DhcpClientPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClient) *bool {
 		if v == nil {
 			return nil
 		}
@@ -46266,155 +46856,155 @@ func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) Enable() pulumi.Bo
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Send hostname
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput) SendHostname() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClient) *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname {
+// Ethernet Interfaces DHCP ClientSend hostname
+func (o EthernetInterfaceLayer3DhcpClientPtrOutput) SendHostname() EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClient) *EthernetInterfaceLayer3DhcpClientSendHostname {
 		if v == nil {
 			return nil
 		}
 		return v.SendHostname
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput)
+	}).(EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
-type EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname struct {
+type EthernetInterfaceLayer3DhcpClientSendHostname struct {
 	// Enable
 	Enable *bool `pulumi:"enable"`
-	// Hostname
+	// Set interface hostname
 	Hostname *string `pulumi:"hostname"`
 }
 
-// EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameInput is an input type that accepts EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs and EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput values.
-// You can construct a concrete instance of `EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameInput` via:
+// EthernetInterfaceLayer3DhcpClientSendHostnameInput is an input type that accepts EthernetInterfaceLayer3DhcpClientSendHostnameArgs and EthernetInterfaceLayer3DhcpClientSendHostnameOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer3DhcpClientSendHostnameInput` via:
 //
-//	EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs{...}
-type EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameInput interface {
+//	EthernetInterfaceLayer3DhcpClientSendHostnameArgs{...}
+type EthernetInterfaceLayer3DhcpClientSendHostnameInput interface {
 	pulumi.Input
 
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutputWithContext(context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput
+	ToEthernetInterfaceLayer3DhcpClientSendHostnameOutput() EthernetInterfaceLayer3DhcpClientSendHostnameOutput
+	ToEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(context.Context) EthernetInterfaceLayer3DhcpClientSendHostnameOutput
 }
 
-type EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs struct {
+type EthernetInterfaceLayer3DhcpClientSendHostnameArgs struct {
 	// Enable
 	Enable pulumi.BoolPtrInput `pulumi:"enable"`
-	// Hostname
+	// Set interface hostname
 	Hostname pulumi.StringPtrInput `pulumi:"hostname"`
 }
 
-func (EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname)(nil)).Elem()
+func (EthernetInterfaceLayer3DhcpClientSendHostnameArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput {
-	return i.ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutputWithContext(context.Background())
+func (i EthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientSendHostnameOutput() EthernetInterfaceLayer3DhcpClientSendHostnameOutput {
+	return i.ToEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(context.Background())
 }
 
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput)
+func (i EthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientSendHostnameOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientSendHostnameOutput)
 }
 
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return i.ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(context.Background())
+func (i EthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return i.ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
 }
 
-func (i EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput).ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(ctx)
+func (i EthernetInterfaceLayer3DhcpClientSendHostnameArgs) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientSendHostnameOutput).ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx)
 }
 
-// EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrInput is an input type that accepts EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs, EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtr and EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput values.
-// You can construct a concrete instance of `EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrInput` via:
+// EthernetInterfaceLayer3DhcpClientSendHostnamePtrInput is an input type that accepts EthernetInterfaceLayer3DhcpClientSendHostnameArgs, EthernetInterfaceLayer3DhcpClientSendHostnamePtr and EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer3DhcpClientSendHostnamePtrInput` via:
 //
-//	        EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs{...}
+//	        EthernetInterfaceLayer3DhcpClientSendHostnameArgs{...}
 //
 //	or:
 //
 //	        nil
-type EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrInput interface {
+type EthernetInterfaceLayer3DhcpClientSendHostnamePtrInput interface {
 	pulumi.Input
 
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput
-	ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput
+	ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput
+	ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Context) EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput
 }
 
-type ethernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrType EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs
+type ethernetInterfaceLayer3DhcpClientSendHostnamePtrType EthernetInterfaceLayer3DhcpClientSendHostnameArgs
 
-func EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtr(v *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrInput {
-	return (*ethernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrType)(v)
+func EthernetInterfaceLayer3DhcpClientSendHostnamePtr(v *EthernetInterfaceLayer3DhcpClientSendHostnameArgs) EthernetInterfaceLayer3DhcpClientSendHostnamePtrInput {
+	return (*ethernetInterfaceLayer3DhcpClientSendHostnamePtrType)(v)
 }
 
-func (*ethernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname)(nil)).Elem()
+func (*ethernetInterfaceLayer3DhcpClientSendHostnamePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**EthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (i *ethernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrType) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return i.ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(context.Background())
+func (i *ethernetInterfaceLayer3DhcpClientSendHostnamePtrType) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return i.ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
 }
 
-func (i *ethernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrType) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput)
+func (i *ethernetInterfaceLayer3DhcpClientSendHostnamePtrType) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
-type EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput struct{ *pulumi.OutputState }
+type EthernetInterfaceLayer3DhcpClientSendHostnameOutput struct{ *pulumi.OutputState }
 
-func (EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname)(nil)).Elem()
+func (EthernetInterfaceLayer3DhcpClientSendHostnameOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput {
+func (o EthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientSendHostnameOutput() EthernetInterfaceLayer3DhcpClientSendHostnameOutput {
 	return o
 }
 
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput {
+func (o EthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientSendHostnameOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientSendHostnameOutput {
 	return o
 }
 
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return o.ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(context.Background())
+func (o EthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(context.Background())
 }
 
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname) *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname {
+func (o EthernetInterfaceLayer3DhcpClientSendHostnameOutput) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v EthernetInterfaceLayer3DhcpClientSendHostname) *EthernetInterfaceLayer3DhcpClientSendHostname {
 		return &v
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput)
+	}).(EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput)
 }
 
 // Enable
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+func (o EthernetInterfaceLayer3DhcpClientSendHostnameOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientSendHostname) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
 }
 
-// Hostname
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput) Hostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname) *string { return v.Hostname }).(pulumi.StringPtrOutput)
+// Set interface hostname
+func (o EthernetInterfaceLayer3DhcpClientSendHostnameOutput) Hostname() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3DhcpClientSendHostname) *string { return v.Hostname }).(pulumi.StringPtrOutput)
 }
 
-type EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput struct{ *pulumi.OutputState }
+type EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput struct{ *pulumi.OutputState }
 
-func (EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname)(nil)).Elem()
+func (EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**EthernetInterfaceLayer3DhcpClientSendHostname)(nil)).Elem()
 }
 
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
+func (o EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput() EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
 	return o
 }
 
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) ToEthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput {
+func (o EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) ToEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput {
 	return o
 }
 
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) Elem() EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname) EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname {
+func (o EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Elem() EthernetInterfaceLayer3DhcpClientSendHostnameOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientSendHostname) EthernetInterfaceLayer3DhcpClientSendHostname {
 		if v != nil {
 			return *v
 		}
-		var ret EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname
+		var ret EthernetInterfaceLayer3DhcpClientSendHostname
 		return ret
-	}).(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput)
+	}).(EthernetInterfaceLayer3DhcpClientSendHostnameOutput)
 }
 
 // Enable
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname) *bool {
+func (o EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientSendHostname) *bool {
 		if v == nil {
 			return nil
 		}
@@ -46422,9 +47012,9 @@ func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) Enable
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Hostname
-func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) Hostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientDhcpClientSendHostname) *string {
+// Set interface hostname
+func (o EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput) Hostname() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3DhcpClientSendHostname) *string {
 		if v == nil {
 			return nil
 		}
@@ -46432,17 +47022,114 @@ func (o EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput) Hostna
 	}).(pulumi.StringPtrOutput)
 }
 
+type EthernetInterfaceLayer3Ip struct {
+	// Ethernet Interface IP addresses name
+	Name string `pulumi:"name"`
+}
+
+// EthernetInterfaceLayer3IpInput is an input type that accepts EthernetInterfaceLayer3IpArgs and EthernetInterfaceLayer3IpOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer3IpInput` via:
+//
+//	EthernetInterfaceLayer3IpArgs{...}
+type EthernetInterfaceLayer3IpInput interface {
+	pulumi.Input
+
+	ToEthernetInterfaceLayer3IpOutput() EthernetInterfaceLayer3IpOutput
+	ToEthernetInterfaceLayer3IpOutputWithContext(context.Context) EthernetInterfaceLayer3IpOutput
+}
+
+type EthernetInterfaceLayer3IpArgs struct {
+	// Ethernet Interface IP addresses name
+	Name pulumi.StringInput `pulumi:"name"`
+}
+
+func (EthernetInterfaceLayer3IpArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (i EthernetInterfaceLayer3IpArgs) ToEthernetInterfaceLayer3IpOutput() EthernetInterfaceLayer3IpOutput {
+	return i.ToEthernetInterfaceLayer3IpOutputWithContext(context.Background())
+}
+
+func (i EthernetInterfaceLayer3IpArgs) ToEthernetInterfaceLayer3IpOutputWithContext(ctx context.Context) EthernetInterfaceLayer3IpOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3IpOutput)
+}
+
+// EthernetInterfaceLayer3IpArrayInput is an input type that accepts EthernetInterfaceLayer3IpArray and EthernetInterfaceLayer3IpArrayOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer3IpArrayInput` via:
+//
+//	EthernetInterfaceLayer3IpArray{ EthernetInterfaceLayer3IpArgs{...} }
+type EthernetInterfaceLayer3IpArrayInput interface {
+	pulumi.Input
+
+	ToEthernetInterfaceLayer3IpArrayOutput() EthernetInterfaceLayer3IpArrayOutput
+	ToEthernetInterfaceLayer3IpArrayOutputWithContext(context.Context) EthernetInterfaceLayer3IpArrayOutput
+}
+
+type EthernetInterfaceLayer3IpArray []EthernetInterfaceLayer3IpInput
+
+func (EthernetInterfaceLayer3IpArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]EthernetInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (i EthernetInterfaceLayer3IpArray) ToEthernetInterfaceLayer3IpArrayOutput() EthernetInterfaceLayer3IpArrayOutput {
+	return i.ToEthernetInterfaceLayer3IpArrayOutputWithContext(context.Background())
+}
+
+func (i EthernetInterfaceLayer3IpArray) ToEthernetInterfaceLayer3IpArrayOutputWithContext(ctx context.Context) EthernetInterfaceLayer3IpArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3IpArrayOutput)
+}
+
+type EthernetInterfaceLayer3IpOutput struct{ *pulumi.OutputState }
+
+func (EthernetInterfaceLayer3IpOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (o EthernetInterfaceLayer3IpOutput) ToEthernetInterfaceLayer3IpOutput() EthernetInterfaceLayer3IpOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer3IpOutput) ToEthernetInterfaceLayer3IpOutputWithContext(ctx context.Context) EthernetInterfaceLayer3IpOutput {
+	return o
+}
+
+// Ethernet Interface IP addresses name
+func (o EthernetInterfaceLayer3IpOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3Ip) string { return v.Name }).(pulumi.StringOutput)
+}
+
+type EthernetInterfaceLayer3IpArrayOutput struct{ *pulumi.OutputState }
+
+func (EthernetInterfaceLayer3IpArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]EthernetInterfaceLayer3Ip)(nil)).Elem()
+}
+
+func (o EthernetInterfaceLayer3IpArrayOutput) ToEthernetInterfaceLayer3IpArrayOutput() EthernetInterfaceLayer3IpArrayOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer3IpArrayOutput) ToEthernetInterfaceLayer3IpArrayOutputWithContext(ctx context.Context) EthernetInterfaceLayer3IpArrayOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer3IpArrayOutput) Index(i pulumi.IntInput) EthernetInterfaceLayer3IpOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) EthernetInterfaceLayer3Ip {
+		return vs[0].([]EthernetInterfaceLayer3Ip)[vs[1].(int)]
+	}).(EthernetInterfaceLayer3IpOutput)
+}
+
 type EthernetInterfaceLayer3Pppoe struct {
 	// Access concentrator
 	AccessConcentrator *string `pulumi:"accessConcentrator"`
 	// Authentication protocol
 	Authentication *string `pulumi:"authentication"`
-	// Default route metric
+	// Metric of the default route created
 	DefaultRouteMetric *int `pulumi:"defaultRouteMetric"`
 	// Enable
 	Enable *bool `pulumi:"enable"`
 	// Passive
-	Passive *bool `pulumi:"passive"`
+	Passive *EthernetInterfaceLayer3PppoePassive `pulumi:"passive"`
 	// Password
 	Password string `pulumi:"password"`
 	// Service
@@ -46469,12 +47156,12 @@ type EthernetInterfaceLayer3PppoeArgs struct {
 	AccessConcentrator pulumi.StringPtrInput `pulumi:"accessConcentrator"`
 	// Authentication protocol
 	Authentication pulumi.StringPtrInput `pulumi:"authentication"`
-	// Default route metric
+	// Metric of the default route created
 	DefaultRouteMetric pulumi.IntPtrInput `pulumi:"defaultRouteMetric"`
 	// Enable
 	Enable pulumi.BoolPtrInput `pulumi:"enable"`
 	// Passive
-	Passive pulumi.BoolPtrInput `pulumi:"passive"`
+	Passive EthernetInterfaceLayer3PppoePassivePtrInput `pulumi:"passive"`
 	// Password
 	Password pulumi.StringInput `pulumi:"password"`
 	// Service
@@ -46572,7 +47259,7 @@ func (o EthernetInterfaceLayer3PppoeOutput) Authentication() pulumi.StringPtrOut
 	return o.ApplyT(func(v EthernetInterfaceLayer3Pppoe) *string { return v.Authentication }).(pulumi.StringPtrOutput)
 }
 
-// Default route metric
+// Metric of the default route created
 func (o EthernetInterfaceLayer3PppoeOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v EthernetInterfaceLayer3Pppoe) *int { return v.DefaultRouteMetric }).(pulumi.IntPtrOutput)
 }
@@ -46583,8 +47270,8 @@ func (o EthernetInterfaceLayer3PppoeOutput) Enable() pulumi.BoolPtrOutput {
 }
 
 // Passive
-func (o EthernetInterfaceLayer3PppoeOutput) Passive() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3Pppoe) *bool { return v.Passive }).(pulumi.BoolPtrOutput)
+func (o EthernetInterfaceLayer3PppoeOutput) Passive() EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3Pppoe) *EthernetInterfaceLayer3PppoePassive { return v.Passive }).(EthernetInterfaceLayer3PppoePassivePtrOutput)
 }
 
 // Password
@@ -46653,7 +47340,7 @@ func (o EthernetInterfaceLayer3PppoePtrOutput) Authentication() pulumi.StringPtr
 	}).(pulumi.StringPtrOutput)
 }
 
-// Default route metric
+// Metric of the default route created
 func (o EthernetInterfaceLayer3PppoePtrOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3Pppoe) *int {
 		if v == nil {
@@ -46674,13 +47361,13 @@ func (o EthernetInterfaceLayer3PppoePtrOutput) Enable() pulumi.BoolPtrOutput {
 }
 
 // Passive
-func (o EthernetInterfaceLayer3PppoePtrOutput) Passive() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *EthernetInterfaceLayer3Pppoe) *bool {
+func (o EthernetInterfaceLayer3PppoePtrOutput) Passive() EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3Pppoe) *EthernetInterfaceLayer3PppoePassive {
 		if v == nil {
 			return nil
 		}
 		return v.Passive
-	}).(pulumi.BoolPtrOutput)
+	}).(EthernetInterfaceLayer3PppoePassivePtrOutput)
 }
 
 // Password
@@ -46723,9 +47410,146 @@ func (o EthernetInterfaceLayer3PppoePtrOutput) Username() pulumi.StringPtrOutput
 	}).(pulumi.StringPtrOutput)
 }
 
+type EthernetInterfaceLayer3PppoePassive struct {
+	// Passive Mode enabled
+	Enable bool `pulumi:"enable"`
+}
+
+// EthernetInterfaceLayer3PppoePassiveInput is an input type that accepts EthernetInterfaceLayer3PppoePassiveArgs and EthernetInterfaceLayer3PppoePassiveOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer3PppoePassiveInput` via:
+//
+//	EthernetInterfaceLayer3PppoePassiveArgs{...}
+type EthernetInterfaceLayer3PppoePassiveInput interface {
+	pulumi.Input
+
+	ToEthernetInterfaceLayer3PppoePassiveOutput() EthernetInterfaceLayer3PppoePassiveOutput
+	ToEthernetInterfaceLayer3PppoePassiveOutputWithContext(context.Context) EthernetInterfaceLayer3PppoePassiveOutput
+}
+
+type EthernetInterfaceLayer3PppoePassiveArgs struct {
+	// Passive Mode enabled
+	Enable pulumi.BoolInput `pulumi:"enable"`
+}
+
+func (EthernetInterfaceLayer3PppoePassiveArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer3PppoePassive)(nil)).Elem()
+}
+
+func (i EthernetInterfaceLayer3PppoePassiveArgs) ToEthernetInterfaceLayer3PppoePassiveOutput() EthernetInterfaceLayer3PppoePassiveOutput {
+	return i.ToEthernetInterfaceLayer3PppoePassiveOutputWithContext(context.Background())
+}
+
+func (i EthernetInterfaceLayer3PppoePassiveArgs) ToEthernetInterfaceLayer3PppoePassiveOutputWithContext(ctx context.Context) EthernetInterfaceLayer3PppoePassiveOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3PppoePassiveOutput)
+}
+
+func (i EthernetInterfaceLayer3PppoePassiveArgs) ToEthernetInterfaceLayer3PppoePassivePtrOutput() EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return i.ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(context.Background())
+}
+
+func (i EthernetInterfaceLayer3PppoePassiveArgs) ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3PppoePassiveOutput).ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(ctx)
+}
+
+// EthernetInterfaceLayer3PppoePassivePtrInput is an input type that accepts EthernetInterfaceLayer3PppoePassiveArgs, EthernetInterfaceLayer3PppoePassivePtr and EthernetInterfaceLayer3PppoePassivePtrOutput values.
+// You can construct a concrete instance of `EthernetInterfaceLayer3PppoePassivePtrInput` via:
+//
+//	        EthernetInterfaceLayer3PppoePassiveArgs{...}
+//
+//	or:
+//
+//	        nil
+type EthernetInterfaceLayer3PppoePassivePtrInput interface {
+	pulumi.Input
+
+	ToEthernetInterfaceLayer3PppoePassivePtrOutput() EthernetInterfaceLayer3PppoePassivePtrOutput
+	ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(context.Context) EthernetInterfaceLayer3PppoePassivePtrOutput
+}
+
+type ethernetInterfaceLayer3PppoePassivePtrType EthernetInterfaceLayer3PppoePassiveArgs
+
+func EthernetInterfaceLayer3PppoePassivePtr(v *EthernetInterfaceLayer3PppoePassiveArgs) EthernetInterfaceLayer3PppoePassivePtrInput {
+	return (*ethernetInterfaceLayer3PppoePassivePtrType)(v)
+}
+
+func (*ethernetInterfaceLayer3PppoePassivePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**EthernetInterfaceLayer3PppoePassive)(nil)).Elem()
+}
+
+func (i *ethernetInterfaceLayer3PppoePassivePtrType) ToEthernetInterfaceLayer3PppoePassivePtrOutput() EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return i.ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(context.Background())
+}
+
+func (i *ethernetInterfaceLayer3PppoePassivePtrType) ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(EthernetInterfaceLayer3PppoePassivePtrOutput)
+}
+
+type EthernetInterfaceLayer3PppoePassiveOutput struct{ *pulumi.OutputState }
+
+func (EthernetInterfaceLayer3PppoePassiveOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*EthernetInterfaceLayer3PppoePassive)(nil)).Elem()
+}
+
+func (o EthernetInterfaceLayer3PppoePassiveOutput) ToEthernetInterfaceLayer3PppoePassiveOutput() EthernetInterfaceLayer3PppoePassiveOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer3PppoePassiveOutput) ToEthernetInterfaceLayer3PppoePassiveOutputWithContext(ctx context.Context) EthernetInterfaceLayer3PppoePassiveOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer3PppoePassiveOutput) ToEthernetInterfaceLayer3PppoePassivePtrOutput() EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return o.ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(context.Background())
+}
+
+func (o EthernetInterfaceLayer3PppoePassiveOutput) ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v EthernetInterfaceLayer3PppoePassive) *EthernetInterfaceLayer3PppoePassive {
+		return &v
+	}).(EthernetInterfaceLayer3PppoePassivePtrOutput)
+}
+
+// Passive Mode enabled
+func (o EthernetInterfaceLayer3PppoePassiveOutput) Enable() pulumi.BoolOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3PppoePassive) bool { return v.Enable }).(pulumi.BoolOutput)
+}
+
+type EthernetInterfaceLayer3PppoePassivePtrOutput struct{ *pulumi.OutputState }
+
+func (EthernetInterfaceLayer3PppoePassivePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**EthernetInterfaceLayer3PppoePassive)(nil)).Elem()
+}
+
+func (o EthernetInterfaceLayer3PppoePassivePtrOutput) ToEthernetInterfaceLayer3PppoePassivePtrOutput() EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer3PppoePassivePtrOutput) ToEthernetInterfaceLayer3PppoePassivePtrOutputWithContext(ctx context.Context) EthernetInterfaceLayer3PppoePassivePtrOutput {
+	return o
+}
+
+func (o EthernetInterfaceLayer3PppoePassivePtrOutput) Elem() EthernetInterfaceLayer3PppoePassiveOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3PppoePassive) EthernetInterfaceLayer3PppoePassive {
+		if v != nil {
+			return *v
+		}
+		var ret EthernetInterfaceLayer3PppoePassive
+		return ret
+	}).(EthernetInterfaceLayer3PppoePassiveOutput)
+}
+
+// Passive Mode enabled
+func (o EthernetInterfaceLayer3PppoePassivePtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *EthernetInterfaceLayer3PppoePassive) *bool {
+		if v == nil {
+			return nil
+		}
+		return &v.Enable
+	}).(pulumi.BoolPtrOutput)
+}
+
 type EthernetInterfaceLayer3PppoeStaticAddress struct {
-	// Ip
-	Ip *string `pulumi:"ip"`
+	// Static IP address
+	Ip string `pulumi:"ip"`
 }
 
 // EthernetInterfaceLayer3PppoeStaticAddressInput is an input type that accepts EthernetInterfaceLayer3PppoeStaticAddressArgs and EthernetInterfaceLayer3PppoeStaticAddressOutput values.
@@ -46740,8 +47564,8 @@ type EthernetInterfaceLayer3PppoeStaticAddressInput interface {
 }
 
 type EthernetInterfaceLayer3PppoeStaticAddressArgs struct {
-	// Ip
-	Ip pulumi.StringPtrInput `pulumi:"ip"`
+	// Static IP address
+	Ip pulumi.StringInput `pulumi:"ip"`
 }
 
 func (EthernetInterfaceLayer3PppoeStaticAddressArgs) ElementType() reflect.Type {
@@ -46821,9 +47645,9 @@ func (o EthernetInterfaceLayer3PppoeStaticAddressOutput) ToEthernetInterfaceLaye
 	}).(EthernetInterfaceLayer3PppoeStaticAddressPtrOutput)
 }
 
-// Ip
-func (o EthernetInterfaceLayer3PppoeStaticAddressOutput) Ip() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v EthernetInterfaceLayer3PppoeStaticAddress) *string { return v.Ip }).(pulumi.StringPtrOutput)
+// Static IP address
+func (o EthernetInterfaceLayer3PppoeStaticAddressOutput) Ip() pulumi.StringOutput {
+	return o.ApplyT(func(v EthernetInterfaceLayer3PppoeStaticAddress) string { return v.Ip }).(pulumi.StringOutput)
 }
 
 type EthernetInterfaceLayer3PppoeStaticAddressPtrOutput struct{ *pulumi.OutputState }
@@ -46850,20 +47674,20 @@ func (o EthernetInterfaceLayer3PppoeStaticAddressPtrOutput) Elem() EthernetInter
 	}).(EthernetInterfaceLayer3PppoeStaticAddressOutput)
 }
 
-// Ip
+// Static IP address
 func (o EthernetInterfaceLayer3PppoeStaticAddressPtrOutput) Ip() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfaceLayer3PppoeStaticAddress) *string {
 		if v == nil {
 			return nil
 		}
-		return v.Ip
+		return &v.Ip
 	}).(pulumi.StringPtrOutput)
 }
 
 type EthernetInterfacePoe struct {
-	// Poe enabled
+	// Enabled PoE?
 	PoeEnabled *bool `pulumi:"poeEnabled"`
-	// Poe rsvd pwr
+	// PoE reserved power
 	PoeRsvdPwr *int `pulumi:"poeRsvdPwr"`
 }
 
@@ -46879,9 +47703,9 @@ type EthernetInterfacePoeInput interface {
 }
 
 type EthernetInterfacePoeArgs struct {
-	// Poe enabled
+	// Enabled PoE?
 	PoeEnabled pulumi.BoolPtrInput `pulumi:"poeEnabled"`
-	// Poe rsvd pwr
+	// PoE reserved power
 	PoeRsvdPwr pulumi.IntPtrInput `pulumi:"poeRsvdPwr"`
 }
 
@@ -46962,12 +47786,12 @@ func (o EthernetInterfacePoeOutput) ToEthernetInterfacePoePtrOutputWithContext(c
 	}).(EthernetInterfacePoePtrOutput)
 }
 
-// Poe enabled
+// Enabled PoE?
 func (o EthernetInterfacePoeOutput) PoeEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v EthernetInterfacePoe) *bool { return v.PoeEnabled }).(pulumi.BoolPtrOutput)
 }
 
-// Poe rsvd pwr
+// PoE reserved power
 func (o EthernetInterfacePoeOutput) PoeRsvdPwr() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v EthernetInterfacePoe) *int { return v.PoeRsvdPwr }).(pulumi.IntPtrOutput)
 }
@@ -46996,7 +47820,7 @@ func (o EthernetInterfacePoePtrOutput) Elem() EthernetInterfacePoeOutput {
 	}).(EthernetInterfacePoeOutput)
 }
 
-// Poe enabled
+// Enabled PoE?
 func (o EthernetInterfacePoePtrOutput) PoeEnabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfacePoe) *bool {
 		if v == nil {
@@ -47006,7 +47830,7 @@ func (o EthernetInterfacePoePtrOutput) PoeEnabled() pulumi.BoolPtrOutput {
 	}).(pulumi.BoolPtrOutput)
 }
 
-// Poe rsvd pwr
+// PoE reserved power
 func (o EthernetInterfacePoePtrOutput) PoeRsvdPwr() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *EthernetInterfacePoe) *int {
 		if v == nil {
@@ -77976,1121 +78800,27 @@ func (o IkeGatewayProtocolIkev2DpdPtrOutput) Enable() pulumi.BoolPtrOutput {
 	}).(pulumi.BoolPtrOutput)
 }
 
-type IpsecCryptoProfileAh struct {
-	// Authentication
-	Authentications []string `pulumi:"authentications"`
-}
-
-// IpsecCryptoProfileAhInput is an input type that accepts IpsecCryptoProfileAhArgs and IpsecCryptoProfileAhOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileAhInput` via:
-//
-//	IpsecCryptoProfileAhArgs{...}
-type IpsecCryptoProfileAhInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileAhOutput() IpsecCryptoProfileAhOutput
-	ToIpsecCryptoProfileAhOutputWithContext(context.Context) IpsecCryptoProfileAhOutput
-}
-
-type IpsecCryptoProfileAhArgs struct {
-	// Authentication
-	Authentications pulumi.StringArrayInput `pulumi:"authentications"`
-}
-
-func (IpsecCryptoProfileAhArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileAh)(nil)).Elem()
-}
-
-func (i IpsecCryptoProfileAhArgs) ToIpsecCryptoProfileAhOutput() IpsecCryptoProfileAhOutput {
-	return i.ToIpsecCryptoProfileAhOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileAhArgs) ToIpsecCryptoProfileAhOutputWithContext(ctx context.Context) IpsecCryptoProfileAhOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileAhOutput)
-}
-
-func (i IpsecCryptoProfileAhArgs) ToIpsecCryptoProfileAhPtrOutput() IpsecCryptoProfileAhPtrOutput {
-	return i.ToIpsecCryptoProfileAhPtrOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileAhArgs) ToIpsecCryptoProfileAhPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileAhPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileAhOutput).ToIpsecCryptoProfileAhPtrOutputWithContext(ctx)
-}
-
-// IpsecCryptoProfileAhPtrInput is an input type that accepts IpsecCryptoProfileAhArgs, IpsecCryptoProfileAhPtr and IpsecCryptoProfileAhPtrOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileAhPtrInput` via:
-//
-//	        IpsecCryptoProfileAhArgs{...}
-//
-//	or:
-//
-//	        nil
-type IpsecCryptoProfileAhPtrInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileAhPtrOutput() IpsecCryptoProfileAhPtrOutput
-	ToIpsecCryptoProfileAhPtrOutputWithContext(context.Context) IpsecCryptoProfileAhPtrOutput
-}
-
-type ipsecCryptoProfileAhPtrType IpsecCryptoProfileAhArgs
-
-func IpsecCryptoProfileAhPtr(v *IpsecCryptoProfileAhArgs) IpsecCryptoProfileAhPtrInput {
-	return (*ipsecCryptoProfileAhPtrType)(v)
-}
-
-func (*ipsecCryptoProfileAhPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileAh)(nil)).Elem()
-}
-
-func (i *ipsecCryptoProfileAhPtrType) ToIpsecCryptoProfileAhPtrOutput() IpsecCryptoProfileAhPtrOutput {
-	return i.ToIpsecCryptoProfileAhPtrOutputWithContext(context.Background())
-}
-
-func (i *ipsecCryptoProfileAhPtrType) ToIpsecCryptoProfileAhPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileAhPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileAhPtrOutput)
-}
-
-type IpsecCryptoProfileAhOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileAhOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileAh)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileAhOutput) ToIpsecCryptoProfileAhOutput() IpsecCryptoProfileAhOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileAhOutput) ToIpsecCryptoProfileAhOutputWithContext(ctx context.Context) IpsecCryptoProfileAhOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileAhOutput) ToIpsecCryptoProfileAhPtrOutput() IpsecCryptoProfileAhPtrOutput {
-	return o.ToIpsecCryptoProfileAhPtrOutputWithContext(context.Background())
-}
-
-func (o IpsecCryptoProfileAhOutput) ToIpsecCryptoProfileAhPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileAhPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v IpsecCryptoProfileAh) *IpsecCryptoProfileAh {
-		return &v
-	}).(IpsecCryptoProfileAhPtrOutput)
-}
-
-// Authentication
-func (o IpsecCryptoProfileAhOutput) Authentications() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileAh) []string { return v.Authentications }).(pulumi.StringArrayOutput)
-}
-
-type IpsecCryptoProfileAhPtrOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileAhPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileAh)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileAhPtrOutput) ToIpsecCryptoProfileAhPtrOutput() IpsecCryptoProfileAhPtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileAhPtrOutput) ToIpsecCryptoProfileAhPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileAhPtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileAhPtrOutput) Elem() IpsecCryptoProfileAhOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileAh) IpsecCryptoProfileAh {
-		if v != nil {
-			return *v
-		}
-		var ret IpsecCryptoProfileAh
-		return ret
-	}).(IpsecCryptoProfileAhOutput)
-}
-
-// Authentication
-func (o IpsecCryptoProfileAhPtrOutput) Authentications() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileAh) []string {
-		if v == nil {
-			return nil
-		}
-		return v.Authentications
-	}).(pulumi.StringArrayOutput)
-}
-
-type IpsecCryptoProfileEsp struct {
-	// Authentication algorithm
-	Authentications []string `pulumi:"authentications"`
-	// Encryption algorithm
-	Encryptions []string `pulumi:"encryptions"`
-}
-
-// IpsecCryptoProfileEspInput is an input type that accepts IpsecCryptoProfileEspArgs and IpsecCryptoProfileEspOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileEspInput` via:
-//
-//	IpsecCryptoProfileEspArgs{...}
-type IpsecCryptoProfileEspInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileEspOutput() IpsecCryptoProfileEspOutput
-	ToIpsecCryptoProfileEspOutputWithContext(context.Context) IpsecCryptoProfileEspOutput
-}
-
-type IpsecCryptoProfileEspArgs struct {
-	// Authentication algorithm
-	Authentications pulumi.StringArrayInput `pulumi:"authentications"`
-	// Encryption algorithm
-	Encryptions pulumi.StringArrayInput `pulumi:"encryptions"`
-}
-
-func (IpsecCryptoProfileEspArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileEsp)(nil)).Elem()
-}
-
-func (i IpsecCryptoProfileEspArgs) ToIpsecCryptoProfileEspOutput() IpsecCryptoProfileEspOutput {
-	return i.ToIpsecCryptoProfileEspOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileEspArgs) ToIpsecCryptoProfileEspOutputWithContext(ctx context.Context) IpsecCryptoProfileEspOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileEspOutput)
-}
-
-func (i IpsecCryptoProfileEspArgs) ToIpsecCryptoProfileEspPtrOutput() IpsecCryptoProfileEspPtrOutput {
-	return i.ToIpsecCryptoProfileEspPtrOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileEspArgs) ToIpsecCryptoProfileEspPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileEspPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileEspOutput).ToIpsecCryptoProfileEspPtrOutputWithContext(ctx)
-}
-
-// IpsecCryptoProfileEspPtrInput is an input type that accepts IpsecCryptoProfileEspArgs, IpsecCryptoProfileEspPtr and IpsecCryptoProfileEspPtrOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileEspPtrInput` via:
-//
-//	        IpsecCryptoProfileEspArgs{...}
-//
-//	or:
-//
-//	        nil
-type IpsecCryptoProfileEspPtrInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileEspPtrOutput() IpsecCryptoProfileEspPtrOutput
-	ToIpsecCryptoProfileEspPtrOutputWithContext(context.Context) IpsecCryptoProfileEspPtrOutput
-}
-
-type ipsecCryptoProfileEspPtrType IpsecCryptoProfileEspArgs
-
-func IpsecCryptoProfileEspPtr(v *IpsecCryptoProfileEspArgs) IpsecCryptoProfileEspPtrInput {
-	return (*ipsecCryptoProfileEspPtrType)(v)
-}
-
-func (*ipsecCryptoProfileEspPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileEsp)(nil)).Elem()
-}
-
-func (i *ipsecCryptoProfileEspPtrType) ToIpsecCryptoProfileEspPtrOutput() IpsecCryptoProfileEspPtrOutput {
-	return i.ToIpsecCryptoProfileEspPtrOutputWithContext(context.Background())
-}
-
-func (i *ipsecCryptoProfileEspPtrType) ToIpsecCryptoProfileEspPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileEspPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileEspPtrOutput)
-}
-
-type IpsecCryptoProfileEspOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileEspOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileEsp)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileEspOutput) ToIpsecCryptoProfileEspOutput() IpsecCryptoProfileEspOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileEspOutput) ToIpsecCryptoProfileEspOutputWithContext(ctx context.Context) IpsecCryptoProfileEspOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileEspOutput) ToIpsecCryptoProfileEspPtrOutput() IpsecCryptoProfileEspPtrOutput {
-	return o.ToIpsecCryptoProfileEspPtrOutputWithContext(context.Background())
-}
-
-func (o IpsecCryptoProfileEspOutput) ToIpsecCryptoProfileEspPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileEspPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v IpsecCryptoProfileEsp) *IpsecCryptoProfileEsp {
-		return &v
-	}).(IpsecCryptoProfileEspPtrOutput)
-}
-
-// Authentication algorithm
-func (o IpsecCryptoProfileEspOutput) Authentications() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileEsp) []string { return v.Authentications }).(pulumi.StringArrayOutput)
-}
-
-// Encryption algorithm
-func (o IpsecCryptoProfileEspOutput) Encryptions() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileEsp) []string { return v.Encryptions }).(pulumi.StringArrayOutput)
-}
-
-type IpsecCryptoProfileEspPtrOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileEspPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileEsp)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileEspPtrOutput) ToIpsecCryptoProfileEspPtrOutput() IpsecCryptoProfileEspPtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileEspPtrOutput) ToIpsecCryptoProfileEspPtrOutputWithContext(ctx context.Context) IpsecCryptoProfileEspPtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileEspPtrOutput) Elem() IpsecCryptoProfileEspOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileEsp) IpsecCryptoProfileEsp {
-		if v != nil {
-			return *v
-		}
-		var ret IpsecCryptoProfileEsp
-		return ret
-	}).(IpsecCryptoProfileEspOutput)
-}
-
-// Authentication algorithm
-func (o IpsecCryptoProfileEspPtrOutput) Authentications() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileEsp) []string {
-		if v == nil {
-			return nil
-		}
-		return v.Authentications
-	}).(pulumi.StringArrayOutput)
-}
-
-// Encryption algorithm
-func (o IpsecCryptoProfileEspPtrOutput) Encryptions() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileEsp) []string {
-		if v == nil {
-			return nil
-		}
-		return v.Encryptions
-	}).(pulumi.StringArrayOutput)
-}
-
-type IpsecCryptoProfileLifesize struct {
-	// specify lifesize in gigabytes(GB)
-	Gb *int `pulumi:"gb"`
-	// specify lifesize in kilobytes(KB)
-	Kb *int `pulumi:"kb"`
-	// specify lifesize in megabytes(MB)
-	Mb *int `pulumi:"mb"`
-	// specify lifesize in terabytes(TB)
-	Tb *int `pulumi:"tb"`
-}
-
-// IpsecCryptoProfileLifesizeInput is an input type that accepts IpsecCryptoProfileLifesizeArgs and IpsecCryptoProfileLifesizeOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileLifesizeInput` via:
-//
-//	IpsecCryptoProfileLifesizeArgs{...}
-type IpsecCryptoProfileLifesizeInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileLifesizeOutput() IpsecCryptoProfileLifesizeOutput
-	ToIpsecCryptoProfileLifesizeOutputWithContext(context.Context) IpsecCryptoProfileLifesizeOutput
-}
-
-type IpsecCryptoProfileLifesizeArgs struct {
-	// specify lifesize in gigabytes(GB)
-	Gb pulumi.IntPtrInput `pulumi:"gb"`
-	// specify lifesize in kilobytes(KB)
-	Kb pulumi.IntPtrInput `pulumi:"kb"`
-	// specify lifesize in megabytes(MB)
-	Mb pulumi.IntPtrInput `pulumi:"mb"`
-	// specify lifesize in terabytes(TB)
-	Tb pulumi.IntPtrInput `pulumi:"tb"`
-}
-
-func (IpsecCryptoProfileLifesizeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileLifesize)(nil)).Elem()
-}
-
-func (i IpsecCryptoProfileLifesizeArgs) ToIpsecCryptoProfileLifesizeOutput() IpsecCryptoProfileLifesizeOutput {
-	return i.ToIpsecCryptoProfileLifesizeOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileLifesizeArgs) ToIpsecCryptoProfileLifesizeOutputWithContext(ctx context.Context) IpsecCryptoProfileLifesizeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileLifesizeOutput)
-}
-
-func (i IpsecCryptoProfileLifesizeArgs) ToIpsecCryptoProfileLifesizePtrOutput() IpsecCryptoProfileLifesizePtrOutput {
-	return i.ToIpsecCryptoProfileLifesizePtrOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileLifesizeArgs) ToIpsecCryptoProfileLifesizePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifesizePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileLifesizeOutput).ToIpsecCryptoProfileLifesizePtrOutputWithContext(ctx)
-}
-
-// IpsecCryptoProfileLifesizePtrInput is an input type that accepts IpsecCryptoProfileLifesizeArgs, IpsecCryptoProfileLifesizePtr and IpsecCryptoProfileLifesizePtrOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileLifesizePtrInput` via:
-//
-//	        IpsecCryptoProfileLifesizeArgs{...}
-//
-//	or:
-//
-//	        nil
-type IpsecCryptoProfileLifesizePtrInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileLifesizePtrOutput() IpsecCryptoProfileLifesizePtrOutput
-	ToIpsecCryptoProfileLifesizePtrOutputWithContext(context.Context) IpsecCryptoProfileLifesizePtrOutput
-}
-
-type ipsecCryptoProfileLifesizePtrType IpsecCryptoProfileLifesizeArgs
-
-func IpsecCryptoProfileLifesizePtr(v *IpsecCryptoProfileLifesizeArgs) IpsecCryptoProfileLifesizePtrInput {
-	return (*ipsecCryptoProfileLifesizePtrType)(v)
-}
-
-func (*ipsecCryptoProfileLifesizePtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileLifesize)(nil)).Elem()
-}
-
-func (i *ipsecCryptoProfileLifesizePtrType) ToIpsecCryptoProfileLifesizePtrOutput() IpsecCryptoProfileLifesizePtrOutput {
-	return i.ToIpsecCryptoProfileLifesizePtrOutputWithContext(context.Background())
-}
-
-func (i *ipsecCryptoProfileLifesizePtrType) ToIpsecCryptoProfileLifesizePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifesizePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileLifesizePtrOutput)
-}
-
-type IpsecCryptoProfileLifesizeOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileLifesizeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileLifesize)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileLifesizeOutput) ToIpsecCryptoProfileLifesizeOutput() IpsecCryptoProfileLifesizeOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifesizeOutput) ToIpsecCryptoProfileLifesizeOutputWithContext(ctx context.Context) IpsecCryptoProfileLifesizeOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifesizeOutput) ToIpsecCryptoProfileLifesizePtrOutput() IpsecCryptoProfileLifesizePtrOutput {
-	return o.ToIpsecCryptoProfileLifesizePtrOutputWithContext(context.Background())
-}
-
-func (o IpsecCryptoProfileLifesizeOutput) ToIpsecCryptoProfileLifesizePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifesizePtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v IpsecCryptoProfileLifesize) *IpsecCryptoProfileLifesize {
-		return &v
-	}).(IpsecCryptoProfileLifesizePtrOutput)
-}
-
-// specify lifesize in gigabytes(GB)
-func (o IpsecCryptoProfileLifesizeOutput) Gb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifesize) *int { return v.Gb }).(pulumi.IntPtrOutput)
-}
-
-// specify lifesize in kilobytes(KB)
-func (o IpsecCryptoProfileLifesizeOutput) Kb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifesize) *int { return v.Kb }).(pulumi.IntPtrOutput)
-}
-
-// specify lifesize in megabytes(MB)
-func (o IpsecCryptoProfileLifesizeOutput) Mb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifesize) *int { return v.Mb }).(pulumi.IntPtrOutput)
-}
-
-// specify lifesize in terabytes(TB)
-func (o IpsecCryptoProfileLifesizeOutput) Tb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifesize) *int { return v.Tb }).(pulumi.IntPtrOutput)
-}
-
-type IpsecCryptoProfileLifesizePtrOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileLifesizePtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileLifesize)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileLifesizePtrOutput) ToIpsecCryptoProfileLifesizePtrOutput() IpsecCryptoProfileLifesizePtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifesizePtrOutput) ToIpsecCryptoProfileLifesizePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifesizePtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifesizePtrOutput) Elem() IpsecCryptoProfileLifesizeOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) IpsecCryptoProfileLifesize {
-		if v != nil {
-			return *v
-		}
-		var ret IpsecCryptoProfileLifesize
-		return ret
-	}).(IpsecCryptoProfileLifesizeOutput)
-}
-
-// specify lifesize in gigabytes(GB)
-func (o IpsecCryptoProfileLifesizePtrOutput) Gb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Gb
-	}).(pulumi.IntPtrOutput)
-}
-
-// specify lifesize in kilobytes(KB)
-func (o IpsecCryptoProfileLifesizePtrOutput) Kb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Kb
-	}).(pulumi.IntPtrOutput)
-}
-
-// specify lifesize in megabytes(MB)
-func (o IpsecCryptoProfileLifesizePtrOutput) Mb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Mb
-	}).(pulumi.IntPtrOutput)
-}
-
-// specify lifesize in terabytes(TB)
-func (o IpsecCryptoProfileLifesizePtrOutput) Tb() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Tb
-	}).(pulumi.IntPtrOutput)
-}
-
-type IpsecCryptoProfileLifetime struct {
-	// specify lifetime in days
-	Days *int `pulumi:"days"`
-	// specify lifetime in hours
-	Hours *int `pulumi:"hours"`
-	// specify lifetime in minutes
-	Minutes *int `pulumi:"minutes"`
-	// specify lifetime in seconds
-	Seconds *int `pulumi:"seconds"`
-}
-
-// IpsecCryptoProfileLifetimeInput is an input type that accepts IpsecCryptoProfileLifetimeArgs and IpsecCryptoProfileLifetimeOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileLifetimeInput` via:
-//
-//	IpsecCryptoProfileLifetimeArgs{...}
-type IpsecCryptoProfileLifetimeInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileLifetimeOutput() IpsecCryptoProfileLifetimeOutput
-	ToIpsecCryptoProfileLifetimeOutputWithContext(context.Context) IpsecCryptoProfileLifetimeOutput
-}
-
-type IpsecCryptoProfileLifetimeArgs struct {
-	// specify lifetime in days
-	Days pulumi.IntPtrInput `pulumi:"days"`
-	// specify lifetime in hours
-	Hours pulumi.IntPtrInput `pulumi:"hours"`
-	// specify lifetime in minutes
-	Minutes pulumi.IntPtrInput `pulumi:"minutes"`
-	// specify lifetime in seconds
-	Seconds pulumi.IntPtrInput `pulumi:"seconds"`
-}
-
-func (IpsecCryptoProfileLifetimeArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileLifetime)(nil)).Elem()
-}
-
-func (i IpsecCryptoProfileLifetimeArgs) ToIpsecCryptoProfileLifetimeOutput() IpsecCryptoProfileLifetimeOutput {
-	return i.ToIpsecCryptoProfileLifetimeOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileLifetimeArgs) ToIpsecCryptoProfileLifetimeOutputWithContext(ctx context.Context) IpsecCryptoProfileLifetimeOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileLifetimeOutput)
-}
-
-func (i IpsecCryptoProfileLifetimeArgs) ToIpsecCryptoProfileLifetimePtrOutput() IpsecCryptoProfileLifetimePtrOutput {
-	return i.ToIpsecCryptoProfileLifetimePtrOutputWithContext(context.Background())
-}
-
-func (i IpsecCryptoProfileLifetimeArgs) ToIpsecCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifetimePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileLifetimeOutput).ToIpsecCryptoProfileLifetimePtrOutputWithContext(ctx)
-}
-
-// IpsecCryptoProfileLifetimePtrInput is an input type that accepts IpsecCryptoProfileLifetimeArgs, IpsecCryptoProfileLifetimePtr and IpsecCryptoProfileLifetimePtrOutput values.
-// You can construct a concrete instance of `IpsecCryptoProfileLifetimePtrInput` via:
-//
-//	        IpsecCryptoProfileLifetimeArgs{...}
-//
-//	or:
-//
-//	        nil
-type IpsecCryptoProfileLifetimePtrInput interface {
-	pulumi.Input
-
-	ToIpsecCryptoProfileLifetimePtrOutput() IpsecCryptoProfileLifetimePtrOutput
-	ToIpsecCryptoProfileLifetimePtrOutputWithContext(context.Context) IpsecCryptoProfileLifetimePtrOutput
-}
-
-type ipsecCryptoProfileLifetimePtrType IpsecCryptoProfileLifetimeArgs
-
-func IpsecCryptoProfileLifetimePtr(v *IpsecCryptoProfileLifetimeArgs) IpsecCryptoProfileLifetimePtrInput {
-	return (*ipsecCryptoProfileLifetimePtrType)(v)
-}
-
-func (*ipsecCryptoProfileLifetimePtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileLifetime)(nil)).Elem()
-}
-
-func (i *ipsecCryptoProfileLifetimePtrType) ToIpsecCryptoProfileLifetimePtrOutput() IpsecCryptoProfileLifetimePtrOutput {
-	return i.ToIpsecCryptoProfileLifetimePtrOutputWithContext(context.Background())
-}
-
-func (i *ipsecCryptoProfileLifetimePtrType) ToIpsecCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifetimePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecCryptoProfileLifetimePtrOutput)
-}
-
-type IpsecCryptoProfileLifetimeOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileLifetimeOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecCryptoProfileLifetime)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileLifetimeOutput) ToIpsecCryptoProfileLifetimeOutput() IpsecCryptoProfileLifetimeOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifetimeOutput) ToIpsecCryptoProfileLifetimeOutputWithContext(ctx context.Context) IpsecCryptoProfileLifetimeOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifetimeOutput) ToIpsecCryptoProfileLifetimePtrOutput() IpsecCryptoProfileLifetimePtrOutput {
-	return o.ToIpsecCryptoProfileLifetimePtrOutputWithContext(context.Background())
-}
-
-func (o IpsecCryptoProfileLifetimeOutput) ToIpsecCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifetimePtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v IpsecCryptoProfileLifetime) *IpsecCryptoProfileLifetime {
-		return &v
-	}).(IpsecCryptoProfileLifetimePtrOutput)
-}
-
-// specify lifetime in days
-func (o IpsecCryptoProfileLifetimeOutput) Days() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifetime) *int { return v.Days }).(pulumi.IntPtrOutput)
-}
-
-// specify lifetime in hours
-func (o IpsecCryptoProfileLifetimeOutput) Hours() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifetime) *int { return v.Hours }).(pulumi.IntPtrOutput)
-}
-
-// specify lifetime in minutes
-func (o IpsecCryptoProfileLifetimeOutput) Minutes() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifetime) *int { return v.Minutes }).(pulumi.IntPtrOutput)
-}
-
-// specify lifetime in seconds
-func (o IpsecCryptoProfileLifetimeOutput) Seconds() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v IpsecCryptoProfileLifetime) *int { return v.Seconds }).(pulumi.IntPtrOutput)
-}
-
-type IpsecCryptoProfileLifetimePtrOutput struct{ *pulumi.OutputState }
-
-func (IpsecCryptoProfileLifetimePtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecCryptoProfileLifetime)(nil)).Elem()
-}
-
-func (o IpsecCryptoProfileLifetimePtrOutput) ToIpsecCryptoProfileLifetimePtrOutput() IpsecCryptoProfileLifetimePtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifetimePtrOutput) ToIpsecCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IpsecCryptoProfileLifetimePtrOutput {
-	return o
-}
-
-func (o IpsecCryptoProfileLifetimePtrOutput) Elem() IpsecCryptoProfileLifetimeOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) IpsecCryptoProfileLifetime {
-		if v != nil {
-			return *v
-		}
-		var ret IpsecCryptoProfileLifetime
-		return ret
-	}).(IpsecCryptoProfileLifetimeOutput)
-}
-
-// specify lifetime in days
-func (o IpsecCryptoProfileLifetimePtrOutput) Days() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Days
-	}).(pulumi.IntPtrOutput)
-}
-
-// specify lifetime in hours
-func (o IpsecCryptoProfileLifetimePtrOutput) Hours() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Hours
-	}).(pulumi.IntPtrOutput)
-}
-
-// specify lifetime in minutes
-func (o IpsecCryptoProfileLifetimePtrOutput) Minutes() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Minutes
-	}).(pulumi.IntPtrOutput)
-}
-
-// specify lifetime in seconds
-func (o IpsecCryptoProfileLifetimePtrOutput) Seconds() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Seconds
-	}).(pulumi.IntPtrOutput)
-}
-
-type IpsecTunnelAutoKey struct {
-	// Ike gateway
-	IkeGateways []IpsecTunnelAutoKeyIkeGateway `pulumi:"ikeGateways"`
-	// Ipsec crypto profile
-	IpsecCryptoProfile string `pulumi:"ipsecCryptoProfile"`
-	// IPv6 type of proxy*id values
-	ProxyIdV6s []IpsecTunnelAutoKeyProxyIdV6 `pulumi:"proxyIdV6s"`
-	// IPv4 type of proxy*id values
-	ProxyIds []IpsecTunnelAutoKeyProxyId `pulumi:"proxyIds"`
-}
-
-// IpsecTunnelAutoKeyInput is an input type that accepts IpsecTunnelAutoKeyArgs and IpsecTunnelAutoKeyOutput values.
-// You can construct a concrete instance of `IpsecTunnelAutoKeyInput` via:
-//
-//	IpsecTunnelAutoKeyArgs{...}
-type IpsecTunnelAutoKeyInput interface {
-	pulumi.Input
-
-	ToIpsecTunnelAutoKeyOutput() IpsecTunnelAutoKeyOutput
-	ToIpsecTunnelAutoKeyOutputWithContext(context.Context) IpsecTunnelAutoKeyOutput
-}
-
-type IpsecTunnelAutoKeyArgs struct {
-	// Ike gateway
-	IkeGateways IpsecTunnelAutoKeyIkeGatewayArrayInput `pulumi:"ikeGateways"`
-	// Ipsec crypto profile
-	IpsecCryptoProfile pulumi.StringInput `pulumi:"ipsecCryptoProfile"`
-	// IPv6 type of proxy*id values
-	ProxyIdV6s IpsecTunnelAutoKeyProxyIdV6ArrayInput `pulumi:"proxyIdV6s"`
-	// IPv4 type of proxy*id values
-	ProxyIds IpsecTunnelAutoKeyProxyIdArrayInput `pulumi:"proxyIds"`
-}
-
-func (IpsecTunnelAutoKeyArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecTunnelAutoKey)(nil)).Elem()
-}
-
-func (i IpsecTunnelAutoKeyArgs) ToIpsecTunnelAutoKeyOutput() IpsecTunnelAutoKeyOutput {
-	return i.ToIpsecTunnelAutoKeyOutputWithContext(context.Background())
-}
-
-func (i IpsecTunnelAutoKeyArgs) ToIpsecTunnelAutoKeyOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecTunnelAutoKeyOutput)
-}
-
-func (i IpsecTunnelAutoKeyArgs) ToIpsecTunnelAutoKeyPtrOutput() IpsecTunnelAutoKeyPtrOutput {
-	return i.ToIpsecTunnelAutoKeyPtrOutputWithContext(context.Background())
-}
-
-func (i IpsecTunnelAutoKeyArgs) ToIpsecTunnelAutoKeyPtrOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecTunnelAutoKeyOutput).ToIpsecTunnelAutoKeyPtrOutputWithContext(ctx)
-}
-
-// IpsecTunnelAutoKeyPtrInput is an input type that accepts IpsecTunnelAutoKeyArgs, IpsecTunnelAutoKeyPtr and IpsecTunnelAutoKeyPtrOutput values.
-// You can construct a concrete instance of `IpsecTunnelAutoKeyPtrInput` via:
-//
-//	        IpsecTunnelAutoKeyArgs{...}
-//
-//	or:
-//
-//	        nil
-type IpsecTunnelAutoKeyPtrInput interface {
-	pulumi.Input
-
-	ToIpsecTunnelAutoKeyPtrOutput() IpsecTunnelAutoKeyPtrOutput
-	ToIpsecTunnelAutoKeyPtrOutputWithContext(context.Context) IpsecTunnelAutoKeyPtrOutput
-}
-
-type ipsecTunnelAutoKeyPtrType IpsecTunnelAutoKeyArgs
-
-func IpsecTunnelAutoKeyPtr(v *IpsecTunnelAutoKeyArgs) IpsecTunnelAutoKeyPtrInput {
-	return (*ipsecTunnelAutoKeyPtrType)(v)
-}
-
-func (*ipsecTunnelAutoKeyPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecTunnelAutoKey)(nil)).Elem()
-}
-
-func (i *ipsecTunnelAutoKeyPtrType) ToIpsecTunnelAutoKeyPtrOutput() IpsecTunnelAutoKeyPtrOutput {
-	return i.ToIpsecTunnelAutoKeyPtrOutputWithContext(context.Background())
-}
-
-func (i *ipsecTunnelAutoKeyPtrType) ToIpsecTunnelAutoKeyPtrOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecTunnelAutoKeyPtrOutput)
-}
-
-type IpsecTunnelAutoKeyOutput struct{ *pulumi.OutputState }
-
-func (IpsecTunnelAutoKeyOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecTunnelAutoKey)(nil)).Elem()
-}
-
-func (o IpsecTunnelAutoKeyOutput) ToIpsecTunnelAutoKeyOutput() IpsecTunnelAutoKeyOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyOutput) ToIpsecTunnelAutoKeyOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyOutput) ToIpsecTunnelAutoKeyPtrOutput() IpsecTunnelAutoKeyPtrOutput {
-	return o.ToIpsecTunnelAutoKeyPtrOutputWithContext(context.Background())
-}
-
-func (o IpsecTunnelAutoKeyOutput) ToIpsecTunnelAutoKeyPtrOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v IpsecTunnelAutoKey) *IpsecTunnelAutoKey {
-		return &v
-	}).(IpsecTunnelAutoKeyPtrOutput)
-}
-
-// Ike gateway
-func (o IpsecTunnelAutoKeyOutput) IkeGateways() IpsecTunnelAutoKeyIkeGatewayArrayOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKey) []IpsecTunnelAutoKeyIkeGateway { return v.IkeGateways }).(IpsecTunnelAutoKeyIkeGatewayArrayOutput)
-}
-
-// Ipsec crypto profile
-func (o IpsecTunnelAutoKeyOutput) IpsecCryptoProfile() pulumi.StringOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKey) string { return v.IpsecCryptoProfile }).(pulumi.StringOutput)
-}
-
-// IPv6 type of proxy*id values
-func (o IpsecTunnelAutoKeyOutput) ProxyIdV6s() IpsecTunnelAutoKeyProxyIdV6ArrayOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKey) []IpsecTunnelAutoKeyProxyIdV6 { return v.ProxyIdV6s }).(IpsecTunnelAutoKeyProxyIdV6ArrayOutput)
-}
-
-// IPv4 type of proxy*id values
-func (o IpsecTunnelAutoKeyOutput) ProxyIds() IpsecTunnelAutoKeyProxyIdArrayOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKey) []IpsecTunnelAutoKeyProxyId { return v.ProxyIds }).(IpsecTunnelAutoKeyProxyIdArrayOutput)
-}
-
-type IpsecTunnelAutoKeyPtrOutput struct{ *pulumi.OutputState }
-
-func (IpsecTunnelAutoKeyPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**IpsecTunnelAutoKey)(nil)).Elem()
-}
-
-func (o IpsecTunnelAutoKeyPtrOutput) ToIpsecTunnelAutoKeyPtrOutput() IpsecTunnelAutoKeyPtrOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyPtrOutput) ToIpsecTunnelAutoKeyPtrOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyPtrOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyPtrOutput) Elem() IpsecTunnelAutoKeyOutput {
-	return o.ApplyT(func(v *IpsecTunnelAutoKey) IpsecTunnelAutoKey {
-		if v != nil {
-			return *v
-		}
-		var ret IpsecTunnelAutoKey
-		return ret
-	}).(IpsecTunnelAutoKeyOutput)
-}
-
-// Ike gateway
-func (o IpsecTunnelAutoKeyPtrOutput) IkeGateways() IpsecTunnelAutoKeyIkeGatewayArrayOutput {
-	return o.ApplyT(func(v *IpsecTunnelAutoKey) []IpsecTunnelAutoKeyIkeGateway {
-		if v == nil {
-			return nil
-		}
-		return v.IkeGateways
-	}).(IpsecTunnelAutoKeyIkeGatewayArrayOutput)
-}
-
-// Ipsec crypto profile
-func (o IpsecTunnelAutoKeyPtrOutput) IpsecCryptoProfile() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *IpsecTunnelAutoKey) *string {
-		if v == nil {
-			return nil
-		}
-		return &v.IpsecCryptoProfile
-	}).(pulumi.StringPtrOutput)
-}
-
-// IPv6 type of proxy*id values
-func (o IpsecTunnelAutoKeyPtrOutput) ProxyIdV6s() IpsecTunnelAutoKeyProxyIdV6ArrayOutput {
-	return o.ApplyT(func(v *IpsecTunnelAutoKey) []IpsecTunnelAutoKeyProxyIdV6 {
-		if v == nil {
-			return nil
-		}
-		return v.ProxyIdV6s
-	}).(IpsecTunnelAutoKeyProxyIdV6ArrayOutput)
-}
-
-// IPv4 type of proxy*id values
-func (o IpsecTunnelAutoKeyPtrOutput) ProxyIds() IpsecTunnelAutoKeyProxyIdArrayOutput {
-	return o.ApplyT(func(v *IpsecTunnelAutoKey) []IpsecTunnelAutoKeyProxyId {
-		if v == nil {
-			return nil
-		}
-		return v.ProxyIds
-	}).(IpsecTunnelAutoKeyProxyIdArrayOutput)
-}
-
-type IpsecTunnelAutoKeyIkeGateway struct {
-	// Name
-	Name *string `pulumi:"name"`
-}
-
-// IpsecTunnelAutoKeyIkeGatewayInput is an input type that accepts IpsecTunnelAutoKeyIkeGatewayArgs and IpsecTunnelAutoKeyIkeGatewayOutput values.
-// You can construct a concrete instance of `IpsecTunnelAutoKeyIkeGatewayInput` via:
-//
-//	IpsecTunnelAutoKeyIkeGatewayArgs{...}
-type IpsecTunnelAutoKeyIkeGatewayInput interface {
-	pulumi.Input
-
-	ToIpsecTunnelAutoKeyIkeGatewayOutput() IpsecTunnelAutoKeyIkeGatewayOutput
-	ToIpsecTunnelAutoKeyIkeGatewayOutputWithContext(context.Context) IpsecTunnelAutoKeyIkeGatewayOutput
-}
-
-type IpsecTunnelAutoKeyIkeGatewayArgs struct {
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-}
-
-func (IpsecTunnelAutoKeyIkeGatewayArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecTunnelAutoKeyIkeGateway)(nil)).Elem()
-}
-
-func (i IpsecTunnelAutoKeyIkeGatewayArgs) ToIpsecTunnelAutoKeyIkeGatewayOutput() IpsecTunnelAutoKeyIkeGatewayOutput {
-	return i.ToIpsecTunnelAutoKeyIkeGatewayOutputWithContext(context.Background())
-}
-
-func (i IpsecTunnelAutoKeyIkeGatewayArgs) ToIpsecTunnelAutoKeyIkeGatewayOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyIkeGatewayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecTunnelAutoKeyIkeGatewayOutput)
-}
-
-// IpsecTunnelAutoKeyIkeGatewayArrayInput is an input type that accepts IpsecTunnelAutoKeyIkeGatewayArray and IpsecTunnelAutoKeyIkeGatewayArrayOutput values.
-// You can construct a concrete instance of `IpsecTunnelAutoKeyIkeGatewayArrayInput` via:
-//
-//	IpsecTunnelAutoKeyIkeGatewayArray{ IpsecTunnelAutoKeyIkeGatewayArgs{...} }
-type IpsecTunnelAutoKeyIkeGatewayArrayInput interface {
-	pulumi.Input
-
-	ToIpsecTunnelAutoKeyIkeGatewayArrayOutput() IpsecTunnelAutoKeyIkeGatewayArrayOutput
-	ToIpsecTunnelAutoKeyIkeGatewayArrayOutputWithContext(context.Context) IpsecTunnelAutoKeyIkeGatewayArrayOutput
-}
-
-type IpsecTunnelAutoKeyIkeGatewayArray []IpsecTunnelAutoKeyIkeGatewayInput
-
-func (IpsecTunnelAutoKeyIkeGatewayArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]IpsecTunnelAutoKeyIkeGateway)(nil)).Elem()
-}
-
-func (i IpsecTunnelAutoKeyIkeGatewayArray) ToIpsecTunnelAutoKeyIkeGatewayArrayOutput() IpsecTunnelAutoKeyIkeGatewayArrayOutput {
-	return i.ToIpsecTunnelAutoKeyIkeGatewayArrayOutputWithContext(context.Background())
-}
-
-func (i IpsecTunnelAutoKeyIkeGatewayArray) ToIpsecTunnelAutoKeyIkeGatewayArrayOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyIkeGatewayArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecTunnelAutoKeyIkeGatewayArrayOutput)
-}
-
-type IpsecTunnelAutoKeyIkeGatewayOutput struct{ *pulumi.OutputState }
-
-func (IpsecTunnelAutoKeyIkeGatewayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecTunnelAutoKeyIkeGateway)(nil)).Elem()
-}
-
-func (o IpsecTunnelAutoKeyIkeGatewayOutput) ToIpsecTunnelAutoKeyIkeGatewayOutput() IpsecTunnelAutoKeyIkeGatewayOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyIkeGatewayOutput) ToIpsecTunnelAutoKeyIkeGatewayOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyIkeGatewayOutput {
-	return o
-}
-
-// Name
-func (o IpsecTunnelAutoKeyIkeGatewayOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKeyIkeGateway) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-type IpsecTunnelAutoKeyIkeGatewayArrayOutput struct{ *pulumi.OutputState }
-
-func (IpsecTunnelAutoKeyIkeGatewayArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]IpsecTunnelAutoKeyIkeGateway)(nil)).Elem()
-}
-
-func (o IpsecTunnelAutoKeyIkeGatewayArrayOutput) ToIpsecTunnelAutoKeyIkeGatewayArrayOutput() IpsecTunnelAutoKeyIkeGatewayArrayOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyIkeGatewayArrayOutput) ToIpsecTunnelAutoKeyIkeGatewayArrayOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyIkeGatewayArrayOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyIkeGatewayArrayOutput) Index(i pulumi.IntInput) IpsecTunnelAutoKeyIkeGatewayOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) IpsecTunnelAutoKeyIkeGateway {
-		return vs[0].([]IpsecTunnelAutoKeyIkeGateway)[vs[1].(int)]
-	}).(IpsecTunnelAutoKeyIkeGatewayOutput)
-}
-
-type IpsecTunnelAutoKeyProxyId struct {
-	// Local
-	Local *string `pulumi:"local"`
-	// Name
-	Name string `pulumi:"name"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
-	Protocol *IpsecTunnelAutoKeyProxyIdProtocol `pulumi:"protocol"`
-	// Remote
-	Remote *string `pulumi:"remote"`
-}
-
-// IpsecTunnelAutoKeyProxyIdInput is an input type that accepts IpsecTunnelAutoKeyProxyIdArgs and IpsecTunnelAutoKeyProxyIdOutput values.
-// You can construct a concrete instance of `IpsecTunnelAutoKeyProxyIdInput` via:
-//
-//	IpsecTunnelAutoKeyProxyIdArgs{...}
-type IpsecTunnelAutoKeyProxyIdInput interface {
-	pulumi.Input
-
-	ToIpsecTunnelAutoKeyProxyIdOutput() IpsecTunnelAutoKeyProxyIdOutput
-	ToIpsecTunnelAutoKeyProxyIdOutputWithContext(context.Context) IpsecTunnelAutoKeyProxyIdOutput
-}
-
-type IpsecTunnelAutoKeyProxyIdArgs struct {
-	// Local
-	Local pulumi.StringPtrInput `pulumi:"local"`
-	// Name
-	Name pulumi.StringInput `pulumi:"name"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
-	Protocol IpsecTunnelAutoKeyProxyIdProtocolPtrInput `pulumi:"protocol"`
-	// Remote
-	Remote pulumi.StringPtrInput `pulumi:"remote"`
-}
-
-func (IpsecTunnelAutoKeyProxyIdArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecTunnelAutoKeyProxyId)(nil)).Elem()
-}
-
-func (i IpsecTunnelAutoKeyProxyIdArgs) ToIpsecTunnelAutoKeyProxyIdOutput() IpsecTunnelAutoKeyProxyIdOutput {
-	return i.ToIpsecTunnelAutoKeyProxyIdOutputWithContext(context.Background())
-}
-
-func (i IpsecTunnelAutoKeyProxyIdArgs) ToIpsecTunnelAutoKeyProxyIdOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyProxyIdOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecTunnelAutoKeyProxyIdOutput)
-}
-
-// IpsecTunnelAutoKeyProxyIdArrayInput is an input type that accepts IpsecTunnelAutoKeyProxyIdArray and IpsecTunnelAutoKeyProxyIdArrayOutput values.
-// You can construct a concrete instance of `IpsecTunnelAutoKeyProxyIdArrayInput` via:
-//
-//	IpsecTunnelAutoKeyProxyIdArray{ IpsecTunnelAutoKeyProxyIdArgs{...} }
-type IpsecTunnelAutoKeyProxyIdArrayInput interface {
-	pulumi.Input
-
-	ToIpsecTunnelAutoKeyProxyIdArrayOutput() IpsecTunnelAutoKeyProxyIdArrayOutput
-	ToIpsecTunnelAutoKeyProxyIdArrayOutputWithContext(context.Context) IpsecTunnelAutoKeyProxyIdArrayOutput
-}
-
-type IpsecTunnelAutoKeyProxyIdArray []IpsecTunnelAutoKeyProxyIdInput
-
-func (IpsecTunnelAutoKeyProxyIdArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]IpsecTunnelAutoKeyProxyId)(nil)).Elem()
-}
-
-func (i IpsecTunnelAutoKeyProxyIdArray) ToIpsecTunnelAutoKeyProxyIdArrayOutput() IpsecTunnelAutoKeyProxyIdArrayOutput {
-	return i.ToIpsecTunnelAutoKeyProxyIdArrayOutputWithContext(context.Background())
-}
-
-func (i IpsecTunnelAutoKeyProxyIdArray) ToIpsecTunnelAutoKeyProxyIdArrayOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyProxyIdArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(IpsecTunnelAutoKeyProxyIdArrayOutput)
-}
-
-type IpsecTunnelAutoKeyProxyIdOutput struct{ *pulumi.OutputState }
-
-func (IpsecTunnelAutoKeyProxyIdOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*IpsecTunnelAutoKeyProxyId)(nil)).Elem()
-}
-
-func (o IpsecTunnelAutoKeyProxyIdOutput) ToIpsecTunnelAutoKeyProxyIdOutput() IpsecTunnelAutoKeyProxyIdOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyProxyIdOutput) ToIpsecTunnelAutoKeyProxyIdOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyProxyIdOutput {
-	return o
-}
-
-// Local
-func (o IpsecTunnelAutoKeyProxyIdOutput) Local() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyId) *string { return v.Local }).(pulumi.StringPtrOutput)
-}
-
-// Name
-func (o IpsecTunnelAutoKeyProxyIdOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyId) string { return v.Name }).(pulumi.StringOutput)
-}
-
-// IPv4 type of proxy*id protocol values for TCP protocol
-func (o IpsecTunnelAutoKeyProxyIdOutput) Protocol() IpsecTunnelAutoKeyProxyIdProtocolPtrOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyId) *IpsecTunnelAutoKeyProxyIdProtocol { return v.Protocol }).(IpsecTunnelAutoKeyProxyIdProtocolPtrOutput)
-}
-
-// Remote
-func (o IpsecTunnelAutoKeyProxyIdOutput) Remote() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyId) *string { return v.Remote }).(pulumi.StringPtrOutput)
-}
-
-type IpsecTunnelAutoKeyProxyIdArrayOutput struct{ *pulumi.OutputState }
-
-func (IpsecTunnelAutoKeyProxyIdArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]IpsecTunnelAutoKeyProxyId)(nil)).Elem()
-}
-
-func (o IpsecTunnelAutoKeyProxyIdArrayOutput) ToIpsecTunnelAutoKeyProxyIdArrayOutput() IpsecTunnelAutoKeyProxyIdArrayOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyProxyIdArrayOutput) ToIpsecTunnelAutoKeyProxyIdArrayOutputWithContext(ctx context.Context) IpsecTunnelAutoKeyProxyIdArrayOutput {
-	return o
-}
-
-func (o IpsecTunnelAutoKeyProxyIdArrayOutput) Index(i pulumi.IntInput) IpsecTunnelAutoKeyProxyIdOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) IpsecTunnelAutoKeyProxyId {
-		return vs[0].([]IpsecTunnelAutoKeyProxyId)[vs[1].(int)]
-	}).(IpsecTunnelAutoKeyProxyIdOutput)
-}
-
 func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicInput)(nil)).Elem(), AddressGroupDynamicArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AddressGroupDynamicPtrInput)(nil)).Elem(), AddressGroupDynamicArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer2Input)(nil)).Elem(), AggregateEthernetInterfaceLayer2Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer2PtrInput)(nil)).Elem(), AggregateEthernetInterfaceLayer2Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer2LacpInput)(nil)).Elem(), AggregateEthernetInterfaceLayer2LacpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer2LacpPtrInput)(nil)).Elem(), AggregateEthernetInterfaceLayer2LacpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3Input)(nil)).Elem(), AggregateEthernetInterfaceLayer3Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3PtrInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3ArpInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3ArpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3ArpArrayInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3ArpArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3DdnsConfigInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3DdnsConfigArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3DdnsConfigPtrInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3DdnsConfigArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClientInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3DhcpClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClientPtrInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3DhcpClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClientSendHostnameInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3DhcpClientSendHostnameArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3LacpInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3LacpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*AggregateEthernetInterfaceLayer3LacpPtrInput)(nil)).Elem(), AggregateEthernetInterfaceLayer3LacpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer2Input)(nil)).Elem(), AggregateInterfaceLayer2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer2PtrInput)(nil)).Elem(), AggregateInterfaceLayer2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer2LacpInput)(nil)).Elem(), AggregateInterfaceLayer2LacpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer2LacpPtrInput)(nil)).Elem(), AggregateInterfaceLayer2LacpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3Input)(nil)).Elem(), AggregateInterfaceLayer3Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3PtrInput)(nil)).Elem(), AggregateInterfaceLayer3Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3ArpInput)(nil)).Elem(), AggregateInterfaceLayer3ArpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3ArpArrayInput)(nil)).Elem(), AggregateInterfaceLayer3ArpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3DdnsConfigInput)(nil)).Elem(), AggregateInterfaceLayer3DdnsConfigArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3DdnsConfigPtrInput)(nil)).Elem(), AggregateInterfaceLayer3DdnsConfigArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3DhcpClientInput)(nil)).Elem(), AggregateInterfaceLayer3DhcpClientArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3DhcpClientPtrInput)(nil)).Elem(), AggregateInterfaceLayer3DhcpClientArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3DhcpClientSendHostnameInput)(nil)).Elem(), AggregateInterfaceLayer3DhcpClientSendHostnameArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3DhcpClientSendHostnamePtrInput)(nil)).Elem(), AggregateInterfaceLayer3DhcpClientSendHostnameArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3IpInput)(nil)).Elem(), AggregateInterfaceLayer3IpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3IpArrayInput)(nil)).Elem(), AggregateInterfaceLayer3IpArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3LacpInput)(nil)).Elem(), AggregateInterfaceLayer3LacpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*AggregateInterfaceLayer3LacpPtrInput)(nil)).Elem(), AggregateInterfaceLayer3LacpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AntiSpywareProfileMicaEngineSpywareEnabledInput)(nil)).Elem(), AntiSpywareProfileMicaEngineSpywareEnabledArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AntiSpywareProfileMicaEngineSpywareEnabledArrayInput)(nil)).Elem(), AntiSpywareProfileMicaEngineSpywareEnabledArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*AntiSpywareProfileRuleInput)(nil)).Elem(), AntiSpywareProfileRuleArgs{})
@@ -79262,8 +78992,12 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastNextHopSelfForcePtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastNextHopSelfForceArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastOrfInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastOrfArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastOrfPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastOrfArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityAllInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityAllArgs{})
@@ -79300,8 +79034,12 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastNextHopSelfForcePtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastNextHopSelfForceArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastOrfInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastOrfPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastOrfArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityPtrInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityAllInput)(nil)).Elem(), BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityAllArgs{})
@@ -79638,6 +79376,8 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*DosProtectionRuleProtectionClassifiedClassificationCriteriaPtrInput)(nil)).Elem(), DosProtectionRuleProtectionClassifiedClassificationCriteriaArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer2Input)(nil)).Elem(), EthernetInterfaceLayer2Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer2PtrInput)(nil)).Elem(), EthernetInterfaceLayer2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer2LldpInput)(nil)).Elem(), EthernetInterfaceLayer2LldpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer2LldpPtrInput)(nil)).Elem(), EthernetInterfaceLayer2LldpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3Input)(nil)).Elem(), EthernetInterfaceLayer3Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3PtrInput)(nil)).Elem(), EthernetInterfaceLayer3Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3ArpInput)(nil)).Elem(), EthernetInterfaceLayer3ArpArgs{})
@@ -79646,12 +79386,14 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DdnsConfigPtrInput)(nil)).Elem(), EthernetInterfaceLayer3DdnsConfigArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientPtrInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClientInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientDhcpClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClientPtrInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientDhcpClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientSendHostnameInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientSendHostnameArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3DhcpClientSendHostnamePtrInput)(nil)).Elem(), EthernetInterfaceLayer3DhcpClientSendHostnameArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3IpInput)(nil)).Elem(), EthernetInterfaceLayer3IpArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3IpArrayInput)(nil)).Elem(), EthernetInterfaceLayer3IpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3PppoeInput)(nil)).Elem(), EthernetInterfaceLayer3PppoeArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3PppoePtrInput)(nil)).Elem(), EthernetInterfaceLayer3PppoeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3PppoePassiveInput)(nil)).Elem(), EthernetInterfaceLayer3PppoePassiveArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3PppoePassivePtrInput)(nil)).Elem(), EthernetInterfaceLayer3PppoePassiveArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3PppoeStaticAddressInput)(nil)).Elem(), EthernetInterfaceLayer3PppoeStaticAddressArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfaceLayer3PppoeStaticAddressPtrInput)(nil)).Elem(), EthernetInterfaceLayer3PppoeStaticAddressArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*EthernetInterfacePoeInput)(nil)).Elem(), EthernetInterfacePoeArgs{})
@@ -80058,38 +79800,26 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev2PtrInput)(nil)).Elem(), IkeGatewayProtocolIkev2Args{})
 	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev2DpdInput)(nil)).Elem(), IkeGatewayProtocolIkev2DpdArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev2DpdPtrInput)(nil)).Elem(), IkeGatewayProtocolIkev2DpdArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileAhInput)(nil)).Elem(), IpsecCryptoProfileAhArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileAhPtrInput)(nil)).Elem(), IpsecCryptoProfileAhArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileEspInput)(nil)).Elem(), IpsecCryptoProfileEspArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileEspPtrInput)(nil)).Elem(), IpsecCryptoProfileEspArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileLifesizeInput)(nil)).Elem(), IpsecCryptoProfileLifesizeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileLifesizePtrInput)(nil)).Elem(), IpsecCryptoProfileLifesizeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileLifetimeInput)(nil)).Elem(), IpsecCryptoProfileLifetimeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileLifetimePtrInput)(nil)).Elem(), IpsecCryptoProfileLifetimeArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecTunnelAutoKeyInput)(nil)).Elem(), IpsecTunnelAutoKeyArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecTunnelAutoKeyPtrInput)(nil)).Elem(), IpsecTunnelAutoKeyArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecTunnelAutoKeyIkeGatewayInput)(nil)).Elem(), IpsecTunnelAutoKeyIkeGatewayArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecTunnelAutoKeyIkeGatewayArrayInput)(nil)).Elem(), IpsecTunnelAutoKeyIkeGatewayArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecTunnelAutoKeyProxyIdInput)(nil)).Elem(), IpsecTunnelAutoKeyProxyIdArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*IpsecTunnelAutoKeyProxyIdArrayInput)(nil)).Elem(), IpsecTunnelAutoKeyProxyIdArray{})
 	pulumi.RegisterOutputType(AddressGroupDynamicOutput{})
 	pulumi.RegisterOutputType(AddressGroupDynamicPtrOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer2Output{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer2PtrOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer2LacpOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer2LacpPtrOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3Output{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3PtrOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3ArpOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3ArpArrayOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3DdnsConfigOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3DdnsConfigPtrOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3DhcpClientOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3DhcpClientPtrOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3DhcpClientSendHostnameOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3LacpOutput{})
-	pulumi.RegisterOutputType(AggregateEthernetInterfaceLayer3LacpPtrOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer2Output{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer2PtrOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer2LacpOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer2LacpPtrOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3Output{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3PtrOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3ArpOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3ArpArrayOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3DdnsConfigOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3DdnsConfigPtrOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3DhcpClientOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3DhcpClientPtrOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3DhcpClientSendHostnameOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3DhcpClientSendHostnamePtrOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3IpOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3IpArrayOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3LacpOutput{})
+	pulumi.RegisterOutputType(AggregateInterfaceLayer3LacpPtrOutput{})
 	pulumi.RegisterOutputType(AntiSpywareProfileMicaEngineSpywareEnabledOutput{})
 	pulumi.RegisterOutputType(AntiSpywareProfileMicaEngineSpywareEnabledArrayOutput{})
 	pulumi.RegisterOutputType(AntiSpywareProfileRuleOutput{})
@@ -80261,8 +79991,12 @@ func init() {
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastNextHopSelfForcePtrOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastOrfOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastOrfPtrOutput{})
-	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASOutput{})
-	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateASPtrOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsPtrOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsAllPtrOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastRemovePrivateAsReplaceAsPtrOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityPtrOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4MulticastSendCommunityAllOutput{})
@@ -80299,8 +80033,12 @@ func init() {
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastNextHopSelfForcePtrOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastOrfOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastOrfPtrOutput{})
-	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASOutput{})
-	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateASPtrOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsPtrOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsAllPtrOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsOutput{})
+	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastRemovePrivateAsReplaceAsPtrOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityPtrOutput{})
 	pulumi.RegisterOutputType(BgpAddressFamilyProfileIpv4Ipv4UnicastSendCommunityAllOutput{})
@@ -80637,6 +80375,8 @@ func init() {
 	pulumi.RegisterOutputType(DosProtectionRuleProtectionClassifiedClassificationCriteriaPtrOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer2Output{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer2PtrOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer2LldpOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer2LldpPtrOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3Output{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3PtrOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3ArpOutput{})
@@ -80645,12 +80385,14 @@ func init() {
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3DdnsConfigPtrOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientPtrOutput{})
-	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientDhcpClientOutput{})
-	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientDhcpClientPtrOutput{})
-	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnameOutput{})
-	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientDhcpClientSendHostnamePtrOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientSendHostnameOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer3DhcpClientSendHostnamePtrOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer3IpOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer3IpArrayOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3PppoeOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3PppoePtrOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer3PppoePassiveOutput{})
+	pulumi.RegisterOutputType(EthernetInterfaceLayer3PppoePassivePtrOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3PppoeStaticAddressOutput{})
 	pulumi.RegisterOutputType(EthernetInterfaceLayer3PppoeStaticAddressPtrOutput{})
 	pulumi.RegisterOutputType(EthernetInterfacePoeOutput{})
@@ -81057,18 +80799,4 @@ func init() {
 	pulumi.RegisterOutputType(IkeGatewayProtocolIkev2PtrOutput{})
 	pulumi.RegisterOutputType(IkeGatewayProtocolIkev2DpdOutput{})
 	pulumi.RegisterOutputType(IkeGatewayProtocolIkev2DpdPtrOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileAhOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileAhPtrOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileEspOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileEspPtrOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileLifesizeOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileLifesizePtrOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileLifetimeOutput{})
-	pulumi.RegisterOutputType(IpsecCryptoProfileLifetimePtrOutput{})
-	pulumi.RegisterOutputType(IpsecTunnelAutoKeyOutput{})
-	pulumi.RegisterOutputType(IpsecTunnelAutoKeyPtrOutput{})
-	pulumi.RegisterOutputType(IpsecTunnelAutoKeyIkeGatewayOutput{})
-	pulumi.RegisterOutputType(IpsecTunnelAutoKeyIkeGatewayArrayOutput{})
-	pulumi.RegisterOutputType(IpsecTunnelAutoKeyProxyIdOutput{})
-	pulumi.RegisterOutputType(IpsecTunnelAutoKeyProxyIdArrayOutput{})
 }

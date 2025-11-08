@@ -47,19 +47,19 @@ import javax.annotation.Nullable;
  *     public static void stack(Context ctx) {
  *         // This file is embedded using go:embed
  *         var scmAddrTag1 = new Tag("scmAddrTag1", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_addr_tag_1")
  *             .color("Red")
  *             .build());
  * 
  *         var scmAddrTag2 = new Tag("scmAddrTag2", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_addr_tag_2")
  *             .color("Blue")
  *             .build());
  * 
  *         var scmAddrTag3 = new Tag("scmAddrTag3", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_addr_tag_3")
  *             .color("Orange")
  *             .build());

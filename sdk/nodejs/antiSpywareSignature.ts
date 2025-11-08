@@ -87,7 +87,7 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
     /**
      * threat id range \n\n and \n\n
      */
-    declare public readonly threatId: pulumi.Output<number>;
+    declare public readonly threatId: pulumi.Output<string>;
     /**
      * Threatname
      */
@@ -206,7 +206,7 @@ export interface AntiSpywareSignatureState {
     /**
      * threat id range \n\n and \n\n
      */
-    threatId?: pulumi.Input<number>;
+    threatId?: pulumi.Input<string>;
     /**
      * Threatname
      */
@@ -268,7 +268,7 @@ export interface AntiSpywareSignatureArgs {
     /**
      * threat id range \n\n and \n\n
      */
-    threatId: pulumi.Input<number>;
+    threatId: pulumi.Input<string>;
     /**
      * Threatname
      */

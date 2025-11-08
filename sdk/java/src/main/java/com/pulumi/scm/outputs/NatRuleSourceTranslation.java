@@ -4,10 +4,9 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.scm.outputs.NatRuleSourceTranslationFallback;
-import java.lang.Boolean;
-import java.lang.String;
-import java.util.List;
+import com.pulumi.scm.outputs.NatRuleSourceTranslationDynamicIp;
+import com.pulumi.scm.outputs.NatRuleSourceTranslationDynamicIpAndPort;
+import com.pulumi.scm.outputs.NatRuleSourceTranslationStaticIp;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,66 +14,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NatRuleSourceTranslation {
     /**
-     * @return Bi directional
+     * @return Dynamic IP
      * 
      */
-    private @Nullable Boolean biDirectional;
+    private @Nullable NatRuleSourceTranslationDynamicIp dynamicIp;
     /**
-     * @return Fallback
+     * @return Dynamic IP and port
      * 
      */
-    private @Nullable NatRuleSourceTranslationFallback fallback;
+    private @Nullable NatRuleSourceTranslationDynamicIpAndPort dynamicIpAndPort;
     /**
-     * @return Interface name
+     * @return Static IP
      * 
      */
-    private @Nullable String interface_;
-    /**
-     * @return Translated IP addresses
-     * 
-     */
-    private @Nullable List<String> translatedAddressArrays;
-    /**
-     * @return Translated IP address
-     * 
-     */
-    private @Nullable String translatedAddressSingle;
+    private @Nullable NatRuleSourceTranslationStaticIp staticIp;
 
     private NatRuleSourceTranslation() {}
     /**
-     * @return Bi directional
+     * @return Dynamic IP
      * 
      */
-    public Optional<Boolean> biDirectional() {
-        return Optional.ofNullable(this.biDirectional);
+    public Optional<NatRuleSourceTranslationDynamicIp> dynamicIp() {
+        return Optional.ofNullable(this.dynamicIp);
     }
     /**
-     * @return Fallback
+     * @return Dynamic IP and port
      * 
      */
-    public Optional<NatRuleSourceTranslationFallback> fallback() {
-        return Optional.ofNullable(this.fallback);
+    public Optional<NatRuleSourceTranslationDynamicIpAndPort> dynamicIpAndPort() {
+        return Optional.ofNullable(this.dynamicIpAndPort);
     }
     /**
-     * @return Interface name
+     * @return Static IP
      * 
      */
-    public Optional<String> interface_() {
-        return Optional.ofNullable(this.interface_);
-    }
-    /**
-     * @return Translated IP addresses
-     * 
-     */
-    public List<String> translatedAddressArrays() {
-        return this.translatedAddressArrays == null ? List.of() : this.translatedAddressArrays;
-    }
-    /**
-     * @return Translated IP address
-     * 
-     */
-    public Optional<String> translatedAddressSingle() {
-        return Optional.ofNullable(this.translatedAddressSingle);
+    public Optional<NatRuleSourceTranslationStaticIp> staticIp() {
+        return Optional.ofNullable(this.staticIp);
     }
 
     public static Builder builder() {
@@ -86,61 +61,40 @@ public final class NatRuleSourceTranslation {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean biDirectional;
-        private @Nullable NatRuleSourceTranslationFallback fallback;
-        private @Nullable String interface_;
-        private @Nullable List<String> translatedAddressArrays;
-        private @Nullable String translatedAddressSingle;
+        private @Nullable NatRuleSourceTranslationDynamicIp dynamicIp;
+        private @Nullable NatRuleSourceTranslationDynamicIpAndPort dynamicIpAndPort;
+        private @Nullable NatRuleSourceTranslationStaticIp staticIp;
         public Builder() {}
         public Builder(NatRuleSourceTranslation defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.biDirectional = defaults.biDirectional;
-    	      this.fallback = defaults.fallback;
-    	      this.interface_ = defaults.interface_;
-    	      this.translatedAddressArrays = defaults.translatedAddressArrays;
-    	      this.translatedAddressSingle = defaults.translatedAddressSingle;
+    	      this.dynamicIp = defaults.dynamicIp;
+    	      this.dynamicIpAndPort = defaults.dynamicIpAndPort;
+    	      this.staticIp = defaults.staticIp;
         }
 
         @CustomType.Setter
-        public Builder biDirectional(@Nullable Boolean biDirectional) {
+        public Builder dynamicIp(@Nullable NatRuleSourceTranslationDynamicIp dynamicIp) {
 
-            this.biDirectional = biDirectional;
+            this.dynamicIp = dynamicIp;
             return this;
         }
         @CustomType.Setter
-        public Builder fallback(@Nullable NatRuleSourceTranslationFallback fallback) {
+        public Builder dynamicIpAndPort(@Nullable NatRuleSourceTranslationDynamicIpAndPort dynamicIpAndPort) {
 
-            this.fallback = fallback;
-            return this;
-        }
-        @CustomType.Setter("interface")
-        public Builder interface_(@Nullable String interface_) {
-
-            this.interface_ = interface_;
+            this.dynamicIpAndPort = dynamicIpAndPort;
             return this;
         }
         @CustomType.Setter
-        public Builder translatedAddressArrays(@Nullable List<String> translatedAddressArrays) {
+        public Builder staticIp(@Nullable NatRuleSourceTranslationStaticIp staticIp) {
 
-            this.translatedAddressArrays = translatedAddressArrays;
-            return this;
-        }
-        public Builder translatedAddressArrays(String... translatedAddressArrays) {
-            return translatedAddressArrays(List.of(translatedAddressArrays));
-        }
-        @CustomType.Setter
-        public Builder translatedAddressSingle(@Nullable String translatedAddressSingle) {
-
-            this.translatedAddressSingle = translatedAddressSingle;
+            this.staticIp = staticIp;
             return this;
         }
         public NatRuleSourceTranslation build() {
             final var _resultValue = new NatRuleSourceTranslation();
-            _resultValue.biDirectional = biDirectional;
-            _resultValue.fallback = fallback;
-            _resultValue.interface_ = interface_;
-            _resultValue.translatedAddressArrays = translatedAddressArrays;
-            _resultValue.translatedAddressSingle = translatedAddressSingle;
+            _resultValue.dynamicIp = dynamicIp;
+            _resultValue.dynamicIpAndPort = dynamicIpAndPort;
+            _resultValue.staticIp = staticIp;
             return _resultValue;
         }
     }

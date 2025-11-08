@@ -13,18 +13,150 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// RadiusServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
+        ///     {
+        ///         Name = "CHAP_only_rsp_ds_1",
+        ///         Folder = "All",
+        ///         Retries = 5,
+        ///         Timeout = 60,
+        ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
+        ///         {
+        ///             CHAP = null,
+        ///         },
+        ///         Servers = new[]
+        ///         {
+        ///             new Scm.Inputs.RadiusServerProfileServerArgs
+        ///             {
+        ///                 Name = "Chap_Server_Primary",
+        ///                 IpAddress = "10.1.1.10",
+        ///                 Port = 1812,
+        ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     var singleProfileById = Scm.GetRadiusServerProfile.Invoke(new()
+        ///     {
+        ///         Id = chapRadiusProfile.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleRspDump"] = singleProfileById.Apply(getRadiusServerProfileResult =&gt; getRadiusServerProfileResult.Name),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetRadiusServerProfileResult> InvokeAsync(GetRadiusServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetRadiusServerProfileResult>("scm:index/getRadiusServerProfile:getRadiusServerProfile", args ?? new GetRadiusServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// RadiusServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
+        ///     {
+        ///         Name = "CHAP_only_rsp_ds_1",
+        ///         Folder = "All",
+        ///         Retries = 5,
+        ///         Timeout = 60,
+        ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
+        ///         {
+        ///             CHAP = null,
+        ///         },
+        ///         Servers = new[]
+        ///         {
+        ///             new Scm.Inputs.RadiusServerProfileServerArgs
+        ///             {
+        ///                 Name = "Chap_Server_Primary",
+        ///                 IpAddress = "10.1.1.10",
+        ///                 Port = 1812,
+        ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     var singleProfileById = Scm.GetRadiusServerProfile.Invoke(new()
+        ///     {
+        ///         Id = chapRadiusProfile.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleRspDump"] = singleProfileById.Apply(getRadiusServerProfileResult =&gt; getRadiusServerProfileResult.Name),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetRadiusServerProfileResult> Invoke(GetRadiusServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileResult>("scm:index/getRadiusServerProfile:getRadiusServerProfile", args ?? new GetRadiusServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// RadiusServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
+        ///     {
+        ///         Name = "CHAP_only_rsp_ds_1",
+        ///         Folder = "All",
+        ///         Retries = 5,
+        ///         Timeout = 60,
+        ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
+        ///         {
+        ///             CHAP = null,
+        ///         },
+        ///         Servers = new[]
+        ///         {
+        ///             new Scm.Inputs.RadiusServerProfileServerArgs
+        ///             {
+        ///                 Name = "Chap_Server_Primary",
+        ///                 IpAddress = "10.1.1.10",
+        ///                 Port = 1812,
+        ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+        ///             },
+        ///         },
+        ///     });
+        /// 
+        ///     var singleProfileById = Scm.GetRadiusServerProfile.Invoke(new()
+        ///     {
+        ///         Id = chapRadiusProfile.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleRspDump"] = singleProfileById.Apply(getRadiusServerProfileResult =&gt; getRadiusServerProfileResult.Name),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetRadiusServerProfileResult> Invoke(GetRadiusServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileResult>("scm:index/getRadiusServerProfile:getRadiusServerProfile", args ?? new GetRadiusServerProfileInvokeArgs(), options.WithDefaults());

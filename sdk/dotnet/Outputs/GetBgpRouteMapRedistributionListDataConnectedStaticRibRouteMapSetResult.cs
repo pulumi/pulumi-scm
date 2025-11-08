@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionListDataConnectedStaticRibRouteMapSetResult
     {
         /// <summary>
-        /// Source address
+        /// Connected Static BGP Rib Route Map Distribution Source address
         /// </summary>
         public readonly string SourceAddress;
 

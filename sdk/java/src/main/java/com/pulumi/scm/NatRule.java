@@ -10,10 +10,10 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.NatRuleArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.NatRuleState;
-import com.pulumi.scm.outputs.NatRuleDnsRewrite;
+import com.pulumi.scm.outputs.NatRuleDestinationTranslation;
+import com.pulumi.scm.outputs.NatRuleDynamicDestinationTranslation;
 import com.pulumi.scm.outputs.NatRuleSourceTranslation;
 import java.lang.Boolean;
-import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
@@ -21,6 +21,157 @@ import javax.annotation.Nullable;
 
 /**
  * NatRule resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
+ * import com.pulumi.scm.NatRule;
+ * import com.pulumi.scm.NatRuleArgs;
+ * import com.pulumi.scm.inputs.NatRuleSourceTranslationArgs;
+ * import com.pulumi.scm.inputs.NatRuleSourceTranslationDynamicIpAndPortArgs;
+ * import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
+ * import com.pulumi.scm.inputs.NatRuleSourceTranslationStaticIpArgs;
+ * import com.pulumi.scm.inputs.NatRuleSourceTranslationDynamicIpArgs;
+ * import com.pulumi.scm.inputs.NatRuleSourceTranslationDynamicIpFallbackArgs;
+ * import com.pulumi.scm.inputs.NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var exampleTag = new Tag("exampleTag", TagArgs.builder()
+ *             .folder("All")
+ *             .name("example-tag")
+ *             .color("Red")
+ *             .build());
+ * 
+ *         //Source Translation (SNAT) - Dynamic IP and Port
+ *         var exampleNatRule = new NatRule("exampleNatRule", NatRuleArgs.builder()
+ *             .name("snat-to-internet-1")
+ *             .froms("any")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .service("service-https")
+ *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
+ *             .disabled(false)
+ *             .natType("ipv4")
+ *             .folder("All")
+ *             .tags(exampleTag.name())
+ *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
+ *                 .dynamicIpAndPort(NatRuleSourceTranslationDynamicIpAndPortArgs.builder()
+ *                     .translatedAddresses(                    
+ *                         "1.1.1.1",
+ *                         "1.1.1.5")
+ *                     .build())
+ *                 .build())
+ *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+ *                 .translatedAddress("192.168.1.10")
+ *                 .translatedPort(8080)
+ *                 .build())
+ *             .activeActiveDeviceBinding("1")
+ *             .build());
+ * 
+ *         //Source Translation (SNAT) - Static IP - Bidirectional - no
+ *         var exampleNatStaticRule = new NatRule("exampleNatStaticRule", NatRuleArgs.builder()
+ *             .name("snat-to-bid-1")
+ *             .froms("any")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .service("service-https")
+ *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
+ *             .disabled(false)
+ *             .natType("ipv4")
+ *             .folder("All")
+ *             .tags(exampleTag.name())
+ *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
+ *                 .staticIp(NatRuleSourceTranslationStaticIpArgs.builder()
+ *                     .translatedAddress("1.1.1.5")
+ *                     .biDirectional("no")
+ *                     .build())
+ *                 .build())
+ *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+ *                 .translatedAddress("192.168.1.10")
+ *                 .translatedPort(8080)
+ *                 .build())
+ *             .activeActiveDeviceBinding("1")
+ *             .build());
+ * 
+ *         //Source Translation (SNAT) - Static IP - Bidirectional - yes
+ *         var exampleNatStaticRule2 = new NatRule("exampleNatStaticRule2", NatRuleArgs.builder()
+ *             .name("snat-to-bid-yes-1")
+ *             .froms("any")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .service("service-https")
+ *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
+ *             .disabled(false)
+ *             .natType("ipv4")
+ *             .folder("All")
+ *             .tags(exampleTag.name())
+ *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
+ *                 .staticIp(NatRuleSourceTranslationStaticIpArgs.builder()
+ *                     .translatedAddress("1.1.1.5")
+ *                     .biDirectional("yes")
+ *                     .build())
+ *                 .build())
+ *             .activeActiveDeviceBinding("1")
+ *             .build());
+ * 
+ *         //Source Translation (SNAT) - Dynamic IP 
+ *         var exampleNatDynamicRule = new NatRule("exampleNatDynamicRule", NatRuleArgs.builder()
+ *             .name("snat-to-dyanamic-1")
+ *             .froms("any")
+ *             .tos("untrust")
+ *             .sources("any")
+ *             .destinations("any")
+ *             .service("service-https")
+ *             .description("Dynamic SNAT for internal traffic accessing the internet. Updating")
+ *             .disabled(false)
+ *             .natType("ipv4")
+ *             .folder("All")
+ *             .tags(exampleTag.name())
+ *             .sourceTranslation(NatRuleSourceTranslationArgs.builder()
+ *                 .dynamicIp(NatRuleSourceTranslationDynamicIpArgs.builder()
+ *                     .translatedAddresses("1.1.1.0/24")
+ *                     .fallback(NatRuleSourceTranslationDynamicIpFallbackArgs.builder()
+ *                         .translatedAddresses("1.1.1.0")
+ *                         .interfaceAddress(NatRuleSourceTranslationDynamicIpFallbackInterfaceAddressArgs.builder()
+ *                             .interface_("ethernet1/1")
+ *                             .ip("1.1.1.5")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .destinationTranslation(NatRuleDestinationTranslationArgs.builder()
+ *                 .translatedAddress("192.168.1.10")
+ *                 .translatedPort(8080)
+ *                 .build())
+ *             .activeActiveDeviceBinding("1")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/natRule:NatRule")
@@ -52,6 +203,20 @@ public class NatRule extends com.pulumi.resources.CustomResource {
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
+    }
+    /**
+     * Destination translation
+     * 
+     */
+    @Export(name="destinationTranslation", refs={NatRuleDestinationTranslation.class}, tree="[0]")
+    private Output</* @Nullable */ NatRuleDestinationTranslation> destinationTranslation;
+
+    /**
+     * @return Destination translation
+     * 
+     */
+    public Output<Optional<NatRuleDestinationTranslation>> destinationTranslation() {
+        return Codegen.optional(this.destinationTranslation);
     }
     /**
      * Destination address(es) of the original packet
@@ -96,32 +261,18 @@ public class NatRule extends com.pulumi.resources.CustomResource {
         return this.disabled;
     }
     /**
-     * Distribution method
+     * Dynamic destination translation
      * 
      */
-    @Export(name="distribution", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> distribution;
+    @Export(name="dynamicDestinationTranslation", refs={NatRuleDynamicDestinationTranslation.class}, tree="[0]")
+    private Output</* @Nullable */ NatRuleDynamicDestinationTranslation> dynamicDestinationTranslation;
 
     /**
-     * @return Distribution method
+     * @return Dynamic destination translation
      * 
      */
-    public Output<Optional<String>> distribution() {
-        return Codegen.optional(this.distribution);
-    }
-    /**
-     * DNS rewrite
-     * 
-     */
-    @Export(name="dnsRewrite", refs={NatRuleDnsRewrite.class}, tree="[0]")
-    private Output</* @Nullable */ NatRuleDnsRewrite> dnsRewrite;
-
-    /**
-     * @return DNS rewrite
-     * 
-     */
-    public Output<Optional<NatRuleDnsRewrite>> dnsRewrite() {
-        return Codegen.optional(this.dnsRewrite);
+    public Output<Optional<NatRuleDynamicDestinationTranslation>> dynamicDestinationTranslation() {
+        return Codegen.optional(this.dynamicDestinationTranslation);
     }
     /**
      * The folder in which the resource is defined
@@ -296,34 +447,6 @@ public class NatRule extends com.pulumi.resources.CustomResource {
      */
     public Output<List<String>> tos() {
         return this.tos;
-    }
-    /**
-     * Translated destination IP address
-     * 
-     */
-    @Export(name="translatedAddressSingle", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> translatedAddressSingle;
-
-    /**
-     * @return Translated destination IP address
-     * 
-     */
-    public Output<Optional<String>> translatedAddressSingle() {
-        return Codegen.optional(this.translatedAddressSingle);
-    }
-    /**
-     * Translated destination port
-     * 
-     */
-    @Export(name="translatedPort", refs={Integer.class}, tree="[0]")
-    private Output</* @Nullable */ Integer> translatedPort;
-
-    /**
-     * @return Translated destination port
-     * 
-     */
-    public Output<Optional<Integer>> translatedPort() {
-        return Codegen.optional(this.translatedPort);
     }
 
     /**

@@ -5,11 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class DnsProxyStaticEntryArgs extends com.pulumi.resources.ResourceArgs {
@@ -20,45 +19,45 @@ public final class DnsProxyStaticEntryArgs extends com.pulumi.resources.Resource
      * Address
      * 
      */
-    @Import(name="addresses")
-    private @Nullable Output<List<String>> addresses;
+    @Import(name="addresses", required=true)
+    private Output<List<String>> addresses;
 
     /**
      * @return Address
      * 
      */
-    public Optional<Output<List<String>>> addresses() {
-        return Optional.ofNullable(this.addresses);
+    public Output<List<String>> addresses() {
+        return this.addresses;
     }
 
     /**
-     * Domain
+     * Fully qualified domain name
      * 
      */
-    @Import(name="domain")
-    private @Nullable Output<String> domain;
+    @Import(name="domain", required=true)
+    private Output<String> domain;
 
     /**
-     * @return Domain
+     * @return Fully qualified domain name
      * 
      */
-    public Optional<Output<String>> domain() {
-        return Optional.ofNullable(this.domain);
+    public Output<String> domain() {
+        return this.domain;
     }
 
     /**
-     * Name
+     * Static entry name
      * 
      */
-    @Import(name="name")
-    private @Nullable Output<String> name;
+    @Import(name="name", required=true)
+    private Output<String> name;
 
     /**
-     * @return Name
+     * @return Static entry name
      * 
      */
-    public Optional<Output<String>> name() {
-        return Optional.ofNullable(this.name);
+    public Output<String> name() {
+        return this.name;
     }
 
     private DnsProxyStaticEntryArgs() {}
@@ -93,7 +92,7 @@ public final class DnsProxyStaticEntryArgs extends com.pulumi.resources.Resource
          * @return builder
          * 
          */
-        public Builder addresses(@Nullable Output<List<String>> addresses) {
+        public Builder addresses(Output<List<String>> addresses) {
             $.addresses = addresses;
             return this;
         }
@@ -119,18 +118,18 @@ public final class DnsProxyStaticEntryArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param domain Domain
+         * @param domain Fully qualified domain name
          * 
          * @return builder
          * 
          */
-        public Builder domain(@Nullable Output<String> domain) {
+        public Builder domain(Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
         /**
-         * @param domain Domain
+         * @param domain Fully qualified domain name
          * 
          * @return builder
          * 
@@ -140,18 +139,18 @@ public final class DnsProxyStaticEntryArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name Name
+         * @param name Static entry name
          * 
          * @return builder
          * 
          */
-        public Builder name(@Nullable Output<String> name) {
+        public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
         /**
-         * @param name Name
+         * @param name Static entry name
          * 
          * @return builder
          * 
@@ -161,6 +160,15 @@ public final class DnsProxyStaticEntryArgs extends com.pulumi.resources.Resource
         }
 
         public DnsProxyStaticEntryArgs build() {
+            if ($.addresses == null) {
+                throw new MissingRequiredPropertyException("DnsProxyStaticEntryArgs", "addresses");
+            }
+            if ($.domain == null) {
+                throw new MissingRequiredPropertyException("DnsProxyStaticEntryArgs", "domain");
+            }
+            if ($.name == null) {
+                throw new MissingRequiredPropertyException("DnsProxyStaticEntryArgs", "name");
+            }
             return $;
         }
     }

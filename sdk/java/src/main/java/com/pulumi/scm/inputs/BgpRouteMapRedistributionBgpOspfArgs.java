@@ -17,14 +17,14 @@ public final class BgpRouteMapRedistributionBgpOspfArgs extends com.pulumi.resou
     public static final BgpRouteMapRedistributionBgpOspfArgs Empty = new BgpRouteMapRedistributionBgpOspfArgs();
 
     /**
-     * Route maps
+     * BGP Root OSPF Route maps
      * 
      */
     @Import(name="routeMaps")
     private @Nullable Output<List<BgpRouteMapRedistributionBgpOspfRouteMapArgs>> routeMaps;
 
     /**
-     * @return Route maps
+     * @return BGP Root OSPF Route maps
      * 
      */
     public Optional<Output<List<BgpRouteMapRedistributionBgpOspfRouteMapArgs>>> routeMaps() {
@@ -56,7 +56,7 @@ public final class BgpRouteMapRedistributionBgpOspfArgs extends com.pulumi.resou
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps BGP Root OSPF Route maps
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class BgpRouteMapRedistributionBgpOspfArgs extends com.pulumi.resou
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps BGP Root OSPF Route maps
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class BgpRouteMapRedistributionBgpOspfArgs extends com.pulumi.resou
         }
 
         /**
-         * @param routeMaps Route maps
+         * @param routeMaps BGP Root OSPF Route maps
          * 
          * @return builder
          * 

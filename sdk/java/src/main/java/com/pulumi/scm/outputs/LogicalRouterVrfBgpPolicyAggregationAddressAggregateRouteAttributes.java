@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return As path limit
      * 
      */
-    private @Nullable Double asPathLimit;
+    private @Nullable Integer asPathLimit;
     /**
      * @return Community
      * 
@@ -39,12 +39,12 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Local preference
      * 
      */
-    private @Nullable Double localPreference;
+    private @Nullable Integer localPreference;
     /**
      * @return Med
      * 
      */
-    private @Nullable Double med;
+    private @Nullable Integer med;
     /**
      * @return Nexthop
      * 
@@ -59,7 +59,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Weight
      * 
      */
-    private @Nullable Double weight;
+    private @Nullable Integer weight;
 
     private LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributes() {}
     /**
@@ -73,7 +73,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return As path limit
      * 
      */
-    public Optional<Double> asPathLimit() {
+    public Optional<Integer> asPathLimit() {
         return Optional.ofNullable(this.asPathLimit);
     }
     /**
@@ -94,14 +94,14 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Local preference
      * 
      */
-    public Optional<Double> localPreference() {
+    public Optional<Integer> localPreference() {
         return Optional.ofNullable(this.localPreference);
     }
     /**
      * @return Med
      * 
      */
-    public Optional<Double> med() {
+    public Optional<Integer> med() {
         return Optional.ofNullable(this.med);
     }
     /**
@@ -122,7 +122,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Weight
      * 
      */
-    public Optional<Double> weight() {
+    public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }
 
@@ -136,14 +136,14 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     @CustomType.Builder
     public static final class Builder {
         private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath asPath;
-        private @Nullable Double asPathLimit;
+        private @Nullable Integer asPathLimit;
         private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity community;
         private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity extendedCommunity;
-        private @Nullable Double localPreference;
-        private @Nullable Double med;
+        private @Nullable Integer localPreference;
+        private @Nullable Integer med;
         private @Nullable String nexthop;
         private @Nullable String origin;
-        private @Nullable Double weight;
+        private @Nullable Integer weight;
         public Builder() {}
         public Builder(LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributes defaults) {
     	      Objects.requireNonNull(defaults);
@@ -165,7 +165,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
             return this;
         }
         @CustomType.Setter
-        public Builder asPathLimit(@Nullable Double asPathLimit) {
+        public Builder asPathLimit(@Nullable Integer asPathLimit) {
 
             this.asPathLimit = asPathLimit;
             return this;
@@ -183,13 +183,13 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
             return this;
         }
         @CustomType.Setter
-        public Builder localPreference(@Nullable Double localPreference) {
+        public Builder localPreference(@Nullable Integer localPreference) {
 
             this.localPreference = localPreference;
             return this;
         }
         @CustomType.Setter
-        public Builder med(@Nullable Double med) {
+        public Builder med(@Nullable Integer med) {
 
             this.med = med;
             return this;
@@ -207,7 +207,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
             return this;
         }
         @CustomType.Setter
-        public Builder weight(@Nullable Double weight) {
+        public Builder weight(@Nullable Integer weight) {
 
             this.weight = weight;
             return this;

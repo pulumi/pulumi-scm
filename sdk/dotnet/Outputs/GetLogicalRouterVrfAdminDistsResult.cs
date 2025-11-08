@@ -16,77 +16,77 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Bgp external
         /// </summary>
-        public readonly double BgpExternal;
+        public readonly int BgpExternal;
         /// <summary>
         /// Bgp internal
         /// </summary>
-        public readonly double BgpInternal;
+        public readonly int BgpInternal;
         /// <summary>
         /// Bgp local
         /// </summary>
-        public readonly double BgpLocal;
+        public readonly int BgpLocal;
         /// <summary>
         /// Ospf ext
         /// </summary>
-        public readonly double OspfExt;
+        public readonly int OspfExt;
         /// <summary>
         /// Ospf inter
         /// </summary>
-        public readonly double OspfInter;
+        public readonly int OspfInter;
         /// <summary>
         /// Ospf intra
         /// </summary>
-        public readonly double OspfIntra;
+        public readonly int OspfIntra;
         /// <summary>
         /// Ospfv3 ext
         /// </summary>
-        public readonly double Ospfv3Ext;
+        public readonly int Ospfv3Ext;
         /// <summary>
         /// Ospfv3 inter
         /// </summary>
-        public readonly double Ospfv3Inter;
+        public readonly int Ospfv3Inter;
         /// <summary>
         /// Ospfv3 intra
         /// </summary>
-        public readonly double Ospfv3Intra;
+        public readonly int Ospfv3Intra;
         /// <summary>
         /// Rip
         /// </summary>
-        public readonly double Rip;
+        public readonly int Rip;
         /// <summary>
         /// Static
         /// </summary>
-        public readonly double Static;
+        public readonly int Static;
         /// <summary>
         /// Static ipv6
         /// </summary>
-        public readonly double StaticIpv6;
+        public readonly int StaticIpv6;
 
         [OutputConstructor]
         private GetLogicalRouterVrfAdminDistsResult(
-            double bgpExternal,
+            int bgpExternal,
 
-            double bgpInternal,
+            int bgpInternal,
 
-            double bgpLocal,
+            int bgpLocal,
 
-            double ospfExt,
+            int ospfExt,
 
-            double ospfInter,
+            int ospfInter,
 
-            double ospfIntra,
+            int ospfIntra,
 
-            double ospfv3Ext,
+            int ospfv3Ext,
 
-            double ospfv3Inter,
+            int ospfv3Inter,
 
-            double ospfv3Intra,
+            int ospfv3Intra,
 
-            double rip,
+            int rip,
 
-            double @static,
+            int @static,
 
-            double staticIpv6)
+            int staticIpv6)
         {
             BgpExternal = bgpExternal;
             BgpInternal = bgpInternal;

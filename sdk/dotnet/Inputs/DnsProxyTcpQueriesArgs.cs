@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsProxyTcpQueriesArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Enabled
+        /// Turn on forwarding of TCP DNS queries?
         /// </summary>
-        [Input("enabled")]
-        public Input<bool>? Enabled { get; set; }
+        [Input("enabled", required: true)]
+        public Input<bool> Enabled { get; set; } = null!;
 
         /// <summary>
-        /// Max pending requests
+        /// Upper limit on number of concurrent TCP DNS requests
         /// </summary>
         [Input("maxPendingRequests")]
         public Input<int>? MaxPendingRequests { get; set; }

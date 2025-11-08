@@ -14,6 +14,113 @@ import (
 // ExternalDynamicList resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// This resource creates a domain-based External Dynamic List (EDL).
+//			// The EDL will fetch a list of domains from the specified URL daily.
+//			_, err := scm.NewExternalDynamicList(ctx, "scm_edl_1", &scm.ExternalDynamicListArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("scm_edl_1"),
+//				Type: &scm.ExternalDynamicListTypeArgs{
+//					Domain: &scm.ExternalDynamicListTypeDomainArgs{
+//						Description: pulumi.String("List of malicious domains to block, updated daily."),
+//						Url:         pulumi.String("http://some-threat-feed.com/domains.txt"),
+//						Recurring: &scm.ExternalDynamicListTypeDomainRecurringArgs{
+//							Daily: &scm.ExternalDynamicListTypeDomainRecurringDailyArgs{
+//								At: pulumi.String("03"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_2", &scm.ExternalDynamicListArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("scm_edl_2"),
+//				Type: &scm.ExternalDynamicListTypeArgs{
+//					Ip: &scm.ExternalDynamicListTypeIpArgs{
+//						Description: pulumi.String("IP threat feed with basic auth, updated hourly."),
+//						Url:         pulumi.String("https://threats.example.com/ips.txt"),
+//						Recurring: &scm.ExternalDynamicListTypeIpRecurringArgs{
+//							Hourly: &scm.ExternalDynamicListTypeIpRecurringHourlyArgs{},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_3", &scm.ExternalDynamicListArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("scm_edl_3"),
+//				Type: &scm.ExternalDynamicListTypeArgs{
+//					Url: &scm.ExternalDynamicListTypeUrlArgs{
+//						Description: pulumi.String("List of phishing URLs, updated every Monday at 2 AM."),
+//						Url:         pulumi.String("https://phish-block.example.com/urls.txt"),
+//						Recurring: &scm.ExternalDynamicListTypeUrlRecurringArgs{
+//							Weekly: &scm.ExternalDynamicListTypeUrlRecurringWeeklyArgs{
+//								DayOfWeek: pulumi.String("monday"),
+//								At:        pulumi.String("02"),
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_4", &scm.ExternalDynamicListArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("scm_edl_4"),
+//				Type: &scm.ExternalDynamicListTypeArgs{
+//					PredefinedIp: &scm.ExternalDynamicListTypePredefinedIpArgs{
+//						Description: pulumi.String("Palo Alto Networks-provided list of high-risk IP addresses."),
+//						Url:         pulumi.String("panw-highrisk-ip-list"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewExternalDynamicList(ctx, "scm_edl_5", &scm.ExternalDynamicListArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("scm_edl_5"),
+//				Type: &scm.ExternalDynamicListTypeArgs{
+//					Ip: &scm.ExternalDynamicListTypeIpArgs{
+//						Description:        pulumi.String("IP threat feed that requires authentication."),
+//						Url:                pulumi.String("https://secure-feed.example.com/ips.txt"),
+//						CertificateProfile: pulumi.String("test-cert-list-qekwys"),
+//						Auth: &scm.ExternalDynamicListTypeIpAuthArgs{
+//							Username: pulumi.String("my-api-user"),
+//							Password: pulumi.String("a-very-secret-password-123!"),
+//						},
+//						Recurring: &scm.ExternalDynamicListTypeIpRecurringArgs{
+//							FiveMinute: &scm.ExternalDynamicListTypeIpRecurringFiveMinuteArgs{},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type ExternalDynamicList struct {
 	pulumi.CustomResourceState
 

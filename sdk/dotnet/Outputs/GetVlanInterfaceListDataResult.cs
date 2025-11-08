@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetVlanInterfaceListDataDdnsConfigResult DdnsConfig;
         /// <summary>
-        /// Default value
+        /// Default interface assignment
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// Dhcp client
+        /// Vlan interfaces DHCP Client Object
         /// </summary>
         public readonly Outputs.GetVlanInterfaceListDataDhcpClientResult DhcpClient;
         /// <summary>
@@ -50,13 +50,13 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string InterfaceManagementProfile;
         /// <summary>
-        /// Ip
+        /// VLAN Interface IP Parent
         /// </summary>
-        public readonly ImmutableArray<string> Ips;
+        public readonly ImmutableArray<Outputs.GetVlanInterfaceListDataIpResult> Ips;
         /// <summary>
         /// MTU
         /// </summary>
-        public readonly double Mtu;
+        public readonly int Mtu;
         /// <summary>
         /// L3 sub-interface name
         /// </summary>
@@ -67,9 +67,9 @@ namespace Pulumi.Scm.Outputs
         public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// Vlan tag
+        /// VLAN tag
         /// </summary>
-        public readonly double VlanTag;
+        public readonly string VlanTag;
 
         [OutputConstructor]
         private GetVlanInterfaceListDataResult(
@@ -91,9 +91,9 @@ namespace Pulumi.Scm.Outputs
 
             string interfaceManagementProfile,
 
-            ImmutableArray<string> ips,
+            ImmutableArray<Outputs.GetVlanInterfaceListDataIpResult> ips,
 
-            double mtu,
+            int mtu,
 
             string name,
 
@@ -101,7 +101,7 @@ namespace Pulumi.Scm.Outputs
 
             string tfid,
 
-            double vlanTag)
+            string vlanTag)
         {
             Arps = arps;
             Comment = comment;

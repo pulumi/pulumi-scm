@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpRouteMapRedistributionConnectedStaticOspfRouteMapSetMetricArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Metric action
+        /// Connected Static BGP OSPF Route map set Metric action
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
 
         /// <summary>
-        /// Metric value
+        /// Connected Static BGP OSPF Route map set Metric value
         /// </summary>
         [Input("value")]
         public Input<int>? Value { get; set; }

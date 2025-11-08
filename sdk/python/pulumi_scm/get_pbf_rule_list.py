@@ -165,6 +165,21 @@ def get_pbf_rule_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Define a data source for listing pbf rules
+    paged_pbf_rules_list = scm.get_pbf_rule_list(folder="All",
+        limit=10)
+    pulumi.export("fetchedPbfRuleListSummary", {
+        "totalRulesInList": paged_pbf_rules_list.total,
+        "allRules": paged_pbf_rules_list.datas,
+    })
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +218,21 @@ def get_pbf_rule_list_output(device: Optional[pulumi.Input[Optional[_builtins.st
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPbfRuleListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Define a data source for listing pbf rules
+    paged_pbf_rules_list = scm.get_pbf_rule_list(folder="All",
+        limit=10)
+    pulumi.export("fetchedPbfRuleListSummary", {
+        "totalRulesInList": paged_pbf_rules_list.total,
+        "allRules": paged_pbf_rules_list.datas,
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.

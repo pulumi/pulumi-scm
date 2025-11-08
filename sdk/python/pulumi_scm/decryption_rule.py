@@ -42,9 +42,11 @@ class DecryptionRuleArgs:
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  type: Optional[pulumi.Input['DecryptionRuleTypeArgs']] = None):
         """
         The set of arguments for constructing a DecryptionRule resource.
@@ -69,9 +71,11 @@ class DecryptionRuleArgs:
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input['DecryptionRuleTypeArgs'] type: The type of decryption
         """
         pulumi.set(__self__, "action", action)
@@ -108,12 +112,16 @@ class DecryptionRuleArgs:
             pulumi.set(__self__, "position", position)
         if profile is not None:
             pulumi.set(__self__, "profile", profile)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if source_hips is not None:
             pulumi.set(__self__, "source_hips", source_hips)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if type is not None:
             pulumi.set(__self__, "type", type)
 
@@ -370,6 +378,18 @@ class DecryptionRuleArgs:
         pulumi.set(self, "profile", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -406,6 +426,18 @@ class DecryptionRuleArgs:
         pulumi.set(self, "tags", value)
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
+    @_builtins.property
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input['DecryptionRuleTypeArgs']]:
         """
@@ -438,12 +470,14 @@ class _DecryptionRuleState:
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  type: Optional[pulumi.Input['DecryptionRuleTypeArgs']] = None):
@@ -466,12 +500,14 @@ class _DecryptionRuleState:
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
         :param pulumi.Input['DecryptionRuleTypeArgs'] type: The type of decryption
         """
@@ -509,6 +545,8 @@ class _DecryptionRuleState:
             pulumi.set(__self__, "position", position)
         if profile is not None:
             pulumi.set(__self__, "profile", profile)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if services is not None:
             pulumi.set(__self__, "services", services)
         if snippet is not None:
@@ -521,6 +559,8 @@ class _DecryptionRuleState:
             pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
         if tos is not None:
@@ -733,6 +773,18 @@ class _DecryptionRuleState:
         pulumi.set(self, "profile", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -805,6 +857,18 @@ class _DecryptionRuleState:
         pulumi.set(self, "tags", value)
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
+    @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
         return pulumi.get(self, "tfid")
@@ -861,17 +925,128 @@ class DecryptionRule(pulumi.CustomResource):
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  type: Optional[pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None,
                  __props__=None):
         """
         DecryptionRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- 1. TAG Resource ---
+        decryption_position_tag = scm.Tag("decryption_position_tag",
+            name="decryption-position-tag",
+            folder="All",
+            color="Purple")
+        # --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
+        anchor_decryption_rule = scm.DecryptionRule("anchor_decryption_rule",
+            name="anchor-decryption-rule",
+            description="Base rule for testing 'before' and 'after' positioning.",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            },
+            destination_hips=["any"],
+            tags=[decryption_position_tag.name],
+            log_success=True,
+            log_fail=True,
+            disabled=False,
+            negate_source=False,
+            negate_destination=False)
+        # --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+        rule_top_decryption_rule = scm.DecryptionRule("rule_top_decryption_rule",
+            name="top-absolute-decryption-rule",
+            description="Placed at the very TOP of the Decryption rulebase.",
+            folder="All",
+            position="pre",
+            action="no-decrypt",
+            relative_position="top",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        rule_bottom_decryption_rule = scm.DecryptionRule("rule_bottom_decryption_rule",
+            name="bottom-absolute-decryption-rule",
+            description="Placed at the very BOTTOM of the Decryption rulebase.",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            relative_position="bottom",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        # --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+        rule_before_anchor_decryption = scm.DecryptionRule("rule_before_anchor_decryption",
+            name="before-anchor-decryption-rule",
+            description="Positioned immediately BEFORE the anchor-decryption-rule. Updating",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            relative_position="before",
+            target_rule=anchor_decryption_rule.id,
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["10.1.1.0/24"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        rule_after_anchor_decryption = scm.DecryptionRule("rule_after_anchor_decryption",
+            name="after-anchor-decryption-rule_123",
+            description="Positioned immediately AFTER the anchor-decryption-rule.",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            relative_position="after",
+            target_rule=anchor_decryption_rule.id,
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["192.168.1.10"],
+            services=["service-https"],
+            categories=["any"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -892,12 +1067,14 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
         :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The type of decryption
         """
@@ -909,6 +1086,115 @@ class DecryptionRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         DecryptionRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # --- 1. TAG Resource ---
+        decryption_position_tag = scm.Tag("decryption_position_tag",
+            name="decryption-position-tag",
+            folder="All",
+            color="Purple")
+        # --- 2. ANCHOR DECRYPTION RULE (Used for relative positioning) ---
+        anchor_decryption_rule = scm.DecryptionRule("anchor_decryption_rule",
+            name="anchor-decryption-rule",
+            description="Base rule for testing 'before' and 'after' positioning.",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            },
+            destination_hips=["any"],
+            tags=[decryption_position_tag.name],
+            log_success=True,
+            log_fail=True,
+            disabled=False,
+            negate_source=False,
+            negate_destination=False)
+        # --- 3. ABSOLUTE POSITIONING Examples ("top" and "bottom") ---
+        rule_top_decryption_rule = scm.DecryptionRule("rule_top_decryption_rule",
+            name="top-absolute-decryption-rule",
+            description="Placed at the very TOP of the Decryption rulebase.",
+            folder="All",
+            position="pre",
+            action="no-decrypt",
+            relative_position="top",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        rule_bottom_decryption_rule = scm.DecryptionRule("rule_bottom_decryption_rule",
+            name="bottom-absolute-decryption-rule",
+            description="Placed at the very BOTTOM of the Decryption rulebase.",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            relative_position="bottom",
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        # --- 4. RELATIVE POSITIONING Examples ("before" and "after") ---
+        rule_before_anchor_decryption = scm.DecryptionRule("rule_before_anchor_decryption",
+            name="before-anchor-decryption-rule",
+            description="Positioned immediately BEFORE the anchor-decryption-rule. Updating",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            relative_position="before",
+            target_rule=anchor_decryption_rule.id,
+            froms=["trust"],
+            tos=["untrust"],
+            sources=["10.1.1.0/24"],
+            destinations=["any"],
+            services=["service-https"],
+            categories=["high-risk"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        rule_after_anchor_decryption = scm.DecryptionRule("rule_after_anchor_decryption",
+            name="after-anchor-decryption-rule_123",
+            description="Positioned immediately AFTER the anchor-decryption-rule.",
+            folder="All",
+            position="pre",
+            action="decrypt",
+            relative_position="after",
+            target_rule=anchor_decryption_rule.id,
+            froms=["any"],
+            tos=["untrust"],
+            sources=["any"],
+            destinations=["192.168.1.10"],
+            services=["service-https"],
+            categories=["any"],
+            source_users=["any"],
+            type={
+                "ssl_forward_proxy": {},
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param DecryptionRuleArgs args: The arguments to use to populate this resource's properties.
@@ -942,12 +1228,14 @@ class DecryptionRule(pulumi.CustomResource):
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  type: Optional[pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None,
                  __props__=None):
@@ -984,6 +1272,7 @@ class DecryptionRule(pulumi.CustomResource):
             __props__.__dict__["negate_source"] = negate_source
             __props__.__dict__["position"] = position
             __props__.__dict__["profile"] = profile
+            __props__.__dict__["relative_position"] = relative_position
             if services is None and not opts.urn:
                 raise TypeError("Missing required property 'services'")
             __props__.__dict__["services"] = services
@@ -996,6 +1285,7 @@ class DecryptionRule(pulumi.CustomResource):
                 raise TypeError("Missing required property 'sources'")
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
+            __props__.__dict__["target_rule"] = target_rule
             if tos is None and not opts.urn:
                 raise TypeError("Missing required property 'tos'")
             __props__.__dict__["tos"] = tos
@@ -1028,12 +1318,14 @@ class DecryptionRule(pulumi.CustomResource):
             negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
             position: Optional[pulumi.Input[_builtins.str]] = None,
             profile: Optional[pulumi.Input[_builtins.str]] = None,
+            relative_position: Optional[pulumi.Input[_builtins.str]] = None,
             services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_rule: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             type: Optional[pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']]] = None) -> 'DecryptionRule':
@@ -1061,12 +1353,14 @@ class DecryptionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_source: Negate the source addresses?
         :param pulumi.Input[_builtins.str] position: The position of a security rule
         :param pulumi.Input[_builtins.str] profile: The decryption profile associated with the decryption rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination services and/or service groups
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: Source hip
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the decryption rule
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone
         :param pulumi.Input[Union['DecryptionRuleTypeArgs', 'DecryptionRuleTypeArgsDict']] type: The type of decryption
         """
@@ -1091,12 +1385,14 @@ class DecryptionRule(pulumi.CustomResource):
         __props__.__dict__["negate_source"] = negate_source
         __props__.__dict__["position"] = position
         __props__.__dict__["profile"] = profile
+        __props__.__dict__["relative_position"] = relative_position
         __props__.__dict__["services"] = services
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["source_hips"] = source_hips
         __props__.__dict__["source_users"] = source_users
         __props__.__dict__["sources"] = sources
         __props__.__dict__["tags"] = tags
+        __props__.__dict__["target_rule"] = target_rule
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["tos"] = tos
         __props__.__dict__["type"] = type
@@ -1239,6 +1535,14 @@ class DecryptionRule(pulumi.CustomResource):
         return pulumi.get(self, "profile")
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @_builtins.property
     @pulumi.getter
     def services(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
@@ -1285,6 +1589,14 @@ class DecryptionRule(pulumi.CustomResource):
         The tags associated with the decryption rule
         """
         return pulumi.get(self, "tags")
+
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
 
     @_builtins.property
     @pulumi.getter

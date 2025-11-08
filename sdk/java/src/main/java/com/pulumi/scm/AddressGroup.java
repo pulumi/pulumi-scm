@@ -76,14 +76,14 @@ import javax.annotation.Nullable;
  * 
  *         // Create tags to be used for dynamic address group
  *         var scmAddressgroupTag1 = new Tag("scmAddressgroupTag1", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_addressgroup_tag_1")
  *             .comments("Managed by Pulumi")
  *             .color("Orange")
  *             .build());
  * 
  *         var scmAddressgroupTag2 = new Tag("scmAddressgroupTag2", TagArgs.builder()
- *             .folder("Shared")
+ *             .folder("All")
  *             .name("scm_addressgroup_tag_2")
  *             .comments("Managed by Pulumi")
  *             .color("Blue")

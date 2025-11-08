@@ -4,6 +4,7 @@
 package com.pulumi.scm.inputs;
 
 import com.pulumi.core.annotations.Import;
+import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -91,6 +92,21 @@ public final class GetLogicalRouterListPlainArgs extends com.pulumi.resources.In
     }
 
     /**
+     * The parameter to mention if the response should be paginated. By default, its set to false
+     * 
+     */
+    @Import(name="pagination")
+    private @Nullable Boolean pagination;
+
+    /**
+     * @return The parameter to mention if the response should be paginated. By default, its set to false
+     * 
+     */
+    public Optional<Boolean> pagination() {
+        return Optional.ofNullable(this.pagination);
+    }
+
+    /**
      * The snippet of the item.
      * 
      */
@@ -113,6 +129,7 @@ public final class GetLogicalRouterListPlainArgs extends com.pulumi.resources.In
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.pagination = $.pagination;
         this.snippet = $.snippet;
     }
 
@@ -186,6 +203,17 @@ public final class GetLogicalRouterListPlainArgs extends com.pulumi.resources.In
          */
         public Builder offset(@Nullable Integer offset) {
             $.offset = offset;
+            return this;
+        }
+
+        /**
+         * @param pagination The parameter to mention if the response should be paginated. By default, its set to false
+         * 
+         * @return builder
+         * 
+         */
+        public Builder pagination(@Nullable Boolean pagination) {
+            $.pagination = pagination;
             return this;
         }
 

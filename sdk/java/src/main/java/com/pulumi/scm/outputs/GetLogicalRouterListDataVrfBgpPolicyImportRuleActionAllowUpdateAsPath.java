@@ -7,7 +7,7 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone;
 import com.pulumi.scm.outputs.GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -21,7 +21,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
      * @return Prepend
      * 
      */
-    private Double prepend;
+    private Integer prepend;
     /**
      * @return Remove
      * 
@@ -31,7 +31,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
      * @return Remove and prepend
      * 
      */
-    private Double removeAndPrepend;
+    private Integer removeAndPrepend;
 
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath() {}
     /**
@@ -45,7 +45,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
      * @return Prepend
      * 
      */
-    public Double prepend() {
+    public Integer prepend() {
         return this.prepend;
     }
     /**
@@ -59,7 +59,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
      * @return Remove and prepend
      * 
      */
-    public Double removeAndPrepend() {
+    public Integer removeAndPrepend() {
         return this.removeAndPrepend;
     }
 
@@ -73,9 +73,9 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
     @CustomType.Builder
     public static final class Builder {
         private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone none;
-        private Double prepend;
+        private Integer prepend;
         private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove remove;
-        private Double removeAndPrepend;
+        private Integer removeAndPrepend;
         public Builder() {}
         public Builder(GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath defaults) {
     	      Objects.requireNonNull(defaults);
@@ -94,7 +94,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
             return this;
         }
         @CustomType.Setter
-        public Builder prepend(Double prepend) {
+        public Builder prepend(Integer prepend) {
             if (prepend == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath", "prepend");
             }
@@ -110,7 +110,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpda
             return this;
         }
         @CustomType.Setter
-        public Builder removeAndPrepend(Double removeAndPrepend) {
+        public Builder removeAndPrepend(Integer removeAndPrepend) {
             if (removeAndPrepend == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllowUpdateAsPath", "removeAndPrepend");
             }

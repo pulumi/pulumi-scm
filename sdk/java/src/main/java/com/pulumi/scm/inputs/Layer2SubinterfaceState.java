@@ -5,7 +5,6 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -114,17 +113,17 @@ public final class Layer2SubinterfaceState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Vlan tag
+     * VLAN tag
      * 
      */
     @Import(name="vlanTag")
-    private @Nullable Output<Double> vlanTag;
+    private @Nullable Output<String> vlanTag;
 
     /**
-     * @return Vlan tag
+     * @return VLAN tag
      * 
      */
-    public Optional<Output<Double>> vlanTag() {
+    public Optional<Output<String>> vlanTag() {
         return Optional.ofNullable(this.vlanTag);
     }
 
@@ -295,23 +294,23 @@ public final class Layer2SubinterfaceState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param vlanTag VLAN tag
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(@Nullable Output<Double> vlanTag) {
+        public Builder vlanTag(@Nullable Output<String> vlanTag) {
             $.vlanTag = vlanTag;
             return this;
         }
 
         /**
-         * @param vlanTag Vlan tag
+         * @param vlanTag VLAN tag
          * 
          * @return builder
          * 
          */
-        public Builder vlanTag(Double vlanTag) {
+        public Builder vlanTag(String vlanTag) {
             return vlanTag(Output.of(vlanTag));
         }
 

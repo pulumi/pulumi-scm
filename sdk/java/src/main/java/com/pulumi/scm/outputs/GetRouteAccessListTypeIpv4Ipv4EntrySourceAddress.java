@@ -5,6 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetRouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,10 +17,10 @@ public final class GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress {
      */
     private String address;
     /**
-     * @return Source IP wildcard
+     * @return Entry
      * 
      */
-    private String wildcard;
+    private GetRouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry entry;
 
     private GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress() {}
     /**
@@ -30,11 +31,11 @@ public final class GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress {
         return this.address;
     }
     /**
-     * @return Source IP wildcard
+     * @return Entry
      * 
      */
-    public String wildcard() {
-        return this.wildcard;
+    public GetRouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry entry() {
+        return this.entry;
     }
 
     public static Builder builder() {
@@ -47,12 +48,12 @@ public final class GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress {
     @CustomType.Builder
     public static final class Builder {
         private String address;
-        private String wildcard;
+        private GetRouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry entry;
         public Builder() {}
         public Builder(GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.address = defaults.address;
-    	      this.wildcard = defaults.wildcard;
+    	      this.entry = defaults.entry;
         }
 
         @CustomType.Setter
@@ -64,17 +65,17 @@ public final class GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress {
             return this;
         }
         @CustomType.Setter
-        public Builder wildcard(String wildcard) {
-            if (wildcard == null) {
-              throw new MissingRequiredPropertyException("GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress", "wildcard");
+        public Builder entry(GetRouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry entry) {
+            if (entry == null) {
+              throw new MissingRequiredPropertyException("GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress", "entry");
             }
-            this.wildcard = wildcard;
+            this.entry = entry;
             return this;
         }
         public GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress build() {
             final var _resultValue = new GetRouteAccessListTypeIpv4Ipv4EntrySourceAddress();
             _resultValue.address = address;
-            _resultValue.wildcard = wildcard;
+            _resultValue.entry = entry;
             return _resultValue;
         }
     }

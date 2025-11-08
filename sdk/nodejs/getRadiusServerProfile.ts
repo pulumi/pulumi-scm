@@ -8,6 +8,33 @@ import * as utilities from "./utilities";
 
 /**
  * RadiusServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const chapRadiusProfile = new scm.RadiusServerProfile("chap_radius_profile", {
+ *     name: "CHAP_only_rsp_ds_1",
+ *     folder: "All",
+ *     retries: 5,
+ *     timeout: 60,
+ *     protocol: {
+ *         cHAP: {},
+ *     },
+ *     servers: [{
+ *         name: "Chap_Server_Primary",
+ *         ipAddress: "10.1.1.10",
+ *         port: 1812,
+ *         secret: "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+ *     }],
+ * });
+ * const singleProfileById = scm.getRadiusServerProfileOutput({
+ *     id: chapRadiusProfile.id,
+ * });
+ * export const singleRspDump = singleProfileById.apply(singleProfileById => singleProfileById.name);
+ * ```
  */
 export function getRadiusServerProfile(args: GetRadiusServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetRadiusServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -75,6 +102,33 @@ export interface GetRadiusServerProfileResult {
 }
 /**
  * RadiusServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const chapRadiusProfile = new scm.RadiusServerProfile("chap_radius_profile", {
+ *     name: "CHAP_only_rsp_ds_1",
+ *     folder: "All",
+ *     retries: 5,
+ *     timeout: 60,
+ *     protocol: {
+ *         cHAP: {},
+ *     },
+ *     servers: [{
+ *         name: "Chap_Server_Primary",
+ *         ipAddress: "10.1.1.10",
+ *         port: 1812,
+ *         secret: "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
+ *     }],
+ * });
+ * const singleProfileById = scm.getRadiusServerProfileOutput({
+ *     id: chapRadiusProfile.id,
+ * });
+ * export const singleRspDump = singleProfileById.apply(singleProfileById => singleProfileById.name);
+ * ```
  */
 export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRadiusServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

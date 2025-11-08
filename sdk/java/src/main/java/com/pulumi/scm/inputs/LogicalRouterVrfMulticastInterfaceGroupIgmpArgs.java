@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -52,13 +52,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
      * 
      */
     @Import(name="lastMemberQueryInterval")
-    private @Nullable Output<Double> lastMemberQueryInterval;
+    private @Nullable Output<Integer> lastMemberQueryInterval;
 
     /**
      * @return Last member query interval
      * 
      */
-    public Optional<Output<Double>> lastMemberQueryInterval() {
+    public Optional<Output<Integer>> lastMemberQueryInterval() {
         return Optional.ofNullable(this.lastMemberQueryInterval);
     }
 
@@ -82,13 +82,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
      * 
      */
     @Import(name="maxQueryResponseTime")
-    private @Nullable Output<Double> maxQueryResponseTime;
+    private @Nullable Output<Integer> maxQueryResponseTime;
 
     /**
      * @return Max query response time
      * 
      */
-    public Optional<Output<Double>> maxQueryResponseTime() {
+    public Optional<Output<Integer>> maxQueryResponseTime() {
         return Optional.ofNullable(this.maxQueryResponseTime);
     }
 
@@ -127,13 +127,13 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
      * 
      */
     @Import(name="queryInterval")
-    private @Nullable Output<Double> queryInterval;
+    private @Nullable Output<Integer> queryInterval;
 
     /**
      * @return Query interval
      * 
      */
-    public Optional<Output<Double>> queryInterval() {
+    public Optional<Output<Integer>> queryInterval() {
         return Optional.ofNullable(this.queryInterval);
     }
 
@@ -264,7 +264,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
          * @return builder
          * 
          */
-        public Builder lastMemberQueryInterval(@Nullable Output<Double> lastMemberQueryInterval) {
+        public Builder lastMemberQueryInterval(@Nullable Output<Integer> lastMemberQueryInterval) {
             $.lastMemberQueryInterval = lastMemberQueryInterval;
             return this;
         }
@@ -275,7 +275,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
          * @return builder
          * 
          */
-        public Builder lastMemberQueryInterval(Double lastMemberQueryInterval) {
+        public Builder lastMemberQueryInterval(Integer lastMemberQueryInterval) {
             return lastMemberQueryInterval(Output.of(lastMemberQueryInterval));
         }
 
@@ -306,7 +306,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
          * @return builder
          * 
          */
-        public Builder maxQueryResponseTime(@Nullable Output<Double> maxQueryResponseTime) {
+        public Builder maxQueryResponseTime(@Nullable Output<Integer> maxQueryResponseTime) {
             $.maxQueryResponseTime = maxQueryResponseTime;
             return this;
         }
@@ -317,7 +317,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
          * @return builder
          * 
          */
-        public Builder maxQueryResponseTime(Double maxQueryResponseTime) {
+        public Builder maxQueryResponseTime(Integer maxQueryResponseTime) {
             return maxQueryResponseTime(Output.of(maxQueryResponseTime));
         }
 
@@ -369,7 +369,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
          * @return builder
          * 
          */
-        public Builder queryInterval(@Nullable Output<Double> queryInterval) {
+        public Builder queryInterval(@Nullable Output<Integer> queryInterval) {
             $.queryInterval = queryInterval;
             return this;
         }
@@ -380,7 +380,7 @@ public final class LogicalRouterVrfMulticastInterfaceGroupIgmpArgs extends com.p
          * @return builder
          * 
          */
-        public Builder queryInterval(Double queryInterval) {
+        public Builder queryInterval(Integer queryInterval) {
             return queryInterval(Output.of(queryInterval));
         }
 

@@ -118,9 +118,17 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string PolicyType;
         /// <summary>
+        /// The position of a security rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
         /// The security profile object
         /// </summary>
         public readonly Outputs.GetSecurityRuleListDataProfileSettingResult ProfileSetting;
+        /// <summary>
+        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        /// </summary>
+        public readonly string RelativePosition;
         /// <summary>
         /// Schedule in which this rule will be applied
         /// </summary>
@@ -153,6 +161,10 @@ namespace Pulumi.Scm.Outputs
         /// The tags associated with the security rule
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        /// <summary>
+        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
+        /// </summary>
+        public readonly string TargetRule;
         /// <summary>
         /// Tenant restrictions
         /// </summary>
@@ -217,7 +229,11 @@ namespace Pulumi.Scm.Outputs
 
             string policyType,
 
+            string position,
+
             Outputs.GetSecurityRuleListDataProfileSettingResult profileSetting,
+
+            string relativePosition,
 
             string schedule,
 
@@ -234,6 +250,8 @@ namespace Pulumi.Scm.Outputs
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string targetRule,
 
             ImmutableArray<string> tenantRestrictions,
 
@@ -267,7 +285,9 @@ namespace Pulumi.Scm.Outputs
             NegateSource = negateSource;
             NegateUser = negateUser;
             PolicyType = policyType;
+            Position = position;
             ProfileSetting = profileSetting;
+            RelativePosition = relativePosition;
             Schedule = schedule;
             SecuritySettings = securitySettings;
             Services = services;
@@ -276,6 +296,7 @@ namespace Pulumi.Scm.Outputs
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            TargetRule = targetRule;
             TenantRestrictions = tenantRestrictions;
             Tfid = tfid;
             Tos = tos;

@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -13,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsProxyTcpQueries {
     /**
-     * @return Enabled
+     * @return Turn on forwarding of TCP DNS queries?
      * 
      */
-    private @Nullable Boolean enabled;
+    private Boolean enabled;
     /**
-     * @return Max pending requests
+     * @return Upper limit on number of concurrent TCP DNS requests
      * 
      */
     private @Nullable Integer maxPendingRequests;
 
     private DnsProxyTcpQueries() {}
     /**
-     * @return Enabled
+     * @return Turn on forwarding of TCP DNS queries?
      * 
      */
-    public Optional<Boolean> enabled() {
-        return Optional.ofNullable(this.enabled);
+    public Boolean enabled() {
+        return this.enabled;
     }
     /**
-     * @return Max pending requests
+     * @return Upper limit on number of concurrent TCP DNS requests
      * 
      */
     public Optional<Integer> maxPendingRequests() {
@@ -48,7 +49,7 @@ public final class DnsProxyTcpQueries {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean enabled;
+        private Boolean enabled;
         private @Nullable Integer maxPendingRequests;
         public Builder() {}
         public Builder(DnsProxyTcpQueries defaults) {
@@ -58,8 +59,10 @@ public final class DnsProxyTcpQueries {
         }
 
         @CustomType.Setter
-        public Builder enabled(@Nullable Boolean enabled) {
-
+        public Builder enabled(Boolean enabled) {
+            if (enabled == null) {
+              throw new MissingRequiredPropertyException("DnsProxyTcpQueries", "enabled");
+            }
             this.enabled = enabled;
             return this;
         }

@@ -13,10 +13,16 @@ namespace Pulumi.Scm.Inputs
     public sealed class EthernetInterfaceLayer2GetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Vlan tag
+        /// LLDP Settings
+        /// </summary>
+        [Input("lldp")]
+        public Input<Inputs.EthernetInterfaceLayer2LldpGetArgs>? Lldp { get; set; }
+
+        /// <summary>
+        /// Assign interface to VLAN tag
         /// </summary>
         [Input("vlanTag")]
-        public Input<int>? VlanTag { get; set; }
+        public Input<string>? VlanTag { get; set; }
 
         public EthernetInterfaceLayer2GetArgs()
         {

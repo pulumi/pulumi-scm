@@ -8,6 +8,7 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3Arp;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3DdnsConfig;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3DhcpClient;
+import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3Ip;
 import com.pulumi.scm.outputs.GetEthernetInterfaceListDataLayer3Pppoe;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,12 +23,12 @@ public final class GetEthernetInterfaceListDataLayer3 {
      */
     private List<GetEthernetInterfaceListDataLayer3Arp> arps;
     /**
-     * @return Ddns config
+     * @return Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     private GetEthernetInterfaceListDataLayer3DdnsConfig ddnsConfig;
     /**
-     * @return Dhcp client
+     * @return Ethernet Interfaces DHCP Client Object
      * 
      */
     private GetEthernetInterfaceListDataLayer3DhcpClient dhcpClient;
@@ -37,10 +38,10 @@ public final class GetEthernetInterfaceListDataLayer3 {
      */
     private String interfaceManagementProfile;
     /**
-     * @return Interface IP addresses
+     * @return Ethernet Interface IP addresses
      * 
      */
-    private List<String> ips;
+    private List<GetEthernetInterfaceListDataLayer3Ip> ips;
     /**
      * @return MTU
      * 
@@ -61,14 +62,14 @@ public final class GetEthernetInterfaceListDataLayer3 {
         return this.arps;
     }
     /**
-     * @return Ddns config
+     * @return Dynamic DNS configuration specific to the Ethernet Interfaces.
      * 
      */
     public GetEthernetInterfaceListDataLayer3DdnsConfig ddnsConfig() {
         return this.ddnsConfig;
     }
     /**
-     * @return Dhcp client
+     * @return Ethernet Interfaces DHCP Client Object
      * 
      */
     public GetEthernetInterfaceListDataLayer3DhcpClient dhcpClient() {
@@ -82,10 +83,10 @@ public final class GetEthernetInterfaceListDataLayer3 {
         return this.interfaceManagementProfile;
     }
     /**
-     * @return Interface IP addresses
+     * @return Ethernet Interface IP addresses
      * 
      */
-    public List<String> ips() {
+    public List<GetEthernetInterfaceListDataLayer3Ip> ips() {
         return this.ips;
     }
     /**
@@ -116,7 +117,7 @@ public final class GetEthernetInterfaceListDataLayer3 {
         private GetEthernetInterfaceListDataLayer3DdnsConfig ddnsConfig;
         private GetEthernetInterfaceListDataLayer3DhcpClient dhcpClient;
         private String interfaceManagementProfile;
-        private List<String> ips;
+        private List<GetEthernetInterfaceListDataLayer3Ip> ips;
         private Integer mtu;
         private GetEthernetInterfaceListDataLayer3Pppoe pppoe;
         public Builder() {}
@@ -167,14 +168,14 @@ public final class GetEthernetInterfaceListDataLayer3 {
             return this;
         }
         @CustomType.Setter
-        public Builder ips(List<String> ips) {
+        public Builder ips(List<GetEthernetInterfaceListDataLayer3Ip> ips) {
             if (ips == null) {
               throw new MissingRequiredPropertyException("GetEthernetInterfaceListDataLayer3", "ips");
             }
             this.ips = ips;
             return this;
         }
-        public Builder ips(String... ips) {
+        public Builder ips(GetEthernetInterfaceListDataLayer3Ip... ips) {
             return ips(List.of(ips));
         }
         @CustomType.Setter

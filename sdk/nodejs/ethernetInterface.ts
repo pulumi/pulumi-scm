@@ -8,6 +8,8 @@ import * as utilities from "./utilities";
 
 /**
  * EthernetInterface resource
+ *
+ * ## Example Usage
  */
 export class EthernetInterface extends pulumi.CustomResource {
     /**
@@ -42,7 +44,7 @@ export class EthernetInterface extends pulumi.CustomResource {
      */
     declare public readonly comment: pulumi.Output<string | undefined>;
     /**
-     * Default value
+     * Default interface assignment
      */
     declare public readonly defaultValue: pulumi.Output<string | undefined>;
     /**
@@ -62,21 +64,21 @@ export class EthernetInterface extends pulumi.CustomResource {
      */
     declare public readonly layer2: pulumi.Output<outputs.EthernetInterfaceLayer2 | undefined>;
     /**
-     * Layer3
+     * Ethernet Interface Layer 3 configuration
      */
     declare public readonly layer3: pulumi.Output<outputs.EthernetInterfaceLayer3>;
     /**
      * Link duplex
      */
-    declare public readonly linkDuplex: pulumi.Output<string | undefined>;
+    declare public readonly linkDuplex: pulumi.Output<string>;
     /**
      * Link speed
      */
-    declare public readonly linkSpeed: pulumi.Output<string | undefined>;
+    declare public readonly linkSpeed: pulumi.Output<string>;
     /**
      * Link state
      */
-    declare public readonly linkState: pulumi.Output<string | undefined>;
+    declare public readonly linkState: pulumi.Output<string>;
     /**
      * Interface name
      */
@@ -84,7 +86,7 @@ export class EthernetInterface extends pulumi.CustomResource {
     /**
      * Poe
      */
-    declare public readonly poe: pulumi.Output<outputs.EthernetInterfacePoe | undefined>;
+    declare public readonly poe: pulumi.Output<outputs.EthernetInterfacePoe>;
     /**
      * The snippet in which the resource is defined
      */
@@ -92,7 +94,7 @@ export class EthernetInterface extends pulumi.CustomResource {
     /**
      * Tap
      */
-    declare public readonly tap: pulumi.Output<outputs.EthernetInterfaceTap>;
+    declare public readonly tap: pulumi.Output<outputs.EthernetInterfaceTap | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
 
     /**
@@ -157,7 +159,7 @@ export interface EthernetInterfaceState {
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default value
+     * Default interface assignment
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -177,7 +179,7 @@ export interface EthernetInterfaceState {
      */
     layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2>;
     /**
-     * Layer3
+     * Ethernet Interface Layer 3 configuration
      */
     layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3>;
     /**
@@ -220,7 +222,7 @@ export interface EthernetInterfaceArgs {
      */
     comment?: pulumi.Input<string>;
     /**
-     * Default value
+     * Default interface assignment
      */
     defaultValue?: pulumi.Input<string>;
     /**
@@ -236,7 +238,7 @@ export interface EthernetInterfaceArgs {
      */
     layer2?: pulumi.Input<inputs.EthernetInterfaceLayer2>;
     /**
-     * Layer3
+     * Ethernet Interface Layer 3 configuration
      */
     layer3?: pulumi.Input<inputs.EthernetInterfaceLayer3>;
     /**

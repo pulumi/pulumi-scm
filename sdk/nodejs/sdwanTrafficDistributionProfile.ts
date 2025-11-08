@@ -46,7 +46,7 @@ export class SdwanTrafficDistributionProfile extends pulumi.CustomResource {
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Link tags
+     * Link-Tags for interfaces identified by defined tags
      */
     declare public readonly linkTags: pulumi.Output<outputs.SdwanTrafficDistributionProfileLinkTag[] | undefined>;
     /**
@@ -61,7 +61,7 @@ export class SdwanTrafficDistributionProfile extends pulumi.CustomResource {
     /**
      * Traffic distribution
      */
-    declare public readonly trafficDistribution: pulumi.Output<string | undefined>;
+    declare public readonly trafficDistribution: pulumi.Output<string>;
 
     /**
      * Create a SdwanTrafficDistributionProfile resource with the given unique name, arguments, and options.
@@ -111,7 +111,7 @@ export interface SdwanTrafficDistributionProfileState {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Link tags
+     * Link-Tags for interfaces identified by defined tags
      */
     linkTags?: pulumi.Input<pulumi.Input<inputs.SdwanTrafficDistributionProfileLinkTag>[]>;
     /**
@@ -142,7 +142,7 @@ export interface SdwanTrafficDistributionProfileArgs {
      */
     folder?: pulumi.Input<string>;
     /**
-     * Link tags
+     * Link-Tags for interfaces identified by defined tags
      */
     linkTags?: pulumi.Input<pulumi.Input<inputs.SdwanTrafficDistributionProfileLinkTag>[]>;
     /**

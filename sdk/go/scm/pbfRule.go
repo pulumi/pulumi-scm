@@ -12,6 +12,161 @@ import (
 )
 
 // PbfRule resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			exampleTag, err := scm.NewTag(ctx, "example_tag", &scm.TagArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("pbf-rule-tag-test-1"),
+//				Color:  pulumi.String("Red"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- PBF Rule Resource with discard action---
+//			_, err = scm.NewPbfRule(ctx, "example_pbf_rule", &scm.PbfRuleArgs{
+//				Name:        pulumi.String("pbf-test-rule-discard"),
+//				Folder:      pulumi.String("All"),
+//				Description: pulumi.String("PBF rule for forwarding specific traffic."),
+//				From: &scm.PbfRuleFromArgs{
+//					Zones: pulumi.StringArray{
+//						pulumi.String("zone-untrust"),
+//					},
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Applications: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-http"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Action: &scm.PbfRuleActionArgs{
+//					Discard: &scm.PbfRuleActionDiscardArgs{},
+//				},
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				EnforceSymmetricReturn: &scm.PbfRuleEnforceSymmetricReturnArgs{
+//					Enabled: pulumi.Bool(false),
+//				},
+//				Schedule: pulumi.String("non-work-hours"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- PBF Rule Resource with no-pbf action---
+//			_, err = scm.NewPbfRule(ctx, "example_no_pbf_rule", &scm.PbfRuleArgs{
+//				Name:        pulumi.String("pbf-test-rule-no-pbf"),
+//				Folder:      pulumi.String("All"),
+//				Description: pulumi.String("PBF rule for forwarding specific traffic"),
+//				From: &scm.PbfRuleFromArgs{
+//					Zones: pulumi.StringArray{
+//						pulumi.String("zone-untrust"),
+//					},
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Applications: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-https"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Action: &scm.PbfRuleActionArgs{
+//					NoPbf: &scm.PbfRuleActionNoPbfArgs{},
+//				},
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				EnforceSymmetricReturn: &scm.PbfRuleEnforceSymmetricReturnArgs{
+//					Enabled: pulumi.Bool(false),
+//				},
+//				Schedule: pulumi.String("non-work-hours"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// --- PBF Rule Resource with forward action---
+//			_, err = scm.NewPbfRule(ctx, "example_forward_pbf_rule", &scm.PbfRuleArgs{
+//				Name:        pulumi.String("pbf-test-rule-forward"),
+//				Folder:      pulumi.String("All"),
+//				Description: pulumi.String("PBF rule for forwarding specific traffic"),
+//				From: &scm.PbfRuleFromArgs{
+//					Zones: pulumi.StringArray{
+//						pulumi.String("zone-untrust"),
+//					},
+//				},
+//				Sources: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Destinations: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Applications: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Services: pulumi.StringArray{
+//					pulumi.String("service-http"),
+//				},
+//				SourceUsers: pulumi.StringArray{
+//					pulumi.String("any"),
+//				},
+//				Action: &scm.PbfRuleActionArgs{
+//					Forward: &scm.PbfRuleActionForwardArgs{
+//						EgressInterface: pulumi.String("ethernet1/1"),
+//						Nexthop: &scm.PbfRuleActionForwardNexthopArgs{
+//							IpAddress: pulumi.String("192.168.1.254"),
+//						},
+//						Monitor: &scm.PbfRuleActionForwardMonitorArgs{
+//							IpAddress:            pulumi.String("8.8.8.10"),
+//							Profile:              pulumi.String("test_tf_profile"),
+//							DisableIfUnreachable: pulumi.Bool(true),
+//						},
+//					},
+//				},
+//				Tags: pulumi.StringArray{
+//					exampleTag.Name,
+//				},
+//				EnforceSymmetricReturn: &scm.PbfRuleEnforceSymmetricReturnArgs{
+//					Enabled: pulumi.Bool(true),
+//				},
+//				Schedule: pulumi.String("non-work-hours"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type PbfRule struct {
 	pulumi.CustomResourceState
 

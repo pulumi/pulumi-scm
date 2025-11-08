@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone;
 import com.pulumi.scm.outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Prepend
      * 
      */
-    private @Nullable Double prepend;
+    private @Nullable Integer prepend;
     /**
      * @return Remove
      * 
@@ -32,7 +32,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Remove and prepend
      * 
      */
-    private @Nullable Double removeAndPrepend;
+    private @Nullable Integer removeAndPrepend;
 
     private LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath() {}
     /**
@@ -46,7 +46,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Prepend
      * 
      */
-    public Optional<Double> prepend() {
+    public Optional<Integer> prepend() {
         return Optional.ofNullable(this.prepend);
     }
     /**
@@ -60,7 +60,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
      * @return Remove and prepend
      * 
      */
-    public Optional<Double> removeAndPrepend() {
+    public Optional<Integer> removeAndPrepend() {
         return Optional.ofNullable(this.removeAndPrepend);
     }
 
@@ -74,9 +74,9 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     @CustomType.Builder
     public static final class Builder {
         private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone none;
-        private @Nullable Double prepend;
+        private @Nullable Integer prepend;
         private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove remove;
-        private @Nullable Double removeAndPrepend;
+        private @Nullable Integer removeAndPrepend;
         public Builder() {}
         public Builder(LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath defaults) {
     	      Objects.requireNonNull(defaults);
@@ -93,7 +93,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
             return this;
         }
         @CustomType.Setter
-        public Builder prepend(@Nullable Double prepend) {
+        public Builder prepend(@Nullable Integer prepend) {
 
             this.prepend = prepend;
             return this;
@@ -105,7 +105,7 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
             return this;
         }
         @CustomType.Setter
-        public Builder removeAndPrepend(@Nullable Double removeAndPrepend) {
+        public Builder removeAndPrepend(@Nullable Integer removeAndPrepend) {
 
             this.removeAndPrepend = removeAndPrepend;
             return this;

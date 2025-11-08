@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticBgp {
     /**
-     * @return Route maps
+     * @return Connected Static BGP Route maps
      * 
      */
     private @Nullable List<BgpRouteMapRedistributionConnectedStaticBgpRouteMap> routeMaps;
 
     private BgpRouteMapRedistributionConnectedStaticBgp() {}
     /**
-     * @return Route maps
+     * @return Connected Static BGP Route maps
      * 
      */
     public List<BgpRouteMapRedistributionConnectedStaticBgpRouteMap> routeMaps() {

@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * DecryptionProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Decryption Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+ * const scmDpProfile = scm.getDecryptionProfile({
+ *     id: "c7629092-d286-400b-ba3f-1d57b8065645",
+ * });
+ * export const scmDecryptionProfileDetails = {
+ *     profileId: scmDpProfile.then(scmDpProfile => scmDpProfile.id),
+ *     folder: scmDpProfile.then(scmDpProfile => scmDpProfile.folder),
+ *     name: scmDpProfile.then(scmDpProfile => scmDpProfile.name),
+ * };
+ * ```
  */
 export function getDecryptionProfile(args: GetDecryptionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDecryptionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -75,6 +95,26 @@ export interface GetDecryptionProfileResult {
 }
 /**
  * DecryptionProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Decryption Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Decryption Profile you want to find.
+ * const scmDpProfile = scm.getDecryptionProfile({
+ *     id: "c7629092-d286-400b-ba3f-1d57b8065645",
+ * });
+ * export const scmDecryptionProfileDetails = {
+ *     profileId: scmDpProfile.then(scmDpProfile => scmDpProfile.id),
+ *     folder: scmDpProfile.then(scmDpProfile => scmDpProfile.folder),
+ *     name: scmDpProfile.then(scmDpProfile => scmDpProfile.name),
+ * };
+ * ```
  */
 export function getDecryptionProfileOutput(args: GetDecryptionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDecryptionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

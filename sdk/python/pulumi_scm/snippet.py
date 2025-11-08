@@ -186,6 +186,26 @@ class Snippet(pulumi.CustomResource):
         """
         Snippet resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_label1 = scm.Label("scm_label_1", name="scm_label")
+        #snippet with label
+        scm_snippet1 = scm.Snippet("scm_snippet_1",
+            name="scm_snippet",
+            description="Adding a Description from Terraform",
+            labels=[scm_label1.name])
+        scm_snippet2 = scm.Snippet("scm_snippet_2",
+            name="scm_snippet_2",
+            description="Adding a Description from Terraform")
+        scm_snippet3 = scm.Snippet("scm_snippet_3",
+            name="scm_snippet_3",
+            description="Adding a Description from Terraform")
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the snippet
@@ -201,6 +221,26 @@ class Snippet(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Snippet resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_label1 = scm.Label("scm_label_1", name="scm_label")
+        #snippet with label
+        scm_snippet1 = scm.Snippet("scm_snippet_1",
+            name="scm_snippet",
+            description="Adding a Description from Terraform",
+            labels=[scm_label1.name])
+        scm_snippet2 = scm.Snippet("scm_snippet_2",
+            name="scm_snippet_2",
+            description="Adding a Description from Terraform")
+        scm_snippet3 = scm.Snippet("scm_snippet_3",
+            name="scm_snippet_3",
+            description="Adding a Description from Terraform")
+        ```
 
         :param str resource_name: The name of the resource.
         :param SnippetArgs args: The arguments to use to populate this resource's properties.

@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Max path
         /// </summary>
-        public readonly double MaxPath;
+        public readonly int MaxPath;
         /// <summary>
         /// Strict source path
         /// </summary>
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Outputs
 
             bool enable,
 
-            double maxPath,
+            int maxPath,
 
             bool strictSourcePath,
 

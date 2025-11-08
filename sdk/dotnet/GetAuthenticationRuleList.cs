@@ -13,18 +13,105 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allPreRules = Scm.GetAuthenticationRuleList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Offset = 15,
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total) },
+        ///             { "firstRuleName", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
-        public static Task<GetAuthenticationRuleListResult> InvokeAsync(GetAuthenticationRuleListArgs? args = null, InvokeOptions? options = null)
+        public static Task<GetAuthenticationRuleListResult> InvokeAsync(GetAuthenticationRuleListArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationRuleListResult>("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args ?? new GetAuthenticationRuleListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allPreRules = Scm.GetAuthenticationRuleList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Offset = 15,
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total) },
+        ///             { "firstRuleName", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
-        public static Output<GetAuthenticationRuleListResult> Invoke(GetAuthenticationRuleListInvokeArgs? args = null, InvokeOptions? options = null)
+        public static Output<GetAuthenticationRuleListResult> Invoke(GetAuthenticationRuleListInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleListResult>("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args ?? new GetAuthenticationRuleListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allPreRules = Scm.GetAuthenticationRuleList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Offset = 15,
+        ///         Position = "pre",
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedRuleListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Total) },
+        ///             { "firstRuleName", allPreRules.Apply(getAuthenticationRuleListResult =&gt; getAuthenticationRuleListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationRuleListResult> Invoke(GetAuthenticationRuleListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationRuleListResult>("scm:index/getAuthenticationRuleList:getAuthenticationRuleList", args ?? new GetAuthenticationRuleListInvokeArgs(), options.WithDefaults());
@@ -62,6 +149,12 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("offset")]
         public int? Offset { get; set; }
+
+        /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        [Input("position", required: true)]
+        public string Position { get; set; } = null!;
 
         /// <summary>
         /// The snippet of the item.
@@ -108,6 +201,12 @@ namespace Pulumi.Scm
         public Input<int>? Offset { get; set; }
 
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        [Input("position", required: true)]
+        public Input<string> Position { get; set; } = null!;
+
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         [Input("snippet")]
@@ -152,6 +251,10 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly int? Offset;
         /// <summary>
+        /// The relative position of the rule
+        /// </summary>
+        public readonly string Position;
+        /// <summary>
         /// The snippet of the item.
         /// </summary>
         public readonly string? Snippet;
@@ -177,6 +280,8 @@ namespace Pulumi.Scm
 
             int? offset,
 
+            string position,
+
             string? snippet,
 
             string tfid,
@@ -190,6 +295,7 @@ namespace Pulumi.Scm
             Limit = limit;
             Name = name;
             Offset = offset;
+            Position = position;
             Snippet = snippet;
             Tfid = tfid;
             Total = total;

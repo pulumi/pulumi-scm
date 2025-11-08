@@ -14,7 +14,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
     /**
-     * @return Interface
+     * @return Connected Static BGP Rib Route maps Interface
      * 
      */
     private @Nullable String interface_;
@@ -24,14 +24,14 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
      */
     private @Nullable BgpRouteMapRedistributionConnectedStaticRibRouteMapMatchIpv4 ipv4;
     /**
-     * @return Metric
+     * @return Connected Static BGP Rib Route maps Metric
      * 
      */
     private @Nullable Integer metric;
 
     private BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch() {}
     /**
-     * @return Interface
+     * @return Connected Static BGP Rib Route maps Interface
      * 
      */
     public Optional<String> interface_() {
@@ -45,7 +45,7 @@ public final class BgpRouteMapRedistributionConnectedStaticRibRouteMapMatch {
         return Optional.ofNullable(this.ipv4);
     }
     /**
-     * @return Metric
+     * @return Connected Static BGP Rib Route maps Metric
      * 
      */
     public Optional<Integer> metric() {

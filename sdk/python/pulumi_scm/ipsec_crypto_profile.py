@@ -354,6 +354,33 @@ class IpsecCryptoProfile(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # The resource block defines a new IPsec Crypto Profile.
+        scm_ipsec_crypto_profile2 = scm.IpsecCryptoProfile("scm_ipsec_crypto_profile_2",
+            name="scm_ipsec_crypto_profile_2",
+            folder="Prisma Access",
+            esp={
+                "authentications": [
+                    "sha256",
+                    "sha384",
+                ],
+                "encryptions": [
+                    "aes-256-gcm",
+                    "aes-128-cbc",
+                ],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 1,
+            },
+            lifesize={
+                "gb": 10,
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['IpsecCryptoProfileAhArgs', 'IpsecCryptoProfileAhArgsDict']] ah: Ah
@@ -376,6 +403,33 @@ class IpsecCryptoProfile(pulumi.CustomResource):
         IpsecCryptoProfile resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # The resource block defines a new IPsec Crypto Profile.
+        scm_ipsec_crypto_profile2 = scm.IpsecCryptoProfile("scm_ipsec_crypto_profile_2",
+            name="scm_ipsec_crypto_profile_2",
+            folder="Prisma Access",
+            esp={
+                "authentications": [
+                    "sha256",
+                    "sha384",
+                ],
+                "encryptions": [
+                    "aes-256-gcm",
+                    "aes-128-cbc",
+                ],
+            },
+            dh_group="group14",
+            lifetime={
+                "hours": 1,
+            },
+            lifesize={
+                "gb": 10,
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param IpsecCryptoProfileArgs args: The arguments to use to populate this resource's properties.

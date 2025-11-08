@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4 {
     /**
-     * @return bgp-route-map-redistributions ipv4 object address
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address address;
     /**
-     * @return bgp-route-map-redistributions ipv4 object next*hop
+     * @return BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop nextHop;
     /**
-     * @return bgp-route-map-redistributions ipv4 object route*source
+     * @return BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource routeSource;
 
     private BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4() {}
     /**
-     * @return bgp-route-map-redistributions ipv4 object address
+     * @return BGP Root OSPF Route maps match bgp-route-map-redistributions ipv4 object address
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4Address> address() {
         return Optional.ofNullable(this.address);
     }
     /**
-     * @return bgp-route-map-redistributions ipv4 object next*hop
+     * @return BGP Root OSPF Route maps match  bgp-route-map-redistributions ipv4 object next*hop
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4NextHop> nextHop() {
         return Optional.ofNullable(this.nextHop);
     }
     /**
-     * @return bgp-route-map-redistributions ipv4 object route*source
+     * @return BGP Root OSPF Route maps ipv4 bgp-route-map-redistributions ipv4 object route*source
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpOspfRouteMapMatchIpv4RouteSource> routeSource() {

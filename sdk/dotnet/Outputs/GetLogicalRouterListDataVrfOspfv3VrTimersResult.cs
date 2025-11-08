@@ -16,17 +16,17 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Lsa interval
         /// </summary>
-        public readonly double LsaInterval;
+        public readonly int LsaInterval;
         /// <summary>
         /// Spf calculation delay
         /// </summary>
-        public readonly double SpfCalculationDelay;
+        public readonly int SpfCalculationDelay;
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfOspfv3VrTimersResult(
-            double lsaInterval,
+            int lsaInterval,
 
-            double spfCalculationDelay)
+            int spfCalculationDelay)
         {
             LsaInterval = lsaInterval;
             SpfCalculationDelay = spfCalculationDelay;

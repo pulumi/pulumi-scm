@@ -6,7 +6,7 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 
 @CustomType
@@ -20,7 +20,7 @@ public final class GetLogicalRouterVrfOspfFloodPreventionLsa {
      * @return Max packet
      * 
      */
-    private Double maxPacket;
+    private Integer maxPacket;
 
     private GetLogicalRouterVrfOspfFloodPreventionLsa() {}
     /**
@@ -34,7 +34,7 @@ public final class GetLogicalRouterVrfOspfFloodPreventionLsa {
      * @return Max packet
      * 
      */
-    public Double maxPacket() {
+    public Integer maxPacket() {
         return this.maxPacket;
     }
 
@@ -48,7 +48,7 @@ public final class GetLogicalRouterVrfOspfFloodPreventionLsa {
     @CustomType.Builder
     public static final class Builder {
         private Boolean enable;
-        private Double maxPacket;
+        private Integer maxPacket;
         public Builder() {}
         public Builder(GetLogicalRouterVrfOspfFloodPreventionLsa defaults) {
     	      Objects.requireNonNull(defaults);
@@ -65,7 +65,7 @@ public final class GetLogicalRouterVrfOspfFloodPreventionLsa {
             return this;
         }
         @CustomType.Setter
-        public Builder maxPacket(Double maxPacket) {
+        public Builder maxPacket(Integer maxPacket) {
             if (maxPacket == null) {
               throw new MissingRequiredPropertyException("GetLogicalRouterVrfOspfFloodPreventionLsa", "maxPacket");
             }

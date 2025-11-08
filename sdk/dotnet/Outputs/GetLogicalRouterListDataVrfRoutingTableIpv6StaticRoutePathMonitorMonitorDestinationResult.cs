@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Count
         /// </summary>
-        public readonly double Count;
+        public readonly int Count;
         /// <summary>
         /// Destination
         /// </summary>
@@ -32,7 +32,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Interval
         /// </summary>
-        public readonly double Interval;
+        public readonly int Interval;
         /// <summary>
         /// Name
         /// </summary>
@@ -44,7 +44,7 @@ namespace Pulumi.Scm.Outputs
 
         [OutputConstructor]
         private GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationResult(
-            double count,
+            int count,
 
             string destination,
 
@@ -52,7 +52,7 @@ namespace Pulumi.Scm.Outputs
 
             bool enable,
 
-            double interval,
+            int interval,
 
             string name,
 

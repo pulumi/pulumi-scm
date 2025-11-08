@@ -245,6 +245,46 @@ def get_pbf_rule(id: Optional[_builtins.str] = None,
     """
     PbfRule data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    example_tag = scm.Tag("example_tag",
+        folder="All",
+        name="pbf-rule-tag-ds-test-1",
+        color="Red")
+    # --- PBF Rule Resource with discard action---
+    example_pbf_rule = scm.PbfRule("example_pbf_rule",
+        name="pbf-test-ds-rule-discard",
+        folder="All",
+        description="Data Source testing pbf rule.",
+        from_={
+            "zones": ["zone-untrust"],
+        },
+        sources=["any"],
+        destinations=["any"],
+        applications=["any"],
+        services=["service-http"],
+        source_users=["any"],
+        action={
+            "discard": {},
+        },
+        tags=[example_tag.name],
+        enforce_symmetric_return={
+            "enabled": False,
+        },
+        schedule="non-work-hours")
+    # Define the data source (the item to be retrieved via API GET)
+    pbf_external_web_test_get = scm.get_pbf_rule_output(id=example_pbf_rule.id)
+    pulumi.export("retrievedIDAndName", {
+        "id": pbf_external_web_test_get.id,
+        "name": pbf_external_web_test_get.name,
+    })
+    pulumi.export("recievedResponse", pbf_external_web_test_get)
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: PBF rule name
@@ -278,6 +318,46 @@ def get_pbf_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetPbfRuleResult]:
     """
     PbfRule data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    example_tag = scm.Tag("example_tag",
+        folder="All",
+        name="pbf-rule-tag-ds-test-1",
+        color="Red")
+    # --- PBF Rule Resource with discard action---
+    example_pbf_rule = scm.PbfRule("example_pbf_rule",
+        name="pbf-test-ds-rule-discard",
+        folder="All",
+        description="Data Source testing pbf rule.",
+        from_={
+            "zones": ["zone-untrust"],
+        },
+        sources=["any"],
+        destinations=["any"],
+        applications=["any"],
+        services=["service-http"],
+        source_users=["any"],
+        action={
+            "discard": {},
+        },
+        tags=[example_tag.name],
+        enforce_symmetric_return={
+            "enabled": False,
+        },
+        schedule="non-work-hours")
+    # Define the data source (the item to be retrieved via API GET)
+    pbf_external_web_test_get = scm.get_pbf_rule_output(id=example_pbf_rule.id)
+    pulumi.export("retrievedIDAndName", {
+        "id": pbf_external_web_test_get.id,
+        "name": pbf_external_web_test_get.name,
+    })
+    pulumi.export("recievedResponse", pbf_external_web_test_get)
+    ```
 
 
     :param _builtins.str id: UUID of the resource

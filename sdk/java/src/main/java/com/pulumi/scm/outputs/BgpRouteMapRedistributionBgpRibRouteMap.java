@@ -15,62 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpRouteMapRedistributionBgpRibRouteMap {
     /**
-     * @return Action
+     * @return BGP Root RIB Route maps Action
      * 
      */
     private @Nullable String action;
     /**
-     * @return Description
+     * @return BGP Root RIB Route maps Description
      * 
      */
     private @Nullable String description;
     /**
-     * @return Match
+     * @return match attribute for BG Rib route map
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpRibRouteMapMatch match;
     /**
-     * @return Sequence number
+     * @return BGP Root RIB Route maps Sequence number
      * 
      */
     private @Nullable Integer name;
     /**
-     * @return Set
+     * @return Set attributes for BGP route map
      * 
      */
     private @Nullable BgpRouteMapRedistributionBgpRibRouteMapSet set;
 
     private BgpRouteMapRedistributionBgpRibRouteMap() {}
     /**
-     * @return Action
+     * @return BGP Root RIB Route maps Action
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return Description
+     * @return BGP Root RIB Route maps Description
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Match
+     * @return match attribute for BG Rib route map
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpRibRouteMapMatch> match() {
         return Optional.ofNullable(this.match);
     }
     /**
-     * @return Sequence number
+     * @return BGP Root RIB Route maps Sequence number
      * 
      */
     public Optional<Integer> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return Set
+     * @return Set attributes for BGP route map
      * 
      */
     public Optional<BgpRouteMapRedistributionBgpRibRouteMapSet> set() {

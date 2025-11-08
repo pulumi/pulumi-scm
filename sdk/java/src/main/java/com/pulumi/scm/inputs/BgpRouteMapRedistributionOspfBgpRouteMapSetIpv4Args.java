@@ -16,14 +16,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args extends c
     public static final BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args Empty = new BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args();
 
     /**
-     * Next hop
+     * OSPF BGP Route maps set ipv4 Next hop
      * 
      */
     @Import(name="nextHop")
     private @Nullable Output<String> nextHop;
 
     /**
-     * @return Next hop
+     * @return OSPF BGP Route maps set ipv4 Next hop
      * 
      */
     public Optional<Output<String>> nextHop() {
@@ -31,14 +31,14 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args extends c
     }
 
     /**
-     * Source address
+     * OSPF BGP Route maps set ipv4 Source address
      * 
      */
     @Import(name="sourceAddress")
     private @Nullable Output<String> sourceAddress;
 
     /**
-     * @return Source address
+     * @return OSPF BGP Route maps set ipv4 Source address
      * 
      */
     public Optional<Output<String>> sourceAddress() {
@@ -71,7 +71,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args extends c
         }
 
         /**
-         * @param nextHop Next hop
+         * @param nextHop OSPF BGP Route maps set ipv4 Next hop
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args extends c
         }
 
         /**
-         * @param nextHop Next hop
+         * @param nextHop OSPF BGP Route maps set ipv4 Next hop
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args extends c
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress OSPF BGP Route maps set ipv4 Source address
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class BgpRouteMapRedistributionOspfBgpRouteMapSetIpv4Args extends c
         }
 
         /**
-         * @param sourceAddress Source address
+         * @param sourceAddress OSPF BGP Route maps set ipv4 Source address
          * 
          * @return builder
          * 

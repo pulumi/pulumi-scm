@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Hold time
         /// </summary>
-        public readonly double HoldTime;
+        public readonly int HoldTime;
         /// <summary>
         /// Monitor destinations
         /// </summary>
@@ -36,7 +36,7 @@ namespace Pulumi.Scm.Outputs
 
             string failureCondition,
 
-            double holdTime,
+            int holdTime,
 
             ImmutableArray<Outputs.GetLogicalRouterListDataVrfRoutingTableIpv6StaticRoutePathMonitorMonitorDestinationResult> monitorDestinations)
         {

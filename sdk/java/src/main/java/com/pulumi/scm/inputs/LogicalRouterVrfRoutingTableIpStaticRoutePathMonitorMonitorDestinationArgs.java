@@ -7,7 +7,7 @@ import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,13 +23,13 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
      * 
      */
     @Import(name="count")
-    private @Nullable Output<Double> count;
+    private @Nullable Output<Integer> count;
 
     /**
      * @return Count
      * 
      */
-    public Optional<Output<Double>> count() {
+    public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
 
@@ -83,13 +83,13 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
      * 
      */
     @Import(name="interval")
-    private @Nullable Output<Double> interval;
+    private @Nullable Output<Integer> interval;
 
     /**
      * @return Interval
      * 
      */
-    public Optional<Output<Double>> interval() {
+    public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
 
@@ -159,7 +159,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
          * @return builder
          * 
          */
-        public Builder count(@Nullable Output<Double> count) {
+        public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
@@ -170,7 +170,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
          * @return builder
          * 
          */
-        public Builder count(Double count) {
+        public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
@@ -243,7 +243,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
          * @return builder
          * 
          */
-        public Builder interval(@Nullable Output<Double> interval) {
+        public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
@@ -254,7 +254,7 @@ public final class LogicalRouterVrfRoutingTableIpStaticRoutePathMonitorMonitorDe
          * @return builder
          * 
          */
-        public Builder interval(Double interval) {
+        public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 

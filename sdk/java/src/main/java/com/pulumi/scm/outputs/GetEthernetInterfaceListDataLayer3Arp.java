@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetEthernetInterfaceListDataLayer3Arp {
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     private String hwAddress;
@@ -23,7 +23,7 @@ public final class GetEthernetInterfaceListDataLayer3Arp {
 
     private GetEthernetInterfaceListDataLayer3Arp() {}
     /**
-     * @return Hw address
+     * @return MAC address
      * 
      */
     public String hwAddress() {

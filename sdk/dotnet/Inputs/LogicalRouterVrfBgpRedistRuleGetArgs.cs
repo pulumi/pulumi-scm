@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         /// Metric
         /// </summary>
         [Input("metric")]
-        public Input<double>? Metric { get; set; }
+        public Input<int>? Metric { get; set; }
 
         /// <summary>
         /// Name
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Inputs
         /// Set as path limit
         /// </summary>
         [Input("setAsPathLimit")]
-        public Input<double>? SetAsPathLimit { get; set; }
+        public Input<int>? SetAsPathLimit { get; set; }
 
         [Input("setCommunities")]
         private InputList<string>? _setCommunities;
@@ -76,13 +76,13 @@ namespace Pulumi.Scm.Inputs
         /// Set local preference
         /// </summary>
         [Input("setLocalPreference")]
-        public Input<double>? SetLocalPreference { get; set; }
+        public Input<int>? SetLocalPreference { get; set; }
 
         /// <summary>
         /// Set med
         /// </summary>
         [Input("setMed")]
-        public Input<double>? SetMed { get; set; }
+        public Input<int>? SetMed { get; set; }
 
         /// <summary>
         /// Set origin

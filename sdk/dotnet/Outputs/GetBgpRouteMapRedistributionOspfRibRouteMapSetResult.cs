@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpRouteMapRedistributionOspfRibRouteMapSetResult
     {
         /// <summary>
-        /// Source address
+        /// OSPF RIB Route maps set Source address
         /// </summary>
         public readonly string SourceAddress;
 

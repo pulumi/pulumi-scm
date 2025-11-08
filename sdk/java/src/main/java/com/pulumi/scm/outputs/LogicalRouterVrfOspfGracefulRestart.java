@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class LogicalRouterVrfOspfGracefulRestart {
      * @return Grace period
      * 
      */
-    private @Nullable Double gracePeriod;
+    private @Nullable Integer gracePeriod;
     /**
      * @return Helper enable
      * 
@@ -31,12 +31,12 @@ public final class LogicalRouterVrfOspfGracefulRestart {
      * @return Max neighbor restart time
      * 
      */
-    private @Nullable Double maxNeighborRestartTime;
+    private @Nullable Integer maxNeighborRestartTime;
     /**
      * @return Strict l s a checking
      * 
      */
-    private @Nullable Boolean strictLSAChecking;
+    private @Nullable Boolean strictLsaChecking;
 
     private LogicalRouterVrfOspfGracefulRestart() {}
     /**
@@ -50,7 +50,7 @@ public final class LogicalRouterVrfOspfGracefulRestart {
      * @return Grace period
      * 
      */
-    public Optional<Double> gracePeriod() {
+    public Optional<Integer> gracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
     /**
@@ -64,15 +64,15 @@ public final class LogicalRouterVrfOspfGracefulRestart {
      * @return Max neighbor restart time
      * 
      */
-    public Optional<Double> maxNeighborRestartTime() {
+    public Optional<Integer> maxNeighborRestartTime() {
         return Optional.ofNullable(this.maxNeighborRestartTime);
     }
     /**
      * @return Strict l s a checking
      * 
      */
-    public Optional<Boolean> strictLSAChecking() {
-        return Optional.ofNullable(this.strictLSAChecking);
+    public Optional<Boolean> strictLsaChecking() {
+        return Optional.ofNullable(this.strictLsaChecking);
     }
 
     public static Builder builder() {
@@ -85,10 +85,10 @@ public final class LogicalRouterVrfOspfGracefulRestart {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable Boolean enable;
-        private @Nullable Double gracePeriod;
+        private @Nullable Integer gracePeriod;
         private @Nullable Boolean helperEnable;
-        private @Nullable Double maxNeighborRestartTime;
-        private @Nullable Boolean strictLSAChecking;
+        private @Nullable Integer maxNeighborRestartTime;
+        private @Nullable Boolean strictLsaChecking;
         public Builder() {}
         public Builder(LogicalRouterVrfOspfGracefulRestart defaults) {
     	      Objects.requireNonNull(defaults);
@@ -96,7 +96,7 @@ public final class LogicalRouterVrfOspfGracefulRestart {
     	      this.gracePeriod = defaults.gracePeriod;
     	      this.helperEnable = defaults.helperEnable;
     	      this.maxNeighborRestartTime = defaults.maxNeighborRestartTime;
-    	      this.strictLSAChecking = defaults.strictLSAChecking;
+    	      this.strictLsaChecking = defaults.strictLsaChecking;
         }
 
         @CustomType.Setter
@@ -106,7 +106,7 @@ public final class LogicalRouterVrfOspfGracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder gracePeriod(@Nullable Double gracePeriod) {
+        public Builder gracePeriod(@Nullable Integer gracePeriod) {
 
             this.gracePeriod = gracePeriod;
             return this;
@@ -118,15 +118,15 @@ public final class LogicalRouterVrfOspfGracefulRestart {
             return this;
         }
         @CustomType.Setter
-        public Builder maxNeighborRestartTime(@Nullable Double maxNeighborRestartTime) {
+        public Builder maxNeighborRestartTime(@Nullable Integer maxNeighborRestartTime) {
 
             this.maxNeighborRestartTime = maxNeighborRestartTime;
             return this;
         }
         @CustomType.Setter
-        public Builder strictLSAChecking(@Nullable Boolean strictLSAChecking) {
+        public Builder strictLsaChecking(@Nullable Boolean strictLsaChecking) {
 
-            this.strictLSAChecking = strictLSAChecking;
+            this.strictLsaChecking = strictLsaChecking;
             return this;
         }
         public LogicalRouterVrfOspfGracefulRestart build() {
@@ -135,7 +135,7 @@ public final class LogicalRouterVrfOspfGracefulRestart {
             _resultValue.gracePeriod = gracePeriod;
             _resultValue.helperEnable = helperEnable;
             _resultValue.maxNeighborRestartTime = maxNeighborRestartTime;
-            _resultValue.strictLSAChecking = strictLSAChecking;
+            _resultValue.strictLsaChecking = strictLsaChecking;
             return _resultValue;
         }
     }

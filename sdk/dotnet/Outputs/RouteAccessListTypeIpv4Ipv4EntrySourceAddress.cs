@@ -18,18 +18,18 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string? Address;
         /// <summary>
-        /// Source IP wildcard
+        /// Entry
         /// </summary>
-        public readonly string? Wildcard;
+        public readonly Outputs.RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry? Entry;
 
         [OutputConstructor]
         private RouteAccessListTypeIpv4Ipv4EntrySourceAddress(
             string? address,
 
-            string? wildcard)
+            Outputs.RouteAccessListTypeIpv4Ipv4EntrySourceAddressEntry? entry)
         {
             Address = address;
-            Wildcard = wildcard;
+            Entry = entry;
         }
     }
 }

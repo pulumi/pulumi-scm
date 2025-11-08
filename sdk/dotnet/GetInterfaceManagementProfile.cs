@@ -13,18 +13,183 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// InterfaceManagementProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. Resource: Create the Interface Management Profile
+        ///     // This block creates the profile with your specified configuration.
+        ///     var testInfMgmtProfile = new Scm.InterfaceManagementProfile("test_inf_mgmt_profile", new()
+        ///     {
+        ///         Name = "test_inf_mgmt_profile_ds_1",
+        ///         Folder = "All",
+        ///         PermittedIps = new[]
+        ///         {
+        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+        ///             {
+        ///                 Name = "10.0.0.0/24",
+        ///             },
+        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+        ///             {
+        ///                 Name = "10.0.0.0/32",
+        ///             },
+        ///         },
+        ///         Http = true,
+        ///         Https = false,
+        ///         Telnet = false,
+        ///         Ssh = true,
+        ///         Ping = false,
+        ///         HttpOcsp = true,
+        ///         UseridService = true,
+        ///         UseridSyslogListenerSsl = true,
+        ///         UseridSyslogListenerUdp = true,
+        ///         ResponsePages = false,
+        ///     });
+        /// 
+        ///     // --------------------------------------------------------------------------------
+        ///     // 2. Data Source: Retrieve the Interface Management Profile by ID
+        ///     // We use the resource's generated 'id' attribute to fetch the profile.
+        ///     var singleProfileById = Scm.GetInterfaceManagementProfile.Invoke(new()
+        ///     {
+        ///         Id = testInfMgmtProfile.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfileName"] = singleProfileById.Apply(getInterfaceManagementProfileResult =&gt; getInterfaceManagementProfileResult.Name),
+        ///         ["fetchedProfile"] = singleProfileById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetInterfaceManagementProfileResult> InvokeAsync(GetInterfaceManagementProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetInterfaceManagementProfileResult>("scm:index/getInterfaceManagementProfile:getInterfaceManagementProfile", args ?? new GetInterfaceManagementProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// InterfaceManagementProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. Resource: Create the Interface Management Profile
+        ///     // This block creates the profile with your specified configuration.
+        ///     var testInfMgmtProfile = new Scm.InterfaceManagementProfile("test_inf_mgmt_profile", new()
+        ///     {
+        ///         Name = "test_inf_mgmt_profile_ds_1",
+        ///         Folder = "All",
+        ///         PermittedIps = new[]
+        ///         {
+        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+        ///             {
+        ///                 Name = "10.0.0.0/24",
+        ///             },
+        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+        ///             {
+        ///                 Name = "10.0.0.0/32",
+        ///             },
+        ///         },
+        ///         Http = true,
+        ///         Https = false,
+        ///         Telnet = false,
+        ///         Ssh = true,
+        ///         Ping = false,
+        ///         HttpOcsp = true,
+        ///         UseridService = true,
+        ///         UseridSyslogListenerSsl = true,
+        ///         UseridSyslogListenerUdp = true,
+        ///         ResponsePages = false,
+        ///     });
+        /// 
+        ///     // --------------------------------------------------------------------------------
+        ///     // 2. Data Source: Retrieve the Interface Management Profile by ID
+        ///     // We use the resource's generated 'id' attribute to fetch the profile.
+        ///     var singleProfileById = Scm.GetInterfaceManagementProfile.Invoke(new()
+        ///     {
+        ///         Id = testInfMgmtProfile.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfileName"] = singleProfileById.Apply(getInterfaceManagementProfileResult =&gt; getInterfaceManagementProfileResult.Name),
+        ///         ["fetchedProfile"] = singleProfileById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetInterfaceManagementProfileResult> Invoke(GetInterfaceManagementProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetInterfaceManagementProfileResult>("scm:index/getInterfaceManagementProfile:getInterfaceManagementProfile", args ?? new GetInterfaceManagementProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// InterfaceManagementProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // 1. Resource: Create the Interface Management Profile
+        ///     // This block creates the profile with your specified configuration.
+        ///     var testInfMgmtProfile = new Scm.InterfaceManagementProfile("test_inf_mgmt_profile", new()
+        ///     {
+        ///         Name = "test_inf_mgmt_profile_ds_1",
+        ///         Folder = "All",
+        ///         PermittedIps = new[]
+        ///         {
+        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+        ///             {
+        ///                 Name = "10.0.0.0/24",
+        ///             },
+        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
+        ///             {
+        ///                 Name = "10.0.0.0/32",
+        ///             },
+        ///         },
+        ///         Http = true,
+        ///         Https = false,
+        ///         Telnet = false,
+        ///         Ssh = true,
+        ///         Ping = false,
+        ///         HttpOcsp = true,
+        ///         UseridService = true,
+        ///         UseridSyslogListenerSsl = true,
+        ///         UseridSyslogListenerUdp = true,
+        ///         ResponsePages = false,
+        ///     });
+        /// 
+        ///     // --------------------------------------------------------------------------------
+        ///     // 2. Data Source: Retrieve the Interface Management Profile by ID
+        ///     // We use the resource's generated 'id' attribute to fetch the profile.
+        ///     var singleProfileById = Scm.GetInterfaceManagementProfile.Invoke(new()
+        ///     {
+        ///         Id = testInfMgmtProfile.Id,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfileName"] = singleProfileById.Apply(getInterfaceManagementProfileResult =&gt; getInterfaceManagementProfileResult.Name),
+        ///         ["fetchedProfile"] = singleProfileById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetInterfaceManagementProfileResult> Invoke(GetInterfaceManagementProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetInterfaceManagementProfileResult>("scm:index/getInterfaceManagementProfile:getInterfaceManagementProfile", args ?? new GetInterfaceManagementProfileInvokeArgs(), options.WithDefaults());
@@ -88,7 +253,7 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly bool Http;
         /// <summary>
-        /// Http ocsp
+        /// Allow HTTP OCSP?
         /// </summary>
         public readonly bool HttpOcsp;
         /// <summary>
@@ -104,17 +269,17 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Permitted ip
+        /// Allowed IP address(es)
         /// </summary>
-        public readonly ImmutableArray<string> PermittedIps;
+        public readonly ImmutableArray<Outputs.GetInterfaceManagementProfilePermittedIpResult> PermittedIps;
         /// <summary>
         /// Allow ping?
         /// </summary>
         public readonly bool Ping;
         /// <summary>
-        /// Response pages
+        /// Allow response pages?
         /// </summary>
-        public readonly string ResponsePages;
+        public readonly bool ResponsePages;
         /// <summary>
         /// The snippet in which the resource is defined
         /// </summary>
@@ -129,15 +294,15 @@ namespace Pulumi.Scm
         public readonly bool Telnet;
         public readonly string Tfid;
         /// <summary>
-        /// Userid service
+        /// Allow User-ID?
         /// </summary>
         public readonly bool UseridService;
         /// <summary>
-        /// Userid syslog listener ssl
+        /// Allow User-ID syslog listener (SSL)?
         /// </summary>
         public readonly bool UseridSyslogListenerSsl;
         /// <summary>
-        /// Userid syslog listener udp
+        /// Allow User-ID syslog listener (UDP)?
         /// </summary>
         public readonly bool UseridSyslogListenerUdp;
 
@@ -157,11 +322,11 @@ namespace Pulumi.Scm
 
             string name,
 
-            ImmutableArray<string> permittedIps,
+            ImmutableArray<Outputs.GetInterfaceManagementProfilePermittedIpResult> permittedIps,
 
             bool ping,
 
-            string responsePages,
+            bool responsePages,
 
             string snippet,
 

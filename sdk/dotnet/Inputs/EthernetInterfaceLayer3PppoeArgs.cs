@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? Authentication { get; set; }
 
         /// <summary>
-        /// Default route metric
+        /// Metric of the default route created
         /// </summary>
         [Input("defaultRouteMetric")]
         public Input<int>? DefaultRouteMetric { get; set; }
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         /// Passive
         /// </summary>
         [Input("passive")]
-        public Input<bool>? Passive { get; set; }
+        public Input<Inputs.EthernetInterfaceLayer3PppoePassiveArgs>? Passive { get; set; }
 
         [Input("password", required: true)]
         private Input<string>? _password;

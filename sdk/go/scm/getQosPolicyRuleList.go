@@ -12,6 +12,38 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			pagedRulesList, err := scm.GetQosPolicyRuleList(ctx, &scm.GetQosPolicyRuleListArgs{
+//				Folder:   pulumi.StringRef("All"),
+//				Offset:   pulumi.IntRef(10),
+//				Position: "pre",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedRuleListSummary", pulumi.Map{
+//				"countOfRulesFetched": pagedRulesList.Total,
+//				"firstRuleName":       pagedRulesList.Datas[0].Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetQosPolicyRuleList(ctx *pulumi.Context, args *GetQosPolicyRuleListArgs, opts ...pulumi.InvokeOption) (*GetQosPolicyRuleListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetQosPolicyRuleListResult
@@ -34,6 +66,8 @@ type GetQosPolicyRuleListArgs struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
@@ -54,6 +88,8 @@ type GetQosPolicyRuleListResult struct {
 	Name *string `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The relative position of the rule
+	Position string `pulumi:"position"`
 	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
@@ -82,6 +118,8 @@ type GetQosPolicyRuleListOutputArgs struct {
 	Name pulumi.StringPtrInput `pulumi:"name"`
 	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The relative position of the rule
+	Position pulumi.StringInput `pulumi:"position"`
 	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
@@ -138,6 +176,11 @@ func (o GetQosPolicyRuleListResultOutput) Name() pulumi.StringPtrOutput {
 // The offset of the first item to return.
 func (o GetQosPolicyRuleListResultOutput) Offset() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v GetQosPolicyRuleListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The relative position of the rule
+func (o GetQosPolicyRuleListResultOutput) Position() pulumi.StringOutput {
+	return o.ApplyT(func(v GetQosPolicyRuleListResult) string { return v.Position }).(pulumi.StringOutput)
 }
 
 // The snippet of the item.

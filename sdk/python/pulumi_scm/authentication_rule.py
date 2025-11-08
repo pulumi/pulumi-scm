@@ -39,10 +39,12 @@ class AuthenticationRuleArgs:
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  timeout: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a AuthenticationRule resource.
@@ -66,10 +68,12 @@ class AuthenticationRuleArgs:
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: Snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         """
         pulumi.set(__self__, "destinations", destinations)
@@ -107,6 +111,8 @@ class AuthenticationRuleArgs:
             pulumi.set(__self__, "negate_source", negate_source)
         if position is not None:
             pulumi.set(__self__, "position", position)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if source_hips is not None:
@@ -115,6 +121,8 @@ class AuthenticationRuleArgs:
             pulumi.set(__self__, "source_users", source_users)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if timeout is not None:
             pulumi.set(__self__, "timeout", timeout)
 
@@ -359,6 +367,18 @@ class AuthenticationRuleArgs:
         pulumi.set(self, "position", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
@@ -407,6 +427,18 @@ class AuthenticationRuleArgs:
         pulumi.set(self, "tags", value)
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
+    @_builtins.property
     @pulumi.getter
     def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
@@ -439,12 +471,14 @@ class _AuthenticationRuleState:
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
                  timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
@@ -467,12 +501,14 @@ class _AuthenticationRuleState:
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
@@ -510,6 +546,8 @@ class _AuthenticationRuleState:
             pulumi.set(__self__, "negate_source", negate_source)
         if position is not None:
             pulumi.set(__self__, "position", position)
+        if relative_position is not None:
+            pulumi.set(__self__, "relative_position", relative_position)
         if services is not None:
             pulumi.set(__self__, "services", services)
         if snippet is not None:
@@ -522,6 +560,8 @@ class _AuthenticationRuleState:
             pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
+        if target_rule is not None:
+            pulumi.set(__self__, "target_rule", target_rule)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
         if timeout is not None:
@@ -734,6 +774,18 @@ class _AuthenticationRuleState:
         pulumi.set(self, "position", value)
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @relative_position.setter
+    def relative_position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "relative_position", value)
+
+    @_builtins.property
     @pulumi.getter
     def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
@@ -806,6 +858,18 @@ class _AuthenticationRuleState:
         pulumi.set(self, "tags", value)
 
     @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
+
+    @target_rule.setter
+    def target_rule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "target_rule", value)
+
+    @_builtins.property
     @pulumi.getter
     def tfid(self) -> Optional[pulumi.Input[_builtins.str]]:
         return pulumi.get(self, "tfid")
@@ -862,17 +926,112 @@ class AuthenticationRule(pulumi.CustomResource):
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
         AuthenticationRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        app_access_tag = scm.Tag("app_access_tag",
+            folder="All",
+            name="app-access-test_25",
+            color="Blue")
+        # -----------------------------------------------------------------------------
+        # 2. ANCHOR RULE (Used for relative positioning by other rules)
+        # -----------------------------------------------------------------------------
+        anchor_rule = scm.AuthenticationRule("anchor_rule",
+            name="test_anchor_rule_251",
+            description="Base rule. Used to test 'before' and 'after' positioning",
+            position="pre",
+            folder="All",
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=[
+                "service-http",
+                "service-https",
+            ],
+            source_users=["any"],
+            timeout=1200,
+            negate_source=False,
+            negate_destination=False,
+            tags=[app_access_tag.name],
+            categories=["any"],
+            destination_hips=["any"],
+            log_authentication_timeout=False,
+            disabled=False)
+        # # -----------------------------------------------------------------------------
+        # # 3. ABSOLUTE POSITIONING Examples ("top" and "bottom")
+        # # -----------------------------------------------------------------------------
+        rule_top_of_list = scm.AuthenticationRule("rule_top_of_list",
+            name="test_top_rule_25",
+            description="Placed at the very top of the 'pre' rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="top",
+            destinations=["any"],
+            froms=["untrust"],
+            tos=["trust"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        rule_bottom_of_list = scm.AuthenticationRule("rule_bottom_of_list",
+            name="test_bottom_rule_25",
+            description="Placed at the very bottom of the 'pre' rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        # -----------------------------------------------------------------------------
+        # 4. RELATIVE POSITIONING Examples ("before" and "after")
+        # -----------------------------------------------------------------------------
+        rule_before_anchor = scm.AuthenticationRule("rule_before_anchor",
+            name="test_before_rule_25_updating",
+            description="Positioned immediately BEFORE the anchor_rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_rule.id,
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        rule_after_anchor = scm.AuthenticationRule("rule_after_anchor",
+            name="test_after_rule_25",
+            description="Positioned immediately AFTER the anchor_rule.",
+            folder="All",
+            position="pre",
+            relative_position="after",
+            target_rule=anchor_rule.id,
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -893,12 +1052,14 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
@@ -910,6 +1071,99 @@ class AuthenticationRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         AuthenticationRule resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        app_access_tag = scm.Tag("app_access_tag",
+            folder="All",
+            name="app-access-test_25",
+            color="Blue")
+        # -----------------------------------------------------------------------------
+        # 2. ANCHOR RULE (Used for relative positioning by other rules)
+        # -----------------------------------------------------------------------------
+        anchor_rule = scm.AuthenticationRule("anchor_rule",
+            name="test_anchor_rule_251",
+            description="Base rule. Used to test 'before' and 'after' positioning",
+            position="pre",
+            folder="All",
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=[
+                "service-http",
+                "service-https",
+            ],
+            source_users=["any"],
+            timeout=1200,
+            negate_source=False,
+            negate_destination=False,
+            tags=[app_access_tag.name],
+            categories=["any"],
+            destination_hips=["any"],
+            log_authentication_timeout=False,
+            disabled=False)
+        # # -----------------------------------------------------------------------------
+        # # 3. ABSOLUTE POSITIONING Examples ("top" and "bottom")
+        # # -----------------------------------------------------------------------------
+        rule_top_of_list = scm.AuthenticationRule("rule_top_of_list",
+            name="test_top_rule_25",
+            description="Placed at the very top of the 'pre' rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="top",
+            destinations=["any"],
+            froms=["untrust"],
+            tos=["trust"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        rule_bottom_of_list = scm.AuthenticationRule("rule_bottom_of_list",
+            name="test_bottom_rule_25",
+            description="Placed at the very bottom of the 'pre' rulebase.",
+            folder="All",
+            position="pre",
+            relative_position="bottom",
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        # -----------------------------------------------------------------------------
+        # 4. RELATIVE POSITIONING Examples ("before" and "after")
+        # -----------------------------------------------------------------------------
+        rule_before_anchor = scm.AuthenticationRule("rule_before_anchor",
+            name="test_before_rule_25_updating",
+            description="Positioned immediately BEFORE the anchor_rule.",
+            folder="All",
+            position="pre",
+            relative_position="before",
+            target_rule=anchor_rule.id,
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        rule_after_anchor = scm.AuthenticationRule("rule_after_anchor",
+            name="test_after_rule_25",
+            description="Positioned immediately AFTER the anchor_rule.",
+            folder="All",
+            position="pre",
+            relative_position="after",
+            target_rule=anchor_rule.id,
+            destinations=["any"],
+            froms=["any"],
+            tos=["any"],
+            sources=["any"],
+            services=["any"],
+            source_users=["any"])
+        ```
 
         :param str resource_name: The name of the resource.
         :param AuthenticationRuleArgs args: The arguments to use to populate this resource's properties.
@@ -943,12 +1197,14 @@ class AuthenticationRule(pulumi.CustomResource):
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
+                 relative_position: Optional[pulumi.Input[_builtins.str]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 target_rule: Optional[pulumi.Input[_builtins.str]] = None,
                  timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
@@ -981,6 +1237,7 @@ class AuthenticationRule(pulumi.CustomResource):
             __props__.__dict__["negate_destination"] = negate_destination
             __props__.__dict__["negate_source"] = negate_source
             __props__.__dict__["position"] = position
+            __props__.__dict__["relative_position"] = relative_position
             if services is None and not opts.urn:
                 raise TypeError("Missing required property 'services'")
             __props__.__dict__["services"] = services
@@ -991,6 +1248,7 @@ class AuthenticationRule(pulumi.CustomResource):
                 raise TypeError("Missing required property 'sources'")
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
+            __props__.__dict__["target_rule"] = target_rule
             __props__.__dict__["timeout"] = timeout
             if tos is None and not opts.urn:
                 raise TypeError("Missing required property 'tos'")
@@ -1023,12 +1281,14 @@ class AuthenticationRule(pulumi.CustomResource):
             negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
             negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
             position: Optional[pulumi.Input[_builtins.str]] = None,
+            relative_position: Optional[pulumi.Input[_builtins.str]] = None,
             services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            target_rule: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             timeout: Optional[pulumi.Input[_builtins.int]] = None,
             tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'AuthenticationRule':
@@ -1056,12 +1316,14 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
         :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.str] target_rule: The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
         :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
@@ -1086,12 +1348,14 @@ class AuthenticationRule(pulumi.CustomResource):
         __props__.__dict__["negate_destination"] = negate_destination
         __props__.__dict__["negate_source"] = negate_source
         __props__.__dict__["position"] = position
+        __props__.__dict__["relative_position"] = relative_position
         __props__.__dict__["services"] = services
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["source_hips"] = source_hips
         __props__.__dict__["source_users"] = source_users
         __props__.__dict__["sources"] = sources
         __props__.__dict__["tags"] = tags
+        __props__.__dict__["target_rule"] = target_rule
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["timeout"] = timeout
         __props__.__dict__["tos"] = tos
@@ -1234,6 +1498,14 @@ class AuthenticationRule(pulumi.CustomResource):
         return pulumi.get(self, "position")
 
     @_builtins.property
+    @pulumi.getter(name="relativePosition")
+    def relative_position(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
+        """
+        return pulumi.get(self, "relative_position")
+
+    @_builtins.property
     @pulumi.getter
     def services(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
@@ -1280,6 +1552,14 @@ class AuthenticationRule(pulumi.CustomResource):
         The authentication rule tags
         """
         return pulumi.get(self, "tags")
+
+    @_builtins.property
+    @pulumi.getter(name="targetRule")
+    def target_rule(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
+        """
+        return pulumi.get(self, "target_rule")
 
     @_builtins.property
     @pulumi.getter

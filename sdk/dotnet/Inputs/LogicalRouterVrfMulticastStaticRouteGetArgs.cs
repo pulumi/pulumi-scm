@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         /// Preference
         /// </summary>
         [Input("preference")]
-        public Input<double>? Preference { get; set; }
+        public Input<int>? Preference { get; set; }
 
         public LogicalRouterVrfMulticastStaticRouteGetArgs()
         {

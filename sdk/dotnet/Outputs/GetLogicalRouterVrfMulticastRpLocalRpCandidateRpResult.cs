@@ -20,7 +20,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Advertisement interval
         /// </summary>
-        public readonly double AdvertisementInterval;
+        public readonly int AdvertisementInterval;
         /// <summary>
         /// Group addresses
         /// </summary>
@@ -32,19 +32,19 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// Priority
         /// </summary>
-        public readonly double Priority;
+        public readonly int Priority;
 
         [OutputConstructor]
         private GetLogicalRouterVrfMulticastRpLocalRpCandidateRpResult(
             string address,
 
-            double advertisementInterval,
+            int advertisementInterval,
 
             ImmutableArray<string> groupAddresses,
 
             string @interface,
 
-            double priority)
+            int priority)
         {
             Address = address;
             AdvertisementInterval = advertisementInterval;

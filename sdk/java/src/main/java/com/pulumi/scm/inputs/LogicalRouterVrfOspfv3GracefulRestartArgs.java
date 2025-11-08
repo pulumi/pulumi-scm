@@ -6,7 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import java.lang.Boolean;
-import java.lang.Double;
+import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -36,13 +36,13 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
      * 
      */
     @Import(name="gracePeriod")
-    private @Nullable Output<Double> gracePeriod;
+    private @Nullable Output<Integer> gracePeriod;
 
     /**
      * @return Grace period
      * 
      */
-    public Optional<Output<Double>> gracePeriod() {
+    public Optional<Output<Integer>> gracePeriod() {
         return Optional.ofNullable(this.gracePeriod);
     }
 
@@ -66,13 +66,13 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
      * 
      */
     @Import(name="maxNeighborRestartTime")
-    private @Nullable Output<Double> maxNeighborRestartTime;
+    private @Nullable Output<Integer> maxNeighborRestartTime;
 
     /**
      * @return Max neighbor restart time
      * 
      */
-    public Optional<Output<Double>> maxNeighborRestartTime() {
+    public Optional<Output<Integer>> maxNeighborRestartTime() {
         return Optional.ofNullable(this.maxNeighborRestartTime);
     }
 
@@ -80,15 +80,15 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
      * Strict l s a checking
      * 
      */
-    @Import(name="strictLSAChecking")
-    private @Nullable Output<Boolean> strictLSAChecking;
+    @Import(name="strictLsaChecking")
+    private @Nullable Output<Boolean> strictLsaChecking;
 
     /**
      * @return Strict l s a checking
      * 
      */
-    public Optional<Output<Boolean>> strictLSAChecking() {
-        return Optional.ofNullable(this.strictLSAChecking);
+    public Optional<Output<Boolean>> strictLsaChecking() {
+        return Optional.ofNullable(this.strictLsaChecking);
     }
 
     private LogicalRouterVrfOspfv3GracefulRestartArgs() {}
@@ -98,7 +98,7 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
         this.gracePeriod = $.gracePeriod;
         this.helperEnable = $.helperEnable;
         this.maxNeighborRestartTime = $.maxNeighborRestartTime;
-        this.strictLSAChecking = $.strictLSAChecking;
+        this.strictLsaChecking = $.strictLsaChecking;
     }
 
     public static Builder builder() {
@@ -146,7 +146,7 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder gracePeriod(@Nullable Output<Double> gracePeriod) {
+        public Builder gracePeriod(@Nullable Output<Integer> gracePeriod) {
             $.gracePeriod = gracePeriod;
             return this;
         }
@@ -157,7 +157,7 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder gracePeriod(Double gracePeriod) {
+        public Builder gracePeriod(Integer gracePeriod) {
             return gracePeriod(Output.of(gracePeriod));
         }
 
@@ -188,7 +188,7 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder maxNeighborRestartTime(@Nullable Output<Double> maxNeighborRestartTime) {
+        public Builder maxNeighborRestartTime(@Nullable Output<Integer> maxNeighborRestartTime) {
             $.maxNeighborRestartTime = maxNeighborRestartTime;
             return this;
         }
@@ -199,29 +199,29 @@ public final class LogicalRouterVrfOspfv3GracefulRestartArgs extends com.pulumi.
          * @return builder
          * 
          */
-        public Builder maxNeighborRestartTime(Double maxNeighborRestartTime) {
+        public Builder maxNeighborRestartTime(Integer maxNeighborRestartTime) {
             return maxNeighborRestartTime(Output.of(maxNeighborRestartTime));
         }
 
         /**
-         * @param strictLSAChecking Strict l s a checking
+         * @param strictLsaChecking Strict l s a checking
          * 
          * @return builder
          * 
          */
-        public Builder strictLSAChecking(@Nullable Output<Boolean> strictLSAChecking) {
-            $.strictLSAChecking = strictLSAChecking;
+        public Builder strictLsaChecking(@Nullable Output<Boolean> strictLsaChecking) {
+            $.strictLsaChecking = strictLsaChecking;
             return this;
         }
 
         /**
-         * @param strictLSAChecking Strict l s a checking
+         * @param strictLsaChecking Strict l s a checking
          * 
          * @return builder
          * 
          */
-        public Builder strictLSAChecking(Boolean strictLSAChecking) {
-            return strictLSAChecking(Output.of(strictLSAChecking));
+        public Builder strictLsaChecking(Boolean strictLsaChecking) {
+            return strictLsaChecking(Output.of(strictLsaChecking));
         }
 
         public LogicalRouterVrfOspfv3GracefulRestartArgs build() {

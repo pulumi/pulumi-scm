@@ -175,7 +175,7 @@ def get_url_access_profile_list(device: Optional[_builtins.str] = None,
     # Data source to retrieve a list of URL Access Profile objects.
     #
     # Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
-    all_shared = scm.get_url_access_profile_list(folder="Shared")
+    all_shared = scm.get_url_access_profile_list(folder="All")
     pulumi.export("urlAccessProfilesListAllShared", all_shared.datas)
     ```
 
@@ -228,7 +228,7 @@ def get_url_access_profile_list_output(device: Optional[pulumi.Input[Optional[_b
     # Data source to retrieve a list of URL Access Profile objects.
     #
     # Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
-    all_shared = scm.get_url_access_profile_list(folder="Shared")
+    all_shared = scm.get_url_access_profile_list(folder="All")
     pulumi.export("urlAccessProfilesListAllShared", all_shared.datas)
     ```
 
