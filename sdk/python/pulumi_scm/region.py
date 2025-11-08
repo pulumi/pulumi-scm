@@ -29,12 +29,12 @@ class RegionArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Region resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: The Addresses param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['RegionGeoLocationArgs'] geo_location: The GeoLocation param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Address
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['RegionGeoLocationArgs'] geo_location: Geo location
+        :param pulumi.Input[_builtins.str] name: The name of the region
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if addresses is not None:
             pulumi.set(__self__, "addresses", addresses)
@@ -53,7 +53,7 @@ class RegionArgs:
     @pulumi.getter
     def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Addresses param.
+        Address
         """
         return pulumi.get(self, "addresses")
 
@@ -65,7 +65,7 @@ class RegionArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -77,7 +77,7 @@ class RegionArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -89,7 +89,7 @@ class RegionArgs:
     @pulumi.getter(name="geoLocation")
     def geo_location(self) -> Optional[pulumi.Input['RegionGeoLocationArgs']]:
         """
-        The GeoLocation param.
+        Geo location
         """
         return pulumi.get(self, "geo_location")
 
@@ -101,7 +101,7 @@ class RegionArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the region
         """
         return pulumi.get(self, "name")
 
@@ -113,7 +113,7 @@ class RegionArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -134,12 +134,12 @@ class _RegionState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Region resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: The Addresses param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['RegionGeoLocationArgs'] geo_location: The GeoLocation param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Address
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['RegionGeoLocationArgs'] geo_location: Geo location
+        :param pulumi.Input[_builtins.str] name: The name of the region
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if addresses is not None:
             pulumi.set(__self__, "addresses", addresses)
@@ -160,7 +160,7 @@ class _RegionState:
     @pulumi.getter
     def addresses(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Addresses param.
+        Address
         """
         return pulumi.get(self, "addresses")
 
@@ -172,7 +172,7 @@ class _RegionState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -184,7 +184,7 @@ class _RegionState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -196,7 +196,7 @@ class _RegionState:
     @pulumi.getter(name="geoLocation")
     def geo_location(self) -> Optional[pulumi.Input['RegionGeoLocationArgs']]:
         """
-        The GeoLocation param.
+        Geo location
         """
         return pulumi.get(self, "geo_location")
 
@@ -208,7 +208,7 @@ class _RegionState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the region
         """
         return pulumi.get(self, "name")
 
@@ -220,7 +220,7 @@ class _RegionState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -252,25 +252,16 @@ class Region(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Region("example")
-        ```
+        Region resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: The Addresses param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: The GeoLocation param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Address
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: Geo location
+        :param pulumi.Input[_builtins.str] name: The name of the region
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -279,16 +270,7 @@ class Region(pulumi.CustomResource):
                  args: Optional[RegionArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Region("example")
-        ```
+        Region resource
 
         :param str resource_name: The name of the resource.
         :param RegionArgs args: The arguments to use to populate this resource's properties.
@@ -351,12 +333,12 @@ class Region(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: The Addresses param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: The GeoLocation param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] addresses: Address
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Union['RegionGeoLocationArgs', 'RegionGeoLocationArgsDict']] geo_location: Geo location
+        :param pulumi.Input[_builtins.str] name: The name of the region
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -375,7 +357,7 @@ class Region(pulumi.CustomResource):
     @pulumi.getter
     def addresses(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Addresses param.
+        Address
         """
         return pulumi.get(self, "addresses")
 
@@ -383,7 +365,7 @@ class Region(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -391,7 +373,7 @@ class Region(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -399,7 +381,7 @@ class Region(pulumi.CustomResource):
     @pulumi.getter(name="geoLocation")
     def geo_location(self) -> pulumi.Output[Optional['outputs.RegionGeoLocation']]:
         """
-        The GeoLocation param.
+        Geo location
         """
         return pulumi.get(self, "geo_location")
 
@@ -407,7 +389,7 @@ class Region(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the region
         """
         return pulumi.get(self, "name")
 
@@ -415,7 +397,7 @@ class Region(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

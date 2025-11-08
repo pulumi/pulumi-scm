@@ -18,14 +18,14 @@ public final class HipObjectCertificateCriteriaArgs extends com.pulumi.resources
     public static final HipObjectCertificateCriteriaArgs Empty = new HipObjectCertificateCriteriaArgs();
 
     /**
-     * The CertificateAttributes param.
+     * Certificate attributes
      * 
      */
     @Import(name="certificateAttributes")
     private @Nullable Output<List<HipObjectCertificateCriteriaCertificateAttributeArgs>> certificateAttributes;
 
     /**
-     * @return The CertificateAttributes param.
+     * @return Certificate attributes
      * 
      */
     public Optional<Output<List<HipObjectCertificateCriteriaCertificateAttributeArgs>>> certificateAttributes() {
@@ -33,14 +33,14 @@ public final class HipObjectCertificateCriteriaArgs extends com.pulumi.resources
     }
 
     /**
-     * Profile for authenticating client certificates.
+     * Profile for authenticating client certificates
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return Profile for authenticating client certificates.
+     * @return Profile for authenticating client certificates
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -73,7 +73,7 @@ public final class HipObjectCertificateCriteriaArgs extends com.pulumi.resources
         }
 
         /**
-         * @param certificateAttributes The CertificateAttributes param.
+         * @param certificateAttributes Certificate attributes
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class HipObjectCertificateCriteriaArgs extends com.pulumi.resources
         }
 
         /**
-         * @param certificateAttributes The CertificateAttributes param.
+         * @param certificateAttributes Certificate attributes
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class HipObjectCertificateCriteriaArgs extends com.pulumi.resources
         }
 
         /**
-         * @param certificateAttributes The CertificateAttributes param.
+         * @param certificateAttributes Certificate attributes
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HipObjectCertificateCriteriaArgs extends com.pulumi.resources
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates.
+         * @param certificateProfile Profile for authenticating client certificates
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class HipObjectCertificateCriteriaArgs extends com.pulumi.resources
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates.
+         * @param certificateProfile Profile for authenticating client certificates
          * 
          * @return builder
          * 

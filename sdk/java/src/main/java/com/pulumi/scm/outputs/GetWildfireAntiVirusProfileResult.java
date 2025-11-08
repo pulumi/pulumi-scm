@@ -16,90 +16,126 @@ import java.util.Objects;
 @CustomType
 public final class GetWildfireAntiVirusProfileResult {
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The MlavExceptions param.
+     * @return Mlav exception
      * 
      */
     private List<GetWildfireAntiVirusProfileMlavException> mlavExceptions;
     /**
-     * @return The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The PacketCapture param.
+     * @return Packet capture
      * 
      */
     private Boolean packetCapture;
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     private List<GetWildfireAntiVirusProfileRule> rules;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
     /**
-     * @return The ThreatExceptions param.
+     * @return Threat exception
      * 
      */
     private List<GetWildfireAntiVirusProfileThreatException> threatExceptions;
 
     private GetWildfireAntiVirusProfileResult() {}
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The MlavExceptions param.
+     * @return Mlav exception
      * 
      */
     public List<GetWildfireAntiVirusProfileMlavException> mlavExceptions() {
         return this.mlavExceptions;
     }
     /**
-     * @return The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The PacketCapture param.
+     * @return Packet capture
      * 
      */
     public Boolean packetCapture() {
         return this.packetCapture;
     }
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     public List<GetWildfireAntiVirusProfileRule> rules() {
         return this.rules;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The ThreatExceptions param.
+     * @return Threat exception
      * 
      */
     public List<GetWildfireAntiVirusProfileThreatException> threatExceptions() {
@@ -116,22 +152,28 @@ public final class GetWildfireAntiVirusProfileResult {
     @CustomType.Builder
     public static final class Builder {
         private String description;
+        private String device;
+        private String folder;
         private String id;
         private List<GetWildfireAntiVirusProfileMlavException> mlavExceptions;
         private String name;
         private Boolean packetCapture;
         private List<GetWildfireAntiVirusProfileRule> rules;
+        private String snippet;
         private String tfid;
         private List<GetWildfireAntiVirusProfileThreatException> threatExceptions;
         public Builder() {}
         public Builder(GetWildfireAntiVirusProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.mlavExceptions = defaults.mlavExceptions;
     	      this.name = defaults.name;
     	      this.packetCapture = defaults.packetCapture;
     	      this.rules = defaults.rules;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.threatExceptions = defaults.threatExceptions;
         }
@@ -142,6 +184,22 @@ public final class GetWildfireAntiVirusProfileResult {
               throw new MissingRequiredPropertyException("GetWildfireAntiVirusProfileResult", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetWildfireAntiVirusProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetWildfireAntiVirusProfileResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -191,6 +249,14 @@ public final class GetWildfireAntiVirusProfileResult {
             return rules(List.of(rules));
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetWildfireAntiVirusProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetWildfireAntiVirusProfileResult", "tfid");
@@ -212,11 +278,14 @@ public final class GetWildfireAntiVirusProfileResult {
         public GetWildfireAntiVirusProfileResult build() {
             final var _resultValue = new GetWildfireAntiVirusProfileResult();
             _resultValue.description = description;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.mlavExceptions = mlavExceptions;
             _resultValue.name = name;
             _resultValue.packetCapture = packetCapture;
             _resultValue.rules = rules;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.threatExceptions = threatExceptions;
             return _resultValue;

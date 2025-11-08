@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetScheduleScheduleTypeRecurring {
     /**
-     * @return The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Daily
      * 
      */
-    private List<String> dailyLists;
+    private List<String> dailies;
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     private GetScheduleScheduleTypeRecurringWeekly weekly;
 
     private GetScheduleScheduleTypeRecurring() {}
     /**
-     * @return The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Daily
      * 
      */
-    public List<String> dailyLists() {
-        return this.dailyLists;
+    public List<String> dailies() {
+        return this.dailies;
     }
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     public GetScheduleScheduleTypeRecurringWeekly weekly() {
@@ -48,25 +48,25 @@ public final class GetScheduleScheduleTypeRecurring {
     }
     @CustomType.Builder
     public static final class Builder {
-        private List<String> dailyLists;
+        private List<String> dailies;
         private GetScheduleScheduleTypeRecurringWeekly weekly;
         public Builder() {}
         public Builder(GetScheduleScheduleTypeRecurring defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dailyLists = defaults.dailyLists;
+    	      this.dailies = defaults.dailies;
     	      this.weekly = defaults.weekly;
         }
 
         @CustomType.Setter
-        public Builder dailyLists(List<String> dailyLists) {
-            if (dailyLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurring", "dailyLists");
+        public Builder dailies(List<String> dailies) {
+            if (dailies == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurring", "dailies");
             }
-            this.dailyLists = dailyLists;
+            this.dailies = dailies;
             return this;
         }
-        public Builder dailyLists(String... dailyLists) {
-            return dailyLists(List.of(dailyLists));
+        public Builder dailies(String... dailies) {
+            return dailies(List.of(dailies));
         }
         @CustomType.Setter
         public Builder weekly(GetScheduleScheduleTypeRecurringWeekly weekly) {
@@ -78,7 +78,7 @@ public final class GetScheduleScheduleTypeRecurring {
         }
         public GetScheduleScheduleTypeRecurring build() {
             final var _resultValue = new GetScheduleScheduleTypeRecurring();
-            _resultValue.dailyLists = dailyLists;
+            _resultValue.dailies = dailies;
             _resultValue.weekly = weekly;
             return _resultValue;
         }

@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan {
     /**
-     * @return The Context param. String length must not exceed 127 characters.
+     * @return Context
      * 
      */
     private String context;
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     private List<GetApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifier> qualifiers;
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     private Integer value;
 
     private GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan() {}
     /**
-     * @return The Context param. String length must not exceed 127 characters.
+     * @return Context
      * 
      */
     public String context() {
         return this.context;
     }
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public List<GetApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifier> qualifiers() {
         return this.qualifiers;
     }
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     public Integer value() {

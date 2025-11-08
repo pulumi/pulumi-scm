@@ -16,14 +16,14 @@ public final class HipObjectCertificateArgs extends com.pulumi.resources.Resourc
     public static final HipObjectCertificateArgs Empty = new HipObjectCertificateArgs();
 
     /**
-     * The Criteria param.
+     * Criteria
      * 
      */
     @Import(name="criteria")
     private @Nullable Output<HipObjectCertificateCriteriaArgs> criteria;
 
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Optional<Output<HipObjectCertificateCriteriaArgs>> criteria() {
@@ -55,7 +55,7 @@ public final class HipObjectCertificateArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class HipObjectCertificateArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 

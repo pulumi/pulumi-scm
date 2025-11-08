@@ -12,96 +12,74 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// Application resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewApplication(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type Application struct {
 	pulumi.CustomResourceState
 
-	// The AbleToTransferFile param.
+	// Able to transfer file
 	AbleToTransferFile pulumi.BoolPtrOutput `pulumi:"ableToTransferFile"`
-	// The AlgDisableCapability param. String length must not exceed 127 characters.
+	// Alg disable capability
 	AlgDisableCapability pulumi.StringPtrOutput `pulumi:"algDisableCapability"`
-	// The Category param.
+	// Category
 	Category pulumi.StringOutput `pulumi:"category"`
-	// The ConsumeBigBandwidth param.
+	// Consume big bandwidth
 	ConsumeBigBandwidth pulumi.BoolPtrOutput `pulumi:"consumeBigBandwidth"`
-	// The DataIdent param.
+	// Data ident
 	DataIdent pulumi.BoolPtrOutput `pulumi:"dataIdent"`
-	// The Default param.
+	// Default
 	Default ApplicationDefaultPtrOutput `pulumi:"default"`
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The EvasiveBehavior param.
+	// Evasive behavior
 	EvasiveBehavior pulumi.BoolPtrOutput `pulumi:"evasiveBehavior"`
-	// The FileTypeIdent param.
+	// File type ident
 	FileTypeIdent pulumi.BoolPtrOutput `pulumi:"fileTypeIdent"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The HasKnownVulnerability param.
+	// Has known vulnerability
 	HasKnownVulnerability pulumi.BoolPtrOutput `pulumi:"hasKnownVulnerability"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the application
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The NoAppidCaching param.
+	// No appid caching
 	NoAppidCaching pulumi.BoolPtrOutput `pulumi:"noAppidCaching"`
-	// The ParentApp param. String length must not exceed 127 characters.
+	// Parent app
 	ParentApp pulumi.StringPtrOutput `pulumi:"parentApp"`
-	// The PervasiveUse param.
+	// Pervasive use
 	PervasiveUse pulumi.BoolPtrOutput `pulumi:"pervasiveUse"`
-	// The ProneToMisuse param.
+	// Prone to misuse
 	ProneToMisuse pulumi.BoolPtrOutput `pulumi:"proneToMisuse"`
-	// The Risk param. Value must be between 1 and 5.
-	Risk pulumi.IntOutput `pulumi:"risk"`
-	// The Signatures param.
+	// Risk
+	Risk pulumi.StringOutput `pulumi:"risk"`
+	// Signature
 	Signatures ApplicationSignatureArrayOutput `pulumi:"signatures"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The Subcategory param. String length must not exceed 63 characters.
-	Subcategory pulumi.StringOutput `pulumi:"subcategory"`
-	// timeout for half-close session in seconds. Value must be between 1 and 604800.
+	// Subcategory
+	Subcategory pulumi.StringPtrOutput `pulumi:"subcategory"`
+	// timeout for half-close session in seconds
 	TcpHalfClosedTimeout pulumi.IntPtrOutput `pulumi:"tcpHalfClosedTimeout"`
-	// timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+	// timeout for session in timeWait state in seconds
 	TcpTimeWaitTimeout pulumi.IntPtrOutput `pulumi:"tcpTimeWaitTimeout"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	TcpTimeout pulumi.IntPtrOutput `pulumi:"tcpTimeout"`
-	// The Technology param. String length must not exceed 63 characters.
-	Technology pulumi.StringOutput `pulumi:"technology"`
-	Tfid       pulumi.StringOutput `pulumi:"tfid"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// Technology
+	Technology pulumi.StringPtrOutput `pulumi:"technology"`
+	Tfid       pulumi.StringOutput    `pulumi:"tfid"`
+	// timeout in seconds
 	Timeout pulumi.IntPtrOutput `pulumi:"timeout"`
-	// The TunnelApplications param.
+	// Tunnel applications
 	TunnelApplications pulumi.BoolPtrOutput `pulumi:"tunnelApplications"`
-	// The TunnelOtherApplication param.
+	// Tunnel other application
 	TunnelOtherApplication pulumi.BoolPtrOutput `pulumi:"tunnelOtherApplication"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	UdpTimeout pulumi.IntPtrOutput `pulumi:"udpTimeout"`
-	// The UsedByMalware param.
+	// Used by malware
 	UsedByMalware pulumi.BoolPtrOutput `pulumi:"usedByMalware"`
-	// The VirusIdent param.
+	// Virus ident
 	VirusIdent pulumi.BoolPtrOutput `pulumi:"virusIdent"`
 }
 
@@ -117,12 +95,6 @@ func NewApplication(ctx *pulumi.Context,
 	}
 	if args.Risk == nil {
 		return nil, errors.New("invalid value for required argument 'Risk'")
-	}
-	if args.Subcategory == nil {
-		return nil, errors.New("invalid value for required argument 'Subcategory'")
-	}
-	if args.Technology == nil {
-		return nil, errors.New("invalid value for required argument 'Technology'")
 	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Application
@@ -147,134 +119,134 @@ func GetApplication(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Application resources.
 type applicationState struct {
-	// The AbleToTransferFile param.
+	// Able to transfer file
 	AbleToTransferFile *bool `pulumi:"ableToTransferFile"`
-	// The AlgDisableCapability param. String length must not exceed 127 characters.
+	// Alg disable capability
 	AlgDisableCapability *string `pulumi:"algDisableCapability"`
-	// The Category param.
+	// Category
 	Category *string `pulumi:"category"`
-	// The ConsumeBigBandwidth param.
+	// Consume big bandwidth
 	ConsumeBigBandwidth *bool `pulumi:"consumeBigBandwidth"`
-	// The DataIdent param.
+	// Data ident
 	DataIdent *bool `pulumi:"dataIdent"`
-	// The Default param.
+	// Default
 	Default *ApplicationDefault `pulumi:"default"`
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The EvasiveBehavior param.
+	// Evasive behavior
 	EvasiveBehavior *bool `pulumi:"evasiveBehavior"`
-	// The FileTypeIdent param.
+	// File type ident
 	FileTypeIdent *bool `pulumi:"fileTypeIdent"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The HasKnownVulnerability param.
+	// Has known vulnerability
 	HasKnownVulnerability *bool `pulumi:"hasKnownVulnerability"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the application
 	Name *string `pulumi:"name"`
-	// The NoAppidCaching param.
+	// No appid caching
 	NoAppidCaching *bool `pulumi:"noAppidCaching"`
-	// The ParentApp param. String length must not exceed 127 characters.
+	// Parent app
 	ParentApp *string `pulumi:"parentApp"`
-	// The PervasiveUse param.
+	// Pervasive use
 	PervasiveUse *bool `pulumi:"pervasiveUse"`
-	// The ProneToMisuse param.
+	// Prone to misuse
 	ProneToMisuse *bool `pulumi:"proneToMisuse"`
-	// The Risk param. Value must be between 1 and 5.
-	Risk *int `pulumi:"risk"`
-	// The Signatures param.
+	// Risk
+	Risk *string `pulumi:"risk"`
+	// Signature
 	Signatures []ApplicationSignature `pulumi:"signatures"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Subcategory param. String length must not exceed 63 characters.
+	// Subcategory
 	Subcategory *string `pulumi:"subcategory"`
-	// timeout for half-close session in seconds. Value must be between 1 and 604800.
+	// timeout for half-close session in seconds
 	TcpHalfClosedTimeout *int `pulumi:"tcpHalfClosedTimeout"`
-	// timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+	// timeout for session in timeWait state in seconds
 	TcpTimeWaitTimeout *int `pulumi:"tcpTimeWaitTimeout"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	TcpTimeout *int `pulumi:"tcpTimeout"`
-	// The Technology param. String length must not exceed 63 characters.
+	// Technology
 	Technology *string `pulumi:"technology"`
 	Tfid       *string `pulumi:"tfid"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	Timeout *int `pulumi:"timeout"`
-	// The TunnelApplications param.
+	// Tunnel applications
 	TunnelApplications *bool `pulumi:"tunnelApplications"`
-	// The TunnelOtherApplication param.
+	// Tunnel other application
 	TunnelOtherApplication *bool `pulumi:"tunnelOtherApplication"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	UdpTimeout *int `pulumi:"udpTimeout"`
-	// The UsedByMalware param.
+	// Used by malware
 	UsedByMalware *bool `pulumi:"usedByMalware"`
-	// The VirusIdent param.
+	// Virus ident
 	VirusIdent *bool `pulumi:"virusIdent"`
 }
 
 type ApplicationState struct {
-	// The AbleToTransferFile param.
+	// Able to transfer file
 	AbleToTransferFile pulumi.BoolPtrInput
-	// The AlgDisableCapability param. String length must not exceed 127 characters.
+	// Alg disable capability
 	AlgDisableCapability pulumi.StringPtrInput
-	// The Category param.
+	// Category
 	Category pulumi.StringPtrInput
-	// The ConsumeBigBandwidth param.
+	// Consume big bandwidth
 	ConsumeBigBandwidth pulumi.BoolPtrInput
-	// The DataIdent param.
+	// Data ident
 	DataIdent pulumi.BoolPtrInput
-	// The Default param.
+	// Default
 	Default ApplicationDefaultPtrInput
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The EvasiveBehavior param.
+	// Evasive behavior
 	EvasiveBehavior pulumi.BoolPtrInput
-	// The FileTypeIdent param.
+	// File type ident
 	FileTypeIdent pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The HasKnownVulnerability param.
+	// Has known vulnerability
 	HasKnownVulnerability pulumi.BoolPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the application
 	Name pulumi.StringPtrInput
-	// The NoAppidCaching param.
+	// No appid caching
 	NoAppidCaching pulumi.BoolPtrInput
-	// The ParentApp param. String length must not exceed 127 characters.
+	// Parent app
 	ParentApp pulumi.StringPtrInput
-	// The PervasiveUse param.
+	// Pervasive use
 	PervasiveUse pulumi.BoolPtrInput
-	// The ProneToMisuse param.
+	// Prone to misuse
 	ProneToMisuse pulumi.BoolPtrInput
-	// The Risk param. Value must be between 1 and 5.
-	Risk pulumi.IntPtrInput
-	// The Signatures param.
+	// Risk
+	Risk pulumi.StringPtrInput
+	// Signature
 	Signatures ApplicationSignatureArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Subcategory param. String length must not exceed 63 characters.
+	// Subcategory
 	Subcategory pulumi.StringPtrInput
-	// timeout for half-close session in seconds. Value must be between 1 and 604800.
+	// timeout for half-close session in seconds
 	TcpHalfClosedTimeout pulumi.IntPtrInput
-	// timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+	// timeout for session in timeWait state in seconds
 	TcpTimeWaitTimeout pulumi.IntPtrInput
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	TcpTimeout pulumi.IntPtrInput
-	// The Technology param. String length must not exceed 63 characters.
+	// Technology
 	Technology pulumi.StringPtrInput
 	Tfid       pulumi.StringPtrInput
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	Timeout pulumi.IntPtrInput
-	// The TunnelApplications param.
+	// Tunnel applications
 	TunnelApplications pulumi.BoolPtrInput
-	// The TunnelOtherApplication param.
+	// Tunnel other application
 	TunnelOtherApplication pulumi.BoolPtrInput
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	UdpTimeout pulumi.IntPtrInput
-	// The UsedByMalware param.
+	// Used by malware
 	UsedByMalware pulumi.BoolPtrInput
-	// The VirusIdent param.
+	// Virus ident
 	VirusIdent pulumi.BoolPtrInput
 }
 
@@ -283,133 +255,133 @@ func (ApplicationState) ElementType() reflect.Type {
 }
 
 type applicationArgs struct {
-	// The AbleToTransferFile param.
+	// Able to transfer file
 	AbleToTransferFile *bool `pulumi:"ableToTransferFile"`
-	// The AlgDisableCapability param. String length must not exceed 127 characters.
+	// Alg disable capability
 	AlgDisableCapability *string `pulumi:"algDisableCapability"`
-	// The Category param.
+	// Category
 	Category string `pulumi:"category"`
-	// The ConsumeBigBandwidth param.
+	// Consume big bandwidth
 	ConsumeBigBandwidth *bool `pulumi:"consumeBigBandwidth"`
-	// The DataIdent param.
+	// Data ident
 	DataIdent *bool `pulumi:"dataIdent"`
-	// The Default param.
+	// Default
 	Default *ApplicationDefault `pulumi:"default"`
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The EvasiveBehavior param.
+	// Evasive behavior
 	EvasiveBehavior *bool `pulumi:"evasiveBehavior"`
-	// The FileTypeIdent param.
+	// File type ident
 	FileTypeIdent *bool `pulumi:"fileTypeIdent"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The HasKnownVulnerability param.
+	// Has known vulnerability
 	HasKnownVulnerability *bool `pulumi:"hasKnownVulnerability"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the application
 	Name *string `pulumi:"name"`
-	// The NoAppidCaching param.
+	// No appid caching
 	NoAppidCaching *bool `pulumi:"noAppidCaching"`
-	// The ParentApp param. String length must not exceed 127 characters.
+	// Parent app
 	ParentApp *string `pulumi:"parentApp"`
-	// The PervasiveUse param.
+	// Pervasive use
 	PervasiveUse *bool `pulumi:"pervasiveUse"`
-	// The ProneToMisuse param.
+	// Prone to misuse
 	ProneToMisuse *bool `pulumi:"proneToMisuse"`
-	// The Risk param. Value must be between 1 and 5.
-	Risk int `pulumi:"risk"`
-	// The Signatures param.
+	// Risk
+	Risk string `pulumi:"risk"`
+	// Signature
 	Signatures []ApplicationSignature `pulumi:"signatures"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Subcategory param. String length must not exceed 63 characters.
-	Subcategory string `pulumi:"subcategory"`
-	// timeout for half-close session in seconds. Value must be between 1 and 604800.
+	// Subcategory
+	Subcategory *string `pulumi:"subcategory"`
+	// timeout for half-close session in seconds
 	TcpHalfClosedTimeout *int `pulumi:"tcpHalfClosedTimeout"`
-	// timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+	// timeout for session in timeWait state in seconds
 	TcpTimeWaitTimeout *int `pulumi:"tcpTimeWaitTimeout"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	TcpTimeout *int `pulumi:"tcpTimeout"`
-	// The Technology param. String length must not exceed 63 characters.
-	Technology string `pulumi:"technology"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// Technology
+	Technology *string `pulumi:"technology"`
+	// timeout in seconds
 	Timeout *int `pulumi:"timeout"`
-	// The TunnelApplications param.
+	// Tunnel applications
 	TunnelApplications *bool `pulumi:"tunnelApplications"`
-	// The TunnelOtherApplication param.
+	// Tunnel other application
 	TunnelOtherApplication *bool `pulumi:"tunnelOtherApplication"`
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	UdpTimeout *int `pulumi:"udpTimeout"`
-	// The UsedByMalware param.
+	// Used by malware
 	UsedByMalware *bool `pulumi:"usedByMalware"`
-	// The VirusIdent param.
+	// Virus ident
 	VirusIdent *bool `pulumi:"virusIdent"`
 }
 
 // The set of arguments for constructing a Application resource.
 type ApplicationArgs struct {
-	// The AbleToTransferFile param.
+	// Able to transfer file
 	AbleToTransferFile pulumi.BoolPtrInput
-	// The AlgDisableCapability param. String length must not exceed 127 characters.
+	// Alg disable capability
 	AlgDisableCapability pulumi.StringPtrInput
-	// The Category param.
+	// Category
 	Category pulumi.StringInput
-	// The ConsumeBigBandwidth param.
+	// Consume big bandwidth
 	ConsumeBigBandwidth pulumi.BoolPtrInput
-	// The DataIdent param.
+	// Data ident
 	DataIdent pulumi.BoolPtrInput
-	// The Default param.
+	// Default
 	Default ApplicationDefaultPtrInput
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The EvasiveBehavior param.
+	// Evasive behavior
 	EvasiveBehavior pulumi.BoolPtrInput
-	// The FileTypeIdent param.
+	// File type ident
 	FileTypeIdent pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The HasKnownVulnerability param.
+	// Has known vulnerability
 	HasKnownVulnerability pulumi.BoolPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the application
 	Name pulumi.StringPtrInput
-	// The NoAppidCaching param.
+	// No appid caching
 	NoAppidCaching pulumi.BoolPtrInput
-	// The ParentApp param. String length must not exceed 127 characters.
+	// Parent app
 	ParentApp pulumi.StringPtrInput
-	// The PervasiveUse param.
+	// Pervasive use
 	PervasiveUse pulumi.BoolPtrInput
-	// The ProneToMisuse param.
+	// Prone to misuse
 	ProneToMisuse pulumi.BoolPtrInput
-	// The Risk param. Value must be between 1 and 5.
-	Risk pulumi.IntInput
-	// The Signatures param.
+	// Risk
+	Risk pulumi.StringInput
+	// Signature
 	Signatures ApplicationSignatureArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Subcategory param. String length must not exceed 63 characters.
-	Subcategory pulumi.StringInput
-	// timeout for half-close session in seconds. Value must be between 1 and 604800.
+	// Subcategory
+	Subcategory pulumi.StringPtrInput
+	// timeout for half-close session in seconds
 	TcpHalfClosedTimeout pulumi.IntPtrInput
-	// timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+	// timeout for session in timeWait state in seconds
 	TcpTimeWaitTimeout pulumi.IntPtrInput
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	TcpTimeout pulumi.IntPtrInput
-	// The Technology param. String length must not exceed 63 characters.
-	Technology pulumi.StringInput
-	// timeout in seconds. Value must be between 0 and 604800.
+	// Technology
+	Technology pulumi.StringPtrInput
+	// timeout in seconds
 	Timeout pulumi.IntPtrInput
-	// The TunnelApplications param.
+	// Tunnel applications
 	TunnelApplications pulumi.BoolPtrInput
-	// The TunnelOtherApplication param.
+	// Tunnel other application
 	TunnelOtherApplication pulumi.BoolPtrInput
-	// timeout in seconds. Value must be between 0 and 604800.
+	// timeout in seconds
 	UdpTimeout pulumi.IntPtrInput
-	// The UsedByMalware param.
+	// Used by malware
 	UsedByMalware pulumi.BoolPtrInput
-	// The VirusIdent param.
+	// Virus ident
 	VirusIdent pulumi.BoolPtrInput
 }
 
@@ -500,161 +472,161 @@ func (o ApplicationOutput) ToApplicationOutputWithContext(ctx context.Context) A
 	return o
 }
 
-// The AbleToTransferFile param.
+// Able to transfer file
 func (o ApplicationOutput) AbleToTransferFile() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.AbleToTransferFile }).(pulumi.BoolPtrOutput)
 }
 
-// The AlgDisableCapability param. String length must not exceed 127 characters.
+// Alg disable capability
 func (o ApplicationOutput) AlgDisableCapability() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.AlgDisableCapability }).(pulumi.StringPtrOutput)
 }
 
-// The Category param.
+// Category
 func (o ApplicationOutput) Category() pulumi.StringOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringOutput { return v.Category }).(pulumi.StringOutput)
 }
 
-// The ConsumeBigBandwidth param.
+// Consume big bandwidth
 func (o ApplicationOutput) ConsumeBigBandwidth() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.ConsumeBigBandwidth }).(pulumi.BoolPtrOutput)
 }
 
-// The DataIdent param.
+// Data ident
 func (o ApplicationOutput) DataIdent() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.DataIdent }).(pulumi.BoolPtrOutput)
 }
 
-// The Default param.
+// Default
 func (o ApplicationOutput) Default() ApplicationDefaultPtrOutput {
 	return o.ApplyT(func(v *Application) ApplicationDefaultPtrOutput { return v.Default }).(ApplicationDefaultPtrOutput)
 }
 
-// The Description param. String length must not exceed 1023 characters.
+// Description
 func (o ApplicationOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o ApplicationOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The EvasiveBehavior param.
+// Evasive behavior
 func (o ApplicationOutput) EvasiveBehavior() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.EvasiveBehavior }).(pulumi.BoolPtrOutput)
 }
 
-// The FileTypeIdent param.
+// File type ident
 func (o ApplicationOutput) FileTypeIdent() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.FileTypeIdent }).(pulumi.BoolPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o ApplicationOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The HasKnownVulnerability param.
+// Has known vulnerability
 func (o ApplicationOutput) HasKnownVulnerability() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.HasKnownVulnerability }).(pulumi.BoolPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// The name of the application
 func (o ApplicationOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NoAppidCaching param.
+// No appid caching
 func (o ApplicationOutput) NoAppidCaching() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.NoAppidCaching }).(pulumi.BoolPtrOutput)
 }
 
-// The ParentApp param. String length must not exceed 127 characters.
+// Parent app
 func (o ApplicationOutput) ParentApp() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.ParentApp }).(pulumi.StringPtrOutput)
 }
 
-// The PervasiveUse param.
+// Pervasive use
 func (o ApplicationOutput) PervasiveUse() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.PervasiveUse }).(pulumi.BoolPtrOutput)
 }
 
-// The ProneToMisuse param.
+// Prone to misuse
 func (o ApplicationOutput) ProneToMisuse() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.ProneToMisuse }).(pulumi.BoolPtrOutput)
 }
 
-// The Risk param. Value must be between 1 and 5.
-func (o ApplicationOutput) Risk() pulumi.IntOutput {
-	return o.ApplyT(func(v *Application) pulumi.IntOutput { return v.Risk }).(pulumi.IntOutput)
+// Risk
+func (o ApplicationOutput) Risk() pulumi.StringOutput {
+	return o.ApplyT(func(v *Application) pulumi.StringOutput { return v.Risk }).(pulumi.StringOutput)
 }
 
-// The Signatures param.
+// Signature
 func (o ApplicationOutput) Signatures() ApplicationSignatureArrayOutput {
 	return o.ApplyT(func(v *Application) ApplicationSignatureArrayOutput { return v.Signatures }).(ApplicationSignatureArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o ApplicationOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The Subcategory param. String length must not exceed 63 characters.
-func (o ApplicationOutput) Subcategory() pulumi.StringOutput {
-	return o.ApplyT(func(v *Application) pulumi.StringOutput { return v.Subcategory }).(pulumi.StringOutput)
+// Subcategory
+func (o ApplicationOutput) Subcategory() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Subcategory }).(pulumi.StringPtrOutput)
 }
 
-// timeout for half-close session in seconds. Value must be between 1 and 604800.
+// timeout for half-close session in seconds
 func (o ApplicationOutput) TcpHalfClosedTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.IntPtrOutput { return v.TcpHalfClosedTimeout }).(pulumi.IntPtrOutput)
 }
 
-// timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+// timeout for session in timeWait state in seconds
 func (o ApplicationOutput) TcpTimeWaitTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.IntPtrOutput { return v.TcpTimeWaitTimeout }).(pulumi.IntPtrOutput)
 }
 
-// timeout in seconds. Value must be between 0 and 604800.
+// timeout in seconds
 func (o ApplicationOutput) TcpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.IntPtrOutput { return v.TcpTimeout }).(pulumi.IntPtrOutput)
 }
 
-// The Technology param. String length must not exceed 63 characters.
-func (o ApplicationOutput) Technology() pulumi.StringOutput {
-	return o.ApplyT(func(v *Application) pulumi.StringOutput { return v.Technology }).(pulumi.StringOutput)
+// Technology
+func (o ApplicationOutput) Technology() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Technology }).(pulumi.StringPtrOutput)
 }
 
 func (o ApplicationOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// timeout in seconds. Value must be between 0 and 604800.
+// timeout in seconds
 func (o ApplicationOutput) Timeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.IntPtrOutput { return v.Timeout }).(pulumi.IntPtrOutput)
 }
 
-// The TunnelApplications param.
+// Tunnel applications
 func (o ApplicationOutput) TunnelApplications() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.TunnelApplications }).(pulumi.BoolPtrOutput)
 }
 
-// The TunnelOtherApplication param.
+// Tunnel other application
 func (o ApplicationOutput) TunnelOtherApplication() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.TunnelOtherApplication }).(pulumi.BoolPtrOutput)
 }
 
-// timeout in seconds. Value must be between 0 and 604800.
+// timeout in seconds
 func (o ApplicationOutput) UdpTimeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.IntPtrOutput { return v.UdpTimeout }).(pulumi.IntPtrOutput)
 }
 
-// The UsedByMalware param.
+// Used by malware
 func (o ApplicationOutput) UsedByMalware() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.UsedByMalware }).(pulumi.BoolPtrOutput)
 }
 
-// The VirusIdent param.
+// Virus ident
 func (o ApplicationOutput) VirusIdent() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.BoolPtrOutput { return v.VirusIdent }).(pulumi.BoolPtrOutput)
 }

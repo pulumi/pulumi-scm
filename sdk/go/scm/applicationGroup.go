@@ -12,7 +12,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ApplicationGroup resource
 //
 // ## Example Usage
 //
@@ -28,7 +28,40 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewApplicationGroup(ctx, "example", nil)
+//			// First, create some applications that will be used in the application group.
+//			scmAgApp1, err := scm.NewApplication(ctx, "scm_ag_app_1", &scm.ApplicationArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_ag_app_1"),
+//				Description: pulumi.String("First test application"),
+//				Category:    pulumi.String("business-systems"),
+//				Subcategory: pulumi.String("database"),
+//				Technology:  pulumi.String("client-server"),
+//				Risk:        pulumi.String("3"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmAgApp2, err := scm.NewApplication(ctx, "scm_ag_app_2", &scm.ApplicationArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_ag_app_2"),
+//				Description: pulumi.String("Second test application"),
+//				Category:    pulumi.String("business-systems"),
+//				Subcategory: pulumi.String("database"),
+//				Technology:  pulumi.String("client-server"),
+//				Risk:        pulumi.String("4"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Create the application group that references the applications above.
+//			_, err = scm.NewApplicationGroup(ctx, "scm_app_group_1", &scm.ApplicationGroupArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_app_group_1"),
+//				Members: pulumi.StringArray{
+//					scmAgApp1.Name,
+//					scmAgApp2.Name,
+//				},
+//			})
 //			if err != nil {
 //				return err
 //			}
@@ -40,15 +73,15 @@ import (
 type ApplicationGroup struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members pulumi.StringArrayOutput `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -86,29 +119,29 @@ func GetApplicationGroup(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ApplicationGroup resources.
 type applicationGroupState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members []string `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type ApplicationGroupState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members pulumi.StringArrayInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -118,29 +151,29 @@ func (ApplicationGroupState) ElementType() reflect.Type {
 }
 
 type applicationGroupArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members []string `pulumi:"members"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a ApplicationGroup resource.
 type ApplicationGroupArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Members
 	Members pulumi.StringArrayInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -231,27 +264,27 @@ func (o ApplicationGroupOutput) ToApplicationGroupOutputWithContext(ctx context.
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o ApplicationGroupOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o ApplicationGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+// Members
 func (o ApplicationGroupOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringArrayOutput { return v.Members }).(pulumi.StringArrayOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string [ 0-9a-zA-Z._-]
 func (o ApplicationGroupOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o ApplicationGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ApplicationGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -13,50 +13,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RadiusServerProfileServer {
     /**
-     * @return The IpAddress param.
+     * @return The IP address of the RADIUS server
      * 
      */
     private @Nullable String ipAddress;
     /**
-     * @return The Name param.
+     * @return The name of the RADIUS server
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The RADIUS server port
      * 
      */
     private @Nullable Integer port;
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The RADIUS secret
      * 
      */
     private @Nullable String secret;
 
     private RadiusServerProfileServer() {}
     /**
-     * @return The IpAddress param.
+     * @return The IP address of the RADIUS server
      * 
      */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
     /**
-     * @return The Name param.
+     * @return The name of the RADIUS server
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The RADIUS server port
      * 
      */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The RADIUS secret
      * 
      */
     public Optional<String> secret() {

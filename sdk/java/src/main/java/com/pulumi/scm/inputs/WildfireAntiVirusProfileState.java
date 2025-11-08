@@ -21,14 +21,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     public static final WildfireAntiVirusProfileState Empty = new WildfireAntiVirusProfileState();
 
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -36,14 +36,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -51,14 +51,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -66,14 +66,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The MlavExceptions param.
+     * Mlav exception
      * 
      */
     @Import(name="mlavExceptions")
     private @Nullable Output<List<WildfireAntiVirusProfileMlavExceptionArgs>> mlavExceptions;
 
     /**
-     * @return The MlavExceptions param.
+     * @return Mlav exception
      * 
      */
     public Optional<Output<List<WildfireAntiVirusProfileMlavExceptionArgs>>> mlavExceptions() {
@@ -81,14 +81,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -96,14 +96,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The PacketCapture param.
+     * Packet capture
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<Boolean> packetCapture;
 
     /**
-     * @return The PacketCapture param.
+     * @return Packet capture
      * 
      */
     public Optional<Output<Boolean>> packetCapture() {
@@ -111,14 +111,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The Rules param.
+     * Rules
      * 
      */
     @Import(name="rules")
     private @Nullable Output<List<WildfireAntiVirusProfileRuleArgs>> rules;
 
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     public Optional<Output<List<WildfireAntiVirusProfileRuleArgs>>> rules() {
@@ -126,14 +126,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -148,14 +148,14 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
     }
 
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      * 
      */
     @Import(name="threatExceptions")
     private @Nullable Output<List<WildfireAntiVirusProfileThreatExceptionArgs>> threatExceptions;
 
     /**
-     * @return The ThreatExceptions param.
+     * @return Threat exception
      * 
      */
     public Optional<Output<List<WildfireAntiVirusProfileThreatExceptionArgs>>> threatExceptions() {
@@ -196,7 +196,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -207,7 +207,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -238,7 +238,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -249,7 +249,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -259,7 +259,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param mlavExceptions The MlavExceptions param.
+         * @param mlavExceptions Mlav exception
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param mlavExceptions The MlavExceptions param.
+         * @param mlavExceptions Mlav exception
          * 
          * @return builder
          * 
@@ -280,7 +280,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param mlavExceptions The MlavExceptions param.
+         * @param mlavExceptions Mlav exception
          * 
          * @return builder
          * 
@@ -290,7 +290,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -301,7 +301,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -311,7 +311,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param packetCapture The PacketCapture param.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 
@@ -322,7 +322,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param packetCapture The PacketCapture param.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 
@@ -332,7 +332,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules Rules
          * 
          * @return builder
          * 
@@ -343,7 +343,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules Rules
          * 
          * @return builder
          * 
@@ -353,7 +353,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules Rules
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -374,7 +374,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -393,7 +393,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param threatExceptions The ThreatExceptions param.
+         * @param threatExceptions Threat exception
          * 
          * @return builder
          * 
@@ -404,7 +404,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param threatExceptions The ThreatExceptions param.
+         * @param threatExceptions Threat exception
          * 
          * @return builder
          * 
@@ -414,7 +414,7 @@ public final class WildfireAntiVirusProfileState extends com.pulumi.resources.Re
         }
 
         /**
-         * @param threatExceptions The ThreatExceptions param.
+         * @param threatExceptions Threat exception
          * 
          * @return builder
          * 

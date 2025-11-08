@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationSignatureAndConditionOrConditionOperatorEqualToResult
     {
         /// <summary>
-        /// The Context param.
+        /// Context
         /// </summary>
         public readonly string Context;
         /// <summary>
-        /// 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+        /// 4-byte hex value
         /// </summary>
         public readonly string Mask;
         /// <summary>
-        /// The Position param. String length must not exceed 127 characters.
+        /// Position
         /// </summary>
         public readonly string Position;
         /// <summary>
-        /// The Value param. String length must not exceed 10 characters.
+        /// Value
         /// </summary>
         public readonly string Value;
 

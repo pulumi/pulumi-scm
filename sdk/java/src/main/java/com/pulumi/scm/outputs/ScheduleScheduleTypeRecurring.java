@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduleScheduleTypeRecurring {
     /**
-     * @return The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+     * @return Daily
      * 
      */
-    private @Nullable List<String> dailyLists;
+    private @Nullable List<String> dailies;
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+     * @return Weekly
      * 
      */
     private @Nullable ScheduleScheduleTypeRecurringWeekly weekly;
 
     private ScheduleScheduleTypeRecurring() {}
     /**
-     * @return The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+     * @return Daily
      * 
      */
-    public List<String> dailyLists() {
-        return this.dailyLists == null ? List.of() : this.dailyLists;
+    public List<String> dailies() {
+        return this.dailies == null ? List.of() : this.dailies;
     }
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+     * @return Weekly
      * 
      */
     public Optional<ScheduleScheduleTypeRecurringWeekly> weekly() {
@@ -49,23 +49,23 @@ public final class ScheduleScheduleTypeRecurring {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable List<String> dailyLists;
+        private @Nullable List<String> dailies;
         private @Nullable ScheduleScheduleTypeRecurringWeekly weekly;
         public Builder() {}
         public Builder(ScheduleScheduleTypeRecurring defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dailyLists = defaults.dailyLists;
+    	      this.dailies = defaults.dailies;
     	      this.weekly = defaults.weekly;
         }
 
         @CustomType.Setter
-        public Builder dailyLists(@Nullable List<String> dailyLists) {
+        public Builder dailies(@Nullable List<String> dailies) {
 
-            this.dailyLists = dailyLists;
+            this.dailies = dailies;
             return this;
         }
-        public Builder dailyLists(String... dailyLists) {
-            return dailyLists(List.of(dailyLists));
+        public Builder dailies(String... dailies) {
+            return dailies(List.of(dailies));
         }
         @CustomType.Setter
         public Builder weekly(@Nullable ScheduleScheduleTypeRecurringWeekly weekly) {
@@ -75,7 +75,7 @@ public final class ScheduleScheduleTypeRecurring {
         }
         public ScheduleScheduleTypeRecurring build() {
             final var _resultValue = new ScheduleScheduleTypeRecurring();
-            _resultValue.dailyLists = dailyLists;
+            _resultValue.dailies = dailies;
             _resultValue.weekly = weekly;
             return _resultValue;
         }

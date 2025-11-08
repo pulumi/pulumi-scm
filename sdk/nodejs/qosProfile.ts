@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.QosProfile("example", {});
- * ```
+ * QosProfile resource
  */
 export class QosProfile extends pulumi.CustomResource {
     /**
@@ -47,27 +38,27 @@ export class QosProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The AggregateBandwidth param.
+     * Aggregate bandwidth
      */
     declare public readonly aggregateBandwidth: pulumi.Output<outputs.QosProfileAggregateBandwidth | undefined>;
     /**
-     * The ClassBandwidthType param.
+     * Class bandwidth type
      */
     declare public readonly classBandwidthType: pulumi.Output<outputs.QosProfileClassBandwidthType | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -112,27 +103,27 @@ export class QosProfile extends pulumi.CustomResource {
  */
 export interface QosProfileState {
     /**
-     * The AggregateBandwidth param.
+     * Aggregate bandwidth
      */
     aggregateBandwidth?: pulumi.Input<inputs.QosProfileAggregateBandwidth>;
     /**
-     * The ClassBandwidthType param.
+     * Class bandwidth type
      */
     classBandwidthType?: pulumi.Input<inputs.QosProfileClassBandwidthType>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -143,27 +134,27 @@ export interface QosProfileState {
  */
 export interface QosProfileArgs {
     /**
-     * The AggregateBandwidth param.
+     * Aggregate bandwidth
      */
     aggregateBandwidth?: pulumi.Input<inputs.QosProfileAggregateBandwidth>;
     /**
-     * The ClassBandwidthType param.
+     * Class bandwidth type
      */
     classBandwidthType?: pulumi.Input<inputs.QosProfileClassBandwidthType>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

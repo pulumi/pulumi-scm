@@ -27,10 +27,13 @@ class GetApplicationFilterResult:
     """
     A collection of values returned by getApplicationFilter.
     """
-    def __init__(__self__, categories=None, evasive=None, excessive_bandwidth_use=None, excludes=None, has_known_vulnerabilities=None, id=None, is_saas=None, name=None, new_appid=None, pervasive=None, prone_to_misuse=None, risks=None, saas_certifications=None, saas_risks=None, subcategories=None, tagging=None, technologies=None, tfid=None, transfers_files=None, tunnels_other_apps=None, used_by_malware=None):
+    def __init__(__self__, categories=None, device=None, evasive=None, excessive_bandwidth_use=None, excludes=None, folder=None, has_known_vulnerabilities=None, id=None, is_saas=None, name=None, new_appid=None, pervasive=None, prone_to_misuse=None, risks=None, saas_certifications=None, saas_risks=None, snippet=None, subcategories=None, tagging=None, technologies=None, tfid=None, transfers_files=None, tunnels_other_apps=None, used_by_malware=None):
         if categories and not isinstance(categories, list):
             raise TypeError("Expected argument 'categories' to be a list")
         pulumi.set(__self__, "categories", categories)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if evasive and not isinstance(evasive, bool):
             raise TypeError("Expected argument 'evasive' to be a bool")
         pulumi.set(__self__, "evasive", evasive)
@@ -40,6 +43,9 @@ class GetApplicationFilterResult:
         if excludes and not isinstance(excludes, list):
             raise TypeError("Expected argument 'excludes' to be a list")
         pulumi.set(__self__, "excludes", excludes)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if has_known_vulnerabilities and not isinstance(has_known_vulnerabilities, bool):
             raise TypeError("Expected argument 'has_known_vulnerabilities' to be a bool")
         pulumi.set(__self__, "has_known_vulnerabilities", has_known_vulnerabilities)
@@ -70,6 +76,9 @@ class GetApplicationFilterResult:
         if saas_risks and not isinstance(saas_risks, list):
             raise TypeError("Expected argument 'saas_risks' to be a list")
         pulumi.set(__self__, "saas_risks", saas_risks)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if subcategories and not isinstance(subcategories, list):
             raise TypeError("Expected argument 'subcategories' to be a list")
         pulumi.set(__self__, "subcategories", subcategories)
@@ -96,15 +105,23 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def categories(self) -> Sequence[_builtins.str]:
         """
-        The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Category
         """
         return pulumi.get(self, "categories")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def evasive(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "evasive")
 
@@ -112,7 +129,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="excessiveBandwidthUse")
     def excessive_bandwidth_use(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "excessive_bandwidth_use")
 
@@ -120,15 +137,23 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def excludes(self) -> Sequence[_builtins.str]:
         """
-        The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Exclude
         """
         return pulumi.get(self, "excludes")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerabilities")
     def has_known_vulnerabilities(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "has_known_vulnerabilities")
 
@@ -136,7 +161,7 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -144,7 +169,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="isSaas")
     def is_saas(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "is_saas")
 
@@ -152,7 +177,7 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -160,7 +185,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="newAppid")
     def new_appid(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "new_appid")
 
@@ -168,7 +193,7 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def pervasive(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "pervasive")
 
@@ -176,7 +201,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "prone_to_misuse")
 
@@ -184,7 +209,7 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def risks(self) -> Sequence[_builtins.int]:
         """
-        The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risks")
 
@@ -192,7 +217,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="saasCertifications")
     def saas_certifications(self) -> Sequence[_builtins.str]:
         """
-        The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas certifications
         """
         return pulumi.get(self, "saas_certifications")
 
@@ -200,15 +225,23 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="saasRisks")
     def saas_risks(self) -> Sequence[_builtins.str]:
         """
-        The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        Saas risk
         """
         return pulumi.get(self, "saas_risks")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def subcategories(self) -> Sequence[_builtins.str]:
         """
-        The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Subcategory
         """
         return pulumi.get(self, "subcategories")
 
@@ -216,7 +249,7 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def tagging(self) -> 'outputs.GetApplicationFilterTaggingResult':
         """
-        The Tagging param.
+        Tagging
         """
         return pulumi.get(self, "tagging")
 
@@ -224,7 +257,7 @@ class GetApplicationFilterResult:
     @pulumi.getter
     def technologies(self) -> Sequence[_builtins.str]:
         """
-        The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        Technology
         """
         return pulumi.get(self, "technologies")
 
@@ -237,7 +270,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="transfersFiles")
     def transfers_files(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "transfers_files")
 
@@ -245,7 +278,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="tunnelsOtherApps")
     def tunnels_other_apps(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "tunnels_other_apps")
 
@@ -253,7 +286,7 @@ class GetApplicationFilterResult:
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> _builtins.bool:
         """
-        only True is a valid value.
+        only True is a valid value
         """
         return pulumi.get(self, "used_by_malware")
 
@@ -265,9 +298,11 @@ class AwaitableGetApplicationFilterResult(GetApplicationFilterResult):
             yield self
         return GetApplicationFilterResult(
             categories=self.categories,
+            device=self.device,
             evasive=self.evasive,
             excessive_bandwidth_use=self.excessive_bandwidth_use,
             excludes=self.excludes,
+            folder=self.folder,
             has_known_vulnerabilities=self.has_known_vulnerabilities,
             id=self.id,
             is_saas=self.is_saas,
@@ -278,6 +313,7 @@ class AwaitableGetApplicationFilterResult(GetApplicationFilterResult):
             risks=self.risks,
             saas_certifications=self.saas_certifications,
             saas_risks=self.saas_risks,
+            snippet=self.snippet,
             subcategories=self.subcategories,
             tagging=self.tagging,
             technologies=self.technologies,
@@ -288,9 +324,10 @@ class AwaitableGetApplicationFilterResult(GetApplicationFilterResult):
 
 
 def get_application_filter(id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetApplicationFilterResult:
     """
-    Retrieves a config item.
+    ApplicationFilter data source
 
     ## Example Usage
 
@@ -298,22 +335,27 @@ def get_application_filter(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_application_filter(id="1234-56-789")
+    scm_application_filter_ds = scm.get_application_filter(id="52ee6475-a99c-42d7-be0a-e251c05e805b")
+    pulumi.export("applicationFiltersDataSourceResults", scm_application_filter_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string [ 0-9a-zA-Z._-]
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getApplicationFilter:getApplicationFilter', __args__, opts=opts, typ=GetApplicationFilterResult).value
 
     return AwaitableGetApplicationFilterResult(
         categories=pulumi.get(__ret__, 'categories'),
+        device=pulumi.get(__ret__, 'device'),
         evasive=pulumi.get(__ret__, 'evasive'),
         excessive_bandwidth_use=pulumi.get(__ret__, 'excessive_bandwidth_use'),
         excludes=pulumi.get(__ret__, 'excludes'),
+        folder=pulumi.get(__ret__, 'folder'),
         has_known_vulnerabilities=pulumi.get(__ret__, 'has_known_vulnerabilities'),
         id=pulumi.get(__ret__, 'id'),
         is_saas=pulumi.get(__ret__, 'is_saas'),
@@ -324,6 +366,7 @@ def get_application_filter(id: Optional[_builtins.str] = None,
         risks=pulumi.get(__ret__, 'risks'),
         saas_certifications=pulumi.get(__ret__, 'saas_certifications'),
         saas_risks=pulumi.get(__ret__, 'saas_risks'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         subcategories=pulumi.get(__ret__, 'subcategories'),
         tagging=pulumi.get(__ret__, 'tagging'),
         technologies=pulumi.get(__ret__, 'technologies'),
@@ -332,9 +375,10 @@ def get_application_filter(id: Optional[_builtins.str] = None,
         tunnels_other_apps=pulumi.get(__ret__, 'tunnels_other_apps'),
         used_by_malware=pulumi.get(__ret__, 'used_by_malware'))
 def get_application_filter_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetApplicationFilterResult]:
     """
-    Retrieves a config item.
+    ApplicationFilter data source
 
     ## Example Usage
 
@@ -342,21 +386,26 @@ def get_application_filter_output(id: Optional[pulumi.Input[_builtins.str]] = No
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_application_filter(id="1234-56-789")
+    scm_application_filter_ds = scm.get_application_filter(id="52ee6475-a99c-42d7-be0a-e251c05e805b")
+    pulumi.export("applicationFiltersDataSourceResults", scm_application_filter_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string [ 0-9a-zA-Z._-]
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getApplicationFilter:getApplicationFilter', __args__, opts=opts, typ=GetApplicationFilterResult)
     return __ret__.apply(lambda __response__: GetApplicationFilterResult(
         categories=pulumi.get(__response__, 'categories'),
+        device=pulumi.get(__response__, 'device'),
         evasive=pulumi.get(__response__, 'evasive'),
         excessive_bandwidth_use=pulumi.get(__response__, 'excessive_bandwidth_use'),
         excludes=pulumi.get(__response__, 'excludes'),
+        folder=pulumi.get(__response__, 'folder'),
         has_known_vulnerabilities=pulumi.get(__response__, 'has_known_vulnerabilities'),
         id=pulumi.get(__response__, 'id'),
         is_saas=pulumi.get(__response__, 'is_saas'),
@@ -367,6 +416,7 @@ def get_application_filter_output(id: Optional[pulumi.Input[_builtins.str]] = No
         risks=pulumi.get(__response__, 'risks'),
         saas_certifications=pulumi.get(__response__, 'saas_certifications'),
         saas_risks=pulumi.get(__response__, 'saas_risks'),
+        snippet=pulumi.get(__response__, 'snippet'),
         subcategories=pulumi.get(__response__, 'subcategories'),
         tagging=pulumi.get(__response__, 'tagging'),
         technologies=pulumi.get(__response__, 'technologies'),

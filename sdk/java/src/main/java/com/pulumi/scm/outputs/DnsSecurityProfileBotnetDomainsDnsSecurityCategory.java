@@ -12,50 +12,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategory {
     /**
-     * @return The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+     * @return Action
      * 
      */
     private @Nullable String action;
     /**
-     * @return The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+     * @return Log level
      * 
      */
     private @Nullable String logLevel;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     private @Nullable String packetCapture;
 
     private DnsSecurityProfileBotnetDomainsDnsSecurityCategory() {}
     /**
-     * @return The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+     * @return Action
      * 
      */
     public Optional<String> action() {
         return Optional.ofNullable(this.action);
     }
     /**
-     * @return The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+     * @return Log level
      * 
      */
     public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public Optional<String> packetCapture() {

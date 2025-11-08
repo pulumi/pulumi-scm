@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecTunnelTunnelMonitorResult
     {
         /// <summary>
-        /// Destination IP to send ICMP probe.
+        /// Destination IP to send ICMP probe
         /// </summary>
         public readonly string DestinationIp;
         /// <summary>
-        /// Enable tunnel monitoring on this tunnel. Default: `True`.
+        /// Enable tunnel monitoring on this tunnel
         /// </summary>
         public readonly bool Enable;
         /// <summary>
-        /// Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+        /// Which proxy-id (or proxy-id-v6) the monitoring traffic will use
         /// </summary>
         public readonly string ProxyId;
 

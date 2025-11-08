@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetCertificateProfileListDataUsernameFieldResult
     {
         /// <summary>
-        /// The Subject param. String must be one of these: `"common-name"`.
+        /// Common name
         /// </summary>
         public readonly string Subject;
         /// <summary>
-        /// The SubjectAlt param. String must be one of these: `"email"`.
+        /// Email address
         /// </summary>
         public readonly string SubjectAlt;
 

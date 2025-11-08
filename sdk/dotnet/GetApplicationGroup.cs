@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetApplicationGroup
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// ApplicationGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetApplicationGroup.Invoke(new()
+        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["applicationGroupOutputs"] = 
+        ///         {
+        ///             { "groupId", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id) },
+        ///             { "folder", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder) },
+        ///             { "name", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name) },
+        ///             { "members", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +47,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetApplicationGroupResult>("scm:index/getApplicationGroup:getApplicationGroup", args ?? new GetApplicationGroupArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ApplicationGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +59,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetApplicationGroup.Invoke(new()
+        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["applicationGroupOutputs"] = 
+        ///         {
+        ///             { "groupId", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id) },
+        ///             { "folder", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder) },
+        ///             { "name", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name) },
+        ///             { "members", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +82,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationGroupResult>("scm:index/getApplicationGroup:getApplicationGroup", args ?? new GetApplicationGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ApplicationGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +94,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetApplicationGroup.Invoke(new()
+        ///     // Look up the application group by its ID from the terraform.tfstate file.
+        ///     var scmApplicationGroupDs = Scm.GetApplicationGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "91616221-ddeb-4b49-866d-48d64dedc056",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["applicationGroupOutputs"] = 
+        ///         {
+        ///             { "groupId", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Id) },
+        ///             { "folder", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Folder) },
+        ///             { "name", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Name) },
+        ///             { "members", scmApplicationGroupDs.Apply(getApplicationGroupResult =&gt; getApplicationGroupResult.Members) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +121,16 @@ namespace Pulumi.Scm
     public sealed class GetApplicationGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetApplicationGroupArgs()
         {
@@ -102,10 +141,16 @@ namespace Pulumi.Scm
     public sealed class GetApplicationGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetApplicationGroupInvokeArgs()
         {
@@ -118,32 +163,53 @@ namespace Pulumi.Scm
     public sealed class GetApplicationGroupResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public readonly ImmutableArray<string> Members;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetApplicationGroupResult(
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> members,
 
             string name,
 
+            string snippet,
+
             string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
             Members = members;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

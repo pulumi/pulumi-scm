@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetLocalUser
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetLocalUser.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// LocalUser data source
         /// </summary>
         public static Task<GetLocalUserResult> InvokeAsync(GetLocalUserArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLocalUserResult>("scm:index/getLocalUser:getLocalUser", args ?? new GetLocalUserArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetLocalUser.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// LocalUser data source
         /// </summary>
         public static Output<GetLocalUserResult> Invoke(GetLocalUserInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLocalUserResult>("scm:index/getLocalUser:getLocalUser", args ?? new GetLocalUserInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetLocalUser.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// LocalUser data source
         /// </summary>
         public static Output<GetLocalUserResult> Invoke(GetLocalUserInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLocalUserResult>("scm:index/getLocalUser:getLocalUser", args ?? new GetLocalUserInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetLocalUserArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the local user
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the local user
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetLocalUserArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetLocalUserInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the local user
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the local user
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetLocalUserInvokeArgs()
         {
@@ -118,26 +76,48 @@ namespace Pulumi.Scm
     public sealed class GetLocalUserResult
     {
         /// <summary>
-        /// The Disabled param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Is the local user disabled?
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The Id param.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the local user
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param. String length must not exceed 31 characters.
+        /// The name of the local user
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Password param. String length must not exceed 63 characters.
+        /// The password of the local user
         /// </summary>
         public readonly string Password;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetLocalUserResult(
+            string device,
+
             bool disabled,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
 
             string id,
 
@@ -145,12 +125,18 @@ namespace Pulumi.Scm
 
             string password,
 
+            string snippet,
+
             string tfid)
         {
+            Device = device;
             Disabled = disabled;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             Name = name;
             Password = password;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

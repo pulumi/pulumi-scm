@@ -17,40 +17,40 @@ public final class GetRemoteNetworkArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetRemoteNetworkArgs Empty = new GetRemoteNetworkArgs();
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
-
-    /**
-     * @return The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
-     * 
-     */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * The UUID of the remote network
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return The UUID of the remote network
      * 
      */
     public Output<String> id() {
         return this.id;
     }
 
+    /**
+     * The name of the remote network
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the remote network
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetRemoteNetworkArgs() {}
 
     private GetRemoteNetworkArgs(GetRemoteNetworkArgs $) {
-        this.folder = $.folder;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -72,28 +72,7 @@ public final class GetRemoteNetworkArgs extends com.pulumi.resources.InvokeArgs 
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable Output<String> folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Remote Networks&#34;`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `&#34;Remote Networks&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(String folder) {
-            return folder(Output.of(folder));
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id The UUID of the remote network
          * 
          * @return builder
          * 
@@ -104,13 +83,34 @@ public final class GetRemoteNetworkArgs extends com.pulumi.resources.InvokeArgs 
         }
 
         /**
-         * @param id The Id param.
+         * @param id The UUID of the remote network
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param name The name of the remote network
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the remote network
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetRemoteNetworkArgs build() {

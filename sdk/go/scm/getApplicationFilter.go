@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ApplicationFilter data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,13 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupApplicationFilter(ctx, &scm.LookupApplicationFilterArgs{
-//				Id: "1234-56-789",
+//			scmApplicationFilterDs, err := scm.LookupApplicationFilter(ctx, &scm.LookupApplicationFilterArgs{
+//				Id: "52ee6475-a99c-42d7-be0a-e251c05e805b",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("applicationFiltersDataSourceResults", scmApplicationFilterDs)
 //			return nil
 //		})
 //	}
@@ -50,52 +51,60 @@ func LookupApplicationFilter(ctx *pulumi.Context, args *LookupApplicationFilterA
 
 // A collection of arguments for invoking getApplicationFilter.
 type LookupApplicationFilterArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getApplicationFilter.
 type LookupApplicationFilterResult struct {
-	// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Category
 	Categories []string `pulumi:"categories"`
-	// only True is a valid value.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// only True is a valid value
 	Evasive bool `pulumi:"evasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ExcessiveBandwidthUse bool `pulumi:"excessiveBandwidthUse"`
-	// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+	// Exclude
 	Excludes []string `pulumi:"excludes"`
-	// only True is a valid value.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// only True is a valid value
 	HasKnownVulnerabilities bool `pulumi:"hasKnownVulnerabilities"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// only True is a valid value.
+	// only True is a valid value
 	IsSaas bool `pulumi:"isSaas"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string [ 0-9a-zA-Z._-]
 	Name string `pulumi:"name"`
-	// only True is a valid value.
+	// only True is a valid value
 	NewAppid bool `pulumi:"newAppid"`
-	// only True is a valid value.
+	// only True is a valid value
 	Pervasive bool `pulumi:"pervasive"`
-	// only True is a valid value.
+	// only True is a valid value
 	ProneToMisuse bool `pulumi:"proneToMisuse"`
-	// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+	// Risk
 	Risks []int `pulumi:"risks"`
-	// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas certifications
 	SaasCertifications []string `pulumi:"saasCertifications"`
-	// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+	// Saas risk
 	SaasRisks []string `pulumi:"saasRisks"`
-	// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Subcategory
 	Subcategories []string `pulumi:"subcategories"`
-	// The Tagging param.
+	// Tagging
 	Tagging GetApplicationFilterTagging `pulumi:"tagging"`
-	// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+	// Technology
 	Technologies []string `pulumi:"technologies"`
 	Tfid         string   `pulumi:"tfid"`
-	// only True is a valid value.
+	// only True is a valid value
 	TransfersFiles bool `pulumi:"transfersFiles"`
-	// only True is a valid value.
+	// only True is a valid value
 	TunnelsOtherApps bool `pulumi:"tunnelsOtherApps"`
-	// only True is a valid value.
+	// only True is a valid value
 	UsedByMalware bool `pulumi:"usedByMalware"`
 }
 
@@ -110,8 +119,10 @@ func LookupApplicationFilterOutput(ctx *pulumi.Context, args LookupApplicationFi
 
 // A collection of arguments for invoking getApplicationFilter.
 type LookupApplicationFilterOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string [ 0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupApplicationFilterOutputArgs) ElementType() reflect.Type {
@@ -133,87 +144,102 @@ func (o LookupApplicationFilterResultOutput) ToLookupApplicationFilterResultOutp
 	return o
 }
 
-// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+// Category
 func (o LookupApplicationFilterResultOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// only True is a valid value.
+// The device in which the resource is defined
+func (o LookupApplicationFilterResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) Evasive() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.Evasive }).(pulumi.BoolOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) ExcessiveBandwidthUse() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.ExcessiveBandwidthUse }).(pulumi.BoolOutput)
 }
 
-// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+// Exclude
 func (o LookupApplicationFilterResultOutput) Excludes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Excludes }).(pulumi.StringArrayOutput)
 }
 
-// only True is a valid value.
+// The folder in which the resource is defined
+func (o LookupApplicationFilterResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) HasKnownVulnerabilities() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.HasKnownVulnerabilities }).(pulumi.BoolOutput)
 }
 
-// The Id param.
+// UUID of the resource
 func (o LookupApplicationFilterResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) IsSaas() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.IsSaas }).(pulumi.BoolOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string [ 0-9a-zA-Z._-]
 func (o LookupApplicationFilterResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) NewAppid() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.NewAppid }).(pulumi.BoolOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) Pervasive() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.Pervasive }).(pulumi.BoolOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) ProneToMisuse() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.ProneToMisuse }).(pulumi.BoolOutput)
 }
 
-// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+// Risk
 func (o LookupApplicationFilterResultOutput) Risks() pulumi.IntArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []int { return v.Risks }).(pulumi.IntArrayOutput)
 }
 
-// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+// Saas certifications
 func (o LookupApplicationFilterResultOutput) SaasCertifications() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.SaasCertifications }).(pulumi.StringArrayOutput)
 }
 
-// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+// Saas risk
 func (o LookupApplicationFilterResultOutput) SaasRisks() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.SaasRisks }).(pulumi.StringArrayOutput)
 }
 
-// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+// The snippet in which the resource is defined
+func (o LookupApplicationFilterResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Subcategory
 func (o LookupApplicationFilterResultOutput) Subcategories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Subcategories }).(pulumi.StringArrayOutput)
 }
 
-// The Tagging param.
+// Tagging
 func (o LookupApplicationFilterResultOutput) Tagging() GetApplicationFilterTaggingOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) GetApplicationFilterTagging { return v.Tagging }).(GetApplicationFilterTaggingOutput)
 }
 
-// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+// Technology
 func (o LookupApplicationFilterResultOutput) Technologies() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) []string { return v.Technologies }).(pulumi.StringArrayOutput)
 }
@@ -222,17 +248,17 @@ func (o LookupApplicationFilterResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) TransfersFiles() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.TransfersFiles }).(pulumi.BoolOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) TunnelsOtherApps() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.TunnelsOtherApps }).(pulumi.BoolOutput)
 }
 
-// only True is a valid value.
+// only True is a valid value
 func (o LookupApplicationFilterResultOutput) UsedByMalware() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationFilterResult) bool { return v.UsedByMalware }).(pulumi.BoolOutput)
 }

@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.IpsecTunnelAutoKeyIkeGatewayGetArgs>? _ikeGateways;
 
         /// <summary>
-        /// The IkeGateways param.
+        /// Ike gateway
         /// </summary>
         public InputList<Inputs.IpsecTunnelAutoKeyIkeGatewayGetArgs> IkeGateways
         {
@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The IpsecCryptoProfile param.
+        /// Ipsec crypto profile
         /// </summary>
         [Input("ipsecCryptoProfile", required: true)]
         public Input<string> IpsecCryptoProfile { get; set; } = null!;
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.IpsecTunnelAutoKeyProxyIdV6GetArgs>? _proxyIdV6s;
 
         /// <summary>
-        /// IPv6 type of proxy*id values.
+        /// IPv6 type of proxy*id values
         /// </summary>
         public InputList<Inputs.IpsecTunnelAutoKeyProxyIdV6GetArgs> ProxyIdV6s
         {
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.IpsecTunnelAutoKeyProxyIdGetArgs>? _proxyIds;
 
         /// <summary>
-        /// IPv4 type of proxy*id values.
+        /// IPv4 type of proxy*id values
         /// </summary>
         public InputList<Inputs.IpsecTunnelAutoKeyProxyIdGetArgs> ProxyIds
         {

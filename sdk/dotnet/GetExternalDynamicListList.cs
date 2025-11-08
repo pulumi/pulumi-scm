@@ -24,11 +24,30 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
+        ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "Shared",
         ///     });
         /// 
+        ///     // Example of using pagination to get the first 5 EDLs.
+        ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///         Limit = 5,
+        ///         Offset = 0,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["allSharedEdlsMap"] = allSharedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Datas),
+        ///         ["paginatedEdlsDetails"] = 
+        ///         {
+        ///             { "totalInFolder", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total) },
+        ///             { "limitUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit) },
+        ///             { "offsetUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -48,11 +67,30 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
+        ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "Shared",
         ///     });
         /// 
+        ///     // Example of using pagination to get the first 5 EDLs.
+        ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///         Limit = 5,
+        ///         Offset = 0,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["allSharedEdlsMap"] = allSharedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Datas),
+        ///         ["paginatedEdlsDetails"] = 
+        ///         {
+        ///             { "totalInFolder", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total) },
+        ///             { "limitUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit) },
+        ///             { "offsetUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -72,11 +110,30 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     // Data source to fetch all external dynamic lists in the "Shared" folder.
+        ///     var allSharedEdls = Scm.GetExternalDynamicListList.Invoke(new()
         ///     {
         ///         Folder = "Shared",
         ///     });
         /// 
+        ///     // Example of using pagination to get the first 5 EDLs.
+        ///     var paginatedEdls = Scm.GetExternalDynamicListList.Invoke(new()
+        ///     {
+        ///         Folder = "Shared",
+        ///         Limit = 5,
+        ///         Offset = 0,
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["allSharedEdlsMap"] = allSharedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Datas),
+        ///         ["paginatedEdlsDetails"] = 
+        ///         {
+        ///             { "totalInFolder", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Total) },
+        ///             { "limitUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Limit) },
+        ///             { "offsetUsed", paginatedEdls.Apply(getExternalDynamicListListResult =&gt; getExternalDynamicListListResult.Offset) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,37 +145,37 @@ namespace Pulumi.Scm
     public sealed class GetExternalDynamicListListArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device of the item.
         /// </summary>
         [Input("device")]
         public string? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
         /// <summary>
-        /// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        /// The max number of items to return. Default: 200.
         /// </summary>
         [Input("limit")]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the item.
         /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// The Offset param. Default: `0`.
+        /// The offset of the first item to return.
         /// </summary>
         [Input("offset")]
         public int? Offset { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet of the item.
         /// </summary>
         [Input("snippet")]
         public string? Snippet { get; set; }
@@ -132,37 +189,37 @@ namespace Pulumi.Scm
     public sealed class GetExternalDynamicListListInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device of the item.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        /// The max number of items to return. Default: 200.
         /// </summary>
         [Input("limit")]
         public Input<int>? Limit { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the item.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Offset param. Default: `0`.
+        /// The offset of the first item to return.
         /// </summary>
         [Input("offset")]
         public Input<int>? Offset { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet of the item.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -178,15 +235,15 @@ namespace Pulumi.Scm
     public sealed class GetExternalDynamicListListResult
     {
         /// <summary>
-        /// The Data param.
+        /// The data.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetExternalDynamicListListDataResult> Datas;
         /// <summary>
-        /// The Device param.
+        /// The device of the item.
         /// </summary>
         public readonly string? Device;
         /// <summary>
-        /// The Folder param.
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string? Folder;
         /// <summary>
@@ -194,24 +251,24 @@ namespace Pulumi.Scm
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        /// The max number of items to return. Default: 200.
         /// </summary>
-        public readonly int Limit;
+        public readonly int? Limit;
         /// <summary>
-        /// The Name param.
+        /// The name of the item.
         /// </summary>
         public readonly string? Name;
         /// <summary>
-        /// The Offset param. Default: `0`.
+        /// The offset of the first item to return.
         /// </summary>
-        public readonly int Offset;
+        public readonly int? Offset;
         /// <summary>
-        /// The Snippet param.
+        /// The snippet of the item.
         /// </summary>
         public readonly string? Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The Total param.
+        /// The total number of items.
         /// </summary>
         public readonly int Total;
 
@@ -225,11 +282,11 @@ namespace Pulumi.Scm
 
             string id,
 
-            int limit,
+            int? limit,
 
             string? name,
 
-            int offset,
+            int? offset,
 
             string? snippet,
 

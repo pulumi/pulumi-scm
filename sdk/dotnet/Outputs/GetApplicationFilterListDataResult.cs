@@ -14,83 +14,96 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationFilterListDataResult
     {
         /// <summary>
-        /// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Category
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// only True is a valid value.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// only True is a valid value
         /// </summary>
         public readonly bool Evasive;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool ExcessiveBandwidthUse;
         /// <summary>
-        /// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Exclude
         /// </summary>
         public readonly ImmutableArray<string> Excludes;
         /// <summary>
-        /// only True is a valid value.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// only True is a valid value
         /// </summary>
         public readonly bool HasKnownVulnerabilities;
         /// <summary>
-        /// UUID of the resource.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool IsSaas;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool NewAppid;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool Pervasive;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool ProneToMisuse;
         /// <summary>
-        /// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        /// Risk
         /// </summary>
         public readonly ImmutableArray<int> Risks;
         /// <summary>
-        /// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas certifications
         /// </summary>
         public readonly ImmutableArray<string> SaasCertifications;
         /// <summary>
-        /// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas risk
         /// </summary>
         public readonly ImmutableArray<string> SaasRisks;
         /// <summary>
-        /// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Subcategory
         /// </summary>
         public readonly ImmutableArray<string> Subcategories;
         /// <summary>
-        /// The Tagging param.
+        /// Tagging
         /// </summary>
         public readonly Outputs.GetApplicationFilterListDataTaggingResult Tagging;
         /// <summary>
-        /// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Technology
         /// </summary>
         public readonly ImmutableArray<string> Technologies;
+        public readonly string Tfid;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool TransfersFiles;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool TunnelsOtherApps;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool UsedByMalware;
 
@@ -98,11 +111,15 @@ namespace Pulumi.Scm.Outputs
         private GetApplicationFilterListDataResult(
             ImmutableArray<string> categories,
 
+            string device,
+
             bool evasive,
 
             bool excessiveBandwidthUse,
 
             ImmutableArray<string> excludes,
+
+            string folder,
 
             bool hasKnownVulnerabilities,
 
@@ -124,11 +141,15 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> saasRisks,
 
+            string snippet,
+
             ImmutableArray<string> subcategories,
 
             Outputs.GetApplicationFilterListDataTaggingResult tagging,
 
             ImmutableArray<string> technologies,
+
+            string tfid,
 
             bool transfersFiles,
 
@@ -137,9 +158,11 @@ namespace Pulumi.Scm.Outputs
             bool usedByMalware)
         {
             Categories = categories;
+            Device = device;
             Evasive = evasive;
             ExcessiveBandwidthUse = excessiveBandwidthUse;
             Excludes = excludes;
+            Folder = folder;
             HasKnownVulnerabilities = hasKnownVulnerabilities;
             Id = id;
             IsSaas = isSaas;
@@ -150,9 +173,11 @@ namespace Pulumi.Scm.Outputs
             Risks = risks;
             SaasCertifications = saasCertifications;
             SaasRisks = saasRisks;
+            Snippet = snippet;
             Subcategories = subcategories;
             Tagging = tagging;
             Technologies = technologies;
+            Tfid = tfid;
             TransfersFiles = transfersFiles;
             TunnelsOtherApps = tunnelsOtherApps;
             UsedByMalware = usedByMalware;

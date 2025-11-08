@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.DecryptionExclusion("example", {});
- * ```
+ * DecryptionExclusion resource
  */
 export class DecryptionExclusion extends pulumi.CustomResource {
     /**
@@ -45,23 +36,23 @@ export class DecryptionExclusion extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Name param.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -104,23 +95,23 @@ export class DecryptionExclusion extends pulumi.CustomResource {
  */
 export interface DecryptionExclusionState {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -131,23 +122,23 @@ export interface DecryptionExclusionState {
  */
 export interface DecryptionExclusionArgs {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

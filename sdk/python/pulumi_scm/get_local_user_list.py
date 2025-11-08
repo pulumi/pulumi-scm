@@ -63,7 +63,7 @@ class GetLocalUserListResult:
     @pulumi.getter
     def datas(self) -> Sequence['outputs.GetLocalUserListDataResult']:
         """
-        The Data param.
+        The data.
         """
         return pulumi.get(self, "datas")
 
@@ -71,7 +71,7 @@ class GetLocalUserListResult:
     @pulumi.getter
     def device(self) -> Optional[_builtins.str]:
         """
-        The Device param.
+        The device of the item.
         """
         return pulumi.get(self, "device")
 
@@ -79,7 +79,7 @@ class GetLocalUserListResult:
     @pulumi.getter
     def folder(self) -> Optional[_builtins.str]:
         """
-        The Folder param.
+        The folder of the item. Default: Shared.
         """
         return pulumi.get(self, "folder")
 
@@ -93,9 +93,9 @@ class GetLocalUserListResult:
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> _builtins.int:
+    def limit(self) -> Optional[_builtins.int]:
         """
-        The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        The max number of items to return. Default: 200.
         """
         return pulumi.get(self, "limit")
 
@@ -103,15 +103,15 @@ class GetLocalUserListResult:
     @pulumi.getter
     def name(self) -> Optional[_builtins.str]:
         """
-        The Name param.
+        The name of the item.
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def offset(self) -> _builtins.int:
+    def offset(self) -> Optional[_builtins.int]:
         """
-        The Offset param. Default: `0`.
+        The offset of the first item to return.
         """
         return pulumi.get(self, "offset")
 
@@ -119,7 +119,7 @@ class GetLocalUserListResult:
     @pulumi.getter
     def snippet(self) -> Optional[_builtins.str]:
         """
-        The Snippet param.
+        The snippet of the item.
         """
         return pulumi.get(self, "snippet")
 
@@ -132,7 +132,7 @@ class GetLocalUserListResult:
     @pulumi.getter
     def total(self) -> _builtins.int:
         """
-        The Total param.
+        The total number of items.
         """
         return pulumi.get(self, "total")
 
@@ -165,22 +165,13 @@ def get_local_user_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
-    ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_local_user_list(folder="Shared")
-    ```
-
-
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -213,22 +204,13 @@ def get_local_user_list_output(device: Optional[pulumi.Input[Optional[_builtins.
     """
     Retrieves a listing of config items.
 
-    ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_local_user_list(folder="Shared")
-    ```
-
-
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
     __args__['device'] = device

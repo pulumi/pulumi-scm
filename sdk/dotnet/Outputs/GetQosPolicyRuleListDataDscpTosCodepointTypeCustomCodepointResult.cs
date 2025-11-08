@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosPolicyRuleListDataDscpTosCodepointTypeCustomCodepointResult
     {
         /// <summary>
-        /// The BinaryValue param.
+        /// Binary value
         /// </summary>
         public readonly string BinaryValue;
         /// <summary>
-        /// The CodepointName param.
+        /// Codepoint name
         /// </summary>
         public readonly string CodepointName;
 

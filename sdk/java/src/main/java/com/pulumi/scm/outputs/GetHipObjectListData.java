@@ -22,174 +22,214 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListData {
     /**
-     * @return The AntiMalware param.
+     * @return Anti malware
      * 
      */
     private GetHipObjectListDataAntiMalware antiMalware;
     /**
-     * @return The Certificate param.
+     * @return Certificate
      * 
      */
     private GetHipObjectListDataCertificate certificate;
     /**
-     * @return The CustomChecks param.
+     * @return Custom checks
      * 
      */
     private GetHipObjectListDataCustomChecks customChecks;
     /**
-     * @return The DataLossPrevention param.
+     * @return Data loss prevention
      * 
      */
     private GetHipObjectListDataDataLossPrevention dataLossPrevention;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The DiskBackup param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Disk backup
      * 
      */
     private GetHipObjectListDataDiskBackup diskBackup;
     /**
-     * @return The DiskEncryption param.
+     * @return Disk encryption
      * 
      */
     private GetHipObjectListDataDiskEncryption diskEncryption;
     /**
-     * @return The Firewall param.
+     * @return Firewall
      * 
      */
     private GetHipObjectListDataFirewall firewall;
     /**
-     * @return The HostInfo param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return Host info
      * 
      */
     private GetHipObjectListDataHostInfo hostInfo;
     /**
-     * @return UUID of the resource.
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The MobileDevice param.
+     * @return Mobile device
      * 
      */
     private GetHipObjectListDataMobileDevice mobileDevice;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the HIP object
      * 
      */
     private String name;
     /**
-     * @return The NetworkInfo param.
+     * @return Network info
      * 
      */
     private GetHipObjectListDataNetworkInfo networkInfo;
     /**
-     * @return The PatchManagement param.
+     * @return Patch management
      * 
      */
     private GetHipObjectListDataPatchManagement patchManagement;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
 
     private GetHipObjectListData() {}
     /**
-     * @return The AntiMalware param.
+     * @return Anti malware
      * 
      */
     public GetHipObjectListDataAntiMalware antiMalware() {
         return this.antiMalware;
     }
     /**
-     * @return The Certificate param.
+     * @return Certificate
      * 
      */
     public GetHipObjectListDataCertificate certificate() {
         return this.certificate;
     }
     /**
-     * @return The CustomChecks param.
+     * @return Custom checks
      * 
      */
     public GetHipObjectListDataCustomChecks customChecks() {
         return this.customChecks;
     }
     /**
-     * @return The DataLossPrevention param.
+     * @return Data loss prevention
      * 
      */
     public GetHipObjectListDataDataLossPrevention dataLossPrevention() {
         return this.dataLossPrevention;
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The DiskBackup param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Disk backup
      * 
      */
     public GetHipObjectListDataDiskBackup diskBackup() {
         return this.diskBackup;
     }
     /**
-     * @return The DiskEncryption param.
+     * @return Disk encryption
      * 
      */
     public GetHipObjectListDataDiskEncryption diskEncryption() {
         return this.diskEncryption;
     }
     /**
-     * @return The Firewall param.
+     * @return Firewall
      * 
      */
     public GetHipObjectListDataFirewall firewall() {
         return this.firewall;
     }
     /**
-     * @return The HostInfo param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return Host info
      * 
      */
     public GetHipObjectListDataHostInfo hostInfo() {
         return this.hostInfo;
     }
     /**
-     * @return UUID of the resource.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The MobileDevice param.
+     * @return Mobile device
      * 
      */
     public GetHipObjectListDataMobileDevice mobileDevice() {
         return this.mobileDevice;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the HIP object
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NetworkInfo param.
+     * @return Network info
      * 
      */
     public GetHipObjectListDataNetworkInfo networkInfo() {
         return this.networkInfo;
     }
     /**
-     * @return The PatchManagement param.
+     * @return Patch management
      * 
      */
     public GetHipObjectListDataPatchManagement patchManagement() {
         return this.patchManagement;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -206,15 +246,19 @@ public final class GetHipObjectListData {
         private GetHipObjectListDataCustomChecks customChecks;
         private GetHipObjectListDataDataLossPrevention dataLossPrevention;
         private String description;
+        private String device;
         private GetHipObjectListDataDiskBackup diskBackup;
         private GetHipObjectListDataDiskEncryption diskEncryption;
         private GetHipObjectListDataFirewall firewall;
+        private String folder;
         private GetHipObjectListDataHostInfo hostInfo;
         private String id;
         private GetHipObjectListDataMobileDevice mobileDevice;
         private String name;
         private GetHipObjectListDataNetworkInfo networkInfo;
         private GetHipObjectListDataPatchManagement patchManagement;
+        private String snippet;
+        private String tfid;
         public Builder() {}
         public Builder(GetHipObjectListData defaults) {
     	      Objects.requireNonNull(defaults);
@@ -223,15 +267,19 @@ public final class GetHipObjectListData {
     	      this.customChecks = defaults.customChecks;
     	      this.dataLossPrevention = defaults.dataLossPrevention;
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
     	      this.diskBackup = defaults.diskBackup;
     	      this.diskEncryption = defaults.diskEncryption;
     	      this.firewall = defaults.firewall;
+    	      this.folder = defaults.folder;
     	      this.hostInfo = defaults.hostInfo;
     	      this.id = defaults.id;
     	      this.mobileDevice = defaults.mobileDevice;
     	      this.name = defaults.name;
     	      this.networkInfo = defaults.networkInfo;
     	      this.patchManagement = defaults.patchManagement;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -275,6 +323,14 @@ public final class GetHipObjectListData {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetHipObjectListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder diskBackup(GetHipObjectListDataDiskBackup diskBackup) {
             if (diskBackup == null) {
               throw new MissingRequiredPropertyException("GetHipObjectListData", "diskBackup");
@@ -296,6 +352,14 @@ public final class GetHipObjectListData {
               throw new MissingRequiredPropertyException("GetHipObjectListData", "firewall");
             }
             this.firewall = firewall;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetHipObjectListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -346,6 +410,22 @@ public final class GetHipObjectListData {
             this.patchManagement = patchManagement;
             return this;
         }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetHipObjectListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetHipObjectListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetHipObjectListData build() {
             final var _resultValue = new GetHipObjectListData();
             _resultValue.antiMalware = antiMalware;
@@ -353,15 +433,19 @@ public final class GetHipObjectListData {
             _resultValue.customChecks = customChecks;
             _resultValue.dataLossPrevention = dataLossPrevention;
             _resultValue.description = description;
+            _resultValue.device = device;
             _resultValue.diskBackup = diskBackup;
             _resultValue.diskEncryption = diskEncryption;
             _resultValue.firewall = firewall;
+            _resultValue.folder = folder;
             _resultValue.hostInfo = hostInfo;
             _resultValue.id = id;
             _resultValue.mobileDevice = mobileDevice;
             _resultValue.name = name;
             _resultValue.networkInfo = networkInfo;
             _resultValue.patchManagement = patchManagement;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileMethodLdap {
     /**
-     * @return The LoginAttribute param.
+     * @return Login attribute
      * 
      */
     private String loginAttribute;
     /**
-     * @return The PasswdExpDays param.
+     * @return Passwd exp days
      * 
      */
     private Integer passwdExpDays;
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     private String serverProfile;
 
     private GetAuthenticationProfileMethodLdap() {}
     /**
-     * @return The LoginAttribute param.
+     * @return Login attribute
      * 
      */
     public String loginAttribute() {
         return this.loginAttribute;
     }
     /**
-     * @return The PasswdExpDays param.
+     * @return Passwd exp days
      * 
      */
     public Integer passwdExpDays() {
         return this.passwdExpDays;
     }
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     public String serverProfile() {

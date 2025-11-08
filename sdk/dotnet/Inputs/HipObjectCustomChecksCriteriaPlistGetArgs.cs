@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectCustomChecksCriteriaPlistKeyGetArgs>? _keys;
 
         /// <summary>
-        /// The Keys param.
+        /// Key
         /// </summary>
         public InputList<Inputs.HipObjectCustomChecksCriteriaPlistKeyGetArgs> Keys
         {
@@ -25,13 +25,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Preference list. String length must not exceed 1023 characters.
+        /// Preference list
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Plist does not exist. Default: `False`.
+        /// Plist does not exist
         /// </summary>
         [Input("negate")]
         public Input<bool>? Negate { get; set; }

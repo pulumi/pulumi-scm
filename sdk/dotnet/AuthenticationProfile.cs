@@ -10,76 +10,61 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.AuthenticationProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// AuthenticationProfile resource
     /// </summary>
     [ScmResourceType("scm:index/authenticationProfile:AuthenticationProfile")]
     public partial class AuthenticationProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The AllowList param.
+        /// Allow list
         /// </summary>
         [Output("allowLists")]
         public Output<ImmutableArray<string>> AllowLists { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Lockout param.
+        /// Lockout
         /// </summary>
         [Output("lockout")]
         public Output<Outputs.AuthenticationProfileLockout?> Lockout { get; private set; } = null!;
 
         /// <summary>
-        /// The Method param.
+        /// Method
         /// </summary>
         [Output("method")]
         public Output<Outputs.AuthenticationProfileMethod?> Method { get; private set; } = null!;
 
         /// <summary>
-        /// The MultiFactorAuth param.
+        /// Multi factor auth
         /// </summary>
         [Output("multiFactorAuth")]
         public Output<Outputs.AuthenticationProfileMultiFactorAuth?> MultiFactorAuth { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication profile
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The SingleSignOn param.
+        /// Single sign on
         /// </summary>
         [Output("singleSignOn")]
         public Output<Outputs.AuthenticationProfileSingleSignOn?> SingleSignOn { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -88,13 +73,13 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The UserDomain param. String length must not exceed 63 characters.
+        /// User domain
         /// </summary>
         [Output("userDomain")]
         public Output<string?> UserDomain { get; private set; } = null!;
 
         /// <summary>
-        /// The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+        /// Username modifier
         /// </summary>
         [Output("usernameModifier")]
         public Output<string?> UsernameModifier { get; private set; } = null!;
@@ -149,7 +134,7 @@ namespace Pulumi.Scm
         private InputList<string>? _allowLists;
 
         /// <summary>
-        /// The AllowList param.
+        /// Allow list
         /// </summary>
         public InputList<string> AllowLists
         {
@@ -158,61 +143,61 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Lockout param.
+        /// Lockout
         /// </summary>
         [Input("lockout")]
         public Input<Inputs.AuthenticationProfileLockoutArgs>? Lockout { get; set; }
 
         /// <summary>
-        /// The Method param.
+        /// Method
         /// </summary>
         [Input("method")]
         public Input<Inputs.AuthenticationProfileMethodArgs>? Method { get; set; }
 
         /// <summary>
-        /// The MultiFactorAuth param.
+        /// Multi factor auth
         /// </summary>
         [Input("multiFactorAuth")]
         public Input<Inputs.AuthenticationProfileMultiFactorAuthArgs>? MultiFactorAuth { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The SingleSignOn param.
+        /// Single sign on
         /// </summary>
         [Input("singleSignOn")]
         public Input<Inputs.AuthenticationProfileSingleSignOnArgs>? SingleSignOn { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The UserDomain param. String length must not exceed 63 characters.
+        /// User domain
         /// </summary>
         [Input("userDomain")]
         public Input<string>? UserDomain { get; set; }
 
         /// <summary>
-        /// The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+        /// Username modifier
         /// </summary>
         [Input("usernameModifier")]
         public Input<string>? UsernameModifier { get; set; }
@@ -229,7 +214,7 @@ namespace Pulumi.Scm
         private InputList<string>? _allowLists;
 
         /// <summary>
-        /// The AllowList param.
+        /// Allow list
         /// </summary>
         public InputList<string> AllowLists
         {
@@ -238,49 +223,49 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Lockout param.
+        /// Lockout
         /// </summary>
         [Input("lockout")]
         public Input<Inputs.AuthenticationProfileLockoutGetArgs>? Lockout { get; set; }
 
         /// <summary>
-        /// The Method param.
+        /// Method
         /// </summary>
         [Input("method")]
         public Input<Inputs.AuthenticationProfileMethodGetArgs>? Method { get; set; }
 
         /// <summary>
-        /// The MultiFactorAuth param.
+        /// Multi factor auth
         /// </summary>
         [Input("multiFactorAuth")]
         public Input<Inputs.AuthenticationProfileMultiFactorAuthGetArgs>? MultiFactorAuth { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The SingleSignOn param.
+        /// Single sign on
         /// </summary>
         [Input("singleSignOn")]
         public Input<Inputs.AuthenticationProfileSingleSignOnGetArgs>? SingleSignOn { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -289,13 +274,13 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The UserDomain param. String length must not exceed 63 characters.
+        /// User domain
         /// </summary>
         [Input("userDomain")]
         public Input<string>? UserDomain { get; set; }
 
         /// <summary>
-        /// The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+        /// Username modifier
         /// </summary>
         [Input("usernameModifier")]
         public Input<string>? UsernameModifier { get; set; }

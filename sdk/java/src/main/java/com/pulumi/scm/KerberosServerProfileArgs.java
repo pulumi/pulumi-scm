@@ -19,14 +19,14 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
     public static final KerberosServerProfileArgs Empty = new KerberosServerProfileArgs();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -34,14 +34,14 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -49,14 +49,29 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Servers param.
+     * The name of the Kerberos server profile
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the Kerberos server profile
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * The Kerberos server configuration
      * 
      */
     @Import(name="servers", required=true)
     private Output<List<KerberosServerProfileServerArgs>> servers;
 
     /**
-     * @return The Servers param.
+     * @return The Kerberos server configuration
      * 
      */
     public Output<List<KerberosServerProfileServerArgs>> servers() {
@@ -64,14 +79,14 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -83,6 +98,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
     private KerberosServerProfileArgs(KerberosServerProfileArgs $) {
         this.device = $.device;
         this.folder = $.folder;
+        this.name = $.name;
         this.servers = $.servers;
         this.snippet = $.snippet;
     }
@@ -106,7 +122,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -117,7 +133,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -127,7 +143,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -138,7 +154,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -148,7 +164,28 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param servers The Servers param.
+         * @param name The name of the Kerberos server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the Kerberos server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param servers The Kerberos server configuration
          * 
          * @return builder
          * 
@@ -159,7 +196,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The Kerberos server configuration
          * 
          * @return builder
          * 
@@ -169,7 +206,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The Kerberos server configuration
          * 
          * @return builder
          * 
@@ -179,7 +216,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -190,7 +227,7 @@ public final class KerberosServerProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

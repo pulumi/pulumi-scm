@@ -12,30 +12,6 @@ import (
 )
 
 // Retrieves a listing of config items.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetFolderList(ctx, &scm.GetFolderListArgs{}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetFolderList(ctx *pulumi.Context, args *GetFolderListArgs, opts ...pulumi.InvokeOption) (*GetFolderListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetFolderListResult
@@ -48,28 +24,40 @@ func GetFolderList(ctx *pulumi.Context, args *GetFolderListArgs, opts ...pulumi.
 
 // A collection of arguments for invoking getFolderList.
 type GetFolderListArgs struct {
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder *string `pulumi:"folder"`
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getFolderList.
 type GetFolderListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetFolderListData `pulumi:"datas"`
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int    `pulumi:"offset"`
-	Tfid   string `pulumi:"tfid"`
-	// The Total param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
+	Tfid    string  `pulumi:"tfid"`
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -84,12 +72,18 @@ func GetFolderListOutput(ctx *pulumi.Context, args GetFolderListOutputArgs, opts
 
 // A collection of arguments for invoking getFolderList.
 type GetFolderListOutputArgs struct {
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The device of the item.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (GetFolderListOutputArgs) ElementType() reflect.Type {
@@ -111,9 +105,19 @@ func (o GetFolderListResultOutput) ToGetFolderListResultOutputWithContext(ctx co
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetFolderListResultOutput) Datas() GetFolderListDataArrayOutput {
 	return o.ApplyT(func(v GetFolderListResult) []GetFolderListData { return v.Datas }).(GetFolderListDataArrayOutput)
+}
+
+// The device of the item.
+func (o GetFolderListResultOutput) Device() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetFolderListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetFolderListResultOutput) Folder() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetFolderListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // The provider-assigned unique ID for this managed resource.
@@ -121,26 +125,31 @@ func (o GetFolderListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetFolderListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetFolderListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetFolderListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetFolderListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetFolderListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetFolderListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetFolderListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetFolderListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetFolderListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetFolderListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetFolderListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The snippet of the item.
+func (o GetFolderListResultOutput) Snippet() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetFolderListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 func (o GetFolderListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetFolderListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetFolderListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetFolderListResult) int { return v.Total }).(pulumi.IntOutput)
 }

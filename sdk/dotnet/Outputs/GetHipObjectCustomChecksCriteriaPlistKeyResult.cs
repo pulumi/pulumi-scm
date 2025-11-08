@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectCustomChecksCriteriaPlistKeyResult
     {
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Key name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Value does not exist or match specified value data. Default: `False`.
+        /// Value does not exist or match specified value data
         /// </summary>
         public readonly bool Negate;
         /// <summary>
-        /// Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// Key value
         /// </summary>
         public readonly string Value;
 

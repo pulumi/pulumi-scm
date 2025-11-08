@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ApplicationFilter resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.ApplicationFilter("example", {});
- * ```
  */
 export class ApplicationFilter extends pulumi.CustomResource {
     /**
@@ -47,92 +40,92 @@ export class ApplicationFilter extends pulumi.CustomResource {
     }
 
     /**
-     * The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Category
      */
     declare public readonly categories: pulumi.Output<string[] | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly evasive: pulumi.Output<boolean | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly excessiveBandwidthUse: pulumi.Output<boolean | undefined>;
     /**
-     * The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Exclude
      */
     declare public readonly excludes: pulumi.Output<string[] | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly hasKnownVulnerabilities: pulumi.Output<boolean | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly isSaas: pulumi.Output<boolean | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly newAppid: pulumi.Output<boolean | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly pervasive: pulumi.Output<boolean | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly proneToMisuse: pulumi.Output<boolean | undefined>;
     /**
-     * The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * Risk
      */
     declare public readonly risks: pulumi.Output<number[] | undefined>;
     /**
-     * The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas certifications
      */
     declare public readonly saasCertifications: pulumi.Output<string[] | undefined>;
     /**
-     * The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas risk
      */
     declare public readonly saasRisks: pulumi.Output<string[] | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Subcategory
      */
     declare public readonly subcategories: pulumi.Output<string[] | undefined>;
     /**
-     * The Tagging param.
+     * Tagging
      */
     declare public readonly tagging: pulumi.Output<outputs.ApplicationFilterTagging | undefined>;
     /**
-     * The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Technology
      */
     declare public readonly technologies: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly transfersFiles: pulumi.Output<boolean | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly tunnelsOtherApps: pulumi.Output<boolean | undefined>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     declare public readonly usedByMalware: pulumi.Output<boolean | undefined>;
 
@@ -208,92 +201,92 @@ export class ApplicationFilter extends pulumi.CustomResource {
  */
 export interface ApplicationFilterState {
     /**
-     * The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Category
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     evasive?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     excessiveBandwidthUse?: pulumi.Input<boolean>;
     /**
-     * The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Exclude
      */
     excludes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     hasKnownVulnerabilities?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     isSaas?: pulumi.Input<boolean>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     newAppid?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     pervasive?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     proneToMisuse?: pulumi.Input<boolean>;
     /**
-     * The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * Risk
      */
     risks?: pulumi.Input<pulumi.Input<number>[]>;
     /**
-     * The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas certifications
      */
     saasCertifications?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas risk
      */
     saasRisks?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Subcategory
      */
     subcategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tagging param.
+     * Tagging
      */
     tagging?: pulumi.Input<inputs.ApplicationFilterTagging>;
     /**
-     * The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Technology
      */
     technologies?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     transfersFiles?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     tunnelsOtherApps?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     usedByMalware?: pulumi.Input<boolean>;
 }
@@ -303,91 +296,91 @@ export interface ApplicationFilterState {
  */
 export interface ApplicationFilterArgs {
     /**
-     * The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Category
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     evasive?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     excessiveBandwidthUse?: pulumi.Input<boolean>;
     /**
-     * The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Exclude
      */
     excludes?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     hasKnownVulnerabilities?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     isSaas?: pulumi.Input<boolean>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     newAppid?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     pervasive?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     proneToMisuse?: pulumi.Input<boolean>;
     /**
-     * The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+     * Risk
      */
     risks?: pulumi.Input<pulumi.Input<number>[]>;
     /**
-     * The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas certifications
      */
     saasCertifications?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * Saas risk
      */
     saasRisks?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Subcategory
      */
     subcategories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Tagging param.
+     * Tagging
      */
     tagging?: pulumi.Input<inputs.ApplicationFilterTagging>;
     /**
-     * The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+     * Technology
      */
     technologies?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     transfersFiles?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     tunnelsOtherApps?: pulumi.Input<boolean>;
     /**
-     * only True is a valid value.
+     * only True is a valid value
      */
     usedByMalware?: pulumi.Input<boolean>;
 }

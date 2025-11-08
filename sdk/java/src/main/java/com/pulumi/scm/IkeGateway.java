@@ -11,6 +11,7 @@ import com.pulumi.scm.IkeGatewayArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.IkeGatewayState;
 import com.pulumi.scm.outputs.IkeGatewayAuthentication;
+import com.pulumi.scm.outputs.IkeGatewayLocalAddress;
 import com.pulumi.scm.outputs.IkeGatewayLocalId;
 import com.pulumi.scm.outputs.IkeGatewayPeerAddress;
 import com.pulumi.scm.outputs.IkeGatewayPeerId;
@@ -23,7 +24,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * IkeGateway resource
  * 
  * ## Example Usage
  * 
@@ -31,154 +32,168 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/ikeGateway:IkeGateway")
 public class IkeGateway extends com.pulumi.resources.CustomResource {
     /**
-     * The Authentication param.
+     * Authentication
      * 
      */
     @Export(name="authentication", refs={IkeGatewayAuthentication.class}, tree="[0]")
     private Output<IkeGatewayAuthentication> authentication;
 
     /**
-     * @return The Authentication param.
+     * @return Authentication
      * 
      */
     public Output<IkeGatewayAuthentication> authentication() {
         return this.authentication;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
     private Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Output<Map<String,String>> encryptedValues() {
         return this.encryptedValues;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The LocalId param.
+     * Local address
+     * 
+     */
+    @Export(name="localAddress", refs={IkeGatewayLocalAddress.class}, tree="[0]")
+    private Output<IkeGatewayLocalAddress> localAddress;
+
+    /**
+     * @return Local address
+     * 
+     */
+    public Output<IkeGatewayLocalAddress> localAddress() {
+        return this.localAddress;
+    }
+    /**
+     * Local id
      * 
      */
     @Export(name="localId", refs={IkeGatewayLocalId.class}, tree="[0]")
     private Output</* @Nullable */ IkeGatewayLocalId> localId;
 
     /**
-     * @return The LocalId param.
+     * @return Local id
      * 
      */
     public Output<Optional<IkeGatewayLocalId>> localId() {
         return Codegen.optional(this.localId);
     }
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The PeerAddress param.
+     * Peer address
      * 
      */
     @Export(name="peerAddress", refs={IkeGatewayPeerAddress.class}, tree="[0]")
     private Output<IkeGatewayPeerAddress> peerAddress;
 
     /**
-     * @return The PeerAddress param.
+     * @return Peer address
      * 
      */
     public Output<IkeGatewayPeerAddress> peerAddress() {
         return this.peerAddress;
     }
     /**
-     * The PeerId param.
+     * Peer id
      * 
      */
     @Export(name="peerId", refs={IkeGatewayPeerId.class}, tree="[0]")
     private Output</* @Nullable */ IkeGatewayPeerId> peerId;
 
     /**
-     * @return The PeerId param.
+     * @return Peer id
      * 
      */
     public Output<Optional<IkeGatewayPeerId>> peerId() {
         return Codegen.optional(this.peerId);
     }
     /**
-     * The Protocol param.
+     * Protocol
      * 
      */
     @Export(name="protocol", refs={IkeGatewayProtocol.class}, tree="[0]")
     private Output<IkeGatewayProtocol> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public Output<IkeGatewayProtocol> protocol() {
         return this.protocol;
     }
     /**
-     * The ProtocolCommon param.
+     * Protocol common
      * 
      */
     @Export(name="protocolCommon", refs={IkeGatewayProtocolCommon.class}, tree="[0]")
-    private Output</* @Nullable */ IkeGatewayProtocolCommon> protocolCommon;
+    private Output<IkeGatewayProtocolCommon> protocolCommon;
 
     /**
-     * @return The ProtocolCommon param.
+     * @return Protocol common
      * 
      */
-    public Output<Optional<IkeGatewayProtocolCommon>> protocolCommon() {
-        return Codegen.optional(this.protocolCommon);
+    public Output<IkeGatewayProtocolCommon> protocolCommon() {
+        return this.protocolCommon;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

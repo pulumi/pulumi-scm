@@ -16,14 +16,14 @@ public final class IpsecTunnelAutoKeyIkeGatewayArgs extends com.pulumi.resources
     public static final IpsecTunnelAutoKeyIkeGatewayArgs Empty = new IpsecTunnelAutoKeyIkeGatewayArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -55,7 +55,7 @@ public final class IpsecTunnelAutoKeyIkeGatewayArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class IpsecTunnelAutoKeyIkeGatewayArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 

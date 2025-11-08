@@ -5,8 +5,12 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.inputs.SecurityRuleAllowUrlCategoryArgs;
+import com.pulumi.scm.inputs.SecurityRuleAllowWebApplicationArgs;
+import com.pulumi.scm.inputs.SecurityRuleDefaultProfileSettingsArgs;
+import com.pulumi.scm.inputs.SecurityRuleLogSettingsArgs;
 import com.pulumi.scm.inputs.SecurityRuleProfileSettingArgs;
+import com.pulumi.scm.inputs.SecurityRuleSecuritySettingsArgs;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,59 +24,134 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     public static final SecurityRuleArgs Empty = new SecurityRuleArgs();
 
     /**
-     * The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+     * The action to be taken when the rule is matched
      * 
      */
-    @Import(name="action", required=true)
-    private Output<String> action;
+    @Import(name="action")
+    private @Nullable Output<String> action;
 
     /**
-     * @return The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+     * @return The action to be taken when the rule is matched
      * 
      */
-    public Output<String> action() {
-        return this.action;
+    public Optional<Output<String>> action() {
+        return Optional.ofNullable(this.action);
     }
 
     /**
-     * The application(s) being accessed.
+     * Allow url category
      * 
      */
-    @Import(name="applications", required=true)
-    private Output<List<String>> applications;
+    @Import(name="allowUrlCategories")
+    private @Nullable Output<List<SecurityRuleAllowUrlCategoryArgs>> allowUrlCategories;
 
     /**
-     * @return The application(s) being accessed.
+     * @return Allow url category
      * 
      */
-    public Output<List<String>> applications() {
-        return this.applications;
+    public Optional<Output<List<SecurityRuleAllowUrlCategoryArgs>>> allowUrlCategories() {
+        return Optional.ofNullable(this.allowUrlCategories);
     }
 
     /**
-     * The URL categories being accessed.
+     * Allow web application
      * 
      */
-    @Import(name="categories", required=true)
-    private Output<List<String>> categories;
+    @Import(name="allowWebApplications")
+    private @Nullable Output<List<SecurityRuleAllowWebApplicationArgs>> allowWebApplications;
 
     /**
-     * @return The URL categories being accessed.
+     * @return Allow web application
      * 
      */
-    public Output<List<String>> categories() {
-        return this.categories;
+    public Optional<Output<List<SecurityRuleAllowWebApplicationArgs>>> allowWebApplications() {
+        return Optional.ofNullable(this.allowWebApplications);
     }
 
     /**
-     * The description of the security rule.
+     * The application(s) being accessed
+     * 
+     */
+    @Import(name="applications")
+    private @Nullable Output<List<String>> applications;
+
+    /**
+     * @return The application(s) being accessed
+     * 
+     */
+    public Optional<Output<List<String>>> applications() {
+        return Optional.ofNullable(this.applications);
+    }
+
+    /**
+     * Block url category
+     * 
+     */
+    @Import(name="blockUrlCategories")
+    private @Nullable Output<List<String>> blockUrlCategories;
+
+    /**
+     * @return Block url category
+     * 
+     */
+    public Optional<Output<List<String>>> blockUrlCategories() {
+        return Optional.ofNullable(this.blockUrlCategories);
+    }
+
+    /**
+     * Block web application
+     * 
+     */
+    @Import(name="blockWebApplications")
+    private @Nullable Output<List<String>> blockWebApplications;
+
+    /**
+     * @return Block web application
+     * 
+     */
+    public Optional<Output<List<String>>> blockWebApplications() {
+        return Optional.ofNullable(this.blockWebApplications);
+    }
+
+    /**
+     * The URL categories being accessed
+     * 
+     */
+    @Import(name="categories")
+    private @Nullable Output<List<String>> categories;
+
+    /**
+     * @return The URL categories being accessed
+     * 
+     */
+    public Optional<Output<List<String>>> categories() {
+        return Optional.ofNullable(this.categories);
+    }
+
+    /**
+     * Default profile settings
+     * 
+     */
+    @Import(name="defaultProfileSettings")
+    private @Nullable Output<SecurityRuleDefaultProfileSettingsArgs> defaultProfileSettings;
+
+    /**
+     * @return Default profile settings
+     * 
+     */
+    public Optional<Output<SecurityRuleDefaultProfileSettingsArgs>> defaultProfileSettings() {
+        return Optional.ofNullable(this.defaultProfileSettings);
+    }
+
+    /**
+     * The description of the security rule
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The description of the security rule.
+     * @return The description of the security rule
      * 
      */
     public Optional<Output<String>> description() {
@@ -80,14 +159,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The destination Host Integrity Profile(s).
+     * The destination Host Integrity Profile(s)
      * 
      */
     @Import(name="destinationHips")
     private @Nullable Output<List<String>> destinationHips;
 
     /**
-     * @return The destination Host Integrity Profile(s).
+     * @return The destination Host Integrity Profile(s)
      * 
      */
     public Optional<Output<List<String>>> destinationHips() {
@@ -95,29 +174,29 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The destination address(es).
+     * The destination address(es)
      * 
      */
-    @Import(name="destinations", required=true)
-    private Output<List<String>> destinations;
+    @Import(name="destinations")
+    private @Nullable Output<List<String>> destinations;
 
     /**
-     * @return The destination address(es).
+     * @return The destination address(es)
      * 
      */
-    public Output<List<String>> destinations() {
-        return this.destinations;
+    public Optional<Output<List<String>>> destinations() {
+        return Optional.ofNullable(this.destinations);
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -125,14 +204,29 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The state of the security rule. Default: `false`.
+     * Devices
+     * 
+     */
+    @Import(name="devices")
+    private @Nullable Output<List<String>> devices;
+
+    /**
+     * @return Devices
+     * 
+     */
+    public Optional<Output<List<String>>> devices() {
+        return Optional.ofNullable(this.devices);
+    }
+
+    /**
+     * Is the security rule disabled?
      * 
      */
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
     /**
-     * @return The state of the security rule. Default: `false`.
+     * @return Is the security rule disabled?
      * 
      */
     public Optional<Output<Boolean>> disabled() {
@@ -140,14 +234,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -155,29 +249,44 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source security zone(s).
+     * The source security zone(s)
      * 
      */
-    @Import(name="froms", required=true)
-    private Output<List<String>> froms;
+    @Import(name="froms")
+    private @Nullable Output<List<String>> froms;
 
     /**
-     * @return The source security zone(s).
+     * @return The source security zone(s)
      * 
      */
-    public Output<List<String>> froms() {
-        return this.froms;
+    public Optional<Output<List<String>>> froms() {
+        return Optional.ofNullable(this.froms);
     }
 
     /**
-     * The external log forwarding profile.
+     * Log at session end?
+     * 
+     */
+    @Import(name="logEnd")
+    private @Nullable Output<Boolean> logEnd;
+
+    /**
+     * @return Log at session end?
+     * 
+     */
+    public Optional<Output<Boolean>> logEnd() {
+        return Optional.ofNullable(this.logEnd);
+    }
+
+    /**
+     * The external log forwarding profile
      * 
      */
     @Import(name="logSetting")
     private @Nullable Output<String> logSetting;
 
     /**
-     * @return The external log forwarding profile.
+     * @return The external log forwarding profile
      * 
      */
     public Optional<Output<String>> logSetting() {
@@ -185,14 +294,44 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The name of the security rule.
+     * Log settings
+     * 
+     */
+    @Import(name="logSettings")
+    private @Nullable Output<SecurityRuleLogSettingsArgs> logSettings;
+
+    /**
+     * @return Log settings
+     * 
+     */
+    public Optional<Output<SecurityRuleLogSettingsArgs>> logSettings() {
+        return Optional.ofNullable(this.logSettings);
+    }
+
+    /**
+     * Log at session start?
+     * 
+     */
+    @Import(name="logStart")
+    private @Nullable Output<Boolean> logStart;
+
+    /**
+     * @return Log at session start?
+     * 
+     */
+    public Optional<Output<Boolean>> logStart() {
+        return Optional.ofNullable(this.logStart);
+    }
+
+    /**
+     * The name of the security rule
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The name of the security rule.
+     * @return The name of the security rule
      * 
      */
     public Optional<Output<String>> name() {
@@ -200,14 +339,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Negate the destination addresses(es). Default: `false`.
+     * Negate the destination addresses(es)?
      * 
      */
     @Import(name="negateDestination")
     private @Nullable Output<Boolean> negateDestination;
 
     /**
-     * @return Negate the destination addresses(es). Default: `false`.
+     * @return Negate the destination addresses(es)?
      * 
      */
     public Optional<Output<Boolean>> negateDestination() {
@@ -215,14 +354,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Negate the source address(es). Default: `false`.
+     * Negate the source address(es)?
      * 
      */
     @Import(name="negateSource")
     private @Nullable Output<Boolean> negateSource;
 
     /**
-     * @return Negate the source address(es). Default: `false`.
+     * @return Negate the source address(es)?
      * 
      */
     public Optional<Output<Boolean>> negateSource() {
@@ -230,14 +369,44 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * Negate user
+     * 
+     */
+    @Import(name="negateUser")
+    private @Nullable Output<Boolean> negateUser;
+
+    /**
+     * @return Negate user
+     * 
+     */
+    public Optional<Output<Boolean>> negateUser() {
+        return Optional.ofNullable(this.negateUser);
+    }
+
+    /**
+     * Policy type
+     * 
+     */
+    @Import(name="policyType")
+    private @Nullable Output<String> policyType;
+
+    /**
+     * @return Policy type
+     * 
+     */
+    public Optional<Output<String>> policyType() {
+        return Optional.ofNullable(this.policyType);
+    }
+
+    /**
+     * The position of a security rule
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The position of a security rule
      * 
      */
     public Optional<Output<String>> position() {
@@ -245,14 +414,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The security profile object.
+     * The security profile object
      * 
      */
     @Import(name="profileSetting")
     private @Nullable Output<SecurityRuleProfileSettingArgs> profileSetting;
 
     /**
-     * @return The security profile object.
+     * @return The security profile object
      * 
      */
     public Optional<Output<SecurityRuleProfileSettingArgs>> profileSetting() {
@@ -260,29 +429,59 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The service(s) being accessed.
+     * Schedule in which this rule will be applied
      * 
      */
-    @Import(name="services", required=true)
-    private Output<List<String>> services;
+    @Import(name="schedule")
+    private @Nullable Output<String> schedule;
 
     /**
-     * @return The service(s) being accessed.
+     * @return Schedule in which this rule will be applied
      * 
      */
-    public Output<List<String>> services() {
-        return this.services;
+    public Optional<Output<String>> schedule() {
+        return Optional.ofNullable(this.schedule);
     }
 
     /**
-     * The Snippet param.
+     * Security settings
+     * 
+     */
+    @Import(name="securitySettings")
+    private @Nullable Output<SecurityRuleSecuritySettingsArgs> securitySettings;
+
+    /**
+     * @return Security settings
+     * 
+     */
+    public Optional<Output<SecurityRuleSecuritySettingsArgs>> securitySettings() {
+        return Optional.ofNullable(this.securitySettings);
+    }
+
+    /**
+     * The service(s) being accessed
+     * 
+     */
+    @Import(name="services")
+    private @Nullable Output<List<String>> services;
+
+    /**
+     * @return The service(s) being accessed
+     * 
+     */
+    public Optional<Output<List<String>>> services() {
+        return Optional.ofNullable(this.services);
+    }
+
+    /**
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -290,14 +489,14 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source Host Integrity Profile(s).
+     * The source Host Integrity Profile(s)
      * 
      */
     @Import(name="sourceHips")
     private @Nullable Output<List<String>> sourceHips;
 
     /**
-     * @return The source Host Integrity Profile(s).
+     * @return The source Host Integrity Profile(s)
      * 
      */
     public Optional<Output<List<String>>> sourceHips() {
@@ -305,44 +504,44 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source user(s) or group(s).
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
-    @Import(name="sourceUsers", required=true)
-    private Output<List<String>> sourceUsers;
+    @Import(name="sourceUsers")
+    private @Nullable Output<List<String>> sourceUsers;
 
     /**
-     * @return The source user(s) or group(s).
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
-    public Output<List<String>> sourceUsers() {
-        return this.sourceUsers;
+    public Optional<Output<List<String>>> sourceUsers() {
+        return Optional.ofNullable(this.sourceUsers);
     }
 
     /**
-     * The source address(es).
+     * The source addresses(es)
      * 
      */
-    @Import(name="sources", required=true)
-    private Output<List<String>> sources;
+    @Import(name="sources")
+    private @Nullable Output<List<String>> sources;
 
     /**
-     * @return The source address(es).
+     * @return The source addresses(es)
      * 
      */
-    public Output<List<String>> sources() {
-        return this.sources;
+    public Optional<Output<List<String>>> sources() {
+        return Optional.ofNullable(this.sources);
     }
 
     /**
-     * The tags associated with the security rule.
+     * The tags associated with the security rule
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return The tags associated with the security rule.
+     * @return The tags associated with the security rule
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -350,45 +549,74 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The destination security zone(s).
+     * Tenant restrictions
      * 
      */
-    @Import(name="tos", required=true)
-    private Output<List<String>> tos;
+    @Import(name="tenantRestrictions")
+    private @Nullable Output<List<String>> tenantRestrictions;
 
     /**
-     * @return The destination security zone(s).
+     * @return Tenant restrictions
      * 
      */
-    public Output<List<String>> tos() {
-        return this.tos;
+    public Optional<Output<List<String>>> tenantRestrictions() {
+        return Optional.ofNullable(this.tenantRestrictions);
+    }
+
+    /**
+     * The destination security zone(s)
+     * 
+     */
+    @Import(name="tos")
+    private @Nullable Output<List<String>> tos;
+
+    /**
+     * @return The destination security zone(s)
+     * 
+     */
+    public Optional<Output<List<String>>> tos() {
+        return Optional.ofNullable(this.tos);
     }
 
     private SecurityRuleArgs() {}
 
     private SecurityRuleArgs(SecurityRuleArgs $) {
         this.action = $.action;
+        this.allowUrlCategories = $.allowUrlCategories;
+        this.allowWebApplications = $.allowWebApplications;
         this.applications = $.applications;
+        this.blockUrlCategories = $.blockUrlCategories;
+        this.blockWebApplications = $.blockWebApplications;
         this.categories = $.categories;
+        this.defaultProfileSettings = $.defaultProfileSettings;
         this.description = $.description;
         this.destinationHips = $.destinationHips;
         this.destinations = $.destinations;
         this.device = $.device;
+        this.devices = $.devices;
         this.disabled = $.disabled;
         this.folder = $.folder;
         this.froms = $.froms;
+        this.logEnd = $.logEnd;
         this.logSetting = $.logSetting;
+        this.logSettings = $.logSettings;
+        this.logStart = $.logStart;
         this.name = $.name;
         this.negateDestination = $.negateDestination;
         this.negateSource = $.negateSource;
+        this.negateUser = $.negateUser;
+        this.policyType = $.policyType;
         this.position = $.position;
         this.profileSetting = $.profileSetting;
+        this.schedule = $.schedule;
+        this.securitySettings = $.securitySettings;
         this.services = $.services;
         this.snippet = $.snippet;
         this.sourceHips = $.sourceHips;
         this.sourceUsers = $.sourceUsers;
         this.sources = $.sources;
         this.tags = $.tags;
+        this.tenantRestrictions = $.tenantRestrictions;
         this.tos = $.tos;
     }
 
@@ -411,18 +639,18 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param action The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+         * @param action The action to be taken when the rule is matched
          * 
          * @return builder
          * 
          */
-        public Builder action(Output<String> action) {
+        public Builder action(@Nullable Output<String> action) {
             $.action = action;
             return this;
         }
 
         /**
-         * @param action The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+         * @param action The action to be taken when the rule is matched
          * 
          * @return builder
          * 
@@ -432,18 +660,80 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param applications The application(s) being accessed.
+         * @param allowUrlCategories Allow url category
          * 
          * @return builder
          * 
          */
-        public Builder applications(Output<List<String>> applications) {
+        public Builder allowUrlCategories(@Nullable Output<List<SecurityRuleAllowUrlCategoryArgs>> allowUrlCategories) {
+            $.allowUrlCategories = allowUrlCategories;
+            return this;
+        }
+
+        /**
+         * @param allowUrlCategories Allow url category
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allowUrlCategories(List<SecurityRuleAllowUrlCategoryArgs> allowUrlCategories) {
+            return allowUrlCategories(Output.of(allowUrlCategories));
+        }
+
+        /**
+         * @param allowUrlCategories Allow url category
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allowUrlCategories(SecurityRuleAllowUrlCategoryArgs... allowUrlCategories) {
+            return allowUrlCategories(List.of(allowUrlCategories));
+        }
+
+        /**
+         * @param allowWebApplications Allow web application
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allowWebApplications(@Nullable Output<List<SecurityRuleAllowWebApplicationArgs>> allowWebApplications) {
+            $.allowWebApplications = allowWebApplications;
+            return this;
+        }
+
+        /**
+         * @param allowWebApplications Allow web application
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allowWebApplications(List<SecurityRuleAllowWebApplicationArgs> allowWebApplications) {
+            return allowWebApplications(Output.of(allowWebApplications));
+        }
+
+        /**
+         * @param allowWebApplications Allow web application
+         * 
+         * @return builder
+         * 
+         */
+        public Builder allowWebApplications(SecurityRuleAllowWebApplicationArgs... allowWebApplications) {
+            return allowWebApplications(List.of(allowWebApplications));
+        }
+
+        /**
+         * @param applications The application(s) being accessed
+         * 
+         * @return builder
+         * 
+         */
+        public Builder applications(@Nullable Output<List<String>> applications) {
             $.applications = applications;
             return this;
         }
 
         /**
-         * @param applications The application(s) being accessed.
+         * @param applications The application(s) being accessed
          * 
          * @return builder
          * 
@@ -453,7 +743,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param applications The application(s) being accessed.
+         * @param applications The application(s) being accessed
          * 
          * @return builder
          * 
@@ -463,18 +753,80 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param categories The URL categories being accessed.
+         * @param blockUrlCategories Block url category
          * 
          * @return builder
          * 
          */
-        public Builder categories(Output<List<String>> categories) {
+        public Builder blockUrlCategories(@Nullable Output<List<String>> blockUrlCategories) {
+            $.blockUrlCategories = blockUrlCategories;
+            return this;
+        }
+
+        /**
+         * @param blockUrlCategories Block url category
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockUrlCategories(List<String> blockUrlCategories) {
+            return blockUrlCategories(Output.of(blockUrlCategories));
+        }
+
+        /**
+         * @param blockUrlCategories Block url category
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockUrlCategories(String... blockUrlCategories) {
+            return blockUrlCategories(List.of(blockUrlCategories));
+        }
+
+        /**
+         * @param blockWebApplications Block web application
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockWebApplications(@Nullable Output<List<String>> blockWebApplications) {
+            $.blockWebApplications = blockWebApplications;
+            return this;
+        }
+
+        /**
+         * @param blockWebApplications Block web application
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockWebApplications(List<String> blockWebApplications) {
+            return blockWebApplications(Output.of(blockWebApplications));
+        }
+
+        /**
+         * @param blockWebApplications Block web application
+         * 
+         * @return builder
+         * 
+         */
+        public Builder blockWebApplications(String... blockWebApplications) {
+            return blockWebApplications(List.of(blockWebApplications));
+        }
+
+        /**
+         * @param categories The URL categories being accessed
+         * 
+         * @return builder
+         * 
+         */
+        public Builder categories(@Nullable Output<List<String>> categories) {
             $.categories = categories;
             return this;
         }
 
         /**
-         * @param categories The URL categories being accessed.
+         * @param categories The URL categories being accessed
          * 
          * @return builder
          * 
@@ -484,7 +836,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param categories The URL categories being accessed.
+         * @param categories The URL categories being accessed
          * 
          * @return builder
          * 
@@ -494,7 +846,28 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The description of the security rule.
+         * @param defaultProfileSettings Default profile settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultProfileSettings(@Nullable Output<SecurityRuleDefaultProfileSettingsArgs> defaultProfileSettings) {
+            $.defaultProfileSettings = defaultProfileSettings;
+            return this;
+        }
+
+        /**
+         * @param defaultProfileSettings Default profile settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder defaultProfileSettings(SecurityRuleDefaultProfileSettingsArgs defaultProfileSettings) {
+            return defaultProfileSettings(Output.of(defaultProfileSettings));
+        }
+
+        /**
+         * @param description The description of the security rule
          * 
          * @return builder
          * 
@@ -505,7 +878,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The description of the security rule.
+         * @param description The description of the security rule
          * 
          * @return builder
          * 
@@ -515,7 +888,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinationHips The destination Host Integrity Profile(s).
+         * @param destinationHips The destination Host Integrity Profile(s)
          * 
          * @return builder
          * 
@@ -526,7 +899,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinationHips The destination Host Integrity Profile(s).
+         * @param destinationHips The destination Host Integrity Profile(s)
          * 
          * @return builder
          * 
@@ -536,7 +909,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinationHips The destination Host Integrity Profile(s).
+         * @param destinationHips The destination Host Integrity Profile(s)
          * 
          * @return builder
          * 
@@ -546,18 +919,18 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinations The destination address(es).
+         * @param destinations The destination address(es)
          * 
          * @return builder
          * 
          */
-        public Builder destinations(Output<List<String>> destinations) {
+        public Builder destinations(@Nullable Output<List<String>> destinations) {
             $.destinations = destinations;
             return this;
         }
 
         /**
-         * @param destinations The destination address(es).
+         * @param destinations The destination address(es)
          * 
          * @return builder
          * 
@@ -567,7 +940,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinations The destination address(es).
+         * @param destinations The destination address(es)
          * 
          * @return builder
          * 
@@ -577,7 +950,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -588,7 +961,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -598,7 +971,38 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disabled The state of the security rule. Default: `false`.
+         * @param devices Devices
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devices(@Nullable Output<List<String>> devices) {
+            $.devices = devices;
+            return this;
+        }
+
+        /**
+         * @param devices Devices
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devices(List<String> devices) {
+            return devices(Output.of(devices));
+        }
+
+        /**
+         * @param devices Devices
+         * 
+         * @return builder
+         * 
+         */
+        public Builder devices(String... devices) {
+            return devices(List.of(devices));
+        }
+
+        /**
+         * @param disabled Is the security rule disabled?
          * 
          * @return builder
          * 
@@ -609,7 +1013,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disabled The state of the security rule. Default: `false`.
+         * @param disabled Is the security rule disabled?
          * 
          * @return builder
          * 
@@ -619,7 +1023,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -630,7 +1034,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -640,18 +1044,18 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s).
+         * @param froms The source security zone(s)
          * 
          * @return builder
          * 
          */
-        public Builder froms(Output<List<String>> froms) {
+        public Builder froms(@Nullable Output<List<String>> froms) {
             $.froms = froms;
             return this;
         }
 
         /**
-         * @param froms The source security zone(s).
+         * @param froms The source security zone(s)
          * 
          * @return builder
          * 
@@ -661,7 +1065,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s).
+         * @param froms The source security zone(s)
          * 
          * @return builder
          * 
@@ -671,7 +1075,28 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logSetting The external log forwarding profile.
+         * @param logEnd Log at session end?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logEnd(@Nullable Output<Boolean> logEnd) {
+            $.logEnd = logEnd;
+            return this;
+        }
+
+        /**
+         * @param logEnd Log at session end?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logEnd(Boolean logEnd) {
+            return logEnd(Output.of(logEnd));
+        }
+
+        /**
+         * @param logSetting The external log forwarding profile
          * 
          * @return builder
          * 
@@ -682,7 +1107,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param logSetting The external log forwarding profile.
+         * @param logSetting The external log forwarding profile
          * 
          * @return builder
          * 
@@ -692,7 +1117,49 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the security rule.
+         * @param logSettings Log settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logSettings(@Nullable Output<SecurityRuleLogSettingsArgs> logSettings) {
+            $.logSettings = logSettings;
+            return this;
+        }
+
+        /**
+         * @param logSettings Log settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logSettings(SecurityRuleLogSettingsArgs logSettings) {
+            return logSettings(Output.of(logSettings));
+        }
+
+        /**
+         * @param logStart Log at session start?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logStart(@Nullable Output<Boolean> logStart) {
+            $.logStart = logStart;
+            return this;
+        }
+
+        /**
+         * @param logStart Log at session start?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder logStart(Boolean logStart) {
+            return logStart(Output.of(logStart));
+        }
+
+        /**
+         * @param name The name of the security rule
          * 
          * @return builder
          * 
@@ -703,7 +1170,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The name of the security rule.
+         * @param name The name of the security rule
          * 
          * @return builder
          * 
@@ -713,7 +1180,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param negateDestination Negate the destination addresses(es). Default: `false`.
+         * @param negateDestination Negate the destination addresses(es)?
          * 
          * @return builder
          * 
@@ -724,7 +1191,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param negateDestination Negate the destination addresses(es). Default: `false`.
+         * @param negateDestination Negate the destination addresses(es)?
          * 
          * @return builder
          * 
@@ -734,7 +1201,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param negateSource Negate the source address(es). Default: `false`.
+         * @param negateSource Negate the source address(es)?
          * 
          * @return builder
          * 
@@ -745,7 +1212,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param negateSource Negate the source address(es). Default: `false`.
+         * @param negateSource Negate the source address(es)?
          * 
          * @return builder
          * 
@@ -755,7 +1222,49 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param negateUser Negate user
+         * 
+         * @return builder
+         * 
+         */
+        public Builder negateUser(@Nullable Output<Boolean> negateUser) {
+            $.negateUser = negateUser;
+            return this;
+        }
+
+        /**
+         * @param negateUser Negate user
+         * 
+         * @return builder
+         * 
+         */
+        public Builder negateUser(Boolean negateUser) {
+            return negateUser(Output.of(negateUser));
+        }
+
+        /**
+         * @param policyType Policy type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyType(@Nullable Output<String> policyType) {
+            $.policyType = policyType;
+            return this;
+        }
+
+        /**
+         * @param policyType Policy type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder policyType(String policyType) {
+            return policyType(Output.of(policyType));
+        }
+
+        /**
+         * @param position The position of a security rule
          * 
          * @return builder
          * 
@@ -766,7 +1275,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The position of a security rule
          * 
          * @return builder
          * 
@@ -776,7 +1285,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param profileSetting The security profile object.
+         * @param profileSetting The security profile object
          * 
          * @return builder
          * 
@@ -787,7 +1296,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param profileSetting The security profile object.
+         * @param profileSetting The security profile object
          * 
          * @return builder
          * 
@@ -797,18 +1306,60 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param services The service(s) being accessed.
+         * @param schedule Schedule in which this rule will be applied
          * 
          * @return builder
          * 
          */
-        public Builder services(Output<List<String>> services) {
+        public Builder schedule(@Nullable Output<String> schedule) {
+            $.schedule = schedule;
+            return this;
+        }
+
+        /**
+         * @param schedule Schedule in which this rule will be applied
+         * 
+         * @return builder
+         * 
+         */
+        public Builder schedule(String schedule) {
+            return schedule(Output.of(schedule));
+        }
+
+        /**
+         * @param securitySettings Security settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securitySettings(@Nullable Output<SecurityRuleSecuritySettingsArgs> securitySettings) {
+            $.securitySettings = securitySettings;
+            return this;
+        }
+
+        /**
+         * @param securitySettings Security settings
+         * 
+         * @return builder
+         * 
+         */
+        public Builder securitySettings(SecurityRuleSecuritySettingsArgs securitySettings) {
+            return securitySettings(Output.of(securitySettings));
+        }
+
+        /**
+         * @param services The service(s) being accessed
+         * 
+         * @return builder
+         * 
+         */
+        public Builder services(@Nullable Output<List<String>> services) {
             $.services = services;
             return this;
         }
 
         /**
-         * @param services The service(s) being accessed.
+         * @param services The service(s) being accessed
          * 
          * @return builder
          * 
@@ -818,7 +1369,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param services The service(s) being accessed.
+         * @param services The service(s) being accessed
          * 
          * @return builder
          * 
@@ -828,7 +1379,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -839,7 +1390,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -849,7 +1400,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sourceHips The source Host Integrity Profile(s).
+         * @param sourceHips The source Host Integrity Profile(s)
          * 
          * @return builder
          * 
@@ -860,7 +1411,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sourceHips The source Host Integrity Profile(s).
+         * @param sourceHips The source Host Integrity Profile(s)
          * 
          * @return builder
          * 
@@ -870,7 +1421,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sourceHips The source Host Integrity Profile(s).
+         * @param sourceHips The source Host Integrity Profile(s)
          * 
          * @return builder
          * 
@@ -880,18 +1431,18 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sourceUsers The source user(s) or group(s).
+         * @param sourceUsers List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
          * 
          * @return builder
          * 
          */
-        public Builder sourceUsers(Output<List<String>> sourceUsers) {
+        public Builder sourceUsers(@Nullable Output<List<String>> sourceUsers) {
             $.sourceUsers = sourceUsers;
             return this;
         }
 
         /**
-         * @param sourceUsers The source user(s) or group(s).
+         * @param sourceUsers List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
          * 
          * @return builder
          * 
@@ -901,7 +1452,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sourceUsers The source user(s) or group(s).
+         * @param sourceUsers List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
          * 
          * @return builder
          * 
@@ -911,18 +1462,18 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es).
+         * @param sources The source addresses(es)
          * 
          * @return builder
          * 
          */
-        public Builder sources(Output<List<String>> sources) {
+        public Builder sources(@Nullable Output<List<String>> sources) {
             $.sources = sources;
             return this;
         }
 
         /**
-         * @param sources The source address(es).
+         * @param sources The source addresses(es)
          * 
          * @return builder
          * 
@@ -932,7 +1483,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es).
+         * @param sources The source addresses(es)
          * 
          * @return builder
          * 
@@ -942,7 +1493,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags The tags associated with the security rule.
+         * @param tags The tags associated with the security rule
          * 
          * @return builder
          * 
@@ -953,7 +1504,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags The tags associated with the security rule.
+         * @param tags The tags associated with the security rule
          * 
          * @return builder
          * 
@@ -963,7 +1514,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags The tags associated with the security rule.
+         * @param tags The tags associated with the security rule
          * 
          * @return builder
          * 
@@ -973,18 +1524,49 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tos The destination security zone(s).
+         * @param tenantRestrictions Tenant restrictions
          * 
          * @return builder
          * 
          */
-        public Builder tos(Output<List<String>> tos) {
+        public Builder tenantRestrictions(@Nullable Output<List<String>> tenantRestrictions) {
+            $.tenantRestrictions = tenantRestrictions;
+            return this;
+        }
+
+        /**
+         * @param tenantRestrictions Tenant restrictions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenantRestrictions(List<String> tenantRestrictions) {
+            return tenantRestrictions(Output.of(tenantRestrictions));
+        }
+
+        /**
+         * @param tenantRestrictions Tenant restrictions
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tenantRestrictions(String... tenantRestrictions) {
+            return tenantRestrictions(List.of(tenantRestrictions));
+        }
+
+        /**
+         * @param tos The destination security zone(s)
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tos(@Nullable Output<List<String>> tos) {
             $.tos = tos;
             return this;
         }
 
         /**
-         * @param tos The destination security zone(s).
+         * @param tos The destination security zone(s)
          * 
          * @return builder
          * 
@@ -994,7 +1576,7 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tos The destination security zone(s).
+         * @param tos The destination security zone(s)
          * 
          * @return builder
          * 
@@ -1004,33 +1586,6 @@ public final class SecurityRuleArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public SecurityRuleArgs build() {
-            if ($.action == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "action");
-            }
-            if ($.applications == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "applications");
-            }
-            if ($.categories == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "categories");
-            }
-            if ($.destinations == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "destinations");
-            }
-            if ($.froms == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "froms");
-            }
-            if ($.services == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "services");
-            }
-            if ($.sourceUsers == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "sourceUsers");
-            }
-            if ($.sources == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "sources");
-            }
-            if ($.tos == null) {
-                throw new MissingRequiredPropertyException("SecurityRuleArgs", "tos");
-            }
             return $;
         }
     }

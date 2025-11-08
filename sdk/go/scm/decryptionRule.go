@@ -12,84 +12,60 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewDecryptionRule(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// DecryptionRule resource
 type DecryptionRule struct {
 	pulumi.CustomResourceState
 
-	// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+	// The action to be taken
 	Action pulumi.StringOutput `pulumi:"action"`
-	// The Categories param.
+	// The destination URL category
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
-	// The Description param.
+	// The description of the decryption rule
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The DestinationHips param.
+	// The Host Integrity Profile of the destination host
 	DestinationHips pulumi.StringArrayOutput `pulumi:"destinationHips"`
-	// The Destinations param.
+	// The destination addresses
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Disabled param.
+	// Is the rule disabled?
 	Disabled pulumi.BoolPtrOutput `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Froms param.
+	// The source security zone
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
-	// The LogFail param.
+	// Log failed decryption events?
 	LogFail pulumi.BoolPtrOutput `pulumi:"logFail"`
-	// The LogSetting param.
+	// The log settings of the decryption rule
 	LogSetting pulumi.StringPtrOutput `pulumi:"logSetting"`
-	// The LogSuccess param.
+	// Log successful decryption events?
 	LogSuccess pulumi.BoolPtrOutput `pulumi:"logSuccess"`
-	// The Name param.
+	// The name of the decryption rule
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The NegateDestination param.
+	// Negate the destination addresses?
 	NegateDestination pulumi.BoolPtrOutput `pulumi:"negateDestination"`
-	// The NegateSource param.
+	// Negate the source addresses?
 	NegateSource pulumi.BoolPtrOutput `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The position of a security rule
 	Position pulumi.StringOutput `pulumi:"position"`
-	// The Profile param.
+	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrOutput `pulumi:"profile"`
-	// The Services param.
+	// The destination services and/or service groups
 	Services pulumi.StringArrayOutput `pulumi:"services"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The SourceHips param.
+	// Source hip
 	SourceHips pulumi.StringArrayOutput `pulumi:"sourceHips"`
-	// The SourceUsers param.
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
-	// The Sources param.
+	// The source addresses
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
-	// The Tags param.
+	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	Tfid pulumi.StringOutput      `pulumi:"tfid"`
-	// The Tos param.
+	// The destination security zone
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
-	// The Type param.
+	// The type of decryption
 	Type DecryptionRuleTypePtrOutput `pulumi:"type"`
 }
 
@@ -147,110 +123,110 @@ func GetDecryptionRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering DecryptionRule resources.
 type decryptionRuleState struct {
-	// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+	// The action to be taken
 	Action *string `pulumi:"action"`
-	// The Categories param.
+	// The destination URL category
 	Categories []string `pulumi:"categories"`
-	// The Description param.
+	// The description of the decryption rule
 	Description *string `pulumi:"description"`
-	// The DestinationHips param.
+	// The Host Integrity Profile of the destination host
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The Destinations param.
+	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Disabled param.
+	// Is the rule disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Froms param.
+	// The source security zone
 	Froms []string `pulumi:"froms"`
-	// The LogFail param.
+	// Log failed decryption events?
 	LogFail *bool `pulumi:"logFail"`
-	// The LogSetting param.
+	// The log settings of the decryption rule
 	LogSetting *string `pulumi:"logSetting"`
-	// The LogSuccess param.
+	// Log successful decryption events?
 	LogSuccess *bool `pulumi:"logSuccess"`
-	// The Name param.
+	// The name of the decryption rule
 	Name *string `pulumi:"name"`
-	// The NegateDestination param.
+	// Negate the destination addresses?
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// The NegateSource param.
+	// Negate the source addresses?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The position of a security rule
 	Position *string `pulumi:"position"`
-	// The Profile param.
+	// The decryption profile associated with the decryption rule
 	Profile *string `pulumi:"profile"`
-	// The Services param.
+	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The SourceHips param.
+	// Source hip
 	SourceHips []string `pulumi:"sourceHips"`
-	// The SourceUsers param.
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Sources param.
+	// The source addresses
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
 	Tfid *string  `pulumi:"tfid"`
-	// The Tos param.
+	// The destination security zone
 	Tos []string `pulumi:"tos"`
-	// The Type param.
+	// The type of decryption
 	Type *DecryptionRuleType `pulumi:"type"`
 }
 
 type DecryptionRuleState struct {
-	// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+	// The action to be taken
 	Action pulumi.StringPtrInput
-	// The Categories param.
+	// The destination URL category
 	Categories pulumi.StringArrayInput
-	// The Description param.
+	// The description of the decryption rule
 	Description pulumi.StringPtrInput
-	// The DestinationHips param.
+	// The Host Integrity Profile of the destination host
 	DestinationHips pulumi.StringArrayInput
-	// The Destinations param.
+	// The destination addresses
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Disabled param.
+	// Is the rule disabled?
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Froms param.
+	// The source security zone
 	Froms pulumi.StringArrayInput
-	// The LogFail param.
+	// Log failed decryption events?
 	LogFail pulumi.BoolPtrInput
-	// The LogSetting param.
+	// The log settings of the decryption rule
 	LogSetting pulumi.StringPtrInput
-	// The LogSuccess param.
+	// Log successful decryption events?
 	LogSuccess pulumi.BoolPtrInput
-	// The Name param.
+	// The name of the decryption rule
 	Name pulumi.StringPtrInput
-	// The NegateDestination param.
+	// Negate the destination addresses?
 	NegateDestination pulumi.BoolPtrInput
-	// The NegateSource param.
+	// Negate the source addresses?
 	NegateSource pulumi.BoolPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The position of a security rule
 	Position pulumi.StringPtrInput
-	// The Profile param.
+	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrInput
-	// The Services param.
+	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The SourceHips param.
+	// Source hip
 	SourceHips pulumi.StringArrayInput
-	// The SourceUsers param.
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
-	// The Sources param.
+	// The source addresses
 	Sources pulumi.StringArrayInput
-	// The Tags param.
+	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayInput
 	Tfid pulumi.StringPtrInput
-	// The Tos param.
+	// The destination security zone
 	Tos pulumi.StringArrayInput
-	// The Type param.
+	// The type of decryption
 	Type DecryptionRuleTypePtrInput
 }
 
@@ -259,109 +235,109 @@ func (DecryptionRuleState) ElementType() reflect.Type {
 }
 
 type decryptionRuleArgs struct {
-	// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+	// The action to be taken
 	Action string `pulumi:"action"`
-	// The Categories param.
+	// The destination URL category
 	Categories []string `pulumi:"categories"`
-	// The Description param.
+	// The description of the decryption rule
 	Description *string `pulumi:"description"`
-	// The DestinationHips param.
+	// The Host Integrity Profile of the destination host
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The Destinations param.
+	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Disabled param.
+	// Is the rule disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Froms param.
+	// The source security zone
 	Froms []string `pulumi:"froms"`
-	// The LogFail param.
+	// Log failed decryption events?
 	LogFail *bool `pulumi:"logFail"`
-	// The LogSetting param.
+	// The log settings of the decryption rule
 	LogSetting *string `pulumi:"logSetting"`
-	// The LogSuccess param.
+	// Log successful decryption events?
 	LogSuccess *bool `pulumi:"logSuccess"`
-	// The Name param.
+	// The name of the decryption rule
 	Name *string `pulumi:"name"`
-	// The NegateDestination param.
+	// Negate the destination addresses?
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// The NegateSource param.
+	// Negate the source addresses?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The position of a security rule
 	Position *string `pulumi:"position"`
-	// The Profile param.
+	// The decryption profile associated with the decryption rule
 	Profile *string `pulumi:"profile"`
-	// The Services param.
+	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The SourceHips param.
+	// Source hip
 	SourceHips []string `pulumi:"sourceHips"`
-	// The SourceUsers param.
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Sources param.
+	// The source addresses
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
-	// The Tos param.
+	// The destination security zone
 	Tos []string `pulumi:"tos"`
-	// The Type param.
+	// The type of decryption
 	Type *DecryptionRuleType `pulumi:"type"`
 }
 
 // The set of arguments for constructing a DecryptionRule resource.
 type DecryptionRuleArgs struct {
-	// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+	// The action to be taken
 	Action pulumi.StringInput
-	// The Categories param.
+	// The destination URL category
 	Categories pulumi.StringArrayInput
-	// The Description param.
+	// The description of the decryption rule
 	Description pulumi.StringPtrInput
-	// The DestinationHips param.
+	// The Host Integrity Profile of the destination host
 	DestinationHips pulumi.StringArrayInput
-	// The Destinations param.
+	// The destination addresses
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Disabled param.
+	// Is the rule disabled?
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Froms param.
+	// The source security zone
 	Froms pulumi.StringArrayInput
-	// The LogFail param.
+	// Log failed decryption events?
 	LogFail pulumi.BoolPtrInput
-	// The LogSetting param.
+	// The log settings of the decryption rule
 	LogSetting pulumi.StringPtrInput
-	// The LogSuccess param.
+	// Log successful decryption events?
 	LogSuccess pulumi.BoolPtrInput
-	// The Name param.
+	// The name of the decryption rule
 	Name pulumi.StringPtrInput
-	// The NegateDestination param.
+	// Negate the destination addresses?
 	NegateDestination pulumi.BoolPtrInput
-	// The NegateSource param.
+	// Negate the source addresses?
 	NegateSource pulumi.BoolPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The position of a security rule
 	Position pulumi.StringPtrInput
-	// The Profile param.
+	// The decryption profile associated with the decryption rule
 	Profile pulumi.StringPtrInput
-	// The Services param.
+	// The destination services and/or service groups
 	Services pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The SourceHips param.
+	// Source hip
 	SourceHips pulumi.StringArrayInput
-	// The SourceUsers param.
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
-	// The Sources param.
+	// The source addresses
 	Sources pulumi.StringArrayInput
-	// The Tags param.
+	// The tags associated with the decryption rule
 	Tags pulumi.StringArrayInput
-	// The Tos param.
+	// The destination security zone
 	Tos pulumi.StringArrayInput
-	// The Type param.
+	// The type of decryption
 	Type DecryptionRuleTypePtrInput
 }
 
@@ -452,117 +428,117 @@ func (o DecryptionRuleOutput) ToDecryptionRuleOutputWithContext(ctx context.Cont
 	return o
 }
 
-// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+// The action to be taken
 func (o DecryptionRuleOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringOutput { return v.Action }).(pulumi.StringOutput)
 }
 
-// The Categories param.
+// The destination URL category
 func (o DecryptionRuleOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The Description param.
+// The description of the decryption rule
 func (o DecryptionRuleOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The DestinationHips param.
+// The Host Integrity Profile of the destination host
 func (o DecryptionRuleOutput) DestinationHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.DestinationHips }).(pulumi.StringArrayOutput)
 }
 
-// The Destinations param.
+// The destination addresses
 func (o DecryptionRuleOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o DecryptionRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Disabled param.
+// Is the rule disabled?
 func (o DecryptionRuleOutput) Disabled() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.BoolPtrOutput { return v.Disabled }).(pulumi.BoolPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o DecryptionRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Froms param.
+// The source security zone
 func (o DecryptionRuleOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The LogFail param.
+// Log failed decryption events?
 func (o DecryptionRuleOutput) LogFail() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.BoolPtrOutput { return v.LogFail }).(pulumi.BoolPtrOutput)
 }
 
-// The LogSetting param.
+// The log settings of the decryption rule
 func (o DecryptionRuleOutput) LogSetting() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.LogSetting }).(pulumi.StringPtrOutput)
 }
 
-// The LogSuccess param.
+// Log successful decryption events?
 func (o DecryptionRuleOutput) LogSuccess() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.BoolPtrOutput { return v.LogSuccess }).(pulumi.BoolPtrOutput)
 }
 
-// The Name param.
+// The name of the decryption rule
 func (o DecryptionRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NegateDestination param.
+// Negate the destination addresses?
 func (o DecryptionRuleOutput) NegateDestination() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.BoolPtrOutput { return v.NegateDestination }).(pulumi.BoolPtrOutput)
 }
 
-// The NegateSource param.
+// Negate the source addresses?
 func (o DecryptionRuleOutput) NegateSource() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.BoolPtrOutput { return v.NegateSource }).(pulumi.BoolPtrOutput)
 }
 
-// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+// The position of a security rule
 func (o DecryptionRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
-// The Profile param.
+// The decryption profile associated with the decryption rule
 func (o DecryptionRuleOutput) Profile() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Profile }).(pulumi.StringPtrOutput)
 }
 
-// The Services param.
+// The destination services and/or service groups
 func (o DecryptionRuleOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o DecryptionRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The SourceHips param.
+// Source hip
 func (o DecryptionRuleOutput) SourceHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.SourceHips }).(pulumi.StringArrayOutput)
 }
 
-// The SourceUsers param.
+// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 func (o DecryptionRuleOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The Sources param.
+// The source addresses
 func (o DecryptionRuleOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The Tags param.
+// The tags associated with the decryption rule
 func (o DecryptionRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
@@ -571,12 +547,12 @@ func (o DecryptionRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Tos param.
+// The destination security zone
 func (o DecryptionRuleOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *DecryptionRule) pulumi.StringArrayOutput { return v.Tos }).(pulumi.StringArrayOutput)
 }
 
-// The Type param.
+// The type of decryption
 func (o DecryptionRuleOutput) Type() DecryptionRuleTypePtrOutput {
 	return o.ApplyT(func(v *DecryptionRule) DecryptionRuleTypePtrOutput { return v.Type }).(DecryptionRuleTypePtrOutput)
 }

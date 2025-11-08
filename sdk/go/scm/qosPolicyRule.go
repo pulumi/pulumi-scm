@@ -12,51 +12,27 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewQosPolicyRule(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// QosPolicyRule resource
 type QosPolicyRule struct {
 	pulumi.CustomResourceState
 
-	// The Action param.
+	// Action
 	Action QosPolicyRuleActionOutput `pulumi:"action"`
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The DscpTos param.
+	// Dscp tos
 	DscpTos QosPolicyRuleDscpTosPtrOutput `pulumi:"dscpTos"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position pulumi.StringOutput `pulumi:"position"`
-	// The Schedule param.
+	// Schedule
 	Schedule pulumi.StringPtrOutput `pulumi:"schedule"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -94,45 +70,45 @@ func GetQosPolicyRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering QosPolicyRule resources.
 type qosPolicyRuleState struct {
-	// The Action param.
+	// Action
 	Action *QosPolicyRuleAction `pulumi:"action"`
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DscpTos param.
+	// Dscp tos
 	DscpTos *QosPolicyRuleDscpTos `pulumi:"dscpTos"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position *string `pulumi:"position"`
-	// The Schedule param.
+	// Schedule
 	Schedule *string `pulumi:"schedule"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type QosPolicyRuleState struct {
-	// The Action param.
+	// Action
 	Action QosPolicyRuleActionPtrInput
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DscpTos param.
+	// Dscp tos
 	DscpTos QosPolicyRuleDscpTosPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position pulumi.StringPtrInput
-	// The Schedule param.
+	// Schedule
 	Schedule pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -142,45 +118,45 @@ func (QosPolicyRuleState) ElementType() reflect.Type {
 }
 
 type qosPolicyRuleArgs struct {
-	// The Action param.
+	// Action
 	Action QosPolicyRuleAction `pulumi:"action"`
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DscpTos param.
+	// Dscp tos
 	DscpTos *QosPolicyRuleDscpTos `pulumi:"dscpTos"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position *string `pulumi:"position"`
-	// The Schedule param.
+	// Schedule
 	Schedule *string `pulumi:"schedule"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a QosPolicyRule resource.
 type QosPolicyRuleArgs struct {
-	// The Action param.
+	// Action
 	Action QosPolicyRuleActionInput
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DscpTos param.
+	// Dscp tos
 	DscpTos QosPolicyRuleDscpTosPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position pulumi.StringPtrInput
-	// The Schedule param.
+	// Schedule
 	Schedule pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -271,47 +247,47 @@ func (o QosPolicyRuleOutput) ToQosPolicyRuleOutputWithContext(ctx context.Contex
 	return o
 }
 
-// The Action param.
+// Action
 func (o QosPolicyRuleOutput) Action() QosPolicyRuleActionOutput {
 	return o.ApplyT(func(v *QosPolicyRule) QosPolicyRuleActionOutput { return v.Action }).(QosPolicyRuleActionOutput)
 }
 
-// The Description param.
+// Description
 func (o QosPolicyRuleOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o QosPolicyRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The DscpTos param.
+// Dscp tos
 func (o QosPolicyRuleOutput) DscpTos() QosPolicyRuleDscpTosPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) QosPolicyRuleDscpTosPtrOutput { return v.DscpTos }).(QosPolicyRuleDscpTosPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o QosPolicyRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Name param.
+// Name
 func (o QosPolicyRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+// The relative position of the rule
 func (o QosPolicyRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
-// The Schedule param.
+// Schedule
 func (o QosPolicyRuleOutput) Schedule() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Schedule }).(pulumi.StringPtrOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o QosPolicyRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

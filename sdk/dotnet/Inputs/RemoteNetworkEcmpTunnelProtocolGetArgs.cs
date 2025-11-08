@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class RemoteNetworkEcmpTunnelProtocolGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Bgp param.
+        /// Bgp
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.RemoteNetworkEcmpTunnelProtocolBgpGetArgs>? Bgp { get; set; }

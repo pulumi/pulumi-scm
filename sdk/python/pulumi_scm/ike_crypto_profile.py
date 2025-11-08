@@ -32,15 +32,15 @@ class IkeCryptoProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a IkeCryptoProfile resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
-        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['IkeCryptoProfileLifetimeArgs'] lifetime: The Lifetime param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: Dh group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: Hash
+        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['IkeCryptoProfileLifetimeArgs'] lifetime: Ike crypto profile lifetime
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         pulumi.set(__self__, "dh_groups", dh_groups)
         pulumi.set(__self__, "encryptions", encryptions)
@@ -62,7 +62,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        Dh group
         """
         return pulumi.get(self, "dh_groups")
 
@@ -74,7 +74,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter
     def encryptions(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        Encryption algorithm
         """
         return pulumi.get(self, "encryptions")
 
@@ -86,7 +86,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter
     def hashes(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        Hash
         """
         return pulumi.get(self, "hashes")
 
@@ -98,7 +98,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter(name="authenticationMultiple")
     def authentication_multiple(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         """
         return pulumi.get(self, "authentication_multiple")
 
@@ -110,7 +110,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -122,7 +122,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -134,7 +134,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter
     def lifetime(self) -> Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']]:
         """
-        The Lifetime param.
+        Ike crypto profile lifetime
         """
         return pulumi.get(self, "lifetime")
 
@@ -146,7 +146,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -158,7 +158,7 @@ class IkeCryptoProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -182,15 +182,15 @@ class _IkeCryptoProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering IkeCryptoProfile resources.
-        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
-        :param pulumi.Input['IkeCryptoProfileLifetimeArgs'] lifetime: The Lifetime param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: Dh group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: Hash
+        :param pulumi.Input['IkeCryptoProfileLifetimeArgs'] lifetime: Ike crypto profile lifetime
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if authentication_multiple is not None:
             pulumi.set(__self__, "authentication_multiple", authentication_multiple)
@@ -217,7 +217,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter(name="authenticationMultiple")
     def authentication_multiple(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         """
         return pulumi.get(self, "authentication_multiple")
 
@@ -229,7 +229,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -241,7 +241,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        Dh group
         """
         return pulumi.get(self, "dh_groups")
 
@@ -253,7 +253,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter
     def encryptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        Encryption algorithm
         """
         return pulumi.get(self, "encryptions")
 
@@ -265,7 +265,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -277,7 +277,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter
     def hashes(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        Hash
         """
         return pulumi.get(self, "hashes")
 
@@ -289,7 +289,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter
     def lifetime(self) -> Optional[pulumi.Input['IkeCryptoProfileLifetimeArgs']]:
         """
-        The Lifetime param.
+        Ike crypto profile lifetime
         """
         return pulumi.get(self, "lifetime")
 
@@ -301,7 +301,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -313,7 +313,7 @@ class _IkeCryptoProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -348,7 +348,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        IkeCryptoProfile resource
 
         ## Example Usage
 
@@ -356,20 +356,39 @@ class IkeCryptoProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.IkeCryptoProfile("example")
+        # The resource block defines a new IKE Crypto Profile.
+        scm_ike_crypto_profile2 = scm.IkeCryptoProfile("scm_ike_crypto_profile_2",
+            name="scm_ike_crypto_profile_2",
+            folder="Prisma Access",
+            hashes=[
+                "sha256",
+                "sha384",
+            ],
+            dh_groups=[
+                "group14",
+                "group5",
+            ],
+            encryptions=[
+                "aes-256-cbc",
+                "aes-128-cbc",
+            ],
+            lifetime={
+                "hours": 8,
+            },
+            authentication_multiple=10)
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
-        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: The Lifetime param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: Dh group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: Hash
+        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: Ike crypto profile lifetime
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -378,7 +397,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
                  args: IkeCryptoProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        IkeCryptoProfile resource
 
         ## Example Usage
 
@@ -386,7 +405,26 @@ class IkeCryptoProfile(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.IkeCryptoProfile("example")
+        # The resource block defines a new IKE Crypto Profile.
+        scm_ike_crypto_profile2 = scm.IkeCryptoProfile("scm_ike_crypto_profile_2",
+            name="scm_ike_crypto_profile_2",
+            folder="Prisma Access",
+            hashes=[
+                "sha256",
+                "sha384",
+            ],
+            dh_groups=[
+                "group14",
+                "group5",
+            ],
+            encryptions=[
+                "aes-256-cbc",
+                "aes-128-cbc",
+            ],
+            lifetime={
+                "hours": 8,
+            },
+            authentication_multiple=10)
         ```
 
         :param str resource_name: The name of the resource.
@@ -465,15 +503,15 @@ class IkeCryptoProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
-        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: The Lifetime param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.int] authentication_multiple: IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] dh_groups: Dh group
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] encryptions: Encryption algorithm
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hashes: Hash
+        :param pulumi.Input[Union['IkeCryptoProfileLifetimeArgs', 'IkeCryptoProfileLifetimeArgsDict']] lifetime: Ike crypto profile lifetime
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -495,7 +533,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter(name="authenticationMultiple")
     def authentication_multiple(self) -> pulumi.Output[_builtins.int]:
         """
-        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         """
         return pulumi.get(self, "authentication_multiple")
 
@@ -503,7 +541,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -511,7 +549,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        Dh group
         """
         return pulumi.get(self, "dh_groups")
 
@@ -519,7 +557,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter
     def encryptions(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        Encryption algorithm
         """
         return pulumi.get(self, "encryptions")
 
@@ -527,7 +565,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -535,7 +573,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter
     def hashes(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        Hash
         """
         return pulumi.get(self, "hashes")
 
@@ -543,7 +581,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter
     def lifetime(self) -> pulumi.Output[Optional['outputs.IkeCryptoProfileLifetime']]:
         """
-        The Lifetime param.
+        Ike crypto profile lifetime
         """
         return pulumi.get(self, "lifetime")
 
@@ -551,7 +589,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -559,7 +597,7 @@ class IkeCryptoProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

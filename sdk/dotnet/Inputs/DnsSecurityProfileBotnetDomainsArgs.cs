@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs>? _dnsSecurityCategories;
 
         /// <summary>
-        /// The DnsSecurityCategories param.
+        /// DNS categories
         /// </summary>
         public InputList<Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs> DnsSecurityCategories
         {
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.DnsSecurityProfileBotnetDomainsListArgs>? _lists;
 
         /// <summary>
-        /// The Lists param.
+        /// Dynamic lists of DNS domains
         /// </summary>
         public InputList<Inputs.DnsSecurityProfileBotnetDomainsListArgs> Lists
         {
@@ -37,7 +37,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Sinkhole param.
+        /// DNS sinkhole settings
         /// </summary>
         [Input("sinkhole")]
         public Input<Inputs.DnsSecurityProfileBotnetDomainsSinkholeArgs>? Sinkhole { get; set; }
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.DnsSecurityProfileBotnetDomainsWhitelistArgs>? _whitelists;
 
         /// <summary>
-        /// The Whitelists param.
+        /// DNS security overrides
         /// </summary>
         public InputList<Inputs.DnsSecurityProfileBotnetDomainsWhitelistArgs> Whitelists
         {

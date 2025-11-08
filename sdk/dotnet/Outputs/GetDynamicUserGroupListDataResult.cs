@@ -14,43 +14,68 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDynamicUserGroupListDataResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// The description of the dynamic address group
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// tag-based filter. String length must not exceed 2047 characters.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The tag-based filter for the dynamic user group
         /// </summary>
         public readonly string Filter;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the dynamic user group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the dynamic address group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Tags associated with the dynamic user group
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetDynamicUserGroupListDataResult(
             string description,
 
+            string device,
+
             string filter,
+
+            string folder,
 
             string id,
 
             string name,
 
-            ImmutableArray<string> tags)
+            string snippet,
+
+            ImmutableArray<string> tags,
+
+            string tfid)
         {
             Description = description;
+            Device = device;
             Filter = filter;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tags = tags;
+            Tfid = tfid;
         }
     }
 }

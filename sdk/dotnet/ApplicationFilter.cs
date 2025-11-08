@@ -10,136 +10,123 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// ApplicationFilter resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.ApplicationFilter("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/applicationFilter:ApplicationFilter")]
     public partial class ApplicationFilter : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Category
         /// </summary>
         [Output("categories")]
         public Output<ImmutableArray<string>> Categories { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("evasive")]
         public Output<bool?> Evasive { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("excessiveBandwidthUse")]
         public Output<bool?> ExcessiveBandwidthUse { get; private set; } = null!;
 
         /// <summary>
-        /// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Exclude
         /// </summary>
         [Output("excludes")]
         public Output<ImmutableArray<string>> Excludes { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("hasKnownVulnerabilities")]
         public Output<bool?> HasKnownVulnerabilities { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("isSaas")]
         public Output<bool?> IsSaas { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("newAppid")]
         public Output<bool?> NewAppid { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("pervasive")]
         public Output<bool?> Pervasive { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("proneToMisuse")]
         public Output<bool?> ProneToMisuse { get; private set; } = null!;
 
         /// <summary>
-        /// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        /// Risk
         /// </summary>
         [Output("risks")]
         public Output<ImmutableArray<int>> Risks { get; private set; } = null!;
 
         /// <summary>
-        /// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas certifications
         /// </summary>
         [Output("saasCertifications")]
         public Output<ImmutableArray<string>> SaasCertifications { get; private set; } = null!;
 
         /// <summary>
-        /// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas risk
         /// </summary>
         [Output("saasRisks")]
         public Output<ImmutableArray<string>> SaasRisks { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Subcategory
         /// </summary>
         [Output("subcategories")]
         public Output<ImmutableArray<string>> Subcategories { get; private set; } = null!;
 
         /// <summary>
-        /// The Tagging param.
+        /// Tagging
         /// </summary>
         [Output("tagging")]
         public Output<Outputs.ApplicationFilterTagging?> Tagging { get; private set; } = null!;
 
         /// <summary>
-        /// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Technology
         /// </summary>
         [Output("technologies")]
         public Output<ImmutableArray<string>> Technologies { get; private set; } = null!;
@@ -148,19 +135,19 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("transfersFiles")]
         public Output<bool?> TransfersFiles { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("tunnelsOtherApps")]
         public Output<bool?> TunnelsOtherApps { get; private set; } = null!;
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Output("usedByMalware")]
         public Output<bool?> UsedByMalware { get; private set; } = null!;
@@ -215,7 +202,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Category
         /// </summary>
         public InputList<string> Categories
         {
@@ -224,19 +211,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("evasive")]
         public Input<bool>? Evasive { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("excessiveBandwidthUse")]
         public Input<bool>? ExcessiveBandwidthUse { get; set; }
@@ -245,7 +232,7 @@ namespace Pulumi.Scm
         private InputList<string>? _excludes;
 
         /// <summary>
-        /// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Exclude
         /// </summary>
         public InputList<string> Excludes
         {
@@ -254,43 +241,43 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("hasKnownVulnerabilities")]
         public Input<bool>? HasKnownVulnerabilities { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("isSaas")]
         public Input<bool>? IsSaas { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("newAppid")]
         public Input<bool>? NewAppid { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("pervasive")]
         public Input<bool>? Pervasive { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("proneToMisuse")]
         public Input<bool>? ProneToMisuse { get; set; }
@@ -299,7 +286,7 @@ namespace Pulumi.Scm
         private InputList<int>? _risks;
 
         /// <summary>
-        /// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        /// Risk
         /// </summary>
         public InputList<int> Risks
         {
@@ -311,7 +298,7 @@ namespace Pulumi.Scm
         private InputList<string>? _saasCertifications;
 
         /// <summary>
-        /// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas certifications
         /// </summary>
         public InputList<string> SaasCertifications
         {
@@ -323,7 +310,7 @@ namespace Pulumi.Scm
         private InputList<string>? _saasRisks;
 
         /// <summary>
-        /// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas risk
         /// </summary>
         public InputList<string> SaasRisks
         {
@@ -332,7 +319,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -341,7 +328,7 @@ namespace Pulumi.Scm
         private InputList<string>? _subcategories;
 
         /// <summary>
-        /// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Subcategory
         /// </summary>
         public InputList<string> Subcategories
         {
@@ -350,7 +337,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Tagging param.
+        /// Tagging
         /// </summary>
         [Input("tagging")]
         public Input<Inputs.ApplicationFilterTaggingArgs>? Tagging { get; set; }
@@ -359,7 +346,7 @@ namespace Pulumi.Scm
         private InputList<string>? _technologies;
 
         /// <summary>
-        /// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Technology
         /// </summary>
         public InputList<string> Technologies
         {
@@ -368,19 +355,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("transfersFiles")]
         public Input<bool>? TransfersFiles { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("tunnelsOtherApps")]
         public Input<bool>? TunnelsOtherApps { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("usedByMalware")]
         public Input<bool>? UsedByMalware { get; set; }
@@ -397,7 +384,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Category
         /// </summary>
         public InputList<string> Categories
         {
@@ -406,19 +393,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("evasive")]
         public Input<bool>? Evasive { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("excessiveBandwidthUse")]
         public Input<bool>? ExcessiveBandwidthUse { get; set; }
@@ -427,7 +414,7 @@ namespace Pulumi.Scm
         private InputList<string>? _excludes;
 
         /// <summary>
-        /// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Exclude
         /// </summary>
         public InputList<string> Excludes
         {
@@ -436,43 +423,43 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("hasKnownVulnerabilities")]
         public Input<bool>? HasKnownVulnerabilities { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("isSaas")]
         public Input<bool>? IsSaas { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("newAppid")]
         public Input<bool>? NewAppid { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("pervasive")]
         public Input<bool>? Pervasive { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("proneToMisuse")]
         public Input<bool>? ProneToMisuse { get; set; }
@@ -481,7 +468,7 @@ namespace Pulumi.Scm
         private InputList<int>? _risks;
 
         /// <summary>
-        /// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        /// Risk
         /// </summary>
         public InputList<int> Risks
         {
@@ -493,7 +480,7 @@ namespace Pulumi.Scm
         private InputList<string>? _saasCertifications;
 
         /// <summary>
-        /// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas certifications
         /// </summary>
         public InputList<string> SaasCertifications
         {
@@ -505,7 +492,7 @@ namespace Pulumi.Scm
         private InputList<string>? _saasRisks;
 
         /// <summary>
-        /// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas risk
         /// </summary>
         public InputList<string> SaasRisks
         {
@@ -514,7 +501,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -523,7 +510,7 @@ namespace Pulumi.Scm
         private InputList<string>? _subcategories;
 
         /// <summary>
-        /// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Subcategory
         /// </summary>
         public InputList<string> Subcategories
         {
@@ -532,7 +519,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Tagging param.
+        /// Tagging
         /// </summary>
         [Input("tagging")]
         public Input<Inputs.ApplicationFilterTaggingGetArgs>? Tagging { get; set; }
@@ -541,7 +528,7 @@ namespace Pulumi.Scm
         private InputList<string>? _technologies;
 
         /// <summary>
-        /// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Technology
         /// </summary>
         public InputList<string> Technologies
         {
@@ -553,19 +540,19 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("transfersFiles")]
         public Input<bool>? TransfersFiles { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("tunnelsOtherApps")]
         public Input<bool>? TunnelsOtherApps { get; set; }
 
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         [Input("usedByMalware")]
         public Input<bool>? UsedByMalware { get; set; }

@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosPolicyRuleDscpTosCodepointTypeResult
     {
         /// <summary>
-        /// The Af param.
+        /// Af
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeAfResult Af;
         /// <summary>
-        /// The Cs param.
+        /// Cs
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeCsResult Cs;
         /// <summary>
-        /// The Custom param.
+        /// Custom
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeCustomResult Custom;
         /// <summary>
-        /// The Ef param.
+        /// Ef
         /// </summary>
-        public readonly bool Ef;
+        public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeEfResult Ef;
         /// <summary>
-        /// The Tos param.
+        /// Tos
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosCodepointTypeTosResult Tos;
 
@@ -42,7 +42,7 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetQosPolicyRuleDscpTosCodepointTypeCustomResult custom,
 
-            bool ef,
+            Outputs.GetQosPolicyRuleDscpTosCodepointTypeEfResult ef,
 
             Outputs.GetQosPolicyRuleDscpTosCodepointTypeTosResult tos)
         {

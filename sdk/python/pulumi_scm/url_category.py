@@ -28,13 +28,13 @@ class UrlCategoryArgs:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a UrlCategory resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: The List param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: List
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] type: Type
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -55,7 +55,7 @@ class UrlCategoryArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -67,7 +67,7 @@ class UrlCategoryArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -79,7 +79,7 @@ class UrlCategoryArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -91,7 +91,7 @@ class UrlCategoryArgs:
     @pulumi.getter
     def lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The List param.
+        List
         """
         return pulumi.get(self, "lists")
 
@@ -103,7 +103,7 @@ class UrlCategoryArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -115,7 +115,7 @@ class UrlCategoryArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -127,7 +127,7 @@ class UrlCategoryArgs:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        Type
         """
         return pulumi.get(self, "type")
 
@@ -149,13 +149,13 @@ class _UrlCategoryState:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering UrlCategory resources.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: The List param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: List
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] type: Type
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -178,7 +178,7 @@ class _UrlCategoryState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -190,7 +190,7 @@ class _UrlCategoryState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -202,7 +202,7 @@ class _UrlCategoryState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -214,7 +214,7 @@ class _UrlCategoryState:
     @pulumi.getter
     def lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The List param.
+        List
         """
         return pulumi.get(self, "lists")
 
@@ -226,7 +226,7 @@ class _UrlCategoryState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -238,7 +238,7 @@ class _UrlCategoryState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -259,7 +259,7 @@ class _UrlCategoryState:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        Type
         """
         return pulumi.get(self, "type")
 
@@ -283,7 +283,7 @@ class UrlCategory(pulumi.CustomResource):
                  type: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        UrlCategory resource
 
         ## Example Usage
 
@@ -291,18 +291,29 @@ class UrlCategory(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.UrlCategory("example", folder="Shared")
+        #
+        # Creates a custom URL Category object.
+        #
+        example = scm.UrlCategory("example",
+            folder="Shared",
+            name="example_url_category",
+            description="Test URL Category for create API",
+            lists=[
+                "example.com",
+                "test-create.com",
+            ],
+            type="URL List")
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: The List param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: List
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] type: Type
         """
         ...
     @overload
@@ -311,7 +322,7 @@ class UrlCategory(pulumi.CustomResource):
                  args: Optional[UrlCategoryArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        UrlCategory resource
 
         ## Example Usage
 
@@ -319,7 +330,18 @@ class UrlCategory(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.UrlCategory("example", folder="Shared")
+        #
+        # Creates a custom URL Category object.
+        #
+        example = scm.UrlCategory("example",
+            folder="Shared",
+            name="example_url_category",
+            description="Test URL Category for create API",
+            lists=[
+                "example.com",
+                "test-create.com",
+            ],
+            type="URL List")
         ```
 
         :param str resource_name: The name of the resource.
@@ -386,13 +408,13 @@ class UrlCategory(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: The List param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] lists: List
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] type: Type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -412,7 +434,7 @@ class UrlCategory(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -420,7 +442,7 @@ class UrlCategory(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -428,7 +450,7 @@ class UrlCategory(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -436,7 +458,7 @@ class UrlCategory(pulumi.CustomResource):
     @pulumi.getter
     def lists(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The List param.
+        List
         """
         return pulumi.get(self, "lists")
 
@@ -444,7 +466,7 @@ class UrlCategory(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -452,7 +474,7 @@ class UrlCategory(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -465,7 +487,7 @@ class UrlCategory(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output[_builtins.str]:
         """
-        The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        Type
         """
         return pulumi.get(self, "type")
 

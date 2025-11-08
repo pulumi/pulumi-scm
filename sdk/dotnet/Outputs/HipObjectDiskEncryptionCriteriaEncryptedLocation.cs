@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectDiskEncryptionCriteriaEncryptedLocation
     {
         /// <summary>
-        /// The EncryptionState param.
+        /// Encryption state
         /// </summary>
         public readonly Outputs.HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState? EncryptionState;
         /// <summary>
-        /// Encryption location. String length must not exceed 1023 characters.
+        /// Encryption location
         /// </summary>
         public readonly string Name;
 

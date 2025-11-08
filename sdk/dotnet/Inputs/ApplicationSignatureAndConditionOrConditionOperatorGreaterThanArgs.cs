@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Context param. String length must not exceed 127 characters.
+        /// Context
         /// </summary>
         [Input("context", required: true)]
         public Input<string> Context { get; set; } = null!;
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgs>? _qualifiers;
 
         /// <summary>
-        /// The Qualifiers param.
+        /// Qualifier
         /// </summary>
         public InputList<Inputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThanQualifierArgs> Qualifiers
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Value param. Value must be between 0 and 4294967295.
+        /// Value
         /// </summary>
         [Input("value", required: true)]
         public Input<int> Value { get; set; } = null!;

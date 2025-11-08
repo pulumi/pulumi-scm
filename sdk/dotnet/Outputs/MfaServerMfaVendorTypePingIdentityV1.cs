@@ -14,50 +14,50 @@ namespace Pulumi.Scm.Outputs
     public sealed class MfaServerMfaVendorTypePingIdentityV1
     {
         /// <summary>
-        /// The PingApiHost param.
+        /// Ping Identity API hostname
         /// </summary>
-        public readonly string? PingApiHost;
+        public readonly string PingApiHost;
         /// <summary>
-        /// The PingBaseuri param.
+        /// Ping Identity API base URI
         /// </summary>
-        public readonly string? PingBaseuri;
+        public readonly string PingBaseuri;
         /// <summary>
-        /// The PingOrg param.
-        /// </summary>
-        public readonly string? PingOrg;
-        /// <summary>
-        /// The PingOrgAlias param.
+        /// Ping Identity client organization ID
         /// </summary>
         public readonly string? PingOrgAlias;
         /// <summary>
-        /// The PingTimeout param.
+        /// Ping Identity timeout (seconds)
         /// </summary>
-        public readonly string? PingTimeout;
+        public readonly int PingTimeout;
         /// <summary>
-        /// The PingToken param.
+        /// Ping Identity API token
         /// </summary>
-        public readonly string? PingToken;
+        public readonly string PingToken;
+        /// <summary>
+        /// Ping Identity Base64 key
+        /// </summary>
+        public readonly string PingUseBase64Key;
 
         [OutputConstructor]
         private MfaServerMfaVendorTypePingIdentityV1(
-            string? pingApiHost,
+            string pingApiHost,
 
-            string? pingBaseuri,
-
-            string? pingOrg,
+            string pingBaseuri,
 
             string? pingOrgAlias,
 
-            string? pingTimeout,
+            int pingTimeout,
 
-            string? pingToken)
+            string pingToken,
+
+            string pingUseBase64Key)
         {
             PingApiHost = pingApiHost;
             PingBaseuri = pingBaseuri;
-            PingOrg = pingOrg;
             PingOrgAlias = pingOrgAlias;
             PingTimeout = pingTimeout;
             PingToken = pingToken;
+            PingUseBase64Key = pingUseBase64Key;
         }
     }
 }

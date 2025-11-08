@@ -14,43 +14,43 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRadiusServerProfileProtocolResult
     {
         /// <summary>
-        /// The Chap param.
+        /// C h a p
         /// </summary>
-        public readonly bool Chap;
+        public readonly string CHAP;
         /// <summary>
-        /// The EapTtlsWithPap param.
+        /// E a p t t l s with p a p
         /// </summary>
-        public readonly Outputs.GetRadiusServerProfileProtocolEapTtlsWithPapResult EapTtlsWithPap;
+        public readonly Outputs.GetRadiusServerProfileProtocolEAPTTLSWithPAPResult EAPTTLSWithPAP;
         /// <summary>
-        /// The Pap param.
+        /// P a p
         /// </summary>
-        public readonly bool Pap;
+        public readonly string PAP;
         /// <summary>
-        /// The PeapMschapV2 param.
+        /// P e a p m s c h a pv2
         /// </summary>
-        public readonly Outputs.GetRadiusServerProfileProtocolPeapMschapV2Result PeapMschapV2;
+        public readonly Outputs.GetRadiusServerProfileProtocolPEAPMSCHAPv2Result PEAPMSCHAPv2;
         /// <summary>
-        /// The PeapWithGtc param.
+        /// P e a p with g t c
         /// </summary>
-        public readonly Outputs.GetRadiusServerProfileProtocolPeapWithGtcResult PeapWithGtc;
+        public readonly Outputs.GetRadiusServerProfileProtocolPEAPWithGTCResult PEAPWithGTC;
 
         [OutputConstructor]
         private GetRadiusServerProfileProtocolResult(
-            bool chap,
+            string cHAP,
 
-            Outputs.GetRadiusServerProfileProtocolEapTtlsWithPapResult eapTtlsWithPap,
+            Outputs.GetRadiusServerProfileProtocolEAPTTLSWithPAPResult eAPTTLSWithPAP,
 
-            bool pap,
+            string pAP,
 
-            Outputs.GetRadiusServerProfileProtocolPeapMschapV2Result peapMschapV2,
+            Outputs.GetRadiusServerProfileProtocolPEAPMSCHAPv2Result pEAPMSCHAPv2,
 
-            Outputs.GetRadiusServerProfileProtocolPeapWithGtcResult peapWithGtc)
+            Outputs.GetRadiusServerProfileProtocolPEAPWithGTCResult pEAPWithGTC)
         {
-            Chap = chap;
-            EapTtlsWithPap = eapTtlsWithPap;
-            Pap = pap;
-            PeapMschapV2 = peapMschapV2;
-            PeapWithGtc = peapWithGtc;
+            CHAP = cHAP;
+            EAPTTLSWithPAP = eAPTTLSWithPAP;
+            PAP = pAP;
+            PEAPMSCHAPv2 = pEAPMSCHAPv2;
+            PEAPWithGTC = pEAPWithGTC;
         }
     }
 }

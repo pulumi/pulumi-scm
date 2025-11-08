@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsSecurityProfileBotnetDomainsListArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         [Input("action")]
         public Input<Inputs.DnsSecurityProfileBotnetDomainsListActionArgs>? Action { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        /// Packet capture
         /// </summary>
         [Input("packetCapture")]
         public Input<string>? PacketCapture { get; set; }

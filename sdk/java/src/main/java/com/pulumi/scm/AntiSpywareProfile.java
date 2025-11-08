@@ -10,7 +10,7 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.AntiSpywareProfileArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.AntiSpywareProfileState;
-import com.pulumi.scm.outputs.AntiSpywareProfileMicaEngineSpywareEnabledList;
+import com.pulumi.scm.outputs.AntiSpywareProfileMicaEngineSpywareEnabled;
 import com.pulumi.scm.outputs.AntiSpywareProfileRule;
 import com.pulumi.scm.outputs.AntiSpywareProfileThreatException;
 import java.lang.Boolean;
@@ -20,176 +20,148 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * AntiSpywareProfile resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.AntiSpywareProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new AntiSpywareProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/antiSpywareProfile:AntiSpywareProfile")
 public class AntiSpywareProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The CloudInlineAnalysis param. Default: `false`.
+     * Cloud inline analysis
      * 
      */
     @Export(name="cloudInlineAnalysis", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> cloudInlineAnalysis;
 
     /**
-     * @return The CloudInlineAnalysis param. Default: `false`.
+     * @return Cloud inline analysis
      * 
      */
     public Output<Boolean> cloudInlineAnalysis() {
         return this.cloudInlineAnalysis;
     }
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The InlineExceptionEdlUrls param.
+     * Inline exception edl url
      * 
      */
     @Export(name="inlineExceptionEdlUrls", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> inlineExceptionEdlUrls;
 
     /**
-     * @return The InlineExceptionEdlUrls param.
+     * @return Inline exception edl url
      * 
      */
     public Output<Optional<List<String>>> inlineExceptionEdlUrls() {
         return Codegen.optional(this.inlineExceptionEdlUrls);
     }
     /**
-     * The InlineExceptionIpAddresses param.
+     * Inline exception ip address
      * 
      */
     @Export(name="inlineExceptionIpAddresses", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> inlineExceptionIpAddresses;
 
     /**
-     * @return The InlineExceptionIpAddresses param.
+     * @return Inline exception ip address
      * 
      */
     public Output<Optional<List<String>>> inlineExceptionIpAddresses() {
         return Codegen.optional(this.inlineExceptionIpAddresses);
     }
     /**
-     * The MicaEngineSpywareEnabledList param.
+     * Mica engine spyware enabled
      * 
      */
-    @Export(name="micaEngineSpywareEnabledLists", refs={List.class,AntiSpywareProfileMicaEngineSpywareEnabledList.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<AntiSpywareProfileMicaEngineSpywareEnabledList>> micaEngineSpywareEnabledLists;
+    @Export(name="micaEngineSpywareEnableds", refs={List.class,AntiSpywareProfileMicaEngineSpywareEnabled.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<AntiSpywareProfileMicaEngineSpywareEnabled>> micaEngineSpywareEnableds;
 
     /**
-     * @return The MicaEngineSpywareEnabledList param.
+     * @return Mica engine spyware enabled
      * 
      */
-    public Output<Optional<List<AntiSpywareProfileMicaEngineSpywareEnabledList>>> micaEngineSpywareEnabledLists() {
-        return Codegen.optional(this.micaEngineSpywareEnabledLists);
+    public Output<Optional<List<AntiSpywareProfileMicaEngineSpywareEnabled>>> micaEngineSpywareEnableds() {
+        return Codegen.optional(this.micaEngineSpywareEnableds);
     }
     /**
-     * The Name param.
+     * The name of the anti-spyware profile
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the anti-spyware profile
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Rules param.
+     * Rules
      * 
      */
     @Export(name="rules", refs={List.class,AntiSpywareProfileRule.class}, tree="[0,1]")
     private Output</* @Nullable */ List<AntiSpywareProfileRule>> rules;
 
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     public Output<Optional<List<AntiSpywareProfileRule>>> rules() {
         return Codegen.optional(this.rules);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -202,14 +174,14 @@ public class AntiSpywareProfile extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      * 
      */
     @Export(name="threatExceptions", refs={List.class,AntiSpywareProfileThreatException.class}, tree="[0,1]")
     private Output</* @Nullable */ List<AntiSpywareProfileThreatException>> threatExceptions;
 
     /**
-     * @return The ThreatExceptions param.
+     * @return Threat exception
      * 
      */
     public Output<Optional<List<AntiSpywareProfileThreatException>>> threatExceptions() {

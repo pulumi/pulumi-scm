@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue {
     /**
-     * @return Registry value name. String length must not exceed 1023 characters.
+     * @return Registry value name
      * 
      */
     private String name;
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     private Boolean negate;
     /**
-     * @return Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry value data
      * 
      */
     private String valueData;
 
     private GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValue() {}
     /**
-     * @return Registry value name. String length must not exceed 1023 characters.
+     * @return Registry value name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     public Boolean negate() {
         return this.negate;
     }
     /**
-     * @return Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry value data
      * 
      */
     public String valueData() {

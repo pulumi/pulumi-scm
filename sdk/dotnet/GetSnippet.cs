@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetSnippet
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSnippet.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Snippet data source
         /// </summary>
         public static Task<GetSnippetResult> InvokeAsync(GetSnippetArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSnippetResult>("scm:index/getSnippet:getSnippet", args ?? new GetSnippetArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSnippet.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Snippet data source
         /// </summary>
         public static Output<GetSnippetResult> Invoke(GetSnippetInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSnippetResult>("scm:index/getSnippet:getSnippet", args ?? new GetSnippetInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSnippet.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Snippet data source
         /// </summary>
         public static Output<GetSnippetResult> Invoke(GetSnippetInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSnippetResult>("scm:index/getSnippet:getSnippet", args ?? new GetSnippetInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetSnippetArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the snippet
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the snippet
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetSnippetArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetSnippetInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the snippet
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the snippet
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetSnippetInvokeArgs()
         {
@@ -118,24 +76,24 @@ namespace Pulumi.Scm
     public sealed class GetSnippetResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the snippet
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the snippet
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Labels param.
+        /// Labels applied to the snippet
         /// </summary>
         public readonly ImmutableArray<string> Labels;
         /// <summary>
-        /// The Name param.
+        /// The name of the snippet
         /// </summary>
         public readonly string Name;
         public readonly string Tfid;
         /// <summary>
-        /// The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        /// The snippet type
         /// </summary>
         public readonly string Type;
 

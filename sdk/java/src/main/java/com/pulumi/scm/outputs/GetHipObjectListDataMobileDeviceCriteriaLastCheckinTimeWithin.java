@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithin {
     /**
-     * @return specify time in days. Value must be between 1 and 365. Default: `30`.
+     * @return specify time in days
      * 
      */
     private Integer days;
 
     private GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithin() {}
     /**
-     * @return specify time in days. Value must be between 1 and 365. Default: `30`.
+     * @return specify time in days
      * 
      */
     public Integer days() {

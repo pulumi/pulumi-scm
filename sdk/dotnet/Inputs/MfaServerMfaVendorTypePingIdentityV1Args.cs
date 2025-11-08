@@ -13,40 +13,50 @@ namespace Pulumi.Scm.Inputs
     public sealed class MfaServerMfaVendorTypePingIdentityV1Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The PingApiHost param.
+        /// Ping Identity API hostname
         /// </summary>
-        [Input("pingApiHost")]
-        public Input<string>? PingApiHost { get; set; }
+        [Input("pingApiHost", required: true)]
+        public Input<string> PingApiHost { get; set; } = null!;
 
         /// <summary>
-        /// The PingBaseuri param.
+        /// Ping Identity API base URI
         /// </summary>
-        [Input("pingBaseuri")]
-        public Input<string>? PingBaseuri { get; set; }
+        [Input("pingBaseuri", required: true)]
+        public Input<string> PingBaseuri { get; set; } = null!;
 
         /// <summary>
-        /// The PingOrg param.
-        /// </summary>
-        [Input("pingOrg")]
-        public Input<string>? PingOrg { get; set; }
-
-        /// <summary>
-        /// The PingOrgAlias param.
+        /// Ping Identity client organization ID
         /// </summary>
         [Input("pingOrgAlias")]
         public Input<string>? PingOrgAlias { get; set; }
 
         /// <summary>
-        /// The PingTimeout param.
+        /// Ping Identity timeout (seconds)
         /// </summary>
-        [Input("pingTimeout")]
-        public Input<string>? PingTimeout { get; set; }
+        [Input("pingTimeout", required: true)]
+        public Input<int> PingTimeout { get; set; } = null!;
 
         /// <summary>
-        /// The PingToken param.
+        /// Ping Identity API token
         /// </summary>
-        [Input("pingToken")]
-        public Input<string>? PingToken { get; set; }
+        [Input("pingToken", required: true)]
+        public Input<string> PingToken { get; set; } = null!;
+
+        [Input("pingUseBase64Key", required: true)]
+        private Input<string>? _pingUseBase64Key;
+
+        /// <summary>
+        /// Ping Identity Base64 key
+        /// </summary>
+        public Input<string>? PingUseBase64Key
+        {
+            get => _pingUseBase64Key;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _pingUseBase64Key = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         public MfaServerMfaVendorTypePingIdentityV1Args()
         {

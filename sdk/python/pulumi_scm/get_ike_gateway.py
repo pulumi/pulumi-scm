@@ -27,19 +27,25 @@ class GetIkeGatewayResult:
     """
     A collection of values returned by getIkeGateway.
     """
-    def __init__(__self__, authentication=None, device=None, folder=None, id=None, local_id=None, name=None, peer_address=None, peer_id=None, protocol=None, protocol_common=None, snippet=None, tfid=None):
+    def __init__(__self__, authentication=None, device=None, encrypted_values=None, folder=None, id=None, local_address=None, local_id=None, name=None, peer_address=None, peer_id=None, protocol=None, protocol_common=None, snippet=None, tfid=None):
         if authentication and not isinstance(authentication, dict):
             raise TypeError("Expected argument 'authentication' to be a dict")
         pulumi.set(__self__, "authentication", authentication)
         if device and not isinstance(device, str):
             raise TypeError("Expected argument 'device' to be a str")
         pulumi.set(__self__, "device", device)
+        if encrypted_values and not isinstance(encrypted_values, dict):
+            raise TypeError("Expected argument 'encrypted_values' to be a dict")
+        pulumi.set(__self__, "encrypted_values", encrypted_values)
         if folder and not isinstance(folder, str):
             raise TypeError("Expected argument 'folder' to be a str")
         pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
+        if local_address and not isinstance(local_address, dict):
+            raise TypeError("Expected argument 'local_address' to be a dict")
+        pulumi.set(__self__, "local_address", local_address)
         if local_id and not isinstance(local_id, dict):
             raise TypeError("Expected argument 'local_id' to be a dict")
         pulumi.set(__self__, "local_id", local_id)
@@ -69,23 +75,31 @@ class GetIkeGatewayResult:
     @pulumi.getter
     def authentication(self) -> 'outputs.GetIkeGatewayAuthenticationResult':
         """
-        The Authentication param.
+        Authentication
         """
         return pulumi.get(self, "authentication")
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[_builtins.str]:
+    def device(self) -> _builtins.str:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
-    @pulumi.getter
-    def folder(self) -> Optional[_builtins.str]:
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Mapping[str, _builtins.str]:
         """
-        The Folder param.
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -93,15 +107,23 @@ class GetIkeGatewayResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
+
+    @_builtins.property
+    @pulumi.getter(name="localAddress")
+    def local_address(self) -> 'outputs.GetIkeGatewayLocalAddressResult':
+        """
+        Local address
+        """
+        return pulumi.get(self, "local_address")
 
     @_builtins.property
     @pulumi.getter(name="localId")
     def local_id(self) -> 'outputs.GetIkeGatewayLocalIdResult':
         """
-        The LocalId param.
+        Local id
         """
         return pulumi.get(self, "local_id")
 
@@ -109,7 +131,7 @@ class GetIkeGatewayResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -117,7 +139,7 @@ class GetIkeGatewayResult:
     @pulumi.getter(name="peerAddress")
     def peer_address(self) -> 'outputs.GetIkeGatewayPeerAddressResult':
         """
-        The PeerAddress param.
+        Peer address
         """
         return pulumi.get(self, "peer_address")
 
@@ -125,7 +147,7 @@ class GetIkeGatewayResult:
     @pulumi.getter(name="peerId")
     def peer_id(self) -> 'outputs.GetIkeGatewayPeerIdResult':
         """
-        The PeerId param.
+        Peer id
         """
         return pulumi.get(self, "peer_id")
 
@@ -133,7 +155,7 @@ class GetIkeGatewayResult:
     @pulumi.getter
     def protocol(self) -> 'outputs.GetIkeGatewayProtocolResult':
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
@@ -141,15 +163,15 @@ class GetIkeGatewayResult:
     @pulumi.getter(name="protocolCommon")
     def protocol_common(self) -> 'outputs.GetIkeGatewayProtocolCommonResult':
         """
-        The ProtocolCommon param.
+        Protocol common
         """
         return pulumi.get(self, "protocol_common")
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[_builtins.str]:
+    def snippet(self) -> _builtins.str:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -167,8 +189,10 @@ class AwaitableGetIkeGatewayResult(GetIkeGatewayResult):
         return GetIkeGatewayResult(
             authentication=self.authentication,
             device=self.device,
+            encrypted_values=self.encrypted_values,
             folder=self.folder,
             id=self.id,
+            local_address=self.local_address,
             local_id=self.local_id,
             name=self.name,
             peer_address=self.peer_address,
@@ -179,13 +203,11 @@ class AwaitableGetIkeGatewayResult(GetIkeGatewayResult):
             tfid=self.tfid)
 
 
-def get_ike_gateway(device: Optional[_builtins.str] = None,
-                    folder: Optional[_builtins.str] = None,
-                    id: Optional[_builtins.str] = None,
-                    snippet: Optional[_builtins.str] = None,
+def get_ike_gateway(id: Optional[_builtins.str] = None,
+                    name: Optional[_builtins.str] = None,
                     opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetIkeGatewayResult:
     """
-    Retrieves a config item.
+    IkeGateway data source
 
     ## Example Usage
 
@@ -193,28 +215,29 @@ def get_ike_gateway(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_ike_gateway(id="1234-56-789")
+    # Data source to retrieve a single IKE Gateway by its ID.
+    # Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
+    example_singular_ike_gateway_ds = scm.get_ike_gateway(id="1ba42513-2985-4783-8bdf-c83cf20d6dd1")
+    pulumi.export("ikeGatewaySingularExample", example_singular_ike_gateway_ds)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getIkeGateway:getIkeGateway', __args__, opts=opts, typ=GetIkeGatewayResult).value
 
     return AwaitableGetIkeGatewayResult(
         authentication=pulumi.get(__ret__, 'authentication'),
         device=pulumi.get(__ret__, 'device'),
+        encrypted_values=pulumi.get(__ret__, 'encrypted_values'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
+        local_address=pulumi.get(__ret__, 'local_address'),
         local_id=pulumi.get(__ret__, 'local_id'),
         name=pulumi.get(__ret__, 'name'),
         peer_address=pulumi.get(__ret__, 'peer_address'),
@@ -223,13 +246,11 @@ def get_ike_gateway(device: Optional[_builtins.str] = None,
         protocol_common=pulumi.get(__ret__, 'protocol_common'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_ike_gateway_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                           folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                           id: Optional[pulumi.Input[_builtins.str]] = None,
-                           snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_ike_gateway_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                           name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                            opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIkeGatewayResult]:
     """
-    Retrieves a config item.
+    IkeGateway data source
 
     ## Example Usage
 
@@ -237,27 +258,28 @@ def get_ike_gateway_output(device: Optional[pulumi.Input[Optional[_builtins.str]
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_ike_gateway(id="1234-56-789")
+    # Data source to retrieve a single IKE Gateway by its ID.
+    # Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
+    example_singular_ike_gateway_ds = scm.get_ike_gateway(id="1ba42513-2985-4783-8bdf-c83cf20d6dd1")
+    pulumi.export("ikeGatewaySingularExample", example_singular_ike_gateway_ds)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getIkeGateway:getIkeGateway', __args__, opts=opts, typ=GetIkeGatewayResult)
     return __ret__.apply(lambda __response__: GetIkeGatewayResult(
         authentication=pulumi.get(__response__, 'authentication'),
         device=pulumi.get(__response__, 'device'),
+        encrypted_values=pulumi.get(__response__, 'encrypted_values'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
+        local_address=pulumi.get(__response__, 'local_address'),
         local_id=pulumi.get(__response__, 'local_id'),
         name=pulumi.get(__response__, 'name'),
         peer_address=pulumi.get(__response__, 'peer_address'),

@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetIpsecTunnel
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// IpsecTunnel data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIpsecTunnel.Invoke(new()
+        ///     // Example of looking up an individual IPsec Tunnel by its ID.
+        ///     var scmIpsecTunnelDs = Scm.GetIpsecTunnel.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7c237a82-8c11-4f09-bdbf-599e159019ce",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ipsecTunnelById"] = scmIpsecTunnelDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +41,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetIpsecTunnelResult>("scm:index/getIpsecTunnel:getIpsecTunnel", args ?? new GetIpsecTunnelArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// IpsecTunnel data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +53,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIpsecTunnel.Invoke(new()
+        ///     // Example of looking up an individual IPsec Tunnel by its ID.
+        ///     var scmIpsecTunnelDs = Scm.GetIpsecTunnel.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7c237a82-8c11-4f09-bdbf-599e159019ce",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ipsecTunnelById"] = scmIpsecTunnelDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +70,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetIpsecTunnelResult>("scm:index/getIpsecTunnel:getIpsecTunnel", args ?? new GetIpsecTunnelInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// IpsecTunnel data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +82,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIpsecTunnel.Invoke(new()
+        ///     // Example of looking up an individual IPsec Tunnel by its ID.
+        ///     var scmIpsecTunnelDs = Scm.GetIpsecTunnel.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7c237a82-8c11-4f09-bdbf-599e159019ce",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ipsecTunnelById"] = scmIpsecTunnelDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,16 +103,16 @@ namespace Pulumi.Scm
     public sealed class GetIpsecTunnelArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetIpsecTunnelArgs()
         {
@@ -108,16 +123,16 @@ namespace Pulumi.Scm
     public sealed class GetIpsecTunnelInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetIpsecTunnelInvokeArgs()
         {
@@ -130,36 +145,48 @@ namespace Pulumi.Scm
     public sealed class GetIpsecTunnelResult
     {
         /// <summary>
-        /// Enable Anti-Replay check on this tunnel.
+        /// Enable Anti-Replay check on this tunnel
         /// </summary>
         public readonly bool AntiReplay;
         /// <summary>
-        /// The AutoKey param.
+        /// Auto key
         /// </summary>
         public readonly Outputs.GetIpsecTunnelAutoKeyResult AutoKey;
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         /// </summary>
         public readonly bool CopyTos;
         /// <summary>
-        /// allow GRE over IPSec. Default: `False`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// allow GRE over IPSec
         /// </summary>
         public readonly bool EnableGreEncapsulation;
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
-        public readonly string? Folder;
+        public readonly string Folder;
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The TunnelMonitor param.
+        /// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+        /// </summary>
+        public readonly string TunnelInterface;
+        /// <summary>
+        /// Tunnel monitor
         /// </summary>
         public readonly Outputs.GetIpsecTunnelTunnelMonitorResult TunnelMonitor;
 
@@ -171,26 +198,35 @@ namespace Pulumi.Scm
 
             bool copyTos,
 
+            string device,
+
             bool enableGreEncapsulation,
 
-            string? folder,
+            string folder,
 
             string id,
 
             string name,
 
+            string snippet,
+
             string tfid,
+
+            string tunnelInterface,
 
             Outputs.GetIpsecTunnelTunnelMonitorResult tunnelMonitor)
         {
             AntiReplay = antiReplay;
             AutoKey = autoKey;
             CopyTos = copyTos;
+            Device = device;
             EnableGreEncapsulation = enableGreEncapsulation;
             Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
+            TunnelInterface = tunnelInterface;
             TunnelMonitor = tunnelMonitor;
         }
     }

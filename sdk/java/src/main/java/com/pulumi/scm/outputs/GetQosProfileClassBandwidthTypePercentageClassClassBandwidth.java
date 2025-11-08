@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetQosProfileClassBandwidthTypePercentageClassClassBandwidth {
     /**
-     * @return guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return guaranteed sending bandwidth in percentage
      * 
      */
     private Integer egressGuaranteed;
     /**
-     * @return max sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return max sending bandwidth in percentage
      * 
      */
     private Integer egressMax;
 
     private GetQosProfileClassBandwidthTypePercentageClassClassBandwidth() {}
     /**
-     * @return guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return guaranteed sending bandwidth in percentage
      * 
      */
     public Integer egressGuaranteed() {
         return this.egressGuaranteed;
     }
     /**
-     * @return max sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return max sending bandwidth in percentage
      * 
      */
     public Integer egressMax() {

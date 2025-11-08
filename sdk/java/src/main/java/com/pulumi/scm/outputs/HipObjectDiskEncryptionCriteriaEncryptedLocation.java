@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDiskEncryptionCriteriaEncryptedLocation {
     /**
-     * @return The EncryptionState param.
+     * @return Encryption state
      * 
      */
     private @Nullable HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState encryptionState;
     /**
-     * @return Encryption location. String length must not exceed 1023 characters.
+     * @return Encryption location
      * 
      */
     private String name;
 
     private HipObjectDiskEncryptionCriteriaEncryptedLocation() {}
     /**
-     * @return The EncryptionState param.
+     * @return Encryption state
      * 
      */
     public Optional<HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionState> encryptionState() {
         return Optional.ofNullable(this.encryptionState);
     }
     /**
-     * @return Encryption location. String length must not exceed 1023 characters.
+     * @return Encryption location
      * 
      */
     public String name() {

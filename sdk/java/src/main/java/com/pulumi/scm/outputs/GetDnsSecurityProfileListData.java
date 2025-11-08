@@ -12,54 +12,94 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityProfileListData {
     /**
-     * @return The BotnetDomains param.
+     * @return Botnet domains
      * 
      */
     private GetDnsSecurityProfileListDataBotnetDomains botnetDomains;
     /**
-     * @return The Description param.
+     * @return The description of the DNS security profile
      * 
      */
     private String description;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the DNS security profile
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return The name of the DNS security profile
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
 
     private GetDnsSecurityProfileListData() {}
     /**
-     * @return The BotnetDomains param.
+     * @return Botnet domains
      * 
      */
     public GetDnsSecurityProfileListDataBotnetDomains botnetDomains() {
         return this.botnetDomains;
     }
     /**
-     * @return The Description param.
+     * @return The description of the DNS security profile
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the DNS security profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return The name of the DNS security profile
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -73,15 +113,23 @@ public final class GetDnsSecurityProfileListData {
     public static final class Builder {
         private GetDnsSecurityProfileListDataBotnetDomains botnetDomains;
         private String description;
+        private String device;
+        private String folder;
         private String id;
         private String name;
+        private String snippet;
+        private String tfid;
         public Builder() {}
         public Builder(GetDnsSecurityProfileListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.botnetDomains = defaults.botnetDomains;
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -101,6 +149,22 @@ public final class GetDnsSecurityProfileListData {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetDnsSecurityProfileListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetDnsSecurityProfileListData", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetDnsSecurityProfileListData", "id");
@@ -116,12 +180,32 @@ public final class GetDnsSecurityProfileListData {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetDnsSecurityProfileListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetDnsSecurityProfileListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetDnsSecurityProfileListData build() {
             final var _resultValue = new GetDnsSecurityProfileListData();
             _resultValue.botnetDomains = botnetDomains;
             _resultValue.description = description;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

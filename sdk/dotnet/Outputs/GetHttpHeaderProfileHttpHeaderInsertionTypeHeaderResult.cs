@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHttpHeaderProfileHttpHeaderInsertionTypeHeaderResult
     {
         /// <summary>
-        /// The Header param.
+        /// The HTTP header string
         /// </summary>
         public readonly string Header;
         /// <summary>
-        /// The Log param. Default: `False`.
+        /// Log the use of this HTTP header insertion?
         /// </summary>
         public readonly bool Log;
         /// <summary>
-        /// The Name param.
+        /// An auto-generated name (*This should be removed*)
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Value param.
+        /// The value associated with the HTTP header
         /// </summary>
         public readonly string Value;
 

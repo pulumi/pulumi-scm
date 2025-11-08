@@ -7,60 +7,109 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Boolean;
 import java.lang.String;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetLocalUserResult {
     /**
-     * @return The Disabled param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Is the local user disabled?
      * 
      */
     private Boolean disabled;
     /**
-     * @return The Id param.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the local user
      * 
      */
     private String id;
     /**
-     * @return The Name param. String length must not exceed 31 characters.
+     * @return The name of the local user
      * 
      */
     private String name;
     /**
-     * @return The Password param. String length must not exceed 63 characters.
+     * @return The password of the local user
      * 
      */
     private String password;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
 
     private GetLocalUserResult() {}
     /**
-     * @return The Disabled param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Is the local user disabled?
      * 
      */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * @return The Id param.
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the local user
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param. String length must not exceed 31 characters.
+     * @return The name of the local user
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Password param. String length must not exceed 63 characters.
+     * @return The password of the local user
      * 
      */
     public String password() {
         return this.password;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -75,27 +124,59 @@ public final class GetLocalUserResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
         private Boolean disabled;
+        private Map<String,String> encryptedValues;
+        private String folder;
         private String id;
         private String name;
         private String password;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetLocalUserResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
     	      this.disabled = defaults.disabled;
+    	      this.encryptedValues = defaults.encryptedValues;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.password = defaults.password;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
         @CustomType.Setter
         public Builder disabled(Boolean disabled) {
             if (disabled == null) {
               throw new MissingRequiredPropertyException("GetLocalUserResult", "disabled");
             }
             this.disabled = disabled;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserResult", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -123,6 +204,14 @@ public final class GetLocalUserResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetLocalUserResult", "tfid");
@@ -132,10 +221,14 @@ public final class GetLocalUserResult {
         }
         public GetLocalUserResult build() {
             final var _resultValue = new GetLocalUserResult();
+            _resultValue.device = device;
             _resultValue.disabled = disabled;
+            _resultValue.encryptedValues = encryptedValues;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.password = password;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             return _resultValue;
         }

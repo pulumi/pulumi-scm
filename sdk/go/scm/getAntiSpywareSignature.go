@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupAntiSpywareSignature(ctx, &scm.LookupAntiSpywareSignatureArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// AntiSpywareSignature data source
 func LookupAntiSpywareSignature(ctx *pulumi.Context, args *LookupAntiSpywareSignatureArgs, opts ...pulumi.InvokeOption) (*LookupAntiSpywareSignatureResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAntiSpywareSignatureResult
@@ -50,36 +24,42 @@ func LookupAntiSpywareSignature(ctx *pulumi.Context, args *LookupAntiSpywareSign
 
 // A collection of arguments for invoking getAntiSpywareSignature.
 type LookupAntiSpywareSignatureArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
 }
 
 // A collection of values returned by getAntiSpywareSignature.
 type LookupAntiSpywareSignatureResult struct {
-	// The Bugtraqs param.
+	// Bugtraq
 	Bugtraqs []string `pulumi:"bugtraqs"`
-	// The Comment param. String length must not exceed 256 characters.
+	// Comment
 	Comment string `pulumi:"comment"`
-	// The Cves param.
+	// Cve
 	Cves []string `pulumi:"cves"`
-	// The DefaultAction param.
+	// anti spyware signature default action
 	DefaultAction GetAntiSpywareSignatureDefaultAction `pulumi:"defaultAction"`
-	// The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Direction
 	Direction string `pulumi:"direction"`
-	// The Id param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The References param.
+	// Reference
 	References []string `pulumi:"references"`
-	// The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+	// Severity
 	Severity string `pulumi:"severity"`
-	// The Signature param.
+	// anti spyware signature
 	Signature GetAntiSpywareSignatureSignature `pulumi:"signature"`
-	Tfid      string                           `pulumi:"tfid"`
-	// threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// threat id range \n\n and \n\n
 	ThreatId int `pulumi:"threatId"`
-	// The Threatname param. String length must not exceed 1024 characters.
+	// Threatname
 	Threatname string `pulumi:"threatname"`
-	// The Vendors param.
+	// Vendor
 	Vendors []string `pulumi:"vendors"`
 }
 
@@ -94,7 +74,7 @@ func LookupAntiSpywareSignatureOutput(ctx *pulumi.Context, args LookupAntiSpywar
 
 // A collection of arguments for invoking getAntiSpywareSignature.
 type LookupAntiSpywareSignatureOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 }
 
@@ -117,66 +97,81 @@ func (o LookupAntiSpywareSignatureResultOutput) ToLookupAntiSpywareSignatureResu
 	return o
 }
 
-// The Bugtraqs param.
+// Bugtraq
 func (o LookupAntiSpywareSignatureResultOutput) Bugtraqs() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.Bugtraqs }).(pulumi.StringArrayOutput)
 }
 
-// The Comment param. String length must not exceed 256 characters.
+// Comment
 func (o LookupAntiSpywareSignatureResultOutput) Comment() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Comment }).(pulumi.StringOutput)
 }
 
-// The Cves param.
+// Cve
 func (o LookupAntiSpywareSignatureResultOutput) Cves() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.Cves }).(pulumi.StringArrayOutput)
 }
 
-// The DefaultAction param.
+// anti spyware signature default action
 func (o LookupAntiSpywareSignatureResultOutput) DefaultAction() GetAntiSpywareSignatureDefaultActionOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) GetAntiSpywareSignatureDefaultAction { return v.DefaultAction }).(GetAntiSpywareSignatureDefaultActionOutput)
 }
 
-// The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+// The device in which the resource is defined
+func (o LookupAntiSpywareSignatureResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Direction
 func (o LookupAntiSpywareSignatureResultOutput) Direction() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Direction }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The folder in which the resource is defined
+func (o LookupAntiSpywareSignatureResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
 func (o LookupAntiSpywareSignatureResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The References param.
+// Reference
 func (o LookupAntiSpywareSignatureResultOutput) References() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.References }).(pulumi.StringArrayOutput)
 }
 
-// The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+// Severity
 func (o LookupAntiSpywareSignatureResultOutput) Severity() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Severity }).(pulumi.StringOutput)
 }
 
-// The Signature param.
+// anti spyware signature
 func (o LookupAntiSpywareSignatureResultOutput) Signature() GetAntiSpywareSignatureSignatureOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) GetAntiSpywareSignatureSignature { return v.Signature }).(GetAntiSpywareSignatureSignatureOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupAntiSpywareSignatureResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupAntiSpywareSignatureResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// threat id range \n\n and \n\n. Value must be between 15000 and 70000000.
+// threat id range \n\n and \n\n
 func (o LookupAntiSpywareSignatureResultOutput) ThreatId() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) int { return v.ThreatId }).(pulumi.IntOutput)
 }
 
-// The Threatname param. String length must not exceed 1024 characters.
+// Threatname
 func (o LookupAntiSpywareSignatureResultOutput) Threatname() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) string { return v.Threatname }).(pulumi.StringOutput)
 }
 
-// The Vendors param.
+// Vendor
 func (o LookupAntiSpywareSignatureResultOutput) Vendors() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareSignatureResult) []string { return v.Vendors }).(pulumi.StringArrayOutput)
 }

@@ -12,41 +12,17 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewInternalDnsServer(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// InternalDnsServer resource
 type InternalDnsServer struct {
 	pulumi.CustomResourceState
 
-	// The DomainNames param.
+	// The DNS domain name(s)
 	DomainNames pulumi.StringArrayOutput `pulumi:"domainNames"`
-	// The Name param.
+	// The name of the internet DNS server resource
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Primary param.
+	// The IP address of the primary DNS server
 	Primary pulumi.StringOutput `pulumi:"primary"`
-	// The Secondary param.
+	// The IP address of the secondary DNS server
 	Secondary pulumi.StringPtrOutput `pulumi:"secondary"`
 	Tfid      pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -87,25 +63,25 @@ func GetInternalDnsServer(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering InternalDnsServer resources.
 type internalDnsServerState struct {
-	// The DomainNames param.
+	// The DNS domain name(s)
 	DomainNames []string `pulumi:"domainNames"`
-	// The Name param.
+	// The name of the internet DNS server resource
 	Name *string `pulumi:"name"`
-	// The Primary param.
+	// The IP address of the primary DNS server
 	Primary *string `pulumi:"primary"`
-	// The Secondary param.
+	// The IP address of the secondary DNS server
 	Secondary *string `pulumi:"secondary"`
 	Tfid      *string `pulumi:"tfid"`
 }
 
 type InternalDnsServerState struct {
-	// The DomainNames param.
+	// The DNS domain name(s)
 	DomainNames pulumi.StringArrayInput
-	// The Name param.
+	// The name of the internet DNS server resource
 	Name pulumi.StringPtrInput
-	// The Primary param.
+	// The IP address of the primary DNS server
 	Primary pulumi.StringPtrInput
-	// The Secondary param.
+	// The IP address of the secondary DNS server
 	Secondary pulumi.StringPtrInput
 	Tfid      pulumi.StringPtrInput
 }
@@ -115,25 +91,25 @@ func (InternalDnsServerState) ElementType() reflect.Type {
 }
 
 type internalDnsServerArgs struct {
-	// The DomainNames param.
+	// The DNS domain name(s)
 	DomainNames []string `pulumi:"domainNames"`
-	// The Name param.
+	// The name of the internet DNS server resource
 	Name *string `pulumi:"name"`
-	// The Primary param.
+	// The IP address of the primary DNS server
 	Primary string `pulumi:"primary"`
-	// The Secondary param.
+	// The IP address of the secondary DNS server
 	Secondary *string `pulumi:"secondary"`
 }
 
 // The set of arguments for constructing a InternalDnsServer resource.
 type InternalDnsServerArgs struct {
-	// The DomainNames param.
+	// The DNS domain name(s)
 	DomainNames pulumi.StringArrayInput
-	// The Name param.
+	// The name of the internet DNS server resource
 	Name pulumi.StringPtrInput
-	// The Primary param.
+	// The IP address of the primary DNS server
 	Primary pulumi.StringInput
-	// The Secondary param.
+	// The IP address of the secondary DNS server
 	Secondary pulumi.StringPtrInput
 }
 
@@ -224,22 +200,22 @@ func (o InternalDnsServerOutput) ToInternalDnsServerOutputWithContext(ctx contex
 	return o
 }
 
-// The DomainNames param.
+// The DNS domain name(s)
 func (o InternalDnsServerOutput) DomainNames() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *InternalDnsServer) pulumi.StringArrayOutput { return v.DomainNames }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// The name of the internet DNS server resource
 func (o InternalDnsServerOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *InternalDnsServer) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Primary param.
+// The IP address of the primary DNS server
 func (o InternalDnsServerOutput) Primary() pulumi.StringOutput {
 	return o.ApplyT(func(v *InternalDnsServer) pulumi.StringOutput { return v.Primary }).(pulumi.StringOutput)
 }
 
-// The Secondary param.
+// The IP address of the secondary DNS server
 func (o InternalDnsServerOutput) Secondary() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *InternalDnsServer) pulumi.StringPtrOutput { return v.Secondary }).(pulumi.StringPtrOutput)
 }

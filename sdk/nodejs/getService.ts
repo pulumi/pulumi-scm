@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Service data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,23 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getService({
- *     id: "1234-56-789",
+ * // Data source to look up a single service by its ID.
+ * const scmServiceTcpDs = scm.getService({
+ *     id: "ff135641-6735-4d7d-85c6-3401bba9dee8",
  * });
+ * export const serviceDetailsTcp = scmServiceTcpDs;
+ * // Data source to look up a single service by its ID.
+ * const scmServiceUdpDs = scm.getService({
+ *     id: "e087b703-aede-437e-853e-b11576f6dcbe",
+ * });
+ * export const serviceDetailsUdp = scmServiceUdpDs;
  * ```
  */
 export function getService(args: GetServiceArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getService:getService", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +40,13 @@ export function getService(args: GetServiceArgs, opts?: pulumi.InvokeOptions): P
  */
 export interface GetServiceArgs {
     /**
-     * The Id param.
+     * The UUID of the service
      */
     id: string;
+    /**
+     * The name of the service
+     */
+    name?: string;
 }
 
 /**
@@ -42,29 +54,41 @@ export interface GetServiceArgs {
  */
 export interface GetServiceResult {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the service
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service
      */
     readonly name: string;
     /**
-     * The Protocol param.
+     * Protocol
      */
     readonly protocol: outputs.GetServiceProtocol;
     /**
-     * Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Tags for service object
      */
     readonly tags: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * Service data source
  *
  * ## Example Usage
  *
@@ -72,15 +96,23 @@ export interface GetServiceResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getService({
- *     id: "1234-56-789",
+ * // Data source to look up a single service by its ID.
+ * const scmServiceTcpDs = scm.getService({
+ *     id: "ff135641-6735-4d7d-85c6-3401bba9dee8",
  * });
+ * export const serviceDetailsTcp = scmServiceTcpDs;
+ * // Data source to look up a single service by its ID.
+ * const scmServiceUdpDs = scm.getService({
+ *     id: "e087b703-aede-437e-853e-b11576f6dcbe",
+ * });
+ * export const serviceDetailsUdp = scmServiceUdpDs;
  * ```
  */
 export function getServiceOutput(args: GetServiceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getService:getService", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -89,7 +121,11 @@ export function getServiceOutput(args: GetServiceOutputArgs, opts?: pulumi.Invok
  */
 export interface GetServiceOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the service
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the service
+     */
+    name?: pulumi.Input<string>;
 }

@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// CertificateProfile data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,15 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupCertificateProfile(ctx, &scm.LookupCertificateProfileArgs{
-//				Id: "1234-56-789",
+//			// Look up a single certificate profile object by its ID.
+//			// The ID used here is from the API response log you provided.
+//			scmCertificateProfileDs, err := scm.LookupCertificateProfile(ctx, &scm.LookupCertificateProfileArgs{
+//				Id: "8e64859b-eba9-4e25-9005-754c90c2b02d",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("exampleCpDsResult", scmCertificateProfileDs)
 //			return nil
 //		})
 //	}
@@ -50,40 +53,48 @@ func LookupCertificateProfile(ctx *pulumi.Context, args *LookupCertificateProfil
 
 // A collection of arguments for invoking getCertificateProfile.
 type LookupCertificateProfileArgs struct {
-	// The Id param.
+	// The UUID of the certificate profile
 	Id string `pulumi:"id"`
+	// The name of the certificate profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getCertificateProfile.
 type LookupCertificateProfileResult struct {
-	// The BlockExpiredCert param.
+	// Block sessions with expired certificates?
 	BlockExpiredCert bool `pulumi:"blockExpiredCert"`
-	// The BlockTimeoutCert param.
+	// Block session if certificate status cannot be retrieved within timeout?
 	BlockTimeoutCert bool `pulumi:"blockTimeoutCert"`
-	// The BlockUnauthenticatedCert param.
+	// Block session if the certificate was not issued to the authenticating device?
 	BlockUnauthenticatedCert bool `pulumi:"blockUnauthenticatedCert"`
-	// The BlockUnknownCert param.
+	// Block session if certificate status is unknown?
 	BlockUnknownCert bool `pulumi:"blockUnknownCert"`
-	// The CaCertificates param.
+	// An ordered list of CA certificates
 	CaCertificates []GetCertificateProfileCaCertificate `pulumi:"caCertificates"`
-	// The CertStatusTimeout param.
+	// Certificate status timeout
 	CertStatusTimeout string `pulumi:"certStatusTimeout"`
-	// The CrlReceiveTimeout param.
+	// CRL receive timeout (seconds)
 	CrlReceiveTimeout string `pulumi:"crlReceiveTimeout"`
-	// The Domain param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// User domain
 	Domain string `pulumi:"domain"`
-	// The Id param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the certificate profile
 	Id string `pulumi:"id"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the certificate profile
 	Name string `pulumi:"name"`
-	// The OcspReceiveTimeout param.
+	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout string `pulumi:"ocspReceiveTimeout"`
-	Tfid               string `pulumi:"tfid"`
-	// The UseCrl param.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// Use CRL?
 	UseCrl bool `pulumi:"useCrl"`
-	// The UseOcsp param.
+	// Use OCSP?
 	UseOcsp bool `pulumi:"useOcsp"`
-	// The UsernameField param.
+	// Certificate username field
 	UsernameField GetCertificateProfileUsernameField `pulumi:"usernameField"`
 }
 
@@ -98,8 +109,10 @@ func LookupCertificateProfileOutput(ctx *pulumi.Context, args LookupCertificateP
 
 // A collection of arguments for invoking getCertificateProfile.
 type LookupCertificateProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the certificate profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the certificate profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupCertificateProfileOutputArgs) ElementType() reflect.Type {
@@ -121,76 +134,91 @@ func (o LookupCertificateProfileResultOutput) ToLookupCertificateProfileResultOu
 	return o
 }
 
-// The BlockExpiredCert param.
+// Block sessions with expired certificates?
 func (o LookupCertificateProfileResultOutput) BlockExpiredCert() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.BlockExpiredCert }).(pulumi.BoolOutput)
 }
 
-// The BlockTimeoutCert param.
+// Block session if certificate status cannot be retrieved within timeout?
 func (o LookupCertificateProfileResultOutput) BlockTimeoutCert() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.BlockTimeoutCert }).(pulumi.BoolOutput)
 }
 
-// The BlockUnauthenticatedCert param.
+// Block session if the certificate was not issued to the authenticating device?
 func (o LookupCertificateProfileResultOutput) BlockUnauthenticatedCert() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.BlockUnauthenticatedCert }).(pulumi.BoolOutput)
 }
 
-// The BlockUnknownCert param.
+// Block session if certificate status is unknown?
 func (o LookupCertificateProfileResultOutput) BlockUnknownCert() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.BlockUnknownCert }).(pulumi.BoolOutput)
 }
 
-// The CaCertificates param.
+// An ordered list of CA certificates
 func (o LookupCertificateProfileResultOutput) CaCertificates() GetCertificateProfileCaCertificateArrayOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) []GetCertificateProfileCaCertificate { return v.CaCertificates }).(GetCertificateProfileCaCertificateArrayOutput)
 }
 
-// The CertStatusTimeout param.
+// Certificate status timeout
 func (o LookupCertificateProfileResultOutput) CertStatusTimeout() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.CertStatusTimeout }).(pulumi.StringOutput)
 }
 
-// The CrlReceiveTimeout param.
+// CRL receive timeout (seconds)
 func (o LookupCertificateProfileResultOutput) CrlReceiveTimeout() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.CrlReceiveTimeout }).(pulumi.StringOutput)
 }
 
-// The Domain param.
+// The device in which the resource is defined
+func (o LookupCertificateProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// User domain
 func (o LookupCertificateProfileResultOutput) Domain() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Domain }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The folder in which the resource is defined
+func (o LookupCertificateProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the certificate profile
 func (o LookupCertificateProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the certificate profile
 func (o LookupCertificateProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The OcspReceiveTimeout param.
+// OCSP receive timeout (seconds)
 func (o LookupCertificateProfileResultOutput) OcspReceiveTimeout() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.OcspReceiveTimeout }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupCertificateProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupCertificateProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The UseCrl param.
+// Use CRL?
 func (o LookupCertificateProfileResultOutput) UseCrl() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.UseCrl }).(pulumi.BoolOutput)
 }
 
-// The UseOcsp param.
+// Use OCSP?
 func (o LookupCertificateProfileResultOutput) UseOcsp() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.UseOcsp }).(pulumi.BoolOutput)
 }
 
-// The UsernameField param.
+// Certificate username field
 func (o LookupCertificateProfileResultOutput) UsernameField() GetCertificateProfileUsernameFieldOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) GetCertificateProfileUsernameField { return v.UsernameField }).(GetCertificateProfileUsernameFieldOutput)
 }

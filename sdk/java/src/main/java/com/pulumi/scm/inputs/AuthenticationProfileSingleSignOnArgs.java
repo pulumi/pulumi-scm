@@ -16,14 +16,14 @@ public final class AuthenticationProfileSingleSignOnArgs extends com.pulumi.reso
     public static final AuthenticationProfileSingleSignOnArgs Empty = new AuthenticationProfileSingleSignOnArgs();
 
     /**
-     * The KerberosKeytab param. String length must not exceed 8192 characters.
+     * Kerberos keytab
      * 
      */
     @Import(name="kerberosKeytab")
     private @Nullable Output<String> kerberosKeytab;
 
     /**
-     * @return The KerberosKeytab param. String length must not exceed 8192 characters.
+     * @return Kerberos keytab
      * 
      */
     public Optional<Output<String>> kerberosKeytab() {
@@ -31,14 +31,14 @@ public final class AuthenticationProfileSingleSignOnArgs extends com.pulumi.reso
     }
 
     /**
-     * The Realm param. String length must not exceed 127 characters.
+     * Realm
      * 
      */
     @Import(name="realm")
     private @Nullable Output<String> realm;
 
     /**
-     * @return The Realm param. String length must not exceed 127 characters.
+     * @return Realm
      * 
      */
     public Optional<Output<String>> realm() {
@@ -71,7 +71,7 @@ public final class AuthenticationProfileSingleSignOnArgs extends com.pulumi.reso
         }
 
         /**
-         * @param kerberosKeytab The KerberosKeytab param. String length must not exceed 8192 characters.
+         * @param kerberosKeytab Kerberos keytab
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AuthenticationProfileSingleSignOnArgs extends com.pulumi.reso
         }
 
         /**
-         * @param kerberosKeytab The KerberosKeytab param. String length must not exceed 8192 characters.
+         * @param kerberosKeytab Kerberos keytab
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class AuthenticationProfileSingleSignOnArgs extends com.pulumi.reso
         }
 
         /**
-         * @param realm The Realm param. String length must not exceed 127 characters.
+         * @param realm Realm
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AuthenticationProfileSingleSignOnArgs extends com.pulumi.reso
         }
 
         /**
-         * @param realm The Realm param. String length must not exceed 127 characters.
+         * @param realm Realm
          * 
          * @return builder
          * 

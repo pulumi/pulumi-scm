@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// IkeCryptoProfile data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,14 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupIkeCryptoProfile(ctx, &scm.LookupIkeCryptoProfileArgs{
-//				Id: "1234-56-789",
+//			// Example of looking up an individual IPsec Crypto Profile by its ID.
+//			scmIkeCryptoProfileDs, err := scm.LookupIkeCryptoProfile(ctx, &scm.LookupIkeCryptoProfileArgs{
+//				Id: "f3a1251a-bb9e-437d-8048-f5d54617d0be",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("ikeProfileById", scmIkeCryptoProfileDs)
 //			return nil
 //		})
 //	}
@@ -50,39 +52,35 @@ func LookupIkeCryptoProfile(ctx *pulumi.Context, args *LookupIkeCryptoProfileArg
 
 // A collection of arguments for invoking getIkeCryptoProfile.
 type LookupIkeCryptoProfileArgs struct {
-	// The Device param.
-	Device *string `pulumi:"device"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Snippet param.
-	Snippet *string `pulumi:"snippet"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getIkeCryptoProfile.
 type LookupIkeCryptoProfileResult struct {
-	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple int `pulumi:"authenticationMultiple"`
-	// The Device param.
-	Device *string `pulumi:"device"`
-	// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Dh group
 	DhGroups []string `pulumi:"dhGroups"`
-	// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+	// Encryption algorithm
 	Encryptions []string `pulumi:"encryptions"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// Hash
 	Hashes []string `pulumi:"hashes"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Lifetime param.
+	// Ike crypto profile lifetime
 	Lifetime GetIkeCryptoProfileLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name string `pulumi:"name"`
-	// The Snippet param.
-	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupIkeCryptoProfileOutput(ctx *pulumi.Context, args LookupIkeCryptoProfileOutputArgs, opts ...pulumi.InvokeOption) LookupIkeCryptoProfileResultOutput {
@@ -96,14 +94,10 @@ func LookupIkeCryptoProfileOutput(ctx *pulumi.Context, args LookupIkeCryptoProfi
 
 // A collection of arguments for invoking getIkeCryptoProfile.
 type LookupIkeCryptoProfileOutputArgs struct {
-	// The Device param.
-	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The Snippet param.
-	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupIkeCryptoProfileOutputArgs) ElementType() reflect.Type {
@@ -125,54 +119,54 @@ func (o LookupIkeCryptoProfileResultOutput) ToLookupIkeCryptoProfileResultOutput
 	return o
 }
 
-// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 func (o LookupIkeCryptoProfileResultOutput) AuthenticationMultiple() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) int { return v.AuthenticationMultiple }).(pulumi.IntOutput)
 }
 
-// The Device param.
-func (o LookupIkeCryptoProfileResultOutput) Device() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupIkeCryptoProfileResult) *string { return v.Device }).(pulumi.StringPtrOutput)
+// The device in which the resource is defined
+func (o LookupIkeCryptoProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+// Dh group
 func (o LookupIkeCryptoProfileResultOutput) DhGroups() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.DhGroups }).(pulumi.StringArrayOutput)
 }
 
-// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+// Encryption algorithm
 func (o LookupIkeCryptoProfileResultOutput) Encryptions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Encryptions }).(pulumi.StringArrayOutput)
 }
 
-// The Folder param.
-func (o LookupIkeCryptoProfileResultOutput) Folder() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupIkeCryptoProfileResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
+// The folder in which the resource is defined
+func (o LookupIkeCryptoProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+// Hash
 func (o LookupIkeCryptoProfileResultOutput) Hashes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Hashes }).(pulumi.StringArrayOutput)
 }
 
-// The Id param.
+// UUID of the resource
 func (o LookupIkeCryptoProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Lifetime param.
+// Ike crypto profile lifetime
 func (o LookupIkeCryptoProfileResultOutput) Lifetime() GetIkeCryptoProfileLifetimeOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) GetIkeCryptoProfileLifetime { return v.Lifetime }).(GetIkeCryptoProfileLifetimeOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupIkeCryptoProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
-func (o LookupIkeCryptoProfileResultOutput) Snippet() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupIkeCryptoProfileResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
+// The snippet in which the resource is defined
+func (o LookupIkeCryptoProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupIkeCryptoProfileResultOutput) Tfid() pulumi.StringOutput {

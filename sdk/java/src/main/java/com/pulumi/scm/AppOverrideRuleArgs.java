@@ -20,14 +20,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     public static final AppOverrideRuleArgs Empty = new AppOverrideRuleArgs();
 
     /**
-     * The Application param.
+     * Application
      * 
      */
     @Import(name="application", required=true)
     private Output<String> application;
 
     /**
-     * @return The Application param.
+     * @return Application
      * 
      */
     public Output<String> application() {
@@ -35,14 +35,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Description param. String length must not exceed 1024 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1024 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -50,14 +50,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Destinations param.
+     * Destination
      * 
      */
     @Import(name="destinations", required=true)
     private Output<List<String>> destinations;
 
     /**
-     * @return The Destinations param.
+     * @return Destination
      * 
      */
     public Output<List<String>> destinations() {
@@ -65,14 +65,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -80,14 +80,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Disabled param. Default: `false`.
+     * Disabled
      * 
      */
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param. Default: `false`.
+     * @return Disabled
      * 
      */
     public Optional<Output<Boolean>> disabled() {
@@ -95,14 +95,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -110,14 +110,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Froms param.
+     * From
      * 
      */
     @Import(name="froms", required=true)
     private Output<List<String>> froms;
 
     /**
-     * @return The Froms param.
+     * @return From
      * 
      */
     public Output<List<String>> froms() {
@@ -125,14 +125,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The GroupTag param.
+     * Group tag
      * 
      */
     @Import(name="groupTag")
     private @Nullable Output<String> groupTag;
 
     /**
-     * @return The GroupTag param.
+     * @return Group tag
      * 
      */
     public Optional<Output<String>> groupTag() {
@@ -140,14 +140,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -155,14 +155,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The NegateDestination param. Default: `false`.
+     * Negate destination
      * 
      */
     @Import(name="negateDestination")
     private @Nullable Output<Boolean> negateDestination;
 
     /**
-     * @return The NegateDestination param. Default: `false`.
+     * @return Negate destination
      * 
      */
     public Optional<Output<Boolean>> negateDestination() {
@@ -170,14 +170,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The NegateSource param. Default: `false`.
+     * Negate source
      * 
      */
     @Import(name="negateSource")
     private @Nullable Output<Boolean> negateSource;
 
     /**
-     * @return The NegateSource param. Default: `false`.
+     * @return Negate source
      * 
      */
     public Optional<Output<Boolean>> negateSource() {
@@ -185,14 +185,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Port param. Value must be between 0 and 65535.
+     * Port
      * 
      */
     @Import(name="port", required=true)
     private Output<Integer> port;
 
     /**
-     * @return The Port param. Value must be between 0 and 65535.
+     * @return Port
      * 
      */
     public Output<Integer> port() {
@@ -200,29 +200,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    @Import(name="position")
-    private @Nullable Output<String> position;
-
-    /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    public Optional<Output<String>> position() {
-        return Optional.ofNullable(this.position);
-    }
-
-    /**
-     * The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+     * Protocol
      * 
      */
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
     /**
-     * @return The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+     * @return Protocol
      * 
      */
     public Output<String> protocol() {
@@ -230,14 +215,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -245,14 +230,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Sources param.
+     * Source
      * 
      */
     @Import(name="sources", required=true)
     private Output<List<String>> sources;
 
     /**
-     * @return The Sources param.
+     * @return Source
      * 
      */
     public Output<List<String>> sources() {
@@ -260,14 +245,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Tags param.
+     * Tag
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return Tag
      * 
      */
     public Optional<Output<List<String>>> tags() {
@@ -275,14 +260,14 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Tos param.
+     * To
      * 
      */
     @Import(name="tos", required=true)
     private Output<List<String>> tos;
 
     /**
-     * @return The Tos param.
+     * @return To
      * 
      */
     public Output<List<String>> tos() {
@@ -304,7 +289,6 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         this.negateDestination = $.negateDestination;
         this.negateSource = $.negateSource;
         this.port = $.port;
-        this.position = $.position;
         this.protocol = $.protocol;
         this.snippet = $.snippet;
         this.sources = $.sources;
@@ -331,7 +315,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param application The Application param.
+         * @param application Application
          * 
          * @return builder
          * 
@@ -342,7 +326,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param application The Application param.
+         * @param application Application
          * 
          * @return builder
          * 
@@ -352,7 +336,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1024 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -363,7 +347,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param description The Description param. String length must not exceed 1024 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -373,7 +357,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations Destination
          * 
          * @return builder
          * 
@@ -384,7 +368,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations Destination
          * 
          * @return builder
          * 
@@ -394,7 +378,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param destinations The Destinations param.
+         * @param destinations Destination
          * 
          * @return builder
          * 
@@ -404,7 +388,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -415,7 +399,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -425,7 +409,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param disabled The Disabled param. Default: `false`.
+         * @param disabled Disabled
          * 
          * @return builder
          * 
@@ -436,7 +420,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param disabled The Disabled param. Default: `false`.
+         * @param disabled Disabled
          * 
          * @return builder
          * 
@@ -446,7 +430,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -457,7 +441,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -467,7 +451,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms From
          * 
          * @return builder
          * 
@@ -478,7 +462,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms From
          * 
          * @return builder
          * 
@@ -488,7 +472,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param froms The Froms param.
+         * @param froms From
          * 
          * @return builder
          * 
@@ -498,7 +482,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param groupTag The GroupTag param.
+         * @param groupTag Group tag
          * 
          * @return builder
          * 
@@ -509,7 +493,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param groupTag The GroupTag param.
+         * @param groupTag Group tag
          * 
          * @return builder
          * 
@@ -519,7 +503,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param name The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -530,7 +514,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param name The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -540,7 +524,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param negateDestination The NegateDestination param. Default: `false`.
+         * @param negateDestination Negate destination
          * 
          * @return builder
          * 
@@ -551,7 +535,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param negateDestination The NegateDestination param. Default: `false`.
+         * @param negateDestination Negate destination
          * 
          * @return builder
          * 
@@ -561,7 +545,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param negateSource The NegateSource param. Default: `false`.
+         * @param negateSource Negate source
          * 
          * @return builder
          * 
@@ -572,7 +556,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param negateSource The NegateSource param. Default: `false`.
+         * @param negateSource Negate source
          * 
          * @return builder
          * 
@@ -582,7 +566,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param port The Port param. Value must be between 0 and 65535.
+         * @param port Port
          * 
          * @return builder
          * 
@@ -593,7 +577,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param port The Port param. Value must be between 0 and 65535.
+         * @param port Port
          * 
          * @return builder
          * 
@@ -603,28 +587,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder position(@Nullable Output<String> position) {
-            $.position = position;
-            return this;
-        }
-
-        /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder position(String position) {
-            return position(Output.of(position));
-        }
-
-        /**
-         * @param protocol The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -635,7 +598,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param protocol The Protocol param. String must be one of these: `&#34;tcp&#34;`, `&#34;udp&#34;`.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -645,7 +608,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -656,7 +619,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -666,7 +629,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources Source
          * 
          * @return builder
          * 
@@ -677,7 +640,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources Source
          * 
          * @return builder
          * 
@@ -687,7 +650,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param sources The Sources param.
+         * @param sources Source
          * 
          * @return builder
          * 
@@ -697,7 +660,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags Tag
          * 
          * @return builder
          * 
@@ -708,7 +671,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags Tag
          * 
          * @return builder
          * 
@@ -718,7 +681,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags Tag
          * 
          * @return builder
          * 
@@ -728,7 +691,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos To
          * 
          * @return builder
          * 
@@ -739,7 +702,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos To
          * 
          * @return builder
          * 
@@ -749,7 +712,7 @@ public final class AppOverrideRuleArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tos The Tos param.
+         * @param tos To
          * 
          * @return builder
          * 

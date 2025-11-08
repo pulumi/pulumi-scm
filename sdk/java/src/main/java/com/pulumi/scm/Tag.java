@@ -15,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * Tag resource
  * 
  * ## Example Usage
  * 
@@ -41,11 +41,24 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new Tag("example", TagArgs.builder()
+ *         // This file is embedded using go:embed
+ *         // Tags for organizing and categorizing resources
+ *         var scmTag1 = new Tag("scmTag1", TagArgs.builder()
  *             .folder("Shared")
- *             .name("myColor")
- *             .color("Green")
- *             .comments("Made by Pulumi")
+ *             .name("scm_tag_1")
+ *             .color("Red")
+ *             .build());
+ * 
+ *         var scmTag2 = new Tag("scmTag2", TagArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_tag_2")
+ *             .color("Blue")
+ *             .build());
+ * 
+ *         var scmTag3 = new Tag("scmTag3", TagArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_tag_3")
+ *             .color("Orange")
  *             .build());
  * 
  *     }
@@ -57,84 +70,84 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/tag:Tag")
 public class Tag extends com.pulumi.resources.CustomResource {
     /**
-     * The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+     * The color of the tag
      * 
      */
     @Export(name="color", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> color;
 
     /**
-     * @return The Color param. String must be one of these: `&#34;Red&#34;`, `&#34;Green&#34;`, `&#34;Blue&#34;`, `&#34;Yellow&#34;`, `&#34;Copper&#34;`, `&#34;Orange&#34;`, `&#34;Purple&#34;`, `&#34;Gray&#34;`, `&#34;Light Green&#34;`, `&#34;Cyan&#34;`, `&#34;Light Gray&#34;`, `&#34;Blue Gray&#34;`, `&#34;Lime&#34;`, `&#34;Black&#34;`, `&#34;Gold&#34;`, `&#34;Brown&#34;`, `&#34;Olive&#34;`, `&#34;Maroon&#34;`, `&#34;Red-Orange&#34;`, `&#34;Yellow-Orange&#34;`, `&#34;Forest Green&#34;`, `&#34;Turquoise Blue&#34;`, `&#34;Azure Blue&#34;`, `&#34;Cerulean Blue&#34;`, `&#34;Midnight Blue&#34;`, `&#34;Medium Blue&#34;`, `&#34;Cobalt Blue&#34;`, `&#34;Violet Blue&#34;`, `&#34;Blue Violet&#34;`, `&#34;Medium Violet&#34;`, `&#34;Medium Rose&#34;`, `&#34;Lavender&#34;`, `&#34;Orchid&#34;`, `&#34;Thistle&#34;`, `&#34;Peach&#34;`, `&#34;Salmon&#34;`, `&#34;Magenta&#34;`, `&#34;Red Violet&#34;`, `&#34;Mahogany&#34;`, `&#34;Burnt Sienna&#34;`, `&#34;Chestnut&#34;`.
+     * @return The color of the tag
      * 
      */
     public Output<Optional<String>> color() {
         return Codegen.optional(this.color);
     }
     /**
-     * The Comments param. String length must not exceed 1023 characters.
+     * The description of the tag
      * 
      */
     @Export(name="comments", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> comments;
 
     /**
-     * @return The Comments param. String length must not exceed 1023 characters.
+     * @return The description of the tag
      * 
      */
     public Output<Optional<String>> comments() {
         return Codegen.optional(this.comments);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Name param. String length must not exceed 127 characters.
+     * The name of the tag
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param. String length must not exceed 127 characters.
+     * @return The name of the tag
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

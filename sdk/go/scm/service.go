@@ -7,12 +7,11 @@ import (
 	"context"
 	"reflect"
 
-	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// Service resource
 //
 // ## Example Usage
 //
@@ -28,7 +27,54 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewService(ctx, "example", nil)
+//			// TCP Service with multiple destination ports custom timeout
+//			_, err := scm.NewService(ctx, "scm_service_tcp_ports", &scm.ServiceArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_service_tcp_ports"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Protocol: &scm.ServiceProtocolArgs{
+//					Tcp: &scm.ServiceProtocolTcpArgs{
+//						Port: pulumi.String("80,443"),
+//						Override: &scm.ServiceProtocolTcpOverrideArgs{
+//							Timeout: pulumi.Int(3600),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// TCP Service with source port, destination port and custom timeout values
+//			_, err = scm.NewService(ctx, "scm_service_tcp_port_src_dst", &scm.ServiceArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_service_tcp_port_src_dst"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Protocol: &scm.ServiceProtocolArgs{
+//					Tcp: &scm.ServiceProtocolTcpArgs{
+//						Port:       pulumi.String("80"),
+//						SourcePort: pulumi.String("49152-65535"),
+//						Override: &scm.ServiceProtocolTcpOverrideArgs{
+//							Timeout:          pulumi.Int(3600),
+//							HalfcloseTimeout: pulumi.Int(240),
+//							TimewaitTimeout:  pulumi.Int(30),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// UDP Service with single destination port
+//			_, err = scm.NewService(ctx, "scm_service_udp_port", &scm.ServiceArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_service_udp_port"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Protocol: &scm.ServiceProtocolArgs{
+//					Udp: &scm.ServiceProtocolUdpArgs{
+//						Port: pulumi.String("53"),
+//					},
+//				},
+//			})
 //			if err != nil {
 //				return err
 //			}
@@ -40,19 +86,19 @@ import (
 type Service struct {
 	pulumi.CustomResourceState
 
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Protocol param.
+	// Protocol
 	Protocol ServiceProtocolOutput `pulumi:"protocol"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags for service object
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	Tfid pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -61,12 +107,9 @@ type Service struct {
 func NewService(ctx *pulumi.Context,
 	name string, args *ServiceArgs, opts ...pulumi.ResourceOption) (*Service, error) {
 	if args == nil {
-		return nil, errors.New("missing one or more required arguments")
+		args = &ServiceArgs{}
 	}
 
-	if args.Protocol == nil {
-		return nil, errors.New("invalid value for required argument 'Protocol'")
-	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource Service
 	err := ctx.RegisterResource("scm:index/service:Service", name, args, &resource, opts...)
@@ -90,37 +133,37 @@ func GetService(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Service resources.
 type serviceState struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service
 	Name *string `pulumi:"name"`
-	// The Protocol param.
+	// Protocol
 	Protocol *ServiceProtocol `pulumi:"protocol"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags for service object
 	Tags []string `pulumi:"tags"`
 	Tfid *string  `pulumi:"tfid"`
 }
 
 type ServiceState struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service
 	Name pulumi.StringPtrInput
-	// The Protocol param.
+	// Protocol
 	Protocol ServiceProtocolPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags for service object
 	Tags pulumi.StringArrayInput
 	Tfid pulumi.StringPtrInput
 }
@@ -130,37 +173,37 @@ func (ServiceState) ElementType() reflect.Type {
 }
 
 type serviceArgs struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service
 	Name *string `pulumi:"name"`
-	// The Protocol param.
-	Protocol ServiceProtocol `pulumi:"protocol"`
-	// The Snippet param.
+	// Protocol
+	Protocol *ServiceProtocol `pulumi:"protocol"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags for service object
 	Tags []string `pulumi:"tags"`
 }
 
 // The set of arguments for constructing a Service resource.
 type ServiceArgs struct {
-	// The Description param. String length must not exceed 1023 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the service
 	Name pulumi.StringPtrInput
-	// The Protocol param.
-	Protocol ServiceProtocolInput
-	// The Snippet param.
+	// Protocol
+	Protocol ServiceProtocolPtrInput
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+	// Tags for service object
 	Tags pulumi.StringArrayInput
 }
 
@@ -251,37 +294,37 @@ func (o ServiceOutput) ToServiceOutputWithContext(ctx context.Context) ServiceOu
 	return o
 }
 
-// The Description param. String length must not exceed 1023 characters.
+// Description
 func (o ServiceOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o ServiceOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o ServiceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the service
 func (o ServiceOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Protocol param.
+// Protocol
 func (o ServiceOutput) Protocol() ServiceProtocolOutput {
 	return o.ApplyT(func(v *Service) ServiceProtocolOutput { return v.Protocol }).(ServiceProtocolOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o ServiceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+// Tags for service object
 func (o ServiceOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Service) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }

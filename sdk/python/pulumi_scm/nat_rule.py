@@ -28,43 +28,43 @@ class NatRuleArgs:
                  tos: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']] = None,
+                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
+                 dns_rewrite: Optional[pulumi.Input['NatRuleDnsRewriteArgs']] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 group_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_translation: Optional[pulumi.Input['NatRuleSourceTranslationArgs']] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target: Optional[pulumi.Input['NatRuleTargetArgs']] = None,
-                 to_interface: Optional[pulumi.Input[_builtins.str]] = None):
+                 to_interface: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_port: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a NatRule resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[_builtins.str] service: The Service param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
-        :param pulumi.Input[_builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Static destination translation parameter.
-        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input['NatRuleDynamicDestinationTranslationArgs'] dynamic_destination_translation: Dynamic destination translation parameter.
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_type: The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: The SourceTranslation param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input['NatRuleTargetArgs'] target: The Target param.
-        :param pulumi.Input[_builtins.str] to_interface: The ToInterface param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
+        :param pulumi.Input[_builtins.str] service: The service of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
+        :param pulumi.Input[_builtins.str] distribution: Distribution method
+        :param pulumi.Input['NatRuleDnsRewriteArgs'] dns_rewrite: DNS rewrite
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: NAT rule name
+        :param pulumi.Input[_builtins.str] nat_type: NAT type
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: Source translation
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
+        :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
+        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
+        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         pulumi.set(__self__, "destinations", destinations)
         pulumi.set(__self__, "froms", froms)
@@ -75,18 +75,16 @@ class NatRuleArgs:
             pulumi.set(__self__, "active_active_device_binding", active_active_device_binding)
         if description is not None:
             pulumi.set(__self__, "description", description)
-        if destination_translation is not None:
-            pulumi.set(__self__, "destination_translation", destination_translation)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
-        if dynamic_destination_translation is not None:
-            pulumi.set(__self__, "dynamic_destination_translation", dynamic_destination_translation)
+        if distribution is not None:
+            pulumi.set(__self__, "distribution", distribution)
+        if dns_rewrite is not None:
+            pulumi.set(__self__, "dns_rewrite", dns_rewrite)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
-        if group_tag is not None:
-            pulumi.set(__self__, "group_tag", group_tag)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if nat_type is not None:
@@ -99,16 +97,18 @@ class NatRuleArgs:
             pulumi.set(__self__, "source_translation", source_translation)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
-        if target is not None:
-            pulumi.set(__self__, "target", target)
         if to_interface is not None:
             pulumi.set(__self__, "to_interface", to_interface)
+        if translated_address_single is not None:
+            pulumi.set(__self__, "translated_address_single", translated_address_single)
+        if translated_port is not None:
+            pulumi.set(__self__, "translated_port", translated_port)
 
     @_builtins.property
     @pulumi.getter
     def destinations(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The destination address(es).
+        Destination address(es) of the original packet
         """
         return pulumi.get(self, "destinations")
 
@@ -120,7 +120,7 @@ class NatRuleArgs:
     @pulumi.getter
     def froms(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The source security zone(s).
+        Source zone(s) of the original packet
         """
         return pulumi.get(self, "froms")
 
@@ -132,7 +132,7 @@ class NatRuleArgs:
     @pulumi.getter
     def service(self) -> pulumi.Input[_builtins.str]:
         """
-        The Service param.
+        The service of the original packet
         """
         return pulumi.get(self, "service")
 
@@ -144,7 +144,7 @@ class NatRuleArgs:
     @pulumi.getter
     def sources(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The source address(es).
+        Source address(es) of the original packet
         """
         return pulumi.get(self, "sources")
 
@@ -156,7 +156,7 @@ class NatRuleArgs:
     @pulumi.getter
     def tos(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The destination security zone(s).
+        Destination zone of the original packet
         """
         return pulumi.get(self, "tos")
 
@@ -168,7 +168,7 @@ class NatRuleArgs:
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+        Active active device binding
         """
         return pulumi.get(self, "active_active_device_binding")
 
@@ -180,7 +180,7 @@ class NatRuleArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        NAT rule description
         """
         return pulumi.get(self, "description")
 
@@ -189,22 +189,10 @@ class NatRuleArgs:
         pulumi.set(self, "description", value)
 
     @_builtins.property
-    @pulumi.getter(name="destinationTranslation")
-    def destination_translation(self) -> Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]:
-        """
-        Static destination translation parameter.
-        """
-        return pulumi.get(self, "destination_translation")
-
-    @destination_translation.setter
-    def destination_translation(self, value: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]):
-        pulumi.set(self, "destination_translation", value)
-
-    @_builtins.property
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -216,7 +204,7 @@ class NatRuleArgs:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param.
+        Disable NAT rule?
         """
         return pulumi.get(self, "disabled")
 
@@ -225,22 +213,34 @@ class NatRuleArgs:
         pulumi.set(self, "disabled", value)
 
     @_builtins.property
-    @pulumi.getter(name="dynamicDestinationTranslation")
-    def dynamic_destination_translation(self) -> Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]:
+    @pulumi.getter
+    def distribution(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Dynamic destination translation parameter.
+        Distribution method
         """
-        return pulumi.get(self, "dynamic_destination_translation")
+        return pulumi.get(self, "distribution")
 
-    @dynamic_destination_translation.setter
-    def dynamic_destination_translation(self, value: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]):
-        pulumi.set(self, "dynamic_destination_translation", value)
+    @distribution.setter
+    def distribution(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "distribution", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dnsRewrite")
+    def dns_rewrite(self) -> Optional[pulumi.Input['NatRuleDnsRewriteArgs']]:
+        """
+        DNS rewrite
+        """
+        return pulumi.get(self, "dns_rewrite")
+
+    @dns_rewrite.setter
+    def dns_rewrite(self, value: Optional[pulumi.Input['NatRuleDnsRewriteArgs']]):
+        pulumi.set(self, "dns_rewrite", value)
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -249,22 +249,10 @@ class NatRuleArgs:
         pulumi.set(self, "folder", value)
 
     @_builtins.property
-    @pulumi.getter(name="groupTag")
-    def group_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The GroupTag param.
-        """
-        return pulumi.get(self, "group_tag")
-
-    @group_tag.setter
-    def group_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "group_tag", value)
-
-    @_builtins.property
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        NAT rule name
         """
         return pulumi.get(self, "name")
 
@@ -276,7 +264,7 @@ class NatRuleArgs:
     @pulumi.getter(name="natType")
     def nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+        NAT type
         """
         return pulumi.get(self, "nat_type")
 
@@ -288,7 +276,7 @@ class NatRuleArgs:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -300,7 +288,7 @@ class NatRuleArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -312,7 +300,7 @@ class NatRuleArgs:
     @pulumi.getter(name="sourceTranslation")
     def source_translation(self) -> Optional[pulumi.Input['NatRuleSourceTranslationArgs']]:
         """
-        The SourceTranslation param.
+        Source translation
         """
         return pulumi.get(self, "source_translation")
 
@@ -324,7 +312,7 @@ class NatRuleArgs:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        NAT rule tags
         """
         return pulumi.get(self, "tags")
 
@@ -333,22 +321,10 @@ class NatRuleArgs:
         pulumi.set(self, "tags", value)
 
     @_builtins.property
-    @pulumi.getter
-    def target(self) -> Optional[pulumi.Input['NatRuleTargetArgs']]:
-        """
-        The Target param.
-        """
-        return pulumi.get(self, "target")
-
-    @target.setter
-    def target(self, value: Optional[pulumi.Input['NatRuleTargetArgs']]):
-        pulumi.set(self, "target", value)
-
-    @_builtins.property
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ToInterface param.
+        Destination interface of the original packet
         """
         return pulumi.get(self, "to_interface")
 
@@ -356,20 +332,43 @@ class NatRuleArgs:
     def to_interface(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "to_interface", value)
 
+    @_builtins.property
+    @pulumi.getter(name="translatedAddressSingle")
+    def translated_address_single(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Translated destination IP address
+        """
+        return pulumi.get(self, "translated_address_single")
+
+    @translated_address_single.setter
+    def translated_address_single(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translated_address_single", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedPort")
+    def translated_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Translated destination port
+        """
+        return pulumi.get(self, "translated_port")
+
+    @translated_port.setter
+    def translated_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "translated_port", value)
+
 
 @pulumi.input_type
 class _NatRuleState:
     def __init__(__self__, *,
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']] = None,
+                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
+                 dns_rewrite: Optional[pulumi.Input['NatRuleDnsRewriteArgs']] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 group_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
@@ -378,54 +377,53 @@ class _NatRuleState:
                  source_translation: Optional[pulumi.Input['NatRuleSourceTranslationArgs']] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target: Optional[pulumi.Input['NatRuleTargetArgs']] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None,
                  to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_port: Optional[pulumi.Input[_builtins.int]] = None):
         """
         Input properties used for looking up and filtering NatRule resources.
-        :param pulumi.Input[_builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input['NatRuleDestinationTranslationArgs'] destination_translation: Static destination translation parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input['NatRuleDynamicDestinationTranslationArgs'] dynamic_destination_translation: Dynamic destination translation parameter.
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_type: The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] service: The Service param.
-        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: The SourceTranslation param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input['NatRuleTargetArgs'] target: The Target param.
-        :param pulumi.Input[_builtins.str] to_interface: The ToInterface param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
+        :param pulumi.Input[_builtins.str] distribution: Distribution method
+        :param pulumi.Input['NatRuleDnsRewriteArgs'] dns_rewrite: DNS rewrite
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
+        :param pulumi.Input[_builtins.str] name: NAT rule name
+        :param pulumi.Input[_builtins.str] nat_type: NAT type
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] service: The service of the original packet
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input['NatRuleSourceTranslationArgs'] source_translation: Source translation
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
+        :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
+        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
+        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         if active_active_device_binding is not None:
             pulumi.set(__self__, "active_active_device_binding", active_active_device_binding)
         if description is not None:
             pulumi.set(__self__, "description", description)
-        if destination_translation is not None:
-            pulumi.set(__self__, "destination_translation", destination_translation)
         if destinations is not None:
             pulumi.set(__self__, "destinations", destinations)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
-        if dynamic_destination_translation is not None:
-            pulumi.set(__self__, "dynamic_destination_translation", dynamic_destination_translation)
+        if distribution is not None:
+            pulumi.set(__self__, "distribution", distribution)
+        if dns_rewrite is not None:
+            pulumi.set(__self__, "dns_rewrite", dns_rewrite)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if froms is not None:
             pulumi.set(__self__, "froms", froms)
-        if group_tag is not None:
-            pulumi.set(__self__, "group_tag", group_tag)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if nat_type is not None:
@@ -442,20 +440,22 @@ class _NatRuleState:
             pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
-        if target is not None:
-            pulumi.set(__self__, "target", target)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
         if to_interface is not None:
             pulumi.set(__self__, "to_interface", to_interface)
         if tos is not None:
             pulumi.set(__self__, "tos", tos)
+        if translated_address_single is not None:
+            pulumi.set(__self__, "translated_address_single", translated_address_single)
+        if translated_port is not None:
+            pulumi.set(__self__, "translated_port", translated_port)
 
     @_builtins.property
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+        Active active device binding
         """
         return pulumi.get(self, "active_active_device_binding")
 
@@ -467,7 +467,7 @@ class _NatRuleState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        NAT rule description
         """
         return pulumi.get(self, "description")
 
@@ -476,22 +476,10 @@ class _NatRuleState:
         pulumi.set(self, "description", value)
 
     @_builtins.property
-    @pulumi.getter(name="destinationTranslation")
-    def destination_translation(self) -> Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]:
-        """
-        Static destination translation parameter.
-        """
-        return pulumi.get(self, "destination_translation")
-
-    @destination_translation.setter
-    def destination_translation(self, value: Optional[pulumi.Input['NatRuleDestinationTranslationArgs']]):
-        pulumi.set(self, "destination_translation", value)
-
-    @_builtins.property
     @pulumi.getter
     def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The destination address(es).
+        Destination address(es) of the original packet
         """
         return pulumi.get(self, "destinations")
 
@@ -503,7 +491,7 @@ class _NatRuleState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -515,7 +503,7 @@ class _NatRuleState:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param.
+        Disable NAT rule?
         """
         return pulumi.get(self, "disabled")
 
@@ -524,22 +512,34 @@ class _NatRuleState:
         pulumi.set(self, "disabled", value)
 
     @_builtins.property
-    @pulumi.getter(name="dynamicDestinationTranslation")
-    def dynamic_destination_translation(self) -> Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]:
+    @pulumi.getter
+    def distribution(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Dynamic destination translation parameter.
+        Distribution method
         """
-        return pulumi.get(self, "dynamic_destination_translation")
+        return pulumi.get(self, "distribution")
 
-    @dynamic_destination_translation.setter
-    def dynamic_destination_translation(self, value: Optional[pulumi.Input['NatRuleDynamicDestinationTranslationArgs']]):
-        pulumi.set(self, "dynamic_destination_translation", value)
+    @distribution.setter
+    def distribution(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "distribution", value)
+
+    @_builtins.property
+    @pulumi.getter(name="dnsRewrite")
+    def dns_rewrite(self) -> Optional[pulumi.Input['NatRuleDnsRewriteArgs']]:
+        """
+        DNS rewrite
+        """
+        return pulumi.get(self, "dns_rewrite")
+
+    @dns_rewrite.setter
+    def dns_rewrite(self, value: Optional[pulumi.Input['NatRuleDnsRewriteArgs']]):
+        pulumi.set(self, "dns_rewrite", value)
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -551,7 +551,7 @@ class _NatRuleState:
     @pulumi.getter
     def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The source security zone(s).
+        Source zone(s) of the original packet
         """
         return pulumi.get(self, "froms")
 
@@ -560,22 +560,10 @@ class _NatRuleState:
         pulumi.set(self, "froms", value)
 
     @_builtins.property
-    @pulumi.getter(name="groupTag")
-    def group_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The GroupTag param.
-        """
-        return pulumi.get(self, "group_tag")
-
-    @group_tag.setter
-    def group_tag(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "group_tag", value)
-
-    @_builtins.property
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        NAT rule name
         """
         return pulumi.get(self, "name")
 
@@ -587,7 +575,7 @@ class _NatRuleState:
     @pulumi.getter(name="natType")
     def nat_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+        NAT type
         """
         return pulumi.get(self, "nat_type")
 
@@ -599,7 +587,7 @@ class _NatRuleState:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -611,7 +599,7 @@ class _NatRuleState:
     @pulumi.getter
     def service(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Service param.
+        The service of the original packet
         """
         return pulumi.get(self, "service")
 
@@ -623,7 +611,7 @@ class _NatRuleState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -635,7 +623,7 @@ class _NatRuleState:
     @pulumi.getter(name="sourceTranslation")
     def source_translation(self) -> Optional[pulumi.Input['NatRuleSourceTranslationArgs']]:
         """
-        The SourceTranslation param.
+        Source translation
         """
         return pulumi.get(self, "source_translation")
 
@@ -647,7 +635,7 @@ class _NatRuleState:
     @pulumi.getter
     def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The source address(es).
+        Source address(es) of the original packet
         """
         return pulumi.get(self, "sources")
 
@@ -659,25 +647,13 @@ class _NatRuleState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        NAT rule tags
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
     def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def target(self) -> Optional[pulumi.Input['NatRuleTargetArgs']]:
-        """
-        The Target param.
-        """
-        return pulumi.get(self, "target")
-
-    @target.setter
-    def target(self, value: Optional[pulumi.Input['NatRuleTargetArgs']]):
-        pulumi.set(self, "target", value)
 
     @_builtins.property
     @pulumi.getter
@@ -692,7 +668,7 @@ class _NatRuleState:
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ToInterface param.
+        Destination interface of the original packet
         """
         return pulumi.get(self, "to_interface")
 
@@ -704,13 +680,37 @@ class _NatRuleState:
     @pulumi.getter
     def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The destination security zone(s).
+        Destination zone of the original packet
         """
         return pulumi.get(self, "tos")
 
     @tos.setter
     def tos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tos", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedAddressSingle")
+    def translated_address_single(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Translated destination IP address
+        """
+        return pulumi.get(self, "translated_address_single")
+
+    @translated_address_single.setter
+    def translated_address_single(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "translated_address_single", value)
+
+    @_builtins.property
+    @pulumi.getter(name="translatedPort")
+    def translated_port(self) -> Optional[pulumi.Input[_builtins.int]]:
+        """
+        Translated destination port
+        """
+        return pulumi.get(self, "translated_port")
+
+    @translated_port.setter
+    def translated_port(self, value: Optional[pulumi.Input[_builtins.int]]):
+        pulumi.set(self, "translated_port", value)
 
 
 @pulumi.type_token("scm:index/natRule:NatRule")
@@ -721,14 +721,13 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
+                 dns_rewrite: Optional[pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 group_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
@@ -737,38 +736,37 @@ class NatRule(pulumi.CustomResource):
                  source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target: Optional[pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']]] = None,
                  to_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_port: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
+        NatRule resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Static destination translation parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation parameter.
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_type: The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] service: The Service param.
-        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: The SourceTranslation param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']] target: The Target param.
-        :param pulumi.Input[_builtins.str] to_interface: The ToInterface param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
+        :param pulumi.Input[_builtins.str] distribution: Distribution method
+        :param pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']] dns_rewrite: DNS rewrite
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
+        :param pulumi.Input[_builtins.str] name: NAT rule name
+        :param pulumi.Input[_builtins.str] nat_type: NAT type
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] service: The service of the original packet
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: Source translation
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
+        :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
+        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
+        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         ...
     @overload
@@ -777,9 +775,7 @@ class NatRule(pulumi.CustomResource):
                  args: NatRuleArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
+        NatRule resource
 
         :param str resource_name: The name of the resource.
         :param NatRuleArgs args: The arguments to use to populate this resource's properties.
@@ -798,14 +794,13 @@ class NatRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+                 distribution: Optional[pulumi.Input[_builtins.str]] = None,
+                 dns_rewrite: Optional[pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 group_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  nat_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
@@ -814,9 +809,10 @@ class NatRule(pulumi.CustomResource):
                  source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 target: Optional[pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']]] = None,
                  to_interface: Optional[pulumi.Input[_builtins.str]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
+                 translated_port: Optional[pulumi.Input[_builtins.int]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -828,18 +824,17 @@ class NatRule(pulumi.CustomResource):
 
             __props__.__dict__["active_active_device_binding"] = active_active_device_binding
             __props__.__dict__["description"] = description
-            __props__.__dict__["destination_translation"] = destination_translation
             if destinations is None and not opts.urn:
                 raise TypeError("Missing required property 'destinations'")
             __props__.__dict__["destinations"] = destinations
             __props__.__dict__["device"] = device
             __props__.__dict__["disabled"] = disabled
-            __props__.__dict__["dynamic_destination_translation"] = dynamic_destination_translation
+            __props__.__dict__["distribution"] = distribution
+            __props__.__dict__["dns_rewrite"] = dns_rewrite
             __props__.__dict__["folder"] = folder
             if froms is None and not opts.urn:
                 raise TypeError("Missing required property 'froms'")
             __props__.__dict__["froms"] = froms
-            __props__.__dict__["group_tag"] = group_tag
             __props__.__dict__["name"] = name
             __props__.__dict__["nat_type"] = nat_type
             __props__.__dict__["position"] = position
@@ -852,11 +847,12 @@ class NatRule(pulumi.CustomResource):
                 raise TypeError("Missing required property 'sources'")
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
-            __props__.__dict__["target"] = target
             __props__.__dict__["to_interface"] = to_interface
             if tos is None and not opts.urn:
                 raise TypeError("Missing required property 'tos'")
             __props__.__dict__["tos"] = tos
+            __props__.__dict__["translated_address_single"] = translated_address_single
+            __props__.__dict__["translated_port"] = translated_port
             __props__.__dict__["tfid"] = None
         super(NatRule, __self__).__init__(
             'scm:index/natRule:NatRule',
@@ -870,14 +866,13 @@ class NatRule(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             active_active_device_binding: Optional[pulumi.Input[_builtins.str]] = None,
             description: Optional[pulumi.Input[_builtins.str]] = None,
-            destination_translation: Optional[pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']]] = None,
             destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
             disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-            dynamic_destination_translation: Optional[pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']]] = None,
+            distribution: Optional[pulumi.Input[_builtins.str]] = None,
+            dns_rewrite: Optional[pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            group_tag: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             nat_type: Optional[pulumi.Input[_builtins.str]] = None,
             position: Optional[pulumi.Input[_builtins.str]] = None,
@@ -886,10 +881,11 @@ class NatRule(pulumi.CustomResource):
             source_translation: Optional[pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-            target: Optional[pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             to_interface: Optional[pulumi.Input[_builtins.str]] = None,
-            tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'NatRule':
+            tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            translated_address_single: Optional[pulumi.Input[_builtins.str]] = None,
+            translated_port: Optional[pulumi.Input[_builtins.int]] = None) -> 'NatRule':
         """
         Get an existing NatRule resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -897,27 +893,27 @@ class NatRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] active_active_device_binding: The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Union['NatRuleDestinationTranslationArgs', 'NatRuleDestinationTranslationArgsDict']] destination_translation: Static destination translation parameter.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[Union['NatRuleDynamicDestinationTranslationArgs', 'NatRuleDynamicDestinationTranslationArgsDict']] dynamic_destination_translation: Dynamic destination translation parameter.
-        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] nat_type: The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] service: The Service param.
-        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
-        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: The SourceTranslation param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[Union['NatRuleTargetArgs', 'NatRuleTargetArgsDict']] target: The Target param.
-        :param pulumi.Input[_builtins.str] to_interface: The ToInterface param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
+        :param pulumi.Input[_builtins.str] active_active_device_binding: Active active device binding
+        :param pulumi.Input[_builtins.str] description: NAT rule description
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: Destination address(es) of the original packet
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Disable NAT rule?
+        :param pulumi.Input[_builtins.str] distribution: Distribution method
+        :param pulumi.Input[Union['NatRuleDnsRewriteArgs', 'NatRuleDnsRewriteArgsDict']] dns_rewrite: DNS rewrite
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: Source zone(s) of the original packet
+        :param pulumi.Input[_builtins.str] name: NAT rule name
+        :param pulumi.Input[_builtins.str] nat_type: NAT type
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] service: The service of the original packet
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Union['NatRuleSourceTranslationArgs', 'NatRuleSourceTranslationArgsDict']] source_translation: Source translation
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: Source address(es) of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: NAT rule tags
+        :param pulumi.Input[_builtins.str] to_interface: Destination interface of the original packet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: Destination zone of the original packet
+        :param pulumi.Input[_builtins.str] translated_address_single: Translated destination IP address
+        :param pulumi.Input[_builtins.int] translated_port: Translated destination port
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -925,14 +921,13 @@ class NatRule(pulumi.CustomResource):
 
         __props__.__dict__["active_active_device_binding"] = active_active_device_binding
         __props__.__dict__["description"] = description
-        __props__.__dict__["destination_translation"] = destination_translation
         __props__.__dict__["destinations"] = destinations
         __props__.__dict__["device"] = device
         __props__.__dict__["disabled"] = disabled
-        __props__.__dict__["dynamic_destination_translation"] = dynamic_destination_translation
+        __props__.__dict__["distribution"] = distribution
+        __props__.__dict__["dns_rewrite"] = dns_rewrite
         __props__.__dict__["folder"] = folder
         __props__.__dict__["froms"] = froms
-        __props__.__dict__["group_tag"] = group_tag
         __props__.__dict__["name"] = name
         __props__.__dict__["nat_type"] = nat_type
         __props__.__dict__["position"] = position
@@ -941,17 +936,18 @@ class NatRule(pulumi.CustomResource):
         __props__.__dict__["source_translation"] = source_translation
         __props__.__dict__["sources"] = sources
         __props__.__dict__["tags"] = tags
-        __props__.__dict__["target"] = target
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["to_interface"] = to_interface
         __props__.__dict__["tos"] = tos
+        __props__.__dict__["translated_address_single"] = translated_address_single
+        __props__.__dict__["translated_port"] = translated_port
         return NatRule(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
     @pulumi.getter(name="activeActiveDeviceBinding")
     def active_active_device_binding(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+        Active active device binding
         """
         return pulumi.get(self, "active_active_device_binding")
 
@@ -959,23 +955,15 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        NAT rule description
         """
         return pulumi.get(self, "description")
-
-    @_builtins.property
-    @pulumi.getter(name="destinationTranslation")
-    def destination_translation(self) -> pulumi.Output[Optional['outputs.NatRuleDestinationTranslation']]:
-        """
-        Static destination translation parameter.
-        """
-        return pulumi.get(self, "destination_translation")
 
     @_builtins.property
     @pulumi.getter
     def destinations(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The destination address(es).
+        Destination address(es) of the original packet
         """
         return pulumi.get(self, "destinations")
 
@@ -983,31 +971,39 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
-    def disabled(self) -> pulumi.Output[Optional[_builtins.bool]]:
+    def disabled(self) -> pulumi.Output[_builtins.bool]:
         """
-        The Disabled param.
+        Disable NAT rule?
         """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
-    @pulumi.getter(name="dynamicDestinationTranslation")
-    def dynamic_destination_translation(self) -> pulumi.Output[Optional['outputs.NatRuleDynamicDestinationTranslation']]:
+    @pulumi.getter
+    def distribution(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        Dynamic destination translation parameter.
+        Distribution method
         """
-        return pulumi.get(self, "dynamic_destination_translation")
+        return pulumi.get(self, "distribution")
+
+    @_builtins.property
+    @pulumi.getter(name="dnsRewrite")
+    def dns_rewrite(self) -> pulumi.Output[Optional['outputs.NatRuleDnsRewrite']]:
+        """
+        DNS rewrite
+        """
+        return pulumi.get(self, "dns_rewrite")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -1015,31 +1011,23 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def froms(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The source security zone(s).
+        Source zone(s) of the original packet
         """
         return pulumi.get(self, "froms")
-
-    @_builtins.property
-    @pulumi.getter(name="groupTag")
-    def group_tag(self) -> pulumi.Output[Optional[_builtins.str]]:
-        """
-        The GroupTag param.
-        """
-        return pulumi.get(self, "group_tag")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        NAT rule name
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="natType")
-    def nat_type(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def nat_type(self) -> pulumi.Output[_builtins.str]:
         """
-        The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+        NAT type
         """
         return pulumi.get(self, "nat_type")
 
@@ -1047,7 +1035,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -1055,7 +1043,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def service(self) -> pulumi.Output[_builtins.str]:
         """
-        The Service param.
+        The service of the original packet
         """
         return pulumi.get(self, "service")
 
@@ -1063,7 +1051,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\\d-_\\. ]+$`.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -1071,7 +1059,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter(name="sourceTranslation")
     def source_translation(self) -> pulumi.Output[Optional['outputs.NatRuleSourceTranslation']]:
         """
-        The SourceTranslation param.
+        Source translation
         """
         return pulumi.get(self, "source_translation")
 
@@ -1079,7 +1067,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def sources(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The source address(es).
+        Source address(es) of the original packet
         """
         return pulumi.get(self, "sources")
 
@@ -1087,17 +1075,9 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Tags param.
+        NAT rule tags
         """
         return pulumi.get(self, "tags")
-
-    @_builtins.property
-    @pulumi.getter
-    def target(self) -> pulumi.Output[Optional['outputs.NatRuleTarget']]:
-        """
-        The Target param.
-        """
-        return pulumi.get(self, "target")
 
     @_builtins.property
     @pulumi.getter
@@ -1108,7 +1088,7 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter(name="toInterface")
     def to_interface(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The ToInterface param.
+        Destination interface of the original packet
         """
         return pulumi.get(self, "to_interface")
 
@@ -1116,7 +1096,23 @@ class NatRule(pulumi.CustomResource):
     @pulumi.getter
     def tos(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The destination security zone(s).
+        Destination zone of the original packet
         """
         return pulumi.get(self, "tos")
+
+    @_builtins.property
+    @pulumi.getter(name="translatedAddressSingle")
+    def translated_address_single(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        Translated destination IP address
+        """
+        return pulumi.get(self, "translated_address_single")
+
+    @_builtins.property
+    @pulumi.getter(name="translatedPort")
+    def translated_port(self) -> pulumi.Output[Optional[_builtins.int]]:
+        """
+        Translated destination port
+        """
+        return pulumi.get(self, "translated_port")
 

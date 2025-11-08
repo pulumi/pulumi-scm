@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getProfileGroup({
- *     id: "1234-56-789",
- * });
- * ```
+ * ProfileGroup data source
  */
 export function getProfileGroup(args: GetProfileGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetProfileGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getProfileGroup:getProfileGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getProfileGroup(args: GetProfileGroupArgs, opts?: pulumi.InvokeO
  */
 export interface GetProfileGroupArgs {
     /**
-     * The Id param.
+     * The UUID of the profile group
      */
     id: string;
+    /**
+     * The name of the profile group
+     */
+    name?: string;
 }
 
 /**
@@ -40,65 +34,71 @@ export interface GetProfileGroupArgs {
  */
 export interface GetProfileGroupResult {
     /**
-     * List of AI security profiles.
+     * Ai security
      */
     readonly aiSecurities: string[];
     /**
-     * List of DNS security profiles.
+     * Data filtering
+     */
+    readonly dataFilterings: string[];
+    /**
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Dns security
      */
     readonly dnsSecurities: string[];
     /**
-     * List of file blocking profiles.
+     * File blocking
      */
     readonly fileBlockings: string[];
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the profile group
      */
     readonly id: string;
     /**
-     * The name of the profile group.
+     * The name of the profile group
      */
     readonly name: string;
     /**
-     * List of HTTP header insertion profiles.
+     * Saas security
      */
     readonly saasSecurities: string[];
     /**
-     * List of anti-spyware profiles.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Spyware
      */
     readonly spywares: string[];
     readonly tfid: string;
     /**
-     * List of URL filtering profiles.
+     * Url filtering
      */
     readonly urlFilterings: string[];
     /**
-     * List of anti-virus and Wildfire analysis profiles.
+     * Virus and wildfire analysis
      */
     readonly virusAndWildfireAnalyses: string[];
     /**
-     * List of vulnerability protection profiles.
+     * Vulnerability
      */
     readonly vulnerabilities: string[];
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getProfileGroup({
- *     id: "1234-56-789",
- * });
- * ```
+ * ProfileGroup data source
  */
 export function getProfileGroupOutput(args: GetProfileGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetProfileGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getProfileGroup:getProfileGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -107,7 +107,11 @@ export function getProfileGroupOutput(args: GetProfileGroupOutputArgs, opts?: pu
  */
 export interface GetProfileGroupOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the profile group
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the profile group
+     */
+    name?: pulumi.Input<string>;
 }

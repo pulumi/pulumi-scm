@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * RemoteNetwork data source
  *
  * ## Example Usage
  *
@@ -15,16 +15,22 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * //
+ * // Data source to retrieve a single remote_network object.
+ * //
+ * // Look up a single Remote Network by its ID.
+ * // Replace the ID with the UUID of the remote network you want to find.
  * const example = scm.getRemoteNetwork({
- *     id: "1234-56-789",
+ *     id: "7fc59ec2-46b3-4a0e-9c86-9b7416426a70",
  * });
+ * export const remoteNetworkDetails = example;
  * ```
  */
 export function getRemoteNetwork(args: GetRemoteNetworkArgs, opts?: pulumi.InvokeOptions): Promise<GetRemoteNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRemoteNetwork:getRemoteNetwork", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -33,13 +39,13 @@ export function getRemoteNetwork(args: GetRemoteNetworkArgs, opts?: pulumi.Invok
  */
 export interface GetRemoteNetworkArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * The UUID of the remote network
      */
     id: string;
+    /**
+     * The name of the remote network
+     */
+    name?: string;
 }
 
 /**
@@ -47,57 +53,61 @@ export interface GetRemoteNetworkArgs {
  */
 export interface GetRemoteNetworkResult {
     /**
-     * The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+     * Ecmp load balancing
      */
     readonly ecmpLoadBalancing: string;
     /**
-     * ecmp*tunnels is required when ecmp*load*balancing is enable.
+     * ecmp*tunnels is required when ecmp*load*balancing is enable
      */
     readonly ecmpTunnels: outputs.GetRemoteNetworkEcmpTunnel[];
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+     * Map of sensitive values returned from the API.
+     */
+    readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder that contains the remote network
      */
     readonly folder: string;
     /**
-     * The Id param.
+     * The UUID of the remote network
      */
     readonly id: string;
     /**
-     * ipsec*tunnel is required when ecmp*load_balancing is disable.
+     * ipsec*tunnel is required when ecmp*load_balancing is disable
      */
     readonly ipsecTunnel: string;
     /**
-     * New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+     * New customer will only be on aggregate bandwidth licensing
      */
     readonly licenseType: string;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the remote network
      */
     readonly name: string;
     /**
-     * setup the protocol when ecmp*load*balancing is disable.
+     * setup the protocol when ecmp*load*balancing is disable
      */
     readonly protocol: outputs.GetRemoteNetworkProtocol;
     /**
-     * The Region param. String length must exceed 1 characters.
+     * Region
      */
     readonly region: string;
     /**
-     * specify secondary ipsecTunnel if needed.
+     * specify secondary ipsecTunnel if needed
      */
     readonly secondaryIpsecTunnel: string;
     /**
-     * spn-name is needed when licenseType is FWAAS-AGGREGATE.
+     * spn-name is needed when licenseType is FWAAS-AGGREGATE
      */
     readonly spnName: string;
     /**
-     * The Subnets param.
+     * Subnets
      */
     readonly subnets: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * RemoteNetwork data source
  *
  * ## Example Usage
  *
@@ -105,16 +115,22 @@ export interface GetRemoteNetworkResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
+ * //
+ * // Data source to retrieve a single remote_network object.
+ * //
+ * // Look up a single Remote Network by its ID.
+ * // Replace the ID with the UUID of the remote network you want to find.
  * const example = scm.getRemoteNetwork({
- *     id: "1234-56-789",
+ *     id: "7fc59ec2-46b3-4a0e-9c86-9b7416426a70",
  * });
+ * export const remoteNetworkDetails = example;
  * ```
  */
 export function getRemoteNetworkOutput(args: GetRemoteNetworkOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRemoteNetworkResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRemoteNetwork:getRemoteNetwork", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -123,11 +139,11 @@ export function getRemoteNetworkOutput(args: GetRemoteNetworkOutputArgs, opts?: 
  */
 export interface GetRemoteNetworkOutputArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * The UUID of the remote network
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the remote network
+     */
+    name?: pulumi.Input<string>;
 }

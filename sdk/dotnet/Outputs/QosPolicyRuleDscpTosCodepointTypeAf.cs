@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class QosPolicyRuleDscpTosCodepointTypeAf
     {
         /// <summary>
-        /// The Codepoint param.
+        /// Codepoint
         /// </summary>
         public readonly string? Codepoint;
 

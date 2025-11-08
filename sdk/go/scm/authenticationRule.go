@@ -7,88 +7,65 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewAuthenticationRule(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// AuthenticationRule resource
 type AuthenticationRule struct {
 	pulumi.CustomResourceState
 
-	// the authentication profile name to apply to authentication rule.
+	// The authentication profile name
 	AuthenticationEnforcement pulumi.StringPtrOutput `pulumi:"authenticationEnforcement"`
-	// The Categories param.
+	// The destination URL categories
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
-	// The Description param.
+	// The description of the authentication rule
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The DestinationHips param.
+	// The destination Host Integrity Profile (HIP)
 	DestinationHips pulumi.StringArrayOutput `pulumi:"destinationHips"`
-	// The Destinations param.
+	// The destination addresses
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
-	// The Device param.
+	// Device
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Disabled param. Default: `false`.
+	// Is the authentication rule disabled?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
-	// The Folder param.
+	// Folder
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Froms param.
+	// The source security zones
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
-	// The GroupTag param.
+	// Group tag
 	GroupTag pulumi.StringPtrOutput `pulumi:"groupTag"`
-	// The HipProfiles param.
+	// The source Host Integrity Profile (HIP)
 	HipProfiles pulumi.StringArrayOutput `pulumi:"hipProfiles"`
-	// The LogAuthenticationTimeout param. Default: `false`.
+	// Log authentication timeouts?
 	LogAuthenticationTimeout pulumi.BoolOutput `pulumi:"logAuthenticationTimeout"`
-	// The LogSetting param.
+	// The log forwarding profile name
 	LogSetting pulumi.StringPtrOutput `pulumi:"logSetting"`
-	// The Name param.
+	// The name of the authentication rule
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The NegateDestination param. Default: `false`.
+	// Are the destination addresses negated?
 	NegateDestination pulumi.BoolOutput `pulumi:"negateDestination"`
-	// The NegateSource param. Default: `false`.
+	// Are the source addresses negated?
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position pulumi.StringOutput `pulumi:"position"`
-	// The Services param.
+	// The destination ports
 	Services pulumi.StringArrayOutput `pulumi:"services"`
-	// The Snippet param.
+	// Snippet
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The SourceHips param.
+	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayOutput `pulumi:"sourceHips"`
-	// The SourceUsers param.
+	// The source users
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
-	// The Sources param.
+	// The source addresses
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
-	// The Tags param.
+	// The authentication rule tags
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
 	Tfid pulumi.StringOutput      `pulumi:"tfid"`
-	// The Timeout param. Value must be between 1 and 1440.
+	// The authentication session timeout (seconds)
 	Timeout pulumi.IntPtrOutput `pulumi:"timeout"`
-	// The Tos param.
+	// The destination security zones
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 }
 
@@ -96,9 +73,24 @@ type AuthenticationRule struct {
 func NewAuthenticationRule(ctx *pulumi.Context,
 	name string, args *AuthenticationRuleArgs, opts ...pulumi.ResourceOption) (*AuthenticationRule, error) {
 	if args == nil {
-		args = &AuthenticationRuleArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.Destinations == nil {
+		return nil, errors.New("invalid value for required argument 'Destinations'")
+	}
+	if args.Froms == nil {
+		return nil, errors.New("invalid value for required argument 'Froms'")
+	}
+	if args.Services == nil {
+		return nil, errors.New("invalid value for required argument 'Services'")
+	}
+	if args.Sources == nil {
+		return nil, errors.New("invalid value for required argument 'Sources'")
+	}
+	if args.Tos == nil {
+		return nil, errors.New("invalid value for required argument 'Tos'")
+	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource AuthenticationRule
 	err := ctx.RegisterResource("scm:index/authenticationRule:AuthenticationRule", name, args, &resource, opts...)
@@ -122,110 +114,110 @@ func GetAuthenticationRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthenticationRule resources.
 type authenticationRuleState struct {
-	// the authentication profile name to apply to authentication rule.
+	// The authentication profile name
 	AuthenticationEnforcement *string `pulumi:"authenticationEnforcement"`
-	// The Categories param.
+	// The destination URL categories
 	Categories []string `pulumi:"categories"`
-	// The Description param.
+	// The description of the authentication rule
 	Description *string `pulumi:"description"`
-	// The DestinationHips param.
+	// The destination Host Integrity Profile (HIP)
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The Destinations param.
+	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// Device
 	Device *string `pulumi:"device"`
-	// The Disabled param. Default: `false`.
+	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// Folder
 	Folder *string `pulumi:"folder"`
-	// The Froms param.
+	// The source security zones
 	Froms []string `pulumi:"froms"`
-	// The GroupTag param.
+	// Group tag
 	GroupTag *string `pulumi:"groupTag"`
-	// The HipProfiles param.
+	// The source Host Integrity Profile (HIP)
 	HipProfiles []string `pulumi:"hipProfiles"`
-	// The LogAuthenticationTimeout param. Default: `false`.
+	// Log authentication timeouts?
 	LogAuthenticationTimeout *bool `pulumi:"logAuthenticationTimeout"`
-	// The LogSetting param.
+	// The log forwarding profile name
 	LogSetting *string `pulumi:"logSetting"`
-	// The Name param.
+	// The name of the authentication rule
 	Name *string `pulumi:"name"`
-	// The NegateDestination param. Default: `false`.
+	// Are the destination addresses negated?
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// The NegateSource param. Default: `false`.
+	// Are the source addresses negated?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position *string `pulumi:"position"`
-	// The Services param.
+	// The destination ports
 	Services []string `pulumi:"services"`
-	// The Snippet param.
+	// Snippet
 	Snippet *string `pulumi:"snippet"`
-	// The SourceHips param.
+	// The source Host Integrity Profile (HIP)
 	SourceHips []string `pulumi:"sourceHips"`
-	// The SourceUsers param.
+	// The source users
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Sources param.
+	// The source addresses
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// The authentication rule tags
 	Tags []string `pulumi:"tags"`
 	Tfid *string  `pulumi:"tfid"`
-	// The Timeout param. Value must be between 1 and 1440.
+	// The authentication session timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
-	// The Tos param.
+	// The destination security zones
 	Tos []string `pulumi:"tos"`
 }
 
 type AuthenticationRuleState struct {
-	// the authentication profile name to apply to authentication rule.
+	// The authentication profile name
 	AuthenticationEnforcement pulumi.StringPtrInput
-	// The Categories param.
+	// The destination URL categories
 	Categories pulumi.StringArrayInput
-	// The Description param.
+	// The description of the authentication rule
 	Description pulumi.StringPtrInput
-	// The DestinationHips param.
+	// The destination Host Integrity Profile (HIP)
 	DestinationHips pulumi.StringArrayInput
-	// The Destinations param.
+	// The destination addresses
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// Device
 	Device pulumi.StringPtrInput
-	// The Disabled param. Default: `false`.
+	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// Folder
 	Folder pulumi.StringPtrInput
-	// The Froms param.
+	// The source security zones
 	Froms pulumi.StringArrayInput
-	// The GroupTag param.
+	// Group tag
 	GroupTag pulumi.StringPtrInput
-	// The HipProfiles param.
+	// The source Host Integrity Profile (HIP)
 	HipProfiles pulumi.StringArrayInput
-	// The LogAuthenticationTimeout param. Default: `false`.
+	// Log authentication timeouts?
 	LogAuthenticationTimeout pulumi.BoolPtrInput
-	// The LogSetting param.
+	// The log forwarding profile name
 	LogSetting pulumi.StringPtrInput
-	// The Name param.
+	// The name of the authentication rule
 	Name pulumi.StringPtrInput
-	// The NegateDestination param. Default: `false`.
+	// Are the destination addresses negated?
 	NegateDestination pulumi.BoolPtrInput
-	// The NegateSource param. Default: `false`.
+	// Are the source addresses negated?
 	NegateSource pulumi.BoolPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position pulumi.StringPtrInput
-	// The Services param.
+	// The destination ports
 	Services pulumi.StringArrayInput
-	// The Snippet param.
+	// Snippet
 	Snippet pulumi.StringPtrInput
-	// The SourceHips param.
+	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayInput
-	// The SourceUsers param.
+	// The source users
 	SourceUsers pulumi.StringArrayInput
-	// The Sources param.
+	// The source addresses
 	Sources pulumi.StringArrayInput
-	// The Tags param.
+	// The authentication rule tags
 	Tags pulumi.StringArrayInput
 	Tfid pulumi.StringPtrInput
-	// The Timeout param. Value must be between 1 and 1440.
+	// The authentication session timeout (seconds)
 	Timeout pulumi.IntPtrInput
-	// The Tos param.
+	// The destination security zones
 	Tos pulumi.StringArrayInput
 }
 
@@ -234,109 +226,109 @@ func (AuthenticationRuleState) ElementType() reflect.Type {
 }
 
 type authenticationRuleArgs struct {
-	// the authentication profile name to apply to authentication rule.
+	// The authentication profile name
 	AuthenticationEnforcement *string `pulumi:"authenticationEnforcement"`
-	// The Categories param.
+	// The destination URL categories
 	Categories []string `pulumi:"categories"`
-	// The Description param.
+	// The description of the authentication rule
 	Description *string `pulumi:"description"`
-	// The DestinationHips param.
+	// The destination Host Integrity Profile (HIP)
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The Destinations param.
+	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// Device
 	Device *string `pulumi:"device"`
-	// The Disabled param. Default: `false`.
+	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// Folder
 	Folder *string `pulumi:"folder"`
-	// The Froms param.
+	// The source security zones
 	Froms []string `pulumi:"froms"`
-	// The GroupTag param.
+	// Group tag
 	GroupTag *string `pulumi:"groupTag"`
-	// The HipProfiles param.
+	// The source Host Integrity Profile (HIP)
 	HipProfiles []string `pulumi:"hipProfiles"`
-	// The LogAuthenticationTimeout param. Default: `false`.
+	// Log authentication timeouts?
 	LogAuthenticationTimeout *bool `pulumi:"logAuthenticationTimeout"`
-	// The LogSetting param.
+	// The log forwarding profile name
 	LogSetting *string `pulumi:"logSetting"`
-	// The Name param.
+	// The name of the authentication rule
 	Name *string `pulumi:"name"`
-	// The NegateDestination param. Default: `false`.
+	// Are the destination addresses negated?
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// The NegateSource param. Default: `false`.
+	// Are the source addresses negated?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position *string `pulumi:"position"`
-	// The Services param.
+	// The destination ports
 	Services []string `pulumi:"services"`
-	// The Snippet param.
+	// Snippet
 	Snippet *string `pulumi:"snippet"`
-	// The SourceHips param.
+	// The source Host Integrity Profile (HIP)
 	SourceHips []string `pulumi:"sourceHips"`
-	// The SourceUsers param.
+	// The source users
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Sources param.
+	// The source addresses
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// The authentication rule tags
 	Tags []string `pulumi:"tags"`
-	// The Timeout param. Value must be between 1 and 1440.
+	// The authentication session timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
-	// The Tos param.
+	// The destination security zones
 	Tos []string `pulumi:"tos"`
 }
 
 // The set of arguments for constructing a AuthenticationRule resource.
 type AuthenticationRuleArgs struct {
-	// the authentication profile name to apply to authentication rule.
+	// The authentication profile name
 	AuthenticationEnforcement pulumi.StringPtrInput
-	// The Categories param.
+	// The destination URL categories
 	Categories pulumi.StringArrayInput
-	// The Description param.
+	// The description of the authentication rule
 	Description pulumi.StringPtrInput
-	// The DestinationHips param.
+	// The destination Host Integrity Profile (HIP)
 	DestinationHips pulumi.StringArrayInput
-	// The Destinations param.
+	// The destination addresses
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// Device
 	Device pulumi.StringPtrInput
-	// The Disabled param. Default: `false`.
+	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// Folder
 	Folder pulumi.StringPtrInput
-	// The Froms param.
+	// The source security zones
 	Froms pulumi.StringArrayInput
-	// The GroupTag param.
+	// Group tag
 	GroupTag pulumi.StringPtrInput
-	// The HipProfiles param.
+	// The source Host Integrity Profile (HIP)
 	HipProfiles pulumi.StringArrayInput
-	// The LogAuthenticationTimeout param. Default: `false`.
+	// Log authentication timeouts?
 	LogAuthenticationTimeout pulumi.BoolPtrInput
-	// The LogSetting param.
+	// The log forwarding profile name
 	LogSetting pulumi.StringPtrInput
-	// The Name param.
+	// The name of the authentication rule
 	Name pulumi.StringPtrInput
-	// The NegateDestination param. Default: `false`.
+	// Are the destination addresses negated?
 	NegateDestination pulumi.BoolPtrInput
-	// The NegateSource param. Default: `false`.
+	// Are the source addresses negated?
 	NegateSource pulumi.BoolPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// The relative position of the rule
 	Position pulumi.StringPtrInput
-	// The Services param.
+	// The destination ports
 	Services pulumi.StringArrayInput
-	// The Snippet param.
+	// Snippet
 	Snippet pulumi.StringPtrInput
-	// The SourceHips param.
+	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayInput
-	// The SourceUsers param.
+	// The source users
 	SourceUsers pulumi.StringArrayInput
-	// The Sources param.
+	// The source addresses
 	Sources pulumi.StringArrayInput
-	// The Tags param.
+	// The authentication rule tags
 	Tags pulumi.StringArrayInput
-	// The Timeout param. Value must be between 1 and 1440.
+	// The authentication session timeout (seconds)
 	Timeout pulumi.IntPtrInput
-	// The Tos param.
+	// The destination security zones
 	Tos pulumi.StringArrayInput
 }
 
@@ -427,117 +419,117 @@ func (o AuthenticationRuleOutput) ToAuthenticationRuleOutputWithContext(ctx cont
 	return o
 }
 
-// the authentication profile name to apply to authentication rule.
+// The authentication profile name
 func (o AuthenticationRuleOutput) AuthenticationEnforcement() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.AuthenticationEnforcement }).(pulumi.StringPtrOutput)
 }
 
-// The Categories param.
+// The destination URL categories
 func (o AuthenticationRuleOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The Description param.
+// The description of the authentication rule
 func (o AuthenticationRuleOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The DestinationHips param.
+// The destination Host Integrity Profile (HIP)
 func (o AuthenticationRuleOutput) DestinationHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.DestinationHips }).(pulumi.StringArrayOutput)
 }
 
-// The Destinations param.
+// The destination addresses
 func (o AuthenticationRuleOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// Device
 func (o AuthenticationRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Disabled param. Default: `false`.
+// Is the authentication rule disabled?
 func (o AuthenticationRuleOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.BoolOutput { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The Folder param.
+// Folder
 func (o AuthenticationRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Froms param.
+// The source security zones
 func (o AuthenticationRuleOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The GroupTag param.
+// Group tag
 func (o AuthenticationRuleOutput) GroupTag() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.GroupTag }).(pulumi.StringPtrOutput)
 }
 
-// The HipProfiles param.
+// The source Host Integrity Profile (HIP)
 func (o AuthenticationRuleOutput) HipProfiles() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.HipProfiles }).(pulumi.StringArrayOutput)
 }
 
-// The LogAuthenticationTimeout param. Default: `false`.
+// Log authentication timeouts?
 func (o AuthenticationRuleOutput) LogAuthenticationTimeout() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.BoolOutput { return v.LogAuthenticationTimeout }).(pulumi.BoolOutput)
 }
 
-// The LogSetting param.
+// The log forwarding profile name
 func (o AuthenticationRuleOutput) LogSetting() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.LogSetting }).(pulumi.StringPtrOutput)
 }
 
-// The Name param.
+// The name of the authentication rule
 func (o AuthenticationRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NegateDestination param. Default: `false`.
+// Are the destination addresses negated?
 func (o AuthenticationRuleOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.BoolOutput { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
-// The NegateSource param. Default: `false`.
+// Are the source addresses negated?
 func (o AuthenticationRuleOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.BoolOutput { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+// The relative position of the rule
 func (o AuthenticationRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
-// The Services param.
+// The destination ports
 func (o AuthenticationRuleOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The Snippet param.
+// Snippet
 func (o AuthenticationRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The SourceHips param.
+// The source Host Integrity Profile (HIP)
 func (o AuthenticationRuleOutput) SourceHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.SourceHips }).(pulumi.StringArrayOutput)
 }
 
-// The SourceUsers param.
+// The source users
 func (o AuthenticationRuleOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The Sources param.
+// The source addresses
 func (o AuthenticationRuleOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The Tags param.
+// The authentication rule tags
 func (o AuthenticationRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
 }
@@ -546,12 +538,12 @@ func (o AuthenticationRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Timeout param. Value must be between 1 and 1440.
+// The authentication session timeout (seconds)
 func (o AuthenticationRuleOutput) Timeout() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.IntPtrOutput { return v.Timeout }).(pulumi.IntPtrOutput)
 }
 
-// The Tos param.
+// The destination security zones
 func (o AuthenticationRuleOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringArrayOutput { return v.Tos }).(pulumi.StringArrayOutput)
 }

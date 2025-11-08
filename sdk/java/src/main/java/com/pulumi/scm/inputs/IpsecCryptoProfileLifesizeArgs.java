@@ -16,14 +16,14 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
     public static final IpsecCryptoProfileLifesizeArgs Empty = new IpsecCryptoProfileLifesizeArgs();
 
     /**
-     * specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * specify lifesize in gigabytes(GB)
      * 
      */
     @Import(name="gb")
     private @Nullable Output<Integer> gb;
 
     /**
-     * @return specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in gigabytes(GB)
      * 
      */
     public Optional<Output<Integer>> gb() {
@@ -31,14 +31,14 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
     }
 
     /**
-     * specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * specify lifesize in kilobytes(KB)
      * 
      */
     @Import(name="kb")
     private @Nullable Output<Integer> kb;
 
     /**
-     * @return specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in kilobytes(KB)
      * 
      */
     public Optional<Output<Integer>> kb() {
@@ -46,14 +46,14 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
     }
 
     /**
-     * specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * specify lifesize in megabytes(MB)
      * 
      */
     @Import(name="mb")
     private @Nullable Output<Integer> mb;
 
     /**
-     * @return specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in megabytes(MB)
      * 
      */
     public Optional<Output<Integer>> mb() {
@@ -61,14 +61,14 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
     }
 
     /**
-     * specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * specify lifesize in terabytes(TB)
      * 
      */
     @Import(name="tb")
     private @Nullable Output<Integer> tb;
 
     /**
-     * @return specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+     * @return specify lifesize in terabytes(TB)
      * 
      */
     public Optional<Output<Integer>> tb() {
@@ -103,7 +103,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param gb specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param gb specify lifesize in gigabytes(GB)
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param gb specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param gb specify lifesize in gigabytes(GB)
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param kb specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param kb specify lifesize in kilobytes(KB)
          * 
          * @return builder
          * 
@@ -135,7 +135,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param kb specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param kb specify lifesize in kilobytes(KB)
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param mb specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param mb specify lifesize in megabytes(MB)
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param mb specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param mb specify lifesize in megabytes(MB)
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param tb specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param tb specify lifesize in terabytes(TB)
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class IpsecCryptoProfileLifesizeArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param tb specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `gb`, `kb`, `mb`, `tb`
+         * @param tb specify lifesize in terabytes(TB)
          * 
          * @return builder
          * 

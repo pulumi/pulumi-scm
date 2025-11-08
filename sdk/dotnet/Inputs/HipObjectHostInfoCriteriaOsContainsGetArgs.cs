@@ -13,31 +13,31 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectHostInfoCriteriaOsContainsGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Apple
         /// </summary>
         [Input("apple")]
         public Input<string>? Apple { get; set; }
 
         /// <summary>
-        /// Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Google
         /// </summary>
         [Input("google")]
         public Input<string>? Google { get; set; }
 
         /// <summary>
-        /// Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Linux
         /// </summary>
         [Input("linux")]
         public Input<string>? Linux { get; set; }
 
         /// <summary>
-        /// Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Microsoft
         /// </summary>
         [Input("microsoft")]
         public Input<string>? Microsoft { get; set; }
 
         /// <summary>
-        /// Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Other
         /// </summary>
         [Input("other")]
         public Input<string>? Other { get; set; }

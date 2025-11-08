@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataPatchManagementCriteriaMissingPatchesSeverityResult
     {
         /// <summary>
-        /// The GreaterEqual param. Value must be between 0 and 100000.
+        /// Greater equal
         /// </summary>
         public readonly int GreaterEqual;
         /// <summary>
-        /// The GreaterThan param. Value must be between 0 and 100000.
+        /// Greater than
         /// </summary>
         public readonly int GreaterThan;
         /// <summary>
-        /// The Is param. Value must be between 0 and 100000.
+        /// Is
         /// </summary>
         public readonly int Is;
         /// <summary>
-        /// The IsNot param. Value must be between 0 and 100000.
+        /// Is not
         /// </summary>
         public readonly int IsNot;
         /// <summary>
-        /// The LessEqual param. Value must be between 0 and 100000.
+        /// Less equal
         /// </summary>
         public readonly int LessEqual;
         /// <summary>
-        /// The LessThan param. Value must be between 0 and 100000.
+        /// Less than
         /// </summary>
         public readonly int LessThan;
 

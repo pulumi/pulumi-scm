@@ -17,86 +17,86 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataType {
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     private GetExternalDynamicListListDataTypeDomain domain;
     /**
-     * @return The Imei param.
+     * @return Imei
      * 
      */
     private GetExternalDynamicListListDataTypeImei imei;
     /**
-     * @return The Imsi param.
+     * @return Imsi
      * 
      */
     private GetExternalDynamicListListDataTypeImsi imsi;
     /**
-     * @return The Ip param.
+     * @return Ip
      * 
      */
     private GetExternalDynamicListListDataTypeIp ip;
     /**
-     * @return The PredefinedIp param.
+     * @return Predefined ip
      * 
      */
     private GetExternalDynamicListListDataTypePredefinedIp predefinedIp;
     /**
-     * @return The PredefinedUrl param.
+     * @return Predefined url
      * 
      */
     private GetExternalDynamicListListDataTypePredefinedUrl predefinedUrl;
     /**
-     * @return The Url param.
+     * @return Url
      * 
      */
     private GetExternalDynamicListListDataTypeUrl url;
 
     private GetExternalDynamicListListDataType() {}
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     public GetExternalDynamicListListDataTypeDomain domain() {
         return this.domain;
     }
     /**
-     * @return The Imei param.
+     * @return Imei
      * 
      */
     public GetExternalDynamicListListDataTypeImei imei() {
         return this.imei;
     }
     /**
-     * @return The Imsi param.
+     * @return Imsi
      * 
      */
     public GetExternalDynamicListListDataTypeImsi imsi() {
         return this.imsi;
     }
     /**
-     * @return The Ip param.
+     * @return Ip
      * 
      */
     public GetExternalDynamicListListDataTypeIp ip() {
         return this.ip;
     }
     /**
-     * @return The PredefinedIp param.
+     * @return Predefined ip
      * 
      */
     public GetExternalDynamicListListDataTypePredefinedIp predefinedIp() {
         return this.predefinedIp;
     }
     /**
-     * @return The PredefinedUrl param.
+     * @return Predefined url
      * 
      */
     public GetExternalDynamicListListDataTypePredefinedUrl predefinedUrl() {
         return this.predefinedUrl;
     }
     /**
-     * @return The Url param.
+     * @return Url
      * 
      */
     public GetExternalDynamicListListDataTypeUrl url() {

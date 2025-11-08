@@ -6,6 +6,7 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.NatRuleSourceTranslationFallbackArgs;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,29 +19,29 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
     public static final NatRuleSourceTranslationArgs Empty = new NatRuleSourceTranslationArgs();
 
     /**
-     * The BiDirectional param. String must be one of these: `&#34;yes&#34;`, `&#34;no&#34;`.
+     * Bi directional
      * 
      */
     @Import(name="biDirectional")
-    private @Nullable Output<String> biDirectional;
+    private @Nullable Output<Boolean> biDirectional;
 
     /**
-     * @return The BiDirectional param. String must be one of these: `&#34;yes&#34;`, `&#34;no&#34;`.
+     * @return Bi directional
      * 
      */
-    public Optional<Output<String>> biDirectional() {
+    public Optional<Output<Boolean>> biDirectional() {
         return Optional.ofNullable(this.biDirectional);
     }
 
     /**
-     * The Fallback param.
+     * Fallback
      * 
      */
     @Import(name="fallback")
     private @Nullable Output<NatRuleSourceTranslationFallbackArgs> fallback;
 
     /**
-     * @return The Fallback param.
+     * @return Fallback
      * 
      */
     public Optional<Output<NatRuleSourceTranslationFallbackArgs>> fallback() {
@@ -48,14 +49,29 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * Interface name
+     * 
+     */
+    @Import(name="interface")
+    private @Nullable Output<String> interface_;
+
+    /**
+     * @return Interface name
+     * 
+     */
+    public Optional<Output<String>> interface_() {
+        return Optional.ofNullable(this.interface_);
+    }
+
+    /**
+     * Translated IP addresses
      * 
      */
     @Import(name="translatedAddressArrays")
     private @Nullable Output<List<String>> translatedAddressArrays;
 
     /**
-     * @return The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * @return Translated IP addresses
      * 
      */
     public Optional<Output<List<String>>> translatedAddressArrays() {
@@ -63,14 +79,14 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * Translated IP address
      * 
      */
     @Import(name="translatedAddressSingle")
     private @Nullable Output<String> translatedAddressSingle;
 
     /**
-     * @return The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+     * @return Translated IP address
      * 
      */
     public Optional<Output<String>> translatedAddressSingle() {
@@ -82,6 +98,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
     private NatRuleSourceTranslationArgs(NatRuleSourceTranslationArgs $) {
         this.biDirectional = $.biDirectional;
         this.fallback = $.fallback;
+        this.interface_ = $.interface_;
         this.translatedAddressArrays = $.translatedAddressArrays;
         this.translatedAddressSingle = $.translatedAddressSingle;
     }
@@ -105,28 +122,28 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param biDirectional The BiDirectional param. String must be one of these: `&#34;yes&#34;`, `&#34;no&#34;`.
+         * @param biDirectional Bi directional
          * 
          * @return builder
          * 
          */
-        public Builder biDirectional(@Nullable Output<String> biDirectional) {
+        public Builder biDirectional(@Nullable Output<Boolean> biDirectional) {
             $.biDirectional = biDirectional;
             return this;
         }
 
         /**
-         * @param biDirectional The BiDirectional param. String must be one of these: `&#34;yes&#34;`, `&#34;no&#34;`.
+         * @param biDirectional Bi directional
          * 
          * @return builder
          * 
          */
-        public Builder biDirectional(String biDirectional) {
+        public Builder biDirectional(Boolean biDirectional) {
             return biDirectional(Output.of(biDirectional));
         }
 
         /**
-         * @param fallback The Fallback param.
+         * @param fallback Fallback
          * 
          * @return builder
          * 
@@ -137,7 +154,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param fallback The Fallback param.
+         * @param fallback Fallback
          * 
          * @return builder
          * 
@@ -147,7 +164,28 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+         * @param interface_ Interface name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interface_(@Nullable Output<String> interface_) {
+            $.interface_ = interface_;
+            return this;
+        }
+
+        /**
+         * @param interface_ Interface name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder interface_(String interface_) {
+            return interface_(Output.of(interface_));
+        }
+
+        /**
+         * @param translatedAddressArrays Translated IP addresses
          * 
          * @return builder
          * 
@@ -158,7 +196,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+         * @param translatedAddressArrays Translated IP addresses
          * 
          * @return builder
          * 
@@ -168,7 +206,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressArrays The TranslatedAddressArray param. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+         * @param translatedAddressArrays Translated IP addresses
          * 
          * @return builder
          * 
@@ -178,7 +216,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressSingle The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+         * @param translatedAddressSingle Translated IP address
          * 
          * @return builder
          * 
@@ -189,7 +227,7 @@ public final class NatRuleSourceTranslationArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param translatedAddressSingle The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `translatedAddressArray`, `translatedAddressSingle`
+         * @param translatedAddressSingle Translated IP address
          * 
          * @return builder
          * 

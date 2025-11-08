@@ -11,38 +11,38 @@ import java.util.Objects;
 @CustomType
 public final class GetWildfireAntiVirusProfileListDataMlavException {
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The Filename param.
+     * @return Filename
      * 
      */
     private String filename;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
 
     private GetWildfireAntiVirusProfileListDataMlavException() {}
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Filename param.
+     * @return Filename
      * 
      */
     public String filename() {
         return this.filename;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {

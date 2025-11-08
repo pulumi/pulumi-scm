@@ -19,218 +19,190 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * CertificateProfile resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.CertificateProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new CertificateProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/certificateProfile:CertificateProfile")
 public class CertificateProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The BlockExpiredCert param.
+     * Block sessions with expired certificates?
      * 
      */
     @Export(name="blockExpiredCert", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> blockExpiredCert;
 
     /**
-     * @return The BlockExpiredCert param.
+     * @return Block sessions with expired certificates?
      * 
      */
     public Output<Optional<Boolean>> blockExpiredCert() {
         return Codegen.optional(this.blockExpiredCert);
     }
     /**
-     * The BlockTimeoutCert param.
+     * Block session if certificate status cannot be retrieved within timeout?
      * 
      */
     @Export(name="blockTimeoutCert", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> blockTimeoutCert;
 
     /**
-     * @return The BlockTimeoutCert param.
+     * @return Block session if certificate status cannot be retrieved within timeout?
      * 
      */
     public Output<Optional<Boolean>> blockTimeoutCert() {
         return Codegen.optional(this.blockTimeoutCert);
     }
     /**
-     * The BlockUnauthenticatedCert param.
+     * Block session if the certificate was not issued to the authenticating device?
      * 
      */
     @Export(name="blockUnauthenticatedCert", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> blockUnauthenticatedCert;
 
     /**
-     * @return The BlockUnauthenticatedCert param.
+     * @return Block session if the certificate was not issued to the authenticating device?
      * 
      */
     public Output<Optional<Boolean>> blockUnauthenticatedCert() {
         return Codegen.optional(this.blockUnauthenticatedCert);
     }
     /**
-     * The BlockUnknownCert param.
+     * Block session if certificate status is unknown?
      * 
      */
     @Export(name="blockUnknownCert", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> blockUnknownCert;
 
     /**
-     * @return The BlockUnknownCert param.
+     * @return Block session if certificate status is unknown?
      * 
      */
     public Output<Optional<Boolean>> blockUnknownCert() {
         return Codegen.optional(this.blockUnknownCert);
     }
     /**
-     * The CaCertificates param.
+     * An ordered list of CA certificates
      * 
      */
     @Export(name="caCertificates", refs={List.class,CertificateProfileCaCertificate.class}, tree="[0,1]")
     private Output<List<CertificateProfileCaCertificate>> caCertificates;
 
     /**
-     * @return The CaCertificates param.
+     * @return An ordered list of CA certificates
      * 
      */
     public Output<List<CertificateProfileCaCertificate>> caCertificates() {
         return this.caCertificates;
     }
     /**
-     * The CertStatusTimeout param.
+     * Certificate status timeout
      * 
      */
     @Export(name="certStatusTimeout", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> certStatusTimeout;
 
     /**
-     * @return The CertStatusTimeout param.
+     * @return Certificate status timeout
      * 
      */
     public Output<Optional<String>> certStatusTimeout() {
         return Codegen.optional(this.certStatusTimeout);
     }
     /**
-     * The CrlReceiveTimeout param.
+     * CRL receive timeout (seconds)
      * 
      */
     @Export(name="crlReceiveTimeout", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> crlReceiveTimeout;
 
     /**
-     * @return The CrlReceiveTimeout param.
+     * @return CRL receive timeout (seconds)
      * 
      */
     public Output<Optional<String>> crlReceiveTimeout() {
         return Codegen.optional(this.crlReceiveTimeout);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Domain param.
+     * User domain
      * 
      */
     @Export(name="domain", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> domain;
 
     /**
-     * @return The Domain param.
+     * @return User domain
      * 
      */
     public Output<Optional<String>> domain() {
         return Codegen.optional(this.domain);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the certificate profile
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the certificate profile
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The OcspReceiveTimeout param.
+     * OCSP receive timeout (seconds)
      * 
      */
     @Export(name="ocspReceiveTimeout", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> ocspReceiveTimeout;
 
     /**
-     * @return The OcspReceiveTimeout param.
+     * @return OCSP receive timeout (seconds)
      * 
      */
     public Output<Optional<String>> ocspReceiveTimeout() {
         return Codegen.optional(this.ocspReceiveTimeout);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -243,42 +215,42 @@ public class CertificateProfile extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The UseCrl param.
+     * Use CRL?
      * 
      */
     @Export(name="useCrl", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useCrl;
 
     /**
-     * @return The UseCrl param.
+     * @return Use CRL?
      * 
      */
     public Output<Optional<Boolean>> useCrl() {
         return Codegen.optional(this.useCrl);
     }
     /**
-     * The UseOcsp param.
+     * Use OCSP?
      * 
      */
     @Export(name="useOcsp", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useOcsp;
 
     /**
-     * @return The UseOcsp param.
+     * @return Use OCSP?
      * 
      */
     public Output<Optional<Boolean>> useOcsp() {
         return Codegen.optional(this.useOcsp);
     }
     /**
-     * The UsernameField param.
+     * Certificate username field
      * 
      */
     @Export(name="usernameField", refs={CertificateProfileUsernameField.class}, tree="[0]")
     private Output</* @Nullable */ CertificateProfileUsernameField> usernameField;
 
     /**
-     * @return The UsernameField param.
+     * @return Certificate username field
      * 
      */
     public Output<Optional<CertificateProfileUsernameField>> usernameField() {

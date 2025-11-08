@@ -63,7 +63,7 @@ class GetVariableListResult:
     @pulumi.getter
     def datas(self) -> Sequence['outputs.GetVariableListDataResult']:
         """
-        The Data param.
+        The data.
         """
         return pulumi.get(self, "datas")
 
@@ -71,7 +71,7 @@ class GetVariableListResult:
     @pulumi.getter
     def device(self) -> Optional[_builtins.str]:
         """
-        The Device param.
+        The device of the item.
         """
         return pulumi.get(self, "device")
 
@@ -79,7 +79,7 @@ class GetVariableListResult:
     @pulumi.getter
     def folder(self) -> Optional[_builtins.str]:
         """
-        The Folder param.
+        The folder of the item. Default: Shared.
         """
         return pulumi.get(self, "folder")
 
@@ -93,9 +93,9 @@ class GetVariableListResult:
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> _builtins.int:
+    def limit(self) -> Optional[_builtins.int]:
         """
-        The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        The max number of items to return. Default: 200.
         """
         return pulumi.get(self, "limit")
 
@@ -103,15 +103,15 @@ class GetVariableListResult:
     @pulumi.getter
     def name(self) -> Optional[_builtins.str]:
         """
-        The Name param.
+        The name of the item.
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def offset(self) -> _builtins.int:
+    def offset(self) -> Optional[_builtins.int]:
         """
-        The Offset param. Default: `0`.
+        The offset of the first item to return.
         """
         return pulumi.get(self, "offset")
 
@@ -119,7 +119,7 @@ class GetVariableListResult:
     @pulumi.getter
     def snippet(self) -> Optional[_builtins.str]:
         """
-        The Snippet param.
+        The snippet of the item.
         """
         return pulumi.get(self, "snippet")
 
@@ -132,7 +132,7 @@ class GetVariableListResult:
     @pulumi.getter
     def total(self) -> _builtins.int:
         """
-        The Total param.
+        The total number of items.
         """
         return pulumi.get(self, "total")
 
@@ -171,16 +171,26 @@ def get_variable_list(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_variable_list(folder="Shared")
+    #
+    # Data source to retrieve a list of all variables in a folder.
+    #
+    # Example 1: Fetch a list of all variables in the "Global" aka "All" folder.
+    all_global = scm.get_variable_list(folder="All")
+    pulumi.export("scmVariableListGlobal", all_global.datas)
+    # Example 2: Use pagination to get the first variables by name.
+    paginated = scm.get_variable_list(folder="All",
+        limit=5,
+        offset=0)
+    pulumi.export("scmVariableListPaginated", paginated.datas)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -219,16 +229,26 @@ def get_variable_list_output(device: Optional[pulumi.Input[Optional[_builtins.st
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_variable_list(folder="Shared")
+    #
+    # Data source to retrieve a list of all variables in a folder.
+    #
+    # Example 1: Fetch a list of all variables in the "Global" aka "All" folder.
+    all_global = scm.get_variable_list(folder="All")
+    pulumi.export("scmVariableListGlobal", all_global.datas)
+    # Example 2: Use pagination to get the first variables by name.
+    paginated = scm.get_variable_list(folder="All",
+        limit=5,
+        offset=0)
+    pulumi.export("scmVariableListPaginated", paginated.datas)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
     __args__['device'] = device

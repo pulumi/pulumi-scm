@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// UrlAccessProfile resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,9 +22,24 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
+    ///     //
+    ///     // Creates a URL Access Profile object.
+    ///     //
     ///     var example = new Scm.UrlAccessProfile("example", new()
     ///     {
     ///         Folder = "Shared",
+    ///         Name = "example_url_access_profile",
+    ///         Description = "Test URL Access Profile for create API",
+    ///         Blocks = new[]
+    ///         {
+    ///             "adult",
+    ///             "gambling",
+    ///         },
+    ///         Alerts = new[]
+    ///         {
+    ///             "high-risk",
+    ///             "phishing",
+    ///         },
     ///     });
     /// 
     /// });
@@ -34,109 +49,115 @@ namespace Pulumi.Scm
     public partial class UrlAccessProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Alerts param.
+        /// Alert
         /// </summary>
         [Output("alerts")]
         public Output<ImmutableArray<string>> Alerts { get; private set; } = null!;
 
         /// <summary>
-        /// The Allows param.
+        /// Allow
         /// </summary>
         [Output("allows")]
         public Output<ImmutableArray<string>> Allows { get; private set; } = null!;
 
         /// <summary>
-        /// The Blocks param.
+        /// Block
         /// </summary>
         [Output("blocks")]
         public Output<ImmutableArray<string>> Blocks { get; private set; } = null!;
 
         /// <summary>
-        /// The CloudInlineCat param.
+        /// Cloud inline cat
         /// </summary>
         [Output("cloudInlineCat")]
         public Output<bool?> CloudInlineCat { get; private set; } = null!;
 
         /// <summary>
-        /// The Continues param.
+        /// Continue
         /// </summary>
         [Output("continues")]
         public Output<ImmutableArray<string>> Continues { get; private set; } = null!;
 
         /// <summary>
-        /// The CredentialEnforcement param.
+        /// Credential enforcement
         /// </summary>
         [Output("credentialEnforcement")]
-        public Output<Outputs.UrlAccessProfileCredentialEnforcement?> CredentialEnforcement { get; private set; } = null!;
+        public Output<Outputs.UrlAccessProfileCredentialEnforcement> CredentialEnforcement { get; private set; } = null!;
 
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The LocalInlineCat param.
+        /// Local inline cat
         /// </summary>
         [Output("localInlineCat")]
         public Output<bool?> LocalInlineCat { get; private set; } = null!;
 
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `True`.
+        /// Log container page only
         /// </summary>
         [Output("logContainerPageOnly")]
         public Output<bool> LogContainerPageOnly { get; private set; } = null!;
 
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `False`.
+        /// Log http hdr referer
         /// </summary>
         [Output("logHttpHdrReferer")]
         public Output<bool> LogHttpHdrReferer { get; private set; } = null!;
 
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `False`.
+        /// Log http hdr user agent
         /// </summary>
         [Output("logHttpHdrUserAgent")]
         public Output<bool> LogHttpHdrUserAgent { get; private set; } = null!;
 
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `False`.
+        /// Log http hdr xff
         /// </summary>
         [Output("logHttpHdrXff")]
         public Output<bool> LogHttpHdrXff { get; private set; } = null!;
 
         /// <summary>
-        /// The MlavCategoryExceptions param.
+        /// Mlav category exception
         /// </summary>
         [Output("mlavCategoryExceptions")]
         public Output<ImmutableArray<string>> MlavCategoryExceptions { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `False`.
+        /// Redirect
+        /// </summary>
+        [Output("redirects")]
+        public Output<ImmutableArray<string>> Redirects { get; private set; } = null!;
+
+        /// <summary>
+        /// Safe search enforcement
         /// </summary>
         [Output("safeSearchEnforcement")]
         public Output<bool> SafeSearchEnforcement { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -194,7 +215,7 @@ namespace Pulumi.Scm
         private InputList<string>? _alerts;
 
         /// <summary>
-        /// The Alerts param.
+        /// Alert
         /// </summary>
         public InputList<string> Alerts
         {
@@ -206,7 +227,7 @@ namespace Pulumi.Scm
         private InputList<string>? _allows;
 
         /// <summary>
-        /// The Allows param.
+        /// Allow
         /// </summary>
         public InputList<string> Allows
         {
@@ -218,7 +239,7 @@ namespace Pulumi.Scm
         private InputList<string>? _blocks;
 
         /// <summary>
-        /// The Blocks param.
+        /// Block
         /// </summary>
         public InputList<string> Blocks
         {
@@ -227,7 +248,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The CloudInlineCat param.
+        /// Cloud inline cat
         /// </summary>
         [Input("cloudInlineCat")]
         public Input<bool>? CloudInlineCat { get; set; }
@@ -236,7 +257,7 @@ namespace Pulumi.Scm
         private InputList<string>? _continues;
 
         /// <summary>
-        /// The Continues param.
+        /// Continue
         /// </summary>
         public InputList<string> Continues
         {
@@ -245,55 +266,55 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The CredentialEnforcement param.
+        /// Credential enforcement
         /// </summary>
         [Input("credentialEnforcement")]
         public Input<Inputs.UrlAccessProfileCredentialEnforcementArgs>? CredentialEnforcement { get; set; }
 
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The LocalInlineCat param.
+        /// Local inline cat
         /// </summary>
         [Input("localInlineCat")]
         public Input<bool>? LocalInlineCat { get; set; }
 
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `True`.
+        /// Log container page only
         /// </summary>
         [Input("logContainerPageOnly")]
         public Input<bool>? LogContainerPageOnly { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `False`.
+        /// Log http hdr referer
         /// </summary>
         [Input("logHttpHdrReferer")]
         public Input<bool>? LogHttpHdrReferer { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `False`.
+        /// Log http hdr user agent
         /// </summary>
         [Input("logHttpHdrUserAgent")]
         public Input<bool>? LogHttpHdrUserAgent { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `False`.
+        /// Log http hdr xff
         /// </summary>
         [Input("logHttpHdrXff")]
         public Input<bool>? LogHttpHdrXff { get; set; }
@@ -302,7 +323,7 @@ namespace Pulumi.Scm
         private InputList<string>? _mlavCategoryExceptions;
 
         /// <summary>
-        /// The MlavCategoryExceptions param.
+        /// Mlav category exception
         /// </summary>
         public InputList<string> MlavCategoryExceptions
         {
@@ -311,19 +332,31 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("redirects")]
+        private InputList<string>? _redirects;
+
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `False`.
+        /// Redirect
+        /// </summary>
+        public InputList<string> Redirects
+        {
+            get => _redirects ?? (_redirects = new InputList<string>());
+            set => _redirects = value;
+        }
+
+        /// <summary>
+        /// Safe search enforcement
         /// </summary>
         [Input("safeSearchEnforcement")]
         public Input<bool>? SafeSearchEnforcement { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -340,7 +373,7 @@ namespace Pulumi.Scm
         private InputList<string>? _alerts;
 
         /// <summary>
-        /// The Alerts param.
+        /// Alert
         /// </summary>
         public InputList<string> Alerts
         {
@@ -352,7 +385,7 @@ namespace Pulumi.Scm
         private InputList<string>? _allows;
 
         /// <summary>
-        /// The Allows param.
+        /// Allow
         /// </summary>
         public InputList<string> Allows
         {
@@ -364,7 +397,7 @@ namespace Pulumi.Scm
         private InputList<string>? _blocks;
 
         /// <summary>
-        /// The Blocks param.
+        /// Block
         /// </summary>
         public InputList<string> Blocks
         {
@@ -373,7 +406,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The CloudInlineCat param.
+        /// Cloud inline cat
         /// </summary>
         [Input("cloudInlineCat")]
         public Input<bool>? CloudInlineCat { get; set; }
@@ -382,7 +415,7 @@ namespace Pulumi.Scm
         private InputList<string>? _continues;
 
         /// <summary>
-        /// The Continues param.
+        /// Continue
         /// </summary>
         public InputList<string> Continues
         {
@@ -391,55 +424,55 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The CredentialEnforcement param.
+        /// Credential enforcement
         /// </summary>
         [Input("credentialEnforcement")]
         public Input<Inputs.UrlAccessProfileCredentialEnforcementGetArgs>? CredentialEnforcement { get; set; }
 
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The LocalInlineCat param.
+        /// Local inline cat
         /// </summary>
         [Input("localInlineCat")]
         public Input<bool>? LocalInlineCat { get; set; }
 
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `True`.
+        /// Log container page only
         /// </summary>
         [Input("logContainerPageOnly")]
         public Input<bool>? LogContainerPageOnly { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `False`.
+        /// Log http hdr referer
         /// </summary>
         [Input("logHttpHdrReferer")]
         public Input<bool>? LogHttpHdrReferer { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `False`.
+        /// Log http hdr user agent
         /// </summary>
         [Input("logHttpHdrUserAgent")]
         public Input<bool>? LogHttpHdrUserAgent { get; set; }
 
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `False`.
+        /// Log http hdr xff
         /// </summary>
         [Input("logHttpHdrXff")]
         public Input<bool>? LogHttpHdrXff { get; set; }
@@ -448,7 +481,7 @@ namespace Pulumi.Scm
         private InputList<string>? _mlavCategoryExceptions;
 
         /// <summary>
-        /// The MlavCategoryExceptions param.
+        /// Mlav category exception
         /// </summary>
         public InputList<string> MlavCategoryExceptions
         {
@@ -457,19 +490,31 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
+        [Input("redirects")]
+        private InputList<string>? _redirects;
+
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `False`.
+        /// Redirect
+        /// </summary>
+        public InputList<string> Redirects
+        {
+            get => _redirects ?? (_redirects = new InputList<string>());
+            set => _redirects = value;
+        }
+
+        /// <summary>
+        /// Safe search enforcement
         /// </summary>
         [Input("safeSearchEnforcement")]
         public Input<bool>? SafeSearchEnforcement { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

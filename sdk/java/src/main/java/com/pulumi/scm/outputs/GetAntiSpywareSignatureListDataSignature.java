@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureListDataSignature {
     /**
-     * @return The Combination param.
+     * @return anti spyware signature combination
      * 
      */
     private GetAntiSpywareSignatureListDataSignatureCombination combination;
     /**
-     * @return The Standards param.
+     * @return Standard
      * 
      */
     private List<GetAntiSpywareSignatureListDataSignatureStandard> standards;
 
     private GetAntiSpywareSignatureListDataSignature() {}
     /**
-     * @return The Combination param.
+     * @return anti spyware signature combination
      * 
      */
     public GetAntiSpywareSignatureListDataSignatureCombination combination() {
         return this.combination;
     }
     /**
-     * @return The Standards param.
+     * @return Standard
      * 
      */
     public List<GetAntiSpywareSignatureListDataSignatureStandard> standards() {

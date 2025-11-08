@@ -14,86 +14,138 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelListData {
     /**
-     * @return Enable Anti-Replay check on this tunnel.
+     * @return Enable Anti-Replay check on this tunnel
      * 
      */
     private Boolean antiReplay;
     /**
-     * @return The AutoKey param.
+     * @return Auto key
      * 
      */
     private GetIpsecTunnelListDataAutoKey autoKey;
     /**
-     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      * 
      */
     private Boolean copyTos;
     /**
-     * @return allow GRE over IPSec. Default: `false`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return allow GRE over IPSec
      * 
      */
     private Boolean enableGreEncapsulation;
     /**
-     * @return UUID of the resource.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The TunnelMonitor param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
+    /**
+     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
+    private String tunnelInterface;
+    /**
+     * @return Tunnel monitor
      * 
      */
     private GetIpsecTunnelListDataTunnelMonitor tunnelMonitor;
 
     private GetIpsecTunnelListData() {}
     /**
-     * @return Enable Anti-Replay check on this tunnel.
+     * @return Enable Anti-Replay check on this tunnel
      * 
      */
     public Boolean antiReplay() {
         return this.antiReplay;
     }
     /**
-     * @return The AutoKey param.
+     * @return Auto key
      * 
      */
     public GetIpsecTunnelListDataAutoKey autoKey() {
         return this.autoKey;
     }
     /**
-     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      * 
      */
     public Boolean copyTos() {
         return this.copyTos;
     }
     /**
-     * @return allow GRE over IPSec. Default: `false`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return allow GRE over IPSec
      * 
      */
     public Boolean enableGreEncapsulation() {
         return this.enableGreEncapsulation;
     }
     /**
-     * @return UUID of the resource.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The TunnelMonitor param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
+    }
+    /**
+     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
+    public String tunnelInterface() {
+        return this.tunnelInterface;
+    }
+    /**
+     * @return Tunnel monitor
      * 
      */
     public GetIpsecTunnelListDataTunnelMonitor tunnelMonitor() {
@@ -112,9 +164,14 @@ public final class GetIpsecTunnelListData {
         private Boolean antiReplay;
         private GetIpsecTunnelListDataAutoKey autoKey;
         private Boolean copyTos;
+        private String device;
         private Boolean enableGreEncapsulation;
+        private String folder;
         private String id;
         private String name;
+        private String snippet;
+        private String tfid;
+        private String tunnelInterface;
         private GetIpsecTunnelListDataTunnelMonitor tunnelMonitor;
         public Builder() {}
         public Builder(GetIpsecTunnelListData defaults) {
@@ -122,9 +179,14 @@ public final class GetIpsecTunnelListData {
     	      this.antiReplay = defaults.antiReplay;
     	      this.autoKey = defaults.autoKey;
     	      this.copyTos = defaults.copyTos;
+    	      this.device = defaults.device;
     	      this.enableGreEncapsulation = defaults.enableGreEncapsulation;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
+    	      this.tunnelInterface = defaults.tunnelInterface;
     	      this.tunnelMonitor = defaults.tunnelMonitor;
         }
 
@@ -153,11 +215,27 @@ public final class GetIpsecTunnelListData {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetIpsecTunnelListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder enableGreEncapsulation(Boolean enableGreEncapsulation) {
             if (enableGreEncapsulation == null) {
               throw new MissingRequiredPropertyException("GetIpsecTunnelListData", "enableGreEncapsulation");
             }
             this.enableGreEncapsulation = enableGreEncapsulation;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetIpsecTunnelListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -177,6 +255,30 @@ public final class GetIpsecTunnelListData {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetIpsecTunnelListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetIpsecTunnelListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tunnelInterface(String tunnelInterface) {
+            if (tunnelInterface == null) {
+              throw new MissingRequiredPropertyException("GetIpsecTunnelListData", "tunnelInterface");
+            }
+            this.tunnelInterface = tunnelInterface;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tunnelMonitor(GetIpsecTunnelListDataTunnelMonitor tunnelMonitor) {
             if (tunnelMonitor == null) {
               throw new MissingRequiredPropertyException("GetIpsecTunnelListData", "tunnelMonitor");
@@ -189,9 +291,14 @@ public final class GetIpsecTunnelListData {
             _resultValue.antiReplay = antiReplay;
             _resultValue.autoKey = autoKey;
             _resultValue.copyTos = copyTos;
+            _resultValue.device = device;
             _resultValue.enableGreEncapsulation = enableGreEncapsulation;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
+            _resultValue.tunnelInterface = tunnelInterface;
             _resultValue.tunnelMonitor = tunnelMonitor;
             return _resultValue;
         }

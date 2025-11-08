@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupQosProfile(ctx, &scm.LookupQosProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// QosProfile data source
 func LookupQosProfile(ctx *pulumi.Context, args *LookupQosProfileArgs, opts ...pulumi.InvokeOption) (*LookupQosProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupQosProfileResult
@@ -50,25 +24,29 @@ func LookupQosProfile(ctx *pulumi.Context, args *LookupQosProfileArgs, opts ...p
 
 // A collection of arguments for invoking getQosProfile.
 type LookupQosProfileArgs struct {
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getQosProfile.
 type LookupQosProfileResult struct {
-	// The AggregateBandwidth param.
+	// Aggregate bandwidth
 	AggregateBandwidth GetQosProfileAggregateBandwidth `pulumi:"aggregateBandwidth"`
-	// The ClassBandwidthType param.
+	// Class bandwidth type
 	ClassBandwidthType GetQosProfileClassBandwidthType `pulumi:"classBandwidthType"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupQosProfileOutput(ctx *pulumi.Context, args LookupQosProfileOutputArgs, opts ...pulumi.InvokeOption) LookupQosProfileResultOutput {
@@ -82,10 +60,10 @@ func LookupQosProfileOutput(ctx *pulumi.Context, args LookupQosProfileOutputArgs
 
 // A collection of arguments for invoking getQosProfile.
 type LookupQosProfileOutputArgs struct {
-	// The Folder param.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupQosProfileOutputArgs) ElementType() reflect.Type {
@@ -107,29 +85,39 @@ func (o LookupQosProfileResultOutput) ToLookupQosProfileResultOutputWithContext(
 	return o
 }
 
-// The AggregateBandwidth param.
+// Aggregate bandwidth
 func (o LookupQosProfileResultOutput) AggregateBandwidth() GetQosProfileAggregateBandwidthOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) GetQosProfileAggregateBandwidth { return v.AggregateBandwidth }).(GetQosProfileAggregateBandwidthOutput)
 }
 
-// The ClassBandwidthType param.
+// Class bandwidth type
 func (o LookupQosProfileResultOutput) ClassBandwidthType() GetQosProfileClassBandwidthTypeOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) GetQosProfileClassBandwidthType { return v.ClassBandwidthType }).(GetQosProfileClassBandwidthTypeOutput)
 }
 
-// The Folder param.
-func (o LookupQosProfileResultOutput) Folder() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupQosProfileResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
+// The device in which the resource is defined
+func (o LookupQosProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The folder in which the resource is defined
+func (o LookupQosProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
 func (o LookupQosProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupQosProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupQosProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupQosProfileResultOutput) Tfid() pulumi.StringOutput {

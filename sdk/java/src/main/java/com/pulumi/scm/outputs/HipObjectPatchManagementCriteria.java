@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectPatchManagementCriteria {
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     private @Nullable String isEnabled;
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     private @Nullable Boolean isInstalled;
     /**
-     * @return The MissingPatches param.
+     * @return Missing patches
      * 
      */
     private @Nullable HipObjectPatchManagementCriteriaMissingPatches missingPatches;
 
     private HipObjectPatchManagementCriteria() {}
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     public Optional<String> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Boolean> isInstalled() {
         return Optional.ofNullable(this.isInstalled);
     }
     /**
-     * @return The MissingPatches param.
+     * @return Missing patches
      * 
      */
     public Optional<HipObjectPatchManagementCriteriaMissingPatches> missingPatches() {

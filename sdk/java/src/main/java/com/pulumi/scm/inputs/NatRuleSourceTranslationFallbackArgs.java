@@ -16,14 +16,14 @@ public final class NatRuleSourceTranslationFallbackArgs extends com.pulumi.resou
     public static final NatRuleSourceTranslationFallbackArgs Empty = new NatRuleSourceTranslationFallbackArgs();
 
     /**
-     * The Interface param. Ensure that only one of the following is specified: `interface`
+     * Interface name
      * 
      */
     @Import(name="interface")
     private @Nullable Output<String> interface_;
 
     /**
-     * @return The Interface param. Ensure that only one of the following is specified: `interface`
+     * @return Interface name
      * 
      */
     public Optional<Output<String>> interface_() {
@@ -55,7 +55,7 @@ public final class NatRuleSourceTranslationFallbackArgs extends com.pulumi.resou
         }
 
         /**
-         * @param interface_ The Interface param. Ensure that only one of the following is specified: `interface`
+         * @param interface_ Interface name
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class NatRuleSourceTranslationFallbackArgs extends com.pulumi.resou
         }
 
         /**
-         * @param interface_ The Interface param. Ensure that only one of the following is specified: `interface`
+         * @param interface_ Interface name
          * 
          * @return builder
          * 

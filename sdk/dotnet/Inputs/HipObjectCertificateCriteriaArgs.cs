@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectCertificateCriteriaCertificateAttributeArgs>? _certificateAttributes;
 
         /// <summary>
-        /// The CertificateAttributes param.
+        /// Certificate attributes
         /// </summary>
         public InputList<Inputs.HipObjectCertificateCriteriaCertificateAttributeArgs> CertificateAttributes
         {
@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Profile for authenticating client certificates.
+        /// Profile for authenticating client certificates
         /// </summary>
         [Input("certificateProfile")]
         public Input<string>? CertificateProfile { get; set; }

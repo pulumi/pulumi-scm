@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.TlsServiceProfile("example", {folder: "Shared"});
- * ```
+ * TlsServiceProfile resource
  */
 export class TlsServiceProfile extends pulumi.CustomResource {
     /**
@@ -47,27 +38,27 @@ export class TlsServiceProfile extends pulumi.CustomResource {
     }
 
     /**
-     * SSL certificate file name. String length must not exceed 255 characters.
+     * Certificate name
      */
     declare public readonly certificate: pulumi.Output<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The ProtocolSettings param.
+     * Protocol settings
      */
     declare public readonly protocolSettings: pulumi.Output<outputs.TlsServiceProfileProtocolSettings>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -118,27 +109,27 @@ export class TlsServiceProfile extends pulumi.CustomResource {
  */
 export interface TlsServiceProfileState {
     /**
-     * SSL certificate file name. String length must not exceed 255 characters.
+     * Certificate name
      */
     certificate?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     name?: pulumi.Input<string>;
     /**
-     * The ProtocolSettings param.
+     * Protocol settings
      */
     protocolSettings?: pulumi.Input<inputs.TlsServiceProfileProtocolSettings>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -149,27 +140,27 @@ export interface TlsServiceProfileState {
  */
 export interface TlsServiceProfileArgs {
     /**
-     * SSL certificate file name. String length must not exceed 255 characters.
+     * Certificate name
      */
     certificate: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     name?: pulumi.Input<string>;
     /**
-     * The ProtocolSettings param.
+     * Protocol settings
      */
     protocolSettings: pulumi.Input<inputs.TlsServiceProfileProtocolSettings>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

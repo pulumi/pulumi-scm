@@ -17,14 +17,14 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
     public static final TacacsServerProfileServerArgs Empty = new TacacsServerProfileServerArgs();
 
     /**
-     * The Address param.
+     * The IP address of the TACACS+ server
      * 
      */
     @Import(name="address")
     private @Nullable Output<String> address;
 
     /**
-     * @return The Address param.
+     * @return The IP address of the TACACS+ server
      * 
      */
     public Optional<Output<String>> address() {
@@ -32,14 +32,14 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Name param.
+     * The name of the TACACS+ server
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the TACACS+ server
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,14 +47,14 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Port param. Value must be between 1 and 65535.
+     * The TACACS+ server port
      * 
      */
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The TACACS+ server port
      * 
      */
     public Optional<Output<Integer>> port() {
@@ -62,14 +62,14 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Secret param. String length must not exceed 64 characters.
+     * The TACACS+ secret
      * 
      */
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The TACACS+ secret
      * 
      */
     public Optional<Output<String>> secret() {
@@ -104,7 +104,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param address The Address param.
+         * @param address The IP address of the TACACS+ server
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param address The Address param.
+         * @param address The IP address of the TACACS+ server
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the TACACS+ server
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the TACACS+ server
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The TACACS+ server port
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The TACACS+ server port
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param secret The Secret param. String length must not exceed 64 characters.
+         * @param secret The TACACS+ secret
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class TacacsServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param secret The Secret param. String length must not exceed 64 characters.
+         * @param secret The TACACS+ secret
          * 
          * @return builder
          * 

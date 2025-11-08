@@ -16,14 +16,14 @@ public final class RemoteNetworkEcmpTunnelProtocolArgs extends com.pulumi.resour
     public static final RemoteNetworkEcmpTunnelProtocolArgs Empty = new RemoteNetworkEcmpTunnelProtocolArgs();
 
     /**
-     * The Bgp param.
+     * Bgp
      * 
      */
     @Import(name="bgp")
     private @Nullable Output<RemoteNetworkEcmpTunnelProtocolBgpArgs> bgp;
 
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public Optional<Output<RemoteNetworkEcmpTunnelProtocolBgpArgs>> bgp() {
@@ -55,7 +55,7 @@ public final class RemoteNetworkEcmpTunnelProtocolArgs extends com.pulumi.resour
         }
 
         /**
-         * @param bgp The Bgp param.
+         * @param bgp Bgp
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class RemoteNetworkEcmpTunnelProtocolArgs extends com.pulumi.resour
         }
 
         /**
-         * @param bgp The Bgp param.
+         * @param bgp Bgp
          * 
          * @return builder
          * 

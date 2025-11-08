@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelTunnelMonitor {
     /**
-     * @return Destination IP to send ICMP probe.
+     * @return Destination IP to send ICMP probe
      * 
      */
     private String destinationIp;
     /**
-     * @return Enable tunnel monitoring on this tunnel. Default: `true`.
+     * @return Enable tunnel monitoring on this tunnel
      * 
      */
     private Boolean enable;
     /**
-     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use
      * 
      */
     private String proxyId;
 
     private GetIpsecTunnelTunnelMonitor() {}
     /**
-     * @return Destination IP to send ICMP probe.
+     * @return Destination IP to send ICMP probe
      * 
      */
     public String destinationIp() {
         return this.destinationIp;
     }
     /**
-     * @return Enable tunnel monitoring on this tunnel. Default: `true`.
+     * @return Enable tunnel monitoring on this tunnel
      * 
      */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use
      * 
      */
     public String proxyId() {

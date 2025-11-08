@@ -16,14 +16,14 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs extends 
     public static final QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs Empty = new QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs();
 
     /**
-     * The BinaryValue param.
+     * Binary value
      * 
      */
     @Import(name="binaryValue")
     private @Nullable Output<String> binaryValue;
 
     /**
-     * @return The BinaryValue param.
+     * @return Binary value
      * 
      */
     public Optional<Output<String>> binaryValue() {
@@ -31,14 +31,14 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs extends 
     }
 
     /**
-     * The CodepointName param.
+     * Codepoint name
      * 
      */
     @Import(name="codepointName")
     private @Nullable Output<String> codepointName;
 
     /**
-     * @return The CodepointName param.
+     * @return Codepoint name
      * 
      */
     public Optional<Output<String>> codepointName() {
@@ -71,7 +71,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs extends 
         }
 
         /**
-         * @param binaryValue The BinaryValue param.
+         * @param binaryValue Binary value
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs extends 
         }
 
         /**
-         * @param binaryValue The BinaryValue param.
+         * @param binaryValue Binary value
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs extends 
         }
 
         /**
-         * @param codepointName The CodepointName param.
+         * @param codepointName Codepoint name
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class QosPolicyRuleDscpTosCodepointTypeCustomCodepointArgs extends 
         }
 
         /**
-         * @param codepointName The CodepointName param.
+         * @param codepointName Codepoint name
          * 
          * @return builder
          * 

@@ -66,15 +66,15 @@ class GetIkeCryptoProfileResult:
     @pulumi.getter(name="authenticationMultiple")
     def authentication_multiple(self) -> _builtins.int:
         """
-        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         """
         return pulumi.get(self, "authentication_multiple")
 
     @_builtins.property
     @pulumi.getter
-    def device(self) -> Optional[_builtins.str]:
+    def device(self) -> _builtins.str:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -82,7 +82,7 @@ class GetIkeCryptoProfileResult:
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> Sequence[_builtins.str]:
         """
-        The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        Dh group
         """
         return pulumi.get(self, "dh_groups")
 
@@ -90,15 +90,15 @@ class GetIkeCryptoProfileResult:
     @pulumi.getter
     def encryptions(self) -> Sequence[_builtins.str]:
         """
-        Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        Encryption algorithm
         """
         return pulumi.get(self, "encryptions")
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[_builtins.str]:
+    def folder(self) -> _builtins.str:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -106,7 +106,7 @@ class GetIkeCryptoProfileResult:
     @pulumi.getter
     def hashes(self) -> Sequence[_builtins.str]:
         """
-        The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        Hash
         """
         return pulumi.get(self, "hashes")
 
@@ -114,7 +114,7 @@ class GetIkeCryptoProfileResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -122,7 +122,7 @@ class GetIkeCryptoProfileResult:
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIkeCryptoProfileLifetimeResult':
         """
-        The Lifetime param.
+        Ike crypto profile lifetime
         """
         return pulumi.get(self, "lifetime")
 
@@ -130,15 +130,15 @@ class GetIkeCryptoProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def snippet(self) -> Optional[_builtins.str]:
+    def snippet(self) -> _builtins.str:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -167,13 +167,11 @@ class AwaitableGetIkeCryptoProfileResult(GetIkeCryptoProfileResult):
             tfid=self.tfid)
 
 
-def get_ike_crypto_profile(device: Optional[_builtins.str] = None,
-                           folder: Optional[_builtins.str] = None,
-                           id: Optional[_builtins.str] = None,
-                           snippet: Optional[_builtins.str] = None,
+def get_ike_crypto_profile(id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetIkeCryptoProfileResult:
     """
-    Retrieves a config item.
+    IkeCryptoProfile data source
 
     ## Example Usage
 
@@ -181,20 +179,18 @@ def get_ike_crypto_profile(device: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_ike_crypto_profile(id="1234-56-789")
+    # Example of looking up an individual IPsec Crypto Profile by its ID.
+    scm_ike_crypto_profile_ds = scm.get_ike_crypto_profile(id="f3a1251a-bb9e-437d-8048-f5d54617d0be")
+    pulumi.export("ikeProfileById", scm_ike_crypto_profile_ds)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getIkeCryptoProfile:getIkeCryptoProfile', __args__, opts=opts, typ=GetIkeCryptoProfileResult).value
 
@@ -210,13 +206,11 @@ def get_ike_crypto_profile(device: Optional[_builtins.str] = None,
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_ike_crypto_profile_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                  folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                  id: Optional[pulumi.Input[_builtins.str]] = None,
-                                  snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+def get_ike_crypto_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetIkeCryptoProfileResult]:
     """
-    Retrieves a config item.
+    IkeCryptoProfile data source
 
     ## Example Usage
 
@@ -224,20 +218,18 @@ def get_ike_crypto_profile_output(device: Optional[pulumi.Input[Optional[_builti
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_ike_crypto_profile(id="1234-56-789")
+    # Example of looking up an individual IPsec Crypto Profile by its ID.
+    scm_ike_crypto_profile_ds = scm.get_ike_crypto_profile(id="f3a1251a-bb9e-437d-8048-f5d54617d0be")
+    pulumi.export("ikeProfileById", scm_ike_crypto_profile_ds)
     ```
 
 
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
     """
     __args__ = dict()
-    __args__['device'] = device
-    __args__['folder'] = folder
     __args__['id'] = id
-    __args__['snippet'] = snippet
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getIkeCryptoProfile:getIkeCryptoProfile', __args__, opts=opts, typ=GetIkeCryptoProfileResult)
     return __ret__.apply(lambda __response__: GetIkeCryptoProfileResult(

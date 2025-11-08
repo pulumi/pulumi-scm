@@ -13,55 +13,55 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectMobileDeviceCriteriaGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Applications param.
+        /// Applications
         /// </summary>
         [Input("applications")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaApplicationsGetArgs>? Applications { get; set; }
 
         /// <summary>
-        /// If device's disk is encrypted.
+        /// If device's disk is encrypted
         /// </summary>
         [Input("diskEncrypted")]
         public Input<bool>? DiskEncrypted { get; set; }
 
         /// <summary>
-        /// The Imei param.
+        /// Imei
         /// </summary>
         [Input("imei")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaImeiGetArgs>? Imei { get; set; }
 
         /// <summary>
-        /// If device is by rooted/jailbroken.
+        /// If device is by rooted/jailbroken
         /// </summary>
         [Input("jailbroken")]
         public Input<bool>? Jailbroken { get; set; }
 
         /// <summary>
-        /// The LastCheckinTime param.
+        /// Last checkin time
         /// </summary>
         [Input("lastCheckinTime")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaLastCheckinTimeGetArgs>? LastCheckinTime { get; set; }
 
         /// <summary>
-        /// The Model param.
+        /// Model
         /// </summary>
         [Input("model")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaModelGetArgs>? Model { get; set; }
 
         /// <summary>
-        /// If device's passcode is present.
+        /// If device's passcode is present
         /// </summary>
         [Input("passcodeSet")]
         public Input<bool>? PasscodeSet { get; set; }
 
         /// <summary>
-        /// The PhoneNumber param.
+        /// Phone number
         /// </summary>
         [Input("phoneNumber")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaPhoneNumberGetArgs>? PhoneNumber { get; set; }
 
         /// <summary>
-        /// The Tag param.
+        /// Tag
         /// </summary>
         [Input("tag")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaTagGetArgs>? Tag { get; set; }

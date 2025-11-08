@@ -8,32 +8,30 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class ExternalDynamicListTypeIpRecurringMonthly {
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
-    private @Nullable String at;
+    private String at;
     /**
-     * @return The DayOfMonth param. Value must be between 1 and 31.
+     * @return Day of month
      * 
      */
     private Integer dayOfMonth;
 
     private ExternalDynamicListTypeIpRecurringMonthly() {}
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
-    public Optional<String> at() {
-        return Optional.ofNullable(this.at);
+    public String at() {
+        return this.at;
     }
     /**
-     * @return The DayOfMonth param. Value must be between 1 and 31.
+     * @return Day of month
      * 
      */
     public Integer dayOfMonth() {
@@ -49,7 +47,7 @@ public final class ExternalDynamicListTypeIpRecurringMonthly {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String at;
+        private String at;
         private Integer dayOfMonth;
         public Builder() {}
         public Builder(ExternalDynamicListTypeIpRecurringMonthly defaults) {
@@ -59,8 +57,10 @@ public final class ExternalDynamicListTypeIpRecurringMonthly {
         }
 
         @CustomType.Setter
-        public Builder at(@Nullable String at) {
-
+        public Builder at(String at) {
+            if (at == null) {
+              throw new MissingRequiredPropertyException("ExternalDynamicListTypeIpRecurringMonthly", "at");
+            }
             this.at = at;
             return this;
         }

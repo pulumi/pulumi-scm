@@ -20,14 +20,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     public static final IpsecTunnelArgs Empty = new IpsecTunnelArgs();
 
     /**
-     * Enable Anti-Replay check on this tunnel.
+     * Enable Anti-Replay check on this tunnel
      * 
      */
     @Import(name="antiReplay")
     private @Nullable Output<Boolean> antiReplay;
 
     /**
-     * @return Enable Anti-Replay check on this tunnel.
+     * @return Enable Anti-Replay check on this tunnel
      * 
      */
     public Optional<Output<Boolean>> antiReplay() {
@@ -35,14 +35,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The AutoKey param.
+     * Auto key
      * 
      */
     @Import(name="autoKey", required=true)
     private Output<IpsecTunnelAutoKeyArgs> autoKey;
 
     /**
-     * @return The AutoKey param.
+     * @return Auto key
      * 
      */
     public Output<IpsecTunnelAutoKeyArgs> autoKey() {
@@ -50,14 +50,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      * 
      */
     @Import(name="copyTos")
     private @Nullable Output<Boolean> copyTos;
 
     /**
-     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      * 
      */
     public Optional<Output<Boolean>> copyTos() {
@@ -65,14 +65,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -80,14 +80,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * allow GRE over IPSec. Default: `false`.
+     * allow GRE over IPSec
      * 
      */
     @Import(name="enableGreEncapsulation")
     private @Nullable Output<Boolean> enableGreEncapsulation;
 
     /**
-     * @return allow GRE over IPSec. Default: `false`.
+     * @return allow GRE over IPSec
      * 
      */
     public Optional<Output<Boolean>> enableGreEncapsulation() {
@@ -95,14 +95,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -110,14 +110,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Optional<Output<String>> name() {
@@ -125,14 +125,14 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -140,14 +140,29 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The TunnelMonitor param.
+     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
+    @Import(name="tunnelInterface")
+    private @Nullable Output<String> tunnelInterface;
+
+    /**
+     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
+    public Optional<Output<String>> tunnelInterface() {
+        return Optional.ofNullable(this.tunnelInterface);
+    }
+
+    /**
+     * Tunnel monitor
      * 
      */
     @Import(name="tunnelMonitor")
     private @Nullable Output<IpsecTunnelTunnelMonitorArgs> tunnelMonitor;
 
     /**
-     * @return The TunnelMonitor param.
+     * @return Tunnel monitor
      * 
      */
     public Optional<Output<IpsecTunnelTunnelMonitorArgs>> tunnelMonitor() {
@@ -165,6 +180,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         this.folder = $.folder;
         this.name = $.name;
         this.snippet = $.snippet;
+        this.tunnelInterface = $.tunnelInterface;
         this.tunnelMonitor = $.tunnelMonitor;
     }
 
@@ -187,7 +203,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param antiReplay Enable Anti-Replay check on this tunnel.
+         * @param antiReplay Enable Anti-Replay check on this tunnel
          * 
          * @return builder
          * 
@@ -198,7 +214,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param antiReplay Enable Anti-Replay check on this tunnel.
+         * @param antiReplay Enable Anti-Replay check on this tunnel
          * 
          * @return builder
          * 
@@ -208,7 +224,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param autoKey The AutoKey param.
+         * @param autoKey Auto key
          * 
          * @return builder
          * 
@@ -219,7 +235,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param autoKey The AutoKey param.
+         * @param autoKey Auto key
          * 
          * @return builder
          * 
@@ -229,7 +245,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param copyTos Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+         * @param copyTos Copy IP TOS bits from inner packet to IPSec packet (not recommended)
          * 
          * @return builder
          * 
@@ -240,7 +256,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param copyTos Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+         * @param copyTos Copy IP TOS bits from inner packet to IPSec packet (not recommended)
          * 
          * @return builder
          * 
@@ -250,7 +266,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -261,7 +277,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -271,7 +287,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enableGreEncapsulation allow GRE over IPSec. Default: `false`.
+         * @param enableGreEncapsulation allow GRE over IPSec
          * 
          * @return builder
          * 
@@ -282,7 +298,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param enableGreEncapsulation allow GRE over IPSec. Default: `false`.
+         * @param enableGreEncapsulation allow GRE over IPSec
          * 
          * @return builder
          * 
@@ -292,7 +308,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -303,7 +319,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -313,7 +329,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -324,7 +340,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -334,7 +350,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -345,7 +361,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -355,7 +371,28 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tunnelMonitor The TunnelMonitor param.
+         * @param tunnelInterface Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterface(@Nullable Output<String> tunnelInterface) {
+            $.tunnelInterface = tunnelInterface;
+            return this;
+        }
+
+        /**
+         * @param tunnelInterface Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder tunnelInterface(String tunnelInterface) {
+            return tunnelInterface(Output.of(tunnelInterface));
+        }
+
+        /**
+         * @param tunnelMonitor Tunnel monitor
          * 
          * @return builder
          * 
@@ -366,7 +403,7 @@ public final class IpsecTunnelArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tunnelMonitor The TunnelMonitor param.
+         * @param tunnelMonitor Tunnel monitor
          * 
          * @return builder
          * 

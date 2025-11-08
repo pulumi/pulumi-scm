@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan {
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     private String context;
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     private List<GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier> qualifiers;
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     private Integer value;
 
     private GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThan() {}
     /**
-     * @return The Context param.
+     * @return Context
      * 
      */
     public String context() {
         return this.context;
     }
     /**
-     * @return The Qualifiers param.
+     * @return Qualifier
      * 
      */
     public List<GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorLessThanQualifier> qualifiers() {
         return this.qualifiers;
     }
     /**
-     * @return The Value param. Value must be between 0 and 4294967295.
+     * @return Value
      * 
      */
     public Integer value() {

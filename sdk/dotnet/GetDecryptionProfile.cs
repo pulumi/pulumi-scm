@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetDecryptionProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDecryptionProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DecryptionProfile data source
         /// </summary>
         public static Task<GetDecryptionProfileResult> InvokeAsync(GetDecryptionProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDecryptionProfileResult>("scm:index/getDecryptionProfile:getDecryptionProfile", args ?? new GetDecryptionProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDecryptionProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DecryptionProfile data source
         /// </summary>
         public static Output<GetDecryptionProfileResult> Invoke(GetDecryptionProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionProfileResult>("scm:index/getDecryptionProfile:getDecryptionProfile", args ?? new GetDecryptionProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDecryptionProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DecryptionProfile data source
         /// </summary>
         public static Output<GetDecryptionProfileResult> Invoke(GetDecryptionProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionProfileResult>("scm:index/getDecryptionProfile:getDecryptionProfile", args ?? new GetDecryptionProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetDecryptionProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetDecryptionProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetDecryptionProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetDecryptionProfileInvokeArgs()
         {
@@ -118,36 +76,54 @@ namespace Pulumi.Scm
     public sealed class GetDecryptionProfileResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SslForwardProxy param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Ssl forward proxy
         /// </summary>
         public readonly Outputs.GetDecryptionProfileSslForwardProxyResult SslForwardProxy;
         /// <summary>
-        /// The SslInboundProxy param.
+        /// Ssl inbound proxy
         /// </summary>
         public readonly Outputs.GetDecryptionProfileSslInboundProxyResult SslInboundProxy;
         /// <summary>
-        /// The SslNoProxy param.
+        /// Ssl no proxy
         /// </summary>
         public readonly Outputs.GetDecryptionProfileSslNoProxyResult SslNoProxy;
         /// <summary>
-        /// The SslProtocolSettings param.
+        /// Ssl protocol settings
         /// </summary>
         public readonly Outputs.GetDecryptionProfileSslProtocolSettingsResult SslProtocolSettings;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetDecryptionProfileResult(
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
+
+            string snippet,
 
             Outputs.GetDecryptionProfileSslForwardProxyResult sslForwardProxy,
 
@@ -159,8 +135,11 @@ namespace Pulumi.Scm
 
             string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             SslForwardProxy = sslForwardProxy;
             SslInboundProxy = sslInboundProxy;
             SslNoProxy = sslNoProxy;

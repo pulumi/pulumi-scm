@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAuthenticationRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * AuthenticationRule data source
  */
 export function getAuthenticationRule(args: GetAuthenticationRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationRule:getAuthenticationRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getAuthenticationRule(args: GetAuthenticationRuleArgs, opts?: pu
  */
 export interface GetAuthenticationRuleArgs {
     /**
-     * The Id param.
+     * The UUID of the authentication rule
      */
     id: string;
+    /**
+     * The name of the authentication rule
+     */
+    name?: string;
 }
 
 /**
@@ -40,113 +34,115 @@ export interface GetAuthenticationRuleArgs {
  */
 export interface GetAuthenticationRuleResult {
     /**
-     * the authentication profile name to apply to authentication rule.
+     * The authentication profile name
      */
     readonly authenticationEnforcement: string;
     /**
-     * The Categories param.
+     * The destination URL categories
      */
     readonly categories: string[];
     /**
-     * The Description param.
+     * The description of the authentication rule
      */
     readonly description: string;
     /**
-     * The DestinationHips param.
+     * The destination Host Integrity Profile (HIP)
      */
     readonly destinationHips: string[];
     /**
-     * The Destinations param.
+     * The destination addresses
      */
     readonly destinations: string[];
     /**
-     * The Disabled param. Default: `false`.
+     * Device
+     */
+    readonly device: string;
+    /**
+     * Is the authentication rule disabled?
      */
     readonly disabled: boolean;
     /**
-     * The Froms param.
+     * Folder
+     */
+    readonly folder: string;
+    /**
+     * The source security zones
      */
     readonly froms: string[];
     /**
-     * The GroupTag param.
+     * Group tag
      */
     readonly groupTag: string;
     /**
-     * The HipProfiles param.
+     * The source Host Integrity Profile (HIP)
      */
     readonly hipProfiles: string[];
     /**
-     * The Id param.
+     * The UUID of the authentication rule
      */
     readonly id: string;
     /**
-     * The LogAuthenticationTimeout param. Default: `false`.
+     * Log authentication timeouts?
      */
     readonly logAuthenticationTimeout: boolean;
     /**
-     * The LogSetting param.
+     * The log forwarding profile name
      */
     readonly logSetting: string;
     /**
-     * The Name param.
+     * The name of the authentication rule
      */
     readonly name: string;
     /**
-     * The NegateDestination param. Default: `false`.
+     * Are the destination addresses negated?
      */
     readonly negateDestination: boolean;
     /**
-     * The NegateSource param. Default: `false`.
+     * Are the source addresses negated?
      */
     readonly negateSource: boolean;
     /**
-     * The Services param.
+     * The destination ports
      */
     readonly services: string[];
     /**
-     * The SourceHips param.
+     * Snippet
+     */
+    readonly snippet: string;
+    /**
+     * The source Host Integrity Profile (HIP)
      */
     readonly sourceHips: string[];
     /**
-     * The SourceUsers param.
+     * The source users
      */
     readonly sourceUsers: string[];
     /**
-     * The Sources param.
+     * The source addresses
      */
     readonly sources: string[];
     /**
-     * The Tags param.
+     * The authentication rule tags
      */
     readonly tags: string[];
     readonly tfid: string;
     /**
-     * The Timeout param. Value must be between 1 and 1440.
+     * The authentication session timeout (seconds)
      */
     readonly timeout: number;
     /**
-     * The Tos param.
+     * The destination security zones
      */
     readonly tos: string[];
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAuthenticationRule({
- *     id: "1234-56-789",
- * });
- * ```
+ * AuthenticationRule data source
  */
 export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationRule:getAuthenticationRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -155,7 +151,11 @@ export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArg
  */
 export interface GetAuthenticationRuleOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the authentication rule
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the authentication rule
+     */
+    name?: pulumi.Input<string>;
 }

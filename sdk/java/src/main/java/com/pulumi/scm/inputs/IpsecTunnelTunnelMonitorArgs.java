@@ -18,14 +18,14 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
     public static final IpsecTunnelTunnelMonitorArgs Empty = new IpsecTunnelTunnelMonitorArgs();
 
     /**
-     * Destination IP to send ICMP probe.
+     * Destination IP to send ICMP probe
      * 
      */
     @Import(name="destinationIp", required=true)
     private Output<String> destinationIp;
 
     /**
-     * @return Destination IP to send ICMP probe.
+     * @return Destination IP to send ICMP probe
      * 
      */
     public Output<String> destinationIp() {
@@ -33,14 +33,14 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Enable tunnel monitoring on this tunnel. Default: `true`.
+     * Enable tunnel monitoring on this tunnel
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return Enable tunnel monitoring on this tunnel. Default: `true`.
+     * @return Enable tunnel monitoring on this tunnel
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -48,14 +48,14 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+     * Which proxy-id (or proxy-id-v6) the monitoring traffic will use
      * 
      */
     @Import(name="proxyId")
     private @Nullable Output<String> proxyId;
 
     /**
-     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+     * @return Which proxy-id (or proxy-id-v6) the monitoring traffic will use
      * 
      */
     public Optional<Output<String>> proxyId() {
@@ -89,7 +89,7 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param destinationIp Destination IP to send ICMP probe.
+         * @param destinationIp Destination IP to send ICMP probe
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param destinationIp Destination IP to send ICMP probe.
+         * @param destinationIp Destination IP to send ICMP probe
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param enable Enable tunnel monitoring on this tunnel. Default: `true`.
+         * @param enable Enable tunnel monitoring on this tunnel
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param enable Enable tunnel monitoring on this tunnel. Default: `true`.
+         * @param enable Enable tunnel monitoring on this tunnel
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param proxyId Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+         * @param proxyId Which proxy-id (or proxy-id-v6) the monitoring traffic will use
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class IpsecTunnelTunnelMonitorArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param proxyId Which proxy-id (or proxy-id-v6) the monitoring traffic will use.
+         * @param proxyId Which proxy-id (or proxy-id-v6) the monitoring traffic will use
          * 
          * @return builder
          * 

@@ -11,38 +11,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataHostInfoCriteriaHostId {
     /**
-     * @return The Contains param. String length must not exceed 255 characters.
+     * @return Contains
      * 
      */
     private String contains;
     /**
-     * @return The Is param. String length must not exceed 255 characters.
+     * @return Is
      * 
      */
     private String is;
     /**
-     * @return The IsNot param. String length must not exceed 255 characters.
+     * @return Is not
      * 
      */
     private String isNot;
 
     private GetHipObjectListDataHostInfoCriteriaHostId() {}
     /**
-     * @return The Contains param. String length must not exceed 255 characters.
+     * @return Contains
      * 
      */
     public String contains() {
         return this.contains;
     }
     /**
-     * @return The Is param. String length must not exceed 255 characters.
+     * @return Is
      * 
      */
     public String is() {
         return this.is;
     }
     /**
-     * @return The IsNot param. String length must not exceed 255 characters.
+     * @return Is not
      * 
      */
     public String isNot() {

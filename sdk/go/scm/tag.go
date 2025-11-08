@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// Tag resource
 //
 // ## Example Usage
 //
@@ -27,11 +27,28 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewTag(ctx, "example", &scm.TagArgs{
-//				Folder:   pulumi.String("Shared"),
-//				Name:     pulumi.String("myColor"),
-//				Color:    pulumi.String("Green"),
-//				Comments: pulumi.String("Made by Pulumi"),
+//			// This file is embedded using go:embed
+//			// Tags for organizing and categorizing resources
+//			_, err := scm.NewTag(ctx, "scm_tag_1", &scm.TagArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_tag_1"),
+//				Color:  pulumi.String("Red"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewTag(ctx, "scm_tag_2", &scm.TagArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_tag_2"),
+//				Color:  pulumi.String("Blue"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewTag(ctx, "scm_tag_3", &scm.TagArgs{
+//				Folder: pulumi.String("Shared"),
+//				Name:   pulumi.String("scm_tag_3"),
+//				Color:  pulumi.String("Orange"),
 //			})
 //			if err != nil {
 //				return err
@@ -44,17 +61,17 @@ import (
 type Tag struct {
 	pulumi.CustomResourceState
 
-	// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+	// The color of the tag
 	Color pulumi.StringPtrOutput `pulumi:"color"`
-	// The Comments param. String length must not exceed 1023 characters.
+	// The description of the tag
 	Comments pulumi.StringPtrOutput `pulumi:"comments"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Name param. String length must not exceed 127 characters.
+	// The name of the tag
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -89,33 +106,33 @@ func GetTag(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Tag resources.
 type tagState struct {
-	// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+	// The color of the tag
 	Color *string `pulumi:"color"`
-	// The Comments param. String length must not exceed 1023 characters.
+	// The description of the tag
 	Comments *string `pulumi:"comments"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param. String length must not exceed 127 characters.
+	// The name of the tag
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type TagState struct {
-	// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+	// The color of the tag
 	Color pulumi.StringPtrInput
-	// The Comments param. String length must not exceed 1023 characters.
+	// The description of the tag
 	Comments pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param. String length must not exceed 127 characters.
+	// The name of the tag
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -125,33 +142,33 @@ func (TagState) ElementType() reflect.Type {
 }
 
 type tagArgs struct {
-	// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+	// The color of the tag
 	Color *string `pulumi:"color"`
-	// The Comments param. String length must not exceed 1023 characters.
+	// The description of the tag
 	Comments *string `pulumi:"comments"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param. String length must not exceed 127 characters.
+	// The name of the tag
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a Tag resource.
 type TagArgs struct {
-	// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+	// The color of the tag
 	Color pulumi.StringPtrInput
-	// The Comments param. String length must not exceed 1023 characters.
+	// The description of the tag
 	Comments pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param. String length must not exceed 127 characters.
+	// The name of the tag
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -242,32 +259,32 @@ func (o TagOutput) ToTagOutputWithContext(ctx context.Context) TagOutput {
 	return o
 }
 
-// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+// The color of the tag
 func (o TagOutput) Color() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringPtrOutput { return v.Color }).(pulumi.StringPtrOutput)
 }
 
-// The Comments param. String length must not exceed 1023 characters.
+// The description of the tag
 func (o TagOutput) Comments() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringPtrOutput { return v.Comments }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o TagOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o TagOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Name param. String length must not exceed 127 characters.
+// The name of the tag
 func (o TagOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o TagOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Tag) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

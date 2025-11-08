@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileMethodTacplusGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Checkgroup param.
+        /// Checkgroup
         /// </summary>
         [Input("checkgroup")]
         public Input<bool>? Checkgroup { get; set; }
 
         /// <summary>
-        /// The ServerProfile param.
+        /// Server profile
         /// </summary>
         [Input("serverProfile")]
         public Input<string>? ServerProfile { get; set; }

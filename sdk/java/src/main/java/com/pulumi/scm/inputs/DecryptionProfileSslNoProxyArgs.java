@@ -16,14 +16,14 @@ public final class DecryptionProfileSslNoProxyArgs extends com.pulumi.resources.
     public static final DecryptionProfileSslNoProxyArgs Empty = new DecryptionProfileSslNoProxyArgs();
 
     /**
-     * The BlockExpiredCertificate param. Default: `false`.
+     * Block expired certificate
      * 
      */
     @Import(name="blockExpiredCertificate")
     private @Nullable Output<Boolean> blockExpiredCertificate;
 
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     public Optional<Output<Boolean>> blockExpiredCertificate() {
@@ -31,14 +31,14 @@ public final class DecryptionProfileSslNoProxyArgs extends com.pulumi.resources.
     }
 
     /**
-     * The BlockUntrustedIssuer param. Default: `false`.
+     * Block untrusted issuer
      * 
      */
     @Import(name="blockUntrustedIssuer")
     private @Nullable Output<Boolean> blockUntrustedIssuer;
 
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     public Optional<Output<Boolean>> blockUntrustedIssuer() {
@@ -71,7 +71,7 @@ public final class DecryptionProfileSslNoProxyArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param blockExpiredCertificate The BlockExpiredCertificate param. Default: `false`.
+         * @param blockExpiredCertificate Block expired certificate
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class DecryptionProfileSslNoProxyArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param blockExpiredCertificate The BlockExpiredCertificate param. Default: `false`.
+         * @param blockExpiredCertificate Block expired certificate
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class DecryptionProfileSslNoProxyArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param blockUntrustedIssuer The BlockUntrustedIssuer param. Default: `false`.
+         * @param blockUntrustedIssuer Block untrusted issuer
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class DecryptionProfileSslNoProxyArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param blockUntrustedIssuer The BlockUntrustedIssuer param. Default: `false`.
+         * @param blockUntrustedIssuer Block untrusted issuer
          * 
          * @return builder
          * 

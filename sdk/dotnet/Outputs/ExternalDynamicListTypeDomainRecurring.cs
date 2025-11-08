@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeDomainRecurring
     {
         /// <summary>
-        /// The Daily param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Daily
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeDomainRecurringDaily? Daily;
         /// <summary>
-        /// The FiveMinute param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Five minute
         /// </summary>
-        public readonly bool? FiveMinute;
+        public readonly Outputs.ExternalDynamicListTypeDomainRecurringFiveMinute? FiveMinute;
         /// <summary>
-        /// The Hourly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Hourly
         /// </summary>
-        public readonly bool? Hourly;
+        public readonly Outputs.ExternalDynamicListTypeDomainRecurringHourly? Hourly;
         /// <summary>
-        /// The Monthly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Monthly
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeDomainRecurringMonthly? Monthly;
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Weekly
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeDomainRecurringWeekly? Weekly;
 
@@ -38,9 +38,9 @@ namespace Pulumi.Scm.Outputs
         private ExternalDynamicListTypeDomainRecurring(
             Outputs.ExternalDynamicListTypeDomainRecurringDaily? daily,
 
-            bool? fiveMinute,
+            Outputs.ExternalDynamicListTypeDomainRecurringFiveMinute? fiveMinute,
 
-            bool? hourly,
+            Outputs.ExternalDynamicListTypeDomainRecurringHourly? hourly,
 
             Outputs.ExternalDynamicListTypeDomainRecurringMonthly? monthly,
 

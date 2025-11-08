@@ -14,27 +14,33 @@ namespace Pulumi.Scm.Outputs
     public sealed class NatRuleSourceTranslation
     {
         /// <summary>
-        /// The BiDirectional param. String must be one of these: `"yes"`, `"no"`.
+        /// Bi directional
         /// </summary>
-        public readonly string? BiDirectional;
+        public readonly bool? BiDirectional;
         /// <summary>
-        /// The Fallback param.
+        /// Fallback
         /// </summary>
         public readonly Outputs.NatRuleSourceTranslationFallback? Fallback;
         /// <summary>
-        /// The TranslatedAddressArray param. Ensure that only one of the following is specified: `TranslatedAddressArray`, `TranslatedAddressSingle`
+        /// Interface name
+        /// </summary>
+        public readonly string? Interface;
+        /// <summary>
+        /// Translated IP addresses
         /// </summary>
         public readonly ImmutableArray<string> TranslatedAddressArrays;
         /// <summary>
-        /// The TranslatedAddressSingle param. String validation regex: `^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$|^(?:[A-Fa-f0-9]{1,4}:){7}[A-Fa-f0-9]{1,4}$`. Ensure that only one of the following is specified: `TranslatedAddressArray`, `TranslatedAddressSingle`
+        /// Translated IP address
         /// </summary>
         public readonly string? TranslatedAddressSingle;
 
         [OutputConstructor]
         private NatRuleSourceTranslation(
-            string? biDirectional,
+            bool? biDirectional,
 
             Outputs.NatRuleSourceTranslationFallback? fallback,
+
+            string? @interface,
 
             ImmutableArray<string> translatedAddressArrays,
 
@@ -42,6 +48,7 @@ namespace Pulumi.Scm.Outputs
         {
             BiDirectional = biDirectional;
             Fallback = fallback;
+            Interface = @interface;
             TranslatedAddressArrays = translatedAddressArrays;
             TranslatedAddressSingle = translatedAddressSingle;
         }

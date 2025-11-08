@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectMobileDevice {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteria criteria;
 
     private HipObjectMobileDevice() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Optional<HipObjectMobileDeviceCriteria> criteria() {

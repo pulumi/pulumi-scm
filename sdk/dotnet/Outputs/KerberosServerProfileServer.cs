@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class KerberosServerProfileServer
     {
         /// <summary>
-        /// The Host param.
+        /// The Kerberos server IP address
         /// </summary>
         public readonly string? Host;
         /// <summary>
-        /// The Name param.
+        /// The Kerberos server name
         /// </summary>
         public readonly string? Name;
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The Kerberos server port
         /// </summary>
         public readonly int? Port;
 

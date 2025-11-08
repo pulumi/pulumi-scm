@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectCustomChecksCriteriaRegistryKeyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// Registry key default value data
         /// </summary>
         [Input("defaultValueData")]
         public Input<string>? DefaultValueData { get; set; }
 
         /// <summary>
-        /// Registry key. String length must not exceed 1023 characters.
+        /// Registry key
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Key does not exist or match specified value data. Default: `False`.
+        /// Key does not exist or match specified value data
         /// </summary>
         [Input("negate")]
         public Input<bool>? Negate { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs>? _registryValues;
 
         /// <summary>
-        /// The RegistryValues param.
+        /// Registry value
         /// </summary>
         public InputList<Inputs.HipObjectCustomChecksCriteriaRegistryKeyRegistryValueArgs> RegistryValues
         {

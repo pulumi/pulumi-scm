@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationProfileMethodSamlIdpResult
     {
         /// <summary>
-        /// The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+        /// Attribute name usergroup
         /// </summary>
         public readonly string AttributeNameUsergroup;
         /// <summary>
-        /// The AttributeNameUsername param. String length must be between 1 and 63 characters.
+        /// Attribute name username
         /// </summary>
         public readonly string AttributeNameUsername;
         /// <summary>
-        /// The CertificateProfile param. String length must not exceed 31 characters.
+        /// Certificate profile
         /// </summary>
         public readonly string CertificateProfile;
         /// <summary>
-        /// The EnableSingleLogout param.
+        /// Enable single logout
         /// </summary>
         public readonly bool EnableSingleLogout;
         /// <summary>
-        /// The RequestSigningCertificate param. String length must not exceed 64 characters.
+        /// Request signing certificate
         /// </summary>
         public readonly string RequestSigningCertificate;
         /// <summary>
-        /// The ServerProfile param. String length must not exceed 63 characters.
+        /// Server profile
         /// </summary>
         public readonly string ServerProfile;
 

@@ -16,14 +16,14 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
     public static final CertificateProfileUsernameFieldArgs Empty = new CertificateProfileUsernameFieldArgs();
 
     /**
-     * The Subject param. String must be one of these: `&#34;common-name&#34;`.
+     * Common name
      * 
      */
     @Import(name="subject")
     private @Nullable Output<String> subject;
 
     /**
-     * @return The Subject param. String must be one of these: `&#34;common-name&#34;`.
+     * @return Common name
      * 
      */
     public Optional<Output<String>> subject() {
@@ -31,14 +31,14 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
     }
 
     /**
-     * The SubjectAlt param. String must be one of these: `&#34;email&#34;`.
+     * Email address
      * 
      */
     @Import(name="subjectAlt")
     private @Nullable Output<String> subjectAlt;
 
     /**
-     * @return The SubjectAlt param. String must be one of these: `&#34;email&#34;`.
+     * @return Email address
      * 
      */
     public Optional<Output<String>> subjectAlt() {
@@ -71,7 +71,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subject The Subject param. String must be one of these: `&#34;common-name&#34;`.
+         * @param subject Common name
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subject The Subject param. String must be one of these: `&#34;common-name&#34;`.
+         * @param subject Common name
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subjectAlt The SubjectAlt param. String must be one of these: `&#34;email&#34;`.
+         * @param subjectAlt Email address
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class CertificateProfileUsernameFieldArgs extends com.pulumi.resour
         }
 
         /**
-         * @param subjectAlt The SubjectAlt param. String must be one of these: `&#34;email&#34;`.
+         * @param subjectAlt Email address
          * 
          * @return builder
          * 

@@ -12,134 +12,134 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DecryptionProfileSslForwardProxy {
     /**
-     * @return The AutoIncludeAltname param. Default: `false`.
+     * @return Auto include altname
      * 
      */
     private @Nullable Boolean autoIncludeAltname;
     /**
-     * @return The BlockClientCert param. Default: `false`.
+     * @return Block client cert
      * 
      */
     private @Nullable Boolean blockClientCert;
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     private @Nullable Boolean blockExpiredCertificate;
     /**
-     * @return The BlockTimeoutCert param. Default: `false`.
+     * @return Block timeout cert
      * 
      */
     private @Nullable Boolean blockTimeoutCert;
     /**
-     * @return The BlockTls13DowngradeNoResource param. Default: `false`.
+     * @return Block tls13 downgrade no resource
      * 
      */
     private @Nullable Boolean blockTls13DowngradeNoResource;
     /**
-     * @return The BlockUnknownCert param. Default: `false`.
+     * @return Block unknown cert
      * 
      */
     private @Nullable Boolean blockUnknownCert;
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     private @Nullable Boolean blockUnsupportedCipher;
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     private @Nullable Boolean blockUnsupportedVersion;
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     private @Nullable Boolean blockUntrustedIssuer;
     /**
-     * @return The RestrictCertExts param. Default: `false`.
+     * @return Restrict cert exts
      * 
      */
     private @Nullable Boolean restrictCertExts;
     /**
-     * @return The StripAlpn param. Default: `false`.
+     * @return Strip alpn
      * 
      */
     private @Nullable Boolean stripAlpn;
 
     private DecryptionProfileSslForwardProxy() {}
     /**
-     * @return The AutoIncludeAltname param. Default: `false`.
+     * @return Auto include altname
      * 
      */
     public Optional<Boolean> autoIncludeAltname() {
         return Optional.ofNullable(this.autoIncludeAltname);
     }
     /**
-     * @return The BlockClientCert param. Default: `false`.
+     * @return Block client cert
      * 
      */
     public Optional<Boolean> blockClientCert() {
         return Optional.ofNullable(this.blockClientCert);
     }
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     public Optional<Boolean> blockExpiredCertificate() {
         return Optional.ofNullable(this.blockExpiredCertificate);
     }
     /**
-     * @return The BlockTimeoutCert param. Default: `false`.
+     * @return Block timeout cert
      * 
      */
     public Optional<Boolean> blockTimeoutCert() {
         return Optional.ofNullable(this.blockTimeoutCert);
     }
     /**
-     * @return The BlockTls13DowngradeNoResource param. Default: `false`.
+     * @return Block tls13 downgrade no resource
      * 
      */
     public Optional<Boolean> blockTls13DowngradeNoResource() {
         return Optional.ofNullable(this.blockTls13DowngradeNoResource);
     }
     /**
-     * @return The BlockUnknownCert param. Default: `false`.
+     * @return Block unknown cert
      * 
      */
     public Optional<Boolean> blockUnknownCert() {
         return Optional.ofNullable(this.blockUnknownCert);
     }
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     public Optional<Boolean> blockUnsupportedCipher() {
         return Optional.ofNullable(this.blockUnsupportedCipher);
     }
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     public Optional<Boolean> blockUnsupportedVersion() {
         return Optional.ofNullable(this.blockUnsupportedVersion);
     }
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     public Optional<Boolean> blockUntrustedIssuer() {
         return Optional.ofNullable(this.blockUntrustedIssuer);
     }
     /**
-     * @return The RestrictCertExts param. Default: `false`.
+     * @return Restrict cert exts
      * 
      */
     public Optional<Boolean> restrictCertExts() {
         return Optional.ofNullable(this.restrictCertExts);
     }
     /**
-     * @return The StripAlpn param. Default: `false`.
+     * @return Strip alpn
      * 
      */
     public Optional<Boolean> stripAlpn() {

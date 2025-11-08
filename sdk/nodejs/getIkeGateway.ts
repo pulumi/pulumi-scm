@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * IkeGateway data source
  *
  * ## Example Usage
  *
@@ -15,18 +15,19 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getIkeGateway({
- *     id: "1234-56-789",
+ * // Data source to retrieve a single IKE Gateway by its ID.
+ * // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
+ * const exampleSingularIkeGatewayDs = scm.getIkeGateway({
+ *     id: "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
  * });
+ * export const ikeGatewaySingularExample = exampleSingularIkeGatewayDs;
  * ```
  */
 export function getIkeGateway(args: GetIkeGatewayArgs, opts?: pulumi.InvokeOptions): Promise<GetIkeGatewayResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getIkeGateway:getIkeGateway", {
-        "device": args.device,
-        "folder": args.folder,
         "id": args.id,
-        "snippet": args.snippet,
+        "name": args.name,
     }, opts);
 }
 
@@ -35,21 +36,13 @@ export function getIkeGateway(args: GetIkeGatewayArgs, opts?: pulumi.InvokeOptio
  */
 export interface GetIkeGatewayArgs {
     /**
-     * The Device param.
-     */
-    device?: string;
-    /**
-     * The Folder param.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
     /**
-     * The Snippet param.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    snippet?: string;
+    name?: string;
 }
 
 /**
@@ -57,53 +50,61 @@ export interface GetIkeGatewayArgs {
  */
 export interface GetIkeGatewayResult {
     /**
-     * The Authentication param.
+     * Authentication
      */
     readonly authentication: outputs.GetIkeGatewayAuthentication;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
-    readonly device?: string;
+    readonly device: string;
     /**
-     * The Folder param.
+     * Map of sensitive values returned from the API.
      */
-    readonly folder?: string;
+    readonly encryptedValues: {[key: string]: string};
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The LocalId param.
+     * Local address
+     */
+    readonly localAddress: outputs.GetIkeGatewayLocalAddress;
+    /**
+     * Local id
      */
     readonly localId: outputs.GetIkeGatewayLocalId;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
     /**
-     * The PeerAddress param.
+     * Peer address
      */
     readonly peerAddress: outputs.GetIkeGatewayPeerAddress;
     /**
-     * The PeerId param.
+     * Peer id
      */
     readonly peerId: outputs.GetIkeGatewayPeerId;
     /**
-     * The Protocol param.
+     * Protocol
      */
     readonly protocol: outputs.GetIkeGatewayProtocol;
     /**
-     * The ProtocolCommon param.
+     * Protocol common
      */
     readonly protocolCommon: outputs.GetIkeGatewayProtocolCommon;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
-    readonly snippet?: string;
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * IkeGateway data source
  *
  * ## Example Usage
  *
@@ -111,18 +112,19 @@ export interface GetIkeGatewayResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getIkeGateway({
- *     id: "1234-56-789",
+ * // Data source to retrieve a single IKE Gateway by its ID.
+ * // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
+ * const exampleSingularIkeGatewayDs = scm.getIkeGateway({
+ *     id: "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
  * });
+ * export const ikeGatewaySingularExample = exampleSingularIkeGatewayDs;
  * ```
  */
 export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetIkeGatewayResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getIkeGateway:getIkeGateway", {
-        "device": args.device,
-        "folder": args.folder,
         "id": args.id,
-        "snippet": args.snippet,
+        "name": args.name,
     }, opts);
 }
 
@@ -131,19 +133,11 @@ export function getIkeGatewayOutput(args: GetIkeGatewayOutputArgs, opts?: pulumi
  */
 export interface GetIkeGatewayOutputArgs {
     /**
-     * The Device param.
-     */
-    device?: pulumi.Input<string>;
-    /**
-     * The Folder param.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
-    snippet?: pulumi.Input<string>;
+    name?: pulumi.Input<string>;
 }

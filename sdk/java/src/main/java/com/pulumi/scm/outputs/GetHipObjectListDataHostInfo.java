@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataHostInfo {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private GetHipObjectListDataHostInfoCriteria criteria;
 
     private GetHipObjectListDataHostInfo() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public GetHipObjectListDataHostInfoCriteria criteria() {

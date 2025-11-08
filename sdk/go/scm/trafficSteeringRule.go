@@ -12,51 +12,25 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewTrafficSteeringRule(ctx, "example", &scm.TrafficSteeringRuleArgs{
-//				Folder: pulumi.String("Shared"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// TrafficSteeringRule resource
 type TrafficSteeringRule struct {
 	pulumi.CustomResourceState
 
-	// The Action param.
+	// Action
 	Action TrafficSteeringRuleActionPtrOutput `pulumi:"action"`
-	// The Category param.
+	// Category
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
-	// The Destination param.
+	// Destination
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+	// The folder containing the traffic steering rule
 	Folder pulumi.StringOutput `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Service param.
+	// Service
 	Services pulumi.StringArrayOutput `pulumi:"services"`
-	// The SourceUser param.
+	// Source user
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
-	// The Source param.
+	// Source
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
 	Tfid    pulumi.StringOutput      `pulumi:"tfid"`
 }
@@ -68,6 +42,9 @@ func NewTrafficSteeringRule(ctx *pulumi.Context,
 		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.Folder == nil {
+		return nil, errors.New("invalid value for required argument 'Folder'")
+	}
 	if args.Services == nil {
 		return nil, errors.New("invalid value for required argument 'Services'")
 	}
@@ -97,41 +74,41 @@ func GetTrafficSteeringRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering TrafficSteeringRule resources.
 type trafficSteeringRuleState struct {
-	// The Action param.
+	// Action
 	Action *TrafficSteeringRuleAction `pulumi:"action"`
-	// The Category param.
+	// Category
 	Categories []string `pulumi:"categories"`
-	// The Destination param.
+	// Destination
 	Destinations []string `pulumi:"destinations"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+	// The folder containing the traffic steering rule
 	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The Service param.
+	// Service
 	Services []string `pulumi:"services"`
-	// The SourceUser param.
+	// Source user
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Source param.
+	// Source
 	Sources []string `pulumi:"sources"`
 	Tfid    *string  `pulumi:"tfid"`
 }
 
 type TrafficSteeringRuleState struct {
-	// The Action param.
+	// Action
 	Action TrafficSteeringRuleActionPtrInput
-	// The Category param.
+	// Category
 	Categories pulumi.StringArrayInput
-	// The Destination param.
+	// Destination
 	Destinations pulumi.StringArrayInput
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+	// The folder containing the traffic steering rule
 	Folder pulumi.StringPtrInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The Service param.
+	// Service
 	Services pulumi.StringArrayInput
-	// The SourceUser param.
+	// Source user
 	SourceUsers pulumi.StringArrayInput
-	// The Source param.
+	// Source
 	Sources pulumi.StringArrayInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -141,41 +118,41 @@ func (TrafficSteeringRuleState) ElementType() reflect.Type {
 }
 
 type trafficSteeringRuleArgs struct {
-	// The Action param.
+	// Action
 	Action *TrafficSteeringRuleAction `pulumi:"action"`
-	// The Category param.
+	// Category
 	Categories []string `pulumi:"categories"`
-	// The Destination param.
+	// Destination
 	Destinations []string `pulumi:"destinations"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// The folder containing the traffic steering rule
+	Folder string `pulumi:"folder"`
+	// Name
 	Name *string `pulumi:"name"`
-	// The Service param.
+	// Service
 	Services []string `pulumi:"services"`
-	// The SourceUser param.
+	// Source user
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Source param.
+	// Source
 	Sources []string `pulumi:"sources"`
 }
 
 // The set of arguments for constructing a TrafficSteeringRule resource.
 type TrafficSteeringRuleArgs struct {
-	// The Action param.
+	// Action
 	Action TrafficSteeringRuleActionPtrInput
-	// The Category param.
+	// Category
 	Categories pulumi.StringArrayInput
-	// The Destination param.
+	// Destination
 	Destinations pulumi.StringArrayInput
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringPtrInput
-	// The Name param.
+	// The folder containing the traffic steering rule
+	Folder pulumi.StringInput
+	// Name
 	Name pulumi.StringPtrInput
-	// The Service param.
+	// Service
 	Services pulumi.StringArrayInput
-	// The SourceUser param.
+	// Source user
 	SourceUsers pulumi.StringArrayInput
-	// The Source param.
+	// Source
 	Sources pulumi.StringArrayInput
 }
 
@@ -266,42 +243,42 @@ func (o TrafficSteeringRuleOutput) ToTrafficSteeringRuleOutputWithContext(ctx co
 	return o
 }
 
-// The Action param.
+// Action
 func (o TrafficSteeringRuleOutput) Action() TrafficSteeringRuleActionPtrOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) TrafficSteeringRuleActionPtrOutput { return v.Action }).(TrafficSteeringRuleActionPtrOutput)
 }
 
-// The Category param.
+// Category
 func (o TrafficSteeringRuleOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) pulumi.StringArrayOutput { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The Destination param.
+// Destination
 func (o TrafficSteeringRuleOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) pulumi.StringArrayOutput { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+// The folder containing the traffic steering rule
 func (o TrafficSteeringRuleOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// Name
 func (o TrafficSteeringRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Service param.
+// Service
 func (o TrafficSteeringRuleOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) pulumi.StringArrayOutput { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The SourceUser param.
+// Source user
 func (o TrafficSteeringRuleOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) pulumi.StringArrayOutput { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The Source param.
+// Source
 func (o TrafficSteeringRuleOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *TrafficSteeringRule) pulumi.StringArrayOutput { return v.Sources }).(pulumi.StringArrayOutput)
 }

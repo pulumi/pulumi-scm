@@ -17,86 +17,86 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataHostInfoCriteria {
     /**
-     * @return The ClientVersion param.
+     * @return Client version
      * 
      */
     private GetHipObjectListDataHostInfoCriteriaClientVersion clientVersion;
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     private GetHipObjectListDataHostInfoCriteriaDomain domain;
     /**
-     * @return The HostId param.
+     * @return Host id
      * 
      */
     private GetHipObjectListDataHostInfoCriteriaHostId hostId;
     /**
-     * @return The HostName param.
+     * @return Host name
      * 
      */
     private GetHipObjectListDataHostInfoCriteriaHostName hostName;
     /**
-     * @return If device is managed.
+     * @return If device is managed
      * 
      */
     private Boolean managed;
     /**
-     * @return The Os param.
+     * @return Os
      * 
      */
     private GetHipObjectListDataHostInfoCriteriaOs os;
     /**
-     * @return The SerialNumber param.
+     * @return Serial number
      * 
      */
     private GetHipObjectListDataHostInfoCriteriaSerialNumber serialNumber;
 
     private GetHipObjectListDataHostInfoCriteria() {}
     /**
-     * @return The ClientVersion param.
+     * @return Client version
      * 
      */
     public GetHipObjectListDataHostInfoCriteriaClientVersion clientVersion() {
         return this.clientVersion;
     }
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     public GetHipObjectListDataHostInfoCriteriaDomain domain() {
         return this.domain;
     }
     /**
-     * @return The HostId param.
+     * @return Host id
      * 
      */
     public GetHipObjectListDataHostInfoCriteriaHostId hostId() {
         return this.hostId;
     }
     /**
-     * @return The HostName param.
+     * @return Host name
      * 
      */
     public GetHipObjectListDataHostInfoCriteriaHostName hostName() {
         return this.hostName;
     }
     /**
-     * @return If device is managed.
+     * @return If device is managed
      * 
      */
     public Boolean managed() {
         return this.managed;
     }
     /**
-     * @return The Os param.
+     * @return Os
      * 
      */
     public GetHipObjectListDataHostInfoCriteriaOs os() {
         return this.os;
     }
     /**
-     * @return The SerialNumber param.
+     * @return Serial number
      * 
      */
     public GetHipObjectListDataHostInfoCriteriaSerialNumber serialNumber() {

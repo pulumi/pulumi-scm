@@ -14,43 +14,60 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetProfileGroupListDataResult
     {
         /// <summary>
-        /// List of AI security profiles.
+        /// Ai security
         /// </summary>
         public readonly ImmutableArray<string> AiSecurities;
         /// <summary>
-        /// List of DNS security profiles.
+        /// Data filtering
+        /// </summary>
+        public readonly ImmutableArray<string> DataFilterings;
+        /// <summary>
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Dns security
         /// </summary>
         public readonly ImmutableArray<string> DnsSecurities;
         /// <summary>
-        /// List of file blocking profiles.
+        /// File blocking
         /// </summary>
         public readonly ImmutableArray<string> FileBlockings;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the profile group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the profile group.
+        /// The name of the profile group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// List of HTTP header insertion profiles.
+        /// Saas security
         /// </summary>
         public readonly ImmutableArray<string> SaasSecurities;
         /// <summary>
-        /// List of anti-spyware profiles.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Spyware
         /// </summary>
         public readonly ImmutableArray<string> Spywares;
+        public readonly string Tfid;
         /// <summary>
-        /// List of URL filtering profiles.
+        /// Url filtering
         /// </summary>
         public readonly ImmutableArray<string> UrlFilterings;
         /// <summary>
-        /// List of anti-virus and Wildfire analysis profiles.
+        /// Virus and wildfire analysis
         /// </summary>
         public readonly ImmutableArray<string> VirusAndWildfireAnalyses;
         /// <summary>
-        /// List of vulnerability protection profiles.
+        /// Vulnerability
         /// </summary>
         public readonly ImmutableArray<string> Vulnerabilities;
 
@@ -58,9 +75,15 @@ namespace Pulumi.Scm.Outputs
         private GetProfileGroupListDataResult(
             ImmutableArray<string> aiSecurities,
 
+            ImmutableArray<string> dataFilterings,
+
+            string device,
+
             ImmutableArray<string> dnsSecurities,
 
             ImmutableArray<string> fileBlockings,
+
+            string folder,
 
             string id,
 
@@ -68,7 +91,11 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> saasSecurities,
 
+            string snippet,
+
             ImmutableArray<string> spywares,
+
+            string tfid,
 
             ImmutableArray<string> urlFilterings,
 
@@ -77,12 +104,17 @@ namespace Pulumi.Scm.Outputs
             ImmutableArray<string> vulnerabilities)
         {
             AiSecurities = aiSecurities;
+            DataFilterings = dataFilterings;
+            Device = device;
             DnsSecurities = dnsSecurities;
             FileBlockings = fileBlockings;
+            Folder = folder;
             Id = id;
             Name = name;
             SaasSecurities = saasSecurities;
+            Snippet = snippet;
             Spywares = spywares;
+            Tfid = tfid;
             UrlFilterings = urlFilterings;
             VirusAndWildfireAnalyses = virusAndWildfireAnalyses;
             Vulnerabilities = vulnerabilities;

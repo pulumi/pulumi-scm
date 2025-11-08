@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RemoteNetworkProtocol {
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     private @Nullable RemoteNetworkProtocolBgp bgp;
     /**
-     * @return secondary bgp routing as bgp*peer.
+     * @return secondary bgp routing as bgp*peer
      * 
      */
     private @Nullable RemoteNetworkProtocolBgpPeer bgpPeer;
 
     private RemoteNetworkProtocol() {}
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public Optional<RemoteNetworkProtocolBgp> bgp() {
         return Optional.ofNullable(this.bgp);
     }
     /**
-     * @return secondary bgp routing as bgp*peer.
+     * @return secondary bgp routing as bgp*peer
      * 
      */
     public Optional<RemoteNetworkProtocolBgpPeer> bgpPeer() {

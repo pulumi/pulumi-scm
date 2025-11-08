@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayListDataProtocolIkev2 {
     /**
-     * @return The Dpd param.
+     * @return Dpd
      * 
      */
     private GetIkeGatewayListDataProtocolIkev2Dpd dpd;
     /**
-     * @return The IkeCryptoProfile param.
+     * @return Ike crypto profile
      * 
      */
     private String ikeCryptoProfile;
 
     private GetIkeGatewayListDataProtocolIkev2() {}
     /**
-     * @return The Dpd param.
+     * @return Dpd
      * 
      */
     public GetIkeGatewayListDataProtocolIkev2Dpd dpd() {
         return this.dpd;
     }
     /**
-     * @return The IkeCryptoProfile param.
+     * @return Ike crypto profile
      * 
      */
     public String ikeCryptoProfile() {

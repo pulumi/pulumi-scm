@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetRemoteNetwork
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// RemoteNetwork data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,20 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a single remote_network object.
+        ///     //
+        ///     // Look up a single Remote Network by its ID.
+        ///     // Replace the ID with the UUID of the remote network you want to find.
         ///     var example = Scm.GetRemoteNetwork.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7fc59ec2-46b3-4a0e-9c86-9b7416426a70",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["remoteNetworkDetails"] = example,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +45,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetRemoteNetworkResult>("scm:index/getRemoteNetwork:getRemoteNetwork", args ?? new GetRemoteNetworkArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// RemoteNetwork data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +57,20 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a single remote_network object.
+        ///     //
+        ///     // Look up a single Remote Network by its ID.
+        ///     // Replace the ID with the UUID of the remote network you want to find.
         ///     var example = Scm.GetRemoteNetwork.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7fc59ec2-46b3-4a0e-9c86-9b7416426a70",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["remoteNetworkDetails"] = example,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +78,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetRemoteNetworkResult>("scm:index/getRemoteNetwork:getRemoteNetwork", args ?? new GetRemoteNetworkInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// RemoteNetwork data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +90,20 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a single remote_network object.
+        ///     //
+        ///     // Look up a single Remote Network by its ID.
+        ///     // Replace the ID with the UUID of the remote network you want to find.
         ///     var example = Scm.GetRemoteNetwork.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7fc59ec2-46b3-4a0e-9c86-9b7416426a70",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["remoteNetworkDetails"] = example,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,16 +115,16 @@ namespace Pulumi.Scm
     public sealed class GetRemoteNetworkArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// The UUID of the remote network
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the remote network
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetRemoteNetworkArgs()
         {
@@ -108,16 +135,16 @@ namespace Pulumi.Scm
     public sealed class GetRemoteNetworkInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// The UUID of the remote network
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the remote network
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetRemoteNetworkInvokeArgs()
         {
@@ -130,51 +157,55 @@ namespace Pulumi.Scm
     public sealed class GetRemoteNetworkResult
     {
         /// <summary>
-        /// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+        /// Ecmp load balancing
         /// </summary>
         public readonly string EcmpLoadBalancing;
         /// <summary>
-        /// ecmp*tunnels is required when ecmp*load*balancing is enable.
+        /// ecmp*tunnels is required when ecmp*load*balancing is enable
         /// </summary>
         public readonly ImmutableArray<Outputs.GetRemoteNetworkEcmpTunnelResult> EcmpTunnels;
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder that contains the remote network
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the remote network
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// ipsec*tunnel is required when ecmp*load_balancing is disable.
+        /// ipsec*tunnel is required when ecmp*load_balancing is disable
         /// </summary>
         public readonly string IpsecTunnel;
         /// <summary>
-        /// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+        /// New customer will only be on aggregate bandwidth licensing
         /// </summary>
         public readonly string LicenseType;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the remote network
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// setup the protocol when ecmp*load*balancing is disable.
+        /// setup the protocol when ecmp*load*balancing is disable
         /// </summary>
         public readonly Outputs.GetRemoteNetworkProtocolResult Protocol;
         /// <summary>
-        /// The Region param. String length must exceed 1 characters.
+        /// Region
         /// </summary>
         public readonly string Region;
         /// <summary>
-        /// specify secondary IpsecTunnel if needed.
+        /// specify secondary IpsecTunnel if needed
         /// </summary>
         public readonly string SecondaryIpsecTunnel;
         /// <summary>
-        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE.
+        /// spn-name is needed when LicenseType is FWAAS-AGGREGATE
         /// </summary>
         public readonly string SpnName;
         /// <summary>
-        /// The Subnets param.
+        /// Subnets
         /// </summary>
         public readonly ImmutableArray<string> Subnets;
         public readonly string Tfid;
@@ -184,6 +215,8 @@ namespace Pulumi.Scm
             string ecmpLoadBalancing,
 
             ImmutableArray<Outputs.GetRemoteNetworkEcmpTunnelResult> ecmpTunnels,
+
+            ImmutableDictionary<string, string> encryptedValues,
 
             string folder,
 
@@ -209,6 +242,7 @@ namespace Pulumi.Scm
         {
             EcmpLoadBalancing = ecmpLoadBalancing;
             EcmpTunnels = ecmpTunnels;
+            EncryptedValues = encryptedValues;
             Folder = folder;
             Id = id;
             IpsecTunnel = ipsecTunnel;

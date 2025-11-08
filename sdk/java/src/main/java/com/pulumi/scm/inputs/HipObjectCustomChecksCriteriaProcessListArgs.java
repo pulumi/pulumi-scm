@@ -18,14 +18,14 @@ public final class HipObjectCustomChecksCriteriaProcessListArgs extends com.pulu
     public static final HipObjectCustomChecksCriteriaProcessListArgs Empty = new HipObjectCustomChecksCriteriaProcessListArgs();
 
     /**
-     * Process Name. String length must not exceed 1023 characters.
+     * Process Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Process Name. String length must not exceed 1023 characters.
+     * @return Process Name
      * 
      */
     public Output<String> name() {
@@ -33,14 +33,14 @@ public final class HipObjectCustomChecksCriteriaProcessListArgs extends com.pulu
     }
 
     /**
-     * The Running param. Default: `true`.
+     * Running
      * 
      */
     @Import(name="running")
     private @Nullable Output<Boolean> running;
 
     /**
-     * @return The Running param. Default: `true`.
+     * @return Running
      * 
      */
     public Optional<Output<Boolean>> running() {
@@ -73,7 +73,7 @@ public final class HipObjectCustomChecksCriteriaProcessListArgs extends com.pulu
         }
 
         /**
-         * @param name Process Name. String length must not exceed 1023 characters.
+         * @param name Process Name
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class HipObjectCustomChecksCriteriaProcessListArgs extends com.pulu
         }
 
         /**
-         * @param name Process Name. String length must not exceed 1023 characters.
+         * @param name Process Name
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class HipObjectCustomChecksCriteriaProcessListArgs extends com.pulu
         }
 
         /**
-         * @param running The Running param. Default: `true`.
+         * @param running Running
          * 
          * @return builder
          * 
@@ -105,7 +105,7 @@ public final class HipObjectCustomChecksCriteriaProcessListArgs extends com.pulu
         }
 
         /**
-         * @param running The Running param. Default: `true`.
+         * @param running Running
          * 
          * @return builder
          * 

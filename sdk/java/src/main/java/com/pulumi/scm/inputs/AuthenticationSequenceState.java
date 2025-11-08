@@ -18,14 +18,14 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
     public static final AuthenticationSequenceState Empty = new AuthenticationSequenceState();
 
     /**
-     * The AuthenticationProfiles param.
+     * An ordered list of authentication profiles
      * 
      */
     @Import(name="authenticationProfiles")
     private @Nullable Output<List<String>> authenticationProfiles;
 
     /**
-     * @return The AuthenticationProfiles param.
+     * @return An ordered list of authentication profiles
      * 
      */
     public Optional<Output<List<String>>> authenticationProfiles() {
@@ -33,14 +33,14 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -48,14 +48,14 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -63,14 +63,14 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Name param.
+     * The name of the authentication sequence
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the authentication sequence
      * 
      */
     public Optional<Output<String>> name() {
@@ -78,14 +78,14 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -100,14 +100,14 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
     }
 
     /**
-     * The UseDomainFindProfile param. Default: `true`.
+     * Use domain to determine authentication profile?
      * 
      */
     @Import(name="useDomainFindProfile")
     private @Nullable Output<Boolean> useDomainFindProfile;
 
     /**
-     * @return The UseDomainFindProfile param. Default: `true`.
+     * @return Use domain to determine authentication profile?
      * 
      */
     public Optional<Output<Boolean>> useDomainFindProfile() {
@@ -145,7 +145,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param authenticationProfiles The AuthenticationProfiles param.
+         * @param authenticationProfiles An ordered list of authentication profiles
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param authenticationProfiles The AuthenticationProfiles param.
+         * @param authenticationProfiles An ordered list of authentication profiles
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param authenticationProfiles The AuthenticationProfiles param.
+         * @param authenticationProfiles An ordered list of authentication profiles
          * 
          * @return builder
          * 
@@ -176,7 +176,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -187,7 +187,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -208,7 +208,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -218,7 +218,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the authentication sequence
          * 
          * @return builder
          * 
@@ -229,7 +229,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the authentication sequence
          * 
          * @return builder
          * 
@@ -239,7 +239,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -250,7 +250,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -269,7 +269,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param useDomainFindProfile The UseDomainFindProfile param. Default: `true`.
+         * @param useDomainFindProfile Use domain to determine authentication profile?
          * 
          * @return builder
          * 
@@ -280,7 +280,7 @@ public final class AuthenticationSequenceState extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param useDomainFindProfile The UseDomainFindProfile param. Default: `true`.
+         * @param useDomainFindProfile Use domain to determine authentication profile?
          * 
          * @return builder
          * 

@@ -14,37 +14,54 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetWildfireAntiVirusProfileListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The MlavExceptions param.
+        /// Mlav exception
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileListDataMlavExceptionResult> MlavExceptions;
         /// <summary>
-        /// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The PacketCapture param.
+        /// Packet capture
         /// </summary>
         public readonly bool PacketCapture;
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileListDataRuleResult> Rules;
         /// <summary>
-        /// The ThreatExceptions param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// Threat exception
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileListDataThreatExceptionResult> ThreatExceptions;
 
         [OutputConstructor]
         private GetWildfireAntiVirusProfileListDataResult(
             string description,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -56,14 +73,22 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<Outputs.GetWildfireAntiVirusProfileListDataRuleResult> rules,
 
+            string snippet,
+
+            string tfid,
+
             ImmutableArray<Outputs.GetWildfireAntiVirusProfileListDataThreatExceptionResult> threatExceptions)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             MlavExceptions = mlavExceptions;
             Name = name;
             PacketCapture = packetCapture;
             Rules = rules;
+            Snippet = snippet;
+            Tfid = tfid;
             ThreatExceptions = threatExceptions;
         }
     }

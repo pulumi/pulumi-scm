@@ -16,14 +16,14 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
     public static final GetDecryptionRuleListPlainArgs Empty = new GetDecryptionRuleListPlainArgs();
 
     /**
-     * The Device param.
+     * The device of the item.
      * 
      */
     @Import(name="device")
     private @Nullable String device;
 
     /**
-     * @return The Device param.
+     * @return The device of the item.
      * 
      */
     public Optional<String> device() {
@@ -31,14 +31,14 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      * 
      */
     @Import(name="folder")
     private @Nullable String folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public Optional<String> folder() {
@@ -46,14 +46,14 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      * 
      */
     @Import(name="limit")
     private @Nullable Integer limit;
 
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
     public Optional<Integer> limit() {
@@ -61,14 +61,14 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Name param.
+     * The name of the item.
      * 
      */
     @Import(name="name")
     private @Nullable String name;
 
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<String> name() {
@@ -76,14 +76,14 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      * 
      */
     @Import(name="offset")
     private @Nullable Integer offset;
 
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
     public Optional<Integer> offset() {
@@ -91,29 +91,14 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    @Import(name="position")
-    private @Nullable String position;
-
-    /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    public Optional<String> position() {
-        return Optional.ofNullable(this.position);
-    }
-
-    /**
-     * The Snippet param.
+     * The snippet of the item.
      * 
      */
     @Import(name="snippet")
     private @Nullable String snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet of the item.
      * 
      */
     public Optional<String> snippet() {
@@ -128,7 +113,6 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
-        this.position = $.position;
         this.snippet = $.snippet;
     }
 
@@ -151,7 +135,7 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device of the item.
          * 
          * @return builder
          * 
@@ -162,7 +146,7 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder of the item. Default: Shared.
          * 
          * @return builder
          * 
@@ -173,7 +157,7 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -184,7 +168,7 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -195,7 +179,7 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
@@ -206,18 +190,7 @@ public final class GetDecryptionRuleListPlainArgs extends com.pulumi.resources.I
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder position(@Nullable String position) {
-            $.position = position;
-            return this;
-        }
-
-        /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet of the item.
          * 
          * @return builder
          * 

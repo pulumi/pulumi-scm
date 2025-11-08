@@ -14,36 +14,61 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRegionListDataResult
     {
         /// <summary>
-        /// The Addresses param.
+        /// Address
         /// </summary>
         public readonly ImmutableArray<string> Addresses;
         /// <summary>
-        /// The GeoLocation param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// Geo location
         /// </summary>
         public readonly Outputs.GetRegionListDataGeoLocationResult GeoLocation;
         /// <summary>
-        /// UUID of the resource.
+        /// The UUID of the region
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the region
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetRegionListDataResult(
             ImmutableArray<string> addresses,
 
+            string device,
+
+            string folder,
+
             Outputs.GetRegionListDataGeoLocationResult geoLocation,
 
             string id,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             Addresses = addresses;
+            Device = device;
+            Folder = folder;
             GeoLocation = geoLocation;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

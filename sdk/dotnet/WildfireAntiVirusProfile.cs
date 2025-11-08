@@ -10,73 +10,55 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.WildfireAntiVirusProfile("example", new()
-    ///     {
-    ///         Folder = "Shared",
-    ///     });
-    /// 
-    /// });
-    /// ```
+    /// WildfireAntiVirusProfile resource
     /// </summary>
     [ScmResourceType("scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile")]
     public partial class WildfireAntiVirusProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The MlavExceptions param.
+        /// Mlav exception
         /// </summary>
         [Output("mlavExceptions")]
         public Output<ImmutableArray<Outputs.WildfireAntiVirusProfileMlavException>> MlavExceptions { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The PacketCapture param.
+        /// Packet capture
         /// </summary>
         [Output("packetCapture")]
         public Output<bool?> PacketCapture { get; private set; } = null!;
 
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         [Output("rules")]
         public Output<ImmutableArray<Outputs.WildfireAntiVirusProfileRule>> Rules { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -85,7 +67,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         [Output("threatExceptions")]
         public Output<ImmutableArray<Outputs.WildfireAntiVirusProfileThreatException>> ThreatExceptions { get; private set; } = null!;
@@ -137,19 +119,19 @@ namespace Pulumi.Scm
     public sealed class WildfireAntiVirusProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -158,7 +140,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.WildfireAntiVirusProfileMlavExceptionArgs>? _mlavExceptions;
 
         /// <summary>
-        /// The MlavExceptions param.
+        /// Mlav exception
         /// </summary>
         public InputList<Inputs.WildfireAntiVirusProfileMlavExceptionArgs> MlavExceptions
         {
@@ -167,13 +149,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The PacketCapture param.
+        /// Packet capture
         /// </summary>
         [Input("packetCapture")]
         public Input<bool>? PacketCapture { get; set; }
@@ -182,7 +164,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.WildfireAntiVirusProfileRuleArgs>? _rules;
 
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public InputList<Inputs.WildfireAntiVirusProfileRuleArgs> Rules
         {
@@ -191,7 +173,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -200,7 +182,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.WildfireAntiVirusProfileThreatExceptionArgs>? _threatExceptions;
 
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         public InputList<Inputs.WildfireAntiVirusProfileThreatExceptionArgs> ThreatExceptions
         {
@@ -217,19 +199,19 @@ namespace Pulumi.Scm
     public sealed class WildfireAntiVirusProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -238,7 +220,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.WildfireAntiVirusProfileMlavExceptionGetArgs>? _mlavExceptions;
 
         /// <summary>
-        /// The MlavExceptions param.
+        /// Mlav exception
         /// </summary>
         public InputList<Inputs.WildfireAntiVirusProfileMlavExceptionGetArgs> MlavExceptions
         {
@@ -247,13 +229,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The PacketCapture param.
+        /// Packet capture
         /// </summary>
         [Input("packetCapture")]
         public Input<bool>? PacketCapture { get; set; }
@@ -262,7 +244,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.WildfireAntiVirusProfileRuleGetArgs>? _rules;
 
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public InputList<Inputs.WildfireAntiVirusProfileRuleGetArgs> Rules
         {
@@ -271,7 +253,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -283,7 +265,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.WildfireAntiVirusProfileThreatExceptionGetArgs>? _threatExceptions;
 
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         public InputList<Inputs.WildfireAntiVirusProfileThreatExceptionGetArgs> ThreatExceptions
         {

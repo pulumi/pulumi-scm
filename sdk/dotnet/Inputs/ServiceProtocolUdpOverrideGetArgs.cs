@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ServiceProtocolUdpOverrideGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+        /// udp session timeout value (in second)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }

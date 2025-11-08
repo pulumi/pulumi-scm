@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.LdapServerProfile("example", {});
- * ```
+ * LdapServerProfile resource
  */
 export class LdapServerProfile extends pulumi.CustomResource {
     /**
@@ -47,56 +38,64 @@ export class LdapServerProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Base param. String length must not exceed 255 characters.
+     * The base DN
      */
     declare public readonly base: pulumi.Output<string | undefined>;
     /**
-     * The BindDn param. String length must not exceed 255 characters.
+     * The bind DN
      */
     declare public readonly bindDn: pulumi.Output<string | undefined>;
     /**
-     * The BindPassword param. String length must not exceed 121 characters.
+     * The bind password
      */
     declare public readonly bindPassword: pulumi.Output<string | undefined>;
     /**
-     * The BindTimelimit param.
+     * The bind timeout (seconds)
      */
     declare public readonly bindTimelimit: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * Map of sensitive values returned from the API.
+     */
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
+    /**
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+     * The LDAP server time
      */
     declare public readonly ldapType: pulumi.Output<string | undefined>;
     /**
-     * The RetryInterval param.
+     * The name of the LDAP server profile
+     */
+    declare public readonly name: pulumi.Output<string>;
+    /**
+     * The search retry interval (seconds)
      */
     declare public readonly retryInterval: pulumi.Output<number | undefined>;
     /**
-     * The Servers param.
+     * The LDAP server configuration
      */
     declare public readonly servers: pulumi.Output<outputs.LdapServerProfileServer[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The Ssl param.
+     * Require SSL/TLS secured connection?
      */
     declare public readonly ssl: pulumi.Output<boolean | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Timelimit param.
+     * The search timeout (seconds)
      */
     declare public readonly timelimit: pulumi.Output<number | undefined>;
     /**
-     * The VerifyServerCertificate param.
+     * Verify server certificate for SSL sessions?
      */
     declare public readonly verifyServerCertificate: pulumi.Output<boolean | undefined>;
 
@@ -118,8 +117,10 @@ export class LdapServerProfile extends pulumi.CustomResource {
             resourceInputs["bindPassword"] = state?.bindPassword;
             resourceInputs["bindTimelimit"] = state?.bindTimelimit;
             resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["ldapType"] = state?.ldapType;
+            resourceInputs["name"] = state?.name;
             resourceInputs["retryInterval"] = state?.retryInterval;
             resourceInputs["servers"] = state?.servers;
             resourceInputs["snippet"] = state?.snippet;
@@ -139,16 +140,18 @@ export class LdapServerProfile extends pulumi.CustomResource {
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["ldapType"] = args?.ldapType;
+            resourceInputs["name"] = args?.name;
             resourceInputs["retryInterval"] = args?.retryInterval;
             resourceInputs["servers"] = args?.servers;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["ssl"] = args?.ssl;
             resourceInputs["timelimit"] = args?.timelimit;
             resourceInputs["verifyServerCertificate"] = args?.verifyServerCertificate;
+            resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        const secretOpts = { additionalSecretOutputs: ["bindPassword"] };
+        const secretOpts = { additionalSecretOutputs: ["bindPassword", "encryptedValues"] };
         opts = pulumi.mergeOptions(opts, secretOpts);
         super(LdapServerProfile.__pulumiType, name, resourceInputs, opts);
     }
@@ -159,56 +162,64 @@ export class LdapServerProfile extends pulumi.CustomResource {
  */
 export interface LdapServerProfileState {
     /**
-     * The Base param. String length must not exceed 255 characters.
+     * The base DN
      */
     base?: pulumi.Input<string>;
     /**
-     * The BindDn param. String length must not exceed 255 characters.
+     * The bind DN
      */
     bindDn?: pulumi.Input<string>;
     /**
-     * The BindPassword param. String length must not exceed 121 characters.
+     * The bind password
      */
     bindPassword?: pulumi.Input<string>;
     /**
-     * The BindTimelimit param.
+     * The bind timeout (seconds)
      */
     bindTimelimit?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * Map of sensitive values returned from the API.
+     */
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    /**
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+     * The LDAP server time
      */
     ldapType?: pulumi.Input<string>;
     /**
-     * The RetryInterval param.
+     * The name of the LDAP server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The search retry interval (seconds)
      */
     retryInterval?: pulumi.Input<number>;
     /**
-     * The Servers param.
+     * The LDAP server configuration
      */
     servers?: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Ssl param.
+     * Require SSL/TLS secured connection?
      */
     ssl?: pulumi.Input<boolean>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Timelimit param.
+     * The search timeout (seconds)
      */
     timelimit?: pulumi.Input<number>;
     /**
-     * The VerifyServerCertificate param.
+     * Verify server certificate for SSL sessions?
      */
     verifyServerCertificate?: pulumi.Input<boolean>;
 }
@@ -218,55 +229,59 @@ export interface LdapServerProfileState {
  */
 export interface LdapServerProfileArgs {
     /**
-     * The Base param. String length must not exceed 255 characters.
+     * The base DN
      */
     base?: pulumi.Input<string>;
     /**
-     * The BindDn param. String length must not exceed 255 characters.
+     * The bind DN
      */
     bindDn?: pulumi.Input<string>;
     /**
-     * The BindPassword param. String length must not exceed 121 characters.
+     * The bind password
      */
     bindPassword?: pulumi.Input<string>;
     /**
-     * The BindTimelimit param.
+     * The bind timeout (seconds)
      */
     bindTimelimit?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+     * The LDAP server time
      */
     ldapType?: pulumi.Input<string>;
     /**
-     * The RetryInterval param.
+     * The name of the LDAP server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The search retry interval (seconds)
      */
     retryInterval?: pulumi.Input<number>;
     /**
-     * The Servers param.
+     * The LDAP server configuration
      */
     servers: pulumi.Input<pulumi.Input<inputs.LdapServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Ssl param.
+     * Require SSL/TLS secured connection?
      */
     ssl?: pulumi.Input<boolean>;
     /**
-     * The Timelimit param.
+     * The search timeout (seconds)
      */
     timelimit?: pulumi.Input<number>;
     /**
-     * The VerifyServerCertificate param.
+     * Verify server certificate for SSL sessions?
      */
     verifyServerCertificate?: pulumi.Input<boolean>;
 }

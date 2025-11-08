@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupFolder(ctx, &scm.LookupFolderArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// Folder data source
 func LookupFolder(ctx *pulumi.Context, args *LookupFolderArgs, opts ...pulumi.InvokeOption) (*LookupFolderResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupFolderResult
@@ -50,23 +24,25 @@ func LookupFolder(ctx *pulumi.Context, args *LookupFolderArgs, opts ...pulumi.In
 
 // A collection of arguments for invoking getFolder.
 type LookupFolderArgs struct {
-	// The Id param.
+	// The UUID of the folder
 	Id string `pulumi:"id"`
+	// The name of the folder
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getFolder.
 type LookupFolderResult struct {
-	// The Description param.
+	// The description of the folder
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The UUID of the folder
 	Id string `pulumi:"id"`
-	// The Labels param.
+	// Labels assigned to the folder
 	Labels []string `pulumi:"labels"`
-	// The Name param.
+	// The name of the folder
 	Name string `pulumi:"name"`
-	// The Parent param.
+	// The parent folder
 	Parent string `pulumi:"parent"`
-	// The Snippets param.
+	// Snippets associated with the folder
 	Snippets []string `pulumi:"snippets"`
 	Tfid     string   `pulumi:"tfid"`
 }
@@ -82,8 +58,10 @@ func LookupFolderOutput(ctx *pulumi.Context, args LookupFolderOutputArgs, opts .
 
 // A collection of arguments for invoking getFolder.
 type LookupFolderOutputArgs struct {
-	// The Id param.
+	// The UUID of the folder
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the folder
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupFolderOutputArgs) ElementType() reflect.Type {
@@ -105,32 +83,32 @@ func (o LookupFolderResultOutput) ToLookupFolderResultOutputWithContext(ctx cont
 	return o
 }
 
-// The Description param.
+// The description of the folder
 func (o LookupFolderResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFolderResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The UUID of the folder
 func (o LookupFolderResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFolderResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Labels param.
+// Labels assigned to the folder
 func (o LookupFolderResultOutput) Labels() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupFolderResult) []string { return v.Labels }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// The name of the folder
 func (o LookupFolderResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFolderResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Parent param.
+// The parent folder
 func (o LookupFolderResultOutput) Parent() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFolderResult) string { return v.Parent }).(pulumi.StringOutput)
 }
 
-// The Snippets param.
+// Snippets associated with the folder
 func (o LookupFolderResultOutput) Snippets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupFolderResult) []string { return v.Snippets }).(pulumi.StringArrayOutput)
 }

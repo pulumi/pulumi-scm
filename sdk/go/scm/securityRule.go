@@ -7,85 +7,90 @@ import (
 	"context"
 	"reflect"
 
-	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// SecurityRule resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewSecurityRule(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type SecurityRule struct {
 	pulumi.CustomResourceState
 
-	// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-	Action pulumi.StringOutput `pulumi:"action"`
-	// The application(s) being accessed.
+	// The action to be taken when the rule is matched
+	Action pulumi.StringPtrOutput `pulumi:"action"`
+	// Allow url category
+	AllowUrlCategories SecurityRuleAllowUrlCategoryArrayOutput `pulumi:"allowUrlCategories"`
+	// Allow web application
+	AllowWebApplications SecurityRuleAllowWebApplicationArrayOutput `pulumi:"allowWebApplications"`
+	// The application(s) being accessed
 	Applications pulumi.StringArrayOutput `pulumi:"applications"`
-	// The URL categories being accessed.
+	// Block url category
+	BlockUrlCategories pulumi.StringArrayOutput `pulumi:"blockUrlCategories"`
+	// Block web application
+	BlockWebApplications pulumi.StringArrayOutput `pulumi:"blockWebApplications"`
+	// The URL categories being accessed
 	Categories pulumi.StringArrayOutput `pulumi:"categories"`
-	// The description of the security rule.
+	// Default profile settings
+	DefaultProfileSettings SecurityRuleDefaultProfileSettingsOutput `pulumi:"defaultProfileSettings"`
+	// The description of the security rule
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The destination Host Integrity Profile(s).
+	// The destination Host Integrity Profile(s)
 	DestinationHips pulumi.StringArrayOutput `pulumi:"destinationHips"`
-	// The destination address(es).
+	// The destination address(es)
 	Destinations pulumi.StringArrayOutput `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The state of the security rule. Default: `false`.
+	// Devices
+	Devices pulumi.StringArrayOutput `pulumi:"devices"`
+	// Is the security rule disabled?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The source security zone(s).
+	// The source security zone(s)
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
-	// The external log forwarding profile.
-	LogSetting pulumi.StringPtrOutput `pulumi:"logSetting"`
-	// The name of the security rule.
+	// Log at session end?
+	LogEnd pulumi.BoolOutput `pulumi:"logEnd"`
+	// The external log forwarding profile
+	LogSetting pulumi.StringOutput `pulumi:"logSetting"`
+	// Log settings
+	LogSettings SecurityRuleLogSettingsOutput `pulumi:"logSettings"`
+	// Log at session start?
+	LogStart pulumi.BoolOutput `pulumi:"logStart"`
+	// The name of the security rule
 	Name pulumi.StringOutput `pulumi:"name"`
-	// Negate the destination addresses(es). Default: `false`.
+	// Negate the destination addresses(es)?
 	NegateDestination pulumi.BoolOutput `pulumi:"negateDestination"`
-	// Negate the source address(es). Default: `false`.
+	// Negate the source address(es)?
 	NegateSource pulumi.BoolOutput `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// Negate user
+	NegateUser pulumi.BoolOutput `pulumi:"negateUser"`
+	// Policy type
+	PolicyType pulumi.StringOutput `pulumi:"policyType"`
+	// The position of a security rule
 	Position pulumi.StringOutput `pulumi:"position"`
-	// The security profile object.
-	ProfileSetting SecurityRuleProfileSettingPtrOutput `pulumi:"profileSetting"`
-	// The service(s) being accessed.
+	// The security profile object
+	ProfileSetting SecurityRuleProfileSettingOutput `pulumi:"profileSetting"`
+	// Schedule in which this rule will be applied
+	Schedule pulumi.StringPtrOutput `pulumi:"schedule"`
+	// Security settings
+	SecuritySettings SecurityRuleSecuritySettingsOutput `pulumi:"securitySettings"`
+	// The service(s) being accessed
 	Services pulumi.StringArrayOutput `pulumi:"services"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
-	// The source Host Integrity Profile(s).
+	// The source Host Integrity Profile(s)
 	SourceHips pulumi.StringArrayOutput `pulumi:"sourceHips"`
-	// The source user(s) or group(s).
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
-	// The source address(es).
+	// The source addresses(es)
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
-	// The tags associated with the security rule.
+	// The tags associated with the security rule
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
-	Tfid pulumi.StringOutput      `pulumi:"tfid"`
-	// The destination security zone(s).
+	// Tenant restrictions
+	TenantRestrictions pulumi.StringArrayOutput `pulumi:"tenantRestrictions"`
+	Tfid               pulumi.StringOutput      `pulumi:"tfid"`
+	// The destination security zone(s)
 	Tos pulumi.StringArrayOutput `pulumi:"tos"`
 }
 
@@ -93,36 +98,9 @@ type SecurityRule struct {
 func NewSecurityRule(ctx *pulumi.Context,
 	name string, args *SecurityRuleArgs, opts ...pulumi.ResourceOption) (*SecurityRule, error) {
 	if args == nil {
-		return nil, errors.New("missing one or more required arguments")
+		args = &SecurityRuleArgs{}
 	}
 
-	if args.Action == nil {
-		return nil, errors.New("invalid value for required argument 'Action'")
-	}
-	if args.Applications == nil {
-		return nil, errors.New("invalid value for required argument 'Applications'")
-	}
-	if args.Categories == nil {
-		return nil, errors.New("invalid value for required argument 'Categories'")
-	}
-	if args.Destinations == nil {
-		return nil, errors.New("invalid value for required argument 'Destinations'")
-	}
-	if args.Froms == nil {
-		return nil, errors.New("invalid value for required argument 'Froms'")
-	}
-	if args.Services == nil {
-		return nil, errors.New("invalid value for required argument 'Services'")
-	}
-	if args.SourceUsers == nil {
-		return nil, errors.New("invalid value for required argument 'SourceUsers'")
-	}
-	if args.Sources == nil {
-		return nil, errors.New("invalid value for required argument 'Sources'")
-	}
-	if args.Tos == nil {
-		return nil, errors.New("invalid value for required argument 'Tos'")
-	}
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource SecurityRule
 	err := ctx.RegisterResource("scm:index/securityRule:SecurityRule", name, args, &resource, opts...)
@@ -146,102 +124,158 @@ func GetSecurityRule(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering SecurityRule resources.
 type securityRuleState struct {
-	// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+	// The action to be taken when the rule is matched
 	Action *string `pulumi:"action"`
-	// The application(s) being accessed.
+	// Allow url category
+	AllowUrlCategories []SecurityRuleAllowUrlCategory `pulumi:"allowUrlCategories"`
+	// Allow web application
+	AllowWebApplications []SecurityRuleAllowWebApplication `pulumi:"allowWebApplications"`
+	// The application(s) being accessed
 	Applications []string `pulumi:"applications"`
-	// The URL categories being accessed.
+	// Block url category
+	BlockUrlCategories []string `pulumi:"blockUrlCategories"`
+	// Block web application
+	BlockWebApplications []string `pulumi:"blockWebApplications"`
+	// The URL categories being accessed
 	Categories []string `pulumi:"categories"`
-	// The description of the security rule.
+	// Default profile settings
+	DefaultProfileSettings *SecurityRuleDefaultProfileSettings `pulumi:"defaultProfileSettings"`
+	// The description of the security rule
 	Description *string `pulumi:"description"`
-	// The destination Host Integrity Profile(s).
+	// The destination Host Integrity Profile(s)
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The destination address(es).
+	// The destination address(es)
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The state of the security rule. Default: `false`.
+	// Devices
+	Devices []string `pulumi:"devices"`
+	// Is the security rule disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The source security zone(s).
+	// The source security zone(s)
 	Froms []string `pulumi:"froms"`
-	// The external log forwarding profile.
+	// Log at session end?
+	LogEnd *bool `pulumi:"logEnd"`
+	// The external log forwarding profile
 	LogSetting *string `pulumi:"logSetting"`
-	// The name of the security rule.
+	// Log settings
+	LogSettings *SecurityRuleLogSettings `pulumi:"logSettings"`
+	// Log at session start?
+	LogStart *bool `pulumi:"logStart"`
+	// The name of the security rule
 	Name *string `pulumi:"name"`
-	// Negate the destination addresses(es). Default: `false`.
+	// Negate the destination addresses(es)?
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// Negate the source address(es). Default: `false`.
+	// Negate the source address(es)?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// Negate user
+	NegateUser *bool `pulumi:"negateUser"`
+	// Policy type
+	PolicyType *string `pulumi:"policyType"`
+	// The position of a security rule
 	Position *string `pulumi:"position"`
-	// The security profile object.
+	// The security profile object
 	ProfileSetting *SecurityRuleProfileSetting `pulumi:"profileSetting"`
-	// The service(s) being accessed.
+	// Schedule in which this rule will be applied
+	Schedule *string `pulumi:"schedule"`
+	// Security settings
+	SecuritySettings *SecurityRuleSecuritySettings `pulumi:"securitySettings"`
+	// The service(s) being accessed
 	Services []string `pulumi:"services"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The source Host Integrity Profile(s).
+	// The source Host Integrity Profile(s)
 	SourceHips []string `pulumi:"sourceHips"`
-	// The source user(s) or group(s).
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The source address(es).
+	// The source addresses(es)
 	Sources []string `pulumi:"sources"`
-	// The tags associated with the security rule.
+	// The tags associated with the security rule
 	Tags []string `pulumi:"tags"`
-	Tfid *string  `pulumi:"tfid"`
-	// The destination security zone(s).
+	// Tenant restrictions
+	TenantRestrictions []string `pulumi:"tenantRestrictions"`
+	Tfid               *string  `pulumi:"tfid"`
+	// The destination security zone(s)
 	Tos []string `pulumi:"tos"`
 }
 
 type SecurityRuleState struct {
-	// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+	// The action to be taken when the rule is matched
 	Action pulumi.StringPtrInput
-	// The application(s) being accessed.
+	// Allow url category
+	AllowUrlCategories SecurityRuleAllowUrlCategoryArrayInput
+	// Allow web application
+	AllowWebApplications SecurityRuleAllowWebApplicationArrayInput
+	// The application(s) being accessed
 	Applications pulumi.StringArrayInput
-	// The URL categories being accessed.
+	// Block url category
+	BlockUrlCategories pulumi.StringArrayInput
+	// Block web application
+	BlockWebApplications pulumi.StringArrayInput
+	// The URL categories being accessed
 	Categories pulumi.StringArrayInput
-	// The description of the security rule.
+	// Default profile settings
+	DefaultProfileSettings SecurityRuleDefaultProfileSettingsPtrInput
+	// The description of the security rule
 	Description pulumi.StringPtrInput
-	// The destination Host Integrity Profile(s).
+	// The destination Host Integrity Profile(s)
 	DestinationHips pulumi.StringArrayInput
-	// The destination address(es).
+	// The destination address(es)
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The state of the security rule. Default: `false`.
+	// Devices
+	Devices pulumi.StringArrayInput
+	// Is the security rule disabled?
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The source security zone(s).
+	// The source security zone(s)
 	Froms pulumi.StringArrayInput
-	// The external log forwarding profile.
+	// Log at session end?
+	LogEnd pulumi.BoolPtrInput
+	// The external log forwarding profile
 	LogSetting pulumi.StringPtrInput
-	// The name of the security rule.
+	// Log settings
+	LogSettings SecurityRuleLogSettingsPtrInput
+	// Log at session start?
+	LogStart pulumi.BoolPtrInput
+	// The name of the security rule
 	Name pulumi.StringPtrInput
-	// Negate the destination addresses(es). Default: `false`.
+	// Negate the destination addresses(es)?
 	NegateDestination pulumi.BoolPtrInput
-	// Negate the source address(es). Default: `false`.
+	// Negate the source address(es)?
 	NegateSource pulumi.BoolPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// Negate user
+	NegateUser pulumi.BoolPtrInput
+	// Policy type
+	PolicyType pulumi.StringPtrInput
+	// The position of a security rule
 	Position pulumi.StringPtrInput
-	// The security profile object.
+	// The security profile object
 	ProfileSetting SecurityRuleProfileSettingPtrInput
-	// The service(s) being accessed.
+	// Schedule in which this rule will be applied
+	Schedule pulumi.StringPtrInput
+	// Security settings
+	SecuritySettings SecurityRuleSecuritySettingsPtrInput
+	// The service(s) being accessed
 	Services pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The source Host Integrity Profile(s).
+	// The source Host Integrity Profile(s)
 	SourceHips pulumi.StringArrayInput
-	// The source user(s) or group(s).
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
-	// The source address(es).
+	// The source addresses(es)
 	Sources pulumi.StringArrayInput
-	// The tags associated with the security rule.
+	// The tags associated with the security rule
 	Tags pulumi.StringArrayInput
-	Tfid pulumi.StringPtrInput
-	// The destination security zone(s).
+	// Tenant restrictions
+	TenantRestrictions pulumi.StringArrayInput
+	Tfid               pulumi.StringPtrInput
+	// The destination security zone(s)
 	Tos pulumi.StringArrayInput
 }
 
@@ -250,101 +284,157 @@ func (SecurityRuleState) ElementType() reflect.Type {
 }
 
 type securityRuleArgs struct {
-	// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-	Action string `pulumi:"action"`
-	// The application(s) being accessed.
+	// The action to be taken when the rule is matched
+	Action *string `pulumi:"action"`
+	// Allow url category
+	AllowUrlCategories []SecurityRuleAllowUrlCategory `pulumi:"allowUrlCategories"`
+	// Allow web application
+	AllowWebApplications []SecurityRuleAllowWebApplication `pulumi:"allowWebApplications"`
+	// The application(s) being accessed
 	Applications []string `pulumi:"applications"`
-	// The URL categories being accessed.
+	// Block url category
+	BlockUrlCategories []string `pulumi:"blockUrlCategories"`
+	// Block web application
+	BlockWebApplications []string `pulumi:"blockWebApplications"`
+	// The URL categories being accessed
 	Categories []string `pulumi:"categories"`
-	// The description of the security rule.
+	// Default profile settings
+	DefaultProfileSettings *SecurityRuleDefaultProfileSettings `pulumi:"defaultProfileSettings"`
+	// The description of the security rule
 	Description *string `pulumi:"description"`
-	// The destination Host Integrity Profile(s).
+	// The destination Host Integrity Profile(s)
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The destination address(es).
+	// The destination address(es)
 	Destinations []string `pulumi:"destinations"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The state of the security rule. Default: `false`.
+	// Devices
+	Devices []string `pulumi:"devices"`
+	// Is the security rule disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The source security zone(s).
+	// The source security zone(s)
 	Froms []string `pulumi:"froms"`
-	// The external log forwarding profile.
+	// Log at session end?
+	LogEnd *bool `pulumi:"logEnd"`
+	// The external log forwarding profile
 	LogSetting *string `pulumi:"logSetting"`
-	// The name of the security rule.
+	// Log settings
+	LogSettings *SecurityRuleLogSettings `pulumi:"logSettings"`
+	// Log at session start?
+	LogStart *bool `pulumi:"logStart"`
+	// The name of the security rule
 	Name *string `pulumi:"name"`
-	// Negate the destination addresses(es). Default: `false`.
+	// Negate the destination addresses(es)?
 	NegateDestination *bool `pulumi:"negateDestination"`
-	// Negate the source address(es). Default: `false`.
+	// Negate the source address(es)?
 	NegateSource *bool `pulumi:"negateSource"`
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// Negate user
+	NegateUser *bool `pulumi:"negateUser"`
+	// Policy type
+	PolicyType *string `pulumi:"policyType"`
+	// The position of a security rule
 	Position *string `pulumi:"position"`
-	// The security profile object.
+	// The security profile object
 	ProfileSetting *SecurityRuleProfileSetting `pulumi:"profileSetting"`
-	// The service(s) being accessed.
+	// Schedule in which this rule will be applied
+	Schedule *string `pulumi:"schedule"`
+	// Security settings
+	SecuritySettings *SecurityRuleSecuritySettings `pulumi:"securitySettings"`
+	// The service(s) being accessed
 	Services []string `pulumi:"services"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The source Host Integrity Profile(s).
+	// The source Host Integrity Profile(s)
 	SourceHips []string `pulumi:"sourceHips"`
-	// The source user(s) or group(s).
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The source address(es).
+	// The source addresses(es)
 	Sources []string `pulumi:"sources"`
-	// The tags associated with the security rule.
+	// The tags associated with the security rule
 	Tags []string `pulumi:"tags"`
-	// The destination security zone(s).
+	// Tenant restrictions
+	TenantRestrictions []string `pulumi:"tenantRestrictions"`
+	// The destination security zone(s)
 	Tos []string `pulumi:"tos"`
 }
 
 // The set of arguments for constructing a SecurityRule resource.
 type SecurityRuleArgs struct {
-	// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-	Action pulumi.StringInput
-	// The application(s) being accessed.
+	// The action to be taken when the rule is matched
+	Action pulumi.StringPtrInput
+	// Allow url category
+	AllowUrlCategories SecurityRuleAllowUrlCategoryArrayInput
+	// Allow web application
+	AllowWebApplications SecurityRuleAllowWebApplicationArrayInput
+	// The application(s) being accessed
 	Applications pulumi.StringArrayInput
-	// The URL categories being accessed.
+	// Block url category
+	BlockUrlCategories pulumi.StringArrayInput
+	// Block web application
+	BlockWebApplications pulumi.StringArrayInput
+	// The URL categories being accessed
 	Categories pulumi.StringArrayInput
-	// The description of the security rule.
+	// Default profile settings
+	DefaultProfileSettings SecurityRuleDefaultProfileSettingsPtrInput
+	// The description of the security rule
 	Description pulumi.StringPtrInput
-	// The destination Host Integrity Profile(s).
+	// The destination Host Integrity Profile(s)
 	DestinationHips pulumi.StringArrayInput
-	// The destination address(es).
+	// The destination address(es)
 	Destinations pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The state of the security rule. Default: `false`.
+	// Devices
+	Devices pulumi.StringArrayInput
+	// Is the security rule disabled?
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The source security zone(s).
+	// The source security zone(s)
 	Froms pulumi.StringArrayInput
-	// The external log forwarding profile.
+	// Log at session end?
+	LogEnd pulumi.BoolPtrInput
+	// The external log forwarding profile
 	LogSetting pulumi.StringPtrInput
-	// The name of the security rule.
+	// Log settings
+	LogSettings SecurityRuleLogSettingsPtrInput
+	// Log at session start?
+	LogStart pulumi.BoolPtrInput
+	// The name of the security rule
 	Name pulumi.StringPtrInput
-	// Negate the destination addresses(es). Default: `false`.
+	// Negate the destination addresses(es)?
 	NegateDestination pulumi.BoolPtrInput
-	// Negate the source address(es). Default: `false`.
+	// Negate the source address(es)?
 	NegateSource pulumi.BoolPtrInput
-	// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+	// Negate user
+	NegateUser pulumi.BoolPtrInput
+	// Policy type
+	PolicyType pulumi.StringPtrInput
+	// The position of a security rule
 	Position pulumi.StringPtrInput
-	// The security profile object.
+	// The security profile object
 	ProfileSetting SecurityRuleProfileSettingPtrInput
-	// The service(s) being accessed.
+	// Schedule in which this rule will be applied
+	Schedule pulumi.StringPtrInput
+	// Security settings
+	SecuritySettings SecurityRuleSecuritySettingsPtrInput
+	// The service(s) being accessed
 	Services pulumi.StringArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The source Host Integrity Profile(s).
+	// The source Host Integrity Profile(s)
 	SourceHips pulumi.StringArrayInput
-	// The source user(s) or group(s).
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
-	// The source address(es).
+	// The source addresses(es)
 	Sources pulumi.StringArrayInput
-	// The tags associated with the security rule.
+	// The tags associated with the security rule
 	Tags pulumi.StringArrayInput
-	// The destination security zone(s).
+	// Tenant restrictions
+	TenantRestrictions pulumi.StringArrayInput
+	// The destination security zone(s)
 	Tos pulumi.StringArrayInput
 }
 
@@ -435,121 +525,191 @@ func (o SecurityRuleOutput) ToSecurityRuleOutputWithContext(ctx context.Context)
 	return o
 }
 
-// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-func (o SecurityRuleOutput) Action() pulumi.StringOutput {
-	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.Action }).(pulumi.StringOutput)
+// The action to be taken when the rule is matched
+func (o SecurityRuleOutput) Action() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.Action }).(pulumi.StringPtrOutput)
 }
 
-// The application(s) being accessed.
+// Allow url category
+func (o SecurityRuleOutput) AllowUrlCategories() SecurityRuleAllowUrlCategoryArrayOutput {
+	return o.ApplyT(func(v *SecurityRule) SecurityRuleAllowUrlCategoryArrayOutput { return v.AllowUrlCategories }).(SecurityRuleAllowUrlCategoryArrayOutput)
+}
+
+// Allow web application
+func (o SecurityRuleOutput) AllowWebApplications() SecurityRuleAllowWebApplicationArrayOutput {
+	return o.ApplyT(func(v *SecurityRule) SecurityRuleAllowWebApplicationArrayOutput { return v.AllowWebApplications }).(SecurityRuleAllowWebApplicationArrayOutput)
+}
+
+// The application(s) being accessed
 func (o SecurityRuleOutput) Applications() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Applications }).(pulumi.StringArrayOutput)
 }
 
-// The URL categories being accessed.
+// Block url category
+func (o SecurityRuleOutput) BlockUrlCategories() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.BlockUrlCategories }).(pulumi.StringArrayOutput)
+}
+
+// Block web application
+func (o SecurityRuleOutput) BlockWebApplications() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.BlockWebApplications }).(pulumi.StringArrayOutput)
+}
+
+// The URL categories being accessed
 func (o SecurityRuleOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The description of the security rule.
+// Default profile settings
+func (o SecurityRuleOutput) DefaultProfileSettings() SecurityRuleDefaultProfileSettingsOutput {
+	return o.ApplyT(func(v *SecurityRule) SecurityRuleDefaultProfileSettingsOutput { return v.DefaultProfileSettings }).(SecurityRuleDefaultProfileSettingsOutput)
+}
+
+// The description of the security rule
 func (o SecurityRuleOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The destination Host Integrity Profile(s).
+// The destination Host Integrity Profile(s)
 func (o SecurityRuleOutput) DestinationHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.DestinationHips }).(pulumi.StringArrayOutput)
 }
 
-// The destination address(es).
+// The destination address(es)
 func (o SecurityRuleOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o SecurityRuleOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The state of the security rule. Default: `false`.
+// Devices
+func (o SecurityRuleOutput) Devices() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Devices }).(pulumi.StringArrayOutput)
+}
+
+// Is the security rule disabled?
 func (o SecurityRuleOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.BoolOutput { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o SecurityRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The source security zone(s).
+// The source security zone(s)
 func (o SecurityRuleOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The external log forwarding profile.
-func (o SecurityRuleOutput) LogSetting() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.LogSetting }).(pulumi.StringPtrOutput)
+// Log at session end?
+func (o SecurityRuleOutput) LogEnd() pulumi.BoolOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.BoolOutput { return v.LogEnd }).(pulumi.BoolOutput)
 }
 
-// The name of the security rule.
+// The external log forwarding profile
+func (o SecurityRuleOutput) LogSetting() pulumi.StringOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.LogSetting }).(pulumi.StringOutput)
+}
+
+// Log settings
+func (o SecurityRuleOutput) LogSettings() SecurityRuleLogSettingsOutput {
+	return o.ApplyT(func(v *SecurityRule) SecurityRuleLogSettingsOutput { return v.LogSettings }).(SecurityRuleLogSettingsOutput)
+}
+
+// Log at session start?
+func (o SecurityRuleOutput) LogStart() pulumi.BoolOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.BoolOutput { return v.LogStart }).(pulumi.BoolOutput)
+}
+
+// The name of the security rule
 func (o SecurityRuleOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// Negate the destination addresses(es). Default: `false`.
+// Negate the destination addresses(es)?
 func (o SecurityRuleOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.BoolOutput { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
-// Negate the source address(es). Default: `false`.
+// Negate the source address(es)?
 func (o SecurityRuleOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.BoolOutput { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+// Negate user
+func (o SecurityRuleOutput) NegateUser() pulumi.BoolOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.BoolOutput { return v.NegateUser }).(pulumi.BoolOutput)
+}
+
+// Policy type
+func (o SecurityRuleOutput) PolicyType() pulumi.StringOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.PolicyType }).(pulumi.StringOutput)
+}
+
+// The position of a security rule
 func (o SecurityRuleOutput) Position() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.Position }).(pulumi.StringOutput)
 }
 
-// The security profile object.
-func (o SecurityRuleOutput) ProfileSetting() SecurityRuleProfileSettingPtrOutput {
-	return o.ApplyT(func(v *SecurityRule) SecurityRuleProfileSettingPtrOutput { return v.ProfileSetting }).(SecurityRuleProfileSettingPtrOutput)
+// The security profile object
+func (o SecurityRuleOutput) ProfileSetting() SecurityRuleProfileSettingOutput {
+	return o.ApplyT(func(v *SecurityRule) SecurityRuleProfileSettingOutput { return v.ProfileSetting }).(SecurityRuleProfileSettingOutput)
 }
 
-// The service(s) being accessed.
+// Schedule in which this rule will be applied
+func (o SecurityRuleOutput) Schedule() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.Schedule }).(pulumi.StringPtrOutput)
+}
+
+// Security settings
+func (o SecurityRuleOutput) SecuritySettings() SecurityRuleSecuritySettingsOutput {
+	return o.ApplyT(func(v *SecurityRule) SecurityRuleSecuritySettingsOutput { return v.SecuritySettings }).(SecurityRuleSecuritySettingsOutput)
+}
+
+// The service(s) being accessed
 func (o SecurityRuleOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o SecurityRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
-// The source Host Integrity Profile(s).
+// The source Host Integrity Profile(s)
 func (o SecurityRuleOutput) SourceHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.SourceHips }).(pulumi.StringArrayOutput)
 }
 
-// The source user(s) or group(s).
+// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 func (o SecurityRuleOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The source address(es).
+// The source addresses(es)
 func (o SecurityRuleOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The tags associated with the security rule.
+// The tags associated with the security rule
 func (o SecurityRuleOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Tags }).(pulumi.StringArrayOutput)
+}
+
+// Tenant restrictions
+func (o SecurityRuleOutput) TenantRestrictions() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.TenantRestrictions }).(pulumi.StringArrayOutput)
 }
 
 func (o SecurityRuleOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The destination security zone(s).
+// The destination security zone(s)
 func (o SecurityRuleOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *SecurityRule) pulumi.StringArrayOutput { return v.Tos }).(pulumi.StringArrayOutput)
 }

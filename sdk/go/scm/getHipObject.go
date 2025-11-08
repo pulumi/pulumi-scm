@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// HipObject data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,14 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupHipObject(ctx, &scm.LookupHipObjectArgs{
-//				Id: "1234-56-789",
+//			// Look up a single HIP Profile by its ID.
+//			scmHipObjectDs, err := scm.LookupHipObject(ctx, &scm.LookupHipObjectArgs{
+//				Id: "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("hipObjectsDsResult", scmHipObjectDs)
 //			return nil
 //		})
 //	}
@@ -50,41 +52,49 @@ func LookupHipObject(ctx *pulumi.Context, args *LookupHipObjectArgs, opts ...pul
 
 // A collection of arguments for invoking getHipObject.
 type LookupHipObjectArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// The name of the HIP object
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getHipObject.
 type LookupHipObjectResult struct {
-	// The AntiMalware param.
+	// Anti malware
 	AntiMalware GetHipObjectAntiMalware `pulumi:"antiMalware"`
-	// The Certificate param.
+	// Certificate
 	Certificate GetHipObjectCertificate `pulumi:"certificate"`
-	// The CustomChecks param.
+	// Custom checks
 	CustomChecks GetHipObjectCustomChecks `pulumi:"customChecks"`
-	// The DataLossPrevention param.
+	// Data loss prevention
 	DataLossPrevention GetHipObjectDataLossPrevention `pulumi:"dataLossPrevention"`
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description string `pulumi:"description"`
-	// The DiskBackup param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Disk backup
 	DiskBackup GetHipObjectDiskBackup `pulumi:"diskBackup"`
-	// The DiskEncryption param.
+	// Disk encryption
 	DiskEncryption GetHipObjectDiskEncryption `pulumi:"diskEncryption"`
-	// The Firewall param.
+	// Firewall
 	Firewall GetHipObjectFirewall `pulumi:"firewall"`
-	// The HostInfo param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// Host info
 	HostInfo GetHipObjectHostInfo `pulumi:"hostInfo"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The MobileDevice param.
+	// Mobile device
 	MobileDevice GetHipObjectMobileDevice `pulumi:"mobileDevice"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP object
 	Name string `pulumi:"name"`
-	// The NetworkInfo param.
+	// Network info
 	NetworkInfo GetHipObjectNetworkInfo `pulumi:"networkInfo"`
-	// The PatchManagement param.
+	// Patch management
 	PatchManagement GetHipObjectPatchManagement `pulumi:"patchManagement"`
-	Tfid            string                      `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupHipObjectOutput(ctx *pulumi.Context, args LookupHipObjectOutputArgs, opts ...pulumi.InvokeOption) LookupHipObjectResultOutput {
@@ -98,8 +108,10 @@ func LookupHipObjectOutput(ctx *pulumi.Context, args LookupHipObjectOutputArgs, 
 
 // A collection of arguments for invoking getHipObject.
 type LookupHipObjectOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the HIP object
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupHipObjectOutputArgs) ElementType() reflect.Type {
@@ -121,74 +133,89 @@ func (o LookupHipObjectResultOutput) ToLookupHipObjectResultOutputWithContext(ct
 	return o
 }
 
-// The AntiMalware param.
+// Anti malware
 func (o LookupHipObjectResultOutput) AntiMalware() GetHipObjectAntiMalwareOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectAntiMalware { return v.AntiMalware }).(GetHipObjectAntiMalwareOutput)
 }
 
-// The Certificate param.
+// Certificate
 func (o LookupHipObjectResultOutput) Certificate() GetHipObjectCertificateOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectCertificate { return v.Certificate }).(GetHipObjectCertificateOutput)
 }
 
-// The CustomChecks param.
+// Custom checks
 func (o LookupHipObjectResultOutput) CustomChecks() GetHipObjectCustomChecksOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectCustomChecks { return v.CustomChecks }).(GetHipObjectCustomChecksOutput)
 }
 
-// The DataLossPrevention param.
+// Data loss prevention
 func (o LookupHipObjectResultOutput) DataLossPrevention() GetHipObjectDataLossPreventionOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDataLossPrevention { return v.DataLossPrevention }).(GetHipObjectDataLossPreventionOutput)
 }
 
-// The Description param. String length must not exceed 255 characters.
+// Description
 func (o LookupHipObjectResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The DiskBackup param.
+// The device in which the resource is defined
+func (o LookupHipObjectResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Disk backup
 func (o LookupHipObjectResultOutput) DiskBackup() GetHipObjectDiskBackupOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDiskBackup { return v.DiskBackup }).(GetHipObjectDiskBackupOutput)
 }
 
-// The DiskEncryption param.
+// Disk encryption
 func (o LookupHipObjectResultOutput) DiskEncryption() GetHipObjectDiskEncryptionOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDiskEncryption { return v.DiskEncryption }).(GetHipObjectDiskEncryptionOutput)
 }
 
-// The Firewall param.
+// Firewall
 func (o LookupHipObjectResultOutput) Firewall() GetHipObjectFirewallOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectFirewall { return v.Firewall }).(GetHipObjectFirewallOutput)
 }
 
-// The HostInfo param.
+// The folder in which the resource is defined
+func (o LookupHipObjectResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// Host info
 func (o LookupHipObjectResultOutput) HostInfo() GetHipObjectHostInfoOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectHostInfo { return v.HostInfo }).(GetHipObjectHostInfoOutput)
 }
 
-// The Id param.
+// UUID of the resource
 func (o LookupHipObjectResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The MobileDevice param.
+// Mobile device
 func (o LookupHipObjectResultOutput) MobileDevice() GetHipObjectMobileDeviceOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectMobileDevice { return v.MobileDevice }).(GetHipObjectMobileDeviceOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// The name of the HIP object
 func (o LookupHipObjectResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NetworkInfo param.
+// Network info
 func (o LookupHipObjectResultOutput) NetworkInfo() GetHipObjectNetworkInfoOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectNetworkInfo { return v.NetworkInfo }).(GetHipObjectNetworkInfoOutput)
 }
 
-// The PatchManagement param.
+// Patch management
 func (o LookupHipObjectResultOutput) PatchManagement() GetHipObjectPatchManagementOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectPatchManagement { return v.PatchManagement }).(GetHipObjectPatchManagementOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupHipObjectResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupHipObjectResultOutput) Tfid() pulumi.StringOutput {

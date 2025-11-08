@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayListDataAuthenticationPreSharedKeyResult
     {
         /// <summary>
-        /// The Key param.
+        /// Key
         /// </summary>
         public readonly string Key;
 

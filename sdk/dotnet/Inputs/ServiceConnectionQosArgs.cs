@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ServiceConnectionQosArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Enable param.
+        /// Enable
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// The QosProfile param.
+        /// Qos profile
         /// </summary>
         [Input("qosProfile")]
         public Input<string>? QosProfile { get; set; }

@@ -17,14 +17,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
     public static final HttpHeaderProfileHttpHeaderInsertionTypeArgs Empty = new HttpHeaderProfileHttpHeaderInsertionTypeArgs();
 
     /**
-     * The Domains param.
+     * A list of DNS domains
      * 
      */
     @Import(name="domains", required=true)
     private Output<List<String>> domains;
 
     /**
-     * @return The Domains param.
+     * @return A list of DNS domains
      * 
      */
     public Output<List<String>> domains() {
@@ -32,14 +32,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
     }
 
     /**
-     * The Headers param.
+     * Headers
      * 
      */
     @Import(name="headers", required=true)
     private Output<List<HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs>> headers;
 
     /**
-     * @return The Headers param.
+     * @return Headers
      * 
      */
     public Output<List<HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs>> headers() {
@@ -47,14 +47,14 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
     }
 
     /**
-     * The Name param.
+     * The HTTP header insertion type (*This is a predefined list in the UI*)
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The HTTP header insertion type (*This is a predefined list in the UI*)
      * 
      */
     public Output<String> name() {
@@ -88,7 +88,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param domains The Domains param.
+         * @param domains A list of DNS domains
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param domains The Domains param.
+         * @param domains A list of DNS domains
          * 
          * @return builder
          * 
@@ -109,7 +109,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param domains The Domains param.
+         * @param domains A list of DNS domains
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param headers The Headers param.
+         * @param headers Headers
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param headers The Headers param.
+         * @param headers Headers
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param headers The Headers param.
+         * @param headers Headers
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param name The Name param.
+         * @param name The HTTP header insertion type (*This is a predefined list in the UI*)
          * 
          * @return builder
          * 
@@ -161,7 +161,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeArgs extends com.pulu
         }
 
         /**
-         * @param name The Name param.
+         * @param name The HTTP header insertion type (*This is a predefined list in the UI*)
          * 
          * @return builder
          * 

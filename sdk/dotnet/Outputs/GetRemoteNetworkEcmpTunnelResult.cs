@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRemoteNetworkEcmpTunnelResult
     {
         /// <summary>
-        /// The IpsecTunnel param.
+        /// Ipsec tunnel
         /// </summary>
         public readonly string IpsecTunnel;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         public readonly Outputs.GetRemoteNetworkEcmpTunnelProtocolResult Protocol;
 

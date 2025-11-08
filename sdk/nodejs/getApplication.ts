@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Application data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,19 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getApplication({
- *     id: "1234-56-789",
+ * // Look up a single application object by its ID.
+ * // The ID used here is from the API response log you provided.
+ * const scmApplicationDs = scm.getApplication({
+ *     id: "bb16f631-4839-475e-8628-70585319ca75",
  * });
+ * export const applicationDsResult = scmApplicationDs;
  * ```
  */
 export function getApplication(args: GetApplicationArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplication:getApplication", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +36,13 @@ export function getApplication(args: GetApplicationArgs, opts?: pulumi.InvokeOpt
  */
 export interface GetApplicationArgs {
     /**
-     * The Id param.
+     * The UUID of the application
      */
     id: string;
+    /**
+     * The name of the application
+     */
+    name?: string;
 }
 
 /**
@@ -42,125 +50,137 @@ export interface GetApplicationArgs {
  */
 export interface GetApplicationResult {
     /**
-     * The AbleToTransferFile param.
+     * Able to transfer file
      */
     readonly ableToTransferFile: boolean;
     /**
-     * The AlgDisableCapability param. String length must not exceed 127 characters.
+     * Alg disable capability
      */
     readonly algDisableCapability: string;
     /**
-     * The Category param.
+     * Category
      */
     readonly category: string;
     /**
-     * The ConsumeBigBandwidth param.
+     * Consume big bandwidth
      */
     readonly consumeBigBandwidth: boolean;
     /**
-     * The DataIdent param.
+     * Data ident
      */
     readonly dataIdent: boolean;
     /**
-     * The Default param.
+     * Default
      */
     readonly default: outputs.GetApplicationDefault;
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     readonly description: string;
     /**
-     * The EvasiveBehavior param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Evasive behavior
      */
     readonly evasiveBehavior: boolean;
     /**
-     * The FileTypeIdent param.
+     * File type ident
      */
     readonly fileTypeIdent: boolean;
     /**
-     * The HasKnownVulnerability param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * Has known vulnerability
      */
     readonly hasKnownVulnerability: boolean;
     /**
-     * The Id param.
+     * The UUID of the application
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the application
      */
     readonly name: string;
     /**
-     * The NoAppidCaching param.
+     * No appid caching
      */
     readonly noAppidCaching: boolean;
     /**
-     * The ParentApp param. String length must not exceed 127 characters.
+     * Parent app
      */
     readonly parentApp: string;
     /**
-     * The PervasiveUse param.
+     * Pervasive use
      */
     readonly pervasiveUse: boolean;
     /**
-     * The ProneToMisuse param.
+     * Prone to misuse
      */
     readonly proneToMisuse: boolean;
     /**
-     * The Risk param. Value must be between 1 and 5.
+     * Risk
      */
-    readonly risk: number;
+    readonly risk: string;
     /**
-     * The Signatures param.
+     * Signature
      */
     readonly signatures: outputs.GetApplicationSignature[];
     /**
-     * The Subcategory param. String length must not exceed 63 characters.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Subcategory
      */
     readonly subcategory: string;
     /**
-     * timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * timeout for half-close session in seconds
      */
     readonly tcpHalfClosedTimeout: number;
     /**
-     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds
      */
     readonly tcpTimeWaitTimeout: number;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     readonly tcpTimeout: number;
     /**
-     * The Technology param. String length must not exceed 63 characters.
+     * Technology
      */
     readonly technology: string;
     readonly tfid: string;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     readonly timeout: number;
     /**
-     * The TunnelApplications param.
+     * Tunnel applications
      */
     readonly tunnelApplications: boolean;
     /**
-     * The TunnelOtherApplication param.
+     * Tunnel other application
      */
     readonly tunnelOtherApplication: boolean;
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      */
     readonly udpTimeout: number;
     /**
-     * The UsedByMalware param.
+     * Used by malware
      */
     readonly usedByMalware: boolean;
     /**
-     * The VirusIdent param.
+     * Virus ident
      */
     readonly virusIdent: boolean;
 }
 /**
- * Retrieves a config item.
+ * Application data source
  *
  * ## Example Usage
  *
@@ -168,15 +188,19 @@ export interface GetApplicationResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getApplication({
- *     id: "1234-56-789",
+ * // Look up a single application object by its ID.
+ * // The ID used here is from the API response log you provided.
+ * const scmApplicationDs = scm.getApplication({
+ *     id: "bb16f631-4839-475e-8628-70585319ca75",
  * });
+ * export const applicationDsResult = scmApplicationDs;
  * ```
  */
 export function getApplicationOutput(args: GetApplicationOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getApplication:getApplication", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -185,7 +209,11 @@ export function getApplicationOutput(args: GetApplicationOutputArgs, opts?: pulu
  */
 export interface GetApplicationOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the application
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the application
+     */
+    name?: pulumi.Input<string>;
 }

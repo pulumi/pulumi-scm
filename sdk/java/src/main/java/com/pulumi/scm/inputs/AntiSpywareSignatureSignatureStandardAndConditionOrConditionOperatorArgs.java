@@ -19,14 +19,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     public static final AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs Empty = new AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs();
 
     /**
-     * The EqualTo param.
+     * Equal to
      * 
      */
     @Import(name="equalTo")
     private @Nullable Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs> equalTo;
 
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToArgs>> equalTo() {
@@ -34,14 +34,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     }
 
     /**
-     * The GreaterThan param.
+     * Greater than
      * 
      */
     @Import(name="greaterThan")
     private @Nullable Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs> greaterThan;
 
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanArgs>> greaterThan() {
@@ -49,14 +49,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     }
 
     /**
-     * The LessThan param.
+     * Less than
      * 
      */
     @Import(name="lessThan")
     private @Nullable Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgs> lessThan;
 
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanArgs>> lessThan() {
@@ -64,14 +64,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     }
 
     /**
-     * The PatternMatch param.
+     * Pattern match
      * 
      */
     @Import(name="patternMatch")
     private @Nullable Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs> patternMatch;
 
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchArgs>> patternMatch() {
@@ -106,7 +106,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param equalTo The EqualTo param.
+         * @param equalTo Equal to
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param equalTo The EqualTo param.
+         * @param equalTo Equal to
          * 
          * @return builder
          * 
@@ -127,7 +127,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param greaterThan The GreaterThan param.
+         * @param greaterThan Greater than
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param greaterThan The GreaterThan param.
+         * @param greaterThan Greater than
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param lessThan The LessThan param.
+         * @param lessThan Less than
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param lessThan The LessThan param.
+         * @param lessThan Less than
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param patternMatch The PatternMatch param.
+         * @param patternMatch Pattern match
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param patternMatch The PatternMatch param.
+         * @param patternMatch Pattern match
          * 
          * @return builder
          * 

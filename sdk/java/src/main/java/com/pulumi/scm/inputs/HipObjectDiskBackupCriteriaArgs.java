@@ -17,14 +17,14 @@ public final class HipObjectDiskBackupCriteriaArgs extends com.pulumi.resources.
     public static final HipObjectDiskBackupCriteriaArgs Empty = new HipObjectDiskBackupCriteriaArgs();
 
     /**
-     * Is Installed. Default: `true`.
+     * Is Installed
      * 
      */
     @Import(name="isInstalled")
     private @Nullable Output<Boolean> isInstalled;
 
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Output<Boolean>> isInstalled() {
@@ -32,14 +32,14 @@ public final class HipObjectDiskBackupCriteriaArgs extends com.pulumi.resources.
     }
 
     /**
-     * The LastBackupTime param.
+     * Last backup time
      * 
      */
     @Import(name="lastBackupTime")
     private @Nullable Output<HipObjectDiskBackupCriteriaLastBackupTimeArgs> lastBackupTime;
 
     /**
-     * @return The LastBackupTime param.
+     * @return Last backup time
      * 
      */
     public Optional<Output<HipObjectDiskBackupCriteriaLastBackupTimeArgs>> lastBackupTime() {
@@ -72,7 +72,7 @@ public final class HipObjectDiskBackupCriteriaArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class HipObjectDiskBackupCriteriaArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class HipObjectDiskBackupCriteriaArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param lastBackupTime The LastBackupTime param.
+         * @param lastBackupTime Last backup time
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HipObjectDiskBackupCriteriaArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param lastBackupTime The LastBackupTime param.
+         * @param lastBackupTime Last backup time
          * 
          * @return builder
          * 

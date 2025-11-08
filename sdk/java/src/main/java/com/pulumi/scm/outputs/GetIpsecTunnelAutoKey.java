@@ -15,50 +15,50 @@ import java.util.Objects;
 @CustomType
 public final class GetIpsecTunnelAutoKey {
     /**
-     * @return The IkeGateways param.
+     * @return Ike gateway
      * 
      */
     private List<GetIpsecTunnelAutoKeyIkeGateway> ikeGateways;
     /**
-     * @return The IpsecCryptoProfile param.
+     * @return Ipsec crypto profile
      * 
      */
     private String ipsecCryptoProfile;
     /**
-     * @return IPv6 type of proxy*id values.
+     * @return IPv6 type of proxy*id values
      * 
      */
     private List<GetIpsecTunnelAutoKeyProxyIdV6> proxyIdV6s;
     /**
-     * @return IPv4 type of proxy*id values.
+     * @return IPv4 type of proxy*id values
      * 
      */
     private List<GetIpsecTunnelAutoKeyProxyId> proxyIds;
 
     private GetIpsecTunnelAutoKey() {}
     /**
-     * @return The IkeGateways param.
+     * @return Ike gateway
      * 
      */
     public List<GetIpsecTunnelAutoKeyIkeGateway> ikeGateways() {
         return this.ikeGateways;
     }
     /**
-     * @return The IpsecCryptoProfile param.
+     * @return Ipsec crypto profile
      * 
      */
     public String ipsecCryptoProfile() {
         return this.ipsecCryptoProfile;
     }
     /**
-     * @return IPv6 type of proxy*id values.
+     * @return IPv6 type of proxy*id values
      * 
      */
     public List<GetIpsecTunnelAutoKeyProxyIdV6> proxyIdV6s() {
         return this.proxyIdV6s;
     }
     /**
-     * @return IPv4 type of proxy*id values.
+     * @return IPv4 type of proxy*id values
      * 
      */
     public List<GetIpsecTunnelAutoKeyProxyId> proxyIds() {

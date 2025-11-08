@@ -5,9 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgs;
 import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs;
+import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgs;
 import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,29 +19,29 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
     public static final HipObjectNetworkInfoCriteriaNetworkIsNotArgs Empty = new HipObjectNetworkInfoCriteriaNetworkIsNotArgs();
 
     /**
-     * The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * Ethernet
      * 
      */
     @Import(name="ethernet")
-    private @Nullable Output<Boolean> ethernet;
+    private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgs> ethernet;
 
     /**
-     * @return The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Ethernet
      * 
      */
-    public Optional<Output<Boolean>> ethernet() {
+    public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgs>> ethernet() {
         return Optional.ofNullable(this.ethernet);
     }
 
     /**
-     * The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * Mobile
      * 
      */
     @Import(name="mobile")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs> mobile;
 
     /**
-     * @return The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Mobile
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs>> mobile() {
@@ -48,29 +49,29 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
     }
 
     /**
-     * The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * Unknown
      * 
      */
     @Import(name="unknown")
-    private @Nullable Output<Boolean> unknown;
+    private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgs> unknown;
 
     /**
-     * @return The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Unknown
      * 
      */
-    public Optional<Output<Boolean>> unknown() {
+    public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgs>> unknown() {
         return Optional.ofNullable(this.unknown);
     }
 
     /**
-     * The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * Wifi
      * 
      */
     @Import(name="wifi")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs> wifi;
 
     /**
-     * @return The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+     * @return Wifi
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs>> wifi() {
@@ -105,28 +106,28 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
         }
 
         /**
-         * @param ethernet The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param ethernet Ethernet
          * 
          * @return builder
          * 
          */
-        public Builder ethernet(@Nullable Output<Boolean> ethernet) {
+        public Builder ethernet(@Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgs> ethernet) {
             $.ethernet = ethernet;
             return this;
         }
 
         /**
-         * @param ethernet The Ethernet param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param ethernet Ethernet
          * 
          * @return builder
          * 
          */
-        public Builder ethernet(Boolean ethernet) {
+        public Builder ethernet(HipObjectNetworkInfoCriteriaNetworkIsNotEthernetArgs ethernet) {
             return ethernet(Output.of(ethernet));
         }
 
         /**
-         * @param mobile The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param mobile Mobile
          * 
          * @return builder
          * 
@@ -137,7 +138,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
         }
 
         /**
-         * @param mobile The Mobile param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param mobile Mobile
          * 
          * @return builder
          * 
@@ -147,28 +148,28 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
         }
 
         /**
-         * @param unknown The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param unknown Unknown
          * 
          * @return builder
          * 
          */
-        public Builder unknown(@Nullable Output<Boolean> unknown) {
+        public Builder unknown(@Nullable Output<HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgs> unknown) {
             $.unknown = unknown;
             return this;
         }
 
         /**
-         * @param unknown The Unknown param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param unknown Unknown
          * 
          * @return builder
          * 
          */
-        public Builder unknown(Boolean unknown) {
+        public Builder unknown(HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgs unknown) {
             return unknown(Output.of(unknown));
         }
 
         /**
-         * @param wifi The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param wifi Wifi
          * 
          * @return builder
          * 
@@ -179,7 +180,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsNotArgs extends com.pulu
         }
 
         /**
-         * @param wifi The Wifi param. Ensure that only one of the following is specified: `ethernet`, `mobile`, `unknown`, `wifi`
+         * @param wifi Wifi
          * 
          * @return builder
          * 

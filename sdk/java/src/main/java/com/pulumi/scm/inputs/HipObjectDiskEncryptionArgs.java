@@ -19,14 +19,14 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
     public static final HipObjectDiskEncryptionArgs Empty = new HipObjectDiskEncryptionArgs();
 
     /**
-     * Encryption locations.
+     * Encryption locations
      * 
      */
     @Import(name="criteria")
     private @Nullable Output<HipObjectDiskEncryptionCriteriaArgs> criteria;
 
     /**
-     * @return Encryption locations.
+     * @return Encryption locations
      * 
      */
     public Optional<Output<HipObjectDiskEncryptionCriteriaArgs>> criteria() {
@@ -34,14 +34,14 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The ExcludeVendor param. Default: `false`.
+     * Exclude vendor
      * 
      */
     @Import(name="excludeVendor")
     private @Nullable Output<Boolean> excludeVendor;
 
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Optional<Output<Boolean>> excludeVendor() {
@@ -49,14 +49,14 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * Vendor name.
+     * Vendor name
      * 
      */
     @Import(name="vendors")
     private @Nullable Output<List<HipObjectDiskEncryptionVendorArgs>> vendors;
 
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public Optional<Output<List<HipObjectDiskEncryptionVendorArgs>>> vendors() {
@@ -90,7 +90,7 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param criteria Encryption locations.
+         * @param criteria Encryption locations
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param criteria Encryption locations.
+         * @param criteria Encryption locations
          * 
          * @return builder
          * 
@@ -111,7 +111,7 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param excludeVendor The ExcludeVendor param. Default: `false`.
+         * @param excludeVendor Exclude vendor
          * 
          * @return builder
          * 
@@ -122,7 +122,7 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param excludeVendor The ExcludeVendor param. Default: `false`.
+         * @param excludeVendor Exclude vendor
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param vendors Vendor name.
+         * @param vendors Vendor name
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param vendors Vendor name.
+         * @param vendors Vendor name
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class HipObjectDiskEncryptionArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param vendors Vendor name.
+         * @param vendors Vendor name
          * 
          * @return builder
          * 

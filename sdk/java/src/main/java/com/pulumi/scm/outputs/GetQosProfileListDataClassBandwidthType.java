@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetQosProfileListDataClassBandwidthType {
     /**
-     * @return The Mbps param.
+     * @return Mbps
      * 
      */
     private GetQosProfileListDataClassBandwidthTypeMbps mbps;
     /**
-     * @return The Percentage param.
+     * @return Percentage
      * 
      */
     private GetQosProfileListDataClassBandwidthTypePercentage percentage;
 
     private GetQosProfileListDataClassBandwidthType() {}
     /**
-     * @return The Mbps param.
+     * @return Mbps
      * 
      */
     public GetQosProfileListDataClassBandwidthTypeMbps mbps() {
         return this.mbps;
     }
     /**
-     * @return The Percentage param.
+     * @return Percentage
      * 
      */
     public GetQosProfileListDataClassBandwidthTypePercentage percentage() {

@@ -12,38 +12,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectHostInfoCriteriaHostId {
     /**
-     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Contains
      * 
      */
     private @Nullable String contains;
     /**
-     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Is
      * 
      */
     private @Nullable String is;
     /**
-     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Is not
      * 
      */
     private @Nullable String isNot;
 
     private HipObjectHostInfoCriteriaHostId() {}
     /**
-     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Contains
      * 
      */
     public Optional<String> contains() {
         return Optional.ofNullable(this.contains);
     }
     /**
-     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Is
      * 
      */
     public Optional<String> is() {
         return Optional.ofNullable(this.is);
     }
     /**
-     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Is not
      * 
      */
     public Optional<String> isNot() {

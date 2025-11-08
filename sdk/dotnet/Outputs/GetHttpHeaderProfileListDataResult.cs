@@ -14,36 +14,61 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHttpHeaderProfileListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the HTTP header profile
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The HttpHeaderInsertions param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// A list of HTTP header profile rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHttpHeaderProfileListDataHttpHeaderInsertionResult> HttpHeaderInsertions;
         /// <summary>
-        /// UUID of the resource.
+        /// The UUID of the HTTP header profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the HTTP header profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetHttpHeaderProfileListDataResult(
             string description,
 
+            string device,
+
+            string folder,
+
             ImmutableArray<Outputs.GetHttpHeaderProfileListDataHttpHeaderInsertionResult> httpHeaderInsertions,
 
             string id,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             HttpHeaderInsertions = httpHeaderInsertions;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

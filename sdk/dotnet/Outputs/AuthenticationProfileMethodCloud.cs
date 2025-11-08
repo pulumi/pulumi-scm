@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class AuthenticationProfileMethodCloud
     {
         /// <summary>
-        /// The tenant profile name.
+        /// The tenant profile name
         /// </summary>
         public readonly string? ProfileName;
 

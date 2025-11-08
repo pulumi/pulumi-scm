@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// HipProfile data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,14 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupHipProfile(ctx, &scm.LookupHipProfileArgs{
-//				Id: "1234-56-789",
+//			// Look up a single HIP Profile by its ID.
+//			scmHipProfileDs, err := scm.LookupHipProfile(ctx, &scm.LookupHipProfileArgs{
+//				Id: "e0a970b8-98d2-42e9-a273-53fbf67607c2",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("hipProfileDsResult", scmHipProfileDs)
 //			return nil
 //		})
 //	}
@@ -50,21 +52,29 @@ func LookupHipProfile(ctx *pulumi.Context, args *LookupHipProfileArgs, opts ...p
 
 // A collection of arguments for invoking getHipProfile.
 type LookupHipProfileArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// The name of the HIP profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getHipProfile.
 type LookupHipProfileResult struct {
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Match param. String length must not exceed 2048 characters.
+	// Match
 	Match string `pulumi:"match"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP profile
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupHipProfileOutput(ctx *pulumi.Context, args LookupHipProfileOutputArgs, opts ...pulumi.InvokeOption) LookupHipProfileResultOutput {
@@ -78,8 +88,10 @@ func LookupHipProfileOutput(ctx *pulumi.Context, args LookupHipProfileOutputArgs
 
 // A collection of arguments for invoking getHipProfile.
 type LookupHipProfileOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the HIP profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupHipProfileOutputArgs) ElementType() reflect.Type {
@@ -101,24 +113,39 @@ func (o LookupHipProfileResultOutput) ToLookupHipProfileResultOutputWithContext(
 	return o
 }
 
-// The Description param. String length must not exceed 255 characters.
+// Description
 func (o LookupHipProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupHipProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupHipProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
 func (o LookupHipProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Match param. String length must not exceed 2048 characters.
+// Match
 func (o LookupHipProfileResultOutput) Match() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Match }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// The name of the HIP profile
 func (o LookupHipProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupHipProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupHipProfileResultOutput) Tfid() pulumi.StringOutput {

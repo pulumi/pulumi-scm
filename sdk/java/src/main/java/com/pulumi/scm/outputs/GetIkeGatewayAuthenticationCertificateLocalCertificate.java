@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayAuthenticationCertificateLocalCertificate {
     /**
-     * @return The LocalCertificateName param.
+     * @return Local certificate name
      * 
      */
     private String localCertificateName;
 
     private GetIkeGatewayAuthenticationCertificateLocalCertificate() {}
     /**
-     * @return The LocalCertificateName param.
+     * @return Local certificate name
      * 
      */
     public String localCertificateName() {

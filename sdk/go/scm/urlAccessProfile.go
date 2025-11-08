@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// UrlAccessProfile resource
 //
 // ## Example Usage
 //
@@ -27,8 +27,19 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a URL Access Profile object.
 //			_, err := scm.NewUrlAccessProfile(ctx, "example", &scm.UrlAccessProfileArgs{
-//				Folder: pulumi.String("Shared"),
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("example_url_access_profile"),
+//				Description: pulumi.String("Test URL Access Profile for create API"),
+//				Blocks: pulumi.StringArray{
+//					pulumi.String("adult"),
+//					pulumi.String("gambling"),
+//				},
+//				Alerts: pulumi.StringArray{
+//					pulumi.String("high-risk"),
+//					pulumi.String("phishing"),
+//				},
 //			})
 //			if err != nil {
 //				return err
@@ -41,41 +52,43 @@ import (
 type UrlAccessProfile struct {
 	pulumi.CustomResourceState
 
-	// The Alerts param.
+	// Alert
 	Alerts pulumi.StringArrayOutput `pulumi:"alerts"`
-	// The Allows param.
+	// Allow
 	Allows pulumi.StringArrayOutput `pulumi:"allows"`
-	// The Blocks param.
+	// Block
 	Blocks pulumi.StringArrayOutput `pulumi:"blocks"`
-	// The CloudInlineCat param.
+	// Cloud inline cat
 	CloudInlineCat pulumi.BoolPtrOutput `pulumi:"cloudInlineCat"`
-	// The Continues param.
+	// Continue
 	Continues pulumi.StringArrayOutput `pulumi:"continues"`
-	// The CredentialEnforcement param.
-	CredentialEnforcement UrlAccessProfileCredentialEnforcementPtrOutput `pulumi:"credentialEnforcement"`
-	// The Description param. String length must not exceed 255 characters.
+	// Credential enforcement
+	CredentialEnforcement UrlAccessProfileCredentialEnforcementOutput `pulumi:"credentialEnforcement"`
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The LocalInlineCat param.
+	// Local inline cat
 	LocalInlineCat pulumi.BoolPtrOutput `pulumi:"localInlineCat"`
-	// The LogContainerPageOnly param. Default: `true`.
+	// Log container page only
 	LogContainerPageOnly pulumi.BoolOutput `pulumi:"logContainerPageOnly"`
-	// The LogHttpHdrReferer param. Default: `false`.
+	// Log http hdr referer
 	LogHttpHdrReferer pulumi.BoolOutput `pulumi:"logHttpHdrReferer"`
-	// The LogHttpHdrUserAgent param. Default: `false`.
+	// Log http hdr user agent
 	LogHttpHdrUserAgent pulumi.BoolOutput `pulumi:"logHttpHdrUserAgent"`
-	// The LogHttpHdrXff param. Default: `false`.
+	// Log http hdr xff
 	LogHttpHdrXff pulumi.BoolOutput `pulumi:"logHttpHdrXff"`
-	// The MlavCategoryExceptions param.
+	// Mlav category exception
 	MlavCategoryExceptions pulumi.StringArrayOutput `pulumi:"mlavCategoryExceptions"`
-	// The Name param.
+	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The SafeSearchEnforcement param. Default: `false`.
+	// Redirect
+	Redirects pulumi.StringArrayOutput `pulumi:"redirects"`
+	// Safe search enforcement
 	SafeSearchEnforcement pulumi.BoolOutput `pulumi:"safeSearchEnforcement"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -110,81 +123,85 @@ func GetUrlAccessProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering UrlAccessProfile resources.
 type urlAccessProfileState struct {
-	// The Alerts param.
+	// Alert
 	Alerts []string `pulumi:"alerts"`
-	// The Allows param.
+	// Allow
 	Allows []string `pulumi:"allows"`
-	// The Blocks param.
+	// Block
 	Blocks []string `pulumi:"blocks"`
-	// The CloudInlineCat param.
+	// Cloud inline cat
 	CloudInlineCat *bool `pulumi:"cloudInlineCat"`
-	// The Continues param.
+	// Continue
 	Continues []string `pulumi:"continues"`
-	// The CredentialEnforcement param.
+	// Credential enforcement
 	CredentialEnforcement *UrlAccessProfileCredentialEnforcement `pulumi:"credentialEnforcement"`
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The LocalInlineCat param.
+	// Local inline cat
 	LocalInlineCat *bool `pulumi:"localInlineCat"`
-	// The LogContainerPageOnly param. Default: `true`.
+	// Log container page only
 	LogContainerPageOnly *bool `pulumi:"logContainerPageOnly"`
-	// The LogHttpHdrReferer param. Default: `false`.
+	// Log http hdr referer
 	LogHttpHdrReferer *bool `pulumi:"logHttpHdrReferer"`
-	// The LogHttpHdrUserAgent param. Default: `false`.
+	// Log http hdr user agent
 	LogHttpHdrUserAgent *bool `pulumi:"logHttpHdrUserAgent"`
-	// The LogHttpHdrXff param. Default: `false`.
+	// Log http hdr xff
 	LogHttpHdrXff *bool `pulumi:"logHttpHdrXff"`
-	// The MlavCategoryExceptions param.
+	// Mlav category exception
 	MlavCategoryExceptions []string `pulumi:"mlavCategoryExceptions"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The SafeSearchEnforcement param. Default: `false`.
+	// Redirect
+	Redirects []string `pulumi:"redirects"`
+	// Safe search enforcement
 	SafeSearchEnforcement *bool `pulumi:"safeSearchEnforcement"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type UrlAccessProfileState struct {
-	// The Alerts param.
+	// Alert
 	Alerts pulumi.StringArrayInput
-	// The Allows param.
+	// Allow
 	Allows pulumi.StringArrayInput
-	// The Blocks param.
+	// Block
 	Blocks pulumi.StringArrayInput
-	// The CloudInlineCat param.
+	// Cloud inline cat
 	CloudInlineCat pulumi.BoolPtrInput
-	// The Continues param.
+	// Continue
 	Continues pulumi.StringArrayInput
-	// The CredentialEnforcement param.
+	// Credential enforcement
 	CredentialEnforcement UrlAccessProfileCredentialEnforcementPtrInput
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The LocalInlineCat param.
+	// Local inline cat
 	LocalInlineCat pulumi.BoolPtrInput
-	// The LogContainerPageOnly param. Default: `true`.
+	// Log container page only
 	LogContainerPageOnly pulumi.BoolPtrInput
-	// The LogHttpHdrReferer param. Default: `false`.
+	// Log http hdr referer
 	LogHttpHdrReferer pulumi.BoolPtrInput
-	// The LogHttpHdrUserAgent param. Default: `false`.
+	// Log http hdr user agent
 	LogHttpHdrUserAgent pulumi.BoolPtrInput
-	// The LogHttpHdrXff param. Default: `false`.
+	// Log http hdr xff
 	LogHttpHdrXff pulumi.BoolPtrInput
-	// The MlavCategoryExceptions param.
+	// Mlav category exception
 	MlavCategoryExceptions pulumi.StringArrayInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The SafeSearchEnforcement param. Default: `false`.
+	// Redirect
+	Redirects pulumi.StringArrayInput
+	// Safe search enforcement
 	SafeSearchEnforcement pulumi.BoolPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -194,81 +211,85 @@ func (UrlAccessProfileState) ElementType() reflect.Type {
 }
 
 type urlAccessProfileArgs struct {
-	// The Alerts param.
+	// Alert
 	Alerts []string `pulumi:"alerts"`
-	// The Allows param.
+	// Allow
 	Allows []string `pulumi:"allows"`
-	// The Blocks param.
+	// Block
 	Blocks []string `pulumi:"blocks"`
-	// The CloudInlineCat param.
+	// Cloud inline cat
 	CloudInlineCat *bool `pulumi:"cloudInlineCat"`
-	// The Continues param.
+	// Continue
 	Continues []string `pulumi:"continues"`
-	// The CredentialEnforcement param.
+	// Credential enforcement
 	CredentialEnforcement *UrlAccessProfileCredentialEnforcement `pulumi:"credentialEnforcement"`
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The LocalInlineCat param.
+	// Local inline cat
 	LocalInlineCat *bool `pulumi:"localInlineCat"`
-	// The LogContainerPageOnly param. Default: `true`.
+	// Log container page only
 	LogContainerPageOnly *bool `pulumi:"logContainerPageOnly"`
-	// The LogHttpHdrReferer param. Default: `false`.
+	// Log http hdr referer
 	LogHttpHdrReferer *bool `pulumi:"logHttpHdrReferer"`
-	// The LogHttpHdrUserAgent param. Default: `false`.
+	// Log http hdr user agent
 	LogHttpHdrUserAgent *bool `pulumi:"logHttpHdrUserAgent"`
-	// The LogHttpHdrXff param. Default: `false`.
+	// Log http hdr xff
 	LogHttpHdrXff *bool `pulumi:"logHttpHdrXff"`
-	// The MlavCategoryExceptions param.
+	// Mlav category exception
 	MlavCategoryExceptions []string `pulumi:"mlavCategoryExceptions"`
-	// The Name param.
+	// Name
 	Name *string `pulumi:"name"`
-	// The SafeSearchEnforcement param. Default: `false`.
+	// Redirect
+	Redirects []string `pulumi:"redirects"`
+	// Safe search enforcement
 	SafeSearchEnforcement *bool `pulumi:"safeSearchEnforcement"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a UrlAccessProfile resource.
 type UrlAccessProfileArgs struct {
-	// The Alerts param.
+	// Alert
 	Alerts pulumi.StringArrayInput
-	// The Allows param.
+	// Allow
 	Allows pulumi.StringArrayInput
-	// The Blocks param.
+	// Block
 	Blocks pulumi.StringArrayInput
-	// The CloudInlineCat param.
+	// Cloud inline cat
 	CloudInlineCat pulumi.BoolPtrInput
-	// The Continues param.
+	// Continue
 	Continues pulumi.StringArrayInput
-	// The CredentialEnforcement param.
+	// Credential enforcement
 	CredentialEnforcement UrlAccessProfileCredentialEnforcementPtrInput
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The LocalInlineCat param.
+	// Local inline cat
 	LocalInlineCat pulumi.BoolPtrInput
-	// The LogContainerPageOnly param. Default: `true`.
+	// Log container page only
 	LogContainerPageOnly pulumi.BoolPtrInput
-	// The LogHttpHdrReferer param. Default: `false`.
+	// Log http hdr referer
 	LogHttpHdrReferer pulumi.BoolPtrInput
-	// The LogHttpHdrUserAgent param. Default: `false`.
+	// Log http hdr user agent
 	LogHttpHdrUserAgent pulumi.BoolPtrInput
-	// The LogHttpHdrXff param. Default: `false`.
+	// Log http hdr xff
 	LogHttpHdrXff pulumi.BoolPtrInput
-	// The MlavCategoryExceptions param.
+	// Mlav category exception
 	MlavCategoryExceptions pulumi.StringArrayInput
-	// The Name param.
+	// Name
 	Name pulumi.StringPtrInput
-	// The SafeSearchEnforcement param. Default: `false`.
+	// Redirect
+	Redirects pulumi.StringArrayInput
+	// Safe search enforcement
 	SafeSearchEnforcement pulumi.BoolPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -359,94 +380,97 @@ func (o UrlAccessProfileOutput) ToUrlAccessProfileOutputWithContext(ctx context.
 	return o
 }
 
-// The Alerts param.
+// Alert
 func (o UrlAccessProfileOutput) Alerts() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringArrayOutput { return v.Alerts }).(pulumi.StringArrayOutput)
 }
 
-// The Allows param.
+// Allow
 func (o UrlAccessProfileOutput) Allows() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringArrayOutput { return v.Allows }).(pulumi.StringArrayOutput)
 }
 
-// The Blocks param.
+// Block
 func (o UrlAccessProfileOutput) Blocks() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringArrayOutput { return v.Blocks }).(pulumi.StringArrayOutput)
 }
 
-// The CloudInlineCat param.
+// Cloud inline cat
 func (o UrlAccessProfileOutput) CloudInlineCat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.BoolPtrOutput { return v.CloudInlineCat }).(pulumi.BoolPtrOutput)
 }
 
-// The Continues param.
+// Continue
 func (o UrlAccessProfileOutput) Continues() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringArrayOutput { return v.Continues }).(pulumi.StringArrayOutput)
 }
 
-// The CredentialEnforcement param.
-func (o UrlAccessProfileOutput) CredentialEnforcement() UrlAccessProfileCredentialEnforcementPtrOutput {
-	return o.ApplyT(func(v *UrlAccessProfile) UrlAccessProfileCredentialEnforcementPtrOutput {
-		return v.CredentialEnforcement
-	}).(UrlAccessProfileCredentialEnforcementPtrOutput)
+// Credential enforcement
+func (o UrlAccessProfileOutput) CredentialEnforcement() UrlAccessProfileCredentialEnforcementOutput {
+	return o.ApplyT(func(v *UrlAccessProfile) UrlAccessProfileCredentialEnforcementOutput { return v.CredentialEnforcement }).(UrlAccessProfileCredentialEnforcementOutput)
 }
 
-// The Description param. String length must not exceed 255 characters.
+// Description
 func (o UrlAccessProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o UrlAccessProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o UrlAccessProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The LocalInlineCat param.
+// Local inline cat
 func (o UrlAccessProfileOutput) LocalInlineCat() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.BoolPtrOutput { return v.LocalInlineCat }).(pulumi.BoolPtrOutput)
 }
 
-// The LogContainerPageOnly param. Default: `true`.
+// Log container page only
 func (o UrlAccessProfileOutput) LogContainerPageOnly() pulumi.BoolOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.BoolOutput { return v.LogContainerPageOnly }).(pulumi.BoolOutput)
 }
 
-// The LogHttpHdrReferer param. Default: `false`.
+// Log http hdr referer
 func (o UrlAccessProfileOutput) LogHttpHdrReferer() pulumi.BoolOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.BoolOutput { return v.LogHttpHdrReferer }).(pulumi.BoolOutput)
 }
 
-// The LogHttpHdrUserAgent param. Default: `false`.
+// Log http hdr user agent
 func (o UrlAccessProfileOutput) LogHttpHdrUserAgent() pulumi.BoolOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.BoolOutput { return v.LogHttpHdrUserAgent }).(pulumi.BoolOutput)
 }
 
-// The LogHttpHdrXff param. Default: `false`.
+// Log http hdr xff
 func (o UrlAccessProfileOutput) LogHttpHdrXff() pulumi.BoolOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.BoolOutput { return v.LogHttpHdrXff }).(pulumi.BoolOutput)
 }
 
-// The MlavCategoryExceptions param.
+// Mlav category exception
 func (o UrlAccessProfileOutput) MlavCategoryExceptions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringArrayOutput { return v.MlavCategoryExceptions }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// Name
 func (o UrlAccessProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The SafeSearchEnforcement param. Default: `false`.
+// Redirect
+func (o UrlAccessProfileOutput) Redirects() pulumi.StringArrayOutput {
+	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringArrayOutput { return v.Redirects }).(pulumi.StringArrayOutput)
+}
+
+// Safe search enforcement
 func (o UrlAccessProfileOutput) SafeSearchEnforcement() pulumi.BoolOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.BoolOutput { return v.SafeSearchEnforcement }).(pulumi.BoolOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o UrlAccessProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlAccessProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

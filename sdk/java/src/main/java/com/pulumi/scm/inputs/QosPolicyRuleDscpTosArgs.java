@@ -17,14 +17,14 @@ public final class QosPolicyRuleDscpTosArgs extends com.pulumi.resources.Resourc
     public static final QosPolicyRuleDscpTosArgs Empty = new QosPolicyRuleDscpTosArgs();
 
     /**
-     * The Codepoints param.
+     * Codepoints
      * 
      */
     @Import(name="codepoints")
     private @Nullable Output<List<QosPolicyRuleDscpTosCodepointArgs>> codepoints;
 
     /**
-     * @return The Codepoints param.
+     * @return Codepoints
      * 
      */
     public Optional<Output<List<QosPolicyRuleDscpTosCodepointArgs>>> codepoints() {
@@ -56,7 +56,7 @@ public final class QosPolicyRuleDscpTosArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param codepoints The Codepoints param.
+         * @param codepoints Codepoints
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class QosPolicyRuleDscpTosArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param codepoints The Codepoints param.
+         * @param codepoints Codepoints
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class QosPolicyRuleDscpTosArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param codepoints The Codepoints param.
+         * @param codepoints Codepoints
          * 
          * @return builder
          * 

@@ -19,14 +19,14 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
     public static final ServiceConnectionGroupArgs Empty = new ServiceConnectionGroupArgs();
 
     /**
-     * The DisableSnat param.
+     * Disable snat
      * 
      */
     @Import(name="disableSnat")
     private @Nullable Output<Boolean> disableSnat;
 
     /**
-     * @return The DisableSnat param.
+     * @return Disable snat
      * 
      */
     public Optional<Output<Boolean>> disableSnat() {
@@ -34,29 +34,14 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
-
-    /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -64,14 +49,14 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The PbfOnly param.
+     * Pbf only
      * 
      */
     @Import(name="pbfOnly")
     private @Nullable Output<Boolean> pbfOnly;
 
     /**
-     * @return The PbfOnly param.
+     * @return Pbf only
      * 
      */
     public Optional<Output<Boolean>> pbfOnly() {
@@ -79,14 +64,14 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The Targets param.
+     * Target
      * 
      */
     @Import(name="targets", required=true)
     private Output<List<String>> targets;
 
     /**
-     * @return The Targets param.
+     * @return Target
      * 
      */
     public Output<List<String>> targets() {
@@ -97,7 +82,6 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
 
     private ServiceConnectionGroupArgs(ServiceConnectionGroupArgs $) {
         this.disableSnat = $.disableSnat;
-        this.folder = $.folder;
         this.name = $.name;
         this.pbfOnly = $.pbfOnly;
         this.targets = $.targets;
@@ -122,7 +106,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param disableSnat The DisableSnat param.
+         * @param disableSnat Disable snat
          * 
          * @return builder
          * 
@@ -133,7 +117,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param disableSnat The DisableSnat param.
+         * @param disableSnat Disable snat
          * 
          * @return builder
          * 
@@ -143,28 +127,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable Output<String> folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(String folder) {
-            return folder(Output.of(folder));
-        }
-
-        /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -175,7 +138,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -185,7 +148,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param pbfOnly The PbfOnly param.
+         * @param pbfOnly Pbf only
          * 
          * @return builder
          * 
@@ -196,7 +159,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param pbfOnly The PbfOnly param.
+         * @param pbfOnly Pbf only
          * 
          * @return builder
          * 
@@ -206,7 +169,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param targets The Targets param.
+         * @param targets Target
          * 
          * @return builder
          * 
@@ -217,7 +180,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param targets The Targets param.
+         * @param targets Target
          * 
          * @return builder
          * 
@@ -227,7 +190,7 @@ public final class ServiceConnectionGroupArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param targets The Targets param.
+         * @param targets Target
          * 
          * @return builder
          * 

@@ -18,14 +18,14 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
     public static final IkeGatewayAuthenticationCertificateArgs Empty = new IkeGatewayAuthenticationCertificateArgs();
 
     /**
-     * The AllowIdPayloadMismatch param.
+     * Allow id payload mismatch
      * 
      */
     @Import(name="allowIdPayloadMismatch")
     private @Nullable Output<Boolean> allowIdPayloadMismatch;
 
     /**
-     * @return The AllowIdPayloadMismatch param.
+     * @return Allow id payload mismatch
      * 
      */
     public Optional<Output<Boolean>> allowIdPayloadMismatch() {
@@ -33,14 +33,14 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
     }
 
     /**
-     * The CertificateProfile param.
+     * Certificate profile
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return The CertificateProfile param.
+     * @return Certificate profile
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -48,14 +48,14 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
     }
 
     /**
-     * The LocalCertificate param.
+     * Local certificate
      * 
      */
     @Import(name="localCertificate")
     private @Nullable Output<IkeGatewayAuthenticationCertificateLocalCertificateArgs> localCertificate;
 
     /**
-     * @return The LocalCertificate param.
+     * @return Local certificate
      * 
      */
     public Optional<Output<IkeGatewayAuthenticationCertificateLocalCertificateArgs>> localCertificate() {
@@ -63,14 +63,14 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
     }
 
     /**
-     * The StrictValidationRevocation param.
+     * Strict validation revocation
      * 
      */
     @Import(name="strictValidationRevocation")
     private @Nullable Output<Boolean> strictValidationRevocation;
 
     /**
-     * @return The StrictValidationRevocation param.
+     * @return Strict validation revocation
      * 
      */
     public Optional<Output<Boolean>> strictValidationRevocation() {
@@ -78,14 +78,14 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
     }
 
     /**
-     * The UseManagementAsSource param.
+     * Use management as source
      * 
      */
     @Import(name="useManagementAsSource")
     private @Nullable Output<Boolean> useManagementAsSource;
 
     /**
-     * @return The UseManagementAsSource param.
+     * @return Use management as source
      * 
      */
     public Optional<Output<Boolean>> useManagementAsSource() {
@@ -121,7 +121,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param allowIdPayloadMismatch The AllowIdPayloadMismatch param.
+         * @param allowIdPayloadMismatch Allow id payload mismatch
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param allowIdPayloadMismatch The AllowIdPayloadMismatch param.
+         * @param allowIdPayloadMismatch Allow id payload mismatch
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param certificateProfile The CertificateProfile param.
+         * @param certificateProfile Certificate profile
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param certificateProfile The CertificateProfile param.
+         * @param certificateProfile Certificate profile
          * 
          * @return builder
          * 
@@ -163,7 +163,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param localCertificate The LocalCertificate param.
+         * @param localCertificate Local certificate
          * 
          * @return builder
          * 
@@ -174,7 +174,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param localCertificate The LocalCertificate param.
+         * @param localCertificate Local certificate
          * 
          * @return builder
          * 
@@ -184,7 +184,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param strictValidationRevocation The StrictValidationRevocation param.
+         * @param strictValidationRevocation Strict validation revocation
          * 
          * @return builder
          * 
@@ -195,7 +195,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param strictValidationRevocation The StrictValidationRevocation param.
+         * @param strictValidationRevocation Strict validation revocation
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param useManagementAsSource The UseManagementAsSource param.
+         * @param useManagementAsSource Use management as source
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class IkeGatewayAuthenticationCertificateArgs extends com.pulumi.re
         }
 
         /**
-         * @param useManagementAsSource The UseManagementAsSource param.
+         * @param useManagementAsSource Use management as source
          * 
          * @return builder
          * 

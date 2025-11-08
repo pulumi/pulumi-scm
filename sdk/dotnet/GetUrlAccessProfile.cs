@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetUrlAccessProfile
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// UrlAccessProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,19 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a single URL Access Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the URL Access Profile you want to find.
         ///     var example = Scm.GetUrlAccessProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "e97c7e7e-9906-42d6-90a8-606ed5527125",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["urlAccessProfileDetails"] = example,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +44,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetUrlAccessProfileResult>("scm:index/getUrlAccessProfile:getUrlAccessProfile", args ?? new GetUrlAccessProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// UrlAccessProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +56,19 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a single URL Access Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the URL Access Profile you want to find.
         ///     var example = Scm.GetUrlAccessProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "e97c7e7e-9906-42d6-90a8-606ed5527125",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["urlAccessProfileDetails"] = example,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +76,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetUrlAccessProfileResult>("scm:index/getUrlAccessProfile:getUrlAccessProfile", args ?? new GetUrlAccessProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// UrlAccessProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +88,19 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a single URL Access Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the URL Access Profile you want to find.
         ///     var example = Scm.GetUrlAccessProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "e97c7e7e-9906-42d6-90a8-606ed5527125",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["urlAccessProfileDetails"] = example,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +112,16 @@ namespace Pulumi.Scm
     public sealed class GetUrlAccessProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetUrlAccessProfileArgs()
         {
@@ -102,10 +132,16 @@ namespace Pulumi.Scm
     public sealed class GetUrlAccessProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetUrlAccessProfileInvokeArgs()
         {
@@ -118,69 +154,85 @@ namespace Pulumi.Scm
     public sealed class GetUrlAccessProfileResult
     {
         /// <summary>
-        /// The Alerts param.
+        /// Alert
         /// </summary>
         public readonly ImmutableArray<string> Alerts;
         /// <summary>
-        /// The Allows param.
+        /// Allow
         /// </summary>
         public readonly ImmutableArray<string> Allows;
         /// <summary>
-        /// The Blocks param.
+        /// Block
         /// </summary>
         public readonly ImmutableArray<string> Blocks;
         /// <summary>
-        /// The CloudInlineCat param.
+        /// Cloud inline cat
         /// </summary>
         public readonly bool CloudInlineCat;
         /// <summary>
-        /// The Continues param.
+        /// Continue
         /// </summary>
         public readonly ImmutableArray<string> Continues;
         /// <summary>
-        /// The CredentialEnforcement param.
+        /// Credential enforcement
         /// </summary>
         public readonly Outputs.GetUrlAccessProfileCredentialEnforcementResult CredentialEnforcement;
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LocalInlineCat param.
+        /// Local inline cat
         /// </summary>
         public readonly bool LocalInlineCat;
         /// <summary>
-        /// The LogContainerPageOnly param. Default: `True`.
+        /// Log container page only
         /// </summary>
         public readonly bool LogContainerPageOnly;
         /// <summary>
-        /// The LogHttpHdrReferer param. Default: `False`.
+        /// Log http hdr referer
         /// </summary>
         public readonly bool LogHttpHdrReferer;
         /// <summary>
-        /// The LogHttpHdrUserAgent param. Default: `False`.
+        /// Log http hdr user agent
         /// </summary>
         public readonly bool LogHttpHdrUserAgent;
         /// <summary>
-        /// The LogHttpHdrXff param. Default: `False`.
+        /// Log http hdr xff
         /// </summary>
         public readonly bool LogHttpHdrXff;
         /// <summary>
-        /// The MlavCategoryExceptions param.
+        /// Mlav category exception
         /// </summary>
         public readonly ImmutableArray<string> MlavCategoryExceptions;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SafeSearchEnforcement param. Default: `False`.
+        /// Redirect
+        /// </summary>
+        public readonly ImmutableArray<string> Redirects;
+        /// <summary>
+        /// Safe search enforcement
         /// </summary>
         public readonly bool SafeSearchEnforcement;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -199,6 +251,10 @@ namespace Pulumi.Scm
 
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             bool localInlineCat,
@@ -215,7 +271,11 @@ namespace Pulumi.Scm
 
             string name,
 
+            ImmutableArray<string> redirects,
+
             bool safeSearchEnforcement,
+
+            string snippet,
 
             string tfid)
         {
@@ -226,6 +286,8 @@ namespace Pulumi.Scm
             Continues = continues;
             CredentialEnforcement = credentialEnforcement;
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             LocalInlineCat = localInlineCat;
             LogContainerPageOnly = logContainerPageOnly;
@@ -234,7 +296,9 @@ namespace Pulumi.Scm
             LogHttpHdrXff = logHttpHdrXff;
             MlavCategoryExceptions = mlavCategoryExceptions;
             Name = name;
+            Redirects = redirects;
             SafeSearchEnforcement = safeSearchEnforcement;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

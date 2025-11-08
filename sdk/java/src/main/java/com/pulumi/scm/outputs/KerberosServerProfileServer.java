@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KerberosServerProfileServer {
     /**
-     * @return The Host param.
+     * @return The Kerberos server IP address
      * 
      */
     private @Nullable String host;
     /**
-     * @return The Name param.
+     * @return The Kerberos server name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The Kerberos server port
      * 
      */
     private @Nullable Integer port;
 
     private KerberosServerProfileServer() {}
     /**
-     * @return The Host param.
+     * @return The Kerberos server IP address
      * 
      */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
     /**
-     * @return The Name param.
+     * @return The Kerberos server name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The Kerberos server port
      * 
      */
     public Optional<Integer> port() {

@@ -15,7 +15,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * HipProfile resource
  * 
  * ## Example Usage
  * 
@@ -27,6 +27,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
  * import com.pulumi.scm.HipProfile;
+ * import com.pulumi.scm.HipProfileArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -40,7 +41,13 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new HipProfile("example");
+ *         // This resource creates a new HIP Profile.
+ *         var scmHipProfile1 = new HipProfile("scmHipProfile1", HipProfileArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_hip_profile_1")
+ *             .description("A HIP profile created by Terraform")
+ *             .match("\"is-win\" and \"is-anti-malware-and-rtp-enabled\"")
+ *             .build());
  * 
  *     }
  * }
@@ -51,84 +58,84 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/hipProfile:HipProfile")
 public class HipProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Match param. String length must not exceed 2048 characters.
+     * Match
      * 
      */
     @Export(name="match", refs={String.class}, tree="[0]")
     private Output<String> match;
 
     /**
-     * @return The Match param. String length must not exceed 2048 characters.
+     * @return Match
      * 
      */
     public Output<String> match() {
         return this.match;
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP profile
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the HIP profile
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataDataLossPrevention {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private GetHipObjectListDataDataLossPreventionCriteria criteria;
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     private Boolean excludeVendor;
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     private List<GetHipObjectListDataDataLossPreventionVendor> vendors;
 
     private GetHipObjectListDataDataLossPrevention() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public GetHipObjectListDataDataLossPreventionCriteria criteria() {
         return this.criteria;
     }
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Boolean excludeVendor() {
         return this.excludeVendor;
     }
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public List<GetHipObjectListDataDataLossPreventionVendor> vendors() {

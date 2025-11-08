@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetNatRuleSourceTranslationFallback {
     /**
-     * @return The Interface param.
+     * @return Interface name
      * 
      */
     private String interface_;
 
     private GetNatRuleSourceTranslationFallback() {}
     /**
-     * @return The Interface param.
+     * @return Interface name
      * 
      */
     public String interface_() {

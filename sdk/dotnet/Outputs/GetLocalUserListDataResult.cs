@@ -14,36 +14,68 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLocalUserListDataResult
     {
         /// <summary>
-        /// The Disabled param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Is the local user disabled?
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// UUID of the resource.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the local user
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param. String length must not exceed 31 characters.
+        /// The name of the local user
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Password param. String length must not exceed 63 characters.
+        /// The password of the local user
         /// </summary>
         public readonly string Password;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetLocalUserListDataResult(
+            string device,
+
             bool disabled,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
 
             string id,
 
             string name,
 
-            string password)
+            string password,
+
+            string snippet,
+
+            string tfid)
         {
+            Device = device;
             Disabled = disabled;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             Name = name;
             Password = password;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

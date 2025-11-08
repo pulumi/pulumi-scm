@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetWildfireAntiVirusProfileListDataThreatExceptionResult
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Notes param.
+        /// Notes
         /// </summary>
         public readonly string Notes;
 

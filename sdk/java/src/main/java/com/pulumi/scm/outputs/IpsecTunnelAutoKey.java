@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpsecTunnelAutoKey {
     /**
-     * @return The IkeGateways param.
+     * @return Ike gateway
      * 
      */
     private List<IpsecTunnelAutoKeyIkeGateway> ikeGateways;
     /**
-     * @return The IpsecCryptoProfile param.
+     * @return Ipsec crypto profile
      * 
      */
     private String ipsecCryptoProfile;
     /**
-     * @return IPv6 type of proxy*id values.
+     * @return IPv6 type of proxy*id values
      * 
      */
     private @Nullable List<IpsecTunnelAutoKeyProxyIdV6> proxyIdV6s;
     /**
-     * @return IPv4 type of proxy*id values.
+     * @return IPv4 type of proxy*id values
      * 
      */
     private @Nullable List<IpsecTunnelAutoKeyProxyId> proxyIds;
 
     private IpsecTunnelAutoKey() {}
     /**
-     * @return The IkeGateways param.
+     * @return Ike gateway
      * 
      */
     public List<IpsecTunnelAutoKeyIkeGateway> ikeGateways() {
         return this.ikeGateways;
     }
     /**
-     * @return The IpsecCryptoProfile param.
+     * @return Ipsec crypto profile
      * 
      */
     public String ipsecCryptoProfile() {
         return this.ipsecCryptoProfile;
     }
     /**
-     * @return IPv6 type of proxy*id values.
+     * @return IPv6 type of proxy*id values
      * 
      */
     public List<IpsecTunnelAutoKeyProxyIdV6> proxyIdV6s() {
         return this.proxyIdV6s == null ? List.of() : this.proxyIdV6s;
     }
     /**
-     * @return IPv4 type of proxy*id values.
+     * @return IPv4 type of proxy*id values
      * 
      */
     public List<IpsecTunnelAutoKeyProxyId> proxyIds() {

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataHostInfoCriteriaOsResult
     {
         /// <summary>
-        /// The Contains param.
+        /// Contains
         /// </summary>
         public readonly Outputs.GetHipObjectListDataHostInfoCriteriaOsContainsResult Contains;
 

@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDnsSecurityProfileBotnetDomainsListActionResult
     {
         /// <summary>
-        /// The Alert param.
+        /// Alert
         /// </summary>
-        public readonly bool Alert;
+        public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionAlertResult Alert;
         /// <summary>
-        /// The Allow param.
+        /// Allow
         /// </summary>
-        public readonly bool Allow;
+        public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionAllowResult Allow;
         /// <summary>
-        /// The Block param.
+        /// Block
         /// </summary>
-        public readonly bool Block;
+        public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionBlockResult Block;
         /// <summary>
-        /// The Sinkhole param.
+        /// Sinkhole
         /// </summary>
-        public readonly bool Sinkhole;
+        public readonly Outputs.GetDnsSecurityProfileBotnetDomainsListActionSinkholeResult Sinkhole;
 
         [OutputConstructor]
         private GetDnsSecurityProfileBotnetDomainsListActionResult(
-            bool alert,
+            Outputs.GetDnsSecurityProfileBotnetDomainsListActionAlertResult alert,
 
-            bool allow,
+            Outputs.GetDnsSecurityProfileBotnetDomainsListActionAllowResult allow,
 
-            bool block,
+            Outputs.GetDnsSecurityProfileBotnetDomainsListActionBlockResult block,
 
-            bool sinkhole)
+            Outputs.GetDnsSecurityProfileBotnetDomainsListActionSinkholeResult sinkhole)
         {
             Alert = alert;
             Allow = allow;

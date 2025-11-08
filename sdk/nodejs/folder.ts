@@ -5,22 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const snip1 = new scm.Snippet("snip1", {name: "foobar"});
- * const example = new scm.Folder("example", {
- *     name: "my folder",
- *     parent: "Shared",
- *     description: "Made by Pulumi",
- *     snippets: [snip1.name],
- * });
- * ```
+ * Folder resource
  */
 export class Folder extends pulumi.CustomResource {
     /**
@@ -51,23 +36,23 @@ export class Folder extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param.
+     * The description of the folder
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Labels param.
+     * Labels assigned to the folder
      */
     declare public readonly labels: pulumi.Output<string[] | undefined>;
     /**
-     * The Name param.
+     * The name of the folder
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Parent param.
+     * The parent folder
      */
     declare public readonly parent: pulumi.Output<string>;
     /**
-     * The Snippets param.
+     * Snippets associated with the folder
      */
     declare public readonly snippets: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -113,23 +98,23 @@ export class Folder extends pulumi.CustomResource {
  */
 export interface FolderState {
     /**
-     * The Description param.
+     * The description of the folder
      */
     description?: pulumi.Input<string>;
     /**
-     * The Labels param.
+     * Labels assigned to the folder
      */
     labels?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * The name of the folder
      */
     name?: pulumi.Input<string>;
     /**
-     * The Parent param.
+     * The parent folder
      */
     parent?: pulumi.Input<string>;
     /**
-     * The Snippets param.
+     * Snippets associated with the folder
      */
     snippets?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -140,23 +125,23 @@ export interface FolderState {
  */
 export interface FolderArgs {
     /**
-     * The Description param.
+     * The description of the folder
      */
     description?: pulumi.Input<string>;
     /**
-     * The Labels param.
+     * Labels assigned to the folder
      */
     labels?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * The name of the folder
      */
     name?: pulumi.Input<string>;
     /**
-     * The Parent param.
+     * The parent folder
      */
     parent: pulumi.Input<string>;
     /**
-     * The Snippets param.
+     * Snippets associated with the folder
      */
     snippets?: pulumi.Input<pulumi.Input<string>[]>;
 }

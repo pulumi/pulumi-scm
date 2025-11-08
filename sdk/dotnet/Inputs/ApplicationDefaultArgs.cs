@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationDefaultArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The IdentByIcmp6Type param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
+        /// Ident by icmp6 type
         /// </summary>
         [Input("identByIcmp6Type")]
         public Input<Inputs.ApplicationDefaultIdentByIcmp6TypeArgs>? IdentByIcmp6Type { get; set; }
 
         /// <summary>
-        /// The IdentByIcmpType param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
+        /// Ident by icmp type
         /// </summary>
         [Input("identByIcmpType")]
         public Input<Inputs.ApplicationDefaultIdentByIcmpTypeArgs>? IdentByIcmpType { get; set; }
 
         /// <summary>
-        /// The IdentByIpProtocol param. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
+        /// Ident by ip protocol
         /// </summary>
         [Input("identByIpProtocol")]
         public Input<string>? IdentByIpProtocol { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _ports;
 
         /// <summary>
-        /// The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `IdentByIcmp6Type`, `IdentByIcmpType`, `IdentByIpProtocol`, `Port`
+        /// Port
         /// </summary>
         public InputList<string> Ports
         {

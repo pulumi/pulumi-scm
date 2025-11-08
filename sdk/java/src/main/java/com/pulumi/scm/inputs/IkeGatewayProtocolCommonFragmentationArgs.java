@@ -16,14 +16,14 @@ public final class IkeGatewayProtocolCommonFragmentationArgs extends com.pulumi.
     public static final IkeGatewayProtocolCommonFragmentationArgs Empty = new IkeGatewayProtocolCommonFragmentationArgs();
 
     /**
-     * The Enable param. Default: `false`.
+     * Enable
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return The Enable param. Default: `false`.
+     * @return Enable
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -55,7 +55,7 @@ public final class IkeGatewayProtocolCommonFragmentationArgs extends com.pulumi.
         }
 
         /**
-         * @param enable The Enable param. Default: `false`.
+         * @param enable Enable
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class IkeGatewayProtocolCommonFragmentationArgs extends com.pulumi.
         }
 
         /**
-         * @param enable The Enable param. Default: `false`.
+         * @param enable Enable
          * 
          * @return builder
          * 

@@ -17,14 +17,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     public static final DecryptionProfileSslProtocolSettingsArgs Empty = new DecryptionProfileSslProtocolSettingsArgs();
 
     /**
-     * The AuthAlgoMd5 param. Default: `true`.
+     * Auth algo md5
      * 
      */
     @Import(name="authAlgoMd5")
     private @Nullable Output<Boolean> authAlgoMd5;
 
     /**
-     * @return The AuthAlgoMd5 param. Default: `true`.
+     * @return Auth algo md5
      * 
      */
     public Optional<Output<Boolean>> authAlgoMd5() {
@@ -32,14 +32,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The AuthAlgoSha1 param. Default: `true`.
+     * Auth algo sha1
      * 
      */
     @Import(name="authAlgoSha1")
     private @Nullable Output<Boolean> authAlgoSha1;
 
     /**
-     * @return The AuthAlgoSha1 param. Default: `true`.
+     * @return Auth algo sha1
      * 
      */
     public Optional<Output<Boolean>> authAlgoSha1() {
@@ -47,14 +47,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The AuthAlgoSha256 param. Default: `true`.
+     * Auth algo sha256
      * 
      */
     @Import(name="authAlgoSha256")
     private @Nullable Output<Boolean> authAlgoSha256;
 
     /**
-     * @return The AuthAlgoSha256 param. Default: `true`.
+     * @return Auth algo sha256
      * 
      */
     public Optional<Output<Boolean>> authAlgoSha256() {
@@ -62,14 +62,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The AuthAlgoSha384 param. Default: `true`.
+     * Auth algo sha384
      * 
      */
     @Import(name="authAlgoSha384")
     private @Nullable Output<Boolean> authAlgoSha384;
 
     /**
-     * @return The AuthAlgoSha384 param. Default: `true`.
+     * @return Auth algo sha384
      * 
      */
     public Optional<Output<Boolean>> authAlgoSha384() {
@@ -77,14 +77,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The EncAlgo3des param. Default: `true`.
+     * Enc algo3des
      * 
      */
     @Import(name="encAlgo3des")
     private @Nullable Output<Boolean> encAlgo3des;
 
     /**
-     * @return The EncAlgo3des param. Default: `true`.
+     * @return Enc algo3des
      * 
      */
     public Optional<Output<Boolean>> encAlgo3des() {
@@ -92,14 +92,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The EncAlgoAes128Cbc param. Default: `true`.
+     * Enc algo aes128 cbc
      * 
      */
     @Import(name="encAlgoAes128Cbc")
     private @Nullable Output<Boolean> encAlgoAes128Cbc;
 
     /**
-     * @return The EncAlgoAes128Cbc param. Default: `true`.
+     * @return Enc algo aes128 cbc
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes128Cbc() {
@@ -107,14 +107,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The EncAlgoAes128Gcm param. Default: `true`.
+     * Enc algo aes128 gcm
      * 
      */
     @Import(name="encAlgoAes128Gcm")
     private @Nullable Output<Boolean> encAlgoAes128Gcm;
 
     /**
-     * @return The EncAlgoAes128Gcm param. Default: `true`.
+     * @return Enc algo aes128 gcm
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes128Gcm() {
@@ -122,14 +122,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The EncAlgoAes256Cbc param. Default: `true`.
+     * Enc algo aes256 cbc
      * 
      */
     @Import(name="encAlgoAes256Cbc")
     private @Nullable Output<Boolean> encAlgoAes256Cbc;
 
     /**
-     * @return The EncAlgoAes256Cbc param. Default: `true`.
+     * @return Enc algo aes256 cbc
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes256Cbc() {
@@ -137,14 +137,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The EncAlgoAes256Gcm param. Default: `true`.
+     * Enc algo aes256 gcm
      * 
      */
     @Import(name="encAlgoAes256Gcm")
     private @Nullable Output<Boolean> encAlgoAes256Gcm;
 
     /**
-     * @return The EncAlgoAes256Gcm param. Default: `true`.
+     * @return Enc algo aes256 gcm
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes256Gcm() {
@@ -152,14 +152,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The EncAlgoChacha20Poly1305 param. Default: `true`.
+     * Enc algo chacha20 poly1305
      * 
      */
     @Import(name="encAlgoChacha20Poly1305")
     private @Nullable Output<Boolean> encAlgoChacha20Poly1305;
 
     /**
-     * @return The EncAlgoChacha20Poly1305 param. Default: `true`.
+     * @return Enc algo chacha20 poly1305
      * 
      */
     public Optional<Output<Boolean>> encAlgoChacha20Poly1305() {
@@ -167,14 +167,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The EncAlgoRc4 param. Default: `true`.
+     * Enc algo rc4
      * 
      */
     @Import(name="encAlgoRc4")
     private @Nullable Output<Boolean> encAlgoRc4;
 
     /**
-     * @return The EncAlgoRc4 param. Default: `true`.
+     * @return Enc algo rc4
      * 
      */
     public Optional<Output<Boolean>> encAlgoRc4() {
@@ -182,14 +182,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The KeyxchgAlgoDhe param. Default: `true`.
+     * Keyxchg algo dhe
      * 
      */
     @Import(name="keyxchgAlgoDhe")
     private @Nullable Output<Boolean> keyxchgAlgoDhe;
 
     /**
-     * @return The KeyxchgAlgoDhe param. Default: `true`.
+     * @return Keyxchg algo dhe
      * 
      */
     public Optional<Output<Boolean>> keyxchgAlgoDhe() {
@@ -197,14 +197,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The KeyxchgAlgoEcdhe param. Default: `true`.
+     * Keyxchg algo ecdhe
      * 
      */
     @Import(name="keyxchgAlgoEcdhe")
     private @Nullable Output<Boolean> keyxchgAlgoEcdhe;
 
     /**
-     * @return The KeyxchgAlgoEcdhe param. Default: `true`.
+     * @return Keyxchg algo ecdhe
      * 
      */
     public Optional<Output<Boolean>> keyxchgAlgoEcdhe() {
@@ -212,14 +212,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The KeyxchgAlgoRsa param. Default: `true`.
+     * Keyxchg algo rsa
      * 
      */
     @Import(name="keyxchgAlgoRsa")
     private @Nullable Output<Boolean> keyxchgAlgoRsa;
 
     /**
-     * @return The KeyxchgAlgoRsa param. Default: `true`.
+     * @return Keyxchg algo rsa
      * 
      */
     public Optional<Output<Boolean>> keyxchgAlgoRsa() {
@@ -227,14 +227,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+     * Max version
      * 
      */
     @Import(name="maxVersion")
     private @Nullable Output<String> maxVersion;
 
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+     * @return Max version
      * 
      */
     public Optional<Output<String>> maxVersion() {
@@ -242,14 +242,14 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
     }
 
     /**
-     * The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+     * Min version
      * 
      */
     @Import(name="minVersion")
     private @Nullable Output<String> minVersion;
 
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Min version
      * 
      */
     public Optional<Output<String>> minVersion() {
@@ -296,7 +296,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoMd5 The AuthAlgoMd5 param. Default: `true`.
+         * @param authAlgoMd5 Auth algo md5
          * 
          * @return builder
          * 
@@ -307,7 +307,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoMd5 The AuthAlgoMd5 param. Default: `true`.
+         * @param authAlgoMd5 Auth algo md5
          * 
          * @return builder
          * 
@@ -317,7 +317,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoSha1 The AuthAlgoSha1 param. Default: `true`.
+         * @param authAlgoSha1 Auth algo sha1
          * 
          * @return builder
          * 
@@ -328,7 +328,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoSha1 The AuthAlgoSha1 param. Default: `true`.
+         * @param authAlgoSha1 Auth algo sha1
          * 
          * @return builder
          * 
@@ -338,7 +338,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoSha256 The AuthAlgoSha256 param. Default: `true`.
+         * @param authAlgoSha256 Auth algo sha256
          * 
          * @return builder
          * 
@@ -349,7 +349,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoSha256 The AuthAlgoSha256 param. Default: `true`.
+         * @param authAlgoSha256 Auth algo sha256
          * 
          * @return builder
          * 
@@ -359,7 +359,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoSha384 The AuthAlgoSha384 param. Default: `true`.
+         * @param authAlgoSha384 Auth algo sha384
          * 
          * @return builder
          * 
@@ -370,7 +370,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param authAlgoSha384 The AuthAlgoSha384 param. Default: `true`.
+         * @param authAlgoSha384 Auth algo sha384
          * 
          * @return builder
          * 
@@ -380,7 +380,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgo3des The EncAlgo3des param. Default: `true`.
+         * @param encAlgo3des Enc algo3des
          * 
          * @return builder
          * 
@@ -391,7 +391,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgo3des The EncAlgo3des param. Default: `true`.
+         * @param encAlgo3des Enc algo3des
          * 
          * @return builder
          * 
@@ -401,7 +401,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes128Cbc The EncAlgoAes128Cbc param. Default: `true`.
+         * @param encAlgoAes128Cbc Enc algo aes128 cbc
          * 
          * @return builder
          * 
@@ -412,7 +412,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes128Cbc The EncAlgoAes128Cbc param. Default: `true`.
+         * @param encAlgoAes128Cbc Enc algo aes128 cbc
          * 
          * @return builder
          * 
@@ -422,7 +422,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes128Gcm The EncAlgoAes128Gcm param. Default: `true`.
+         * @param encAlgoAes128Gcm Enc algo aes128 gcm
          * 
          * @return builder
          * 
@@ -433,7 +433,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes128Gcm The EncAlgoAes128Gcm param. Default: `true`.
+         * @param encAlgoAes128Gcm Enc algo aes128 gcm
          * 
          * @return builder
          * 
@@ -443,7 +443,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes256Cbc The EncAlgoAes256Cbc param. Default: `true`.
+         * @param encAlgoAes256Cbc Enc algo aes256 cbc
          * 
          * @return builder
          * 
@@ -454,7 +454,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes256Cbc The EncAlgoAes256Cbc param. Default: `true`.
+         * @param encAlgoAes256Cbc Enc algo aes256 cbc
          * 
          * @return builder
          * 
@@ -464,7 +464,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes256Gcm The EncAlgoAes256Gcm param. Default: `true`.
+         * @param encAlgoAes256Gcm Enc algo aes256 gcm
          * 
          * @return builder
          * 
@@ -475,7 +475,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoAes256Gcm The EncAlgoAes256Gcm param. Default: `true`.
+         * @param encAlgoAes256Gcm Enc algo aes256 gcm
          * 
          * @return builder
          * 
@@ -485,7 +485,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoChacha20Poly1305 The EncAlgoChacha20Poly1305 param. Default: `true`.
+         * @param encAlgoChacha20Poly1305 Enc algo chacha20 poly1305
          * 
          * @return builder
          * 
@@ -496,7 +496,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoChacha20Poly1305 The EncAlgoChacha20Poly1305 param. Default: `true`.
+         * @param encAlgoChacha20Poly1305 Enc algo chacha20 poly1305
          * 
          * @return builder
          * 
@@ -506,7 +506,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoRc4 The EncAlgoRc4 param. Default: `true`.
+         * @param encAlgoRc4 Enc algo rc4
          * 
          * @return builder
          * 
@@ -517,7 +517,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param encAlgoRc4 The EncAlgoRc4 param. Default: `true`.
+         * @param encAlgoRc4 Enc algo rc4
          * 
          * @return builder
          * 
@@ -527,7 +527,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param keyxchgAlgoDhe The KeyxchgAlgoDhe param. Default: `true`.
+         * @param keyxchgAlgoDhe Keyxchg algo dhe
          * 
          * @return builder
          * 
@@ -538,7 +538,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param keyxchgAlgoDhe The KeyxchgAlgoDhe param. Default: `true`.
+         * @param keyxchgAlgoDhe Keyxchg algo dhe
          * 
          * @return builder
          * 
@@ -548,7 +548,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param keyxchgAlgoEcdhe The KeyxchgAlgoEcdhe param. Default: `true`.
+         * @param keyxchgAlgoEcdhe Keyxchg algo ecdhe
          * 
          * @return builder
          * 
@@ -559,7 +559,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param keyxchgAlgoEcdhe The KeyxchgAlgoEcdhe param. Default: `true`.
+         * @param keyxchgAlgoEcdhe Keyxchg algo ecdhe
          * 
          * @return builder
          * 
@@ -569,7 +569,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param keyxchgAlgoRsa The KeyxchgAlgoRsa param. Default: `true`.
+         * @param keyxchgAlgoRsa Keyxchg algo rsa
          * 
          * @return builder
          * 
@@ -580,7 +580,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param keyxchgAlgoRsa The KeyxchgAlgoRsa param. Default: `true`.
+         * @param keyxchgAlgoRsa Keyxchg algo rsa
          * 
          * @return builder
          * 
@@ -590,7 +590,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param maxVersion The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+         * @param maxVersion Max version
          * 
          * @return builder
          * 
@@ -601,7 +601,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param maxVersion The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+         * @param maxVersion Max version
          * 
          * @return builder
          * 
@@ -611,7 +611,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param minVersion The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+         * @param minVersion Min version
          * 
          * @return builder
          * 
@@ -622,7 +622,7 @@ public final class DecryptionProfileSslProtocolSettingsArgs extends com.pulumi.r
         }
 
         /**
-         * @param minVersion The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+         * @param minVersion Min version
          * 
          * @return builder
          * 

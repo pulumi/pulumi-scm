@@ -14,41 +14,73 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTacacsServerProfileListDataResult
     {
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the TACACS+ server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+        /// The name of the TACACS+ server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The TACACS+ authentication protocol
         /// </summary>
         public readonly string Protocol;
         /// <summary>
-        /// The Servers param.
+        /// The TACACS+ server configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetTacacsServerProfileListDataServerResult> Servers;
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 30.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// The TACACS+ timeout (seconds)
         /// </summary>
         public readonly int Timeout;
         /// <summary>
-        /// The UseSingleConnection param.
+        /// Use a single TACACS+ connection?
         /// </summary>
         public readonly bool UseSingleConnection;
 
         [OutputConstructor]
         private GetTacacsServerProfileListDataResult(
+            string device,
+
+            string folder,
+
             string id,
+
+            string name,
 
             string protocol,
 
             ImmutableArray<Outputs.GetTacacsServerProfileListDataServerResult> servers,
 
+            string snippet,
+
+            string tfid,
+
             int timeout,
 
             bool useSingleConnection)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
+            Name = name;
             Protocol = protocol;
             Servers = servers;
+            Snippet = snippet;
+            Tfid = tfid;
             Timeout = timeout;
             UseSingleConnection = useSingleConnection;
         }

@@ -13,37 +13,37 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileMethodSamlIdpArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+        /// Attribute name usergroup
         /// </summary>
         [Input("attributeNameUsergroup")]
         public Input<string>? AttributeNameUsergroup { get; set; }
 
         /// <summary>
-        /// The AttributeNameUsername param. String length must be between 1 and 63 characters.
+        /// Attribute name username
         /// </summary>
         [Input("attributeNameUsername")]
         public Input<string>? AttributeNameUsername { get; set; }
 
         /// <summary>
-        /// The CertificateProfile param. String length must not exceed 31 characters.
+        /// Certificate profile
         /// </summary>
         [Input("certificateProfile")]
         public Input<string>? CertificateProfile { get; set; }
 
         /// <summary>
-        /// The EnableSingleLogout param.
+        /// Enable single logout
         /// </summary>
         [Input("enableSingleLogout")]
         public Input<bool>? EnableSingleLogout { get; set; }
 
         /// <summary>
-        /// The RequestSigningCertificate param. String length must not exceed 64 characters.
+        /// Request signing certificate
         /// </summary>
         [Input("requestSigningCertificate")]
         public Input<string>? RequestSigningCertificate { get; set; }
 
         /// <summary>
-        /// The ServerProfile param. String length must not exceed 63 characters.
+        /// Server profile
         /// </summary>
         [Input("serverProfile")]
         public Input<string>? ServerProfile { get; set; }

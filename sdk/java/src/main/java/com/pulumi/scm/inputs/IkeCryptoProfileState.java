@@ -19,14 +19,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     public static final IkeCryptoProfileState Empty = new IkeCryptoProfileState();
 
     /**
-     * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+     * IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      * 
      */
     @Import(name="authenticationMultiple")
     private @Nullable Output<Integer> authenticationMultiple;
 
     /**
-     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+     * @return IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
      * 
      */
     public Optional<Output<Integer>> authenticationMultiple() {
@@ -34,14 +34,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -49,14 +49,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+     * Dh group
      * 
      */
     @Import(name="dhGroups")
     private @Nullable Output<List<String>> dhGroups;
 
     /**
-     * @return The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+     * @return Dh group
      * 
      */
     public Optional<Output<List<String>>> dhGroups() {
@@ -64,14 +64,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+     * Encryption algorithm
      * 
      */
     @Import(name="encryptions")
     private @Nullable Output<List<String>> encryptions;
 
     /**
-     * @return Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+     * @return Encryption algorithm
      * 
      */
     public Optional<Output<List<String>>> encryptions() {
@@ -79,14 +79,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -94,14 +94,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * Hash
      * 
      */
     @Import(name="hashes")
     private @Nullable Output<List<String>> hashes;
 
     /**
-     * @return The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * @return Hash
      * 
      */
     public Optional<Output<List<String>>> hashes() {
@@ -109,14 +109,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Lifetime param.
+     * Ike crypto profile lifetime
      * 
      */
     @Import(name="lifetime")
     private @Nullable Output<IkeCryptoProfileLifetimeArgs> lifetime;
 
     /**
-     * @return The Lifetime param.
+     * @return Ike crypto profile lifetime
      * 
      */
     public Optional<Output<IkeCryptoProfileLifetimeArgs>> lifetime() {
@@ -124,14 +124,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Optional<Output<String>> name() {
@@ -139,14 +139,14 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -194,7 +194,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authenticationMultiple IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+         * @param authenticationMultiple IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param authenticationMultiple IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+         * @param authenticationMultiple IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
          * 
          * @return builder
          * 
@@ -215,7 +215,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -236,7 +236,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dhGroups The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+         * @param dhGroups Dh group
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dhGroups The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+         * @param dhGroups Dh group
          * 
          * @return builder
          * 
@@ -257,7 +257,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param dhGroups The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`.
+         * @param dhGroups Dh group
          * 
          * @return builder
          * 
@@ -267,7 +267,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param encryptions Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+         * @param encryptions Encryption algorithm
          * 
          * @return builder
          * 
@@ -278,7 +278,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param encryptions Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+         * @param encryptions Encryption algorithm
          * 
          * @return builder
          * 
@@ -288,7 +288,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param encryptions Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`.
+         * @param encryptions Encryption algorithm
          * 
          * @return builder
          * 
@@ -298,7 +298,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -309,7 +309,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -319,7 +319,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param hashes The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+         * @param hashes Hash
          * 
          * @return builder
          * 
@@ -330,7 +330,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param hashes The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+         * @param hashes Hash
          * 
          * @return builder
          * 
@@ -340,7 +340,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param hashes The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+         * @param hashes Hash
          * 
          * @return builder
          * 
@@ -350,7 +350,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param lifetime The Lifetime param.
+         * @param lifetime Ike crypto profile lifetime
          * 
          * @return builder
          * 
@@ -361,7 +361,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param lifetime The Lifetime param.
+         * @param lifetime Ike crypto profile lifetime
          * 
          * @return builder
          * 
@@ -371,7 +371,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -382,7 +382,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -392,7 +392,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -403,7 +403,7 @@ public final class IkeCryptoProfileState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

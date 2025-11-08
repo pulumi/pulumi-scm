@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecTunnelAutoKeyIkeGatewayResult
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
 

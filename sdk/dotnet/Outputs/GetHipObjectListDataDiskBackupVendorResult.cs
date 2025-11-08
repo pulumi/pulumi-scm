@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataDiskBackupVendorResult
     {
         /// <summary>
-        /// The Name param. String length must not exceed 103 characters.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// Product
         /// </summary>
         public readonly ImmutableArray<string> Products;
 

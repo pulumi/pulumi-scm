@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileListDataMethodRadius {
     /**
-     * @return The Checkgroup param.
+     * @return Checkgroup
      * 
      */
     private Boolean checkgroup;
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     private String serverProfile;
 
     private GetAuthenticationProfileListDataMethodRadius() {}
     /**
-     * @return The Checkgroup param.
+     * @return Checkgroup
      * 
      */
     public Boolean checkgroup() {
         return this.checkgroup;
     }
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     public String serverProfile() {

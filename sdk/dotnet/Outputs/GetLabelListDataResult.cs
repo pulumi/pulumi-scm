@@ -14,17 +14,18 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLabelListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the label
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the label
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the label
         /// </summary>
         public readonly string Name;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetLabelListDataResult(
@@ -32,11 +33,14 @@ namespace Pulumi.Scm.Outputs
 
             string id,
 
-            string name)
+            string name,
+
+            string tfid)
         {
             Description = description;
             Id = id;
             Name = name;
+            Tfid = tfid;
         }
     }
 }

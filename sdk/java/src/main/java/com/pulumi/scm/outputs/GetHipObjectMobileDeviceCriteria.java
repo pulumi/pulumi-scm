@@ -17,110 +17,110 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectMobileDeviceCriteria {
     /**
-     * @return The Applications param.
+     * @return Applications
      * 
      */
     private GetHipObjectMobileDeviceCriteriaApplications applications;
     /**
-     * @return If device&#39;s disk is encrypted.
+     * @return If device&#39;s disk is encrypted
      * 
      */
     private Boolean diskEncrypted;
     /**
-     * @return The Imei param.
+     * @return Imei
      * 
      */
     private GetHipObjectMobileDeviceCriteriaImei imei;
     /**
-     * @return If device is by rooted/jailbroken.
+     * @return If device is by rooted/jailbroken
      * 
      */
     private Boolean jailbroken;
     /**
-     * @return The LastCheckinTime param.
+     * @return Last checkin time
      * 
      */
     private GetHipObjectMobileDeviceCriteriaLastCheckinTime lastCheckinTime;
     /**
-     * @return The Model param.
+     * @return Model
      * 
      */
     private GetHipObjectMobileDeviceCriteriaModel model;
     /**
-     * @return If device&#39;s passcode is present.
+     * @return If device&#39;s passcode is present
      * 
      */
     private Boolean passcodeSet;
     /**
-     * @return The PhoneNumber param.
+     * @return Phone number
      * 
      */
     private GetHipObjectMobileDeviceCriteriaPhoneNumber phoneNumber;
     /**
-     * @return The Tag param.
+     * @return Tag
      * 
      */
     private GetHipObjectMobileDeviceCriteriaTag tag;
 
     private GetHipObjectMobileDeviceCriteria() {}
     /**
-     * @return The Applications param.
+     * @return Applications
      * 
      */
     public GetHipObjectMobileDeviceCriteriaApplications applications() {
         return this.applications;
     }
     /**
-     * @return If device&#39;s disk is encrypted.
+     * @return If device&#39;s disk is encrypted
      * 
      */
     public Boolean diskEncrypted() {
         return this.diskEncrypted;
     }
     /**
-     * @return The Imei param.
+     * @return Imei
      * 
      */
     public GetHipObjectMobileDeviceCriteriaImei imei() {
         return this.imei;
     }
     /**
-     * @return If device is by rooted/jailbroken.
+     * @return If device is by rooted/jailbroken
      * 
      */
     public Boolean jailbroken() {
         return this.jailbroken;
     }
     /**
-     * @return The LastCheckinTime param.
+     * @return Last checkin time
      * 
      */
     public GetHipObjectMobileDeviceCriteriaLastCheckinTime lastCheckinTime() {
         return this.lastCheckinTime;
     }
     /**
-     * @return The Model param.
+     * @return Model
      * 
      */
     public GetHipObjectMobileDeviceCriteriaModel model() {
         return this.model;
     }
     /**
-     * @return If device&#39;s passcode is present.
+     * @return If device&#39;s passcode is present
      * 
      */
     public Boolean passcodeSet() {
         return this.passcodeSet;
     }
     /**
-     * @return The PhoneNumber param.
+     * @return Phone number
      * 
      */
     public GetHipObjectMobileDeviceCriteriaPhoneNumber phoneNumber() {
         return this.phoneNumber;
     }
     /**
-     * @return The Tag param.
+     * @return Tag
      * 
      */
     public GetHipObjectMobileDeviceCriteriaTag tag() {

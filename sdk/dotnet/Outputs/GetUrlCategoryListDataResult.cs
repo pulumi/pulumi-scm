@@ -14,23 +14,36 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetUrlCategoryListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The List param.
+        /// List
         /// </summary>
         public readonly ImmutableArray<string> Lists;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// Type
         /// </summary>
         public readonly string Type;
 
@@ -38,18 +51,30 @@ namespace Pulumi.Scm.Outputs
         private GetUrlCategoryListDataResult(
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> lists,
 
             string name,
 
+            string snippet,
+
+            string tfid,
+
             string type)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Lists = lists;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
             Type = type;
         }
     }

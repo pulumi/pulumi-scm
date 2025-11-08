@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationSignatureAndConditionOrConditionOperatorResult
     {
         /// <summary>
-        /// The EqualTo param.
+        /// Equal to
         /// </summary>
         public readonly Outputs.GetApplicationSignatureAndConditionOrConditionOperatorEqualToResult EqualTo;
         /// <summary>
-        /// The GreaterThan param.
+        /// Greater than
         /// </summary>
         public readonly Outputs.GetApplicationSignatureAndConditionOrConditionOperatorGreaterThanResult GreaterThan;
         /// <summary>
-        /// The LessThan param.
+        /// Less than
         /// </summary>
         public readonly Outputs.GetApplicationSignatureAndConditionOrConditionOperatorLessThanResult LessThan;
         /// <summary>
-        /// The PatternMatch param.
+        /// Pattern match
         /// </summary>
         public readonly Outputs.GetApplicationSignatureAndConditionOrConditionOperatorPatternMatchResult PatternMatch;
 

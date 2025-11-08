@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NatRuleSourceTranslationFallback {
     /**
-     * @return The Interface param. Ensure that only one of the following is specified: `interface`
+     * @return Interface name
      * 
      */
     private @Nullable String interface_;
 
     private NatRuleSourceTranslationFallback() {}
     /**
-     * @return The Interface param. Ensure that only one of the following is specified: `interface`
+     * @return Interface name
      * 
      */
     public Optional<String> interface_() {

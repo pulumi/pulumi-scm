@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSchedule({
- *     id: "1234-56-789",
- * });
- * ```
+ * Schedule data source
  */
 export function getSchedule(args: GetScheduleArgs, opts?: pulumi.InvokeOptions): Promise<GetScheduleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSchedule:getSchedule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getSchedule(args: GetScheduleArgs, opts?: pulumi.InvokeOptions):
  */
 export interface GetScheduleArgs {
     /**
-     * The Id param.
+     * The UUID of the schedule
      */
     id: string;
+    /**
+     * The name of the schedule
+     */
+    name?: string;
 }
 
 /**
@@ -42,37 +36,39 @@ export interface GetScheduleArgs {
  */
 export interface GetScheduleResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the schedule
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the schedule
      */
     readonly name: string;
     /**
-     * The ScheduleType param.
+     * Schedule type
      */
     readonly scheduleType: outputs.GetScheduleScheduleType;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSchedule({
- *     id: "1234-56-789",
- * });
- * ```
+ * Schedule data source
  */
 export function getScheduleOutput(args: GetScheduleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetScheduleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSchedule:getSchedule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -81,7 +77,11 @@ export function getScheduleOutput(args: GetScheduleOutputArgs, opts?: pulumi.Inv
  */
 export interface GetScheduleOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the schedule
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the schedule
+     */
+    name?: pulumi.Input<string>;
 }

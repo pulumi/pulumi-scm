@@ -14,59 +14,76 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetScepProfileListDataResult
     {
         /// <summary>
-        /// The Algorithm param.
+        /// Algorithm
         /// </summary>
         public readonly Outputs.GetScepProfileListDataAlgorithmResult Algorithm;
         /// <summary>
-        /// The CaIdentityName param.
+        /// Certificate Authority identity
         /// </summary>
         public readonly string CaIdentityName;
         /// <summary>
-        /// The CertificateAttributes param.
+        /// Subject Alternative name type
         /// </summary>
         public readonly Outputs.GetScepProfileListDataCertificateAttributesResult CertificateAttributes;
         /// <summary>
-        /// The Digest param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Digest for CSR
         /// </summary>
         public readonly string Digest;
         /// <summary>
-        /// The Fingerprint param.
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// CA certificate fingerprint
         /// </summary>
         public readonly string Fingerprint;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the SCEP profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the SCEP profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The ScepCaCert param.
+        /// SCEP server CA certificate
         /// </summary>
         public readonly string ScepCaCert;
         /// <summary>
-        /// The ScepChallenge param.
+        /// One Time Password challenge
         /// </summary>
         public readonly Outputs.GetScepProfileListDataScepChallengeResult ScepChallenge;
         /// <summary>
-        /// The ScepClientCert param.
+        /// SCEP client ceertificate
         /// </summary>
         public readonly string ScepClientCert;
         /// <summary>
-        /// The ScepUrl param.
+        /// SCEP server URL
         /// </summary>
         public readonly string ScepUrl;
         /// <summary>
-        /// The Subject param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Subject
         /// </summary>
         public readonly string Subject;
+        public readonly string Tfid;
         /// <summary>
-        /// The UseAsDigitalSignature param.
+        /// Use as digital signature?
         /// </summary>
         public readonly bool UseAsDigitalSignature;
         /// <summary>
-        /// The UseForKeyEncipherment param.
+        /// Use for key encipherment?
         /// </summary>
         public readonly bool UseForKeyEncipherment;
 
@@ -78,9 +95,15 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetScepProfileListDataCertificateAttributesResult certificateAttributes,
 
+            string device,
+
             string digest,
 
+            ImmutableDictionary<string, string> encryptedValues,
+
             string fingerprint,
+
+            string folder,
 
             string id,
 
@@ -94,7 +117,11 @@ namespace Pulumi.Scm.Outputs
 
             string scepUrl,
 
+            string snippet,
+
             string subject,
+
+            string tfid,
 
             bool useAsDigitalSignature,
 
@@ -103,15 +130,20 @@ namespace Pulumi.Scm.Outputs
             Algorithm = algorithm;
             CaIdentityName = caIdentityName;
             CertificateAttributes = certificateAttributes;
+            Device = device;
             Digest = digest;
+            EncryptedValues = encryptedValues;
             Fingerprint = fingerprint;
+            Folder = folder;
             Id = id;
             Name = name;
             ScepCaCert = scepCaCert;
             ScepChallenge = scepChallenge;
             ScepClientCert = scepClientCert;
             ScepUrl = scepUrl;
+            Snippet = snippet;
             Subject = subject;
+            Tfid = tfid;
             UseAsDigitalSignature = useAsDigitalSignature;
             UseForKeyEncipherment = useForKeyEncipherment;
         }

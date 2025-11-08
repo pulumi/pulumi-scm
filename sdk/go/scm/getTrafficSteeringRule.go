@@ -11,9 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
+// TrafficSteeringRule data source
 func LookupTrafficSteeringRule(ctx *pulumi.Context, args *LookupTrafficSteeringRuleArgs, opts ...pulumi.InvokeOption) (*LookupTrafficSteeringRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupTrafficSteeringRuleResult
@@ -26,27 +24,31 @@ func LookupTrafficSteeringRule(ctx *pulumi.Context, args *LookupTrafficSteeringR
 
 // A collection of arguments for invoking getTrafficSteeringRule.
 type LookupTrafficSteeringRuleArgs struct {
-	// The Id param.
+	// The UUID of the traffic steering rule
 	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getTrafficSteeringRule.
 type LookupTrafficSteeringRuleResult struct {
-	// The Action param.
+	// Action
 	Action GetTrafficSteeringRuleAction `pulumi:"action"`
-	// The Category param.
+	// Category
 	Categories []string `pulumi:"categories"`
-	// The Destination param.
+	// Destination
 	Destinations []string `pulumi:"destinations"`
-	// The Id param.
+	// The folder containing the traffic steering rule
+	Folder string `pulumi:"folder"`
+	// The UUID of the traffic steering rule
 	Id string `pulumi:"id"`
-	// The Name param.
+	// Name
 	Name string `pulumi:"name"`
-	// The Service param.
+	// Service
 	Services []string `pulumi:"services"`
-	// The SourceUser param.
+	// Source user
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Source param.
+	// Source
 	Sources []string `pulumi:"sources"`
 	Tfid    string   `pulumi:"tfid"`
 }
@@ -62,8 +64,10 @@ func LookupTrafficSteeringRuleOutput(ctx *pulumi.Context, args LookupTrafficStee
 
 // A collection of arguments for invoking getTrafficSteeringRule.
 type LookupTrafficSteeringRuleOutputArgs struct {
-	// The Id param.
+	// The UUID of the traffic steering rule
 	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupTrafficSteeringRuleOutputArgs) ElementType() reflect.Type {
@@ -85,42 +89,47 @@ func (o LookupTrafficSteeringRuleResultOutput) ToLookupTrafficSteeringRuleResult
 	return o
 }
 
-// The Action param.
+// Action
 func (o LookupTrafficSteeringRuleResultOutput) Action() GetTrafficSteeringRuleActionOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) GetTrafficSteeringRuleAction { return v.Action }).(GetTrafficSteeringRuleActionOutput)
 }
 
-// The Category param.
+// Category
 func (o LookupTrafficSteeringRuleResultOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) []string { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The Destination param.
+// Destination
 func (o LookupTrafficSteeringRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Id param.
+// The folder containing the traffic steering rule
+func (o LookupTrafficSteeringRuleResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the traffic steering rule
 func (o LookupTrafficSteeringRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// Name
 func (o LookupTrafficSteeringRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Service param.
+// Service
 func (o LookupTrafficSteeringRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The SourceUser param.
+// Source user
 func (o LookupTrafficSteeringRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The Source param.
+// Source
 func (o LookupTrafficSteeringRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupTrafficSteeringRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }

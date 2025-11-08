@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// HipProfile resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,7 +22,14 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.HipProfile("example");
+    ///     // This resource creates a new HIP Profile.
+    ///     var scmHipProfile1 = new Scm.HipProfile("scm_hip_profile_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_hip_profile_1",
+    ///         Description = "A HIP profile created by Terraform",
+    ///         Match = "\"is-win\" and \"is-anti-malware-and-rtp-enabled\"",
+    ///     });
     /// 
     /// });
     /// ```
@@ -31,37 +38,37 @@ namespace Pulumi.Scm
     public partial class HipProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Match param. String length must not exceed 2048 characters.
+        /// Match
         /// </summary>
         [Output("match")]
         public Output<string> Match { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP profile
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -116,37 +123,37 @@ namespace Pulumi.Scm
     public sealed class HipProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Match param. String length must not exceed 2048 characters.
+        /// Match
         /// </summary>
         [Input("match", required: true)]
         public Input<string> Match { get; set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -160,37 +167,37 @@ namespace Pulumi.Scm
     public sealed class HipProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Match param. String length must not exceed 2048 characters.
+        /// Match
         /// </summary>
         [Input("match")]
         public Input<string>? Match { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

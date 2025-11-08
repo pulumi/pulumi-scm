@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataDiskBackup {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private GetHipObjectListDataDiskBackupCriteria criteria;
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     private Boolean excludeVendor;
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     private List<GetHipObjectListDataDiskBackupVendor> vendors;
 
     private GetHipObjectListDataDiskBackup() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public GetHipObjectListDataDiskBackupCriteria criteria() {
         return this.criteria;
     }
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Boolean excludeVendor() {
         return this.excludeVendor;
     }
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public List<GetHipObjectListDataDiskBackupVendor> vendors() {

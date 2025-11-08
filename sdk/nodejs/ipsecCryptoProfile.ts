@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * IpsecCryptoProfile resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.IpsecCryptoProfile("example", {});
- * ```
  */
 export class IpsecCryptoProfile extends pulumi.CustomResource {
     /**
@@ -47,39 +40,39 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Ah
      */
     declare public readonly ah: pulumi.Output<outputs.IpsecCryptoProfileAh | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+     * phase-2 DH group (PFS DH group)
      */
     declare public readonly dhGroup: pulumi.Output<string>;
     /**
-     * The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Esp
      */
     declare public readonly esp: pulumi.Output<outputs.IpsecCryptoProfileEsp | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Lifesize param.
+     * Lifesize
      */
     declare public readonly lifesize: pulumi.Output<outputs.IpsecCryptoProfileLifesize | undefined>;
     /**
-     * The Lifetime param.
+     * Ipsec crypto profile lifetime
      */
     declare public readonly lifetime: pulumi.Output<outputs.IpsecCryptoProfileLifetime>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -133,39 +126,39 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
  */
 export interface IpsecCryptoProfileState {
     /**
-     * The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Ah
      */
     ah?: pulumi.Input<inputs.IpsecCryptoProfileAh>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+     * phase-2 DH group (PFS DH group)
      */
     dhGroup?: pulumi.Input<string>;
     /**
-     * The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Esp
      */
     esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Lifesize param.
+     * Lifesize
      */
     lifesize?: pulumi.Input<inputs.IpsecCryptoProfileLifesize>;
     /**
-     * The Lifetime param.
+     * Ipsec crypto profile lifetime
      */
     lifetime?: pulumi.Input<inputs.IpsecCryptoProfileLifetime>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -176,39 +169,39 @@ export interface IpsecCryptoProfileState {
  */
 export interface IpsecCryptoProfileArgs {
     /**
-     * The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Ah
      */
     ah?: pulumi.Input<inputs.IpsecCryptoProfileAh>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+     * phase-2 DH group (PFS DH group)
      */
     dhGroup?: pulumi.Input<string>;
     /**
-     * The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Esp
      */
     esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Lifesize param.
+     * Lifesize
      */
     lifesize?: pulumi.Input<inputs.IpsecCryptoProfileLifesize>;
     /**
-     * The Lifetime param.
+     * Ipsec crypto profile lifetime
      */
     lifetime: pulumi.Input<inputs.IpsecCryptoProfileLifetime>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

@@ -16,14 +16,14 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsMobileArgs extends com.p
     public static final HipObjectNetworkInfoCriteriaNetworkIsMobileArgs Empty = new HipObjectNetworkInfoCriteriaNetworkIsMobileArgs();
 
     /**
-     * The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * Carrier
      * 
      */
     @Import(name="carrier")
     private @Nullable Output<String> carrier;
 
     /**
-     * @return The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Carrier
      * 
      */
     public Optional<Output<String>> carrier() {
@@ -55,7 +55,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsMobileArgs extends com.p
         }
 
         /**
-         * @param carrier The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param carrier Carrier
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class HipObjectNetworkInfoCriteriaNetworkIsMobileArgs extends com.p
         }
 
         /**
-         * @param carrier The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+         * @param carrier Carrier
          * 
          * @return builder
          * 

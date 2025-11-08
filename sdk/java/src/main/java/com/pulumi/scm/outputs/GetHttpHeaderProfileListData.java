@@ -13,54 +13,94 @@ import java.util.Objects;
 @CustomType
 public final class GetHttpHeaderProfileListData {
     /**
-     * @return The Description param.
+     * @return The description of the HTTP header profile
      * 
      */
     private String description;
     /**
-     * @return The HttpHeaderInsertions param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return A list of HTTP header profile rules
      * 
      */
     private List<GetHttpHeaderProfileListDataHttpHeaderInsertion> httpHeaderInsertions;
     /**
-     * @return UUID of the resource.
+     * @return The UUID of the HTTP header profile
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return The name of the HTTP header profile
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
 
     private GetHttpHeaderProfileListData() {}
     /**
-     * @return The Description param.
+     * @return The description of the HTTP header profile
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The HttpHeaderInsertions param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return A list of HTTP header profile rules
      * 
      */
     public List<GetHttpHeaderProfileListDataHttpHeaderInsertion> httpHeaderInsertions() {
         return this.httpHeaderInsertions;
     }
     /**
-     * @return UUID of the resource.
+     * @return The UUID of the HTTP header profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return The name of the HTTP header profile
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -73,16 +113,24 @@ public final class GetHttpHeaderProfileListData {
     @CustomType.Builder
     public static final class Builder {
         private String description;
+        private String device;
+        private String folder;
         private List<GetHttpHeaderProfileListDataHttpHeaderInsertion> httpHeaderInsertions;
         private String id;
         private String name;
+        private String snippet;
+        private String tfid;
         public Builder() {}
         public Builder(GetHttpHeaderProfileListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.httpHeaderInsertions = defaults.httpHeaderInsertions;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -91,6 +139,22 @@ public final class GetHttpHeaderProfileListData {
               throw new MissingRequiredPropertyException("GetHttpHeaderProfileListData", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetHttpHeaderProfileListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetHttpHeaderProfileListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -120,12 +184,32 @@ public final class GetHttpHeaderProfileListData {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetHttpHeaderProfileListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetHttpHeaderProfileListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetHttpHeaderProfileListData build() {
             final var _resultValue = new GetHttpHeaderProfileListData();
             _resultValue.description = description;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.httpHeaderInsertions = httpHeaderInsertions;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

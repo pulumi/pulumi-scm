@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectHostInfoCriteriaOs {
     /**
-     * @return The Contains param.
+     * @return Contains
      * 
      */
     private GetHipObjectHostInfoCriteriaOsContains contains;
 
     private GetHipObjectHostInfoCriteriaOs() {}
     /**
-     * @return The Contains param.
+     * @return Contains
      * 
      */
     public GetHipObjectHostInfoCriteriaOsContains contains() {

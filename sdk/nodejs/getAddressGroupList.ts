@@ -15,9 +15,23 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getAddressGroupList({
+ * // This data source will call the "ListAddresses" API endpoint
+ * // and return all filters in the "Shared" folder.
+ * // 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
+ * const allShared = scm.getAddressGroupList({
  *     folder: "Shared",
  * });
+ * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * const paginatedAddressGroupsExample = scm.getAddressGroupList({
+ *     folder: "Shared",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const paginatedAddressGroups = paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const paginationAddressGroupsDetails = {
+ *     totalObjectsInFolder: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.total),
+ *     limitUsed: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.limit),
+ * };
  * ```
  */
 export function getAddressGroupList(args?: GetAddressGroupListArgs, opts?: pulumi.InvokeOptions): Promise<GetAddressGroupListResult> {
@@ -38,27 +52,27 @@ export function getAddressGroupList(args?: GetAddressGroupListArgs, opts?: pulum
  */
 export interface GetAddressGroupListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -68,15 +82,15 @@ export interface GetAddressGroupListArgs {
  */
 export interface GetAddressGroupListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetAddressGroupListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -84,24 +98,24 @@ export interface GetAddressGroupListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -114,9 +128,23 @@ export interface GetAddressGroupListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getAddressGroupList({
+ * // This data source will call the "ListAddresses" API endpoint
+ * // and return all filters in the "Shared" folder.
+ * // 1. Use a single data block to fetch ALL addresses in the "Shared" folder.
+ * const allShared = scm.getAddressGroupList({
  *     folder: "Shared",
  * });
+ * export const addressGroupsDataSourceResultsFromList = allShared.then(allShared => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * const paginatedAddressGroupsExample = scm.getAddressGroupList({
+ *     folder: "Shared",
+ *     limit: 5,
+ *     offset: 0,
+ * });
+ * export const paginatedAddressGroups = paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => .reduce((__obj, addr) => ({ ...__obj, [addr.id]: addr })));
+ * export const paginationAddressGroupsDetails = {
+ *     totalObjectsInFolder: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.total),
+ *     limitUsed: paginatedAddressGroupsExample.then(paginatedAddressGroupsExample => paginatedAddressGroupsExample.limit),
+ * };
  * ```
  */
 export function getAddressGroupListOutput(args?: GetAddressGroupListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAddressGroupListResult> {
@@ -137,27 +165,27 @@ export function getAddressGroupListOutput(args?: GetAddressGroupListOutputArgs, 
  */
 export interface GetAddressGroupListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

@@ -34,17 +34,17 @@ class AuthenticationProfileArgs:
                  username_modifier: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a AuthenticationProfile resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The AllowList param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: The Lockout param.
-        :param pulumi.Input['AuthenticationProfileMethodArgs'] method: The Method param.
-        :param pulumi.Input['AuthenticationProfileMultiFactorAuthArgs'] multi_factor_auth: The MultiFactorAuth param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: The SingleSignOn param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] user_domain: The UserDomain param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] username_modifier: The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: Allow list
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: Lockout
+        :param pulumi.Input['AuthenticationProfileMethodArgs'] method: Method
+        :param pulumi.Input['AuthenticationProfileMultiFactorAuthArgs'] multi_factor_auth: Multi factor auth
+        :param pulumi.Input[_builtins.str] name: The name of the authentication profile
+        :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: Single sign on
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] user_domain: User domain
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
         """
         if allow_lists is not None:
             pulumi.set(__self__, "allow_lists", allow_lists)
@@ -73,7 +73,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter(name="allowLists")
     def allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The AllowList param.
+        Allow list
         """
         return pulumi.get(self, "allow_lists")
 
@@ -85,7 +85,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -97,7 +97,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -109,7 +109,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter
     def lockout(self) -> Optional[pulumi.Input['AuthenticationProfileLockoutArgs']]:
         """
-        The Lockout param.
+        Lockout
         """
         return pulumi.get(self, "lockout")
 
@@ -121,7 +121,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter
     def method(self) -> Optional[pulumi.Input['AuthenticationProfileMethodArgs']]:
         """
-        The Method param.
+        Method
         """
         return pulumi.get(self, "method")
 
@@ -133,7 +133,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter(name="multiFactorAuth")
     def multi_factor_auth(self) -> Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']]:
         """
-        The MultiFactorAuth param.
+        Multi factor auth
         """
         return pulumi.get(self, "multi_factor_auth")
 
@@ -145,7 +145,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the authentication profile
         """
         return pulumi.get(self, "name")
 
@@ -157,7 +157,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter(name="singleSignOn")
     def single_sign_on(self) -> Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']]:
         """
-        The SingleSignOn param.
+        Single sign on
         """
         return pulumi.get(self, "single_sign_on")
 
@@ -169,7 +169,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -181,7 +181,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter(name="userDomain")
     def user_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The UserDomain param. String length must not exceed 63 characters.
+        User domain
         """
         return pulumi.get(self, "user_domain")
 
@@ -193,7 +193,7 @@ class AuthenticationProfileArgs:
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        Username modifier
         """
         return pulumi.get(self, "username_modifier")
 
@@ -219,17 +219,17 @@ class _AuthenticationProfileState:
                  username_modifier: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AuthenticationProfile resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The AllowList param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: The Lockout param.
-        :param pulumi.Input['AuthenticationProfileMethodArgs'] method: The Method param.
-        :param pulumi.Input['AuthenticationProfileMultiFactorAuthArgs'] multi_factor_auth: The MultiFactorAuth param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: The SingleSignOn param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] user_domain: The UserDomain param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] username_modifier: The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: Allow list
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['AuthenticationProfileLockoutArgs'] lockout: Lockout
+        :param pulumi.Input['AuthenticationProfileMethodArgs'] method: Method
+        :param pulumi.Input['AuthenticationProfileMultiFactorAuthArgs'] multi_factor_auth: Multi factor auth
+        :param pulumi.Input[_builtins.str] name: The name of the authentication profile
+        :param pulumi.Input['AuthenticationProfileSingleSignOnArgs'] single_sign_on: Single sign on
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] user_domain: User domain
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
         """
         if allow_lists is not None:
             pulumi.set(__self__, "allow_lists", allow_lists)
@@ -260,7 +260,7 @@ class _AuthenticationProfileState:
     @pulumi.getter(name="allowLists")
     def allow_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The AllowList param.
+        Allow list
         """
         return pulumi.get(self, "allow_lists")
 
@@ -272,7 +272,7 @@ class _AuthenticationProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -284,7 +284,7 @@ class _AuthenticationProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -296,7 +296,7 @@ class _AuthenticationProfileState:
     @pulumi.getter
     def lockout(self) -> Optional[pulumi.Input['AuthenticationProfileLockoutArgs']]:
         """
-        The Lockout param.
+        Lockout
         """
         return pulumi.get(self, "lockout")
 
@@ -308,7 +308,7 @@ class _AuthenticationProfileState:
     @pulumi.getter
     def method(self) -> Optional[pulumi.Input['AuthenticationProfileMethodArgs']]:
         """
-        The Method param.
+        Method
         """
         return pulumi.get(self, "method")
 
@@ -320,7 +320,7 @@ class _AuthenticationProfileState:
     @pulumi.getter(name="multiFactorAuth")
     def multi_factor_auth(self) -> Optional[pulumi.Input['AuthenticationProfileMultiFactorAuthArgs']]:
         """
-        The MultiFactorAuth param.
+        Multi factor auth
         """
         return pulumi.get(self, "multi_factor_auth")
 
@@ -332,7 +332,7 @@ class _AuthenticationProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the authentication profile
         """
         return pulumi.get(self, "name")
 
@@ -344,7 +344,7 @@ class _AuthenticationProfileState:
     @pulumi.getter(name="singleSignOn")
     def single_sign_on(self) -> Optional[pulumi.Input['AuthenticationProfileSingleSignOnArgs']]:
         """
-        The SingleSignOn param.
+        Single sign on
         """
         return pulumi.get(self, "single_sign_on")
 
@@ -356,7 +356,7 @@ class _AuthenticationProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -377,7 +377,7 @@ class _AuthenticationProfileState:
     @pulumi.getter(name="userDomain")
     def user_domain(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The UserDomain param. String length must not exceed 63 characters.
+        User domain
         """
         return pulumi.get(self, "user_domain")
 
@@ -389,7 +389,7 @@ class _AuthenticationProfileState:
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        Username modifier
         """
         return pulumi.get(self, "username_modifier")
 
@@ -417,30 +417,21 @@ class AuthenticationProfile(pulumi.CustomResource):
                  username_modifier: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AuthenticationProfile("example")
-        ```
+        AuthenticationProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The AllowList param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: The Lockout param.
-        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: The Method param.
-        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: The MultiFactorAuth param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: The SingleSignOn param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] user_domain: The UserDomain param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] username_modifier: The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: Allow list
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: Lockout
+        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: Method
+        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: Multi factor auth
+        :param pulumi.Input[_builtins.str] name: The name of the authentication profile
+        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: Single sign on
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] user_domain: User domain
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
         """
         ...
     @overload
@@ -449,16 +440,7 @@ class AuthenticationProfile(pulumi.CustomResource):
                  args: Optional[AuthenticationProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AuthenticationProfile("example")
-        ```
+        AuthenticationProfile resource
 
         :param str resource_name: The name of the resource.
         :param AuthenticationProfileArgs args: The arguments to use to populate this resource's properties.
@@ -536,17 +518,17 @@ class AuthenticationProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: The AllowList param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: The Lockout param.
-        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: The Method param.
-        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: The MultiFactorAuth param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: The SingleSignOn param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] user_domain: The UserDomain param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] username_modifier: The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] allow_lists: Allow list
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Union['AuthenticationProfileLockoutArgs', 'AuthenticationProfileLockoutArgsDict']] lockout: Lockout
+        :param pulumi.Input[Union['AuthenticationProfileMethodArgs', 'AuthenticationProfileMethodArgsDict']] method: Method
+        :param pulumi.Input[Union['AuthenticationProfileMultiFactorAuthArgs', 'AuthenticationProfileMultiFactorAuthArgsDict']] multi_factor_auth: Multi factor auth
+        :param pulumi.Input[_builtins.str] name: The name of the authentication profile
+        :param pulumi.Input[Union['AuthenticationProfileSingleSignOnArgs', 'AuthenticationProfileSingleSignOnArgsDict']] single_sign_on: Single sign on
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] user_domain: User domain
+        :param pulumi.Input[_builtins.str] username_modifier: Username modifier
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -568,9 +550,9 @@ class AuthenticationProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter(name="allowLists")
-    def allow_lists(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def allow_lists(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The AllowList param.
+        Allow list
         """
         return pulumi.get(self, "allow_lists")
 
@@ -578,7 +560,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -586,7 +568,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -594,7 +576,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter
     def lockout(self) -> pulumi.Output[Optional['outputs.AuthenticationProfileLockout']]:
         """
-        The Lockout param.
+        Lockout
         """
         return pulumi.get(self, "lockout")
 
@@ -602,7 +584,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter
     def method(self) -> pulumi.Output[Optional['outputs.AuthenticationProfileMethod']]:
         """
-        The Method param.
+        Method
         """
         return pulumi.get(self, "method")
 
@@ -610,7 +592,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="multiFactorAuth")
     def multi_factor_auth(self) -> pulumi.Output[Optional['outputs.AuthenticationProfileMultiFactorAuth']]:
         """
-        The MultiFactorAuth param.
+        Multi factor auth
         """
         return pulumi.get(self, "multi_factor_auth")
 
@@ -618,7 +600,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the authentication profile
         """
         return pulumi.get(self, "name")
 
@@ -626,7 +608,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="singleSignOn")
     def single_sign_on(self) -> pulumi.Output[Optional['outputs.AuthenticationProfileSingleSignOn']]:
         """
-        The SingleSignOn param.
+        Single sign on
         """
         return pulumi.get(self, "single_sign_on")
 
@@ -634,7 +616,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -647,7 +629,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="userDomain")
     def user_domain(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The UserDomain param. String length must not exceed 63 characters.
+        User domain
         """
         return pulumi.get(self, "user_domain")
 
@@ -655,7 +637,7 @@ class AuthenticationProfile(pulumi.CustomResource):
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\\\%USERINPUT%"`.
+        Username modifier
         """
         return pulumi.get(self, "username_modifier")
 

@@ -18,14 +18,14 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
     public static final HipObjectPatchManagementCriteriaArgs Empty = new HipObjectPatchManagementCriteriaArgs();
 
     /**
-     * is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * is enabled
      * 
      */
     @Import(name="isEnabled")
     private @Nullable Output<String> isEnabled;
 
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     public Optional<Output<String>> isEnabled() {
@@ -33,14 +33,14 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
     }
 
     /**
-     * Is Installed. Default: `true`.
+     * Is Installed
      * 
      */
     @Import(name="isInstalled")
     private @Nullable Output<Boolean> isInstalled;
 
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Output<Boolean>> isInstalled() {
@@ -48,14 +48,14 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
     }
 
     /**
-     * The MissingPatches param.
+     * Missing patches
      * 
      */
     @Import(name="missingPatches")
     private @Nullable Output<HipObjectPatchManagementCriteriaMissingPatchesArgs> missingPatches;
 
     /**
-     * @return The MissingPatches param.
+     * @return Missing patches
      * 
      */
     public Optional<Output<HipObjectPatchManagementCriteriaMissingPatchesArgs>> missingPatches() {
@@ -89,7 +89,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param isEnabled is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+         * @param isEnabled is enabled
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param isEnabled is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+         * @param isEnabled is enabled
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param isInstalled Is Installed. Default: `true`.
+         * @param isInstalled Is Installed
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param missingPatches The MissingPatches param.
+         * @param missingPatches Missing patches
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class HipObjectPatchManagementCriteriaArgs extends com.pulumi.resou
         }
 
         /**
-         * @param missingPatches The MissingPatches param.
+         * @param missingPatches Missing patches
          * 
          * @return builder
          * 

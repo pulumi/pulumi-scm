@@ -12,7 +12,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// IkeCryptoProfile resource
 //
 // ## Example Usage
 //
@@ -28,7 +28,27 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewIkeCryptoProfile(ctx, "example", nil)
+//			// The resource block defines a new IKE Crypto Profile.
+//			_, err := scm.NewIkeCryptoProfile(ctx, "scm_ike_crypto_profile_2", &scm.IkeCryptoProfileArgs{
+//				Name:   pulumi.String("scm_ike_crypto_profile_2"),
+//				Folder: pulumi.String("Prisma Access"),
+//				Hashes: pulumi.StringArray{
+//					pulumi.String("sha256"),
+//					pulumi.String("sha384"),
+//				},
+//				DhGroups: pulumi.StringArray{
+//					pulumi.String("group14"),
+//					pulumi.String("group5"),
+//				},
+//				Encryptions: pulumi.StringArray{
+//					pulumi.String("aes-256-cbc"),
+//					pulumi.String("aes-128-cbc"),
+//				},
+//				Lifetime: &scm.IkeCryptoProfileLifetimeArgs{
+//					Hours: pulumi.Int(8),
+//				},
+//				AuthenticationMultiple: pulumi.Int(10),
+//			})
 //			if err != nil {
 //				return err
 //			}
@@ -40,23 +60,23 @@ import (
 type IkeCryptoProfile struct {
 	pulumi.CustomResourceState
 
-	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple pulumi.IntOutput `pulumi:"authenticationMultiple"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+	// Dh group
 	DhGroups pulumi.StringArrayOutput `pulumi:"dhGroups"`
-	// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+	// Encryption algorithm
 	Encryptions pulumi.StringArrayOutput `pulumi:"encryptions"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+	// Hash
 	Hashes pulumi.StringArrayOutput `pulumi:"hashes"`
-	// The Lifetime param.
+	// Ike crypto profile lifetime
 	Lifetime IkeCryptoProfileLifetimePtrOutput `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -100,45 +120,45 @@ func GetIkeCryptoProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering IkeCryptoProfile resources.
 type ikeCryptoProfileState struct {
-	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple *int `pulumi:"authenticationMultiple"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+	// Dh group
 	DhGroups []string `pulumi:"dhGroups"`
-	// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+	// Encryption algorithm
 	Encryptions []string `pulumi:"encryptions"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+	// Hash
 	Hashes []string `pulumi:"hashes"`
-	// The Lifetime param.
+	// Ike crypto profile lifetime
 	Lifetime *IkeCryptoProfileLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type IkeCryptoProfileState struct {
-	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple pulumi.IntPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+	// Dh group
 	DhGroups pulumi.StringArrayInput
-	// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+	// Encryption algorithm
 	Encryptions pulumi.StringArrayInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+	// Hash
 	Hashes pulumi.StringArrayInput
-	// The Lifetime param.
+	// Ike crypto profile lifetime
 	Lifetime IkeCryptoProfileLifetimePtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -148,45 +168,45 @@ func (IkeCryptoProfileState) ElementType() reflect.Type {
 }
 
 type ikeCryptoProfileArgs struct {
-	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple *int `pulumi:"authenticationMultiple"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+	// Dh group
 	DhGroups []string `pulumi:"dhGroups"`
-	// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+	// Encryption algorithm
 	Encryptions []string `pulumi:"encryptions"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+	// Hash
 	Hashes []string `pulumi:"hashes"`
-	// The Lifetime param.
+	// Ike crypto profile lifetime
 	Lifetime *IkeCryptoProfileLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a IkeCryptoProfile resource.
 type IkeCryptoProfileArgs struct {
-	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple pulumi.IntPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+	// Dh group
 	DhGroups pulumi.StringArrayInput
-	// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+	// Encryption algorithm
 	Encryptions pulumi.StringArrayInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+	// Hash
 	Hashes pulumi.StringArrayInput
-	// The Lifetime param.
+	// Ike crypto profile lifetime
 	Lifetime IkeCryptoProfileLifetimePtrInput
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -277,47 +297,47 @@ func (o IkeCryptoProfileOutput) ToIkeCryptoProfileOutputWithContext(ctx context.
 	return o
 }
 
-// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 func (o IkeCryptoProfileOutput) AuthenticationMultiple() pulumi.IntOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.IntOutput { return v.AuthenticationMultiple }).(pulumi.IntOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o IkeCryptoProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+// Dh group
 func (o IkeCryptoProfileOutput) DhGroups() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringArrayOutput { return v.DhGroups }).(pulumi.StringArrayOutput)
 }
 
-// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+// Encryption algorithm
 func (o IkeCryptoProfileOutput) Encryptions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringArrayOutput { return v.Encryptions }).(pulumi.StringArrayOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o IkeCryptoProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+// Hash
 func (o IkeCryptoProfileOutput) Hashes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringArrayOutput { return v.Hashes }).(pulumi.StringArrayOutput)
 }
 
-// The Lifetime param.
+// Ike crypto profile lifetime
 func (o IkeCryptoProfileOutput) Lifetime() IkeCryptoProfileLifetimePtrOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) IkeCryptoProfileLifetimePtrOutput { return v.Lifetime }).(IkeCryptoProfileLifetimePtrOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o IkeCryptoProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o IkeCryptoProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

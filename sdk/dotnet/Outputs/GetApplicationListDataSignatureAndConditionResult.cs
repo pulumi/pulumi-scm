@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationListDataSignatureAndConditionResult
     {
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OrConditions param.
+        /// Or condition
         /// </summary>
         public readonly ImmutableArray<Outputs.GetApplicationListDataSignatureAndConditionOrConditionResult> OrConditions;
 

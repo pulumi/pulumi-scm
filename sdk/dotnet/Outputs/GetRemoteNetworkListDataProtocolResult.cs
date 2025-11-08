@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRemoteNetworkListDataProtocolResult
     {
         /// <summary>
-        /// The Bgp param.
+        /// Bgp
         /// </summary>
         public readonly Outputs.GetRemoteNetworkListDataProtocolBgpResult Bgp;
         /// <summary>
-        /// secondary bgp routing as bgp*peer.
+        /// secondary bgp routing as bgp*peer
         /// </summary>
         public readonly Outputs.GetRemoteNetworkListDataProtocolBgpPeerResult BgpPeer;
 

@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCustomChecksCriteriaRegistryKeyRegistryValue {
     /**
-     * @return Registry value name. String length must not exceed 1023 characters.
+     * @return Registry value name
      * 
      */
     private String name;
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     private @Nullable Boolean negate;
     /**
-     * @return Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry value data
      * 
      */
     private @Nullable String valueData;
 
     private HipObjectCustomChecksCriteriaRegistryKeyRegistryValue() {}
     /**
-     * @return Registry value name. String length must not exceed 1023 characters.
+     * @return Registry value name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     public Optional<Boolean> negate() {
         return Optional.ofNullable(this.negate);
     }
     /**
-     * @return Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry value data
      * 
      */
     public Optional<String> valueData() {

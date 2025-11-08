@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetHipObject
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// HipObject data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetHipObject.Invoke(new()
+        ///     // Look up a single HIP Profile by its ID.
+        ///     var scmHipObjectDs = Scm.GetHipObject.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["hipObjectsDsResult"] = scmHipObjectDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +41,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetHipObjectResult>("scm:index/getHipObject:getHipObject", args ?? new GetHipObjectArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// HipObject data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +53,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetHipObject.Invoke(new()
+        ///     // Look up a single HIP Profile by its ID.
+        ///     var scmHipObjectDs = Scm.GetHipObject.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["hipObjectsDsResult"] = scmHipObjectDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +70,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetHipObjectResult>("scm:index/getHipObject:getHipObject", args ?? new GetHipObjectInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// HipObject data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +82,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetHipObject.Invoke(new()
+        ///     // Look up a single HIP Profile by its ID.
+        ///     var scmHipObjectDs = Scm.GetHipObject.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["hipObjectsDsResult"] = scmHipObjectDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +103,16 @@ namespace Pulumi.Scm
     public sealed class GetHipObjectArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the HIP object
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetHipObjectArgs()
         {
@@ -102,10 +123,16 @@ namespace Pulumi.Scm
     public sealed class GetHipObjectInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the HIP object
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetHipObjectInvokeArgs()
         {
@@ -118,61 +145,73 @@ namespace Pulumi.Scm
     public sealed class GetHipObjectResult
     {
         /// <summary>
-        /// The AntiMalware param.
+        /// Anti malware
         /// </summary>
         public readonly Outputs.GetHipObjectAntiMalwareResult AntiMalware;
         /// <summary>
-        /// The Certificate param.
+        /// Certificate
         /// </summary>
         public readonly Outputs.GetHipObjectCertificateResult Certificate;
         /// <summary>
-        /// The CustomChecks param.
+        /// Custom checks
         /// </summary>
         public readonly Outputs.GetHipObjectCustomChecksResult CustomChecks;
         /// <summary>
-        /// The DataLossPrevention param.
+        /// Data loss prevention
         /// </summary>
         public readonly Outputs.GetHipObjectDataLossPreventionResult DataLossPrevention;
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DiskBackup param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Disk backup
         /// </summary>
         public readonly Outputs.GetHipObjectDiskBackupResult DiskBackup;
         /// <summary>
-        /// The DiskEncryption param.
+        /// Disk encryption
         /// </summary>
         public readonly Outputs.GetHipObjectDiskEncryptionResult DiskEncryption;
         /// <summary>
-        /// The Firewall param.
+        /// Firewall
         /// </summary>
         public readonly Outputs.GetHipObjectFirewallResult Firewall;
         /// <summary>
-        /// The HostInfo param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// Host info
         /// </summary>
         public readonly Outputs.GetHipObjectHostInfoResult HostInfo;
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The MobileDevice param.
+        /// Mobile device
         /// </summary>
         public readonly Outputs.GetHipObjectMobileDeviceResult MobileDevice;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP object
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NetworkInfo param.
+        /// Network info
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoResult NetworkInfo;
         /// <summary>
-        /// The PatchManagement param.
+        /// Patch management
         /// </summary>
         public readonly Outputs.GetHipObjectPatchManagementResult PatchManagement;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -187,11 +226,15 @@ namespace Pulumi.Scm
 
             string description,
 
+            string device,
+
             Outputs.GetHipObjectDiskBackupResult diskBackup,
 
             Outputs.GetHipObjectDiskEncryptionResult diskEncryption,
 
             Outputs.GetHipObjectFirewallResult firewall,
+
+            string folder,
 
             Outputs.GetHipObjectHostInfoResult hostInfo,
 
@@ -205,6 +248,8 @@ namespace Pulumi.Scm
 
             Outputs.GetHipObjectPatchManagementResult patchManagement,
 
+            string snippet,
+
             string tfid)
         {
             AntiMalware = antiMalware;
@@ -212,15 +257,18 @@ namespace Pulumi.Scm
             CustomChecks = customChecks;
             DataLossPrevention = dataLossPrevention;
             Description = description;
+            Device = device;
             DiskBackup = diskBackup;
             DiskEncryption = diskEncryption;
             Firewall = firewall;
+            Folder = folder;
             HostInfo = hostInfo;
             Id = id;
             MobileDevice = mobileDevice;
             Name = name;
             NetworkInfo = networkInfo;
             PatchManagement = patchManagement;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

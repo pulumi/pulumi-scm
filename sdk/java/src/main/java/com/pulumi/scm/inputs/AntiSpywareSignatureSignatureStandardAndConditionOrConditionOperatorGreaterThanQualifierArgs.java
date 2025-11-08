@@ -16,14 +16,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     public static final AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs Empty = new AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -31,14 +31,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
     }
 
     /**
-     * The Value param.
+     * Value
      * 
      */
     @Import(name="value")
     private @Nullable Output<String> value;
 
     /**
-     * @return The Value param.
+     * @return Value
      * 
      */
     public Optional<Output<String>> value() {
@@ -71,7 +71,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param value The Value param.
+         * @param value Value
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionO
         }
 
         /**
-         * @param value The Value param.
+         * @param value Value
          * 
          * @return builder
          * 

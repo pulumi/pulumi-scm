@@ -5,45 +5,45 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetScepProfileScepChallengeDynamicChallenge;
+import com.pulumi.scm.outputs.GetScepProfileScepChallengeDynamic;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetScepProfileScepChallenge {
     /**
-     * @return The DynamicChallenge param.
+     * @return Dynamic
      * 
      */
-    private GetScepProfileScepChallengeDynamicChallenge dynamicChallenge;
+    private GetScepProfileScepChallengeDynamic dynamic;
     /**
-     * @return Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters.
+     * @return Challenge to use for SCEP server on mobile clients
      * 
      */
     private String fixed;
     /**
-     * @return The None param. String must be one of these: `&#34;&#34;`.
+     * @return No OTP
      * 
      */
     private String none;
 
     private GetScepProfileScepChallenge() {}
     /**
-     * @return The DynamicChallenge param.
+     * @return Dynamic
      * 
      */
-    public GetScepProfileScepChallengeDynamicChallenge dynamicChallenge() {
-        return this.dynamicChallenge;
+    public GetScepProfileScepChallengeDynamic dynamic() {
+        return this.dynamic;
     }
     /**
-     * @return Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters.
+     * @return Challenge to use for SCEP server on mobile clients
      * 
      */
     public String fixed() {
         return this.fixed;
     }
     /**
-     * @return The None param. String must be one of these: `&#34;&#34;`.
+     * @return No OTP
      * 
      */
     public String none() {
@@ -59,23 +59,23 @@ public final class GetScepProfileScepChallenge {
     }
     @CustomType.Builder
     public static final class Builder {
-        private GetScepProfileScepChallengeDynamicChallenge dynamicChallenge;
+        private GetScepProfileScepChallengeDynamic dynamic;
         private String fixed;
         private String none;
         public Builder() {}
         public Builder(GetScepProfileScepChallenge defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dynamicChallenge = defaults.dynamicChallenge;
+    	      this.dynamic = defaults.dynamic;
     	      this.fixed = defaults.fixed;
     	      this.none = defaults.none;
         }
 
         @CustomType.Setter
-        public Builder dynamicChallenge(GetScepProfileScepChallengeDynamicChallenge dynamicChallenge) {
-            if (dynamicChallenge == null) {
-              throw new MissingRequiredPropertyException("GetScepProfileScepChallenge", "dynamicChallenge");
+        public Builder dynamic(GetScepProfileScepChallengeDynamic dynamic) {
+            if (dynamic == null) {
+              throw new MissingRequiredPropertyException("GetScepProfileScepChallenge", "dynamic");
             }
-            this.dynamicChallenge = dynamicChallenge;
+            this.dynamic = dynamic;
             return this;
         }
         @CustomType.Setter
@@ -96,7 +96,7 @@ public final class GetScepProfileScepChallenge {
         }
         public GetScepProfileScepChallenge build() {
             final var _resultValue = new GetScepProfileScepChallenge();
-            _resultValue.dynamicChallenge = dynamicChallenge;
+            _resultValue.dynamic = dynamic;
             _resultValue.fixed = fixed;
             _resultValue.none = none;
             return _resultValue;

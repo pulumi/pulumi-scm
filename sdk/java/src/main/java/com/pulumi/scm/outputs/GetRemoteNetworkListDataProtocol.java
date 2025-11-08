@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetRemoteNetworkListDataProtocol {
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     private GetRemoteNetworkListDataProtocolBgp bgp;
     /**
-     * @return secondary bgp routing as bgp*peer.
+     * @return secondary bgp routing as bgp*peer
      * 
      */
     private GetRemoteNetworkListDataProtocolBgpPeer bgpPeer;
 
     private GetRemoteNetworkListDataProtocol() {}
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public GetRemoteNetworkListDataProtocolBgp bgp() {
         return this.bgp;
     }
     /**
-     * @return secondary bgp routing as bgp*peer.
+     * @return secondary bgp routing as bgp*peer
      * 
      */
     public GetRemoteNetworkListDataProtocolBgpPeer bgpPeer() {

@@ -12,47 +12,21 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewTlsServiceProfile(ctx, "example", &scm.TlsServiceProfileArgs{
-//				Folder: pulumi.String("Shared"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// TlsServiceProfile resource
 type TlsServiceProfile struct {
 	pulumi.CustomResourceState
 
-	// SSL certificate file name. String length must not exceed 255 characters.
+	// Certificate name
 	Certificate pulumi.StringOutput `pulumi:"certificate"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The ProtocolSettings param.
+	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettingsOutput `pulumi:"protocolSettings"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -93,33 +67,33 @@ func GetTlsServiceProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering TlsServiceProfile resources.
 type tlsServiceProfileState struct {
-	// SSL certificate file name. String length must not exceed 255 characters.
+	// Certificate name
 	Certificate *string `pulumi:"certificate"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 	Name *string `pulumi:"name"`
-	// The ProtocolSettings param.
+	// Protocol settings
 	ProtocolSettings *TlsServiceProfileProtocolSettings `pulumi:"protocolSettings"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type TlsServiceProfileState struct {
-	// SSL certificate file name. String length must not exceed 255 characters.
+	// Certificate name
 	Certificate pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 	Name pulumi.StringPtrInput
-	// The ProtocolSettings param.
+	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettingsPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -129,33 +103,33 @@ func (TlsServiceProfileState) ElementType() reflect.Type {
 }
 
 type tlsServiceProfileArgs struct {
-	// SSL certificate file name. String length must not exceed 255 characters.
+	// Certificate name
 	Certificate string `pulumi:"certificate"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 	Name *string `pulumi:"name"`
-	// The ProtocolSettings param.
+	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettings `pulumi:"protocolSettings"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a TlsServiceProfile resource.
 type TlsServiceProfileArgs struct {
-	// SSL certificate file name. String length must not exceed 255 characters.
+	// Certificate name
 	Certificate pulumi.StringInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 	Name pulumi.StringPtrInput
-	// The ProtocolSettings param.
+	// Protocol settings
 	ProtocolSettings TlsServiceProfileProtocolSettingsInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -246,32 +220,32 @@ func (o TlsServiceProfileOutput) ToTlsServiceProfileOutputWithContext(ctx contex
 	return o
 }
 
-// SSL certificate file name. String length must not exceed 255 characters.
+// Certificate name
 func (o TlsServiceProfileOutput) Certificate() pulumi.StringOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringOutput { return v.Certificate }).(pulumi.StringOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o TlsServiceProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o TlsServiceProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
 func (o TlsServiceProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The ProtocolSettings param.
+// Protocol settings
 func (o TlsServiceProfileOutput) ProtocolSettings() TlsServiceProfileProtocolSettingsOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) TlsServiceProfileProtocolSettingsOutput { return v.ProtocolSettings }).(TlsServiceProfileProtocolSettingsOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o TlsServiceProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TlsServiceProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

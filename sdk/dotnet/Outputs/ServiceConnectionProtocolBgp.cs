@@ -14,39 +14,39 @@ namespace Pulumi.Scm.Outputs
     public sealed class ServiceConnectionProtocolBgp
     {
         /// <summary>
-        /// The DoNotExportRoutes param.
+        /// Do not export routes
         /// </summary>
         public readonly bool? DoNotExportRoutes;
         /// <summary>
-        /// The Enable param.
+        /// Enable
         /// </summary>
         public readonly bool? Enable;
         /// <summary>
-        /// The FastFailover param.
+        /// Fast failover
         /// </summary>
         public readonly bool? FastFailover;
         /// <summary>
-        /// The LocalIpAddress param.
+        /// Local ip address
         /// </summary>
         public readonly string? LocalIpAddress;
         /// <summary>
-        /// The OriginateDefaultRoute param.
+        /// Originate default route
         /// </summary>
         public readonly bool? OriginateDefaultRoute;
         /// <summary>
-        /// The PeerAs param.
+        /// Peer as
         /// </summary>
         public readonly string? PeerAs;
         /// <summary>
-        /// The PeerIpAddress param.
+        /// Peer ip address
         /// </summary>
         public readonly string? PeerIpAddress;
         /// <summary>
-        /// The Secret param.
+        /// Secret
         /// </summary>
         public readonly string? Secret;
         /// <summary>
-        /// The SummarizeMobileUserRoutes param.
+        /// Summarize mobile user routes
         /// </summary>
         public readonly bool? SummarizeMobileUserRoutes;
 

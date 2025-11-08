@@ -12,50 +12,50 @@ import java.util.Objects;
 @CustomType
 public final class GetHttpHeaderProfileListDataHttpHeaderInsertionTypeHeader {
     /**
-     * @return The Header param.
+     * @return The HTTP header string
      * 
      */
     private String header;
     /**
-     * @return The Log param. Default: `false`.
+     * @return Log the use of this HTTP header insertion?
      * 
      */
     private Boolean log;
     /**
-     * @return The Name param.
+     * @return An auto-generated name (*This should be removed*)
      * 
      */
     private String name;
     /**
-     * @return The Value param.
+     * @return The value associated with the HTTP header
      * 
      */
     private String value;
 
     private GetHttpHeaderProfileListDataHttpHeaderInsertionTypeHeader() {}
     /**
-     * @return The Header param.
+     * @return The HTTP header string
      * 
      */
     public String header() {
         return this.header;
     }
     /**
-     * @return The Log param. Default: `false`.
+     * @return Log the use of this HTTP header insertion?
      * 
      */
     public Boolean log() {
         return this.log;
     }
     /**
-     * @return The Name param.
+     * @return An auto-generated name (*This should be removed*)
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Value param.
+     * @return The value associated with the HTTP header
      * 
      */
     public String value() {

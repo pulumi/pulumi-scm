@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataPatchManagementCriteria {
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     private String isEnabled;
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     private Boolean isInstalled;
     /**
-     * @return The MissingPatches param.
+     * @return Missing patches
      * 
      */
     private GetHipObjectListDataPatchManagementCriteriaMissingPatches missingPatches;
 
     private GetHipObjectListDataPatchManagementCriteria() {}
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     public String isEnabled() {
         return this.isEnabled;
     }
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Boolean isInstalled() {
         return this.isInstalled;
     }
     /**
-     * @return The MissingPatches param.
+     * @return Missing patches
      * 
      */
     public GetHipObjectListDataPatchManagementCriteriaMissingPatches missingPatches() {

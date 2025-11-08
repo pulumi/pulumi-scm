@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.KerberosServerProfile("example", {});
- * ```
+ * KerberosServerProfile resource
  */
 export class KerberosServerProfile extends pulumi.CustomResource {
     /**
@@ -47,19 +38,23 @@ export class KerberosServerProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Servers param.
+     * The name of the Kerberos server profile
+     */
+    declare public readonly name: pulumi.Output<string>;
+    /**
+     * The Kerberos server configuration
      */
     declare public readonly servers: pulumi.Output<outputs.KerberosServerProfileServer[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -79,6 +74,7 @@ export class KerberosServerProfile extends pulumi.CustomResource {
             const state = argsOrState as KerberosServerProfileState | undefined;
             resourceInputs["device"] = state?.device;
             resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
             resourceInputs["servers"] = state?.servers;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tfid"] = state?.tfid;
@@ -89,6 +85,7 @@ export class KerberosServerProfile extends pulumi.CustomResource {
             }
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
             resourceInputs["servers"] = args?.servers;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["tfid"] = undefined /*out*/;
@@ -103,19 +100,23 @@ export class KerberosServerProfile extends pulumi.CustomResource {
  */
 export interface KerberosServerProfileState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Servers param.
+     * The name of the Kerberos server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The Kerberos server configuration
      */
     servers?: pulumi.Input<pulumi.Input<inputs.KerberosServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -126,19 +127,23 @@ export interface KerberosServerProfileState {
  */
 export interface KerberosServerProfileArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Servers param.
+     * The name of the Kerberos server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The Kerberos server configuration
      */
     servers: pulumi.Input<pulumi.Input<inputs.KerberosServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

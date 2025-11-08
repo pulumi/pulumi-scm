@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetFileBlockingProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetFileBlockingProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// FileBlockingProfile data source
         /// </summary>
         public static Task<GetFileBlockingProfileResult> InvokeAsync(GetFileBlockingProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetFileBlockingProfileResult>("scm:index/getFileBlockingProfile:getFileBlockingProfile", args ?? new GetFileBlockingProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetFileBlockingProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// FileBlockingProfile data source
         /// </summary>
         public static Output<GetFileBlockingProfileResult> Invoke(GetFileBlockingProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFileBlockingProfileResult>("scm:index/getFileBlockingProfile:getFileBlockingProfile", args ?? new GetFileBlockingProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetFileBlockingProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// FileBlockingProfile data source
         /// </summary>
         public static Output<GetFileBlockingProfileResult> Invoke(GetFileBlockingProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetFileBlockingProfileResult>("scm:index/getFileBlockingProfile:getFileBlockingProfile", args ?? new GetFileBlockingProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetFileBlockingProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the file blocking profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the file blocking profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetFileBlockingProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetFileBlockingProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the file blocking profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the file blocking profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetFileBlockingProfileInvokeArgs()
         {
@@ -118,26 +76,42 @@ namespace Pulumi.Scm
     public sealed class GetFileBlockingProfileResult
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the file blocking profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the file blocking profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Rules param.
+        /// A list of file blocking rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetFileBlockingProfileRuleResult> Rules;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetFileBlockingProfileResult(
             string description,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -145,12 +119,17 @@ namespace Pulumi.Scm
 
             ImmutableArray<Outputs.GetFileBlockingProfileRuleResult> rules,
 
+            string snippet,
+
             string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             Rules = rules;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

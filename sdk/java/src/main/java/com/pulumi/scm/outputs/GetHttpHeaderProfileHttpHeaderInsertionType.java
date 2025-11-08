@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHttpHeaderProfileHttpHeaderInsertionType {
     /**
-     * @return The Domains param.
+     * @return A list of DNS domains
      * 
      */
     private List<String> domains;
     /**
-     * @return The Headers param.
+     * @return Headers
      * 
      */
     private List<GetHttpHeaderProfileHttpHeaderInsertionTypeHeader> headers;
     /**
-     * @return The Name param.
+     * @return The HTTP header insertion type (*This is a predefined list in the UI*)
      * 
      */
     private String name;
 
     private GetHttpHeaderProfileHttpHeaderInsertionType() {}
     /**
-     * @return The Domains param.
+     * @return A list of DNS domains
      * 
      */
     public List<String> domains() {
         return this.domains;
     }
     /**
-     * @return The Headers param.
+     * @return Headers
      * 
      */
     public List<GetHttpHeaderProfileHttpHeaderInsertionTypeHeader> headers() {
         return this.headers;
     }
     /**
-     * @return The Name param.
+     * @return The HTTP header insertion type (*This is a predefined list in the UI*)
      * 
      */
     public String name() {

@@ -5,16 +5,9 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ServiceConnectionGroup resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.ServiceConnectionGroup("example", {});
- * ```
  */
 export class ServiceConnectionGroup extends pulumi.CustomResource {
     /**
@@ -45,23 +38,19 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
     }
 
     /**
-     * The DisableSnat param.
+     * Disable snat
      */
     declare public readonly disableSnat: pulumi.Output<boolean | undefined>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    declare public readonly folder: pulumi.Output<string>;
-    /**
-     * The Name param.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The PbfOnly param.
+     * Pbf only
      */
     declare public readonly pbfOnly: pulumi.Output<boolean | undefined>;
     /**
-     * The Targets param.
+     * Target
      */
     declare public readonly targets: pulumi.Output<string[]>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -80,7 +69,6 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as ServiceConnectionGroupState | undefined;
             resourceInputs["disableSnat"] = state?.disableSnat;
-            resourceInputs["folder"] = state?.folder;
             resourceInputs["name"] = state?.name;
             resourceInputs["pbfOnly"] = state?.pbfOnly;
             resourceInputs["targets"] = state?.targets;
@@ -91,7 +79,6 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
                 throw new Error("Missing required property 'targets'");
             }
             resourceInputs["disableSnat"] = args?.disableSnat;
-            resourceInputs["folder"] = args?.folder;
             resourceInputs["name"] = args?.name;
             resourceInputs["pbfOnly"] = args?.pbfOnly;
             resourceInputs["targets"] = args?.targets;
@@ -107,23 +94,19 @@ export class ServiceConnectionGroup extends pulumi.CustomResource {
  */
 export interface ServiceConnectionGroupState {
     /**
-     * The DisableSnat param.
+     * Disable snat
      */
     disableSnat?: pulumi.Input<boolean>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The PbfOnly param.
+     * Pbf only
      */
     pbfOnly?: pulumi.Input<boolean>;
     /**
-     * The Targets param.
+     * Target
      */
     targets?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -134,23 +117,19 @@ export interface ServiceConnectionGroupState {
  */
 export interface ServiceConnectionGroupArgs {
     /**
-     * The DisableSnat param.
+     * Disable snat
      */
     disableSnat?: pulumi.Input<boolean>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The PbfOnly param.
+     * Pbf only
      */
     pbfOnly?: pulumi.Input<boolean>;
     /**
-     * The Targets param.
+     * Target
      */
     targets: pulumi.Input<pulumi.Input<string>[]>;
 }

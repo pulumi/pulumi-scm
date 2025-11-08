@@ -17,106 +17,64 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * ServiceConnectionGroup resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.ServiceConnectionGroup;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ServiceConnectionGroup("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/serviceConnectionGroup:ServiceConnectionGroup")
 public class ServiceConnectionGroup extends com.pulumi.resources.CustomResource {
     /**
-     * The DisableSnat param.
+     * Disable snat
      * 
      */
     @Export(name="disableSnat", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> disableSnat;
 
     /**
-     * @return The DisableSnat param.
+     * @return Disable snat
      * 
      */
     public Output<Optional<Boolean>> disableSnat() {
         return Codegen.optional(this.disableSnat);
     }
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    @Export(name="folder", refs={String.class}, tree="[0]")
-    private Output<String> folder;
-
-    /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    public Output<String> folder() {
-        return this.folder;
-    }
-    /**
-     * The Name param.
+     * Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The PbfOnly param.
+     * Pbf only
      * 
      */
     @Export(name="pbfOnly", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> pbfOnly;
 
     /**
-     * @return The PbfOnly param.
+     * @return Pbf only
      * 
      */
     public Output<Optional<Boolean>> pbfOnly() {
         return Codegen.optional(this.pbfOnly);
     }
     /**
-     * The Targets param.
+     * Target
      * 
      */
     @Export(name="targets", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> targets;
 
     /**
-     * @return The Targets param.
+     * @return Target
      * 
      */
     public Output<List<String>> targets() {

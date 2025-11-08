@@ -14,31 +14,48 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIpsecTunnelListDataResult
     {
         /// <summary>
-        /// Enable Anti-Replay check on this tunnel.
+        /// Enable Anti-Replay check on this tunnel
         /// </summary>
         public readonly bool AntiReplay;
         /// <summary>
-        /// The AutoKey param.
+        /// Auto key
         /// </summary>
         public readonly Outputs.GetIpsecTunnelListDataAutoKeyResult AutoKey;
         /// <summary>
-        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `False`.
+        /// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
         /// </summary>
         public readonly bool CopyTos;
         /// <summary>
-        /// allow GRE over IPSec. Default: `False`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// allow GRE over IPSec
         /// </summary>
         public readonly bool EnableGreEncapsulation;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The TunnelMonitor param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+        /// </summary>
+        public readonly string TunnelInterface;
+        /// <summary>
+        /// Tunnel monitor
         /// </summary>
         public readonly Outputs.GetIpsecTunnelListDataTunnelMonitorResult TunnelMonitor;
 
@@ -50,20 +67,35 @@ namespace Pulumi.Scm.Outputs
 
             bool copyTos,
 
+            string device,
+
             bool enableGreEncapsulation,
+
+            string folder,
 
             string id,
 
             string name,
+
+            string snippet,
+
+            string tfid,
+
+            string tunnelInterface,
 
             Outputs.GetIpsecTunnelListDataTunnelMonitorResult tunnelMonitor)
         {
             AntiReplay = antiReplay;
             AutoKey = autoKey;
             CopyTos = copyTos;
+            Device = device;
             EnableGreEncapsulation = enableGreEncapsulation;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
+            TunnelInterface = tunnelInterface;
             TunnelMonitor = tunnelMonitor;
         }
     }

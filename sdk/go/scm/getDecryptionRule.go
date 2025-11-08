@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupDecryptionRule(ctx, &scm.LookupDecryptionRuleArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// DecryptionRule data source
 func LookupDecryptionRule(ctx *pulumi.Context, args *LookupDecryptionRuleArgs, opts ...pulumi.InvokeOption) (*LookupDecryptionRuleResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupDecryptionRuleResult
@@ -50,56 +24,64 @@ func LookupDecryptionRule(ctx *pulumi.Context, args *LookupDecryptionRuleArgs, o
 
 // A collection of arguments for invoking getDecryptionRule.
 type LookupDecryptionRuleArgs struct {
-	// The Id param.
+	// The UUID of the decryption rule
 	Id string `pulumi:"id"`
+	// The name of the decryption rule
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getDecryptionRule.
 type LookupDecryptionRuleResult struct {
-	// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+	// The action to be taken
 	Action string `pulumi:"action"`
-	// The Categories param.
+	// The destination URL category
 	Categories []string `pulumi:"categories"`
-	// The Description param.
+	// The description of the decryption rule
 	Description string `pulumi:"description"`
-	// The DestinationHips param.
+	// The Host Integrity Profile of the destination host
 	DestinationHips []string `pulumi:"destinationHips"`
-	// The Destinations param.
+	// The destination addresses
 	Destinations []string `pulumi:"destinations"`
-	// The Disabled param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Is the rule disabled?
 	Disabled bool `pulumi:"disabled"`
-	// The Froms param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The source security zone
 	Froms []string `pulumi:"froms"`
-	// The Id param.
+	// The UUID of the decryption rule
 	Id string `pulumi:"id"`
-	// The LogFail param.
+	// Log failed decryption events?
 	LogFail bool `pulumi:"logFail"`
-	// The LogSetting param.
+	// The log settings of the decryption rule
 	LogSetting string `pulumi:"logSetting"`
-	// The LogSuccess param.
+	// Log successful decryption events?
 	LogSuccess bool `pulumi:"logSuccess"`
-	// The Name param.
+	// The name of the decryption rule
 	Name string `pulumi:"name"`
-	// The NegateDestination param.
+	// Negate the destination addresses?
 	NegateDestination bool `pulumi:"negateDestination"`
-	// The NegateSource param.
+	// Negate the source addresses?
 	NegateSource bool `pulumi:"negateSource"`
-	// The Profile param.
+	// The decryption profile associated with the decryption rule
 	Profile string `pulumi:"profile"`
-	// The Services param.
+	// The destination services and/or service groups
 	Services []string `pulumi:"services"`
-	// The SourceHips param.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Source hip
 	SourceHips []string `pulumi:"sourceHips"`
-	// The SourceUsers param.
+	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// The Sources param.
+	// The source addresses
 	Sources []string `pulumi:"sources"`
-	// The Tags param.
+	// The tags associated with the decryption rule
 	Tags []string `pulumi:"tags"`
 	Tfid string   `pulumi:"tfid"`
-	// The Tos param.
+	// The destination security zone
 	Tos []string `pulumi:"tos"`
-	// The Type param.
+	// The type of decryption
 	Type GetDecryptionRuleType `pulumi:"type"`
 }
 
@@ -114,8 +96,10 @@ func LookupDecryptionRuleOutput(ctx *pulumi.Context, args LookupDecryptionRuleOu
 
 // A collection of arguments for invoking getDecryptionRule.
 type LookupDecryptionRuleOutputArgs struct {
-	// The Id param.
+	// The UUID of the decryption rule
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the decryption rule
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupDecryptionRuleOutputArgs) ElementType() reflect.Type {
@@ -137,102 +121,117 @@ func (o LookupDecryptionRuleResultOutput) ToLookupDecryptionRuleResultOutputWith
 	return o
 }
 
-// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+// The action to be taken
 func (o LookupDecryptionRuleResultOutput) Action() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Action }).(pulumi.StringOutput)
 }
 
-// The Categories param.
+// The destination URL category
 func (o LookupDecryptionRuleResultOutput) Categories() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Categories }).(pulumi.StringArrayOutput)
 }
 
-// The Description param.
+// The description of the decryption rule
 func (o LookupDecryptionRuleResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The DestinationHips param.
+// The Host Integrity Profile of the destination host
 func (o LookupDecryptionRuleResultOutput) DestinationHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.DestinationHips }).(pulumi.StringArrayOutput)
 }
 
-// The Destinations param.
+// The destination addresses
 func (o LookupDecryptionRuleResultOutput) Destinations() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Destinations }).(pulumi.StringArrayOutput)
 }
 
-// The Disabled param.
+// The device in which the resource is defined
+func (o LookupDecryptionRuleResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Is the rule disabled?
 func (o LookupDecryptionRuleResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The Froms param.
+// The folder in which the resource is defined
+func (o LookupDecryptionRuleResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The source security zone
 func (o LookupDecryptionRuleResultOutput) Froms() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Froms }).(pulumi.StringArrayOutput)
 }
 
-// The Id param.
+// The UUID of the decryption rule
 func (o LookupDecryptionRuleResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The LogFail param.
+// Log failed decryption events?
 func (o LookupDecryptionRuleResultOutput) LogFail() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) bool { return v.LogFail }).(pulumi.BoolOutput)
 }
 
-// The LogSetting param.
+// The log settings of the decryption rule
 func (o LookupDecryptionRuleResultOutput) LogSetting() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.LogSetting }).(pulumi.StringOutput)
 }
 
-// The LogSuccess param.
+// Log successful decryption events?
 func (o LookupDecryptionRuleResultOutput) LogSuccess() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) bool { return v.LogSuccess }).(pulumi.BoolOutput)
 }
 
-// The Name param.
+// The name of the decryption rule
 func (o LookupDecryptionRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NegateDestination param.
+// Negate the destination addresses?
 func (o LookupDecryptionRuleResultOutput) NegateDestination() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) bool { return v.NegateDestination }).(pulumi.BoolOutput)
 }
 
-// The NegateSource param.
+// Negate the source addresses?
 func (o LookupDecryptionRuleResultOutput) NegateSource() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) bool { return v.NegateSource }).(pulumi.BoolOutput)
 }
 
-// The Profile param.
+// The decryption profile associated with the decryption rule
 func (o LookupDecryptionRuleResultOutput) Profile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Profile }).(pulumi.StringOutput)
 }
 
-// The Services param.
+// The destination services and/or service groups
 func (o LookupDecryptionRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The SourceHips param.
+// The snippet in which the resource is defined
+func (o LookupDecryptionRuleResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Source hip
 func (o LookupDecryptionRuleResultOutput) SourceHips() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.SourceHips }).(pulumi.StringArrayOutput)
 }
 
-// The SourceUsers param.
+// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 func (o LookupDecryptionRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// The Sources param.
+// The source addresses
 func (o LookupDecryptionRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// The Tags param.
+// The tags associated with the decryption rule
 func (o LookupDecryptionRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }
@@ -241,12 +240,12 @@ func (o LookupDecryptionRuleResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Tos param.
+// The destination security zone
 func (o LookupDecryptionRuleResultOutput) Tos() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) []string { return v.Tos }).(pulumi.StringArrayOutput)
 }
 
-// The Type param.
+// The type of decryption
 func (o LookupDecryptionRuleResultOutput) Type() GetDecryptionRuleTypeOutput {
 	return o.ApplyT(func(v LookupDecryptionRuleResult) GetDecryptionRuleType { return v.Type }).(GetDecryptionRuleTypeOutput)
 }

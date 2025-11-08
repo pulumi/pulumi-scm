@@ -14,41 +14,41 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeDomainResult
     {
         /// <summary>
-        /// Profile for authenticating client certificates. Default: `"None"`.
+        /// Auth
+        /// </summary>
+        public readonly Outputs.GetExternalDynamicListListDataTypeDomainAuthResult Auth;
+        /// <summary>
+        /// Profile for authenticating client certificates
         /// </summary>
         public readonly string CertificateProfile;
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DomainAuth param.
-        /// </summary>
-        public readonly Outputs.GetExternalDynamicListListDataTypeDomainDomainAuthResult DomainAuth;
-        /// <summary>
-        /// The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        /// Exception list
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// Enable/Disable expand domain. Default: `False`.
+        /// Enable/Disable expand domain
         /// </summary>
         public readonly bool ExpandDomain;
         /// <summary>
-        /// The Recurring param.
+        /// Recurring
         /// </summary>
         public readonly Outputs.GetExternalDynamicListListDataTypeDomainRecurringResult Recurring;
         /// <summary>
-        /// The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        /// Url
         /// </summary>
         public readonly string Url;
 
         [OutputConstructor]
         private GetExternalDynamicListListDataTypeDomainResult(
+            Outputs.GetExternalDynamicListListDataTypeDomainAuthResult auth,
+
             string certificateProfile,
 
             string description,
-
-            Outputs.GetExternalDynamicListListDataTypeDomainDomainAuthResult domainAuth,
 
             ImmutableArray<string> exceptionLists,
 
@@ -58,9 +58,9 @@ namespace Pulumi.Scm.Outputs
 
             string url)
         {
+            Auth = auth;
             CertificateProfile = certificateProfile;
             Description = description;
-            DomainAuth = domainAuth;
             ExceptionLists = exceptionLists;
             ExpandDomain = expandDomain;
             Recurring = recurring;

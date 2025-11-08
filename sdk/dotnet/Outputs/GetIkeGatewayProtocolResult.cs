@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayProtocolResult
     {
         /// <summary>
-        /// The Ikev1 param.
+        /// Ikev1
         /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolIkev1Result Ikev1;
         /// <summary>
-        /// The Ikev2 param.
+        /// Ikev2
         /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolIkev2Result Ikev2;
         /// <summary>
-        /// The Version param. String must be one of these: `"ikev2-preferred"`, `"ikev1"`, `"ikev2"`. Default: `"ikev2-preferred"`.
+        /// Version
         /// </summary>
         public readonly string Version;
 

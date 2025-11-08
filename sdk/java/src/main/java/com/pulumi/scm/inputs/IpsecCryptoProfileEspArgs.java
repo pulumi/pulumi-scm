@@ -16,14 +16,14 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
     public static final IpsecCryptoProfileEspArgs Empty = new IpsecCryptoProfileEspArgs();
 
     /**
-     * Authentication algorithm.
+     * Authentication algorithm
      * 
      */
     @Import(name="authentications", required=true)
     private Output<List<String>> authentications;
 
     /**
-     * @return Authentication algorithm.
+     * @return Authentication algorithm
      * 
      */
     public Output<List<String>> authentications() {
@@ -31,14 +31,14 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`, `&#34;null&#34;`.
+     * Encryption algorithm
      * 
      */
     @Import(name="encryptions", required=true)
     private Output<List<String>> encryptions;
 
     /**
-     * @return Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`, `&#34;null&#34;`.
+     * @return Encryption algorithm
      * 
      */
     public Output<List<String>> encryptions() {
@@ -71,7 +71,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param authentications Authentication algorithm.
+         * @param authentications Authentication algorithm
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param authentications Authentication algorithm.
+         * @param authentications Authentication algorithm
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param authentications Authentication algorithm.
+         * @param authentications Authentication algorithm
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param encryptions Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`, `&#34;null&#34;`.
+         * @param encryptions Encryption algorithm
          * 
          * @return builder
          * 
@@ -113,7 +113,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param encryptions Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`, `&#34;null&#34;`.
+         * @param encryptions Encryption algorithm
          * 
          * @return builder
          * 
@@ -123,7 +123,7 @@ public final class IpsecCryptoProfileEspArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param encryptions Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`, `&#34;null&#34;`.
+         * @param encryptions Encryption algorithm
          * 
          * @return builder
          * 

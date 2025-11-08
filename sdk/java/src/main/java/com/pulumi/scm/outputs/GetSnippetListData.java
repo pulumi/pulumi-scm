@@ -12,62 +12,66 @@ import java.util.Objects;
 @CustomType
 public final class GetSnippetListData {
     /**
-     * @return The Description param.
+     * @return The description of the snippet
      * 
      */
     private String description;
     /**
-     * @return The Id param.
+     * @return The UUID of the snippet
      * 
      */
     private String id;
     /**
-     * @return The Labels param.
+     * @return Labels applied to the snippet
      * 
      */
     private List<String> labels;
     /**
-     * @return The Name param.
+     * @return The name of the snippet
      * 
      */
     private String name;
+    private String tfid;
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * @return The snippet type
      * 
      */
     private String type;
 
     private GetSnippetListData() {}
     /**
-     * @return The Description param.
+     * @return The description of the snippet
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the snippet
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Labels param.
+     * @return Labels applied to the snippet
      * 
      */
     public List<String> labels() {
         return this.labels;
     }
     /**
-     * @return The Name param.
+     * @return The name of the snippet
      * 
      */
     public String name() {
         return this.name;
     }
+    public String tfid() {
+        return this.tfid;
+    }
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * @return The snippet type
      * 
      */
     public String type() {
@@ -87,6 +91,7 @@ public final class GetSnippetListData {
         private String id;
         private List<String> labels;
         private String name;
+        private String tfid;
         private String type;
         public Builder() {}
         public Builder(GetSnippetListData defaults) {
@@ -95,6 +100,7 @@ public final class GetSnippetListData {
     	      this.id = defaults.id;
     	      this.labels = defaults.labels;
     	      this.name = defaults.name;
+    	      this.tfid = defaults.tfid;
     	      this.type = defaults.type;
         }
 
@@ -134,6 +140,14 @@ public final class GetSnippetListData {
             return this;
         }
         @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetSnippetListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
+        @CustomType.Setter
         public Builder type(String type) {
             if (type == null) {
               throw new MissingRequiredPropertyException("GetSnippetListData", "type");
@@ -147,6 +161,7 @@ public final class GetSnippetListData {
             _resultValue.id = id;
             _resultValue.labels = labels;
             _resultValue.name = name;
+            _resultValue.tfid = tfid;
             _resultValue.type = type;
             return _resultValue;
         }

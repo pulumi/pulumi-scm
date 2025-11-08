@@ -16,40 +16,40 @@ public final class GetQosPolicyRulePlainArgs extends com.pulumi.resources.Invoke
     public static final GetQosPolicyRulePlainArgs Empty = new GetQosPolicyRulePlainArgs();
 
     /**
-     * The Folder param.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable String folder;
-
-    /**
-     * @return The Folder param.
-     * 
-     */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
 
+    /**
+     * Name
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return Name
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetQosPolicyRulePlainArgs() {}
 
     private GetQosPolicyRulePlainArgs(GetQosPolicyRulePlainArgs $) {
-        this.folder = $.folder;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -71,24 +71,24 @@ public final class GetQosPolicyRulePlainArgs extends com.pulumi.resources.Invoke
         }
 
         /**
-         * @param folder The Folder param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable String folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 

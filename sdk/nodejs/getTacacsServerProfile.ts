@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getTacacsServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * TacacsServerProfile data source
  */
 export function getTacacsServerProfile(args: GetTacacsServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTacacsServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTacacsServerProfile:getTacacsServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getTacacsServerProfile(args: GetTacacsServerProfileArgs, opts?: 
  */
 export interface GetTacacsServerProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the TACACS+ server profile
      */
     id: string;
+    /**
+     * The name of the TACACS+ server profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,45 +36,51 @@ export interface GetTacacsServerProfileArgs {
  */
 export interface GetTacacsServerProfileResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the TACACS+ server profile
      */
     readonly id: string;
     /**
-     * The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+     * The name of the TACACS+ server profile
+     */
+    readonly name: string;
+    /**
+     * The TACACS+ authentication protocol
      */
     readonly protocol: string;
     /**
-     * The Servers param.
+     * The TACACS+ server configuration
      */
     readonly servers: outputs.GetTacacsServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The Timeout param. Value must be between 1 and 30.
+     * The TACACS+ timeout (seconds)
      */
     readonly timeout: number;
     /**
-     * The UseSingleConnection param.
+     * Use a single TACACS+ connection?
      */
     readonly useSingleConnection: boolean;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getTacacsServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * TacacsServerProfile data source
  */
 export function getTacacsServerProfileOutput(args: GetTacacsServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTacacsServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTacacsServerProfile:getTacacsServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -89,7 +89,11 @@ export function getTacacsServerProfileOutput(args: GetTacacsServerProfileOutputA
  */
 export interface GetTacacsServerProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the TACACS+ server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the TACACS+ server profile
+     */
+    name?: pulumi.Input<string>;
 }

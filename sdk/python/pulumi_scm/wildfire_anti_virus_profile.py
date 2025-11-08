@@ -32,15 +32,15 @@ class WildfireAntiVirusProfileArgs:
                  threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]]] = None):
         """
         The set of arguments for constructing a WildfireAntiVirusProfile resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]] mlav_exceptions: The MlavExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] packet_capture: The PacketCapture param.
-        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]] rules: The Rules param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]] threat_exceptions: The ThreatExceptions param.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]] mlav_exceptions: Mlav exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
+        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]] rules: Rules
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]] threat_exceptions: Threat exception
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -65,7 +65,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -77,7 +77,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -89,7 +89,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -101,7 +101,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter(name="mlavExceptions")
     def mlav_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]]]:
         """
-        The MlavExceptions param.
+        Mlav exception
         """
         return pulumi.get(self, "mlav_exceptions")
 
@@ -113,7 +113,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -125,7 +125,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter(name="packetCapture")
     def packet_capture(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The PacketCapture param.
+        Packet capture
         """
         return pulumi.get(self, "packet_capture")
 
@@ -137,7 +137,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter
     def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]]]:
         """
-        The Rules param.
+        Rules
         """
         return pulumi.get(self, "rules")
 
@@ -149,7 +149,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -161,7 +161,7 @@ class WildfireAntiVirusProfileArgs:
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]]]:
         """
-        The ThreatExceptions param.
+        Threat exception
         """
         return pulumi.get(self, "threat_exceptions")
 
@@ -185,15 +185,15 @@ class _WildfireAntiVirusProfileState:
                  threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]]] = None):
         """
         Input properties used for looking up and filtering WildfireAntiVirusProfile resources.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]] mlav_exceptions: The MlavExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] packet_capture: The PacketCapture param.
-        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]] rules: The Rules param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]] threat_exceptions: The ThreatExceptions param.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]] mlav_exceptions: Mlav exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
+        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]] rules: Rules
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]] threat_exceptions: Threat exception
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -220,7 +220,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -232,7 +232,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -244,7 +244,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -256,7 +256,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter(name="mlavExceptions")
     def mlav_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]]]:
         """
-        The MlavExceptions param.
+        Mlav exception
         """
         return pulumi.get(self, "mlav_exceptions")
 
@@ -268,7 +268,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -280,7 +280,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter(name="packetCapture")
     def packet_capture(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The PacketCapture param.
+        Packet capture
         """
         return pulumi.get(self, "packet_capture")
 
@@ -292,7 +292,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter
     def rules(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]]]:
         """
-        The Rules param.
+        Rules
         """
         return pulumi.get(self, "rules")
 
@@ -304,7 +304,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -325,7 +325,7 @@ class _WildfireAntiVirusProfileState:
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]]]:
         """
-        The ThreatExceptions param.
+        Threat exception
         """
         return pulumi.get(self, "threat_exceptions")
 
@@ -351,28 +351,19 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
                  threat_exceptions: Optional[pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileThreatExceptionArgs', 'WildfireAntiVirusProfileThreatExceptionArgsDict']]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.WildfireAntiVirusProfile("example", folder="Shared")
-        ```
+        WildfireAntiVirusProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileMlavExceptionArgs', 'WildfireAntiVirusProfileMlavExceptionArgsDict']]]] mlav_exceptions: The MlavExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] packet_capture: The PacketCapture param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileRuleArgs', 'WildfireAntiVirusProfileRuleArgsDict']]]] rules: The Rules param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileThreatExceptionArgs', 'WildfireAntiVirusProfileThreatExceptionArgsDict']]]] threat_exceptions: The ThreatExceptions param.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileMlavExceptionArgs', 'WildfireAntiVirusProfileMlavExceptionArgsDict']]]] mlav_exceptions: Mlav exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileRuleArgs', 'WildfireAntiVirusProfileRuleArgsDict']]]] rules: Rules
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileThreatExceptionArgs', 'WildfireAntiVirusProfileThreatExceptionArgsDict']]]] threat_exceptions: Threat exception
         """
         ...
     @overload
@@ -381,16 +372,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
                  args: Optional[WildfireAntiVirusProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.WildfireAntiVirusProfile("example", folder="Shared")
-        ```
+        WildfireAntiVirusProfile resource
 
         :param str resource_name: The name of the resource.
         :param WildfireAntiVirusProfileArgs args: The arguments to use to populate this resource's properties.
@@ -462,15 +444,15 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileMlavExceptionArgs', 'WildfireAntiVirusProfileMlavExceptionArgsDict']]]] mlav_exceptions: The MlavExceptions param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.bool] packet_capture: The PacketCapture param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileRuleArgs', 'WildfireAntiVirusProfileRuleArgsDict']]]] rules: The Rules param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileThreatExceptionArgs', 'WildfireAntiVirusProfileThreatExceptionArgsDict']]]] threat_exceptions: The ThreatExceptions param.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileMlavExceptionArgs', 'WildfireAntiVirusProfileMlavExceptionArgsDict']]]] mlav_exceptions: Mlav exception
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileRuleArgs', 'WildfireAntiVirusProfileRuleArgsDict']]]] rules: Rules
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileThreatExceptionArgs', 'WildfireAntiVirusProfileThreatExceptionArgsDict']]]] threat_exceptions: Threat exception
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -492,7 +474,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -500,7 +482,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -508,7 +490,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -516,7 +498,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter(name="mlavExceptions")
     def mlav_exceptions(self) -> pulumi.Output[Optional[Sequence['outputs.WildfireAntiVirusProfileMlavException']]]:
         """
-        The MlavExceptions param.
+        Mlav exception
         """
         return pulumi.get(self, "mlav_exceptions")
 
@@ -524,7 +506,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -532,7 +514,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter(name="packetCapture")
     def packet_capture(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The PacketCapture param.
+        Packet capture
         """
         return pulumi.get(self, "packet_capture")
 
@@ -540,7 +522,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter
     def rules(self) -> pulumi.Output[Optional[Sequence['outputs.WildfireAntiVirusProfileRule']]]:
         """
-        The Rules param.
+        Rules
         """
         return pulumi.get(self, "rules")
 
@@ -548,7 +530,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -561,7 +543,7 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> pulumi.Output[Optional[Sequence['outputs.WildfireAntiVirusProfileThreatException']]]:
         """
-        The ThreatExceptions param.
+        Threat exception
         """
         return pulumi.get(self, "threat_exceptions")
 

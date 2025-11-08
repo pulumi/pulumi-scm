@@ -17,14 +17,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionA
     public static final AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs Empty = new AntiSpywareSignatureSignatureStandardAndConditionOrConditionArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -32,14 +32,14 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionA
     }
 
     /**
-     * The Operator param.
+     * Operator
      * 
      */
     @Import(name="operator")
     private @Nullable Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs> operator;
 
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorArgs>> operator() {
@@ -72,7 +72,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionA
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionA
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionA
         }
 
         /**
-         * @param operator The Operator param.
+         * @param operator Operator
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionA
         }
 
         /**
-         * @param operator The Operator param.
+         * @param operator Operator
          * 
          * @return builder
          * 

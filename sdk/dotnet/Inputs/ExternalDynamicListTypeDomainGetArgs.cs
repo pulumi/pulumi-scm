@@ -13,28 +13,28 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeDomainGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Profile for authenticating client certificates. Default: `"None"`.
+        /// Auth
+        /// </summary>
+        [Input("auth")]
+        public Input<Inputs.ExternalDynamicListTypeDomainAuthGetArgs>? Auth { get; set; }
+
+        /// <summary>
+        /// Profile for authenticating client certificates
         /// </summary>
         [Input("certificateProfile")]
         public Input<string>? CertificateProfile { get; set; }
 
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
-
-        /// <summary>
-        /// The DomainAuth param.
-        /// </summary>
-        [Input("domainAuth")]
-        public Input<Inputs.ExternalDynamicListTypeDomainDomainAuthGetArgs>? DomainAuth { get; set; }
 
         [Input("exceptionLists")]
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        /// Exception list
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -43,22 +43,22 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Enable/Disable expand domain. Default: `False`.
+        /// Enable/Disable expand domain
         /// </summary>
         [Input("expandDomain")]
         public Input<bool>? ExpandDomain { get; set; }
 
         /// <summary>
-        /// The Recurring param.
+        /// Recurring
         /// </summary>
         [Input("recurring", required: true)]
         public Input<Inputs.ExternalDynamicListTypeDomainRecurringGetArgs> Recurring { get; set; } = null!;
 
         /// <summary>
-        /// The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        /// Url
         /// </summary>
-        [Input("url")]
-        public Input<string>? Url { get; set; }
+        [Input("url", required: true)]
+        public Input<string> Url { get; set; } = null!;
 
         public ExternalDynamicListTypeDomainGetArgs()
         {

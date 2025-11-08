@@ -13,74 +13,74 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareProfileListDataRule {
     /**
-     * @return The Action param.
+     * @return anti spyware profiles rules default action
      * 
      */
     private GetAntiSpywareProfileListDataRuleAction action;
     /**
-     * @return The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+     * @return Category
      * 
      */
     private String category;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     private String packetCapture;
     /**
-     * @return The Severities param.
+     * @return Severity
      * 
      */
     private List<String> severities;
     /**
-     * @return The ThreatName param. String length must exceed 4 characters.
+     * @return Threat name
      * 
      */
     private String threatName;
 
     private GetAntiSpywareProfileListDataRule() {}
     /**
-     * @return The Action param.
+     * @return anti spyware profiles rules default action
      * 
      */
     public GetAntiSpywareProfileListDataRuleAction action() {
         return this.action;
     }
     /**
-     * @return The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+     * @return Category
      * 
      */
     public String category() {
         return this.category;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public String packetCapture() {
         return this.packetCapture;
     }
     /**
-     * @return The Severities param.
+     * @return Severity
      * 
      */
     public List<String> severities() {
         return this.severities;
     }
     /**
-     * @return The ThreatName param. String length must exceed 4 characters.
+     * @return Threat name
      * 
      */
     public String threatName() {

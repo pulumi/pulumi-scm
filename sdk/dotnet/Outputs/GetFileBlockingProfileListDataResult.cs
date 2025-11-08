@@ -14,36 +14,61 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetFileBlockingProfileListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the file blocking profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the file blocking profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Rules param.
+        /// A list of file blocking rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetFileBlockingProfileListDataRuleResult> Rules;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetFileBlockingProfileListDataResult(
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
 
-            ImmutableArray<Outputs.GetFileBlockingProfileListDataRuleResult> rules)
+            ImmutableArray<Outputs.GetFileBlockingProfileListDataRuleResult> rules,
+
+            string snippet,
+
+            string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             Rules = rules;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

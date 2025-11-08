@@ -17,40 +17,40 @@ public final class GetServiceConnectionArgs extends com.pulumi.resources.InvokeA
     public static final GetServiceConnectionArgs Empty = new GetServiceConnectionArgs();
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
-
-    /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * The UUID of the service connection
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return The UUID of the service connection
      * 
      */
     public Output<String> id() {
         return this.id;
     }
 
+    /**
+     * The name of the service connection
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the service connection
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetServiceConnectionArgs() {}
 
     private GetServiceConnectionArgs(GetServiceConnectionArgs $) {
-        this.folder = $.folder;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -72,28 +72,7 @@ public final class GetServiceConnectionArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable Output<String> folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(String folder) {
-            return folder(Output.of(folder));
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id The UUID of the service connection
          * 
          * @return builder
          * 
@@ -104,13 +83,34 @@ public final class GetServiceConnectionArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param id The Id param.
+         * @param id The UUID of the service connection
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param name The name of the service connection
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the service connection
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetServiceConnectionArgs build() {

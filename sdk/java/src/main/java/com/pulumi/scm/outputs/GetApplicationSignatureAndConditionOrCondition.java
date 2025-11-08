@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationSignatureAndConditionOrCondition {
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperator operator;
 
     private GetApplicationSignatureAndConditionOrCondition() {}
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperator operator() {

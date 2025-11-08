@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.ScepProfile("example", {});
- * ```
+ * ScepProfile resource
  */
 export class ScepProfile extends pulumi.CustomResource {
     /**
@@ -47,72 +38,72 @@ export class ScepProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Algorithm param.
+     * Algorithm
      */
-    declare public readonly algorithm: pulumi.Output<outputs.ScepProfileAlgorithm | undefined>;
+    declare public readonly algorithm: pulumi.Output<outputs.ScepProfileAlgorithm>;
     /**
-     * The CaIdentityName param.
+     * Certificate Authority identity
      */
     declare public readonly caIdentityName: pulumi.Output<string>;
     /**
-     * The CertificateAttributes param.
+     * Subject Alternative name type
      */
     declare public readonly certificateAttributes: pulumi.Output<outputs.ScepProfileCertificateAttributes | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Digest param.
+     * Digest for CSR
      */
     declare public readonly digest: pulumi.Output<string>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
-     * The Fingerprint param.
+     * CA certificate fingerprint
      */
     declare public readonly fingerprint: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the SCEP profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The ScepCaCert param.
+     * SCEP server CA certificate
      */
     declare public readonly scepCaCert: pulumi.Output<string | undefined>;
     /**
-     * The ScepChallenge param.
+     * One Time Password challenge
      */
-    declare public readonly scepChallenge: pulumi.Output<outputs.ScepProfileScepChallenge | undefined>;
+    declare public readonly scepChallenge: pulumi.Output<outputs.ScepProfileScepChallenge>;
     /**
-     * The ScepClientCert param.
+     * SCEP client ceertificate
      */
     declare public readonly scepClientCert: pulumi.Output<string | undefined>;
     /**
-     * The ScepUrl param.
+     * SCEP server URL
      */
     declare public readonly scepUrl: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * The Subject param.
+     * Subject
      */
-    declare public readonly subject: pulumi.Output<string | undefined>;
+    declare public readonly subject: pulumi.Output<string>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The UseAsDigitalSignature param.
+     * Use as digital signature?
      */
     declare public readonly useAsDigitalSignature: pulumi.Output<boolean | undefined>;
     /**
-     * The UseForKeyEncipherment param.
+     * Use for key encipherment?
      */
     declare public readonly useForKeyEncipherment: pulumi.Output<boolean | undefined>;
 
@@ -149,14 +140,23 @@ export class ScepProfile extends pulumi.CustomResource {
             resourceInputs["useForKeyEncipherment"] = state?.useForKeyEncipherment;
         } else {
             const args = argsOrState as ScepProfileArgs | undefined;
+            if (args?.algorithm === undefined && !opts.urn) {
+                throw new Error("Missing required property 'algorithm'");
+            }
             if (args?.caIdentityName === undefined && !opts.urn) {
                 throw new Error("Missing required property 'caIdentityName'");
             }
             if (args?.digest === undefined && !opts.urn) {
                 throw new Error("Missing required property 'digest'");
             }
+            if (args?.scepChallenge === undefined && !opts.urn) {
+                throw new Error("Missing required property 'scepChallenge'");
+            }
             if (args?.scepUrl === undefined && !opts.urn) {
                 throw new Error("Missing required property 'scepUrl'");
+            }
+            if (args?.subject === undefined && !opts.urn) {
+                throw new Error("Missing required property 'subject'");
             }
             resourceInputs["algorithm"] = args?.algorithm;
             resourceInputs["caIdentityName"] = args?.caIdentityName;
@@ -189,72 +189,72 @@ export class ScepProfile extends pulumi.CustomResource {
  */
 export interface ScepProfileState {
     /**
-     * The Algorithm param.
+     * Algorithm
      */
     algorithm?: pulumi.Input<inputs.ScepProfileAlgorithm>;
     /**
-     * The CaIdentityName param.
+     * Certificate Authority identity
      */
     caIdentityName?: pulumi.Input<string>;
     /**
-     * The CertificateAttributes param.
+     * Subject Alternative name type
      */
     certificateAttributes?: pulumi.Input<inputs.ScepProfileCertificateAttributes>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Digest param.
+     * Digest for CSR
      */
     digest?: pulumi.Input<string>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
-     * The Fingerprint param.
+     * CA certificate fingerprint
      */
     fingerprint?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the SCEP profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The ScepCaCert param.
+     * SCEP server CA certificate
      */
     scepCaCert?: pulumi.Input<string>;
     /**
-     * The ScepChallenge param.
+     * One Time Password challenge
      */
     scepChallenge?: pulumi.Input<inputs.ScepProfileScepChallenge>;
     /**
-     * The ScepClientCert param.
+     * SCEP client ceertificate
      */
     scepClientCert?: pulumi.Input<string>;
     /**
-     * The ScepUrl param.
+     * SCEP server URL
      */
     scepUrl?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Subject param.
+     * Subject
      */
     subject?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The UseAsDigitalSignature param.
+     * Use as digital signature?
      */
     useAsDigitalSignature?: pulumi.Input<boolean>;
     /**
-     * The UseForKeyEncipherment param.
+     * Use for key encipherment?
      */
     useForKeyEncipherment?: pulumi.Input<boolean>;
 }
@@ -264,67 +264,67 @@ export interface ScepProfileState {
  */
 export interface ScepProfileArgs {
     /**
-     * The Algorithm param.
+     * Algorithm
      */
-    algorithm?: pulumi.Input<inputs.ScepProfileAlgorithm>;
+    algorithm: pulumi.Input<inputs.ScepProfileAlgorithm>;
     /**
-     * The CaIdentityName param.
+     * Certificate Authority identity
      */
     caIdentityName: pulumi.Input<string>;
     /**
-     * The CertificateAttributes param.
+     * Subject Alternative name type
      */
     certificateAttributes?: pulumi.Input<inputs.ScepProfileCertificateAttributes>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Digest param.
+     * Digest for CSR
      */
     digest: pulumi.Input<string>;
     /**
-     * The Fingerprint param.
+     * CA certificate fingerprint
      */
     fingerprint?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the SCEP profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The ScepCaCert param.
+     * SCEP server CA certificate
      */
     scepCaCert?: pulumi.Input<string>;
     /**
-     * The ScepChallenge param.
+     * One Time Password challenge
      */
-    scepChallenge?: pulumi.Input<inputs.ScepProfileScepChallenge>;
+    scepChallenge: pulumi.Input<inputs.ScepProfileScepChallenge>;
     /**
-     * The ScepClientCert param.
+     * SCEP client ceertificate
      */
     scepClientCert?: pulumi.Input<string>;
     /**
-     * The ScepUrl param.
+     * SCEP server URL
      */
     scepUrl: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Subject param.
+     * Subject
      */
-    subject?: pulumi.Input<string>;
+    subject: pulumi.Input<string>;
     /**
-     * The UseAsDigitalSignature param.
+     * Use as digital signature?
      */
     useAsDigitalSignature?: pulumi.Input<boolean>;
     /**
-     * The UseForKeyEncipherment param.
+     * Use for key encipherment?
      */
     useForKeyEncipherment?: pulumi.Input<boolean>;
 }

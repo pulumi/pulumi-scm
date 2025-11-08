@@ -9,8 +9,6 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.ResourceArgs {
@@ -18,29 +16,29 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
     public static final FileBlockingProfileRuleArgs Empty = new FileBlockingProfileRuleArgs();
 
     /**
-     * The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+     * The action to take when the rule match criteria is met
      * 
      */
-    @Import(name="action")
-    private @Nullable Output<String> action;
+    @Import(name="action", required=true)
+    private Output<String> action;
 
     /**
-     * @return The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+     * @return The action to take when the rule match criteria is met
      * 
      */
-    public Optional<Output<String>> action() {
-        return Optional.ofNullable(this.action);
+    public Output<String> action() {
+        return this.action;
     }
 
     /**
-     * The Applications param. List must contain at least 1 elements.
+     * The application transferring the files (App-ID naming)
      * 
      */
     @Import(name="applications", required=true)
     private Output<List<String>> applications;
 
     /**
-     * @return The Applications param. List must contain at least 1 elements.
+     * @return The application transferring the files (App-ID naming)
      * 
      */
     public Output<List<String>> applications() {
@@ -48,29 +46,29 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+     * The direction of the file transfer
      * 
      */
-    @Import(name="direction")
-    private @Nullable Output<String> direction;
+    @Import(name="direction", required=true)
+    private Output<String> direction;
 
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+     * @return The direction of the file transfer
      * 
      */
-    public Optional<Output<String>> direction() {
-        return Optional.ofNullable(this.direction);
+    public Output<String> direction() {
+        return this.direction;
     }
 
     /**
-     * The FileTypes param. List must contain at least 1 elements.
+     * The file type
      * 
      */
     @Import(name="fileTypes", required=true)
     private Output<List<String>> fileTypes;
 
     /**
-     * @return The FileTypes param. List must contain at least 1 elements.
+     * @return The file type
      * 
      */
     public Output<List<String>> fileTypes() {
@@ -78,14 +76,14 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Name param.
+     * The name of the file blocking rule
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the file blocking rule
      * 
      */
     public Output<String> name() {
@@ -121,18 +119,18 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param action The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+         * @param action The action to take when the rule match criteria is met
          * 
          * @return builder
          * 
          */
-        public Builder action(@Nullable Output<String> action) {
+        public Builder action(Output<String> action) {
             $.action = action;
             return this;
         }
 
         /**
-         * @param action The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+         * @param action The action to take when the rule match criteria is met
          * 
          * @return builder
          * 
@@ -142,7 +140,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param applications The Applications param. List must contain at least 1 elements.
+         * @param applications The application transferring the files (App-ID naming)
          * 
          * @return builder
          * 
@@ -153,7 +151,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param applications The Applications param. List must contain at least 1 elements.
+         * @param applications The application transferring the files (App-ID naming)
          * 
          * @return builder
          * 
@@ -163,7 +161,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param applications The Applications param. List must contain at least 1 elements.
+         * @param applications The application transferring the files (App-ID naming)
          * 
          * @return builder
          * 
@@ -173,18 +171,18 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param direction The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+         * @param direction The direction of the file transfer
          * 
          * @return builder
          * 
          */
-        public Builder direction(@Nullable Output<String> direction) {
+        public Builder direction(Output<String> direction) {
             $.direction = direction;
             return this;
         }
 
         /**
-         * @param direction The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+         * @param direction The direction of the file transfer
          * 
          * @return builder
          * 
@@ -194,7 +192,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param fileTypes The FileTypes param. List must contain at least 1 elements.
+         * @param fileTypes The file type
          * 
          * @return builder
          * 
@@ -205,7 +203,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param fileTypes The FileTypes param. List must contain at least 1 elements.
+         * @param fileTypes The file type
          * 
          * @return builder
          * 
@@ -215,7 +213,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param fileTypes The FileTypes param. List must contain at least 1 elements.
+         * @param fileTypes The file type
          * 
          * @return builder
          * 
@@ -225,7 +223,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the file blocking rule
          * 
          * @return builder
          * 
@@ -236,7 +234,7 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the file blocking rule
          * 
          * @return builder
          * 
@@ -246,8 +244,14 @@ public final class FileBlockingProfileRuleArgs extends com.pulumi.resources.Reso
         }
 
         public FileBlockingProfileRuleArgs build() {
+            if ($.action == null) {
+                throw new MissingRequiredPropertyException("FileBlockingProfileRuleArgs", "action");
+            }
             if ($.applications == null) {
                 throw new MissingRequiredPropertyException("FileBlockingProfileRuleArgs", "applications");
+            }
+            if ($.direction == null) {
+                throw new MissingRequiredPropertyException("FileBlockingProfileRuleArgs", "direction");
             }
             if ($.fileTypes == null) {
                 throw new MissingRequiredPropertyException("FileBlockingProfileRuleArgs", "fileTypes");

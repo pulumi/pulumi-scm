@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceProtocol {
     /**
-     * @return The Tcp param.
+     * @return Tcp
      * 
      */
     private GetServiceProtocolTcp tcp;
     /**
-     * @return The Udp param.
+     * @return Udp
      * 
      */
     private GetServiceProtocolUdp udp;
 
     private GetServiceProtocol() {}
     /**
-     * @return The Tcp param.
+     * @return Tcp
      * 
      */
     public GetServiceProtocolTcp tcp() {
         return this.tcp;
     }
     /**
-     * @return The Udp param.
+     * @return Udp
      * 
      */
     public GetServiceProtocolUdp udp() {

@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectNetworkInfoCriteriaNetworkArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Is param. Ensure that only one of the following is specified: `Is`, `IsNot`
+        /// Is
         /// </summary>
         [Input("is")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsArgs>? Is { get; set; }
 
         /// <summary>
-        /// The IsNot param. Ensure that only one of the following is specified: `Is`, `IsNot`
+        /// Is not
         /// </summary>
         [Input("isNot")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsNotArgs>? IsNot { get; set; }

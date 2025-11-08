@@ -14,63 +14,76 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAppOverrideRuleListDataResult
     {
         /// <summary>
-        /// The Application param.
+        /// Application
         /// </summary>
         public readonly string Application;
         /// <summary>
-        /// The Description param. String length must not exceed 1024 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Destinations param.
+        /// Destination
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Disabled
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The Froms param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// From
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         public readonly string GroupTag;
         /// <summary>
-        /// UUID of the resource.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param. String length must not exceed 63 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Negate destination
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Negate source
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
-        /// The Port param. Value must be between 0 and 65535.
+        /// Port
         /// </summary>
         public readonly int Port;
         /// <summary>
-        /// The Protocol param. String must be one of these: `"tcp"`, `"udp"`.
+        /// Protocol
         /// </summary>
         public readonly string Protocol;
         /// <summary>
-        /// The Sources param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Source
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
-        /// The Tags param.
+        /// Tag
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
         /// <summary>
-        /// The Tos param.
+        /// To
         /// </summary>
         public readonly ImmutableArray<string> Tos;
 
@@ -82,7 +95,11 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> destinations,
 
+            string device,
+
             bool disabled,
+
+            string folder,
 
             ImmutableArray<string> froms,
 
@@ -100,16 +117,22 @@ namespace Pulumi.Scm.Outputs
 
             string protocol,
 
+            string snippet,
+
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string tfid,
 
             ImmutableArray<string> tos)
         {
             Application = application;
             Description = description;
             Destinations = destinations;
+            Device = device;
             Disabled = disabled;
+            Folder = folder;
             Froms = froms;
             GroupTag = groupTag;
             Id = id;
@@ -118,8 +141,10 @@ namespace Pulumi.Scm.Outputs
             NegateSource = negateSource;
             Port = port;
             Protocol = protocol;
+            Snippet = snippet;
             Sources = sources;
             Tags = tags;
+            Tfid = tfid;
             Tos = tos;
         }
     }

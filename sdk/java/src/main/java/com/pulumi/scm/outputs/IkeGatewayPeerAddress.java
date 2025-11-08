@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.IkeGatewayPeerAddressDynamic;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -13,38 +13,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayPeerAddress {
     /**
-     * @return The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return Dynamic
      * 
      */
-    private @Nullable Boolean dynamicAddress;
+    private @Nullable IkeGatewayPeerAddressDynamic dynamic;
     /**
-     * @return peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return peer gateway FQDN name
      * 
      */
     private @Nullable String fqdn;
     /**
-     * @return peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return peer gateway has static IP address
      * 
      */
     private @Nullable String ip;
 
     private IkeGatewayPeerAddress() {}
     /**
-     * @return The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return Dynamic
      * 
      */
-    public Optional<Boolean> dynamicAddress() {
-        return Optional.ofNullable(this.dynamicAddress);
+    public Optional<IkeGatewayPeerAddressDynamic> dynamic() {
+        return Optional.ofNullable(this.dynamic);
     }
     /**
-     * @return peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return peer gateway FQDN name
      * 
      */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * @return peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return peer gateway has static IP address
      * 
      */
     public Optional<String> ip() {
@@ -60,21 +60,21 @@ public final class IkeGatewayPeerAddress {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean dynamicAddress;
+        private @Nullable IkeGatewayPeerAddressDynamic dynamic;
         private @Nullable String fqdn;
         private @Nullable String ip;
         public Builder() {}
         public Builder(IkeGatewayPeerAddress defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.dynamicAddress = defaults.dynamicAddress;
+    	      this.dynamic = defaults.dynamic;
     	      this.fqdn = defaults.fqdn;
     	      this.ip = defaults.ip;
         }
 
         @CustomType.Setter
-        public Builder dynamicAddress(@Nullable Boolean dynamicAddress) {
+        public Builder dynamic(@Nullable IkeGatewayPeerAddressDynamic dynamic) {
 
-            this.dynamicAddress = dynamicAddress;
+            this.dynamic = dynamic;
             return this;
         }
         @CustomType.Setter
@@ -91,7 +91,7 @@ public final class IkeGatewayPeerAddress {
         }
         public IkeGatewayPeerAddress build() {
             final var _resultValue = new IkeGatewayPeerAddress();
-            _resultValue.dynamicAddress = dynamicAddress;
+            _resultValue.dynamic = dynamic;
             _resultValue.fqdn = fqdn;
             _resultValue.ip = ip;
             return _resultValue;

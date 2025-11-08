@@ -7,6 +7,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetSecurityRulePlainArgs extends com.pulumi.resources.InvokeArgs {
@@ -14,24 +16,40 @@ public final class GetSecurityRulePlainArgs extends com.pulumi.resources.InvokeA
     public static final GetSecurityRulePlainArgs Empty = new GetSecurityRulePlainArgs();
 
     /**
-     * The Id param.
+     * The UUID of the security rule
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return The UUID of the security rule
      * 
      */
     public String id() {
         return this.id;
     }
 
+    /**
+     * The name of the security rule
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return The name of the security rule
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetSecurityRulePlainArgs() {}
 
     private GetSecurityRulePlainArgs(GetSecurityRulePlainArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -53,13 +71,24 @@ public final class GetSecurityRulePlainArgs extends com.pulumi.resources.InvokeA
         }
 
         /**
-         * @param id The Id param.
+         * @param id The UUID of the security rule
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name The name of the security rule
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 

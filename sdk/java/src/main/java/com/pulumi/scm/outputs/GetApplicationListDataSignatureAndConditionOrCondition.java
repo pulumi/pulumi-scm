@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationListDataSignatureAndConditionOrCondition {
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     private GetApplicationListDataSignatureAndConditionOrConditionOperator operator;
 
     private GetApplicationListDataSignatureAndConditionOrCondition() {}
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     public GetApplicationListDataSignatureAndConditionOrConditionOperator operator() {

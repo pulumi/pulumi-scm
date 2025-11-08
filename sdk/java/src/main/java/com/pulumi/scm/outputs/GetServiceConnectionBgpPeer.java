@@ -5,81 +5,68 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetServiceConnectionBgpPeer {
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     private String localIpAddress;
     /**
-     * @return The LocalIpv6Address param.
+     * @return Local ipv6 address
      * 
      */
     private String localIpv6Address;
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     private String peerIpAddress;
     /**
-     * @return The PeerIpv6Address param.
+     * @return Peer ipv6 address
      * 
      */
     private String peerIpv6Address;
     /**
-     * @return The SameAsPrimary param.
-     * 
-     */
-    private Boolean sameAsPrimary;
-    /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     private String secret;
 
     private GetServiceConnectionBgpPeer() {}
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     public String localIpAddress() {
         return this.localIpAddress;
     }
     /**
-     * @return The LocalIpv6Address param.
+     * @return Local ipv6 address
      * 
      */
     public String localIpv6Address() {
         return this.localIpv6Address;
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     public String peerIpAddress() {
         return this.peerIpAddress;
     }
     /**
-     * @return The PeerIpv6Address param.
+     * @return Peer ipv6 address
      * 
      */
     public String peerIpv6Address() {
         return this.peerIpv6Address;
     }
     /**
-     * @return The SameAsPrimary param.
-     * 
-     */
-    public Boolean sameAsPrimary() {
-        return this.sameAsPrimary;
-    }
-    /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     public String secret() {
@@ -99,7 +86,6 @@ public final class GetServiceConnectionBgpPeer {
         private String localIpv6Address;
         private String peerIpAddress;
         private String peerIpv6Address;
-        private Boolean sameAsPrimary;
         private String secret;
         public Builder() {}
         public Builder(GetServiceConnectionBgpPeer defaults) {
@@ -108,7 +94,6 @@ public final class GetServiceConnectionBgpPeer {
     	      this.localIpv6Address = defaults.localIpv6Address;
     	      this.peerIpAddress = defaults.peerIpAddress;
     	      this.peerIpv6Address = defaults.peerIpv6Address;
-    	      this.sameAsPrimary = defaults.sameAsPrimary;
     	      this.secret = defaults.secret;
         }
 
@@ -145,14 +130,6 @@ public final class GetServiceConnectionBgpPeer {
             return this;
         }
         @CustomType.Setter
-        public Builder sameAsPrimary(Boolean sameAsPrimary) {
-            if (sameAsPrimary == null) {
-              throw new MissingRequiredPropertyException("GetServiceConnectionBgpPeer", "sameAsPrimary");
-            }
-            this.sameAsPrimary = sameAsPrimary;
-            return this;
-        }
-        @CustomType.Setter
         public Builder secret(String secret) {
             if (secret == null) {
               throw new MissingRequiredPropertyException("GetServiceConnectionBgpPeer", "secret");
@@ -166,7 +143,6 @@ public final class GetServiceConnectionBgpPeer {
             _resultValue.localIpv6Address = localIpv6Address;
             _resultValue.peerIpAddress = peerIpAddress;
             _resultValue.peerIpv6Address = peerIpv6Address;
-            _resultValue.sameAsPrimary = sameAsPrimary;
             _resultValue.secret = secret;
             return _resultValue;
         }

@@ -22,14 +22,14 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
     public static final HipObjectHostInfoCriteriaArgs Empty = new HipObjectHostInfoCriteriaArgs();
 
     /**
-     * The ClientVersion param.
+     * Client version
      * 
      */
     @Import(name="clientVersion")
     private @Nullable Output<HipObjectHostInfoCriteriaClientVersionArgs> clientVersion;
 
     /**
-     * @return The ClientVersion param.
+     * @return Client version
      * 
      */
     public Optional<Output<HipObjectHostInfoCriteriaClientVersionArgs>> clientVersion() {
@@ -37,14 +37,14 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Domain param.
+     * Domain
      * 
      */
     @Import(name="domain")
     private @Nullable Output<HipObjectHostInfoCriteriaDomainArgs> domain;
 
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     public Optional<Output<HipObjectHostInfoCriteriaDomainArgs>> domain() {
@@ -52,14 +52,14 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The HostId param.
+     * Host id
      * 
      */
     @Import(name="hostId")
     private @Nullable Output<HipObjectHostInfoCriteriaHostIdArgs> hostId;
 
     /**
-     * @return The HostId param.
+     * @return Host id
      * 
      */
     public Optional<Output<HipObjectHostInfoCriteriaHostIdArgs>> hostId() {
@@ -67,14 +67,14 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The HostName param.
+     * Host name
      * 
      */
     @Import(name="hostName")
     private @Nullable Output<HipObjectHostInfoCriteriaHostNameArgs> hostName;
 
     /**
-     * @return The HostName param.
+     * @return Host name
      * 
      */
     public Optional<Output<HipObjectHostInfoCriteriaHostNameArgs>> hostName() {
@@ -82,14 +82,14 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * If device is managed.
+     * If device is managed
      * 
      */
     @Import(name="managed")
     private @Nullable Output<Boolean> managed;
 
     /**
-     * @return If device is managed.
+     * @return If device is managed
      * 
      */
     public Optional<Output<Boolean>> managed() {
@@ -97,14 +97,14 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Os param.
+     * Os
      * 
      */
     @Import(name="os")
     private @Nullable Output<HipObjectHostInfoCriteriaOsArgs> os;
 
     /**
-     * @return The Os param.
+     * @return Os
      * 
      */
     public Optional<Output<HipObjectHostInfoCriteriaOsArgs>> os() {
@@ -112,14 +112,14 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The SerialNumber param.
+     * Serial number
      * 
      */
     @Import(name="serialNumber")
     private @Nullable Output<HipObjectHostInfoCriteriaSerialNumberArgs> serialNumber;
 
     /**
-     * @return The SerialNumber param.
+     * @return Serial number
      * 
      */
     public Optional<Output<HipObjectHostInfoCriteriaSerialNumberArgs>> serialNumber() {
@@ -157,7 +157,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param clientVersion The ClientVersion param.
+         * @param clientVersion Client version
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param clientVersion The ClientVersion param.
+         * @param clientVersion Client version
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param domain The Domain param.
+         * @param domain Domain
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param domain The Domain param.
+         * @param domain Domain
          * 
          * @return builder
          * 
@@ -199,7 +199,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param hostId The HostId param.
+         * @param hostId Host id
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param hostId The HostId param.
+         * @param hostId Host id
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param hostName The HostName param.
+         * @param hostName Host name
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param hostName The HostName param.
+         * @param hostName Host name
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param managed If device is managed.
+         * @param managed If device is managed
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param managed If device is managed.
+         * @param managed If device is managed
          * 
          * @return builder
          * 
@@ -262,7 +262,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param os The Os param.
+         * @param os Os
          * 
          * @return builder
          * 
@@ -273,7 +273,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param os The Os param.
+         * @param os Os
          * 
          * @return builder
          * 
@@ -283,7 +283,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param serialNumber The SerialNumber param.
+         * @param serialNumber Serial number
          * 
          * @return builder
          * 
@@ -294,7 +294,7 @@ public final class HipObjectHostInfoCriteriaArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param serialNumber The SerialNumber param.
+         * @param serialNumber Serial number
          * 
          * @return builder
          * 

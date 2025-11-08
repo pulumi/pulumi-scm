@@ -18,86 +18,86 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectHostInfoCriteria {
     /**
-     * @return The ClientVersion param.
+     * @return Client version
      * 
      */
     private @Nullable HipObjectHostInfoCriteriaClientVersion clientVersion;
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     private @Nullable HipObjectHostInfoCriteriaDomain domain;
     /**
-     * @return The HostId param.
+     * @return Host id
      * 
      */
     private @Nullable HipObjectHostInfoCriteriaHostId hostId;
     /**
-     * @return The HostName param.
+     * @return Host name
      * 
      */
     private @Nullable HipObjectHostInfoCriteriaHostName hostName;
     /**
-     * @return If device is managed.
+     * @return If device is managed
      * 
      */
     private @Nullable Boolean managed;
     /**
-     * @return The Os param.
+     * @return Os
      * 
      */
     private @Nullable HipObjectHostInfoCriteriaOs os;
     /**
-     * @return The SerialNumber param.
+     * @return Serial number
      * 
      */
     private @Nullable HipObjectHostInfoCriteriaSerialNumber serialNumber;
 
     private HipObjectHostInfoCriteria() {}
     /**
-     * @return The ClientVersion param.
+     * @return Client version
      * 
      */
     public Optional<HipObjectHostInfoCriteriaClientVersion> clientVersion() {
         return Optional.ofNullable(this.clientVersion);
     }
     /**
-     * @return The Domain param.
+     * @return Domain
      * 
      */
     public Optional<HipObjectHostInfoCriteriaDomain> domain() {
         return Optional.ofNullable(this.domain);
     }
     /**
-     * @return The HostId param.
+     * @return Host id
      * 
      */
     public Optional<HipObjectHostInfoCriteriaHostId> hostId() {
         return Optional.ofNullable(this.hostId);
     }
     /**
-     * @return The HostName param.
+     * @return Host name
      * 
      */
     public Optional<HipObjectHostInfoCriteriaHostName> hostName() {
         return Optional.ofNullable(this.hostName);
     }
     /**
-     * @return If device is managed.
+     * @return If device is managed
      * 
      */
     public Optional<Boolean> managed() {
         return Optional.ofNullable(this.managed);
     }
     /**
-     * @return The Os param.
+     * @return Os
      * 
      */
     public Optional<HipObjectHostInfoCriteriaOs> os() {
         return Optional.ofNullable(this.os);
     }
     /**
-     * @return The SerialNumber param.
+     * @return Serial number
      * 
      */
     public Optional<HipObjectHostInfoCriteriaSerialNumber> serialNumber() {

@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosPolicyRuleDscpTosCodepointTypeCs {
     /**
-     * @return The Codepoint param.
+     * @return Codepoint
      * 
      */
     private @Nullable String codepoint;
 
     private QosPolicyRuleDscpTosCodepointTypeCs() {}
     /**
-     * @return The Codepoint param.
+     * @return Codepoint
      * 
      */
     public Optional<String> codepoint() {

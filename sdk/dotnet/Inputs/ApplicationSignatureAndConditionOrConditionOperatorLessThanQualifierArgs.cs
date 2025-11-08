@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifierArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// The Value param.
+        /// Value
         /// </summary>
         [Input("value", required: true)]
         public Input<string> Value { get; set; } = null!;

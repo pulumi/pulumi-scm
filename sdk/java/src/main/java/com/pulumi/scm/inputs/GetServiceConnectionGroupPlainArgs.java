@@ -16,40 +16,40 @@ public final class GetServiceConnectionGroupPlainArgs extends com.pulumi.resourc
     public static final GetServiceConnectionGroupPlainArgs Empty = new GetServiceConnectionGroupPlainArgs();
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable String folder;
-
-    /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * The UUID of the service connection group
      * 
      */
     @Import(name="id", required=true)
     private String id;
 
     /**
-     * @return The Id param.
+     * @return The UUID of the service connection group
      * 
      */
     public String id() {
         return this.id;
     }
 
+    /**
+     * Name
+     * 
+     */
+    @Import(name="name")
+    private @Nullable String name;
+
+    /**
+     * @return Name
+     * 
+     */
+    public Optional<String> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetServiceConnectionGroupPlainArgs() {}
 
     private GetServiceConnectionGroupPlainArgs(GetServiceConnectionGroupPlainArgs $) {
-        this.folder = $.folder;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -71,24 +71,24 @@ public final class GetServiceConnectionGroupPlainArgs extends com.pulumi.resourc
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable String folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id The UUID of the service connection group
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             $.id = id;
+            return this;
+        }
+
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable String name) {
+            $.name = name;
             return this;
         }
 

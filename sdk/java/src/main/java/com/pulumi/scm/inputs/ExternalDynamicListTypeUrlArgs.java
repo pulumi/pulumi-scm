@@ -6,8 +6,8 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.inputs.ExternalDynamicListTypeUrlAuthArgs;
 import com.pulumi.scm.inputs.ExternalDynamicListTypeUrlRecurringArgs;
-import com.pulumi.scm.inputs.ExternalDynamicListTypeUrlUrlAuthArgs;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,29 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     public static final ExternalDynamicListTypeUrlArgs Empty = new ExternalDynamicListTypeUrlArgs();
 
     /**
-     * Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * Auth
+     * 
+     */
+    @Import(name="auth")
+    private @Nullable Output<ExternalDynamicListTypeUrlAuthArgs> auth;
+
+    /**
+     * @return Auth
+     * 
+     */
+    public Optional<Output<ExternalDynamicListTypeUrlAuthArgs>> auth() {
+        return Optional.ofNullable(this.auth);
+    }
+
+    /**
+     * Profile for authenticating client certificates
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Profile for authenticating client certificates
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -35,14 +50,14 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -50,14 +65,14 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * Exception list
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -65,14 +80,14 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The Recurring param.
+     * Recurring
      * 
      */
     @Import(name="recurring", required=true)
     private Output<ExternalDynamicListTypeUrlRecurringArgs> recurring;
 
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public Output<ExternalDynamicListTypeUrlRecurringArgs> recurring() {
@@ -80,44 +95,29 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
     }
 
     /**
-     * The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * Url
      * 
      */
-    @Import(name="url")
-    private @Nullable Output<String> url;
+    @Import(name="url", required=true)
+    private Output<String> url;
 
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
-    public Optional<Output<String>> url() {
-        return Optional.ofNullable(this.url);
-    }
-
-    /**
-     * The UrlAuth param.
-     * 
-     */
-    @Import(name="urlAuth")
-    private @Nullable Output<ExternalDynamicListTypeUrlUrlAuthArgs> urlAuth;
-
-    /**
-     * @return The UrlAuth param.
-     * 
-     */
-    public Optional<Output<ExternalDynamicListTypeUrlUrlAuthArgs>> urlAuth() {
-        return Optional.ofNullable(this.urlAuth);
+    public Output<String> url() {
+        return this.url;
     }
 
     private ExternalDynamicListTypeUrlArgs() {}
 
     private ExternalDynamicListTypeUrlArgs(ExternalDynamicListTypeUrlArgs $) {
+        this.auth = $.auth;
         this.certificateProfile = $.certificateProfile;
         this.description = $.description;
         this.exceptionLists = $.exceptionLists;
         this.recurring = $.recurring;
         this.url = $.url;
-        this.urlAuth = $.urlAuth;
     }
 
     public static Builder builder() {
@@ -139,7 +139,28 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+         * @param auth Auth
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auth(@Nullable Output<ExternalDynamicListTypeUrlAuthArgs> auth) {
+            $.auth = auth;
+            return this;
+        }
+
+        /**
+         * @param auth Auth
+         * 
+         * @return builder
+         * 
+         */
+        public Builder auth(ExternalDynamicListTypeUrlAuthArgs auth) {
+            return auth(Output.of(auth));
+        }
+
+        /**
+         * @param certificateProfile Profile for authenticating client certificates
          * 
          * @return builder
          * 
@@ -150,7 +171,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param certificateProfile Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+         * @param certificateProfile Profile for authenticating client certificates
          * 
          * @return builder
          * 
@@ -160,7 +181,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -171,7 +192,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -181,7 +202,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -192,7 +213,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -202,7 +223,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -212,7 +233,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param recurring The Recurring param.
+         * @param recurring Recurring
          * 
          * @return builder
          * 
@@ -223,7 +244,7 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param recurring The Recurring param.
+         * @param recurring Recurring
          * 
          * @return builder
          * 
@@ -233,18 +254,18 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param url The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+         * @param url Url
          * 
          * @return builder
          * 
          */
-        public Builder url(@Nullable Output<String> url) {
+        public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
         /**
-         * @param url The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+         * @param url Url
          * 
          * @return builder
          * 
@@ -253,30 +274,12 @@ public final class ExternalDynamicListTypeUrlArgs extends com.pulumi.resources.R
             return url(Output.of(url));
         }
 
-        /**
-         * @param urlAuth The UrlAuth param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder urlAuth(@Nullable Output<ExternalDynamicListTypeUrlUrlAuthArgs> urlAuth) {
-            $.urlAuth = urlAuth;
-            return this;
-        }
-
-        /**
-         * @param urlAuth The UrlAuth param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder urlAuth(ExternalDynamicListTypeUrlUrlAuthArgs urlAuth) {
-            return urlAuth(Output.of(urlAuth));
-        }
-
         public ExternalDynamicListTypeUrlArgs build() {
             if ($.recurring == null) {
                 throw new MissingRequiredPropertyException("ExternalDynamicListTypeUrlArgs", "recurring");
+            }
+            if ($.url == null) {
+                throw new MissingRequiredPropertyException("ExternalDynamicListTypeUrlArgs", "url");
             }
             return $;
         }

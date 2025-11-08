@@ -13,194 +13,194 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DecryptionProfileSslProtocolSettings {
     /**
-     * @return The AuthAlgoMd5 param. Default: `true`.
+     * @return Auth algo md5
      * 
      */
     private @Nullable Boolean authAlgoMd5;
     /**
-     * @return The AuthAlgoSha1 param. Default: `true`.
+     * @return Auth algo sha1
      * 
      */
     private @Nullable Boolean authAlgoSha1;
     /**
-     * @return The AuthAlgoSha256 param. Default: `true`.
+     * @return Auth algo sha256
      * 
      */
     private @Nullable Boolean authAlgoSha256;
     /**
-     * @return The AuthAlgoSha384 param. Default: `true`.
+     * @return Auth algo sha384
      * 
      */
     private @Nullable Boolean authAlgoSha384;
     /**
-     * @return The EncAlgo3des param. Default: `true`.
+     * @return Enc algo3des
      * 
      */
     private @Nullable Boolean encAlgo3des;
     /**
-     * @return The EncAlgoAes128Cbc param. Default: `true`.
+     * @return Enc algo aes128 cbc
      * 
      */
     private @Nullable Boolean encAlgoAes128Cbc;
     /**
-     * @return The EncAlgoAes128Gcm param. Default: `true`.
+     * @return Enc algo aes128 gcm
      * 
      */
     private @Nullable Boolean encAlgoAes128Gcm;
     /**
-     * @return The EncAlgoAes256Cbc param. Default: `true`.
+     * @return Enc algo aes256 cbc
      * 
      */
     private @Nullable Boolean encAlgoAes256Cbc;
     /**
-     * @return The EncAlgoAes256Gcm param. Default: `true`.
+     * @return Enc algo aes256 gcm
      * 
      */
     private @Nullable Boolean encAlgoAes256Gcm;
     /**
-     * @return The EncAlgoChacha20Poly1305 param. Default: `true`.
+     * @return Enc algo chacha20 poly1305
      * 
      */
     private @Nullable Boolean encAlgoChacha20Poly1305;
     /**
-     * @return The EncAlgoRc4 param. Default: `true`.
+     * @return Enc algo rc4
      * 
      */
     private @Nullable Boolean encAlgoRc4;
     /**
-     * @return The KeyxchgAlgoDhe param. Default: `true`.
+     * @return Keyxchg algo dhe
      * 
      */
     private @Nullable Boolean keyxchgAlgoDhe;
     /**
-     * @return The KeyxchgAlgoEcdhe param. Default: `true`.
+     * @return Keyxchg algo ecdhe
      * 
      */
     private @Nullable Boolean keyxchgAlgoEcdhe;
     /**
-     * @return The KeyxchgAlgoRsa param. Default: `true`.
+     * @return Keyxchg algo rsa
      * 
      */
     private @Nullable Boolean keyxchgAlgoRsa;
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+     * @return Max version
      * 
      */
     private @Nullable String maxVersion;
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Min version
      * 
      */
     private @Nullable String minVersion;
 
     private DecryptionProfileSslProtocolSettings() {}
     /**
-     * @return The AuthAlgoMd5 param. Default: `true`.
+     * @return Auth algo md5
      * 
      */
     public Optional<Boolean> authAlgoMd5() {
         return Optional.ofNullable(this.authAlgoMd5);
     }
     /**
-     * @return The AuthAlgoSha1 param. Default: `true`.
+     * @return Auth algo sha1
      * 
      */
     public Optional<Boolean> authAlgoSha1() {
         return Optional.ofNullable(this.authAlgoSha1);
     }
     /**
-     * @return The AuthAlgoSha256 param. Default: `true`.
+     * @return Auth algo sha256
      * 
      */
     public Optional<Boolean> authAlgoSha256() {
         return Optional.ofNullable(this.authAlgoSha256);
     }
     /**
-     * @return The AuthAlgoSha384 param. Default: `true`.
+     * @return Auth algo sha384
      * 
      */
     public Optional<Boolean> authAlgoSha384() {
         return Optional.ofNullable(this.authAlgoSha384);
     }
     /**
-     * @return The EncAlgo3des param. Default: `true`.
+     * @return Enc algo3des
      * 
      */
     public Optional<Boolean> encAlgo3des() {
         return Optional.ofNullable(this.encAlgo3des);
     }
     /**
-     * @return The EncAlgoAes128Cbc param. Default: `true`.
+     * @return Enc algo aes128 cbc
      * 
      */
     public Optional<Boolean> encAlgoAes128Cbc() {
         return Optional.ofNullable(this.encAlgoAes128Cbc);
     }
     /**
-     * @return The EncAlgoAes128Gcm param. Default: `true`.
+     * @return Enc algo aes128 gcm
      * 
      */
     public Optional<Boolean> encAlgoAes128Gcm() {
         return Optional.ofNullable(this.encAlgoAes128Gcm);
     }
     /**
-     * @return The EncAlgoAes256Cbc param. Default: `true`.
+     * @return Enc algo aes256 cbc
      * 
      */
     public Optional<Boolean> encAlgoAes256Cbc() {
         return Optional.ofNullable(this.encAlgoAes256Cbc);
     }
     /**
-     * @return The EncAlgoAes256Gcm param. Default: `true`.
+     * @return Enc algo aes256 gcm
      * 
      */
     public Optional<Boolean> encAlgoAes256Gcm() {
         return Optional.ofNullable(this.encAlgoAes256Gcm);
     }
     /**
-     * @return The EncAlgoChacha20Poly1305 param. Default: `true`.
+     * @return Enc algo chacha20 poly1305
      * 
      */
     public Optional<Boolean> encAlgoChacha20Poly1305() {
         return Optional.ofNullable(this.encAlgoChacha20Poly1305);
     }
     /**
-     * @return The EncAlgoRc4 param. Default: `true`.
+     * @return Enc algo rc4
      * 
      */
     public Optional<Boolean> encAlgoRc4() {
         return Optional.ofNullable(this.encAlgoRc4);
     }
     /**
-     * @return The KeyxchgAlgoDhe param. Default: `true`.
+     * @return Keyxchg algo dhe
      * 
      */
     public Optional<Boolean> keyxchgAlgoDhe() {
         return Optional.ofNullable(this.keyxchgAlgoDhe);
     }
     /**
-     * @return The KeyxchgAlgoEcdhe param. Default: `true`.
+     * @return Keyxchg algo ecdhe
      * 
      */
     public Optional<Boolean> keyxchgAlgoEcdhe() {
         return Optional.ofNullable(this.keyxchgAlgoEcdhe);
     }
     /**
-     * @return The KeyxchgAlgoRsa param. Default: `true`.
+     * @return Keyxchg algo rsa
      * 
      */
     public Optional<Boolean> keyxchgAlgoRsa() {
         return Optional.ofNullable(this.keyxchgAlgoRsa);
     }
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;tls1-2&#34;`.
+     * @return Max version
      * 
      */
     public Optional<String> maxVersion() {
         return Optional.ofNullable(this.maxVersion);
     }
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;sslv3&#34;`, `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Min version
      * 
      */
     public Optional<String> minVersion() {

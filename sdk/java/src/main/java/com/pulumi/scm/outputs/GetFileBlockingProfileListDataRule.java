@@ -12,62 +12,62 @@ import java.util.Objects;
 @CustomType
 public final class GetFileBlockingProfileListDataRule {
     /**
-     * @return The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+     * @return The action to take when the rule match criteria is met
      * 
      */
     private String action;
     /**
-     * @return The Applications param. List must contain at least 1 elements.
+     * @return The application transferring the files (App-ID naming)
      * 
      */
     private List<String> applications;
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+     * @return The direction of the file transfer
      * 
      */
     private String direction;
     /**
-     * @return The FileTypes param. List must contain at least 1 elements.
+     * @return The file type
      * 
      */
     private List<String> fileTypes;
     /**
-     * @return The Name param.
+     * @return The name of the file blocking rule
      * 
      */
     private String name;
 
     private GetFileBlockingProfileListDataRule() {}
     /**
-     * @return The Action param. String must be one of these: `&#34;alert&#34;`, `&#34;block&#34;`, `&#34;continue&#34;`. Default: `&#34;alert&#34;`.
+     * @return The action to take when the rule match criteria is met
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return The Applications param. List must contain at least 1 elements.
+     * @return The application transferring the files (App-ID naming)
      * 
      */
     public List<String> applications() {
         return this.applications;
     }
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`. Default: `&#34;both&#34;`.
+     * @return The direction of the file transfer
      * 
      */
     public String direction() {
         return this.direction;
     }
     /**
-     * @return The FileTypes param. List must contain at least 1 elements.
+     * @return The file type
      * 
      */
     public List<String> fileTypes() {
         return this.fileTypes;
     }
     /**
-     * @return The Name param.
+     * @return The name of the file blocking rule
      * 
      */
     public String name() {

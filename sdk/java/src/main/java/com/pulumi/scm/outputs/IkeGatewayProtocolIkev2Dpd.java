@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayProtocolIkev2Dpd {
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private @Nullable Boolean enable;
 
     private IkeGatewayProtocolIkev2Dpd() {}
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Optional<Boolean> enable() {

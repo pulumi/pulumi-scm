@@ -10,160 +10,145 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.DecryptionRule("example");
-    /// 
-    /// });
-    /// ```
+    /// DecryptionRule resource
     /// </summary>
     [ScmResourceType("scm:index/decryptionRule:DecryptionRule")]
     public partial class DecryptionRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        /// The action to be taken
         /// </summary>
         [Output("action")]
         public Output<string> Action { get; private set; } = null!;
 
         /// <summary>
-        /// The Categories param.
+        /// The destination URL category
         /// </summary>
         [Output("categories")]
         public Output<ImmutableArray<string>> Categories { get; private set; } = null!;
 
         /// <summary>
-        /// The Description param.
+        /// The description of the decryption rule
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The DestinationHips param.
+        /// The Host Integrity Profile of the destination host
         /// </summary>
         [Output("destinationHips")]
         public Output<ImmutableArray<string>> DestinationHips { get; private set; } = null!;
 
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         [Output("destinations")]
         public Output<ImmutableArray<string>> Destinations { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Disabled param.
+        /// Is the rule disabled?
         /// </summary>
         [Output("disabled")]
         public Output<bool?> Disabled { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Froms param.
+        /// The source security zone
         /// </summary>
         [Output("froms")]
         public Output<ImmutableArray<string>> Froms { get; private set; } = null!;
 
         /// <summary>
-        /// The LogFail param.
+        /// Log failed decryption events?
         /// </summary>
         [Output("logFail")]
         public Output<bool?> LogFail { get; private set; } = null!;
 
         /// <summary>
-        /// The LogSetting param.
+        /// The log settings of the decryption rule
         /// </summary>
         [Output("logSetting")]
         public Output<string?> LogSetting { get; private set; } = null!;
 
         /// <summary>
-        /// The LogSuccess param.
+        /// Log successful decryption events?
         /// </summary>
         [Output("logSuccess")]
         public Output<bool?> LogSuccess { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the decryption rule
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateDestination param.
+        /// Negate the destination addresses?
         /// </summary>
         [Output("negateDestination")]
         public Output<bool?> NegateDestination { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateSource param.
+        /// Negate the source addresses?
         /// </summary>
         [Output("negateSource")]
         public Output<bool?> NegateSource { get; private set; } = null!;
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The position of a security rule
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
-        /// The Profile param.
+        /// The decryption profile associated with the decryption rule
         /// </summary>
         [Output("profile")]
         public Output<string?> Profile { get; private set; } = null!;
 
         /// <summary>
-        /// The Services param.
+        /// The destination services and/or service groups
         /// </summary>
         [Output("services")]
         public Output<ImmutableArray<string>> Services { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The SourceHips param.
+        /// Source hip
         /// </summary>
         [Output("sourceHips")]
         public Output<ImmutableArray<string>> SourceHips { get; private set; } = null!;
 
         /// <summary>
-        /// The SourceUsers param.
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         [Output("sourceUsers")]
         public Output<ImmutableArray<string>> SourceUsers { get; private set; } = null!;
 
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         [Output("sources")]
         public Output<ImmutableArray<string>> Sources { get; private set; } = null!;
 
         /// <summary>
-        /// The Tags param.
+        /// The tags associated with the decryption rule
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
@@ -172,13 +157,13 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Tos param.
+        /// The destination security zone
         /// </summary>
         [Output("tos")]
         public Output<ImmutableArray<string>> Tos { get; private set; } = null!;
 
         /// <summary>
-        /// The Type param.
+        /// The type of decryption
         /// </summary>
         [Output("type")]
         public Output<Outputs.DecryptionRuleType?> Type { get; private set; } = null!;
@@ -230,7 +215,7 @@ namespace Pulumi.Scm
     public sealed class DecryptionRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        /// The action to be taken
         /// </summary>
         [Input("action", required: true)]
         public Input<string> Action { get; set; } = null!;
@@ -239,7 +224,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Categories param.
+        /// The destination URL category
         /// </summary>
         public InputList<string> Categories
         {
@@ -248,7 +233,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Description param.
+        /// The description of the decryption rule
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -257,7 +242,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinationHips;
 
         /// <summary>
-        /// The DestinationHips param.
+        /// The Host Integrity Profile of the destination host
         /// </summary>
         public InputList<string> DestinationHips
         {
@@ -269,7 +254,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         public InputList<string> Destinations
         {
@@ -278,19 +263,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param.
+        /// Is the rule disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -299,7 +284,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The Froms param.
+        /// The source security zone
         /// </summary>
         public InputList<string> Froms
         {
@@ -308,49 +293,49 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The LogFail param.
+        /// Log failed decryption events?
         /// </summary>
         [Input("logFail")]
         public Input<bool>? LogFail { get; set; }
 
         /// <summary>
-        /// The LogSetting param.
+        /// The log settings of the decryption rule
         /// </summary>
         [Input("logSetting")]
         public Input<string>? LogSetting { get; set; }
 
         /// <summary>
-        /// The LogSuccess param.
+        /// Log successful decryption events?
         /// </summary>
         [Input("logSuccess")]
         public Input<bool>? LogSuccess { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the decryption rule
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param.
+        /// Negate the destination addresses?
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param.
+        /// Negate the source addresses?
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The position of a security rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// The Profile param.
+        /// The decryption profile associated with the decryption rule
         /// </summary>
         [Input("profile")]
         public Input<string>? Profile { get; set; }
@@ -359,7 +344,7 @@ namespace Pulumi.Scm
         private InputList<string>? _services;
 
         /// <summary>
-        /// The Services param.
+        /// The destination services and/or service groups
         /// </summary>
         public InputList<string> Services
         {
@@ -368,7 +353,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -377,7 +362,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceHips;
 
         /// <summary>
-        /// The SourceHips param.
+        /// Source hip
         /// </summary>
         public InputList<string> SourceHips
         {
@@ -389,7 +374,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The SourceUsers param.
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -401,7 +386,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         public InputList<string> Sources
         {
@@ -413,7 +398,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// The tags associated with the decryption rule
         /// </summary>
         public InputList<string> Tags
         {
@@ -425,7 +410,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The Tos param.
+        /// The destination security zone
         /// </summary>
         public InputList<string> Tos
         {
@@ -434,7 +419,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Type param.
+        /// The type of decryption
         /// </summary>
         [Input("type")]
         public Input<Inputs.DecryptionRuleTypeArgs>? Type { get; set; }
@@ -448,7 +433,7 @@ namespace Pulumi.Scm
     public sealed class DecryptionRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        /// The action to be taken
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
@@ -457,7 +442,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Categories param.
+        /// The destination URL category
         /// </summary>
         public InputList<string> Categories
         {
@@ -466,7 +451,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Description param.
+        /// The description of the decryption rule
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -475,7 +460,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinationHips;
 
         /// <summary>
-        /// The DestinationHips param.
+        /// The Host Integrity Profile of the destination host
         /// </summary>
         public InputList<string> DestinationHips
         {
@@ -487,7 +472,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         public InputList<string> Destinations
         {
@@ -496,19 +481,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param.
+        /// Is the rule disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -517,7 +502,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The Froms param.
+        /// The source security zone
         /// </summary>
         public InputList<string> Froms
         {
@@ -526,49 +511,49 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The LogFail param.
+        /// Log failed decryption events?
         /// </summary>
         [Input("logFail")]
         public Input<bool>? LogFail { get; set; }
 
         /// <summary>
-        /// The LogSetting param.
+        /// The log settings of the decryption rule
         /// </summary>
         [Input("logSetting")]
         public Input<string>? LogSetting { get; set; }
 
         /// <summary>
-        /// The LogSuccess param.
+        /// Log successful decryption events?
         /// </summary>
         [Input("logSuccess")]
         public Input<bool>? LogSuccess { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the decryption rule
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param.
+        /// Negate the destination addresses?
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param.
+        /// Negate the source addresses?
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The position of a security rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// The Profile param.
+        /// The decryption profile associated with the decryption rule
         /// </summary>
         [Input("profile")]
         public Input<string>? Profile { get; set; }
@@ -577,7 +562,7 @@ namespace Pulumi.Scm
         private InputList<string>? _services;
 
         /// <summary>
-        /// The Services param.
+        /// The destination services and/or service groups
         /// </summary>
         public InputList<string> Services
         {
@@ -586,7 +571,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -595,7 +580,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceHips;
 
         /// <summary>
-        /// The SourceHips param.
+        /// Source hip
         /// </summary>
         public InputList<string> SourceHips
         {
@@ -607,7 +592,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The SourceUsers param.
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -619,7 +604,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         public InputList<string> Sources
         {
@@ -631,7 +616,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// The tags associated with the decryption rule
         /// </summary>
         public InputList<string> Tags
         {
@@ -646,7 +631,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The Tos param.
+        /// The destination security zone
         /// </summary>
         public InputList<string> Tos
         {
@@ -655,7 +640,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Type param.
+        /// The type of decryption
         /// </summary>
         [Input("type")]
         public Input<Inputs.DecryptionRuleTypeGetArgs>? Type { get; set; }

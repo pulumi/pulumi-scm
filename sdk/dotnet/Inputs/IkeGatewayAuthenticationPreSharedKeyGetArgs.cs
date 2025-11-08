@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private Input<string>? _key;
 
         /// <summary>
-        /// The Key param.
+        /// Key
         /// </summary>
         public Input<string>? Key
         {

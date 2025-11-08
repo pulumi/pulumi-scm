@@ -10,73 +10,58 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.DecryptionProfile("example");
-    /// 
-    /// });
-    /// ```
+    /// DecryptionProfile resource
     /// </summary>
     [ScmResourceType("scm:index/decryptionProfile:DecryptionProfile")]
     public partial class DecryptionProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The SslForwardProxy param.
+        /// Ssl forward proxy
         /// </summary>
         [Output("sslForwardProxy")]
-        public Output<Outputs.DecryptionProfileSslForwardProxy?> SslForwardProxy { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslForwardProxy> SslForwardProxy { get; private set; } = null!;
 
         /// <summary>
-        /// The SslInboundProxy param.
+        /// Ssl inbound proxy
         /// </summary>
         [Output("sslInboundProxy")]
-        public Output<Outputs.DecryptionProfileSslInboundProxy?> SslInboundProxy { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslInboundProxy> SslInboundProxy { get; private set; } = null!;
 
         /// <summary>
-        /// The SslNoProxy param.
+        /// Ssl no proxy
         /// </summary>
         [Output("sslNoProxy")]
-        public Output<Outputs.DecryptionProfileSslNoProxy?> SslNoProxy { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslNoProxy> SslNoProxy { get; private set; } = null!;
 
         /// <summary>
-        /// The SslProtocolSettings param.
+        /// Ssl protocol settings
         /// </summary>
         [Output("sslProtocolSettings")]
-        public Output<Outputs.DecryptionProfileSslProtocolSettings?> SslProtocolSettings { get; private set; } = null!;
+        public Output<Outputs.DecryptionProfileSslProtocolSettings> SslProtocolSettings { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
@@ -128,49 +113,49 @@ namespace Pulumi.Scm
     public sealed class DecryptionProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The SslForwardProxy param.
+        /// Ssl forward proxy
         /// </summary>
         [Input("sslForwardProxy")]
         public Input<Inputs.DecryptionProfileSslForwardProxyArgs>? SslForwardProxy { get; set; }
 
         /// <summary>
-        /// The SslInboundProxy param.
+        /// Ssl inbound proxy
         /// </summary>
         [Input("sslInboundProxy")]
         public Input<Inputs.DecryptionProfileSslInboundProxyArgs>? SslInboundProxy { get; set; }
 
         /// <summary>
-        /// The SslNoProxy param.
+        /// Ssl no proxy
         /// </summary>
         [Input("sslNoProxy")]
         public Input<Inputs.DecryptionProfileSslNoProxyArgs>? SslNoProxy { get; set; }
 
         /// <summary>
-        /// The SslProtocolSettings param.
+        /// Ssl protocol settings
         /// </summary>
         [Input("sslProtocolSettings")]
         public Input<Inputs.DecryptionProfileSslProtocolSettingsArgs>? SslProtocolSettings { get; set; }
@@ -184,49 +169,49 @@ namespace Pulumi.Scm
     public sealed class DecryptionProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The SslForwardProxy param.
+        /// Ssl forward proxy
         /// </summary>
         [Input("sslForwardProxy")]
         public Input<Inputs.DecryptionProfileSslForwardProxyGetArgs>? SslForwardProxy { get; set; }
 
         /// <summary>
-        /// The SslInboundProxy param.
+        /// Ssl inbound proxy
         /// </summary>
         [Input("sslInboundProxy")]
         public Input<Inputs.DecryptionProfileSslInboundProxyGetArgs>? SslInboundProxy { get; set; }
 
         /// <summary>
-        /// The SslNoProxy param.
+        /// Ssl no proxy
         /// </summary>
         [Input("sslNoProxy")]
         public Input<Inputs.DecryptionProfileSslNoProxyGetArgs>? SslNoProxy { get; set; }
 
         /// <summary>
-        /// The SslProtocolSettings param.
+        /// Ssl protocol settings
         /// </summary>
         [Input("sslProtocolSettings")]
         public Input<Inputs.DecryptionProfileSslProtocolSettingsGetArgs>? SslProtocolSettings { get; set; }

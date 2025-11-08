@@ -20,47 +20,48 @@ __all__ = ['SamlServerProfileArgs', 'SamlServerProfile']
 class SamlServerProfileArgs:
     def __init__(__self__, *,
                  certificate: pulumi.Input[_builtins.str],
+                 entity_id: pulumi.Input[_builtins.str],
+                 sso_bindings: pulumi.Input[_builtins.str],
+                 sso_url: pulumi.Input[_builtins.str],
                  device: Optional[pulumi.Input[_builtins.str]] = None,
-                 entity_id: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
-                 sso_url: Optional[pulumi.Input[_builtins.str]] = None,
                  validate_idp_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
                  want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a SamlServerProfile resource.
-        :param pulumi.Input[_builtins.str] certificate: The Certificate param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] entity_id: The EntityId param. String length must be between 1 and 1024 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.int] max_clock_skew: The MaxClockSkew param. Value must be between 1 and 900.
-        :param pulumi.Input[_builtins.str] slo_bindings: The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] sso_bindings: The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] sso_url: The SsoUrl param. String length must be between 1 and 255 characters.
-        :param pulumi.Input[_builtins.bool] validate_idp_certificate: The ValidateIdpCertificate param.
-        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: The WantAuthRequestsSigned param.
+        :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
+        :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
+        :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
+        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
         """
         pulumi.set(__self__, "certificate", certificate)
+        pulumi.set(__self__, "entity_id", entity_id)
+        pulumi.set(__self__, "sso_bindings", sso_bindings)
+        pulumi.set(__self__, "sso_url", sso_url)
         if device is not None:
             pulumi.set(__self__, "device", device)
-        if entity_id is not None:
-            pulumi.set(__self__, "entity_id", entity_id)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if max_clock_skew is not None:
             pulumi.set(__self__, "max_clock_skew", max_clock_skew)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
         if slo_bindings is not None:
             pulumi.set(__self__, "slo_bindings", slo_bindings)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
-        if sso_bindings is not None:
-            pulumi.set(__self__, "sso_bindings", sso_bindings)
-        if sso_url is not None:
-            pulumi.set(__self__, "sso_url", sso_url)
         if validate_idp_certificate is not None:
             pulumi.set(__self__, "validate_idp_certificate", validate_idp_certificate)
         if want_auth_requests_signed is not None:
@@ -70,7 +71,7 @@ class SamlServerProfileArgs:
     @pulumi.getter
     def certificate(self) -> pulumi.Input[_builtins.str]:
         """
-        The Certificate param. String length must not exceed 63 characters.
+        The identity provider certificate
         """
         return pulumi.get(self, "certificate")
 
@@ -79,10 +80,46 @@ class SamlServerProfileArgs:
         pulumi.set(self, "certificate", value)
 
     @_builtins.property
+    @pulumi.getter(name="entityId")
+    def entity_id(self) -> pulumi.Input[_builtins.str]:
+        """
+        The identity provider ID
+        """
+        return pulumi.get(self, "entity_id")
+
+    @entity_id.setter
+    def entity_id(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "entity_id", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ssoBindings")
+    def sso_bindings(self) -> pulumi.Input[_builtins.str]:
+        """
+        SAML HTTP binding for SSO requests to the identity provider
+        """
+        return pulumi.get(self, "sso_bindings")
+
+    @sso_bindings.setter
+    def sso_bindings(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "sso_bindings", value)
+
+    @_builtins.property
+    @pulumi.getter(name="ssoUrl")
+    def sso_url(self) -> pulumi.Input[_builtins.str]:
+        """
+        Identity provider SSO URL
+        """
+        return pulumi.get(self, "sso_url")
+
+    @sso_url.setter
+    def sso_url(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "sso_url", value)
+
+    @_builtins.property
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -91,22 +128,10 @@ class SamlServerProfileArgs:
         pulumi.set(self, "device", value)
 
     @_builtins.property
-    @pulumi.getter(name="entityId")
-    def entity_id(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The EntityId param. String length must be between 1 and 1024 characters.
-        """
-        return pulumi.get(self, "entity_id")
-
-    @entity_id.setter
-    def entity_id(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "entity_id", value)
-
-    @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -118,7 +143,7 @@ class SamlServerProfileArgs:
     @pulumi.getter(name="maxClockSkew")
     def max_clock_skew(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The MaxClockSkew param. Value must be between 1 and 900.
+        Maxiumum clock skew
         """
         return pulumi.get(self, "max_clock_skew")
 
@@ -127,10 +152,22 @@ class SamlServerProfileArgs:
         pulumi.set(self, "max_clock_skew", value)
 
     @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name of the SAML server profile
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        SAML HTTP binding for SLO requests to the identity provider
         """
         return pulumi.get(self, "slo_bindings")
 
@@ -142,7 +179,7 @@ class SamlServerProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -151,34 +188,10 @@ class SamlServerProfileArgs:
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
-    @pulumi.getter(name="ssoBindings")
-    def sso_bindings(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
-        """
-        return pulumi.get(self, "sso_bindings")
-
-    @sso_bindings.setter
-    def sso_bindings(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "sso_bindings", value)
-
-    @_builtins.property
-    @pulumi.getter(name="ssoUrl")
-    def sso_url(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The SsoUrl param. String length must be between 1 and 255 characters.
-        """
-        return pulumi.get(self, "sso_url")
-
-    @sso_url.setter
-    def sso_url(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "sso_url", value)
-
-    @_builtins.property
     @pulumi.getter(name="validateIdpCertificate")
     def validate_idp_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The ValidateIdpCertificate param.
+        Validate the identity provider certificate?
         """
         return pulumi.get(self, "validate_idp_certificate")
 
@@ -190,7 +203,7 @@ class SamlServerProfileArgs:
     @pulumi.getter(name="wantAuthRequestsSigned")
     def want_auth_requests_signed(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The WantAuthRequestsSigned param.
+        Sign SAML message to the identity provider?
         """
         return pulumi.get(self, "want_auth_requests_signed")
 
@@ -207,6 +220,7 @@ class _SamlServerProfileState:
                  entity_id: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
@@ -216,17 +230,18 @@ class _SamlServerProfileState:
                  want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering SamlServerProfile resources.
-        :param pulumi.Input[_builtins.str] certificate: The Certificate param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] entity_id: The EntityId param. String length must be between 1 and 1024 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.int] max_clock_skew: The MaxClockSkew param. Value must be between 1 and 900.
-        :param pulumi.Input[_builtins.str] slo_bindings: The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] sso_bindings: The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] sso_url: The SsoUrl param. String length must be between 1 and 255 characters.
-        :param pulumi.Input[_builtins.bool] validate_idp_certificate: The ValidateIdpCertificate param.
-        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: The WantAuthRequestsSigned param.
+        :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
+        :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
+        :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
+        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
         """
         if certificate is not None:
             pulumi.set(__self__, "certificate", certificate)
@@ -238,6 +253,8 @@ class _SamlServerProfileState:
             pulumi.set(__self__, "folder", folder)
         if max_clock_skew is not None:
             pulumi.set(__self__, "max_clock_skew", max_clock_skew)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
         if slo_bindings is not None:
             pulumi.set(__self__, "slo_bindings", slo_bindings)
         if snippet is not None:
@@ -257,7 +274,7 @@ class _SamlServerProfileState:
     @pulumi.getter
     def certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Certificate param. String length must not exceed 63 characters.
+        The identity provider certificate
         """
         return pulumi.get(self, "certificate")
 
@@ -269,7 +286,7 @@ class _SamlServerProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -281,7 +298,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="entityId")
     def entity_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The EntityId param. String length must be between 1 and 1024 characters.
+        The identity provider ID
         """
         return pulumi.get(self, "entity_id")
 
@@ -293,7 +310,7 @@ class _SamlServerProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -305,7 +322,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="maxClockSkew")
     def max_clock_skew(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The MaxClockSkew param. Value must be between 1 and 900.
+        Maxiumum clock skew
         """
         return pulumi.get(self, "max_clock_skew")
 
@@ -314,10 +331,22 @@ class _SamlServerProfileState:
         pulumi.set(self, "max_clock_skew", value)
 
     @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name of the SAML server profile
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        SAML HTTP binding for SLO requests to the identity provider
         """
         return pulumi.get(self, "slo_bindings")
 
@@ -329,7 +358,7 @@ class _SamlServerProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -341,7 +370,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        SAML HTTP binding for SSO requests to the identity provider
         """
         return pulumi.get(self, "sso_bindings")
 
@@ -353,7 +382,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="ssoUrl")
     def sso_url(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The SsoUrl param. String length must be between 1 and 255 characters.
+        Identity provider SSO URL
         """
         return pulumi.get(self, "sso_url")
 
@@ -374,7 +403,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="validateIdpCertificate")
     def validate_idp_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The ValidateIdpCertificate param.
+        Validate the identity provider certificate?
         """
         return pulumi.get(self, "validate_idp_certificate")
 
@@ -386,7 +415,7 @@ class _SamlServerProfileState:
     @pulumi.getter(name="wantAuthRequestsSigned")
     def want_auth_requests_signed(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The WantAuthRequestsSigned param.
+        Sign SAML message to the identity provider?
         """
         return pulumi.get(self, "want_auth_requests_signed")
 
@@ -406,6 +435,7 @@ class SamlServerProfile(pulumi.CustomResource):
                  entity_id: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
@@ -414,30 +444,22 @@ class SamlServerProfile(pulumi.CustomResource):
                  want_auth_requests_signed: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.SamlServerProfile("example")
-        ```
+        SamlServerProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] certificate: The Certificate param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] entity_id: The EntityId param. String length must be between 1 and 1024 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.int] max_clock_skew: The MaxClockSkew param. Value must be between 1 and 900.
-        :param pulumi.Input[_builtins.str] slo_bindings: The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] sso_bindings: The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] sso_url: The SsoUrl param. String length must be between 1 and 255 characters.
-        :param pulumi.Input[_builtins.bool] validate_idp_certificate: The ValidateIdpCertificate param.
-        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: The WantAuthRequestsSigned param.
+        :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
+        :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
+        :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
+        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
         """
         ...
     @overload
@@ -446,16 +468,7 @@ class SamlServerProfile(pulumi.CustomResource):
                  args: SamlServerProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.SamlServerProfile("example")
-        ```
+        SamlServerProfile resource
 
         :param str resource_name: The name of the resource.
         :param SamlServerProfileArgs args: The arguments to use to populate this resource's properties.
@@ -477,6 +490,7 @@ class SamlServerProfile(pulumi.CustomResource):
                  entity_id: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
@@ -496,12 +510,19 @@ class SamlServerProfile(pulumi.CustomResource):
                 raise TypeError("Missing required property 'certificate'")
             __props__.__dict__["certificate"] = certificate
             __props__.__dict__["device"] = device
+            if entity_id is None and not opts.urn:
+                raise TypeError("Missing required property 'entity_id'")
             __props__.__dict__["entity_id"] = entity_id
             __props__.__dict__["folder"] = folder
             __props__.__dict__["max_clock_skew"] = max_clock_skew
+            __props__.__dict__["name"] = name
             __props__.__dict__["slo_bindings"] = slo_bindings
             __props__.__dict__["snippet"] = snippet
+            if sso_bindings is None and not opts.urn:
+                raise TypeError("Missing required property 'sso_bindings'")
             __props__.__dict__["sso_bindings"] = sso_bindings
+            if sso_url is None and not opts.urn:
+                raise TypeError("Missing required property 'sso_url'")
             __props__.__dict__["sso_url"] = sso_url
             __props__.__dict__["validate_idp_certificate"] = validate_idp_certificate
             __props__.__dict__["want_auth_requests_signed"] = want_auth_requests_signed
@@ -521,6 +542,7 @@ class SamlServerProfile(pulumi.CustomResource):
             entity_id: Optional[pulumi.Input[_builtins.str]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             max_clock_skew: Optional[pulumi.Input[_builtins.int]] = None,
+            name: Optional[pulumi.Input[_builtins.str]] = None,
             slo_bindings: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             sso_bindings: Optional[pulumi.Input[_builtins.str]] = None,
@@ -535,17 +557,18 @@ class SamlServerProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] certificate: The Certificate param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] entity_id: The EntityId param. String length must be between 1 and 1024 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.int] max_clock_skew: The MaxClockSkew param. Value must be between 1 and 900.
-        :param pulumi.Input[_builtins.str] slo_bindings: The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] sso_bindings: The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
-        :param pulumi.Input[_builtins.str] sso_url: The SsoUrl param. String length must be between 1 and 255 characters.
-        :param pulumi.Input[_builtins.bool] validate_idp_certificate: The ValidateIdpCertificate param.
-        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: The WantAuthRequestsSigned param.
+        :param pulumi.Input[_builtins.str] certificate: The identity provider certificate
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] entity_id: The identity provider ID
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.int] max_clock_skew: Maxiumum clock skew
+        :param pulumi.Input[_builtins.str] name: The name of the SAML server profile
+        :param pulumi.Input[_builtins.str] slo_bindings: SAML HTTP binding for SLO requests to the identity provider
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] sso_bindings: SAML HTTP binding for SSO requests to the identity provider
+        :param pulumi.Input[_builtins.str] sso_url: Identity provider SSO URL
+        :param pulumi.Input[_builtins.bool] validate_idp_certificate: Validate the identity provider certificate?
+        :param pulumi.Input[_builtins.bool] want_auth_requests_signed: Sign SAML message to the identity provider?
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -556,6 +579,7 @@ class SamlServerProfile(pulumi.CustomResource):
         __props__.__dict__["entity_id"] = entity_id
         __props__.__dict__["folder"] = folder
         __props__.__dict__["max_clock_skew"] = max_clock_skew
+        __props__.__dict__["name"] = name
         __props__.__dict__["slo_bindings"] = slo_bindings
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["sso_bindings"] = sso_bindings
@@ -569,7 +593,7 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def certificate(self) -> pulumi.Output[_builtins.str]:
         """
-        The Certificate param. String length must not exceed 63 characters.
+        The identity provider certificate
         """
         return pulumi.get(self, "certificate")
 
@@ -577,15 +601,15 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="entityId")
-    def entity_id(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def entity_id(self) -> pulumi.Output[_builtins.str]:
         """
-        The EntityId param. String length must be between 1 and 1024 characters.
+        The identity provider ID
         """
         return pulumi.get(self, "entity_id")
 
@@ -593,7 +617,7 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -601,15 +625,23 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="maxClockSkew")
     def max_clock_skew(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        The MaxClockSkew param. Value must be between 1 and 900.
+        Maxiumum clock skew
         """
         return pulumi.get(self, "max_clock_skew")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Output[_builtins.str]:
+        """
+        The name of the SAML server profile
+        """
+        return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        SAML HTTP binding for SLO requests to the identity provider
         """
         return pulumi.get(self, "slo_bindings")
 
@@ -617,23 +649,23 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="ssoBindings")
-    def sso_bindings(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def sso_bindings(self) -> pulumi.Output[_builtins.str]:
         """
-        The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        SAML HTTP binding for SSO requests to the identity provider
         """
         return pulumi.get(self, "sso_bindings")
 
     @_builtins.property
     @pulumi.getter(name="ssoUrl")
-    def sso_url(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def sso_url(self) -> pulumi.Output[_builtins.str]:
         """
-        The SsoUrl param. String length must be between 1 and 255 characters.
+        Identity provider SSO URL
         """
         return pulumi.get(self, "sso_url")
 
@@ -646,7 +678,7 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="validateIdpCertificate")
     def validate_idp_certificate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The ValidateIdpCertificate param.
+        Validate the identity provider certificate?
         """
         return pulumi.get(self, "validate_idp_certificate")
 
@@ -654,7 +686,7 @@ class SamlServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="wantAuthRequestsSigned")
     def want_auth_requests_signed(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The WantAuthRequestsSigned param.
+        Sign SAML message to the identity provider?
         """
         return pulumi.get(self, "want_auth_requests_signed")
 

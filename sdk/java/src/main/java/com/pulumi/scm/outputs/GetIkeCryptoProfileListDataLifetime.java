@@ -11,50 +11,50 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeCryptoProfileListDataLifetime {
     /**
-     * @return specify lifetime in days. Value must be between 1 and 365.
+     * @return specify lifetime in days
      * 
      */
     private Integer days;
     /**
-     * @return specify lifetime in hours. Value must be between 1 and 65535.
+     * @return specify lifetime in hours
      * 
      */
     private Integer hours;
     /**
-     * @return specify lifetime in minutes. Value must be between 3 and 65535.
+     * @return specify lifetime in minutes
      * 
      */
     private Integer minutes;
     /**
-     * @return specify lifetime in seconds. Value must be between 180 and 65535.
+     * @return specify lifetime in seconds
      * 
      */
     private Integer seconds;
 
     private GetIkeCryptoProfileListDataLifetime() {}
     /**
-     * @return specify lifetime in days. Value must be between 1 and 365.
+     * @return specify lifetime in days
      * 
      */
     public Integer days() {
         return this.days;
     }
     /**
-     * @return specify lifetime in hours. Value must be between 1 and 65535.
+     * @return specify lifetime in hours
      * 
      */
     public Integer hours() {
         return this.hours;
     }
     /**
-     * @return specify lifetime in minutes. Value must be between 3 and 65535.
+     * @return specify lifetime in minutes
      * 
      */
     public Integer minutes() {
         return this.minutes;
     }
     /**
-     * @return specify lifetime in seconds. Value must be between 180 and 65535.
+     * @return specify lifetime in seconds
      * 
      */
     public Integer seconds() {

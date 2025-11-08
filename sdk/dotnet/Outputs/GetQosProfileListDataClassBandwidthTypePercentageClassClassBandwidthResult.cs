@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosProfileListDataClassBandwidthTypePercentageClassClassBandwidthResult
     {
         /// <summary>
-        /// guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+        /// guaranteed sending bandwidth in percentage
         /// </summary>
         public readonly int EgressGuaranteed;
         /// <summary>
-        /// max sending bandwidth in percentage. Value must be between 0 and 100.
+        /// max sending bandwidth in percentage
         /// </summary>
         public readonly int EgressMax;
 

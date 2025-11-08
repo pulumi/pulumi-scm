@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupLocalUser(ctx, &scm.LookupLocalUserArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// LocalUser data source
 func LookupLocalUser(ctx *pulumi.Context, args *LookupLocalUserArgs, opts ...pulumi.InvokeOption) (*LookupLocalUserResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLocalUserResult
@@ -50,21 +24,31 @@ func LookupLocalUser(ctx *pulumi.Context, args *LookupLocalUserArgs, opts ...pul
 
 // A collection of arguments for invoking getLocalUser.
 type LookupLocalUserArgs struct {
-	// The Id param.
+	// The UUID of the local user
 	Id string `pulumi:"id"`
+	// The name of the local user
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getLocalUser.
 type LookupLocalUserResult struct {
-	// The Disabled param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Is the local user disabled?
 	Disabled bool `pulumi:"disabled"`
-	// The Id param.
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the local user
 	Id string `pulumi:"id"`
-	// The Name param. String length must not exceed 31 characters.
+	// The name of the local user
 	Name string `pulumi:"name"`
-	// The Password param. String length must not exceed 63 characters.
+	// The password of the local user
 	Password string `pulumi:"password"`
-	Tfid     string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupLocalUserOutput(ctx *pulumi.Context, args LookupLocalUserOutputArgs, opts ...pulumi.InvokeOption) LookupLocalUserResultOutput {
@@ -78,8 +62,10 @@ func LookupLocalUserOutput(ctx *pulumi.Context, args LookupLocalUserOutputArgs, 
 
 // A collection of arguments for invoking getLocalUser.
 type LookupLocalUserOutputArgs struct {
-	// The Id param.
+	// The UUID of the local user
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the local user
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupLocalUserOutputArgs) ElementType() reflect.Type {
@@ -101,24 +87,44 @@ func (o LookupLocalUserResultOutput) ToLookupLocalUserResultOutputWithContext(ct
 	return o
 }
 
-// The Disabled param.
+// The device in which the resource is defined
+func (o LookupLocalUserResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Is the local user disabled?
 func (o LookupLocalUserResultOutput) Disabled() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) bool { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// The Id param.
+// Map of sensitive values returned from the API.
+func (o LookupLocalUserResultOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v LookupLocalUserResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupLocalUserResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the local user
 func (o LookupLocalUserResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param. String length must not exceed 31 characters.
+// The name of the local user
 func (o LookupLocalUserResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Password param. String length must not exceed 63 characters.
+// The password of the local user
 func (o LookupLocalUserResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Password }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupLocalUserResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLocalUserResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupLocalUserResultOutput) Tfid() pulumi.StringOutput {

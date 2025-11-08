@@ -18,148 +18,120 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * IpsecTunnel resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.IpsecTunnel;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new IpsecTunnel("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/ipsecTunnel:IpsecTunnel")
 public class IpsecTunnel extends com.pulumi.resources.CustomResource {
     /**
-     * Enable Anti-Replay check on this tunnel.
+     * Enable Anti-Replay check on this tunnel
      * 
      */
     @Export(name="antiReplay", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> antiReplay;
 
     /**
-     * @return Enable Anti-Replay check on this tunnel.
+     * @return Enable Anti-Replay check on this tunnel
      * 
      */
     public Output<Optional<Boolean>> antiReplay() {
         return Codegen.optional(this.antiReplay);
     }
     /**
-     * The AutoKey param.
+     * Auto key
      * 
      */
     @Export(name="autoKey", refs={IpsecTunnelAutoKey.class}, tree="[0]")
     private Output<IpsecTunnelAutoKey> autoKey;
 
     /**
-     * @return The AutoKey param.
+     * @return Auto key
      * 
      */
     public Output<IpsecTunnelAutoKey> autoKey() {
         return this.autoKey;
     }
     /**
-     * Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      * 
      */
     @Export(name="copyTos", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> copyTos;
 
     /**
-     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended). Default: `false`.
+     * @return Copy IP TOS bits from inner packet to IPSec packet (not recommended)
      * 
      */
     public Output<Boolean> copyTos() {
         return this.copyTos;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * allow GRE over IPSec. Default: `false`.
+     * allow GRE over IPSec
      * 
      */
     @Export(name="enableGreEncapsulation", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> enableGreEncapsulation;
 
     /**
-     * @return allow GRE over IPSec. Default: `false`.
+     * @return allow GRE over IPSec
      * 
      */
     public Output<Boolean> enableGreEncapsulation() {
         return this.enableGreEncapsulation;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -172,18 +144,32 @@ public class IpsecTunnel extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The TunnelMonitor param.
+     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
+    @Export(name="tunnelInterface", refs={String.class}, tree="[0]")
+    private Output<String> tunnelInterface;
+
+    /**
+     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+     * 
+     */
+    public Output<String> tunnelInterface() {
+        return this.tunnelInterface;
+    }
+    /**
+     * Tunnel monitor
      * 
      */
     @Export(name="tunnelMonitor", refs={IpsecTunnelTunnelMonitor.class}, tree="[0]")
-    private Output</* @Nullable */ IpsecTunnelTunnelMonitor> tunnelMonitor;
+    private Output<IpsecTunnelTunnelMonitor> tunnelMonitor;
 
     /**
-     * @return The TunnelMonitor param.
+     * @return Tunnel monitor
      * 
      */
-    public Output<Optional<IpsecTunnelTunnelMonitor>> tunnelMonitor() {
-        return Codegen.optional(this.tunnelMonitor);
+    public Output<IpsecTunnelTunnelMonitor> tunnelMonitor() {
+        return this.tunnelMonitor;
     }
 
     /**

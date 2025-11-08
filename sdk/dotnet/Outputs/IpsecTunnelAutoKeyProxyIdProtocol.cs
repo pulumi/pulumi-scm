@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class IpsecTunnelAutoKeyProxyIdProtocol
     {
         /// <summary>
-        /// IP protocol number. Value must be between 1 and 254. Ensure that only one of the following is specified: `Number`, `Tcp`, `Udp`
+        /// IP protocol number
         /// </summary>
         public readonly int? Number;
         /// <summary>
-        /// The Tcp param. Ensure that only one of the following is specified: `Number`, `Tcp`, `Udp`
+        /// IPv4 type of proxy*id protocol values for TCP protocol
         /// </summary>
         public readonly Outputs.IpsecTunnelAutoKeyProxyIdProtocolTcp? Tcp;
         /// <summary>
-        /// The Udp param. Ensure that only one of the following is specified: `Number`, `Tcp`, `Udp`
+        /// IPv6 type of proxy*id protocol values for UDP protocol
         /// </summary>
         public readonly Outputs.IpsecTunnelAutoKeyProxyIdProtocolUdp? Udp;
 

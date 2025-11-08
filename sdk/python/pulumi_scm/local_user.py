@@ -19,21 +19,22 @@ __all__ = ['LocalUserArgs', 'LocalUser']
 @pulumi.input_type
 class LocalUserArgs:
     def __init__(__self__, *,
+                 password: pulumi.Input[_builtins.str],
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 password: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a LocalUser resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] password: The Password param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] password: The password of the local user
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the local user disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the local user
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
+        pulumi.set(__self__, "password", password)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if disabled is not None:
@@ -42,16 +43,26 @@ class LocalUserArgs:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if password is not None:
-            pulumi.set(__self__, "password", password)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
 
     @_builtins.property
     @pulumi.getter
+    def password(self) -> pulumi.Input[_builtins.str]:
+        """
+        The password of the local user
+        """
+        return pulumi.get(self, "password")
+
+    @password.setter
+    def password(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "password", value)
+
+    @_builtins.property
+    @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -63,7 +74,7 @@ class LocalUserArgs:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param.
+        Is the local user disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -75,7 +86,7 @@ class LocalUserArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -87,7 +98,7 @@ class LocalUserArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param. String length must not exceed 31 characters.
+        The name of the local user
         """
         return pulumi.get(self, "name")
 
@@ -97,21 +108,9 @@ class LocalUserArgs:
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Password param. String length must not exceed 63 characters.
-        """
-        return pulumi.get(self, "password")
-
-    @password.setter
-    def password(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "password", value)
-
-    @_builtins.property
-    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -133,13 +132,13 @@ class _LocalUserState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering LocalUser resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] password: The Password param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the local user disabled?
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the local user
+        :param pulumi.Input[_builtins.str] password: The password of the local user
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -162,7 +161,7 @@ class _LocalUserState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -174,7 +173,7 @@ class _LocalUserState:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param.
+        Is the local user disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -186,7 +185,7 @@ class _LocalUserState:
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        (Internal use) Encrypted values returned from the API.
+        Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
@@ -198,7 +197,7 @@ class _LocalUserState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -210,7 +209,7 @@ class _LocalUserState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param. String length must not exceed 31 characters.
+        The name of the local user
         """
         return pulumi.get(self, "name")
 
@@ -222,7 +221,7 @@ class _LocalUserState:
     @pulumi.getter
     def password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Password param. String length must not exceed 63 characters.
+        The password of the local user
         """
         return pulumi.get(self, "password")
 
@@ -234,7 +233,7 @@ class _LocalUserState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -266,49 +265,25 @@ class LocalUser(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.LocalUser("example",
-            folder="Shared",
-            name="user1",
-            password="secret")
-        ```
+        LocalUser resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] password: The Password param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the local user disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the local user
+        :param pulumi.Input[_builtins.str] password: The password of the local user
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[LocalUserArgs] = None,
+                 args: LocalUserArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.LocalUser("example",
-            folder="Shared",
-            name="user1",
-            password="secret")
-        ```
+        LocalUser resource
 
         :param str resource_name: The name of the resource.
         :param LocalUserArgs args: The arguments to use to populate this resource's properties.
@@ -344,6 +319,8 @@ class LocalUser(pulumi.CustomResource):
             __props__.__dict__["disabled"] = disabled
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
+            if password is None and not opts.urn:
+                raise TypeError("Missing required property 'password'")
             __props__.__dict__["password"] = None if password is None else pulumi.Output.secret(password)
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["encrypted_values"] = None
@@ -375,13 +352,13 @@ class LocalUser(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] password: The Password param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] disabled: Is the local user disabled?
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the local user
+        :param pulumi.Input[_builtins.str] password: The password of the local user
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -401,15 +378,15 @@ class LocalUser(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
-    def disabled(self) -> pulumi.Output[Optional[_builtins.bool]]:
+    def disabled(self) -> pulumi.Output[_builtins.bool]:
         """
-        The Disabled param.
+        Is the local user disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -417,7 +394,7 @@ class LocalUser(pulumi.CustomResource):
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> pulumi.Output[Mapping[str, _builtins.str]]:
         """
-        (Internal use) Encrypted values returned from the API.
+        Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
@@ -425,7 +402,7 @@ class LocalUser(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -433,15 +410,15 @@ class LocalUser(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param. String length must not exceed 31 characters.
+        The name of the local user
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def password(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def password(self) -> pulumi.Output[_builtins.str]:
         """
-        The Password param. String length must not exceed 63 characters.
+        The password of the local user
         """
         return pulumi.get(self, "password")
 
@@ -449,7 +426,7 @@ class LocalUser(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectNetworkInfoArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Criteria param.
+        /// Criteria
         /// </summary>
         [Input("criteria")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaArgs>? Criteria { get; set; }

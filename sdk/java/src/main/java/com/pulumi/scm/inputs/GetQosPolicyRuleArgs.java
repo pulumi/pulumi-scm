@@ -17,40 +17,40 @@ public final class GetQosPolicyRuleArgs extends com.pulumi.resources.InvokeArgs 
     public static final GetQosPolicyRuleArgs Empty = new GetQosPolicyRuleArgs();
 
     /**
-     * The Folder param.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
-
-    /**
-     * @return The Folder param.
-     * 
-     */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * UUID of the resource
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public Output<String> id() {
         return this.id;
     }
 
+    /**
+     * Name
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return Name
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetQosPolicyRuleArgs() {}
 
     private GetQosPolicyRuleArgs(GetQosPolicyRuleArgs $) {
-        this.folder = $.folder;
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -72,28 +72,7 @@ public final class GetQosPolicyRuleArgs extends com.pulumi.resources.InvokeArgs 
         }
 
         /**
-         * @param folder The Folder param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable Output<String> folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param folder The Folder param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(String folder) {
-            return folder(Output.of(folder));
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
@@ -104,13 +83,34 @@ public final class GetQosPolicyRuleArgs extends com.pulumi.resources.InvokeArgs 
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the resource
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name Name
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetQosPolicyRuleArgs build() {

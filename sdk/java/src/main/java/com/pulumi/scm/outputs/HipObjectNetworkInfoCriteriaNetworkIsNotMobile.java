@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectNetworkInfoCriteriaNetworkIsNotMobile {
     /**
-     * @return The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Carrier
      * 
      */
     private @Nullable String carrier;
 
     private HipObjectNetworkInfoCriteriaNetworkIsNotMobile() {}
     /**
-     * @return The Carrier param. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Carrier
      * 
      */
     public Optional<String> carrier() {

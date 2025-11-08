@@ -21,22 +21,18 @@ class ServiceConnectionGroupArgs:
     def __init__(__self__, *,
                  targets: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  pbf_only: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a ServiceConnectionGroup resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: The Targets param.
-        :param pulumi.Input[_builtins.bool] disable_snat: The DisableSnat param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] pbf_only: The PbfOnly param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: Target
+        :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] pbf_only: Pbf only
         """
         pulumi.set(__self__, "targets", targets)
         if disable_snat is not None:
             pulumi.set(__self__, "disable_snat", disable_snat)
-        if folder is not None:
-            pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if pbf_only is not None:
@@ -46,7 +42,7 @@ class ServiceConnectionGroupArgs:
     @pulumi.getter
     def targets(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Targets param.
+        Target
         """
         return pulumi.get(self, "targets")
 
@@ -58,7 +54,7 @@ class ServiceConnectionGroupArgs:
     @pulumi.getter(name="disableSnat")
     def disable_snat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The DisableSnat param.
+        Disable snat
         """
         return pulumi.get(self, "disable_snat")
 
@@ -68,21 +64,9 @@ class ServiceConnectionGroupArgs:
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        """
-        return pulumi.get(self, "folder")
-
-    @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -94,7 +78,7 @@ class ServiceConnectionGroupArgs:
     @pulumi.getter(name="pbfOnly")
     def pbf_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The PbfOnly param.
+        Pbf only
         """
         return pulumi.get(self, "pbf_only")
 
@@ -107,23 +91,19 @@ class ServiceConnectionGroupArgs:
 class _ServiceConnectionGroupState:
     def __init__(__self__, *,
                  disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
                  targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceConnectionGroup resources.
-        :param pulumi.Input[_builtins.bool] disable_snat: The DisableSnat param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] pbf_only: The PbfOnly param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: The Targets param.
+        :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] pbf_only: Pbf only
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: Target
         """
         if disable_snat is not None:
             pulumi.set(__self__, "disable_snat", disable_snat)
-        if folder is not None:
-            pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if pbf_only is not None:
@@ -137,7 +117,7 @@ class _ServiceConnectionGroupState:
     @pulumi.getter(name="disableSnat")
     def disable_snat(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The DisableSnat param.
+        Disable snat
         """
         return pulumi.get(self, "disable_snat")
 
@@ -147,21 +127,9 @@ class _ServiceConnectionGroupState:
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        """
-        return pulumi.get(self, "folder")
-
-    @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -173,7 +141,7 @@ class _ServiceConnectionGroupState:
     @pulumi.getter(name="pbfOnly")
     def pbf_only(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The PbfOnly param.
+        Pbf only
         """
         return pulumi.get(self, "pbf_only")
 
@@ -185,7 +153,7 @@ class _ServiceConnectionGroupState:
     @pulumi.getter
     def targets(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Targets param.
+        Target
         """
         return pulumi.get(self, "targets")
 
@@ -210,30 +178,21 @@ class ServiceConnectionGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
                  targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        ServiceConnectionGroup resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ServiceConnectionGroup("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] disable_snat: The DisableSnat param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] pbf_only: The PbfOnly param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: The Targets param.
+        :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] pbf_only: Pbf only
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: Target
         """
         ...
     @overload
@@ -242,16 +201,9 @@ class ServiceConnectionGroup(pulumi.CustomResource):
                  args: ServiceConnectionGroupArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        ServiceConnectionGroup resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ServiceConnectionGroup("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param ServiceConnectionGroupArgs args: The arguments to use to populate this resource's properties.
@@ -269,7 +221,6 @@ class ServiceConnectionGroup(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
                  targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -283,7 +234,6 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             __props__ = ServiceConnectionGroupArgs.__new__(ServiceConnectionGroupArgs)
 
             __props__.__dict__["disable_snat"] = disable_snat
-            __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
             __props__.__dict__["pbf_only"] = pbf_only
             if targets is None and not opts.urn:
@@ -301,7 +251,6 @@ class ServiceConnectionGroup(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             disable_snat: Optional[pulumi.Input[_builtins.bool]] = None,
-            folder: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             pbf_only: Optional[pulumi.Input[_builtins.bool]] = None,
             targets: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
@@ -313,18 +262,16 @@ class ServiceConnectionGroup(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] disable_snat: The DisableSnat param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] pbf_only: The PbfOnly param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: The Targets param.
+        :param pulumi.Input[_builtins.bool] disable_snat: Disable snat
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.bool] pbf_only: Pbf only
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] targets: Target
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _ServiceConnectionGroupState.__new__(_ServiceConnectionGroupState)
 
         __props__.__dict__["disable_snat"] = disable_snat
-        __props__.__dict__["folder"] = folder
         __props__.__dict__["name"] = name
         __props__.__dict__["pbf_only"] = pbf_only
         __props__.__dict__["targets"] = targets
@@ -335,23 +282,15 @@ class ServiceConnectionGroup(pulumi.CustomResource):
     @pulumi.getter(name="disableSnat")
     def disable_snat(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The DisableSnat param.
+        Disable snat
         """
         return pulumi.get(self, "disable_snat")
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> pulumi.Output[_builtins.str]:
-        """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        """
-        return pulumi.get(self, "folder")
-
-    @_builtins.property
-    @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -359,7 +298,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
     @pulumi.getter(name="pbfOnly")
     def pbf_only(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The PbfOnly param.
+        Pbf only
         """
         return pulumi.get(self, "pbf_only")
 
@@ -367,7 +306,7 @@ class ServiceConnectionGroup(pulumi.CustomResource):
     @pulumi.getter
     def targets(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Targets param.
+        Target
         """
         return pulumi.get(self, "targets")
 

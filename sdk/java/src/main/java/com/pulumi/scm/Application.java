@@ -20,390 +20,362 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * Application resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.Application;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new Application("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/application:Application")
 public class Application extends com.pulumi.resources.CustomResource {
     /**
-     * The AbleToTransferFile param.
+     * Able to transfer file
      * 
      */
     @Export(name="ableToTransferFile", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> ableToTransferFile;
 
     /**
-     * @return The AbleToTransferFile param.
+     * @return Able to transfer file
      * 
      */
     public Output<Optional<Boolean>> ableToTransferFile() {
         return Codegen.optional(this.ableToTransferFile);
     }
     /**
-     * The AlgDisableCapability param. String length must not exceed 127 characters.
+     * Alg disable capability
      * 
      */
     @Export(name="algDisableCapability", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> algDisableCapability;
 
     /**
-     * @return The AlgDisableCapability param. String length must not exceed 127 characters.
+     * @return Alg disable capability
      * 
      */
     public Output<Optional<String>> algDisableCapability() {
         return Codegen.optional(this.algDisableCapability);
     }
     /**
-     * The Category param.
+     * Category
      * 
      */
     @Export(name="category", refs={String.class}, tree="[0]")
     private Output<String> category;
 
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     public Output<String> category() {
         return this.category;
     }
     /**
-     * The ConsumeBigBandwidth param.
+     * Consume big bandwidth
      * 
      */
     @Export(name="consumeBigBandwidth", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> consumeBigBandwidth;
 
     /**
-     * @return The ConsumeBigBandwidth param.
+     * @return Consume big bandwidth
      * 
      */
     public Output<Optional<Boolean>> consumeBigBandwidth() {
         return Codegen.optional(this.consumeBigBandwidth);
     }
     /**
-     * The DataIdent param.
+     * Data ident
      * 
      */
     @Export(name="dataIdent", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> dataIdent;
 
     /**
-     * @return The DataIdent param.
+     * @return Data ident
      * 
      */
     public Output<Optional<Boolean>> dataIdent() {
         return Codegen.optional(this.dataIdent);
     }
     /**
-     * The Default param.
+     * Default
      * 
      */
     @Export(name="default", refs={ApplicationDefault.class}, tree="[0]")
     private Output</* @Nullable */ ApplicationDefault> default_;
 
     /**
-     * @return The Default param.
+     * @return Default
      * 
      */
     public Output<Optional<ApplicationDefault>> default_() {
         return Codegen.optional(this.default_);
     }
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The EvasiveBehavior param.
+     * Evasive behavior
      * 
      */
     @Export(name="evasiveBehavior", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> evasiveBehavior;
 
     /**
-     * @return The EvasiveBehavior param.
+     * @return Evasive behavior
      * 
      */
     public Output<Optional<Boolean>> evasiveBehavior() {
         return Codegen.optional(this.evasiveBehavior);
     }
     /**
-     * The FileTypeIdent param.
+     * File type ident
      * 
      */
     @Export(name="fileTypeIdent", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> fileTypeIdent;
 
     /**
-     * @return The FileTypeIdent param.
+     * @return File type ident
      * 
      */
     public Output<Optional<Boolean>> fileTypeIdent() {
         return Codegen.optional(this.fileTypeIdent);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The HasKnownVulnerability param.
+     * Has known vulnerability
      * 
      */
     @Export(name="hasKnownVulnerability", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> hasKnownVulnerability;
 
     /**
-     * @return The HasKnownVulnerability param.
+     * @return Has known vulnerability
      * 
      */
     public Output<Optional<Boolean>> hasKnownVulnerability() {
         return Codegen.optional(this.hasKnownVulnerability);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the application
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the application
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The NoAppidCaching param.
+     * No appid caching
      * 
      */
     @Export(name="noAppidCaching", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> noAppidCaching;
 
     /**
-     * @return The NoAppidCaching param.
+     * @return No appid caching
      * 
      */
     public Output<Optional<Boolean>> noAppidCaching() {
         return Codegen.optional(this.noAppidCaching);
     }
     /**
-     * The ParentApp param. String length must not exceed 127 characters.
+     * Parent app
      * 
      */
     @Export(name="parentApp", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> parentApp;
 
     /**
-     * @return The ParentApp param. String length must not exceed 127 characters.
+     * @return Parent app
      * 
      */
     public Output<Optional<String>> parentApp() {
         return Codegen.optional(this.parentApp);
     }
     /**
-     * The PervasiveUse param.
+     * Pervasive use
      * 
      */
     @Export(name="pervasiveUse", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> pervasiveUse;
 
     /**
-     * @return The PervasiveUse param.
+     * @return Pervasive use
      * 
      */
     public Output<Optional<Boolean>> pervasiveUse() {
         return Codegen.optional(this.pervasiveUse);
     }
     /**
-     * The ProneToMisuse param.
+     * Prone to misuse
      * 
      */
     @Export(name="proneToMisuse", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> proneToMisuse;
 
     /**
-     * @return The ProneToMisuse param.
+     * @return Prone to misuse
      * 
      */
     public Output<Optional<Boolean>> proneToMisuse() {
         return Codegen.optional(this.proneToMisuse);
     }
     /**
-     * The Risk param. Value must be between 1 and 5.
+     * Risk
      * 
      */
-    @Export(name="risk", refs={Integer.class}, tree="[0]")
-    private Output<Integer> risk;
+    @Export(name="risk", refs={String.class}, tree="[0]")
+    private Output<String> risk;
 
     /**
-     * @return The Risk param. Value must be between 1 and 5.
+     * @return Risk
      * 
      */
-    public Output<Integer> risk() {
+    public Output<String> risk() {
         return this.risk;
     }
     /**
-     * The Signatures param.
+     * Signature
      * 
      */
     @Export(name="signatures", refs={List.class,ApplicationSignature.class}, tree="[0,1]")
     private Output</* @Nullable */ List<ApplicationSignature>> signatures;
 
     /**
-     * @return The Signatures param.
+     * @return Signature
      * 
      */
     public Output<Optional<List<ApplicationSignature>>> signatures() {
         return Codegen.optional(this.signatures);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The Subcategory param. String length must not exceed 63 characters.
+     * Subcategory
      * 
      */
     @Export(name="subcategory", refs={String.class}, tree="[0]")
-    private Output<String> subcategory;
+    private Output</* @Nullable */ String> subcategory;
 
     /**
-     * @return The Subcategory param. String length must not exceed 63 characters.
+     * @return Subcategory
      * 
      */
-    public Output<String> subcategory() {
-        return this.subcategory;
+    public Output<Optional<String>> subcategory() {
+        return Codegen.optional(this.subcategory);
     }
     /**
-     * timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * timeout for half-close session in seconds
      * 
      */
     @Export(name="tcpHalfClosedTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpHalfClosedTimeout;
 
     /**
-     * @return timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * @return timeout for half-close session in seconds
      * 
      */
     public Output<Optional<Integer>> tcpHalfClosedTimeout() {
         return Codegen.optional(this.tcpHalfClosedTimeout);
     }
     /**
-     * timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * timeout for session in timeWait state in seconds
      * 
      */
     @Export(name="tcpTimeWaitTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpTimeWaitTimeout;
 
     /**
-     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds
      * 
      */
     public Output<Optional<Integer>> tcpTimeWaitTimeout() {
         return Codegen.optional(this.tcpTimeWaitTimeout);
     }
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      * 
      */
     @Export(name="tcpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> tcpTimeout;
 
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Output<Optional<Integer>> tcpTimeout() {
         return Codegen.optional(this.tcpTimeout);
     }
     /**
-     * The Technology param. String length must not exceed 63 characters.
+     * Technology
      * 
      */
     @Export(name="technology", refs={String.class}, tree="[0]")
-    private Output<String> technology;
+    private Output</* @Nullable */ String> technology;
 
     /**
-     * @return The Technology param. String length must not exceed 63 characters.
+     * @return Technology
      * 
      */
-    public Output<String> technology() {
-        return this.technology;
+    public Output<Optional<String>> technology() {
+        return Codegen.optional(this.technology);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
@@ -412,84 +384,84 @@ public class Application extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      * 
      */
     @Export(name="timeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> timeout;
 
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Output<Optional<Integer>> timeout() {
         return Codegen.optional(this.timeout);
     }
     /**
-     * The TunnelApplications param.
+     * Tunnel applications
      * 
      */
     @Export(name="tunnelApplications", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelApplications;
 
     /**
-     * @return The TunnelApplications param.
+     * @return Tunnel applications
      * 
      */
     public Output<Optional<Boolean>> tunnelApplications() {
         return Codegen.optional(this.tunnelApplications);
     }
     /**
-     * The TunnelOtherApplication param.
+     * Tunnel other application
      * 
      */
     @Export(name="tunnelOtherApplication", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> tunnelOtherApplication;
 
     /**
-     * @return The TunnelOtherApplication param.
+     * @return Tunnel other application
      * 
      */
     public Output<Optional<Boolean>> tunnelOtherApplication() {
         return Codegen.optional(this.tunnelOtherApplication);
     }
     /**
-     * timeout in seconds. Value must be between 0 and 604800.
+     * timeout in seconds
      * 
      */
     @Export(name="udpTimeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> udpTimeout;
 
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Output<Optional<Integer>> udpTimeout() {
         return Codegen.optional(this.udpTimeout);
     }
     /**
-     * The UsedByMalware param.
+     * Used by malware
      * 
      */
     @Export(name="usedByMalware", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> usedByMalware;
 
     /**
-     * @return The UsedByMalware param.
+     * @return Used by malware
      * 
      */
     public Output<Optional<Boolean>> usedByMalware() {
         return Codegen.optional(this.usedByMalware);
     }
     /**
-     * The VirusIdent param.
+     * Virus ident
      * 
      */
     @Export(name="virusIdent", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> virusIdent;
 
     /**
-     * @return The VirusIdent param.
+     * @return Virus ident
      * 
      */
     public Output<Optional<Boolean>> virusIdent() {

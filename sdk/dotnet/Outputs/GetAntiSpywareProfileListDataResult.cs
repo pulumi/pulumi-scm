@@ -14,39 +14,52 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareProfileListDataResult
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `False`.
+        /// Cloud inline analysis
         /// </summary>
         public readonly bool CloudInlineAnalysis;
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the anti-spyware profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The InlineExceptionEdlUrls param.
+        /// Inline exception edl url
         /// </summary>
         public readonly ImmutableArray<string> InlineExceptionEdlUrls;
         /// <summary>
-        /// The InlineExceptionIpAddresses param.
+        /// Inline exception ip address
         /// </summary>
         public readonly ImmutableArray<string> InlineExceptionIpAddresses;
         /// <summary>
-        /// The MicaEngineSpywareEnabledList param.
+        /// Mica engine spyware enabled
         /// </summary>
-        public readonly ImmutableArray<Outputs.GetAntiSpywareProfileListDataMicaEngineSpywareEnabledListResult> MicaEngineSpywareEnabledLists;
+        public readonly ImmutableArray<Outputs.GetAntiSpywareProfileListDataMicaEngineSpywareEnabledResult> MicaEngineSpywareEnableds;
         /// <summary>
-        /// The Name param.
+        /// The name of the anti-spyware profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileListDataRuleResult> Rules;
         /// <summary>
-        /// The ThreatExceptions param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// Threat exception
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileListDataThreatExceptionResult> ThreatExceptions;
 
@@ -56,28 +69,40 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> inlineExceptionEdlUrls,
 
             ImmutableArray<string> inlineExceptionIpAddresses,
 
-            ImmutableArray<Outputs.GetAntiSpywareProfileListDataMicaEngineSpywareEnabledListResult> micaEngineSpywareEnabledLists,
+            ImmutableArray<Outputs.GetAntiSpywareProfileListDataMicaEngineSpywareEnabledResult> micaEngineSpywareEnableds,
 
             string name,
 
             ImmutableArray<Outputs.GetAntiSpywareProfileListDataRuleResult> rules,
 
+            string snippet,
+
+            string tfid,
+
             ImmutableArray<Outputs.GetAntiSpywareProfileListDataThreatExceptionResult> threatExceptions)
         {
             CloudInlineAnalysis = cloudInlineAnalysis;
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             InlineExceptionEdlUrls = inlineExceptionEdlUrls;
             InlineExceptionIpAddresses = inlineExceptionIpAddresses;
-            MicaEngineSpywareEnabledLists = micaEngineSpywareEnabledLists;
+            MicaEngineSpywareEnableds = micaEngineSpywareEnableds;
             Name = name;
             Rules = rules;
+            Snippet = snippet;
+            Tfid = tfid;
             ThreatExceptions = threatExceptions;
         }
     }

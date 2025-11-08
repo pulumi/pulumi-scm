@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _domains;
 
         /// <summary>
-        /// The Domains param.
+        /// A list of DNS domains
         /// </summary>
         public InputList<string> Domains
         {
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionTypeHeaderGetArgs>? _headers;
 
         /// <summary>
-        /// The Headers param.
+        /// Headers
         /// </summary>
         public InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionTypeHeaderGetArgs> Headers
         {
@@ -37,7 +37,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Name param.
+        /// The HTTP header insertion type (*This is a predefined list in the UI*)
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;

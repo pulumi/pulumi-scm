@@ -13,110 +13,110 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RemoteNetworkProtocolBgp {
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes?
      * 
      */
     private @Nullable Boolean doNotExportRoutes;
     /**
-     * @return to setup bgp protocol, enable need to set as true.
+     * @return Enable BGP peering?
      * 
      */
     private @Nullable Boolean enable;
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address
      * 
      */
     private @Nullable String localIpAddress;
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route?
      * 
      */
     private @Nullable Boolean originateDefaultRoute;
     /**
-     * @return The PeerAs param.
+     * @return BGP peer ASN
      * 
      */
     private @Nullable String peerAs;
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address
      * 
      */
     private @Nullable String peerIpAddress;
     /**
-     * @return Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+     * @return Route exchange types
      * 
      */
     private @Nullable String peeringType;
     /**
-     * @return The Secret param.
+     * @return BGP peering secret
      * 
      */
     private @Nullable String secret;
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes?
      * 
      */
     private @Nullable Boolean summarizeMobileUserRoutes;
 
     private RemoteNetworkProtocolBgp() {}
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes?
      * 
      */
     public Optional<Boolean> doNotExportRoutes() {
         return Optional.ofNullable(this.doNotExportRoutes);
     }
     /**
-     * @return to setup bgp protocol, enable need to set as true.
+     * @return Enable BGP peering?
      * 
      */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address
      * 
      */
     public Optional<String> localIpAddress() {
         return Optional.ofNullable(this.localIpAddress);
     }
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route?
      * 
      */
     public Optional<Boolean> originateDefaultRoute() {
         return Optional.ofNullable(this.originateDefaultRoute);
     }
     /**
-     * @return The PeerAs param.
+     * @return BGP peer ASN
      * 
      */
     public Optional<String> peerAs() {
         return Optional.ofNullable(this.peerAs);
     }
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address
      * 
      */
     public Optional<String> peerIpAddress() {
         return Optional.ofNullable(this.peerIpAddress);
     }
     /**
-     * @return Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+     * @return Route exchange types
      * 
      */
     public Optional<String> peeringType() {
         return Optional.ofNullable(this.peeringType);
     }
     /**
-     * @return The Secret param.
+     * @return BGP peering secret
      * 
      */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes?
      * 
      */
     public Optional<Boolean> summarizeMobileUserRoutes() {

@@ -6,70 +6,71 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeImeiRecurringDaily;
+import com.pulumi.scm.outputs.GetExternalDynamicListTypeImeiRecurringFiveMinute;
+import com.pulumi.scm.outputs.GetExternalDynamicListTypeImeiRecurringHourly;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeImeiRecurringMonthly;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeImeiRecurringWeekly;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetExternalDynamicListTypeImeiRecurring {
     /**
-     * @return The Daily param.
+     * @return Daily
      * 
      */
     private GetExternalDynamicListTypeImeiRecurringDaily daily;
     /**
-     * @return The FiveMinute param.
+     * @return Five minute
      * 
      */
-    private Boolean fiveMinute;
+    private GetExternalDynamicListTypeImeiRecurringFiveMinute fiveMinute;
     /**
-     * @return The Hourly param.
+     * @return Hourly
      * 
      */
-    private Boolean hourly;
+    private GetExternalDynamicListTypeImeiRecurringHourly hourly;
     /**
-     * @return The Monthly param.
+     * @return Monthly
      * 
      */
     private GetExternalDynamicListTypeImeiRecurringMonthly monthly;
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     private GetExternalDynamicListTypeImeiRecurringWeekly weekly;
 
     private GetExternalDynamicListTypeImeiRecurring() {}
     /**
-     * @return The Daily param.
+     * @return Daily
      * 
      */
     public GetExternalDynamicListTypeImeiRecurringDaily daily() {
         return this.daily;
     }
     /**
-     * @return The FiveMinute param.
+     * @return Five minute
      * 
      */
-    public Boolean fiveMinute() {
+    public GetExternalDynamicListTypeImeiRecurringFiveMinute fiveMinute() {
         return this.fiveMinute;
     }
     /**
-     * @return The Hourly param.
+     * @return Hourly
      * 
      */
-    public Boolean hourly() {
+    public GetExternalDynamicListTypeImeiRecurringHourly hourly() {
         return this.hourly;
     }
     /**
-     * @return The Monthly param.
+     * @return Monthly
      * 
      */
     public GetExternalDynamicListTypeImeiRecurringMonthly monthly() {
         return this.monthly;
     }
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     public GetExternalDynamicListTypeImeiRecurringWeekly weekly() {
@@ -86,8 +87,8 @@ public final class GetExternalDynamicListTypeImeiRecurring {
     @CustomType.Builder
     public static final class Builder {
         private GetExternalDynamicListTypeImeiRecurringDaily daily;
-        private Boolean fiveMinute;
-        private Boolean hourly;
+        private GetExternalDynamicListTypeImeiRecurringFiveMinute fiveMinute;
+        private GetExternalDynamicListTypeImeiRecurringHourly hourly;
         private GetExternalDynamicListTypeImeiRecurringMonthly monthly;
         private GetExternalDynamicListTypeImeiRecurringWeekly weekly;
         public Builder() {}
@@ -109,7 +110,7 @@ public final class GetExternalDynamicListTypeImeiRecurring {
             return this;
         }
         @CustomType.Setter
-        public Builder fiveMinute(Boolean fiveMinute) {
+        public Builder fiveMinute(GetExternalDynamicListTypeImeiRecurringFiveMinute fiveMinute) {
             if (fiveMinute == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListTypeImeiRecurring", "fiveMinute");
             }
@@ -117,7 +118,7 @@ public final class GetExternalDynamicListTypeImeiRecurring {
             return this;
         }
         @CustomType.Setter
-        public Builder hourly(Boolean hourly) {
+        public Builder hourly(GetExternalDynamicListTypeImeiRecurringHourly hourly) {
             if (hourly == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListTypeImeiRecurring", "hourly");
             }

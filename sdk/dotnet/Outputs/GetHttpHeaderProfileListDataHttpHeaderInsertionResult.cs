@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHttpHeaderProfileListDataHttpHeaderInsertionResult
     {
         /// <summary>
-        /// The Name param.
+        /// The name of the HTTP header insertion rule
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Types param.
+        /// A list of HTTP header insertion definitions (*This should be an object rather than an array*)
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHttpHeaderProfileListDataHttpHeaderInsertionTypeResult> Types;
 

@@ -21,20 +21,19 @@ __all__ = ['ExternalDynamicListArgs', 'ExternalDynamicList']
 @pulumi.input_type
 class ExternalDynamicListArgs:
     def __init__(__self__, *,
-                 type: pulumi.Input['ExternalDynamicListTypeArgs'],
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input['ExternalDynamicListTypeArgs']] = None):
         """
         The set of arguments for constructing a ExternalDynamicList resource.
-        :param pulumi.Input['ExternalDynamicListTypeArgs'] type: The Type param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input['ExternalDynamicListTypeArgs'] type: Type
         """
-        pulumi.set(__self__, "type", type)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if folder is not None:
@@ -43,24 +42,14 @@ class ExternalDynamicListArgs:
             pulumi.set(__self__, "name", name)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
-
-    @_builtins.property
-    @pulumi.getter
-    def type(self) -> pulumi.Input['ExternalDynamicListTypeArgs']:
-        """
-        The Type param.
-        """
-        return pulumi.get(self, "type")
-
-    @type.setter
-    def type(self, value: pulumi.Input['ExternalDynamicListTypeArgs']):
-        pulumi.set(self, "type", value)
+        if type is not None:
+            pulumi.set(__self__, "type", type)
 
     @_builtins.property
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -72,7 +61,7 @@ class ExternalDynamicListArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -84,7 +73,7 @@ class ExternalDynamicListArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the external dynamic list
         """
         return pulumi.get(self, "name")
 
@@ -96,13 +85,25 @@ class ExternalDynamicListArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @snippet.setter
     def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "snippet", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> Optional[pulumi.Input['ExternalDynamicListTypeArgs']]:
+        """
+        Type
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: Optional[pulumi.Input['ExternalDynamicListTypeArgs']]):
+        pulumi.set(self, "type", value)
 
 
 @pulumi.input_type
@@ -117,12 +118,12 @@ class _ExternalDynamicListState:
                  type: Optional[pulumi.Input['ExternalDynamicListTypeArgs']] = None):
         """
         Input properties used for looking up and filtering ExternalDynamicList resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input['ExternalDynamicListTypeArgs'] type: The Type param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input['ExternalDynamicListTypeArgs'] type: Type
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -143,7 +144,7 @@ class _ExternalDynamicListState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -155,7 +156,7 @@ class _ExternalDynamicListState:
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
         """
-        (Internal use) Encrypted values returned from the API.
+        Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
@@ -167,7 +168,7 @@ class _ExternalDynamicListState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -179,7 +180,7 @@ class _ExternalDynamicListState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the external dynamic list
         """
         return pulumi.get(self, "name")
 
@@ -191,7 +192,7 @@ class _ExternalDynamicListState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -212,7 +213,7 @@ class _ExternalDynamicListState:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input['ExternalDynamicListTypeArgs']]:
         """
-        The Type param.
+        Type
         """
         return pulumi.get(self, "type")
 
@@ -234,42 +235,28 @@ class ExternalDynamicList(pulumi.CustomResource):
                  type: Optional[pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        ExternalDynamicList resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ExternalDynamicList("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: The Type param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: Type
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: ExternalDynamicListArgs,
+                 args: Optional[ExternalDynamicListArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        ExternalDynamicList resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.ExternalDynamicList("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param ExternalDynamicListArgs args: The arguments to use to populate this resource's properties.
@@ -304,8 +291,6 @@ class ExternalDynamicList(pulumi.CustomResource):
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
             __props__.__dict__["snippet"] = snippet
-            if type is None and not opts.urn:
-                raise TypeError("Missing required property 'type'")
             __props__.__dict__["type"] = type
             __props__.__dict__["encrypted_values"] = None
             __props__.__dict__["tfid"] = None
@@ -335,12 +320,12 @@ class ExternalDynamicList(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: (Internal use) Encrypted values returned from the API.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: The Type param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the external dynamic list
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Union['ExternalDynamicListTypeArgs', 'ExternalDynamicListTypeArgsDict']] type: Type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -359,7 +344,7 @@ class ExternalDynamicList(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -367,7 +352,7 @@ class ExternalDynamicList(pulumi.CustomResource):
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> pulumi.Output[Mapping[str, _builtins.str]]:
         """
-        (Internal use) Encrypted values returned from the API.
+        Map of sensitive values returned from the API.
         """
         return pulumi.get(self, "encrypted_values")
 
@@ -375,7 +360,7 @@ class ExternalDynamicList(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -383,7 +368,7 @@ class ExternalDynamicList(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the external dynamic list
         """
         return pulumi.get(self, "name")
 
@@ -391,7 +376,7 @@ class ExternalDynamicList(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -404,7 +389,7 @@ class ExternalDynamicList(pulumi.CustomResource):
     @pulumi.getter
     def type(self) -> pulumi.Output['outputs.ExternalDynamicListType']:
         """
-        The Type param.
+        Type
         """
         return pulumi.get(self, "type")
 

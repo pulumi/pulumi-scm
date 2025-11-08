@@ -12,27 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class GetDynamicUserGroupResult {
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return The description of the dynamic address group
      * 
      */
     private String description;
     /**
-     * @return tag-based filter. String length must not exceed 2047 characters.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The tag-based filter for the dynamic user group
      * 
      */
     private String filter;
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the dynamic user group
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the dynamic address group
      * 
      */
     private String name;
     /**
-     * @return Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Tags associated with the dynamic user group
      * 
      */
     private List<String> tags;
@@ -40,35 +55,56 @@ public final class GetDynamicUserGroupResult {
 
     private GetDynamicUserGroupResult() {}
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return The description of the dynamic address group
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return tag-based filter. String length must not exceed 2047 characters.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The tag-based filter for the dynamic user group
      * 
      */
     public String filter() {
         return this.filter;
     }
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the dynamic user group
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the dynamic address group
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Tags associated with the dynamic user group
      * 
      */
     public List<String> tags() {
@@ -88,18 +124,24 @@ public final class GetDynamicUserGroupResult {
     @CustomType.Builder
     public static final class Builder {
         private String description;
+        private String device;
         private String filter;
+        private String folder;
         private String id;
         private String name;
+        private String snippet;
         private List<String> tags;
         private String tfid;
         public Builder() {}
         public Builder(GetDynamicUserGroupResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
     	      this.filter = defaults.filter;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
     	      this.tags = defaults.tags;
     	      this.tfid = defaults.tfid;
         }
@@ -113,11 +155,27 @@ public final class GetDynamicUserGroupResult {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetDynamicUserGroupResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder filter(String filter) {
             if (filter == null) {
               throw new MissingRequiredPropertyException("GetDynamicUserGroupResult", "filter");
             }
             this.filter = filter;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetDynamicUserGroupResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -134,6 +192,14 @@ public final class GetDynamicUserGroupResult {
               throw new MissingRequiredPropertyException("GetDynamicUserGroupResult", "name");
             }
             this.name = name;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetDynamicUserGroupResult", "snippet");
+            }
+            this.snippet = snippet;
             return this;
         }
         @CustomType.Setter
@@ -158,9 +224,12 @@ public final class GetDynamicUserGroupResult {
         public GetDynamicUserGroupResult build() {
             final var _resultValue = new GetDynamicUserGroupResult();
             _resultValue.description = description;
+            _resultValue.device = device;
             _resultValue.filter = filter;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
             _resultValue.tags = tags;
             _resultValue.tfid = tfid;
             return _resultValue;

@@ -27,7 +27,7 @@ class GetTrafficSteeringRuleResult:
     """
     A collection of values returned by getTrafficSteeringRule.
     """
-    def __init__(__self__, action=None, categories=None, destinations=None, id=None, name=None, services=None, source_users=None, sources=None, tfid=None):
+    def __init__(__self__, action=None, categories=None, destinations=None, folder=None, id=None, name=None, services=None, source_users=None, sources=None, tfid=None):
         if action and not isinstance(action, dict):
             raise TypeError("Expected argument 'action' to be a dict")
         pulumi.set(__self__, "action", action)
@@ -37,6 +37,9 @@ class GetTrafficSteeringRuleResult:
         if destinations and not isinstance(destinations, list):
             raise TypeError("Expected argument 'destinations' to be a list")
         pulumi.set(__self__, "destinations", destinations)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -60,7 +63,7 @@ class GetTrafficSteeringRuleResult:
     @pulumi.getter
     def action(self) -> 'outputs.GetTrafficSteeringRuleActionResult':
         """
-        The Action param.
+        Action
         """
         return pulumi.get(self, "action")
 
@@ -68,7 +71,7 @@ class GetTrafficSteeringRuleResult:
     @pulumi.getter
     def categories(self) -> Sequence[_builtins.str]:
         """
-        The Category param.
+        Category
         """
         return pulumi.get(self, "categories")
 
@@ -76,15 +79,23 @@ class GetTrafficSteeringRuleResult:
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
         """
-        The Destination param.
+        Destination
         """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder containing the traffic steering rule
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the traffic steering rule
         """
         return pulumi.get(self, "id")
 
@@ -92,7 +103,7 @@ class GetTrafficSteeringRuleResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -100,7 +111,7 @@ class GetTrafficSteeringRuleResult:
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
         """
-        The Service param.
+        Service
         """
         return pulumi.get(self, "services")
 
@@ -108,7 +119,7 @@ class GetTrafficSteeringRuleResult:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
         """
-        The SourceUser param.
+        Source user
         """
         return pulumi.get(self, "source_users")
 
@@ -116,7 +127,7 @@ class GetTrafficSteeringRuleResult:
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
         """
-        The Source param.
+        Source
         """
         return pulumi.get(self, "sources")
 
@@ -135,6 +146,7 @@ class AwaitableGetTrafficSteeringRuleResult(GetTrafficSteeringRuleResult):
             action=self.action,
             categories=self.categories,
             destinations=self.destinations,
+            folder=self.folder,
             id=self.id,
             name=self.name,
             services=self.services,
@@ -144,17 +156,18 @@ class AwaitableGetTrafficSteeringRuleResult(GetTrafficSteeringRuleResult):
 
 
 def get_traffic_steering_rule(id: Optional[_builtins.str] = None,
+                              name: Optional[_builtins.str] = None,
                               opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetTrafficSteeringRuleResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
+    TrafficSteeringRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the traffic steering rule
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getTrafficSteeringRule:getTrafficSteeringRule', __args__, opts=opts, typ=GetTrafficSteeringRuleResult).value
 
@@ -162,6 +175,7 @@ def get_traffic_steering_rule(id: Optional[_builtins.str] = None,
         action=pulumi.get(__ret__, 'action'),
         categories=pulumi.get(__ret__, 'categories'),
         destinations=pulumi.get(__ret__, 'destinations'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         services=pulumi.get(__ret__, 'services'),
@@ -169,23 +183,25 @@ def get_traffic_steering_rule(id: Optional[_builtins.str] = None,
         sources=pulumi.get(__ret__, 'sources'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_traffic_steering_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                     name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetTrafficSteeringRuleResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
+    TrafficSteeringRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the traffic steering rule
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getTrafficSteeringRule:getTrafficSteeringRule', __args__, opts=opts, typ=GetTrafficSteeringRuleResult)
     return __ret__.apply(lambda __response__: GetTrafficSteeringRuleResult(
         action=pulumi.get(__response__, 'action'),
         categories=pulumi.get(__response__, 'categories'),
         destinations=pulumi.get(__response__, 'destinations'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         services=pulumi.get(__response__, 'services'),

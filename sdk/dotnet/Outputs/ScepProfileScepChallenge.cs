@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class ScepProfileScepChallenge
     {
         /// <summary>
-        /// The DynamicChallenge param. Ensure that only one of the following is specified: `Dynamic`, `Fixed`, `None`
+        /// Dynamic
         /// </summary>
-        public readonly Outputs.ScepProfileScepChallengeDynamicChallenge? DynamicChallenge;
+        public readonly Outputs.ScepProfileScepChallengeDynamic? Dynamic;
         /// <summary>
-        /// Challenge to use for SCEP server on mobile clients. String length must not exceed 1024 characters. Ensure that only one of the following is specified: `Dynamic`, `Fixed`, `None`
+        /// Challenge to use for SCEP server on mobile clients
         /// </summary>
         public readonly string? Fixed;
         /// <summary>
-        /// The None param. String must be one of these: `""`. Ensure that only one of the following is specified: `Dynamic`, `Fixed`, `None`
+        /// No OTP
         /// </summary>
         public readonly string? None;
 
         [OutputConstructor]
         private ScepProfileScepChallenge(
-            Outputs.ScepProfileScepChallengeDynamicChallenge? dynamicChallenge,
+            Outputs.ScepProfileScepChallengeDynamic? dynamic,
 
             string? @fixed,
 
             string? none)
         {
-            DynamicChallenge = dynamicChallenge;
+            Dynamic = dynamic;
             Fixed = @fixed;
             None = none;
         }

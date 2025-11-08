@@ -13,43 +13,43 @@ namespace Pulumi.Scm.Inputs
     public sealed class RemoteNetworkProtocolBgpGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DoNotExportRoutes param.
+        /// Do not export routes?
         /// </summary>
         [Input("doNotExportRoutes")]
         public Input<bool>? DoNotExportRoutes { get; set; }
 
         /// <summary>
-        /// to setup bgp protocol, enable need to set as true.
+        /// Enable BGP peering?
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// The LocalIpAddress param.
+        /// Local peer IP address
         /// </summary>
         [Input("localIpAddress")]
         public Input<string>? LocalIpAddress { get; set; }
 
         /// <summary>
-        /// The OriginateDefaultRoute param.
+        /// Originate default route?
         /// </summary>
         [Input("originateDefaultRoute")]
         public Input<bool>? OriginateDefaultRoute { get; set; }
 
         /// <summary>
-        /// The PeerAs param.
+        /// BGP peer ASN
         /// </summary>
         [Input("peerAs")]
         public Input<string>? PeerAs { get; set; }
 
         /// <summary>
-        /// The PeerIpAddress param.
+        /// Remote peer IP address
         /// </summary>
         [Input("peerIpAddress")]
         public Input<string>? PeerIpAddress { get; set; }
 
         /// <summary>
-        /// Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `"exchange-v4-over-v4"`, `"exchange-v4-v6-over-v4"`, `"exchange-v4-over-v4-v6-over-v6"`, `"exchange-v6-over-v6"`.
+        /// Route exchange types
         /// </summary>
         [Input("peeringType")]
         public Input<string>? PeeringType { get; set; }
@@ -58,7 +58,7 @@ namespace Pulumi.Scm.Inputs
         private Input<string>? _secret;
 
         /// <summary>
-        /// The Secret param.
+        /// BGP peering secret
         /// </summary>
         public Input<string>? Secret
         {
@@ -71,7 +71,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The SummarizeMobileUserRoutes param.
+        /// Summarize mobile user routes?
         /// </summary>
         [Input("summarizeMobileUserRoutes")]
         public Input<bool>? SummarizeMobileUserRoutes { get; set; }

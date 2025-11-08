@@ -7,55 +7,28 @@ import (
 	"context"
 	"reflect"
 
+	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewLocalUser(ctx, "example", &scm.LocalUserArgs{
-//				Folder:   pulumi.String("Shared"),
-//				Name:     pulumi.String("user1"),
-//				Password: pulumi.String("secret"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// LocalUser resource
 type LocalUser struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Disabled param.
-	Disabled pulumi.BoolPtrOutput `pulumi:"disabled"`
-	// (Internal use) Encrypted values returned from the API.
+	// Is the local user disabled?
+	Disabled pulumi.BoolOutput `pulumi:"disabled"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Name param. String length must not exceed 31 characters.
+	// The name of the local user
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Password param. String length must not exceed 63 characters.
-	Password pulumi.StringPtrOutput `pulumi:"password"`
-	// The Snippet param.
+	// The password of the local user
+	Password pulumi.StringOutput `pulumi:"password"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -64,11 +37,14 @@ type LocalUser struct {
 func NewLocalUser(ctx *pulumi.Context,
 	name string, args *LocalUserArgs, opts ...pulumi.ResourceOption) (*LocalUser, error) {
 	if args == nil {
-		args = &LocalUserArgs{}
+		return nil, errors.New("missing one or more required arguments")
 	}
 
+	if args.Password == nil {
+		return nil, errors.New("invalid value for required argument 'Password'")
+	}
 	if args.Password != nil {
-		args.Password = pulumi.ToSecret(args.Password).(pulumi.StringPtrInput)
+		args.Password = pulumi.ToSecret(args.Password).(pulumi.StringInput)
 	}
 	secrets := pulumi.AdditionalSecretOutputs([]string{
 		"encryptedValues",
@@ -98,37 +74,37 @@ func GetLocalUser(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering LocalUser resources.
 type localUserState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Disabled param.
+	// Is the local user disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param. String length must not exceed 31 characters.
+	// The name of the local user
 	Name *string `pulumi:"name"`
-	// The Password param. String length must not exceed 63 characters.
+	// The password of the local user
 	Password *string `pulumi:"password"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type LocalUserState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Disabled param.
+	// Is the local user disabled?
 	Disabled pulumi.BoolPtrInput
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param. String length must not exceed 31 characters.
+	// The name of the local user
 	Name pulumi.StringPtrInput
-	// The Password param. String length must not exceed 63 characters.
+	// The password of the local user
 	Password pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -138,33 +114,33 @@ func (LocalUserState) ElementType() reflect.Type {
 }
 
 type localUserArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Disabled param.
+	// Is the local user disabled?
 	Disabled *bool `pulumi:"disabled"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param. String length must not exceed 31 characters.
+	// The name of the local user
 	Name *string `pulumi:"name"`
-	// The Password param. String length must not exceed 63 characters.
-	Password *string `pulumi:"password"`
-	// The Snippet param.
+	// The password of the local user
+	Password string `pulumi:"password"`
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a LocalUser resource.
 type LocalUserArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Disabled param.
+	// Is the local user disabled?
 	Disabled pulumi.BoolPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param. String length must not exceed 31 characters.
+	// The name of the local user
 	Name pulumi.StringPtrInput
-	// The Password param. String length must not exceed 63 characters.
-	Password pulumi.StringPtrInput
-	// The Snippet param.
+	// The password of the local user
+	Password pulumi.StringInput
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -255,37 +231,37 @@ func (o LocalUserOutput) ToLocalUserOutputWithContext(ctx context.Context) Local
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o LocalUserOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LocalUser) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Disabled param.
-func (o LocalUserOutput) Disabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *LocalUser) pulumi.BoolPtrOutput { return v.Disabled }).(pulumi.BoolPtrOutput)
+// Is the local user disabled?
+func (o LocalUserOutput) Disabled() pulumi.BoolOutput {
+	return o.ApplyT(func(v *LocalUser) pulumi.BoolOutput { return v.Disabled }).(pulumi.BoolOutput)
 }
 
-// (Internal use) Encrypted values returned from the API.
+// Map of sensitive values returned from the API.
 func (o LocalUserOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *LocalUser) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o LocalUserOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LocalUser) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Name param. String length must not exceed 31 characters.
+// The name of the local user
 func (o LocalUserOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *LocalUser) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Password param. String length must not exceed 63 characters.
-func (o LocalUserOutput) Password() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *LocalUser) pulumi.StringPtrOutput { return v.Password }).(pulumi.StringPtrOutput)
+// The password of the local user
+func (o LocalUserOutput) Password() pulumi.StringOutput {
+	return o.ApplyT(func(v *LocalUser) pulumi.StringOutput { return v.Password }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o LocalUserOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LocalUser) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

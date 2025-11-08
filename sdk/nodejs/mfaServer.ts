@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.MfaServer("example", {});
- * ```
+ * MfaServer resource
  */
 export class MfaServer extends pulumi.CustomResource {
     /**
@@ -47,27 +38,31 @@ export class MfaServer extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * Map of sensitive values returned from the API.
+     */
+    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
+    /**
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The MfaCertProfile param.
+     * The MFA server certificate profile
      */
     declare public readonly mfaCertProfile: pulumi.Output<string>;
     /**
-     * The MfaVendorType param.
+     * The MFA vendor type
      */
-    declare public readonly mfaVendorType: pulumi.Output<outputs.MfaServerMfaVendorType | undefined>;
+    declare public readonly mfaVendorType: pulumi.Output<outputs.MfaServerMfaVendorType>;
     /**
-     * The Name param.
+     * The name of the MFA server profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -86,6 +81,7 @@ export class MfaServer extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as MfaServerState | undefined;
             resourceInputs["device"] = state?.device;
+            resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
             resourceInputs["mfaCertProfile"] = state?.mfaCertProfile;
             resourceInputs["mfaVendorType"] = state?.mfaVendorType;
@@ -103,9 +99,12 @@ export class MfaServer extends pulumi.CustomResource {
             resourceInputs["mfaVendorType"] = args?.mfaVendorType;
             resourceInputs["name"] = args?.name;
             resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
+        const secretOpts = { additionalSecretOutputs: ["encryptedValues"] };
+        opts = pulumi.mergeOptions(opts, secretOpts);
         super(MfaServer.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -115,27 +114,31 @@ export class MfaServer extends pulumi.CustomResource {
  */
 export interface MfaServerState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * Map of sensitive values returned from the API.
+     */
+    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
+    /**
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The MfaCertProfile param.
+     * The MFA server certificate profile
      */
     mfaCertProfile?: pulumi.Input<string>;
     /**
-     * The MfaVendorType param.
+     * The MFA vendor type
      */
     mfaVendorType?: pulumi.Input<inputs.MfaServerMfaVendorType>;
     /**
-     * The Name param.
+     * The name of the MFA server profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -146,27 +149,27 @@ export interface MfaServerState {
  */
 export interface MfaServerArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The MfaCertProfile param.
+     * The MFA server certificate profile
      */
     mfaCertProfile: pulumi.Input<string>;
     /**
-     * The MfaVendorType param.
+     * The MFA vendor type
      */
     mfaVendorType?: pulumi.Input<inputs.MfaServerMfaVendorType>;
     /**
-     * The Name param.
+     * The name of the MFA server profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

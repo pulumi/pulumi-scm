@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignature {
     /**
-     * @return The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+     * @return anti spyware signature combination
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureCombination combination;
     /**
-     * @return The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+     * @return Standard
      * 
      */
     private @Nullable List<AntiSpywareSignatureSignatureStandard> standards;
 
     private AntiSpywareSignatureSignature() {}
     /**
-     * @return The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+     * @return anti spyware signature combination
      * 
      */
     public Optional<AntiSpywareSignatureSignatureCombination> combination() {
         return Optional.ofNullable(this.combination);
     }
     /**
-     * @return The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+     * @return Standard
      * 
      */
     public List<AntiSpywareSignatureSignatureStandard> standards() {

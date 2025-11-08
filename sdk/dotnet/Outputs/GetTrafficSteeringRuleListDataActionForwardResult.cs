@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTrafficSteeringRuleListDataActionForwardResult
     {
         /// <summary>
-        /// The Target param.
+        /// Target
         /// </summary>
         public readonly string Target;
 

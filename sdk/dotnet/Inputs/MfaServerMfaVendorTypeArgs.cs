@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class MfaServerMfaVendorTypeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DuoSecurityV2 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
+        /// Integration with [Duo Security](https://duo.com/product)
         /// </summary>
         [Input("duoSecurityV2")]
         public Input<Inputs.MfaServerMfaVendorTypeDuoSecurityV2Args>? DuoSecurityV2 { get; set; }
 
         /// <summary>
-        /// The OktaAdaptiveV1 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
+        /// Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
         /// </summary>
         [Input("oktaAdaptiveV1")]
         public Input<Inputs.MfaServerMfaVendorTypeOktaAdaptiveV1Args>? OktaAdaptiveV1 { get; set; }
 
         /// <summary>
-        /// The PingIdentityV1 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
+        /// Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
         /// </summary>
         [Input("pingIdentityV1")]
         public Input<Inputs.MfaServerMfaVendorTypePingIdentityV1Args>? PingIdentityV1 { get; set; }
 
         /// <summary>
-        /// The RsaSecuridAccessV1 param. Ensure that only one of the following is specified: `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, `RsaSecuridAccessV1`
+        /// Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
         /// </summary>
         [Input("rsaSecuridAccessV1")]
         public Input<Inputs.MfaServerMfaVendorTypeRsaSecuridAccessV1Args>? RsaSecuridAccessV1 { get; set; }

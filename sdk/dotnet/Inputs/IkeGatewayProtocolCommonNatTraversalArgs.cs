@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayProtocolCommonNatTraversalArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Enable param.
+        /// Enable
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }

@@ -8,69 +8,69 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetQosPolicyRuleDscpTosCodepointTypeAf;
 import com.pulumi.scm.outputs.GetQosPolicyRuleDscpTosCodepointTypeCs;
 import com.pulumi.scm.outputs.GetQosPolicyRuleDscpTosCodepointTypeCustom;
+import com.pulumi.scm.outputs.GetQosPolicyRuleDscpTosCodepointTypeEf;
 import com.pulumi.scm.outputs.GetQosPolicyRuleDscpTosCodepointTypeTos;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetQosPolicyRuleDscpTosCodepointType {
     /**
-     * @return The Af param.
+     * @return Af
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeAf af;
     /**
-     * @return The Cs param.
+     * @return Cs
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeCs cs;
     /**
-     * @return The Custom param.
+     * @return Custom
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeCustom custom;
     /**
-     * @return The Ef param.
+     * @return Ef
      * 
      */
-    private Boolean ef;
+    private GetQosPolicyRuleDscpTosCodepointTypeEf ef;
     /**
-     * @return The Tos param.
+     * @return Tos
      * 
      */
     private GetQosPolicyRuleDscpTosCodepointTypeTos tos;
 
     private GetQosPolicyRuleDscpTosCodepointType() {}
     /**
-     * @return The Af param.
+     * @return Af
      * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeAf af() {
         return this.af;
     }
     /**
-     * @return The Cs param.
+     * @return Cs
      * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeCs cs() {
         return this.cs;
     }
     /**
-     * @return The Custom param.
+     * @return Custom
      * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeCustom custom() {
         return this.custom;
     }
     /**
-     * @return The Ef param.
+     * @return Ef
      * 
      */
-    public Boolean ef() {
+    public GetQosPolicyRuleDscpTosCodepointTypeEf ef() {
         return this.ef;
     }
     /**
-     * @return The Tos param.
+     * @return Tos
      * 
      */
     public GetQosPolicyRuleDscpTosCodepointTypeTos tos() {
@@ -89,7 +89,7 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
         private GetQosPolicyRuleDscpTosCodepointTypeAf af;
         private GetQosPolicyRuleDscpTosCodepointTypeCs cs;
         private GetQosPolicyRuleDscpTosCodepointTypeCustom custom;
-        private Boolean ef;
+        private GetQosPolicyRuleDscpTosCodepointTypeEf ef;
         private GetQosPolicyRuleDscpTosCodepointTypeTos tos;
         public Builder() {}
         public Builder(GetQosPolicyRuleDscpTosCodepointType defaults) {
@@ -126,7 +126,7 @@ public final class GetQosPolicyRuleDscpTosCodepointType {
             return this;
         }
         @CustomType.Setter
-        public Builder ef(Boolean ef) {
+        public Builder ef(GetQosPolicyRuleDscpTosCodepointTypeEf ef) {
             if (ef == null) {
               throw new MissingRequiredPropertyException("GetQosPolicyRuleDscpTosCodepointType", "ef");
             }

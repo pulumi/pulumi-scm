@@ -11,45 +11,21 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewHttpHeaderProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// HttpHeaderProfile resource
 type HttpHeaderProfile struct {
 	pulumi.CustomResourceState
 
-	// The Description param.
+	// The description of the HTTP header profile
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The HttpHeaderInsertions param.
+	// A list of HTTP header profile rules
 	HttpHeaderInsertions HttpHeaderProfileHttpHeaderInsertionArrayOutput `pulumi:"httpHeaderInsertions"`
-	// The Name param.
+	// The name of the HTTP header profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -84,33 +60,33 @@ func GetHttpHeaderProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering HttpHeaderProfile resources.
 type httpHeaderProfileState struct {
-	// The Description param.
+	// The description of the HTTP header profile
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The HttpHeaderInsertions param.
+	// A list of HTTP header profile rules
 	HttpHeaderInsertions []HttpHeaderProfileHttpHeaderInsertion `pulumi:"httpHeaderInsertions"`
-	// The Name param.
+	// The name of the HTTP header profile
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type HttpHeaderProfileState struct {
-	// The Description param.
+	// The description of the HTTP header profile
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The HttpHeaderInsertions param.
+	// A list of HTTP header profile rules
 	HttpHeaderInsertions HttpHeaderProfileHttpHeaderInsertionArrayInput
-	// The Name param.
+	// The name of the HTTP header profile
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -120,33 +96,33 @@ func (HttpHeaderProfileState) ElementType() reflect.Type {
 }
 
 type httpHeaderProfileArgs struct {
-	// The Description param.
+	// The description of the HTTP header profile
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The HttpHeaderInsertions param.
+	// A list of HTTP header profile rules
 	HttpHeaderInsertions []HttpHeaderProfileHttpHeaderInsertion `pulumi:"httpHeaderInsertions"`
-	// The Name param.
+	// The name of the HTTP header profile
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a HttpHeaderProfile resource.
 type HttpHeaderProfileArgs struct {
-	// The Description param.
+	// The description of the HTTP header profile
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The HttpHeaderInsertions param.
+	// A list of HTTP header profile rules
 	HttpHeaderInsertions HttpHeaderProfileHttpHeaderInsertionArrayInput
-	// The Name param.
+	// The name of the HTTP header profile
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -237,34 +213,34 @@ func (o HttpHeaderProfileOutput) ToHttpHeaderProfileOutputWithContext(ctx contex
 	return o
 }
 
-// The Description param.
+// The description of the HTTP header profile
 func (o HttpHeaderProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o HttpHeaderProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o HttpHeaderProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The HttpHeaderInsertions param.
+// A list of HTTP header profile rules
 func (o HttpHeaderProfileOutput) HttpHeaderInsertions() HttpHeaderProfileHttpHeaderInsertionArrayOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) HttpHeaderProfileHttpHeaderInsertionArrayOutput {
 		return v.HttpHeaderInsertions
 	}).(HttpHeaderProfileHttpHeaderInsertionArrayOutput)
 }
 
-// The Name param.
+// The name of the HTTP header profile
 func (o HttpHeaderProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o HttpHeaderProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HttpHeaderProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

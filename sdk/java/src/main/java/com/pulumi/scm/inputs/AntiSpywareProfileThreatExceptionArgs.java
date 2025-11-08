@@ -19,14 +19,14 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
     public static final AntiSpywareProfileThreatExceptionArgs Empty = new AntiSpywareProfileThreatExceptionArgs();
 
     /**
-     * The Action param.
+     * anti spyware profiles threat exception default action
      * 
      */
     @Import(name="action")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionArgs> action;
 
     /**
-     * @return The Action param.
+     * @return anti spyware profiles threat exception default action
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionArgs>> action() {
@@ -34,14 +34,14 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
     }
 
     /**
-     * The ExemptIps param.
+     * Exempt ip
      * 
      */
     @Import(name="exemptIps")
     private @Nullable Output<List<AntiSpywareProfileThreatExceptionExemptIpArgs>> exemptIps;
 
     /**
-     * @return The ExemptIps param.
+     * @return Exempt ip
      * 
      */
     public Optional<Output<List<AntiSpywareProfileThreatExceptionExemptIpArgs>>> exemptIps() {
@@ -49,14 +49,14 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -64,14 +64,14 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
     }
 
     /**
-     * The Notes param.
+     * Notes
      * 
      */
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     public Optional<Output<String>> notes() {
@@ -79,14 +79,14 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
     }
 
     /**
-     * The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * Packet capture
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<String> packetCapture;
 
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public Optional<Output<String>> packetCapture() {
@@ -122,7 +122,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param action The Action param.
+         * @param action anti spyware profiles threat exception default action
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param action The Action param.
+         * @param action anti spyware profiles threat exception default action
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param exemptIps The ExemptIps param.
+         * @param exemptIps Exempt ip
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param exemptIps The ExemptIps param.
+         * @param exemptIps Exempt ip
          * 
          * @return builder
          * 
@@ -164,7 +164,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param exemptIps The ExemptIps param.
+         * @param exemptIps Exempt ip
          * 
          * @return builder
          * 
@@ -174,7 +174,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -185,7 +185,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -195,7 +195,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param notes The Notes param.
+         * @param notes Notes
          * 
          * @return builder
          * 
@@ -206,7 +206,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param notes The Notes param.
+         * @param notes Notes
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 
@@ -227,7 +227,7 @@ public final class AntiSpywareProfileThreatExceptionArgs extends com.pulumi.reso
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 

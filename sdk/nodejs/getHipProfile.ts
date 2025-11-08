@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * HipProfile data source
  *
  * ## Example Usage
  *
@@ -13,15 +13,18 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getHipProfile({
- *     id: "1234-56-789",
+ * // Look up a single HIP Profile by its ID.
+ * const scmHipProfileDs = scm.getHipProfile({
+ *     id: "e0a970b8-98d2-42e9-a273-53fbf67607c2",
  * });
+ * export const hipProfileDsResult = scmHipProfileDs;
  * ```
  */
 export function getHipProfile(args: GetHipProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetHipProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHipProfile:getHipProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +33,13 @@ export function getHipProfile(args: GetHipProfileArgs, opts?: pulumi.InvokeOptio
  */
 export interface GetHipProfileArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * The name of the HIP profile
+     */
+    name?: string;
 }
 
 /**
@@ -40,25 +47,37 @@ export interface GetHipProfileArgs {
  */
 export interface GetHipProfileResult {
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The Match param. String length must not exceed 2048 characters.
+     * Match
      */
     readonly match: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP profile
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * HipProfile data source
  *
  * ## Example Usage
  *
@@ -66,15 +85,18 @@ export interface GetHipProfileResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getHipProfile({
- *     id: "1234-56-789",
+ * // Look up a single HIP Profile by its ID.
+ * const scmHipProfileDs = scm.getHipProfile({
+ *     id: "e0a970b8-98d2-42e9-a273-53fbf67607c2",
  * });
+ * export const hipProfileDsResult = scmHipProfileDs;
  * ```
  */
 export function getHipProfileOutput(args: GetHipProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHipProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHipProfile:getHipProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -83,7 +105,11 @@ export function getHipProfileOutput(args: GetHipProfileOutputArgs, opts?: pulumi
  */
 export interface GetHipProfileOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the HIP profile
+     */
+    name?: pulumi.Input<string>;
 }

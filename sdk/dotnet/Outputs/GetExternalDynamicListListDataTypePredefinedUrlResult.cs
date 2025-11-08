@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypePredefinedUrlResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        /// Exception list
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// The Url param.
+        /// Url
         /// </summary>
         public readonly string Url;
 

@@ -28,13 +28,13 @@ class DynamicUserGroupArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a DynamicUserGroup resource.
-        :param pulumi.Input[_builtins.str] filter: tag-based filter. String length must not exceed 2047 characters.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] filter: The tag-based filter for the dynamic user group
+        :param pulumi.Input[_builtins.str] description: The description of the dynamic address group
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the dynamic address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the dynamic user group
         """
         pulumi.set(__self__, "filter", filter)
         if description is not None:
@@ -54,7 +54,7 @@ class DynamicUserGroupArgs:
     @pulumi.getter
     def filter(self) -> pulumi.Input[_builtins.str]:
         """
-        tag-based filter. String length must not exceed 2047 characters.
+        The tag-based filter for the dynamic user group
         """
         return pulumi.get(self, "filter")
 
@@ -66,7 +66,7 @@ class DynamicUserGroupArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        The description of the dynamic address group
         """
         return pulumi.get(self, "description")
 
@@ -78,7 +78,7 @@ class DynamicUserGroupArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -90,7 +90,7 @@ class DynamicUserGroupArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -102,7 +102,7 @@ class DynamicUserGroupArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the dynamic address group
         """
         return pulumi.get(self, "name")
 
@@ -114,7 +114,7 @@ class DynamicUserGroupArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -126,7 +126,7 @@ class DynamicUserGroupArgs:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the dynamic user group
         """
         return pulumi.get(self, "tags")
 
@@ -148,13 +148,13 @@ class _DynamicUserGroupState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering DynamicUserGroup resources.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] filter: tag-based filter. String length must not exceed 2047 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: The description of the dynamic address group
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] filter: The tag-based filter for the dynamic user group
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the dynamic address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the dynamic user group
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -177,7 +177,7 @@ class _DynamicUserGroupState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        The description of the dynamic address group
         """
         return pulumi.get(self, "description")
 
@@ -189,7 +189,7 @@ class _DynamicUserGroupState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -201,7 +201,7 @@ class _DynamicUserGroupState:
     @pulumi.getter
     def filter(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        tag-based filter. String length must not exceed 2047 characters.
+        The tag-based filter for the dynamic user group
         """
         return pulumi.get(self, "filter")
 
@@ -213,7 +213,7 @@ class _DynamicUserGroupState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -225,7 +225,7 @@ class _DynamicUserGroupState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the dynamic address group
         """
         return pulumi.get(self, "name")
 
@@ -237,7 +237,7 @@ class _DynamicUserGroupState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -249,7 +249,7 @@ class _DynamicUserGroupState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the dynamic user group
         """
         return pulumi.get(self, "tags")
 
@@ -282,7 +282,7 @@ class DynamicUserGroup(pulumi.CustomResource):
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        DynamicUserGroup resource
 
         ## Example Usage
 
@@ -290,18 +290,47 @@ class DynamicUserGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.DynamicUserGroup("example")
+        # First, create the tags that will be used in the dynamic user group's filter.
+        scm_dug_tag1 = scm.Tag("scm_dug_tag_1",
+            folder="Shared",
+            name="scm_dug_tag_1",
+            color="Red")
+        scm_dug_tag2 = scm.Tag("scm_dug_tag_2",
+            folder="Shared",
+            name="scm_dug_tag_2",
+            color="Blue")
+        scm_dug_tag3 = scm.Tag("scm_dug_tag_3",
+            folder="Shared",
+            name="scm_dug_tag_3",
+            color="Green")
+        # Create the dynamic user group that references the tags above.
+        scm_dug1 = scm.DynamicUserGroup("scm_dug_1",
+            folder="Shared",
+            name="scm_dug_1",
+            description="DUG created for Terraform",
+            filter=pulumi.Output.all(
+                scmDugTag1Name=scm_dug_tag1.name,
+                scmDugTag2Name=scm_dug_tag2.name,
+                scmDugTag3Name=scm_dug_tag3.name
+        ).apply(lambda resolved_outputs: f"'{resolved_outputs['scmDugTag1Name']}' or '{resolved_outputs['scmDugTag2Name']}' and '{resolved_outputs['scmDugTag3Name']}'")
+        ,
+            tags=[scm_dug_tag1.name],
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_dug_tag1,
+                    scm_dug_tag2,
+                    scm_dug_tag3,
+                ]))
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] filter: tag-based filter. String length must not exceed 2047 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: The description of the dynamic address group
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] filter: The tag-based filter for the dynamic user group
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the dynamic address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the dynamic user group
         """
         ...
     @overload
@@ -310,7 +339,7 @@ class DynamicUserGroup(pulumi.CustomResource):
                  args: DynamicUserGroupArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        DynamicUserGroup resource
 
         ## Example Usage
 
@@ -318,7 +347,36 @@ class DynamicUserGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.DynamicUserGroup("example")
+        # First, create the tags that will be used in the dynamic user group's filter.
+        scm_dug_tag1 = scm.Tag("scm_dug_tag_1",
+            folder="Shared",
+            name="scm_dug_tag_1",
+            color="Red")
+        scm_dug_tag2 = scm.Tag("scm_dug_tag_2",
+            folder="Shared",
+            name="scm_dug_tag_2",
+            color="Blue")
+        scm_dug_tag3 = scm.Tag("scm_dug_tag_3",
+            folder="Shared",
+            name="scm_dug_tag_3",
+            color="Green")
+        # Create the dynamic user group that references the tags above.
+        scm_dug1 = scm.DynamicUserGroup("scm_dug_1",
+            folder="Shared",
+            name="scm_dug_1",
+            description="DUG created for Terraform",
+            filter=pulumi.Output.all(
+                scmDugTag1Name=scm_dug_tag1.name,
+                scmDugTag2Name=scm_dug_tag2.name,
+                scmDugTag3Name=scm_dug_tag3.name
+        ).apply(lambda resolved_outputs: f"'{resolved_outputs['scmDugTag1Name']}' or '{resolved_outputs['scmDugTag2Name']}' and '{resolved_outputs['scmDugTag3Name']}'")
+        ,
+            tags=[scm_dug_tag1.name],
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_dug_tag1,
+                    scm_dug_tag2,
+                    scm_dug_tag3,
+                ]))
         ```
 
         :param str resource_name: The name of the resource.
@@ -387,13 +445,13 @@ class DynamicUserGroup(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] filter: tag-based filter. String length must not exceed 2047 characters.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: The description of the dynamic address group
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] filter: The tag-based filter for the dynamic user group
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the dynamic address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the dynamic user group
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -413,7 +471,7 @@ class DynamicUserGroup(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        The description of the dynamic address group
         """
         return pulumi.get(self, "description")
 
@@ -421,7 +479,7 @@ class DynamicUserGroup(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -429,7 +487,7 @@ class DynamicUserGroup(pulumi.CustomResource):
     @pulumi.getter
     def filter(self) -> pulumi.Output[_builtins.str]:
         """
-        tag-based filter. String length must not exceed 2047 characters.
+        The tag-based filter for the dynamic user group
         """
         return pulumi.get(self, "filter")
 
@@ -437,7 +495,7 @@ class DynamicUserGroup(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -445,7 +503,7 @@ class DynamicUserGroup(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the dynamic address group
         """
         return pulumi.get(self, "name")
 
@@ -453,7 +511,7 @@ class DynamicUserGroup(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -461,7 +519,7 @@ class DynamicUserGroup(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the dynamic user group
         """
         return pulumi.get(self, "tags")
 

@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetQosProfileListDataClassBandwidthTypePercentageClass {
     /**
-     * @return The ClassBandwidth param.
+     * @return Class bandwidth
      * 
      */
     private GetQosProfileListDataClassBandwidthTypePercentageClassClassBandwidth classBandwidth;
     /**
-     * @return Traffic class. String length must not exceed 31 characters.
+     * @return Traffic class
      * 
      */
     private String name;
     /**
-     * @return traffic class priority. String must be one of these: `&#34;real-time&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;low&#34;`. Default: `&#34;medium&#34;`.
+     * @return traffic class priority
      * 
      */
     private String priority;
 
     private GetQosProfileListDataClassBandwidthTypePercentageClass() {}
     /**
-     * @return The ClassBandwidth param.
+     * @return Class bandwidth
      * 
      */
     public GetQosProfileListDataClassBandwidthTypePercentageClassClassBandwidth classBandwidth() {
         return this.classBandwidth;
     }
     /**
-     * @return Traffic class. String length must not exceed 31 characters.
+     * @return Traffic class
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return traffic class priority. String must be one of these: `&#34;real-time&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;low&#34;`. Default: `&#34;medium&#34;`.
+     * @return traffic class priority
      * 
      */
     public String priority() {

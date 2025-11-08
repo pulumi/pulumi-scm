@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataMobileDevice {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private GetHipObjectListDataMobileDeviceCriteria criteria;
 
     private GetHipObjectListDataMobileDevice() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public GetHipObjectListDataMobileDeviceCriteria criteria() {

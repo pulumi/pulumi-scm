@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperator {
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualTo equalTo;
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThan lessThan;
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatch patternMatch;
 
     private AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperator() {}
     /**
-     * @return The EqualTo param.
+     * @return Equal to
      * 
      */
     public Optional<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualTo> equalTo() {
         return Optional.ofNullable(this.equalTo);
     }
     /**
-     * @return The GreaterThan param.
+     * @return Greater than
      * 
      */
     public Optional<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThan> greaterThan() {
         return Optional.ofNullable(this.greaterThan);
     }
     /**
-     * @return The LessThan param.
+     * @return Less than
      * 
      */
     public Optional<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThan> lessThan() {
         return Optional.ofNullable(this.lessThan);
     }
     /**
-     * @return The PatternMatch param.
+     * @return Pattern match
      * 
      */
     public Optional<AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatch> patternMatch() {

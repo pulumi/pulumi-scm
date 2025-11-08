@@ -18,14 +18,14 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
     public static final ExternalDynamicListTypePredefinedUrlArgs Empty = new ExternalDynamicListTypePredefinedUrlArgs();
 
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -33,14 +33,14 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
     }
 
     /**
-     * The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * Exception list
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -48,14 +48,14 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
     }
 
     /**
-     * The Url param.
+     * Url
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return The Url param.
+     * @return Url
      * 
      */
     public Output<String> url() {
@@ -89,7 +89,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param exceptionLists The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+         * @param exceptionLists Exception list
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param url The Url param.
+         * @param url Url
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class ExternalDynamicListTypePredefinedUrlArgs extends com.pulumi.r
         }
 
         /**
-         * @param url The Url param.
+         * @param url Url
          * 
          * @return builder
          * 

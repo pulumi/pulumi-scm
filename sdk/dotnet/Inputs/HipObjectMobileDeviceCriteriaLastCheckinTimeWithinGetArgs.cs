@@ -13,10 +13,10 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectMobileDeviceCriteriaLastCheckinTimeWithinGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// specify time in days. Value must be between 1 and 365. Default: `30`.
+        /// specify time in days
         /// </summary>
-        [Input("days")]
-        public Input<int>? Days { get; set; }
+        [Input("days", required: true)]
+        public Input<int> Days { get; set; } = null!;
 
         public HipObjectMobileDeviceCriteriaLastCheckinTimeWithinGetArgs()
         {

@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupAuthenticationProfile(ctx, &scm.LookupAuthenticationProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// AuthenticationProfile data source
 func LookupAuthenticationProfile(ctx *pulumi.Context, args *LookupAuthenticationProfileArgs, opts ...pulumi.InvokeOption) (*LookupAuthenticationProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAuthenticationProfileResult
@@ -50,30 +24,38 @@ func LookupAuthenticationProfile(ctx *pulumi.Context, args *LookupAuthentication
 
 // A collection of arguments for invoking getAuthenticationProfile.
 type LookupAuthenticationProfileArgs struct {
-	// The Id param.
+	// The UUID of the authentication profile
 	Id string `pulumi:"id"`
+	// The name of the authentication profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getAuthenticationProfile.
 type LookupAuthenticationProfileResult struct {
-	// The AllowList param.
+	// Allow list
 	AllowLists []string `pulumi:"allowLists"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the authentication profile
 	Id string `pulumi:"id"`
-	// The Lockout param.
+	// Lockout
 	Lockout GetAuthenticationProfileLockout `pulumi:"lockout"`
-	// The Method param.
+	// Method
 	Method GetAuthenticationProfileMethod `pulumi:"method"`
-	// The MultiFactorAuth param.
+	// Multi factor auth
 	MultiFactorAuth GetAuthenticationProfileMultiFactorAuth `pulumi:"multiFactorAuth"`
-	// The Name param.
+	// The name of the authentication profile
 	Name string `pulumi:"name"`
-	// The SingleSignOn param.
+	// Single sign on
 	SingleSignOn GetAuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
-	Tfid         string                               `pulumi:"tfid"`
-	// The UserDomain param. String length must not exceed 63 characters.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// User domain
 	UserDomain string `pulumi:"userDomain"`
-	// The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+	// Username modifier
 	UsernameModifier string `pulumi:"usernameModifier"`
 }
 
@@ -88,8 +70,10 @@ func LookupAuthenticationProfileOutput(ctx *pulumi.Context, args LookupAuthentic
 
 // A collection of arguments for invoking getAuthenticationProfile.
 type LookupAuthenticationProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the authentication profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the authentication profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupAuthenticationProfileOutputArgs) ElementType() reflect.Type {
@@ -111,53 +95,68 @@ func (o LookupAuthenticationProfileResultOutput) ToLookupAuthenticationProfileRe
 	return o
 }
 
-// The AllowList param.
+// Allow list
 func (o LookupAuthenticationProfileResultOutput) AllowLists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) []string { return v.AllowLists }).(pulumi.StringArrayOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupAuthenticationProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupAuthenticationProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the authentication profile
 func (o LookupAuthenticationProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Lockout param.
+// Lockout
 func (o LookupAuthenticationProfileResultOutput) Lockout() GetAuthenticationProfileLockoutOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileLockout { return v.Lockout }).(GetAuthenticationProfileLockoutOutput)
 }
 
-// The Method param.
+// Method
 func (o LookupAuthenticationProfileResultOutput) Method() GetAuthenticationProfileMethodOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileMethod { return v.Method }).(GetAuthenticationProfileMethodOutput)
 }
 
-// The MultiFactorAuth param.
+// Multi factor auth
 func (o LookupAuthenticationProfileResultOutput) MultiFactorAuth() GetAuthenticationProfileMultiFactorAuthOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileMultiFactorAuth {
 		return v.MultiFactorAuth
 	}).(GetAuthenticationProfileMultiFactorAuthOutput)
 }
 
-// The Name param.
+// The name of the authentication profile
 func (o LookupAuthenticationProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The SingleSignOn param.
+// Single sign on
 func (o LookupAuthenticationProfileResultOutput) SingleSignOn() GetAuthenticationProfileSingleSignOnOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileSingleSignOn { return v.SingleSignOn }).(GetAuthenticationProfileSingleSignOnOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupAuthenticationProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupAuthenticationProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The UserDomain param. String length must not exceed 63 characters.
+// User domain
 func (o LookupAuthenticationProfileResultOutput) UserDomain() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.UserDomain }).(pulumi.StringOutput)
 }
 
-// The UsernameModifier param. String must be one of these: `"%USERINPUT%"`, `"%USERINPUT%@%USERDOMAIN%"`, `"%USERDOMAIN%\\%USERINPUT%"`.
+// Username modifier
 func (o LookupAuthenticationProfileResultOutput) UsernameModifier() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.UsernameModifier }).(pulumi.StringOutput)
 }

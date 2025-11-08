@@ -21,14 +21,14 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     public static final TacacsServerProfileArgs Empty = new TacacsServerProfileArgs();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -36,14 +36,14 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -51,14 +51,29 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+     * The name of the TACACS+ server profile
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the TACACS+ server profile
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * The TACACS+ authentication protocol
      * 
      */
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
     /**
-     * @return The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+     * @return The TACACS+ authentication protocol
      * 
      */
     public Output<String> protocol() {
@@ -66,14 +81,14 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Servers param.
+     * The TACACS+ server configuration
      * 
      */
     @Import(name="servers", required=true)
     private Output<List<TacacsServerProfileServerArgs>> servers;
 
     /**
-     * @return The Servers param.
+     * @return The TACACS+ server configuration
      * 
      */
     public Output<List<TacacsServerProfileServerArgs>> servers() {
@@ -81,14 +96,14 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -96,14 +111,14 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Timeout param. Value must be between 1 and 30.
+     * The TACACS+ timeout (seconds)
      * 
      */
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
     /**
-     * @return The Timeout param. Value must be between 1 and 30.
+     * @return The TACACS+ timeout (seconds)
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -111,14 +126,14 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The UseSingleConnection param.
+     * Use a single TACACS+ connection?
      * 
      */
     @Import(name="useSingleConnection")
     private @Nullable Output<Boolean> useSingleConnection;
 
     /**
-     * @return The UseSingleConnection param.
+     * @return Use a single TACACS+ connection?
      * 
      */
     public Optional<Output<Boolean>> useSingleConnection() {
@@ -130,6 +145,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
     private TacacsServerProfileArgs(TacacsServerProfileArgs $) {
         this.device = $.device;
         this.folder = $.folder;
+        this.name = $.name;
         this.protocol = $.protocol;
         this.servers = $.servers;
         this.snippet = $.snippet;
@@ -156,7 +172,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -167,7 +183,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -177,7 +193,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -188,7 +204,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -198,7 +214,28 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param protocol The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+         * @param name The name of the TACACS+ server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the TACACS+ server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param protocol The TACACS+ authentication protocol
          * 
          * @return builder
          * 
@@ -209,7 +246,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param protocol The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+         * @param protocol The TACACS+ authentication protocol
          * 
          * @return builder
          * 
@@ -219,7 +256,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The TACACS+ server configuration
          * 
          * @return builder
          * 
@@ -230,7 +267,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The TACACS+ server configuration
          * 
          * @return builder
          * 
@@ -240,7 +277,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param servers The Servers param.
+         * @param servers The TACACS+ server configuration
          * 
          * @return builder
          * 
@@ -250,7 +287,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -261,7 +298,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -271,7 +308,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 30.
+         * @param timeout The TACACS+ timeout (seconds)
          * 
          * @return builder
          * 
@@ -282,7 +319,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param timeout The Timeout param. Value must be between 1 and 30.
+         * @param timeout The TACACS+ timeout (seconds)
          * 
          * @return builder
          * 
@@ -292,7 +329,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param useSingleConnection The UseSingleConnection param.
+         * @param useSingleConnection Use a single TACACS+ connection?
          * 
          * @return builder
          * 
@@ -303,7 +340,7 @@ public final class TacacsServerProfileArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param useSingleConnection The UseSingleConnection param.
+         * @param useSingleConnection Use a single TACACS+ connection?
          * 
          * @return builder
          * 

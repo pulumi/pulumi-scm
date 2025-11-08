@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectDataLossPreventionCriteria {
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     private @Nullable String isEnabled;
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     private @Nullable Boolean isInstalled;
 
     private HipObjectDataLossPreventionCriteria() {}
     /**
-     * @return is enabled. String must be one of these: `&#34;no&#34;`, `&#34;yes&#34;`, `&#34;not-available&#34;`.
+     * @return is enabled
      * 
      */
     public Optional<String> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
-     * @return Is Installed. Default: `true`.
+     * @return Is Installed
      * 
      */
     public Optional<Boolean> isInstalled() {

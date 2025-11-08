@@ -16,44 +16,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLabelListResult {
     /**
-     * @return The Data param.
+     * @return The data.
      * 
      */
     private List<GetLabelListData> datas;
+    /**
+     * @return The device of the item.
+     * 
+     */
+    private @Nullable String device;
+    /**
+     * @return The folder of the item. Default: Shared.
+     * 
+     */
+    private @Nullable String folder;
     /**
      * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private String id;
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
-    private Integer limit;
+    private @Nullable Integer limit;
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     private @Nullable String name;
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
-    private Integer offset;
+    private @Nullable Integer offset;
+    /**
+     * @return The snippet of the item.
+     * 
+     */
+    private @Nullable String snippet;
     private String tfid;
     /**
-     * @return The Total param.
+     * @return The total number of items.
      * 
      */
     private Integer total;
 
     private GetLabelListResult() {}
     /**
-     * @return The Data param.
+     * @return The data.
      * 
      */
     public List<GetLabelListData> datas() {
         return this.datas;
+    }
+    /**
+     * @return The device of the item.
+     * 
+     */
+    public Optional<String> device() {
+        return Optional.ofNullable(this.device);
+    }
+    /**
+     * @return The folder of the item. Default: Shared.
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
     }
     /**
      * @return The provider-assigned unique ID for this managed resource.
@@ -63,31 +92,38 @@ public final class GetLabelListResult {
         return this.id;
     }
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
-    public Integer limit() {
-        return this.limit;
+    public Optional<Integer> limit() {
+        return Optional.ofNullable(this.limit);
     }
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
-    public Integer offset() {
-        return this.offset;
+    public Optional<Integer> offset() {
+        return Optional.ofNullable(this.offset);
+    }
+    /**
+     * @return The snippet of the item.
+     * 
+     */
+    public Optional<String> snippet() {
+        return Optional.ofNullable(this.snippet);
     }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The Total param.
+     * @return The total number of items.
      * 
      */
     public Integer total() {
@@ -104,20 +140,26 @@ public final class GetLabelListResult {
     @CustomType.Builder
     public static final class Builder {
         private List<GetLabelListData> datas;
+        private @Nullable String device;
+        private @Nullable String folder;
         private String id;
-        private Integer limit;
+        private @Nullable Integer limit;
         private @Nullable String name;
-        private Integer offset;
+        private @Nullable Integer offset;
+        private @Nullable String snippet;
         private String tfid;
         private Integer total;
         public Builder() {}
         public Builder(GetLabelListResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.datas = defaults.datas;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.limit = defaults.limit;
     	      this.name = defaults.name;
     	      this.offset = defaults.offset;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.total = defaults.total;
         }
@@ -134,6 +176,18 @@ public final class GetLabelListResult {
             return datas(List.of(datas));
         }
         @CustomType.Setter
+        public Builder device(@Nullable String device) {
+
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(@Nullable String folder) {
+
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetLabelListResult", "id");
@@ -142,10 +196,8 @@ public final class GetLabelListResult {
             return this;
         }
         @CustomType.Setter
-        public Builder limit(Integer limit) {
-            if (limit == null) {
-              throw new MissingRequiredPropertyException("GetLabelListResult", "limit");
-            }
+        public Builder limit(@Nullable Integer limit) {
+
             this.limit = limit;
             return this;
         }
@@ -156,11 +208,15 @@ public final class GetLabelListResult {
             return this;
         }
         @CustomType.Setter
-        public Builder offset(Integer offset) {
-            if (offset == null) {
-              throw new MissingRequiredPropertyException("GetLabelListResult", "offset");
-            }
+        public Builder offset(@Nullable Integer offset) {
+
             this.offset = offset;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(@Nullable String snippet) {
+
+            this.snippet = snippet;
             return this;
         }
         @CustomType.Setter
@@ -182,10 +238,13 @@ public final class GetLabelListResult {
         public GetLabelListResult build() {
             final var _resultValue = new GetLabelListResult();
             _resultValue.datas = datas;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.limit = limit;
             _resultValue.name = name;
             _resultValue.offset = offset;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.total = total;
             return _resultValue;

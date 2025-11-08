@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class AuthenticationProfileSingleSignOn
     {
         /// <summary>
-        /// The KerberosKeytab param. String length must not exceed 8192 characters.
+        /// Kerberos keytab
         /// </summary>
         public readonly string? KerberosKeytab;
         /// <summary>
-        /// The Realm param. String length must not exceed 127 characters.
+        /// Realm
         /// </summary>
         public readonly string? Realm;
 

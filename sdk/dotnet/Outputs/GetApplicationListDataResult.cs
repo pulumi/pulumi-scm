@@ -14,119 +14,132 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationListDataResult
     {
         /// <summary>
-        /// The AbleToTransferFile param.
+        /// Able to transfer file
         /// </summary>
         public readonly bool AbleToTransferFile;
         /// <summary>
-        /// The AlgDisableCapability param. String length must not exceed 127 characters.
+        /// Alg disable capability
         /// </summary>
         public readonly string AlgDisableCapability;
         /// <summary>
-        /// The Category param.
+        /// Category
         /// </summary>
         public readonly string Category;
         /// <summary>
-        /// The ConsumeBigBandwidth param.
+        /// Consume big bandwidth
         /// </summary>
         public readonly bool ConsumeBigBandwidth;
         /// <summary>
-        /// The DataIdent param.
+        /// Data ident
         /// </summary>
         public readonly bool DataIdent;
         /// <summary>
-        /// The Default param.
+        /// Default
         /// </summary>
         public readonly Outputs.GetApplicationListDataDefaultResult Default;
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The EvasiveBehavior param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Evasive behavior
         /// </summary>
         public readonly bool EvasiveBehavior;
         /// <summary>
-        /// The FileTypeIdent param.
+        /// File type ident
         /// </summary>
         public readonly bool FileTypeIdent;
         /// <summary>
-        /// The HasKnownVulnerability param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// Has known vulnerability
         /// </summary>
         public readonly bool HasKnownVulnerability;
         /// <summary>
-        /// UUID of the resource.
+        /// The UUID of the application
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the application
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NoAppidCaching param.
+        /// No appid caching
         /// </summary>
         public readonly bool NoAppidCaching;
         /// <summary>
-        /// The ParentApp param. String length must not exceed 127 characters.
+        /// Parent app
         /// </summary>
         public readonly string ParentApp;
         /// <summary>
-        /// The PervasiveUse param.
+        /// Pervasive use
         /// </summary>
         public readonly bool PervasiveUse;
         /// <summary>
-        /// The ProneToMisuse param.
+        /// Prone to misuse
         /// </summary>
         public readonly bool ProneToMisuse;
         /// <summary>
-        /// The Risk param. Value must be between 1 and 5.
+        /// Risk
         /// </summary>
-        public readonly int Risk;
+        public readonly string Risk;
         /// <summary>
-        /// The Signatures param.
+        /// Signature
         /// </summary>
         public readonly ImmutableArray<Outputs.GetApplicationListDataSignatureResult> Signatures;
         /// <summary>
-        /// The Subcategory param. String length must not exceed 63 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Subcategory
         /// </summary>
         public readonly string Subcategory;
         /// <summary>
-        /// timeout for half-close session in seconds. Value must be between 1 and 604800.
+        /// timeout for half-close session in seconds
         /// </summary>
         public readonly int TcpHalfClosedTimeout;
         /// <summary>
-        /// timeout for session in TimeWait state in seconds. Value must be between 1 and 600.
+        /// timeout for session in TimeWait state in seconds
         /// </summary>
         public readonly int TcpTimeWaitTimeout;
         /// <summary>
-        /// timeout in seconds. Value must be between 0 and 604800.
+        /// timeout in seconds
         /// </summary>
         public readonly int TcpTimeout;
         /// <summary>
-        /// The Technology param. String length must not exceed 63 characters.
+        /// Technology
         /// </summary>
         public readonly string Technology;
+        public readonly string Tfid;
         /// <summary>
-        /// timeout in seconds. Value must be between 0 and 604800.
+        /// timeout in seconds
         /// </summary>
         public readonly int Timeout;
         /// <summary>
-        /// The TunnelApplications param.
+        /// Tunnel applications
         /// </summary>
         public readonly bool TunnelApplications;
         /// <summary>
-        /// The TunnelOtherApplication param.
+        /// Tunnel other application
         /// </summary>
         public readonly bool TunnelOtherApplication;
         /// <summary>
-        /// timeout in seconds. Value must be between 0 and 604800.
+        /// timeout in seconds
         /// </summary>
         public readonly int UdpTimeout;
         /// <summary>
-        /// The UsedByMalware param.
+        /// Used by malware
         /// </summary>
         public readonly bool UsedByMalware;
         /// <summary>
-        /// The VirusIdent param.
+        /// Virus ident
         /// </summary>
         public readonly bool VirusIdent;
 
@@ -146,9 +159,13 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
+            string device,
+
             bool evasiveBehavior,
 
             bool fileTypeIdent,
+
+            string folder,
 
             bool hasKnownVulnerability,
 
@@ -164,9 +181,11 @@ namespace Pulumi.Scm.Outputs
 
             bool proneToMisuse,
 
-            int risk,
+            string risk,
 
             ImmutableArray<Outputs.GetApplicationListDataSignatureResult> signatures,
+
+            string snippet,
 
             string subcategory,
 
@@ -177,6 +196,8 @@ namespace Pulumi.Scm.Outputs
             int tcpTimeout,
 
             string technology,
+
+            string tfid,
 
             int timeout,
 
@@ -197,8 +218,10 @@ namespace Pulumi.Scm.Outputs
             DataIdent = dataIdent;
             Default = @default;
             Description = description;
+            Device = device;
             EvasiveBehavior = evasiveBehavior;
             FileTypeIdent = fileTypeIdent;
+            Folder = folder;
             HasKnownVulnerability = hasKnownVulnerability;
             Id = id;
             Name = name;
@@ -208,11 +231,13 @@ namespace Pulumi.Scm.Outputs
             ProneToMisuse = proneToMisuse;
             Risk = risk;
             Signatures = signatures;
+            Snippet = snippet;
             Subcategory = subcategory;
             TcpHalfClosedTimeout = tcpHalfClosedTimeout;
             TcpTimeWaitTimeout = tcpTimeWaitTimeout;
             TcpTimeout = tcpTimeout;
             Technology = technology;
+            Tfid = tfid;
             Timeout = timeout;
             TunnelApplications = tunnelApplications;
             TunnelOtherApplication = tunnelOtherApplication;

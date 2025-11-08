@@ -18,14 +18,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     public static final SamlServerProfileState Empty = new SamlServerProfileState();
 
     /**
-     * The Certificate param. String length must not exceed 63 characters.
+     * The identity provider certificate
      * 
      */
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
     /**
-     * @return The Certificate param. String length must not exceed 63 characters.
+     * @return The identity provider certificate
      * 
      */
     public Optional<Output<String>> certificate() {
@@ -33,14 +33,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -48,14 +48,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The EntityId param. String length must be between 1 and 1024 characters.
+     * The identity provider ID
      * 
      */
     @Import(name="entityId")
     private @Nullable Output<String> entityId;
 
     /**
-     * @return The EntityId param. String length must be between 1 and 1024 characters.
+     * @return The identity provider ID
      * 
      */
     public Optional<Output<String>> entityId() {
@@ -63,14 +63,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -78,14 +78,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The MaxClockSkew param. Value must be between 1 and 900.
+     * Maxiumum clock skew
      * 
      */
     @Import(name="maxClockSkew")
     private @Nullable Output<Integer> maxClockSkew;
 
     /**
-     * @return The MaxClockSkew param. Value must be between 1 and 900.
+     * @return Maxiumum clock skew
      * 
      */
     public Optional<Output<Integer>> maxClockSkew() {
@@ -93,14 +93,29 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * The name of the SAML server profile
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the SAML server profile
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider
      * 
      */
     @Import(name="sloBindings")
     private @Nullable Output<String> sloBindings;
 
     /**
-     * @return The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return SAML HTTP binding for SLO requests to the identity provider
      * 
      */
     public Optional<Output<String>> sloBindings() {
@@ -108,14 +123,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -123,14 +138,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * SAML HTTP binding for SSO requests to the identity provider
      * 
      */
     @Import(name="ssoBindings")
     private @Nullable Output<String> ssoBindings;
 
     /**
-     * @return The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return SAML HTTP binding for SSO requests to the identity provider
      * 
      */
     public Optional<Output<String>> ssoBindings() {
@@ -138,14 +153,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The SsoUrl param. String length must be between 1 and 255 characters.
+     * Identity provider SSO URL
      * 
      */
     @Import(name="ssoUrl")
     private @Nullable Output<String> ssoUrl;
 
     /**
-     * @return The SsoUrl param. String length must be between 1 and 255 characters.
+     * @return Identity provider SSO URL
      * 
      */
     public Optional<Output<String>> ssoUrl() {
@@ -160,14 +175,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The ValidateIdpCertificate param.
+     * Validate the identity provider certificate?
      * 
      */
     @Import(name="validateIdpCertificate")
     private @Nullable Output<Boolean> validateIdpCertificate;
 
     /**
-     * @return The ValidateIdpCertificate param.
+     * @return Validate the identity provider certificate?
      * 
      */
     public Optional<Output<Boolean>> validateIdpCertificate() {
@@ -175,14 +190,14 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The WantAuthRequestsSigned param.
+     * Sign SAML message to the identity provider?
      * 
      */
     @Import(name="wantAuthRequestsSigned")
     private @Nullable Output<Boolean> wantAuthRequestsSigned;
 
     /**
-     * @return The WantAuthRequestsSigned param.
+     * @return Sign SAML message to the identity provider?
      * 
      */
     public Optional<Output<Boolean>> wantAuthRequestsSigned() {
@@ -197,6 +212,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         this.entityId = $.entityId;
         this.folder = $.folder;
         this.maxClockSkew = $.maxClockSkew;
+        this.name = $.name;
         this.sloBindings = $.sloBindings;
         this.snippet = $.snippet;
         this.ssoBindings = $.ssoBindings;
@@ -225,7 +241,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param certificate The Certificate param. String length must not exceed 63 characters.
+         * @param certificate The identity provider certificate
          * 
          * @return builder
          * 
@@ -236,7 +252,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param certificate The Certificate param. String length must not exceed 63 characters.
+         * @param certificate The identity provider certificate
          * 
          * @return builder
          * 
@@ -246,7 +262,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -257,7 +273,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -267,7 +283,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param entityId The EntityId param. String length must be between 1 and 1024 characters.
+         * @param entityId The identity provider ID
          * 
          * @return builder
          * 
@@ -278,7 +294,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param entityId The EntityId param. String length must be between 1 and 1024 characters.
+         * @param entityId The identity provider ID
          * 
          * @return builder
          * 
@@ -288,7 +304,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -299,7 +315,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -309,7 +325,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param maxClockSkew The MaxClockSkew param. Value must be between 1 and 900.
+         * @param maxClockSkew Maxiumum clock skew
          * 
          * @return builder
          * 
@@ -320,7 +336,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param maxClockSkew The MaxClockSkew param. Value must be between 1 and 900.
+         * @param maxClockSkew Maxiumum clock skew
          * 
          * @return builder
          * 
@@ -330,7 +346,28 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sloBindings The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+         * @param name The name of the SAML server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the SAML server profile
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
+        }
+
+        /**
+         * @param sloBindings SAML HTTP binding for SLO requests to the identity provider
          * 
          * @return builder
          * 
@@ -341,7 +378,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param sloBindings The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+         * @param sloBindings SAML HTTP binding for SLO requests to the identity provider
          * 
          * @return builder
          * 
@@ -351,7 +388,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -362,7 +399,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -372,7 +409,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ssoBindings The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+         * @param ssoBindings SAML HTTP binding for SSO requests to the identity provider
          * 
          * @return builder
          * 
@@ -383,7 +420,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ssoBindings The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+         * @param ssoBindings SAML HTTP binding for SSO requests to the identity provider
          * 
          * @return builder
          * 
@@ -393,7 +430,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ssoUrl The SsoUrl param. String length must be between 1 and 255 characters.
+         * @param ssoUrl Identity provider SSO URL
          * 
          * @return builder
          * 
@@ -404,7 +441,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ssoUrl The SsoUrl param. String length must be between 1 and 255 characters.
+         * @param ssoUrl Identity provider SSO URL
          * 
          * @return builder
          * 
@@ -423,7 +460,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param validateIdpCertificate The ValidateIdpCertificate param.
+         * @param validateIdpCertificate Validate the identity provider certificate?
          * 
          * @return builder
          * 
@@ -434,7 +471,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param validateIdpCertificate The ValidateIdpCertificate param.
+         * @param validateIdpCertificate Validate the identity provider certificate?
          * 
          * @return builder
          * 
@@ -444,7 +481,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param wantAuthRequestsSigned The WantAuthRequestsSigned param.
+         * @param wantAuthRequestsSigned Sign SAML message to the identity provider?
          * 
          * @return builder
          * 
@@ -455,7 +492,7 @@ public final class SamlServerProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param wantAuthRequestsSigned The WantAuthRequestsSigned param.
+         * @param wantAuthRequestsSigned Sign SAML message to the identity provider?
          * 
          * @return builder
          * 

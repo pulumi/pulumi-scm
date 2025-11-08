@@ -5,60 +5,62 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetUrlAccessProfileCredentialEnforcementModeDisabled;
+import com.pulumi.scm.outputs.GetUrlAccessProfileCredentialEnforcementModeDomainCredentials;
+import com.pulumi.scm.outputs.GetUrlAccessProfileCredentialEnforcementModeIpUser;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetUrlAccessProfileCredentialEnforcementMode {
     /**
-     * @return The Disabled param.
+     * @return Disabled
      * 
      */
-    private Boolean disabled;
+    private GetUrlAccessProfileCredentialEnforcementModeDisabled disabled;
     /**
-     * @return The DomainCredentials param.
+     * @return Domain credentials
      * 
      */
-    private Boolean domainCredentials;
+    private GetUrlAccessProfileCredentialEnforcementModeDomainCredentials domainCredentials;
     /**
-     * @return The GroupMapping param.
+     * @return Group mapping
      * 
      */
     private String groupMapping;
     /**
-     * @return The IpUser param.
+     * @return Ip user
      * 
      */
-    private Boolean ipUser;
+    private GetUrlAccessProfileCredentialEnforcementModeIpUser ipUser;
 
     private GetUrlAccessProfileCredentialEnforcementMode() {}
     /**
-     * @return The Disabled param.
+     * @return Disabled
      * 
      */
-    public Boolean disabled() {
+    public GetUrlAccessProfileCredentialEnforcementModeDisabled disabled() {
         return this.disabled;
     }
     /**
-     * @return The DomainCredentials param.
+     * @return Domain credentials
      * 
      */
-    public Boolean domainCredentials() {
+    public GetUrlAccessProfileCredentialEnforcementModeDomainCredentials domainCredentials() {
         return this.domainCredentials;
     }
     /**
-     * @return The GroupMapping param.
+     * @return Group mapping
      * 
      */
     public String groupMapping() {
         return this.groupMapping;
     }
     /**
-     * @return The IpUser param.
+     * @return Ip user
      * 
      */
-    public Boolean ipUser() {
+    public GetUrlAccessProfileCredentialEnforcementModeIpUser ipUser() {
         return this.ipUser;
     }
 
@@ -71,10 +73,10 @@ public final class GetUrlAccessProfileCredentialEnforcementMode {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean disabled;
-        private Boolean domainCredentials;
+        private GetUrlAccessProfileCredentialEnforcementModeDisabled disabled;
+        private GetUrlAccessProfileCredentialEnforcementModeDomainCredentials domainCredentials;
         private String groupMapping;
-        private Boolean ipUser;
+        private GetUrlAccessProfileCredentialEnforcementModeIpUser ipUser;
         public Builder() {}
         public Builder(GetUrlAccessProfileCredentialEnforcementMode defaults) {
     	      Objects.requireNonNull(defaults);
@@ -85,7 +87,7 @@ public final class GetUrlAccessProfileCredentialEnforcementMode {
         }
 
         @CustomType.Setter
-        public Builder disabled(Boolean disabled) {
+        public Builder disabled(GetUrlAccessProfileCredentialEnforcementModeDisabled disabled) {
             if (disabled == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileCredentialEnforcementMode", "disabled");
             }
@@ -93,7 +95,7 @@ public final class GetUrlAccessProfileCredentialEnforcementMode {
             return this;
         }
         @CustomType.Setter
-        public Builder domainCredentials(Boolean domainCredentials) {
+        public Builder domainCredentials(GetUrlAccessProfileCredentialEnforcementModeDomainCredentials domainCredentials) {
             if (domainCredentials == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileCredentialEnforcementMode", "domainCredentials");
             }
@@ -109,7 +111,7 @@ public final class GetUrlAccessProfileCredentialEnforcementMode {
             return this;
         }
         @CustomType.Setter
-        public Builder ipUser(Boolean ipUser) {
+        public Builder ipUser(GetUrlAccessProfileCredentialEnforcementModeIpUser ipUser) {
             if (ipUser == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileCredentialEnforcementMode", "ipUser");
             }

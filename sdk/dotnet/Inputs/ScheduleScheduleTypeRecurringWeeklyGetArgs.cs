@@ -12,88 +12,88 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class ScheduleScheduleTypeRecurringWeeklyGetArgs : global::Pulumi.ResourceArgs
     {
-        [Input("fridayLists")]
-        private InputList<string>? _fridayLists;
+        [Input("fridays")]
+        private InputList<string>? _fridays;
 
         /// <summary>
-        /// The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Friday
         /// </summary>
-        public InputList<string> FridayLists
+        public InputList<string> Fridays
         {
-            get => _fridayLists ?? (_fridayLists = new InputList<string>());
-            set => _fridayLists = value;
+            get => _fridays ?? (_fridays = new InputList<string>());
+            set => _fridays = value;
         }
 
-        [Input("mondayLists")]
-        private InputList<string>? _mondayLists;
+        [Input("mondays")]
+        private InputList<string>? _mondays;
 
         /// <summary>
-        /// The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Monday
         /// </summary>
-        public InputList<string> MondayLists
+        public InputList<string> Mondays
         {
-            get => _mondayLists ?? (_mondayLists = new InputList<string>());
-            set => _mondayLists = value;
+            get => _mondays ?? (_mondays = new InputList<string>());
+            set => _mondays = value;
         }
 
-        [Input("saturdayLists")]
-        private InputList<string>? _saturdayLists;
+        [Input("saturdays")]
+        private InputList<string>? _saturdays;
 
         /// <summary>
-        /// The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Saturday
         /// </summary>
-        public InputList<string> SaturdayLists
+        public InputList<string> Saturdays
         {
-            get => _saturdayLists ?? (_saturdayLists = new InputList<string>());
-            set => _saturdayLists = value;
+            get => _saturdays ?? (_saturdays = new InputList<string>());
+            set => _saturdays = value;
         }
 
-        [Input("sundayLists")]
-        private InputList<string>? _sundayLists;
+        [Input("sundays")]
+        private InputList<string>? _sundays;
 
         /// <summary>
-        /// The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Sunday
         /// </summary>
-        public InputList<string> SundayLists
+        public InputList<string> Sundays
         {
-            get => _sundayLists ?? (_sundayLists = new InputList<string>());
-            set => _sundayLists = value;
+            get => _sundays ?? (_sundays = new InputList<string>());
+            set => _sundays = value;
         }
 
-        [Input("thursdayLists")]
-        private InputList<string>? _thursdayLists;
+        [Input("thursdays")]
+        private InputList<string>? _thursdays;
 
         /// <summary>
-        /// The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Thursday
         /// </summary>
-        public InputList<string> ThursdayLists
+        public InputList<string> Thursdays
         {
-            get => _thursdayLists ?? (_thursdayLists = new InputList<string>());
-            set => _thursdayLists = value;
+            get => _thursdays ?? (_thursdays = new InputList<string>());
+            set => _thursdays = value;
         }
 
-        [Input("tuesdayLists")]
-        private InputList<string>? _tuesdayLists;
+        [Input("tuesdays")]
+        private InputList<string>? _tuesdays;
 
         /// <summary>
-        /// The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Tuesday
         /// </summary>
-        public InputList<string> TuesdayLists
+        public InputList<string> Tuesdays
         {
-            get => _tuesdayLists ?? (_tuesdayLists = new InputList<string>());
-            set => _tuesdayLists = value;
+            get => _tuesdays ?? (_tuesdays = new InputList<string>());
+            set => _tuesdays = value;
         }
 
-        [Input("wednesdayLists")]
-        private InputList<string>? _wednesdayLists;
+        [Input("wednesdays")]
+        private InputList<string>? _wednesdays;
 
         /// <summary>
-        /// The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Wednesday
         /// </summary>
-        public InputList<string> WednesdayLists
+        public InputList<string> Wednesdays
         {
-            get => _wednesdayLists ?? (_wednesdayLists = new InputList<string>());
-            set => _wednesdayLists = value;
+            get => _wednesdays ?? (_wednesdays = new InputList<string>());
+            set => _wednesdays = value;
         }
 
         public ScheduleScheduleTypeRecurringWeeklyGetArgs()

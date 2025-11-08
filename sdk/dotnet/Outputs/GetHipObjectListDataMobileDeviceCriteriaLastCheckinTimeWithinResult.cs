@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithinResult
     {
         /// <summary>
-        /// specify time in days. Value must be between 1 and 365. Default: `30`.
+        /// specify time in days
         /// </summary>
         public readonly int Days;
 

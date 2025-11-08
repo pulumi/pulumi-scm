@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectDiskEncryptionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Encryption locations.
+        /// Encryption locations
         /// </summary>
         [Input("criteria")]
         public Input<Inputs.HipObjectDiskEncryptionCriteriaArgs>? Criteria { get; set; }
 
         /// <summary>
-        /// The ExcludeVendor param. Default: `False`.
+        /// Exclude vendor
         /// </summary>
         [Input("excludeVendor")]
         public Input<bool>? ExcludeVendor { get; set; }
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectDiskEncryptionVendorArgs>? _vendors;
 
         /// <summary>
-        /// Vendor name.
+        /// Vendor name
         /// </summary>
         public InputList<Inputs.HipObjectDiskEncryptionVendorArgs> Vendors
         {

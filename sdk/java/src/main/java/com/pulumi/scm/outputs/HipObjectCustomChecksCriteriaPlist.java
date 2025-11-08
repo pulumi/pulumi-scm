@@ -16,38 +16,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectCustomChecksCriteriaPlist {
     /**
-     * @return The Keys param.
+     * @return Key
      * 
      */
     private @Nullable List<HipObjectCustomChecksCriteriaPlistKey> keys;
     /**
-     * @return Preference list. String length must not exceed 1023 characters.
+     * @return Preference list
      * 
      */
     private String name;
     /**
-     * @return Plist does not exist. Default: `false`.
+     * @return Plist does not exist
      * 
      */
     private @Nullable Boolean negate;
 
     private HipObjectCustomChecksCriteriaPlist() {}
     /**
-     * @return The Keys param.
+     * @return Key
      * 
      */
     public List<HipObjectCustomChecksCriteriaPlistKey> keys() {
         return this.keys == null ? List.of() : this.keys;
     }
     /**
-     * @return Preference list. String length must not exceed 1023 characters.
+     * @return Preference list
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Plist does not exist. Default: `false`.
+     * @return Plist does not exist
      * 
      */
     public Optional<Boolean> negate() {

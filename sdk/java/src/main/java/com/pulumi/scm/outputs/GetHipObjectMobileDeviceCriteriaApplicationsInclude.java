@@ -11,38 +11,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectMobileDeviceCriteriaApplicationsInclude {
     /**
-     * @return application hash. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return application hash
      * 
      */
     private String hash;
     /**
-     * @return The Name param. String length must not exceed 31 characters.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return application package name. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return application package name
      * 
      */
     private String package_;
 
     private GetHipObjectMobileDeviceCriteriaApplicationsInclude() {}
     /**
-     * @return application hash. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return application hash
      * 
      */
     public String hash() {
         return this.hash;
     }
     /**
-     * @return The Name param. String length must not exceed 31 characters.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return application package name. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return application package name
      * 
      */
     public String package_() {

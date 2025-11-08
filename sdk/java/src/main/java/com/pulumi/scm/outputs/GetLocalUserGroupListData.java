@@ -12,26 +12,78 @@ import java.util.Objects;
 @CustomType
 public final class GetLocalUserGroupListData {
     /**
-     * @return The Name param. String length must not exceed 31 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the local user group
+     * 
+     */
+    private String id;
+    /**
+     * @return The name of the local user group
      * 
      */
     private String name;
     /**
-     * @return The Users param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
+    /**
+     * @return The local user group users
      * 
      */
     private List<String> users;
 
     private GetLocalUserGroupListData() {}
     /**
-     * @return The Name param. String length must not exceed 31 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the local user group
+     * 
+     */
+    public String id() {
+        return this.id;
+    }
+    /**
+     * @return The name of the local user group
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Users param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
+    }
+    /**
+     * @return The local user group users
      * 
      */
     public List<String> users() {
@@ -47,21 +99,71 @@ public final class GetLocalUserGroupListData {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
+        private String folder;
+        private String id;
         private String name;
+        private String snippet;
+        private String tfid;
         private List<String> users;
         public Builder() {}
         public Builder(GetLocalUserGroupListData defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
+    	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
     	      this.users = defaults.users;
         }
 
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserGroupListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserGroupListData", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder id(String id) {
+            if (id == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserGroupListData", "id");
+            }
+            this.id = id;
+            return this;
+        }
         @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetLocalUserGroupListData", "name");
             }
             this.name = name;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserGroupListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetLocalUserGroupListData", "tfid");
+            }
+            this.tfid = tfid;
             return this;
         }
         @CustomType.Setter
@@ -77,7 +179,12 @@ public final class GetLocalUserGroupListData {
         }
         public GetLocalUserGroupListData build() {
             final var _resultValue = new GetLocalUserGroupListData();
+            _resultValue.device = device;
+            _resultValue.folder = folder;
+            _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             _resultValue.users = users;
             return _resultValue;
         }

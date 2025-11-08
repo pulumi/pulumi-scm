@@ -15,9 +15,18 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getHipProfileList({
+ * // Fetch a list of all HIP Profile objects in the Shared folder.
+ * const allShared = scm.getHipProfileList({
  *     folder: "Shared",
  * });
+ * export const hipProfilesListAllShared = allShared.then(allShared => allShared.datas);
+ * // Example of using pagination to get the first 10 HIP Profiles.
+ * const paginated = scm.getHipProfileList({
+ *     folder: "Shared",
+ *     limit: 10,
+ *     offset: 0,
+ * });
+ * export const hipProfilesListPaginated = paginated.then(paginated => paginated.datas);
  * ```
  */
 export function getHipProfileList(args?: GetHipProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetHipProfileListResult> {
@@ -38,27 +47,27 @@ export function getHipProfileList(args?: GetHipProfileListArgs, opts?: pulumi.In
  */
 export interface GetHipProfileListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -68,15 +77,15 @@ export interface GetHipProfileListArgs {
  */
 export interface GetHipProfileListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetHipProfileListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -84,24 +93,24 @@ export interface GetHipProfileListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -114,9 +123,18 @@ export interface GetHipProfileListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getHipProfileList({
+ * // Fetch a list of all HIP Profile objects in the Shared folder.
+ * const allShared = scm.getHipProfileList({
  *     folder: "Shared",
  * });
+ * export const hipProfilesListAllShared = allShared.then(allShared => allShared.datas);
+ * // Example of using pagination to get the first 10 HIP Profiles.
+ * const paginated = scm.getHipProfileList({
+ *     folder: "Shared",
+ *     limit: 10,
+ *     offset: 0,
+ * });
+ * export const hipProfilesListPaginated = paginated.then(paginated => paginated.datas);
  * ```
  */
 export function getHipProfileListOutput(args?: GetHipProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHipProfileListResult> {
@@ -137,27 +155,27 @@ export function getHipProfileListOutput(args?: GetHipProfileListOutputArgs, opts
  */
 export interface GetHipProfileListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceConnectionQos {
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     private Boolean enable;
     /**
-     * @return The QosProfile param.
+     * @return Qos profile
      * 
      */
     private String qosProfile;
 
     private GetServiceConnectionQos() {}
     /**
-     * @return The Enable param.
+     * @return Enable
      * 
      */
     public Boolean enable() {
         return this.enable;
     }
     /**
-     * @return The QosProfile param.
+     * @return Qos profile
      * 
      */
     public String qosProfile() {

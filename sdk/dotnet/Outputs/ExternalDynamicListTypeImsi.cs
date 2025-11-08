@@ -14,48 +14,48 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeImsi
     {
         /// <summary>
-        /// Profile for authenticating client certificates. Default: `"None"`.
+        /// Auth
+        /// </summary>
+        public readonly Outputs.ExternalDynamicListTypeImsiAuth? Auth;
+        /// <summary>
+        /// Profile for authenticating client certificates
         /// </summary>
         public readonly string? CertificateProfile;
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string? Description;
         /// <summary>
-        /// The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 34 characters.
+        /// Exception list
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// The ImsiAuth param.
-        /// </summary>
-        public readonly Outputs.ExternalDynamicListTypeImsiImsiAuth? ImsiAuth;
-        /// <summary>
-        /// The Recurring param.
+        /// Recurring
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImsiRecurring Recurring;
         /// <summary>
-        /// The Url param. String length must not exceed 255 characters. Default: `"http://"`.
+        /// Url
         /// </summary>
-        public readonly string? Url;
+        public readonly string Url;
 
         [OutputConstructor]
         private ExternalDynamicListTypeImsi(
+            Outputs.ExternalDynamicListTypeImsiAuth? auth,
+
             string? certificateProfile,
 
             string? description,
 
             ImmutableArray<string> exceptionLists,
 
-            Outputs.ExternalDynamicListTypeImsiImsiAuth? imsiAuth,
-
             Outputs.ExternalDynamicListTypeImsiRecurring recurring,
 
-            string? url)
+            string url)
         {
+            Auth = auth;
             CertificateProfile = certificateProfile;
             Description = description;
             ExceptionLists = exceptionLists;
-            ImsiAuth = imsiAuth;
             Recurring = recurring;
             Url = url;
         }

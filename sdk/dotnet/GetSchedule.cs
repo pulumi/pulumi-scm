@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetSchedule
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSchedule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Schedule data source
         /// </summary>
         public static Task<GetScheduleResult> InvokeAsync(GetScheduleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetScheduleResult>("scm:index/getSchedule:getSchedule", args ?? new GetScheduleArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSchedule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Schedule data source
         /// </summary>
         public static Output<GetScheduleResult> Invoke(GetScheduleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetScheduleResult>("scm:index/getSchedule:getSchedule", args ?? new GetScheduleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetSchedule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Schedule data source
         /// </summary>
         public static Output<GetScheduleResult> Invoke(GetScheduleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetScheduleResult>("scm:index/getSchedule:getSchedule", args ?? new GetScheduleInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetScheduleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the schedule
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the schedule
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetScheduleArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetScheduleInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the schedule
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the schedule
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetScheduleInvokeArgs()
         {
@@ -118,32 +76,53 @@ namespace Pulumi.Scm
     public sealed class GetScheduleResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the schedule
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the schedule
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The ScheduleType param.
+        /// Schedule type
         /// </summary>
         public readonly Outputs.GetScheduleScheduleTypeResult ScheduleType;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetScheduleResult(
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
 
             Outputs.GetScheduleScheduleTypeResult scheduleType,
 
+            string snippet,
+
             string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             ScheduleType = scheduleType;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

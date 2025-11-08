@@ -15,174 +15,210 @@ import java.util.Objects;
 @CustomType
 public final class GetCertificateProfileResult {
     /**
-     * @return The BlockExpiredCert param.
+     * @return Block sessions with expired certificates?
      * 
      */
     private Boolean blockExpiredCert;
     /**
-     * @return The BlockTimeoutCert param.
+     * @return Block session if certificate status cannot be retrieved within timeout?
      * 
      */
     private Boolean blockTimeoutCert;
     /**
-     * @return The BlockUnauthenticatedCert param.
+     * @return Block session if the certificate was not issued to the authenticating device?
      * 
      */
     private Boolean blockUnauthenticatedCert;
     /**
-     * @return The BlockUnknownCert param.
+     * @return Block session if certificate status is unknown?
      * 
      */
     private Boolean blockUnknownCert;
     /**
-     * @return The CaCertificates param.
+     * @return An ordered list of CA certificates
      * 
      */
     private List<GetCertificateProfileCaCertificate> caCertificates;
     /**
-     * @return The CertStatusTimeout param.
+     * @return Certificate status timeout
      * 
      */
     private String certStatusTimeout;
     /**
-     * @return The CrlReceiveTimeout param.
+     * @return CRL receive timeout (seconds)
      * 
      */
     private String crlReceiveTimeout;
     /**
-     * @return The Domain param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return User domain
      * 
      */
     private String domain;
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the certificate profile
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the certificate profile
      * 
      */
     private String name;
     /**
-     * @return The OcspReceiveTimeout param.
+     * @return OCSP receive timeout (seconds)
      * 
      */
     private String ocspReceiveTimeout;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
     /**
-     * @return The UseCrl param.
+     * @return Use CRL?
      * 
      */
     private Boolean useCrl;
     /**
-     * @return The UseOcsp param.
+     * @return Use OCSP?
      * 
      */
     private Boolean useOcsp;
     /**
-     * @return The UsernameField param.
+     * @return Certificate username field
      * 
      */
     private GetCertificateProfileUsernameField usernameField;
 
     private GetCertificateProfileResult() {}
     /**
-     * @return The BlockExpiredCert param.
+     * @return Block sessions with expired certificates?
      * 
      */
     public Boolean blockExpiredCert() {
         return this.blockExpiredCert;
     }
     /**
-     * @return The BlockTimeoutCert param.
+     * @return Block session if certificate status cannot be retrieved within timeout?
      * 
      */
     public Boolean blockTimeoutCert() {
         return this.blockTimeoutCert;
     }
     /**
-     * @return The BlockUnauthenticatedCert param.
+     * @return Block session if the certificate was not issued to the authenticating device?
      * 
      */
     public Boolean blockUnauthenticatedCert() {
         return this.blockUnauthenticatedCert;
     }
     /**
-     * @return The BlockUnknownCert param.
+     * @return Block session if certificate status is unknown?
      * 
      */
     public Boolean blockUnknownCert() {
         return this.blockUnknownCert;
     }
     /**
-     * @return The CaCertificates param.
+     * @return An ordered list of CA certificates
      * 
      */
     public List<GetCertificateProfileCaCertificate> caCertificates() {
         return this.caCertificates;
     }
     /**
-     * @return The CertStatusTimeout param.
+     * @return Certificate status timeout
      * 
      */
     public String certStatusTimeout() {
         return this.certStatusTimeout;
     }
     /**
-     * @return The CrlReceiveTimeout param.
+     * @return CRL receive timeout (seconds)
      * 
      */
     public String crlReceiveTimeout() {
         return this.crlReceiveTimeout;
     }
     /**
-     * @return The Domain param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return User domain
      * 
      */
     public String domain() {
         return this.domain;
     }
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the certificate profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the certificate profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The OcspReceiveTimeout param.
+     * @return OCSP receive timeout (seconds)
      * 
      */
     public String ocspReceiveTimeout() {
         return this.ocspReceiveTimeout;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The UseCrl param.
+     * @return Use CRL?
      * 
      */
     public Boolean useCrl() {
         return this.useCrl;
     }
     /**
-     * @return The UseOcsp param.
+     * @return Use OCSP?
      * 
      */
     public Boolean useOcsp() {
         return this.useOcsp;
     }
     /**
-     * @return The UsernameField param.
+     * @return Certificate username field
      * 
      */
     public GetCertificateProfileUsernameField usernameField() {
@@ -205,10 +241,13 @@ public final class GetCertificateProfileResult {
         private List<GetCertificateProfileCaCertificate> caCertificates;
         private String certStatusTimeout;
         private String crlReceiveTimeout;
+        private String device;
         private String domain;
+        private String folder;
         private String id;
         private String name;
         private String ocspReceiveTimeout;
+        private String snippet;
         private String tfid;
         private Boolean useCrl;
         private Boolean useOcsp;
@@ -223,10 +262,13 @@ public final class GetCertificateProfileResult {
     	      this.caCertificates = defaults.caCertificates;
     	      this.certStatusTimeout = defaults.certStatusTimeout;
     	      this.crlReceiveTimeout = defaults.crlReceiveTimeout;
+    	      this.device = defaults.device;
     	      this.domain = defaults.domain;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.ocspReceiveTimeout = defaults.ocspReceiveTimeout;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.useCrl = defaults.useCrl;
     	      this.useOcsp = defaults.useOcsp;
@@ -293,11 +335,27 @@ public final class GetCertificateProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetCertificateProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder domain(String domain) {
             if (domain == null) {
               throw new MissingRequiredPropertyException("GetCertificateProfileResult", "domain");
             }
             this.domain = domain;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetCertificateProfileResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -322,6 +380,14 @@ public final class GetCertificateProfileResult {
               throw new MissingRequiredPropertyException("GetCertificateProfileResult", "ocspReceiveTimeout");
             }
             this.ocspReceiveTimeout = ocspReceiveTimeout;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetCertificateProfileResult", "snippet");
+            }
+            this.snippet = snippet;
             return this;
         }
         @CustomType.Setter
@@ -365,10 +431,13 @@ public final class GetCertificateProfileResult {
             _resultValue.caCertificates = caCertificates;
             _resultValue.certStatusTimeout = certStatusTimeout;
             _resultValue.crlReceiveTimeout = crlReceiveTimeout;
+            _resultValue.device = device;
             _resultValue.domain = domain;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.ocspReceiveTimeout = ocspReceiveTimeout;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.useCrl = useCrl;
             _resultValue.useOcsp = useOcsp;

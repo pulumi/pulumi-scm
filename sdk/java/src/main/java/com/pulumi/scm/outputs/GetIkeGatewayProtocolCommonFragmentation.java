@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayProtocolCommonFragmentation {
     /**
-     * @return The Enable param. Default: `false`.
+     * @return Enable
      * 
      */
     private Boolean enable;
 
     private GetIkeGatewayProtocolCommonFragmentation() {}
     /**
-     * @return The Enable param. Default: `false`.
+     * @return Enable
      * 
      */
     public Boolean enable() {

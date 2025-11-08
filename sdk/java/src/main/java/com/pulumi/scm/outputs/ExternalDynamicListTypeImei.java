@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.ExternalDynamicListTypeImeiImeiAuth;
+import com.pulumi.scm.outputs.ExternalDynamicListTypeImeiAuth;
 import com.pulumi.scm.outputs.ExternalDynamicListTypeImeiRecurring;
 import java.lang.String;
 import java.util.List;
@@ -16,78 +16,78 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeImei {
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    private @Nullable ExternalDynamicListTypeImeiAuth auth;
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     private @Nullable String certificateProfile;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private @Nullable String description;
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Exception list
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return The ImeiAuth param.
-     * 
-     */
-    private @Nullable ExternalDynamicListTypeImeiImeiAuth imeiAuth;
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private ExternalDynamicListTypeImeiRecurring recurring;
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
-    private @Nullable String url;
+    private String url;
 
     private ExternalDynamicListTypeImei() {}
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    public Optional<ExternalDynamicListTypeImeiAuth> auth() {
+        return Optional.ofNullable(this.auth);
+    }
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     public Optional<String> certificateProfile() {
         return Optional.ofNullable(this.certificateProfile);
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return The ImeiAuth param.
-     * 
-     */
-    public Optional<ExternalDynamicListTypeImeiImeiAuth> imeiAuth() {
-        return Optional.ofNullable(this.imeiAuth);
-    }
-    /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public ExternalDynamicListTypeImeiRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
-    public Optional<String> url() {
-        return Optional.ofNullable(this.url);
+    public String url() {
+        return this.url;
     }
 
     public static Builder builder() {
@@ -99,23 +99,29 @@ public final class ExternalDynamicListTypeImei {
     }
     @CustomType.Builder
     public static final class Builder {
+        private @Nullable ExternalDynamicListTypeImeiAuth auth;
         private @Nullable String certificateProfile;
         private @Nullable String description;
         private @Nullable List<String> exceptionLists;
-        private @Nullable ExternalDynamicListTypeImeiImeiAuth imeiAuth;
         private ExternalDynamicListTypeImeiRecurring recurring;
-        private @Nullable String url;
+        private String url;
         public Builder() {}
         public Builder(ExternalDynamicListTypeImei defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.auth = defaults.auth;
     	      this.certificateProfile = defaults.certificateProfile;
     	      this.description = defaults.description;
     	      this.exceptionLists = defaults.exceptionLists;
-    	      this.imeiAuth = defaults.imeiAuth;
     	      this.recurring = defaults.recurring;
     	      this.url = defaults.url;
         }
 
+        @CustomType.Setter
+        public Builder auth(@Nullable ExternalDynamicListTypeImeiAuth auth) {
+
+            this.auth = auth;
+            return this;
+        }
         @CustomType.Setter
         public Builder certificateProfile(@Nullable String certificateProfile) {
 
@@ -138,12 +144,6 @@ public final class ExternalDynamicListTypeImei {
             return exceptionLists(List.of(exceptionLists));
         }
         @CustomType.Setter
-        public Builder imeiAuth(@Nullable ExternalDynamicListTypeImeiImeiAuth imeiAuth) {
-
-            this.imeiAuth = imeiAuth;
-            return this;
-        }
-        @CustomType.Setter
         public Builder recurring(ExternalDynamicListTypeImeiRecurring recurring) {
             if (recurring == null) {
               throw new MissingRequiredPropertyException("ExternalDynamicListTypeImei", "recurring");
@@ -152,17 +152,19 @@ public final class ExternalDynamicListTypeImei {
             return this;
         }
         @CustomType.Setter
-        public Builder url(@Nullable String url) {
-
+        public Builder url(String url) {
+            if (url == null) {
+              throw new MissingRequiredPropertyException("ExternalDynamicListTypeImei", "url");
+            }
             this.url = url;
             return this;
         }
         public ExternalDynamicListTypeImei build() {
             final var _resultValue = new ExternalDynamicListTypeImei();
+            _resultValue.auth = auth;
             _resultValue.certificateProfile = certificateProfile;
             _resultValue.description = description;
             _resultValue.exceptionLists = exceptionLists;
-            _resultValue.imeiAuth = imeiAuth;
             _resultValue.recurring = recurring;
             _resultValue.url = url;
             return _resultValue;

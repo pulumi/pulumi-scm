@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectListDataCustomChecksCriteriaRegistryKey {
     /**
-     * @return Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry key default value data
      * 
      */
     private String defaultValueData;
     /**
-     * @return Registry key. String length must not exceed 1023 characters.
+     * @return Registry key
      * 
      */
     private String name;
     /**
-     * @return Key does not exist or match specified value data. Default: `false`.
+     * @return Key does not exist or match specified value data
      * 
      */
     private Boolean negate;
     /**
-     * @return The RegistryValues param.
+     * @return Registry value
      * 
      */
     private List<GetHipObjectListDataCustomChecksCriteriaRegistryKeyRegistryValue> registryValues;
 
     private GetHipObjectListDataCustomChecksCriteriaRegistryKey() {}
     /**
-     * @return Registry key default value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Registry key default value data
      * 
      */
     public String defaultValueData() {
         return this.defaultValueData;
     }
     /**
-     * @return Registry key. String length must not exceed 1023 characters.
+     * @return Registry key
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Key does not exist or match specified value data. Default: `false`.
+     * @return Key does not exist or match specified value data
      * 
      */
     public Boolean negate() {
         return this.negate;
     }
     /**
-     * @return The RegistryValues param.
+     * @return Registry value
      * 
      */
     public List<GetHipObjectListDataCustomChecksCriteriaRegistryKeyRegistryValue> registryValues() {

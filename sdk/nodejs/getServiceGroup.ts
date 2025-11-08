@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ServiceGroup data source
  *
  * ## Example Usage
  *
@@ -13,15 +13,19 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getServiceGroup({
- *     id: "1234-56-789",
+ * // Look up a single service group object by its ID.
+ * // The ID used here is from the terraform.tfstate file.
+ * const scmServiceGroupDs = scm.getServiceGroup({
+ *     id: "dc430d61-52ca-44bc-a797-e65123a94134",
  * });
+ * export const serviceGroupDsResult = scmServiceGroupDs;
  * ```
  */
 export function getServiceGroup(args: GetServiceGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceGroup:getServiceGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +34,13 @@ export function getServiceGroup(args: GetServiceGroupArgs, opts?: pulumi.InvokeO
  */
 export interface GetServiceGroupArgs {
     /**
-     * The Id param.
+     * The UUID of the service group
      */
     id: string;
+    /**
+     * The name of the service group
+     */
+    name?: string;
 }
 
 /**
@@ -40,25 +48,37 @@ export interface GetServiceGroupArgs {
  */
 export interface GetServiceGroupResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the service group
      */
     readonly id: string;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     readonly members: string[];
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service group
      */
     readonly name: string;
     /**
-     * Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Tags associated with the service group
      */
     readonly tags: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * ServiceGroup data source
  *
  * ## Example Usage
  *
@@ -66,15 +86,19 @@ export interface GetServiceGroupResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getServiceGroup({
- *     id: "1234-56-789",
+ * // Look up a single service group object by its ID.
+ * // The ID used here is from the terraform.tfstate file.
+ * const scmServiceGroupDs = scm.getServiceGroup({
+ *     id: "dc430d61-52ca-44bc-a797-e65123a94134",
  * });
+ * export const serviceGroupDsResult = scmServiceGroupDs;
  * ```
  */
 export function getServiceGroupOutput(args: GetServiceGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceGroup:getServiceGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -83,7 +107,11 @@ export function getServiceGroupOutput(args: GetServiceGroupOutputArgs, opts?: pu
  */
 export interface GetServiceGroupOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the service group
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the service group
+     */
+    name?: pulumi.Input<string>;
 }

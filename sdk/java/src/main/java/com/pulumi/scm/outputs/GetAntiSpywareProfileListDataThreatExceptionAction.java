@@ -5,108 +5,114 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionAlert;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionAllow;
 import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionBlockIp;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionDefault;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionDrop;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetBoth;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetClient;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatExceptionActionResetServer;
 import java.util.Objects;
 
 @CustomType
 public final class GetAntiSpywareProfileListDataThreatExceptionAction {
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    private Boolean alert;
+    private GetAntiSpywareProfileListDataThreatExceptionActionAlert alert;
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    private Boolean allow;
+    private GetAntiSpywareProfileListDataThreatExceptionActionAllow allow;
     /**
-     * @return The BlockIp param.
+     * @return anti spyware profiles threat exception action block ip
      * 
      */
     private GetAntiSpywareProfileListDataThreatExceptionActionBlockIp blockIp;
     /**
-     * @return The Default param.
+     * @return Default
      * 
      */
-    private Boolean default_;
+    private GetAntiSpywareProfileListDataThreatExceptionActionDefault default_;
     /**
-     * @return The Drop param.
+     * @return Drop
      * 
      */
-    private Boolean drop;
+    private GetAntiSpywareProfileListDataThreatExceptionActionDrop drop;
     /**
-     * @return The ResetBoth param.
+     * @return Reset both
      * 
      */
-    private Boolean resetBoth;
+    private GetAntiSpywareProfileListDataThreatExceptionActionResetBoth resetBoth;
     /**
-     * @return The ResetClient param.
+     * @return Reset client
      * 
      */
-    private Boolean resetClient;
+    private GetAntiSpywareProfileListDataThreatExceptionActionResetClient resetClient;
     /**
-     * @return The ResetServer param.
+     * @return Reset server
      * 
      */
-    private Boolean resetServer;
+    private GetAntiSpywareProfileListDataThreatExceptionActionResetServer resetServer;
 
     private GetAntiSpywareProfileListDataThreatExceptionAction() {}
     /**
-     * @return The Alert param.
+     * @return Alert
      * 
      */
-    public Boolean alert() {
+    public GetAntiSpywareProfileListDataThreatExceptionActionAlert alert() {
         return this.alert;
     }
     /**
-     * @return The Allow param.
+     * @return Allow
      * 
      */
-    public Boolean allow() {
+    public GetAntiSpywareProfileListDataThreatExceptionActionAllow allow() {
         return this.allow;
     }
     /**
-     * @return The BlockIp param.
+     * @return anti spyware profiles threat exception action block ip
      * 
      */
     public GetAntiSpywareProfileListDataThreatExceptionActionBlockIp blockIp() {
         return this.blockIp;
     }
     /**
-     * @return The Default param.
+     * @return Default
      * 
      */
-    public Boolean default_() {
+    public GetAntiSpywareProfileListDataThreatExceptionActionDefault default_() {
         return this.default_;
     }
     /**
-     * @return The Drop param.
+     * @return Drop
      * 
      */
-    public Boolean drop() {
+    public GetAntiSpywareProfileListDataThreatExceptionActionDrop drop() {
         return this.drop;
     }
     /**
-     * @return The ResetBoth param.
+     * @return Reset both
      * 
      */
-    public Boolean resetBoth() {
+    public GetAntiSpywareProfileListDataThreatExceptionActionResetBoth resetBoth() {
         return this.resetBoth;
     }
     /**
-     * @return The ResetClient param.
+     * @return Reset client
      * 
      */
-    public Boolean resetClient() {
+    public GetAntiSpywareProfileListDataThreatExceptionActionResetClient resetClient() {
         return this.resetClient;
     }
     /**
-     * @return The ResetServer param.
+     * @return Reset server
      * 
      */
-    public Boolean resetServer() {
+    public GetAntiSpywareProfileListDataThreatExceptionActionResetServer resetServer() {
         return this.resetServer;
     }
 
@@ -119,14 +125,14 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean alert;
-        private Boolean allow;
+        private GetAntiSpywareProfileListDataThreatExceptionActionAlert alert;
+        private GetAntiSpywareProfileListDataThreatExceptionActionAllow allow;
         private GetAntiSpywareProfileListDataThreatExceptionActionBlockIp blockIp;
-        private Boolean default_;
-        private Boolean drop;
-        private Boolean resetBoth;
-        private Boolean resetClient;
-        private Boolean resetServer;
+        private GetAntiSpywareProfileListDataThreatExceptionActionDefault default_;
+        private GetAntiSpywareProfileListDataThreatExceptionActionDrop drop;
+        private GetAntiSpywareProfileListDataThreatExceptionActionResetBoth resetBoth;
+        private GetAntiSpywareProfileListDataThreatExceptionActionResetClient resetClient;
+        private GetAntiSpywareProfileListDataThreatExceptionActionResetServer resetServer;
         public Builder() {}
         public Builder(GetAntiSpywareProfileListDataThreatExceptionAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -141,7 +147,7 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
         }
 
         @CustomType.Setter
-        public Builder alert(Boolean alert) {
+        public Builder alert(GetAntiSpywareProfileListDataThreatExceptionActionAlert alert) {
             if (alert == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListDataThreatExceptionAction", "alert");
             }
@@ -149,7 +155,7 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
             return this;
         }
         @CustomType.Setter
-        public Builder allow(Boolean allow) {
+        public Builder allow(GetAntiSpywareProfileListDataThreatExceptionActionAllow allow) {
             if (allow == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListDataThreatExceptionAction", "allow");
             }
@@ -165,7 +171,7 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
             return this;
         }
         @CustomType.Setter("default")
-        public Builder default_(Boolean default_) {
+        public Builder default_(GetAntiSpywareProfileListDataThreatExceptionActionDefault default_) {
             if (default_ == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListDataThreatExceptionAction", "default_");
             }
@@ -173,7 +179,7 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
             return this;
         }
         @CustomType.Setter
-        public Builder drop(Boolean drop) {
+        public Builder drop(GetAntiSpywareProfileListDataThreatExceptionActionDrop drop) {
             if (drop == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListDataThreatExceptionAction", "drop");
             }
@@ -181,7 +187,7 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetBoth(Boolean resetBoth) {
+        public Builder resetBoth(GetAntiSpywareProfileListDataThreatExceptionActionResetBoth resetBoth) {
             if (resetBoth == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListDataThreatExceptionAction", "resetBoth");
             }
@@ -189,7 +195,7 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetClient(Boolean resetClient) {
+        public Builder resetClient(GetAntiSpywareProfileListDataThreatExceptionActionResetClient resetClient) {
             if (resetClient == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListDataThreatExceptionAction", "resetClient");
             }
@@ -197,7 +203,7 @@ public final class GetAntiSpywareProfileListDataThreatExceptionAction {
             return this;
         }
         @CustomType.Setter
-        public Builder resetServer(Boolean resetServer) {
+        public Builder resetServer(GetAntiSpywareProfileListDataThreatExceptionActionResetServer resetServer) {
             if (resetServer == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListDataThreatExceptionAction", "resetServer");
             }

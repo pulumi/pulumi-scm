@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetRemoteNetworkListDataEcmpTunnelProtocol {
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     private GetRemoteNetworkListDataEcmpTunnelProtocolBgp bgp;
 
     private GetRemoteNetworkListDataEcmpTunnelProtocol() {}
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public GetRemoteNetworkListDataEcmpTunnelProtocolBgp bgp() {

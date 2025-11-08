@@ -19,14 +19,14 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
     public static final ApplicationDefaultArgs Empty = new ApplicationDefaultArgs();
 
     /**
-     * The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * Ident by icmp6 type
      * 
      */
     @Import(name="identByIcmp6Type")
     private @Nullable Output<ApplicationDefaultIdentByIcmp6TypeArgs> identByIcmp6Type;
 
     /**
-     * @return The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by icmp6 type
      * 
      */
     public Optional<Output<ApplicationDefaultIdentByIcmp6TypeArgs>> identByIcmp6Type() {
@@ -34,14 +34,14 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * Ident by icmp type
      * 
      */
     @Import(name="identByIcmpType")
     private @Nullable Output<ApplicationDefaultIdentByIcmpTypeArgs> identByIcmpType;
 
     /**
-     * @return The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by icmp type
      * 
      */
     public Optional<Output<ApplicationDefaultIdentByIcmpTypeArgs>> identByIcmpType() {
@@ -49,14 +49,14 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * Ident by ip protocol
      * 
      */
     @Import(name="identByIpProtocol")
     private @Nullable Output<String> identByIpProtocol;
 
     /**
-     * @return The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by ip protocol
      * 
      */
     public Optional<Output<String>> identByIpProtocol() {
@@ -64,14 +64,14 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * Port
      * 
      */
     @Import(name="ports")
     private @Nullable Output<List<String>> ports;
 
     /**
-     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Port
      * 
      */
     public Optional<Output<List<String>>> ports() {
@@ -106,7 +106,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param identByIcmp6Type The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param identByIcmp6Type Ident by icmp6 type
          * 
          * @return builder
          * 
@@ -117,7 +117,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param identByIcmp6Type The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param identByIcmp6Type Ident by icmp6 type
          * 
          * @return builder
          * 
@@ -127,7 +127,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param identByIcmpType The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param identByIcmpType Ident by icmp type
          * 
          * @return builder
          * 
@@ -138,7 +138,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param identByIcmpType The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param identByIcmpType Ident by icmp type
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param identByIpProtocol The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param identByIpProtocol Ident by ip protocol
          * 
          * @return builder
          * 
@@ -159,7 +159,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param identByIpProtocol The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param identByIpProtocol Ident by ip protocol
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ports The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param ports Port
          * 
          * @return builder
          * 
@@ -180,7 +180,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ports The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param ports Port
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class ApplicationDefaultArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ports The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+         * @param ports Port
          * 
          * @return builder
          * 

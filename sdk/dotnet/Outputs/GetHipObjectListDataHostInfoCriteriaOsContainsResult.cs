@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataHostInfoCriteriaOsContainsResult
     {
         /// <summary>
-        /// Apple vendor. String length must not exceed 255 characters.
+        /// Apple
         /// </summary>
         public readonly string Apple;
         /// <summary>
-        /// Google vendor. String length must not exceed 255 characters.
+        /// Google
         /// </summary>
         public readonly string Google;
         /// <summary>
-        /// Linux vendor. String length must not exceed 255 characters.
+        /// Linux
         /// </summary>
         public readonly string Linux;
         /// <summary>
-        /// Microsoft vendor. String length must not exceed 255 characters.
+        /// Microsoft
         /// </summary>
         public readonly string Microsoft;
         /// <summary>
-        /// Other vendor. String length must not exceed 255 characters.
+        /// Other
         /// </summary>
         public readonly string Other;
 

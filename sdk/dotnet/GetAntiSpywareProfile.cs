@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetAntiSpywareProfile
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// AntiSpywareProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetAntiSpywareProfile.Invoke(new()
+        ///     // Look up anti-spyware-profile by ID
+        ///     var scmAntiSpywareProfileDs = Scm.GetAntiSpywareProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAntiSpywareProfileOutput"] = 
+        ///         {
+        ///             { "profileId", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id) },
+        ///             { "folder", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder) },
+        ///             { "name", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name) },
+        ///             { "description", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description) },
+        ///             { "cloudInlineAnalysis", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +48,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAntiSpywareProfileResult>("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", args ?? new GetAntiSpywareProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// AntiSpywareProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +60,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetAntiSpywareProfile.Invoke(new()
+        ///     // Look up anti-spyware-profile by ID
+        ///     var scmAntiSpywareProfileDs = Scm.GetAntiSpywareProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAntiSpywareProfileOutput"] = 
+        ///         {
+        ///             { "profileId", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id) },
+        ///             { "folder", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder) },
+        ///             { "name", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name) },
+        ///             { "description", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description) },
+        ///             { "cloudInlineAnalysis", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +84,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetAntiSpywareProfileResult>("scm:index/getAntiSpywareProfile:getAntiSpywareProfile", args ?? new GetAntiSpywareProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// AntiSpywareProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +96,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetAntiSpywareProfile.Invoke(new()
+        ///     // Look up anti-spyware-profile by ID
+        ///     var scmAntiSpywareProfileDs = Scm.GetAntiSpywareProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAntiSpywareProfileOutput"] = 
+        ///         {
+        ///             { "profileId", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Id) },
+        ///             { "folder", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Folder) },
+        ///             { "name", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Name) },
+        ///             { "description", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.Description) },
+        ///             { "cloudInlineAnalysis", scmAntiSpywareProfileDs.Apply(getAntiSpywareProfileResult =&gt; getAntiSpywareProfileResult.CloudInlineAnalysis) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +124,16 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the anti-spyware profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the anti-spyware profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetAntiSpywareProfileArgs()
         {
@@ -102,10 +144,16 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the anti-spyware profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the anti-spyware profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetAntiSpywareProfileInvokeArgs()
         {
@@ -118,40 +166,52 @@ namespace Pulumi.Scm
     public sealed class GetAntiSpywareProfileResult
     {
         /// <summary>
-        /// The CloudInlineAnalysis param. Default: `False`.
+        /// Cloud inline analysis
         /// </summary>
         public readonly bool CloudInlineAnalysis;
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the anti-spyware profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The InlineExceptionEdlUrls param.
+        /// Inline exception edl url
         /// </summary>
         public readonly ImmutableArray<string> InlineExceptionEdlUrls;
         /// <summary>
-        /// The InlineExceptionIpAddresses param.
+        /// Inline exception ip address
         /// </summary>
         public readonly ImmutableArray<string> InlineExceptionIpAddresses;
         /// <summary>
-        /// The MicaEngineSpywareEnabledList param.
+        /// Mica engine spyware enabled
         /// </summary>
-        public readonly ImmutableArray<Outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledListResult> MicaEngineSpywareEnabledLists;
+        public readonly ImmutableArray<Outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledResult> MicaEngineSpywareEnableds;
         /// <summary>
-        /// The Name param.
+        /// The name of the anti-spyware profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileRuleResult> Rules;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileThreatExceptionResult> ThreatExceptions;
 
@@ -161,17 +221,23 @@ namespace Pulumi.Scm
 
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> inlineExceptionEdlUrls,
 
             ImmutableArray<string> inlineExceptionIpAddresses,
 
-            ImmutableArray<Outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledListResult> micaEngineSpywareEnabledLists,
+            ImmutableArray<Outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledResult> micaEngineSpywareEnableds,
 
             string name,
 
             ImmutableArray<Outputs.GetAntiSpywareProfileRuleResult> rules,
+
+            string snippet,
 
             string tfid,
 
@@ -179,12 +245,15 @@ namespace Pulumi.Scm
         {
             CloudInlineAnalysis = cloudInlineAnalysis;
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             InlineExceptionEdlUrls = inlineExceptionEdlUrls;
             InlineExceptionIpAddresses = inlineExceptionIpAddresses;
-            MicaEngineSpywareEnabledLists = micaEngineSpywareEnabledLists;
+            MicaEngineSpywareEnableds = micaEngineSpywareEnableds;
             Name = name;
             Rules = rules;
+            Snippet = snippet;
             Tfid = tfid;
             ThreatExceptions = threatExceptions;
         }

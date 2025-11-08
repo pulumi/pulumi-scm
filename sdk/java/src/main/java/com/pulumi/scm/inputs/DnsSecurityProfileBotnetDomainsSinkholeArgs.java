@@ -16,14 +16,14 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
     public static final DnsSecurityProfileBotnetDomainsSinkholeArgs Empty = new DnsSecurityProfileBotnetDomainsSinkholeArgs();
 
     /**
-     * The Ipv4Address param. String must be one of these: `&#34;127.0.0.1&#34;`, `&#34;pan-sinkhole-default-ip&#34;`.
+     * Ipv4 address
      * 
      */
     @Import(name="ipv4Address")
     private @Nullable Output<String> ipv4Address;
 
     /**
-     * @return The Ipv4Address param. String must be one of these: `&#34;127.0.0.1&#34;`, `&#34;pan-sinkhole-default-ip&#34;`.
+     * @return Ipv4 address
      * 
      */
     public Optional<Output<String>> ipv4Address() {
@@ -31,14 +31,14 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
     }
 
     /**
-     * The Ipv6Address param. String must be one of these: `&#34;::1&#34;`.
+     * Ipv6 address
      * 
      */
     @Import(name="ipv6Address")
     private @Nullable Output<String> ipv6Address;
 
     /**
-     * @return The Ipv6Address param. String must be one of these: `&#34;::1&#34;`.
+     * @return Ipv6 address
      * 
      */
     public Optional<Output<String>> ipv6Address() {
@@ -71,7 +71,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv4Address The Ipv4Address param. String must be one of these: `&#34;127.0.0.1&#34;`, `&#34;pan-sinkhole-default-ip&#34;`.
+         * @param ipv4Address Ipv4 address
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv4Address The Ipv4Address param. String must be one of these: `&#34;127.0.0.1&#34;`, `&#34;pan-sinkhole-default-ip&#34;`.
+         * @param ipv4Address Ipv4 address
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv6Address The Ipv6Address param. String must be one of these: `&#34;::1&#34;`.
+         * @param ipv6Address Ipv6 address
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class DnsSecurityProfileBotnetDomainsSinkholeArgs extends com.pulum
         }
 
         /**
-         * @param ipv6Address The Ipv6Address param. String must be one of these: `&#34;::1&#34;`.
+         * @param ipv6Address Ipv6 address
          * 
          * @return builder
          * 

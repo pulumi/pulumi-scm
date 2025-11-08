@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class IpsecTunnelAutoKeyIkeGatewayArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }

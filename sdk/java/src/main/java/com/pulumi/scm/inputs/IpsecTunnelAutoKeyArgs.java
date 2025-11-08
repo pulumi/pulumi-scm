@@ -21,14 +21,14 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
     public static final IpsecTunnelAutoKeyArgs Empty = new IpsecTunnelAutoKeyArgs();
 
     /**
-     * The IkeGateways param.
+     * Ike gateway
      * 
      */
     @Import(name="ikeGateways", required=true)
     private Output<List<IpsecTunnelAutoKeyIkeGatewayArgs>> ikeGateways;
 
     /**
-     * @return The IkeGateways param.
+     * @return Ike gateway
      * 
      */
     public Output<List<IpsecTunnelAutoKeyIkeGatewayArgs>> ikeGateways() {
@@ -36,14 +36,14 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The IpsecCryptoProfile param.
+     * Ipsec crypto profile
      * 
      */
     @Import(name="ipsecCryptoProfile", required=true)
     private Output<String> ipsecCryptoProfile;
 
     /**
-     * @return The IpsecCryptoProfile param.
+     * @return Ipsec crypto profile
      * 
      */
     public Output<String> ipsecCryptoProfile() {
@@ -51,14 +51,14 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * IPv6 type of proxy*id values.
+     * IPv6 type of proxy*id values
      * 
      */
     @Import(name="proxyIdV6s")
     private @Nullable Output<List<IpsecTunnelAutoKeyProxyIdV6Args>> proxyIdV6s;
 
     /**
-     * @return IPv6 type of proxy*id values.
+     * @return IPv6 type of proxy*id values
      * 
      */
     public Optional<Output<List<IpsecTunnelAutoKeyProxyIdV6Args>>> proxyIdV6s() {
@@ -66,14 +66,14 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * IPv4 type of proxy*id values.
+     * IPv4 type of proxy*id values
      * 
      */
     @Import(name="proxyIds")
     private @Nullable Output<List<IpsecTunnelAutoKeyProxyIdArgs>> proxyIds;
 
     /**
-     * @return IPv4 type of proxy*id values.
+     * @return IPv4 type of proxy*id values
      * 
      */
     public Optional<Output<List<IpsecTunnelAutoKeyProxyIdArgs>>> proxyIds() {
@@ -108,7 +108,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ikeGateways The IkeGateways param.
+         * @param ikeGateways Ike gateway
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ikeGateways The IkeGateways param.
+         * @param ikeGateways Ike gateway
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ikeGateways The IkeGateways param.
+         * @param ikeGateways Ike gateway
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ipsecCryptoProfile The IpsecCryptoProfile param.
+         * @param ipsecCryptoProfile Ipsec crypto profile
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ipsecCryptoProfile The IpsecCryptoProfile param.
+         * @param ipsecCryptoProfile Ipsec crypto profile
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proxyIdV6s IPv6 type of proxy*id values.
+         * @param proxyIdV6s IPv6 type of proxy*id values
          * 
          * @return builder
          * 
@@ -171,7 +171,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proxyIdV6s IPv6 type of proxy*id values.
+         * @param proxyIdV6s IPv6 type of proxy*id values
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proxyIdV6s IPv6 type of proxy*id values.
+         * @param proxyIdV6s IPv6 type of proxy*id values
          * 
          * @return builder
          * 
@@ -191,7 +191,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proxyIds IPv4 type of proxy*id values.
+         * @param proxyIds IPv4 type of proxy*id values
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proxyIds IPv4 type of proxy*id values.
+         * @param proxyIds IPv4 type of proxy*id values
          * 
          * @return builder
          * 
@@ -212,7 +212,7 @@ public final class IpsecTunnelAutoKeyArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param proxyIds IPv4 type of proxy*id values.
+         * @param proxyIds IPv4 type of proxy*id values
          * 
          * @return builder
          * 

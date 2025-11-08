@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getTlsServiceProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * TlsServiceProfile data source
  */
 export function getTlsServiceProfile(args: GetTlsServiceProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetTlsServiceProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTlsServiceProfile:getTlsServiceProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getTlsServiceProfile(args: GetTlsServiceProfileArgs, opts?: pulu
  */
 export interface GetTlsServiceProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the TLS service profile
      */
     id: string;
+    /**
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+     */
+    name?: string;
 }
 
 /**
@@ -42,41 +36,43 @@ export interface GetTlsServiceProfileArgs {
  */
 export interface GetTlsServiceProfileResult {
     /**
-     * SSL certificate file name. String length must not exceed 255 characters.
+     * Certificate name
      */
     readonly certificate: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the TLS service profile
      */
     readonly id: string;
     /**
-     * SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     readonly name: string;
     /**
-     * The ProtocolSettings param.
+     * Protocol settings
      */
     readonly protocolSettings: outputs.GetTlsServiceProfileProtocolSettings;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getTlsServiceProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * TlsServiceProfile data source
  */
 export function getTlsServiceProfileOutput(args: GetTlsServiceProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTlsServiceProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTlsServiceProfile:getTlsServiceProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -85,7 +81,11 @@ export function getTlsServiceProfileOutput(args: GetTlsServiceProfileOutputArgs,
  */
 export interface GetTlsServiceProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the TLS service profile
      */
     id: pulumi.Input<string>;
+    /**
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+     */
+    name?: pulumi.Input<string>;
 }

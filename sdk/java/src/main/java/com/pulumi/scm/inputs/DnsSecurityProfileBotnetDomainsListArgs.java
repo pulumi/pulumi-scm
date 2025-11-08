@@ -18,14 +18,14 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
     public static final DnsSecurityProfileBotnetDomainsListArgs Empty = new DnsSecurityProfileBotnetDomainsListArgs();
 
     /**
-     * The Action param.
+     * Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<DnsSecurityProfileBotnetDomainsListActionArgs> action;
 
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public Optional<Output<DnsSecurityProfileBotnetDomainsListActionArgs>> action() {
@@ -33,14 +33,14 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
@@ -48,14 +48,14 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
     }
 
     /**
-     * The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * Packet capture
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<String> packetCapture;
 
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public Optional<Output<String>> packetCapture() {
@@ -89,7 +89,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param action The Action param.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param action The Action param.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class DnsSecurityProfileBotnetDomainsListArgs extends com.pulumi.re
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 

@@ -8,6 +8,8 @@ import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.String;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class GetSnippetArgs extends com.pulumi.resources.InvokeArgs {
@@ -15,24 +17,40 @@ public final class GetSnippetArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetSnippetArgs Empty = new GetSnippetArgs();
 
     /**
-     * The Id param.
+     * The UUID of the snippet
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return The UUID of the snippet
      * 
      */
     public Output<String> id() {
         return this.id;
     }
 
+    /**
+     * The name of the snippet
+     * 
+     */
+    @Import(name="name")
+    private @Nullable Output<String> name;
+
+    /**
+     * @return The name of the snippet
+     * 
+     */
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
+    }
+
     private GetSnippetArgs() {}
 
     private GetSnippetArgs(GetSnippetArgs $) {
         this.id = $.id;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -54,7 +72,7 @@ public final class GetSnippetArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param id The Id param.
+         * @param id The UUID of the snippet
          * 
          * @return builder
          * 
@@ -65,13 +83,34 @@ public final class GetSnippetArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param id The Id param.
+         * @param id The UUID of the snippet
          * 
          * @return builder
          * 
          */
         public Builder id(String id) {
             return id(Output.of(id));
+        }
+
+        /**
+         * @param name The name of the snippet
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
+            return this;
+        }
+
+        /**
+         * @param name The name of the snippet
+         * 
+         * @return builder
+         * 
+         */
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetSnippetArgs build() {

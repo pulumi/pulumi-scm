@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayAuthenticationPreSharedKey {
     /**
-     * @return The Key param.
+     * @return Key
      * 
      */
     private @Nullable String key;
 
     private IkeGatewayAuthenticationPreSharedKey() {}
     /**
-     * @return The Key param.
+     * @return Key
      * 
      */
     public Optional<String> key() {

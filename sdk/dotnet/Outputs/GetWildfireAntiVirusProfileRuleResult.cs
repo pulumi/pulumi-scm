@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetWildfireAntiVirusProfileRuleResult
     {
         /// <summary>
-        /// The Analysis param. String must be one of these: `"public-cloud"`, `"private-cloud"`.
+        /// Analysis
         /// </summary>
         public readonly string Analysis;
         /// <summary>
-        /// The Applications param.
+        /// Application
         /// </summary>
         public readonly ImmutableArray<string> Applications;
         /// <summary>
-        /// The Direction param. String must be one of these: `"download"`, `"upload"`, `"both"`.
+        /// Direction
         /// </summary>
         public readonly string Direction;
         /// <summary>
-        /// The FileTypes param.
+        /// File type
         /// </summary>
         public readonly ImmutableArray<string> FileTypes;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
 

@@ -6,70 +6,71 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeDomainRecurringDaily;
+import com.pulumi.scm.outputs.GetExternalDynamicListTypeDomainRecurringFiveMinute;
+import com.pulumi.scm.outputs.GetExternalDynamicListTypeDomainRecurringHourly;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeDomainRecurringMonthly;
 import com.pulumi.scm.outputs.GetExternalDynamicListTypeDomainRecurringWeekly;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetExternalDynamicListTypeDomainRecurring {
     /**
-     * @return The Daily param.
+     * @return Daily
      * 
      */
     private GetExternalDynamicListTypeDomainRecurringDaily daily;
     /**
-     * @return The FiveMinute param.
+     * @return Five minute
      * 
      */
-    private Boolean fiveMinute;
+    private GetExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute;
     /**
-     * @return The Hourly param.
+     * @return Hourly
      * 
      */
-    private Boolean hourly;
+    private GetExternalDynamicListTypeDomainRecurringHourly hourly;
     /**
-     * @return The Monthly param.
+     * @return Monthly
      * 
      */
     private GetExternalDynamicListTypeDomainRecurringMonthly monthly;
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     private GetExternalDynamicListTypeDomainRecurringWeekly weekly;
 
     private GetExternalDynamicListTypeDomainRecurring() {}
     /**
-     * @return The Daily param.
+     * @return Daily
      * 
      */
     public GetExternalDynamicListTypeDomainRecurringDaily daily() {
         return this.daily;
     }
     /**
-     * @return The FiveMinute param.
+     * @return Five minute
      * 
      */
-    public Boolean fiveMinute() {
+    public GetExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute() {
         return this.fiveMinute;
     }
     /**
-     * @return The Hourly param.
+     * @return Hourly
      * 
      */
-    public Boolean hourly() {
+    public GetExternalDynamicListTypeDomainRecurringHourly hourly() {
         return this.hourly;
     }
     /**
-     * @return The Monthly param.
+     * @return Monthly
      * 
      */
     public GetExternalDynamicListTypeDomainRecurringMonthly monthly() {
         return this.monthly;
     }
     /**
-     * @return The Weekly param.
+     * @return Weekly
      * 
      */
     public GetExternalDynamicListTypeDomainRecurringWeekly weekly() {
@@ -86,8 +87,8 @@ public final class GetExternalDynamicListTypeDomainRecurring {
     @CustomType.Builder
     public static final class Builder {
         private GetExternalDynamicListTypeDomainRecurringDaily daily;
-        private Boolean fiveMinute;
-        private Boolean hourly;
+        private GetExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute;
+        private GetExternalDynamicListTypeDomainRecurringHourly hourly;
         private GetExternalDynamicListTypeDomainRecurringMonthly monthly;
         private GetExternalDynamicListTypeDomainRecurringWeekly weekly;
         public Builder() {}
@@ -109,7 +110,7 @@ public final class GetExternalDynamicListTypeDomainRecurring {
             return this;
         }
         @CustomType.Setter
-        public Builder fiveMinute(Boolean fiveMinute) {
+        public Builder fiveMinute(GetExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute) {
             if (fiveMinute == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListTypeDomainRecurring", "fiveMinute");
             }
@@ -117,7 +118,7 @@ public final class GetExternalDynamicListTypeDomainRecurring {
             return this;
         }
         @CustomType.Setter
-        public Builder hourly(Boolean hourly) {
+        public Builder hourly(GetExternalDynamicListTypeDomainRecurringHourly hourly) {
             if (hourly == null) {
               throw new MissingRequiredPropertyException("GetExternalDynamicListTypeDomainRecurring", "hourly");
             }

@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DecryptionProfileSslNoProxy {
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     private @Nullable Boolean blockExpiredCertificate;
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     private @Nullable Boolean blockUntrustedIssuer;
 
     private DecryptionProfileSslNoProxy() {}
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     public Optional<Boolean> blockExpiredCertificate() {
         return Optional.ofNullable(this.blockExpiredCertificate);
     }
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     public Optional<Boolean> blockUntrustedIssuer() {

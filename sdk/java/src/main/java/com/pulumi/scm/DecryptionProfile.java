@@ -19,152 +19,122 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.DecryptionProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new DecryptionProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * DecryptionProfile resource
  * 
  */
 @ResourceType(type="scm:index/decryptionProfile:DecryptionProfile")
 public class DecryptionProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The SslForwardProxy param.
+     * Ssl forward proxy
      * 
      */
     @Export(name="sslForwardProxy", refs={DecryptionProfileSslForwardProxy.class}, tree="[0]")
-    private Output</* @Nullable */ DecryptionProfileSslForwardProxy> sslForwardProxy;
+    private Output<DecryptionProfileSslForwardProxy> sslForwardProxy;
 
     /**
-     * @return The SslForwardProxy param.
+     * @return Ssl forward proxy
      * 
      */
-    public Output<Optional<DecryptionProfileSslForwardProxy>> sslForwardProxy() {
-        return Codegen.optional(this.sslForwardProxy);
+    public Output<DecryptionProfileSslForwardProxy> sslForwardProxy() {
+        return this.sslForwardProxy;
     }
     /**
-     * The SslInboundProxy param.
+     * Ssl inbound proxy
      * 
      */
     @Export(name="sslInboundProxy", refs={DecryptionProfileSslInboundProxy.class}, tree="[0]")
-    private Output</* @Nullable */ DecryptionProfileSslInboundProxy> sslInboundProxy;
+    private Output<DecryptionProfileSslInboundProxy> sslInboundProxy;
 
     /**
-     * @return The SslInboundProxy param.
+     * @return Ssl inbound proxy
      * 
      */
-    public Output<Optional<DecryptionProfileSslInboundProxy>> sslInboundProxy() {
-        return Codegen.optional(this.sslInboundProxy);
+    public Output<DecryptionProfileSslInboundProxy> sslInboundProxy() {
+        return this.sslInboundProxy;
     }
     /**
-     * The SslNoProxy param.
+     * Ssl no proxy
      * 
      */
     @Export(name="sslNoProxy", refs={DecryptionProfileSslNoProxy.class}, tree="[0]")
-    private Output</* @Nullable */ DecryptionProfileSslNoProxy> sslNoProxy;
+    private Output<DecryptionProfileSslNoProxy> sslNoProxy;
 
     /**
-     * @return The SslNoProxy param.
+     * @return Ssl no proxy
      * 
      */
-    public Output<Optional<DecryptionProfileSslNoProxy>> sslNoProxy() {
-        return Codegen.optional(this.sslNoProxy);
+    public Output<DecryptionProfileSslNoProxy> sslNoProxy() {
+        return this.sslNoProxy;
     }
     /**
-     * The SslProtocolSettings param.
+     * Ssl protocol settings
      * 
      */
     @Export(name="sslProtocolSettings", refs={DecryptionProfileSslProtocolSettings.class}, tree="[0]")
-    private Output</* @Nullable */ DecryptionProfileSslProtocolSettings> sslProtocolSettings;
+    private Output<DecryptionProfileSslProtocolSettings> sslProtocolSettings;
 
     /**
-     * @return The SslProtocolSettings param.
+     * @return Ssl protocol settings
      * 
      */
-    public Output<Optional<DecryptionProfileSslProtocolSettings>> sslProtocolSettings() {
-        return Codegen.optional(this.sslProtocolSettings);
+    public Output<DecryptionProfileSslProtocolSettings> sslProtocolSettings() {
+        return this.sslProtocolSettings;
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;

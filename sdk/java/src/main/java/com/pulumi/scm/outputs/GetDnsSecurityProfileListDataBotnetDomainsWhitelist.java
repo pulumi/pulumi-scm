@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityProfileListDataBotnetDomainsWhitelist {
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The Name param.
+     * @return DNS domain or FQDN to be whitelisted
      * 
      */
     private String name;
 
     private GetDnsSecurityProfileListDataBotnetDomainsWhitelist() {}
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Name param.
+     * @return DNS domain or FQDN to be whitelisted
      * 
      */
     public String name() {

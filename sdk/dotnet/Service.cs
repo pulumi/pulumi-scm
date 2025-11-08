@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// Service resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,7 +22,61 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.Service("example");
+    ///     // TCP Service with multiple destination ports custom timeout
+    ///     var scmServiceTcpPorts = new Scm.Service("scm_service_tcp_ports", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_service_tcp_ports",
+    ///         Description = "Managed by Pulumi",
+    ///         Protocol = new Scm.Inputs.ServiceProtocolArgs
+    ///         {
+    ///             Tcp = new Scm.Inputs.ServiceProtocolTcpArgs
+    ///             {
+    ///                 Port = "80,443",
+    ///                 Override = new Scm.Inputs.ServiceProtocolTcpOverrideArgs
+    ///                 {
+    ///                     Timeout = 3600,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // TCP Service with source port, destination port and custom timeout values
+    ///     var scmServiceTcpPortSrcDst = new Scm.Service("scm_service_tcp_port_src_dst", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_service_tcp_port_src_dst",
+    ///         Description = "Managed by Pulumi",
+    ///         Protocol = new Scm.Inputs.ServiceProtocolArgs
+    ///         {
+    ///             Tcp = new Scm.Inputs.ServiceProtocolTcpArgs
+    ///             {
+    ///                 Port = "80",
+    ///                 SourcePort = "49152-65535",
+    ///                 Override = new Scm.Inputs.ServiceProtocolTcpOverrideArgs
+    ///                 {
+    ///                     Timeout = 3600,
+    ///                     HalfcloseTimeout = 240,
+    ///                     TimewaitTimeout = 30,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // UDP Service with single destination port
+    ///     var scmServiceUdpPort = new Scm.Service("scm_service_udp_port", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_service_udp_port",
+    ///         Description = "Managed by Pulumi",
+    ///         Protocol = new Scm.Inputs.ServiceProtocolArgs
+    ///         {
+    ///             Udp = new Scm.Inputs.ServiceProtocolUdpArgs
+    ///             {
+    ///                 Port = "53",
+    ///             },
+    ///         },
+    ///     });
     /// 
     /// });
     /// ```
@@ -31,43 +85,43 @@ namespace Pulumi.Scm
     public partial class Service : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         [Output("protocol")]
         public Output<Outputs.ServiceProtocol> Protocol { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags for service object
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
@@ -83,7 +137,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public Service(string name, ServiceArgs args, CustomResourceOptions? options = null)
+        public Service(string name, ServiceArgs? args = null, CustomResourceOptions? options = null)
             : base("scm:index/service:Service", name, args ?? new ServiceArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -122,37 +176,37 @@ namespace Pulumi.Scm
     public sealed class ServiceArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
-        [Input("protocol", required: true)]
-        public Input<Inputs.ServiceProtocolArgs> Protocol { get; set; } = null!;
+        [Input("protocol")]
+        public Input<Inputs.ServiceProtocolArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -161,7 +215,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags for service object
         /// </summary>
         public InputList<string> Tags
         {
@@ -178,37 +232,37 @@ namespace Pulumi.Scm
     public sealed class ServiceState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         [Input("protocol")]
         public Input<Inputs.ServiceProtocolGetArgs>? Protocol { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -217,7 +271,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags for service object
         /// </summary>
         public InputList<string> Tags
         {

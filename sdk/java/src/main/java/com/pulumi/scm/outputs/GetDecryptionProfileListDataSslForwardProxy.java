@@ -11,134 +11,134 @@ import java.util.Objects;
 @CustomType
 public final class GetDecryptionProfileListDataSslForwardProxy {
     /**
-     * @return The AutoIncludeAltname param. Default: `false`.
+     * @return Auto include altname
      * 
      */
     private Boolean autoIncludeAltname;
     /**
-     * @return The BlockClientCert param. Default: `false`.
+     * @return Block client cert
      * 
      */
     private Boolean blockClientCert;
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     private Boolean blockExpiredCertificate;
     /**
-     * @return The BlockTimeoutCert param. Default: `false`.
+     * @return Block timeout cert
      * 
      */
     private Boolean blockTimeoutCert;
     /**
-     * @return The BlockTls13DowngradeNoResource param. Default: `false`.
+     * @return Block tls13 downgrade no resource
      * 
      */
     private Boolean blockTls13DowngradeNoResource;
     /**
-     * @return The BlockUnknownCert param. Default: `false`.
+     * @return Block unknown cert
      * 
      */
     private Boolean blockUnknownCert;
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     private Boolean blockUnsupportedCipher;
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     private Boolean blockUnsupportedVersion;
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     private Boolean blockUntrustedIssuer;
     /**
-     * @return The RestrictCertExts param. Default: `false`.
+     * @return Restrict cert exts
      * 
      */
     private Boolean restrictCertExts;
     /**
-     * @return The StripAlpn param. Default: `false`.
+     * @return Strip alpn
      * 
      */
     private Boolean stripAlpn;
 
     private GetDecryptionProfileListDataSslForwardProxy() {}
     /**
-     * @return The AutoIncludeAltname param. Default: `false`.
+     * @return Auto include altname
      * 
      */
     public Boolean autoIncludeAltname() {
         return this.autoIncludeAltname;
     }
     /**
-     * @return The BlockClientCert param. Default: `false`.
+     * @return Block client cert
      * 
      */
     public Boolean blockClientCert() {
         return this.blockClientCert;
     }
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     public Boolean blockExpiredCertificate() {
         return this.blockExpiredCertificate;
     }
     /**
-     * @return The BlockTimeoutCert param. Default: `false`.
+     * @return Block timeout cert
      * 
      */
     public Boolean blockTimeoutCert() {
         return this.blockTimeoutCert;
     }
     /**
-     * @return The BlockTls13DowngradeNoResource param. Default: `false`.
+     * @return Block tls13 downgrade no resource
      * 
      */
     public Boolean blockTls13DowngradeNoResource() {
         return this.blockTls13DowngradeNoResource;
     }
     /**
-     * @return The BlockUnknownCert param. Default: `false`.
+     * @return Block unknown cert
      * 
      */
     public Boolean blockUnknownCert() {
         return this.blockUnknownCert;
     }
     /**
-     * @return The BlockUnsupportedCipher param. Default: `false`.
+     * @return Block unsupported cipher
      * 
      */
     public Boolean blockUnsupportedCipher() {
         return this.blockUnsupportedCipher;
     }
     /**
-     * @return The BlockUnsupportedVersion param. Default: `false`.
+     * @return Block unsupported version
      * 
      */
     public Boolean blockUnsupportedVersion() {
         return this.blockUnsupportedVersion;
     }
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     public Boolean blockUntrustedIssuer() {
         return this.blockUntrustedIssuer;
     }
     /**
-     * @return The RestrictCertExts param. Default: `false`.
+     * @return Restrict cert exts
      * 
      */
     public Boolean restrictCertExts() {
         return this.restrictCertExts;
     }
     /**
-     * @return The StripAlpn param. Default: `false`.
+     * @return Strip alpn
      * 
      */
     public Boolean stripAlpn() {

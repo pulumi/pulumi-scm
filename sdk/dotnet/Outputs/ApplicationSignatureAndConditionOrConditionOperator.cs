@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperator
     {
         /// <summary>
-        /// The EqualTo param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Equal to
         /// </summary>
         public readonly Outputs.ApplicationSignatureAndConditionOrConditionOperatorEqualTo? EqualTo;
         /// <summary>
-        /// The GreaterThan param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Greater than
         /// </summary>
         public readonly Outputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThan? GreaterThan;
         /// <summary>
-        /// The LessThan param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Less than
         /// </summary>
         public readonly Outputs.ApplicationSignatureAndConditionOrConditionOperatorLessThan? LessThan;
         /// <summary>
-        /// The PatternMatch param. Ensure that only one of the following is specified: `EqualTo`, `GreaterThan`, `LessThan`, `PatternMatch`
+        /// Pattern match
         /// </summary>
         public readonly Outputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatch? PatternMatch;
 

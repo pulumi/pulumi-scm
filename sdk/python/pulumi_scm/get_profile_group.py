@@ -26,16 +26,25 @@ class GetProfileGroupResult:
     """
     A collection of values returned by getProfileGroup.
     """
-    def __init__(__self__, ai_securities=None, dns_securities=None, file_blockings=None, id=None, name=None, saas_securities=None, spywares=None, tfid=None, url_filterings=None, virus_and_wildfire_analyses=None, vulnerabilities=None):
+    def __init__(__self__, ai_securities=None, data_filterings=None, device=None, dns_securities=None, file_blockings=None, folder=None, id=None, name=None, saas_securities=None, snippet=None, spywares=None, tfid=None, url_filterings=None, virus_and_wildfire_analyses=None, vulnerabilities=None):
         if ai_securities and not isinstance(ai_securities, list):
             raise TypeError("Expected argument 'ai_securities' to be a list")
         pulumi.set(__self__, "ai_securities", ai_securities)
+        if data_filterings and not isinstance(data_filterings, list):
+            raise TypeError("Expected argument 'data_filterings' to be a list")
+        pulumi.set(__self__, "data_filterings", data_filterings)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if dns_securities and not isinstance(dns_securities, list):
             raise TypeError("Expected argument 'dns_securities' to be a list")
         pulumi.set(__self__, "dns_securities", dns_securities)
         if file_blockings and not isinstance(file_blockings, list):
             raise TypeError("Expected argument 'file_blockings' to be a list")
         pulumi.set(__self__, "file_blockings", file_blockings)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -45,6 +54,9 @@ class GetProfileGroupResult:
         if saas_securities and not isinstance(saas_securities, list):
             raise TypeError("Expected argument 'saas_securities' to be a list")
         pulumi.set(__self__, "saas_securities", saas_securities)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if spywares and not isinstance(spywares, list):
             raise TypeError("Expected argument 'spywares' to be a list")
         pulumi.set(__self__, "spywares", spywares)
@@ -65,15 +77,31 @@ class GetProfileGroupResult:
     @pulumi.getter(name="aiSecurities")
     def ai_securities(self) -> Sequence[_builtins.str]:
         """
-        List of AI security profiles.
+        Ai security
         """
         return pulumi.get(self, "ai_securities")
+
+    @_builtins.property
+    @pulumi.getter(name="dataFilterings")
+    def data_filterings(self) -> Sequence[_builtins.str]:
+        """
+        Data filtering
+        """
+        return pulumi.get(self, "data_filterings")
+
+    @_builtins.property
+    @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="dnsSecurities")
     def dns_securities(self) -> Sequence[_builtins.str]:
         """
-        List of DNS security profiles.
+        Dns security
         """
         return pulumi.get(self, "dns_securities")
 
@@ -81,15 +109,23 @@ class GetProfileGroupResult:
     @pulumi.getter(name="fileBlockings")
     def file_blockings(self) -> Sequence[_builtins.str]:
         """
-        List of file blocking profiles.
+        File blocking
         """
         return pulumi.get(self, "file_blockings")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the profile group
         """
         return pulumi.get(self, "id")
 
@@ -97,7 +133,7 @@ class GetProfileGroupResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The name of the profile group.
+        The name of the profile group
         """
         return pulumi.get(self, "name")
 
@@ -105,15 +141,23 @@ class GetProfileGroupResult:
     @pulumi.getter(name="saasSecurities")
     def saas_securities(self) -> Sequence[_builtins.str]:
         """
-        List of HTTP header insertion profiles.
+        Saas security
         """
         return pulumi.get(self, "saas_securities")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def spywares(self) -> Sequence[_builtins.str]:
         """
-        List of anti-spyware profiles.
+        Spyware
         """
         return pulumi.get(self, "spywares")
 
@@ -126,7 +170,7 @@ class GetProfileGroupResult:
     @pulumi.getter(name="urlFilterings")
     def url_filterings(self) -> Sequence[_builtins.str]:
         """
-        List of URL filtering profiles.
+        Url filtering
         """
         return pulumi.get(self, "url_filterings")
 
@@ -134,7 +178,7 @@ class GetProfileGroupResult:
     @pulumi.getter(name="virusAndWildfireAnalyses")
     def virus_and_wildfire_analyses(self) -> Sequence[_builtins.str]:
         """
-        List of anti-virus and Wildfire analysis profiles.
+        Virus and wildfire analysis
         """
         return pulumi.get(self, "virus_and_wildfire_analyses")
 
@@ -142,7 +186,7 @@ class GetProfileGroupResult:
     @pulumi.getter
     def vulnerabilities(self) -> Sequence[_builtins.str]:
         """
-        List of vulnerability protection profiles.
+        Vulnerability
         """
         return pulumi.get(self, "vulnerabilities")
 
@@ -154,11 +198,15 @@ class AwaitableGetProfileGroupResult(GetProfileGroupResult):
             yield self
         return GetProfileGroupResult(
             ai_securities=self.ai_securities,
+            data_filterings=self.data_filterings,
+            device=self.device,
             dns_securities=self.dns_securities,
             file_blockings=self.file_blockings,
+            folder=self.folder,
             id=self.id,
             name=self.name,
             saas_securities=self.saas_securities,
+            snippet=self.snippet,
             spywares=self.spywares,
             tfid=self.tfid,
             url_filterings=self.url_filterings,
@@ -167,67 +215,63 @@ class AwaitableGetProfileGroupResult(GetProfileGroupResult):
 
 
 def get_profile_group(id: Optional[_builtins.str] = None,
+                      name: Optional[_builtins.str] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetProfileGroupResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_profile_group(id="1234-56-789")
-    ```
+    ProfileGroup data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the profile group
+    :param _builtins.str name: The name of the profile group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getProfileGroup:getProfileGroup', __args__, opts=opts, typ=GetProfileGroupResult).value
 
     return AwaitableGetProfileGroupResult(
         ai_securities=pulumi.get(__ret__, 'ai_securities'),
+        data_filterings=pulumi.get(__ret__, 'data_filterings'),
+        device=pulumi.get(__ret__, 'device'),
         dns_securities=pulumi.get(__ret__, 'dns_securities'),
         file_blockings=pulumi.get(__ret__, 'file_blockings'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         saas_securities=pulumi.get(__ret__, 'saas_securities'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         spywares=pulumi.get(__ret__, 'spywares'),
         tfid=pulumi.get(__ret__, 'tfid'),
         url_filterings=pulumi.get(__ret__, 'url_filterings'),
         virus_and_wildfire_analyses=pulumi.get(__ret__, 'virus_and_wildfire_analyses'),
         vulnerabilities=pulumi.get(__ret__, 'vulnerabilities'))
 def get_profile_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                             name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetProfileGroupResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_profile_group(id="1234-56-789")
-    ```
+    ProfileGroup data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the profile group
+    :param _builtins.str name: The name of the profile group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getProfileGroup:getProfileGroup', __args__, opts=opts, typ=GetProfileGroupResult)
     return __ret__.apply(lambda __response__: GetProfileGroupResult(
         ai_securities=pulumi.get(__response__, 'ai_securities'),
+        data_filterings=pulumi.get(__response__, 'data_filterings'),
+        device=pulumi.get(__response__, 'device'),
         dns_securities=pulumi.get(__response__, 'dns_securities'),
         file_blockings=pulumi.get(__response__, 'file_blockings'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         saas_securities=pulumi.get(__response__, 'saas_securities'),
+        snippet=pulumi.get(__response__, 'snippet'),
         spywares=pulumi.get(__response__, 'spywares'),
         tfid=pulumi.get(__response__, 'tfid'),
         url_filterings=pulumi.get(__response__, 'url_filterings'),

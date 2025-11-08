@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectCustomChecksCriteriaRegistryKeyRegistryValueResult
     {
         /// <summary>
-        /// Registry value name. String length must not exceed 1023 characters.
+        /// Registry value name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Value does not exist or match specified value data. Default: `False`.
+        /// Value does not exist or match specified value data
         /// </summary>
         public readonly bool Negate;
         /// <summary>
-        /// Registry value data. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// Registry value data
         /// </summary>
         public readonly string ValueData;
 

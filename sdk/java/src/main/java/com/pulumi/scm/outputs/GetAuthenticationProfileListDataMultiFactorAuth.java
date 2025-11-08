@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileListDataMultiFactorAuth {
     /**
-     * @return The Factors param.
+     * @return Factors
      * 
      */
     private List<String> factors;
     /**
-     * @return The MfaEnable param.
+     * @return Mfa enable
      * 
      */
     private Boolean mfaEnable;
 
     private GetAuthenticationProfileListDataMultiFactorAuth() {}
     /**
-     * @return The Factors param.
+     * @return Factors
      * 
      */
     public List<String> factors() {
         return this.factors;
     }
     /**
-     * @return The MfaEnable param.
+     * @return Mfa enable
      * 
      */
     public Boolean mfaEnable() {

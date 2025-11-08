@@ -17,14 +17,14 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
     public static final QosProfileClassBandwidthTypePercentageClassArgs Empty = new QosProfileClassBandwidthTypePercentageClassArgs();
 
     /**
-     * The ClassBandwidth param.
+     * Class bandwidth
      * 
      */
     @Import(name="classBandwidth")
     private @Nullable Output<QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs> classBandwidth;
 
     /**
-     * @return The ClassBandwidth param.
+     * @return Class bandwidth
      * 
      */
     public Optional<Output<QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs>> classBandwidth() {
@@ -32,14 +32,14 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
     }
 
     /**
-     * Traffic class. String length must not exceed 31 characters.
+     * Traffic class
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Traffic class. String length must not exceed 31 characters.
+     * @return Traffic class
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,14 +47,14 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
     }
 
     /**
-     * traffic class priority. String must be one of these: `&#34;real-time&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;low&#34;`. Default: `&#34;medium&#34;`.
+     * traffic class priority
      * 
      */
     @Import(name="priority")
     private @Nullable Output<String> priority;
 
     /**
-     * @return traffic class priority. String must be one of these: `&#34;real-time&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;low&#34;`. Default: `&#34;medium&#34;`.
+     * @return traffic class priority
      * 
      */
     public Optional<Output<String>> priority() {
@@ -88,7 +88,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param classBandwidth The ClassBandwidth param.
+         * @param classBandwidth Class bandwidth
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param classBandwidth The ClassBandwidth param.
+         * @param classBandwidth Class bandwidth
          * 
          * @return builder
          * 
@@ -109,7 +109,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param name Traffic class. String length must not exceed 31 characters.
+         * @param name Traffic class
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param name Traffic class. String length must not exceed 31 characters.
+         * @param name Traffic class
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param priority traffic class priority. String must be one of these: `&#34;real-time&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;low&#34;`. Default: `&#34;medium&#34;`.
+         * @param priority traffic class priority
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class QosProfileClassBandwidthTypePercentageClassArgs extends com.p
         }
 
         /**
-         * @param priority traffic class priority. String must be one of these: `&#34;real-time&#34;`, `&#34;high&#34;`, `&#34;medium&#34;`, `&#34;low&#34;`. Default: `&#34;medium&#34;`.
+         * @param priority traffic class priority
          * 
          * @return builder
          * 

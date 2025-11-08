@@ -14,50 +14,50 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationListDataDefault {
     /**
-     * @return The IdentByIcmp6Type param.
+     * @return Ident by icmp6 type
      * 
      */
     private GetApplicationListDataDefaultIdentByIcmp6Type identByIcmp6Type;
     /**
-     * @return The IdentByIcmpType param.
+     * @return Ident by icmp type
      * 
      */
     private GetApplicationListDataDefaultIdentByIcmpType identByIcmpType;
     /**
-     * @return The IdentByIpProtocol param.
+     * @return Ident by ip protocol
      * 
      */
     private String identByIpProtocol;
     /**
-     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Port
      * 
      */
     private List<String> ports;
 
     private GetApplicationListDataDefault() {}
     /**
-     * @return The IdentByIcmp6Type param.
+     * @return Ident by icmp6 type
      * 
      */
     public GetApplicationListDataDefaultIdentByIcmp6Type identByIcmp6Type() {
         return this.identByIcmp6Type;
     }
     /**
-     * @return The IdentByIcmpType param.
+     * @return Ident by icmp type
      * 
      */
     public GetApplicationListDataDefaultIdentByIcmpType identByIcmpType() {
         return this.identByIcmpType;
     }
     /**
-     * @return The IdentByIpProtocol param.
+     * @return Ident by ip protocol
      * 
      */
     public String identByIpProtocol() {
         return this.identByIpProtocol;
     }
     /**
-     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Port
      * 
      */
     public List<String> ports() {

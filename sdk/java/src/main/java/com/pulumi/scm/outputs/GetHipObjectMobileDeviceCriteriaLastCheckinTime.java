@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectMobileDeviceCriteriaLastCheckinTime {
     /**
-     * @return The NotWithin param.
+     * @return Not within
      * 
      */
     private GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin notWithin;
     /**
-     * @return The Within param.
+     * @return Within
      * 
      */
     private GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithin within;
 
     private GetHipObjectMobileDeviceCriteriaLastCheckinTime() {}
     /**
-     * @return The NotWithin param.
+     * @return Not within
      * 
      */
     public GetHipObjectMobileDeviceCriteriaLastCheckinTimeNotWithin notWithin() {
         return this.notWithin;
     }
     /**
-     * @return The Within param.
+     * @return Within
      * 
      */
     public GetHipObjectMobileDeviceCriteriaLastCheckinTimeWithin within() {

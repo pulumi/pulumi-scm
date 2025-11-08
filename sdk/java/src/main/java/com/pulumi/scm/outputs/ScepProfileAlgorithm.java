@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScepProfileAlgorithm {
     /**
-     * @return The Rsa param.
+     * @return Key length (bits)
      * 
      */
     private @Nullable ScepProfileAlgorithmRsa rsa;
 
     private ScepProfileAlgorithm() {}
     /**
-     * @return The Rsa param.
+     * @return Key length (bits)
      * 
      */
     public Optional<ScepProfileAlgorithmRsa> rsa() {

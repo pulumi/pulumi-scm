@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanResult
     {
         /// <summary>
-        /// The Context param.
+        /// Context
         /// </summary>
         public readonly string Context;
         /// <summary>
-        /// The Qualifiers param.
+        /// Qualifier
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareSignatureListDataSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierResult> Qualifiers;
         /// <summary>
-        /// The Value param. Value must be between 0 and 4294967295.
+        /// Value
         /// </summary>
         public readonly int Value;
 

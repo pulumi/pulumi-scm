@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class DnsSecurityProfileBotnetDomainsWhitelistArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// DNS domain or FQDN to be whitelisted
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;

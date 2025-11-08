@@ -7,14 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
+ * TrafficSteeringRule data source
  */
 export function getTrafficSteeringRule(args: GetTrafficSteeringRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetTrafficSteeringRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -23,9 +22,13 @@ export function getTrafficSteeringRule(args: GetTrafficSteeringRuleArgs, opts?: 
  */
 export interface GetTrafficSteeringRuleArgs {
     /**
-     * The Id param.
+     * The UUID of the traffic steering rule
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -33,48 +36,51 @@ export interface GetTrafficSteeringRuleArgs {
  */
 export interface GetTrafficSteeringRuleResult {
     /**
-     * The Action param.
+     * Action
      */
     readonly action: outputs.GetTrafficSteeringRuleAction;
     /**
-     * The Category param.
+     * Category
      */
     readonly categories: string[];
     /**
-     * The Destination param.
+     * Destination
      */
     readonly destinations: string[];
     /**
-     * The Id param.
+     * The folder containing the traffic steering rule
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the traffic steering rule
      */
     readonly id: string;
     /**
-     * The Name param.
+     * Name
      */
     readonly name: string;
     /**
-     * The Service param.
+     * Service
      */
     readonly services: string[];
     /**
-     * The SourceUser param.
+     * Source user
      */
     readonly sourceUsers: string[];
     /**
-     * The Source param.
+     * Source
      */
     readonly sources: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
+ * TrafficSteeringRule data source
  */
 export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTrafficSteeringRuleResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getTrafficSteeringRule:getTrafficSteeringRule", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -83,7 +89,11 @@ export function getTrafficSteeringRuleOutput(args: GetTrafficSteeringRuleOutputA
  */
 export interface GetTrafficSteeringRuleOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the traffic steering rule
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

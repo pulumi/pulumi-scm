@@ -10,14 +10,14 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.AddressGroupArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.AddressGroupState;
-import com.pulumi.scm.outputs.AddressGroupDynamicValue;
+import com.pulumi.scm.outputs.AddressGroupDynamic;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * AddressGroup resource
  * 
  * ## Example Usage
  * 
@@ -28,10 +28,13 @@ import javax.annotation.Nullable;
  * import com.pulumi.Context;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
- * import com.pulumi.scm.AddressObject;
- * import com.pulumi.scm.AddressObjectArgs;
+ * import com.pulumi.scm.Address;
+ * import com.pulumi.scm.AddressArgs;
  * import com.pulumi.scm.AddressGroup;
  * import com.pulumi.scm.AddressGroupArgs;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
+ * import com.pulumi.scm.inputs.AddressGroupDynamicArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -45,17 +48,55 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var x = new AddressObject("x", AddressObjectArgs.builder()
+ *         // This file is embedded using go:embed
+ *         // First, create some addresses that will be used in the address group
+ *         var scmAddressAg1 = new Address("scmAddressAg1", AddressArgs.builder()
  *             .folder("Shared")
- *             .name("foo")
- *             .description("Made by Pulumi")
- *             .fqdn("www.example.com")
+ *             .name("scm_address_ag_1")
+ *             .description("First test address")
+ *             .ipNetmask("192.168.1.1/32")
  *             .build());
  * 
- *         var example = new AddressGroup("example", AddressGroupArgs.builder()
+ *         var scmAddressAg2 = new Address("scmAddressAg2", AddressArgs.builder()
  *             .folder("Shared")
- *             .name("example")
- *             .staticLists(x.name())
+ *             .name("scm_address_ag_2")
+ *             .description("Second test address")
+ *             .ipNetmask("192.168.1.2/32")
+ *             .build());
+ * 
+ *         // Create the address group that references the addresses above
+ *         var scmAddressGroup1 = new AddressGroup("scmAddressGroup1", AddressGroupArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_address_group_1")
+ *             .description("Sample address group created with Terraform")
+ *             .statics(            
+ *                 scmAddressAg1.name(),
+ *                 scmAddressAg2.name())
+ *             .build());
+ * 
+ *         // Create tags to be used for dynamic address group
+ *         var scmAddressgroupTag1 = new Tag("scmAddressgroupTag1", TagArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_addressgroup_tag_1")
+ *             .comments("Managed by Pulumi")
+ *             .color("Orange")
+ *             .build());
+ * 
+ *         var scmAddressgroupTag2 = new Tag("scmAddressgroupTag2", TagArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_addressgroup_tag_2")
+ *             .comments("Managed by Pulumi")
+ *             .color("Blue")
+ *             .build());
+ * 
+ *         // Create a dynamic addressgroup that matches both tags
+ *         var scmAddressgroupDynamic = new AddressGroup("scmAddressgroupDynamic", AddressGroupArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_addressgroup_dynamic")
+ *             .description("Managed by Pulumi")
+ *             .dynamic(AddressGroupDynamicArgs.builder()
+ *                 .filter("scm_addressgroup_tag_1 and scm_addressgroup_tag_2")
+ *                 .build())
  *             .build());
  * 
  *     }
@@ -67,112 +108,112 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/addressGroup:AddressGroup")
 public class AddressGroup extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Dynamic
      * 
      */
-    @Export(name="dynamicValue", refs={AddressGroupDynamicValue.class}, tree="[0]")
-    private Output</* @Nullable */ AddressGroupDynamicValue> dynamicValue;
+    @Export(name="dynamic", refs={AddressGroupDynamic.class}, tree="[0]")
+    private Output</* @Nullable */ AddressGroupDynamic> dynamic;
 
     /**
-     * @return The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+     * @return Dynamic
      * 
      */
-    public Output<Optional<AddressGroupDynamicValue>> dynamicValue() {
-        return Codegen.optional(this.dynamicValue);
+    public Output<Optional<AddressGroupDynamic>> dynamic() {
+        return Codegen.optional(this.dynamic);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the address group
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the address group
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+     * Static
      * 
      */
-    @Export(name="staticLists", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> staticLists;
+    @Export(name="statics", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> statics;
 
     /**
-     * @return The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+     * @return Static
      * 
      */
-    public Output<Optional<List<String>>> staticLists() {
-        return Codegen.optional(this.staticLists);
+    public Output<Optional<List<String>>> statics() {
+        return Codegen.optional(this.statics);
     }
     /**
-     * Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for address group object
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tags for address group object
      * 
      */
     public Output<Optional<List<String>>> tags() {

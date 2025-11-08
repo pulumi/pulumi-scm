@@ -27,7 +27,7 @@ class GetDecryptionRuleListResult:
     """
     A collection of values returned by getDecryptionRuleList.
     """
-    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, position=None, snippet=None, tfid=None, total=None):
+    def __init__(__self__, datas=None, device=None, folder=None, id=None, limit=None, name=None, offset=None, snippet=None, tfid=None, total=None):
         if datas and not isinstance(datas, list):
             raise TypeError("Expected argument 'datas' to be a list")
         pulumi.set(__self__, "datas", datas)
@@ -49,9 +49,6 @@ class GetDecryptionRuleListResult:
         if offset and not isinstance(offset, int):
             raise TypeError("Expected argument 'offset' to be a int")
         pulumi.set(__self__, "offset", offset)
-        if position and not isinstance(position, str):
-            raise TypeError("Expected argument 'position' to be a str")
-        pulumi.set(__self__, "position", position)
         if snippet and not isinstance(snippet, str):
             raise TypeError("Expected argument 'snippet' to be a str")
         pulumi.set(__self__, "snippet", snippet)
@@ -66,7 +63,7 @@ class GetDecryptionRuleListResult:
     @pulumi.getter
     def datas(self) -> Sequence['outputs.GetDecryptionRuleListDataResult']:
         """
-        The Data param.
+        The data.
         """
         return pulumi.get(self, "datas")
 
@@ -74,7 +71,7 @@ class GetDecryptionRuleListResult:
     @pulumi.getter
     def device(self) -> Optional[_builtins.str]:
         """
-        The Device param.
+        The device of the item.
         """
         return pulumi.get(self, "device")
 
@@ -82,7 +79,7 @@ class GetDecryptionRuleListResult:
     @pulumi.getter
     def folder(self) -> Optional[_builtins.str]:
         """
-        The Folder param.
+        The folder of the item. Default: Shared.
         """
         return pulumi.get(self, "folder")
 
@@ -96,9 +93,9 @@ class GetDecryptionRuleListResult:
 
     @_builtins.property
     @pulumi.getter
-    def limit(self) -> _builtins.int:
+    def limit(self) -> Optional[_builtins.int]:
         """
-        The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        The max number of items to return. Default: 200.
         """
         return pulumi.get(self, "limit")
 
@@ -106,31 +103,23 @@ class GetDecryptionRuleListResult:
     @pulumi.getter
     def name(self) -> Optional[_builtins.str]:
         """
-        The Name param.
+        The name of the item.
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def offset(self) -> _builtins.int:
+    def offset(self) -> Optional[_builtins.int]:
         """
-        The Offset param. Default: `0`.
+        The offset of the first item to return.
         """
         return pulumi.get(self, "offset")
 
     @_builtins.property
     @pulumi.getter
-    def position(self) -> _builtins.str:
-        """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        """
-        return pulumi.get(self, "position")
-
-    @_builtins.property
-    @pulumi.getter
     def snippet(self) -> Optional[_builtins.str]:
         """
-        The Snippet param.
+        The snippet of the item.
         """
         return pulumi.get(self, "snippet")
 
@@ -143,7 +132,7 @@ class GetDecryptionRuleListResult:
     @pulumi.getter
     def total(self) -> _builtins.int:
         """
-        The Total param.
+        The total number of items.
         """
         return pulumi.get(self, "total")
 
@@ -161,7 +150,6 @@ class AwaitableGetDecryptionRuleListResult(GetDecryptionRuleListResult):
             limit=self.limit,
             name=self.name,
             offset=self.offset,
-            position=self.position,
             snippet=self.snippet,
             tfid=self.tfid,
             total=self.total)
@@ -172,30 +160,18 @@ def get_decryption_rule_list(device: Optional[_builtins.str] = None,
                              limit: Optional[_builtins.int] = None,
                              name: Optional[_builtins.str] = None,
                              offset: Optional[_builtins.int] = None,
-                             position: Optional[_builtins.str] = None,
                              snippet: Optional[_builtins.str] = None,
                              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDecryptionRuleListResult:
     """
     Retrieves a listing of config items.
 
-    ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_decryption_rule_list(folder="Shared",
-        position="pre")
-    ```
-
-
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
-    :param _builtins.str position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -203,7 +179,6 @@ def get_decryption_rule_list(device: Optional[_builtins.str] = None,
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
-    __args__['position'] = position
     __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getDecryptionRuleList:getDecryptionRuleList', __args__, opts=opts, typ=GetDecryptionRuleListResult).value
@@ -216,7 +191,6 @@ def get_decryption_rule_list(device: Optional[_builtins.str] = None,
         limit=pulumi.get(__ret__, 'limit'),
         name=pulumi.get(__ret__, 'name'),
         offset=pulumi.get(__ret__, 'offset'),
-        position=pulumi.get(__ret__, 'position'),
         snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         total=pulumi.get(__ret__, 'total'))
@@ -225,30 +199,18 @@ def get_decryption_rule_list_output(device: Optional[pulumi.Input[Optional[_buil
                                     limit: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
                                     name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                     offset: Optional[pulumi.Input[Optional[_builtins.int]]] = None,
-                                    position: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                     snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDecryptionRuleListResult]:
     """
     Retrieves a listing of config items.
 
-    ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_decryption_rule_list(folder="Shared",
-        position="pre")
-    ```
-
-
-    :param _builtins.str device: The Device param.
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.int limit: The Limit param. A limit of -1 will return all configured items. Default: `200`.
-    :param _builtins.str name: The Name param.
-    :param _builtins.int offset: The Offset param. Default: `0`.
-    :param _builtins.str position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-    :param _builtins.str snippet: The Snippet param.
+    :param _builtins.str device: The device of the item.
+    :param _builtins.str folder: The folder of the item. Default: Shared.
+    :param _builtins.int limit: The max number of items to return. Default: 200.
+    :param _builtins.str name: The name of the item.
+    :param _builtins.int offset: The offset of the first item to return.
+    :param _builtins.str snippet: The snippet of the item.
     """
     __args__ = dict()
     __args__['device'] = device
@@ -256,7 +218,6 @@ def get_decryption_rule_list_output(device: Optional[pulumi.Input[Optional[_buil
     __args__['limit'] = limit
     __args__['name'] = name
     __args__['offset'] = offset
-    __args__['position'] = position
     __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDecryptionRuleList:getDecryptionRuleList', __args__, opts=opts, typ=GetDecryptionRuleListResult)
@@ -268,7 +229,6 @@ def get_decryption_rule_list_output(device: Optional[pulumi.Input[Optional[_buil
         limit=pulumi.get(__response__, 'limit'),
         name=pulumi.get(__response__, 'name'),
         offset=pulumi.get(__response__, 'offset'),
-        position=pulumi.get(__response__, 'position'),
         snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         total=pulumi.get(__response__, 'total')))

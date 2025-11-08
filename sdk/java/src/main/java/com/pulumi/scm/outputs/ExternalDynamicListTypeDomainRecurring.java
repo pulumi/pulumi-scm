@@ -5,9 +5,10 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainRecurringDaily;
+import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainRecurringFiveMinute;
+import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainRecurringHourly;
 import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainRecurringMonthly;
 import com.pulumi.scm.outputs.ExternalDynamicListTypeDomainRecurringWeekly;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,62 +16,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeDomainRecurring {
     /**
-     * @return The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Daily
      * 
      */
     private @Nullable ExternalDynamicListTypeDomainRecurringDaily daily;
     /**
-     * @return The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Five minute
      * 
      */
-    private @Nullable Boolean fiveMinute;
+    private @Nullable ExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute;
     /**
-     * @return The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Hourly
      * 
      */
-    private @Nullable Boolean hourly;
+    private @Nullable ExternalDynamicListTypeDomainRecurringHourly hourly;
     /**
-     * @return The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Monthly
      * 
      */
     private @Nullable ExternalDynamicListTypeDomainRecurringMonthly monthly;
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Weekly
      * 
      */
     private @Nullable ExternalDynamicListTypeDomainRecurringWeekly weekly;
 
     private ExternalDynamicListTypeDomainRecurring() {}
     /**
-     * @return The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Daily
      * 
      */
     public Optional<ExternalDynamicListTypeDomainRecurringDaily> daily() {
         return Optional.ofNullable(this.daily);
     }
     /**
-     * @return The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Five minute
      * 
      */
-    public Optional<Boolean> fiveMinute() {
+    public Optional<ExternalDynamicListTypeDomainRecurringFiveMinute> fiveMinute() {
         return Optional.ofNullable(this.fiveMinute);
     }
     /**
-     * @return The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Hourly
      * 
      */
-    public Optional<Boolean> hourly() {
+    public Optional<ExternalDynamicListTypeDomainRecurringHourly> hourly() {
         return Optional.ofNullable(this.hourly);
     }
     /**
-     * @return The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Monthly
      * 
      */
     public Optional<ExternalDynamicListTypeDomainRecurringMonthly> monthly() {
         return Optional.ofNullable(this.monthly);
     }
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Weekly
      * 
      */
     public Optional<ExternalDynamicListTypeDomainRecurringWeekly> weekly() {
@@ -87,8 +88,8 @@ public final class ExternalDynamicListTypeDomainRecurring {
     @CustomType.Builder
     public static final class Builder {
         private @Nullable ExternalDynamicListTypeDomainRecurringDaily daily;
-        private @Nullable Boolean fiveMinute;
-        private @Nullable Boolean hourly;
+        private @Nullable ExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute;
+        private @Nullable ExternalDynamicListTypeDomainRecurringHourly hourly;
         private @Nullable ExternalDynamicListTypeDomainRecurringMonthly monthly;
         private @Nullable ExternalDynamicListTypeDomainRecurringWeekly weekly;
         public Builder() {}
@@ -108,13 +109,13 @@ public final class ExternalDynamicListTypeDomainRecurring {
             return this;
         }
         @CustomType.Setter
-        public Builder fiveMinute(@Nullable Boolean fiveMinute) {
+        public Builder fiveMinute(@Nullable ExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute) {
 
             this.fiveMinute = fiveMinute;
             return this;
         }
         @CustomType.Setter
-        public Builder hourly(@Nullable Boolean hourly) {
+        public Builder hourly(@Nullable ExternalDynamicListTypeDomainRecurringHourly hourly) {
 
             this.hourly = hourly;
             return this;

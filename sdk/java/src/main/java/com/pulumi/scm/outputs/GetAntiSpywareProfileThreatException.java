@@ -14,62 +14,62 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareProfileThreatException {
     /**
-     * @return The Action param.
+     * @return anti spyware profiles threat exception default action
      * 
      */
     private GetAntiSpywareProfileThreatExceptionAction action;
     /**
-     * @return The ExemptIps param.
+     * @return Exempt ip
      * 
      */
     private List<GetAntiSpywareProfileThreatExceptionExemptIp> exemptIps;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     private String notes;
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     private String packetCapture;
 
     private GetAntiSpywareProfileThreatException() {}
     /**
-     * @return The Action param.
+     * @return anti spyware profiles threat exception default action
      * 
      */
     public GetAntiSpywareProfileThreatExceptionAction action() {
         return this.action;
     }
     /**
-     * @return The ExemptIps param.
+     * @return Exempt ip
      * 
      */
     public List<GetAntiSpywareProfileThreatExceptionExemptIp> exemptIps() {
         return this.exemptIps;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     public String notes() {
         return this.notes;
     }
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public String packetCapture() {

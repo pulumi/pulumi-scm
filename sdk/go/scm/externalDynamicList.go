@@ -7,51 +7,28 @@ import (
 	"context"
 	"reflect"
 
-	"errors"
 	"github.com/pulumi/pulumi-scm/sdk/go/scm/internal"
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ExternalDynamicList resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewExternalDynamicList(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type ExternalDynamicList struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the external dynamic list
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The Type param.
+	// Type
 	Type ExternalDynamicListTypeOutput `pulumi:"type"`
 }
 
@@ -59,12 +36,9 @@ type ExternalDynamicList struct {
 func NewExternalDynamicList(ctx *pulumi.Context,
 	name string, args *ExternalDynamicListArgs, opts ...pulumi.ResourceOption) (*ExternalDynamicList, error) {
 	if args == nil {
-		return nil, errors.New("missing one or more required arguments")
+		args = &ExternalDynamicListArgs{}
 	}
 
-	if args.Type == nil {
-		return nil, errors.New("invalid value for required argument 'Type'")
-	}
 	secrets := pulumi.AdditionalSecretOutputs([]string{
 		"encryptedValues",
 	})
@@ -92,34 +66,34 @@ func GetExternalDynamicList(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering ExternalDynamicList resources.
 type externalDynamicListState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the external dynamic list
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The Type param.
+	// Type
 	Type *ExternalDynamicListType `pulumi:"type"`
 }
 
 type ExternalDynamicListState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// (Internal use) Encrypted values returned from the API.
+	// Map of sensitive values returned from the API.
 	EncryptedValues pulumi.StringMapInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the external dynamic list
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The Type param.
+	// Type
 	Type ExternalDynamicListTypePtrInput
 }
 
@@ -128,30 +102,30 @@ func (ExternalDynamicListState) ElementType() reflect.Type {
 }
 
 type externalDynamicListArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the external dynamic list
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The Type param.
-	Type ExternalDynamicListType `pulumi:"type"`
+	// Type
+	Type *ExternalDynamicListType `pulumi:"type"`
 }
 
 // The set of arguments for constructing a ExternalDynamicList resource.
 type ExternalDynamicListArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the external dynamic list
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The Type param.
-	Type ExternalDynamicListTypeInput
+	// Type
+	Type ExternalDynamicListTypePtrInput
 }
 
 func (ExternalDynamicListArgs) ElementType() reflect.Type {
@@ -241,27 +215,27 @@ func (o ExternalDynamicListOutput) ToExternalDynamicListOutputWithContext(ctx co
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o ExternalDynamicListOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicList) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// (Internal use) Encrypted values returned from the API.
+// Map of sensitive values returned from the API.
 func (o ExternalDynamicListOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v *ExternalDynamicList) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o ExternalDynamicListOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicList) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the external dynamic list
 func (o ExternalDynamicListOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *ExternalDynamicList) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o ExternalDynamicListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ExternalDynamicList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -270,7 +244,7 @@ func (o ExternalDynamicListOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *ExternalDynamicList) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param.
+// Type
 func (o ExternalDynamicListOutput) Type() ExternalDynamicListTypeOutput {
 	return o.ApplyT(func(v *ExternalDynamicList) ExternalDynamicListTypeOutput { return v.Type }).(ExternalDynamicListTypeOutput)
 }

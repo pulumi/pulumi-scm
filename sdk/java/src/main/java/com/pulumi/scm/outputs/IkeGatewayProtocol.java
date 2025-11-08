@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayProtocol {
     /**
-     * @return The Ikev1 param.
+     * @return Ikev1
      * 
      */
     private @Nullable IkeGatewayProtocolIkev1 ikev1;
     /**
-     * @return The Ikev2 param.
+     * @return Ikev2
      * 
      */
     private @Nullable IkeGatewayProtocolIkev2 ikev2;
     /**
-     * @return The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+     * @return Version
      * 
      */
     private @Nullable String version;
 
     private IkeGatewayProtocol() {}
     /**
-     * @return The Ikev1 param.
+     * @return Ikev1
      * 
      */
     public Optional<IkeGatewayProtocolIkev1> ikev1() {
         return Optional.ofNullable(this.ikev1);
     }
     /**
-     * @return The Ikev2 param.
+     * @return Ikev2
      * 
      */
     public Optional<IkeGatewayProtocolIkev2> ikev2() {
         return Optional.ofNullable(this.ikev2);
     }
     /**
-     * @return The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+     * @return Version
      * 
      */
     public Optional<String> version() {

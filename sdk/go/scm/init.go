@@ -21,10 +21,12 @@ func (m *module) Version() semver.Version {
 
 func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi.Resource, err error) {
 	switch typ {
+	case "scm:index/address:Address":
+		r = &Address{}
 	case "scm:index/addressGroup:AddressGroup":
 		r = &AddressGroup{}
-	case "scm:index/addressObject:AddressObject":
-		r = &AddressObject{}
+	case "scm:index/aggregateEthernetInterface:AggregateEthernetInterface":
+		r = &AggregateEthernetInterface{}
 	case "scm:index/antiSpywareProfile:AntiSpywareProfile":
 		r = &AntiSpywareProfile{}
 	case "scm:index/antiSpywareSignature:AntiSpywareSignature":
@@ -37,14 +39,24 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ApplicationFilter{}
 	case "scm:index/applicationGroup:ApplicationGroup":
 		r = &ApplicationGroup{}
-	case "scm:index/authenticationPortal:AuthenticationPortal":
-		r = &AuthenticationPortal{}
 	case "scm:index/authenticationProfile:AuthenticationProfile":
 		r = &AuthenticationProfile{}
 	case "scm:index/authenticationRule:AuthenticationRule":
 		r = &AuthenticationRule{}
 	case "scm:index/authenticationSequence:AuthenticationSequence":
 		r = &AuthenticationSequence{}
+	case "scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile":
+		r = &BgpAddressFamilyProfile{}
+	case "scm:index/bgpAuthProfile:BgpAuthProfile":
+		r = &BgpAuthProfile{}
+	case "scm:index/bgpFilteringProfile:BgpFilteringProfile":
+		r = &BgpFilteringProfile{}
+	case "scm:index/bgpRedistributionProfile:BgpRedistributionProfile":
+		r = &BgpRedistributionProfile{}
+	case "scm:index/bgpRouteMap:BgpRouteMap":
+		r = &BgpRouteMap{}
+	case "scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution":
+		r = &BgpRouteMapRedistribution{}
 	case "scm:index/certificateProfile:CertificateProfile":
 		r = &CertificateProfile{}
 	case "scm:index/decryptionExclusion:DecryptionExclusion":
@@ -53,10 +65,20 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &DecryptionProfile{}
 	case "scm:index/decryptionRule:DecryptionRule":
 		r = &DecryptionRule{}
+	case "scm:index/dhcpInterface:DhcpInterface":
+		r = &DhcpInterface{}
+	case "scm:index/dnsProxy:DnsProxy":
+		r = &DnsProxy{}
 	case "scm:index/dnsSecurityProfile:DnsSecurityProfile":
 		r = &DnsSecurityProfile{}
+	case "scm:index/dosProtectionProfile:DosProtectionProfile":
+		r = &DosProtectionProfile{}
+	case "scm:index/dosProtectionRule:DosProtectionRule":
+		r = &DosProtectionRule{}
 	case "scm:index/dynamicUserGroup:DynamicUserGroup":
 		r = &DynamicUserGroup{}
+	case "scm:index/ethernetInterface:EthernetInterface":
+		r = &EthernetInterface{}
 	case "scm:index/externalDynamicList:ExternalDynamicList":
 		r = &ExternalDynamicList{}
 	case "scm:index/fileBlockingProfile:FileBlockingProfile":
@@ -69,10 +91,14 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &HipProfile{}
 	case "scm:index/httpHeaderProfile:HttpHeaderProfile":
 		r = &HttpHeaderProfile{}
+	case "scm:index/httpServerProfile:HttpServerProfile":
+		r = &HttpServerProfile{}
 	case "scm:index/ikeCryptoProfile:IkeCryptoProfile":
 		r = &IkeCryptoProfile{}
 	case "scm:index/ikeGateway:IkeGateway":
 		r = &IkeGateway{}
+	case "scm:index/interfaceManagementProfile:InterfaceManagementProfile":
+		r = &InterfaceManagementProfile{}
 	case "scm:index/internalDnsServer:InternalDnsServer":
 		r = &InternalDnsServer{}
 	case "scm:index/ipsecCryptoProfile:IpsecCryptoProfile":
@@ -81,16 +107,34 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &IpsecTunnel{}
 	case "scm:index/kerberosServerProfile:KerberosServerProfile":
 		r = &KerberosServerProfile{}
+	case "scm:index/label:Label":
+		r = &Label{}
+	case "scm:index/layer2Subinterface:Layer2Subinterface":
+		r = &Layer2Subinterface{}
+	case "scm:index/layer3Subinterface:Layer3Subinterface":
+		r = &Layer3Subinterface{}
 	case "scm:index/ldapServerProfile:LdapServerProfile":
 		r = &LdapServerProfile{}
+	case "scm:index/linkTag:LinkTag":
+		r = &LinkTag{}
 	case "scm:index/localUser:LocalUser":
 		r = &LocalUser{}
+	case "scm:index/localUserGroup:LocalUserGroup":
+		r = &LocalUserGroup{}
+	case "scm:index/logForwardingProfile:LogForwardingProfile":
+		r = &LogForwardingProfile{}
+	case "scm:index/logicalRouter:LogicalRouter":
+		r = &LogicalRouter{}
+	case "scm:index/loopbackInterface:LoopbackInterface":
+		r = &LoopbackInterface{}
 	case "scm:index/mfaServer:MfaServer":
 		r = &MfaServer{}
 	case "scm:index/natRule:NatRule":
 		r = &NatRule{}
-	case "scm:index/ocspResponder:OcspResponder":
-		r = &OcspResponder{}
+	case "scm:index/ospfAuthProfile:OspfAuthProfile":
+		r = &OspfAuthProfile{}
+	case "scm:index/pbfRule:PbfRule":
+		r = &PbfRule{}
 	case "scm:index/profileGroup:ProfileGroup":
 		r = &ProfileGroup{}
 	case "scm:index/qosPolicyRule:QosPolicyRule":
@@ -103,12 +147,30 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &Region{}
 	case "scm:index/remoteNetwork:RemoteNetwork":
 		r = &RemoteNetwork{}
+	case "scm:index/routeAccessList:RouteAccessList":
+		r = &RouteAccessList{}
+	case "scm:index/routeCommunityList:RouteCommunityList":
+		r = &RouteCommunityList{}
+	case "scm:index/routePathAccessList:RoutePathAccessList":
+		r = &RoutePathAccessList{}
+	case "scm:index/routePrefixList:RoutePrefixList":
+		r = &RoutePrefixList{}
 	case "scm:index/samlServerProfile:SamlServerProfile":
 		r = &SamlServerProfile{}
 	case "scm:index/scepProfile:ScepProfile":
 		r = &ScepProfile{}
 	case "scm:index/schedule:Schedule":
 		r = &Schedule{}
+	case "scm:index/sdwanErrorCorrectionProfile:SdwanErrorCorrectionProfile":
+		r = &SdwanErrorCorrectionProfile{}
+	case "scm:index/sdwanPathQualityProfile:SdwanPathQualityProfile":
+		r = &SdwanPathQualityProfile{}
+	case "scm:index/sdwanRule:SdwanRule":
+		r = &SdwanRule{}
+	case "scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile":
+		r = &SdwanSaasQualityProfile{}
+	case "scm:index/sdwanTrafficDistributionProfile:SdwanTrafficDistributionProfile":
+		r = &SdwanTrafficDistributionProfile{}
 	case "scm:index/securityRule:SecurityRule":
 		r = &SecurityRule{}
 	case "scm:index/service:Service":
@@ -121,6 +183,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceGroup{}
 	case "scm:index/snippet:Snippet":
 		r = &Snippet{}
+	case "scm:index/syslogServerProfile:SyslogServerProfile":
+		r = &SyslogServerProfile{}
 	case "scm:index/tacacsServerProfile:TacacsServerProfile":
 		r = &TacacsServerProfile{}
 	case "scm:index/tag:Tag":
@@ -129,18 +193,26 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &TlsServiceProfile{}
 	case "scm:index/trafficSteeringRule:TrafficSteeringRule":
 		r = &TrafficSteeringRule{}
+	case "scm:index/tunnelInterface:TunnelInterface":
+		r = &TunnelInterface{}
 	case "scm:index/urlAccessProfile:UrlAccessProfile":
 		r = &UrlAccessProfile{}
 	case "scm:index/urlCategory:UrlCategory":
 		r = &UrlCategory{}
 	case "scm:index/variable:Variable":
 		r = &Variable{}
+	case "scm:index/vlanInterface:VlanInterface":
+		r = &VlanInterface{}
 	case "scm:index/vulnerabilityProtectionProfile:VulnerabilityProtectionProfile":
 		r = &VulnerabilityProtectionProfile{}
-	case "scm:index/vulnerabilityProtectionSignatures:VulnerabilityProtectionSignatures":
-		r = &VulnerabilityProtectionSignatures{}
+	case "scm:index/vulnerabilityProtectionSignature:VulnerabilityProtectionSignature":
+		r = &VulnerabilityProtectionSignature{}
 	case "scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile":
 		r = &WildfireAntiVirusProfile{}
+	case "scm:index/zone:Zone":
+		r = &Zone{}
+	case "scm:index/zoneProtectionProfile:ZoneProtectionProfile":
+		r = &ZoneProtectionProfile{}
 	default:
 		return nil, fmt.Errorf("unknown resource type: %s", typ)
 	}
@@ -174,12 +246,17 @@ func init() {
 	}
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/address",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/addressGroup",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
-		"index/addressObject",
+		"index/aggregateEthernetInterface",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -214,11 +291,6 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
-		"index/authenticationPortal",
-		&module{version},
-	)
-	pulumi.RegisterResourceModule(
-		"scm",
 		"index/authenticationProfile",
 		&module{version},
 	)
@@ -230,6 +302,36 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/authenticationSequence",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bgpAddressFamilyProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bgpAuthProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bgpFilteringProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bgpRedistributionProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bgpRouteMap",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bgpRouteMapRedistribution",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -254,12 +356,37 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/dhcpInterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/dnsProxy",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/dnsSecurityProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/dosProtectionProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/dosProtectionRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/dynamicUserGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/ethernetInterface",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -294,12 +421,22 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/httpServerProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/ikeCryptoProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/ikeGateway",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/interfaceManagementProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -324,12 +461,52 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/label",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/layer2Subinterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/layer3Subinterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/ldapServerProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/linkTag",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/localUser",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/localUserGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/logForwardingProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/logicalRouter",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/loopbackInterface",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -344,7 +521,12 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
-		"index/ocspResponder",
+		"index/ospfAuthProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/pbfRule",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -379,6 +561,26 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/routeAccessList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/routeCommunityList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/routePathAccessList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/routePrefixList",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/samlServerProfile",
 		&module{version},
 	)
@@ -390,6 +592,31 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/schedule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/sdwanErrorCorrectionProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/sdwanPathQualityProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/sdwanRule",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/sdwanSaasQualityProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/sdwanTrafficDistributionProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -424,6 +651,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/syslogServerProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/tacacsServerProfile",
 		&module{version},
 	)
@@ -444,6 +676,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/tunnelInterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/urlAccessProfile",
 		&module{version},
 	)
@@ -459,17 +696,32 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/vlanInterface",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/vulnerabilityProtectionProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
-		"index/vulnerabilityProtectionSignatures",
+		"index/vulnerabilityProtectionSignature",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/wildfireAntiVirusProfile",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/zone",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/zoneProtectionProfile",
 		&module{version},
 	)
 	pulumi.RegisterResourcePackage(

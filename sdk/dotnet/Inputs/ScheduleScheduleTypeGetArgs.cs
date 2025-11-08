@@ -12,20 +12,20 @@ namespace Pulumi.Scm.Inputs
 
     public sealed class ScheduleScheduleTypeGetArgs : global::Pulumi.ResourceArgs
     {
-        [Input("nonRecurringLists")]
-        private InputList<string>? _nonRecurringLists;
+        [Input("nonRecurrings")]
+        private InputList<string>? _nonRecurrings;
 
         /// <summary>
-        /// The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1])@([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `NonRecurring`, `Recurring`
+        /// Non recurring
         /// </summary>
-        public InputList<string> NonRecurringLists
+        public InputList<string> NonRecurrings
         {
-            get => _nonRecurringLists ?? (_nonRecurringLists = new InputList<string>());
-            set => _nonRecurringLists = value;
+            get => _nonRecurrings ?? (_nonRecurrings = new InputList<string>());
+            set => _nonRecurrings = value;
         }
 
         /// <summary>
-        /// The Recurring param. Ensure that only one of the following is specified: `NonRecurring`, `Recurring`
+        /// Recurring
         /// </summary>
         [Input("recurring")]
         public Input<Inputs.ScheduleScheduleTypeRecurringGetArgs>? Recurring { get; set; }

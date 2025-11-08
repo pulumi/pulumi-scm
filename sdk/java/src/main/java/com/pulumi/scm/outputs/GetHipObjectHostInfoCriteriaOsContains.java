@@ -11,62 +11,62 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectHostInfoCriteriaOsContains {
     /**
-     * @return Apple vendor. String length must not exceed 255 characters.
+     * @return Apple
      * 
      */
     private String apple;
     /**
-     * @return Google vendor. String length must not exceed 255 characters.
+     * @return Google
      * 
      */
     private String google;
     /**
-     * @return Linux vendor. String length must not exceed 255 characters.
+     * @return Linux
      * 
      */
     private String linux;
     /**
-     * @return Microsoft vendor. String length must not exceed 255 characters.
+     * @return Microsoft
      * 
      */
     private String microsoft;
     /**
-     * @return Other vendor. String length must not exceed 255 characters.
+     * @return Other
      * 
      */
     private String other;
 
     private GetHipObjectHostInfoCriteriaOsContains() {}
     /**
-     * @return Apple vendor. String length must not exceed 255 characters.
+     * @return Apple
      * 
      */
     public String apple() {
         return this.apple;
     }
     /**
-     * @return Google vendor. String length must not exceed 255 characters.
+     * @return Google
      * 
      */
     public String google() {
         return this.google;
     }
     /**
-     * @return Linux vendor. String length must not exceed 255 characters.
+     * @return Linux
      * 
      */
     public String linux() {
         return this.linux;
     }
     /**
-     * @return Microsoft vendor. String length must not exceed 255 characters.
+     * @return Microsoft
      * 
      */
     public String microsoft() {
         return this.microsoft;
     }
     /**
-     * @return Other vendor. String length must not exceed 255 characters.
+     * @return Other
      * 
      */
     public String other() {

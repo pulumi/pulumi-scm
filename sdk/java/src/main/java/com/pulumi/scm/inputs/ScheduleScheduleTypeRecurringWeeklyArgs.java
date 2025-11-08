@@ -17,120 +17,120 @@ public final class ScheduleScheduleTypeRecurringWeeklyArgs extends com.pulumi.re
     public static final ScheduleScheduleTypeRecurringWeeklyArgs Empty = new ScheduleScheduleTypeRecurringWeeklyArgs();
 
     /**
-     * The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * Friday
      * 
      */
-    @Import(name="fridayLists")
-    private @Nullable Output<List<String>> fridayLists;
+    @Import(name="fridays")
+    private @Nullable Output<List<String>> fridays;
 
     /**
-     * @return The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Friday
      * 
      */
-    public Optional<Output<List<String>>> fridayLists() {
-        return Optional.ofNullable(this.fridayLists);
+    public Optional<Output<List<String>>> fridays() {
+        return Optional.ofNullable(this.fridays);
     }
 
     /**
-     * The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * Monday
      * 
      */
-    @Import(name="mondayLists")
-    private @Nullable Output<List<String>> mondayLists;
+    @Import(name="mondays")
+    private @Nullable Output<List<String>> mondays;
 
     /**
-     * @return The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Monday
      * 
      */
-    public Optional<Output<List<String>>> mondayLists() {
-        return Optional.ofNullable(this.mondayLists);
+    public Optional<Output<List<String>>> mondays() {
+        return Optional.ofNullable(this.mondays);
     }
 
     /**
-     * The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * Saturday
      * 
      */
-    @Import(name="saturdayLists")
-    private @Nullable Output<List<String>> saturdayLists;
+    @Import(name="saturdays")
+    private @Nullable Output<List<String>> saturdays;
 
     /**
-     * @return The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Saturday
      * 
      */
-    public Optional<Output<List<String>>> saturdayLists() {
-        return Optional.ofNullable(this.saturdayLists);
+    public Optional<Output<List<String>>> saturdays() {
+        return Optional.ofNullable(this.saturdays);
     }
 
     /**
-     * The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * Sunday
      * 
      */
-    @Import(name="sundayLists")
-    private @Nullable Output<List<String>> sundayLists;
+    @Import(name="sundays")
+    private @Nullable Output<List<String>> sundays;
 
     /**
-     * @return The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Sunday
      * 
      */
-    public Optional<Output<List<String>>> sundayLists() {
-        return Optional.ofNullable(this.sundayLists);
+    public Optional<Output<List<String>>> sundays() {
+        return Optional.ofNullable(this.sundays);
     }
 
     /**
-     * The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * Thursday
      * 
      */
-    @Import(name="thursdayLists")
-    private @Nullable Output<List<String>> thursdayLists;
+    @Import(name="thursdays")
+    private @Nullable Output<List<String>> thursdays;
 
     /**
-     * @return The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Thursday
      * 
      */
-    public Optional<Output<List<String>>> thursdayLists() {
-        return Optional.ofNullable(this.thursdayLists);
+    public Optional<Output<List<String>>> thursdays() {
+        return Optional.ofNullable(this.thursdays);
     }
 
     /**
-     * The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * Tuesday
      * 
      */
-    @Import(name="tuesdayLists")
-    private @Nullable Output<List<String>> tuesdayLists;
+    @Import(name="tuesdays")
+    private @Nullable Output<List<String>> tuesdays;
 
     /**
-     * @return The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Tuesday
      * 
      */
-    public Optional<Output<List<String>>> tuesdayLists() {
-        return Optional.ofNullable(this.tuesdayLists);
+    public Optional<Output<List<String>>> tuesdays() {
+        return Optional.ofNullable(this.tuesdays);
     }
 
     /**
-     * The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * Wednesday
      * 
      */
-    @Import(name="wednesdayLists")
-    private @Nullable Output<List<String>> wednesdayLists;
+    @Import(name="wednesdays")
+    private @Nullable Output<List<String>> wednesdays;
 
     /**
-     * @return The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Wednesday
      * 
      */
-    public Optional<Output<List<String>>> wednesdayLists() {
-        return Optional.ofNullable(this.wednesdayLists);
+    public Optional<Output<List<String>>> wednesdays() {
+        return Optional.ofNullable(this.wednesdays);
     }
 
     private ScheduleScheduleTypeRecurringWeeklyArgs() {}
 
     private ScheduleScheduleTypeRecurringWeeklyArgs(ScheduleScheduleTypeRecurringWeeklyArgs $) {
-        this.fridayLists = $.fridayLists;
-        this.mondayLists = $.mondayLists;
-        this.saturdayLists = $.saturdayLists;
-        this.sundayLists = $.sundayLists;
-        this.thursdayLists = $.thursdayLists;
-        this.tuesdayLists = $.tuesdayLists;
-        this.wednesdayLists = $.wednesdayLists;
+        this.fridays = $.fridays;
+        this.mondays = $.mondays;
+        this.saturdays = $.saturdays;
+        this.sundays = $.sundays;
+        this.thursdays = $.thursdays;
+        this.tuesdays = $.tuesdays;
+        this.wednesdays = $.wednesdays;
     }
 
     public static Builder builder() {
@@ -152,220 +152,220 @@ public final class ScheduleScheduleTypeRecurringWeeklyArgs extends com.pulumi.re
         }
 
         /**
-         * @param fridayLists The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param fridays Friday
          * 
          * @return builder
          * 
          */
-        public Builder fridayLists(@Nullable Output<List<String>> fridayLists) {
-            $.fridayLists = fridayLists;
+        public Builder fridays(@Nullable Output<List<String>> fridays) {
+            $.fridays = fridays;
             return this;
         }
 
         /**
-         * @param fridayLists The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param fridays Friday
          * 
          * @return builder
          * 
          */
-        public Builder fridayLists(List<String> fridayLists) {
-            return fridayLists(Output.of(fridayLists));
+        public Builder fridays(List<String> fridays) {
+            return fridays(Output.of(fridays));
         }
 
         /**
-         * @param fridayLists The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param fridays Friday
          * 
          * @return builder
          * 
          */
-        public Builder fridayLists(String... fridayLists) {
-            return fridayLists(List.of(fridayLists));
+        public Builder fridays(String... fridays) {
+            return fridays(List.of(fridays));
         }
 
         /**
-         * @param mondayLists The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param mondays Monday
          * 
          * @return builder
          * 
          */
-        public Builder mondayLists(@Nullable Output<List<String>> mondayLists) {
-            $.mondayLists = mondayLists;
+        public Builder mondays(@Nullable Output<List<String>> mondays) {
+            $.mondays = mondays;
             return this;
         }
 
         /**
-         * @param mondayLists The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param mondays Monday
          * 
          * @return builder
          * 
          */
-        public Builder mondayLists(List<String> mondayLists) {
-            return mondayLists(Output.of(mondayLists));
+        public Builder mondays(List<String> mondays) {
+            return mondays(Output.of(mondays));
         }
 
         /**
-         * @param mondayLists The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param mondays Monday
          * 
          * @return builder
          * 
          */
-        public Builder mondayLists(String... mondayLists) {
-            return mondayLists(List.of(mondayLists));
+        public Builder mondays(String... mondays) {
+            return mondays(List.of(mondays));
         }
 
         /**
-         * @param saturdayLists The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param saturdays Saturday
          * 
          * @return builder
          * 
          */
-        public Builder saturdayLists(@Nullable Output<List<String>> saturdayLists) {
-            $.saturdayLists = saturdayLists;
+        public Builder saturdays(@Nullable Output<List<String>> saturdays) {
+            $.saturdays = saturdays;
             return this;
         }
 
         /**
-         * @param saturdayLists The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param saturdays Saturday
          * 
          * @return builder
          * 
          */
-        public Builder saturdayLists(List<String> saturdayLists) {
-            return saturdayLists(Output.of(saturdayLists));
+        public Builder saturdays(List<String> saturdays) {
+            return saturdays(Output.of(saturdays));
         }
 
         /**
-         * @param saturdayLists The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param saturdays Saturday
          * 
          * @return builder
          * 
          */
-        public Builder saturdayLists(String... saturdayLists) {
-            return saturdayLists(List.of(saturdayLists));
+        public Builder saturdays(String... saturdays) {
+            return saturdays(List.of(saturdays));
         }
 
         /**
-         * @param sundayLists The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param sundays Sunday
          * 
          * @return builder
          * 
          */
-        public Builder sundayLists(@Nullable Output<List<String>> sundayLists) {
-            $.sundayLists = sundayLists;
+        public Builder sundays(@Nullable Output<List<String>> sundays) {
+            $.sundays = sundays;
             return this;
         }
 
         /**
-         * @param sundayLists The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param sundays Sunday
          * 
          * @return builder
          * 
          */
-        public Builder sundayLists(List<String> sundayLists) {
-            return sundayLists(Output.of(sundayLists));
+        public Builder sundays(List<String> sundays) {
+            return sundays(Output.of(sundays));
         }
 
         /**
-         * @param sundayLists The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param sundays Sunday
          * 
          * @return builder
          * 
          */
-        public Builder sundayLists(String... sundayLists) {
-            return sundayLists(List.of(sundayLists));
+        public Builder sundays(String... sundays) {
+            return sundays(List.of(sundays));
         }
 
         /**
-         * @param thursdayLists The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param thursdays Thursday
          * 
          * @return builder
          * 
          */
-        public Builder thursdayLists(@Nullable Output<List<String>> thursdayLists) {
-            $.thursdayLists = thursdayLists;
+        public Builder thursdays(@Nullable Output<List<String>> thursdays) {
+            $.thursdays = thursdays;
             return this;
         }
 
         /**
-         * @param thursdayLists The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param thursdays Thursday
          * 
          * @return builder
          * 
          */
-        public Builder thursdayLists(List<String> thursdayLists) {
-            return thursdayLists(Output.of(thursdayLists));
+        public Builder thursdays(List<String> thursdays) {
+            return thursdays(Output.of(thursdays));
         }
 
         /**
-         * @param thursdayLists The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param thursdays Thursday
          * 
          * @return builder
          * 
          */
-        public Builder thursdayLists(String... thursdayLists) {
-            return thursdayLists(List.of(thursdayLists));
+        public Builder thursdays(String... thursdays) {
+            return thursdays(List.of(thursdays));
         }
 
         /**
-         * @param tuesdayLists The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param tuesdays Tuesday
          * 
          * @return builder
          * 
          */
-        public Builder tuesdayLists(@Nullable Output<List<String>> tuesdayLists) {
-            $.tuesdayLists = tuesdayLists;
+        public Builder tuesdays(@Nullable Output<List<String>> tuesdays) {
+            $.tuesdays = tuesdays;
             return this;
         }
 
         /**
-         * @param tuesdayLists The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param tuesdays Tuesday
          * 
          * @return builder
          * 
          */
-        public Builder tuesdayLists(List<String> tuesdayLists) {
-            return tuesdayLists(Output.of(tuesdayLists));
+        public Builder tuesdays(List<String> tuesdays) {
+            return tuesdays(Output.of(tuesdays));
         }
 
         /**
-         * @param tuesdayLists The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param tuesdays Tuesday
          * 
          * @return builder
          * 
          */
-        public Builder tuesdayLists(String... tuesdayLists) {
-            return tuesdayLists(List.of(tuesdayLists));
+        public Builder tuesdays(String... tuesdays) {
+            return tuesdays(List.of(tuesdays));
         }
 
         /**
-         * @param wednesdayLists The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param wednesdays Wednesday
          * 
          * @return builder
          * 
          */
-        public Builder wednesdayLists(@Nullable Output<List<String>> wednesdayLists) {
-            $.wednesdayLists = wednesdayLists;
+        public Builder wednesdays(@Nullable Output<List<String>> wednesdays) {
+            $.wednesdays = wednesdays;
             return this;
         }
 
         /**
-         * @param wednesdayLists The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param wednesdays Wednesday
          * 
          * @return builder
          * 
          */
-        public Builder wednesdayLists(List<String> wednesdayLists) {
-            return wednesdayLists(Output.of(wednesdayLists));
+        public Builder wednesdays(List<String> wednesdays) {
+            return wednesdays(Output.of(wednesdays));
         }
 
         /**
-         * @param wednesdayLists The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+         * @param wednesdays Wednesday
          * 
          * @return builder
          * 
          */
-        public Builder wednesdayLists(String... wednesdayLists) {
-            return wednesdayLists(List.of(wednesdayLists));
+        public Builder wednesdays(String... wednesdays) {
+            return wednesdays(List.of(wednesdays));
         }
 
         public ScheduleScheduleTypeRecurringWeeklyArgs build() {

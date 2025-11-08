@@ -14,21 +14,21 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectPatchManagementCriteriaMissingPatches
     {
         /// <summary>
-        /// The Check param. String must be one of these: `"has-any"`, `"has-none"`, `"has-all"`. Default: `"has-any"`.
+        /// Check
         /// </summary>
-        public readonly string? Check;
+        public readonly string Check;
         /// <summary>
-        /// The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// Patches
         /// </summary>
         public readonly ImmutableArray<string> Patches;
         /// <summary>
-        /// The Severity param.
+        /// Severity
         /// </summary>
         public readonly Outputs.HipObjectPatchManagementCriteriaMissingPatchesSeverity? Severity;
 
         [OutputConstructor]
         private HipObjectPatchManagementCriteriaMissingPatches(
-            string? check,
+            string check,
 
             ImmutableArray<string> patches,
 

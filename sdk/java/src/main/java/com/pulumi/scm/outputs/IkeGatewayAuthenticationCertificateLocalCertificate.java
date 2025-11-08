@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayAuthenticationCertificateLocalCertificate {
     /**
-     * @return The LocalCertificateName param.
+     * @return Local certificate name
      * 
      */
     private @Nullable String localCertificateName;
 
     private IkeGatewayAuthenticationCertificateLocalCertificate() {}
     /**
-     * @return The LocalCertificateName param.
+     * @return Local certificate name
      * 
      */
     public Optional<String> localCertificateName() {

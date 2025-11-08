@@ -26,13 +26,10 @@ class GetServiceConnectionGroupResult:
     """
     A collection of values returned by getServiceConnectionGroup.
     """
-    def __init__(__self__, disable_snat=None, folder=None, id=None, name=None, pbf_only=None, targets=None, tfid=None):
+    def __init__(__self__, disable_snat=None, id=None, name=None, pbf_only=None, targets=None, tfid=None):
         if disable_snat and not isinstance(disable_snat, bool):
             raise TypeError("Expected argument 'disable_snat' to be a bool")
         pulumi.set(__self__, "disable_snat", disable_snat)
-        if folder and not isinstance(folder, str):
-            raise TypeError("Expected argument 'folder' to be a str")
-        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -53,23 +50,15 @@ class GetServiceConnectionGroupResult:
     @pulumi.getter(name="disableSnat")
     def disable_snat(self) -> _builtins.bool:
         """
-        The DisableSnat param.
+        Disable snat
         """
         return pulumi.get(self, "disable_snat")
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> _builtins.str:
-        """
-        The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-        """
-        return pulumi.get(self, "folder")
-
-    @_builtins.property
-    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the service connection group
         """
         return pulumi.get(self, "id")
 
@@ -77,7 +66,7 @@ class GetServiceConnectionGroupResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -85,7 +74,7 @@ class GetServiceConnectionGroupResult:
     @pulumi.getter(name="pbfOnly")
     def pbf_only(self) -> _builtins.bool:
         """
-        The PbfOnly param.
+        Pbf only
         """
         return pulumi.get(self, "pbf_only")
 
@@ -93,7 +82,7 @@ class GetServiceConnectionGroupResult:
     @pulumi.getter
     def targets(self) -> Sequence[_builtins.str]:
         """
-        The Targets param.
+        Target
         """
         return pulumi.get(self, "targets")
 
@@ -110,7 +99,6 @@ class AwaitableGetServiceConnectionGroupResult(GetServiceConnectionGroupResult):
             yield self
         return GetServiceConnectionGroupResult(
             disable_snat=self.disable_snat,
-            folder=self.folder,
             id=self.id,
             name=self.name,
             pbf_only=self.pbf_only,
@@ -118,68 +106,50 @@ class AwaitableGetServiceConnectionGroupResult(GetServiceConnectionGroupResult):
             tfid=self.tfid)
 
 
-def get_service_connection_group(folder: Optional[_builtins.str] = None,
-                                 id: Optional[_builtins.str] = None,
+def get_service_connection_group(id: Optional[_builtins.str] = None,
+                                 name: Optional[_builtins.str] = None,
                                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceConnectionGroupResult:
     """
-    Retrieves a config item.
+    ServiceConnectionGroup data source
 
     ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
 
-    example = scm.get_service_connection_group(id="1234-56-789",
-        folder="Service Connections")
-    ```
-
-
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service connection group
+    :param _builtins.str name: Name
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getServiceConnectionGroup:getServiceConnectionGroup', __args__, opts=opts, typ=GetServiceConnectionGroupResult).value
 
     return AwaitableGetServiceConnectionGroupResult(
         disable_snat=pulumi.get(__ret__, 'disable_snat'),
-        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         pbf_only=pulumi.get(__ret__, 'pbf_only'),
         targets=pulumi.get(__ret__, 'targets'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_service_connection_group_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                                        id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_service_connection_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                        name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceConnectionGroupResult]:
     """
-    Retrieves a config item.
+    ServiceConnectionGroup data source
 
     ## Example Usage
 
-    ```python
-    import pulumi
-    import pulumi_scm as scm
 
-    example = scm.get_service_connection_group(id="1234-56-789",
-        folder="Service Connections")
-    ```
-
-
-    :param _builtins.str folder: The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\\s-]{1,}$`. Default: `"Service Connections"`.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service connection group
+    :param _builtins.str name: Name
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceConnectionGroup:getServiceConnectionGroup', __args__, opts=opts, typ=GetServiceConnectionGroupResult)
     return __ret__.apply(lambda __response__: GetServiceConnectionGroupResult(
         disable_snat=pulumi.get(__response__, 'disable_snat'),
-        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         pbf_only=pulumi.get(__response__, 'pbf_only'),

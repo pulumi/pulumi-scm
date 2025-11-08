@@ -4,8 +4,13 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.scm.outputs.AntiSpywareProfileRuleActionAlert;
+import com.pulumi.scm.outputs.AntiSpywareProfileRuleActionAllow;
 import com.pulumi.scm.outputs.AntiSpywareProfileRuleActionBlockIp;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.AntiSpywareProfileRuleActionDrop;
+import com.pulumi.scm.outputs.AntiSpywareProfileRuleActionResetBoth;
+import com.pulumi.scm.outputs.AntiSpywareProfileRuleActionResetClient;
+import com.pulumi.scm.outputs.AntiSpywareProfileRuleActionResetServer;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -13,89 +18,89 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareProfileRuleAction {
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Alert
      * 
      */
-    private @Nullable Boolean alert;
+    private @Nullable AntiSpywareProfileRuleActionAlert alert;
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Allow
      * 
      */
-    private @Nullable Boolean allow;
+    private @Nullable AntiSpywareProfileRuleActionAllow allow;
     /**
-     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return anti spyware profiles rules action block ip
      * 
      */
     private @Nullable AntiSpywareProfileRuleActionBlockIp blockIp;
     /**
-     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Drop
      * 
      */
-    private @Nullable Boolean drop;
+    private @Nullable AntiSpywareProfileRuleActionDrop drop;
     /**
-     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset both
      * 
      */
-    private @Nullable Boolean resetBoth;
+    private @Nullable AntiSpywareProfileRuleActionResetBoth resetBoth;
     /**
-     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset client
      * 
      */
-    private @Nullable Boolean resetClient;
+    private @Nullable AntiSpywareProfileRuleActionResetClient resetClient;
     /**
-     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset server
      * 
      */
-    private @Nullable Boolean resetServer;
+    private @Nullable AntiSpywareProfileRuleActionResetServer resetServer;
 
     private AntiSpywareProfileRuleAction() {}
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Alert
      * 
      */
-    public Optional<Boolean> alert() {
+    public Optional<AntiSpywareProfileRuleActionAlert> alert() {
         return Optional.ofNullable(this.alert);
     }
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Allow
      * 
      */
-    public Optional<Boolean> allow() {
+    public Optional<AntiSpywareProfileRuleActionAllow> allow() {
         return Optional.ofNullable(this.allow);
     }
     /**
-     * @return The BlockIp param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return anti spyware profiles rules action block ip
      * 
      */
     public Optional<AntiSpywareProfileRuleActionBlockIp> blockIp() {
         return Optional.ofNullable(this.blockIp);
     }
     /**
-     * @return The Drop param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Drop
      * 
      */
-    public Optional<Boolean> drop() {
+    public Optional<AntiSpywareProfileRuleActionDrop> drop() {
         return Optional.ofNullable(this.drop);
     }
     /**
-     * @return The ResetBoth param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset both
      * 
      */
-    public Optional<Boolean> resetBoth() {
+    public Optional<AntiSpywareProfileRuleActionResetBoth> resetBoth() {
         return Optional.ofNullable(this.resetBoth);
     }
     /**
-     * @return The ResetClient param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset client
      * 
      */
-    public Optional<Boolean> resetClient() {
+    public Optional<AntiSpywareProfileRuleActionResetClient> resetClient() {
         return Optional.ofNullable(this.resetClient);
     }
     /**
-     * @return The ResetServer param. Ensure that only one of the following is specified: `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, `resetServer`
+     * @return Reset server
      * 
      */
-    public Optional<Boolean> resetServer() {
+    public Optional<AntiSpywareProfileRuleActionResetServer> resetServer() {
         return Optional.ofNullable(this.resetServer);
     }
 
@@ -108,13 +113,13 @@ public final class AntiSpywareProfileRuleAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean alert;
-        private @Nullable Boolean allow;
+        private @Nullable AntiSpywareProfileRuleActionAlert alert;
+        private @Nullable AntiSpywareProfileRuleActionAllow allow;
         private @Nullable AntiSpywareProfileRuleActionBlockIp blockIp;
-        private @Nullable Boolean drop;
-        private @Nullable Boolean resetBoth;
-        private @Nullable Boolean resetClient;
-        private @Nullable Boolean resetServer;
+        private @Nullable AntiSpywareProfileRuleActionDrop drop;
+        private @Nullable AntiSpywareProfileRuleActionResetBoth resetBoth;
+        private @Nullable AntiSpywareProfileRuleActionResetClient resetClient;
+        private @Nullable AntiSpywareProfileRuleActionResetServer resetServer;
         public Builder() {}
         public Builder(AntiSpywareProfileRuleAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -128,13 +133,13 @@ public final class AntiSpywareProfileRuleAction {
         }
 
         @CustomType.Setter
-        public Builder alert(@Nullable Boolean alert) {
+        public Builder alert(@Nullable AntiSpywareProfileRuleActionAlert alert) {
 
             this.alert = alert;
             return this;
         }
         @CustomType.Setter
-        public Builder allow(@Nullable Boolean allow) {
+        public Builder allow(@Nullable AntiSpywareProfileRuleActionAllow allow) {
 
             this.allow = allow;
             return this;
@@ -146,25 +151,25 @@ public final class AntiSpywareProfileRuleAction {
             return this;
         }
         @CustomType.Setter
-        public Builder drop(@Nullable Boolean drop) {
+        public Builder drop(@Nullable AntiSpywareProfileRuleActionDrop drop) {
 
             this.drop = drop;
             return this;
         }
         @CustomType.Setter
-        public Builder resetBoth(@Nullable Boolean resetBoth) {
+        public Builder resetBoth(@Nullable AntiSpywareProfileRuleActionResetBoth resetBoth) {
 
             this.resetBoth = resetBoth;
             return this;
         }
         @CustomType.Setter
-        public Builder resetClient(@Nullable Boolean resetClient) {
+        public Builder resetClient(@Nullable AntiSpywareProfileRuleActionResetClient resetClient) {
 
             this.resetClient = resetClient;
             return this;
         }
         @CustomType.Setter
-        public Builder resetServer(@Nullable Boolean resetServer) {
+        public Builder resetServer(@Nullable AntiSpywareProfileRuleActionResetServer resetServer) {
 
             this.resetServer = resetServer;
             return this;

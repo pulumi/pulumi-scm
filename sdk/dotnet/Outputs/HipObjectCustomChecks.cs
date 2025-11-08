@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectCustomChecks
     {
         /// <summary>
-        /// The Criteria param.
+        /// Criteria
         /// </summary>
         public readonly Outputs.HipObjectCustomChecksCriteria Criteria;
 

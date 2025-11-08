@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Tag resource
  *
  * ## Example Usage
  *
@@ -13,11 +13,22 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.Tag("example", {
+ * // This file is embedded using go:embed
+ * // Tags for organizing and categorizing resources
+ * const scmTag1 = new scm.Tag("scm_tag_1", {
  *     folder: "Shared",
- *     name: "myColor",
- *     color: "Green",
- *     comments: "Made by Pulumi",
+ *     name: "scm_tag_1",
+ *     color: "Red",
+ * });
+ * const scmTag2 = new scm.Tag("scm_tag_2", {
+ *     folder: "Shared",
+ *     name: "scm_tag_2",
+ *     color: "Blue",
+ * });
+ * const scmTag3 = new scm.Tag("scm_tag_3", {
+ *     folder: "Shared",
+ *     name: "scm_tag_3",
+ *     color: "Orange",
  * });
  * ```
  */
@@ -50,27 +61,27 @@ export class Tag extends pulumi.CustomResource {
     }
 
     /**
-     * The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+     * The color of the tag
      */
     declare public readonly color: pulumi.Output<string | undefined>;
     /**
-     * The Comments param. String length must not exceed 1023 characters.
+     * The description of the tag
      */
     declare public readonly comments: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Name param. String length must not exceed 127 characters.
+     * The name of the tag
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -115,27 +126,27 @@ export class Tag extends pulumi.CustomResource {
  */
 export interface TagState {
     /**
-     * The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+     * The color of the tag
      */
     color?: pulumi.Input<string>;
     /**
-     * The Comments param. String length must not exceed 1023 characters.
+     * The description of the tag
      */
     comments?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param. String length must not exceed 127 characters.
+     * The name of the tag
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -146,27 +157,27 @@ export interface TagState {
  */
 export interface TagArgs {
     /**
-     * The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+     * The color of the tag
      */
     color?: pulumi.Input<string>;
     /**
-     * The Comments param. String length must not exceed 1023 characters.
+     * The description of the tag
      */
     comments?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param. String length must not exceed 127 characters.
+     * The name of the tag
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

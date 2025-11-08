@@ -14,30 +14,6 @@ import (
 // Retrieves a listing of config items.
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetServiceList(ctx, &scm.GetServiceListArgs{
-//				Folder: pulumi.StringRef("Shared"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetServiceList(ctx *pulumi.Context, args *GetServiceListArgs, opts ...pulumi.InvokeOption) (*GetServiceListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetServiceListResult
@@ -50,40 +26,40 @@ func GetServiceList(ctx *pulumi.Context, args *GetServiceListArgs, opts ...pulum
 
 // A collection of arguments for invoking getServiceList.
 type GetServiceListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getServiceList.
 type GetServiceListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetServiceListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +74,17 @@ func GetServiceListOutput(ctx *pulumi.Context, args GetServiceListOutputArgs, op
 
 // A collection of arguments for invoking getServiceList.
 type GetServiceListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +107,17 @@ func (o GetServiceListResultOutput) ToGetServiceListResultOutputWithContext(ctx 
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetServiceListResultOutput) Datas() GetServiceListDataArrayOutput {
 	return o.ApplyT(func(v GetServiceListResult) []GetServiceListData { return v.Datas }).(GetServiceListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetServiceListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetServiceListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetServiceListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetServiceListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +127,22 @@ func (o GetServiceListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetServiceListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetServiceListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetServiceListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetServiceListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetServiceListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetServiceListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetServiceListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetServiceListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetServiceListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetServiceListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetServiceListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetServiceListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetServiceListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +151,7 @@ func (o GetServiceListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetServiceListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetServiceListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetServiceListResult) int { return v.Total }).(pulumi.IntOutput)
 }

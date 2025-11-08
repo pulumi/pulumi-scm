@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayListDataAuthenticationPreSharedKey {
     /**
-     * @return The Key param.
+     * @return Key
      * 
      */
     private String key;
 
     private GetIkeGatewayListDataAuthenticationPreSharedKey() {}
     /**
-     * @return The Key param.
+     * @return Key
      * 
      */
     public String key() {

@@ -28,11 +28,11 @@ class ScheduleArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Schedule resource.
-        :param pulumi.Input['ScheduleScheduleTypeArgs'] schedule_type: The ScheduleType param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input['ScheduleScheduleTypeArgs'] schedule_type: Schedule type
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the schedule
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         pulumi.set(__self__, "schedule_type", schedule_type)
         if device is not None:
@@ -48,7 +48,7 @@ class ScheduleArgs:
     @pulumi.getter(name="scheduleType")
     def schedule_type(self) -> pulumi.Input['ScheduleScheduleTypeArgs']:
         """
-        The ScheduleType param.
+        Schedule type
         """
         return pulumi.get(self, "schedule_type")
 
@@ -60,7 +60,7 @@ class ScheduleArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -72,7 +72,7 @@ class ScheduleArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -84,7 +84,7 @@ class ScheduleArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the schedule
         """
         return pulumi.get(self, "name")
 
@@ -96,7 +96,7 @@ class ScheduleArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -116,11 +116,11 @@ class _ScheduleState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Schedule resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input['ScheduleScheduleTypeArgs'] schedule_type: The ScheduleType param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the schedule
+        :param pulumi.Input['ScheduleScheduleTypeArgs'] schedule_type: Schedule type
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -139,7 +139,7 @@ class _ScheduleState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -151,7 +151,7 @@ class _ScheduleState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -163,7 +163,7 @@ class _ScheduleState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the schedule
         """
         return pulumi.get(self, "name")
 
@@ -175,7 +175,7 @@ class _ScheduleState:
     @pulumi.getter(name="scheduleType")
     def schedule_type(self) -> Optional[pulumi.Input['ScheduleScheduleTypeArgs']]:
         """
-        The ScheduleType param.
+        Schedule type
         """
         return pulumi.get(self, "schedule_type")
 
@@ -187,7 +187,7 @@ class _ScheduleState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -218,24 +218,15 @@ class Schedule(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Schedule("example")
-        ```
+        Schedule resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']] schedule_type: The ScheduleType param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the schedule
+        :param pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']] schedule_type: Schedule type
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -244,16 +235,7 @@ class Schedule(pulumi.CustomResource):
                  args: ScheduleArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Schedule("example")
-        ```
+        Schedule resource
 
         :param str resource_name: The name of the resource.
         :param ScheduleArgs args: The arguments to use to populate this resource's properties.
@@ -315,11 +297,11 @@ class Schedule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']] schedule_type: The ScheduleType param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the schedule
+        :param pulumi.Input[Union['ScheduleScheduleTypeArgs', 'ScheduleScheduleTypeArgsDict']] schedule_type: Schedule type
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -337,7 +319,7 @@ class Schedule(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -345,7 +327,7 @@ class Schedule(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -353,7 +335,7 @@ class Schedule(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the schedule
         """
         return pulumi.get(self, "name")
 
@@ -361,7 +343,7 @@ class Schedule(pulumi.CustomResource):
     @pulumi.getter(name="scheduleType")
     def schedule_type(self) -> pulumi.Output['outputs.ScheduleScheduleType']:
         """
-        The ScheduleType param.
+        Schedule type
         """
         return pulumi.get(self, "schedule_type")
 
@@ -369,7 +351,7 @@ class Schedule(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

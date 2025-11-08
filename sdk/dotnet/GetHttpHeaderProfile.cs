@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetHttpHeaderProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetHttpHeaderProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// HttpHeaderProfile data source
         /// </summary>
         public static Task<GetHttpHeaderProfileResult> InvokeAsync(GetHttpHeaderProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetHttpHeaderProfileResult>("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args ?? new GetHttpHeaderProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetHttpHeaderProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// HttpHeaderProfile data source
         /// </summary>
         public static Output<GetHttpHeaderProfileResult> Invoke(GetHttpHeaderProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetHttpHeaderProfileResult>("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args ?? new GetHttpHeaderProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetHttpHeaderProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// HttpHeaderProfile data source
         /// </summary>
         public static Output<GetHttpHeaderProfileResult> Invoke(GetHttpHeaderProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetHttpHeaderProfileResult>("scm:index/getHttpHeaderProfile:getHttpHeaderProfile", args ?? new GetHttpHeaderProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetHttpHeaderProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the HTTP header profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the HTTP header profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetHttpHeaderProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetHttpHeaderProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the HTTP header profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the HTTP header profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetHttpHeaderProfileInvokeArgs()
         {
@@ -118,26 +76,42 @@ namespace Pulumi.Scm
     public sealed class GetHttpHeaderProfileResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the HTTP header profile
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The HttpHeaderInsertions param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// A list of HTTP header profile rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHttpHeaderProfileHttpHeaderInsertionResult> HttpHeaderInsertions;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the HTTP header profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the HTTP header profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetHttpHeaderProfileResult(
             string description,
+
+            string device,
+
+            string folder,
 
             ImmutableArray<Outputs.GetHttpHeaderProfileHttpHeaderInsertionResult> httpHeaderInsertions,
 
@@ -145,12 +119,17 @@ namespace Pulumi.Scm
 
             string name,
 
+            string snippet,
+
             string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             HttpHeaderInsertions = httpHeaderInsertions;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

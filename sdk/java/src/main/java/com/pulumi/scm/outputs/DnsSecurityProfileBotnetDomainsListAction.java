@@ -4,7 +4,10 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.DnsSecurityProfileBotnetDomainsListActionAlert;
+import com.pulumi.scm.outputs.DnsSecurityProfileBotnetDomainsListActionAllow;
+import com.pulumi.scm.outputs.DnsSecurityProfileBotnetDomainsListActionBlock;
+import com.pulumi.scm.outputs.DnsSecurityProfileBotnetDomainsListActionSinkhole;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -12,53 +15,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsSecurityProfileBotnetDomainsListAction {
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Alert
      * 
      */
-    private @Nullable Boolean alert;
+    private @Nullable DnsSecurityProfileBotnetDomainsListActionAlert alert;
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Allow
      * 
      */
-    private @Nullable Boolean allow;
+    private @Nullable DnsSecurityProfileBotnetDomainsListActionAllow allow;
     /**
-     * @return The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Block
      * 
      */
-    private @Nullable Boolean block;
+    private @Nullable DnsSecurityProfileBotnetDomainsListActionBlock block;
     /**
-     * @return The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Sinkhole
      * 
      */
-    private @Nullable Boolean sinkhole;
+    private @Nullable DnsSecurityProfileBotnetDomainsListActionSinkhole sinkhole;
 
     private DnsSecurityProfileBotnetDomainsListAction() {}
     /**
-     * @return The Alert param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Alert
      * 
      */
-    public Optional<Boolean> alert() {
+    public Optional<DnsSecurityProfileBotnetDomainsListActionAlert> alert() {
         return Optional.ofNullable(this.alert);
     }
     /**
-     * @return The Allow param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Allow
      * 
      */
-    public Optional<Boolean> allow() {
+    public Optional<DnsSecurityProfileBotnetDomainsListActionAllow> allow() {
         return Optional.ofNullable(this.allow);
     }
     /**
-     * @return The Block param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Block
      * 
      */
-    public Optional<Boolean> block() {
+    public Optional<DnsSecurityProfileBotnetDomainsListActionBlock> block() {
         return Optional.ofNullable(this.block);
     }
     /**
-     * @return The Sinkhole param. Ensure that only one of the following is specified: `alert`, `allow`, `block`, `sinkhole`
+     * @return Sinkhole
      * 
      */
-    public Optional<Boolean> sinkhole() {
+    public Optional<DnsSecurityProfileBotnetDomainsListActionSinkhole> sinkhole() {
         return Optional.ofNullable(this.sinkhole);
     }
 
@@ -71,10 +74,10 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean alert;
-        private @Nullable Boolean allow;
-        private @Nullable Boolean block;
-        private @Nullable Boolean sinkhole;
+        private @Nullable DnsSecurityProfileBotnetDomainsListActionAlert alert;
+        private @Nullable DnsSecurityProfileBotnetDomainsListActionAllow allow;
+        private @Nullable DnsSecurityProfileBotnetDomainsListActionBlock block;
+        private @Nullable DnsSecurityProfileBotnetDomainsListActionSinkhole sinkhole;
         public Builder() {}
         public Builder(DnsSecurityProfileBotnetDomainsListAction defaults) {
     	      Objects.requireNonNull(defaults);
@@ -85,25 +88,25 @@ public final class DnsSecurityProfileBotnetDomainsListAction {
         }
 
         @CustomType.Setter
-        public Builder alert(@Nullable Boolean alert) {
+        public Builder alert(@Nullable DnsSecurityProfileBotnetDomainsListActionAlert alert) {
 
             this.alert = alert;
             return this;
         }
         @CustomType.Setter
-        public Builder allow(@Nullable Boolean allow) {
+        public Builder allow(@Nullable DnsSecurityProfileBotnetDomainsListActionAllow allow) {
 
             this.allow = allow;
             return this;
         }
         @CustomType.Setter
-        public Builder block(@Nullable Boolean block) {
+        public Builder block(@Nullable DnsSecurityProfileBotnetDomainsListActionBlock block) {
 
             this.block = block;
             return this;
         }
         @CustomType.Setter
-        public Builder sinkhole(@Nullable Boolean sinkhole) {
+        public Builder sinkhole(@Nullable DnsSecurityProfileBotnetDomainsListActionSinkhole sinkhole) {
 
             this.sinkhole = sinkhole;
             return this;

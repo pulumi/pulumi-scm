@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class HttpHeaderProfileHttpHeaderInsertionType
     {
         /// <summary>
-        /// The Domains param.
+        /// A list of DNS domains
         /// </summary>
         public readonly ImmutableArray<string> Domains;
         /// <summary>
-        /// The Headers param.
+        /// Headers
         /// </summary>
         public readonly ImmutableArray<Outputs.HttpHeaderProfileHttpHeaderInsertionTypeHeader> Headers;
         /// <summary>
-        /// The Name param.
+        /// The HTTP header insertion type (*This is a predefined list in the UI*)
         /// </summary>
         public readonly string Name;
 

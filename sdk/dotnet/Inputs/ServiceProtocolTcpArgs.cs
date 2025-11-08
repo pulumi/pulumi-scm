@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class ServiceProtocolTcpArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Override param.
+        /// Override
         /// </summary>
         [Input("override")]
         public Input<Inputs.ServiceProtocolTcpOverrideArgs>? Override { get; set; }
 
         /// <summary>
-        /// The Port param. String length must be between 1 and 1023 characters.
+        /// Port
         /// </summary>
         [Input("port", required: true)]
         public Input<string> Port { get; set; } = null!;
 
         /// <summary>
-        /// The SourcePort param. String length must be between 1 and 1023 characters.
+        /// Source port
         /// </summary>
         [Input("sourcePort")]
         public Input<string>? SourcePort { get; set; }

@@ -14,21 +14,34 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTagListDataResult
     {
         /// <summary>
-        /// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+        /// The color of the tag
         /// </summary>
         public readonly string Color;
         /// <summary>
-        /// The Comments param. String length must not exceed 1023 characters.
+        /// The description of the tag
         /// </summary>
         public readonly string Comments;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the tag
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param. String length must not exceed 127 characters.
+        /// The name of the tag
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetTagListDataResult(
@@ -36,14 +49,26 @@ namespace Pulumi.Scm.Outputs
 
             string comments,
 
+            string device,
+
+            string folder,
+
             string id,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             Color = color;
             Comments = comments;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

@@ -19,14 +19,14 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
     public static final TrafficSteeringRuleArgs Empty = new TrafficSteeringRuleArgs();
 
     /**
-     * The Action param.
+     * Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<TrafficSteeringRuleActionArgs> action;
 
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public Optional<Output<TrafficSteeringRuleActionArgs>> action() {
@@ -34,14 +34,14 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Category param.
+     * Category
      * 
      */
     @Import(name="categories")
     private @Nullable Output<List<String>> categories;
 
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     public Optional<Output<List<String>>> categories() {
@@ -49,14 +49,14 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Destination param.
+     * Destination
      * 
      */
     @Import(name="destinations")
     private @Nullable Output<List<String>> destinations;
 
     /**
-     * @return The Destination param.
+     * @return Destination
      * 
      */
     public Optional<Output<List<String>>> destinations() {
@@ -64,29 +64,29 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * The folder containing the traffic steering rule
      * 
      */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
+    @Import(name="folder", required=true)
+    private Output<String> folder;
 
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * @return The folder containing the traffic steering rule
      * 
      */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
+    public Output<String> folder() {
+        return this.folder;
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -94,14 +94,14 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Service param.
+     * Service
      * 
      */
     @Import(name="services", required=true)
     private Output<List<String>> services;
 
     /**
-     * @return The Service param.
+     * @return Service
      * 
      */
     public Output<List<String>> services() {
@@ -109,14 +109,14 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The SourceUser param.
+     * Source user
      * 
      */
     @Import(name="sourceUsers")
     private @Nullable Output<List<String>> sourceUsers;
 
     /**
-     * @return The SourceUser param.
+     * @return Source user
      * 
      */
     public Optional<Output<List<String>>> sourceUsers() {
@@ -124,14 +124,14 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Source param.
+     * Source
      * 
      */
     @Import(name="sources", required=true)
     private Output<List<String>> sources;
 
     /**
-     * @return The Source param.
+     * @return Source
      * 
      */
     public Output<List<String>> sources() {
@@ -170,7 +170,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param action The Action param.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param action The Action param.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -191,7 +191,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param categories The Category param.
+         * @param categories Category
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param categories The Category param.
+         * @param categories Category
          * 
          * @return builder
          * 
@@ -212,7 +212,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param categories The Category param.
+         * @param categories Category
          * 
          * @return builder
          * 
@@ -222,7 +222,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param destinations The Destination param.
+         * @param destinations Destination
          * 
          * @return builder
          * 
@@ -233,7 +233,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param destinations The Destination param.
+         * @param destinations Destination
          * 
          * @return builder
          * 
@@ -243,7 +243,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param destinations The Destination param.
+         * @param destinations Destination
          * 
          * @return builder
          * 
@@ -253,18 +253,18 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+         * @param folder The folder containing the traffic steering rule
          * 
          * @return builder
          * 
          */
-        public Builder folder(@Nullable Output<String> folder) {
+        public Builder folder(Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+         * @param folder The folder containing the traffic steering rule
          * 
          * @return builder
          * 
@@ -274,7 +274,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -285,7 +285,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -295,7 +295,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param services The Service param.
+         * @param services Service
          * 
          * @return builder
          * 
@@ -306,7 +306,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param services The Service param.
+         * @param services Service
          * 
          * @return builder
          * 
@@ -316,7 +316,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param services The Service param.
+         * @param services Service
          * 
          * @return builder
          * 
@@ -326,7 +326,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sourceUsers The SourceUser param.
+         * @param sourceUsers Source user
          * 
          * @return builder
          * 
@@ -337,7 +337,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sourceUsers The SourceUser param.
+         * @param sourceUsers Source user
          * 
          * @return builder
          * 
@@ -347,7 +347,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sourceUsers The SourceUser param.
+         * @param sourceUsers Source user
          * 
          * @return builder
          * 
@@ -357,7 +357,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sources The Source param.
+         * @param sources Source
          * 
          * @return builder
          * 
@@ -368,7 +368,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sources The Source param.
+         * @param sources Source
          * 
          * @return builder
          * 
@@ -378,7 +378,7 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param sources The Source param.
+         * @param sources Source
          * 
          * @return builder
          * 
@@ -388,6 +388,9 @@ public final class TrafficSteeringRuleArgs extends com.pulumi.resources.Resource
         }
 
         public TrafficSteeringRuleArgs build() {
+            if ($.folder == null) {
+                throw new MissingRequiredPropertyException("TrafficSteeringRuleArgs", "folder");
+            }
             if ($.services == null) {
                 throw new MissingRequiredPropertyException("TrafficSteeringRuleArgs", "services");
             }

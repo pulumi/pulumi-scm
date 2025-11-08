@@ -19,14 +19,14 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
     public static final HipObjectMobileDeviceCriteriaApplicationsArgs Empty = new HipObjectMobileDeviceCriteriaApplicationsArgs();
 
     /**
-     * The HasMalware param.
+     * Has malware
      * 
      */
     @Import(name="hasMalware")
     private @Nullable Output<HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs> hasMalware;
 
     /**
-     * @return The HasMalware param.
+     * @return Has malware
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs>> hasMalware() {
@@ -34,14 +34,14 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
     }
 
     /**
-     * Has apps that are not managed.
+     * Has apps that are not managed
      * 
      */
     @Import(name="hasUnmanagedApp")
     private @Nullable Output<Boolean> hasUnmanagedApp;
 
     /**
-     * @return Has apps that are not managed.
+     * @return Has apps that are not managed
      * 
      */
     public Optional<Output<Boolean>> hasUnmanagedApp() {
@@ -49,14 +49,14 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
     }
 
     /**
-     * The Includes param.
+     * Includes
      * 
      */
     @Import(name="includes")
     private @Nullable Output<List<HipObjectMobileDeviceCriteriaApplicationsIncludeArgs>> includes;
 
     /**
-     * @return The Includes param.
+     * @return Includes
      * 
      */
     public Optional<Output<List<HipObjectMobileDeviceCriteriaApplicationsIncludeArgs>>> includes() {
@@ -90,7 +90,7 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
         }
 
         /**
-         * @param hasMalware The HasMalware param.
+         * @param hasMalware Has malware
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
         }
 
         /**
-         * @param hasMalware The HasMalware param.
+         * @param hasMalware Has malware
          * 
          * @return builder
          * 
@@ -111,7 +111,7 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
         }
 
         /**
-         * @param hasUnmanagedApp Has apps that are not managed.
+         * @param hasUnmanagedApp Has apps that are not managed
          * 
          * @return builder
          * 
@@ -122,7 +122,7 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
         }
 
         /**
-         * @param hasUnmanagedApp Has apps that are not managed.
+         * @param hasUnmanagedApp Has apps that are not managed
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
         }
 
         /**
-         * @param includes The Includes param.
+         * @param includes Includes
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
         }
 
         /**
-         * @param includes The Includes param.
+         * @param includes Includes
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class HipObjectMobileDeviceCriteriaApplicationsArgs extends com.pul
         }
 
         /**
-         * @param includes The Includes param.
+         * @param includes Includes
          * 
          * @return builder
          * 

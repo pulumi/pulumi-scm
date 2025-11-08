@@ -12,7 +12,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// HipProfile resource
 //
 // ## Example Usage
 //
@@ -28,7 +28,13 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewHipProfile(ctx, "example", nil)
+//			// This resource creates a new HIP Profile.
+//			_, err := scm.NewHipProfile(ctx, "scm_hip_profile_1", &scm.HipProfileArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_hip_profile_1"),
+//				Description: pulumi.String("A HIP profile created by Terraform"),
+//				Match:       pulumi.String("\"is-win\" and \"is-anti-malware-and-rtp-enabled\""),
+//			})
 //			if err != nil {
 //				return err
 //			}
@@ -40,17 +46,17 @@ import (
 type HipProfile struct {
 	pulumi.CustomResourceState
 
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Match param. String length must not exceed 2048 characters.
+	// Match
 	Match pulumi.StringOutput `pulumi:"match"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -88,33 +94,33 @@ func GetHipProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering HipProfile resources.
 type hipProfileState struct {
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Match param. String length must not exceed 2048 characters.
+	// Match
 	Match *string `pulumi:"match"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP profile
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type HipProfileState struct {
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Match param. String length must not exceed 2048 characters.
+	// Match
 	Match pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP profile
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -124,33 +130,33 @@ func (HipProfileState) ElementType() reflect.Type {
 }
 
 type hipProfileArgs struct {
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Match param. String length must not exceed 2048 characters.
+	// Match
 	Match string `pulumi:"match"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP profile
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a HipProfile resource.
 type HipProfileArgs struct {
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Match param. String length must not exceed 2048 characters.
+	// Match
 	Match pulumi.StringInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP profile
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -241,32 +247,32 @@ func (o HipProfileOutput) ToHipProfileOutputWithContext(ctx context.Context) Hip
 	return o
 }
 
-// The Description param. String length must not exceed 255 characters.
+// Description
 func (o HipProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o HipProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o HipProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Match param. String length must not exceed 2048 characters.
+// Match
 func (o HipProfileOutput) Match() pulumi.StringOutput {
 	return o.ApplyT(func(v *HipProfile) pulumi.StringOutput { return v.Match }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// The name of the HIP profile
 func (o HipProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *HipProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o HipProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

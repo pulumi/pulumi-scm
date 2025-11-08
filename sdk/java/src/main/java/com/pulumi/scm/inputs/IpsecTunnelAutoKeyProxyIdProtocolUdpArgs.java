@@ -16,14 +16,14 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs extends com.pulumi.r
     public static final IpsecTunnelAutoKeyProxyIdProtocolUdpArgs Empty = new IpsecTunnelAutoKeyProxyIdProtocolUdpArgs();
 
     /**
-     * The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+     * Local port
      * 
      */
     @Import(name="localPort")
     private @Nullable Output<Integer> localPort;
 
     /**
-     * @return The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Local port
      * 
      */
     public Optional<Output<Integer>> localPort() {
@@ -31,14 +31,14 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs extends com.pulumi.r
     }
 
     /**
-     * The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+     * Remote port
      * 
      */
     @Import(name="remotePort")
     private @Nullable Output<Integer> remotePort;
 
     /**
-     * @return The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+     * @return Remote port
      * 
      */
     public Optional<Output<Integer>> remotePort() {
@@ -71,7 +71,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs extends com.pulumi.r
         }
 
         /**
-         * @param localPort The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+         * @param localPort Local port
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs extends com.pulumi.r
         }
 
         /**
-         * @param localPort The LocalPort param. Value must be between 0 and 65535. Default: `0`.
+         * @param localPort Local port
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs extends com.pulumi.r
         }
 
         /**
-         * @param remotePort The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+         * @param remotePort Remote port
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class IpsecTunnelAutoKeyProxyIdProtocolUdpArgs extends com.pulumi.r
         }
 
         /**
-         * @param remotePort The RemotePort param. Value must be between 0 and 65535. Default: `0`.
+         * @param remotePort Remote port
          * 
          * @return builder
          * 

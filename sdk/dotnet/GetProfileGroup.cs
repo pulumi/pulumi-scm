@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetProfileGroup
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetProfileGroup.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// ProfileGroup data source
         /// </summary>
         public static Task<GetProfileGroupResult> InvokeAsync(GetProfileGroupArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetProfileGroupResult>("scm:index/getProfileGroup:getProfileGroup", args ?? new GetProfileGroupArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetProfileGroup.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// ProfileGroup data source
         /// </summary>
         public static Output<GetProfileGroupResult> Invoke(GetProfileGroupInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetProfileGroupResult>("scm:index/getProfileGroup:getProfileGroup", args ?? new GetProfileGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetProfileGroup.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// ProfileGroup data source
         /// </summary>
         public static Output<GetProfileGroupResult> Invoke(GetProfileGroupInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetProfileGroupResult>("scm:index/getProfileGroup:getProfileGroup", args ?? new GetProfileGroupInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetProfileGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the profile group
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the profile group
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetProfileGroupArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetProfileGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the profile group
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the profile group
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetProfileGroupInvokeArgs()
         {
@@ -118,44 +76,60 @@ namespace Pulumi.Scm
     public sealed class GetProfileGroupResult
     {
         /// <summary>
-        /// List of AI security profiles.
+        /// Ai security
         /// </summary>
         public readonly ImmutableArray<string> AiSecurities;
         /// <summary>
-        /// List of DNS security profiles.
+        /// Data filtering
+        /// </summary>
+        public readonly ImmutableArray<string> DataFilterings;
+        /// <summary>
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Dns security
         /// </summary>
         public readonly ImmutableArray<string> DnsSecurities;
         /// <summary>
-        /// List of file blocking profiles.
+        /// File blocking
         /// </summary>
         public readonly ImmutableArray<string> FileBlockings;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the profile group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The name of the profile group.
+        /// The name of the profile group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// List of HTTP header insertion profiles.
+        /// Saas security
         /// </summary>
         public readonly ImmutableArray<string> SaasSecurities;
         /// <summary>
-        /// List of anti-spyware profiles.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Spyware
         /// </summary>
         public readonly ImmutableArray<string> Spywares;
         public readonly string Tfid;
         /// <summary>
-        /// List of URL filtering profiles.
+        /// Url filtering
         /// </summary>
         public readonly ImmutableArray<string> UrlFilterings;
         /// <summary>
-        /// List of anti-virus and Wildfire analysis profiles.
+        /// Virus and wildfire analysis
         /// </summary>
         public readonly ImmutableArray<string> VirusAndWildfireAnalyses;
         /// <summary>
-        /// List of vulnerability protection profiles.
+        /// Vulnerability
         /// </summary>
         public readonly ImmutableArray<string> Vulnerabilities;
 
@@ -163,15 +137,23 @@ namespace Pulumi.Scm
         private GetProfileGroupResult(
             ImmutableArray<string> aiSecurities,
 
+            ImmutableArray<string> dataFilterings,
+
+            string device,
+
             ImmutableArray<string> dnsSecurities,
 
             ImmutableArray<string> fileBlockings,
+
+            string folder,
 
             string id,
 
             string name,
 
             ImmutableArray<string> saasSecurities,
+
+            string snippet,
 
             ImmutableArray<string> spywares,
 
@@ -184,11 +166,15 @@ namespace Pulumi.Scm
             ImmutableArray<string> vulnerabilities)
         {
             AiSecurities = aiSecurities;
+            DataFilterings = dataFilterings;
+            Device = device;
             DnsSecurities = dnsSecurities;
             FileBlockings = fileBlockings;
+            Folder = folder;
             Id = id;
             Name = name;
             SaasSecurities = saasSecurities;
+            Snippet = snippet;
             Spywares = spywares;
             Tfid = tfid;
             UrlFilterings = urlFilterings;

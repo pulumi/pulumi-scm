@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSamlServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * SamlServerProfile data source
  */
 export function getSamlServerProfile(args: GetSamlServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSamlServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSamlServerProfile:getSamlServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getSamlServerProfile(args: GetSamlServerProfileArgs, opts?: pulu
  */
 export interface GetSamlServerProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the SAML server profile
      */
     id: string;
+    /**
+     * The name of the SAML server profile
+     */
+    name?: string;
 }
 
 /**
@@ -40,61 +34,67 @@ export interface GetSamlServerProfileArgs {
  */
 export interface GetSamlServerProfileResult {
     /**
-     * The Certificate param. String length must not exceed 63 characters.
+     * The identity provider certificate
      */
     readonly certificate: string;
     /**
-     * The EntityId param. String length must be between 1 and 1024 characters.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The identity provider ID
      */
     readonly entityId: string;
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the SAML server profile
      */
     readonly id: string;
     /**
-     * The MaxClockSkew param. Value must be between 1 and 900.
+     * Maxiumum clock skew
      */
     readonly maxClockSkew: number;
     /**
-     * The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * The name of the SAML server profile
+     */
+    readonly name: string;
+    /**
+     * SAML HTTP binding for SLO requests to the identity provider
      */
     readonly sloBindings: string;
     /**
-     * The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * SAML HTTP binding for SSO requests to the identity provider
      */
     readonly ssoBindings: string;
     /**
-     * The SsoUrl param. String length must be between 1 and 255 characters.
+     * Identity provider SSO URL
      */
     readonly ssoUrl: string;
     readonly tfid: string;
     /**
-     * The ValidateIdpCertificate param.
+     * Validate the identity provider certificate?
      */
     readonly validateIdpCertificate: boolean;
     /**
-     * The WantAuthRequestsSigned param.
+     * Sign SAML message to the identity provider?
      */
     readonly wantAuthRequestsSigned: boolean;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getSamlServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * SamlServerProfile data source
  */
 export function getSamlServerProfileOutput(args: GetSamlServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSamlServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSamlServerProfile:getSamlServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -103,7 +103,11 @@ export function getSamlServerProfileOutput(args: GetSamlServerProfileOutputArgs,
  */
 export interface GetSamlServerProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the SAML server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the SAML server profile
+     */
+    name?: pulumi.Input<string>;
 }

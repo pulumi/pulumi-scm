@@ -8,95 +8,95 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetAuthenticationProfileMethodCloud;
 import com.pulumi.scm.outputs.GetAuthenticationProfileMethodKerberos;
 import com.pulumi.scm.outputs.GetAuthenticationProfileMethodLdap;
+import com.pulumi.scm.outputs.GetAuthenticationProfileMethodLocalDatabase;
 import com.pulumi.scm.outputs.GetAuthenticationProfileMethodRadius;
 import com.pulumi.scm.outputs.GetAuthenticationProfileMethodSamlIdp;
 import com.pulumi.scm.outputs.GetAuthenticationProfileMethodTacplus;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetAuthenticationProfileMethod {
     /**
-     * @return The Cloud param.
+     * @return Cloud
      * 
      */
     private GetAuthenticationProfileMethodCloud cloud;
     /**
-     * @return The Kerberos param.
+     * @return Kerberos
      * 
      */
     private GetAuthenticationProfileMethodKerberos kerberos;
     /**
-     * @return The Ldap param.
+     * @return Ldap
      * 
      */
     private GetAuthenticationProfileMethodLdap ldap;
     /**
-     * @return The LocalDatabase param.
+     * @return Local database
      * 
      */
-    private Boolean localDatabase;
+    private GetAuthenticationProfileMethodLocalDatabase localDatabase;
     /**
-     * @return The Radius param.
+     * @return Radius
      * 
      */
     private GetAuthenticationProfileMethodRadius radius;
     /**
-     * @return The SamlIdp param.
+     * @return Saml idp
      * 
      */
     private GetAuthenticationProfileMethodSamlIdp samlIdp;
     /**
-     * @return The Tacplus param.
+     * @return Tacplus
      * 
      */
     private GetAuthenticationProfileMethodTacplus tacplus;
 
     private GetAuthenticationProfileMethod() {}
     /**
-     * @return The Cloud param.
+     * @return Cloud
      * 
      */
     public GetAuthenticationProfileMethodCloud cloud() {
         return this.cloud;
     }
     /**
-     * @return The Kerberos param.
+     * @return Kerberos
      * 
      */
     public GetAuthenticationProfileMethodKerberos kerberos() {
         return this.kerberos;
     }
     /**
-     * @return The Ldap param.
+     * @return Ldap
      * 
      */
     public GetAuthenticationProfileMethodLdap ldap() {
         return this.ldap;
     }
     /**
-     * @return The LocalDatabase param.
+     * @return Local database
      * 
      */
-    public Boolean localDatabase() {
+    public GetAuthenticationProfileMethodLocalDatabase localDatabase() {
         return this.localDatabase;
     }
     /**
-     * @return The Radius param.
+     * @return Radius
      * 
      */
     public GetAuthenticationProfileMethodRadius radius() {
         return this.radius;
     }
     /**
-     * @return The SamlIdp param.
+     * @return Saml idp
      * 
      */
     public GetAuthenticationProfileMethodSamlIdp samlIdp() {
         return this.samlIdp;
     }
     /**
-     * @return The Tacplus param.
+     * @return Tacplus
      * 
      */
     public GetAuthenticationProfileMethodTacplus tacplus() {
@@ -115,7 +115,7 @@ public final class GetAuthenticationProfileMethod {
         private GetAuthenticationProfileMethodCloud cloud;
         private GetAuthenticationProfileMethodKerberos kerberos;
         private GetAuthenticationProfileMethodLdap ldap;
-        private Boolean localDatabase;
+        private GetAuthenticationProfileMethodLocalDatabase localDatabase;
         private GetAuthenticationProfileMethodRadius radius;
         private GetAuthenticationProfileMethodSamlIdp samlIdp;
         private GetAuthenticationProfileMethodTacplus tacplus;
@@ -156,7 +156,7 @@ public final class GetAuthenticationProfileMethod {
             return this;
         }
         @CustomType.Setter
-        public Builder localDatabase(Boolean localDatabase) {
+        public Builder localDatabase(GetAuthenticationProfileMethodLocalDatabase localDatabase) {
             if (localDatabase == null) {
               throw new MissingRequiredPropertyException("GetAuthenticationProfileMethod", "localDatabase");
             }

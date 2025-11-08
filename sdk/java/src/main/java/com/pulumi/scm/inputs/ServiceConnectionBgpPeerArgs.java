@@ -5,7 +5,6 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,14 +16,14 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
     public static final ServiceConnectionBgpPeerArgs Empty = new ServiceConnectionBgpPeerArgs();
 
     /**
-     * The LocalIpAddress param.
+     * Local ip address
      * 
      */
     @Import(name="localIpAddress")
     private @Nullable Output<String> localIpAddress;
 
     /**
-     * @return The LocalIpAddress param.
+     * @return Local ip address
      * 
      */
     public Optional<Output<String>> localIpAddress() {
@@ -32,14 +31,14 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The LocalIpv6Address param.
+     * Local ipv6 address
      * 
      */
     @Import(name="localIpv6Address")
     private @Nullable Output<String> localIpv6Address;
 
     /**
-     * @return The LocalIpv6Address param.
+     * @return Local ipv6 address
      * 
      */
     public Optional<Output<String>> localIpv6Address() {
@@ -47,14 +46,14 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The PeerIpAddress param.
+     * Peer ip address
      * 
      */
     @Import(name="peerIpAddress")
     private @Nullable Output<String> peerIpAddress;
 
     /**
-     * @return The PeerIpAddress param.
+     * @return Peer ip address
      * 
      */
     public Optional<Output<String>> peerIpAddress() {
@@ -62,14 +61,14 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The PeerIpv6Address param.
+     * Peer ipv6 address
      * 
      */
     @Import(name="peerIpv6Address")
     private @Nullable Output<String> peerIpv6Address;
 
     /**
-     * @return The PeerIpv6Address param.
+     * @return Peer ipv6 address
      * 
      */
     public Optional<Output<String>> peerIpv6Address() {
@@ -77,29 +76,14 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The SameAsPrimary param.
-     * 
-     */
-    @Import(name="sameAsPrimary")
-    private @Nullable Output<Boolean> sameAsPrimary;
-
-    /**
-     * @return The SameAsPrimary param.
-     * 
-     */
-    public Optional<Output<Boolean>> sameAsPrimary() {
-        return Optional.ofNullable(this.sameAsPrimary);
-    }
-
-    /**
-     * The Secret param.
+     * Secret
      * 
      */
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
     /**
-     * @return The Secret param.
+     * @return Secret
      * 
      */
     public Optional<Output<String>> secret() {
@@ -113,7 +97,6 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         this.localIpv6Address = $.localIpv6Address;
         this.peerIpAddress = $.peerIpAddress;
         this.peerIpv6Address = $.peerIpv6Address;
-        this.sameAsPrimary = $.sameAsPrimary;
         this.secret = $.secret;
     }
 
@@ -136,7 +119,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local ip address
          * 
          * @return builder
          * 
@@ -147,7 +130,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local ip address
          * 
          * @return builder
          * 
@@ -157,7 +140,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param localIpv6Address The LocalIpv6Address param.
+         * @param localIpv6Address Local ipv6 address
          * 
          * @return builder
          * 
@@ -168,7 +151,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param localIpv6Address The LocalIpv6Address param.
+         * @param localIpv6Address Local ipv6 address
          * 
          * @return builder
          * 
@@ -178,7 +161,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Peer ip address
          * 
          * @return builder
          * 
@@ -189,7 +172,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Peer ip address
          * 
          * @return builder
          * 
@@ -199,7 +182,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param peerIpv6Address The PeerIpv6Address param.
+         * @param peerIpv6Address Peer ipv6 address
          * 
          * @return builder
          * 
@@ -210,7 +193,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param peerIpv6Address The PeerIpv6Address param.
+         * @param peerIpv6Address Peer ipv6 address
          * 
          * @return builder
          * 
@@ -220,28 +203,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param sameAsPrimary The SameAsPrimary param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder sameAsPrimary(@Nullable Output<Boolean> sameAsPrimary) {
-            $.sameAsPrimary = sameAsPrimary;
-            return this;
-        }
-
-        /**
-         * @param sameAsPrimary The SameAsPrimary param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder sameAsPrimary(Boolean sameAsPrimary) {
-            return sameAsPrimary(Output.of(sameAsPrimary));
-        }
-
-        /**
-         * @param secret The Secret param.
+         * @param secret Secret
          * 
          * @return builder
          * 
@@ -252,7 +214,7 @@ public final class ServiceConnectionBgpPeerArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param secret The Secret param.
+         * @param secret Secret
          * 
          * @return builder
          * 

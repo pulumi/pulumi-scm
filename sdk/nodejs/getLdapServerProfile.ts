@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getLdapServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * LdapServerProfile data source
  */
 export function getLdapServerProfile(args: GetLdapServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetLdapServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLdapServerProfile:getLdapServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getLdapServerProfile(args: GetLdapServerProfileArgs, opts?: pulu
  */
 export interface GetLdapServerProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the LDAP server profile
      */
     id: string;
+    /**
+     * The name of the LDAP server profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,69 +36,79 @@ export interface GetLdapServerProfileArgs {
  */
 export interface GetLdapServerProfileResult {
     /**
-     * The Base param. String length must not exceed 255 characters.
+     * The base DN
      */
     readonly base: string;
     /**
-     * The BindDn param. String length must not exceed 255 characters.
+     * The bind DN
      */
     readonly bindDn: string;
     /**
-     * The BindPassword param. String length must not exceed 121 characters.
+     * The bind password
      */
     readonly bindPassword: string;
     /**
-     * The BindTimelimit param.
+     * The bind timeout (seconds)
      */
     readonly bindTimelimit: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Map of sensitive values returned from the API.
+     */
+    readonly encryptedValues: {[key: string]: string};
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the LDAP server profile
      */
     readonly id: string;
     /**
-     * The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+     * The LDAP server time
      */
     readonly ldapType: string;
     /**
-     * The RetryInterval param.
+     * The name of the LDAP server profile
+     */
+    readonly name: string;
+    /**
+     * The search retry interval (seconds)
      */
     readonly retryInterval: number;
     /**
-     * The Servers param.
+     * The LDAP server configuration
      */
     readonly servers: outputs.GetLdapServerProfileServer[];
     /**
-     * The Ssl param.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Require SSL/TLS secured connection?
      */
     readonly ssl: boolean;
     readonly tfid: string;
     /**
-     * The Timelimit param.
+     * The search timeout (seconds)
      */
     readonly timelimit: number;
     /**
-     * The VerifyServerCertificate param.
+     * Verify server certificate for SSL sessions?
      */
     readonly verifyServerCertificate: boolean;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getLdapServerProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * LdapServerProfile data source
  */
 export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLdapServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLdapServerProfile:getLdapServerProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -113,7 +117,11 @@ export function getLdapServerProfileOutput(args: GetLdapServerProfileOutputArgs,
  */
 export interface GetLdapServerProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the LDAP server profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the LDAP server profile
+     */
+    name?: pulumi.Input<string>;
 }

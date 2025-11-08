@@ -13,28 +13,28 @@ namespace Pulumi.Scm.Inputs
     public sealed class UrlAccessProfileCredentialEnforcementModeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Disabled param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Disabled
         /// </summary>
         [Input("disabled")]
-        public Input<bool>? Disabled { get; set; }
+        public Input<Inputs.UrlAccessProfileCredentialEnforcementModeDisabledArgs>? Disabled { get; set; }
 
         /// <summary>
-        /// The DomainCredentials param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Domain credentials
         /// </summary>
         [Input("domainCredentials")]
-        public Input<bool>? DomainCredentials { get; set; }
+        public Input<Inputs.UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs>? DomainCredentials { get; set; }
 
         /// <summary>
-        /// The GroupMapping param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Group mapping
         /// </summary>
         [Input("groupMapping")]
         public Input<string>? GroupMapping { get; set; }
 
         /// <summary>
-        /// The IpUser param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Ip user
         /// </summary>
         [Input("ipUser")]
-        public Input<bool>? IpUser { get; set; }
+        public Input<Inputs.UrlAccessProfileCredentialEnforcementModeIpUserArgs>? IpUser { get; set; }
 
         public UrlAccessProfileCredentialEnforcementModeArgs()
         {

@@ -12,90 +12,90 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScheduleScheduleTypeRecurringWeekly {
     /**
-     * @return The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Friday
      * 
      */
-    private @Nullable List<String> fridayLists;
+    private @Nullable List<String> fridays;
     /**
-     * @return The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Monday
      * 
      */
-    private @Nullable List<String> mondayLists;
+    private @Nullable List<String> mondays;
     /**
-     * @return The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Saturday
      * 
      */
-    private @Nullable List<String> saturdayLists;
+    private @Nullable List<String> saturdays;
     /**
-     * @return The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Sunday
      * 
      */
-    private @Nullable List<String> sundayLists;
+    private @Nullable List<String> sundays;
     /**
-     * @return The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Thursday
      * 
      */
-    private @Nullable List<String> thursdayLists;
+    private @Nullable List<String> thursdays;
     /**
-     * @return The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Tuesday
      * 
      */
-    private @Nullable List<String> tuesdayLists;
+    private @Nullable List<String> tuesdays;
     /**
-     * @return The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Wednesday
      * 
      */
-    private @Nullable List<String> wednesdayLists;
+    private @Nullable List<String> wednesdays;
 
     private ScheduleScheduleTypeRecurringWeekly() {}
     /**
-     * @return The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Friday
      * 
      */
-    public List<String> fridayLists() {
-        return this.fridayLists == null ? List.of() : this.fridayLists;
+    public List<String> fridays() {
+        return this.fridays == null ? List.of() : this.fridays;
     }
     /**
-     * @return The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Monday
      * 
      */
-    public List<String> mondayLists() {
-        return this.mondayLists == null ? List.of() : this.mondayLists;
+    public List<String> mondays() {
+        return this.mondays == null ? List.of() : this.mondays;
     }
     /**
-     * @return The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Saturday
      * 
      */
-    public List<String> saturdayLists() {
-        return this.saturdayLists == null ? List.of() : this.saturdayLists;
+    public List<String> saturdays() {
+        return this.saturdays == null ? List.of() : this.saturdays;
     }
     /**
-     * @return The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Sunday
      * 
      */
-    public List<String> sundayLists() {
-        return this.sundayLists == null ? List.of() : this.sundayLists;
+    public List<String> sundays() {
+        return this.sundays == null ? List.of() : this.sundays;
     }
     /**
-     * @return The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Thursday
      * 
      */
-    public List<String> thursdayLists() {
-        return this.thursdayLists == null ? List.of() : this.thursdayLists;
+    public List<String> thursdays() {
+        return this.thursdays == null ? List.of() : this.thursdays;
     }
     /**
-     * @return The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Tuesday
      * 
      */
-    public List<String> tuesdayLists() {
-        return this.tuesdayLists == null ? List.of() : this.tuesdayLists;
+    public List<String> tuesdays() {
+        return this.tuesdays == null ? List.of() : this.tuesdays;
     }
     /**
-     * @return The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Wednesday
      * 
      */
-    public List<String> wednesdayLists() {
-        return this.wednesdayLists == null ? List.of() : this.wednesdayLists;
+    public List<String> wednesdays() {
+        return this.wednesdays == null ? List.of() : this.wednesdays;
     }
 
     public static Builder builder() {
@@ -107,97 +107,97 @@ public final class ScheduleScheduleTypeRecurringWeekly {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable List<String> fridayLists;
-        private @Nullable List<String> mondayLists;
-        private @Nullable List<String> saturdayLists;
-        private @Nullable List<String> sundayLists;
-        private @Nullable List<String> thursdayLists;
-        private @Nullable List<String> tuesdayLists;
-        private @Nullable List<String> wednesdayLists;
+        private @Nullable List<String> fridays;
+        private @Nullable List<String> mondays;
+        private @Nullable List<String> saturdays;
+        private @Nullable List<String> sundays;
+        private @Nullable List<String> thursdays;
+        private @Nullable List<String> tuesdays;
+        private @Nullable List<String> wednesdays;
         public Builder() {}
         public Builder(ScheduleScheduleTypeRecurringWeekly defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.fridayLists = defaults.fridayLists;
-    	      this.mondayLists = defaults.mondayLists;
-    	      this.saturdayLists = defaults.saturdayLists;
-    	      this.sundayLists = defaults.sundayLists;
-    	      this.thursdayLists = defaults.thursdayLists;
-    	      this.tuesdayLists = defaults.tuesdayLists;
-    	      this.wednesdayLists = defaults.wednesdayLists;
+    	      this.fridays = defaults.fridays;
+    	      this.mondays = defaults.mondays;
+    	      this.saturdays = defaults.saturdays;
+    	      this.sundays = defaults.sundays;
+    	      this.thursdays = defaults.thursdays;
+    	      this.tuesdays = defaults.tuesdays;
+    	      this.wednesdays = defaults.wednesdays;
         }
 
         @CustomType.Setter
-        public Builder fridayLists(@Nullable List<String> fridayLists) {
+        public Builder fridays(@Nullable List<String> fridays) {
 
-            this.fridayLists = fridayLists;
+            this.fridays = fridays;
             return this;
         }
-        public Builder fridayLists(String... fridayLists) {
-            return fridayLists(List.of(fridayLists));
+        public Builder fridays(String... fridays) {
+            return fridays(List.of(fridays));
         }
         @CustomType.Setter
-        public Builder mondayLists(@Nullable List<String> mondayLists) {
+        public Builder mondays(@Nullable List<String> mondays) {
 
-            this.mondayLists = mondayLists;
+            this.mondays = mondays;
             return this;
         }
-        public Builder mondayLists(String... mondayLists) {
-            return mondayLists(List.of(mondayLists));
+        public Builder mondays(String... mondays) {
+            return mondays(List.of(mondays));
         }
         @CustomType.Setter
-        public Builder saturdayLists(@Nullable List<String> saturdayLists) {
+        public Builder saturdays(@Nullable List<String> saturdays) {
 
-            this.saturdayLists = saturdayLists;
+            this.saturdays = saturdays;
             return this;
         }
-        public Builder saturdayLists(String... saturdayLists) {
-            return saturdayLists(List.of(saturdayLists));
+        public Builder saturdays(String... saturdays) {
+            return saturdays(List.of(saturdays));
         }
         @CustomType.Setter
-        public Builder sundayLists(@Nullable List<String> sundayLists) {
+        public Builder sundays(@Nullable List<String> sundays) {
 
-            this.sundayLists = sundayLists;
+            this.sundays = sundays;
             return this;
         }
-        public Builder sundayLists(String... sundayLists) {
-            return sundayLists(List.of(sundayLists));
+        public Builder sundays(String... sundays) {
+            return sundays(List.of(sundays));
         }
         @CustomType.Setter
-        public Builder thursdayLists(@Nullable List<String> thursdayLists) {
+        public Builder thursdays(@Nullable List<String> thursdays) {
 
-            this.thursdayLists = thursdayLists;
+            this.thursdays = thursdays;
             return this;
         }
-        public Builder thursdayLists(String... thursdayLists) {
-            return thursdayLists(List.of(thursdayLists));
+        public Builder thursdays(String... thursdays) {
+            return thursdays(List.of(thursdays));
         }
         @CustomType.Setter
-        public Builder tuesdayLists(@Nullable List<String> tuesdayLists) {
+        public Builder tuesdays(@Nullable List<String> tuesdays) {
 
-            this.tuesdayLists = tuesdayLists;
+            this.tuesdays = tuesdays;
             return this;
         }
-        public Builder tuesdayLists(String... tuesdayLists) {
-            return tuesdayLists(List.of(tuesdayLists));
+        public Builder tuesdays(String... tuesdays) {
+            return tuesdays(List.of(tuesdays));
         }
         @CustomType.Setter
-        public Builder wednesdayLists(@Nullable List<String> wednesdayLists) {
+        public Builder wednesdays(@Nullable List<String> wednesdays) {
 
-            this.wednesdayLists = wednesdayLists;
+            this.wednesdays = wednesdays;
             return this;
         }
-        public Builder wednesdayLists(String... wednesdayLists) {
-            return wednesdayLists(List.of(wednesdayLists));
+        public Builder wednesdays(String... wednesdays) {
+            return wednesdays(List.of(wednesdays));
         }
         public ScheduleScheduleTypeRecurringWeekly build() {
             final var _resultValue = new ScheduleScheduleTypeRecurringWeekly();
-            _resultValue.fridayLists = fridayLists;
-            _resultValue.mondayLists = mondayLists;
-            _resultValue.saturdayLists = saturdayLists;
-            _resultValue.sundayLists = sundayLists;
-            _resultValue.thursdayLists = thursdayLists;
-            _resultValue.tuesdayLists = tuesdayLists;
-            _resultValue.wednesdayLists = wednesdayLists;
+            _resultValue.fridays = fridays;
+            _resultValue.mondays = mondays;
+            _resultValue.saturdays = saturdays;
+            _resultValue.sundays = sundays;
+            _resultValue.thursdays = thursdays;
+            _resultValue.tuesdays = tuesdays;
+            _resultValue.wednesdays = wednesdays;
             return _resultValue;
         }
     }

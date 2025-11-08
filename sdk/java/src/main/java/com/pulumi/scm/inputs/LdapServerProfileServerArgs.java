@@ -17,14 +17,14 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
     public static final LdapServerProfileServerArgs Empty = new LdapServerProfileServerArgs();
 
     /**
-     * The Address param.
+     * The LDAP server IP address
      * 
      */
     @Import(name="address")
     private @Nullable Output<String> address;
 
     /**
-     * @return The Address param.
+     * @return The LDAP server IP address
      * 
      */
     public Optional<Output<String>> address() {
@@ -32,14 +32,14 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Name param.
+     * The LDAP server name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The LDAP server name
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,14 +47,14 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Port param. Value must be between 1 and 65535.
+     * The LDAP server port
      * 
      */
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The LDAP server port
      * 
      */
     public Optional<Output<Integer>> port() {
@@ -88,7 +88,7 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param address The Address param.
+         * @param address The LDAP server IP address
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param address The Address param.
+         * @param address The LDAP server IP address
          * 
          * @return builder
          * 
@@ -109,7 +109,7 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name The LDAP server name
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name The LDAP server name
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The LDAP server port
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class LdapServerProfileServerArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The LDAP server port
          * 
          * @return builder
          * 

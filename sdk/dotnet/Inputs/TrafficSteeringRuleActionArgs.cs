@@ -13,16 +13,16 @@ namespace Pulumi.Scm.Inputs
     public sealed class TrafficSteeringRuleActionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Forward param. Ensure that only one of the following is specified: `Forward`, `no-pbf`
+        /// Forward
         /// </summary>
         [Input("forward")]
         public Input<Inputs.TrafficSteeringRuleActionForwardArgs>? Forward { get; set; }
 
         /// <summary>
-        /// The NoPbf param. Ensure that only one of the following is specified: `Forward`, `no-pbf`
+        /// No pbf
         /// </summary>
         [Input("noPbf")]
-        public Input<bool>? NoPbf { get; set; }
+        public Input<string>? NoPbf { get; set; }
 
         public TrafficSteeringRuleActionArgs()
         {

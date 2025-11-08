@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetService
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// Service data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetService.Invoke(new()
+        ///     // Data source to look up a single service by its ID.
+        ///     var scmServiceTcpDs = Scm.GetService.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "ff135641-6735-4d7d-85c6-3401bba9dee8",
         ///     });
         /// 
+        ///     // Data source to look up a single service by its ID.
+        ///     var scmServiceUdpDs = Scm.GetService.Invoke(new()
+        ///     {
+        ///         Id = "e087b703-aede-437e-853e-b11576f6dcbe",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["serviceDetailsTcp"] = scmServiceTcpDs,
+        ///         ["serviceDetailsUdp"] = scmServiceUdpDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +48,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetServiceResult>("scm:index/getService:getService", args ?? new GetServiceArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// Service data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +60,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetService.Invoke(new()
+        ///     // Data source to look up a single service by its ID.
+        ///     var scmServiceTcpDs = Scm.GetService.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "ff135641-6735-4d7d-85c6-3401bba9dee8",
         ///     });
         /// 
+        ///     // Data source to look up a single service by its ID.
+        ///     var scmServiceUdpDs = Scm.GetService.Invoke(new()
+        ///     {
+        ///         Id = "e087b703-aede-437e-853e-b11576f6dcbe",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["serviceDetailsTcp"] = scmServiceTcpDs,
+        ///         ["serviceDetailsUdp"] = scmServiceUdpDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +84,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceResult>("scm:index/getService:getService", args ?? new GetServiceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// Service data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +96,23 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetService.Invoke(new()
+        ///     // Data source to look up a single service by its ID.
+        ///     var scmServiceTcpDs = Scm.GetService.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "ff135641-6735-4d7d-85c6-3401bba9dee8",
         ///     });
         /// 
+        ///     // Data source to look up a single service by its ID.
+        ///     var scmServiceUdpDs = Scm.GetService.Invoke(new()
+        ///     {
+        ///         Id = "e087b703-aede-437e-853e-b11576f6dcbe",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["serviceDetailsTcp"] = scmServiceTcpDs,
+        ///         ["serviceDetailsUdp"] = scmServiceUdpDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +124,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the service
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the service
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetServiceArgs()
         {
@@ -102,10 +144,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the service
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the service
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetServiceInvokeArgs()
         {
@@ -118,23 +166,35 @@ namespace Pulumi.Scm
     public sealed class GetServiceResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the service
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         public readonly Outputs.GetServiceProtocolResult Protocol;
         /// <summary>
-        /// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Tags for service object
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
@@ -143,20 +203,29 @@ namespace Pulumi.Scm
         private GetServiceResult(
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
 
             Outputs.GetServiceProtocolResult protocol,
 
+            string snippet,
+
             ImmutableArray<string> tags,
 
             string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             Protocol = protocol;
+            Snippet = snippet;
             Tags = tags;
             Tfid = tfid;
         }

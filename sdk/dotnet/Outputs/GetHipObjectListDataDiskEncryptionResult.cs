@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectListDataDiskEncryptionResult
     {
         /// <summary>
-        /// Encryption locations.
+        /// Encryption locations
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDiskEncryptionCriteriaResult Criteria;
         /// <summary>
-        /// The ExcludeVendor param. Default: `False`.
+        /// Exclude vendor
         /// </summary>
         public readonly bool ExcludeVendor;
         /// <summary>
-        /// Vendor name.
+        /// Vendor name
         /// </summary>
         public readonly ImmutableArray<Outputs.GetHipObjectListDataDiskEncryptionVendorResult> Vendors;
 

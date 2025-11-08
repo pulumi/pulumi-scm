@@ -22,14 +22,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     public static final HipObjectMobileDeviceCriteriaArgs Empty = new HipObjectMobileDeviceCriteriaArgs();
 
     /**
-     * The Applications param.
+     * Applications
      * 
      */
     @Import(name="applications")
     private @Nullable Output<HipObjectMobileDeviceCriteriaApplicationsArgs> applications;
 
     /**
-     * @return The Applications param.
+     * @return Applications
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaApplicationsArgs>> applications() {
@@ -37,14 +37,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * If device&#39;s disk is encrypted.
+     * If device&#39;s disk is encrypted
      * 
      */
     @Import(name="diskEncrypted")
     private @Nullable Output<Boolean> diskEncrypted;
 
     /**
-     * @return If device&#39;s disk is encrypted.
+     * @return If device&#39;s disk is encrypted
      * 
      */
     public Optional<Output<Boolean>> diskEncrypted() {
@@ -52,14 +52,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * The Imei param.
+     * Imei
      * 
      */
     @Import(name="imei")
     private @Nullable Output<HipObjectMobileDeviceCriteriaImeiArgs> imei;
 
     /**
-     * @return The Imei param.
+     * @return Imei
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaImeiArgs>> imei() {
@@ -67,14 +67,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * If device is by rooted/jailbroken.
+     * If device is by rooted/jailbroken
      * 
      */
     @Import(name="jailbroken")
     private @Nullable Output<Boolean> jailbroken;
 
     /**
-     * @return If device is by rooted/jailbroken.
+     * @return If device is by rooted/jailbroken
      * 
      */
     public Optional<Output<Boolean>> jailbroken() {
@@ -82,14 +82,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * The LastCheckinTime param.
+     * Last checkin time
      * 
      */
     @Import(name="lastCheckinTime")
     private @Nullable Output<HipObjectMobileDeviceCriteriaLastCheckinTimeArgs> lastCheckinTime;
 
     /**
-     * @return The LastCheckinTime param.
+     * @return Last checkin time
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaLastCheckinTimeArgs>> lastCheckinTime() {
@@ -97,14 +97,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * The Model param.
+     * Model
      * 
      */
     @Import(name="model")
     private @Nullable Output<HipObjectMobileDeviceCriteriaModelArgs> model;
 
     /**
-     * @return The Model param.
+     * @return Model
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaModelArgs>> model() {
@@ -112,14 +112,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * If device&#39;s passcode is present.
+     * If device&#39;s passcode is present
      * 
      */
     @Import(name="passcodeSet")
     private @Nullable Output<Boolean> passcodeSet;
 
     /**
-     * @return If device&#39;s passcode is present.
+     * @return If device&#39;s passcode is present
      * 
      */
     public Optional<Output<Boolean>> passcodeSet() {
@@ -127,14 +127,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * The PhoneNumber param.
+     * Phone number
      * 
      */
     @Import(name="phoneNumber")
     private @Nullable Output<HipObjectMobileDeviceCriteriaPhoneNumberArgs> phoneNumber;
 
     /**
-     * @return The PhoneNumber param.
+     * @return Phone number
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaPhoneNumberArgs>> phoneNumber() {
@@ -142,14 +142,14 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
     }
 
     /**
-     * The Tag param.
+     * Tag
      * 
      */
     @Import(name="tag")
     private @Nullable Output<HipObjectMobileDeviceCriteriaTagArgs> tag;
 
     /**
-     * @return The Tag param.
+     * @return Tag
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaTagArgs>> tag() {
@@ -189,7 +189,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param applications The Applications param.
+         * @param applications Applications
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param applications The Applications param.
+         * @param applications Applications
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param diskEncrypted If device&#39;s disk is encrypted.
+         * @param diskEncrypted If device&#39;s disk is encrypted
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param diskEncrypted If device&#39;s disk is encrypted.
+         * @param diskEncrypted If device&#39;s disk is encrypted
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param imei The Imei param.
+         * @param imei Imei
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param imei The Imei param.
+         * @param imei Imei
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param jailbroken If device is by rooted/jailbroken.
+         * @param jailbroken If device is by rooted/jailbroken
          * 
          * @return builder
          * 
@@ -263,7 +263,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param jailbroken If device is by rooted/jailbroken.
+         * @param jailbroken If device is by rooted/jailbroken
          * 
          * @return builder
          * 
@@ -273,7 +273,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param lastCheckinTime The LastCheckinTime param.
+         * @param lastCheckinTime Last checkin time
          * 
          * @return builder
          * 
@@ -284,7 +284,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param lastCheckinTime The LastCheckinTime param.
+         * @param lastCheckinTime Last checkin time
          * 
          * @return builder
          * 
@@ -294,7 +294,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param model The Model param.
+         * @param model Model
          * 
          * @return builder
          * 
@@ -305,7 +305,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param model The Model param.
+         * @param model Model
          * 
          * @return builder
          * 
@@ -315,7 +315,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param passcodeSet If device&#39;s passcode is present.
+         * @param passcodeSet If device&#39;s passcode is present
          * 
          * @return builder
          * 
@@ -326,7 +326,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param passcodeSet If device&#39;s passcode is present.
+         * @param passcodeSet If device&#39;s passcode is present
          * 
          * @return builder
          * 
@@ -336,7 +336,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param phoneNumber The PhoneNumber param.
+         * @param phoneNumber Phone number
          * 
          * @return builder
          * 
@@ -347,7 +347,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param phoneNumber The PhoneNumber param.
+         * @param phoneNumber Phone number
          * 
          * @return builder
          * 
@@ -357,7 +357,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param tag The Tag param.
+         * @param tag Tag
          * 
          * @return builder
          * 
@@ -368,7 +368,7 @@ public final class HipObjectMobileDeviceCriteriaArgs extends com.pulumi.resource
         }
 
         /**
-         * @param tag The Tag param.
+         * @param tag Tag
          * 
          * @return builder
          * 

@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetQosPolicyRuleListDataDscpTosCodepoint {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     private GetQosPolicyRuleListDataDscpTosCodepointType type;
 
     private GetQosPolicyRuleListDataDscpTosCodepoint() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public GetQosPolicyRuleListDataDscpTosCodepointType type() {

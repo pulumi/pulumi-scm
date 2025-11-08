@@ -6,45 +6,45 @@ package com.pulumi.scm.outputs;
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile;
+import com.pulumi.scm.outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown;
 import com.pulumi.scm.outputs.GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifi;
-import java.lang.Boolean;
 import java.util.Objects;
 
 @CustomType
 public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
     /**
-     * @return The Mobile param.
+     * @return Mobile
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile mobile;
     /**
-     * @return The Unknown param.
+     * @return Unknown
      * 
      */
-    private Boolean unknown;
+    private GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown unknown;
     /**
-     * @return The Wifi param.
+     * @return Wifi
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifi wifi;
 
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIs() {}
     /**
-     * @return The Mobile param.
+     * @return Mobile
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile mobile() {
         return this.mobile;
     }
     /**
-     * @return The Unknown param.
+     * @return Unknown
      * 
      */
-    public Boolean unknown() {
+    public GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown unknown() {
         return this.unknown;
     }
     /**
-     * @return The Wifi param.
+     * @return Wifi
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifi wifi() {
@@ -61,7 +61,7 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
     @CustomType.Builder
     public static final class Builder {
         private GetHipObjectListDataNetworkInfoCriteriaNetworkIsMobile mobile;
-        private Boolean unknown;
+        private GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown unknown;
         private GetHipObjectListDataNetworkInfoCriteriaNetworkIsWifi wifi;
         public Builder() {}
         public Builder(GetHipObjectListDataNetworkInfoCriteriaNetworkIs defaults) {
@@ -80,7 +80,7 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIs {
             return this;
         }
         @CustomType.Setter
-        public Builder unknown(Boolean unknown) {
+        public Builder unknown(GetHipObjectListDataNetworkInfoCriteriaNetworkIsUnknown unknown) {
             if (unknown == null) {
               throw new MissingRequiredPropertyException("GetHipObjectListDataNetworkInfoCriteriaNetworkIs", "unknown");
             }

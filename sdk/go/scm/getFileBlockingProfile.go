@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupFileBlockingProfile(ctx, &scm.LookupFileBlockingProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// FileBlockingProfile data source
 func LookupFileBlockingProfile(ctx *pulumi.Context, args *LookupFileBlockingProfileArgs, opts ...pulumi.InvokeOption) (*LookupFileBlockingProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupFileBlockingProfileResult
@@ -50,21 +24,29 @@ func LookupFileBlockingProfile(ctx *pulumi.Context, args *LookupFileBlockingProf
 
 // A collection of arguments for invoking getFileBlockingProfile.
 type LookupFileBlockingProfileArgs struct {
-	// The Id param.
+	// The UUID of the file blocking profile
 	Id string `pulumi:"id"`
+	// The name of the file blocking profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getFileBlockingProfile.
 type LookupFileBlockingProfileResult struct {
-	// The Description param.
+	// Description
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the file blocking profile
 	Id string `pulumi:"id"`
-	// The Name param.
+	// The name of the file blocking profile
 	Name string `pulumi:"name"`
-	// The Rules param.
+	// A list of file blocking rules
 	Rules []GetFileBlockingProfileRule `pulumi:"rules"`
-	Tfid  string                       `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupFileBlockingProfileOutput(ctx *pulumi.Context, args LookupFileBlockingProfileOutputArgs, opts ...pulumi.InvokeOption) LookupFileBlockingProfileResultOutput {
@@ -78,8 +60,10 @@ func LookupFileBlockingProfileOutput(ctx *pulumi.Context, args LookupFileBlockin
 
 // A collection of arguments for invoking getFileBlockingProfile.
 type LookupFileBlockingProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the file blocking profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the file blocking profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupFileBlockingProfileOutputArgs) ElementType() reflect.Type {
@@ -101,24 +85,39 @@ func (o LookupFileBlockingProfileResultOutput) ToLookupFileBlockingProfileResult
 	return o
 }
 
-// The Description param.
+// Description
 func (o LookupFileBlockingProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupFileBlockingProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupFileBlockingProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the file blocking profile
 func (o LookupFileBlockingProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// The name of the file blocking profile
 func (o LookupFileBlockingProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Rules param.
+// A list of file blocking rules
 func (o LookupFileBlockingProfileResultOutput) Rules() GetFileBlockingProfileRuleArrayOutput {
 	return o.ApplyT(func(v LookupFileBlockingProfileResult) []GetFileBlockingProfileRule { return v.Rules }).(GetFileBlockingProfileRuleArrayOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupFileBlockingProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupFileBlockingProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupFileBlockingProfileResultOutput) Tfid() pulumi.StringOutput {

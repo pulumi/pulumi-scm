@@ -16,14 +16,14 @@ public final class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs exten
     public static final QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs Empty = new QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs();
 
     /**
-     * guaranteed sending bandwidth in mbps. Value must be between 0 and 60000.
+     * guaranteed sending bandwidth in mbps
      * 
      */
     @Import(name="egressGuaranteed")
     private @Nullable Output<Integer> egressGuaranteed;
 
     /**
-     * @return guaranteed sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return guaranteed sending bandwidth in mbps
      * 
      */
     public Optional<Output<Integer>> egressGuaranteed() {
@@ -31,14 +31,14 @@ public final class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs exten
     }
 
     /**
-     * max sending bandwidth in mbps. Value must be between 0 and 60000.
+     * max sending bandwidth in mbps
      * 
      */
     @Import(name="egressMax")
     private @Nullable Output<Integer> egressMax;
 
     /**
-     * @return max sending bandwidth in mbps. Value must be between 0 and 60000.
+     * @return max sending bandwidth in mbps
      * 
      */
     public Optional<Output<Integer>> egressMax() {
@@ -71,7 +71,7 @@ public final class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs exten
         }
 
         /**
-         * @param egressGuaranteed guaranteed sending bandwidth in mbps. Value must be between 0 and 60000.
+         * @param egressGuaranteed guaranteed sending bandwidth in mbps
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs exten
         }
 
         /**
-         * @param egressGuaranteed guaranteed sending bandwidth in mbps. Value must be between 0 and 60000.
+         * @param egressGuaranteed guaranteed sending bandwidth in mbps
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs exten
         }
 
         /**
-         * @param egressMax max sending bandwidth in mbps. Value must be between 0 and 60000.
+         * @param egressMax max sending bandwidth in mbps
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs exten
         }
 
         /**
-         * @param egressMax max sending bandwidth in mbps. Value must be between 0 and 60000.
+         * @param egressMax max sending bandwidth in mbps
          * 
          * @return builder
          * 

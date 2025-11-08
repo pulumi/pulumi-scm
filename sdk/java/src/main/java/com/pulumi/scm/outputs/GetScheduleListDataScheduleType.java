@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetScheduleListDataScheduleType {
     /**
-     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Non recurring
      * 
      */
-    private List<String> nonRecurringLists;
+    private List<String> nonRecurrings;
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private GetScheduleListDataScheduleTypeRecurring recurring;
 
     private GetScheduleListDataScheduleType() {}
     /**
-     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Non recurring
      * 
      */
-    public List<String> nonRecurringLists() {
-        return this.nonRecurringLists;
+    public List<String> nonRecurrings() {
+        return this.nonRecurrings;
     }
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public GetScheduleListDataScheduleTypeRecurring recurring() {
@@ -48,25 +48,25 @@ public final class GetScheduleListDataScheduleType {
     }
     @CustomType.Builder
     public static final class Builder {
-        private List<String> nonRecurringLists;
+        private List<String> nonRecurrings;
         private GetScheduleListDataScheduleTypeRecurring recurring;
         public Builder() {}
         public Builder(GetScheduleListDataScheduleType defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.nonRecurringLists = defaults.nonRecurringLists;
+    	      this.nonRecurrings = defaults.nonRecurrings;
     	      this.recurring = defaults.recurring;
         }
 
         @CustomType.Setter
-        public Builder nonRecurringLists(List<String> nonRecurringLists) {
-            if (nonRecurringLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleListDataScheduleType", "nonRecurringLists");
+        public Builder nonRecurrings(List<String> nonRecurrings) {
+            if (nonRecurrings == null) {
+              throw new MissingRequiredPropertyException("GetScheduleListDataScheduleType", "nonRecurrings");
             }
-            this.nonRecurringLists = nonRecurringLists;
+            this.nonRecurrings = nonRecurrings;
             return this;
         }
-        public Builder nonRecurringLists(String... nonRecurringLists) {
-            return nonRecurringLists(List.of(nonRecurringLists));
+        public Builder nonRecurrings(String... nonRecurrings) {
+            return nonRecurrings(List.of(nonRecurrings));
         }
         @CustomType.Setter
         public Builder recurring(GetScheduleListDataScheduleTypeRecurring recurring) {
@@ -78,7 +78,7 @@ public final class GetScheduleListDataScheduleType {
         }
         public GetScheduleListDataScheduleType build() {
             final var _resultValue = new GetScheduleListDataScheduleType();
-            _resultValue.nonRecurringLists = nonRecurringLists;
+            _resultValue.nonRecurrings = nonRecurrings;
             _resultValue.recurring = recurring;
             return _resultValue;
         }

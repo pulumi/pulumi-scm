@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectDiskBackup
     {
         /// <summary>
-        /// The Criteria param.
+        /// Criteria
         /// </summary>
         public readonly Outputs.HipObjectDiskBackupCriteria? Criteria;
         /// <summary>
-        /// The ExcludeVendor param. Default: `False`.
+        /// Exclude vendor
         /// </summary>
         public readonly bool? ExcludeVendor;
         /// <summary>
-        /// Vendor name.
+        /// Vendor name
         /// </summary>
         public readonly ImmutableArray<Outputs.HipObjectDiskBackupVendor> Vendors;
 

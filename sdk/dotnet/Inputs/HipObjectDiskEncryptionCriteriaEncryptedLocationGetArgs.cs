@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectDiskEncryptionCriteriaEncryptedLocationGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The EncryptionState param.
+        /// Encryption state
         /// </summary>
         [Input("encryptionState")]
         public Input<Inputs.HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateGetArgs>? EncryptionState { get; set; }
 
         /// <summary>
-        /// Encryption location. String length must not exceed 1023 characters.
+        /// Encryption location
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;

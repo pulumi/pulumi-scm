@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectNetworkInfoCriteriaNetworkIsResult
     {
         /// <summary>
-        /// The Mobile param.
+        /// Mobile
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsMobileResult Mobile;
         /// <summary>
-        /// The Unknown param.
+        /// Unknown
         /// </summary>
-        public readonly bool Unknown;
+        public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsUnknownResult Unknown;
         /// <summary>
-        /// The Wifi param.
+        /// Wifi
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsWifiResult Wifi;
 
@@ -30,7 +30,7 @@ namespace Pulumi.Scm.Outputs
         private GetHipObjectNetworkInfoCriteriaNetworkIsResult(
             Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsMobileResult mobile,
 
-            bool unknown,
+            Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsUnknownResult unknown,
 
             Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsWifiResult wifi)
         {

@@ -23,37 +23,37 @@ class AddressGroupArgs:
     def __init__(__self__, *,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_value: Optional[pulumi.Input['AddressGroupDynamicValueArgs']] = None,
+                 dynamic: Optional[pulumi.Input['AddressGroupDynamicArgs']] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 statics: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AddressGroup resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input['AddressGroupDynamicValueArgs'] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] static_lists: The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input['AddressGroupDynamicArgs'] dynamic: Dynamic
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
         if device is not None:
             pulumi.set(__self__, "device", device)
-        if dynamic_value is not None:
-            pulumi.set(__self__, "dynamic_value", dynamic_value)
+        if dynamic is not None:
+            pulumi.set(__self__, "dynamic", dynamic)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
-        if static_lists is not None:
-            pulumi.set(__self__, "static_lists", static_lists)
+        if statics is not None:
+            pulumi.set(__self__, "statics", statics)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
 
@@ -61,7 +61,7 @@ class AddressGroupArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -73,7 +73,7 @@ class AddressGroupArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -82,22 +82,22 @@ class AddressGroupArgs:
         pulumi.set(self, "device", value)
 
     @_builtins.property
-    @pulumi.getter(name="dynamicValue")
-    def dynamic_value(self) -> Optional[pulumi.Input['AddressGroupDynamicValueArgs']]:
+    @pulumi.getter
+    def dynamic(self) -> Optional[pulumi.Input['AddressGroupDynamicArgs']]:
         """
-        The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        Dynamic
         """
-        return pulumi.get(self, "dynamic_value")
+        return pulumi.get(self, "dynamic")
 
-    @dynamic_value.setter
-    def dynamic_value(self, value: Optional[pulumi.Input['AddressGroupDynamicValueArgs']]):
-        pulumi.set(self, "dynamic_value", value)
+    @dynamic.setter
+    def dynamic(self, value: Optional[pulumi.Input['AddressGroupDynamicArgs']]):
+        pulumi.set(self, "dynamic", value)
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -109,7 +109,7 @@ class AddressGroupArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the address group
         """
         return pulumi.get(self, "name")
 
@@ -121,7 +121,7 @@ class AddressGroupArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -130,22 +130,22 @@ class AddressGroupArgs:
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
-    @pulumi.getter(name="staticLists")
-    def static_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    @pulumi.getter
+    def statics(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+        Static
         """
-        return pulumi.get(self, "static_lists")
+        return pulumi.get(self, "statics")
 
-    @static_lists.setter
-    def static_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "static_lists", value)
+    @statics.setter
+    def statics(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "statics", value)
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags for address group object
         """
         return pulumi.get(self, "tags")
 
@@ -159,38 +159,38 @@ class _AddressGroupState:
     def __init__(__self__, *,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_value: Optional[pulumi.Input['AddressGroupDynamicValueArgs']] = None,
+                 dynamic: Optional[pulumi.Input['AddressGroupDynamicArgs']] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 statics: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering AddressGroup resources.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input['AddressGroupDynamicValueArgs'] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] static_lists: The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input['AddressGroupDynamicArgs'] dynamic: Dynamic
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
         if device is not None:
             pulumi.set(__self__, "device", device)
-        if dynamic_value is not None:
-            pulumi.set(__self__, "dynamic_value", dynamic_value)
+        if dynamic is not None:
+            pulumi.set(__self__, "dynamic", dynamic)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
-        if static_lists is not None:
-            pulumi.set(__self__, "static_lists", static_lists)
+        if statics is not None:
+            pulumi.set(__self__, "statics", statics)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
         if tfid is not None:
@@ -200,7 +200,7 @@ class _AddressGroupState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -212,7 +212,7 @@ class _AddressGroupState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -221,22 +221,22 @@ class _AddressGroupState:
         pulumi.set(self, "device", value)
 
     @_builtins.property
-    @pulumi.getter(name="dynamicValue")
-    def dynamic_value(self) -> Optional[pulumi.Input['AddressGroupDynamicValueArgs']]:
+    @pulumi.getter
+    def dynamic(self) -> Optional[pulumi.Input['AddressGroupDynamicArgs']]:
         """
-        The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        Dynamic
         """
-        return pulumi.get(self, "dynamic_value")
+        return pulumi.get(self, "dynamic")
 
-    @dynamic_value.setter
-    def dynamic_value(self, value: Optional[pulumi.Input['AddressGroupDynamicValueArgs']]):
-        pulumi.set(self, "dynamic_value", value)
+    @dynamic.setter
+    def dynamic(self, value: Optional[pulumi.Input['AddressGroupDynamicArgs']]):
+        pulumi.set(self, "dynamic", value)
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -248,7 +248,7 @@ class _AddressGroupState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the address group
         """
         return pulumi.get(self, "name")
 
@@ -260,7 +260,7 @@ class _AddressGroupState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -269,22 +269,22 @@ class _AddressGroupState:
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
-    @pulumi.getter(name="staticLists")
-    def static_lists(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+    @pulumi.getter
+    def statics(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+        Static
         """
-        return pulumi.get(self, "static_lists")
+        return pulumi.get(self, "statics")
 
-    @static_lists.setter
-    def static_lists(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "static_lists", value)
+    @statics.setter
+    def statics(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "statics", value)
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags for address group object
         """
         return pulumi.get(self, "tags")
 
@@ -310,15 +310,15 @@ class AddressGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_value: Optional[pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']]] = None,
+                 dynamic: Optional[pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 statics: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        AddressGroup resource
 
         ## Example Usage
 
@@ -326,27 +326,58 @@ class AddressGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        x = scm.AddressObject("x",
+        # This file is embedded using go:embed
+        # First, create some addresses that will be used in the address group
+        scm_address_ag1 = scm.Address("scm_address_ag_1",
             folder="Shared",
-            name="foo",
-            description="Made by Pulumi",
-            fqdn="www.example.com")
-        example = scm.AddressGroup("example",
+            name="scm_address_ag_1",
+            description="First test address",
+            ip_netmask="192.168.1.1/32")
+        scm_address_ag2 = scm.Address("scm_address_ag_2",
             folder="Shared",
-            name="example",
-            static_lists=[x.name])
+            name="scm_address_ag_2",
+            description="Second test address",
+            ip_netmask="192.168.1.2/32")
+        # Create the address group that references the addresses above
+        scm_address_group1 = scm.AddressGroup("scm_address_group_1",
+            folder="Shared",
+            name="scm_address_group_1",
+            description="Sample address group created with Terraform",
+            statics=[
+                scm_address_ag1.name,
+                scm_address_ag2.name,
+            ])
+        # Create tags to be used for dynamic address group
+        scm_addressgroup_tag1 = scm.Tag("scm_addressgroup_tag_1",
+            folder="Shared",
+            name="scm_addressgroup_tag_1",
+            comments="Managed by Pulumi",
+            color="Orange")
+        scm_addressgroup_tag2 = scm.Tag("scm_addressgroup_tag_2",
+            folder="Shared",
+            name="scm_addressgroup_tag_2",
+            comments="Managed by Pulumi",
+            color="Blue")
+        # Create a dynamic addressgroup that matches both tags
+        scm_addressgroup_dynamic = scm.AddressGroup("scm_addressgroup_dynamic",
+            folder="Shared",
+            name="scm_addressgroup_dynamic",
+            description="Managed by Pulumi",
+            dynamic={
+                "filter": "scm_addressgroup_tag_1 and scm_addressgroup_tag_2",
+            })
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] static_lists: The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']] dynamic: Dynamic
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         """
         ...
     @overload
@@ -355,7 +386,7 @@ class AddressGroup(pulumi.CustomResource):
                  args: Optional[AddressGroupArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        AddressGroup resource
 
         ## Example Usage
 
@@ -363,15 +394,46 @@ class AddressGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        x = scm.AddressObject("x",
+        # This file is embedded using go:embed
+        # First, create some addresses that will be used in the address group
+        scm_address_ag1 = scm.Address("scm_address_ag_1",
             folder="Shared",
-            name="foo",
-            description="Made by Pulumi",
-            fqdn="www.example.com")
-        example = scm.AddressGroup("example",
+            name="scm_address_ag_1",
+            description="First test address",
+            ip_netmask="192.168.1.1/32")
+        scm_address_ag2 = scm.Address("scm_address_ag_2",
             folder="Shared",
-            name="example",
-            static_lists=[x.name])
+            name="scm_address_ag_2",
+            description="Second test address",
+            ip_netmask="192.168.1.2/32")
+        # Create the address group that references the addresses above
+        scm_address_group1 = scm.AddressGroup("scm_address_group_1",
+            folder="Shared",
+            name="scm_address_group_1",
+            description="Sample address group created with Terraform",
+            statics=[
+                scm_address_ag1.name,
+                scm_address_ag2.name,
+            ])
+        # Create tags to be used for dynamic address group
+        scm_addressgroup_tag1 = scm.Tag("scm_addressgroup_tag_1",
+            folder="Shared",
+            name="scm_addressgroup_tag_1",
+            comments="Managed by Pulumi",
+            color="Orange")
+        scm_addressgroup_tag2 = scm.Tag("scm_addressgroup_tag_2",
+            folder="Shared",
+            name="scm_addressgroup_tag_2",
+            comments="Managed by Pulumi",
+            color="Blue")
+        # Create a dynamic addressgroup that matches both tags
+        scm_addressgroup_dynamic = scm.AddressGroup("scm_addressgroup_dynamic",
+            folder="Shared",
+            name="scm_addressgroup_dynamic",
+            description="Managed by Pulumi",
+            dynamic={
+                "filter": "scm_addressgroup_tag_1 and scm_addressgroup_tag_2",
+            })
         ```
 
         :param str resource_name: The name of the resource.
@@ -391,11 +453,11 @@ class AddressGroup(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
-                 dynamic_value: Optional[pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']]] = None,
+                 dynamic: Optional[pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 static_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 statics: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -408,11 +470,11 @@ class AddressGroup(pulumi.CustomResource):
 
             __props__.__dict__["description"] = description
             __props__.__dict__["device"] = device
-            __props__.__dict__["dynamic_value"] = dynamic_value
+            __props__.__dict__["dynamic"] = dynamic
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
             __props__.__dict__["snippet"] = snippet
-            __props__.__dict__["static_lists"] = static_lists
+            __props__.__dict__["statics"] = statics
             __props__.__dict__["tags"] = tags
             __props__.__dict__["tfid"] = None
         super(AddressGroup, __self__).__init__(
@@ -427,11 +489,11 @@ class AddressGroup(pulumi.CustomResource):
             opts: Optional[pulumi.ResourceOptions] = None,
             description: Optional[pulumi.Input[_builtins.str]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
-            dynamic_value: Optional[pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']]] = None,
+            dynamic: Optional[pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            static_lists: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            statics: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'AddressGroup':
         """
@@ -441,14 +503,14 @@ class AddressGroup(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Union['AddressGroupDynamicValueArgs', 'AddressGroupDynamicValueArgsDict']] dynamic_value: The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] static_lists: The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Union['AddressGroupDynamicArgs', 'AddressGroupDynamicArgsDict']] dynamic: Dynamic
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the address group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] statics: Static
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for address group object
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -456,11 +518,11 @@ class AddressGroup(pulumi.CustomResource):
 
         __props__.__dict__["description"] = description
         __props__.__dict__["device"] = device
-        __props__.__dict__["dynamic_value"] = dynamic_value
+        __props__.__dict__["dynamic"] = dynamic
         __props__.__dict__["folder"] = folder
         __props__.__dict__["name"] = name
         __props__.__dict__["snippet"] = snippet
-        __props__.__dict__["static_lists"] = static_lists
+        __props__.__dict__["statics"] = statics
         __props__.__dict__["tags"] = tags
         __props__.__dict__["tfid"] = tfid
         return AddressGroup(resource_name, opts=opts, __props__=__props__)
@@ -469,7 +531,7 @@ class AddressGroup(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -477,23 +539,23 @@ class AddressGroup(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
-    @pulumi.getter(name="dynamicValue")
-    def dynamic_value(self) -> pulumi.Output[Optional['outputs.AddressGroupDynamicValue']]:
+    @pulumi.getter
+    def dynamic(self) -> pulumi.Output[Optional['outputs.AddressGroupDynamic']]:
         """
-        The DynamicValue param. Ensure that only one of the following is specified: `dynamic`, `static`
+        Dynamic
         """
-        return pulumi.get(self, "dynamic_value")
+        return pulumi.get(self, "dynamic")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -501,7 +563,7 @@ class AddressGroup(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the address group
         """
         return pulumi.get(self, "name")
 
@@ -509,23 +571,23 @@ class AddressGroup(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
-    @pulumi.getter(name="staticLists")
-    def static_lists(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    @pulumi.getter
+    def statics(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The StaticList param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `dynamic`, `static`
+        Static
         """
-        return pulumi.get(self, "static_lists")
+        return pulumi.get(self, "statics")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        Tags for address group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags for address group object
         """
         return pulumi.get(self, "tags")
 

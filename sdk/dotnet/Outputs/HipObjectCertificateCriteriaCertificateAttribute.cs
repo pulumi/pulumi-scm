@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectCertificateCriteriaCertificateAttribute
     {
         /// <summary>
-        /// Attribute Name.
+        /// Attribute Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// Key value
         /// </summary>
         public readonly string? Value;
 

@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * IkeGateway resource
  *
  * ## Example Usage
  */
@@ -40,47 +40,51 @@ export class IkeGateway extends pulumi.CustomResource {
     }
 
     /**
-     * The Authentication param.
+     * Authentication
      */
     declare public readonly authentication: pulumi.Output<outputs.IkeGatewayAuthentication>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The LocalId param.
+     * Local address
+     */
+    declare public readonly localAddress: pulumi.Output<outputs.IkeGatewayLocalAddress>;
+    /**
+     * Local id
      */
     declare public readonly localId: pulumi.Output<outputs.IkeGatewayLocalId | undefined>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The PeerAddress param.
+     * Peer address
      */
     declare public readonly peerAddress: pulumi.Output<outputs.IkeGatewayPeerAddress>;
     /**
-     * The PeerId param.
+     * Peer id
      */
     declare public readonly peerId: pulumi.Output<outputs.IkeGatewayPeerId | undefined>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     declare public readonly protocol: pulumi.Output<outputs.IkeGatewayProtocol>;
     /**
-     * The ProtocolCommon param.
+     * Protocol common
      */
-    declare public readonly protocolCommon: pulumi.Output<outputs.IkeGatewayProtocolCommon | undefined>;
+    declare public readonly protocolCommon: pulumi.Output<outputs.IkeGatewayProtocolCommon>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -102,6 +106,7 @@ export class IkeGateway extends pulumi.CustomResource {
             resourceInputs["device"] = state?.device;
             resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
+            resourceInputs["localAddress"] = state?.localAddress;
             resourceInputs["localId"] = state?.localId;
             resourceInputs["name"] = state?.name;
             resourceInputs["peerAddress"] = state?.peerAddress;
@@ -124,6 +129,7 @@ export class IkeGateway extends pulumi.CustomResource {
             resourceInputs["authentication"] = args?.authentication;
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
+            resourceInputs["localAddress"] = args?.localAddress;
             resourceInputs["localId"] = args?.localId;
             resourceInputs["name"] = args?.name;
             resourceInputs["peerAddress"] = args?.peerAddress;
@@ -146,47 +152,51 @@ export class IkeGateway extends pulumi.CustomResource {
  */
 export interface IkeGatewayState {
     /**
-     * The Authentication param.
+     * Authentication
      */
     authentication?: pulumi.Input<inputs.IkeGatewayAuthentication>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      */
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The LocalId param.
+     * Local address
+     */
+    localAddress?: pulumi.Input<inputs.IkeGatewayLocalAddress>;
+    /**
+     * Local id
      */
     localId?: pulumi.Input<inputs.IkeGatewayLocalId>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The PeerAddress param.
+     * Peer address
      */
     peerAddress?: pulumi.Input<inputs.IkeGatewayPeerAddress>;
     /**
-     * The PeerId param.
+     * Peer id
      */
     peerId?: pulumi.Input<inputs.IkeGatewayPeerId>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     protocol?: pulumi.Input<inputs.IkeGatewayProtocol>;
     /**
-     * The ProtocolCommon param.
+     * Protocol common
      */
     protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -197,43 +207,47 @@ export interface IkeGatewayState {
  */
 export interface IkeGatewayArgs {
     /**
-     * The Authentication param.
+     * Authentication
      */
     authentication: pulumi.Input<inputs.IkeGatewayAuthentication>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The LocalId param.
+     * Local address
+     */
+    localAddress?: pulumi.Input<inputs.IkeGatewayLocalAddress>;
+    /**
+     * Local id
      */
     localId?: pulumi.Input<inputs.IkeGatewayLocalId>;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The PeerAddress param.
+     * Peer address
      */
     peerAddress: pulumi.Input<inputs.IkeGatewayPeerAddress>;
     /**
-     * The PeerId param.
+     * Peer id
      */
     peerId?: pulumi.Input<inputs.IkeGatewayPeerId>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     protocol: pulumi.Input<inputs.IkeGatewayProtocol>;
     /**
-     * The ProtocolCommon param.
+     * Protocol common
      */
     protocolCommon?: pulumi.Input<inputs.IkeGatewayProtocolCommon>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

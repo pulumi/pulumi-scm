@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Context param.
+        /// Context
         /// </summary>
         [Input("context")]
         public Input<string>? Context { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierGetArgs>? _qualifiers;
 
         /// <summary>
-        /// The Qualifiers param.
+        /// Qualifier
         /// </summary>
         public InputList<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanQualifierGetArgs> Qualifiers
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Value param. Value must be between 0 and 4294967295.
+        /// Value
         /// </summary>
         [Input("value")]
         public Input<int>? Value { get; set; }

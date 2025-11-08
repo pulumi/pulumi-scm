@@ -5,12 +5,29 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * UrlCategory data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single URL Category object by its ID.
+ * //
+ * // Replace the ID with the UUID of the URL Category you want to find.
+ * const example = scm.getUrlCategory({
+ *     id: "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
+ * });
+ * export const urlCategoryDetails = example;
+ * ```
  */
 export function getUrlCategory(args: GetUrlCategoryArgs, opts?: pulumi.InvokeOptions): Promise<GetUrlCategoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getUrlCategory:getUrlCategory", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -19,9 +36,13 @@ export function getUrlCategory(args: GetUrlCategoryArgs, opts?: pulumi.InvokeOpt
  */
 export interface GetUrlCategoryArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -29,34 +50,63 @@ export interface GetUrlCategoryArgs {
  */
 export interface GetUrlCategoryResult {
     /**
-     * The Description param.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The List param.
+     * List
      */
     readonly lists: string[];
     /**
-     * The Name param.
+     * Name
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+     * Type
      */
     readonly type: string;
 }
 /**
- * Retrieves a config item.
+ * UrlCategory data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single URL Category object by its ID.
+ * //
+ * // Replace the ID with the UUID of the URL Category you want to find.
+ * const example = scm.getUrlCategory({
+ *     id: "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
+ * });
+ * export const urlCategoryDetails = example;
+ * ```
  */
 export function getUrlCategoryOutput(args: GetUrlCategoryOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetUrlCategoryResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getUrlCategory:getUrlCategory", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -65,7 +115,11 @@ export function getUrlCategoryOutput(args: GetUrlCategoryOutputArgs, opts?: pulu
  */
 export interface GetUrlCategoryOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

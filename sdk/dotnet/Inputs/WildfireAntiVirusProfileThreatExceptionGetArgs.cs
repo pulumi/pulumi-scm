@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class WildfireAntiVirusProfileThreatExceptionGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Notes param.
+        /// Notes
         /// </summary>
         [Input("notes")]
         public Input<string>? Notes { get; set; }

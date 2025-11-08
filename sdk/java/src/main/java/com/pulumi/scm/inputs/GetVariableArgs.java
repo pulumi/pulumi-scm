@@ -17,44 +17,14 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetVariableArgs Empty = new GetVariableArgs();
 
     /**
-     * The Device param.
-     * 
-     */
-    @Import(name="device")
-    private @Nullable Output<String> device;
-
-    /**
-     * @return The Device param.
-     * 
-     */
-    public Optional<Output<String>> device() {
-        return Optional.ofNullable(this.device);
-    }
-
-    /**
-     * The Folder param.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
-
-    /**
-     * @return The Folder param.
-     * 
-     */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The Id param.
+     * UUID of the variable
      * 
      */
     @Import(name="id", required=true)
     private Output<String> id;
 
     /**
-     * @return The Id param.
+     * @return UUID of the variable
      * 
      */
     public Output<String> id() {
@@ -62,27 +32,25 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The Snippet param.
+     * The name of the variable
      * 
      */
-    @Import(name="snippet")
-    private @Nullable Output<String> snippet;
+    @Import(name="name")
+    private @Nullable Output<String> name;
 
     /**
-     * @return The Snippet param.
+     * @return The name of the variable
      * 
      */
-    public Optional<Output<String>> snippet() {
-        return Optional.ofNullable(this.snippet);
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     private GetVariableArgs() {}
 
     private GetVariableArgs(GetVariableArgs $) {
-        this.device = $.device;
-        this.folder = $.folder;
         this.id = $.id;
-        this.snippet = $.snippet;
+        this.name = $.name;
     }
 
     public static Builder builder() {
@@ -104,49 +72,7 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param device The Device param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder device(@Nullable Output<String> device) {
-            $.device = device;
-            return this;
-        }
-
-        /**
-         * @param device The Device param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder device(String device) {
-            return device(Output.of(device));
-        }
-
-        /**
-         * @param folder The Folder param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable Output<String> folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param folder The Folder param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(String folder) {
-            return folder(Output.of(folder));
-        }
-
-        /**
-         * @param id The Id param.
+         * @param id UUID of the variable
          * 
          * @return builder
          * 
@@ -157,7 +83,7 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param id The Id param.
+         * @param id UUID of the variable
          * 
          * @return builder
          * 
@@ -167,24 +93,24 @@ public final class GetVariableArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param name The name of the variable
          * 
          * @return builder
          * 
          */
-        public Builder snippet(@Nullable Output<String> snippet) {
-            $.snippet = snippet;
+        public Builder name(@Nullable Output<String> name) {
+            $.name = name;
             return this;
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param name The name of the variable
          * 
          * @return builder
          * 
          */
-        public Builder snippet(String snippet) {
-            return snippet(Output.of(snippet));
+        public Builder name(String name) {
+            return name(Output.of(name));
         }
 
         public GetVariableArgs build() {

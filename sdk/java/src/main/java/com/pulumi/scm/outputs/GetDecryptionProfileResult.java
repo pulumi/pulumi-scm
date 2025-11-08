@@ -15,32 +15,47 @@ import java.util.Objects;
 @CustomType
 public final class GetDecryptionProfileResult {
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      * 
      */
     private String name;
     /**
-     * @return The SslForwardProxy param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Ssl forward proxy
      * 
      */
     private GetDecryptionProfileSslForwardProxy sslForwardProxy;
     /**
-     * @return The SslInboundProxy param.
+     * @return Ssl inbound proxy
      * 
      */
     private GetDecryptionProfileSslInboundProxy sslInboundProxy;
     /**
-     * @return The SslNoProxy param.
+     * @return Ssl no proxy
      * 
      */
     private GetDecryptionProfileSslNoProxy sslNoProxy;
     /**
-     * @return The SslProtocolSettings param.
+     * @return Ssl protocol settings
      * 
      */
     private GetDecryptionProfileSslProtocolSettings sslProtocolSettings;
@@ -48,42 +63,63 @@ public final class GetDecryptionProfileResult {
 
     private GetDecryptionProfileResult() {}
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+     * @return Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The SslForwardProxy param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Ssl forward proxy
      * 
      */
     public GetDecryptionProfileSslForwardProxy sslForwardProxy() {
         return this.sslForwardProxy;
     }
     /**
-     * @return The SslInboundProxy param.
+     * @return Ssl inbound proxy
      * 
      */
     public GetDecryptionProfileSslInboundProxy sslInboundProxy() {
         return this.sslInboundProxy;
     }
     /**
-     * @return The SslNoProxy param.
+     * @return Ssl no proxy
      * 
      */
     public GetDecryptionProfileSslNoProxy sslNoProxy() {
         return this.sslNoProxy;
     }
     /**
-     * @return The SslProtocolSettings param.
+     * @return Ssl protocol settings
      * 
      */
     public GetDecryptionProfileSslProtocolSettings sslProtocolSettings() {
@@ -102,8 +138,11 @@ public final class GetDecryptionProfileResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
+        private String folder;
         private String id;
         private String name;
+        private String snippet;
         private GetDecryptionProfileSslForwardProxy sslForwardProxy;
         private GetDecryptionProfileSslInboundProxy sslInboundProxy;
         private GetDecryptionProfileSslNoProxy sslNoProxy;
@@ -112,8 +151,11 @@ public final class GetDecryptionProfileResult {
         public Builder() {}
         public Builder(GetDecryptionProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
     	      this.sslForwardProxy = defaults.sslForwardProxy;
     	      this.sslInboundProxy = defaults.sslInboundProxy;
     	      this.sslNoProxy = defaults.sslNoProxy;
@@ -121,6 +163,22 @@ public final class GetDecryptionProfileResult {
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionProfileResult", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
         @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
@@ -135,6 +193,14 @@ public final class GetDecryptionProfileResult {
               throw new MissingRequiredPropertyException("GetDecryptionProfileResult", "name");
             }
             this.name = name;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionProfileResult", "snippet");
+            }
+            this.snippet = snippet;
             return this;
         }
         @CustomType.Setter
@@ -179,8 +245,11 @@ public final class GetDecryptionProfileResult {
         }
         public GetDecryptionProfileResult build() {
             final var _resultValue = new GetDecryptionProfileResult();
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
             _resultValue.sslForwardProxy = sslForwardProxy;
             _resultValue.sslInboundProxy = sslInboundProxy;
             _resultValue.sslNoProxy = sslNoProxy;

@@ -10,160 +10,145 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.AuthenticationRule("example");
-    /// 
-    /// });
-    /// ```
+    /// AuthenticationRule resource
     /// </summary>
     [ScmResourceType("scm:index/authenticationRule:AuthenticationRule")]
     public partial class AuthenticationRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// the authentication profile name to apply to authentication rule.
+        /// The authentication profile name
         /// </summary>
         [Output("authenticationEnforcement")]
         public Output<string?> AuthenticationEnforcement { get; private set; } = null!;
 
         /// <summary>
-        /// The Categories param.
+        /// The destination URL categories
         /// </summary>
         [Output("categories")]
         public Output<ImmutableArray<string>> Categories { get; private set; } = null!;
 
         /// <summary>
-        /// The Description param.
+        /// The description of the authentication rule
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The DestinationHips param.
+        /// The destination Host Integrity Profile (HIP)
         /// </summary>
         [Output("destinationHips")]
         public Output<ImmutableArray<string>> DestinationHips { get; private set; } = null!;
 
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         [Output("destinations")]
         public Output<ImmutableArray<string>> Destinations { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// Device
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// Is the authentication rule disabled?
         /// </summary>
         [Output("disabled")]
         public Output<bool> Disabled { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// Folder
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Froms param.
+        /// The source security zones
         /// </summary>
         [Output("froms")]
         public Output<ImmutableArray<string>> Froms { get; private set; } = null!;
 
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         [Output("groupTag")]
         public Output<string?> GroupTag { get; private set; } = null!;
 
         /// <summary>
-        /// The HipProfiles param.
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         [Output("hipProfiles")]
         public Output<ImmutableArray<string>> HipProfiles { get; private set; } = null!;
 
         /// <summary>
-        /// The LogAuthenticationTimeout param. Default: `False`.
+        /// Log authentication timeouts?
         /// </summary>
         [Output("logAuthenticationTimeout")]
         public Output<bool> LogAuthenticationTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// The LogSetting param.
+        /// The log forwarding profile name
         /// </summary>
         [Output("logSetting")]
         public Output<string?> LogSetting { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication rule
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Are the destination addresses negated?
         /// </summary>
         [Output("negateDestination")]
         public Output<bool> NegateDestination { get; private set; } = null!;
 
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Are the source addresses negated?
         /// </summary>
         [Output("negateSource")]
         public Output<bool> NegateSource { get; private set; } = null!;
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The relative position of the rule
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
-        /// The Services param.
+        /// The destination ports
         /// </summary>
         [Output("services")]
         public Output<ImmutableArray<string>> Services { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// Snippet
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The SourceHips param.
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         [Output("sourceHips")]
         public Output<ImmutableArray<string>> SourceHips { get; private set; } = null!;
 
         /// <summary>
-        /// The SourceUsers param.
+        /// The source users
         /// </summary>
         [Output("sourceUsers")]
         public Output<ImmutableArray<string>> SourceUsers { get; private set; } = null!;
 
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         [Output("sources")]
         public Output<ImmutableArray<string>> Sources { get; private set; } = null!;
 
         /// <summary>
-        /// The Tags param.
+        /// The authentication rule tags
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
@@ -172,13 +157,13 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 1440.
+        /// The authentication session timeout (seconds)
         /// </summary>
         [Output("timeout")]
         public Output<int?> Timeout { get; private set; } = null!;
 
         /// <summary>
-        /// The Tos param.
+        /// The destination security zones
         /// </summary>
         [Output("tos")]
         public Output<ImmutableArray<string>> Tos { get; private set; } = null!;
@@ -191,7 +176,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public AuthenticationRule(string name, AuthenticationRuleArgs? args = null, CustomResourceOptions? options = null)
+        public AuthenticationRule(string name, AuthenticationRuleArgs args, CustomResourceOptions? options = null)
             : base("scm:index/authenticationRule:AuthenticationRule", name, args ?? new AuthenticationRuleArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -230,7 +215,7 @@ namespace Pulumi.Scm
     public sealed class AuthenticationRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// the authentication profile name to apply to authentication rule.
+        /// The authentication profile name
         /// </summary>
         [Input("authenticationEnforcement")]
         public Input<string>? AuthenticationEnforcement { get; set; }
@@ -239,7 +224,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Categories param.
+        /// The destination URL categories
         /// </summary>
         public InputList<string> Categories
         {
@@ -248,7 +233,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Description param.
+        /// The description of the authentication rule
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -257,7 +242,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinationHips;
 
         /// <summary>
-        /// The DestinationHips param.
+        /// The destination Host Integrity Profile (HIP)
         /// </summary>
         public InputList<string> DestinationHips
         {
@@ -265,11 +250,11 @@ namespace Pulumi.Scm
             set => _destinationHips = value;
         }
 
-        [Input("destinations")]
+        [Input("destinations", required: true)]
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         public InputList<string> Destinations
         {
@@ -278,28 +263,28 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// Device
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// Is the authentication rule disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// Folder
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
-        [Input("froms")]
+        [Input("froms", required: true)]
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The Froms param.
+        /// The source security zones
         /// </summary>
         public InputList<string> Froms
         {
@@ -308,7 +293,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         [Input("groupTag")]
         public Input<string>? GroupTag { get; set; }
@@ -317,7 +302,7 @@ namespace Pulumi.Scm
         private InputList<string>? _hipProfiles;
 
         /// <summary>
-        /// The HipProfiles param.
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         public InputList<string> HipProfiles
         {
@@ -326,46 +311,46 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The LogAuthenticationTimeout param. Default: `False`.
+        /// Log authentication timeouts?
         /// </summary>
         [Input("logAuthenticationTimeout")]
         public Input<bool>? LogAuthenticationTimeout { get; set; }
 
         /// <summary>
-        /// The LogSetting param.
+        /// The log forwarding profile name
         /// </summary>
         [Input("logSetting")]
         public Input<string>? LogSetting { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication rule
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Are the destination addresses negated?
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Are the source addresses negated?
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The relative position of the rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
-        [Input("services")]
+        [Input("services", required: true)]
         private InputList<string>? _services;
 
         /// <summary>
-        /// The Services param.
+        /// The destination ports
         /// </summary>
         public InputList<string> Services
         {
@@ -374,7 +359,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// Snippet
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -383,7 +368,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceHips;
 
         /// <summary>
-        /// The SourceHips param.
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         public InputList<string> SourceHips
         {
@@ -395,7 +380,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The SourceUsers param.
+        /// The source users
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -403,11 +388,11 @@ namespace Pulumi.Scm
             set => _sourceUsers = value;
         }
 
-        [Input("sources")]
+        [Input("sources", required: true)]
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         public InputList<string> Sources
         {
@@ -419,7 +404,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// The authentication rule tags
         /// </summary>
         public InputList<string> Tags
         {
@@ -428,16 +413,16 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 1440.
+        /// The authentication session timeout (seconds)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }
 
-        [Input("tos")]
+        [Input("tos", required: true)]
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The Tos param.
+        /// The destination security zones
         /// </summary>
         public InputList<string> Tos
         {
@@ -454,7 +439,7 @@ namespace Pulumi.Scm
     public sealed class AuthenticationRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// the authentication profile name to apply to authentication rule.
+        /// The authentication profile name
         /// </summary>
         [Input("authenticationEnforcement")]
         public Input<string>? AuthenticationEnforcement { get; set; }
@@ -463,7 +448,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Categories param.
+        /// The destination URL categories
         /// </summary>
         public InputList<string> Categories
         {
@@ -472,7 +457,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Description param.
+        /// The description of the authentication rule
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -481,7 +466,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinationHips;
 
         /// <summary>
-        /// The DestinationHips param.
+        /// The destination Host Integrity Profile (HIP)
         /// </summary>
         public InputList<string> DestinationHips
         {
@@ -493,7 +478,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         public InputList<string> Destinations
         {
@@ -502,19 +487,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// Device
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// Is the authentication rule disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// Folder
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -523,7 +508,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The Froms param.
+        /// The source security zones
         /// </summary>
         public InputList<string> Froms
         {
@@ -532,7 +517,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         [Input("groupTag")]
         public Input<string>? GroupTag { get; set; }
@@ -541,7 +526,7 @@ namespace Pulumi.Scm
         private InputList<string>? _hipProfiles;
 
         /// <summary>
-        /// The HipProfiles param.
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         public InputList<string> HipProfiles
         {
@@ -550,37 +535,37 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The LogAuthenticationTimeout param. Default: `False`.
+        /// Log authentication timeouts?
         /// </summary>
         [Input("logAuthenticationTimeout")]
         public Input<bool>? LogAuthenticationTimeout { get; set; }
 
         /// <summary>
-        /// The LogSetting param.
+        /// The log forwarding profile name
         /// </summary>
         [Input("logSetting")]
         public Input<string>? LogSetting { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication rule
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Are the destination addresses negated?
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Are the source addresses negated?
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The relative position of the rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
@@ -589,7 +574,7 @@ namespace Pulumi.Scm
         private InputList<string>? _services;
 
         /// <summary>
-        /// The Services param.
+        /// The destination ports
         /// </summary>
         public InputList<string> Services
         {
@@ -598,7 +583,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// Snippet
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -607,7 +592,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceHips;
 
         /// <summary>
-        /// The SourceHips param.
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         public InputList<string> SourceHips
         {
@@ -619,7 +604,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The SourceUsers param.
+        /// The source users
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -631,7 +616,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         public InputList<string> Sources
         {
@@ -643,7 +628,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// The authentication rule tags
         /// </summary>
         public InputList<string> Tags
         {
@@ -655,7 +640,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 1440.
+        /// The authentication session timeout (seconds)
         /// </summary>
         [Input("timeout")]
         public Input<int>? Timeout { get; set; }
@@ -664,7 +649,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The Tos param.
+        /// The destination security zones
         /// </summary>
         public InputList<string> Tos
         {

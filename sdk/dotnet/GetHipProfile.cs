@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetHipProfile
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// HipProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetHipProfile.Invoke(new()
+        ///     // Look up a single HIP Profile by its ID.
+        ///     var scmHipProfileDs = Scm.GetHipProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "e0a970b8-98d2-42e9-a273-53fbf67607c2",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["hipProfileDsResult"] = scmHipProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +41,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetHipProfileResult>("scm:index/getHipProfile:getHipProfile", args ?? new GetHipProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// HipProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +53,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetHipProfile.Invoke(new()
+        ///     // Look up a single HIP Profile by its ID.
+        ///     var scmHipProfileDs = Scm.GetHipProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "e0a970b8-98d2-42e9-a273-53fbf67607c2",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["hipProfileDsResult"] = scmHipProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +70,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetHipProfileResult>("scm:index/getHipProfile:getHipProfile", args ?? new GetHipProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// HipProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +82,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetHipProfile.Invoke(new()
+        ///     // Look up a single HIP Profile by its ID.
+        ///     var scmHipProfileDs = Scm.GetHipProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "e0a970b8-98d2-42e9-a273-53fbf67607c2",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["hipProfileDsResult"] = scmHipProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +103,16 @@ namespace Pulumi.Scm
     public sealed class GetHipProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the HIP profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetHipProfileArgs()
         {
@@ -102,10 +123,16 @@ namespace Pulumi.Scm
     public sealed class GetHipProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the HIP profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetHipProfileInvokeArgs()
         {
@@ -118,26 +145,42 @@ namespace Pulumi.Scm
     public sealed class GetHipProfileResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Match param. String length must not exceed 2048 characters.
+        /// Match
         /// </summary>
         public readonly string Match;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetHipProfileResult(
             string description,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -145,12 +188,17 @@ namespace Pulumi.Scm
 
             string name,
 
+            string snippet,
+
             string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Match = match;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

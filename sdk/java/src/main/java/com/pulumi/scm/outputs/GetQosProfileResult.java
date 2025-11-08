@@ -9,73 +9,95 @@ import com.pulumi.scm.outputs.GetQosProfileAggregateBandwidth;
 import com.pulumi.scm.outputs.GetQosProfileClassBandwidthType;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 @CustomType
 public final class GetQosProfileResult {
     /**
-     * @return The AggregateBandwidth param.
+     * @return Aggregate bandwidth
      * 
      */
     private GetQosProfileAggregateBandwidth aggregateBandwidth;
     /**
-     * @return The ClassBandwidthType param.
+     * @return Class bandwidth type
      * 
      */
     private GetQosProfileClassBandwidthType classBandwidthType;
     /**
-     * @return The Folder param.
+     * @return The device in which the resource is defined
      * 
      */
-    private @Nullable String folder;
+    private String device;
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
 
     private GetQosProfileResult() {}
     /**
-     * @return The AggregateBandwidth param.
+     * @return Aggregate bandwidth
      * 
      */
     public GetQosProfileAggregateBandwidth aggregateBandwidth() {
         return this.aggregateBandwidth;
     }
     /**
-     * @return The ClassBandwidthType param.
+     * @return Class bandwidth type
      * 
      */
     public GetQosProfileClassBandwidthType classBandwidthType() {
         return this.classBandwidthType;
     }
     /**
-     * @return The Folder param.
+     * @return The device in which the resource is defined
      * 
      */
-    public Optional<String> folder() {
-        return Optional.ofNullable(this.folder);
+    public String device() {
+        return this.device;
     }
     /**
-     * @return The Id param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -92,18 +114,22 @@ public final class GetQosProfileResult {
     public static final class Builder {
         private GetQosProfileAggregateBandwidth aggregateBandwidth;
         private GetQosProfileClassBandwidthType classBandwidthType;
-        private @Nullable String folder;
+        private String device;
+        private String folder;
         private String id;
         private String name;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetQosProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.aggregateBandwidth = defaults.aggregateBandwidth;
     	      this.classBandwidthType = defaults.classBandwidthType;
+    	      this.device = defaults.device;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
         }
 
@@ -124,8 +150,18 @@ public final class GetQosProfileResult {
             return this;
         }
         @CustomType.Setter
-        public Builder folder(@Nullable String folder) {
-
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetQosProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetQosProfileResult", "folder");
+            }
             this.folder = folder;
             return this;
         }
@@ -146,6 +182,14 @@ public final class GetQosProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetQosProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetQosProfileResult", "tfid");
@@ -157,9 +201,11 @@ public final class GetQosProfileResult {
             final var _resultValue = new GetQosProfileResult();
             _resultValue.aggregateBandwidth = aggregateBandwidth;
             _resultValue.classBandwidthType = classBandwidthType;
+            _resultValue.device = device;
             _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             return _resultValue;
         }

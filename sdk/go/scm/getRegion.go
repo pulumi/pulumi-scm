@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupRegion(ctx, &scm.LookupRegionArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// Region data source
 func LookupRegion(ctx *pulumi.Context, args *LookupRegionArgs, opts ...pulumi.InvokeOption) (*LookupRegionResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupRegionResult
@@ -50,21 +24,29 @@ func LookupRegion(ctx *pulumi.Context, args *LookupRegionArgs, opts ...pulumi.In
 
 // A collection of arguments for invoking getRegion.
 type LookupRegionArgs struct {
-	// The Id param.
+	// The UUID of the region
 	Id string `pulumi:"id"`
+	// The name of the region
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getRegion.
 type LookupRegionResult struct {
-	// The Addresses param.
+	// Address
 	Addresses []string `pulumi:"addresses"`
-	// The GeoLocation param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// Geo location
 	GeoLocation GetRegionGeoLocation `pulumi:"geoLocation"`
-	// The Id param.
+	// The UUID of the region
 	Id string `pulumi:"id"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the region
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupRegionOutput(ctx *pulumi.Context, args LookupRegionOutputArgs, opts ...pulumi.InvokeOption) LookupRegionResultOutput {
@@ -78,8 +60,10 @@ func LookupRegionOutput(ctx *pulumi.Context, args LookupRegionOutputArgs, opts .
 
 // A collection of arguments for invoking getRegion.
 type LookupRegionOutputArgs struct {
-	// The Id param.
+	// The UUID of the region
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the region
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupRegionOutputArgs) ElementType() reflect.Type {
@@ -101,24 +85,39 @@ func (o LookupRegionResultOutput) ToLookupRegionResultOutputWithContext(ctx cont
 	return o
 }
 
-// The Addresses param.
+// Address
 func (o LookupRegionResultOutput) Addresses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupRegionResult) []string { return v.Addresses }).(pulumi.StringArrayOutput)
 }
 
-// The GeoLocation param.
+// The device in which the resource is defined
+func (o LookupRegionResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupRegionResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupRegionResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupRegionResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// Geo location
 func (o LookupRegionResultOutput) GeoLocation() GetRegionGeoLocationOutput {
 	return o.ApplyT(func(v LookupRegionResult) GetRegionGeoLocation { return v.GeoLocation }).(GetRegionGeoLocationOutput)
 }
 
-// The Id param.
+// The UUID of the region
 func (o LookupRegionResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRegionResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// The name of the region
 func (o LookupRegionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRegionResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupRegionResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupRegionResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupRegionResultOutput) Tfid() pulumi.StringOutput {

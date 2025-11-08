@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class AntiSpywareSignatureSignatureStandard
     {
         /// <summary>
-        /// The AndConditions param.
+        /// And condition
         /// </summary>
         public readonly ImmutableArray<Outputs.AntiSpywareSignatureSignatureStandardAndCondition> AndConditions;
         /// <summary>
-        /// The Comment param. String length must not exceed 256 characters.
+        /// Comment
         /// </summary>
         public readonly string? Comment;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OrderFree param. Default: `False`.
+        /// Order free
         /// </summary>
         public readonly bool? OrderFree;
         /// <summary>
-        /// The Scope param. String must be one of these: `"protocol-data-unit"`, `"session"`.
+        /// Scope
         /// </summary>
         public readonly string? Scope;
 

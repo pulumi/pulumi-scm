@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileSingleSignOn {
     /**
-     * @return The KerberosKeytab param. String length must not exceed 8192 characters.
+     * @return Kerberos keytab
      * 
      */
     private @Nullable String kerberosKeytab;
     /**
-     * @return The Realm param. String length must not exceed 127 characters.
+     * @return Realm
      * 
      */
     private @Nullable String realm;
 
     private AuthenticationProfileSingleSignOn() {}
     /**
-     * @return The KerberosKeytab param. String length must not exceed 8192 characters.
+     * @return Kerberos keytab
      * 
      */
     public Optional<String> kerberosKeytab() {
         return Optional.ofNullable(this.kerberosKeytab);
     }
     /**
-     * @return The Realm param. String length must not exceed 127 characters.
+     * @return Realm
      * 
      */
     public Optional<String> realm() {

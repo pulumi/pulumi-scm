@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectMobileDeviceCriteriaApplicationsArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The HasMalware param.
+        /// Has malware
         /// </summary>
         [Input("hasMalware")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs>? HasMalware { get; set; }
 
         /// <summary>
-        /// Has apps that are not managed.
+        /// Has apps that are not managed
         /// </summary>
         [Input("hasUnmanagedApp")]
         public Input<bool>? HasUnmanagedApp { get; set; }
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectMobileDeviceCriteriaApplicationsIncludeArgs>? _includes;
 
         /// <summary>
-        /// The Includes param.
+        /// Includes
         /// </summary>
         public InputList<Inputs.HipObjectMobileDeviceCriteriaApplicationsIncludeArgs> Includes
         {

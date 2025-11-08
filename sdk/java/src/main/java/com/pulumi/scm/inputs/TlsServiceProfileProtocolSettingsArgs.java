@@ -17,14 +17,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     public static final TlsServiceProfileProtocolSettingsArgs Empty = new TlsServiceProfileProtocolSettingsArgs();
 
     /**
-     * Allow authentication SHA1.
+     * Allow SHA1 authentication?
      * 
      */
     @Import(name="authAlgoSha1")
     private @Nullable Output<Boolean> authAlgoSha1;
 
     /**
-     * @return Allow authentication SHA1.
+     * @return Allow SHA1 authentication?
      * 
      */
     public Optional<Output<Boolean>> authAlgoSha1() {
@@ -32,14 +32,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow authentication SHA256.
+     * Allow SHA256 authentication?
      * 
      */
     @Import(name="authAlgoSha256")
     private @Nullable Output<Boolean> authAlgoSha256;
 
     /**
-     * @return Allow authentication SHA256.
+     * @return Allow SHA256 authentication?
      * 
      */
     public Optional<Output<Boolean>> authAlgoSha256() {
@@ -47,14 +47,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow authentication SHA384.
+     * Allow SHA384 authentication?
      * 
      */
     @Import(name="authAlgoSha384")
     private @Nullable Output<Boolean> authAlgoSha384;
 
     /**
-     * @return Allow authentication SHA384.
+     * @return Allow SHA384 authentication?
      * 
      */
     public Optional<Output<Boolean>> authAlgoSha384() {
@@ -62,14 +62,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm 3DES.
+     * Allow 3DES algorithm?
      * 
      */
     @Import(name="encAlgo3des")
     private @Nullable Output<Boolean> encAlgo3des;
 
     /**
-     * @return Allow algorithm 3DES.
+     * @return Allow 3DES algorithm?
      * 
      */
     public Optional<Output<Boolean>> encAlgo3des() {
@@ -77,14 +77,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm AES-128-CBC.
+     * Allow AES-128-CBC algorithm?
      * 
      */
     @Import(name="encAlgoAes128Cbc")
     private @Nullable Output<Boolean> encAlgoAes128Cbc;
 
     /**
-     * @return Allow algorithm AES-128-CBC.
+     * @return Allow AES-128-CBC algorithm?
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes128Cbc() {
@@ -92,14 +92,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm AES-128-GCM.
+     * Allow AES-128-GCM algorithm?
      * 
      */
     @Import(name="encAlgoAes128Gcm")
     private @Nullable Output<Boolean> encAlgoAes128Gcm;
 
     /**
-     * @return Allow algorithm AES-128-GCM.
+     * @return Allow AES-128-GCM algorithm?
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes128Gcm() {
@@ -107,14 +107,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm AES-256-CBC.
+     * Allow AES-256-CBC algorithm?
      * 
      */
     @Import(name="encAlgoAes256Cbc")
     private @Nullable Output<Boolean> encAlgoAes256Cbc;
 
     /**
-     * @return Allow algorithm AES-256-CBC.
+     * @return Allow AES-256-CBC algorithm?
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes256Cbc() {
@@ -122,14 +122,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm AES-256-GCM.
+     * Allow algorithm AES-256-GCM
      * 
      */
     @Import(name="encAlgoAes256Gcm")
     private @Nullable Output<Boolean> encAlgoAes256Gcm;
 
     /**
-     * @return Allow algorithm AES-256-GCM.
+     * @return Allow algorithm AES-256-GCM
      * 
      */
     public Optional<Output<Boolean>> encAlgoAes256Gcm() {
@@ -137,14 +137,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm RC4.
+     * Allow RC4 algorithm?
      * 
      */
     @Import(name="encAlgoRc4")
     private @Nullable Output<Boolean> encAlgoRc4;
 
     /**
-     * @return Allow algorithm RC4.
+     * @return Allow RC4 algorithm?
      * 
      */
     public Optional<Output<Boolean>> encAlgoRc4() {
@@ -152,14 +152,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm DHE.
+     * Allow DHE algorithm?
      * 
      */
     @Import(name="keyxchgAlgoDhe")
     private @Nullable Output<Boolean> keyxchgAlgoDhe;
 
     /**
-     * @return Allow algorithm DHE.
+     * @return Allow DHE algorithm?
      * 
      */
     public Optional<Output<Boolean>> keyxchgAlgoDhe() {
@@ -167,14 +167,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm ECDHE.
+     * Allow ECDHE algorithm?
      * 
      */
     @Import(name="keyxchgAlgoEcdhe")
     private @Nullable Output<Boolean> keyxchgAlgoEcdhe;
 
     /**
-     * @return Allow algorithm ECDHE.
+     * @return Allow ECDHE algorithm?
      * 
      */
     public Optional<Output<Boolean>> keyxchgAlgoEcdhe() {
@@ -182,14 +182,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * Allow algorithm RSA.
+     * Allow RSA algorithm?
      * 
      */
     @Import(name="keyxchgAlgoRsa")
     private @Nullable Output<Boolean> keyxchgAlgoRsa;
 
     /**
-     * @return Allow algorithm RSA.
+     * @return Allow RSA algorithm?
      * 
      */
     public Optional<Output<Boolean>> keyxchgAlgoRsa() {
@@ -197,14 +197,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * The MaxVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;max&#34;`.
+     * Maximum TLS version
      * 
      */
     @Import(name="maxVersion")
     private @Nullable Output<String> maxVersion;
 
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;max&#34;`.
+     * @return Maximum TLS version
      * 
      */
     public Optional<Output<String>> maxVersion() {
@@ -212,14 +212,14 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
     }
 
     /**
-     * The MinVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`. Default: `&#34;tls1-0&#34;`.
+     * Minimum TLS version
      * 
      */
     @Import(name="minVersion")
     private @Nullable Output<String> minVersion;
 
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Minimum TLS version
      * 
      */
     public Optional<Output<String>> minVersion() {
@@ -264,7 +264,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param authAlgoSha1 Allow authentication SHA1.
+         * @param authAlgoSha1 Allow SHA1 authentication?
          * 
          * @return builder
          * 
@@ -275,7 +275,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param authAlgoSha1 Allow authentication SHA1.
+         * @param authAlgoSha1 Allow SHA1 authentication?
          * 
          * @return builder
          * 
@@ -285,7 +285,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param authAlgoSha256 Allow authentication SHA256.
+         * @param authAlgoSha256 Allow SHA256 authentication?
          * 
          * @return builder
          * 
@@ -296,7 +296,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param authAlgoSha256 Allow authentication SHA256.
+         * @param authAlgoSha256 Allow SHA256 authentication?
          * 
          * @return builder
          * 
@@ -306,7 +306,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param authAlgoSha384 Allow authentication SHA384.
+         * @param authAlgoSha384 Allow SHA384 authentication?
          * 
          * @return builder
          * 
@@ -317,7 +317,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param authAlgoSha384 Allow authentication SHA384.
+         * @param authAlgoSha384 Allow SHA384 authentication?
          * 
          * @return builder
          * 
@@ -327,7 +327,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgo3des Allow algorithm 3DES.
+         * @param encAlgo3des Allow 3DES algorithm?
          * 
          * @return builder
          * 
@@ -338,7 +338,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgo3des Allow algorithm 3DES.
+         * @param encAlgo3des Allow 3DES algorithm?
          * 
          * @return builder
          * 
@@ -348,7 +348,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes128Cbc Allow algorithm AES-128-CBC.
+         * @param encAlgoAes128Cbc Allow AES-128-CBC algorithm?
          * 
          * @return builder
          * 
@@ -359,7 +359,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes128Cbc Allow algorithm AES-128-CBC.
+         * @param encAlgoAes128Cbc Allow AES-128-CBC algorithm?
          * 
          * @return builder
          * 
@@ -369,7 +369,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes128Gcm Allow algorithm AES-128-GCM.
+         * @param encAlgoAes128Gcm Allow AES-128-GCM algorithm?
          * 
          * @return builder
          * 
@@ -380,7 +380,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes128Gcm Allow algorithm AES-128-GCM.
+         * @param encAlgoAes128Gcm Allow AES-128-GCM algorithm?
          * 
          * @return builder
          * 
@@ -390,7 +390,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes256Cbc Allow algorithm AES-256-CBC.
+         * @param encAlgoAes256Cbc Allow AES-256-CBC algorithm?
          * 
          * @return builder
          * 
@@ -401,7 +401,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes256Cbc Allow algorithm AES-256-CBC.
+         * @param encAlgoAes256Cbc Allow AES-256-CBC algorithm?
          * 
          * @return builder
          * 
@@ -411,7 +411,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes256Gcm Allow algorithm AES-256-GCM.
+         * @param encAlgoAes256Gcm Allow algorithm AES-256-GCM
          * 
          * @return builder
          * 
@@ -422,7 +422,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoAes256Gcm Allow algorithm AES-256-GCM.
+         * @param encAlgoAes256Gcm Allow algorithm AES-256-GCM
          * 
          * @return builder
          * 
@@ -432,7 +432,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoRc4 Allow algorithm RC4.
+         * @param encAlgoRc4 Allow RC4 algorithm?
          * 
          * @return builder
          * 
@@ -443,7 +443,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param encAlgoRc4 Allow algorithm RC4.
+         * @param encAlgoRc4 Allow RC4 algorithm?
          * 
          * @return builder
          * 
@@ -453,7 +453,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyxchgAlgoDhe Allow algorithm DHE.
+         * @param keyxchgAlgoDhe Allow DHE algorithm?
          * 
          * @return builder
          * 
@@ -464,7 +464,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyxchgAlgoDhe Allow algorithm DHE.
+         * @param keyxchgAlgoDhe Allow DHE algorithm?
          * 
          * @return builder
          * 
@@ -474,7 +474,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyxchgAlgoEcdhe Allow algorithm ECDHE.
+         * @param keyxchgAlgoEcdhe Allow ECDHE algorithm?
          * 
          * @return builder
          * 
@@ -485,7 +485,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyxchgAlgoEcdhe Allow algorithm ECDHE.
+         * @param keyxchgAlgoEcdhe Allow ECDHE algorithm?
          * 
          * @return builder
          * 
@@ -495,7 +495,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyxchgAlgoRsa Allow algorithm RSA.
+         * @param keyxchgAlgoRsa Allow RSA algorithm?
          * 
          * @return builder
          * 
@@ -506,7 +506,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param keyxchgAlgoRsa Allow algorithm RSA.
+         * @param keyxchgAlgoRsa Allow RSA algorithm?
          * 
          * @return builder
          * 
@@ -516,7 +516,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param maxVersion The MaxVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;max&#34;`.
+         * @param maxVersion Maximum TLS version
          * 
          * @return builder
          * 
@@ -527,7 +527,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param maxVersion The MaxVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;max&#34;`.
+         * @param maxVersion Maximum TLS version
          * 
          * @return builder
          * 
@@ -537,7 +537,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param minVersion The MinVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`. Default: `&#34;tls1-0&#34;`.
+         * @param minVersion Minimum TLS version
          * 
          * @return builder
          * 
@@ -548,7 +548,7 @@ public final class TlsServiceProfileProtocolSettingsArgs extends com.pulumi.reso
         }
 
         /**
-         * @param minVersion The MinVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`. Default: `&#34;tls1-0&#34;`.
+         * @param minVersion Minimum TLS version
          * 
          * @return builder
          * 

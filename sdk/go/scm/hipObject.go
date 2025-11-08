@@ -11,43 +11,43 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// HipObject resource
 //
 // ## Example Usage
 type HipObject struct {
 	pulumi.CustomResourceState
 
-	// The AntiMalware param.
-	AntiMalware HipObjectAntiMalwarePtrOutput `pulumi:"antiMalware"`
-	// The Certificate param.
+	// Anti malware
+	AntiMalware HipObjectAntiMalwareOutput `pulumi:"antiMalware"`
+	// Certificate
 	Certificate HipObjectCertificatePtrOutput `pulumi:"certificate"`
-	// The CustomChecks param.
+	// Custom checks
 	CustomChecks HipObjectCustomChecksPtrOutput `pulumi:"customChecks"`
-	// The DataLossPrevention param.
-	DataLossPrevention HipObjectDataLossPreventionPtrOutput `pulumi:"dataLossPrevention"`
-	// The Description param. String length must not exceed 255 characters.
+	// Data loss prevention
+	DataLossPrevention HipObjectDataLossPreventionOutput `pulumi:"dataLossPrevention"`
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The DiskBackup param.
-	DiskBackup HipObjectDiskBackupPtrOutput `pulumi:"diskBackup"`
-	// The DiskEncryption param.
-	DiskEncryption HipObjectDiskEncryptionPtrOutput `pulumi:"diskEncryption"`
-	// The Firewall param.
-	Firewall HipObjectFirewallPtrOutput `pulumi:"firewall"`
-	// The Folder param.
+	// Disk backup
+	DiskBackup HipObjectDiskBackupOutput `pulumi:"diskBackup"`
+	// Disk encryption
+	DiskEncryption HipObjectDiskEncryptionOutput `pulumi:"diskEncryption"`
+	// Firewall
+	Firewall HipObjectFirewallOutput `pulumi:"firewall"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The HostInfo param.
+	// Host info
 	HostInfo HipObjectHostInfoPtrOutput `pulumi:"hostInfo"`
-	// The MobileDevice param.
+	// Mobile device
 	MobileDevice HipObjectMobileDevicePtrOutput `pulumi:"mobileDevice"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP object
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The NetworkInfo param.
+	// Network info
 	NetworkInfo HipObjectNetworkInfoPtrOutput `pulumi:"networkInfo"`
-	// The PatchManagement param.
-	PatchManagement HipObjectPatchManagementPtrOutput `pulumi:"patchManagement"`
-	// The Snippet param.
+	// Patch management
+	PatchManagement HipObjectPatchManagementOutput `pulumi:"patchManagement"`
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -82,73 +82,73 @@ func GetHipObject(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering HipObject resources.
 type hipObjectState struct {
-	// The AntiMalware param.
+	// Anti malware
 	AntiMalware *HipObjectAntiMalware `pulumi:"antiMalware"`
-	// The Certificate param.
+	// Certificate
 	Certificate *HipObjectCertificate `pulumi:"certificate"`
-	// The CustomChecks param.
+	// Custom checks
 	CustomChecks *HipObjectCustomChecks `pulumi:"customChecks"`
-	// The DataLossPrevention param.
+	// Data loss prevention
 	DataLossPrevention *HipObjectDataLossPrevention `pulumi:"dataLossPrevention"`
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DiskBackup param.
+	// Disk backup
 	DiskBackup *HipObjectDiskBackup `pulumi:"diskBackup"`
-	// The DiskEncryption param.
+	// Disk encryption
 	DiskEncryption *HipObjectDiskEncryption `pulumi:"diskEncryption"`
-	// The Firewall param.
+	// Firewall
 	Firewall *HipObjectFirewall `pulumi:"firewall"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The HostInfo param.
+	// Host info
 	HostInfo *HipObjectHostInfo `pulumi:"hostInfo"`
-	// The MobileDevice param.
+	// Mobile device
 	MobileDevice *HipObjectMobileDevice `pulumi:"mobileDevice"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP object
 	Name *string `pulumi:"name"`
-	// The NetworkInfo param.
+	// Network info
 	NetworkInfo *HipObjectNetworkInfo `pulumi:"networkInfo"`
-	// The PatchManagement param.
+	// Patch management
 	PatchManagement *HipObjectPatchManagement `pulumi:"patchManagement"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type HipObjectState struct {
-	// The AntiMalware param.
+	// Anti malware
 	AntiMalware HipObjectAntiMalwarePtrInput
-	// The Certificate param.
+	// Certificate
 	Certificate HipObjectCertificatePtrInput
-	// The CustomChecks param.
+	// Custom checks
 	CustomChecks HipObjectCustomChecksPtrInput
-	// The DataLossPrevention param.
+	// Data loss prevention
 	DataLossPrevention HipObjectDataLossPreventionPtrInput
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DiskBackup param.
+	// Disk backup
 	DiskBackup HipObjectDiskBackupPtrInput
-	// The DiskEncryption param.
+	// Disk encryption
 	DiskEncryption HipObjectDiskEncryptionPtrInput
-	// The Firewall param.
+	// Firewall
 	Firewall HipObjectFirewallPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The HostInfo param.
+	// Host info
 	HostInfo HipObjectHostInfoPtrInput
-	// The MobileDevice param.
+	// Mobile device
 	MobileDevice HipObjectMobileDevicePtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP object
 	Name pulumi.StringPtrInput
-	// The NetworkInfo param.
+	// Network info
 	NetworkInfo HipObjectNetworkInfoPtrInput
-	// The PatchManagement param.
+	// Patch management
 	PatchManagement HipObjectPatchManagementPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -158,73 +158,73 @@ func (HipObjectState) ElementType() reflect.Type {
 }
 
 type hipObjectArgs struct {
-	// The AntiMalware param.
+	// Anti malware
 	AntiMalware *HipObjectAntiMalware `pulumi:"antiMalware"`
-	// The Certificate param.
+	// Certificate
 	Certificate *HipObjectCertificate `pulumi:"certificate"`
-	// The CustomChecks param.
+	// Custom checks
 	CustomChecks *HipObjectCustomChecks `pulumi:"customChecks"`
-	// The DataLossPrevention param.
+	// Data loss prevention
 	DataLossPrevention *HipObjectDataLossPrevention `pulumi:"dataLossPrevention"`
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The DiskBackup param.
+	// Disk backup
 	DiskBackup *HipObjectDiskBackup `pulumi:"diskBackup"`
-	// The DiskEncryption param.
+	// Disk encryption
 	DiskEncryption *HipObjectDiskEncryption `pulumi:"diskEncryption"`
-	// The Firewall param.
+	// Firewall
 	Firewall *HipObjectFirewall `pulumi:"firewall"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The HostInfo param.
+	// Host info
 	HostInfo *HipObjectHostInfo `pulumi:"hostInfo"`
-	// The MobileDevice param.
+	// Mobile device
 	MobileDevice *HipObjectMobileDevice `pulumi:"mobileDevice"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP object
 	Name *string `pulumi:"name"`
-	// The NetworkInfo param.
+	// Network info
 	NetworkInfo *HipObjectNetworkInfo `pulumi:"networkInfo"`
-	// The PatchManagement param.
+	// Patch management
 	PatchManagement *HipObjectPatchManagement `pulumi:"patchManagement"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a HipObject resource.
 type HipObjectArgs struct {
-	// The AntiMalware param.
+	// Anti malware
 	AntiMalware HipObjectAntiMalwarePtrInput
-	// The Certificate param.
+	// Certificate
 	Certificate HipObjectCertificatePtrInput
-	// The CustomChecks param.
+	// Custom checks
 	CustomChecks HipObjectCustomChecksPtrInput
-	// The DataLossPrevention param.
+	// Data loss prevention
 	DataLossPrevention HipObjectDataLossPreventionPtrInput
-	// The Description param. String length must not exceed 255 characters.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The DiskBackup param.
+	// Disk backup
 	DiskBackup HipObjectDiskBackupPtrInput
-	// The DiskEncryption param.
+	// Disk encryption
 	DiskEncryption HipObjectDiskEncryptionPtrInput
-	// The Firewall param.
+	// Firewall
 	Firewall HipObjectFirewallPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The HostInfo param.
+	// Host info
 	HostInfo HipObjectHostInfoPtrInput
-	// The MobileDevice param.
+	// Mobile device
 	MobileDevice HipObjectMobileDevicePtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the HIP object
 	Name pulumi.StringPtrInput
-	// The NetworkInfo param.
+	// Network info
 	NetworkInfo HipObjectNetworkInfoPtrInput
-	// The PatchManagement param.
+	// Patch management
 	PatchManagement HipObjectPatchManagementPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -315,82 +315,82 @@ func (o HipObjectOutput) ToHipObjectOutputWithContext(ctx context.Context) HipOb
 	return o
 }
 
-// The AntiMalware param.
-func (o HipObjectOutput) AntiMalware() HipObjectAntiMalwarePtrOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectAntiMalwarePtrOutput { return v.AntiMalware }).(HipObjectAntiMalwarePtrOutput)
+// Anti malware
+func (o HipObjectOutput) AntiMalware() HipObjectAntiMalwareOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectAntiMalwareOutput { return v.AntiMalware }).(HipObjectAntiMalwareOutput)
 }
 
-// The Certificate param.
+// Certificate
 func (o HipObjectOutput) Certificate() HipObjectCertificatePtrOutput {
 	return o.ApplyT(func(v *HipObject) HipObjectCertificatePtrOutput { return v.Certificate }).(HipObjectCertificatePtrOutput)
 }
 
-// The CustomChecks param.
+// Custom checks
 func (o HipObjectOutput) CustomChecks() HipObjectCustomChecksPtrOutput {
 	return o.ApplyT(func(v *HipObject) HipObjectCustomChecksPtrOutput { return v.CustomChecks }).(HipObjectCustomChecksPtrOutput)
 }
 
-// The DataLossPrevention param.
-func (o HipObjectOutput) DataLossPrevention() HipObjectDataLossPreventionPtrOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectDataLossPreventionPtrOutput { return v.DataLossPrevention }).(HipObjectDataLossPreventionPtrOutput)
+// Data loss prevention
+func (o HipObjectOutput) DataLossPrevention() HipObjectDataLossPreventionOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectDataLossPreventionOutput { return v.DataLossPrevention }).(HipObjectDataLossPreventionOutput)
 }
 
-// The Description param. String length must not exceed 255 characters.
+// Description
 func (o HipObjectOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o HipObjectOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The DiskBackup param.
-func (o HipObjectOutput) DiskBackup() HipObjectDiskBackupPtrOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectDiskBackupPtrOutput { return v.DiskBackup }).(HipObjectDiskBackupPtrOutput)
+// Disk backup
+func (o HipObjectOutput) DiskBackup() HipObjectDiskBackupOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectDiskBackupOutput { return v.DiskBackup }).(HipObjectDiskBackupOutput)
 }
 
-// The DiskEncryption param.
-func (o HipObjectOutput) DiskEncryption() HipObjectDiskEncryptionPtrOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectDiskEncryptionPtrOutput { return v.DiskEncryption }).(HipObjectDiskEncryptionPtrOutput)
+// Disk encryption
+func (o HipObjectOutput) DiskEncryption() HipObjectDiskEncryptionOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectDiskEncryptionOutput { return v.DiskEncryption }).(HipObjectDiskEncryptionOutput)
 }
 
-// The Firewall param.
-func (o HipObjectOutput) Firewall() HipObjectFirewallPtrOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectFirewallPtrOutput { return v.Firewall }).(HipObjectFirewallPtrOutput)
+// Firewall
+func (o HipObjectOutput) Firewall() HipObjectFirewallOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectFirewallOutput { return v.Firewall }).(HipObjectFirewallOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o HipObjectOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The HostInfo param.
+// Host info
 func (o HipObjectOutput) HostInfo() HipObjectHostInfoPtrOutput {
 	return o.ApplyT(func(v *HipObject) HipObjectHostInfoPtrOutput { return v.HostInfo }).(HipObjectHostInfoPtrOutput)
 }
 
-// The MobileDevice param.
+// Mobile device
 func (o HipObjectOutput) MobileDevice() HipObjectMobileDevicePtrOutput {
 	return o.ApplyT(func(v *HipObject) HipObjectMobileDevicePtrOutput { return v.MobileDevice }).(HipObjectMobileDevicePtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// The name of the HIP object
 func (o HipObjectOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The NetworkInfo param.
+// Network info
 func (o HipObjectOutput) NetworkInfo() HipObjectNetworkInfoPtrOutput {
 	return o.ApplyT(func(v *HipObject) HipObjectNetworkInfoPtrOutput { return v.NetworkInfo }).(HipObjectNetworkInfoPtrOutput)
 }
 
-// The PatchManagement param.
-func (o HipObjectOutput) PatchManagement() HipObjectPatchManagementPtrOutput {
-	return o.ApplyT(func(v *HipObject) HipObjectPatchManagementPtrOutput { return v.PatchManagement }).(HipObjectPatchManagementPtrOutput)
+// Patch management
+func (o HipObjectOutput) PatchManagement() HipObjectPatchManagementOutput {
+	return o.ApplyT(func(v *HipObject) HipObjectPatchManagementOutput { return v.PatchManagement }).(HipObjectPatchManagementOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o HipObjectOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *HipObject) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

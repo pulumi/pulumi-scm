@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getScepProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * ScepProfile data source
  */
 export function getScepProfile(args: GetScepProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetScepProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getScepProfile:getScepProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getScepProfile(args: GetScepProfileArgs, opts?: pulumi.InvokeOpt
  */
 export interface GetScepProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the SCEP profile
      */
     id: string;
+    /**
+     * The name of the SCEP profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,81 +36,87 @@ export interface GetScepProfileArgs {
  */
 export interface GetScepProfileResult {
     /**
-     * The Algorithm param.
+     * Algorithm
      */
     readonly algorithm: outputs.GetScepProfileAlgorithm;
     /**
-     * The CaIdentityName param.
+     * Certificate Authority identity
      */
     readonly caIdentityName: string;
     /**
-     * The CertificateAttributes param.
+     * Subject Alternative name type
      */
     readonly certificateAttributes: outputs.GetScepProfileCertificateAttributes;
     /**
-     * The Digest param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Digest for CSR
      */
     readonly digest: string;
     /**
-     * The Fingerprint param.
+     * Map of sensitive values returned from the API.
+     */
+    readonly encryptedValues: {[key: string]: string};
+    /**
+     * CA certificate fingerprint
      */
     readonly fingerprint: string;
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the SCEP profile
      */
     readonly id: string;
     /**
-     * alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the SCEP profile
      */
     readonly name: string;
     /**
-     * The ScepCaCert param.
+     * SCEP server CA certificate
      */
     readonly scepCaCert: string;
     /**
-     * The ScepChallenge param.
+     * One Time Password challenge
      */
     readonly scepChallenge: outputs.GetScepProfileScepChallenge;
     /**
-     * The ScepClientCert param.
+     * SCEP client ceertificate
      */
     readonly scepClientCert: string;
     /**
-     * The ScepUrl param.
+     * SCEP server URL
      */
     readonly scepUrl: string;
     /**
-     * The Subject param.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Subject
      */
     readonly subject: string;
     readonly tfid: string;
     /**
-     * The UseAsDigitalSignature param.
+     * Use as digital signature?
      */
     readonly useAsDigitalSignature: boolean;
     /**
-     * The UseForKeyEncipherment param.
+     * Use for key encipherment?
      */
     readonly useForKeyEncipherment: boolean;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getScepProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * ScepProfile data source
  */
 export function getScepProfileOutput(args: GetScepProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetScepProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getScepProfile:getScepProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -125,7 +125,11 @@ export function getScepProfileOutput(args: GetScepProfileOutputArgs, opts?: pulu
  */
 export interface GetScepProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the SCEP profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the SCEP profile
+     */
+    name?: pulumi.Input<string>;
 }

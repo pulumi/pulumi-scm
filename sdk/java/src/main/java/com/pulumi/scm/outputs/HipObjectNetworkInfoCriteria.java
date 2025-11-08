@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectNetworkInfoCriteria {
     /**
-     * @return The Network param.
+     * @return Network
      * 
      */
     private @Nullable HipObjectNetworkInfoCriteriaNetwork network;
 
     private HipObjectNetworkInfoCriteria() {}
     /**
-     * @return The Network param.
+     * @return Network
      * 
      */
     public Optional<HipObjectNetworkInfoCriteriaNetwork> network() {

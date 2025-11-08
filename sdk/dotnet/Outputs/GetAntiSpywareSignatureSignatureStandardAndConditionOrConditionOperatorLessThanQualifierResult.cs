@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanQualifierResult
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Value param.
+        /// Value
         /// </summary>
         public readonly string Value;
 

@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationSignatureAndConditionOrConditionOperator {
     /**
-     * @return The EqualTo param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Equal to
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorEqualTo equalTo;
     /**
-     * @return The GreaterThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Greater than
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
-     * @return The LessThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Less than
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
-     * @return The PatternMatch param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Pattern match
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorPatternMatch patternMatch;
 
     private ApplicationSignatureAndConditionOrConditionOperator() {}
     /**
-     * @return The EqualTo param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Equal to
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorEqualTo> equalTo() {
         return Optional.ofNullable(this.equalTo);
     }
     /**
-     * @return The GreaterThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Greater than
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorGreaterThan> greaterThan() {
         return Optional.ofNullable(this.greaterThan);
     }
     /**
-     * @return The LessThan param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Less than
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorLessThan> lessThan() {
         return Optional.ofNullable(this.lessThan);
     }
     /**
-     * @return The PatternMatch param. Ensure that only one of the following is specified: `equalTo`, `greaterThan`, `lessThan`, `patternMatch`
+     * @return Pattern match
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorPatternMatch> patternMatch() {

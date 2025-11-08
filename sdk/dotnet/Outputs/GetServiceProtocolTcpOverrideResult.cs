@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceProtocolTcpOverrideResult
     {
         /// <summary>
-        /// tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+        /// tcp session half-close timeout value (in second)
         /// </summary>
         public readonly int HalfcloseTimeout;
         /// <summary>
-        /// tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+        /// tcp session timeout value (in second)
         /// </summary>
         public readonly int Timeout;
         /// <summary>
-        /// tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+        /// tcp session time-wait timeout value (in second)
         /// </summary>
         public readonly int TimewaitTimeout;
 

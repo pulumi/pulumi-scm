@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ApplicationGroup resource
  *
  * ## Example Usage
  *
@@ -13,7 +13,34 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.ApplicationGroup("example", {});
+ * // First, create some applications that will be used in the application group.
+ * const scmAgApp1 = new scm.Application("scm_ag_app_1", {
+ *     folder: "Shared",
+ *     name: "scm_ag_app_1",
+ *     description: "First test application",
+ *     category: "business-systems",
+ *     subcategory: "database",
+ *     technology: "client-server",
+ *     risk: "3",
+ * });
+ * const scmAgApp2 = new scm.Application("scm_ag_app_2", {
+ *     folder: "Shared",
+ *     name: "scm_ag_app_2",
+ *     description: "Second test application",
+ *     category: "business-systems",
+ *     subcategory: "database",
+ *     technology: "client-server",
+ *     risk: "4",
+ * });
+ * // Create the application group that references the applications above.
+ * const scmAppGroup1 = new scm.ApplicationGroup("scm_app_group_1", {
+ *     folder: "Shared",
+ *     name: "scm_app_group_1",
+ *     members: [
+ *         scmAgApp1.name,
+ *         scmAgApp2.name,
+ *     ],
+ * });
  * ```
  */
 export class ApplicationGroup extends pulumi.CustomResource {
@@ -45,23 +72,23 @@ export class ApplicationGroup extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     declare public readonly members: pulumi.Output<string[]>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -107,23 +134,23 @@ export class ApplicationGroup extends pulumi.CustomResource {
  */
 export interface ApplicationGroupState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     members?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -134,23 +161,23 @@ export interface ApplicationGroupState {
  */
 export interface ApplicationGroupArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     members: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
 }

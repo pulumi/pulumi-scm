@@ -4,7 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.DecryptionRuleTypeSslForwardProxy;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DecryptionRuleType {
     /**
-     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * @return Ssl forward proxy
      * 
      */
-    private @Nullable Boolean sslForwardProxy;
+    private @Nullable DecryptionRuleTypeSslForwardProxy sslForwardProxy;
     /**
-     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * @return add the certificate name for SSL inbound inspection
      * 
      */
     private @Nullable String sslInboundInspection;
 
     private DecryptionRuleType() {}
     /**
-     * @return The SslForwardProxy param. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * @return Ssl forward proxy
      * 
      */
-    public Optional<Boolean> sslForwardProxy() {
+    public Optional<DecryptionRuleTypeSslForwardProxy> sslForwardProxy() {
         return Optional.ofNullable(this.sslForwardProxy);
     }
     /**
-     * @return add the certificate name for SSL inbound inspection. Ensure that only one of the following is specified: `sslForwardProxy`, `sslInboundInspection`
+     * @return add the certificate name for SSL inbound inspection
      * 
      */
     public Optional<String> sslInboundInspection() {
@@ -48,7 +48,7 @@ public final class DecryptionRuleType {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable Boolean sslForwardProxy;
+        private @Nullable DecryptionRuleTypeSslForwardProxy sslForwardProxy;
         private @Nullable String sslInboundInspection;
         public Builder() {}
         public Builder(DecryptionRuleType defaults) {
@@ -58,7 +58,7 @@ public final class DecryptionRuleType {
         }
 
         @CustomType.Setter
-        public Builder sslForwardProxy(@Nullable Boolean sslForwardProxy) {
+        public Builder sslForwardProxy(@Nullable DecryptionRuleTypeSslForwardProxy sslForwardProxy) {
 
             this.sslForwardProxy = sslForwardProxy;
             return this;

@@ -5,10 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class MfaServerMfaVendorTypeDuoSecurityV2Args extends com.pulumi.resources.ResourceArgs {
@@ -16,78 +16,78 @@ public final class MfaServerMfaVendorTypeDuoSecurityV2Args extends com.pulumi.re
     public static final MfaServerMfaVendorTypeDuoSecurityV2Args Empty = new MfaServerMfaVendorTypeDuoSecurityV2Args();
 
     /**
-     * The DuoApiHost param.
+     * Duo Security API hostname
      * 
      */
-    @Import(name="duoApiHost")
-    private @Nullable Output<String> duoApiHost;
+    @Import(name="duoApiHost", required=true)
+    private Output<String> duoApiHost;
 
     /**
-     * @return The DuoApiHost param.
+     * @return Duo Security API hostname
      * 
      */
-    public Optional<Output<String>> duoApiHost() {
-        return Optional.ofNullable(this.duoApiHost);
+    public Output<String> duoApiHost() {
+        return this.duoApiHost;
     }
 
     /**
-     * The DuoBaseuri param.
+     * Duo Security API base URI
      * 
      */
-    @Import(name="duoBaseuri")
-    private @Nullable Output<String> duoBaseuri;
+    @Import(name="duoBaseuri", required=true)
+    private Output<String> duoBaseuri;
 
     /**
-     * @return The DuoBaseuri param.
+     * @return Duo Security API base URI
      * 
      */
-    public Optional<Output<String>> duoBaseuri() {
-        return Optional.ofNullable(this.duoBaseuri);
+    public Output<String> duoBaseuri() {
+        return this.duoBaseuri;
     }
 
     /**
-     * The DuoIntegrationKey param.
+     * Duo Security integration key
      * 
      */
-    @Import(name="duoIntegrationKey")
-    private @Nullable Output<String> duoIntegrationKey;
+    @Import(name="duoIntegrationKey", required=true)
+    private Output<String> duoIntegrationKey;
 
     /**
-     * @return The DuoIntegrationKey param.
+     * @return Duo Security integration key
      * 
      */
-    public Optional<Output<String>> duoIntegrationKey() {
-        return Optional.ofNullable(this.duoIntegrationKey);
+    public Output<String> duoIntegrationKey() {
+        return this.duoIntegrationKey;
     }
 
     /**
-     * The DuoSecretKey param.
+     * Duo Security secret key
      * 
      */
-    @Import(name="duoSecretKey")
-    private @Nullable Output<String> duoSecretKey;
+    @Import(name="duoSecretKey", required=true)
+    private Output<String> duoSecretKey;
 
     /**
-     * @return The DuoSecretKey param.
+     * @return Duo Security secret key
      * 
      */
-    public Optional<Output<String>> duoSecretKey() {
-        return Optional.ofNullable(this.duoSecretKey);
+    public Output<String> duoSecretKey() {
+        return this.duoSecretKey;
     }
 
     /**
-     * The DuoTimeout param.
+     * Duo Security timeout (seconds)
      * 
      */
-    @Import(name="duoTimeout")
-    private @Nullable Output<String> duoTimeout;
+    @Import(name="duoTimeout", required=true)
+    private Output<Integer> duoTimeout;
 
     /**
-     * @return The DuoTimeout param.
+     * @return Duo Security timeout (seconds)
      * 
      */
-    public Optional<Output<String>> duoTimeout() {
-        return Optional.ofNullable(this.duoTimeout);
+    public Output<Integer> duoTimeout() {
+        return this.duoTimeout;
     }
 
     private MfaServerMfaVendorTypeDuoSecurityV2Args() {}
@@ -119,18 +119,18 @@ public final class MfaServerMfaVendorTypeDuoSecurityV2Args extends com.pulumi.re
         }
 
         /**
-         * @param duoApiHost The DuoApiHost param.
+         * @param duoApiHost Duo Security API hostname
          * 
          * @return builder
          * 
          */
-        public Builder duoApiHost(@Nullable Output<String> duoApiHost) {
+        public Builder duoApiHost(Output<String> duoApiHost) {
             $.duoApiHost = duoApiHost;
             return this;
         }
 
         /**
-         * @param duoApiHost The DuoApiHost param.
+         * @param duoApiHost Duo Security API hostname
          * 
          * @return builder
          * 
@@ -140,18 +140,18 @@ public final class MfaServerMfaVendorTypeDuoSecurityV2Args extends com.pulumi.re
         }
 
         /**
-         * @param duoBaseuri The DuoBaseuri param.
+         * @param duoBaseuri Duo Security API base URI
          * 
          * @return builder
          * 
          */
-        public Builder duoBaseuri(@Nullable Output<String> duoBaseuri) {
+        public Builder duoBaseuri(Output<String> duoBaseuri) {
             $.duoBaseuri = duoBaseuri;
             return this;
         }
 
         /**
-         * @param duoBaseuri The DuoBaseuri param.
+         * @param duoBaseuri Duo Security API base URI
          * 
          * @return builder
          * 
@@ -161,18 +161,18 @@ public final class MfaServerMfaVendorTypeDuoSecurityV2Args extends com.pulumi.re
         }
 
         /**
-         * @param duoIntegrationKey The DuoIntegrationKey param.
+         * @param duoIntegrationKey Duo Security integration key
          * 
          * @return builder
          * 
          */
-        public Builder duoIntegrationKey(@Nullable Output<String> duoIntegrationKey) {
+        public Builder duoIntegrationKey(Output<String> duoIntegrationKey) {
             $.duoIntegrationKey = duoIntegrationKey;
             return this;
         }
 
         /**
-         * @param duoIntegrationKey The DuoIntegrationKey param.
+         * @param duoIntegrationKey Duo Security integration key
          * 
          * @return builder
          * 
@@ -182,18 +182,18 @@ public final class MfaServerMfaVendorTypeDuoSecurityV2Args extends com.pulumi.re
         }
 
         /**
-         * @param duoSecretKey The DuoSecretKey param.
+         * @param duoSecretKey Duo Security secret key
          * 
          * @return builder
          * 
          */
-        public Builder duoSecretKey(@Nullable Output<String> duoSecretKey) {
+        public Builder duoSecretKey(Output<String> duoSecretKey) {
             $.duoSecretKey = duoSecretKey;
             return this;
         }
 
         /**
-         * @param duoSecretKey The DuoSecretKey param.
+         * @param duoSecretKey Duo Security secret key
          * 
          * @return builder
          * 
@@ -203,27 +203,42 @@ public final class MfaServerMfaVendorTypeDuoSecurityV2Args extends com.pulumi.re
         }
 
         /**
-         * @param duoTimeout The DuoTimeout param.
+         * @param duoTimeout Duo Security timeout (seconds)
          * 
          * @return builder
          * 
          */
-        public Builder duoTimeout(@Nullable Output<String> duoTimeout) {
+        public Builder duoTimeout(Output<Integer> duoTimeout) {
             $.duoTimeout = duoTimeout;
             return this;
         }
 
         /**
-         * @param duoTimeout The DuoTimeout param.
+         * @param duoTimeout Duo Security timeout (seconds)
          * 
          * @return builder
          * 
          */
-        public Builder duoTimeout(String duoTimeout) {
+        public Builder duoTimeout(Integer duoTimeout) {
             return duoTimeout(Output.of(duoTimeout));
         }
 
         public MfaServerMfaVendorTypeDuoSecurityV2Args build() {
+            if ($.duoApiHost == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeDuoSecurityV2Args", "duoApiHost");
+            }
+            if ($.duoBaseuri == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeDuoSecurityV2Args", "duoBaseuri");
+            }
+            if ($.duoIntegrationKey == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeDuoSecurityV2Args", "duoIntegrationKey");
+            }
+            if ($.duoSecretKey == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeDuoSecurityV2Args", "duoSecretKey");
+            }
+            if ($.duoTimeout == null) {
+                throw new MissingRequiredPropertyException("MfaServerMfaVendorTypeDuoSecurityV2Args", "duoTimeout");
+            }
             return $;
         }
     }

@@ -12,32 +12,6 @@ import (
 )
 
 // Retrieves a listing of config items.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetWildfireAntiVirusProfileList(ctx, &scm.GetWildfireAntiVirusProfileListArgs{
-//				Folder: pulumi.StringRef("Shared"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetWildfireAntiVirusProfileList(ctx *pulumi.Context, args *GetWildfireAntiVirusProfileListArgs, opts ...pulumi.InvokeOption) (*GetWildfireAntiVirusProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetWildfireAntiVirusProfileListResult
@@ -50,40 +24,40 @@ func GetWildfireAntiVirusProfileList(ctx *pulumi.Context, args *GetWildfireAntiV
 
 // A collection of arguments for invoking getWildfireAntiVirusProfileList.
 type GetWildfireAntiVirusProfileListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getWildfireAntiVirusProfileList.
 type GetWildfireAntiVirusProfileListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetWildfireAntiVirusProfileListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +72,17 @@ func GetWildfireAntiVirusProfileListOutput(ctx *pulumi.Context, args GetWildfire
 
 // A collection of arguments for invoking getWildfireAntiVirusProfileList.
 type GetWildfireAntiVirusProfileListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +105,17 @@ func (o GetWildfireAntiVirusProfileListResultOutput) ToGetWildfireAntiVirusProfi
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetWildfireAntiVirusProfileListResultOutput) Datas() GetWildfireAntiVirusProfileListDataArrayOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) []GetWildfireAntiVirusProfileListData { return v.Datas }).(GetWildfireAntiVirusProfileListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetWildfireAntiVirusProfileListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetWildfireAntiVirusProfileListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +125,22 @@ func (o GetWildfireAntiVirusProfileListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetWildfireAntiVirusProfileListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetWildfireAntiVirusProfileListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetWildfireAntiVirusProfileListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetWildfireAntiVirusProfileListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetWildfireAntiVirusProfileListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetWildfireAntiVirusProfileListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +149,7 @@ func (o GetWildfireAntiVirusProfileListResultOutput) Tfid() pulumi.StringOutput 
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetWildfireAntiVirusProfileListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetWildfireAntiVirusProfileListResult) int { return v.Total }).(pulumi.IntOutput)
 }

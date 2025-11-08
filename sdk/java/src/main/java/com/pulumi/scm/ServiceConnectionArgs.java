@@ -22,14 +22,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     public static final ServiceConnectionArgs Empty = new ServiceConnectionArgs();
 
     /**
-     * The BackupSC param.
+     * Backup s c
      * 
      */
     @Import(name="backupSC")
     private @Nullable Output<String> backupSC;
 
     /**
-     * @return The BackupSC param.
+     * @return Backup s c
      * 
      */
     public Optional<Output<String>> backupSC() {
@@ -37,14 +37,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The BgpPeer param.
+     * Bgp peer
      * 
      */
     @Import(name="bgpPeer")
     private @Nullable Output<ServiceConnectionBgpPeerArgs> bgpPeer;
 
     /**
-     * @return The BgpPeer param.
+     * @return Bgp peer
      * 
      */
     public Optional<Output<ServiceConnectionBgpPeerArgs>> bgpPeer() {
@@ -52,29 +52,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    @Import(name="folder")
-    private @Nullable Output<String> folder;
-
-    /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-     * 
-     */
-    public Optional<Output<String>> folder() {
-        return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * The IpsecTunnel param.
+     * Ipsec tunnel
      * 
      */
     @Import(name="ipsecTunnel", required=true)
     private Output<String> ipsecTunnel;
 
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     public Output<String> ipsecTunnel() {
@@ -82,14 +67,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Name param.
+     * The name of the service connection
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the service connection
      * 
      */
     public Optional<Output<String>> name() {
@@ -97,14 +82,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The NatPool param.
+     * Nat pool
      * 
      */
     @Import(name="natPool")
     private @Nullable Output<String> natPool;
 
     /**
-     * @return The NatPool param.
+     * @return Nat pool
      * 
      */
     public Optional<Output<String>> natPool() {
@@ -112,14 +97,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+     * No export community
      * 
      */
     @Import(name="noExportCommunity")
     private @Nullable Output<String> noExportCommunity;
 
     /**
-     * @return The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+     * @return No export community
      * 
      */
     public Optional<Output<String>> noExportCommunity() {
@@ -127,14 +112,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+     * Onboarding type
      * 
      */
     @Import(name="onboardingType")
     private @Nullable Output<String> onboardingType;
 
     /**
-     * @return The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+     * @return Onboarding type
      * 
      */
     public Optional<Output<String>> onboardingType() {
@@ -142,14 +127,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Protocol param.
+     * Protocol
      * 
      */
     @Import(name="protocol")
     private @Nullable Output<ServiceConnectionProtocolArgs> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public Optional<Output<ServiceConnectionProtocolArgs>> protocol() {
@@ -157,14 +142,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Qos param.
+     * Qos
      * 
      */
     @Import(name="qos")
     private @Nullable Output<ServiceConnectionQosArgs> qos;
 
     /**
-     * @return The Qos param.
+     * @return Qos
      * 
      */
     public Optional<Output<ServiceConnectionQosArgs>> qos() {
@@ -172,14 +157,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Region param.
+     * Region
      * 
      */
     @Import(name="region", required=true)
     private Output<String> region;
 
     /**
-     * @return The Region param.
+     * @return Region
      * 
      */
     public Output<String> region() {
@@ -187,14 +172,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The SecondaryIpsecTunnel param.
+     * Secondary ipsec tunnel
      * 
      */
     @Import(name="secondaryIpsecTunnel")
     private @Nullable Output<String> secondaryIpsecTunnel;
 
     /**
-     * @return The SecondaryIpsecTunnel param.
+     * @return Secondary ipsec tunnel
      * 
      */
     public Optional<Output<String>> secondaryIpsecTunnel() {
@@ -202,14 +187,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The SourceNat param.
+     * Source nat
      * 
      */
     @Import(name="sourceNat")
     private @Nullable Output<Boolean> sourceNat;
 
     /**
-     * @return The SourceNat param.
+     * @return Source nat
      * 
      */
     public Optional<Output<Boolean>> sourceNat() {
@@ -217,14 +202,14 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Subnets param.
+     * Subnets
      * 
      */
     @Import(name="subnets")
     private @Nullable Output<List<String>> subnets;
 
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     public Optional<Output<List<String>>> subnets() {
@@ -236,7 +221,6 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
     private ServiceConnectionArgs(ServiceConnectionArgs $) {
         this.backupSC = $.backupSC;
         this.bgpPeer = $.bgpPeer;
-        this.folder = $.folder;
         this.ipsecTunnel = $.ipsecTunnel;
         this.name = $.name;
         this.natPool = $.natPool;
@@ -269,7 +253,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param backupSC The BackupSC param.
+         * @param backupSC Backup s c
          * 
          * @return builder
          * 
@@ -280,7 +264,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param backupSC The BackupSC param.
+         * @param backupSC Backup s c
          * 
          * @return builder
          * 
@@ -290,7 +274,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param bgpPeer The BgpPeer param.
+         * @param bgpPeer Bgp peer
          * 
          * @return builder
          * 
@@ -301,7 +285,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param bgpPeer The BgpPeer param.
+         * @param bgpPeer Bgp peer
          * 
          * @return builder
          * 
@@ -311,28 +295,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(@Nullable Output<String> folder) {
-            $.folder = folder;
-            return this;
-        }
-
-        /**
-         * @param folder The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder folder(String folder) {
-            return folder(Output.of(folder));
-        }
-
-        /**
-         * @param ipsecTunnel The IpsecTunnel param.
+         * @param ipsecTunnel Ipsec tunnel
          * 
          * @return builder
          * 
@@ -343,7 +306,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param ipsecTunnel The IpsecTunnel param.
+         * @param ipsecTunnel Ipsec tunnel
          * 
          * @return builder
          * 
@@ -353,7 +316,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the service connection
          * 
          * @return builder
          * 
@@ -364,7 +327,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the service connection
          * 
          * @return builder
          * 
@@ -374,7 +337,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param natPool The NatPool param.
+         * @param natPool Nat pool
          * 
          * @return builder
          * 
@@ -385,7 +348,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param natPool The NatPool param.
+         * @param natPool Nat pool
          * 
          * @return builder
          * 
@@ -395,7 +358,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param noExportCommunity The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+         * @param noExportCommunity No export community
          * 
          * @return builder
          * 
@@ -406,7 +369,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param noExportCommunity The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+         * @param noExportCommunity No export community
          * 
          * @return builder
          * 
@@ -416,7 +379,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param onboardingType The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+         * @param onboardingType Onboarding type
          * 
          * @return builder
          * 
@@ -427,7 +390,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param onboardingType The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+         * @param onboardingType Onboarding type
          * 
          * @return builder
          * 
@@ -437,7 +400,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -448,7 +411,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -458,7 +421,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param qos The Qos param.
+         * @param qos Qos
          * 
          * @return builder
          * 
@@ -469,7 +432,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param qos The Qos param.
+         * @param qos Qos
          * 
          * @return builder
          * 
@@ -479,7 +442,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param region The Region param.
+         * @param region Region
          * 
          * @return builder
          * 
@@ -490,7 +453,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param region The Region param.
+         * @param region Region
          * 
          * @return builder
          * 
@@ -500,7 +463,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param secondaryIpsecTunnel The SecondaryIpsecTunnel param.
+         * @param secondaryIpsecTunnel Secondary ipsec tunnel
          * 
          * @return builder
          * 
@@ -511,7 +474,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param secondaryIpsecTunnel The SecondaryIpsecTunnel param.
+         * @param secondaryIpsecTunnel Secondary ipsec tunnel
          * 
          * @return builder
          * 
@@ -521,7 +484,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sourceNat The SourceNat param.
+         * @param sourceNat Source nat
          * 
          * @return builder
          * 
@@ -532,7 +495,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param sourceNat The SourceNat param.
+         * @param sourceNat Source nat
          * 
          * @return builder
          * 
@@ -542,7 +505,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param subnets The Subnets param.
+         * @param subnets Subnets
          * 
          * @return builder
          * 
@@ -553,7 +516,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param subnets The Subnets param.
+         * @param subnets Subnets
          * 
          * @return builder
          * 
@@ -563,7 +526,7 @@ public final class ServiceConnectionArgs extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param subnets The Subnets param.
+         * @param subnets Subnets
          * 
          * @return builder
          * 

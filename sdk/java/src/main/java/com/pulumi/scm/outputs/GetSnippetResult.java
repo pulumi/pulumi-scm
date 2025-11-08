@@ -12,56 +12,56 @@ import java.util.Objects;
 @CustomType
 public final class GetSnippetResult {
     /**
-     * @return The Description param.
+     * @return The description of the snippet
      * 
      */
     private String description;
     /**
-     * @return The Id param.
+     * @return The UUID of the snippet
      * 
      */
     private String id;
     /**
-     * @return The Labels param.
+     * @return Labels applied to the snippet
      * 
      */
     private List<String> labels;
     /**
-     * @return The Name param.
+     * @return The name of the snippet
      * 
      */
     private String name;
     private String tfid;
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * @return The snippet type
      * 
      */
     private String type;
 
     private GetSnippetResult() {}
     /**
-     * @return The Description param.
+     * @return The description of the snippet
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the snippet
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Labels param.
+     * @return Labels applied to the snippet
      * 
      */
     public List<String> labels() {
         return this.labels;
     }
     /**
-     * @return The Name param.
+     * @return The name of the snippet
      * 
      */
     public String name() {
@@ -71,7 +71,7 @@ public final class GetSnippetResult {
         return this.tfid;
     }
     /**
-     * @return The Type param. String must be one of these: `&#34;predefined&#34;`, `&#34;custom&#34;`.
+     * @return The snippet type
      * 
      */
     public String type() {

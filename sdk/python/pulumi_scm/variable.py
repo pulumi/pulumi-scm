@@ -19,23 +19,27 @@ __all__ = ['VariableArgs', 'Variable']
 @pulumi.input_type
 class VariableArgs:
     def __init__(__self__, *,
+                 type: pulumi.Input[_builtins.str],
+                 value: pulumi.Input[_builtins.str],
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
-                 value: Optional[pulumi.Input[_builtins.str]] = None):
+                 overridden: Optional[pulumi.Input[_builtins.bool]] = None,
+                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Variable resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-        :param pulumi.Input[_builtins.str] value: value can accept either string or integer.
+        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] value: The value of the variable
+        :param pulumi.Input[_builtins.str] description: The description of the variable
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the variable
+        :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
+        pulumi.set(__self__, "type", type)
+        pulumi.set(__self__, "value", value)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if device is not None:
@@ -44,18 +48,40 @@ class VariableArgs:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if overridden is not None:
+            pulumi.set(__self__, "overridden", overridden)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
-        if type is not None:
-            pulumi.set(__self__, "type", type)
-        if value is not None:
-            pulumi.set(__self__, "value", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> pulumi.Input[_builtins.str]:
+        """
+        The variable type
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "type", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def value(self) -> pulumi.Input[_builtins.str]:
+        """
+        The value of the variable
+        """
+        return pulumi.get(self, "value")
+
+    @value.setter
+    def value(self, value: pulumi.Input[_builtins.str]):
+        pulumi.set(self, "value", value)
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the variable
         """
         return pulumi.get(self, "description")
 
@@ -67,7 +93,7 @@ class VariableArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -79,7 +105,7 @@ class VariableArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -91,7 +117,7 @@ class VariableArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the variable
         """
         return pulumi.get(self, "name")
 
@@ -101,39 +127,27 @@ class VariableArgs:
 
     @_builtins.property
     @pulumi.getter
+    def overridden(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Is the variable overridden?
+        """
+        return pulumi.get(self, "overridden")
+
+    @overridden.setter
+    def overridden(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "overridden", value)
+
+    @_builtins.property
+    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @snippet.setter
     def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "snippet", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-        """
-        return pulumi.get(self, "type")
-
-    @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "type", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def value(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        value can accept either string or integer.
-        """
-        return pulumi.get(self, "value")
-
-    @value.setter
-    def value(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "value", value)
 
 
 @pulumi.input_type
@@ -150,14 +164,14 @@ class _VariableState:
                  value: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Variable resources.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.bool] overridden: The Overridden param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-        :param pulumi.Input[_builtins.str] value: value can accept either string or integer.
+        :param pulumi.Input[_builtins.str] description: The description of the variable
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the variable
+        :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] value: The value of the variable
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -182,7 +196,7 @@ class _VariableState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the variable
         """
         return pulumi.get(self, "description")
 
@@ -194,7 +208,7 @@ class _VariableState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -206,7 +220,7 @@ class _VariableState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -218,7 +232,7 @@ class _VariableState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the variable
         """
         return pulumi.get(self, "name")
 
@@ -230,7 +244,7 @@ class _VariableState:
     @pulumi.getter
     def overridden(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Overridden param.
+        Is the variable overridden?
         """
         return pulumi.get(self, "overridden")
 
@@ -242,7 +256,7 @@ class _VariableState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -263,7 +277,7 @@ class _VariableState:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        The variable type
         """
         return pulumi.get(self, "type")
 
@@ -275,7 +289,7 @@ class _VariableState:
     @pulumi.getter
     def value(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        value can accept either string or integer.
+        The value of the variable
         """
         return pulumi.get(self, "value")
 
@@ -294,12 +308,13 @@ class Variable(pulumi.CustomResource):
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 overridden: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  type: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        Variable resource
 
         ## Example Usage
 
@@ -307,27 +322,126 @@ class Variable(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.Variable("example", folder="Shared")
+        #
+        # Creates a variable in as-number format
+        #
+        scm_variable_asn = scm.Variable("scm_variable_asn",
+            folder="All",
+            name="$scm_variable_asn",
+            description="Managed by Pulumi",
+            type="as-number",
+            value="65535")
+        #
+        # Creates a variable in count format
+        #
+        scm_variable_count = scm.Variable("scm_variable_count",
+            folder="All",
+            name="$scm_variable_count",
+            description="Managed by Pulumi",
+            type="count",
+            value="15")
+        #
+        # Creates a variable in fqdn format
+        #
+        scm_variable_fqdn = scm.Variable("scm_variable_fqdn",
+            folder="All",
+            name="$scm_variable_fqdn",
+            description="Managed by Pulumi",
+            type="fqdn",
+            value="scm.example.com")
+        #
+        # Creates a variable in group-id format
+        #
+        scm_variable_group_id = scm.Variable("scm_variable_group_id",
+            folder="All",
+            name="$scm_variable_group_id",
+            description="Managed by Pulumi",
+            type="group-id",
+            value="10")
+        #
+        # Creates a variable in ip-range format
+        #
+        scm_variable_iprange = scm.Variable("scm_variable_iprange",
+            folder="All",
+            name="$scm_variable_iprange",
+            description="Managed by Pulumi",
+            type="ip-range",
+            value="198.18.1.1-198.18.1.100")
+        #
+        # Creates a variable in ip-netmask format
+        #
+        scm_variable_ipaddr = scm.Variable("scm_variable_ipaddr",
+            folder="All",
+            name="$scm_variable_ipaddr",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="198.18.2.0/24")
+        #
+        # Creates a variable in ip-wildcard format
+        #
+        scm_variable_ipwildcard = scm.Variable("scm_variable_ipwildcard",
+            folder="All",
+            name="$scm_variable_ipwildcard",
+            description="Managed by Pulumi",
+            type="ip-wildcard",
+            value="198.18.1.0/0.255.255.255")
+        #
+        # Creates a variable in percent format
+        #
+        scm_variable_percent = scm.Variable("scm_variable_percent",
+            folder="All",
+            name="$scm_variable_percent",
+            description="Managed by Pulumi",
+            type="percent",
+            value="10")
+        #
+        # Creates a variable in router-id format
+        #
+        scm_variable_router_id = scm.Variable("scm_variable_router_id",
+            folder="All",
+            name="$scm_variable_router_id",
+            description="Managed by Pulumi",
+            type="router-id",
+            value="198.18.1.1")
+        #
+        # Creates a variable in timer format
+        #
+        scm_variable_timer = scm.Variable("scm_variable_timer",
+            folder="All",
+            name="$scm_variable_timer",
+            description="Managed by Pulumi",
+            type="timer",
+            value="1440")
+        #
+        # Creates a variable in zone format
+        #
+        scm_variable_zone = scm.Variable("scm_variable_zone",
+            folder="All",
+            name="$scm_variable_zone",
+            description="Managed by Pulumi",
+            type="zone",
+            value="internet")
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-        :param pulumi.Input[_builtins.str] value: value can accept either string or integer.
+        :param pulumi.Input[_builtins.str] description: The description of the variable
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the variable
+        :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] value: The value of the variable
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[VariableArgs] = None,
+                 args: VariableArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        Variable resource
 
         ## Example Usage
 
@@ -335,7 +449,105 @@ class Variable(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.Variable("example", folder="Shared")
+        #
+        # Creates a variable in as-number format
+        #
+        scm_variable_asn = scm.Variable("scm_variable_asn",
+            folder="All",
+            name="$scm_variable_asn",
+            description="Managed by Pulumi",
+            type="as-number",
+            value="65535")
+        #
+        # Creates a variable in count format
+        #
+        scm_variable_count = scm.Variable("scm_variable_count",
+            folder="All",
+            name="$scm_variable_count",
+            description="Managed by Pulumi",
+            type="count",
+            value="15")
+        #
+        # Creates a variable in fqdn format
+        #
+        scm_variable_fqdn = scm.Variable("scm_variable_fqdn",
+            folder="All",
+            name="$scm_variable_fqdn",
+            description="Managed by Pulumi",
+            type="fqdn",
+            value="scm.example.com")
+        #
+        # Creates a variable in group-id format
+        #
+        scm_variable_group_id = scm.Variable("scm_variable_group_id",
+            folder="All",
+            name="$scm_variable_group_id",
+            description="Managed by Pulumi",
+            type="group-id",
+            value="10")
+        #
+        # Creates a variable in ip-range format
+        #
+        scm_variable_iprange = scm.Variable("scm_variable_iprange",
+            folder="All",
+            name="$scm_variable_iprange",
+            description="Managed by Pulumi",
+            type="ip-range",
+            value="198.18.1.1-198.18.1.100")
+        #
+        # Creates a variable in ip-netmask format
+        #
+        scm_variable_ipaddr = scm.Variable("scm_variable_ipaddr",
+            folder="All",
+            name="$scm_variable_ipaddr",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="198.18.2.0/24")
+        #
+        # Creates a variable in ip-wildcard format
+        #
+        scm_variable_ipwildcard = scm.Variable("scm_variable_ipwildcard",
+            folder="All",
+            name="$scm_variable_ipwildcard",
+            description="Managed by Pulumi",
+            type="ip-wildcard",
+            value="198.18.1.0/0.255.255.255")
+        #
+        # Creates a variable in percent format
+        #
+        scm_variable_percent = scm.Variable("scm_variable_percent",
+            folder="All",
+            name="$scm_variable_percent",
+            description="Managed by Pulumi",
+            type="percent",
+            value="10")
+        #
+        # Creates a variable in router-id format
+        #
+        scm_variable_router_id = scm.Variable("scm_variable_router_id",
+            folder="All",
+            name="$scm_variable_router_id",
+            description="Managed by Pulumi",
+            type="router-id",
+            value="198.18.1.1")
+        #
+        # Creates a variable in timer format
+        #
+        scm_variable_timer = scm.Variable("scm_variable_timer",
+            folder="All",
+            name="$scm_variable_timer",
+            description="Managed by Pulumi",
+            type="timer",
+            value="1440")
+        #
+        # Creates a variable in zone format
+        #
+        scm_variable_zone = scm.Variable("scm_variable_zone",
+            folder="All",
+            name="$scm_variable_zone",
+            description="Managed by Pulumi",
+            type="zone",
+            value="internet")
         ```
 
         :param str resource_name: The name of the resource.
@@ -357,6 +569,7 @@ class Variable(pulumi.CustomResource):
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 overridden: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  type: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.str]] = None,
@@ -373,10 +586,14 @@ class Variable(pulumi.CustomResource):
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
+            __props__.__dict__["overridden"] = overridden
             __props__.__dict__["snippet"] = snippet
+            if type is None and not opts.urn:
+                raise TypeError("Missing required property 'type'")
             __props__.__dict__["type"] = type
+            if value is None and not opts.urn:
+                raise TypeError("Missing required property 'value'")
             __props__.__dict__["value"] = value
-            __props__.__dict__["overridden"] = None
             __props__.__dict__["tfid"] = None
         super(Variable, __self__).__init__(
             'scm:index/variable:Variable',
@@ -404,14 +621,14 @@ class Variable(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.bool] overridden: The Overridden param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
-        :param pulumi.Input[_builtins.str] value: value can accept either string or integer.
+        :param pulumi.Input[_builtins.str] description: The description of the variable
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the variable
+        :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] type: The variable type
+        :param pulumi.Input[_builtins.str] value: The value of the variable
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -432,7 +649,7 @@ class Variable(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        The description of the variable
         """
         return pulumi.get(self, "description")
 
@@ -440,7 +657,7 @@ class Variable(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -448,7 +665,7 @@ class Variable(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -456,15 +673,15 @@ class Variable(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the variable
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
-    def overridden(self) -> pulumi.Output[_builtins.bool]:
+    def overridden(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The Overridden param.
+        Is the variable overridden?
         """
         return pulumi.get(self, "overridden")
 
@@ -472,7 +689,7 @@ class Variable(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -483,17 +700,17 @@ class Variable(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def type(self) -> pulumi.Output[_builtins.str]:
         """
-        The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        The variable type
         """
         return pulumi.get(self, "type")
 
     @_builtins.property
     @pulumi.getter
-    def value(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def value(self) -> pulumi.Output[_builtins.str]:
         """
-        value can accept either string or integer.
+        The value of the variable
         """
         return pulumi.get(self, "value")
 

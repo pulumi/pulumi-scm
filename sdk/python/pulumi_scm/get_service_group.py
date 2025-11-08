@@ -26,7 +26,13 @@ class GetServiceGroupResult:
     """
     A collection of values returned by getServiceGroup.
     """
-    def __init__(__self__, id=None, members=None, name=None, tags=None, tfid=None):
+    def __init__(__self__, device=None, folder=None, id=None, members=None, name=None, snippet=None, tags=None, tfid=None):
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -36,6 +42,9 @@ class GetServiceGroupResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tags and not isinstance(tags, list):
             raise TypeError("Expected argument 'tags' to be a list")
         pulumi.set(__self__, "tags", tags)
@@ -45,9 +54,25 @@ class GetServiceGroupResult:
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the service group
         """
         return pulumi.get(self, "id")
 
@@ -55,7 +80,7 @@ class GetServiceGroupResult:
     @pulumi.getter
     def members(self) -> Sequence[_builtins.str]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -63,15 +88,23 @@ class GetServiceGroupResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service group
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
         """
-        Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the service group
         """
         return pulumi.get(self, "tags")
 
@@ -87,17 +120,21 @@ class AwaitableGetServiceGroupResult(GetServiceGroupResult):
         if False:
             yield self
         return GetServiceGroupResult(
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             members=self.members,
             name=self.name,
+            snippet=self.snippet,
             tags=self.tags,
             tfid=self.tfid)
 
 
 def get_service_group(id: Optional[_builtins.str] = None,
+                      name: Optional[_builtins.str] = None,
                       opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceGroupResult:
     """
-    Retrieves a config item.
+    ServiceGroup data source
 
     ## Example Usage
 
@@ -105,27 +142,36 @@ def get_service_group(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_service_group(id="1234-56-789")
+    # Look up a single service group object by its ID.
+    # The ID used here is from the terraform.tfstate file.
+    scm_service_group_ds = scm.get_service_group(id="dc430d61-52ca-44bc-a797-e65123a94134")
+    pulumi.export("serviceGroupDsResult", scm_service_group_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service group
+    :param _builtins.str name: The name of the service group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getServiceGroup:getServiceGroup', __args__, opts=opts, typ=GetServiceGroupResult).value
 
     return AwaitableGetServiceGroupResult(
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         members=pulumi.get(__ret__, 'members'),
         name=pulumi.get(__ret__, 'name'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_service_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                             name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceGroupResult]:
     """
-    Retrieves a config item.
+    ServiceGroup data source
 
     ## Example Usage
 
@@ -133,19 +179,27 @@ def get_service_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_service_group(id="1234-56-789")
+    # Look up a single service group object by its ID.
+    # The ID used here is from the terraform.tfstate file.
+    scm_service_group_ds = scm.get_service_group(id="dc430d61-52ca-44bc-a797-e65123a94134")
+    pulumi.export("serviceGroupDsResult", scm_service_group_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service group
+    :param _builtins.str name: The name of the service group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getServiceGroup:getServiceGroup', __args__, opts=opts, typ=GetServiceGroupResult)
     return __ret__.apply(lambda __response__: GetServiceGroupResult(
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         members=pulumi.get(__response__, 'members'),
         name=pulumi.get(__response__, 'name'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tags=pulumi.get(__response__, 'tags'),
         tfid=pulumi.get(__response__, 'tfid')))

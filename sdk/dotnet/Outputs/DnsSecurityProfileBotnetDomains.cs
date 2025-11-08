@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class DnsSecurityProfileBotnetDomains
     {
         /// <summary>
-        /// The DnsSecurityCategories param.
+        /// DNS categories
         /// </summary>
         public readonly ImmutableArray<Outputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategory> DnsSecurityCategories;
         /// <summary>
-        /// The Lists param.
+        /// Dynamic lists of DNS domains
         /// </summary>
         public readonly ImmutableArray<Outputs.DnsSecurityProfileBotnetDomainsList> Lists;
         /// <summary>
-        /// The Sinkhole param.
+        /// DNS sinkhole settings
         /// </summary>
         public readonly Outputs.DnsSecurityProfileBotnetDomainsSinkhole? Sinkhole;
         /// <summary>
-        /// The Whitelists param.
+        /// DNS security overrides
         /// </summary>
         public readonly ImmutableArray<Outputs.DnsSecurityProfileBotnetDomainsWhitelist> Whitelists;
 

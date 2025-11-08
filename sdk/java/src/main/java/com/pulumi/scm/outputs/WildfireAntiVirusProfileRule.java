@@ -13,62 +13,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WildfireAntiVirusProfileRule {
     /**
-     * @return The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+     * @return Analysis
      * 
      */
     private @Nullable String analysis;
     /**
-     * @return The Applications param.
+     * @return Application
      * 
      */
     private @Nullable List<String> applications;
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+     * @return Direction
      * 
      */
     private @Nullable String direction;
     /**
-     * @return The FileTypes param.
+     * @return File type
      * 
      */
     private @Nullable List<String> fileTypes;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
 
     private WildfireAntiVirusProfileRule() {}
     /**
-     * @return The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+     * @return Analysis
      * 
      */
     public Optional<String> analysis() {
         return Optional.ofNullable(this.analysis);
     }
     /**
-     * @return The Applications param.
+     * @return Application
      * 
      */
     public List<String> applications() {
         return this.applications == null ? List.of() : this.applications;
     }
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+     * @return Direction
      * 
      */
     public Optional<String> direction() {
         return Optional.ofNullable(this.direction);
     }
     /**
-     * @return The FileTypes param.
+     * @return File type
      * 
      */
     public List<String> fileTypes() {
         return this.fileTypes == null ? List.of() : this.fileTypes;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {

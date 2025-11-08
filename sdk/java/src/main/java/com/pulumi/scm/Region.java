@@ -17,120 +17,90 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.Region;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new Region("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * Region resource
  * 
  */
 @ResourceType(type="scm:index/region:Region")
 public class Region extends com.pulumi.resources.CustomResource {
     /**
-     * The Addresses param.
+     * Address
      * 
      */
     @Export(name="addresses", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> addresses;
 
     /**
-     * @return The Addresses param.
+     * @return Address
      * 
      */
     public Output<Optional<List<String>>> addresses() {
         return Codegen.optional(this.addresses);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The GeoLocation param.
+     * Geo location
      * 
      */
     @Export(name="geoLocation", refs={RegionGeoLocation.class}, tree="[0]")
     private Output</* @Nullable */ RegionGeoLocation> geoLocation;
 
     /**
-     * @return The GeoLocation param.
+     * @return Geo location
      * 
      */
     public Output<Optional<RegionGeoLocation>> geoLocation() {
         return Codegen.optional(this.geoLocation);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the region
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the region
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

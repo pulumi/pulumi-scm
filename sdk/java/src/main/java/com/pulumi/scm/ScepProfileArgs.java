@@ -21,29 +21,29 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     public static final ScepProfileArgs Empty = new ScepProfileArgs();
 
     /**
-     * The Algorithm param.
+     * Algorithm
      * 
      */
-    @Import(name="algorithm")
-    private @Nullable Output<ScepProfileAlgorithmArgs> algorithm;
+    @Import(name="algorithm", required=true)
+    private Output<ScepProfileAlgorithmArgs> algorithm;
 
     /**
-     * @return The Algorithm param.
+     * @return Algorithm
      * 
      */
-    public Optional<Output<ScepProfileAlgorithmArgs>> algorithm() {
-        return Optional.ofNullable(this.algorithm);
+    public Output<ScepProfileAlgorithmArgs> algorithm() {
+        return this.algorithm;
     }
 
     /**
-     * The CaIdentityName param.
+     * Certificate Authority identity
      * 
      */
     @Import(name="caIdentityName", required=true)
     private Output<String> caIdentityName;
 
     /**
-     * @return The CaIdentityName param.
+     * @return Certificate Authority identity
      * 
      */
     public Output<String> caIdentityName() {
@@ -51,14 +51,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The CertificateAttributes param.
+     * Subject Alternative name type
      * 
      */
     @Import(name="certificateAttributes")
     private @Nullable Output<ScepProfileCertificateAttributesArgs> certificateAttributes;
 
     /**
-     * @return The CertificateAttributes param.
+     * @return Subject Alternative name type
      * 
      */
     public Optional<Output<ScepProfileCertificateAttributesArgs>> certificateAttributes() {
@@ -66,14 +66,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -81,14 +81,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Digest param.
+     * Digest for CSR
      * 
      */
     @Import(name="digest", required=true)
     private Output<String> digest;
 
     /**
-     * @return The Digest param.
+     * @return Digest for CSR
      * 
      */
     public Output<String> digest() {
@@ -96,14 +96,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Fingerprint param.
+     * CA certificate fingerprint
      * 
      */
     @Import(name="fingerprint")
     private @Nullable Output<String> fingerprint;
 
     /**
-     * @return The Fingerprint param.
+     * @return CA certificate fingerprint
      * 
      */
     public Optional<Output<String>> fingerprint() {
@@ -111,14 +111,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -126,14 +126,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the SCEP profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the SCEP profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -141,14 +141,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ScepCaCert param.
+     * SCEP server CA certificate
      * 
      */
     @Import(name="scepCaCert")
     private @Nullable Output<String> scepCaCert;
 
     /**
-     * @return The ScepCaCert param.
+     * @return SCEP server CA certificate
      * 
      */
     public Optional<Output<String>> scepCaCert() {
@@ -156,29 +156,29 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ScepChallenge param.
+     * One Time Password challenge
      * 
      */
-    @Import(name="scepChallenge")
-    private @Nullable Output<ScepProfileScepChallengeArgs> scepChallenge;
+    @Import(name="scepChallenge", required=true)
+    private Output<ScepProfileScepChallengeArgs> scepChallenge;
 
     /**
-     * @return The ScepChallenge param.
+     * @return One Time Password challenge
      * 
      */
-    public Optional<Output<ScepProfileScepChallengeArgs>> scepChallenge() {
-        return Optional.ofNullable(this.scepChallenge);
+    public Output<ScepProfileScepChallengeArgs> scepChallenge() {
+        return this.scepChallenge;
     }
 
     /**
-     * The ScepClientCert param.
+     * SCEP client ceertificate
      * 
      */
     @Import(name="scepClientCert")
     private @Nullable Output<String> scepClientCert;
 
     /**
-     * @return The ScepClientCert param.
+     * @return SCEP client ceertificate
      * 
      */
     public Optional<Output<String>> scepClientCert() {
@@ -186,14 +186,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ScepUrl param.
+     * SCEP server URL
      * 
      */
     @Import(name="scepUrl", required=true)
     private Output<String> scepUrl;
 
     /**
-     * @return The ScepUrl param.
+     * @return SCEP server URL
      * 
      */
     public Output<String> scepUrl() {
@@ -201,14 +201,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -216,29 +216,29 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Subject param.
+     * Subject
      * 
      */
-    @Import(name="subject")
-    private @Nullable Output<String> subject;
+    @Import(name="subject", required=true)
+    private Output<String> subject;
 
     /**
-     * @return The Subject param.
+     * @return Subject
      * 
      */
-    public Optional<Output<String>> subject() {
-        return Optional.ofNullable(this.subject);
+    public Output<String> subject() {
+        return this.subject;
     }
 
     /**
-     * The UseAsDigitalSignature param.
+     * Use as digital signature?
      * 
      */
     @Import(name="useAsDigitalSignature")
     private @Nullable Output<Boolean> useAsDigitalSignature;
 
     /**
-     * @return The UseAsDigitalSignature param.
+     * @return Use as digital signature?
      * 
      */
     public Optional<Output<Boolean>> useAsDigitalSignature() {
@@ -246,14 +246,14 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The UseForKeyEncipherment param.
+     * Use for key encipherment?
      * 
      */
     @Import(name="useForKeyEncipherment")
     private @Nullable Output<Boolean> useForKeyEncipherment;
 
     /**
-     * @return The UseForKeyEncipherment param.
+     * @return Use for key encipherment?
      * 
      */
     public Optional<Output<Boolean>> useForKeyEncipherment() {
@@ -300,18 +300,18 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param algorithm The Algorithm param.
+         * @param algorithm Algorithm
          * 
          * @return builder
          * 
          */
-        public Builder algorithm(@Nullable Output<ScepProfileAlgorithmArgs> algorithm) {
+        public Builder algorithm(Output<ScepProfileAlgorithmArgs> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
         /**
-         * @param algorithm The Algorithm param.
+         * @param algorithm Algorithm
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param caIdentityName The CaIdentityName param.
+         * @param caIdentityName Certificate Authority identity
          * 
          * @return builder
          * 
@@ -332,7 +332,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param caIdentityName The CaIdentityName param.
+         * @param caIdentityName Certificate Authority identity
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateAttributes The CertificateAttributes param.
+         * @param certificateAttributes Subject Alternative name type
          * 
          * @return builder
          * 
@@ -353,7 +353,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificateAttributes The CertificateAttributes param.
+         * @param certificateAttributes Subject Alternative name type
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -374,7 +374,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -384,7 +384,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param digest The Digest param.
+         * @param digest Digest for CSR
          * 
          * @return builder
          * 
@@ -395,7 +395,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param digest The Digest param.
+         * @param digest Digest for CSR
          * 
          * @return builder
          * 
@@ -405,7 +405,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fingerprint The Fingerprint param.
+         * @param fingerprint CA certificate fingerprint
          * 
          * @return builder
          * 
@@ -416,7 +416,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param fingerprint The Fingerprint param.
+         * @param fingerprint CA certificate fingerprint
          * 
          * @return builder
          * 
@@ -426,7 +426,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -437,7 +437,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -447,7 +447,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the SCEP profile
          * 
          * @return builder
          * 
@@ -458,7 +458,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the SCEP profile
          * 
          * @return builder
          * 
@@ -468,7 +468,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepCaCert The ScepCaCert param.
+         * @param scepCaCert SCEP server CA certificate
          * 
          * @return builder
          * 
@@ -479,7 +479,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepCaCert The ScepCaCert param.
+         * @param scepCaCert SCEP server CA certificate
          * 
          * @return builder
          * 
@@ -489,18 +489,18 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepChallenge The ScepChallenge param.
+         * @param scepChallenge One Time Password challenge
          * 
          * @return builder
          * 
          */
-        public Builder scepChallenge(@Nullable Output<ScepProfileScepChallengeArgs> scepChallenge) {
+        public Builder scepChallenge(Output<ScepProfileScepChallengeArgs> scepChallenge) {
             $.scepChallenge = scepChallenge;
             return this;
         }
 
         /**
-         * @param scepChallenge The ScepChallenge param.
+         * @param scepChallenge One Time Password challenge
          * 
          * @return builder
          * 
@@ -510,7 +510,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepClientCert The ScepClientCert param.
+         * @param scepClientCert SCEP client ceertificate
          * 
          * @return builder
          * 
@@ -521,7 +521,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepClientCert The ScepClientCert param.
+         * @param scepClientCert SCEP client ceertificate
          * 
          * @return builder
          * 
@@ -531,7 +531,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepUrl The ScepUrl param.
+         * @param scepUrl SCEP server URL
          * 
          * @return builder
          * 
@@ -542,7 +542,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param scepUrl The ScepUrl param.
+         * @param scepUrl SCEP server URL
          * 
          * @return builder
          * 
@@ -552,7 +552,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -563,7 +563,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -573,18 +573,18 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param subject The Subject param.
+         * @param subject Subject
          * 
          * @return builder
          * 
          */
-        public Builder subject(@Nullable Output<String> subject) {
+        public Builder subject(Output<String> subject) {
             $.subject = subject;
             return this;
         }
 
         /**
-         * @param subject The Subject param.
+         * @param subject Subject
          * 
          * @return builder
          * 
@@ -594,7 +594,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param useAsDigitalSignature The UseAsDigitalSignature param.
+         * @param useAsDigitalSignature Use as digital signature?
          * 
          * @return builder
          * 
@@ -605,7 +605,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param useAsDigitalSignature The UseAsDigitalSignature param.
+         * @param useAsDigitalSignature Use as digital signature?
          * 
          * @return builder
          * 
@@ -615,7 +615,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param useForKeyEncipherment The UseForKeyEncipherment param.
+         * @param useForKeyEncipherment Use for key encipherment?
          * 
          * @return builder
          * 
@@ -626,7 +626,7 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param useForKeyEncipherment The UseForKeyEncipherment param.
+         * @param useForKeyEncipherment Use for key encipherment?
          * 
          * @return builder
          * 
@@ -636,14 +636,23 @@ public final class ScepProfileArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public ScepProfileArgs build() {
+            if ($.algorithm == null) {
+                throw new MissingRequiredPropertyException("ScepProfileArgs", "algorithm");
+            }
             if ($.caIdentityName == null) {
                 throw new MissingRequiredPropertyException("ScepProfileArgs", "caIdentityName");
             }
             if ($.digest == null) {
                 throw new MissingRequiredPropertyException("ScepProfileArgs", "digest");
             }
+            if ($.scepChallenge == null) {
+                throw new MissingRequiredPropertyException("ScepProfileArgs", "scepChallenge");
+            }
             if ($.scepUrl == null) {
                 throw new MissingRequiredPropertyException("ScepProfileArgs", "scepUrl");
+            }
+            if ($.subject == null) {
+                throw new MissingRequiredPropertyException("ScepProfileArgs", "subject");
             }
             return $;
         }

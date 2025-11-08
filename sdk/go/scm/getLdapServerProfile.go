@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupLdapServerProfile(ctx, &scm.LookupLdapServerProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// LdapServerProfile data source
 func LookupLdapServerProfile(ctx *pulumi.Context, args *LookupLdapServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupLdapServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupLdapServerProfileResult
@@ -50,34 +24,46 @@ func LookupLdapServerProfile(ctx *pulumi.Context, args *LookupLdapServerProfileA
 
 // A collection of arguments for invoking getLdapServerProfile.
 type LookupLdapServerProfileArgs struct {
-	// The Id param.
+	// The UUID of the LDAP server profile
 	Id string `pulumi:"id"`
+	// The name of the LDAP server profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getLdapServerProfile.
 type LookupLdapServerProfileResult struct {
-	// The Base param. String length must not exceed 255 characters.
+	// The base DN
 	Base string `pulumi:"base"`
-	// The BindDn param. String length must not exceed 255 characters.
+	// The bind DN
 	BindDn string `pulumi:"bindDn"`
-	// The BindPassword param. String length must not exceed 121 characters.
+	// The bind password
 	BindPassword string `pulumi:"bindPassword"`
-	// The BindTimelimit param.
+	// The bind timeout (seconds)
 	BindTimelimit string `pulumi:"bindTimelimit"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the LDAP server profile
 	Id string `pulumi:"id"`
-	// The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+	// The LDAP server time
 	LdapType string `pulumi:"ldapType"`
-	// The RetryInterval param.
+	// The name of the LDAP server profile
+	Name string `pulumi:"name"`
+	// The search retry interval (seconds)
 	RetryInterval int `pulumi:"retryInterval"`
-	// The Servers param.
+	// The LDAP server configuration
 	Servers []GetLdapServerProfileServer `pulumi:"servers"`
-	// The Ssl param.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	// Require SSL/TLS secured connection?
 	Ssl  bool   `pulumi:"ssl"`
 	Tfid string `pulumi:"tfid"`
-	// The Timelimit param.
+	// The search timeout (seconds)
 	Timelimit int `pulumi:"timelimit"`
-	// The VerifyServerCertificate param.
+	// Verify server certificate for SSL sessions?
 	VerifyServerCertificate bool `pulumi:"verifyServerCertificate"`
 }
 
@@ -92,8 +78,10 @@ func LookupLdapServerProfileOutput(ctx *pulumi.Context, args LookupLdapServerPro
 
 // A collection of arguments for invoking getLdapServerProfile.
 type LookupLdapServerProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the LDAP server profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the LDAP server profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupLdapServerProfileOutputArgs) ElementType() reflect.Type {
@@ -115,47 +103,72 @@ func (o LookupLdapServerProfileResultOutput) ToLookupLdapServerProfileResultOutp
 	return o
 }
 
-// The Base param. String length must not exceed 255 characters.
+// The base DN
 func (o LookupLdapServerProfileResultOutput) Base() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Base }).(pulumi.StringOutput)
 }
 
-// The BindDn param. String length must not exceed 255 characters.
+// The bind DN
 func (o LookupLdapServerProfileResultOutput) BindDn() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.BindDn }).(pulumi.StringOutput)
 }
 
-// The BindPassword param. String length must not exceed 121 characters.
+// The bind password
 func (o LookupLdapServerProfileResultOutput) BindPassword() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.BindPassword }).(pulumi.StringOutput)
 }
 
-// The BindTimelimit param.
+// The bind timeout (seconds)
 func (o LookupLdapServerProfileResultOutput) BindTimelimit() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.BindTimelimit }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupLdapServerProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// Map of sensitive values returned from the API.
+func (o LookupLdapServerProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v LookupLdapServerProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupLdapServerProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the LDAP server profile
 func (o LookupLdapServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+// The LDAP server time
 func (o LookupLdapServerProfileResultOutput) LdapType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.LdapType }).(pulumi.StringOutput)
 }
 
-// The RetryInterval param.
+// The name of the LDAP server profile
+func (o LookupLdapServerProfileResultOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The search retry interval (seconds)
 func (o LookupLdapServerProfileResultOutput) RetryInterval() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) int { return v.RetryInterval }).(pulumi.IntOutput)
 }
 
-// The Servers param.
+// The LDAP server configuration
 func (o LookupLdapServerProfileResultOutput) Servers() GetLdapServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) []GetLdapServerProfileServer { return v.Servers }).(GetLdapServerProfileServerArrayOutput)
 }
 
-// The Ssl param.
+// The snippet in which the resource is defined
+func (o LookupLdapServerProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
+}
+
+// Require SSL/TLS secured connection?
 func (o LookupLdapServerProfileResultOutput) Ssl() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) bool { return v.Ssl }).(pulumi.BoolOutput)
 }
@@ -164,12 +177,12 @@ func (o LookupLdapServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Timelimit param.
+// The search timeout (seconds)
 func (o LookupLdapServerProfileResultOutput) Timelimit() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) int { return v.Timelimit }).(pulumi.IntOutput)
 }
 
-// The VerifyServerCertificate param.
+// Verify server certificate for SSL sessions?
 func (o LookupLdapServerProfileResultOutput) VerifyServerCertificate() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) bool { return v.VerifyServerCertificate }).(pulumi.BoolOutput)
 }

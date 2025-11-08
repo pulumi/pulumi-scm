@@ -26,22 +26,34 @@ class GetSamlServerProfileResult:
     """
     A collection of values returned by getSamlServerProfile.
     """
-    def __init__(__self__, certificate=None, entity_id=None, id=None, max_clock_skew=None, slo_bindings=None, sso_bindings=None, sso_url=None, tfid=None, validate_idp_certificate=None, want_auth_requests_signed=None):
+    def __init__(__self__, certificate=None, device=None, entity_id=None, folder=None, id=None, max_clock_skew=None, name=None, slo_bindings=None, snippet=None, sso_bindings=None, sso_url=None, tfid=None, validate_idp_certificate=None, want_auth_requests_signed=None):
         if certificate and not isinstance(certificate, str):
             raise TypeError("Expected argument 'certificate' to be a str")
         pulumi.set(__self__, "certificate", certificate)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if entity_id and not isinstance(entity_id, str):
             raise TypeError("Expected argument 'entity_id' to be a str")
         pulumi.set(__self__, "entity_id", entity_id)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
         if max_clock_skew and not isinstance(max_clock_skew, int):
             raise TypeError("Expected argument 'max_clock_skew' to be a int")
         pulumi.set(__self__, "max_clock_skew", max_clock_skew)
+        if name and not isinstance(name, str):
+            raise TypeError("Expected argument 'name' to be a str")
+        pulumi.set(__self__, "name", name)
         if slo_bindings and not isinstance(slo_bindings, str):
             raise TypeError("Expected argument 'slo_bindings' to be a str")
         pulumi.set(__self__, "slo_bindings", slo_bindings)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if sso_bindings and not isinstance(sso_bindings, str):
             raise TypeError("Expected argument 'sso_bindings' to be a str")
         pulumi.set(__self__, "sso_bindings", sso_bindings)
@@ -62,23 +74,39 @@ class GetSamlServerProfileResult:
     @pulumi.getter
     def certificate(self) -> _builtins.str:
         """
-        The Certificate param. String length must not exceed 63 characters.
+        The identity provider certificate
         """
         return pulumi.get(self, "certificate")
+
+    @_builtins.property
+    @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="entityId")
     def entity_id(self) -> _builtins.str:
         """
-        The EntityId param. String length must be between 1 and 1024 characters.
+        The identity provider ID
         """
         return pulumi.get(self, "entity_id")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the SAML server profile
         """
         return pulumi.get(self, "id")
 
@@ -86,23 +114,39 @@ class GetSamlServerProfileResult:
     @pulumi.getter(name="maxClockSkew")
     def max_clock_skew(self) -> _builtins.int:
         """
-        The MaxClockSkew param. Value must be between 1 and 900.
+        Maxiumum clock skew
         """
         return pulumi.get(self, "max_clock_skew")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> _builtins.str:
+        """
+        The name of the SAML server profile
+        """
+        return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> _builtins.str:
         """
-        The SloBindings param. String must be one of these: `"post"`, `"redirect"`.
+        SAML HTTP binding for SLO requests to the identity provider
         """
         return pulumi.get(self, "slo_bindings")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> _builtins.str:
         """
-        The SsoBindings param. String must be one of these: `"post"`, `"redirect"`.
+        SAML HTTP binding for SSO requests to the identity provider
         """
         return pulumi.get(self, "sso_bindings")
 
@@ -110,7 +154,7 @@ class GetSamlServerProfileResult:
     @pulumi.getter(name="ssoUrl")
     def sso_url(self) -> _builtins.str:
         """
-        The SsoUrl param. String length must be between 1 and 255 characters.
+        Identity provider SSO URL
         """
         return pulumi.get(self, "sso_url")
 
@@ -123,7 +167,7 @@ class GetSamlServerProfileResult:
     @pulumi.getter(name="validateIdpCertificate")
     def validate_idp_certificate(self) -> _builtins.bool:
         """
-        The ValidateIdpCertificate param.
+        Validate the identity provider certificate?
         """
         return pulumi.get(self, "validate_idp_certificate")
 
@@ -131,7 +175,7 @@ class GetSamlServerProfileResult:
     @pulumi.getter(name="wantAuthRequestsSigned")
     def want_auth_requests_signed(self) -> _builtins.bool:
         """
-        The WantAuthRequestsSigned param.
+        Sign SAML message to the identity provider?
         """
         return pulumi.get(self, "want_auth_requests_signed")
 
@@ -143,10 +187,14 @@ class AwaitableGetSamlServerProfileResult(GetSamlServerProfileResult):
             yield self
         return GetSamlServerProfileResult(
             certificate=self.certificate,
+            device=self.device,
             entity_id=self.entity_id,
+            folder=self.folder,
             id=self.id,
             max_clock_skew=self.max_clock_skew,
+            name=self.name,
             slo_bindings=self.slo_bindings,
+            snippet=self.snippet,
             sso_bindings=self.sso_bindings,
             sso_url=self.sso_url,
             tfid=self.tfid,
@@ -155,65 +203,61 @@ class AwaitableGetSamlServerProfileResult(GetSamlServerProfileResult):
 
 
 def get_saml_server_profile(id: Optional[_builtins.str] = None,
+                            name: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSamlServerProfileResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_saml_server_profile(id="1234-56-789")
-    ```
+    SamlServerProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the SAML server profile
+    :param _builtins.str name: The name of the SAML server profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getSamlServerProfile:getSamlServerProfile', __args__, opts=opts, typ=GetSamlServerProfileResult).value
 
     return AwaitableGetSamlServerProfileResult(
         certificate=pulumi.get(__ret__, 'certificate'),
+        device=pulumi.get(__ret__, 'device'),
         entity_id=pulumi.get(__ret__, 'entity_id'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         max_clock_skew=pulumi.get(__ret__, 'max_clock_skew'),
+        name=pulumi.get(__ret__, 'name'),
         slo_bindings=pulumi.get(__ret__, 'slo_bindings'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         sso_bindings=pulumi.get(__ret__, 'sso_bindings'),
         sso_url=pulumi.get(__ret__, 'sso_url'),
         tfid=pulumi.get(__ret__, 'tfid'),
         validate_idp_certificate=pulumi.get(__ret__, 'validate_idp_certificate'),
         want_auth_requests_signed=pulumi.get(__ret__, 'want_auth_requests_signed'))
 def get_saml_server_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSamlServerProfileResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_saml_server_profile(id="1234-56-789")
-    ```
+    SamlServerProfile data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the SAML server profile
+    :param _builtins.str name: The name of the SAML server profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSamlServerProfile:getSamlServerProfile', __args__, opts=opts, typ=GetSamlServerProfileResult)
     return __ret__.apply(lambda __response__: GetSamlServerProfileResult(
         certificate=pulumi.get(__response__, 'certificate'),
+        device=pulumi.get(__response__, 'device'),
         entity_id=pulumi.get(__response__, 'entity_id'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         max_clock_skew=pulumi.get(__response__, 'max_clock_skew'),
+        name=pulumi.get(__response__, 'name'),
         slo_bindings=pulumi.get(__response__, 'slo_bindings'),
+        snippet=pulumi.get(__response__, 'snippet'),
         sso_bindings=pulumi.get(__response__, 'sso_bindings'),
         sso_url=pulumi.get(__response__, 'sso_url'),
         tfid=pulumi.get(__response__, 'tfid'),

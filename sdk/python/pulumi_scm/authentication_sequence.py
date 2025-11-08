@@ -27,12 +27,12 @@ class AuthenticationSequenceArgs:
                  use_domain_find_profile: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a AuthenticationSequence resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: The AuthenticationProfiles param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_domain_find_profile: The UseDomainFindProfile param. Default: `true`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: An ordered list of authentication profiles
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the authentication sequence
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_domain_find_profile: Use domain to determine authentication profile?
         """
         if authentication_profiles is not None:
             pulumi.set(__self__, "authentication_profiles", authentication_profiles)
@@ -51,7 +51,7 @@ class AuthenticationSequenceArgs:
     @pulumi.getter(name="authenticationProfiles")
     def authentication_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The AuthenticationProfiles param.
+        An ordered list of authentication profiles
         """
         return pulumi.get(self, "authentication_profiles")
 
@@ -63,7 +63,7 @@ class AuthenticationSequenceArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -75,7 +75,7 @@ class AuthenticationSequenceArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -87,7 +87,7 @@ class AuthenticationSequenceArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the authentication sequence
         """
         return pulumi.get(self, "name")
 
@@ -99,7 +99,7 @@ class AuthenticationSequenceArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -111,7 +111,7 @@ class AuthenticationSequenceArgs:
     @pulumi.getter(name="useDomainFindProfile")
     def use_domain_find_profile(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseDomainFindProfile param. Default: `true`.
+        Use domain to determine authentication profile?
         """
         return pulumi.get(self, "use_domain_find_profile")
 
@@ -132,12 +132,12 @@ class _AuthenticationSequenceState:
                  use_domain_find_profile: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering AuthenticationSequence resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: The AuthenticationProfiles param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_domain_find_profile: The UseDomainFindProfile param. Default: `true`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: An ordered list of authentication profiles
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the authentication sequence
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_domain_find_profile: Use domain to determine authentication profile?
         """
         if authentication_profiles is not None:
             pulumi.set(__self__, "authentication_profiles", authentication_profiles)
@@ -158,7 +158,7 @@ class _AuthenticationSequenceState:
     @pulumi.getter(name="authenticationProfiles")
     def authentication_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The AuthenticationProfiles param.
+        An ordered list of authentication profiles
         """
         return pulumi.get(self, "authentication_profiles")
 
@@ -170,7 +170,7 @@ class _AuthenticationSequenceState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -182,7 +182,7 @@ class _AuthenticationSequenceState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -194,7 +194,7 @@ class _AuthenticationSequenceState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the authentication sequence
         """
         return pulumi.get(self, "name")
 
@@ -206,7 +206,7 @@ class _AuthenticationSequenceState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -227,7 +227,7 @@ class _AuthenticationSequenceState:
     @pulumi.getter(name="useDomainFindProfile")
     def use_domain_find_profile(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UseDomainFindProfile param. Default: `true`.
+        Use domain to determine authentication profile?
         """
         return pulumi.get(self, "use_domain_find_profile")
 
@@ -250,25 +250,16 @@ class AuthenticationSequence(pulumi.CustomResource):
                  use_domain_find_profile: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AuthenticationSequence("example")
-        ```
+        AuthenticationSequence resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: The AuthenticationProfiles param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_domain_find_profile: The UseDomainFindProfile param. Default: `true`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: An ordered list of authentication profiles
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the authentication sequence
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_domain_find_profile: Use domain to determine authentication profile?
         """
         ...
     @overload
@@ -277,16 +268,7 @@ class AuthenticationSequence(pulumi.CustomResource):
                  args: Optional[AuthenticationSequenceArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AuthenticationSequence("example")
-        ```
+        AuthenticationSequence resource
 
         :param str resource_name: The name of the resource.
         :param AuthenticationSequenceArgs args: The arguments to use to populate this resource's properties.
@@ -349,12 +331,12 @@ class AuthenticationSequence(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: The AuthenticationProfiles param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] use_domain_find_profile: The UseDomainFindProfile param. Default: `true`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] authentication_profiles: An ordered list of authentication profiles
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the authentication sequence
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] use_domain_find_profile: Use domain to determine authentication profile?
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -373,7 +355,7 @@ class AuthenticationSequence(pulumi.CustomResource):
     @pulumi.getter(name="authenticationProfiles")
     def authentication_profiles(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The AuthenticationProfiles param.
+        An ordered list of authentication profiles
         """
         return pulumi.get(self, "authentication_profiles")
 
@@ -381,7 +363,7 @@ class AuthenticationSequence(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -389,7 +371,7 @@ class AuthenticationSequence(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -397,7 +379,7 @@ class AuthenticationSequence(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the authentication sequence
         """
         return pulumi.get(self, "name")
 
@@ -405,7 +387,7 @@ class AuthenticationSequence(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -418,7 +400,7 @@ class AuthenticationSequence(pulumi.CustomResource):
     @pulumi.getter(name="useDomainFindProfile")
     def use_domain_find_profile(self) -> pulumi.Output[_builtins.bool]:
         """
-        The UseDomainFindProfile param. Default: `true`.
+        Use domain to determine authentication profile?
         """
         return pulumi.get(self, "use_domain_find_profile")
 

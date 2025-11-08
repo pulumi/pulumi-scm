@@ -50,7 +50,7 @@ class GetSnippetResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        The description of the snippet
         """
         return pulumi.get(self, "description")
 
@@ -58,7 +58,7 @@ class GetSnippetResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the snippet
         """
         return pulumi.get(self, "id")
 
@@ -66,7 +66,7 @@ class GetSnippetResult:
     @pulumi.getter
     def labels(self) -> Sequence[_builtins.str]:
         """
-        The Labels param.
+        Labels applied to the snippet
         """
         return pulumi.get(self, "labels")
 
@@ -74,7 +74,7 @@ class GetSnippetResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        The name of the snippet
         """
         return pulumi.get(self, "name")
 
@@ -87,7 +87,7 @@ class GetSnippetResult:
     @pulumi.getter
     def type(self) -> _builtins.str:
         """
-        The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        The snippet type
         """
         return pulumi.get(self, "type")
 
@@ -107,24 +107,18 @@ class AwaitableGetSnippetResult(GetSnippetResult):
 
 
 def get_snippet(id: Optional[_builtins.str] = None,
+                name: Optional[_builtins.str] = None,
                 opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSnippetResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_snippet(id="1234-56-789")
-    ```
+    Snippet data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the snippet
+    :param _builtins.str name: The name of the snippet
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getSnippet:getSnippet', __args__, opts=opts, typ=GetSnippetResult).value
 
@@ -136,24 +130,18 @@ def get_snippet(id: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         type=pulumi.get(__ret__, 'type'))
 def get_snippet_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                       name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSnippetResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_snippet(id="1234-56-789")
-    ```
+    Snippet data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the snippet
+    :param _builtins.str name: The name of the snippet
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSnippet:getSnippet', __args__, opts=opts, typ=GetSnippetResult)
     return __ret__.apply(lambda __response__: GetSnippetResult(

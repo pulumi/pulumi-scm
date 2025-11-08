@@ -18,14 +18,14 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
     public static final IkeGatewayProtocolArgs Empty = new IkeGatewayProtocolArgs();
 
     /**
-     * The Ikev1 param.
+     * Ikev1
      * 
      */
     @Import(name="ikev1")
     private @Nullable Output<IkeGatewayProtocolIkev1Args> ikev1;
 
     /**
-     * @return The Ikev1 param.
+     * @return Ikev1
      * 
      */
     public Optional<Output<IkeGatewayProtocolIkev1Args>> ikev1() {
@@ -33,14 +33,14 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Ikev2 param.
+     * Ikev2
      * 
      */
     @Import(name="ikev2")
     private @Nullable Output<IkeGatewayProtocolIkev2Args> ikev2;
 
     /**
-     * @return The Ikev2 param.
+     * @return Ikev2
      * 
      */
     public Optional<Output<IkeGatewayProtocolIkev2Args>> ikev2() {
@@ -48,14 +48,14 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+     * Version
      * 
      */
     @Import(name="version")
     private @Nullable Output<String> version;
 
     /**
-     * @return The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+     * @return Version
      * 
      */
     public Optional<Output<String>> version() {
@@ -89,7 +89,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ikev1 The Ikev1 param.
+         * @param ikev1 Ikev1
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ikev1 The Ikev1 param.
+         * @param ikev1 Ikev1
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ikev2 The Ikev2 param.
+         * @param ikev2 Ikev2
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param ikev2 The Ikev2 param.
+         * @param ikev2 Ikev2
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param version The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+         * @param version Version
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class IkeGatewayProtocolArgs extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param version The Version param. String must be one of these: `&#34;ikev2-preferred&#34;`, `&#34;ikev1&#34;`, `&#34;ikev2&#34;`. Default: `&#34;ikev2-preferred&#34;`.
+         * @param version Version
          * 
          * @return builder
          * 

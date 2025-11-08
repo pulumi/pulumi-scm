@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// RemoteNetwork data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,17 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupRemoteNetwork(ctx, &scm.LookupRemoteNetworkArgs{
-//				Id: "1234-56-789",
+//			// Data source to retrieve a single remote_network object.
+//			//
+//			// Look up a single Remote Network by its ID.
+//			// Replace the ID with the UUID of the remote network you want to find.
+//			example, err := scm.LookupRemoteNetwork(ctx, &scm.LookupRemoteNetworkArgs{
+//				Id: "7fc59ec2-46b3-4a0e-9c86-9b7416426a70",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("remoteNetworkDetails", example)
 //			return nil
 //		})
 //	}
@@ -50,37 +55,39 @@ func LookupRemoteNetwork(ctx *pulumi.Context, args *LookupRemoteNetworkArgs, opt
 
 // A collection of arguments for invoking getRemoteNetwork.
 type LookupRemoteNetworkArgs struct {
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the remote network
 	Id string `pulumi:"id"`
+	// The name of the remote network
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getRemoteNetwork.
 type LookupRemoteNetworkResult struct {
-	// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+	// Ecmp load balancing
 	EcmpLoadBalancing string `pulumi:"ecmpLoadBalancing"`
-	// ecmp*tunnels is required when ecmp*load*balancing is enable.
+	// ecmp*tunnels is required when ecmp*load*balancing is enable
 	EcmpTunnels []GetRemoteNetworkEcmpTunnel `pulumi:"ecmpTunnels"`
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder that contains the remote network
 	Folder string `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the remote network
 	Id string `pulumi:"id"`
-	// ipsec*tunnel is required when ecmp*load_balancing is disable.
+	// ipsec*tunnel is required when ecmp*load_balancing is disable
 	IpsecTunnel string `pulumi:"ipsecTunnel"`
-	// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+	// New customer will only be on aggregate bandwidth licensing
 	LicenseType string `pulumi:"licenseType"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the remote network
 	Name string `pulumi:"name"`
-	// setup the protocol when ecmp*load*balancing is disable.
+	// setup the protocol when ecmp*load*balancing is disable
 	Protocol GetRemoteNetworkProtocol `pulumi:"protocol"`
-	// The Region param. String length must exceed 1 characters.
+	// Region
 	Region string `pulumi:"region"`
-	// specify secondary ipsecTunnel if needed.
+	// specify secondary ipsecTunnel if needed
 	SecondaryIpsecTunnel string `pulumi:"secondaryIpsecTunnel"`
-	// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+	// spn-name is needed when licenseType is FWAAS-AGGREGATE
 	SpnName string `pulumi:"spnName"`
-	// The Subnets param.
+	// Subnets
 	Subnets []string `pulumi:"subnets"`
 	Tfid    string   `pulumi:"tfid"`
 }
@@ -96,10 +103,10 @@ func LookupRemoteNetworkOutput(ctx *pulumi.Context, args LookupRemoteNetworkOutp
 
 // A collection of arguments for invoking getRemoteNetwork.
 type LookupRemoteNetworkOutputArgs struct {
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the remote network
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the remote network
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupRemoteNetworkOutputArgs) ElementType() reflect.Type {
@@ -121,62 +128,67 @@ func (o LookupRemoteNetworkResultOutput) ToLookupRemoteNetworkResultOutputWithCo
 	return o
 }
 
-// The EcmpLoadBalancing param. String must be one of these: `"enable"`, `"disable"`. Default: `"disable"`.
+// Ecmp load balancing
 func (o LookupRemoteNetworkResultOutput) EcmpLoadBalancing() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.EcmpLoadBalancing }).(pulumi.StringOutput)
 }
 
-// ecmp*tunnels is required when ecmp*load*balancing is enable.
+// ecmp*tunnels is required when ecmp*load*balancing is enable
 func (o LookupRemoteNetworkResultOutput) EcmpTunnels() GetRemoteNetworkEcmpTunnelArrayOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) []GetRemoteNetworkEcmpTunnel { return v.EcmpTunnels }).(GetRemoteNetworkEcmpTunnelArrayOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+// Map of sensitive values returned from the API.
+func (o LookupRemoteNetworkResultOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v LookupRemoteNetworkResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder that contains the remote network
 func (o LookupRemoteNetworkResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The UUID of the remote network
 func (o LookupRemoteNetworkResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// ipsec*tunnel is required when ecmp*load_balancing is disable.
+// ipsec*tunnel is required when ecmp*load_balancing is disable
 func (o LookupRemoteNetworkResultOutput) IpsecTunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.IpsecTunnel }).(pulumi.StringOutput)
 }
 
-// New customer will only be on aggregate bandwidth licensing. String length must exceed 1 characters. Default: `"FWAAS-AGGREGATE"`.
+// New customer will only be on aggregate bandwidth licensing
 func (o LookupRemoteNetworkResultOutput) LicenseType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.LicenseType }).(pulumi.StringOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the remote network
 func (o LookupRemoteNetworkResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// setup the protocol when ecmp*load*balancing is disable.
+// setup the protocol when ecmp*load*balancing is disable
 func (o LookupRemoteNetworkResultOutput) Protocol() GetRemoteNetworkProtocolOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) GetRemoteNetworkProtocol { return v.Protocol }).(GetRemoteNetworkProtocolOutput)
 }
 
-// The Region param. String length must exceed 1 characters.
+// Region
 func (o LookupRemoteNetworkResultOutput) Region() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.Region }).(pulumi.StringOutput)
 }
 
-// specify secondary ipsecTunnel if needed.
+// specify secondary ipsecTunnel if needed
 func (o LookupRemoteNetworkResultOutput) SecondaryIpsecTunnel() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.SecondaryIpsecTunnel }).(pulumi.StringOutput)
 }
 
-// spn-name is needed when licenseType is FWAAS-AGGREGATE.
+// spn-name is needed when licenseType is FWAAS-AGGREGATE
 func (o LookupRemoteNetworkResultOutput) SpnName() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) string { return v.SpnName }).(pulumi.StringOutput)
 }
 
-// The Subnets param.
+// Subnets
 func (o LookupRemoteNetworkResultOutput) Subnets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupRemoteNetworkResult) []string { return v.Subnets }).(pulumi.StringArrayOutput)
 }

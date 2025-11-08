@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperatorLessThan
     {
         /// <summary>
-        /// The Context param. String length must not exceed 127 characters.
+        /// Context
         /// </summary>
         public readonly string Context;
         /// <summary>
-        /// The Qualifiers param.
+        /// Qualifier
         /// </summary>
         public readonly ImmutableArray<Outputs.ApplicationSignatureAndConditionOrConditionOperatorLessThanQualifier> Qualifiers;
         /// <summary>
-        /// The Value param. Value must be between 0 and 4294967295.
+        /// Value
         /// </summary>
         public readonly int Value;
 

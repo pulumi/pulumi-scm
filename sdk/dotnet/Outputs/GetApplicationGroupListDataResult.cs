@@ -14,29 +14,54 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationGroupListDataResult
     {
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public readonly ImmutableArray<string> Members;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetApplicationGroupListDataResult(
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> members,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
             Members = members;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

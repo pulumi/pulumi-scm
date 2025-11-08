@@ -21,429 +21,99 @@ __all__ = ['SecurityRuleArgs', 'SecurityRule']
 @pulumi.input_type
 class SecurityRuleArgs:
     def __init__(__self__, *,
-                 action: pulumi.Input[_builtins.str],
-                 applications: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 categories: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 destinations: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 froms: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 services: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 source_users: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 sources: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 tos: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
-                 description: Optional[pulumi.Input[_builtins.str]] = None,
-                 destination_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 device: Optional[pulumi.Input[_builtins.str]] = None,
-                 disabled: Optional[pulumi.Input[_builtins.bool]] = None,
-                 folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 log_setting: Optional[pulumi.Input[_builtins.str]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
-                 negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
-                 position: Optional[pulumi.Input[_builtins.str]] = None,
-                 profile_setting: Optional[pulumi.Input['SecurityRuleProfileSettingArgs']] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
-        """
-        The set of arguments for constructing a SecurityRule resource.
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source user(s) or group(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
-        :param pulumi.Input[_builtins.str] description: The description of the security rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s).
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The state of the security rule. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile.
-        :param pulumi.Input[_builtins.str] name: The name of the security rule.
-        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es). Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es). Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule.
-        """
-        pulumi.set(__self__, "action", action)
-        pulumi.set(__self__, "applications", applications)
-        pulumi.set(__self__, "categories", categories)
-        pulumi.set(__self__, "destinations", destinations)
-        pulumi.set(__self__, "froms", froms)
-        pulumi.set(__self__, "services", services)
-        pulumi.set(__self__, "source_users", source_users)
-        pulumi.set(__self__, "sources", sources)
-        pulumi.set(__self__, "tos", tos)
-        if description is not None:
-            pulumi.set(__self__, "description", description)
-        if destination_hips is not None:
-            pulumi.set(__self__, "destination_hips", destination_hips)
-        if device is not None:
-            pulumi.set(__self__, "device", device)
-        if disabled is not None:
-            pulumi.set(__self__, "disabled", disabled)
-        if folder is not None:
-            pulumi.set(__self__, "folder", folder)
-        if log_setting is not None:
-            pulumi.set(__self__, "log_setting", log_setting)
-        if name is not None:
-            pulumi.set(__self__, "name", name)
-        if negate_destination is not None:
-            pulumi.set(__self__, "negate_destination", negate_destination)
-        if negate_source is not None:
-            pulumi.set(__self__, "negate_source", negate_source)
-        if position is not None:
-            pulumi.set(__self__, "position", position)
-        if profile_setting is not None:
-            pulumi.set(__self__, "profile_setting", profile_setting)
-        if snippet is not None:
-            pulumi.set(__self__, "snippet", snippet)
-        if source_hips is not None:
-            pulumi.set(__self__, "source_hips", source_hips)
-        if tags is not None:
-            pulumi.set(__self__, "tags", tags)
-
-    @_builtins.property
-    @pulumi.getter
-    def action(self) -> pulumi.Input[_builtins.str]:
-        """
-        The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-        """
-        return pulumi.get(self, "action")
-
-    @action.setter
-    def action(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "action", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def applications(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The application(s) being accessed.
-        """
-        return pulumi.get(self, "applications")
-
-    @applications.setter
-    def applications(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "applications", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def categories(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The URL categories being accessed.
-        """
-        return pulumi.get(self, "categories")
-
-    @categories.setter
-    def categories(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "categories", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def destinations(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The destination address(es).
-        """
-        return pulumi.get(self, "destinations")
-
-    @destinations.setter
-    def destinations(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "destinations", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def froms(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The source security zone(s).
-        """
-        return pulumi.get(self, "froms")
-
-    @froms.setter
-    def froms(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "froms", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def services(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The service(s) being accessed.
-        """
-        return pulumi.get(self, "services")
-
-    @services.setter
-    def services(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "services", value)
-
-    @_builtins.property
-    @pulumi.getter(name="sourceUsers")
-    def source_users(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The source user(s) or group(s).
-        """
-        return pulumi.get(self, "source_users")
-
-    @source_users.setter
-    def source_users(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "source_users", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def sources(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The source address(es).
-        """
-        return pulumi.get(self, "sources")
-
-    @sources.setter
-    def sources(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "sources", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def tos(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
-        """
-        The destination security zone(s).
-        """
-        return pulumi.get(self, "tos")
-
-    @tos.setter
-    def tos(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
-        pulumi.set(self, "tos", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The description of the security rule.
-        """
-        return pulumi.get(self, "description")
-
-    @description.setter
-    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "description", value)
-
-    @_builtins.property
-    @pulumi.getter(name="destinationHips")
-    def destination_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The destination Host Integrity Profile(s).
-        """
-        return pulumi.get(self, "destination_hips")
-
-    @destination_hips.setter
-    def destination_hips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "destination_hips", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Device param.
-        """
-        return pulumi.get(self, "device")
-
-    @device.setter
-    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "device", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
-        """
-        The state of the security rule. Default: `false`.
-        """
-        return pulumi.get(self, "disabled")
-
-    @disabled.setter
-    def disabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
-        pulumi.set(self, "disabled", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Folder param.
-        """
-        return pulumi.get(self, "folder")
-
-    @folder.setter
-    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter(name="logSetting")
-    def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The external log forwarding profile.
-        """
-        return pulumi.get(self, "log_setting")
-
-    @log_setting.setter
-    def log_setting(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "log_setting", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The name of the security rule.
-        """
-        return pulumi.get(self, "name")
-
-    @name.setter
-    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "name", value)
-
-    @_builtins.property
-    @pulumi.getter(name="negateDestination")
-    def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
-        """
-        Negate the destination addresses(es). Default: `false`.
-        """
-        return pulumi.get(self, "negate_destination")
-
-    @negate_destination.setter
-    def negate_destination(self, value: Optional[pulumi.Input[_builtins.bool]]):
-        pulumi.set(self, "negate_destination", value)
-
-    @_builtins.property
-    @pulumi.getter(name="negateSource")
-    def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
-        """
-        Negate the source address(es). Default: `false`.
-        """
-        return pulumi.get(self, "negate_source")
-
-    @negate_source.setter
-    def negate_source(self, value: Optional[pulumi.Input[_builtins.bool]]):
-        pulumi.set(self, "negate_source", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        """
-        return pulumi.get(self, "position")
-
-    @position.setter
-    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "position", value)
-
-    @_builtins.property
-    @pulumi.getter(name="profileSetting")
-    def profile_setting(self) -> Optional[pulumi.Input['SecurityRuleProfileSettingArgs']]:
-        """
-        The security profile object.
-        """
-        return pulumi.get(self, "profile_setting")
-
-    @profile_setting.setter
-    def profile_setting(self, value: Optional[pulumi.Input['SecurityRuleProfileSettingArgs']]):
-        pulumi.set(self, "profile_setting", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The Snippet param.
-        """
-        return pulumi.get(self, "snippet")
-
-    @snippet.setter
-    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "snippet", value)
-
-    @_builtins.property
-    @pulumi.getter(name="sourceHips")
-    def source_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The source Host Integrity Profile(s).
-        """
-        return pulumi.get(self, "source_hips")
-
-    @source_hips.setter
-    def source_hips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "source_hips", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The tags associated with the security rule.
-        """
-        return pulumi.get(self, "tags")
-
-    @tags.setter
-    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "tags", value)
-
-
-@pulumi.input_type
-class _SecurityRuleState:
-    def __init__(__self__, *,
                  action: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]]] = None,
+                 allow_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]]] = None,
                  applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_profile_settings: Optional[pulumi.Input['SecurityRuleDefaultProfileSettingsArgs']] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 log_end: Optional[pulumi.Input[_builtins.bool]] = None,
                  log_setting: Optional[pulumi.Input[_builtins.str]] = None,
+                 log_settings: Optional[pulumi.Input['SecurityRuleLogSettingsArgs']] = None,
+                 log_start: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
+                 negate_user: Optional[pulumi.Input[_builtins.bool]] = None,
+                 policy_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_setting: Optional[pulumi.Input['SecurityRuleProfileSettingArgs']] = None,
+                 schedule: Optional[pulumi.Input[_builtins.str]] = None,
+                 security_settings: Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
+                 tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
-        Input properties used for looking up and filtering SecurityRule resources.
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed.
-        :param pulumi.Input[_builtins.str] description: The description of the security rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The state of the security rule. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile.
-        :param pulumi.Input[_builtins.str] name: The name of the security rule.
-        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es). Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es). Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source user(s) or group(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
+        The set of arguments for constructing a SecurityRule resource.
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]] allow_url_categories: Allow url category
+        :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]] allow_web_applications: Allow web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_url_categories: Block url category
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_web_applications: Block web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed
+        :param pulumi.Input['SecurityRuleDefaultProfileSettingsArgs'] default_profile_settings: Default profile settings
+        :param pulumi.Input[_builtins.str] description: The description of the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] devices: Devices
+        :param pulumi.Input[_builtins.bool] disabled: Is the security rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s)
+        :param pulumi.Input[_builtins.bool] log_end: Log at session end?
+        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile
+        :param pulumi.Input['SecurityRuleLogSettingsArgs'] log_settings: Log settings
+        :param pulumi.Input[_builtins.bool] log_start: Log at session start?
+        :param pulumi.Input[_builtins.str] name: The name of the security rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es)?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
+        :param pulumi.Input[_builtins.bool] negate_user: Negate user
+        :param pulumi.Input[_builtins.str] policy_type: Policy type
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
+        :param pulumi.Input['SecurityRuleSecuritySettingsArgs'] security_settings: Security settings
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
+        if allow_url_categories is not None:
+            pulumi.set(__self__, "allow_url_categories", allow_url_categories)
+        if allow_web_applications is not None:
+            pulumi.set(__self__, "allow_web_applications", allow_web_applications)
         if applications is not None:
             pulumi.set(__self__, "applications", applications)
+        if block_url_categories is not None:
+            pulumi.set(__self__, "block_url_categories", block_url_categories)
+        if block_web_applications is not None:
+            pulumi.set(__self__, "block_web_applications", block_web_applications)
         if categories is not None:
             pulumi.set(__self__, "categories", categories)
+        if default_profile_settings is not None:
+            pulumi.set(__self__, "default_profile_settings", default_profile_settings)
         if description is not None:
             pulumi.set(__self__, "description", description)
         if destination_hips is not None:
@@ -452,24 +122,40 @@ class _SecurityRuleState:
             pulumi.set(__self__, "destinations", destinations)
         if device is not None:
             pulumi.set(__self__, "device", device)
+        if devices is not None:
+            pulumi.set(__self__, "devices", devices)
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if froms is not None:
             pulumi.set(__self__, "froms", froms)
+        if log_end is not None:
+            pulumi.set(__self__, "log_end", log_end)
         if log_setting is not None:
             pulumi.set(__self__, "log_setting", log_setting)
+        if log_settings is not None:
+            pulumi.set(__self__, "log_settings", log_settings)
+        if log_start is not None:
+            pulumi.set(__self__, "log_start", log_start)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if negate_destination is not None:
             pulumi.set(__self__, "negate_destination", negate_destination)
         if negate_source is not None:
             pulumi.set(__self__, "negate_source", negate_source)
+        if negate_user is not None:
+            pulumi.set(__self__, "negate_user", negate_user)
+        if policy_type is not None:
+            pulumi.set(__self__, "policy_type", policy_type)
         if position is not None:
             pulumi.set(__self__, "position", position)
         if profile_setting is not None:
             pulumi.set(__self__, "profile_setting", profile_setting)
+        if schedule is not None:
+            pulumi.set(__self__, "schedule", schedule)
+        if security_settings is not None:
+            pulumi.set(__self__, "security_settings", security_settings)
         if services is not None:
             pulumi.set(__self__, "services", services)
         if snippet is not None:
@@ -482,8 +168,8 @@ class _SecurityRuleState:
             pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
-        if tfid is not None:
-            pulumi.set(__self__, "tfid", tfid)
+        if tenant_restrictions is not None:
+            pulumi.set(__self__, "tenant_restrictions", tenant_restrictions)
         if tos is not None:
             pulumi.set(__self__, "tos", tos)
 
@@ -491,7 +177,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+        The action to be taken when the rule is matched
         """
         return pulumi.get(self, "action")
 
@@ -500,10 +186,34 @@ class _SecurityRuleState:
         pulumi.set(self, "action", value)
 
     @_builtins.property
+    @pulumi.getter(name="allowUrlCategories")
+    def allow_url_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]]]:
+        """
+        Allow url category
+        """
+        return pulumi.get(self, "allow_url_categories")
+
+    @allow_url_categories.setter
+    def allow_url_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]]]):
+        pulumi.set(self, "allow_url_categories", value)
+
+    @_builtins.property
+    @pulumi.getter(name="allowWebApplications")
+    def allow_web_applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]]]:
+        """
+        Allow web application
+        """
+        return pulumi.get(self, "allow_web_applications")
+
+    @allow_web_applications.setter
+    def allow_web_applications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]]]):
+        pulumi.set(self, "allow_web_applications", value)
+
+    @_builtins.property
     @pulumi.getter
     def applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The application(s) being accessed.
+        The application(s) being accessed
         """
         return pulumi.get(self, "applications")
 
@@ -512,10 +222,34 @@ class _SecurityRuleState:
         pulumi.set(self, "applications", value)
 
     @_builtins.property
+    @pulumi.getter(name="blockUrlCategories")
+    def block_url_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Block url category
+        """
+        return pulumi.get(self, "block_url_categories")
+
+    @block_url_categories.setter
+    def block_url_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "block_url_categories", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockWebApplications")
+    def block_web_applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Block web application
+        """
+        return pulumi.get(self, "block_web_applications")
+
+    @block_web_applications.setter
+    def block_web_applications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "block_web_applications", value)
+
+    @_builtins.property
     @pulumi.getter
     def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The URL categories being accessed.
+        The URL categories being accessed
         """
         return pulumi.get(self, "categories")
 
@@ -524,10 +258,22 @@ class _SecurityRuleState:
         pulumi.set(self, "categories", value)
 
     @_builtins.property
+    @pulumi.getter(name="defaultProfileSettings")
+    def default_profile_settings(self) -> Optional[pulumi.Input['SecurityRuleDefaultProfileSettingsArgs']]:
+        """
+        Default profile settings
+        """
+        return pulumi.get(self, "default_profile_settings")
+
+    @default_profile_settings.setter
+    def default_profile_settings(self, value: Optional[pulumi.Input['SecurityRuleDefaultProfileSettingsArgs']]):
+        pulumi.set(self, "default_profile_settings", value)
+
+    @_builtins.property
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The description of the security rule.
+        The description of the security rule
         """
         return pulumi.get(self, "description")
 
@@ -539,7 +285,7 @@ class _SecurityRuleState:
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The destination Host Integrity Profile(s).
+        The destination Host Integrity Profile(s)
         """
         return pulumi.get(self, "destination_hips")
 
@@ -551,7 +297,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The destination address(es).
+        The destination address(es)
         """
         return pulumi.get(self, "destinations")
 
@@ -563,7 +309,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -573,9 +319,21 @@ class _SecurityRuleState:
 
     @_builtins.property
     @pulumi.getter
+    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Devices
+        """
+        return pulumi.get(self, "devices")
+
+    @devices.setter
+    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "devices", value)
+
+    @_builtins.property
+    @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The state of the security rule. Default: `false`.
+        Is the security rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -587,7 +345,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -599,7 +357,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The source security zone(s).
+        The source security zone(s)
         """
         return pulumi.get(self, "froms")
 
@@ -608,10 +366,22 @@ class _SecurityRuleState:
         pulumi.set(self, "froms", value)
 
     @_builtins.property
+    @pulumi.getter(name="logEnd")
+    def log_end(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Log at session end?
+        """
+        return pulumi.get(self, "log_end")
+
+    @log_end.setter
+    def log_end(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "log_end", value)
+
+    @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The external log forwarding profile.
+        The external log forwarding profile
         """
         return pulumi.get(self, "log_setting")
 
@@ -620,10 +390,34 @@ class _SecurityRuleState:
         pulumi.set(self, "log_setting", value)
 
     @_builtins.property
+    @pulumi.getter(name="logSettings")
+    def log_settings(self) -> Optional[pulumi.Input['SecurityRuleLogSettingsArgs']]:
+        """
+        Log settings
+        """
+        return pulumi.get(self, "log_settings")
+
+    @log_settings.setter
+    def log_settings(self, value: Optional[pulumi.Input['SecurityRuleLogSettingsArgs']]):
+        pulumi.set(self, "log_settings", value)
+
+    @_builtins.property
+    @pulumi.getter(name="logStart")
+    def log_start(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Log at session start?
+        """
+        return pulumi.get(self, "log_start")
+
+    @log_start.setter
+    def log_start(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "log_start", value)
+
+    @_builtins.property
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The name of the security rule.
+        The name of the security rule
         """
         return pulumi.get(self, "name")
 
@@ -635,7 +429,7 @@ class _SecurityRuleState:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Negate the destination addresses(es). Default: `false`.
+        Negate the destination addresses(es)?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -647,7 +441,7 @@ class _SecurityRuleState:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        Negate the source address(es). Default: `false`.
+        Negate the source address(es)?
         """
         return pulumi.get(self, "negate_source")
 
@@ -656,10 +450,34 @@ class _SecurityRuleState:
         pulumi.set(self, "negate_source", value)
 
     @_builtins.property
+    @pulumi.getter(name="negateUser")
+    def negate_user(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Negate user
+        """
+        return pulumi.get(self, "negate_user")
+
+    @negate_user.setter
+    def negate_user(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "negate_user", value)
+
+    @_builtins.property
+    @pulumi.getter(name="policyType")
+    def policy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Policy type
+        """
+        return pulumi.get(self, "policy_type")
+
+    @policy_type.setter
+    def policy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "policy_type", value)
+
+    @_builtins.property
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The position of a security rule
         """
         return pulumi.get(self, "position")
 
@@ -671,7 +489,7 @@ class _SecurityRuleState:
     @pulumi.getter(name="profileSetting")
     def profile_setting(self) -> Optional[pulumi.Input['SecurityRuleProfileSettingArgs']]:
         """
-        The security profile object.
+        The security profile object
         """
         return pulumi.get(self, "profile_setting")
 
@@ -681,9 +499,33 @@ class _SecurityRuleState:
 
     @_builtins.property
     @pulumi.getter
+    def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Schedule in which this rule will be applied
+        """
+        return pulumi.get(self, "schedule")
+
+    @schedule.setter
+    def schedule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "schedule", value)
+
+    @_builtins.property
+    @pulumi.getter(name="securitySettings")
+    def security_settings(self) -> Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']]:
+        """
+        Security settings
+        """
+        return pulumi.get(self, "security_settings")
+
+    @security_settings.setter
+    def security_settings(self, value: Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']]):
+        pulumi.set(self, "security_settings", value)
+
+    @_builtins.property
+    @pulumi.getter
     def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The service(s) being accessed.
+        The service(s) being accessed
         """
         return pulumi.get(self, "services")
 
@@ -695,7 +537,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -707,7 +549,7 @@ class _SecurityRuleState:
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The source Host Integrity Profile(s).
+        The source Host Integrity Profile(s)
         """
         return pulumi.get(self, "source_hips")
 
@@ -719,7 +561,7 @@ class _SecurityRuleState:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The source user(s) or group(s).
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         """
         return pulumi.get(self, "source_users")
 
@@ -731,7 +573,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The source address(es).
+        The source addresses(es)
         """
         return pulumi.get(self, "sources")
 
@@ -743,13 +585,628 @@ class _SecurityRuleState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The tags associated with the security rule.
+        The tags associated with the security rule
         """
         return pulumi.get(self, "tags")
 
     @tags.setter
     def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
         pulumi.set(self, "tags", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tenantRestrictions")
+    def tenant_restrictions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Tenant restrictions
+        """
+        return pulumi.get(self, "tenant_restrictions")
+
+    @tenant_restrictions.setter
+    def tenant_restrictions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "tenant_restrictions", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The destination security zone(s)
+        """
+        return pulumi.get(self, "tos")
+
+    @tos.setter
+    def tos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "tos", value)
+
+
+@pulumi.input_type
+class _SecurityRuleState:
+    def __init__(__self__, *,
+                 action: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]]] = None,
+                 allow_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]]] = None,
+                 applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_profile_settings: Optional[pulumi.Input['SecurityRuleDefaultProfileSettingsArgs']] = None,
+                 description: Optional[pulumi.Input[_builtins.str]] = None,
+                 destination_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 device: Optional[pulumi.Input[_builtins.str]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 disabled: Optional[pulumi.Input[_builtins.bool]] = None,
+                 folder: Optional[pulumi.Input[_builtins.str]] = None,
+                 froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 log_end: Optional[pulumi.Input[_builtins.bool]] = None,
+                 log_setting: Optional[pulumi.Input[_builtins.str]] = None,
+                 log_settings: Optional[pulumi.Input['SecurityRuleLogSettingsArgs']] = None,
+                 log_start: Optional[pulumi.Input[_builtins.bool]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
+                 negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
+                 negate_user: Optional[pulumi.Input[_builtins.bool]] = None,
+                 policy_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 position: Optional[pulumi.Input[_builtins.str]] = None,
+                 profile_setting: Optional[pulumi.Input['SecurityRuleProfileSettingArgs']] = None,
+                 schedule: Optional[pulumi.Input[_builtins.str]] = None,
+                 security_settings: Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']] = None,
+                 services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
+                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+        """
+        Input properties used for looking up and filtering SecurityRule resources.
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]] allow_url_categories: Allow url category
+        :param pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]] allow_web_applications: Allow web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_url_categories: Block url category
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_web_applications: Block web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed
+        :param pulumi.Input['SecurityRuleDefaultProfileSettingsArgs'] default_profile_settings: Default profile settings
+        :param pulumi.Input[_builtins.str] description: The description of the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] devices: Devices
+        :param pulumi.Input[_builtins.bool] disabled: Is the security rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s)
+        :param pulumi.Input[_builtins.bool] log_end: Log at session end?
+        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile
+        :param pulumi.Input['SecurityRuleLogSettingsArgs'] log_settings: Log settings
+        :param pulumi.Input[_builtins.bool] log_start: Log at session start?
+        :param pulumi.Input[_builtins.str] name: The name of the security rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es)?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
+        :param pulumi.Input[_builtins.bool] negate_user: Negate user
+        :param pulumi.Input[_builtins.str] policy_type: Policy type
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input['SecurityRuleProfileSettingArgs'] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
+        :param pulumi.Input['SecurityRuleSecuritySettingsArgs'] security_settings: Security settings
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
+        """
+        if action is not None:
+            pulumi.set(__self__, "action", action)
+        if allow_url_categories is not None:
+            pulumi.set(__self__, "allow_url_categories", allow_url_categories)
+        if allow_web_applications is not None:
+            pulumi.set(__self__, "allow_web_applications", allow_web_applications)
+        if applications is not None:
+            pulumi.set(__self__, "applications", applications)
+        if block_url_categories is not None:
+            pulumi.set(__self__, "block_url_categories", block_url_categories)
+        if block_web_applications is not None:
+            pulumi.set(__self__, "block_web_applications", block_web_applications)
+        if categories is not None:
+            pulumi.set(__self__, "categories", categories)
+        if default_profile_settings is not None:
+            pulumi.set(__self__, "default_profile_settings", default_profile_settings)
+        if description is not None:
+            pulumi.set(__self__, "description", description)
+        if destination_hips is not None:
+            pulumi.set(__self__, "destination_hips", destination_hips)
+        if destinations is not None:
+            pulumi.set(__self__, "destinations", destinations)
+        if device is not None:
+            pulumi.set(__self__, "device", device)
+        if devices is not None:
+            pulumi.set(__self__, "devices", devices)
+        if disabled is not None:
+            pulumi.set(__self__, "disabled", disabled)
+        if folder is not None:
+            pulumi.set(__self__, "folder", folder)
+        if froms is not None:
+            pulumi.set(__self__, "froms", froms)
+        if log_end is not None:
+            pulumi.set(__self__, "log_end", log_end)
+        if log_setting is not None:
+            pulumi.set(__self__, "log_setting", log_setting)
+        if log_settings is not None:
+            pulumi.set(__self__, "log_settings", log_settings)
+        if log_start is not None:
+            pulumi.set(__self__, "log_start", log_start)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
+        if negate_destination is not None:
+            pulumi.set(__self__, "negate_destination", negate_destination)
+        if negate_source is not None:
+            pulumi.set(__self__, "negate_source", negate_source)
+        if negate_user is not None:
+            pulumi.set(__self__, "negate_user", negate_user)
+        if policy_type is not None:
+            pulumi.set(__self__, "policy_type", policy_type)
+        if position is not None:
+            pulumi.set(__self__, "position", position)
+        if profile_setting is not None:
+            pulumi.set(__self__, "profile_setting", profile_setting)
+        if schedule is not None:
+            pulumi.set(__self__, "schedule", schedule)
+        if security_settings is not None:
+            pulumi.set(__self__, "security_settings", security_settings)
+        if services is not None:
+            pulumi.set(__self__, "services", services)
+        if snippet is not None:
+            pulumi.set(__self__, "snippet", snippet)
+        if source_hips is not None:
+            pulumi.set(__self__, "source_hips", source_hips)
+        if source_users is not None:
+            pulumi.set(__self__, "source_users", source_users)
+        if sources is not None:
+            pulumi.set(__self__, "sources", sources)
+        if tags is not None:
+            pulumi.set(__self__, "tags", tags)
+        if tenant_restrictions is not None:
+            pulumi.set(__self__, "tenant_restrictions", tenant_restrictions)
+        if tfid is not None:
+            pulumi.set(__self__, "tfid", tfid)
+        if tos is not None:
+            pulumi.set(__self__, "tos", tos)
+
+    @_builtins.property
+    @pulumi.getter
+    def action(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The action to be taken when the rule is matched
+        """
+        return pulumi.get(self, "action")
+
+    @action.setter
+    def action(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "action", value)
+
+    @_builtins.property
+    @pulumi.getter(name="allowUrlCategories")
+    def allow_url_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]]]:
+        """
+        Allow url category
+        """
+        return pulumi.get(self, "allow_url_categories")
+
+    @allow_url_categories.setter
+    def allow_url_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowUrlCategoryArgs']]]]):
+        pulumi.set(self, "allow_url_categories", value)
+
+    @_builtins.property
+    @pulumi.getter(name="allowWebApplications")
+    def allow_web_applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]]]:
+        """
+        Allow web application
+        """
+        return pulumi.get(self, "allow_web_applications")
+
+    @allow_web_applications.setter
+    def allow_web_applications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SecurityRuleAllowWebApplicationArgs']]]]):
+        pulumi.set(self, "allow_web_applications", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The application(s) being accessed
+        """
+        return pulumi.get(self, "applications")
+
+    @applications.setter
+    def applications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "applications", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockUrlCategories")
+    def block_url_categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Block url category
+        """
+        return pulumi.get(self, "block_url_categories")
+
+    @block_url_categories.setter
+    def block_url_categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "block_url_categories", value)
+
+    @_builtins.property
+    @pulumi.getter(name="blockWebApplications")
+    def block_web_applications(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Block web application
+        """
+        return pulumi.get(self, "block_web_applications")
+
+    @block_web_applications.setter
+    def block_web_applications(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "block_web_applications", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The URL categories being accessed
+        """
+        return pulumi.get(self, "categories")
+
+    @categories.setter
+    def categories(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "categories", value)
+
+    @_builtins.property
+    @pulumi.getter(name="defaultProfileSettings")
+    def default_profile_settings(self) -> Optional[pulumi.Input['SecurityRuleDefaultProfileSettingsArgs']]:
+        """
+        Default profile settings
+        """
+        return pulumi.get(self, "default_profile_settings")
+
+    @default_profile_settings.setter
+    def default_profile_settings(self, value: Optional[pulumi.Input['SecurityRuleDefaultProfileSettingsArgs']]):
+        pulumi.set(self, "default_profile_settings", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def description(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The description of the security rule
+        """
+        return pulumi.get(self, "description")
+
+    @description.setter
+    def description(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "description", value)
+
+    @_builtins.property
+    @pulumi.getter(name="destinationHips")
+    def destination_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The destination Host Integrity Profile(s)
+        """
+        return pulumi.get(self, "destination_hips")
+
+    @destination_hips.setter
+    def destination_hips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destination_hips", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The destination address(es)
+        """
+        return pulumi.get(self, "destinations")
+
+    @destinations.setter
+    def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def device(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @device.setter
+    def device(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "device", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def devices(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Devices
+        """
+        return pulumi.get(self, "devices")
+
+    @devices.setter
+    def devices(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "devices", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Is the security rule disabled?
+        """
+        return pulumi.get(self, "disabled")
+
+    @disabled.setter
+    def disabled(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "disabled", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @folder.setter
+    def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "folder", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The source security zone(s)
+        """
+        return pulumi.get(self, "froms")
+
+    @froms.setter
+    def froms(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "froms", value)
+
+    @_builtins.property
+    @pulumi.getter(name="logEnd")
+    def log_end(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Log at session end?
+        """
+        return pulumi.get(self, "log_end")
+
+    @log_end.setter
+    def log_end(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "log_end", value)
+
+    @_builtins.property
+    @pulumi.getter(name="logSetting")
+    def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The external log forwarding profile
+        """
+        return pulumi.get(self, "log_setting")
+
+    @log_setting.setter
+    def log_setting(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "log_setting", value)
+
+    @_builtins.property
+    @pulumi.getter(name="logSettings")
+    def log_settings(self) -> Optional[pulumi.Input['SecurityRuleLogSettingsArgs']]:
+        """
+        Log settings
+        """
+        return pulumi.get(self, "log_settings")
+
+    @log_settings.setter
+    def log_settings(self, value: Optional[pulumi.Input['SecurityRuleLogSettingsArgs']]):
+        pulumi.set(self, "log_settings", value)
+
+    @_builtins.property
+    @pulumi.getter(name="logStart")
+    def log_start(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Log at session start?
+        """
+        return pulumi.get(self, "log_start")
+
+    @log_start.setter
+    def log_start(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "log_start", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name of the security rule
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter(name="negateDestination")
+    def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Negate the destination addresses(es)?
+        """
+        return pulumi.get(self, "negate_destination")
+
+    @negate_destination.setter
+    def negate_destination(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "negate_destination", value)
+
+    @_builtins.property
+    @pulumi.getter(name="negateSource")
+    def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Negate the source address(es)?
+        """
+        return pulumi.get(self, "negate_source")
+
+    @negate_source.setter
+    def negate_source(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "negate_source", value)
+
+    @_builtins.property
+    @pulumi.getter(name="negateUser")
+    def negate_user(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Negate user
+        """
+        return pulumi.get(self, "negate_user")
+
+    @negate_user.setter
+    def negate_user(self, value: Optional[pulumi.Input[_builtins.bool]]):
+        pulumi.set(self, "negate_user", value)
+
+    @_builtins.property
+    @pulumi.getter(name="policyType")
+    def policy_type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Policy type
+        """
+        return pulumi.get(self, "policy_type")
+
+    @policy_type.setter
+    def policy_type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "policy_type", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def position(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The position of a security rule
+        """
+        return pulumi.get(self, "position")
+
+    @position.setter
+    def position(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "position", value)
+
+    @_builtins.property
+    @pulumi.getter(name="profileSetting")
+    def profile_setting(self) -> Optional[pulumi.Input['SecurityRuleProfileSettingArgs']]:
+        """
+        The security profile object
+        """
+        return pulumi.get(self, "profile_setting")
+
+    @profile_setting.setter
+    def profile_setting(self, value: Optional[pulumi.Input['SecurityRuleProfileSettingArgs']]):
+        pulumi.set(self, "profile_setting", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Schedule in which this rule will be applied
+        """
+        return pulumi.get(self, "schedule")
+
+    @schedule.setter
+    def schedule(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "schedule", value)
+
+    @_builtins.property
+    @pulumi.getter(name="securitySettings")
+    def security_settings(self) -> Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']]:
+        """
+        Security settings
+        """
+        return pulumi.get(self, "security_settings")
+
+    @security_settings.setter
+    def security_settings(self, value: Optional[pulumi.Input['SecurityRuleSecuritySettingsArgs']]):
+        pulumi.set(self, "security_settings", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The service(s) being accessed
+        """
+        return pulumi.get(self, "services")
+
+    @services.setter
+    def services(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "services", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @snippet.setter
+    def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "snippet", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceHips")
+    def source_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The source Host Integrity Profile(s)
+        """
+        return pulumi.get(self, "source_hips")
+
+    @source_hips.setter
+    def source_hips(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_hips", value)
+
+    @_builtins.property
+    @pulumi.getter(name="sourceUsers")
+    def source_users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        """
+        return pulumi.get(self, "source_users")
+
+    @source_users.setter
+    def source_users(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "source_users", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The source addresses(es)
+        """
+        return pulumi.get(self, "sources")
+
+    @sources.setter
+    def sources(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "sources", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        The tags associated with the security rule
+        """
+        return pulumi.get(self, "tags")
+
+    @tags.setter
+    def tags(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "tags", value)
+
+    @_builtins.property
+    @pulumi.getter(name="tenantRestrictions")
+    def tenant_restrictions(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
+        """
+        Tenant restrictions
+        """
+        return pulumi.get(self, "tenant_restrictions")
+
+    @tenant_restrictions.setter
+    def tenant_restrictions(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "tenant_restrictions", value)
 
     @_builtins.property
     @pulumi.getter
@@ -764,7 +1221,7 @@ class _SecurityRuleState:
     @pulumi.getter
     def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The destination security zone(s).
+        The destination security zone(s)
         """
         return pulumi.get(self, "tos")
 
@@ -780,84 +1237,98 @@ class SecurityRule(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  action: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]]] = None,
+                 allow_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]]] = None,
                  applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_profile_settings: Optional[pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 log_end: Optional[pulumi.Input[_builtins.bool]] = None,
                  log_setting: Optional[pulumi.Input[_builtins.str]] = None,
+                 log_settings: Optional[pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']]] = None,
+                 log_start: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
+                 negate_user: Optional[pulumi.Input[_builtins.bool]] = None,
+                 policy_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+                 schedule: Optional[pulumi.Input[_builtins.str]] = None,
+                 security_settings: Optional[pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        SecurityRule resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.SecurityRule("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed.
-        :param pulumi.Input[_builtins.str] description: The description of the security rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The state of the security rule. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile.
-        :param pulumi.Input[_builtins.str] name: The name of the security rule.
-        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es). Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es). Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source user(s) or group(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]] allow_url_categories: Allow url category
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]] allow_web_applications: Allow web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_url_categories: Block url category
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_web_applications: Block web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed
+        :param pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']] default_profile_settings: Default profile settings
+        :param pulumi.Input[_builtins.str] description: The description of the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] devices: Devices
+        :param pulumi.Input[_builtins.bool] disabled: Is the security rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s)
+        :param pulumi.Input[_builtins.bool] log_end: Log at session end?
+        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile
+        :param pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']] log_settings: Log settings
+        :param pulumi.Input[_builtins.bool] log_start: Log at session start?
+        :param pulumi.Input[_builtins.str] name: The name of the security rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es)?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
+        :param pulumi.Input[_builtins.bool] negate_user: Negate user
+        :param pulumi.Input[_builtins.str] policy_type: Policy type
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
+        :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']] security_settings: Security settings
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: SecurityRuleArgs,
+                 args: Optional[SecurityRuleArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        SecurityRule resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.SecurityRule("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param SecurityRuleArgs args: The arguments to use to populate this resource's properties.
@@ -875,27 +1346,41 @@ class SecurityRule(pulumi.CustomResource):
                  resource_name: str,
                  opts: Optional[pulumi.ResourceOptions] = None,
                  action: Optional[pulumi.Input[_builtins.str]] = None,
+                 allow_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]]] = None,
+                 allow_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]]] = None,
                  applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 block_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 default_profile_settings: Optional[pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
+                 devices: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 log_end: Optional[pulumi.Input[_builtins.bool]] = None,
                  log_setting: Optional[pulumi.Input[_builtins.str]] = None,
+                 log_settings: Optional[pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']]] = None,
+                 log_start: Optional[pulumi.Input[_builtins.bool]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
+                 negate_user: Optional[pulumi.Input[_builtins.bool]] = None,
+                 policy_type: Optional[pulumi.Input[_builtins.str]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
                  profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+                 schedule: Optional[pulumi.Input[_builtins.str]] = None,
+                 security_settings: Optional[pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
                  services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+                 tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -906,46 +1391,42 @@ class SecurityRule(pulumi.CustomResource):
                 raise TypeError('__props__ is only valid when passed in combination with a valid opts.id to get an existing resource')
             __props__ = SecurityRuleArgs.__new__(SecurityRuleArgs)
 
-            if action is None and not opts.urn:
-                raise TypeError("Missing required property 'action'")
             __props__.__dict__["action"] = action
-            if applications is None and not opts.urn:
-                raise TypeError("Missing required property 'applications'")
+            __props__.__dict__["allow_url_categories"] = allow_url_categories
+            __props__.__dict__["allow_web_applications"] = allow_web_applications
             __props__.__dict__["applications"] = applications
-            if categories is None and not opts.urn:
-                raise TypeError("Missing required property 'categories'")
+            __props__.__dict__["block_url_categories"] = block_url_categories
+            __props__.__dict__["block_web_applications"] = block_web_applications
             __props__.__dict__["categories"] = categories
+            __props__.__dict__["default_profile_settings"] = default_profile_settings
             __props__.__dict__["description"] = description
             __props__.__dict__["destination_hips"] = destination_hips
-            if destinations is None and not opts.urn:
-                raise TypeError("Missing required property 'destinations'")
             __props__.__dict__["destinations"] = destinations
             __props__.__dict__["device"] = device
+            __props__.__dict__["devices"] = devices
             __props__.__dict__["disabled"] = disabled
             __props__.__dict__["folder"] = folder
-            if froms is None and not opts.urn:
-                raise TypeError("Missing required property 'froms'")
             __props__.__dict__["froms"] = froms
+            __props__.__dict__["log_end"] = log_end
             __props__.__dict__["log_setting"] = log_setting
+            __props__.__dict__["log_settings"] = log_settings
+            __props__.__dict__["log_start"] = log_start
             __props__.__dict__["name"] = name
             __props__.__dict__["negate_destination"] = negate_destination
             __props__.__dict__["negate_source"] = negate_source
+            __props__.__dict__["negate_user"] = negate_user
+            __props__.__dict__["policy_type"] = policy_type
             __props__.__dict__["position"] = position
             __props__.__dict__["profile_setting"] = profile_setting
-            if services is None and not opts.urn:
-                raise TypeError("Missing required property 'services'")
+            __props__.__dict__["schedule"] = schedule
+            __props__.__dict__["security_settings"] = security_settings
             __props__.__dict__["services"] = services
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["source_hips"] = source_hips
-            if source_users is None and not opts.urn:
-                raise TypeError("Missing required property 'source_users'")
             __props__.__dict__["source_users"] = source_users
-            if sources is None and not opts.urn:
-                raise TypeError("Missing required property 'sources'")
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
-            if tos is None and not opts.urn:
-                raise TypeError("Missing required property 'tos'")
+            __props__.__dict__["tenant_restrictions"] = tenant_restrictions
             __props__.__dict__["tos"] = tos
             __props__.__dict__["tfid"] = None
         super(SecurityRule, __self__).__init__(
@@ -959,27 +1440,41 @@ class SecurityRule(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             action: Optional[pulumi.Input[_builtins.str]] = None,
+            allow_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]]] = None,
+            allow_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]]] = None,
             applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            block_url_categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            block_web_applications: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            default_profile_settings: Optional[pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']]] = None,
             description: Optional[pulumi.Input[_builtins.str]] = None,
             destination_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
+            devices: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             disabled: Optional[pulumi.Input[_builtins.bool]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            log_end: Optional[pulumi.Input[_builtins.bool]] = None,
             log_setting: Optional[pulumi.Input[_builtins.str]] = None,
+            log_settings: Optional[pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']]] = None,
+            log_start: Optional[pulumi.Input[_builtins.bool]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
             negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
+            negate_user: Optional[pulumi.Input[_builtins.bool]] = None,
+            policy_type: Optional[pulumi.Input[_builtins.str]] = None,
             position: Optional[pulumi.Input[_builtins.str]] = None,
             profile_setting: Optional[pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']]] = None,
+            schedule: Optional[pulumi.Input[_builtins.str]] = None,
+            security_settings: Optional[pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']]] = None,
             services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
+            tenant_restrictions: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None,
             tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None) -> 'SecurityRule':
         """
@@ -989,105 +1484,173 @@ class SecurityRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed.
-        :param pulumi.Input[_builtins.str] description: The description of the security rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es).
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The state of the security rule. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s).
-        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile.
-        :param pulumi.Input[_builtins.str] name: The name of the security rule.
-        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es). Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es). Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source user(s) or group(s).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source address(es).
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s).
+        :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowUrlCategoryArgs', 'SecurityRuleAllowUrlCategoryArgsDict']]]] allow_url_categories: Allow url category
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SecurityRuleAllowWebApplicationArgs', 'SecurityRuleAllowWebApplicationArgsDict']]]] allow_web_applications: Allow web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] applications: The application(s) being accessed
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_url_categories: Block url category
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] block_web_applications: Block web application
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The URL categories being accessed
+        :param pulumi.Input[Union['SecurityRuleDefaultProfileSettingsArgs', 'SecurityRuleDefaultProfileSettingsArgsDict']] default_profile_settings: Default profile settings
+        :param pulumi.Input[_builtins.str] description: The description of the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination address(es)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] devices: Devices
+        :param pulumi.Input[_builtins.bool] disabled: Is the security rule disabled?
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zone(s)
+        :param pulumi.Input[_builtins.bool] log_end: Log at session end?
+        :param pulumi.Input[_builtins.str] log_setting: The external log forwarding profile
+        :param pulumi.Input[Union['SecurityRuleLogSettingsArgs', 'SecurityRuleLogSettingsArgsDict']] log_settings: Log settings
+        :param pulumi.Input[_builtins.bool] log_start: Log at session start?
+        :param pulumi.Input[_builtins.str] name: The name of the security rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Negate the destination addresses(es)?
+        :param pulumi.Input[_builtins.bool] negate_source: Negate the source address(es)?
+        :param pulumi.Input[_builtins.bool] negate_user: Negate user
+        :param pulumi.Input[_builtins.str] policy_type: Policy type
+        :param pulumi.Input[_builtins.str] position: The position of a security rule
+        :param pulumi.Input[Union['SecurityRuleProfileSettingArgs', 'SecurityRuleProfileSettingArgsDict']] profile_setting: The security profile object
+        :param pulumi.Input[_builtins.str] schedule: Schedule in which this rule will be applied
+        :param pulumi.Input[Union['SecurityRuleSecuritySettingsArgs', 'SecurityRuleSecuritySettingsArgsDict']] security_settings: Security settings
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The service(s) being accessed
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile(s)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses(es)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The tags associated with the security rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tenant_restrictions: Tenant restrictions
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zone(s)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _SecurityRuleState.__new__(_SecurityRuleState)
 
         __props__.__dict__["action"] = action
+        __props__.__dict__["allow_url_categories"] = allow_url_categories
+        __props__.__dict__["allow_web_applications"] = allow_web_applications
         __props__.__dict__["applications"] = applications
+        __props__.__dict__["block_url_categories"] = block_url_categories
+        __props__.__dict__["block_web_applications"] = block_web_applications
         __props__.__dict__["categories"] = categories
+        __props__.__dict__["default_profile_settings"] = default_profile_settings
         __props__.__dict__["description"] = description
         __props__.__dict__["destination_hips"] = destination_hips
         __props__.__dict__["destinations"] = destinations
         __props__.__dict__["device"] = device
+        __props__.__dict__["devices"] = devices
         __props__.__dict__["disabled"] = disabled
         __props__.__dict__["folder"] = folder
         __props__.__dict__["froms"] = froms
+        __props__.__dict__["log_end"] = log_end
         __props__.__dict__["log_setting"] = log_setting
+        __props__.__dict__["log_settings"] = log_settings
+        __props__.__dict__["log_start"] = log_start
         __props__.__dict__["name"] = name
         __props__.__dict__["negate_destination"] = negate_destination
         __props__.__dict__["negate_source"] = negate_source
+        __props__.__dict__["negate_user"] = negate_user
+        __props__.__dict__["policy_type"] = policy_type
         __props__.__dict__["position"] = position
         __props__.__dict__["profile_setting"] = profile_setting
+        __props__.__dict__["schedule"] = schedule
+        __props__.__dict__["security_settings"] = security_settings
         __props__.__dict__["services"] = services
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["source_hips"] = source_hips
         __props__.__dict__["source_users"] = source_users
         __props__.__dict__["sources"] = sources
         __props__.__dict__["tags"] = tags
+        __props__.__dict__["tenant_restrictions"] = tenant_restrictions
         __props__.__dict__["tfid"] = tfid
         __props__.__dict__["tos"] = tos
         return SecurityRule(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
     @pulumi.getter
-    def action(self) -> pulumi.Output[_builtins.str]:
+    def action(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+        The action to be taken when the rule is matched
         """
         return pulumi.get(self, "action")
+
+    @_builtins.property
+    @pulumi.getter(name="allowUrlCategories")
+    def allow_url_categories(self) -> pulumi.Output[Sequence['outputs.SecurityRuleAllowUrlCategory']]:
+        """
+        Allow url category
+        """
+        return pulumi.get(self, "allow_url_categories")
+
+    @_builtins.property
+    @pulumi.getter(name="allowWebApplications")
+    def allow_web_applications(self) -> pulumi.Output[Sequence['outputs.SecurityRuleAllowWebApplication']]:
+        """
+        Allow web application
+        """
+        return pulumi.get(self, "allow_web_applications")
 
     @_builtins.property
     @pulumi.getter
     def applications(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The application(s) being accessed.
+        The application(s) being accessed
         """
         return pulumi.get(self, "applications")
+
+    @_builtins.property
+    @pulumi.getter(name="blockUrlCategories")
+    def block_url_categories(self) -> pulumi.Output[Sequence[_builtins.str]]:
+        """
+        Block url category
+        """
+        return pulumi.get(self, "block_url_categories")
+
+    @_builtins.property
+    @pulumi.getter(name="blockWebApplications")
+    def block_web_applications(self) -> pulumi.Output[Sequence[_builtins.str]]:
+        """
+        Block web application
+        """
+        return pulumi.get(self, "block_web_applications")
 
     @_builtins.property
     @pulumi.getter
     def categories(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The URL categories being accessed.
+        The URL categories being accessed
         """
         return pulumi.get(self, "categories")
+
+    @_builtins.property
+    @pulumi.getter(name="defaultProfileSettings")
+    def default_profile_settings(self) -> pulumi.Output['outputs.SecurityRuleDefaultProfileSettings']:
+        """
+        Default profile settings
+        """
+        return pulumi.get(self, "default_profile_settings")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The description of the security rule.
+        The description of the security rule
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter(name="destinationHips")
-    def destination_hips(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def destination_hips(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The destination Host Integrity Profile(s).
+        The destination Host Integrity Profile(s)
         """
         return pulumi.get(self, "destination_hips")
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def destinations(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The destination address(es).
+        The destination address(es)
         """
         return pulumi.get(self, "destinations")
 
@@ -1095,15 +1658,23 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
+    def devices(self) -> pulumi.Output[Sequence[_builtins.str]]:
+        """
+        Devices
+        """
+        return pulumi.get(self, "devices")
+
+    @_builtins.property
+    @pulumi.getter
     def disabled(self) -> pulumi.Output[_builtins.bool]:
         """
-        The state of the security rule. Default: `false`.
+        Is the security rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -1111,31 +1682,55 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
-    def froms(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def froms(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The source security zone(s).
+        The source security zone(s)
         """
         return pulumi.get(self, "froms")
 
     @_builtins.property
-    @pulumi.getter(name="logSetting")
-    def log_setting(self) -> pulumi.Output[Optional[_builtins.str]]:
+    @pulumi.getter(name="logEnd")
+    def log_end(self) -> pulumi.Output[_builtins.bool]:
         """
-        The external log forwarding profile.
+        Log at session end?
+        """
+        return pulumi.get(self, "log_end")
+
+    @_builtins.property
+    @pulumi.getter(name="logSetting")
+    def log_setting(self) -> pulumi.Output[_builtins.str]:
+        """
+        The external log forwarding profile
         """
         return pulumi.get(self, "log_setting")
+
+    @_builtins.property
+    @pulumi.getter(name="logSettings")
+    def log_settings(self) -> pulumi.Output['outputs.SecurityRuleLogSettings']:
+        """
+        Log settings
+        """
+        return pulumi.get(self, "log_settings")
+
+    @_builtins.property
+    @pulumi.getter(name="logStart")
+    def log_start(self) -> pulumi.Output[_builtins.bool]:
+        """
+        Log at session start?
+        """
+        return pulumi.get(self, "log_start")
 
     @_builtins.property
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The name of the security rule.
+        The name of the security rule
         """
         return pulumi.get(self, "name")
 
@@ -1143,7 +1738,7 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> pulumi.Output[_builtins.bool]:
         """
-        Negate the destination addresses(es). Default: `false`.
+        Negate the destination addresses(es)?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -1151,31 +1746,63 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> pulumi.Output[_builtins.bool]:
         """
-        Negate the source address(es). Default: `false`.
+        Negate the source address(es)?
         """
         return pulumi.get(self, "negate_source")
+
+    @_builtins.property
+    @pulumi.getter(name="negateUser")
+    def negate_user(self) -> pulumi.Output[_builtins.bool]:
+        """
+        Negate user
+        """
+        return pulumi.get(self, "negate_user")
+
+    @_builtins.property
+    @pulumi.getter(name="policyType")
+    def policy_type(self) -> pulumi.Output[_builtins.str]:
+        """
+        Policy type
+        """
+        return pulumi.get(self, "policy_type")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The position of a security rule
         """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter(name="profileSetting")
-    def profile_setting(self) -> pulumi.Output[Optional['outputs.SecurityRuleProfileSetting']]:
+    def profile_setting(self) -> pulumi.Output['outputs.SecurityRuleProfileSetting']:
         """
-        The security profile object.
+        The security profile object
         """
         return pulumi.get(self, "profile_setting")
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def schedule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The service(s) being accessed.
+        Schedule in which this rule will be applied
+        """
+        return pulumi.get(self, "schedule")
+
+    @_builtins.property
+    @pulumi.getter(name="securitySettings")
+    def security_settings(self) -> pulumi.Output['outputs.SecurityRuleSecuritySettings']:
+        """
+        Security settings
+        """
+        return pulumi.get(self, "security_settings")
+
+    @_builtins.property
+    @pulumi.getter
+    def services(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+        """
+        The service(s) being accessed
         """
         return pulumi.get(self, "services")
 
@@ -1183,31 +1810,31 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceHips")
-    def source_hips(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def source_hips(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The source Host Integrity Profile(s).
+        The source Host Integrity Profile(s)
         """
         return pulumi.get(self, "source_hips")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
-    def source_users(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def source_users(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The source user(s) or group(s).
+        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
-    def sources(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def sources(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The source address(es).
+        The source addresses(es)
         """
         return pulumi.get(self, "sources")
 
@@ -1215,9 +1842,17 @@ class SecurityRule(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The tags associated with the security rule.
+        The tags associated with the security rule
         """
         return pulumi.get(self, "tags")
+
+    @_builtins.property
+    @pulumi.getter(name="tenantRestrictions")
+    def tenant_restrictions(self) -> pulumi.Output[Sequence[_builtins.str]]:
+        """
+        Tenant restrictions
+        """
+        return pulumi.get(self, "tenant_restrictions")
 
     @_builtins.property
     @pulumi.getter
@@ -1226,9 +1861,9 @@ class SecurityRule(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> pulumi.Output[Sequence[_builtins.str]]:
+    def tos(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The destination security zone(s).
+        The destination security zone(s)
         """
         return pulumi.get(self, "tos")
 

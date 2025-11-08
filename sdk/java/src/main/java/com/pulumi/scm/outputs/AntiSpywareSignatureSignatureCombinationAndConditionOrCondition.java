@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignatureCombinationAndConditionOrCondition {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private @Nullable String name;
     /**
-     * @return The ThreatId param.
+     * @return Threat id
      * 
      */
     private @Nullable String threatId;
 
     private AntiSpywareSignatureSignatureCombinationAndConditionOrCondition() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * @return The ThreatId param.
+     * @return Threat id
      * 
      */
     public Optional<String> threatId() {

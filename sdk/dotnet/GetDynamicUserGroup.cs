@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetDynamicUserGroup
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// DynamicUserGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,24 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetDynamicUserGroup.Invoke(new()
+        ///     // Look up the dynamic user group by its ID.
+        ///     var scmDynamicUserGroupDs = Scm.GetDynamicUserGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["dynamicUserGroupDetails"] = 
+        ///         {
+        ///             { "id", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id) },
+        ///             { "name", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name) },
+        ///             { "folder", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder) },
+        ///             { "description", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description) },
+        ///             { "filter", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter) },
+        ///             { "tags", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +49,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDynamicUserGroupResult>("scm:index/getDynamicUserGroup:getDynamicUserGroup", args ?? new GetDynamicUserGroupArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// DynamicUserGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +61,24 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetDynamicUserGroup.Invoke(new()
+        ///     // Look up the dynamic user group by its ID.
+        ///     var scmDynamicUserGroupDs = Scm.GetDynamicUserGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["dynamicUserGroupDetails"] = 
+        ///         {
+        ///             { "id", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id) },
+        ///             { "name", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name) },
+        ///             { "folder", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder) },
+        ///             { "description", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description) },
+        ///             { "filter", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter) },
+        ///             { "tags", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +86,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetDynamicUserGroupResult>("scm:index/getDynamicUserGroup:getDynamicUserGroup", args ?? new GetDynamicUserGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// DynamicUserGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +98,24 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetDynamicUserGroup.Invoke(new()
+        ///     // Look up the dynamic user group by its ID.
+        ///     var scmDynamicUserGroupDs = Scm.GetDynamicUserGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["dynamicUserGroupDetails"] = 
+        ///         {
+        ///             { "id", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Id) },
+        ///             { "name", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Name) },
+        ///             { "folder", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Folder) },
+        ///             { "description", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Description) },
+        ///             { "filter", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Filter) },
+        ///             { "tags", scmDynamicUserGroupDs.Apply(getDynamicUserGroupResult =&gt; getDynamicUserGroupResult.Tags) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +127,16 @@ namespace Pulumi.Scm
     public sealed class GetDynamicUserGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the dynamic user group
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the dynamic address group
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetDynamicUserGroupArgs()
         {
@@ -102,10 +147,16 @@ namespace Pulumi.Scm
     public sealed class GetDynamicUserGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the dynamic user group
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the dynamic address group
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetDynamicUserGroupInvokeArgs()
         {
@@ -118,23 +169,35 @@ namespace Pulumi.Scm
     public sealed class GetDynamicUserGroupResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// The description of the dynamic address group
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// tag-based filter. String length must not exceed 2047 characters.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The tag-based filter for the dynamic user group
         /// </summary>
         public readonly string Filter;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the dynamic user group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the dynamic address group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Tags associated with the dynamic user group
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
@@ -143,20 +206,29 @@ namespace Pulumi.Scm
         private GetDynamicUserGroupResult(
             string description,
 
+            string device,
+
             string filter,
+
+            string folder,
 
             string id,
 
             string name,
+
+            string snippet,
 
             ImmutableArray<string> tags,
 
             string tfid)
         {
             Description = description;
+            Device = device;
             Filter = filter;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tags = tags;
             Tfid = tfid;
         }

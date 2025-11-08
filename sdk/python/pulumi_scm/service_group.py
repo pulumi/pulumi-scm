@@ -27,12 +27,12 @@ class ServiceGroupArgs:
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a ServiceGroup resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: The name of the service group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the service group
         """
         pulumi.set(__self__, "members", members)
         if device is not None:
@@ -50,7 +50,7 @@ class ServiceGroupArgs:
     @pulumi.getter
     def members(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -62,7 +62,7 @@ class ServiceGroupArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -74,7 +74,7 @@ class ServiceGroupArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -86,7 +86,7 @@ class ServiceGroupArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service group
         """
         return pulumi.get(self, "name")
 
@@ -98,7 +98,7 @@ class ServiceGroupArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -110,7 +110,7 @@ class ServiceGroupArgs:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the service group
         """
         return pulumi.get(self, "tags")
 
@@ -131,12 +131,12 @@ class _ServiceGroupState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ServiceGroup resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] name: The name of the service group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the service group
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -157,7 +157,7 @@ class _ServiceGroupState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -169,7 +169,7 @@ class _ServiceGroupState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -181,7 +181,7 @@ class _ServiceGroupState:
     @pulumi.getter
     def members(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -193,7 +193,7 @@ class _ServiceGroupState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service group
         """
         return pulumi.get(self, "name")
 
@@ -205,7 +205,7 @@ class _ServiceGroupState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -217,7 +217,7 @@ class _ServiceGroupState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the service group
         """
         return pulumi.get(self, "tags")
 
@@ -249,7 +249,7 @@ class ServiceGroup(pulumi.CustomResource):
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        ServiceGroup resource
 
         ## Example Usage
 
@@ -257,17 +257,56 @@ class ServiceGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.ServiceGroup("example")
+        # TCP Service with multiple destination ports custom timeout
+        scm_service_tcp_ports = scm.Service("scm_service_tcp_ports",
+            folder="Shared",
+            name="scm_service_tcp_ports",
+            description="Managed by Pulumi",
+            protocol={
+                "tcp": {
+                    "port": "80,443",
+                    "override": {
+                        "timeout": 3600,
+                    },
+                },
+            })
+        # UDP Service with single destination port
+        scm_service_udp_port = scm.Service("scm_service_udp_port",
+            folder="Shared",
+            name="scm_service_udp_port",
+            description="Managed by Pulumi",
+            protocol={
+                "udp": {
+                    "port": "53",
+                },
+            })
+        # Service Group containing multiple services
+        scm_servicegroup = scm.ServiceGroup("scm_servicegroup",
+            folder="Shared",
+            name="scm_servicegroup",
+            members=[
+                scm_service_tcp_ports.name,
+                scm_service_udp_port.name,
+            ])
+        # Service Group containing multiple services and another servicegroup
+        scm_servicegroup_nested = scm.ServiceGroup("scm_servicegroup_nested",
+            folder="Shared",
+            name="scm_servicegroup_nested",
+            members=[
+                scm_service_tcp_ports.name,
+                scm_service_udp_port.name,
+                scm_servicegroup.name,
+            ])
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] name: The name of the service group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the service group
         """
         ...
     @overload
@@ -276,7 +315,7 @@ class ServiceGroup(pulumi.CustomResource):
                  args: ServiceGroupArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        ServiceGroup resource
 
         ## Example Usage
 
@@ -284,7 +323,46 @@ class ServiceGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.ServiceGroup("example")
+        # TCP Service with multiple destination ports custom timeout
+        scm_service_tcp_ports = scm.Service("scm_service_tcp_ports",
+            folder="Shared",
+            name="scm_service_tcp_ports",
+            description="Managed by Pulumi",
+            protocol={
+                "tcp": {
+                    "port": "80,443",
+                    "override": {
+                        "timeout": 3600,
+                    },
+                },
+            })
+        # UDP Service with single destination port
+        scm_service_udp_port = scm.Service("scm_service_udp_port",
+            folder="Shared",
+            name="scm_service_udp_port",
+            description="Managed by Pulumi",
+            protocol={
+                "udp": {
+                    "port": "53",
+                },
+            })
+        # Service Group containing multiple services
+        scm_servicegroup = scm.ServiceGroup("scm_servicegroup",
+            folder="Shared",
+            name="scm_servicegroup",
+            members=[
+                scm_service_tcp_ports.name,
+                scm_service_udp_port.name,
+            ])
+        # Service Group containing multiple services and another servicegroup
+        scm_servicegroup_nested = scm.ServiceGroup("scm_servicegroup_nested",
+            folder="Shared",
+            name="scm_servicegroup_nested",
+            members=[
+                scm_service_tcp_ports.name,
+                scm_service_udp_port.name,
+                scm_servicegroup.name,
+            ])
         ```
 
         :param str resource_name: The name of the resource.
@@ -350,12 +428,12 @@ class ServiceGroup(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] name: The name of the service group
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: Tags associated with the service group
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -374,7 +452,7 @@ class ServiceGroup(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -382,7 +460,7 @@ class ServiceGroup(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -390,7 +468,7 @@ class ServiceGroup(pulumi.CustomResource):
     @pulumi.getter
     def members(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -398,7 +476,7 @@ class ServiceGroup(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service group
         """
         return pulumi.get(self, "name")
 
@@ -406,7 +484,7 @@ class ServiceGroup(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -414,7 +492,7 @@ class ServiceGroup(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the service group
         """
         return pulumi.get(self, "tags")
 

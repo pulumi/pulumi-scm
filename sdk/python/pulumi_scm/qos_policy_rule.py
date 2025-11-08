@@ -32,15 +32,15 @@ class QosPolicyRuleArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a QosPolicyRule resource.
-        :param pulumi.Input['QosPolicyRuleActionArgs'] action: The Action param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input['QosPolicyRuleDscpTosArgs'] dscp_tos: The DscpTos param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] schedule: The Schedule param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input['QosPolicyRuleActionArgs'] action: Action
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input['QosPolicyRuleDscpTosArgs'] dscp_tos: Dscp tos
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] schedule: Schedule
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         pulumi.set(__self__, "action", action)
         if description is not None:
@@ -64,7 +64,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def action(self) -> pulumi.Input['QosPolicyRuleActionArgs']:
         """
-        The Action param.
+        Action
         """
         return pulumi.get(self, "action")
 
@@ -76,7 +76,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -88,7 +88,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -100,7 +100,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter(name="dscpTos")
     def dscp_tos(self) -> Optional[pulumi.Input['QosPolicyRuleDscpTosArgs']]:
         """
-        The DscpTos param.
+        Dscp tos
         """
         return pulumi.get(self, "dscp_tos")
 
@@ -112,7 +112,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -124,7 +124,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -136,7 +136,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -148,7 +148,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Schedule param.
+        Schedule
         """
         return pulumi.get(self, "schedule")
 
@@ -160,7 +160,7 @@ class QosPolicyRuleArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -184,15 +184,15 @@ class _QosPolicyRuleState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering QosPolicyRule resources.
-        :param pulumi.Input['QosPolicyRuleActionArgs'] action: The Action param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input['QosPolicyRuleDscpTosArgs'] dscp_tos: The DscpTos param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] schedule: The Schedule param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input['QosPolicyRuleActionArgs'] action: Action
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input['QosPolicyRuleDscpTosArgs'] dscp_tos: Dscp tos
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] schedule: Schedule
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if action is not None:
             pulumi.set(__self__, "action", action)
@@ -219,7 +219,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def action(self) -> Optional[pulumi.Input['QosPolicyRuleActionArgs']]:
         """
-        The Action param.
+        Action
         """
         return pulumi.get(self, "action")
 
@@ -231,7 +231,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -243,7 +243,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -255,7 +255,7 @@ class _QosPolicyRuleState:
     @pulumi.getter(name="dscpTos")
     def dscp_tos(self) -> Optional[pulumi.Input['QosPolicyRuleDscpTosArgs']]:
         """
-        The DscpTos param.
+        Dscp tos
         """
         return pulumi.get(self, "dscp_tos")
 
@@ -267,7 +267,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -279,7 +279,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -291,7 +291,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -303,7 +303,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def schedule(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Schedule param.
+        Schedule
         """
         return pulumi.get(self, "schedule")
 
@@ -315,7 +315,7 @@ class _QosPolicyRuleState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -350,28 +350,19 @@ class QosPolicyRule(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.QosPolicyRule("example")
-        ```
+        QosPolicyRule resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: The Action param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: The DscpTos param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] schedule: The Schedule param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: Action
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: Dscp tos
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] schedule: Schedule
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -380,16 +371,7 @@ class QosPolicyRule(pulumi.CustomResource):
                  args: QosPolicyRuleArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.QosPolicyRule("example")
-        ```
+        QosPolicyRule resource
 
         :param str resource_name: The name of the resource.
         :param QosPolicyRuleArgs args: The arguments to use to populate this resource's properties.
@@ -463,15 +445,15 @@ class QosPolicyRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: The Action param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: The DscpTos param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[_builtins.str] schedule: The Schedule param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Union['QosPolicyRuleActionArgs', 'QosPolicyRuleActionArgsDict']] action: Action
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Union['QosPolicyRuleDscpTosArgs', 'QosPolicyRuleDscpTosArgsDict']] dscp_tos: Dscp tos
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Name
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] schedule: Schedule
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -493,7 +475,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def action(self) -> pulumi.Output['outputs.QosPolicyRuleAction']:
         """
-        The Action param.
+        Action
         """
         return pulumi.get(self, "action")
 
@@ -501,7 +483,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -509,7 +491,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -517,7 +499,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter(name="dscpTos")
     def dscp_tos(self) -> pulumi.Output[Optional['outputs.QosPolicyRuleDscpTos']]:
         """
-        The DscpTos param.
+        Dscp tos
         """
         return pulumi.get(self, "dscp_tos")
 
@@ -525,7 +507,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -533,7 +515,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -541,7 +523,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -549,7 +531,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def schedule(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Schedule param.
+        Schedule
         """
         return pulumi.get(self, "schedule")
 
@@ -557,7 +539,7 @@ class QosPolicyRule(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

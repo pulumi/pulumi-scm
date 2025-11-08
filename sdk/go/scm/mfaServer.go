@@ -12,45 +12,23 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewMfaServer(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// MfaServer resource
 type MfaServer struct {
 	pulumi.CustomResourceState
 
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapOutput `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The MfaCertProfile param.
+	// The MFA server certificate profile
 	MfaCertProfile pulumi.StringOutput `pulumi:"mfaCertProfile"`
-	// The MfaVendorType param.
-	MfaVendorType MfaServerMfaVendorTypePtrOutput `pulumi:"mfaVendorType"`
-	// The Name param.
+	// The MFA vendor type
+	MfaVendorType MfaServerMfaVendorTypeOutput `pulumi:"mfaVendorType"`
+	// The name of the MFA server profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -65,6 +43,10 @@ func NewMfaServer(ctx *pulumi.Context,
 	if args.MfaCertProfile == nil {
 		return nil, errors.New("invalid value for required argument 'MfaCertProfile'")
 	}
+	secrets := pulumi.AdditionalSecretOutputs([]string{
+		"encryptedValues",
+	})
+	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
 	var resource MfaServer
 	err := ctx.RegisterResource("scm:index/mfaServer:MfaServer", name, args, &resource, opts...)
@@ -88,33 +70,37 @@ func GetMfaServer(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering MfaServer resources.
 type mfaServerState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// Map of sensitive values returned from the API.
+	EncryptedValues map[string]string `pulumi:"encryptedValues"`
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The MfaCertProfile param.
+	// The MFA server certificate profile
 	MfaCertProfile *string `pulumi:"mfaCertProfile"`
-	// The MfaVendorType param.
+	// The MFA vendor type
 	MfaVendorType *MfaServerMfaVendorType `pulumi:"mfaVendorType"`
-	// The Name param.
+	// The name of the MFA server profile
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type MfaServerState struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// Map of sensitive values returned from the API.
+	EncryptedValues pulumi.StringMapInput
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The MfaCertProfile param.
+	// The MFA server certificate profile
 	MfaCertProfile pulumi.StringPtrInput
-	// The MfaVendorType param.
+	// The MFA vendor type
 	MfaVendorType MfaServerMfaVendorTypePtrInput
-	// The Name param.
+	// The name of the MFA server profile
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -124,33 +110,33 @@ func (MfaServerState) ElementType() reflect.Type {
 }
 
 type mfaServerArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The MfaCertProfile param.
+	// The MFA server certificate profile
 	MfaCertProfile string `pulumi:"mfaCertProfile"`
-	// The MfaVendorType param.
+	// The MFA vendor type
 	MfaVendorType *MfaServerMfaVendorType `pulumi:"mfaVendorType"`
-	// The Name param.
+	// The name of the MFA server profile
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a MfaServer resource.
 type MfaServerArgs struct {
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The MfaCertProfile param.
+	// The MFA server certificate profile
 	MfaCertProfile pulumi.StringInput
-	// The MfaVendorType param.
+	// The MFA vendor type
 	MfaVendorType MfaServerMfaVendorTypePtrInput
-	// The Name param.
+	// The name of the MFA server profile
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -241,32 +227,37 @@ func (o MfaServerOutput) ToMfaServerOutputWithContext(ctx context.Context) MfaSe
 	return o
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o MfaServerOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// Map of sensitive values returned from the API.
+func (o MfaServerOutput) EncryptedValues() pulumi.StringMapOutput {
+	return o.ApplyT(func(v *MfaServer) pulumi.StringMapOutput { return v.EncryptedValues }).(pulumi.StringMapOutput)
+}
+
+// The folder in which the resource is defined
 func (o MfaServerOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The MfaCertProfile param.
+// The MFA server certificate profile
 func (o MfaServerOutput) MfaCertProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringOutput { return v.MfaCertProfile }).(pulumi.StringOutput)
 }
 
-// The MfaVendorType param.
-func (o MfaServerOutput) MfaVendorType() MfaServerMfaVendorTypePtrOutput {
-	return o.ApplyT(func(v *MfaServer) MfaServerMfaVendorTypePtrOutput { return v.MfaVendorType }).(MfaServerMfaVendorTypePtrOutput)
+// The MFA vendor type
+func (o MfaServerOutput) MfaVendorType() MfaServerMfaVendorTypeOutput {
+	return o.ApplyT(func(v *MfaServer) MfaServerMfaVendorTypeOutput { return v.MfaVendorType }).(MfaServerMfaVendorTypeOutput)
 }
 
-// The Name param.
+// The name of the MFA server profile
 func (o MfaServerOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o MfaServerOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *MfaServer) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

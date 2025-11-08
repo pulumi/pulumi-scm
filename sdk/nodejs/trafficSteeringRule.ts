@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.TrafficSteeringRule("example", {folder: "Shared"});
- * ```
+ * TrafficSteeringRule resource
  */
 export class TrafficSteeringRule extends pulumi.CustomResource {
     /**
@@ -47,35 +38,35 @@ export class TrafficSteeringRule extends pulumi.CustomResource {
     }
 
     /**
-     * The Action param.
+     * Action
      */
     declare public readonly action: pulumi.Output<outputs.TrafficSteeringRuleAction | undefined>;
     /**
-     * The Category param.
+     * Category
      */
     declare public readonly categories: pulumi.Output<string[] | undefined>;
     /**
-     * The Destination param.
+     * Destination
      */
-    declare public readonly destinations: pulumi.Output<string[] | undefined>;
+    declare public readonly destinations: pulumi.Output<string[]>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The folder containing the traffic steering rule
      */
     declare public readonly folder: pulumi.Output<string>;
     /**
-     * The Name param.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Service param.
+     * Service
      */
     declare public readonly services: pulumi.Output<string[]>;
     /**
-     * The SourceUser param.
+     * Source user
      */
-    declare public readonly sourceUsers: pulumi.Output<string[] | undefined>;
+    declare public readonly sourceUsers: pulumi.Output<string[]>;
     /**
-     * The Source param.
+     * Source
      */
     declare public readonly sources: pulumi.Output<string[]>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -104,6 +95,9 @@ export class TrafficSteeringRule extends pulumi.CustomResource {
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as TrafficSteeringRuleArgs | undefined;
+            if (args?.folder === undefined && !opts.urn) {
+                throw new Error("Missing required property 'folder'");
+            }
             if (args?.services === undefined && !opts.urn) {
                 throw new Error("Missing required property 'services'");
             }
@@ -130,35 +124,35 @@ export class TrafficSteeringRule extends pulumi.CustomResource {
  */
 export interface TrafficSteeringRuleState {
     /**
-     * The Action param.
+     * Action
      */
     action?: pulumi.Input<inputs.TrafficSteeringRuleAction>;
     /**
-     * The Category param.
+     * Category
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Destination param.
+     * Destination
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The folder containing the traffic steering rule
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Service param.
+     * Service
      */
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SourceUser param.
+     * Source user
      */
     sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Source param.
+     * Source
      */
     sources?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -169,35 +163,35 @@ export interface TrafficSteeringRuleState {
  */
 export interface TrafficSteeringRuleArgs {
     /**
-     * The Action param.
+     * Action
      */
     action?: pulumi.Input<inputs.TrafficSteeringRuleAction>;
     /**
-     * The Category param.
+     * Category
      */
     categories?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Destination param.
+     * Destination
      */
     destinations?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * The folder containing the traffic steering rule
      */
-    folder?: pulumi.Input<string>;
+    folder: pulumi.Input<string>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Service param.
+     * Service
      */
     services: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The SourceUser param.
+     * Source user
      */
     sourceUsers?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Source param.
+     * Source
      */
     sources: pulumi.Input<pulumi.Input<string>[]>;
 }

@@ -12,14 +12,14 @@ import java.util.Objects;
 @CustomType
 public final class IpsecCryptoProfileAh {
     /**
-     * @return The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * @return Authentication
      * 
      */
     private List<String> authentications;
 
     private IpsecCryptoProfileAh() {}
     /**
-     * @return The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * @return Authentication
      * 
      */
     public List<String> authentications() {

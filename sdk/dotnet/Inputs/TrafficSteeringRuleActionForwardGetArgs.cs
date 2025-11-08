@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class TrafficSteeringRuleActionForwardGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Target param.
+        /// Target
         /// </summary>
         [Input("target")]
         public Input<string>? Target { get; set; }

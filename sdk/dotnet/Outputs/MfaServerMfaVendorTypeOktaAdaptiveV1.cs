@@ -14,37 +14,37 @@ namespace Pulumi.Scm.Outputs
     public sealed class MfaServerMfaVendorTypeOktaAdaptiveV1
     {
         /// <summary>
-        /// The OktaApiHost param.
+        /// Okta API hostname
         /// </summary>
-        public readonly string? OktaApiHost;
+        public readonly string OktaApiHost;
         /// <summary>
-        /// The OktaBaseuri param.
+        /// Okta baseuri
         /// </summary>
-        public readonly string? OktaBaseuri;
+        public readonly string OktaBaseuri;
         /// <summary>
-        /// The OktaOrg param.
+        /// Okta organization
         /// </summary>
-        public readonly string? OktaOrg;
+        public readonly string OktaOrg;
         /// <summary>
-        /// The OktaTimeout param.
+        /// Okta timeout (seconds)
         /// </summary>
-        public readonly string? OktaTimeout;
+        public readonly int OktaTimeout;
         /// <summary>
-        /// The OktaToken param.
+        /// Okta API token
         /// </summary>
-        public readonly string? OktaToken;
+        public readonly string OktaToken;
 
         [OutputConstructor]
         private MfaServerMfaVendorTypeOktaAdaptiveV1(
-            string? oktaApiHost,
+            string oktaApiHost,
 
-            string? oktaBaseuri,
+            string oktaBaseuri,
 
-            string? oktaOrg,
+            string oktaOrg,
 
-            string? oktaTimeout,
+            int oktaTimeout,
 
-            string? oktaToken)
+            string oktaToken)
         {
             OktaApiHost = oktaApiHost;
             OktaBaseuri = oktaBaseuri;

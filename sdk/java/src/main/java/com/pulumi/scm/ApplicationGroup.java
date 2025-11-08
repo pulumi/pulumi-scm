@@ -16,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * ApplicationGroup resource
  * 
  * ## Example Usage
  * 
@@ -27,7 +27,10 @@ import javax.annotation.Nullable;
  * import com.pulumi.Context;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Application;
+ * import com.pulumi.scm.ApplicationArgs;
  * import com.pulumi.scm.ApplicationGroup;
+ * import com.pulumi.scm.ApplicationGroupArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -41,7 +44,35 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ApplicationGroup("example");
+ *         // First, create some applications that will be used in the application group.
+ *         var scmAgApp1 = new Application("scmAgApp1", ApplicationArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_ag_app_1")
+ *             .description("First test application")
+ *             .category("business-systems")
+ *             .subcategory("database")
+ *             .technology("client-server")
+ *             .risk("3")
+ *             .build());
+ * 
+ *         var scmAgApp2 = new Application("scmAgApp2", ApplicationArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_ag_app_2")
+ *             .description("Second test application")
+ *             .category("business-systems")
+ *             .subcategory("database")
+ *             .technology("client-server")
+ *             .risk("4")
+ *             .build());
+ * 
+ *         // Create the application group that references the applications above.
+ *         var scmAppGroup1 = new ApplicationGroup("scmAppGroup1", ApplicationGroupArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_app_group_1")
+ *             .members(            
+ *                 scmAgApp1.name(),
+ *                 scmAgApp2.name())
+ *             .build());
  * 
  *     }
  * }
@@ -52,70 +83,70 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/applicationGroup:ApplicationGroup")
 public class ApplicationGroup extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      * 
      */
     @Export(name="members", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> members;
 
     /**
-     * @return The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Members
      * 
      */
     public Output<List<String>> members() {
         return this.members;
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

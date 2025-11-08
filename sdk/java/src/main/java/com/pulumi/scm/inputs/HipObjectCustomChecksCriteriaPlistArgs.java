@@ -20,14 +20,14 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
     public static final HipObjectCustomChecksCriteriaPlistArgs Empty = new HipObjectCustomChecksCriteriaPlistArgs();
 
     /**
-     * The Keys param.
+     * Key
      * 
      */
     @Import(name="keys")
     private @Nullable Output<List<HipObjectCustomChecksCriteriaPlistKeyArgs>> keys;
 
     /**
-     * @return The Keys param.
+     * @return Key
      * 
      */
     public Optional<Output<List<HipObjectCustomChecksCriteriaPlistKeyArgs>>> keys() {
@@ -35,14 +35,14 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
     }
 
     /**
-     * Preference list. String length must not exceed 1023 characters.
+     * Preference list
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Preference list. String length must not exceed 1023 characters.
+     * @return Preference list
      * 
      */
     public Output<String> name() {
@@ -50,14 +50,14 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
     }
 
     /**
-     * Plist does not exist. Default: `false`.
+     * Plist does not exist
      * 
      */
     @Import(name="negate")
     private @Nullable Output<Boolean> negate;
 
     /**
-     * @return Plist does not exist. Default: `false`.
+     * @return Plist does not exist
      * 
      */
     public Optional<Output<Boolean>> negate() {
@@ -91,7 +91,7 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
         }
 
         /**
-         * @param keys The Keys param.
+         * @param keys Key
          * 
          * @return builder
          * 
@@ -102,7 +102,7 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
         }
 
         /**
-         * @param keys The Keys param.
+         * @param keys Key
          * 
          * @return builder
          * 
@@ -112,7 +112,7 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
         }
 
         /**
-         * @param keys The Keys param.
+         * @param keys Key
          * 
          * @return builder
          * 
@@ -122,7 +122,7 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
         }
 
         /**
-         * @param name Preference list. String length must not exceed 1023 characters.
+         * @param name Preference list
          * 
          * @return builder
          * 
@@ -133,7 +133,7 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
         }
 
         /**
-         * @param name Preference list. String length must not exceed 1023 characters.
+         * @param name Preference list
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
         }
 
         /**
-         * @param negate Plist does not exist. Default: `false`.
+         * @param negate Plist does not exist
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class HipObjectCustomChecksCriteriaPlistArgs extends com.pulumi.res
         }
 
         /**
-         * @param negate Plist does not exist. Default: `false`.
+         * @param negate Plist does not exist
          * 
          * @return builder
          * 

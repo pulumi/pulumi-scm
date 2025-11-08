@@ -24,11 +24,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a list of remote_network objects.
+        ///     //
+        ///     // Look up a list of Remote Networks, filtering by folder.
         ///     var example = Scm.GetRemoteNetworkList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["remoteNetworkList"] = .Select(network =&gt; 
+        ///         {
+        ///             return network.Name;
+        ///         }).ToList(),
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -48,11 +59,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a list of remote_network objects.
+        ///     //
+        ///     // Look up a list of Remote Networks, filtering by folder.
         ///     var example = Scm.GetRemoteNetworkList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["remoteNetworkList"] = .Select(network =&gt; 
+        ///         {
+        ///             return network.Name;
+        ///         }).ToList(),
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -72,11 +94,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
+        ///     //
+        ///     // Data source to retrieve a list of remote_network objects.
+        ///     //
+        ///     // Look up a list of Remote Networks, filtering by folder.
         ///     var example = Scm.GetRemoteNetworkList.Invoke(new()
         ///     {
         ///         Folder = "Remote Networks",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["remoteNetworkList"] = .Select(network =&gt; 
+        ///         {
+        ///             return network.Name;
+        ///         }).ToList(),
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,28 +121,40 @@ namespace Pulumi.Scm
     public sealed class GetRemoteNetworkListArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        /// The device of the item.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder of the item. Default: Shared.
         /// </summary>
         [Input("folder")]
         public string? Folder { get; set; }
 
         /// <summary>
-        /// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        /// The max number of items to return. Default: 200.
         /// </summary>
         [Input("limit")]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the item.
         /// </summary>
         [Input("name")]
         public string? Name { get; set; }
 
         /// <summary>
-        /// The Offset param. Default: `0`.
+        /// The offset of the first item to return.
         /// </summary>
         [Input("offset")]
         public int? Offset { get; set; }
+
+        /// <summary>
+        /// The snippet of the item.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
 
         public GetRemoteNetworkListArgs()
         {
@@ -120,28 +165,40 @@ namespace Pulumi.Scm
     public sealed class GetRemoteNetworkListInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        /// The device of the item.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder of the item. Default: Shared.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        /// The max number of items to return. Default: 200.
         /// </summary>
         [Input("limit")]
         public Input<int>? Limit { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the item.
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Offset param. Default: `0`.
+        /// The offset of the first item to return.
         /// </summary>
         [Input("offset")]
         public Input<int>? Offset { get; set; }
+
+        /// <summary>
+        /// The snippet of the item.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetRemoteNetworkListInvokeArgs()
         {
@@ -154,32 +211,40 @@ namespace Pulumi.Scm
     public sealed class GetRemoteNetworkListResult
     {
         /// <summary>
-        /// The Data param.
+        /// The data.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetRemoteNetworkListDataResult> Datas;
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+        /// The device of the item.
         /// </summary>
-        public readonly string Folder;
+        public readonly string? Device;
+        /// <summary>
+        /// The folder of the item. Default: Shared.
+        /// </summary>
+        public readonly string? Folder;
         /// <summary>
         /// The provider-assigned unique ID for this managed resource.
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+        /// The max number of items to return. Default: 200.
         /// </summary>
-        public readonly int Limit;
+        public readonly int? Limit;
         /// <summary>
-        /// The Name param.
+        /// The name of the item.
         /// </summary>
         public readonly string? Name;
         /// <summary>
-        /// The Offset param. Default: `0`.
+        /// The offset of the first item to return.
         /// </summary>
-        public readonly int Offset;
+        public readonly int? Offset;
+        /// <summary>
+        /// The snippet of the item.
+        /// </summary>
+        public readonly string? Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The Total param.
+        /// The total number of items.
         /// </summary>
         public readonly int Total;
 
@@ -187,26 +252,32 @@ namespace Pulumi.Scm
         private GetRemoteNetworkListResult(
             ImmutableArray<Outputs.GetRemoteNetworkListDataResult> datas,
 
-            string folder,
+            string? device,
+
+            string? folder,
 
             string id,
 
-            int limit,
+            int? limit,
 
             string? name,
 
-            int offset,
+            int? offset,
+
+            string? snippet,
 
             string tfid,
 
             int total)
         {
             Datas = datas;
+            Device = device;
             Folder = folder;
             Id = id;
             Limit = limit;
             Name = name;
             Offset = offset;
+            Snippet = snippet;
             Tfid = tfid;
             Total = total;
         }

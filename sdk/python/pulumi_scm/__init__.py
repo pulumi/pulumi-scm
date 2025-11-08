@@ -6,31 +6,44 @@ import builtins as _builtins
 from . import _utilities
 import typing
 # Export this package's modules as members:
+from .address import *
 from .address_group import *
-from .address_object import *
+from .aggregate_ethernet_interface import *
 from .anti_spyware_profile import *
 from .anti_spyware_signature import *
 from .app_override_rule import *
 from .application import *
 from .application_filter import *
 from .application_group import *
-from .authentication_portal import *
 from .authentication_profile import *
 from .authentication_rule import *
 from .authentication_sequence import *
+from .bgp_address_family_profile import *
+from .bgp_auth_profile import *
+from .bgp_filtering_profile import *
+from .bgp_redistribution_profile import *
+from .bgp_route_map import *
+from .bgp_route_map_redistribution import *
 from .certificate_profile import *
 from .decryption_exclusion import *
 from .decryption_profile import *
 from .decryption_rule import *
+from .dhcp_interface import *
+from .dns_proxy import *
 from .dns_security_profile import *
+from .dos_protection_profile import *
+from .dos_protection_rule import *
 from .dynamic_user_group import *
+from .ethernet_interface import *
 from .external_dynamic_list import *
 from .file_blocking_profile import *
 from .folder import *
+from .get_address import *
 from .get_address_group import *
 from .get_address_group_list import *
-from .get_address_object import *
-from .get_address_object_list import *
+from .get_address_list import *
+from .get_aggregate_ethernet_interface import *
+from .get_aggregate_ethernet_interface_list import *
 from .get_anti_spyware_profile import *
 from .get_anti_spyware_profile_list import *
 from .get_anti_spyware_signature import *
@@ -43,28 +56,46 @@ from .get_application_filter_list import *
 from .get_application_group import *
 from .get_application_group_list import *
 from .get_application_list import *
-from .get_authentication_portal import *
-from .get_authentication_portal_list import *
 from .get_authentication_profile import *
 from .get_authentication_profile_list import *
 from .get_authentication_rule import *
 from .get_authentication_rule_list import *
 from .get_authentication_sequence import *
 from .get_authentication_sequence_list import *
-from .get_auto_tag_actions_list import *
+from .get_bgp_address_family_profile import *
+from .get_bgp_address_family_profile_list import *
+from .get_bgp_auth_profile import *
+from .get_bgp_auth_profile_list import *
+from .get_bgp_filtering_profile import *
+from .get_bgp_filtering_profile_list import *
+from .get_bgp_redistribution_profile import *
+from .get_bgp_redistribution_profile_list import *
+from .get_bgp_route_map import *
+from .get_bgp_route_map_list import *
+from .get_bgp_route_map_redistribution import *
+from .get_bgp_route_map_redistribution_list import *
 from .get_certificate_profile import *
 from .get_certificate_profile_list import *
 from .get_decryption_exclusion import *
+from .get_decryption_exclusion_list import *
 from .get_decryption_profile import *
 from .get_decryption_profile_list import *
 from .get_decryption_rule import *
 from .get_decryption_rule_list import *
-from .get_device import *
-from .get_device_list import *
+from .get_dhcp_interface import *
+from .get_dhcp_interface_list import *
+from .get_dns_proxy import *
+from .get_dns_proxy_list import *
 from .get_dns_security_profile import *
 from .get_dns_security_profile_list import *
+from .get_dos_protection_profile import *
+from .get_dos_protection_profile_list import *
+from .get_dos_protection_rule import *
+from .get_dos_protection_rule_list import *
 from .get_dynamic_user_group import *
 from .get_dynamic_user_group_list import *
+from .get_ethernet_interface import *
+from .get_ethernet_interface_list import *
 from .get_external_dynamic_list import *
 from .get_external_dynamic_list_list import *
 from .get_file_blocking_profile import *
@@ -77,32 +108,46 @@ from .get_hip_profile import *
 from .get_hip_profile_list import *
 from .get_http_header_profile import *
 from .get_http_header_profile_list import *
+from .get_http_server_profile import *
+from .get_http_server_profile_list import *
 from .get_ike_crypto_profile import *
 from .get_ike_crypto_profile_list import *
 from .get_ike_gateway import *
 from .get_ike_gateway_list import *
-from .get_internal_dns_server import *
-from .get_internal_dns_server_list import *
+from .get_interface_management_profile import *
+from .get_interface_management_profile_list import *
 from .get_ipsec_crypto_profile import *
 from .get_ipsec_crypto_profile_list import *
 from .get_ipsec_tunnel import *
 from .get_ipsec_tunnel_list import *
-from .get_jobs import *
-from .get_jobs_list import *
 from .get_kerberos_server_profile import *
 from .get_kerberos_server_profile_list import *
+from .get_label import *
 from .get_label_list import *
-from .get_labels_getbyid_response import *
+from .get_layer2_subinterface import *
+from .get_layer2_subinterface_list import *
+from .get_layer3_subinterface import *
+from .get_layer3_subinterface_list import *
 from .get_ldap_server_profile import *
 from .get_ldap_server_profile_list import *
+from .get_link_tag import *
+from .get_link_tag_list import *
 from .get_local_user import *
+from .get_local_user_group import *
 from .get_local_user_group_list import *
 from .get_local_user_list import *
-from .get_mfa_server import *
+from .get_log_forwarding_profile import *
+from .get_log_forwarding_profile_list import *
+from .get_logical_router import *
+from .get_logical_router_list import *
+from .get_loopback_interface import *
+from .get_loopback_interface_list import *
 from .get_nat_rule import *
 from .get_nat_rule_list import *
-from .get_ocsp_responder import *
-from .get_ocsp_responder_list import *
+from .get_ospf_auth_profile import *
+from .get_ospf_auth_profile_list import *
+from .get_pbf_rule import *
+from .get_pbf_rule_list import *
 from .get_profile_group import *
 from .get_profile_group_list import *
 from .get_qos_policy_rule import *
@@ -115,12 +160,30 @@ from .get_region import *
 from .get_region_list import *
 from .get_remote_network import *
 from .get_remote_network_list import *
+from .get_route_access_list import *
+from .get_route_access_list_list import *
+from .get_route_community_list import *
+from .get_route_community_list_list import *
+from .get_route_path_access_list import *
+from .get_route_path_access_list_list import *
+from .get_route_prefix_list import *
+from .get_route_prefix_list_list import *
 from .get_saml_server_profile import *
 from .get_saml_server_profile_list import *
 from .get_scep_profile import *
 from .get_scep_profile_list import *
 from .get_schedule import *
 from .get_schedule_list import *
+from .get_sdwan_error_correction_profile import *
+from .get_sdwan_error_correction_profile_list import *
+from .get_sdwan_path_quality_profile import *
+from .get_sdwan_path_quality_profile_list import *
+from .get_sdwan_rule import *
+from .get_sdwan_rule_list import *
+from .get_sdwan_saas_quality_profile import *
+from .get_sdwan_saas_quality_profile_list import *
+from .get_sdwan_traffic_distribution_profile import *
+from .get_sdwan_traffic_distribution_profile_list import *
 from .get_security_rule import *
 from .get_security_rule_list import *
 from .get_service import *
@@ -131,9 +194,12 @@ from .get_service_connection_list import *
 from .get_service_group import *
 from .get_service_group_list import *
 from .get_service_list import *
-from .get_shared_infrastructure_settings_list import *
+from .get_site import *
+from .get_site_list import *
 from .get_snippet import *
 from .get_snippet_list import *
+from .get_syslog_server_profile import *
+from .get_syslog_server_profile_list import *
 from .get_tacacs_server_profile import *
 from .get_tacacs_server_profile_list import *
 from .get_tag import *
@@ -142,34 +208,51 @@ from .get_tls_service_profile import *
 from .get_tls_service_profile_list import *
 from .get_traffic_steering_rule import *
 from .get_traffic_steering_rule_list import *
-from .get_trusted_certificate_authority_list import *
+from .get_tunnel_interface import *
+from .get_tunnel_interface_list import *
 from .get_url_access_profile import *
 from .get_url_access_profile_list import *
 from .get_url_category import *
 from .get_url_category_list import *
-from .get_url_filtering_category_list import *
 from .get_variable import *
 from .get_variable_list import *
+from .get_vlan_interface import *
+from .get_vlan_interface_list import *
 from .get_vulnerability_protection_profile import *
 from .get_vulnerability_protection_profile_list import *
-from .get_vulnerability_protection_signatures import *
-from .get_vulnerability_protection_signatures_list import *
+from .get_vulnerability_protection_signature import *
+from .get_vulnerability_protection_signature_list import *
 from .get_wildfire_anti_virus_profile import *
 from .get_wildfire_anti_virus_profile_list import *
+from .get_zone import *
+from .get_zone_list import *
+from .get_zone_protection_profile import *
+from .get_zone_protection_profile_list import *
 from .hip_object import *
 from .hip_profile import *
 from .http_header_profile import *
+from .http_server_profile import *
 from .ike_crypto_profile import *
 from .ike_gateway import *
+from .interface_management_profile import *
 from .internal_dns_server import *
 from .ipsec_crypto_profile import *
 from .ipsec_tunnel import *
 from .kerberos_server_profile import *
+from .label import *
+from .layer2_subinterface import *
+from .layer3_subinterface import *
 from .ldap_server_profile import *
+from .link_tag import *
 from .local_user import *
+from .local_user_group import *
+from .log_forwarding_profile import *
+from .logical_router import *
+from .loopback_interface import *
 from .mfa_server import *
 from .nat_rule import *
-from .ocsp_responder import *
+from .ospf_auth_profile import *
+from .pbf_rule import *
 from .profile_group import *
 from .provider import *
 from .qos_policy_rule import *
@@ -177,25 +260,39 @@ from .qos_profile import *
 from .radius_server_profile import *
 from .region import *
 from .remote_network import *
+from .route_access_list import *
+from .route_community_list import *
+from .route_path_access_list import *
+from .route_prefix_list import *
 from .saml_server_profile import *
 from .scep_profile import *
 from .schedule import *
+from .sdwan_error_correction_profile import *
+from .sdwan_path_quality_profile import *
+from .sdwan_rule import *
+from .sdwan_saas_quality_profile import *
+from .sdwan_traffic_distribution_profile import *
 from .security_rule import *
 from .service import *
 from .service_connection import *
 from .service_connection_group import *
 from .service_group import *
 from .snippet import *
+from .syslog_server_profile import *
 from .tacacs_server_profile import *
 from .tag import *
 from .tls_service_profile import *
 from .traffic_steering_rule import *
+from .tunnel_interface import *
 from .url_access_profile import *
 from .url_category import *
 from .variable import *
+from .vlan_interface import *
 from .vulnerability_protection_profile import *
-from .vulnerability_protection_signatures import *
+from .vulnerability_protection_signature import *
 from .wildfire_anti_virus_profile import *
+from .zone import *
+from .zone_protection_profile import *
 from ._inputs import *
 from . import outputs
 
@@ -211,6 +308,14 @@ _utilities.register(
 [
  {
   "pkg": "scm",
+  "mod": "index/address",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/address:Address": "Address"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/addressGroup",
   "fqn": "pulumi_scm",
   "classes": {
@@ -219,10 +324,10 @@ _utilities.register(
  },
  {
   "pkg": "scm",
-  "mod": "index/addressObject",
+  "mod": "index/aggregateEthernetInterface",
   "fqn": "pulumi_scm",
   "classes": {
-   "scm:index/addressObject:AddressObject": "AddressObject"
+   "scm:index/aggregateEthernetInterface:AggregateEthernetInterface": "AggregateEthernetInterface"
   }
  },
  {
@@ -275,14 +380,6 @@ _utilities.register(
  },
  {
   "pkg": "scm",
-  "mod": "index/authenticationPortal",
-  "fqn": "pulumi_scm",
-  "classes": {
-   "scm:index/authenticationPortal:AuthenticationPortal": "AuthenticationPortal"
-  }
- },
- {
-  "pkg": "scm",
   "mod": "index/authenticationProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -303,6 +400,54 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/authenticationSequence:AuthenticationSequence": "AuthenticationSequence"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bgpAddressFamilyProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile": "BgpAddressFamilyProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bgpAuthProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bgpAuthProfile:BgpAuthProfile": "BgpAuthProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bgpFilteringProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bgpFilteringProfile:BgpFilteringProfile": "BgpFilteringProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bgpRedistributionProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bgpRedistributionProfile:BgpRedistributionProfile": "BgpRedistributionProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bgpRouteMap",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bgpRouteMap:BgpRouteMap": "BgpRouteMap"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bgpRouteMapRedistribution",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution": "BgpRouteMapRedistribution"
   }
  },
  {
@@ -339,6 +484,22 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/dhcpInterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/dhcpInterface:DhcpInterface": "DhcpInterface"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/dnsProxy",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/dnsProxy:DnsProxy": "DnsProxy"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/dnsSecurityProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -347,10 +508,34 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/dosProtectionProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/dosProtectionProfile:DosProtectionProfile": "DosProtectionProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/dosProtectionRule",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/dosProtectionRule:DosProtectionRule": "DosProtectionRule"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/dynamicUserGroup",
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/dynamicUserGroup:DynamicUserGroup": "DynamicUserGroup"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/ethernetInterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/ethernetInterface:EthernetInterface": "EthernetInterface"
   }
  },
  {
@@ -403,6 +588,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/httpServerProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/httpServerProfile:HttpServerProfile": "HttpServerProfile"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/ikeCryptoProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -415,6 +608,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/ikeGateway:IkeGateway": "IkeGateway"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/interfaceManagementProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/interfaceManagementProfile:InterfaceManagementProfile": "InterfaceManagementProfile"
   }
  },
  {
@@ -451,6 +652,30 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/label",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/label:Label": "Label"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/layer2Subinterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/layer2Subinterface:Layer2Subinterface": "Layer2Subinterface"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/layer3Subinterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/layer3Subinterface:Layer3Subinterface": "Layer3Subinterface"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/ldapServerProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -459,10 +684,50 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/linkTag",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/linkTag:LinkTag": "LinkTag"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/localUser",
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/localUser:LocalUser": "LocalUser"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/localUserGroup",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/localUserGroup:LocalUserGroup": "LocalUserGroup"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/logForwardingProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/logForwardingProfile:LogForwardingProfile": "LogForwardingProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/logicalRouter",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/logicalRouter:LogicalRouter": "LogicalRouter"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/loopbackInterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/loopbackInterface:LoopbackInterface": "LoopbackInterface"
   }
  },
  {
@@ -483,10 +748,18 @@ _utilities.register(
  },
  {
   "pkg": "scm",
-  "mod": "index/ocspResponder",
+  "mod": "index/ospfAuthProfile",
   "fqn": "pulumi_scm",
   "classes": {
-   "scm:index/ocspResponder:OcspResponder": "OcspResponder"
+   "scm:index/ospfAuthProfile:OspfAuthProfile": "OspfAuthProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/pbfRule",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/pbfRule:PbfRule": "PbfRule"
   }
  },
  {
@@ -539,6 +812,38 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/routeAccessList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/routeAccessList:RouteAccessList": "RouteAccessList"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/routeCommunityList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/routeCommunityList:RouteCommunityList": "RouteCommunityList"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/routePathAccessList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/routePathAccessList:RoutePathAccessList": "RoutePathAccessList"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/routePrefixList",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/routePrefixList:RoutePrefixList": "RoutePrefixList"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/samlServerProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -559,6 +864,46 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/schedule:Schedule": "Schedule"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/sdwanErrorCorrectionProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/sdwanErrorCorrectionProfile:SdwanErrorCorrectionProfile": "SdwanErrorCorrectionProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/sdwanPathQualityProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/sdwanPathQualityProfile:SdwanPathQualityProfile": "SdwanPathQualityProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/sdwanRule",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/sdwanRule:SdwanRule": "SdwanRule"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/sdwanSaasQualityProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile": "SdwanSaasQualityProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/sdwanTrafficDistributionProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/sdwanTrafficDistributionProfile:SdwanTrafficDistributionProfile": "SdwanTrafficDistributionProfile"
   }
  },
  {
@@ -611,6 +956,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/syslogServerProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/syslogServerProfile:SyslogServerProfile": "SyslogServerProfile"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/tacacsServerProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -643,6 +996,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/tunnelInterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/tunnelInterface:TunnelInterface": "TunnelInterface"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/urlAccessProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -667,6 +1028,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/vlanInterface",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/vlanInterface:VlanInterface": "VlanInterface"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/vulnerabilityProtectionProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -675,10 +1044,10 @@ _utilities.register(
  },
  {
   "pkg": "scm",
-  "mod": "index/vulnerabilityProtectionSignatures",
+  "mod": "index/vulnerabilityProtectionSignature",
   "fqn": "pulumi_scm",
   "classes": {
-   "scm:index/vulnerabilityProtectionSignatures:VulnerabilityProtectionSignatures": "VulnerabilityProtectionSignatures"
+   "scm:index/vulnerabilityProtectionSignature:VulnerabilityProtectionSignature": "VulnerabilityProtectionSignature"
   }
  },
  {
@@ -687,6 +1056,22 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/wildfireAntiVirusProfile:WildfireAntiVirusProfile": "WildfireAntiVirusProfile"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/zone",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/zone:Zone": "Zone"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/zoneProtectionProfile",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/zoneProtectionProfile:ZoneProtectionProfile": "ZoneProtectionProfile"
   }
  }
 ]

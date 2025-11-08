@@ -16,123 +16,90 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.TlsServiceProfile;
- * import com.pulumi.scm.TlsServiceProfileArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new TlsServiceProfile("example", TlsServiceProfileArgs.builder()
- *             .folder("Shared")
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
+ * TlsServiceProfile resource
  * 
  */
 @ResourceType(type="scm:index/tlsServiceProfile:TlsServiceProfile")
 public class TlsServiceProfile extends com.pulumi.resources.CustomResource {
     /**
-     * SSL certificate file name. String length must not exceed 255 characters.
+     * Certificate name
      * 
      */
     @Export(name="certificate", refs={String.class}, tree="[0]")
     private Output<String> certificate;
 
     /**
-     * @return SSL certificate file name. String length must not exceed 255 characters.
+     * @return Certificate name
      * 
      */
     public Output<String> certificate() {
         return this.certificate;
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The ProtocolSettings param.
+     * Protocol settings
      * 
      */
     @Export(name="protocolSettings", refs={TlsServiceProfileProtocolSettings.class}, tree="[0]")
     private Output<TlsServiceProfileProtocolSettings> protocolSettings;
 
     /**
-     * @return The ProtocolSettings param.
+     * @return Protocol settings
      * 
      */
     public Output<TlsServiceProfileProtocolSettings> protocolSettings() {
         return this.protocolSettings;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

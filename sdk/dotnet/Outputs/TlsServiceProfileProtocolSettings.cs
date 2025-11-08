@@ -14,59 +14,59 @@ namespace Pulumi.Scm.Outputs
     public sealed class TlsServiceProfileProtocolSettings
     {
         /// <summary>
-        /// Allow authentication SHA1.
+        /// Allow SHA1 authentication?
         /// </summary>
         public readonly bool? AuthAlgoSha1;
         /// <summary>
-        /// Allow authentication SHA256.
+        /// Allow SHA256 authentication?
         /// </summary>
         public readonly bool? AuthAlgoSha256;
         /// <summary>
-        /// Allow authentication SHA384.
+        /// Allow SHA384 authentication?
         /// </summary>
         public readonly bool? AuthAlgoSha384;
         /// <summary>
-        /// Allow algorithm 3DES.
+        /// Allow 3DES algorithm?
         /// </summary>
         public readonly bool? EncAlgo3des;
         /// <summary>
-        /// Allow algorithm AES-128-CBC.
+        /// Allow AES-128-CBC algorithm?
         /// </summary>
         public readonly bool? EncAlgoAes128Cbc;
         /// <summary>
-        /// Allow algorithm AES-128-GCM.
+        /// Allow AES-128-GCM algorithm?
         /// </summary>
         public readonly bool? EncAlgoAes128Gcm;
         /// <summary>
-        /// Allow algorithm AES-256-CBC.
+        /// Allow AES-256-CBC algorithm?
         /// </summary>
         public readonly bool? EncAlgoAes256Cbc;
         /// <summary>
-        /// Allow algorithm AES-256-GCM.
+        /// Allow algorithm AES-256-GCM
         /// </summary>
         public readonly bool? EncAlgoAes256Gcm;
         /// <summary>
-        /// Allow algorithm RC4.
+        /// Allow RC4 algorithm?
         /// </summary>
         public readonly bool? EncAlgoRc4;
         /// <summary>
-        /// Allow algorithm DHE.
+        /// Allow DHE algorithm?
         /// </summary>
         public readonly bool? KeyxchgAlgoDhe;
         /// <summary>
-        /// Allow algorithm ECDHE.
+        /// Allow ECDHE algorithm?
         /// </summary>
         public readonly bool? KeyxchgAlgoEcdhe;
         /// <summary>
-        /// Allow algorithm RSA.
+        /// Allow RSA algorithm?
         /// </summary>
         public readonly bool? KeyxchgAlgoRsa;
         /// <summary>
-        /// The MaxVersion param. String must be one of these: `"tls1-0"`, `"tls1-1"`, `"tls1-2"`, `"tls1-3"`, `"max"`. Default: `"max"`.
+        /// Maximum TLS version
         /// </summary>
         public readonly string? MaxVersion;
         /// <summary>
-        /// The MinVersion param. String must be one of these: `"tls1-0"`, `"tls1-1"`, `"tls1-2"`. Default: `"tls1-0"`.
+        /// Minimum TLS version
         /// </summary>
         public readonly string? MinVersion;
 

@@ -18,29 +18,29 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
     public static final ScheduleScheduleTypeRecurringArgs Empty = new ScheduleScheduleTypeRecurringArgs();
 
     /**
-     * The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+     * Daily
      * 
      */
-    @Import(name="dailyLists")
-    private @Nullable Output<List<String>> dailyLists;
+    @Import(name="dailies")
+    private @Nullable Output<List<String>> dailies;
 
     /**
-     * @return The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+     * @return Daily
      * 
      */
-    public Optional<Output<List<String>>> dailyLists() {
-        return Optional.ofNullable(this.dailyLists);
+    public Optional<Output<List<String>>> dailies() {
+        return Optional.ofNullable(this.dailies);
     }
 
     /**
-     * The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+     * Weekly
      * 
      */
     @Import(name="weekly")
     private @Nullable Output<ScheduleScheduleTypeRecurringWeeklyArgs> weekly;
 
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+     * @return Weekly
      * 
      */
     public Optional<Output<ScheduleScheduleTypeRecurringWeeklyArgs>> weekly() {
@@ -50,7 +50,7 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
     private ScheduleScheduleTypeRecurringArgs() {}
 
     private ScheduleScheduleTypeRecurringArgs(ScheduleScheduleTypeRecurringArgs $) {
-        this.dailyLists = $.dailyLists;
+        this.dailies = $.dailies;
         this.weekly = $.weekly;
     }
 
@@ -73,38 +73,38 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
         }
 
         /**
-         * @param dailyLists The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+         * @param dailies Daily
          * 
          * @return builder
          * 
          */
-        public Builder dailyLists(@Nullable Output<List<String>> dailyLists) {
-            $.dailyLists = dailyLists;
+        public Builder dailies(@Nullable Output<List<String>> dailies) {
+            $.dailies = dailies;
             return this;
         }
 
         /**
-         * @param dailyLists The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+         * @param dailies Daily
          * 
          * @return builder
          * 
          */
-        public Builder dailyLists(List<String> dailyLists) {
-            return dailyLists(Output.of(dailyLists));
+        public Builder dailies(List<String> dailies) {
+            return dailies(Output.of(dailies));
         }
 
         /**
-         * @param dailyLists The DailyList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `daily`, `weekly`
+         * @param dailies Daily
          * 
          * @return builder
          * 
          */
-        public Builder dailyLists(String... dailyLists) {
-            return dailyLists(List.of(dailyLists));
+        public Builder dailies(String... dailies) {
+            return dailies(List.of(dailies));
         }
 
         /**
-         * @param weekly The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+         * @param weekly Weekly
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class ScheduleScheduleTypeRecurringArgs extends com.pulumi.resource
         }
 
         /**
-         * @param weekly The Weekly param. Ensure that only one of the following is specified: `daily`, `weekly`
+         * @param weekly Weekly
          * 
          * @return builder
          * 

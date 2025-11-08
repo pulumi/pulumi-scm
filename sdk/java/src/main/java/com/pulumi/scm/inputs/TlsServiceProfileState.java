@@ -17,14 +17,14 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
     public static final TlsServiceProfileState Empty = new TlsServiceProfileState();
 
     /**
-     * SSL certificate file name. String length must not exceed 255 characters.
+     * Certificate name
      * 
      */
     @Import(name="certificate")
     private @Nullable Output<String> certificate;
 
     /**
-     * @return SSL certificate file name. String length must not exceed 255 characters.
+     * @return Certificate name
      * 
      */
     public Optional<Output<String>> certificate() {
@@ -32,14 +32,14 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -47,14 +47,14 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -62,14 +62,14 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * @return TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      * 
      */
     public Optional<Output<String>> name() {
@@ -77,14 +77,14 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The ProtocolSettings param.
+     * Protocol settings
      * 
      */
     @Import(name="protocolSettings")
     private @Nullable Output<TlsServiceProfileProtocolSettingsArgs> protocolSettings;
 
     /**
-     * @return The ProtocolSettings param.
+     * @return Protocol settings
      * 
      */
     public Optional<Output<TlsServiceProfileProtocolSettingsArgs>> protocolSettings() {
@@ -92,14 +92,14 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -144,7 +144,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param certificate SSL certificate file name. String length must not exceed 255 characters.
+         * @param certificate Certificate name
          * 
          * @return builder
          * 
@@ -155,7 +155,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param certificate SSL certificate file name. String length must not exceed 255 characters.
+         * @param certificate Certificate name
          * 
          * @return builder
          * 
@@ -165,7 +165,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -176,7 +176,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -186,7 +186,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -197,7 +197,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -207,7 +207,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+         * @param name TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
          * 
          * @return builder
          * 
@@ -218,7 +218,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param name SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+         * @param name TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param protocolSettings The ProtocolSettings param.
+         * @param protocolSettings Protocol settings
          * 
          * @return builder
          * 
@@ -239,7 +239,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param protocolSettings The ProtocolSettings param.
+         * @param protocolSettings Protocol settings
          * 
          * @return builder
          * 
@@ -249,7 +249,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -260,7 +260,7 @@ public final class TlsServiceProfileState extends com.pulumi.resources.ResourceA
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

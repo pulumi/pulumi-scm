@@ -26,7 +26,7 @@ class GetAuthenticationRuleResult:
     """
     A collection of values returned by getAuthenticationRule.
     """
-    def __init__(__self__, authentication_enforcement=None, categories=None, description=None, destination_hips=None, destinations=None, disabled=None, froms=None, group_tag=None, hip_profiles=None, id=None, log_authentication_timeout=None, log_setting=None, name=None, negate_destination=None, negate_source=None, services=None, source_hips=None, source_users=None, sources=None, tags=None, tfid=None, timeout=None, tos=None):
+    def __init__(__self__, authentication_enforcement=None, categories=None, description=None, destination_hips=None, destinations=None, device=None, disabled=None, folder=None, froms=None, group_tag=None, hip_profiles=None, id=None, log_authentication_timeout=None, log_setting=None, name=None, negate_destination=None, negate_source=None, services=None, snippet=None, source_hips=None, source_users=None, sources=None, tags=None, tfid=None, timeout=None, tos=None):
         if authentication_enforcement and not isinstance(authentication_enforcement, str):
             raise TypeError("Expected argument 'authentication_enforcement' to be a str")
         pulumi.set(__self__, "authentication_enforcement", authentication_enforcement)
@@ -42,9 +42,15 @@ class GetAuthenticationRuleResult:
         if destinations and not isinstance(destinations, list):
             raise TypeError("Expected argument 'destinations' to be a list")
         pulumi.set(__self__, "destinations", destinations)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if disabled and not isinstance(disabled, bool):
             raise TypeError("Expected argument 'disabled' to be a bool")
         pulumi.set(__self__, "disabled", disabled)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if froms and not isinstance(froms, list):
             raise TypeError("Expected argument 'froms' to be a list")
         pulumi.set(__self__, "froms", froms)
@@ -75,6 +81,9 @@ class GetAuthenticationRuleResult:
         if services and not isinstance(services, list):
             raise TypeError("Expected argument 'services' to be a list")
         pulumi.set(__self__, "services", services)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if source_hips and not isinstance(source_hips, list):
             raise TypeError("Expected argument 'source_hips' to be a list")
         pulumi.set(__self__, "source_hips", source_hips)
@@ -101,7 +110,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="authenticationEnforcement")
     def authentication_enforcement(self) -> _builtins.str:
         """
-        the authentication profile name to apply to authentication rule.
+        The authentication profile name
         """
         return pulumi.get(self, "authentication_enforcement")
 
@@ -109,7 +118,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def categories(self) -> Sequence[_builtins.str]:
         """
-        The Categories param.
+        The destination URL categories
         """
         return pulumi.get(self, "categories")
 
@@ -117,7 +126,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        The description of the authentication rule
         """
         return pulumi.get(self, "description")
 
@@ -125,7 +134,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Sequence[_builtins.str]:
         """
-        The DestinationHips param.
+        The destination Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "destination_hips")
 
@@ -133,23 +142,39 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def destinations(self) -> Sequence[_builtins.str]:
         """
-        The Destinations param.
+        The destination addresses
         """
         return pulumi.get(self, "destinations")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        Device
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def disabled(self) -> _builtins.bool:
         """
-        The Disabled param. Default: `false`.
+        Is the authentication rule disabled?
         """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        Folder
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
         """
-        The Froms param.
+        The source security zones
         """
         return pulumi.get(self, "froms")
 
@@ -157,7 +182,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> _builtins.str:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -165,7 +190,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="hipProfiles")
     def hip_profiles(self) -> Sequence[_builtins.str]:
         """
-        The HipProfiles param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "hip_profiles")
 
@@ -173,7 +198,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the authentication rule
         """
         return pulumi.get(self, "id")
 
@@ -181,7 +206,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="logAuthenticationTimeout")
     def log_authentication_timeout(self) -> _builtins.bool:
         """
-        The LogAuthenticationTimeout param. Default: `false`.
+        Log authentication timeouts?
         """
         return pulumi.get(self, "log_authentication_timeout")
 
@@ -189,7 +214,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
         """
-        The LogSetting param.
+        The log forwarding profile name
         """
         return pulumi.get(self, "log_setting")
 
@@ -197,7 +222,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        The name of the authentication rule
         """
         return pulumi.get(self, "name")
 
@@ -205,7 +230,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
         """
-        The NegateDestination param. Default: `false`.
+        Are the destination addresses negated?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -213,7 +238,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
         """
-        The NegateSource param. Default: `false`.
+        Are the source addresses negated?
         """
         return pulumi.get(self, "negate_source")
 
@@ -221,15 +246,23 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
         """
-        The Services param.
+        The destination ports
         """
         return pulumi.get(self, "services")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        Snippet
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Sequence[_builtins.str]:
         """
-        The SourceHips param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "source_hips")
 
@@ -237,7 +270,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
         """
-        The SourceUsers param.
+        The source users
         """
         return pulumi.get(self, "source_users")
 
@@ -245,7 +278,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
         """
-        The Sources param.
+        The source addresses
         """
         return pulumi.get(self, "sources")
 
@@ -253,7 +286,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
         """
-        The Tags param.
+        The authentication rule tags
         """
         return pulumi.get(self, "tags")
 
@@ -266,7 +299,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def timeout(self) -> _builtins.int:
         """
-        The Timeout param. Value must be between 1 and 1440.
+        The authentication session timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
@@ -274,7 +307,7 @@ class GetAuthenticationRuleResult:
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
         """
-        The Tos param.
+        The destination security zones
         """
         return pulumi.get(self, "tos")
 
@@ -290,7 +323,9 @@ class AwaitableGetAuthenticationRuleResult(GetAuthenticationRuleResult):
             description=self.description,
             destination_hips=self.destination_hips,
             destinations=self.destinations,
+            device=self.device,
             disabled=self.disabled,
+            folder=self.folder,
             froms=self.froms,
             group_tag=self.group_tag,
             hip_profiles=self.hip_profiles,
@@ -301,6 +336,7 @@ class AwaitableGetAuthenticationRuleResult(GetAuthenticationRuleResult):
             negate_destination=self.negate_destination,
             negate_source=self.negate_source,
             services=self.services,
+            snippet=self.snippet,
             source_hips=self.source_hips,
             source_users=self.source_users,
             sources=self.sources,
@@ -311,24 +347,18 @@ class AwaitableGetAuthenticationRuleResult(GetAuthenticationRuleResult):
 
 
 def get_authentication_rule(id: Optional[_builtins.str] = None,
+                            name: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAuthenticationRuleResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_authentication_rule(id="1234-56-789")
-    ```
+    AuthenticationRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the authentication rule
+    :param _builtins.str name: The name of the authentication rule
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getAuthenticationRule:getAuthenticationRule', __args__, opts=opts, typ=GetAuthenticationRuleResult).value
 
@@ -338,7 +368,9 @@ def get_authentication_rule(id: Optional[_builtins.str] = None,
         description=pulumi.get(__ret__, 'description'),
         destination_hips=pulumi.get(__ret__, 'destination_hips'),
         destinations=pulumi.get(__ret__, 'destinations'),
+        device=pulumi.get(__ret__, 'device'),
         disabled=pulumi.get(__ret__, 'disabled'),
+        folder=pulumi.get(__ret__, 'folder'),
         froms=pulumi.get(__ret__, 'froms'),
         group_tag=pulumi.get(__ret__, 'group_tag'),
         hip_profiles=pulumi.get(__ret__, 'hip_profiles'),
@@ -349,6 +381,7 @@ def get_authentication_rule(id: Optional[_builtins.str] = None,
         negate_destination=pulumi.get(__ret__, 'negate_destination'),
         negate_source=pulumi.get(__ret__, 'negate_source'),
         services=pulumi.get(__ret__, 'services'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         source_hips=pulumi.get(__ret__, 'source_hips'),
         source_users=pulumi.get(__ret__, 'source_users'),
         sources=pulumi.get(__ret__, 'sources'),
@@ -357,24 +390,18 @@ def get_authentication_rule(id: Optional[_builtins.str] = None,
         timeout=pulumi.get(__ret__, 'timeout'),
         tos=pulumi.get(__ret__, 'tos'))
 def get_authentication_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationRuleResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_authentication_rule(id="1234-56-789")
-    ```
+    AuthenticationRule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the authentication rule
+    :param _builtins.str name: The name of the authentication rule
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getAuthenticationRule:getAuthenticationRule', __args__, opts=opts, typ=GetAuthenticationRuleResult)
     return __ret__.apply(lambda __response__: GetAuthenticationRuleResult(
@@ -383,7 +410,9 @@ def get_authentication_rule_output(id: Optional[pulumi.Input[_builtins.str]] = N
         description=pulumi.get(__response__, 'description'),
         destination_hips=pulumi.get(__response__, 'destination_hips'),
         destinations=pulumi.get(__response__, 'destinations'),
+        device=pulumi.get(__response__, 'device'),
         disabled=pulumi.get(__response__, 'disabled'),
+        folder=pulumi.get(__response__, 'folder'),
         froms=pulumi.get(__response__, 'froms'),
         group_tag=pulumi.get(__response__, 'group_tag'),
         hip_profiles=pulumi.get(__response__, 'hip_profiles'),
@@ -394,6 +423,7 @@ def get_authentication_rule_output(id: Optional[pulumi.Input[_builtins.str]] = N
         negate_destination=pulumi.get(__response__, 'negate_destination'),
         negate_source=pulumi.get(__response__, 'negate_source'),
         services=pulumi.get(__response__, 'services'),
+        snippet=pulumi.get(__response__, 'snippet'),
         source_hips=pulumi.get(__response__, 'source_hips'),
         source_users=pulumi.get(__response__, 'source_users'),
         sources=pulumi.get(__response__, 'sources'),

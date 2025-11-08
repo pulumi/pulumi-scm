@@ -13,26 +13,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureSignatureStandardAndCondition {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The OrConditions param.
+     * @return Or condition
      * 
      */
     private List<GetAntiSpywareSignatureSignatureStandardAndConditionOrCondition> orConditions;
 
     private GetAntiSpywareSignatureSignatureStandardAndCondition() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The OrConditions param.
+     * @return Or condition
      * 
      */
     public List<GetAntiSpywareSignatureSignatureStandardAndConditionOrCondition> orConditions() {

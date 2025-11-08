@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectHostInfoResult
     {
         /// <summary>
-        /// The Criteria param.
+        /// Criteria
         /// </summary>
         public readonly Outputs.GetHipObjectHostInfoCriteriaResult Criteria;
 

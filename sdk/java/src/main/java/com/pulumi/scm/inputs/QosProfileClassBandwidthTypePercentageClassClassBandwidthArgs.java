@@ -16,14 +16,14 @@ public final class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
     public static final QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs Empty = new QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs();
 
     /**
-     * guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+     * guaranteed sending bandwidth in percentage
      * 
      */
     @Import(name="egressGuaranteed")
     private @Nullable Output<Integer> egressGuaranteed;
 
     /**
-     * @return guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return guaranteed sending bandwidth in percentage
      * 
      */
     public Optional<Output<Integer>> egressGuaranteed() {
@@ -31,14 +31,14 @@ public final class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
     }
 
     /**
-     * max sending bandwidth in percentage. Value must be between 0 and 100.
+     * max sending bandwidth in percentage
      * 
      */
     @Import(name="egressMax")
     private @Nullable Output<Integer> egressMax;
 
     /**
-     * @return max sending bandwidth in percentage. Value must be between 0 and 100.
+     * @return max sending bandwidth in percentage
      * 
      */
     public Optional<Output<Integer>> egressMax() {
@@ -71,7 +71,7 @@ public final class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
         }
 
         /**
-         * @param egressGuaranteed guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+         * @param egressGuaranteed guaranteed sending bandwidth in percentage
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
         }
 
         /**
-         * @param egressGuaranteed guaranteed sending bandwidth in percentage. Value must be between 0 and 100.
+         * @param egressGuaranteed guaranteed sending bandwidth in percentage
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
         }
 
         /**
-         * @param egressMax max sending bandwidth in percentage. Value must be between 0 and 100.
+         * @param egressMax max sending bandwidth in percentage
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class QosProfileClassBandwidthTypePercentageClassClassBandwidthArgs
         }
 
         /**
-         * @param egressMax max sending bandwidth in percentage. Value must be between 0 and 100.
+         * @param egressMax max sending bandwidth in percentage
          * 
          * @return builder
          * 

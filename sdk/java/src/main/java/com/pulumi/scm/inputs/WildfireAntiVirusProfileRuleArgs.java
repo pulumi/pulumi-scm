@@ -17,14 +17,14 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
     public static final WildfireAntiVirusProfileRuleArgs Empty = new WildfireAntiVirusProfileRuleArgs();
 
     /**
-     * The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+     * Analysis
      * 
      */
     @Import(name="analysis")
     private @Nullable Output<String> analysis;
 
     /**
-     * @return The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+     * @return Analysis
      * 
      */
     public Optional<Output<String>> analysis() {
@@ -32,14 +32,14 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
     }
 
     /**
-     * The Applications param.
+     * Application
      * 
      */
     @Import(name="applications")
     private @Nullable Output<List<String>> applications;
 
     /**
-     * @return The Applications param.
+     * @return Application
      * 
      */
     public Optional<Output<List<String>>> applications() {
@@ -47,14 +47,14 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
     }
 
     /**
-     * The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+     * Direction
      * 
      */
     @Import(name="direction")
     private @Nullable Output<String> direction;
 
     /**
-     * @return The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+     * @return Direction
      * 
      */
     public Optional<Output<String>> direction() {
@@ -62,14 +62,14 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
     }
 
     /**
-     * The FileTypes param.
+     * File type
      * 
      */
     @Import(name="fileTypes")
     private @Nullable Output<List<String>> fileTypes;
 
     /**
-     * @return The FileTypes param.
+     * @return File type
      * 
      */
     public Optional<Output<List<String>>> fileTypes() {
@@ -77,14 +77,14 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -120,7 +120,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param analysis The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+         * @param analysis Analysis
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param analysis The Analysis param. String must be one of these: `&#34;public-cloud&#34;`, `&#34;private-cloud&#34;`.
+         * @param analysis Analysis
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param applications The Applications param.
+         * @param applications Application
          * 
          * @return builder
          * 
@@ -152,7 +152,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param applications The Applications param.
+         * @param applications Application
          * 
          * @return builder
          * 
@@ -162,7 +162,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param applications The Applications param.
+         * @param applications Application
          * 
          * @return builder
          * 
@@ -172,7 +172,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param direction The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+         * @param direction Direction
          * 
          * @return builder
          * 
@@ -183,7 +183,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param direction The Direction param. String must be one of these: `&#34;download&#34;`, `&#34;upload&#34;`, `&#34;both&#34;`.
+         * @param direction Direction
          * 
          * @return builder
          * 
@@ -193,7 +193,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param fileTypes The FileTypes param.
+         * @param fileTypes File type
          * 
          * @return builder
          * 
@@ -204,7 +204,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param fileTypes The FileTypes param.
+         * @param fileTypes File type
          * 
          * @return builder
          * 
@@ -214,7 +214,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param fileTypes The FileTypes param.
+         * @param fileTypes File type
          * 
          * @return builder
          * 
@@ -224,7 +224,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -235,7 +235,7 @@ public final class WildfireAntiVirusProfileRuleArgs extends com.pulumi.resources
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 

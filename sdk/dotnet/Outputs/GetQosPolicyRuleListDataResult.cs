@@ -14,29 +14,42 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosPolicyRuleListDataResult
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleListDataActionResult Action;
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DscpTos param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Dscp tos
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleListDataDscpTosResult DscpTos;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Schedule param.
+        /// Schedule
         /// </summary>
         public readonly string Schedule;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetQosPolicyRuleListDataResult(
@@ -44,20 +57,32 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
+            string device,
+
             Outputs.GetQosPolicyRuleListDataDscpTosResult dscpTos,
+
+            string folder,
 
             string id,
 
             string name,
 
-            string schedule)
+            string schedule,
+
+            string snippet,
+
+            string tfid)
         {
             Action = action;
             Description = description;
+            Device = device;
             DscpTos = dscpTos;
+            Folder = folder;
             Id = id;
             Name = name;
             Schedule = schedule;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

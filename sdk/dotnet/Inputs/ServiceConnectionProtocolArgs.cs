@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ServiceConnectionProtocolArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Bgp param.
+        /// Bgp
         /// </summary>
         [Input("bgp")]
         public Input<Inputs.ServiceConnectionProtocolBgpArgs>? Bgp { get; set; }

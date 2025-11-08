@@ -15,111 +15,108 @@ import com.pulumi.scm.outputs.RadiusServerProfileServer;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
+ * RadiusServerProfile resource
  * 
  */
 @ResourceType(type="scm:index/radiusServerProfile:RadiusServerProfile")
 public class RadiusServerProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * (Internal use) Encrypted values returned from the API.
-     * 
-     */
-    @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
-    private Output<Map<String,String>> encryptedValues;
-
-    /**
-     * @return (Internal use) Encrypted values returned from the API.
-     * 
-     */
-    public Output<Map<String,String>> encryptedValues() {
-        return this.encryptedValues;
-    }
-    /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Protocol param.
+     * The name of the RADIUS server profile
+     * 
+     */
+    @Export(name="name", refs={String.class}, tree="[0]")
+    private Output<String> name;
+
+    /**
+     * @return The name of the RADIUS server profile
+     * 
+     */
+    public Output<String> name() {
+        return this.name;
+    }
+    /**
+     * The RADIUS authentication protocol
      * 
      */
     @Export(name="protocol", refs={RadiusServerProfileProtocol.class}, tree="[0]")
-    private Output</* @Nullable */ RadiusServerProfileProtocol> protocol;
+    private Output<RadiusServerProfileProtocol> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return The RADIUS authentication protocol
      * 
      */
-    public Output<Optional<RadiusServerProfileProtocol>> protocol() {
-        return Codegen.optional(this.protocol);
+    public Output<RadiusServerProfileProtocol> protocol() {
+        return this.protocol;
     }
     /**
-     * The Retries param. Value must be between 1 and 5.
+     * The number of RADIUS server retries
      * 
      */
     @Export(name="retries", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> retries;
 
     /**
-     * @return The Retries param. Value must be between 1 and 5.
+     * @return The number of RADIUS server retries
      * 
      */
     public Output<Optional<Integer>> retries() {
         return Codegen.optional(this.retries);
     }
     /**
-     * The Servers param.
+     * Server
      * 
      */
     @Export(name="servers", refs={List.class,RadiusServerProfileServer.class}, tree="[0,1]")
     private Output<List<RadiusServerProfileServer>> servers;
 
     /**
-     * @return The Servers param.
+     * @return Server
      * 
      */
     public Output<List<RadiusServerProfileServer>> servers() {
         return this.servers;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -132,14 +129,14 @@ public class RadiusServerProfile extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Timeout param. Value must be between 1 and 120.
+     * The RADIUS server authentication timeout (seconds)
      * 
      */
     @Export(name="timeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> timeout;
 
     /**
-     * @return The Timeout param. Value must be between 1 and 120.
+     * @return The RADIUS server authentication timeout (seconds)
      * 
      */
     public Output<Optional<Integer>> timeout() {
@@ -185,9 +182,6 @@ public class RadiusServerProfile extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
-            .additionalSecretOutputs(List.of(
-                "encryptedValues"
-            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

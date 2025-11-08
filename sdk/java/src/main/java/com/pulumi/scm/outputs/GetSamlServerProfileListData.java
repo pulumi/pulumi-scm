@@ -13,110 +13,162 @@ import java.util.Objects;
 @CustomType
 public final class GetSamlServerProfileListData {
     /**
-     * @return The Certificate param. String length must not exceed 63 characters.
+     * @return The identity provider certificate
      * 
      */
     private String certificate;
     /**
-     * @return The EntityId param. String length must be between 1 and 1024 characters.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The identity provider ID
      * 
      */
     private String entityId;
     /**
-     * @return UUID of the resource.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the SAML server profile
      * 
      */
     private String id;
     /**
-     * @return The MaxClockSkew param. Value must be between 1 and 900.
+     * @return Maxiumum clock skew
      * 
      */
     private Integer maxClockSkew;
     /**
-     * @return The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return The name of the SAML server profile
+     * 
+     */
+    private String name;
+    /**
+     * @return SAML HTTP binding for SLO requests to the identity provider
      * 
      */
     private String sloBindings;
     /**
-     * @return The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return SAML HTTP binding for SSO requests to the identity provider
      * 
      */
     private String ssoBindings;
     /**
-     * @return The SsoUrl param. String length must be between 1 and 255 characters.
+     * @return Identity provider SSO URL
      * 
      */
     private String ssoUrl;
+    private String tfid;
     /**
-     * @return The ValidateIdpCertificate param.
+     * @return Validate the identity provider certificate?
      * 
      */
     private Boolean validateIdpCertificate;
     /**
-     * @return The WantAuthRequestsSigned param.
+     * @return Sign SAML message to the identity provider?
      * 
      */
     private Boolean wantAuthRequestsSigned;
 
     private GetSamlServerProfileListData() {}
     /**
-     * @return The Certificate param. String length must not exceed 63 characters.
+     * @return The identity provider certificate
      * 
      */
     public String certificate() {
         return this.certificate;
     }
     /**
-     * @return The EntityId param. String length must be between 1 and 1024 characters.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The identity provider ID
      * 
      */
     public String entityId() {
         return this.entityId;
     }
     /**
-     * @return UUID of the resource.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the SAML server profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The MaxClockSkew param. Value must be between 1 and 900.
+     * @return Maxiumum clock skew
      * 
      */
     public Integer maxClockSkew() {
         return this.maxClockSkew;
     }
     /**
-     * @return The SloBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return The name of the SAML server profile
+     * 
+     */
+    public String name() {
+        return this.name;
+    }
+    /**
+     * @return SAML HTTP binding for SLO requests to the identity provider
      * 
      */
     public String sloBindings() {
         return this.sloBindings;
     }
     /**
-     * @return The SsoBindings param. String must be one of these: `&#34;post&#34;`, `&#34;redirect&#34;`.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return SAML HTTP binding for SSO requests to the identity provider
      * 
      */
     public String ssoBindings() {
         return this.ssoBindings;
     }
     /**
-     * @return The SsoUrl param. String length must be between 1 and 255 characters.
+     * @return Identity provider SSO URL
      * 
      */
     public String ssoUrl() {
         return this.ssoUrl;
     }
+    public String tfid() {
+        return this.tfid;
+    }
     /**
-     * @return The ValidateIdpCertificate param.
+     * @return Validate the identity provider certificate?
      * 
      */
     public Boolean validateIdpCertificate() {
         return this.validateIdpCertificate;
     }
     /**
-     * @return The WantAuthRequestsSigned param.
+     * @return Sign SAML message to the identity provider?
      * 
      */
     public Boolean wantAuthRequestsSigned() {
@@ -133,24 +185,34 @@ public final class GetSamlServerProfileListData {
     @CustomType.Builder
     public static final class Builder {
         private String certificate;
+        private String device;
         private String entityId;
+        private String folder;
         private String id;
         private Integer maxClockSkew;
+        private String name;
         private String sloBindings;
+        private String snippet;
         private String ssoBindings;
         private String ssoUrl;
+        private String tfid;
         private Boolean validateIdpCertificate;
         private Boolean wantAuthRequestsSigned;
         public Builder() {}
         public Builder(GetSamlServerProfileListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.certificate = defaults.certificate;
+    	      this.device = defaults.device;
     	      this.entityId = defaults.entityId;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.maxClockSkew = defaults.maxClockSkew;
+    	      this.name = defaults.name;
     	      this.sloBindings = defaults.sloBindings;
+    	      this.snippet = defaults.snippet;
     	      this.ssoBindings = defaults.ssoBindings;
     	      this.ssoUrl = defaults.ssoUrl;
+    	      this.tfid = defaults.tfid;
     	      this.validateIdpCertificate = defaults.validateIdpCertificate;
     	      this.wantAuthRequestsSigned = defaults.wantAuthRequestsSigned;
         }
@@ -164,11 +226,27 @@ public final class GetSamlServerProfileListData {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder entityId(String entityId) {
             if (entityId == null) {
               throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "entityId");
             }
             this.entityId = entityId;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -188,11 +266,27 @@ public final class GetSamlServerProfileListData {
             return this;
         }
         @CustomType.Setter
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "name");
+            }
+            this.name = name;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sloBindings(String sloBindings) {
             if (sloBindings == null) {
               throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "sloBindings");
             }
             this.sloBindings = sloBindings;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "snippet");
+            }
+            this.snippet = snippet;
             return this;
         }
         @CustomType.Setter
@@ -209,6 +303,14 @@ public final class GetSamlServerProfileListData {
               throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "ssoUrl");
             }
             this.ssoUrl = ssoUrl;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetSamlServerProfileListData", "tfid");
+            }
+            this.tfid = tfid;
             return this;
         }
         @CustomType.Setter
@@ -230,12 +332,17 @@ public final class GetSamlServerProfileListData {
         public GetSamlServerProfileListData build() {
             final var _resultValue = new GetSamlServerProfileListData();
             _resultValue.certificate = certificate;
+            _resultValue.device = device;
             _resultValue.entityId = entityId;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.maxClockSkew = maxClockSkew;
+            _resultValue.name = name;
             _resultValue.sloBindings = sloBindings;
+            _resultValue.snippet = snippet;
             _resultValue.ssoBindings = ssoBindings;
             _resultValue.ssoUrl = ssoUrl;
+            _resultValue.tfid = tfid;
             _resultValue.validateIdpCertificate = validateIdpCertificate;
             _resultValue.wantAuthRequestsSigned = wantAuthRequestsSigned;
             return _resultValue;

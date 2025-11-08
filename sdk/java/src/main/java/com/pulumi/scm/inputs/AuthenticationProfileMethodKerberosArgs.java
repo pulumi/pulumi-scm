@@ -16,14 +16,14 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
     public static final AuthenticationProfileMethodKerberosArgs Empty = new AuthenticationProfileMethodKerberosArgs();
 
     /**
-     * The Realm param.
+     * Realm
      * 
      */
     @Import(name="realm")
     private @Nullable Output<String> realm;
 
     /**
-     * @return The Realm param.
+     * @return Realm
      * 
      */
     public Optional<Output<String>> realm() {
@@ -31,14 +31,14 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
     }
 
     /**
-     * The ServerProfile param.
+     * Server profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return The ServerProfile param.
+     * @return Server profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -71,7 +71,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param realm The Realm param.
+         * @param realm Realm
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param realm The Realm param.
+         * @param realm Realm
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param serverProfile The ServerProfile param.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param serverProfile The ServerProfile param.
+         * @param serverProfile Server profile
          * 
          * @return builder
          * 

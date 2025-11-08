@@ -14,39 +14,39 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRemoteNetworkListDataProtocolBgpResult
     {
         /// <summary>
-        /// The DoNotExportRoutes param.
+        /// Do not export routes?
         /// </summary>
         public readonly bool DoNotExportRoutes;
         /// <summary>
-        /// to setup bgp protocol, enable need to set as true.
+        /// Enable BGP peering?
         /// </summary>
         public readonly bool Enable;
         /// <summary>
-        /// The LocalIpAddress param.
+        /// Local peer IP address
         /// </summary>
         public readonly string LocalIpAddress;
         /// <summary>
-        /// The OriginateDefaultRoute param.
+        /// Originate default route?
         /// </summary>
         public readonly bool OriginateDefaultRoute;
         /// <summary>
-        /// The PeerAs param.
+        /// BGP peer ASN
         /// </summary>
         public readonly string PeerAs;
         /// <summary>
-        /// The PeerIpAddress param.
+        /// Remote peer IP address
         /// </summary>
         public readonly string PeerIpAddress;
         /// <summary>
-        /// Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `"exchange-v4-over-v4"`, `"exchange-v4-v6-over-v4"`, `"exchange-v4-over-v4-v6-over-v6"`, `"exchange-v6-over-v6"`.
+        /// Route exchange types
         /// </summary>
         public readonly string PeeringType;
         /// <summary>
-        /// The Secret param.
+        /// BGP peering secret
         /// </summary>
         public readonly string Secret;
         /// <summary>
-        /// The SummarizeMobileUserRoutes param.
+        /// Summarize mobile user routes?
         /// </summary>
         public readonly bool SummarizeMobileUserRoutes;
 

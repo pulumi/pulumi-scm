@@ -5,11 +5,10 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetNatRuleDestinationTranslation;
-import com.pulumi.scm.outputs.GetNatRuleDynamicDestinationTranslation;
+import com.pulumi.scm.outputs.GetNatRuleDnsRewrite;
 import com.pulumi.scm.outputs.GetNatRuleSourceTranslation;
-import com.pulumi.scm.outputs.GetNatRuleTarget;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,262 +16,262 @@ import java.util.Objects;
 @CustomType
 public final class GetNatRuleResult {
     /**
-     * @return The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+     * @return Active active device binding
      * 
      */
     private String activeActiveDeviceBinding;
     /**
-     * @return The Description param.
+     * @return NAT rule description
      * 
      */
     private String description;
     /**
-     * @return Static destination translation parameter.
-     * 
-     */
-    private GetNatRuleDestinationTranslation destinationTranslation;
-    /**
-     * @return The destination address(es).
+     * @return Destination address(es) of the original packet
      * 
      */
     private List<String> destinations;
     /**
-     * @return The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The device in which the resource is defined
      * 
      */
     private String device;
     /**
-     * @return The Disabled param.
+     * @return Disable NAT rule?
      * 
      */
     private Boolean disabled;
     /**
-     * @return Dynamic destination translation parameter.
+     * @return Distribution method
      * 
      */
-    private GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation;
+    private String distribution;
     /**
-     * @return The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return DNS rewrite
+     * 
+     */
+    private GetNatRuleDnsRewrite dnsRewrite;
+    /**
+     * @return The folder in which the resource is defined
      * 
      */
     private String folder;
     /**
-     * @return The source security zone(s).
+     * @return Source zone(s) of the original packet
      * 
      */
     private List<String> froms;
     /**
-     * @return The GroupTag param.
-     * 
-     */
-    private String groupTag;
-    /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return NAT rule name
      * 
      */
     private String name;
     /**
-     * @return The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+     * @return NAT type
      * 
      */
     private String natType;
     /**
-     * @return The Service param.
+     * @return The service of the original packet
      * 
      */
     private String service;
     /**
-     * @return The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The snippet in which the resource is defined
      * 
      */
     private String snippet;
     /**
-     * @return The SourceTranslation param.
+     * @return Source translation
      * 
      */
     private GetNatRuleSourceTranslation sourceTranslation;
     /**
-     * @return The source address(es).
+     * @return Source address(es) of the original packet
      * 
      */
     private List<String> sources;
     /**
-     * @return The Tags param.
+     * @return NAT rule tags
      * 
      */
     private List<String> tags;
-    /**
-     * @return The Target param.
-     * 
-     */
-    private GetNatRuleTarget target;
     private String tfid;
     /**
-     * @return The ToInterface param.
+     * @return Destination interface of the original packet
      * 
      */
     private String toInterface;
     /**
-     * @return The destination security zone(s).
+     * @return Destination zone of the original packet
      * 
      */
     private List<String> tos;
+    /**
+     * @return Translated destination IP address
+     * 
+     */
+    private String translatedAddressSingle;
+    /**
+     * @return Translated destination port
+     * 
+     */
+    private Integer translatedPort;
 
     private GetNatRuleResult() {}
     /**
-     * @return The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+     * @return Active active device binding
      * 
      */
     public String activeActiveDeviceBinding() {
         return this.activeActiveDeviceBinding;
     }
     /**
-     * @return The Description param.
+     * @return NAT rule description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return Static destination translation parameter.
-     * 
-     */
-    public GetNatRuleDestinationTranslation destinationTranslation() {
-        return this.destinationTranslation;
-    }
-    /**
-     * @return The destination address(es).
+     * @return Destination address(es) of the original packet
      * 
      */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * @return The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The device in which the resource is defined
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The Disabled param.
+     * @return Disable NAT rule?
      * 
      */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * @return Dynamic destination translation parameter.
+     * @return Distribution method
      * 
      */
-    public GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation() {
-        return this.dynamicDestinationTranslation;
+    public String distribution() {
+        return this.distribution;
     }
     /**
-     * @return The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return DNS rewrite
+     * 
+     */
+    public GetNatRuleDnsRewrite dnsRewrite() {
+        return this.dnsRewrite;
+    }
+    /**
+     * @return The folder in which the resource is defined
      * 
      */
     public String folder() {
         return this.folder;
     }
     /**
-     * @return The source security zone(s).
+     * @return Source zone(s) of the original packet
      * 
      */
     public List<String> froms() {
         return this.froms;
     }
     /**
-     * @return The GroupTag param.
-     * 
-     */
-    public String groupTag() {
-        return this.groupTag;
-    }
-    /**
-     * @return The Id param.
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return NAT rule name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+     * @return NAT type
      * 
      */
     public String natType() {
         return this.natType;
     }
     /**
-     * @return The Service param.
+     * @return The service of the original packet
      * 
      */
     public String service() {
         return this.service;
     }
     /**
-     * @return The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The snippet in which the resource is defined
      * 
      */
     public String snippet() {
         return this.snippet;
     }
     /**
-     * @return The SourceTranslation param.
+     * @return Source translation
      * 
      */
     public GetNatRuleSourceTranslation sourceTranslation() {
         return this.sourceTranslation;
     }
     /**
-     * @return The source address(es).
+     * @return Source address(es) of the original packet
      * 
      */
     public List<String> sources() {
         return this.sources;
     }
     /**
-     * @return The Tags param.
+     * @return NAT rule tags
      * 
      */
     public List<String> tags() {
         return this.tags;
     }
-    /**
-     * @return The Target param.
-     * 
-     */
-    public GetNatRuleTarget target() {
-        return this.target;
-    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The ToInterface param.
+     * @return Destination interface of the original packet
      * 
      */
     public String toInterface() {
         return this.toInterface;
     }
     /**
-     * @return The destination security zone(s).
+     * @return Destination zone of the original packet
      * 
      */
     public List<String> tos() {
         return this.tos;
+    }
+    /**
+     * @return Translated destination IP address
+     * 
+     */
+    public String translatedAddressSingle() {
+        return this.translatedAddressSingle;
+    }
+    /**
+     * @return Translated destination port
+     * 
+     */
+    public Integer translatedPort() {
+        return this.translatedPort;
     }
 
     public static Builder builder() {
@@ -286,14 +285,13 @@ public final class GetNatRuleResult {
     public static final class Builder {
         private String activeActiveDeviceBinding;
         private String description;
-        private GetNatRuleDestinationTranslation destinationTranslation;
         private List<String> destinations;
         private String device;
         private Boolean disabled;
-        private GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation;
+        private String distribution;
+        private GetNatRuleDnsRewrite dnsRewrite;
         private String folder;
         private List<String> froms;
-        private String groupTag;
         private String id;
         private String name;
         private String natType;
@@ -302,23 +300,23 @@ public final class GetNatRuleResult {
         private GetNatRuleSourceTranslation sourceTranslation;
         private List<String> sources;
         private List<String> tags;
-        private GetNatRuleTarget target;
         private String tfid;
         private String toInterface;
         private List<String> tos;
+        private String translatedAddressSingle;
+        private Integer translatedPort;
         public Builder() {}
         public Builder(GetNatRuleResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.activeActiveDeviceBinding = defaults.activeActiveDeviceBinding;
     	      this.description = defaults.description;
-    	      this.destinationTranslation = defaults.destinationTranslation;
     	      this.destinations = defaults.destinations;
     	      this.device = defaults.device;
     	      this.disabled = defaults.disabled;
-    	      this.dynamicDestinationTranslation = defaults.dynamicDestinationTranslation;
+    	      this.distribution = defaults.distribution;
+    	      this.dnsRewrite = defaults.dnsRewrite;
     	      this.folder = defaults.folder;
     	      this.froms = defaults.froms;
-    	      this.groupTag = defaults.groupTag;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.natType = defaults.natType;
@@ -327,10 +325,11 @@ public final class GetNatRuleResult {
     	      this.sourceTranslation = defaults.sourceTranslation;
     	      this.sources = defaults.sources;
     	      this.tags = defaults.tags;
-    	      this.target = defaults.target;
     	      this.tfid = defaults.tfid;
     	      this.toInterface = defaults.toInterface;
     	      this.tos = defaults.tos;
+    	      this.translatedAddressSingle = defaults.translatedAddressSingle;
+    	      this.translatedPort = defaults.translatedPort;
         }
 
         @CustomType.Setter
@@ -347,14 +346,6 @@ public final class GetNatRuleResult {
               throw new MissingRequiredPropertyException("GetNatRuleResult", "description");
             }
             this.description = description;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder destinationTranslation(GetNatRuleDestinationTranslation destinationTranslation) {
-            if (destinationTranslation == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "destinationTranslation");
-            }
-            this.destinationTranslation = destinationTranslation;
             return this;
         }
         @CustomType.Setter
@@ -385,11 +376,19 @@ public final class GetNatRuleResult {
             return this;
         }
         @CustomType.Setter
-        public Builder dynamicDestinationTranslation(GetNatRuleDynamicDestinationTranslation dynamicDestinationTranslation) {
-            if (dynamicDestinationTranslation == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "dynamicDestinationTranslation");
+        public Builder distribution(String distribution) {
+            if (distribution == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleResult", "distribution");
             }
-            this.dynamicDestinationTranslation = dynamicDestinationTranslation;
+            this.distribution = distribution;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder dnsRewrite(GetNatRuleDnsRewrite dnsRewrite) {
+            if (dnsRewrite == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleResult", "dnsRewrite");
+            }
+            this.dnsRewrite = dnsRewrite;
             return this;
         }
         @CustomType.Setter
@@ -410,14 +409,6 @@ public final class GetNatRuleResult {
         }
         public Builder froms(String... froms) {
             return froms(List.of(froms));
-        }
-        @CustomType.Setter
-        public Builder groupTag(String groupTag) {
-            if (groupTag == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "groupTag");
-            }
-            this.groupTag = groupTag;
-            return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -490,14 +481,6 @@ public final class GetNatRuleResult {
             return tags(List.of(tags));
         }
         @CustomType.Setter
-        public Builder target(GetNatRuleTarget target) {
-            if (target == null) {
-              throw new MissingRequiredPropertyException("GetNatRuleResult", "target");
-            }
-            this.target = target;
-            return this;
-        }
-        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetNatRuleResult", "tfid");
@@ -524,18 +507,33 @@ public final class GetNatRuleResult {
         public Builder tos(String... tos) {
             return tos(List.of(tos));
         }
+        @CustomType.Setter
+        public Builder translatedAddressSingle(String translatedAddressSingle) {
+            if (translatedAddressSingle == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleResult", "translatedAddressSingle");
+            }
+            this.translatedAddressSingle = translatedAddressSingle;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder translatedPort(Integer translatedPort) {
+            if (translatedPort == null) {
+              throw new MissingRequiredPropertyException("GetNatRuleResult", "translatedPort");
+            }
+            this.translatedPort = translatedPort;
+            return this;
+        }
         public GetNatRuleResult build() {
             final var _resultValue = new GetNatRuleResult();
             _resultValue.activeActiveDeviceBinding = activeActiveDeviceBinding;
             _resultValue.description = description;
-            _resultValue.destinationTranslation = destinationTranslation;
             _resultValue.destinations = destinations;
             _resultValue.device = device;
             _resultValue.disabled = disabled;
-            _resultValue.dynamicDestinationTranslation = dynamicDestinationTranslation;
+            _resultValue.distribution = distribution;
+            _resultValue.dnsRewrite = dnsRewrite;
             _resultValue.folder = folder;
             _resultValue.froms = froms;
-            _resultValue.groupTag = groupTag;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.natType = natType;
@@ -544,10 +542,11 @@ public final class GetNatRuleResult {
             _resultValue.sourceTranslation = sourceTranslation;
             _resultValue.sources = sources;
             _resultValue.tags = tags;
-            _resultValue.target = target;
             _resultValue.tfid = tfid;
             _resultValue.toInterface = toInterface;
             _resultValue.tos = tos;
+            _resultValue.translatedAddressSingle = translatedAddressSingle;
+            _resultValue.translatedPort = translatedPort;
             return _resultValue;
         }
     }

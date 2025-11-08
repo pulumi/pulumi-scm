@@ -16,118 +16,76 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.Snippet;
- * import com.pulumi.scm.SnippetArgs;
- * import com.pulumi.scm.Folder;
- * import com.pulumi.scm.FolderArgs;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var snip1 = new Snippet("snip1", SnippetArgs.builder()
- *             .name("foobar")
- *             .build());
- * 
- *         var example = new Folder("example", FolderArgs.builder()
- *             .name("my folder")
- *             .parent("Shared")
- *             .description("Made by Pulumi")
- *             .snippets(snip1.name())
- *             .build());
- * 
- *     }
- * }
- * }
- * </pre>
+ * Folder resource
  * 
  */
 @ResourceType(type="scm:index/folder:Folder")
 public class Folder extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param.
+     * The description of the folder
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the folder
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Labels param.
+     * Labels assigned to the folder
      * 
      */
     @Export(name="labels", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> labels;
 
     /**
-     * @return The Labels param.
+     * @return Labels assigned to the folder
      * 
      */
     public Output<Optional<List<String>>> labels() {
         return Codegen.optional(this.labels);
     }
     /**
-     * The Name param.
+     * The name of the folder
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the folder
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Parent param.
+     * The parent folder
      * 
      */
     @Export(name="parent", refs={String.class}, tree="[0]")
     private Output<String> parent;
 
     /**
-     * @return The Parent param.
+     * @return The parent folder
      * 
      */
     public Output<String> parent() {
         return this.parent;
     }
     /**
-     * The Snippets param.
+     * Snippets associated with the folder
      * 
      */
     @Export(name="snippets", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> snippets;
 
     /**
-     * @return The Snippets param.
+     * @return Snippets associated with the folder
      * 
      */
     public Output<Optional<List<String>>> snippets() {

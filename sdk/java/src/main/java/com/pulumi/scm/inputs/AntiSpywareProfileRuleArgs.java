@@ -18,14 +18,14 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
     public static final AntiSpywareProfileRuleArgs Empty = new AntiSpywareProfileRuleArgs();
 
     /**
-     * The Action param.
+     * anti spyware profiles rules default action
      * 
      */
     @Import(name="action")
     private @Nullable Output<AntiSpywareProfileRuleActionArgs> action;
 
     /**
-     * @return The Action param.
+     * @return anti spyware profiles rules default action
      * 
      */
     public Optional<Output<AntiSpywareProfileRuleActionArgs>> action() {
@@ -33,14 +33,14 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+     * Category
      * 
      */
     @Import(name="category")
     private @Nullable Output<String> category;
 
     /**
-     * @return The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+     * @return Category
      * 
      */
     public Optional<Output<String>> category() {
@@ -48,14 +48,14 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -63,14 +63,14 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * Packet capture
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<String> packetCapture;
 
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public Optional<Output<String>> packetCapture() {
@@ -78,14 +78,14 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The Severities param.
+     * Severity
      * 
      */
     @Import(name="severities")
     private @Nullable Output<List<String>> severities;
 
     /**
-     * @return The Severities param.
+     * @return Severity
      * 
      */
     public Optional<Output<List<String>>> severities() {
@@ -93,14 +93,14 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
     }
 
     /**
-     * The ThreatName param. String length must exceed 4 characters.
+     * Threat name
      * 
      */
     @Import(name="threatName")
     private @Nullable Output<String> threatName;
 
     /**
-     * @return The ThreatName param. String length must exceed 4 characters.
+     * @return Threat name
      * 
      */
     public Optional<Output<String>> threatName() {
@@ -137,7 +137,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param action The Action param.
+         * @param action anti spyware profiles rules default action
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param action The Action param.
+         * @param action anti spyware profiles rules default action
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param category The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+         * @param category Category
          * 
          * @return builder
          * 
@@ -169,7 +169,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param category The Category param. String must be one of these: `&#34;dns-proxy&#34;`, `&#34;backdoor&#34;`, `&#34;data-theft&#34;`, `&#34;autogen&#34;`, `&#34;spyware&#34;`, `&#34;dns-security&#34;`, `&#34;downloader&#34;`, `&#34;dns-phishing&#34;`, `&#34;phishing-kit&#34;`, `&#34;cryptominer&#34;`, `&#34;hacktool&#34;`, `&#34;dns-benign&#34;`, `&#34;dns-wildfire&#34;`, `&#34;botnet&#34;`, `&#34;dns-grayware&#34;`, `&#34;inline-cloud-c2&#34;`, `&#34;keylogger&#34;`, `&#34;p2p-communication&#34;`, `&#34;domain-edl&#34;`, `&#34;webshell&#34;`, `&#34;command-and-control&#34;`, `&#34;dns-ddns&#34;`, `&#34;net-worm&#34;`, `&#34;any&#34;`, `&#34;tls-fingerprint&#34;`, `&#34;dns-new-domain&#34;`, `&#34;dns&#34;`, `&#34;fraud&#34;`, `&#34;dns-c2&#34;`, `&#34;adware&#34;`, `&#34;post-exploitation&#34;`, `&#34;dns-malware&#34;`, `&#34;browser-hijack&#34;`, `&#34;dns-parked&#34;`.
+         * @param category Category
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -190,7 +190,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 
@@ -211,7 +211,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param severities The Severities param.
+         * @param severities Severity
          * 
          * @return builder
          * 
@@ -232,7 +232,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param severities The Severities param.
+         * @param severities Severity
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param severities The Severities param.
+         * @param severities Severity
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param threatName The ThreatName param. String length must exceed 4 characters.
+         * @param threatName Threat name
          * 
          * @return builder
          * 
@@ -263,7 +263,7 @@ public final class AntiSpywareProfileRuleArgs extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param threatName The ThreatName param. String length must exceed 4 characters.
+         * @param threatName Threat name
          * 
          * @return builder
          * 

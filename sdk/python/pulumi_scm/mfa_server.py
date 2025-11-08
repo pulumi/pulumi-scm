@@ -29,12 +29,12 @@ class MfaServerArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a MfaServer resource.
-        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MfaCertProfile param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input['MfaServerMfaVendorTypeArgs'] mfa_vendor_type: The MfaVendorType param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MFA server certificate profile
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input['MfaServerMfaVendorTypeArgs'] mfa_vendor_type: The MFA vendor type
+        :param pulumi.Input[_builtins.str] name: The name of the MFA server profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         pulumi.set(__self__, "mfa_cert_profile", mfa_cert_profile)
         if device is not None:
@@ -52,7 +52,7 @@ class MfaServerArgs:
     @pulumi.getter(name="mfaCertProfile")
     def mfa_cert_profile(self) -> pulumi.Input[_builtins.str]:
         """
-        The MfaCertProfile param.
+        The MFA server certificate profile
         """
         return pulumi.get(self, "mfa_cert_profile")
 
@@ -64,7 +64,7 @@ class MfaServerArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -76,7 +76,7 @@ class MfaServerArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -88,7 +88,7 @@ class MfaServerArgs:
     @pulumi.getter(name="mfaVendorType")
     def mfa_vendor_type(self) -> Optional[pulumi.Input['MfaServerMfaVendorTypeArgs']]:
         """
-        The MfaVendorType param.
+        The MFA vendor type
         """
         return pulumi.get(self, "mfa_vendor_type")
 
@@ -100,7 +100,7 @@ class MfaServerArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the MFA server profile
         """
         return pulumi.get(self, "name")
 
@@ -112,7 +112,7 @@ class MfaServerArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -125,6 +125,7 @@ class MfaServerArgs:
 class _MfaServerState:
     def __init__(__self__, *,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
+                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  mfa_cert_profile: Optional[pulumi.Input[_builtins.str]] = None,
                  mfa_vendor_type: Optional[pulumi.Input['MfaServerMfaVendorTypeArgs']] = None,
@@ -133,15 +134,18 @@ class _MfaServerState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering MfaServer resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MfaCertProfile param.
-        :param pulumi.Input['MfaServerMfaVendorTypeArgs'] mfa_vendor_type: The MfaVendorType param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MFA server certificate profile
+        :param pulumi.Input['MfaServerMfaVendorTypeArgs'] mfa_vendor_type: The MFA vendor type
+        :param pulumi.Input[_builtins.str] name: The name of the MFA server profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
+        if encrypted_values is not None:
+            pulumi.set(__self__, "encrypted_values", encrypted_values)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if mfa_cert_profile is not None:
@@ -159,7 +163,7 @@ class _MfaServerState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -168,10 +172,22 @@ class _MfaServerState:
         pulumi.set(self, "device", value)
 
     @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+        """
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
+
+    @encrypted_values.setter
+    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "encrypted_values", value)
+
+    @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -183,7 +199,7 @@ class _MfaServerState:
     @pulumi.getter(name="mfaCertProfile")
     def mfa_cert_profile(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The MfaCertProfile param.
+        The MFA server certificate profile
         """
         return pulumi.get(self, "mfa_cert_profile")
 
@@ -195,7 +211,7 @@ class _MfaServerState:
     @pulumi.getter(name="mfaVendorType")
     def mfa_vendor_type(self) -> Optional[pulumi.Input['MfaServerMfaVendorTypeArgs']]:
         """
-        The MfaVendorType param.
+        The MFA vendor type
         """
         return pulumi.get(self, "mfa_vendor_type")
 
@@ -207,7 +223,7 @@ class _MfaServerState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the MFA server profile
         """
         return pulumi.get(self, "name")
 
@@ -219,7 +235,7 @@ class _MfaServerState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -251,25 +267,16 @@ class MfaServer(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.MfaServer("example")
-        ```
+        MfaServer resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MfaCertProfile param.
-        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MfaVendorType param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MFA server certificate profile
+        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MFA vendor type
+        :param pulumi.Input[_builtins.str] name: The name of the MFA server profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -278,16 +285,7 @@ class MfaServer(pulumi.CustomResource):
                  args: MfaServerArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.MfaServer("example")
-        ```
+        MfaServer resource
 
         :param str resource_name: The name of the resource.
         :param MfaServerArgs args: The arguments to use to populate this resource's properties.
@@ -327,7 +325,10 @@ class MfaServer(pulumi.CustomResource):
             __props__.__dict__["mfa_vendor_type"] = mfa_vendor_type
             __props__.__dict__["name"] = name
             __props__.__dict__["snippet"] = snippet
+            __props__.__dict__["encrypted_values"] = None
             __props__.__dict__["tfid"] = None
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["encryptedValues"])
+        opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(MfaServer, __self__).__init__(
             'scm:index/mfaServer:MfaServer',
             resource_name,
@@ -339,6 +340,7 @@ class MfaServer(pulumi.CustomResource):
             id: pulumi.Input[str],
             opts: Optional[pulumi.ResourceOptions] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
+            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             mfa_cert_profile: Optional[pulumi.Input[_builtins.str]] = None,
             mfa_vendor_type: Optional[pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']]] = None,
@@ -352,18 +354,20 @@ class MfaServer(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MfaCertProfile param.
-        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MfaVendorType param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] mfa_cert_profile: The MFA server certificate profile
+        :param pulumi.Input[Union['MfaServerMfaVendorTypeArgs', 'MfaServerMfaVendorTypeArgsDict']] mfa_vendor_type: The MFA vendor type
+        :param pulumi.Input[_builtins.str] name: The name of the MFA server profile
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
         __props__ = _MfaServerState.__new__(_MfaServerState)
 
         __props__.__dict__["device"] = device
+        __props__.__dict__["encrypted_values"] = encrypted_values
         __props__.__dict__["folder"] = folder
         __props__.__dict__["mfa_cert_profile"] = mfa_cert_profile
         __props__.__dict__["mfa_vendor_type"] = mfa_vendor_type
@@ -376,15 +380,23 @@ class MfaServer(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> pulumi.Output[Mapping[str, _builtins.str]]:
+        """
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -392,15 +404,15 @@ class MfaServer(pulumi.CustomResource):
     @pulumi.getter(name="mfaCertProfile")
     def mfa_cert_profile(self) -> pulumi.Output[_builtins.str]:
         """
-        The MfaCertProfile param.
+        The MFA server certificate profile
         """
         return pulumi.get(self, "mfa_cert_profile")
 
     @_builtins.property
     @pulumi.getter(name="mfaVendorType")
-    def mfa_vendor_type(self) -> pulumi.Output[Optional['outputs.MfaServerMfaVendorType']]:
+    def mfa_vendor_type(self) -> pulumi.Output['outputs.MfaServerMfaVendorType']:
         """
-        The MfaVendorType param.
+        The MFA vendor type
         """
         return pulumi.get(self, "mfa_vendor_type")
 
@@ -408,7 +420,7 @@ class MfaServer(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the MFA server profile
         """
         return pulumi.get(self, "name")
 
@@ -416,7 +428,7 @@ class MfaServer(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

@@ -10,7 +10,12 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.SecurityRuleArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.SecurityRuleState;
+import com.pulumi.scm.outputs.SecurityRuleAllowUrlCategory;
+import com.pulumi.scm.outputs.SecurityRuleAllowWebApplication;
+import com.pulumi.scm.outputs.SecurityRuleDefaultProfileSettings;
+import com.pulumi.scm.outputs.SecurityRuleLogSettings;
 import com.pulumi.scm.outputs.SecurityRuleProfileSetting;
+import com.pulumi.scm.outputs.SecurityRuleSecuritySettings;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,348 +23,516 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * SecurityRule resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.SecurityRule;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new SecurityRule("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/securityRule:SecurityRule")
 public class SecurityRule extends com.pulumi.resources.CustomResource {
     /**
-     * The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+     * The action to be taken when the rule is matched
      * 
      */
     @Export(name="action", refs={String.class}, tree="[0]")
-    private Output<String> action;
+    private Output</* @Nullable */ String> action;
 
     /**
-     * @return The action to be taken when the rule is matched. String must be one of these: `&#34;allow&#34;`, `&#34;deny&#34;`, `&#34;drop&#34;`, `&#34;reset-client&#34;`, `&#34;reset-server&#34;`, `&#34;reset-both&#34;`.
+     * @return The action to be taken when the rule is matched
      * 
      */
-    public Output<String> action() {
-        return this.action;
+    public Output<Optional<String>> action() {
+        return Codegen.optional(this.action);
     }
     /**
-     * The application(s) being accessed.
+     * Allow url category
+     * 
+     */
+    @Export(name="allowUrlCategories", refs={List.class,SecurityRuleAllowUrlCategory.class}, tree="[0,1]")
+    private Output<List<SecurityRuleAllowUrlCategory>> allowUrlCategories;
+
+    /**
+     * @return Allow url category
+     * 
+     */
+    public Output<List<SecurityRuleAllowUrlCategory>> allowUrlCategories() {
+        return this.allowUrlCategories;
+    }
+    /**
+     * Allow web application
+     * 
+     */
+    @Export(name="allowWebApplications", refs={List.class,SecurityRuleAllowWebApplication.class}, tree="[0,1]")
+    private Output<List<SecurityRuleAllowWebApplication>> allowWebApplications;
+
+    /**
+     * @return Allow web application
+     * 
+     */
+    public Output<List<SecurityRuleAllowWebApplication>> allowWebApplications() {
+        return this.allowWebApplications;
+    }
+    /**
+     * The application(s) being accessed
      * 
      */
     @Export(name="applications", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> applications;
 
     /**
-     * @return The application(s) being accessed.
+     * @return The application(s) being accessed
      * 
      */
     public Output<List<String>> applications() {
         return this.applications;
     }
     /**
-     * The URL categories being accessed.
+     * Block url category
+     * 
+     */
+    @Export(name="blockUrlCategories", refs={List.class,String.class}, tree="[0,1]")
+    private Output<List<String>> blockUrlCategories;
+
+    /**
+     * @return Block url category
+     * 
+     */
+    public Output<List<String>> blockUrlCategories() {
+        return this.blockUrlCategories;
+    }
+    /**
+     * Block web application
+     * 
+     */
+    @Export(name="blockWebApplications", refs={List.class,String.class}, tree="[0,1]")
+    private Output<List<String>> blockWebApplications;
+
+    /**
+     * @return Block web application
+     * 
+     */
+    public Output<List<String>> blockWebApplications() {
+        return this.blockWebApplications;
+    }
+    /**
+     * The URL categories being accessed
      * 
      */
     @Export(name="categories", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> categories;
 
     /**
-     * @return The URL categories being accessed.
+     * @return The URL categories being accessed
      * 
      */
     public Output<List<String>> categories() {
         return this.categories;
     }
     /**
-     * The description of the security rule.
+     * Default profile settings
+     * 
+     */
+    @Export(name="defaultProfileSettings", refs={SecurityRuleDefaultProfileSettings.class}, tree="[0]")
+    private Output<SecurityRuleDefaultProfileSettings> defaultProfileSettings;
+
+    /**
+     * @return Default profile settings
+     * 
+     */
+    public Output<SecurityRuleDefaultProfileSettings> defaultProfileSettings() {
+        return this.defaultProfileSettings;
+    }
+    /**
+     * The description of the security rule
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The description of the security rule.
+     * @return The description of the security rule
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The destination Host Integrity Profile(s).
+     * The destination Host Integrity Profile(s)
      * 
      */
     @Export(name="destinationHips", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> destinationHips;
+    private Output<List<String>> destinationHips;
 
     /**
-     * @return The destination Host Integrity Profile(s).
+     * @return The destination Host Integrity Profile(s)
      * 
      */
-    public Output<Optional<List<String>>> destinationHips() {
-        return Codegen.optional(this.destinationHips);
+    public Output<List<String>> destinationHips() {
+        return this.destinationHips;
     }
     /**
-     * The destination address(es).
+     * The destination address(es)
      * 
      */
     @Export(name="destinations", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> destinations;
+    private Output</* @Nullable */ List<String>> destinations;
 
     /**
-     * @return The destination address(es).
+     * @return The destination address(es)
      * 
      */
-    public Output<List<String>> destinations() {
-        return this.destinations;
+    public Output<Optional<List<String>>> destinations() {
+        return Codegen.optional(this.destinations);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The state of the security rule. Default: `false`.
+     * Devices
+     * 
+     */
+    @Export(name="devices", refs={List.class,String.class}, tree="[0,1]")
+    private Output<List<String>> devices;
+
+    /**
+     * @return Devices
+     * 
+     */
+    public Output<List<String>> devices() {
+        return this.devices;
+    }
+    /**
+     * Is the security rule disabled?
      * 
      */
     @Export(name="disabled", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> disabled;
 
     /**
-     * @return The state of the security rule. Default: `false`.
+     * @return Is the security rule disabled?
      * 
      */
     public Output<Boolean> disabled() {
         return this.disabled;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The source security zone(s).
+     * The source security zone(s)
      * 
      */
     @Export(name="froms", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> froms;
+    private Output</* @Nullable */ List<String>> froms;
 
     /**
-     * @return The source security zone(s).
+     * @return The source security zone(s)
      * 
      */
-    public Output<List<String>> froms() {
-        return this.froms;
+    public Output<Optional<List<String>>> froms() {
+        return Codegen.optional(this.froms);
     }
     /**
-     * The external log forwarding profile.
+     * Log at session end?
+     * 
+     */
+    @Export(name="logEnd", refs={Boolean.class}, tree="[0]")
+    private Output<Boolean> logEnd;
+
+    /**
+     * @return Log at session end?
+     * 
+     */
+    public Output<Boolean> logEnd() {
+        return this.logEnd;
+    }
+    /**
+     * The external log forwarding profile
      * 
      */
     @Export(name="logSetting", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> logSetting;
+    private Output<String> logSetting;
 
     /**
-     * @return The external log forwarding profile.
+     * @return The external log forwarding profile
      * 
      */
-    public Output<Optional<String>> logSetting() {
-        return Codegen.optional(this.logSetting);
+    public Output<String> logSetting() {
+        return this.logSetting;
     }
     /**
-     * The name of the security rule.
+     * Log settings
+     * 
+     */
+    @Export(name="logSettings", refs={SecurityRuleLogSettings.class}, tree="[0]")
+    private Output<SecurityRuleLogSettings> logSettings;
+
+    /**
+     * @return Log settings
+     * 
+     */
+    public Output<SecurityRuleLogSettings> logSettings() {
+        return this.logSettings;
+    }
+    /**
+     * Log at session start?
+     * 
+     */
+    @Export(name="logStart", refs={Boolean.class}, tree="[0]")
+    private Output<Boolean> logStart;
+
+    /**
+     * @return Log at session start?
+     * 
+     */
+    public Output<Boolean> logStart() {
+        return this.logStart;
+    }
+    /**
+     * The name of the security rule
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The name of the security rule.
+     * @return The name of the security rule
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * Negate the destination addresses(es). Default: `false`.
+     * Negate the destination addresses(es)?
      * 
      */
     @Export(name="negateDestination", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> negateDestination;
 
     /**
-     * @return Negate the destination addresses(es). Default: `false`.
+     * @return Negate the destination addresses(es)?
      * 
      */
     public Output<Boolean> negateDestination() {
         return this.negateDestination;
     }
     /**
-     * Negate the source address(es). Default: `false`.
+     * Negate the source address(es)?
      * 
      */
     @Export(name="negateSource", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> negateSource;
 
     /**
-     * @return Negate the source address(es). Default: `false`.
+     * @return Negate the source address(es)?
      * 
      */
     public Output<Boolean> negateSource() {
         return this.negateSource;
     }
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * Negate user
+     * 
+     */
+    @Export(name="negateUser", refs={Boolean.class}, tree="[0]")
+    private Output<Boolean> negateUser;
+
+    /**
+     * @return Negate user
+     * 
+     */
+    public Output<Boolean> negateUser() {
+        return this.negateUser;
+    }
+    /**
+     * Policy type
+     * 
+     */
+    @Export(name="policyType", refs={String.class}, tree="[0]")
+    private Output<String> policyType;
+
+    /**
+     * @return Policy type
+     * 
+     */
+    public Output<String> policyType() {
+        return this.policyType;
+    }
+    /**
+     * The position of a security rule
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The position of a security rule
      * 
      */
     public Output<String> position() {
         return this.position;
     }
     /**
-     * The security profile object.
+     * The security profile object
      * 
      */
     @Export(name="profileSetting", refs={SecurityRuleProfileSetting.class}, tree="[0]")
-    private Output</* @Nullable */ SecurityRuleProfileSetting> profileSetting;
+    private Output<SecurityRuleProfileSetting> profileSetting;
 
     /**
-     * @return The security profile object.
+     * @return The security profile object
      * 
      */
-    public Output<Optional<SecurityRuleProfileSetting>> profileSetting() {
-        return Codegen.optional(this.profileSetting);
+    public Output<SecurityRuleProfileSetting> profileSetting() {
+        return this.profileSetting;
     }
     /**
-     * The service(s) being accessed.
+     * Schedule in which this rule will be applied
+     * 
+     */
+    @Export(name="schedule", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> schedule;
+
+    /**
+     * @return Schedule in which this rule will be applied
+     * 
+     */
+    public Output<Optional<String>> schedule() {
+        return Codegen.optional(this.schedule);
+    }
+    /**
+     * Security settings
+     * 
+     */
+    @Export(name="securitySettings", refs={SecurityRuleSecuritySettings.class}, tree="[0]")
+    private Output<SecurityRuleSecuritySettings> securitySettings;
+
+    /**
+     * @return Security settings
+     * 
+     */
+    public Output<SecurityRuleSecuritySettings> securitySettings() {
+        return this.securitySettings;
+    }
+    /**
+     * The service(s) being accessed
      * 
      */
     @Export(name="services", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> services;
+    private Output</* @Nullable */ List<String>> services;
 
     /**
-     * @return The service(s) being accessed.
+     * @return The service(s) being accessed
      * 
      */
-    public Output<List<String>> services() {
-        return this.services;
+    public Output<Optional<List<String>>> services() {
+        return Codegen.optional(this.services);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The source Host Integrity Profile(s).
+     * The source Host Integrity Profile(s)
      * 
      */
     @Export(name="sourceHips", refs={List.class,String.class}, tree="[0,1]")
-    private Output</* @Nullable */ List<String>> sourceHips;
+    private Output<List<String>> sourceHips;
 
     /**
-     * @return The source Host Integrity Profile(s).
+     * @return The source Host Integrity Profile(s)
      * 
      */
-    public Output<Optional<List<String>>> sourceHips() {
-        return Codegen.optional(this.sourceHips);
+    public Output<List<String>> sourceHips() {
+        return this.sourceHips;
     }
     /**
-     * The source user(s) or group(s).
+     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     @Export(name="sourceUsers", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> sourceUsers;
+    private Output</* @Nullable */ List<String>> sourceUsers;
 
     /**
-     * @return The source user(s) or group(s).
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
-    public Output<List<String>> sourceUsers() {
-        return this.sourceUsers;
+    public Output<Optional<List<String>>> sourceUsers() {
+        return Codegen.optional(this.sourceUsers);
     }
     /**
-     * The source address(es).
+     * The source addresses(es)
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> sources;
+    private Output</* @Nullable */ List<String>> sources;
 
     /**
-     * @return The source address(es).
+     * @return The source addresses(es)
      * 
      */
-    public Output<List<String>> sources() {
-        return this.sources;
+    public Output<Optional<List<String>>> sources() {
+        return Codegen.optional(this.sources);
     }
     /**
-     * The tags associated with the security rule.
+     * The tags associated with the security rule
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return The tags associated with the security rule.
+     * @return The tags associated with the security rule
      * 
      */
     public Output<Optional<List<String>>> tags() {
         return Codegen.optional(this.tags);
+    }
+    /**
+     * Tenant restrictions
+     * 
+     */
+    @Export(name="tenantRestrictions", refs={List.class,String.class}, tree="[0,1]")
+    private Output<List<String>> tenantRestrictions;
+
+    /**
+     * @return Tenant restrictions
+     * 
+     */
+    public Output<List<String>> tenantRestrictions() {
+        return this.tenantRestrictions;
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
@@ -368,18 +541,18 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The destination security zone(s).
+     * The destination security zone(s)
      * 
      */
     @Export(name="tos", refs={List.class,String.class}, tree="[0,1]")
-    private Output<List<String>> tos;
+    private Output</* @Nullable */ List<String>> tos;
 
     /**
-     * @return The destination security zone(s).
+     * @return The destination security zone(s)
      * 
      */
-    public Output<List<String>> tos() {
-        return this.tos;
+    public Output<Optional<List<String>>> tos() {
+        return Codegen.optional(this.tos);
     }
 
     /**
@@ -394,7 +567,7 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @param name The _unique_ name of the resulting resource.
      * @param args The arguments to use to populate this resource's properties.
      */
-    public SecurityRule(java.lang.String name, SecurityRuleArgs args) {
+    public SecurityRule(java.lang.String name, @Nullable SecurityRuleArgs args) {
         this(name, args, null);
     }
     /**
@@ -403,7 +576,7 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param options A bag of options that control this resource's behavior.
      */
-    public SecurityRule(java.lang.String name, SecurityRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    public SecurityRule(java.lang.String name, @Nullable SecurityRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         super("scm:index/securityRule:SecurityRule", name, makeArgs(args, options), makeResourceOptions(options, Codegen.empty()), false);
     }
 
@@ -411,7 +584,7 @@ public class SecurityRule extends com.pulumi.resources.CustomResource {
         super("scm:index/securityRule:SecurityRule", name, state, makeResourceOptions(options, id), false);
     }
 
-    private static SecurityRuleArgs makeArgs(SecurityRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
+    private static SecurityRuleArgs makeArgs(@Nullable SecurityRuleArgs args, @Nullable com.pulumi.resources.CustomResourceOptions options) {
         if (options != null && options.getUrn().isPresent()) {
             return null;
         }

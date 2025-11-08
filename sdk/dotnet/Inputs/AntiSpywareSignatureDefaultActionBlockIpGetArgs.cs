@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureDefaultActionBlockIpGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Duration param. Value must be between 1 and 3600.
+        /// Duration
         /// </summary>
         [Input("duration")]
         public Input<int>? Duration { get; set; }
 
         /// <summary>
-        /// The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`.
+        /// Track by
         /// </summary>
         [Input("trackBy")]
         public Input<string>? TrackBy { get; set; }

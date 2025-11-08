@@ -15,66 +15,114 @@ import java.util.Objects;
 @CustomType
 public final class GetTacacsServerProfileResult {
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the TACACS+ server profile
      * 
      */
     private String id;
     /**
-     * @return The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+     * @return The name of the TACACS+ server profile
+     * 
+     */
+    private String name;
+    /**
+     * @return The TACACS+ authentication protocol
      * 
      */
     private String protocol;
     /**
-     * @return The Servers param.
+     * @return The TACACS+ server configuration
      * 
      */
     private List<GetTacacsServerProfileServer> servers;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
     /**
-     * @return The Timeout param. Value must be between 1 and 30.
+     * @return The TACACS+ timeout (seconds)
      * 
      */
     private Integer timeout;
     /**
-     * @return The UseSingleConnection param.
+     * @return Use a single TACACS+ connection?
      * 
      */
     private Boolean useSingleConnection;
 
     private GetTacacsServerProfileResult() {}
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the TACACS+ server profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+     * @return The name of the TACACS+ server profile
+     * 
+     */
+    public String name() {
+        return this.name;
+    }
+    /**
+     * @return The TACACS+ authentication protocol
      * 
      */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * @return The Servers param.
+     * @return The TACACS+ server configuration
      * 
      */
     public List<GetTacacsServerProfileServer> servers() {
         return this.servers;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
     public String tfid() {
         return this.tfid;
     }
     /**
-     * @return The Timeout param. Value must be between 1 and 30.
+     * @return The TACACS+ timeout (seconds)
      * 
      */
     public Integer timeout() {
         return this.timeout;
     }
     /**
-     * @return The UseSingleConnection param.
+     * @return Use a single TACACS+ connection?
      * 
      */
     public Boolean useSingleConnection() {
@@ -90,29 +138,61 @@ public final class GetTacacsServerProfileResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
+        private String folder;
         private String id;
+        private String name;
         private String protocol;
         private List<GetTacacsServerProfileServer> servers;
+        private String snippet;
         private String tfid;
         private Integer timeout;
         private Boolean useSingleConnection;
         public Builder() {}
         public Builder(GetTacacsServerProfileResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
+    	      this.name = defaults.name;
     	      this.protocol = defaults.protocol;
     	      this.servers = defaults.servers;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
     	      this.timeout = defaults.timeout;
     	      this.useSingleConnection = defaults.useSingleConnection;
         }
 
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetTacacsServerProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetTacacsServerProfileResult", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetTacacsServerProfileResult", "id");
             }
             this.id = id;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetTacacsServerProfileResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
@@ -133,6 +213,14 @@ public final class GetTacacsServerProfileResult {
         }
         public Builder servers(GetTacacsServerProfileServer... servers) {
             return servers(List.of(servers));
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetTacacsServerProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
         }
         @CustomType.Setter
         public Builder tfid(String tfid) {
@@ -160,9 +248,13 @@ public final class GetTacacsServerProfileResult {
         }
         public GetTacacsServerProfileResult build() {
             final var _resultValue = new GetTacacsServerProfileResult();
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
+            _resultValue.name = name;
             _resultValue.protocol = protocol;
             _resultValue.servers = servers;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             _resultValue.timeout = timeout;
             _resultValue.useSingleConnection = useSingleConnection;

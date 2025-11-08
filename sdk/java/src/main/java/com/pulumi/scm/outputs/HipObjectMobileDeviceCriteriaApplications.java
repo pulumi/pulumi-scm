@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectMobileDeviceCriteriaApplications {
     /**
-     * @return The HasMalware param.
+     * @return Has malware
      * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaApplicationsHasMalware hasMalware;
     /**
-     * @return Has apps that are not managed.
+     * @return Has apps that are not managed
      * 
      */
     private @Nullable Boolean hasUnmanagedApp;
     /**
-     * @return The Includes param.
+     * @return Includes
      * 
      */
     private @Nullable List<HipObjectMobileDeviceCriteriaApplicationsInclude> includes;
 
     private HipObjectMobileDeviceCriteriaApplications() {}
     /**
-     * @return The HasMalware param.
+     * @return Has malware
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaApplicationsHasMalware> hasMalware() {
         return Optional.ofNullable(this.hasMalware);
     }
     /**
-     * @return Has apps that are not managed.
+     * @return Has apps that are not managed
      * 
      */
     public Optional<Boolean> hasUnmanagedApp() {
         return Optional.ofNullable(this.hasUnmanagedApp);
     }
     /**
-     * @return The Includes param.
+     * @return Includes
      * 
      */
     public List<HipObjectMobileDeviceCriteriaApplicationsInclude> includes() {

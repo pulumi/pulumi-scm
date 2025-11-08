@@ -27,7 +27,13 @@ class GetScheduleResult:
     """
     A collection of values returned by getSchedule.
     """
-    def __init__(__self__, id=None, name=None, schedule_type=None, tfid=None):
+    def __init__(__self__, device=None, folder=None, id=None, name=None, schedule_type=None, snippet=None, tfid=None):
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -37,15 +43,34 @@ class GetScheduleResult:
         if schedule_type and not isinstance(schedule_type, dict):
             raise TypeError("Expected argument 'schedule_type' to be a dict")
         pulumi.set(__self__, "schedule_type", schedule_type)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the schedule
         """
         return pulumi.get(self, "id")
 
@@ -53,7 +78,7 @@ class GetScheduleResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the schedule
         """
         return pulumi.get(self, "name")
 
@@ -61,9 +86,17 @@ class GetScheduleResult:
     @pulumi.getter(name="scheduleType")
     def schedule_type(self) -> 'outputs.GetScheduleScheduleTypeResult':
         """
-        The ScheduleType param.
+        Schedule type
         """
         return pulumi.get(self, "schedule_type")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -77,62 +110,59 @@ class AwaitableGetScheduleResult(GetScheduleResult):
         if False:
             yield self
         return GetScheduleResult(
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             name=self.name,
             schedule_type=self.schedule_type,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
 def get_schedule(id: Optional[_builtins.str] = None,
+                 name: Optional[_builtins.str] = None,
                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetScheduleResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_schedule(id="1234-56-789")
-    ```
+    Schedule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the schedule
+    :param _builtins.str name: The name of the schedule
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getSchedule:getSchedule', __args__, opts=opts, typ=GetScheduleResult).value
 
     return AwaitableGetScheduleResult(
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         schedule_type=pulumi.get(__ret__, 'schedule_type'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_schedule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                        name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetScheduleResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_schedule(id="1234-56-789")
-    ```
+    Schedule data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the schedule
+    :param _builtins.str name: The name of the schedule
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getSchedule:getSchedule', __args__, opts=opts, typ=GetScheduleResult)
     return __ret__.apply(lambda __response__: GetScheduleResult(
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         schedule_type=pulumi.get(__response__, 'schedule_type'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

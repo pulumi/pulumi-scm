@@ -16,309 +16,345 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationResult {
     /**
-     * @return The AbleToTransferFile param.
+     * @return Able to transfer file
      * 
      */
     private Boolean ableToTransferFile;
     /**
-     * @return The AlgDisableCapability param. String length must not exceed 127 characters.
+     * @return Alg disable capability
      * 
      */
     private String algDisableCapability;
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     private String category;
     /**
-     * @return The ConsumeBigBandwidth param.
+     * @return Consume big bandwidth
      * 
      */
     private Boolean consumeBigBandwidth;
     /**
-     * @return The DataIdent param.
+     * @return Data ident
      * 
      */
     private Boolean dataIdent;
     /**
-     * @return The Default param.
+     * @return Default
      * 
      */
     private GetApplicationDefault default_;
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The EvasiveBehavior param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Evasive behavior
      * 
      */
     private Boolean evasiveBehavior;
     /**
-     * @return The FileTypeIdent param.
+     * @return File type ident
      * 
      */
     private Boolean fileTypeIdent;
     /**
-     * @return The HasKnownVulnerability param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return Has known vulnerability
      * 
      */
     private Boolean hasKnownVulnerability;
     /**
-     * @return The Id param.
+     * @return The UUID of the application
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the application
      * 
      */
     private String name;
     /**
-     * @return The NoAppidCaching param.
+     * @return No appid caching
      * 
      */
     private Boolean noAppidCaching;
     /**
-     * @return The ParentApp param. String length must not exceed 127 characters.
+     * @return Parent app
      * 
      */
     private String parentApp;
     /**
-     * @return The PervasiveUse param.
+     * @return Pervasive use
      * 
      */
     private Boolean pervasiveUse;
     /**
-     * @return The ProneToMisuse param.
+     * @return Prone to misuse
      * 
      */
     private Boolean proneToMisuse;
     /**
-     * @return The Risk param. Value must be between 1 and 5.
+     * @return Risk
      * 
      */
-    private Integer risk;
+    private String risk;
     /**
-     * @return The Signatures param.
+     * @return Signature
      * 
      */
     private List<GetApplicationSignature> signatures;
     /**
-     * @return The Subcategory param. String length must not exceed 63 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Subcategory
      * 
      */
     private String subcategory;
     /**
-     * @return timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * @return timeout for half-close session in seconds
      * 
      */
     private Integer tcpHalfClosedTimeout;
     /**
-     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds
      * 
      */
     private Integer tcpTimeWaitTimeout;
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     private Integer tcpTimeout;
     /**
-     * @return The Technology param. String length must not exceed 63 characters.
+     * @return Technology
      * 
      */
     private String technology;
     private String tfid;
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     private Integer timeout;
     /**
-     * @return The TunnelApplications param.
+     * @return Tunnel applications
      * 
      */
     private Boolean tunnelApplications;
     /**
-     * @return The TunnelOtherApplication param.
+     * @return Tunnel other application
      * 
      */
     private Boolean tunnelOtherApplication;
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     private Integer udpTimeout;
     /**
-     * @return The UsedByMalware param.
+     * @return Used by malware
      * 
      */
     private Boolean usedByMalware;
     /**
-     * @return The VirusIdent param.
+     * @return Virus ident
      * 
      */
     private Boolean virusIdent;
 
     private GetApplicationResult() {}
     /**
-     * @return The AbleToTransferFile param.
+     * @return Able to transfer file
      * 
      */
     public Boolean ableToTransferFile() {
         return this.ableToTransferFile;
     }
     /**
-     * @return The AlgDisableCapability param. String length must not exceed 127 characters.
+     * @return Alg disable capability
      * 
      */
     public String algDisableCapability() {
         return this.algDisableCapability;
     }
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     public String category() {
         return this.category;
     }
     /**
-     * @return The ConsumeBigBandwidth param.
+     * @return Consume big bandwidth
      * 
      */
     public Boolean consumeBigBandwidth() {
         return this.consumeBigBandwidth;
     }
     /**
-     * @return The DataIdent param.
+     * @return Data ident
      * 
      */
     public Boolean dataIdent() {
         return this.dataIdent;
     }
     /**
-     * @return The Default param.
+     * @return Default
      * 
      */
     public GetApplicationDefault default_() {
         return this.default_;
     }
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The EvasiveBehavior param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Evasive behavior
      * 
      */
     public Boolean evasiveBehavior() {
         return this.evasiveBehavior;
     }
     /**
-     * @return The FileTypeIdent param.
+     * @return File type ident
      * 
      */
     public Boolean fileTypeIdent() {
         return this.fileTypeIdent;
     }
     /**
-     * @return The HasKnownVulnerability param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return Has known vulnerability
      * 
      */
     public Boolean hasKnownVulnerability() {
         return this.hasKnownVulnerability;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the application
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the application
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NoAppidCaching param.
+     * @return No appid caching
      * 
      */
     public Boolean noAppidCaching() {
         return this.noAppidCaching;
     }
     /**
-     * @return The ParentApp param. String length must not exceed 127 characters.
+     * @return Parent app
      * 
      */
     public String parentApp() {
         return this.parentApp;
     }
     /**
-     * @return The PervasiveUse param.
+     * @return Pervasive use
      * 
      */
     public Boolean pervasiveUse() {
         return this.pervasiveUse;
     }
     /**
-     * @return The ProneToMisuse param.
+     * @return Prone to misuse
      * 
      */
     public Boolean proneToMisuse() {
         return this.proneToMisuse;
     }
     /**
-     * @return The Risk param. Value must be between 1 and 5.
+     * @return Risk
      * 
      */
-    public Integer risk() {
+    public String risk() {
         return this.risk;
     }
     /**
-     * @return The Signatures param.
+     * @return Signature
      * 
      */
     public List<GetApplicationSignature> signatures() {
         return this.signatures;
     }
     /**
-     * @return The Subcategory param. String length must not exceed 63 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Subcategory
      * 
      */
     public String subcategory() {
         return this.subcategory;
     }
     /**
-     * @return timeout for half-close session in seconds. Value must be between 1 and 604800.
+     * @return timeout for half-close session in seconds
      * 
      */
     public Integer tcpHalfClosedTimeout() {
         return this.tcpHalfClosedTimeout;
     }
     /**
-     * @return timeout for session in timeWait state in seconds. Value must be between 1 and 600.
+     * @return timeout for session in timeWait state in seconds
      * 
      */
     public Integer tcpTimeWaitTimeout() {
         return this.tcpTimeWaitTimeout;
     }
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Integer tcpTimeout() {
         return this.tcpTimeout;
     }
     /**
-     * @return The Technology param. String length must not exceed 63 characters.
+     * @return Technology
      * 
      */
     public String technology() {
@@ -328,42 +364,42 @@ public final class GetApplicationResult {
         return this.tfid;
     }
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Integer timeout() {
         return this.timeout;
     }
     /**
-     * @return The TunnelApplications param.
+     * @return Tunnel applications
      * 
      */
     public Boolean tunnelApplications() {
         return this.tunnelApplications;
     }
     /**
-     * @return The TunnelOtherApplication param.
+     * @return Tunnel other application
      * 
      */
     public Boolean tunnelOtherApplication() {
         return this.tunnelOtherApplication;
     }
     /**
-     * @return timeout in seconds. Value must be between 0 and 604800.
+     * @return timeout in seconds
      * 
      */
     public Integer udpTimeout() {
         return this.udpTimeout;
     }
     /**
-     * @return The UsedByMalware param.
+     * @return Used by malware
      * 
      */
     public Boolean usedByMalware() {
         return this.usedByMalware;
     }
     /**
-     * @return The VirusIdent param.
+     * @return Virus ident
      * 
      */
     public Boolean virusIdent() {
@@ -386,8 +422,10 @@ public final class GetApplicationResult {
         private Boolean dataIdent;
         private GetApplicationDefault default_;
         private String description;
+        private String device;
         private Boolean evasiveBehavior;
         private Boolean fileTypeIdent;
+        private String folder;
         private Boolean hasKnownVulnerability;
         private String id;
         private String name;
@@ -395,8 +433,9 @@ public final class GetApplicationResult {
         private String parentApp;
         private Boolean pervasiveUse;
         private Boolean proneToMisuse;
-        private Integer risk;
+        private String risk;
         private List<GetApplicationSignature> signatures;
+        private String snippet;
         private String subcategory;
         private Integer tcpHalfClosedTimeout;
         private Integer tcpTimeWaitTimeout;
@@ -419,8 +458,10 @@ public final class GetApplicationResult {
     	      this.dataIdent = defaults.dataIdent;
     	      this.default_ = defaults.default_;
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
     	      this.evasiveBehavior = defaults.evasiveBehavior;
     	      this.fileTypeIdent = defaults.fileTypeIdent;
+    	      this.folder = defaults.folder;
     	      this.hasKnownVulnerability = defaults.hasKnownVulnerability;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
@@ -430,6 +471,7 @@ public final class GetApplicationResult {
     	      this.proneToMisuse = defaults.proneToMisuse;
     	      this.risk = defaults.risk;
     	      this.signatures = defaults.signatures;
+    	      this.snippet = defaults.snippet;
     	      this.subcategory = defaults.subcategory;
     	      this.tcpHalfClosedTimeout = defaults.tcpHalfClosedTimeout;
     	      this.tcpTimeWaitTimeout = defaults.tcpTimeWaitTimeout;
@@ -501,6 +543,14 @@ public final class GetApplicationResult {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetApplicationResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder evasiveBehavior(Boolean evasiveBehavior) {
             if (evasiveBehavior == null) {
               throw new MissingRequiredPropertyException("GetApplicationResult", "evasiveBehavior");
@@ -514,6 +564,14 @@ public final class GetApplicationResult {
               throw new MissingRequiredPropertyException("GetApplicationResult", "fileTypeIdent");
             }
             this.fileTypeIdent = fileTypeIdent;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetApplicationResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -573,7 +631,7 @@ public final class GetApplicationResult {
             return this;
         }
         @CustomType.Setter
-        public Builder risk(Integer risk) {
+        public Builder risk(String risk) {
             if (risk == null) {
               throw new MissingRequiredPropertyException("GetApplicationResult", "risk");
             }
@@ -590,6 +648,14 @@ public final class GetApplicationResult {
         }
         public Builder signatures(GetApplicationSignature... signatures) {
             return signatures(List.of(signatures));
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetApplicationResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
         }
         @CustomType.Setter
         public Builder subcategory(String subcategory) {
@@ -696,8 +762,10 @@ public final class GetApplicationResult {
             _resultValue.dataIdent = dataIdent;
             _resultValue.default_ = default_;
             _resultValue.description = description;
+            _resultValue.device = device;
             _resultValue.evasiveBehavior = evasiveBehavior;
             _resultValue.fileTypeIdent = fileTypeIdent;
+            _resultValue.folder = folder;
             _resultValue.hasKnownVulnerability = hasKnownVulnerability;
             _resultValue.id = id;
             _resultValue.name = name;
@@ -707,6 +775,7 @@ public final class GetApplicationResult {
             _resultValue.proneToMisuse = proneToMisuse;
             _resultValue.risk = risk;
             _resultValue.signatures = signatures;
+            _resultValue.snippet = snippet;
             _resultValue.subcategory = subcategory;
             _resultValue.tcpHalfClosedTimeout = tcpHalfClosedTimeout;
             _resultValue.tcpTimeWaitTimeout = tcpTimeWaitTimeout;

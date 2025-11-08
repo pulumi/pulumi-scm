@@ -15,14 +15,14 @@ public final class HipObjectCustomChecksArgs extends com.pulumi.resources.Resour
     public static final HipObjectCustomChecksArgs Empty = new HipObjectCustomChecksArgs();
 
     /**
-     * The Criteria param.
+     * Criteria
      * 
      */
     @Import(name="criteria", required=true)
     private Output<HipObjectCustomChecksCriteriaArgs> criteria;
 
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Output<HipObjectCustomChecksCriteriaArgs> criteria() {
@@ -54,7 +54,7 @@ public final class HipObjectCustomChecksArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class HipObjectCustomChecksArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 

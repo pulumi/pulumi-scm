@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeImsiRecurring
     {
         /// <summary>
-        /// The Daily param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Daily
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImsiRecurringDaily? Daily;
         /// <summary>
-        /// The FiveMinute param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Five minute
         /// </summary>
-        public readonly bool? FiveMinute;
+        public readonly Outputs.ExternalDynamicListTypeImsiRecurringFiveMinute? FiveMinute;
         /// <summary>
-        /// The Hourly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Hourly
         /// </summary>
-        public readonly bool? Hourly;
+        public readonly Outputs.ExternalDynamicListTypeImsiRecurringHourly? Hourly;
         /// <summary>
-        /// The Monthly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Monthly
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImsiRecurringMonthly? Monthly;
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Weekly
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImsiRecurringWeekly? Weekly;
 
@@ -38,9 +38,9 @@ namespace Pulumi.Scm.Outputs
         private ExternalDynamicListTypeImsiRecurring(
             Outputs.ExternalDynamicListTypeImsiRecurringDaily? daily,
 
-            bool? fiveMinute,
+            Outputs.ExternalDynamicListTypeImsiRecurringFiveMinute? fiveMinute,
 
-            bool? hourly,
+            Outputs.ExternalDynamicListTypeImsiRecurringHourly? hourly,
 
             Outputs.ExternalDynamicListTypeImsiRecurringMonthly? monthly,
 

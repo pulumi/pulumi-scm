@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class RadiusServerProfileServerGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The IpAddress param.
+        /// The IP address of the RADIUS server
         /// </summary>
         [Input("ipAddress")]
         public Input<string>? IpAddress { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The name of the RADIUS server
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The RADIUS server port
         /// </summary>
         [Input("port")]
         public Input<int>? Port { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private Input<string>? _secret;
 
         /// <summary>
-        /// The Secret param. String length must not exceed 64 characters.
+        /// The RADIUS secret
         /// </summary>
         public Input<string>? Secret
         {

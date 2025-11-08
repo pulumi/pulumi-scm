@@ -18,14 +18,14 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
     public static final HipObjectCustomChecksCriteriaPlistKeyArgs Empty = new HipObjectCustomChecksCriteriaPlistKeyArgs();
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Key name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Key name
      * 
      */
     public Output<String> name() {
@@ -33,14 +33,14 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
     }
 
     /**
-     * Value does not exist or match specified value data. Default: `false`.
+     * Value does not exist or match specified value data
      * 
      */
     @Import(name="negate")
     private @Nullable Output<Boolean> negate;
 
     /**
-     * @return Value does not exist or match specified value data. Default: `false`.
+     * @return Value does not exist or match specified value data
      * 
      */
     public Optional<Output<Boolean>> negate() {
@@ -48,14 +48,14 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
     }
 
     /**
-     * Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * Key value
      * 
      */
     @Import(name="value")
     private @Nullable Output<String> value;
 
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     public Optional<Output<String>> value() {
@@ -89,7 +89,7 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Key name
          * 
          * @return builder
          * 
@@ -100,7 +100,7 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Key name
          * 
          * @return builder
          * 
@@ -110,7 +110,7 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
         }
 
         /**
-         * @param negate Value does not exist or match specified value data. Default: `false`.
+         * @param negate Value does not exist or match specified value data
          * 
          * @return builder
          * 
@@ -121,7 +121,7 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
         }
 
         /**
-         * @param negate Value does not exist or match specified value data. Default: `false`.
+         * @param negate Value does not exist or match specified value data
          * 
          * @return builder
          * 
@@ -131,7 +131,7 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
         }
 
         /**
-         * @param value Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param value Key value
          * 
          * @return builder
          * 
@@ -142,7 +142,7 @@ public final class HipObjectCustomChecksCriteriaPlistKeyArgs extends com.pulumi.
         }
 
         /**
-         * @param value Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param value Key value
          * 
          * @return builder
          * 

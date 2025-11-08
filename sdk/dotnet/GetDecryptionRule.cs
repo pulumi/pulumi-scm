@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetDecryptionRule
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDecryptionRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DecryptionRule data source
         /// </summary>
         public static Task<GetDecryptionRuleResult> InvokeAsync(GetDecryptionRuleArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDecryptionRuleResult>("scm:index/getDecryptionRule:getDecryptionRule", args ?? new GetDecryptionRuleArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDecryptionRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DecryptionRule data source
         /// </summary>
         public static Output<GetDecryptionRuleResult> Invoke(GetDecryptionRuleInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionRuleResult>("scm:index/getDecryptionRule:getDecryptionRule", args ?? new GetDecryptionRuleInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDecryptionRule.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DecryptionRule data source
         /// </summary>
         public static Output<GetDecryptionRuleResult> Invoke(GetDecryptionRuleInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDecryptionRuleResult>("scm:index/getDecryptionRule:getDecryptionRule", args ?? new GetDecryptionRuleInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetDecryptionRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the decryption rule
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the decryption rule
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetDecryptionRuleArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetDecryptionRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the decryption rule
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the decryption rule
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetDecryptionRuleInvokeArgs()
         {
@@ -118,92 +76,104 @@ namespace Pulumi.Scm
     public sealed class GetDecryptionRuleResult
     {
         /// <summary>
-        /// The Action param. String must be one of these: `"decrypt"`, `"no-decrypt"`.
+        /// The action to be taken
         /// </summary>
         public readonly string Action;
         /// <summary>
-        /// The Categories param.
+        /// The destination URL category
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// The Description param.
+        /// The description of the decryption rule
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DestinationHips param.
+        /// The Host Integrity Profile of the destination host
         /// </summary>
         public readonly ImmutableArray<string> DestinationHips;
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The Disabled param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Is the rule disabled?
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The Froms param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The source security zone
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the decryption rule
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LogFail param.
+        /// Log failed decryption events?
         /// </summary>
         public readonly bool LogFail;
         /// <summary>
-        /// The LogSetting param.
+        /// The log settings of the decryption rule
         /// </summary>
         public readonly string LogSetting;
         /// <summary>
-        /// The LogSuccess param.
+        /// Log successful decryption events?
         /// </summary>
         public readonly bool LogSuccess;
         /// <summary>
-        /// The Name param.
+        /// The name of the decryption rule
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NegateDestination param.
+        /// Negate the destination addresses?
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// The NegateSource param.
+        /// Negate the source addresses?
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
-        /// The Profile param.
+        /// The decryption profile associated with the decryption rule
         /// </summary>
         public readonly string Profile;
         /// <summary>
-        /// The Services param.
+        /// The destination services and/or service groups
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The SourceHips param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Source hip
         /// </summary>
         public readonly ImmutableArray<string> SourceHips;
         /// <summary>
-        /// The SourceUsers param.
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
-        /// The Tags param.
+        /// The tags associated with the decryption rule
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
         /// <summary>
-        /// The Tos param.
+        /// The destination security zone
         /// </summary>
         public readonly ImmutableArray<string> Tos;
         /// <summary>
-        /// The Type param.
+        /// The type of decryption
         /// </summary>
         public readonly Outputs.GetDecryptionRuleTypeResult Type;
 
@@ -219,7 +189,11 @@ namespace Pulumi.Scm
 
             ImmutableArray<string> destinations,
 
+            string device,
+
             bool disabled,
+
+            string folder,
 
             ImmutableArray<string> froms,
 
@@ -241,6 +215,8 @@ namespace Pulumi.Scm
 
             ImmutableArray<string> services,
 
+            string snippet,
+
             ImmutableArray<string> sourceHips,
 
             ImmutableArray<string> sourceUsers,
@@ -260,7 +236,9 @@ namespace Pulumi.Scm
             Description = description;
             DestinationHips = destinationHips;
             Destinations = destinations;
+            Device = device;
             Disabled = disabled;
+            Folder = folder;
             Froms = froms;
             Id = id;
             LogFail = logFail;
@@ -271,6 +249,7 @@ namespace Pulumi.Scm
             NegateSource = negateSource;
             Profile = profile;
             Services = services;
+            Snippet = snippet;
             SourceHips = sourceHips;
             SourceUsers = sourceUsers;
             Sources = sources;

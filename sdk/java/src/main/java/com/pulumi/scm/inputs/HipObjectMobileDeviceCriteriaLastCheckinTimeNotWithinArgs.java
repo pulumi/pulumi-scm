@@ -5,10 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs extends com.pulumi.resources.ResourceArgs {
@@ -16,18 +15,18 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs ext
     public static final HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs Empty = new HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs();
 
     /**
-     * specify time in days. Value must be between 1 and 365. Default: `30`.
+     * specify time in days
      * 
      */
-    @Import(name="days")
-    private @Nullable Output<Integer> days;
+    @Import(name="days", required=true)
+    private Output<Integer> days;
 
     /**
-     * @return specify time in days. Value must be between 1 and 365. Default: `30`.
+     * @return specify time in days
      * 
      */
-    public Optional<Output<Integer>> days() {
-        return Optional.ofNullable(this.days);
+    public Output<Integer> days() {
+        return this.days;
     }
 
     private HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs() {}
@@ -55,18 +54,18 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs ext
         }
 
         /**
-         * @param days specify time in days. Value must be between 1 and 365. Default: `30`.
+         * @param days specify time in days
          * 
          * @return builder
          * 
          */
-        public Builder days(@Nullable Output<Integer> days) {
+        public Builder days(Output<Integer> days) {
             $.days = days;
             return this;
         }
 
         /**
-         * @param days specify time in days. Value must be between 1 and 365. Default: `30`.
+         * @param days specify time in days
          * 
          * @return builder
          * 
@@ -76,6 +75,9 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs ext
         }
 
         public HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs build() {
+            if ($.days == null) {
+                throw new MissingRequiredPropertyException("HipObjectMobileDeviceCriteriaLastCheckinTimeNotWithinArgs", "days");
+            }
             return $;
         }
     }

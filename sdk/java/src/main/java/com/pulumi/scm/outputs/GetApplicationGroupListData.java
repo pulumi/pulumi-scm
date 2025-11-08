@@ -12,42 +12,82 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationGroupListData {
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the resource
      * 
      */
     private String id;
     /**
-     * @return The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Members
      * 
      */
     private List<String> members;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
 
     private GetApplicationGroupListData() {}
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the resource
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Members
      * 
      */
     public List<String> members() {
         return this.members;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -59,17 +99,41 @@ public final class GetApplicationGroupListData {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String device;
+        private String folder;
         private String id;
         private List<String> members;
         private String name;
+        private String snippet;
+        private String tfid;
         public Builder() {}
         public Builder(GetApplicationGroupListData defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.members = defaults.members;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetApplicationGroupListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetApplicationGroupListData", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
         @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
@@ -97,11 +161,31 @@ public final class GetApplicationGroupListData {
             this.name = name;
             return this;
         }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetApplicationGroupListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetApplicationGroupListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetApplicationGroupListData build() {
             final var _resultValue = new GetApplicationGroupListData();
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.members = members;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

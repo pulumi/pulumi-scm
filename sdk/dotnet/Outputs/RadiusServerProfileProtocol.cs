@@ -14,43 +14,43 @@ namespace Pulumi.Scm.Outputs
     public sealed class RadiusServerProfileProtocol
     {
         /// <summary>
-        /// The Chap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// C h a p
         /// </summary>
-        public readonly bool? Chap;
+        public readonly string? CHAP;
         /// <summary>
-        /// The EapTtlsWithPap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// E a p t t l s with p a p
         /// </summary>
-        public readonly Outputs.RadiusServerProfileProtocolEapTtlsWithPap? EapTtlsWithPap;
+        public readonly Outputs.RadiusServerProfileProtocolEAPTTLSWithPAP? EAPTTLSWithPAP;
         /// <summary>
-        /// The Pap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// P a p
         /// </summary>
-        public readonly bool? Pap;
+        public readonly string? PAP;
         /// <summary>
-        /// The PeapMschapV2 param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// P e a p m s c h a pv2
         /// </summary>
-        public readonly Outputs.RadiusServerProfileProtocolPeapMschapV2? PeapMschapV2;
+        public readonly Outputs.RadiusServerProfileProtocolPEAPMSCHAPv2? PEAPMSCHAPv2;
         /// <summary>
-        /// The PeapWithGtc param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// P e a p with g t c
         /// </summary>
-        public readonly Outputs.RadiusServerProfileProtocolPeapWithGtc? PeapWithGtc;
+        public readonly Outputs.RadiusServerProfileProtocolPEAPWithGTC? PEAPWithGTC;
 
         [OutputConstructor]
         private RadiusServerProfileProtocol(
-            bool? chap,
+            string? cHAP,
 
-            Outputs.RadiusServerProfileProtocolEapTtlsWithPap? eapTtlsWithPap,
+            Outputs.RadiusServerProfileProtocolEAPTTLSWithPAP? eAPTTLSWithPAP,
 
-            bool? pap,
+            string? pAP,
 
-            Outputs.RadiusServerProfileProtocolPeapMschapV2? peapMschapV2,
+            Outputs.RadiusServerProfileProtocolPEAPMSCHAPv2? pEAPMSCHAPv2,
 
-            Outputs.RadiusServerProfileProtocolPeapWithGtc? peapWithGtc)
+            Outputs.RadiusServerProfileProtocolPEAPWithGTC? pEAPWithGTC)
         {
-            Chap = chap;
-            EapTtlsWithPap = eapTtlsWithPap;
-            Pap = pap;
-            PeapMschapV2 = peapMschapV2;
-            PeapWithGtc = peapWithGtc;
+            CHAP = cHAP;
+            EAPTTLSWithPAP = eAPTTLSWithPAP;
+            PAP = pAP;
+            PEAPMSCHAPv2 = pEAPMSCHAPv2;
+            PEAPWithGTC = pEAPWithGTC;
         }
     }
 }

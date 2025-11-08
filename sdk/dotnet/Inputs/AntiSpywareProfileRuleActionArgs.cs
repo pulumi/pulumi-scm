@@ -13,46 +13,46 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareProfileRuleActionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Alert param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Alert
         /// </summary>
         [Input("alert")]
-        public Input<bool>? Alert { get; set; }
+        public Input<Inputs.AntiSpywareProfileRuleActionAlertArgs>? Alert { get; set; }
 
         /// <summary>
-        /// The Allow param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Allow
         /// </summary>
         [Input("allow")]
-        public Input<bool>? Allow { get; set; }
+        public Input<Inputs.AntiSpywareProfileRuleActionAllowArgs>? Allow { get; set; }
 
         /// <summary>
-        /// The BlockIp param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// anti spyware profiles rules action block ip
         /// </summary>
         [Input("blockIp")]
         public Input<Inputs.AntiSpywareProfileRuleActionBlockIpArgs>? BlockIp { get; set; }
 
         /// <summary>
-        /// The Drop param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Drop
         /// </summary>
         [Input("drop")]
-        public Input<bool>? Drop { get; set; }
+        public Input<Inputs.AntiSpywareProfileRuleActionDropArgs>? Drop { get; set; }
 
         /// <summary>
-        /// The ResetBoth param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset both
         /// </summary>
         [Input("resetBoth")]
-        public Input<bool>? ResetBoth { get; set; }
+        public Input<Inputs.AntiSpywareProfileRuleActionResetBothArgs>? ResetBoth { get; set; }
 
         /// <summary>
-        /// The ResetClient param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset client
         /// </summary>
         [Input("resetClient")]
-        public Input<bool>? ResetClient { get; set; }
+        public Input<Inputs.AntiSpywareProfileRuleActionResetClientArgs>? ResetClient { get; set; }
 
         /// <summary>
-        /// The ResetServer param. Ensure that only one of the following is specified: `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, `ResetServer`
+        /// Reset server
         /// </summary>
         [Input("resetServer")]
-        public Input<bool>? ResetServer { get; set; }
+        public Input<Inputs.AntiSpywareProfileRuleActionResetServerArgs>? ResetServer { get; set; }
 
         public AntiSpywareProfileRuleActionArgs()
         {

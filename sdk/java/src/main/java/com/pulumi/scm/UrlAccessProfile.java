@@ -18,7 +18,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * UrlAccessProfile resource
  * 
  * ## Example Usage
  * 
@@ -44,8 +44,19 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a URL Access Profile object.
+ *         //
  *         var example = new UrlAccessProfile("example", UrlAccessProfileArgs.builder()
  *             .folder("Shared")
+ *             .name("example_url_access_profile")
+ *             .description("Test URL Access Profile for create API")
+ *             .blocks(            
+ *                 "adult",
+ *                 "gambling")
+ *             .alerts(            
+ *                 "high-risk",
+ *                 "phishing")
  *             .build());
  * 
  *     }
@@ -57,252 +68,266 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/urlAccessProfile:UrlAccessProfile")
 public class UrlAccessProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Alerts param.
+     * Alert
      * 
      */
     @Export(name="alerts", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> alerts;
 
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     public Output<Optional<List<String>>> alerts() {
         return Codegen.optional(this.alerts);
     }
     /**
-     * The Allows param.
+     * Allow
      * 
      */
     @Export(name="allows", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> allows;
 
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     public Output<Optional<List<String>>> allows() {
         return Codegen.optional(this.allows);
     }
     /**
-     * The Blocks param.
+     * Block
      * 
      */
     @Export(name="blocks", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> blocks;
 
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     public Output<Optional<List<String>>> blocks() {
         return Codegen.optional(this.blocks);
     }
     /**
-     * The CloudInlineCat param.
+     * Cloud inline cat
      * 
      */
     @Export(name="cloudInlineCat", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> cloudInlineCat;
 
     /**
-     * @return The CloudInlineCat param.
+     * @return Cloud inline cat
      * 
      */
     public Output<Optional<Boolean>> cloudInlineCat() {
         return Codegen.optional(this.cloudInlineCat);
     }
     /**
-     * The Continues param.
+     * Continue
      * 
      */
     @Export(name="continues", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> continues;
 
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     public Output<Optional<List<String>>> continues() {
         return Codegen.optional(this.continues);
     }
     /**
-     * The CredentialEnforcement param.
+     * Credential enforcement
      * 
      */
     @Export(name="credentialEnforcement", refs={UrlAccessProfileCredentialEnforcement.class}, tree="[0]")
-    private Output</* @Nullable */ UrlAccessProfileCredentialEnforcement> credentialEnforcement;
+    private Output<UrlAccessProfileCredentialEnforcement> credentialEnforcement;
 
     /**
-     * @return The CredentialEnforcement param.
+     * @return Credential enforcement
      * 
      */
-    public Output<Optional<UrlAccessProfileCredentialEnforcement>> credentialEnforcement() {
-        return Codegen.optional(this.credentialEnforcement);
+    public Output<UrlAccessProfileCredentialEnforcement> credentialEnforcement() {
+        return this.credentialEnforcement;
     }
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The LocalInlineCat param.
+     * Local inline cat
      * 
      */
     @Export(name="localInlineCat", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> localInlineCat;
 
     /**
-     * @return The LocalInlineCat param.
+     * @return Local inline cat
      * 
      */
     public Output<Optional<Boolean>> localInlineCat() {
         return Codegen.optional(this.localInlineCat);
     }
     /**
-     * The LogContainerPageOnly param. Default: `true`.
+     * Log container page only
      * 
      */
     @Export(name="logContainerPageOnly", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> logContainerPageOnly;
 
     /**
-     * @return The LogContainerPageOnly param. Default: `true`.
+     * @return Log container page only
      * 
      */
     public Output<Boolean> logContainerPageOnly() {
         return this.logContainerPageOnly;
     }
     /**
-     * The LogHttpHdrReferer param. Default: `false`.
+     * Log http hdr referer
      * 
      */
     @Export(name="logHttpHdrReferer", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> logHttpHdrReferer;
 
     /**
-     * @return The LogHttpHdrReferer param. Default: `false`.
+     * @return Log http hdr referer
      * 
      */
     public Output<Boolean> logHttpHdrReferer() {
         return this.logHttpHdrReferer;
     }
     /**
-     * The LogHttpHdrUserAgent param. Default: `false`.
+     * Log http hdr user agent
      * 
      */
     @Export(name="logHttpHdrUserAgent", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> logHttpHdrUserAgent;
 
     /**
-     * @return The LogHttpHdrUserAgent param. Default: `false`.
+     * @return Log http hdr user agent
      * 
      */
     public Output<Boolean> logHttpHdrUserAgent() {
         return this.logHttpHdrUserAgent;
     }
     /**
-     * The LogHttpHdrXff param. Default: `false`.
+     * Log http hdr xff
      * 
      */
     @Export(name="logHttpHdrXff", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> logHttpHdrXff;
 
     /**
-     * @return The LogHttpHdrXff param. Default: `false`.
+     * @return Log http hdr xff
      * 
      */
     public Output<Boolean> logHttpHdrXff() {
         return this.logHttpHdrXff;
     }
     /**
-     * The MlavCategoryExceptions param.
+     * Mlav category exception
      * 
      */
     @Export(name="mlavCategoryExceptions", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> mlavCategoryExceptions;
 
     /**
-     * @return The MlavCategoryExceptions param.
+     * @return Mlav category exception
      * 
      */
     public Output<Optional<List<String>>> mlavCategoryExceptions() {
         return Codegen.optional(this.mlavCategoryExceptions);
     }
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The SafeSearchEnforcement param. Default: `false`.
+     * Redirect
+     * 
+     */
+    @Export(name="redirects", refs={List.class,String.class}, tree="[0,1]")
+    private Output</* @Nullable */ List<String>> redirects;
+
+    /**
+     * @return Redirect
+     * 
+     */
+    public Output<Optional<List<String>>> redirects() {
+        return Codegen.optional(this.redirects);
+    }
+    /**
+     * Safe search enforcement
      * 
      */
     @Export(name="safeSearchEnforcement", refs={Boolean.class}, tree="[0]")
     private Output<Boolean> safeSearchEnforcement;
 
     /**
-     * @return The SafeSearchEnforcement param. Default: `false`.
+     * @return Safe search enforcement
      * 
      */
     public Output<Boolean> safeSearchEnforcement() {
         return this.safeSearchEnforcement;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

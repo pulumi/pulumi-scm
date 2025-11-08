@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.Snippet("example", {});
- * ```
+ * Snippet resource
  */
 export class Snippet extends pulumi.CustomResource {
     /**
@@ -45,22 +36,22 @@ export class Snippet extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param.
+     * The description of the snippet
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Labels param.
+     * Labels applied to the snippet
      */
     declare public readonly labels: pulumi.Output<string[] | undefined>;
     /**
-     * The Name param.
+     * The name of the snippet
      */
     declare public readonly name: pulumi.Output<string>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Type param. String must be one of these: `"predefined"`, `"custom"`.
+     * The snippet type
      */
-    declare public /*out*/ readonly type: pulumi.Output<string>;
+    declare public readonly type: pulumi.Output<string | undefined>;
 
     /**
      * Create a Snippet resource with the given unique name, arguments, and options.
@@ -85,8 +76,8 @@ export class Snippet extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["labels"] = args?.labels;
             resourceInputs["name"] = args?.name;
+            resourceInputs["type"] = args?.type;
             resourceInputs["tfid"] = undefined /*out*/;
-            resourceInputs["type"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Snippet.__pulumiType, name, resourceInputs, opts);
@@ -98,20 +89,20 @@ export class Snippet extends pulumi.CustomResource {
  */
 export interface SnippetState {
     /**
-     * The Description param.
+     * The description of the snippet
      */
     description?: pulumi.Input<string>;
     /**
-     * The Labels param.
+     * Labels applied to the snippet
      */
     labels?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * The name of the snippet
      */
     name?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Type param. String must be one of these: `"predefined"`, `"custom"`.
+     * The snippet type
      */
     type?: pulumi.Input<string>;
 }
@@ -121,15 +112,19 @@ export interface SnippetState {
  */
 export interface SnippetArgs {
     /**
-     * The Description param.
+     * The description of the snippet
      */
     description?: pulumi.Input<string>;
     /**
-     * The Labels param.
+     * Labels applied to the snippet
      */
     labels?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * The name of the snippet
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet type
+     */
+    type?: pulumi.Input<string>;
 }

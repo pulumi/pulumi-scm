@@ -17,14 +17,14 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
     public static final ServiceProtocolArgs Empty = new ServiceProtocolArgs();
 
     /**
-     * The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * Tcp
      * 
      */
     @Import(name="tcp")
     private @Nullable Output<ServiceProtocolTcpArgs> tcp;
 
     /**
-     * @return The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * @return Tcp
      * 
      */
     public Optional<Output<ServiceProtocolTcpArgs>> tcp() {
@@ -32,14 +32,14 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
     }
 
     /**
-     * The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * Udp
      * 
      */
     @Import(name="udp")
     private @Nullable Output<ServiceProtocolUdpArgs> udp;
 
     /**
-     * @return The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * @return Udp
      * 
      */
     public Optional<Output<ServiceProtocolUdpArgs>> udp() {
@@ -72,7 +72,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tcp The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+         * @param tcp Tcp
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param tcp The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+         * @param tcp Tcp
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param udp The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+         * @param udp Udp
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
         }
 
         /**
-         * @param udp The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+         * @param udp Udp
          * 
          * @return builder
          * 

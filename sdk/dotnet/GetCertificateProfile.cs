@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetCertificateProfile
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// CertificateProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetCertificateProfile.Invoke(new()
+        ///     // Look up a single certificate profile object by its ID.
+        ///     // The ID used here is from the API response log you provided.
+        ///     var scmCertificateProfileDs = Scm.GetCertificateProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "8e64859b-eba9-4e25-9005-754c90c2b02d",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["exampleCpDsResult"] = scmCertificateProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +42,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetCertificateProfileResult>("scm:index/getCertificateProfile:getCertificateProfile", args ?? new GetCertificateProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// CertificateProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +54,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetCertificateProfile.Invoke(new()
+        ///     // Look up a single certificate profile object by its ID.
+        ///     // The ID used here is from the API response log you provided.
+        ///     var scmCertificateProfileDs = Scm.GetCertificateProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "8e64859b-eba9-4e25-9005-754c90c2b02d",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["exampleCpDsResult"] = scmCertificateProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +72,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetCertificateProfileResult>("scm:index/getCertificateProfile:getCertificateProfile", args ?? new GetCertificateProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// CertificateProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +84,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetCertificateProfile.Invoke(new()
+        ///     // Look up a single certificate profile object by its ID.
+        ///     // The ID used here is from the API response log you provided.
+        ///     var scmCertificateProfileDs = Scm.GetCertificateProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "8e64859b-eba9-4e25-9005-754c90c2b02d",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["exampleCpDsResult"] = scmCertificateProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +106,16 @@ namespace Pulumi.Scm
     public sealed class GetCertificateProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the certificate profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the certificate profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetCertificateProfileArgs()
         {
@@ -102,10 +126,16 @@ namespace Pulumi.Scm
     public sealed class GetCertificateProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the certificate profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the certificate profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetCertificateProfileInvokeArgs()
         {
@@ -118,60 +148,72 @@ namespace Pulumi.Scm
     public sealed class GetCertificateProfileResult
     {
         /// <summary>
-        /// The BlockExpiredCert param.
+        /// Block sessions with expired certificates?
         /// </summary>
         public readonly bool BlockExpiredCert;
         /// <summary>
-        /// The BlockTimeoutCert param.
+        /// Block session if certificate status cannot be retrieved within timeout?
         /// </summary>
         public readonly bool BlockTimeoutCert;
         /// <summary>
-        /// The BlockUnauthenticatedCert param.
+        /// Block session if the certificate was not issued to the authenticating device?
         /// </summary>
         public readonly bool BlockUnauthenticatedCert;
         /// <summary>
-        /// The BlockUnknownCert param.
+        /// Block session if certificate status is unknown?
         /// </summary>
         public readonly bool BlockUnknownCert;
         /// <summary>
-        /// The CaCertificates param.
+        /// An ordered list of CA certificates
         /// </summary>
         public readonly ImmutableArray<Outputs.GetCertificateProfileCaCertificateResult> CaCertificates;
         /// <summary>
-        /// The CertStatusTimeout param.
+        /// Certificate status timeout
         /// </summary>
         public readonly string CertStatusTimeout;
         /// <summary>
-        /// The CrlReceiveTimeout param.
+        /// CRL receive timeout (seconds)
         /// </summary>
         public readonly string CrlReceiveTimeout;
         /// <summary>
-        /// The Domain param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// User domain
         /// </summary>
         public readonly string Domain;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the certificate profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the certificate profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OcspReceiveTimeout param.
+        /// OCSP receive timeout (seconds)
         /// </summary>
         public readonly string OcspReceiveTimeout;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The UseCrl param.
+        /// Use CRL?
         /// </summary>
         public readonly bool UseCrl;
         /// <summary>
-        /// The UseOcsp param.
+        /// Use OCSP?
         /// </summary>
         public readonly bool UseOcsp;
         /// <summary>
-        /// The UsernameField param.
+        /// Certificate username field
         /// </summary>
         public readonly Outputs.GetCertificateProfileUsernameFieldResult UsernameField;
 
@@ -191,13 +233,19 @@ namespace Pulumi.Scm
 
             string crlReceiveTimeout,
 
+            string device,
+
             string domain,
+
+            string folder,
 
             string id,
 
             string name,
 
             string ocspReceiveTimeout,
+
+            string snippet,
 
             string tfid,
 
@@ -214,10 +262,13 @@ namespace Pulumi.Scm
             CaCertificates = caCertificates;
             CertStatusTimeout = certStatusTimeout;
             CrlReceiveTimeout = crlReceiveTimeout;
+            Device = device;
             Domain = domain;
+            Folder = folder;
             Id = id;
             Name = name;
             OcspReceiveTimeout = ocspReceiveTimeout;
+            Snippet = snippet;
             Tfid = tfid;
             UseCrl = useCrl;
             UseOcsp = useOcsp;

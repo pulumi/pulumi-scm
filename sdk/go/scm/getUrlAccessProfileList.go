@@ -27,12 +27,16 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetUrlAccessProfileList(ctx, &scm.GetUrlAccessProfileListArgs{
+//			// Data source to retrieve a list of URL Access Profile objects.
+//			//
+//			// Example 1: Fetch a list of all URL Access Profiles in the "Shared" folder.
+//			allShared, err := scm.GetUrlAccessProfileList(ctx, &scm.GetUrlAccessProfileListArgs{
 //				Folder: pulumi.StringRef("Shared"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("urlAccessProfilesListAllShared", allShared.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +54,40 @@ func GetUrlAccessProfileList(ctx *pulumi.Context, args *GetUrlAccessProfileListA
 
 // A collection of arguments for invoking getUrlAccessProfileList.
 type GetUrlAccessProfileListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getUrlAccessProfileList.
 type GetUrlAccessProfileListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetUrlAccessProfileListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +102,17 @@ func GetUrlAccessProfileListOutput(ctx *pulumi.Context, args GetUrlAccessProfile
 
 // A collection of arguments for invoking getUrlAccessProfileList.
 type GetUrlAccessProfileListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +135,17 @@ func (o GetUrlAccessProfileListResultOutput) ToGetUrlAccessProfileListResultOutp
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetUrlAccessProfileListResultOutput) Datas() GetUrlAccessProfileListDataArrayOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) []GetUrlAccessProfileListData { return v.Datas }).(GetUrlAccessProfileListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetUrlAccessProfileListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetUrlAccessProfileListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +155,22 @@ func (o GetUrlAccessProfileListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetUrlAccessProfileListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetUrlAccessProfileListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetUrlAccessProfileListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetUrlAccessProfileListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetUrlAccessProfileListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetUrlAccessProfileListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetUrlAccessProfileListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetUrlAccessProfileListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetUrlAccessProfileListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetUrlAccessProfileListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +179,7 @@ func (o GetUrlAccessProfileListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetUrlAccessProfileListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetUrlAccessProfileListResult) int { return v.Total }).(pulumi.IntOutput)
 }

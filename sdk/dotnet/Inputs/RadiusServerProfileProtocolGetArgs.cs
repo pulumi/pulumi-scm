@@ -13,34 +13,34 @@ namespace Pulumi.Scm.Inputs
     public sealed class RadiusServerProfileProtocolGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Chap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// C h a p
         /// </summary>
-        [Input("chap")]
-        public Input<bool>? Chap { get; set; }
+        [Input("cHAP")]
+        public Input<string>? CHAP { get; set; }
 
         /// <summary>
-        /// The EapTtlsWithPap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// E a p t t l s with p a p
         /// </summary>
-        [Input("eapTtlsWithPap")]
-        public Input<Inputs.RadiusServerProfileProtocolEapTtlsWithPapGetArgs>? EapTtlsWithPap { get; set; }
+        [Input("eAPTTLSWithPAP")]
+        public Input<Inputs.RadiusServerProfileProtocolEAPTTLSWithPAPGetArgs>? EAPTTLSWithPAP { get; set; }
 
         /// <summary>
-        /// The Pap param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// P a p
         /// </summary>
-        [Input("pap")]
-        public Input<bool>? Pap { get; set; }
+        [Input("pAP")]
+        public Input<string>? PAP { get; set; }
 
         /// <summary>
-        /// The PeapMschapV2 param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// P e a p m s c h a pv2
         /// </summary>
-        [Input("peapMschapV2")]
-        public Input<Inputs.RadiusServerProfileProtocolPeapMschapV2GetArgs>? PeapMschapV2 { get; set; }
+        [Input("pEAPMSCHAPv2")]
+        public Input<Inputs.RadiusServerProfileProtocolPEAPMSCHAPv2GetArgs>? PEAPMSCHAPv2 { get; set; }
 
         /// <summary>
-        /// The PeapWithGtc param. Ensure that only one of the following is specified: `CHAP`, `EAP_TTLS_with_PAP`, `PAP`, `PEAP_MSCHAPv2`, `PEAP_with_GTC`
+        /// P e a p with g t c
         /// </summary>
-        [Input("peapWithGtc")]
-        public Input<Inputs.RadiusServerProfileProtocolPeapWithGtcGetArgs>? PeapWithGtc { get; set; }
+        [Input("pEAPWithGTC")]
+        public Input<Inputs.RadiusServerProfileProtocolPEAPWithGTCGetArgs>? PEAPWithGTC { get; set; }
 
         public RadiusServerProfileProtocolGetArgs()
         {

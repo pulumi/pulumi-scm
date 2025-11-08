@@ -13,31 +13,31 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayAuthenticationCertificateArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The AllowIdPayloadMismatch param.
+        /// Allow id payload mismatch
         /// </summary>
         [Input("allowIdPayloadMismatch")]
         public Input<bool>? AllowIdPayloadMismatch { get; set; }
 
         /// <summary>
-        /// The CertificateProfile param.
+        /// Certificate profile
         /// </summary>
         [Input("certificateProfile")]
         public Input<string>? CertificateProfile { get; set; }
 
         /// <summary>
-        /// The LocalCertificate param.
+        /// Local certificate
         /// </summary>
         [Input("localCertificate")]
         public Input<Inputs.IkeGatewayAuthenticationCertificateLocalCertificateArgs>? LocalCertificate { get; set; }
 
         /// <summary>
-        /// The StrictValidationRevocation param.
+        /// Strict validation revocation
         /// </summary>
         [Input("strictValidationRevocation")]
         public Input<bool>? StrictValidationRevocation { get; set; }
 
         /// <summary>
-        /// The UseManagementAsSource param.
+        /// Use management as source
         /// </summary>
         [Input("useManagementAsSource")]
         public Input<bool>? UseManagementAsSource { get; set; }

@@ -16,14 +16,14 @@ public final class HipObjectMobileDeviceArgs extends com.pulumi.resources.Resour
     public static final HipObjectMobileDeviceArgs Empty = new HipObjectMobileDeviceArgs();
 
     /**
-     * The Criteria param.
+     * Criteria
      * 
      */
     @Import(name="criteria")
     private @Nullable Output<HipObjectMobileDeviceCriteriaArgs> criteria;
 
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Optional<Output<HipObjectMobileDeviceCriteriaArgs>> criteria() {
@@ -55,7 +55,7 @@ public final class HipObjectMobileDeviceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class HipObjectMobileDeviceArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 

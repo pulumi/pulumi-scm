@@ -17,14 +17,14 @@ public final class QosProfileClassBandwidthTypeMbpsArgs extends com.pulumi.resou
     public static final QosProfileClassBandwidthTypeMbpsArgs Empty = new QosProfileClassBandwidthTypeMbpsArgs();
 
     /**
-     * QoS setting for traffic classes.
+     * QoS setting for traffic classes
      * 
      */
     @Import(name="classes")
     private @Nullable Output<List<QosProfileClassBandwidthTypeMbpsClassArgs>> classes;
 
     /**
-     * @return QoS setting for traffic classes.
+     * @return QoS setting for traffic classes
      * 
      */
     public Optional<Output<List<QosProfileClassBandwidthTypeMbpsClassArgs>>> classes() {
@@ -56,7 +56,7 @@ public final class QosProfileClassBandwidthTypeMbpsArgs extends com.pulumi.resou
         }
 
         /**
-         * @param classes QoS setting for traffic classes.
+         * @param classes QoS setting for traffic classes
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class QosProfileClassBandwidthTypeMbpsArgs extends com.pulumi.resou
         }
 
         /**
-         * @param classes QoS setting for traffic classes.
+         * @param classes QoS setting for traffic classes
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class QosProfileClassBandwidthTypeMbpsArgs extends com.pulumi.resou
         }
 
         /**
-         * @param classes QoS setting for traffic classes.
+         * @param classes QoS setting for traffic classes
          * 
          * @return builder
          * 

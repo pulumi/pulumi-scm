@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * UrlCategory resource
  *
  * ## Example Usage
  *
@@ -13,7 +13,19 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.UrlCategory("example", {folder: "Shared"});
+ * //
+ * // Creates a custom URL Category object.
+ * //
+ * const example = new scm.UrlCategory("example", {
+ *     folder: "Shared",
+ *     name: "example_url_category",
+ *     description: "Test URL Category for create API",
+ *     lists: [
+ *         "example.com",
+ *         "test-create.com",
+ *     ],
+ *     type: "URL List",
+ * });
  * ```
  */
 export class UrlCategory extends pulumi.CustomResource {
@@ -45,32 +57,32 @@ export class UrlCategory extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The List param.
+     * List
      */
     declare public readonly lists: pulumi.Output<string[] | undefined>;
     /**
-     * The Name param.
+     * Name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+     * Type
      */
     declare public readonly type: pulumi.Output<string>;
 
@@ -116,32 +128,32 @@ export class UrlCategory extends pulumi.CustomResource {
  */
 export interface UrlCategoryState {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The List param.
+     * List
      */
     lists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+     * Type
      */
     type?: pulumi.Input<string>;
 }
@@ -151,31 +163,31 @@ export interface UrlCategoryState {
  */
 export interface UrlCategoryArgs {
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The List param.
+     * List
      */
     lists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * Name
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+     * Type
      */
     type?: pulumi.Input<string>;
 }

@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.ProfileGroup("example", {});
- * ```
+ * ProfileGroup resource
  */
 export class ProfileGroup extends pulumi.CustomResource {
     /**
@@ -45,52 +36,56 @@ export class ProfileGroup extends pulumi.CustomResource {
     }
 
     /**
-     * List of AI security profiles.
+     * Ai security
      */
     declare public readonly aiSecurities: pulumi.Output<string[] | undefined>;
     /**
-     * The Device param.
+     * Data filtering
+     */
+    declare public readonly dataFilterings: pulumi.Output<string[] | undefined>;
+    /**
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * List of DNS security profiles.
+     * Dns security
      */
     declare public readonly dnsSecurities: pulumi.Output<string[] | undefined>;
     /**
-     * List of file blocking profiles.
+     * File blocking
      */
     declare public readonly fileBlockings: pulumi.Output<string[] | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The name of the profile group.
+     * The name of the profile group
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * List of HTTP header insertion profiles.
+     * Saas security
      */
     declare public readonly saasSecurities: pulumi.Output<string[] | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * List of anti-spyware profiles.
+     * Spyware
      */
     declare public readonly spywares: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * List of URL filtering profiles.
+     * Url filtering
      */
     declare public readonly urlFilterings: pulumi.Output<string[] | undefined>;
     /**
-     * List of anti-virus and Wildfire analysis profiles.
+     * Virus and wildfire analysis
      */
     declare public readonly virusAndWildfireAnalyses: pulumi.Output<string[] | undefined>;
     /**
-     * List of vulnerability protection profiles.
+     * Vulnerability
      */
     declare public readonly vulnerabilities: pulumi.Output<string[] | undefined>;
 
@@ -108,6 +103,7 @@ export class ProfileGroup extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as ProfileGroupState | undefined;
             resourceInputs["aiSecurities"] = state?.aiSecurities;
+            resourceInputs["dataFilterings"] = state?.dataFilterings;
             resourceInputs["device"] = state?.device;
             resourceInputs["dnsSecurities"] = state?.dnsSecurities;
             resourceInputs["fileBlockings"] = state?.fileBlockings;
@@ -123,6 +119,7 @@ export class ProfileGroup extends pulumi.CustomResource {
         } else {
             const args = argsOrState as ProfileGroupArgs | undefined;
             resourceInputs["aiSecurities"] = args?.aiSecurities;
+            resourceInputs["dataFilterings"] = args?.dataFilterings;
             resourceInputs["device"] = args?.device;
             resourceInputs["dnsSecurities"] = args?.dnsSecurities;
             resourceInputs["fileBlockings"] = args?.fileBlockings;
@@ -146,52 +143,56 @@ export class ProfileGroup extends pulumi.CustomResource {
  */
 export interface ProfileGroupState {
     /**
-     * List of AI security profiles.
+     * Ai security
      */
     aiSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * Data filtering
+     */
+    dataFilterings?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * List of DNS security profiles.
+     * Dns security
      */
     dnsSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * List of file blocking profiles.
+     * File blocking
      */
     fileBlockings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The name of the profile group.
+     * The name of the profile group
      */
     name?: pulumi.Input<string>;
     /**
-     * List of HTTP header insertion profiles.
+     * Saas security
      */
     saasSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * List of anti-spyware profiles.
+     * Spyware
      */
     spywares?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
     /**
-     * List of URL filtering profiles.
+     * Url filtering
      */
     urlFilterings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * List of anti-virus and Wildfire analysis profiles.
+     * Virus and wildfire analysis
      */
     virusAndWildfireAnalyses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * List of vulnerability protection profiles.
+     * Vulnerability
      */
     vulnerabilities?: pulumi.Input<pulumi.Input<string>[]>;
 }
@@ -201,51 +202,55 @@ export interface ProfileGroupState {
  */
 export interface ProfileGroupArgs {
     /**
-     * List of AI security profiles.
+     * Ai security
      */
     aiSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Device param.
+     * Data filtering
+     */
+    dataFilterings?: pulumi.Input<pulumi.Input<string>[]>;
+    /**
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * List of DNS security profiles.
+     * Dns security
      */
     dnsSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * List of file blocking profiles.
+     * File blocking
      */
     fileBlockings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The name of the profile group.
+     * The name of the profile group
      */
     name?: pulumi.Input<string>;
     /**
-     * List of HTTP header insertion profiles.
+     * Saas security
      */
     saasSecurities?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * List of anti-spyware profiles.
+     * Spyware
      */
     spywares?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * List of URL filtering profiles.
+     * Url filtering
      */
     urlFilterings?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * List of anti-virus and Wildfire analysis profiles.
+     * Virus and wildfire analysis
      */
     virusAndWildfireAnalyses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * List of vulnerability protection profiles.
+     * Vulnerability
      */
     vulnerabilities?: pulumi.Input<pulumi.Input<string>[]>;
 }

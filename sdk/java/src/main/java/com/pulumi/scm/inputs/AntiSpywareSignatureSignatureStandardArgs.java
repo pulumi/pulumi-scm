@@ -20,14 +20,14 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
     public static final AntiSpywareSignatureSignatureStandardArgs Empty = new AntiSpywareSignatureSignatureStandardArgs();
 
     /**
-     * The AndConditions param.
+     * And condition
      * 
      */
     @Import(name="andConditions")
     private @Nullable Output<List<AntiSpywareSignatureSignatureStandardAndConditionArgs>> andConditions;
 
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     public Optional<Output<List<AntiSpywareSignatureSignatureStandardAndConditionArgs>>> andConditions() {
@@ -35,14 +35,14 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
     }
 
     /**
-     * The Comment param. String length must not exceed 256 characters.
+     * Comment
      * 
      */
     @Import(name="comment")
     private @Nullable Output<String> comment;
 
     /**
-     * @return The Comment param. String length must not exceed 256 characters.
+     * @return Comment
      * 
      */
     public Optional<Output<String>> comment() {
@@ -50,14 +50,14 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
@@ -65,14 +65,14 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
     }
 
     /**
-     * The OrderFree param. Default: `false`.
+     * Order free
      * 
      */
     @Import(name="orderFree")
     private @Nullable Output<Boolean> orderFree;
 
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     public Optional<Output<Boolean>> orderFree() {
@@ -80,14 +80,14 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
     }
 
     /**
-     * The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+     * Scope
      * 
      */
     @Import(name="scope")
     private @Nullable Output<String> scope;
 
     /**
-     * @return The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+     * @return Scope
      * 
      */
     public Optional<Output<String>> scope() {
@@ -123,7 +123,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param andConditions The AndConditions param.
+         * @param andConditions And condition
          * 
          * @return builder
          * 
@@ -134,7 +134,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param andConditions The AndConditions param.
+         * @param andConditions And condition
          * 
          * @return builder
          * 
@@ -144,7 +144,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param andConditions The AndConditions param.
+         * @param andConditions And condition
          * 
          * @return builder
          * 
@@ -154,7 +154,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param comment The Comment param. String length must not exceed 256 characters.
+         * @param comment Comment
          * 
          * @return builder
          * 
@@ -165,7 +165,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param comment The Comment param. String length must not exceed 256 characters.
+         * @param comment Comment
          * 
          * @return builder
          * 
@@ -175,7 +175,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -186,7 +186,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -196,7 +196,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param orderFree The OrderFree param. Default: `false`.
+         * @param orderFree Order free
          * 
          * @return builder
          * 
@@ -207,7 +207,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param orderFree The OrderFree param. Default: `false`.
+         * @param orderFree Order free
          * 
          * @return builder
          * 
@@ -217,7 +217,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param scope The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+         * @param scope Scope
          * 
          * @return builder
          * 
@@ -228,7 +228,7 @@ public final class AntiSpywareSignatureSignatureStandardArgs extends com.pulumi.
         }
 
         /**
-         * @param scope The Scope param. String must be one of these: `&#34;protocol-data-unit&#34;`, `&#34;session&#34;`.
+         * @param scope Scope
          * 
          * @return builder
          * 

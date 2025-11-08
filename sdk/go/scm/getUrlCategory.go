@@ -11,7 +11,37 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// UrlCategory data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a single URL Category object by its ID.
+//			//
+//			// Replace the ID with the UUID of the URL Category you want to find.
+//			example, err := scm.LookupUrlCategory(ctx, &scm.LookupUrlCategoryArgs{
+//				Id: "5ae04e1a-bc7b-4ea3-99bb-86de23886b45",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("urlCategoryDetails", example)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupUrlCategory(ctx *pulumi.Context, args *LookupUrlCategoryArgs, opts ...pulumi.InvokeOption) (*LookupUrlCategoryResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupUrlCategoryResult
@@ -24,22 +54,30 @@ func LookupUrlCategory(ctx *pulumi.Context, args *LookupUrlCategoryArgs, opts ..
 
 // A collection of arguments for invoking getUrlCategory.
 type LookupUrlCategoryArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getUrlCategory.
 type LookupUrlCategoryResult struct {
-	// The Description param.
+	// Description
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The List param.
+	// List
 	Lists []string `pulumi:"lists"`
-	// The Name param.
+	// Name
 	Name string `pulumi:"name"`
-	Tfid string `pulumi:"tfid"`
-	// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// Type
 	Type string `pulumi:"type"`
 }
 
@@ -54,8 +92,10 @@ func LookupUrlCategoryOutput(ctx *pulumi.Context, args LookupUrlCategoryOutputAr
 
 // A collection of arguments for invoking getUrlCategory.
 type LookupUrlCategoryOutputArgs struct {
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupUrlCategoryOutputArgs) ElementType() reflect.Type {
@@ -77,31 +117,46 @@ func (o LookupUrlCategoryResultOutput) ToLookupUrlCategoryResultOutputWithContex
 	return o
 }
 
-// The Description param.
+// Description
 func (o LookupUrlCategoryResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupUrlCategoryResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupUrlCategoryResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// UUID of the resource
 func (o LookupUrlCategoryResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The List param.
+// List
 func (o LookupUrlCategoryResultOutput) Lists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) []string { return v.Lists }).(pulumi.StringArrayOutput)
 }
 
-// The Name param.
+// Name
 func (o LookupUrlCategoryResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupUrlCategoryResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupUrlCategoryResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Type param. String must be one of these: `"URL List"`, `"Category Match"`. Default: `"URL List"`.
+// Type
 func (o LookupUrlCategoryResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Type }).(pulumi.StringOutput)
 }

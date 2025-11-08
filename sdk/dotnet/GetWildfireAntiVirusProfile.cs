@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetWildfireAntiVirusProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetWildfireAntiVirusProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// WildfireAntiVirusProfile data source
         /// </summary>
         public static Task<GetWildfireAntiVirusProfileResult> InvokeAsync(GetWildfireAntiVirusProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetWildfireAntiVirusProfileResult>("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", args ?? new GetWildfireAntiVirusProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetWildfireAntiVirusProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// WildfireAntiVirusProfile data source
         /// </summary>
         public static Output<GetWildfireAntiVirusProfileResult> Invoke(GetWildfireAntiVirusProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetWildfireAntiVirusProfileResult>("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", args ?? new GetWildfireAntiVirusProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetWildfireAntiVirusProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// WildfireAntiVirusProfile data source
         /// </summary>
         public static Output<GetWildfireAntiVirusProfileResult> Invoke(GetWildfireAntiVirusProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetWildfireAntiVirusProfileResult>("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", args ?? new GetWildfireAntiVirusProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetWildfireAntiVirusProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetWildfireAntiVirusProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetWildfireAntiVirusProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Name
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetWildfireAntiVirusProfileInvokeArgs()
         {
@@ -118,38 +76,54 @@ namespace Pulumi.Scm
     public sealed class GetWildfireAntiVirusProfileResult
     {
         /// <summary>
-        /// The Description param.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The MlavExceptions param.
+        /// Mlav exception
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileMlavExceptionResult> MlavExceptions;
         /// <summary>
-        /// The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The PacketCapture param.
+        /// Packet capture
         /// </summary>
         public readonly bool PacketCapture;
         /// <summary>
-        /// The Rules param.
+        /// Rules
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileRuleResult> Rules;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The ThreatExceptions param.
+        /// Threat exception
         /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileThreatExceptionResult> ThreatExceptions;
 
         [OutputConstructor]
         private GetWildfireAntiVirusProfileResult(
             string description,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -161,16 +135,21 @@ namespace Pulumi.Scm
 
             ImmutableArray<Outputs.GetWildfireAntiVirusProfileRuleResult> rules,
 
+            string snippet,
+
             string tfid,
 
             ImmutableArray<Outputs.GetWildfireAntiVirusProfileThreatExceptionResult> threatExceptions)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             MlavExceptions = mlavExceptions;
             Name = name;
             PacketCapture = packetCapture;
             Rules = rules;
+            Snippet = snippet;
             Tfid = tfid;
             ThreatExceptions = threatExceptions;
         }

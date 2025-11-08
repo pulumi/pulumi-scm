@@ -16,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * ServiceGroup resource
  * 
  * ## Example Usage
  * 
@@ -27,7 +27,14 @@ import javax.annotation.Nullable;
  * import com.pulumi.Context;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Service;
+ * import com.pulumi.scm.ServiceArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolTcpArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolTcpOverrideArgs;
+ * import com.pulumi.scm.inputs.ServiceProtocolUdpArgs;
  * import com.pulumi.scm.ServiceGroup;
+ * import com.pulumi.scm.ServiceGroupArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -41,7 +48,51 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new ServiceGroup("example");
+ *         // TCP Service with multiple destination ports custom timeout
+ *         var scmServiceTcpPorts = new Service("scmServiceTcpPorts", ServiceArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_service_tcp_ports")
+ *             .description("Managed by Pulumi")
+ *             .protocol(ServiceProtocolArgs.builder()
+ *                 .tcp(ServiceProtocolTcpArgs.builder()
+ *                     .port("80,443")
+ *                     .override(ServiceProtocolTcpOverrideArgs.builder()
+ *                         .timeout(3600)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // UDP Service with single destination port
+ *         var scmServiceUdpPort = new Service("scmServiceUdpPort", ServiceArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_service_udp_port")
+ *             .description("Managed by Pulumi")
+ *             .protocol(ServiceProtocolArgs.builder()
+ *                 .udp(ServiceProtocolUdpArgs.builder()
+ *                     .port("53")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         // Service Group containing multiple services
+ *         var scmServicegroup = new ServiceGroup("scmServicegroup", ServiceGroupArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_servicegroup")
+ *             .members(            
+ *                 scmServiceTcpPorts.name(),
+ *                 scmServiceUdpPort.name())
+ *             .build());
+ * 
+ *         // Service Group containing multiple services and another servicegroup
+ *         var scmServicegroupNested = new ServiceGroup("scmServicegroupNested", ServiceGroupArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_servicegroup_nested")
+ *             .members(            
+ *                 scmServiceTcpPorts.name(),
+ *                 scmServiceUdpPort.name(),
+ *                 scmServicegroup.name())
+ *             .build());
  * 
  *     }
  * }
@@ -52,84 +103,84 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/serviceGroup:ServiceGroup")
 public class ServiceGroup extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      * 
      */
     @Export(name="members", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> members;
 
     /**
-     * @return The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Members
      * 
      */
     public Output<List<String>> members() {
         return this.members;
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service group
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the service group
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the service group
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tags associated with the service group
      * 
      */
     public Output<Optional<List<String>>> tags() {

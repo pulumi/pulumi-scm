@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetLdapServerProfileServerResult
     {
         /// <summary>
-        /// The Address param.
+        /// The LDAP server IP address
         /// </summary>
         public readonly string Address;
         /// <summary>
-        /// The Name param.
+        /// The LDAP server name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The LDAP server port
         /// </summary>
         public readonly int Port;
 

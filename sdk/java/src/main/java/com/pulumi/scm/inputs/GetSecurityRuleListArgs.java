@@ -17,14 +17,14 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
     public static final GetSecurityRuleListArgs Empty = new GetSecurityRuleListArgs();
 
     /**
-     * The Device param.
+     * The device of the item.
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device of the item.
      * 
      */
     public Optional<Output<String>> device() {
@@ -32,14 +32,14 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -47,14 +47,14 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      * 
      */
     @Import(name="limit")
     private @Nullable Output<Integer> limit;
 
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
     public Optional<Output<Integer>> limit() {
@@ -62,14 +62,14 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The Name param.
+     * The name of the item.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<Output<String>> name() {
@@ -77,14 +77,14 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      * 
      */
     @Import(name="offset")
     private @Nullable Output<Integer> offset;
 
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
     public Optional<Output<Integer>> offset() {
@@ -92,29 +92,14 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    @Import(name="position")
-    private @Nullable Output<String> position;
-
-    /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-     * 
-     */
-    public Optional<Output<String>> position() {
-        return Optional.ofNullable(this.position);
-    }
-
-    /**
-     * The Snippet param.
+     * The snippet of the item.
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet of the item.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -129,7 +114,6 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
-        this.position = $.position;
         this.snippet = $.snippet;
     }
 
@@ -152,7 +136,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device of the item.
          * 
          * @return builder
          * 
@@ -163,7 +147,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device of the item.
          * 
          * @return builder
          * 
@@ -173,7 +157,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder of the item. Default: Shared.
          * 
          * @return builder
          * 
@@ -184,7 +168,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder of the item. Default: Shared.
          * 
          * @return builder
          * 
@@ -194,7 +178,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -205,7 +189,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -215,7 +199,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -226,7 +210,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -236,7 +220,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
@@ -247,7 +231,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
@@ -257,28 +241,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder position(@Nullable Output<String> position) {
-            $.position = position;
-            return this;
-        }
-
-        /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder position(String position) {
-            return position(Output.of(position));
-        }
-
-        /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet of the item.
          * 
          * @return builder
          * 
@@ -289,7 +252,7 @@ public final class GetSecurityRuleListArgs extends com.pulumi.resources.InvokeAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet of the item.
          * 
          * @return builder
          * 

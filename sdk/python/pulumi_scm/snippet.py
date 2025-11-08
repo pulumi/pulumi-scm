@@ -21,12 +21,14 @@ class SnippetArgs:
     def __init__(__self__, *,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  labels: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Snippet resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
+        :param pulumi.Input[_builtins.str] description: The description of the snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
+        :param pulumi.Input[_builtins.str] name: The name of the snippet
+        :param pulumi.Input[_builtins.str] type: The snippet type
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -34,12 +36,14 @@ class SnippetArgs:
             pulumi.set(__self__, "labels", labels)
         if name is not None:
             pulumi.set(__self__, "name", name)
+        if type is not None:
+            pulumi.set(__self__, "type", type)
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the snippet
         """
         return pulumi.get(self, "description")
 
@@ -51,7 +55,7 @@ class SnippetArgs:
     @pulumi.getter
     def labels(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Labels param.
+        Labels applied to the snippet
         """
         return pulumi.get(self, "labels")
 
@@ -63,13 +67,25 @@ class SnippetArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the snippet
         """
         return pulumi.get(self, "name")
 
     @name.setter
     def name(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "name", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The snippet type
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "type", value)
 
 
 @pulumi.input_type
@@ -82,10 +98,10 @@ class _SnippetState:
                  type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Snippet resources.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        :param pulumi.Input[_builtins.str] description: The description of the snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
+        :param pulumi.Input[_builtins.str] name: The name of the snippet
+        :param pulumi.Input[_builtins.str] type: The snippet type
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -102,7 +118,7 @@ class _SnippetState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the snippet
         """
         return pulumi.get(self, "description")
 
@@ -114,7 +130,7 @@ class _SnippetState:
     @pulumi.getter
     def labels(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Labels param.
+        Labels applied to the snippet
         """
         return pulumi.get(self, "labels")
 
@@ -126,7 +142,7 @@ class _SnippetState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the snippet
         """
         return pulumi.get(self, "name")
 
@@ -147,7 +163,7 @@ class _SnippetState:
     @pulumi.getter
     def type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        The snippet type
         """
         return pulumi.get(self, "type")
 
@@ -165,24 +181,17 @@ class Snippet(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  labels: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Snippet("example")
-        ```
+        Snippet resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
+        :param pulumi.Input[_builtins.str] description: The description of the snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
+        :param pulumi.Input[_builtins.str] name: The name of the snippet
+        :param pulumi.Input[_builtins.str] type: The snippet type
         """
         ...
     @overload
@@ -191,16 +200,7 @@ class Snippet(pulumi.CustomResource):
                  args: Optional[SnippetArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Snippet("example")
-        ```
+        Snippet resource
 
         :param str resource_name: The name of the resource.
         :param SnippetArgs args: The arguments to use to populate this resource's properties.
@@ -220,6 +220,7 @@ class Snippet(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  labels: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -232,8 +233,8 @@ class Snippet(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["labels"] = labels
             __props__.__dict__["name"] = name
+            __props__.__dict__["type"] = type
             __props__.__dict__["tfid"] = None
-            __props__.__dict__["type"] = None
         super(Snippet, __self__).__init__(
             'scm:index/snippet:Snippet',
             resource_name,
@@ -256,10 +257,10 @@ class Snippet(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: The Labels param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.str] type: The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        :param pulumi.Input[_builtins.str] description: The description of the snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
+        :param pulumi.Input[_builtins.str] name: The name of the snippet
+        :param pulumi.Input[_builtins.str] type: The snippet type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -276,7 +277,7 @@ class Snippet(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        The description of the snippet
         """
         return pulumi.get(self, "description")
 
@@ -284,7 +285,7 @@ class Snippet(pulumi.CustomResource):
     @pulumi.getter
     def labels(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Labels param.
+        Labels applied to the snippet
         """
         return pulumi.get(self, "labels")
 
@@ -292,7 +293,7 @@ class Snippet(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the snippet
         """
         return pulumi.get(self, "name")
 
@@ -303,9 +304,9 @@ class Snippet(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> pulumi.Output[_builtins.str]:
+    def type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Type param. String must be one of these: `"predefined"`, `"custom"`.
+        The snippet type
         """
         return pulumi.get(self, "type")
 

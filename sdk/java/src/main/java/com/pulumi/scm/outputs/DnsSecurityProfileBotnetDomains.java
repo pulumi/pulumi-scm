@@ -16,50 +16,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DnsSecurityProfileBotnetDomains {
     /**
-     * @return The DnsSecurityCategories param.
+     * @return DNS categories
      * 
      */
     private @Nullable List<DnsSecurityProfileBotnetDomainsDnsSecurityCategory> dnsSecurityCategories;
     /**
-     * @return The Lists param.
+     * @return Dynamic lists of DNS domains
      * 
      */
     private @Nullable List<DnsSecurityProfileBotnetDomainsList> lists;
     /**
-     * @return The Sinkhole param.
+     * @return DNS sinkhole settings
      * 
      */
     private @Nullable DnsSecurityProfileBotnetDomainsSinkhole sinkhole;
     /**
-     * @return The Whitelists param.
+     * @return DNS security overrides
      * 
      */
     private @Nullable List<DnsSecurityProfileBotnetDomainsWhitelist> whitelists;
 
     private DnsSecurityProfileBotnetDomains() {}
     /**
-     * @return The DnsSecurityCategories param.
+     * @return DNS categories
      * 
      */
     public List<DnsSecurityProfileBotnetDomainsDnsSecurityCategory> dnsSecurityCategories() {
         return this.dnsSecurityCategories == null ? List.of() : this.dnsSecurityCategories;
     }
     /**
-     * @return The Lists param.
+     * @return Dynamic lists of DNS domains
      * 
      */
     public List<DnsSecurityProfileBotnetDomainsList> lists() {
         return this.lists == null ? List.of() : this.lists;
     }
     /**
-     * @return The Sinkhole param.
+     * @return DNS sinkhole settings
      * 
      */
     public Optional<DnsSecurityProfileBotnetDomainsSinkhole> sinkhole() {
         return Optional.ofNullable(this.sinkhole);
     }
     /**
-     * @return The Whitelists param.
+     * @return DNS security overrides
      * 
      */
     public List<DnsSecurityProfileBotnetDomainsWhitelist> whitelists() {

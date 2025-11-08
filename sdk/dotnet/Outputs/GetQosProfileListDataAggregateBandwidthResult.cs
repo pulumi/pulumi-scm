@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosProfileListDataAggregateBandwidthResult
     {
         /// <summary>
-        /// guaranteed sending bandwidth in mbps. Value must be between 0 and 16000.
+        /// guaranteed sending bandwidth in mbps
         /// </summary>
         public readonly int EgressGuaranteed;
         /// <summary>
-        /// max sending bandwidth in mbps. Value must be between 0 and 60000.
+        /// max sending bandwidth in mbps
         /// </summary>
         public readonly int EgressMax;
 

@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Interval param. Value must be between 1 and 3600.
+        /// Interval
         /// </summary>
         [Input("interval")]
         public Input<int>? Interval { get; set; }
 
         /// <summary>
-        /// The Threshold param. Value must be between 1 and 255.
+        /// Threshold
         /// </summary>
         [Input("threshold")]
         public Input<int>? Threshold { get; set; }
 
         /// <summary>
-        /// The TrackBy param. String must be one of these: `"source-and-destination"`, `"source"`, `"destination"`.
+        /// Track by
         /// </summary>
         [Input("trackBy")]
         public Input<string>? TrackBy { get; set; }

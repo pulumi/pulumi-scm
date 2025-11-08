@@ -15,9 +15,11 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getCertificateProfileList({
+ * // Fetch a list of all certificate profile objects from the "Shared" folder.
+ * const allProfiles = scm.getCertificateProfileList({
  *     folder: "Shared",
  * });
+ * export const certificateProfilesList = allProfiles.then(allProfiles => allProfiles.datas);
  * ```
  */
 export function getCertificateProfileList(args?: GetCertificateProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetCertificateProfileListResult> {
@@ -38,27 +40,27 @@ export function getCertificateProfileList(args?: GetCertificateProfileListArgs, 
  */
 export interface GetCertificateProfileListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -68,15 +70,15 @@ export interface GetCertificateProfileListArgs {
  */
 export interface GetCertificateProfileListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetCertificateProfileListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -84,24 +86,24 @@ export interface GetCertificateProfileListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -114,9 +116,11 @@ export interface GetCertificateProfileListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getCertificateProfileList({
+ * // Fetch a list of all certificate profile objects from the "Shared" folder.
+ * const allProfiles = scm.getCertificateProfileList({
  *     folder: "Shared",
  * });
+ * export const certificateProfilesList = allProfiles.then(allProfiles => allProfiles.datas);
  * ```
  */
 export function getCertificateProfileListOutput(args?: GetCertificateProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCertificateProfileListResult> {
@@ -137,27 +141,27 @@ export function getCertificateProfileListOutput(args?: GetCertificateProfileList
  */
 export interface GetCertificateProfileListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

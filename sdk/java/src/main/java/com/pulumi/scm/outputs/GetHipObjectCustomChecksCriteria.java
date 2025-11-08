@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectCustomChecksCriteria {
     /**
-     * @return The Plist param.
+     * @return Plist
      * 
      */
     private List<GetHipObjectCustomChecksCriteriaPlist> plists;
     /**
-     * @return The ProcessList param.
+     * @return Process list
      * 
      */
     private List<GetHipObjectCustomChecksCriteriaProcessList> processLists;
     /**
-     * @return The RegistryKeys param.
+     * @return Registry key
      * 
      */
     private List<GetHipObjectCustomChecksCriteriaRegistryKey> registryKeys;
 
     private GetHipObjectCustomChecksCriteria() {}
     /**
-     * @return The Plist param.
+     * @return Plist
      * 
      */
     public List<GetHipObjectCustomChecksCriteriaPlist> plists() {
         return this.plists;
     }
     /**
-     * @return The ProcessList param.
+     * @return Process list
      * 
      */
     public List<GetHipObjectCustomChecksCriteriaProcessList> processLists() {
         return this.processLists;
     }
     /**
-     * @return The RegistryKeys param.
+     * @return Registry key
      * 
      */
     public List<GetHipObjectCustomChecksCriteriaRegistryKey> registryKeys() {

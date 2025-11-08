@@ -15,14 +15,14 @@ public final class AntiSpywareProfileThreatExceptionExemptIpArgs extends com.pul
     public static final AntiSpywareProfileThreatExceptionExemptIpArgs Empty = new AntiSpywareProfileThreatExceptionExemptIpArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
@@ -54,7 +54,7 @@ public final class AntiSpywareProfileThreatExceptionExemptIpArgs extends com.pul
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -65,7 +65,7 @@ public final class AntiSpywareProfileThreatExceptionExemptIpArgs extends com.pul
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 

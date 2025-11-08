@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareProfileThreatExceptionExemptIpArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;

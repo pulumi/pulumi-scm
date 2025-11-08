@@ -27,12 +27,28 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetExternalDynamicListList(ctx, &scm.GetExternalDynamicListListArgs{
+//			// Data source to fetch all external dynamic lists in the "Shared" folder.
+//			allSharedEdls, err := scm.GetExternalDynamicListList(ctx, &scm.GetExternalDynamicListListArgs{
 //				Folder: pulumi.StringRef("Shared"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("allSharedEdlsMap", allSharedEdls.Datas)
+//			// Example of using pagination to get the first 5 EDLs.
+//			paginatedEdls, err := scm.GetExternalDynamicListList(ctx, &scm.GetExternalDynamicListListArgs{
+//				Folder: pulumi.StringRef("Shared"),
+//				Limit:  pulumi.IntRef(5),
+//				Offset: pulumi.IntRef(0),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("paginatedEdlsDetails", pulumi.IntMap{
+//				"totalInFolder": paginatedEdls.Total,
+//				"limitUsed":     paginatedEdls.Limit,
+//				"offsetUsed":    paginatedEdls.Offset,
+//			})
 //			return nil
 //		})
 //	}
@@ -50,40 +66,40 @@ func GetExternalDynamicListList(ctx *pulumi.Context, args *GetExternalDynamicLis
 
 // A collection of arguments for invoking getExternalDynamicListList.
 type GetExternalDynamicListListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getExternalDynamicListList.
 type GetExternalDynamicListListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetExternalDynamicListListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +114,17 @@ func GetExternalDynamicListListOutput(ctx *pulumi.Context, args GetExternalDynam
 
 // A collection of arguments for invoking getExternalDynamicListList.
 type GetExternalDynamicListListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +147,17 @@ func (o GetExternalDynamicListListResultOutput) ToGetExternalDynamicListListResu
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetExternalDynamicListListResultOutput) Datas() GetExternalDynamicListListDataArrayOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) []GetExternalDynamicListListData { return v.Datas }).(GetExternalDynamicListListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetExternalDynamicListListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetExternalDynamicListListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +167,22 @@ func (o GetExternalDynamicListListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetExternalDynamicListListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetExternalDynamicListListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetExternalDynamicListListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetExternalDynamicListListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetExternalDynamicListListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetExternalDynamicListListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetExternalDynamicListListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetExternalDynamicListListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetExternalDynamicListListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetExternalDynamicListListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +191,7 @@ func (o GetExternalDynamicListListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetExternalDynamicListListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetExternalDynamicListListResult) int { return v.Total }).(pulumi.IntOutput)
 }

@@ -14,31 +14,31 @@ namespace Pulumi.Scm.Outputs
     public sealed class UrlAccessProfileCredentialEnforcementMode
     {
         /// <summary>
-        /// The Disabled param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Disabled
         /// </summary>
-        public readonly bool? Disabled;
+        public readonly Outputs.UrlAccessProfileCredentialEnforcementModeDisabled? Disabled;
         /// <summary>
-        /// The DomainCredentials param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Domain credentials
         /// </summary>
-        public readonly bool? DomainCredentials;
+        public readonly Outputs.UrlAccessProfileCredentialEnforcementModeDomainCredentials? DomainCredentials;
         /// <summary>
-        /// The GroupMapping param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Group mapping
         /// </summary>
         public readonly string? GroupMapping;
         /// <summary>
-        /// The IpUser param. Ensure that only one of the following is specified: `Disabled`, `DomainCredentials`, `GroupMapping`, `IpUser`
+        /// Ip user
         /// </summary>
-        public readonly bool? IpUser;
+        public readonly Outputs.UrlAccessProfileCredentialEnforcementModeIpUser? IpUser;
 
         [OutputConstructor]
         private UrlAccessProfileCredentialEnforcementMode(
-            bool? disabled,
+            Outputs.UrlAccessProfileCredentialEnforcementModeDisabled? disabled,
 
-            bool? domainCredentials,
+            Outputs.UrlAccessProfileCredentialEnforcementModeDomainCredentials? domainCredentials,
 
             string? groupMapping,
 
-            bool? ipUser)
+            Outputs.UrlAccessProfileCredentialEnforcementModeIpUser? ipUser)
         {
             Disabled = disabled;
             DomainCredentials = domainCredentials;

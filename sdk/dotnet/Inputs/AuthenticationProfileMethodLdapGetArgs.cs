@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileMethodLdapGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The LoginAttribute param.
+        /// Login attribute
         /// </summary>
         [Input("loginAttribute")]
         public Input<string>? LoginAttribute { get; set; }
 
         /// <summary>
-        /// The PasswdExpDays param.
+        /// Passwd exp days
         /// </summary>
         [Input("passwdExpDays")]
         public Input<int>? PasswdExpDays { get; set; }
 
         /// <summary>
-        /// The ServerProfile param.
+        /// Server profile
         /// </summary>
         [Input("serverProfile")]
         public Input<string>? ServerProfile { get; set; }

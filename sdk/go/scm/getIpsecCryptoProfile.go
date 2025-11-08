@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// IpsecCryptoProfile data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,14 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupIpsecCryptoProfile(ctx, &scm.LookupIpsecCryptoProfileArgs{
-//				Id: "1234-56-789",
+//			// Example of looking up an individual IPsec Crypto Profile by its ID.
+//			scmIpsecCryptoProfileDs, err := scm.LookupIpsecCryptoProfile(ctx, &scm.LookupIpsecCryptoProfileArgs{
+//				Id: "b89e8fe1-9e92-46fa-8a67-de84313128c9",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("ipsecProfileById", scmIpsecCryptoProfileDs)
 //			return nil
 //		})
 //	}
@@ -50,39 +52,35 @@ func LookupIpsecCryptoProfile(ctx *pulumi.Context, args *LookupIpsecCryptoProfil
 
 // A collection of arguments for invoking getIpsecCryptoProfile.
 type LookupIpsecCryptoProfileArgs struct {
-	// The Device param.
-	Device *string `pulumi:"device"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Snippet param.
-	Snippet *string `pulumi:"snippet"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getIpsecCryptoProfile.
 type LookupIpsecCryptoProfileResult struct {
-	// The Ah param.
+	// Ah
 	Ah GetIpsecCryptoProfileAh `pulumi:"ah"`
-	// The Device param.
-	Device *string `pulumi:"device"`
-	// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// phase-2 DH group (PFS DH group)
 	DhGroup string `pulumi:"dhGroup"`
-	// The Esp param.
+	// Esp
 	Esp GetIpsecCryptoProfileEsp `pulumi:"esp"`
-	// The Folder param.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// UUID of the resource
 	Id string `pulumi:"id"`
-	// The Lifesize param.
+	// Lifesize
 	Lifesize GetIpsecCryptoProfileLifesize `pulumi:"lifesize"`
-	// The Lifetime param.
+	// Ipsec crypto profile lifetime
 	Lifetime GetIpsecCryptoProfileLifetime `pulumi:"lifetime"`
-	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name string `pulumi:"name"`
-	// The Snippet param.
-	Snippet *string `pulumi:"snippet"`
-	Tfid    string  `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupIpsecCryptoProfileOutput(ctx *pulumi.Context, args LookupIpsecCryptoProfileOutputArgs, opts ...pulumi.InvokeOption) LookupIpsecCryptoProfileResultOutput {
@@ -96,14 +94,10 @@ func LookupIpsecCryptoProfileOutput(ctx *pulumi.Context, args LookupIpsecCryptoP
 
 // A collection of arguments for invoking getIpsecCryptoProfile.
 type LookupIpsecCryptoProfileOutputArgs struct {
-	// The Device param.
-	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
-	// The Snippet param.
-	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
+	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupIpsecCryptoProfileOutputArgs) ElementType() reflect.Type {
@@ -125,54 +119,54 @@ func (o LookupIpsecCryptoProfileResultOutput) ToLookupIpsecCryptoProfileResultOu
 	return o
 }
 
-// The Ah param.
+// Ah
 func (o LookupIpsecCryptoProfileResultOutput) Ah() GetIpsecCryptoProfileAhOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileAh { return v.Ah }).(GetIpsecCryptoProfileAhOutput)
 }
 
-// The Device param.
-func (o LookupIpsecCryptoProfileResultOutput) Device() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) *string { return v.Device }).(pulumi.StringPtrOutput)
+// The device in which the resource is defined
+func (o LookupIpsecCryptoProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+// phase-2 DH group (PFS DH group)
 func (o LookupIpsecCryptoProfileResultOutput) DhGroup() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.DhGroup }).(pulumi.StringOutput)
 }
 
-// The Esp param.
+// Esp
 func (o LookupIpsecCryptoProfileResultOutput) Esp() GetIpsecCryptoProfileEspOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileEsp { return v.Esp }).(GetIpsecCryptoProfileEspOutput)
 }
 
-// The Folder param.
-func (o LookupIpsecCryptoProfileResultOutput) Folder() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
+// The folder in which the resource is defined
+func (o LookupIpsecCryptoProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// UUID of the resource
 func (o LookupIpsecCryptoProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Lifesize param.
+// Lifesize
 func (o LookupIpsecCryptoProfileResultOutput) Lifesize() GetIpsecCryptoProfileLifesizeOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileLifesize { return v.Lifesize }).(GetIpsecCryptoProfileLifesizeOutput)
 }
 
-// The Lifetime param.
+// Ipsec crypto profile lifetime
 func (o LookupIpsecCryptoProfileResultOutput) Lifetime() GetIpsecCryptoProfileLifetimeOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileLifetime { return v.Lifetime }).(GetIpsecCryptoProfileLifetimeOutput)
 }
 
-// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 func (o LookupIpsecCryptoProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
-func (o LookupIpsecCryptoProfileResultOutput) Snippet() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
+// The snippet in which the resource is defined
+func (o LookupIpsecCryptoProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupIpsecCryptoProfileResultOutput) Tfid() pulumi.StringOutput {

@@ -4,6 +4,7 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.HipObjectPatchManagementCriteriaMissingPatchesSeverity;
 import java.lang.String;
 import java.util.List;
@@ -14,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectPatchManagementCriteriaMissingPatches {
     /**
-     * @return The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+     * @return Check
      * 
      */
-    private @Nullable String check;
+    private String check;
     /**
-     * @return The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Patches
      * 
      */
     private @Nullable List<String> patches;
     /**
-     * @return The Severity param.
+     * @return Severity
      * 
      */
     private @Nullable HipObjectPatchManagementCriteriaMissingPatchesSeverity severity;
 
     private HipObjectPatchManagementCriteriaMissingPatches() {}
     /**
-     * @return The Check param. String must be one of these: `&#34;has-any&#34;`, `&#34;has-none&#34;`, `&#34;has-all&#34;`. Default: `&#34;has-any&#34;`.
+     * @return Check
      * 
      */
-    public Optional<String> check() {
-        return Optional.ofNullable(this.check);
+    public String check() {
+        return this.check;
     }
     /**
-     * @return The Patches param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return Patches
      * 
      */
     public List<String> patches() {
         return this.patches == null ? List.of() : this.patches;
     }
     /**
-     * @return The Severity param.
+     * @return Severity
      * 
      */
     public Optional<HipObjectPatchManagementCriteriaMissingPatchesSeverity> severity() {
@@ -61,7 +62,7 @@ public final class HipObjectPatchManagementCriteriaMissingPatches {
     }
     @CustomType.Builder
     public static final class Builder {
-        private @Nullable String check;
+        private String check;
         private @Nullable List<String> patches;
         private @Nullable HipObjectPatchManagementCriteriaMissingPatchesSeverity severity;
         public Builder() {}
@@ -73,8 +74,10 @@ public final class HipObjectPatchManagementCriteriaMissingPatches {
         }
 
         @CustomType.Setter
-        public Builder check(@Nullable String check) {
-
+        public Builder check(String check) {
+            if (check == null) {
+              throw new MissingRequiredPropertyException("HipObjectPatchManagementCriteriaMissingPatches", "check");
+            }
             this.check = check;
             return this;
         }

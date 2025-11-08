@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetApplicationFilter
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// ApplicationFilter data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,15 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetApplicationFilter.Invoke(new()
+        ///     var scmApplicationFilterDs = Scm.GetApplicationFilter.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "52ee6475-a99c-42d7-be0a-e251c05e805b",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["applicationFiltersDataSourceResults"] = scmApplicationFilterDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +40,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetApplicationFilterResult>("scm:index/getApplicationFilter:getApplicationFilter", args ?? new GetApplicationFilterArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ApplicationFilter data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +52,15 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetApplicationFilter.Invoke(new()
+        ///     var scmApplicationFilterDs = Scm.GetApplicationFilter.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "52ee6475-a99c-42d7-be0a-e251c05e805b",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["applicationFiltersDataSourceResults"] = scmApplicationFilterDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +68,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetApplicationFilterResult>("scm:index/getApplicationFilter:getApplicationFilter", args ?? new GetApplicationFilterInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ApplicationFilter data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +80,15 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetApplicationFilter.Invoke(new()
+        ///     var scmApplicationFilterDs = Scm.GetApplicationFilter.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "52ee6475-a99c-42d7-be0a-e251c05e805b",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["applicationFiltersDataSourceResults"] = scmApplicationFilterDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +100,16 @@ namespace Pulumi.Scm
     public sealed class GetApplicationFilterArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetApplicationFilterArgs()
         {
@@ -102,10 +120,16 @@ namespace Pulumi.Scm
     public sealed class GetApplicationFilterInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetApplicationFilterInvokeArgs()
         {
@@ -118,84 +142,96 @@ namespace Pulumi.Scm
     public sealed class GetApplicationFilterResult
     {
         /// <summary>
-        /// The Categories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Category
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// only True is a valid value.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// only True is a valid value
         /// </summary>
         public readonly bool Evasive;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool ExcessiveBandwidthUse;
         /// <summary>
-        /// The Excludes param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Exclude
         /// </summary>
         public readonly ImmutableArray<string> Excludes;
         /// <summary>
-        /// only True is a valid value.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// only True is a valid value
         /// </summary>
         public readonly bool HasKnownVulnerabilities;
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool IsSaas;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool NewAppid;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool Pervasive;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool ProneToMisuse;
         /// <summary>
-        /// The Risks param. Individual elements in this list are subject to additional validation. Value must be between 1 and 5.
+        /// Risk
         /// </summary>
         public readonly ImmutableArray<int> Risks;
         /// <summary>
-        /// The SaasCertifications param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas certifications
         /// </summary>
         public readonly ImmutableArray<string> SaasCertifications;
         /// <summary>
-        /// The SaasRisks param. Individual elements in this list are subject to additional validation. String length must not exceed 32 characters.
+        /// Saas risk
         /// </summary>
         public readonly ImmutableArray<string> SaasRisks;
         /// <summary>
-        /// The Subcategories param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Subcategory
         /// </summary>
         public readonly ImmutableArray<string> Subcategories;
         /// <summary>
-        /// The Tagging param.
+        /// Tagging
         /// </summary>
         public readonly Outputs.GetApplicationFilterTaggingResult Tagging;
         /// <summary>
-        /// The Technologies param. Individual elements in this list are subject to additional validation. String length must not exceed 128 characters.
+        /// Technology
         /// </summary>
         public readonly ImmutableArray<string> Technologies;
         public readonly string Tfid;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool TransfersFiles;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool TunnelsOtherApps;
         /// <summary>
-        /// only True is a valid value.
+        /// only True is a valid value
         /// </summary>
         public readonly bool UsedByMalware;
 
@@ -203,11 +239,15 @@ namespace Pulumi.Scm
         private GetApplicationFilterResult(
             ImmutableArray<string> categories,
 
+            string device,
+
             bool evasive,
 
             bool excessiveBandwidthUse,
 
             ImmutableArray<string> excludes,
+
+            string folder,
 
             bool hasKnownVulnerabilities,
 
@@ -229,6 +269,8 @@ namespace Pulumi.Scm
 
             ImmutableArray<string> saasRisks,
 
+            string snippet,
+
             ImmutableArray<string> subcategories,
 
             Outputs.GetApplicationFilterTaggingResult tagging,
@@ -244,9 +286,11 @@ namespace Pulumi.Scm
             bool usedByMalware)
         {
             Categories = categories;
+            Device = device;
             Evasive = evasive;
             ExcessiveBandwidthUse = excessiveBandwidthUse;
             Excludes = excludes;
+            Folder = folder;
             HasKnownVulnerabilities = hasKnownVulnerabilities;
             Id = id;
             IsSaas = isSaas;
@@ -257,6 +301,7 @@ namespace Pulumi.Scm
             Risks = risks;
             SaasCertifications = saasCertifications;
             SaasRisks = saasRisks;
+            Snippet = snippet;
             Subcategories = subcategories;
             Tagging = tagging;
             Technologies = technologies;

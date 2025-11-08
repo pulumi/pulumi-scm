@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class QosProfileClassBandwidthTypeMbpsClassArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The ClassBandwidth param.
+        /// Class bandwidth
         /// </summary>
         [Input("classBandwidth")]
         public Input<Inputs.QosProfileClassBandwidthTypeMbpsClassClassBandwidthArgs>? ClassBandwidth { get; set; }
 
         /// <summary>
-        /// Traffic class. String length must not exceed 31 characters.
+        /// Traffic class
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// traffic class priority. String must be one of these: `"real-time"`, `"high"`, `"medium"`, `"low"`. Default: `"medium"`.
+        /// traffic class priority
         /// </summary>
         [Input("priority")]
         public Input<string>? Priority { get; set; }

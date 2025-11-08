@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationDefault {
     /**
-     * @return The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by icmp6 type
      * 
      */
     private @Nullable ApplicationDefaultIdentByIcmp6Type identByIcmp6Type;
     /**
-     * @return The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by icmp type
      * 
      */
     private @Nullable ApplicationDefaultIdentByIcmpType identByIcmpType;
     /**
-     * @return The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by ip protocol
      * 
      */
     private @Nullable String identByIpProtocol;
     /**
-     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Port
      * 
      */
     private @Nullable List<String> ports;
 
     private ApplicationDefault() {}
     /**
-     * @return The IdentByIcmp6Type param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by icmp6 type
      * 
      */
     public Optional<ApplicationDefaultIdentByIcmp6Type> identByIcmp6Type() {
         return Optional.ofNullable(this.identByIcmp6Type);
     }
     /**
-     * @return The IdentByIcmpType param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by icmp type
      * 
      */
     public Optional<ApplicationDefaultIdentByIcmpType> identByIcmpType() {
         return Optional.ofNullable(this.identByIcmpType);
     }
     /**
-     * @return The IdentByIpProtocol param. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Ident by ip protocol
      * 
      */
     public Optional<String> identByIpProtocol() {
         return Optional.ofNullable(this.identByIpProtocol);
     }
     /**
-     * @return The Ports param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters. Ensure that only one of the following is specified: `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, `port`
+     * @return Port
      * 
      */
     public List<String> ports() {

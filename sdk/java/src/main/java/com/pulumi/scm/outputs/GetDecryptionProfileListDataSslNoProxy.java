@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetDecryptionProfileListDataSslNoProxy {
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     private Boolean blockExpiredCertificate;
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     private Boolean blockUntrustedIssuer;
 
     private GetDecryptionProfileListDataSslNoProxy() {}
     /**
-     * @return The BlockExpiredCertificate param. Default: `false`.
+     * @return Block expired certificate
      * 
      */
     public Boolean blockExpiredCertificate() {
         return this.blockExpiredCertificate;
     }
     /**
-     * @return The BlockUntrustedIssuer param. Default: `false`.
+     * @return Block untrusted issuer
      * 
      */
     public Boolean blockUntrustedIssuer() {

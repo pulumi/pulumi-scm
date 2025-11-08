@@ -18,14 +18,14 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
     public static final RegionArgs Empty = new RegionArgs();
 
     /**
-     * The Addresses param.
+     * Address
      * 
      */
     @Import(name="addresses")
     private @Nullable Output<List<String>> addresses;
 
     /**
-     * @return The Addresses param.
+     * @return Address
      * 
      */
     public Optional<Output<List<String>>> addresses() {
@@ -33,14 +33,14 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -48,14 +48,14 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -63,14 +63,14 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The GeoLocation param.
+     * Geo location
      * 
      */
     @Import(name="geoLocation")
     private @Nullable Output<RegionGeoLocationArgs> geoLocation;
 
     /**
-     * @return The GeoLocation param.
+     * @return Geo location
      * 
      */
     public Optional<Output<RegionGeoLocationArgs>> geoLocation() {
@@ -78,14 +78,14 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the region
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the region
      * 
      */
     public Optional<Output<String>> name() {
@@ -93,14 +93,14 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -137,7 +137,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param addresses The Addresses param.
+         * @param addresses Address
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param addresses The Addresses param.
+         * @param addresses Address
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param addresses The Addresses param.
+         * @param addresses Address
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -200,7 +200,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param geoLocation The GeoLocation param.
+         * @param geoLocation Geo location
          * 
          * @return builder
          * 
@@ -221,7 +221,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param geoLocation The GeoLocation param.
+         * @param geoLocation Geo location
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the region
          * 
          * @return builder
          * 
@@ -242,7 +242,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the region
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -263,7 +263,7 @@ public final class RegionArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

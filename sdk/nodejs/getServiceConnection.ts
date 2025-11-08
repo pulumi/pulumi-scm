@@ -7,25 +7,15 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ServiceConnection data source
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getServiceConnection({
- *     id: "1234-56-789",
- *     folder: "Service Connections",
- * });
- * ```
  */
 export function getServiceConnection(args: GetServiceConnectionArgs, opts?: pulumi.InvokeOptions): Promise<GetServiceConnectionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getServiceConnection:getServiceConnection", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -34,13 +24,13 @@ export function getServiceConnection(args: GetServiceConnectionArgs, opts?: pulu
  */
 export interface GetServiceConnectionArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * The UUID of the service connection
      */
     id: string;
+    /**
+     * The name of the service connection
+     */
+    name?: string;
 }
 
 /**
@@ -48,87 +38,77 @@ export interface GetServiceConnectionArgs {
  */
 export interface GetServiceConnectionResult {
     /**
-     * The BackupSC param.
+     * Backup s c
      */
     readonly backupSC: string;
     /**
-     * The BgpPeer param.
+     * Bgp peer
      */
     readonly bgpPeer: outputs.GetServiceConnectionBgpPeer;
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+     * Map of sensitive values returned from the API.
      */
-    readonly folder: string;
+    readonly encryptedValues: {[key: string]: string};
     /**
-     * The Id param.
+     * The UUID of the service connection
      */
     readonly id: string;
     /**
-     * The IpsecTunnel param.
+     * Ipsec tunnel
      */
     readonly ipsecTunnel: string;
     /**
-     * The Name param.
+     * The name of the service connection
      */
     readonly name: string;
     /**
-     * The NatPool param.
+     * Nat pool
      */
     readonly natPool: string;
     /**
-     * The NoExportCommunity param. String must be one of these: `"Disabled"`, `"Enabled-In"`, `"Enabled-Out"`, `"Enabled-Both"`.
+     * No export community
      */
     readonly noExportCommunity: string;
     /**
-     * The OnboardingType param. String must be one of these: `"classic"`. Default: `"classic"`.
+     * Onboarding type
      */
     readonly onboardingType: string;
     /**
-     * The Protocol param.
+     * Protocol
      */
     readonly protocol: outputs.GetServiceConnectionProtocol;
     /**
-     * The Qos param.
+     * Qos
      */
     readonly qos: outputs.GetServiceConnectionQos;
     /**
-     * The Region param.
+     * Region
      */
     readonly region: string;
     /**
-     * The SecondaryIpsecTunnel param.
+     * Secondary ipsec tunnel
      */
     readonly secondaryIpsecTunnel: string;
     /**
-     * The SourceNat param.
+     * Source nat
      */
     readonly sourceNat: boolean;
     /**
-     * The Subnets param.
+     * Subnets
      */
     readonly subnets: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * ServiceConnection data source
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getServiceConnection({
- *     id: "1234-56-789",
- *     folder: "Service Connections",
- * });
- * ```
  */
 export function getServiceConnectionOutput(args: GetServiceConnectionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetServiceConnectionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getServiceConnection:getServiceConnection", {
-        "folder": args.folder,
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -137,11 +117,11 @@ export function getServiceConnectionOutput(args: GetServiceConnectionOutputArgs,
  */
 export interface GetServiceConnectionOutputArgs {
     /**
-     * The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * The UUID of the service connection
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the service connection
+     */
+    name?: pulumi.Input<string>;
 }

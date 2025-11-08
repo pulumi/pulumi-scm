@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDnsSecurityProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * DnsSecurityProfile data source
  */
 export function getDnsSecurityProfile(args: GetDnsSecurityProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsSecurityProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getDnsSecurityProfile(args: GetDnsSecurityProfileArgs, opts?: pu
  */
 export interface GetDnsSecurityProfileArgs {
     /**
-     * The Id param.
+     * The UUID of the DNS security profile
      */
     id: string;
+    /**
+     * The name of the DNS security profile
+     */
+    name?: string;
 }
 
 /**
@@ -42,41 +36,43 @@ export interface GetDnsSecurityProfileArgs {
  */
 export interface GetDnsSecurityProfileResult {
     /**
-     * The BotnetDomains param.
+     * Botnet domains
      */
     readonly botnetDomains: outputs.GetDnsSecurityProfileBotnetDomains;
     /**
-     * The Description param.
+     * The description of the DNS security profile
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the DNS security profile
      */
     readonly id: string;
     /**
-     * The Name param.
+     * The name of the DNS security profile
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getDnsSecurityProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * DnsSecurityProfile data source
  */
 export function getDnsSecurityProfileOutput(args: GetDnsSecurityProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsSecurityProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -85,7 +81,11 @@ export function getDnsSecurityProfileOutput(args: GetDnsSecurityProfileOutputArg
  */
 export interface GetDnsSecurityProfileOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the DNS security profile
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the DNS security profile
+     */
+    name?: pulumi.Input<string>;
 }

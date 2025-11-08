@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeImsiRecurringMonthlyResult
     {
         /// <summary>
-        /// Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        /// Time specification hh (e.g. 20)
         /// </summary>
         public readonly string At;
         /// <summary>
-        /// The DayOfMonth param. Value must be between 1 and 31.
+        /// Day of month
         /// </summary>
         public readonly int DayOfMonth;
 

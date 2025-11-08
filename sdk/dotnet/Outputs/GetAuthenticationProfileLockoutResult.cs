@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationProfileLockoutResult
     {
         /// <summary>
-        /// The FailedAttempts param. Value must be between 0 and 10.
+        /// Failed attempts
         /// </summary>
         public readonly int FailedAttempts;
         /// <summary>
-        /// The LockoutTime param. Value must be between 0 and 60.
+        /// Lockout time
         /// </summary>
         public readonly int LockoutTime;
 

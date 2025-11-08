@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureSignatureStandardAndConditionGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionGetArgs>? _orConditions;
 
         /// <summary>
-        /// The OrConditions param.
+        /// Or condition
         /// </summary>
         public InputList<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionGetArgs> OrConditions
         {

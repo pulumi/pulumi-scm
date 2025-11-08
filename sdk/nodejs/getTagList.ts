@@ -15,9 +15,12 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getTagList({
+ * // Fetch a list of all application objects.
+ * // This data source will call the "List" API endpoint.
+ * const allTags = scm.getTagList({
  *     folder: "Shared",
  * });
+ * export const tagsListRaw = allTags.then(allTags => allTags.datas);
  * ```
  */
 export function getTagList(args?: GetTagListArgs, opts?: pulumi.InvokeOptions): Promise<GetTagListResult> {
@@ -38,27 +41,27 @@ export function getTagList(args?: GetTagListArgs, opts?: pulumi.InvokeOptions): 
  */
 export interface GetTagListArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: string;
 }
@@ -68,15 +71,15 @@ export interface GetTagListArgs {
  */
 export interface GetTagListResult {
     /**
-     * The Data param.
+     * The data.
      */
     readonly datas: outputs.GetTagListData[];
     /**
-     * The Device param.
+     * The device of the item.
      */
     readonly device?: string;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     readonly folder?: string;
     /**
@@ -84,24 +87,24 @@ export interface GetTagListResult {
      */
     readonly id: string;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
-    readonly limit: number;
+    readonly limit?: number;
     /**
-     * The Name param.
+     * The name of the item.
      */
     readonly name?: string;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
-    readonly offset: number;
+    readonly offset?: number;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     readonly snippet?: string;
     readonly tfid: string;
     /**
-     * The Total param.
+     * The total number of items.
      */
     readonly total: number;
 }
@@ -114,9 +117,12 @@ export interface GetTagListResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getTagList({
+ * // Fetch a list of all application objects.
+ * // This data source will call the "List" API endpoint.
+ * const allTags = scm.getTagList({
  *     folder: "Shared",
  * });
+ * export const tagsListRaw = allTags.then(allTags => allTags.datas);
  * ```
  */
 export function getTagListOutput(args?: GetTagListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTagListResult> {
@@ -137,27 +143,27 @@ export function getTagListOutput(args?: GetTagListOutputArgs, opts?: pulumi.Invo
  */
 export interface GetTagListOutputArgs {
     /**
-     * The Device param.
+     * The device of the item.
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder of the item. Default: Shared.
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The max number of items to return. Default: 200.
      */
     limit?: pulumi.Input<number>;
     /**
-     * The Name param.
+     * The name of the item.
      */
     name?: pulumi.Input<string>;
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      */
     offset?: pulumi.Input<number>;
     /**
-     * The Snippet param.
+     * The snippet of the item.
      */
     snippet?: pulumi.Input<string>;
 }

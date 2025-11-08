@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosProfileClassBandwidthTypePercentageClassResult
     {
         /// <summary>
-        /// The ClassBandwidth param.
+        /// Class bandwidth
         /// </summary>
         public readonly Outputs.GetQosProfileClassBandwidthTypePercentageClassClassBandwidthResult ClassBandwidth;
         /// <summary>
-        /// Traffic class. String length must not exceed 31 characters.
+        /// Traffic class
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// traffic class priority. String must be one of these: `"real-time"`, `"high"`, `"medium"`, `"low"`. Default: `"medium"`.
+        /// traffic class priority
         /// </summary>
         public readonly string Priority;
 

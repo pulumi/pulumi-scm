@@ -22,9 +22,7 @@ __all__ = ['ApplicationArgs', 'Application']
 class ApplicationArgs:
     def __init__(__self__, *,
                  category: pulumi.Input[_builtins.str],
-                 risk: pulumi.Input[_builtins.int],
-                 subcategory: pulumi.Input[_builtins.str],
-                 technology: pulumi.Input[_builtins.str],
+                 risk: pulumi.Input[_builtins.str],
                  able_to_transfer_file: Optional[pulumi.Input[_builtins.bool]] = None,
                  alg_disable_capability: Optional[pulumi.Input[_builtins.str]] = None,
                  consume_big_bandwidth: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -43,9 +41,11 @@ class ApplicationArgs:
                  prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
                  signatures: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 subcategory: Optional[pulumi.Input[_builtins.str]] = None,
                  tcp_half_closed_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  tcp_time_wait_timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  tcp_timeout: Optional[pulumi.Input[_builtins.int]] = None,
+                 technology: Optional[pulumi.Input[_builtins.str]] = None,
                  timeout: Optional[pulumi.Input[_builtins.int]] = None,
                  tunnel_applications: Optional[pulumi.Input[_builtins.bool]] = None,
                  tunnel_other_application: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -54,42 +54,40 @@ class ApplicationArgs:
                  virus_ident: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a Application resource.
-        :param pulumi.Input[_builtins.str] category: The Category param.
-        :param pulumi.Input[_builtins.int] risk: The Risk param. Value must be between 1 and 5.
-        :param pulumi.Input[_builtins.str] subcategory: The Subcategory param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] technology: The Technology param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.bool] able_to_transfer_file: The AbleToTransferFile param.
-        :param pulumi.Input[_builtins.str] alg_disable_capability: The AlgDisableCapability param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: The ConsumeBigBandwidth param.
-        :param pulumi.Input[_builtins.bool] data_ident: The DataIdent param.
-        :param pulumi.Input['ApplicationDefaultArgs'] default: The Default param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive_behavior: The EvasiveBehavior param.
-        :param pulumi.Input[_builtins.bool] file_type_ident: The FileTypeIdent param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerability: The HasKnownVulnerability param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] no_appid_caching: The NoAppidCaching param.
-        :param pulumi.Input[_builtins.str] parent_app: The ParentApp param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.bool] pervasive_use: The PervasiveUse param.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: The ProneToMisuse param.
-        :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: The Signatures param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds. Value must be between 1 and 604800.
-        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds. Value must be between 1 and 600.
-        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.int] timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] tunnel_applications: The TunnelApplications param.
-        :param pulumi.Input[_builtins.bool] tunnel_other_application: The TunnelOtherApplication param.
-        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] used_by_malware: The UsedByMalware param.
-        :param pulumi.Input[_builtins.bool] virus_ident: The VirusIdent param.
+        :param pulumi.Input[_builtins.str] category: Category
+        :param pulumi.Input[_builtins.str] risk: Risk
+        :param pulumi.Input[_builtins.bool] able_to_transfer_file: Able to transfer file
+        :param pulumi.Input[_builtins.str] alg_disable_capability: Alg disable capability
+        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: Consume big bandwidth
+        :param pulumi.Input[_builtins.bool] data_ident: Data ident
+        :param pulumi.Input['ApplicationDefaultArgs'] default: Default
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
+        :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
+        :param pulumi.Input[_builtins.str] name: The name of the application
+        :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
+        :param pulumi.Input[_builtins.str] parent_app: Parent app
+        :param pulumi.Input[_builtins.bool] pervasive_use: Pervasive use
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
+        :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: Signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] subcategory: Subcategory
+        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
+        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
+        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.str] technology: Technology
+        :param pulumi.Input[_builtins.int] timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] tunnel_applications: Tunnel applications
+        :param pulumi.Input[_builtins.bool] tunnel_other_application: Tunnel other application
+        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] used_by_malware: Used by malware
+        :param pulumi.Input[_builtins.bool] virus_ident: Virus ident
         """
         pulumi.set(__self__, "category", category)
         pulumi.set(__self__, "risk", risk)
-        pulumi.set(__self__, "subcategory", subcategory)
-        pulumi.set(__self__, "technology", technology)
         if able_to_transfer_file is not None:
             pulumi.set(__self__, "able_to_transfer_file", able_to_transfer_file)
         if alg_disable_capability is not None:
@@ -126,12 +124,16 @@ class ApplicationArgs:
             pulumi.set(__self__, "signatures", signatures)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
+        if subcategory is not None:
+            pulumi.set(__self__, "subcategory", subcategory)
         if tcp_half_closed_timeout is not None:
             pulumi.set(__self__, "tcp_half_closed_timeout", tcp_half_closed_timeout)
         if tcp_time_wait_timeout is not None:
             pulumi.set(__self__, "tcp_time_wait_timeout", tcp_time_wait_timeout)
         if tcp_timeout is not None:
             pulumi.set(__self__, "tcp_timeout", tcp_timeout)
+        if technology is not None:
+            pulumi.set(__self__, "technology", technology)
         if timeout is not None:
             pulumi.set(__self__, "timeout", timeout)
         if tunnel_applications is not None:
@@ -149,7 +151,7 @@ class ApplicationArgs:
     @pulumi.getter
     def category(self) -> pulumi.Input[_builtins.str]:
         """
-        The Category param.
+        Category
         """
         return pulumi.get(self, "category")
 
@@ -159,45 +161,21 @@ class ApplicationArgs:
 
     @_builtins.property
     @pulumi.getter
-    def risk(self) -> pulumi.Input[_builtins.int]:
+    def risk(self) -> pulumi.Input[_builtins.str]:
         """
-        The Risk param. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risk")
 
     @risk.setter
-    def risk(self, value: pulumi.Input[_builtins.int]):
+    def risk(self, value: pulumi.Input[_builtins.str]):
         pulumi.set(self, "risk", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def subcategory(self) -> pulumi.Input[_builtins.str]:
-        """
-        The Subcategory param. String length must not exceed 63 characters.
-        """
-        return pulumi.get(self, "subcategory")
-
-    @subcategory.setter
-    def subcategory(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "subcategory", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def technology(self) -> pulumi.Input[_builtins.str]:
-        """
-        The Technology param. String length must not exceed 63 characters.
-        """
-        return pulumi.get(self, "technology")
-
-    @technology.setter
-    def technology(self, value: pulumi.Input[_builtins.str]):
-        pulumi.set(self, "technology", value)
 
     @_builtins.property
     @pulumi.getter(name="ableToTransferFile")
     def able_to_transfer_file(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The AbleToTransferFile param.
+        Able to transfer file
         """
         return pulumi.get(self, "able_to_transfer_file")
 
@@ -209,7 +187,7 @@ class ApplicationArgs:
     @pulumi.getter(name="algDisableCapability")
     def alg_disable_capability(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The AlgDisableCapability param. String length must not exceed 127 characters.
+        Alg disable capability
         """
         return pulumi.get(self, "alg_disable_capability")
 
@@ -221,7 +199,7 @@ class ApplicationArgs:
     @pulumi.getter(name="consumeBigBandwidth")
     def consume_big_bandwidth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The ConsumeBigBandwidth param.
+        Consume big bandwidth
         """
         return pulumi.get(self, "consume_big_bandwidth")
 
@@ -233,7 +211,7 @@ class ApplicationArgs:
     @pulumi.getter(name="dataIdent")
     def data_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The DataIdent param.
+        Data ident
         """
         return pulumi.get(self, "data_ident")
 
@@ -245,7 +223,7 @@ class ApplicationArgs:
     @pulumi.getter
     def default(self) -> Optional[pulumi.Input['ApplicationDefaultArgs']]:
         """
-        The Default param.
+        Default
         """
         return pulumi.get(self, "default")
 
@@ -257,7 +235,7 @@ class ApplicationArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -269,7 +247,7 @@ class ApplicationArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -281,7 +259,7 @@ class ApplicationArgs:
     @pulumi.getter(name="evasiveBehavior")
     def evasive_behavior(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The EvasiveBehavior param.
+        Evasive behavior
         """
         return pulumi.get(self, "evasive_behavior")
 
@@ -293,7 +271,7 @@ class ApplicationArgs:
     @pulumi.getter(name="fileTypeIdent")
     def file_type_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The FileTypeIdent param.
+        File type ident
         """
         return pulumi.get(self, "file_type_ident")
 
@@ -305,7 +283,7 @@ class ApplicationArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -317,7 +295,7 @@ class ApplicationArgs:
     @pulumi.getter(name="hasKnownVulnerability")
     def has_known_vulnerability(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The HasKnownVulnerability param.
+        Has known vulnerability
         """
         return pulumi.get(self, "has_known_vulnerability")
 
@@ -329,7 +307,7 @@ class ApplicationArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the application
         """
         return pulumi.get(self, "name")
 
@@ -341,7 +319,7 @@ class ApplicationArgs:
     @pulumi.getter(name="noAppidCaching")
     def no_appid_caching(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NoAppidCaching param.
+        No appid caching
         """
         return pulumi.get(self, "no_appid_caching")
 
@@ -353,7 +331,7 @@ class ApplicationArgs:
     @pulumi.getter(name="parentApp")
     def parent_app(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ParentApp param. String length must not exceed 127 characters.
+        Parent app
         """
         return pulumi.get(self, "parent_app")
 
@@ -365,7 +343,7 @@ class ApplicationArgs:
     @pulumi.getter(name="pervasiveUse")
     def pervasive_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The PervasiveUse param.
+        Pervasive use
         """
         return pulumi.get(self, "pervasive_use")
 
@@ -377,7 +355,7 @@ class ApplicationArgs:
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The ProneToMisuse param.
+        Prone to misuse
         """
         return pulumi.get(self, "prone_to_misuse")
 
@@ -389,7 +367,7 @@ class ApplicationArgs:
     @pulumi.getter
     def signatures(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]:
         """
-        The Signatures param.
+        Signature
         """
         return pulumi.get(self, "signatures")
 
@@ -401,7 +379,7 @@ class ApplicationArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -410,10 +388,22 @@ class ApplicationArgs:
         pulumi.set(self, "snippet", value)
 
     @_builtins.property
+    @pulumi.getter
+    def subcategory(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Subcategory
+        """
+        return pulumi.get(self, "subcategory")
+
+    @subcategory.setter
+    def subcategory(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "subcategory", value)
+
+    @_builtins.property
     @pulumi.getter(name="tcpHalfClosedTimeout")
     def tcp_half_closed_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout for half-close session in seconds. Value must be between 1 and 604800.
+        timeout for half-close session in seconds
         """
         return pulumi.get(self, "tcp_half_closed_timeout")
 
@@ -425,7 +415,7 @@ class ApplicationArgs:
     @pulumi.getter(name="tcpTimeWaitTimeout")
     def tcp_time_wait_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        timeout for session in time_wait state in seconds
         """
         return pulumi.get(self, "tcp_time_wait_timeout")
 
@@ -437,7 +427,7 @@ class ApplicationArgs:
     @pulumi.getter(name="tcpTimeout")
     def tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "tcp_timeout")
 
@@ -447,9 +437,21 @@ class ApplicationArgs:
 
     @_builtins.property
     @pulumi.getter
+    def technology(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        Technology
+        """
+        return pulumi.get(self, "technology")
+
+    @technology.setter
+    def technology(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "technology", value)
+
+    @_builtins.property
+    @pulumi.getter
     def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "timeout")
 
@@ -461,7 +463,7 @@ class ApplicationArgs:
     @pulumi.getter(name="tunnelApplications")
     def tunnel_applications(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The TunnelApplications param.
+        Tunnel applications
         """
         return pulumi.get(self, "tunnel_applications")
 
@@ -473,7 +475,7 @@ class ApplicationArgs:
     @pulumi.getter(name="tunnelOtherApplication")
     def tunnel_other_application(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The TunnelOtherApplication param.
+        Tunnel other application
         """
         return pulumi.get(self, "tunnel_other_application")
 
@@ -485,7 +487,7 @@ class ApplicationArgs:
     @pulumi.getter(name="udpTimeout")
     def udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "udp_timeout")
 
@@ -497,7 +499,7 @@ class ApplicationArgs:
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UsedByMalware param.
+        Used by malware
         """
         return pulumi.get(self, "used_by_malware")
 
@@ -509,7 +511,7 @@ class ApplicationArgs:
     @pulumi.getter(name="virusIdent")
     def virus_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The VirusIdent param.
+        Virus ident
         """
         return pulumi.get(self, "virus_ident")
 
@@ -538,7 +540,7 @@ class _ApplicationState:
                  parent_app: Optional[pulumi.Input[_builtins.str]] = None,
                  pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
                  prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risk: Optional[pulumi.Input[_builtins.int]] = None,
+                 risk: Optional[pulumi.Input[_builtins.str]] = None,
                  signatures: Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  subcategory: Optional[pulumi.Input[_builtins.str]] = None,
@@ -555,37 +557,37 @@ class _ApplicationState:
                  virus_ident: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering Application resources.
-        :param pulumi.Input[_builtins.bool] able_to_transfer_file: The AbleToTransferFile param.
-        :param pulumi.Input[_builtins.str] alg_disable_capability: The AlgDisableCapability param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.str] category: The Category param.
-        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: The ConsumeBigBandwidth param.
-        :param pulumi.Input[_builtins.bool] data_ident: The DataIdent param.
-        :param pulumi.Input['ApplicationDefaultArgs'] default: The Default param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive_behavior: The EvasiveBehavior param.
-        :param pulumi.Input[_builtins.bool] file_type_ident: The FileTypeIdent param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerability: The HasKnownVulnerability param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] no_appid_caching: The NoAppidCaching param.
-        :param pulumi.Input[_builtins.str] parent_app: The ParentApp param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.bool] pervasive_use: The PervasiveUse param.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: The ProneToMisuse param.
-        :param pulumi.Input[_builtins.int] risk: The Risk param. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: The Signatures param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] subcategory: The Subcategory param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds. Value must be between 1 and 604800.
-        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds. Value must be between 1 and 600.
-        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.str] technology: The Technology param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.int] timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] tunnel_applications: The TunnelApplications param.
-        :param pulumi.Input[_builtins.bool] tunnel_other_application: The TunnelOtherApplication param.
-        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] used_by_malware: The UsedByMalware param.
-        :param pulumi.Input[_builtins.bool] virus_ident: The VirusIdent param.
+        :param pulumi.Input[_builtins.bool] able_to_transfer_file: Able to transfer file
+        :param pulumi.Input[_builtins.str] alg_disable_capability: Alg disable capability
+        :param pulumi.Input[_builtins.str] category: Category
+        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: Consume big bandwidth
+        :param pulumi.Input[_builtins.bool] data_ident: Data ident
+        :param pulumi.Input['ApplicationDefaultArgs'] default: Default
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
+        :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
+        :param pulumi.Input[_builtins.str] name: The name of the application
+        :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
+        :param pulumi.Input[_builtins.str] parent_app: Parent app
+        :param pulumi.Input[_builtins.bool] pervasive_use: Pervasive use
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
+        :param pulumi.Input[_builtins.str] risk: Risk
+        :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: Signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] subcategory: Subcategory
+        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
+        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
+        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.str] technology: Technology
+        :param pulumi.Input[_builtins.int] timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] tunnel_applications: Tunnel applications
+        :param pulumi.Input[_builtins.bool] tunnel_other_application: Tunnel other application
+        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] used_by_malware: Used by malware
+        :param pulumi.Input[_builtins.bool] virus_ident: Virus ident
         """
         if able_to_transfer_file is not None:
             pulumi.set(__self__, "able_to_transfer_file", able_to_transfer_file)
@@ -656,7 +658,7 @@ class _ApplicationState:
     @pulumi.getter(name="ableToTransferFile")
     def able_to_transfer_file(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The AbleToTransferFile param.
+        Able to transfer file
         """
         return pulumi.get(self, "able_to_transfer_file")
 
@@ -668,7 +670,7 @@ class _ApplicationState:
     @pulumi.getter(name="algDisableCapability")
     def alg_disable_capability(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The AlgDisableCapability param. String length must not exceed 127 characters.
+        Alg disable capability
         """
         return pulumi.get(self, "alg_disable_capability")
 
@@ -680,7 +682,7 @@ class _ApplicationState:
     @pulumi.getter
     def category(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Category param.
+        Category
         """
         return pulumi.get(self, "category")
 
@@ -692,7 +694,7 @@ class _ApplicationState:
     @pulumi.getter(name="consumeBigBandwidth")
     def consume_big_bandwidth(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The ConsumeBigBandwidth param.
+        Consume big bandwidth
         """
         return pulumi.get(self, "consume_big_bandwidth")
 
@@ -704,7 +706,7 @@ class _ApplicationState:
     @pulumi.getter(name="dataIdent")
     def data_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The DataIdent param.
+        Data ident
         """
         return pulumi.get(self, "data_ident")
 
@@ -716,7 +718,7 @@ class _ApplicationState:
     @pulumi.getter
     def default(self) -> Optional[pulumi.Input['ApplicationDefaultArgs']]:
         """
-        The Default param.
+        Default
         """
         return pulumi.get(self, "default")
 
@@ -728,7 +730,7 @@ class _ApplicationState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -740,7 +742,7 @@ class _ApplicationState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -752,7 +754,7 @@ class _ApplicationState:
     @pulumi.getter(name="evasiveBehavior")
     def evasive_behavior(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The EvasiveBehavior param.
+        Evasive behavior
         """
         return pulumi.get(self, "evasive_behavior")
 
@@ -764,7 +766,7 @@ class _ApplicationState:
     @pulumi.getter(name="fileTypeIdent")
     def file_type_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The FileTypeIdent param.
+        File type ident
         """
         return pulumi.get(self, "file_type_ident")
 
@@ -776,7 +778,7 @@ class _ApplicationState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -788,7 +790,7 @@ class _ApplicationState:
     @pulumi.getter(name="hasKnownVulnerability")
     def has_known_vulnerability(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The HasKnownVulnerability param.
+        Has known vulnerability
         """
         return pulumi.get(self, "has_known_vulnerability")
 
@@ -800,7 +802,7 @@ class _ApplicationState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the application
         """
         return pulumi.get(self, "name")
 
@@ -812,7 +814,7 @@ class _ApplicationState:
     @pulumi.getter(name="noAppidCaching")
     def no_appid_caching(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NoAppidCaching param.
+        No appid caching
         """
         return pulumi.get(self, "no_appid_caching")
 
@@ -824,7 +826,7 @@ class _ApplicationState:
     @pulumi.getter(name="parentApp")
     def parent_app(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The ParentApp param. String length must not exceed 127 characters.
+        Parent app
         """
         return pulumi.get(self, "parent_app")
 
@@ -836,7 +838,7 @@ class _ApplicationState:
     @pulumi.getter(name="pervasiveUse")
     def pervasive_use(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The PervasiveUse param.
+        Pervasive use
         """
         return pulumi.get(self, "pervasive_use")
 
@@ -848,7 +850,7 @@ class _ApplicationState:
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The ProneToMisuse param.
+        Prone to misuse
         """
         return pulumi.get(self, "prone_to_misuse")
 
@@ -858,21 +860,21 @@ class _ApplicationState:
 
     @_builtins.property
     @pulumi.getter
-    def risk(self) -> Optional[pulumi.Input[_builtins.int]]:
+    def risk(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Risk param. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risk")
 
     @risk.setter
-    def risk(self, value: Optional[pulumi.Input[_builtins.int]]):
+    def risk(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "risk", value)
 
     @_builtins.property
     @pulumi.getter
     def signatures(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]]]:
         """
-        The Signatures param.
+        Signature
         """
         return pulumi.get(self, "signatures")
 
@@ -884,7 +886,7 @@ class _ApplicationState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -896,7 +898,7 @@ class _ApplicationState:
     @pulumi.getter
     def subcategory(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Subcategory param. String length must not exceed 63 characters.
+        Subcategory
         """
         return pulumi.get(self, "subcategory")
 
@@ -908,7 +910,7 @@ class _ApplicationState:
     @pulumi.getter(name="tcpHalfClosedTimeout")
     def tcp_half_closed_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout for half-close session in seconds. Value must be between 1 and 604800.
+        timeout for half-close session in seconds
         """
         return pulumi.get(self, "tcp_half_closed_timeout")
 
@@ -920,7 +922,7 @@ class _ApplicationState:
     @pulumi.getter(name="tcpTimeWaitTimeout")
     def tcp_time_wait_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        timeout for session in time_wait state in seconds
         """
         return pulumi.get(self, "tcp_time_wait_timeout")
 
@@ -932,7 +934,7 @@ class _ApplicationState:
     @pulumi.getter(name="tcpTimeout")
     def tcp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "tcp_timeout")
 
@@ -944,7 +946,7 @@ class _ApplicationState:
     @pulumi.getter
     def technology(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Technology param. String length must not exceed 63 characters.
+        Technology
         """
         return pulumi.get(self, "technology")
 
@@ -965,7 +967,7 @@ class _ApplicationState:
     @pulumi.getter
     def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "timeout")
 
@@ -977,7 +979,7 @@ class _ApplicationState:
     @pulumi.getter(name="tunnelApplications")
     def tunnel_applications(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The TunnelApplications param.
+        Tunnel applications
         """
         return pulumi.get(self, "tunnel_applications")
 
@@ -989,7 +991,7 @@ class _ApplicationState:
     @pulumi.getter(name="tunnelOtherApplication")
     def tunnel_other_application(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The TunnelOtherApplication param.
+        Tunnel other application
         """
         return pulumi.get(self, "tunnel_other_application")
 
@@ -1001,7 +1003,7 @@ class _ApplicationState:
     @pulumi.getter(name="udpTimeout")
     def udp_timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "udp_timeout")
 
@@ -1013,7 +1015,7 @@ class _ApplicationState:
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The UsedByMalware param.
+        Used by malware
         """
         return pulumi.get(self, "used_by_malware")
 
@@ -1025,7 +1027,7 @@ class _ApplicationState:
     @pulumi.getter(name="virusIdent")
     def virus_ident(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The VirusIdent param.
+        Virus ident
         """
         return pulumi.get(self, "virus_ident")
 
@@ -1057,7 +1059,7 @@ class Application(pulumi.CustomResource):
                  parent_app: Optional[pulumi.Input[_builtins.str]] = None,
                  pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
                  prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risk: Optional[pulumi.Input[_builtins.int]] = None,
+                 risk: Optional[pulumi.Input[_builtins.str]] = None,
                  signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  subcategory: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1073,50 +1075,43 @@ class Application(pulumi.CustomResource):
                  virus_ident: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        Application resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Application("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] able_to_transfer_file: The AbleToTransferFile param.
-        :param pulumi.Input[_builtins.str] alg_disable_capability: The AlgDisableCapability param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.str] category: The Category param.
-        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: The ConsumeBigBandwidth param.
-        :param pulumi.Input[_builtins.bool] data_ident: The DataIdent param.
-        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: The Default param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive_behavior: The EvasiveBehavior param.
-        :param pulumi.Input[_builtins.bool] file_type_ident: The FileTypeIdent param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerability: The HasKnownVulnerability param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] no_appid_caching: The NoAppidCaching param.
-        :param pulumi.Input[_builtins.str] parent_app: The ParentApp param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.bool] pervasive_use: The PervasiveUse param.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: The ProneToMisuse param.
-        :param pulumi.Input[_builtins.int] risk: The Risk param. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: The Signatures param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] subcategory: The Subcategory param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds. Value must be between 1 and 604800.
-        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds. Value must be between 1 and 600.
-        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.str] technology: The Technology param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.int] timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] tunnel_applications: The TunnelApplications param.
-        :param pulumi.Input[_builtins.bool] tunnel_other_application: The TunnelOtherApplication param.
-        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] used_by_malware: The UsedByMalware param.
-        :param pulumi.Input[_builtins.bool] virus_ident: The VirusIdent param.
+        :param pulumi.Input[_builtins.bool] able_to_transfer_file: Able to transfer file
+        :param pulumi.Input[_builtins.str] alg_disable_capability: Alg disable capability
+        :param pulumi.Input[_builtins.str] category: Category
+        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: Consume big bandwidth
+        :param pulumi.Input[_builtins.bool] data_ident: Data ident
+        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: Default
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
+        :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
+        :param pulumi.Input[_builtins.str] name: The name of the application
+        :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
+        :param pulumi.Input[_builtins.str] parent_app: Parent app
+        :param pulumi.Input[_builtins.bool] pervasive_use: Pervasive use
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
+        :param pulumi.Input[_builtins.str] risk: Risk
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] subcategory: Subcategory
+        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
+        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
+        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.str] technology: Technology
+        :param pulumi.Input[_builtins.int] timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] tunnel_applications: Tunnel applications
+        :param pulumi.Input[_builtins.bool] tunnel_other_application: Tunnel other application
+        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] used_by_malware: Used by malware
+        :param pulumi.Input[_builtins.bool] virus_ident: Virus ident
         """
         ...
     @overload
@@ -1125,16 +1120,9 @@ class Application(pulumi.CustomResource):
                  args: ApplicationArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        Application resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.Application("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param ApplicationArgs args: The arguments to use to populate this resource's properties.
@@ -1168,7 +1156,7 @@ class Application(pulumi.CustomResource):
                  parent_app: Optional[pulumi.Input[_builtins.str]] = None,
                  pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
                  prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-                 risk: Optional[pulumi.Input[_builtins.int]] = None,
+                 risk: Optional[pulumi.Input[_builtins.str]] = None,
                  signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  subcategory: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1215,14 +1203,10 @@ class Application(pulumi.CustomResource):
             __props__.__dict__["risk"] = risk
             __props__.__dict__["signatures"] = signatures
             __props__.__dict__["snippet"] = snippet
-            if subcategory is None and not opts.urn:
-                raise TypeError("Missing required property 'subcategory'")
             __props__.__dict__["subcategory"] = subcategory
             __props__.__dict__["tcp_half_closed_timeout"] = tcp_half_closed_timeout
             __props__.__dict__["tcp_time_wait_timeout"] = tcp_time_wait_timeout
             __props__.__dict__["tcp_timeout"] = tcp_timeout
-            if technology is None and not opts.urn:
-                raise TypeError("Missing required property 'technology'")
             __props__.__dict__["technology"] = technology
             __props__.__dict__["timeout"] = timeout
             __props__.__dict__["tunnel_applications"] = tunnel_applications
@@ -1258,7 +1242,7 @@ class Application(pulumi.CustomResource):
             parent_app: Optional[pulumi.Input[_builtins.str]] = None,
             pervasive_use: Optional[pulumi.Input[_builtins.bool]] = None,
             prone_to_misuse: Optional[pulumi.Input[_builtins.bool]] = None,
-            risk: Optional[pulumi.Input[_builtins.int]] = None,
+            risk: Optional[pulumi.Input[_builtins.str]] = None,
             signatures: Optional[pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             subcategory: Optional[pulumi.Input[_builtins.str]] = None,
@@ -1280,37 +1264,37 @@ class Application(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.bool] able_to_transfer_file: The AbleToTransferFile param.
-        :param pulumi.Input[_builtins.str] alg_disable_capability: The AlgDisableCapability param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.str] category: The Category param.
-        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: The ConsumeBigBandwidth param.
-        :param pulumi.Input[_builtins.bool] data_ident: The DataIdent param.
-        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: The Default param.
-        :param pulumi.Input[_builtins.str] description: The Description param. String length must not exceed 1023 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] evasive_behavior: The EvasiveBehavior param.
-        :param pulumi.Input[_builtins.bool] file_type_ident: The FileTypeIdent param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.bool] has_known_vulnerability: The HasKnownVulnerability param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.bool] no_appid_caching: The NoAppidCaching param.
-        :param pulumi.Input[_builtins.str] parent_app: The ParentApp param. String length must not exceed 127 characters.
-        :param pulumi.Input[_builtins.bool] pervasive_use: The PervasiveUse param.
-        :param pulumi.Input[_builtins.bool] prone_to_misuse: The ProneToMisuse param.
-        :param pulumi.Input[_builtins.int] risk: The Risk param. Value must be between 1 and 5.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: The Signatures param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.str] subcategory: The Subcategory param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds. Value must be between 1 and 604800.
-        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds. Value must be between 1 and 600.
-        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.str] technology: The Technology param. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.int] timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] tunnel_applications: The TunnelApplications param.
-        :param pulumi.Input[_builtins.bool] tunnel_other_application: The TunnelOtherApplication param.
-        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds. Value must be between 0 and 604800.
-        :param pulumi.Input[_builtins.bool] used_by_malware: The UsedByMalware param.
-        :param pulumi.Input[_builtins.bool] virus_ident: The VirusIdent param.
+        :param pulumi.Input[_builtins.bool] able_to_transfer_file: Able to transfer file
+        :param pulumi.Input[_builtins.str] alg_disable_capability: Alg disable capability
+        :param pulumi.Input[_builtins.str] category: Category
+        :param pulumi.Input[_builtins.bool] consume_big_bandwidth: Consume big bandwidth
+        :param pulumi.Input[_builtins.bool] data_ident: Data ident
+        :param pulumi.Input[Union['ApplicationDefaultArgs', 'ApplicationDefaultArgsDict']] default: Default
+        :param pulumi.Input[_builtins.str] description: Description
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
+        :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
+        :param pulumi.Input[_builtins.str] name: The name of the application
+        :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
+        :param pulumi.Input[_builtins.str] parent_app: Parent app
+        :param pulumi.Input[_builtins.bool] pervasive_use: Pervasive use
+        :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
+        :param pulumi.Input[_builtins.str] risk: Risk
+        :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.str] subcategory: Subcategory
+        :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
+        :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
+        :param pulumi.Input[_builtins.int] tcp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.str] technology: Technology
+        :param pulumi.Input[_builtins.int] timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] tunnel_applications: Tunnel applications
+        :param pulumi.Input[_builtins.bool] tunnel_other_application: Tunnel other application
+        :param pulumi.Input[_builtins.int] udp_timeout: timeout in seconds
+        :param pulumi.Input[_builtins.bool] used_by_malware: Used by malware
+        :param pulumi.Input[_builtins.bool] virus_ident: Virus ident
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1354,7 +1338,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="ableToTransferFile")
     def able_to_transfer_file(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The AbleToTransferFile param.
+        Able to transfer file
         """
         return pulumi.get(self, "able_to_transfer_file")
 
@@ -1362,7 +1346,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="algDisableCapability")
     def alg_disable_capability(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The AlgDisableCapability param. String length must not exceed 127 characters.
+        Alg disable capability
         """
         return pulumi.get(self, "alg_disable_capability")
 
@@ -1370,7 +1354,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def category(self) -> pulumi.Output[_builtins.str]:
         """
-        The Category param.
+        Category
         """
         return pulumi.get(self, "category")
 
@@ -1378,7 +1362,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="consumeBigBandwidth")
     def consume_big_bandwidth(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The ConsumeBigBandwidth param.
+        Consume big bandwidth
         """
         return pulumi.get(self, "consume_big_bandwidth")
 
@@ -1386,7 +1370,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="dataIdent")
     def data_ident(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The DataIdent param.
+        Data ident
         """
         return pulumi.get(self, "data_ident")
 
@@ -1394,7 +1378,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def default(self) -> pulumi.Output[Optional['outputs.ApplicationDefault']]:
         """
-        The Default param.
+        Default
         """
         return pulumi.get(self, "default")
 
@@ -1402,7 +1386,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
@@ -1410,7 +1394,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -1418,7 +1402,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="evasiveBehavior")
     def evasive_behavior(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The EvasiveBehavior param.
+        Evasive behavior
         """
         return pulumi.get(self, "evasive_behavior")
 
@@ -1426,7 +1410,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="fileTypeIdent")
     def file_type_ident(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The FileTypeIdent param.
+        File type ident
         """
         return pulumi.get(self, "file_type_ident")
 
@@ -1434,7 +1418,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -1442,7 +1426,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="hasKnownVulnerability")
     def has_known_vulnerability(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The HasKnownVulnerability param.
+        Has known vulnerability
         """
         return pulumi.get(self, "has_known_vulnerability")
 
@@ -1450,7 +1434,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the application
         """
         return pulumi.get(self, "name")
 
@@ -1458,7 +1442,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="noAppidCaching")
     def no_appid_caching(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The NoAppidCaching param.
+        No appid caching
         """
         return pulumi.get(self, "no_appid_caching")
 
@@ -1466,7 +1450,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="parentApp")
     def parent_app(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The ParentApp param. String length must not exceed 127 characters.
+        Parent app
         """
         return pulumi.get(self, "parent_app")
 
@@ -1474,7 +1458,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="pervasiveUse")
     def pervasive_use(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The PervasiveUse param.
+        Pervasive use
         """
         return pulumi.get(self, "pervasive_use")
 
@@ -1482,15 +1466,15 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The ProneToMisuse param.
+        Prone to misuse
         """
         return pulumi.get(self, "prone_to_misuse")
 
     @_builtins.property
     @pulumi.getter
-    def risk(self) -> pulumi.Output[_builtins.int]:
+    def risk(self) -> pulumi.Output[_builtins.str]:
         """
-        The Risk param. Value must be between 1 and 5.
+        Risk
         """
         return pulumi.get(self, "risk")
 
@@ -1498,7 +1482,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def signatures(self) -> pulumi.Output[Optional[Sequence['outputs.ApplicationSignature']]]:
         """
-        The Signatures param.
+        Signature
         """
         return pulumi.get(self, "signatures")
 
@@ -1506,15 +1490,15 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
-    def subcategory(self) -> pulumi.Output[_builtins.str]:
+    def subcategory(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Subcategory param. String length must not exceed 63 characters.
+        Subcategory
         """
         return pulumi.get(self, "subcategory")
 
@@ -1522,7 +1506,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="tcpHalfClosedTimeout")
     def tcp_half_closed_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        timeout for half-close session in seconds. Value must be between 1 and 604800.
+        timeout for half-close session in seconds
         """
         return pulumi.get(self, "tcp_half_closed_timeout")
 
@@ -1530,7 +1514,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="tcpTimeWaitTimeout")
     def tcp_time_wait_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        timeout for session in time_wait state in seconds. Value must be between 1 and 600.
+        timeout for session in time_wait state in seconds
         """
         return pulumi.get(self, "tcp_time_wait_timeout")
 
@@ -1538,15 +1522,15 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="tcpTimeout")
     def tcp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "tcp_timeout")
 
     @_builtins.property
     @pulumi.getter
-    def technology(self) -> pulumi.Output[_builtins.str]:
+    def technology(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Technology param. String length must not exceed 63 characters.
+        Technology
         """
         return pulumi.get(self, "technology")
 
@@ -1559,7 +1543,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter
     def timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "timeout")
 
@@ -1567,7 +1551,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="tunnelApplications")
     def tunnel_applications(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The TunnelApplications param.
+        Tunnel applications
         """
         return pulumi.get(self, "tunnel_applications")
 
@@ -1575,7 +1559,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="tunnelOtherApplication")
     def tunnel_other_application(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The TunnelOtherApplication param.
+        Tunnel other application
         """
         return pulumi.get(self, "tunnel_other_application")
 
@@ -1583,7 +1567,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="udpTimeout")
     def udp_timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        timeout in seconds. Value must be between 0 and 604800.
+        timeout in seconds
         """
         return pulumi.get(self, "udp_timeout")
 
@@ -1591,7 +1575,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The UsedByMalware param.
+        Used by malware
         """
         return pulumi.get(self, "used_by_malware")
 
@@ -1599,7 +1583,7 @@ class Application(pulumi.CustomResource):
     @pulumi.getter(name="virusIdent")
     def virus_ident(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The VirusIdent param.
+        Virus ident
         """
         return pulumi.get(self, "virus_ident")
 

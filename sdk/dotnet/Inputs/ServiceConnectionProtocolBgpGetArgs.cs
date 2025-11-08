@@ -13,43 +13,43 @@ namespace Pulumi.Scm.Inputs
     public sealed class ServiceConnectionProtocolBgpGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DoNotExportRoutes param.
+        /// Do not export routes
         /// </summary>
         [Input("doNotExportRoutes")]
         public Input<bool>? DoNotExportRoutes { get; set; }
 
         /// <summary>
-        /// The Enable param.
+        /// Enable
         /// </summary>
         [Input("enable")]
         public Input<bool>? Enable { get; set; }
 
         /// <summary>
-        /// The FastFailover param.
+        /// Fast failover
         /// </summary>
         [Input("fastFailover")]
         public Input<bool>? FastFailover { get; set; }
 
         /// <summary>
-        /// The LocalIpAddress param.
+        /// Local ip address
         /// </summary>
         [Input("localIpAddress")]
         public Input<string>? LocalIpAddress { get; set; }
 
         /// <summary>
-        /// The OriginateDefaultRoute param.
+        /// Originate default route
         /// </summary>
         [Input("originateDefaultRoute")]
         public Input<bool>? OriginateDefaultRoute { get; set; }
 
         /// <summary>
-        /// The PeerAs param.
+        /// Peer as
         /// </summary>
         [Input("peerAs")]
         public Input<string>? PeerAs { get; set; }
 
         /// <summary>
-        /// The PeerIpAddress param.
+        /// Peer ip address
         /// </summary>
         [Input("peerIpAddress")]
         public Input<string>? PeerIpAddress { get; set; }
@@ -58,7 +58,7 @@ namespace Pulumi.Scm.Inputs
         private Input<string>? _secret;
 
         /// <summary>
-        /// The Secret param.
+        /// Secret
         /// </summary>
         public Input<string>? Secret
         {
@@ -71,7 +71,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The SummarizeMobileUserRoutes param.
+        /// Summarize mobile user routes
         /// </summary>
         [Input("summarizeMobileUserRoutes")]
         public Input<bool>? SummarizeMobileUserRoutes { get; set; }

@@ -14,36 +14,61 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipProfileListDataResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Match param. String length must not exceed 2048 characters.
+        /// Match
         /// </summary>
         public readonly string Match;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// The name of the HIP profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetHipProfileListDataResult(
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string match,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Match = match;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

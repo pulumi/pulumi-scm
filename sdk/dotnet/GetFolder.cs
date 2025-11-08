@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetFolder
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetFolder.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Folder data source
         /// </summary>
         public static Task<GetFolderResult> InvokeAsync(GetFolderArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetFolderResult>("scm:index/getFolder:getFolder", args ?? new GetFolderArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetFolder.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Folder data source
         /// </summary>
         public static Output<GetFolderResult> Invoke(GetFolderInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFolderResult>("scm:index/getFolder:getFolder", args ?? new GetFolderInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetFolder.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// Folder data source
         /// </summary>
         public static Output<GetFolderResult> Invoke(GetFolderInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetFolderResult>("scm:index/getFolder:getFolder", args ?? new GetFolderInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetFolderArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the folder
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the folder
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetFolderArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetFolderInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the folder
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the folder
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetFolderInvokeArgs()
         {
@@ -118,27 +76,27 @@ namespace Pulumi.Scm
     public sealed class GetFolderResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the folder
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the folder
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Labels param.
+        /// Labels assigned to the folder
         /// </summary>
         public readonly ImmutableArray<string> Labels;
         /// <summary>
-        /// The Name param.
+        /// The name of the folder
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Parent param.
+        /// The parent folder
         /// </summary>
         public readonly string Parent;
         /// <summary>
-        /// The Snippets param.
+        /// Snippets associated with the folder
         /// </summary>
         public readonly ImmutableArray<string> Snippets;
         public readonly string Tfid;

@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectHostInfoCriteriaOsContains
     {
         /// <summary>
-        /// Apple vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Apple
         /// </summary>
         public readonly string? Apple;
         /// <summary>
-        /// Google vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Google
         /// </summary>
         public readonly string? Google;
         /// <summary>
-        /// Linux vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Linux
         /// </summary>
         public readonly string? Linux;
         /// <summary>
-        /// Microsoft vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Microsoft
         /// </summary>
         public readonly string? Microsoft;
         /// <summary>
-        /// Other vendor. String length must not exceed 255 characters. Ensure that only one of the following is specified: `Apple`, `Google`, `Linux`, `Microsoft`, `Other`
+        /// Other
         /// </summary>
         public readonly string? Other;
 

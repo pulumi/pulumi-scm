@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Context param.
+        /// Context
         /// </summary>
         [Input("context", required: true)]
         public Input<string> Context { get; set; } = null!;
 
         /// <summary>
-        /// 4-byte hex value. String length must not exceed 10 characters. String validation regex: `^[0][xX][0-9A-Fa-f]{8}$`.
+        /// 4-byte hex value
         /// </summary>
         [Input("mask")]
         public Input<string>? Mask { get; set; }
 
         /// <summary>
-        /// The Position param. String length must not exceed 127 characters.
+        /// Position
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// The Value param. String length must not exceed 10 characters.
+        /// Value
         /// </summary>
         [Input("value", required: true)]
         public Input<string> Value { get; set; } = null!;

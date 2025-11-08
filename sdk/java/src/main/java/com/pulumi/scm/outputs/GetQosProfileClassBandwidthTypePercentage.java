@@ -12,14 +12,14 @@ import java.util.Objects;
 @CustomType
 public final class GetQosProfileClassBandwidthTypePercentage {
     /**
-     * @return QoS setting for traffic classes.
+     * @return QoS setting for traffic classes
      * 
      */
     private List<GetQosProfileClassBandwidthTypePercentageClass> classes;
 
     private GetQosProfileClassBandwidthTypePercentage() {}
     /**
-     * @return QoS setting for traffic classes.
+     * @return QoS setting for traffic classes
      * 
      */
     public List<GetQosProfileClassBandwidthTypePercentageClass> classes() {

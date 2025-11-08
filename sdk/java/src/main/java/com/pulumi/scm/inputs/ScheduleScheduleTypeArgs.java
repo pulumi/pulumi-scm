@@ -18,29 +18,29 @@ public final class ScheduleScheduleTypeArgs extends com.pulumi.resources.Resourc
     public static final ScheduleScheduleTypeArgs Empty = new ScheduleScheduleTypeArgs();
 
     /**
-     * The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * Non recurring
      * 
      */
-    @Import(name="nonRecurringLists")
-    private @Nullable Output<List<String>> nonRecurringLists;
+    @Import(name="nonRecurrings")
+    private @Nullable Output<List<String>> nonRecurrings;
 
     /**
-     * @return The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * @return Non recurring
      * 
      */
-    public Optional<Output<List<String>>> nonRecurringLists() {
-        return Optional.ofNullable(this.nonRecurringLists);
+    public Optional<Output<List<String>>> nonRecurrings() {
+        return Optional.ofNullable(this.nonRecurrings);
     }
 
     /**
-     * The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * Recurring
      * 
      */
     @Import(name="recurring")
     private @Nullable Output<ScheduleScheduleTypeRecurringArgs> recurring;
 
     /**
-     * @return The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+     * @return Recurring
      * 
      */
     public Optional<Output<ScheduleScheduleTypeRecurringArgs>> recurring() {
@@ -50,7 +50,7 @@ public final class ScheduleScheduleTypeArgs extends com.pulumi.resources.Resourc
     private ScheduleScheduleTypeArgs() {}
 
     private ScheduleScheduleTypeArgs(ScheduleScheduleTypeArgs $) {
-        this.nonRecurringLists = $.nonRecurringLists;
+        this.nonRecurrings = $.nonRecurrings;
         this.recurring = $.recurring;
     }
 
@@ -73,38 +73,38 @@ public final class ScheduleScheduleTypeArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param nonRecurringLists The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+         * @param nonRecurrings Non recurring
          * 
          * @return builder
          * 
          */
-        public Builder nonRecurringLists(@Nullable Output<List<String>> nonRecurringLists) {
-            $.nonRecurringLists = nonRecurringLists;
+        public Builder nonRecurrings(@Nullable Output<List<String>> nonRecurrings) {
+            $.nonRecurrings = nonRecurrings;
             return this;
         }
 
         /**
-         * @param nonRecurringLists The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+         * @param nonRecurrings Non recurring
          * 
          * @return builder
          * 
          */
-        public Builder nonRecurringLists(List<String> nonRecurringLists) {
-            return nonRecurringLists(Output.of(nonRecurringLists));
+        public Builder nonRecurrings(List<String> nonRecurrings) {
+            return nonRecurrings(Output.of(nonRecurrings));
         }
 
         /**
-         * @param nonRecurringLists The NonRecurringList param. Individual elements in this list are subject to additional validation. String length must be between 33 and 33 characters. String validation regex: `[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])-[0-9][0-9][0-9][0-9]\/([0][1-9]|[1][0-2])\/([0-2][0-9]|[3][0-1]){@literal @}([01][0-9]|[2][0-3]):([0-5][0-9])`. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+         * @param nonRecurrings Non recurring
          * 
          * @return builder
          * 
          */
-        public Builder nonRecurringLists(String... nonRecurringLists) {
-            return nonRecurringLists(List.of(nonRecurringLists));
+        public Builder nonRecurrings(String... nonRecurrings) {
+            return nonRecurrings(List.of(nonRecurrings));
         }
 
         /**
-         * @param recurring The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+         * @param recurring Recurring
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class ScheduleScheduleTypeArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param recurring The Recurring param. Ensure that only one of the following is specified: `nonRecurring`, `recurring`
+         * @param recurring Recurring
          * 
          * @return builder
          * 

@@ -12,66 +12,44 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// CertificateProfile resource
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewCertificateProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 type CertificateProfile struct {
 	pulumi.CustomResourceState
 
-	// The BlockExpiredCert param.
+	// Block sessions with expired certificates?
 	BlockExpiredCert pulumi.BoolPtrOutput `pulumi:"blockExpiredCert"`
-	// The BlockTimeoutCert param.
+	// Block session if certificate status cannot be retrieved within timeout?
 	BlockTimeoutCert pulumi.BoolPtrOutput `pulumi:"blockTimeoutCert"`
-	// The BlockUnauthenticatedCert param.
+	// Block session if the certificate was not issued to the authenticating device?
 	BlockUnauthenticatedCert pulumi.BoolPtrOutput `pulumi:"blockUnauthenticatedCert"`
-	// The BlockUnknownCert param.
+	// Block session if certificate status is unknown?
 	BlockUnknownCert pulumi.BoolPtrOutput `pulumi:"blockUnknownCert"`
-	// The CaCertificates param.
+	// An ordered list of CA certificates
 	CaCertificates CertificateProfileCaCertificateArrayOutput `pulumi:"caCertificates"`
-	// The CertStatusTimeout param.
+	// Certificate status timeout
 	CertStatusTimeout pulumi.StringPtrOutput `pulumi:"certStatusTimeout"`
-	// The CrlReceiveTimeout param.
+	// CRL receive timeout (seconds)
 	CrlReceiveTimeout pulumi.StringPtrOutput `pulumi:"crlReceiveTimeout"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Domain param.
+	// User domain
 	Domain pulumi.StringPtrOutput `pulumi:"domain"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the certificate profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The OcspReceiveTimeout param.
+	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrOutput `pulumi:"ocspReceiveTimeout"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
-	// The UseCrl param.
+	// Use CRL?
 	UseCrl pulumi.BoolPtrOutput `pulumi:"useCrl"`
-	// The UseOcsp param.
+	// Use OCSP?
 	UseOcsp pulumi.BoolPtrOutput `pulumi:"useOcsp"`
-	// The UsernameField param.
+	// Certificate username field
 	UsernameField CertificateProfileUsernameFieldPtrOutput `pulumi:"usernameField"`
 }
 
@@ -108,74 +86,74 @@ func GetCertificateProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering CertificateProfile resources.
 type certificateProfileState struct {
-	// The BlockExpiredCert param.
+	// Block sessions with expired certificates?
 	BlockExpiredCert *bool `pulumi:"blockExpiredCert"`
-	// The BlockTimeoutCert param.
+	// Block session if certificate status cannot be retrieved within timeout?
 	BlockTimeoutCert *bool `pulumi:"blockTimeoutCert"`
-	// The BlockUnauthenticatedCert param.
+	// Block session if the certificate was not issued to the authenticating device?
 	BlockUnauthenticatedCert *bool `pulumi:"blockUnauthenticatedCert"`
-	// The BlockUnknownCert param.
+	// Block session if certificate status is unknown?
 	BlockUnknownCert *bool `pulumi:"blockUnknownCert"`
-	// The CaCertificates param.
+	// An ordered list of CA certificates
 	CaCertificates []CertificateProfileCaCertificate `pulumi:"caCertificates"`
-	// The CertStatusTimeout param.
+	// Certificate status timeout
 	CertStatusTimeout *string `pulumi:"certStatusTimeout"`
-	// The CrlReceiveTimeout param.
+	// CRL receive timeout (seconds)
 	CrlReceiveTimeout *string `pulumi:"crlReceiveTimeout"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Domain param.
+	// User domain
 	Domain *string `pulumi:"domain"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the certificate profile
 	Name *string `pulumi:"name"`
-	// The OcspReceiveTimeout param.
+	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout *string `pulumi:"ocspReceiveTimeout"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
-	// The UseCrl param.
+	// Use CRL?
 	UseCrl *bool `pulumi:"useCrl"`
-	// The UseOcsp param.
+	// Use OCSP?
 	UseOcsp *bool `pulumi:"useOcsp"`
-	// The UsernameField param.
+	// Certificate username field
 	UsernameField *CertificateProfileUsernameField `pulumi:"usernameField"`
 }
 
 type CertificateProfileState struct {
-	// The BlockExpiredCert param.
+	// Block sessions with expired certificates?
 	BlockExpiredCert pulumi.BoolPtrInput
-	// The BlockTimeoutCert param.
+	// Block session if certificate status cannot be retrieved within timeout?
 	BlockTimeoutCert pulumi.BoolPtrInput
-	// The BlockUnauthenticatedCert param.
+	// Block session if the certificate was not issued to the authenticating device?
 	BlockUnauthenticatedCert pulumi.BoolPtrInput
-	// The BlockUnknownCert param.
+	// Block session if certificate status is unknown?
 	BlockUnknownCert pulumi.BoolPtrInput
-	// The CaCertificates param.
+	// An ordered list of CA certificates
 	CaCertificates CertificateProfileCaCertificateArrayInput
-	// The CertStatusTimeout param.
+	// Certificate status timeout
 	CertStatusTimeout pulumi.StringPtrInput
-	// The CrlReceiveTimeout param.
+	// CRL receive timeout (seconds)
 	CrlReceiveTimeout pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Domain param.
+	// User domain
 	Domain pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the certificate profile
 	Name pulumi.StringPtrInput
-	// The OcspReceiveTimeout param.
+	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
-	// The UseCrl param.
+	// Use CRL?
 	UseCrl pulumi.BoolPtrInput
-	// The UseOcsp param.
+	// Use OCSP?
 	UseOcsp pulumi.BoolPtrInput
-	// The UsernameField param.
+	// Certificate username field
 	UsernameField CertificateProfileUsernameFieldPtrInput
 }
 
@@ -184,73 +162,73 @@ func (CertificateProfileState) ElementType() reflect.Type {
 }
 
 type certificateProfileArgs struct {
-	// The BlockExpiredCert param.
+	// Block sessions with expired certificates?
 	BlockExpiredCert *bool `pulumi:"blockExpiredCert"`
-	// The BlockTimeoutCert param.
+	// Block session if certificate status cannot be retrieved within timeout?
 	BlockTimeoutCert *bool `pulumi:"blockTimeoutCert"`
-	// The BlockUnauthenticatedCert param.
+	// Block session if the certificate was not issued to the authenticating device?
 	BlockUnauthenticatedCert *bool `pulumi:"blockUnauthenticatedCert"`
-	// The BlockUnknownCert param.
+	// Block session if certificate status is unknown?
 	BlockUnknownCert *bool `pulumi:"blockUnknownCert"`
-	// The CaCertificates param.
+	// An ordered list of CA certificates
 	CaCertificates []CertificateProfileCaCertificate `pulumi:"caCertificates"`
-	// The CertStatusTimeout param.
+	// Certificate status timeout
 	CertStatusTimeout *string `pulumi:"certStatusTimeout"`
-	// The CrlReceiveTimeout param.
+	// CRL receive timeout (seconds)
 	CrlReceiveTimeout *string `pulumi:"crlReceiveTimeout"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Domain param.
+	// User domain
 	Domain *string `pulumi:"domain"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the certificate profile
 	Name *string `pulumi:"name"`
-	// The OcspReceiveTimeout param.
+	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout *string `pulumi:"ocspReceiveTimeout"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
-	// The UseCrl param.
+	// Use CRL?
 	UseCrl *bool `pulumi:"useCrl"`
-	// The UseOcsp param.
+	// Use OCSP?
 	UseOcsp *bool `pulumi:"useOcsp"`
-	// The UsernameField param.
+	// Certificate username field
 	UsernameField *CertificateProfileUsernameField `pulumi:"usernameField"`
 }
 
 // The set of arguments for constructing a CertificateProfile resource.
 type CertificateProfileArgs struct {
-	// The BlockExpiredCert param.
+	// Block sessions with expired certificates?
 	BlockExpiredCert pulumi.BoolPtrInput
-	// The BlockTimeoutCert param.
+	// Block session if certificate status cannot be retrieved within timeout?
 	BlockTimeoutCert pulumi.BoolPtrInput
-	// The BlockUnauthenticatedCert param.
+	// Block session if the certificate was not issued to the authenticating device?
 	BlockUnauthenticatedCert pulumi.BoolPtrInput
-	// The BlockUnknownCert param.
+	// Block session if certificate status is unknown?
 	BlockUnknownCert pulumi.BoolPtrInput
-	// The CaCertificates param.
+	// An ordered list of CA certificates
 	CaCertificates CertificateProfileCaCertificateArrayInput
-	// The CertStatusTimeout param.
+	// Certificate status timeout
 	CertStatusTimeout pulumi.StringPtrInput
-	// The CrlReceiveTimeout param.
+	// CRL receive timeout (seconds)
 	CrlReceiveTimeout pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Domain param.
+	// User domain
 	Domain pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+	// The name of the certificate profile
 	Name pulumi.StringPtrInput
-	// The OcspReceiveTimeout param.
+	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
-	// The UseCrl param.
+	// Use CRL?
 	UseCrl pulumi.BoolPtrInput
-	// The UseOcsp param.
+	// Use OCSP?
 	UseOcsp pulumi.BoolPtrInput
-	// The UsernameField param.
+	// Certificate username field
 	UsernameField CertificateProfileUsernameFieldPtrInput
 }
 
@@ -341,67 +319,67 @@ func (o CertificateProfileOutput) ToCertificateProfileOutputWithContext(ctx cont
 	return o
 }
 
-// The BlockExpiredCert param.
+// Block sessions with expired certificates?
 func (o CertificateProfileOutput) BlockExpiredCert() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.BoolPtrOutput { return v.BlockExpiredCert }).(pulumi.BoolPtrOutput)
 }
 
-// The BlockTimeoutCert param.
+// Block session if certificate status cannot be retrieved within timeout?
 func (o CertificateProfileOutput) BlockTimeoutCert() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.BoolPtrOutput { return v.BlockTimeoutCert }).(pulumi.BoolPtrOutput)
 }
 
-// The BlockUnauthenticatedCert param.
+// Block session if the certificate was not issued to the authenticating device?
 func (o CertificateProfileOutput) BlockUnauthenticatedCert() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.BoolPtrOutput { return v.BlockUnauthenticatedCert }).(pulumi.BoolPtrOutput)
 }
 
-// The BlockUnknownCert param.
+// Block session if certificate status is unknown?
 func (o CertificateProfileOutput) BlockUnknownCert() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.BoolPtrOutput { return v.BlockUnknownCert }).(pulumi.BoolPtrOutput)
 }
 
-// The CaCertificates param.
+// An ordered list of CA certificates
 func (o CertificateProfileOutput) CaCertificates() CertificateProfileCaCertificateArrayOutput {
 	return o.ApplyT(func(v *CertificateProfile) CertificateProfileCaCertificateArrayOutput { return v.CaCertificates }).(CertificateProfileCaCertificateArrayOutput)
 }
 
-// The CertStatusTimeout param.
+// Certificate status timeout
 func (o CertificateProfileOutput) CertStatusTimeout() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.CertStatusTimeout }).(pulumi.StringPtrOutput)
 }
 
-// The CrlReceiveTimeout param.
+// CRL receive timeout (seconds)
 func (o CertificateProfileOutput) CrlReceiveTimeout() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.CrlReceiveTimeout }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o CertificateProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Domain param.
+// User domain
 func (o CertificateProfileOutput) Domain() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Domain }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o CertificateProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+// The name of the certificate profile
 func (o CertificateProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The OcspReceiveTimeout param.
+// OCSP receive timeout (seconds)
 func (o CertificateProfileOutput) OcspReceiveTimeout() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.OcspReceiveTimeout }).(pulumi.StringPtrOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o CertificateProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -410,17 +388,17 @@ func (o CertificateProfileOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The UseCrl param.
+// Use CRL?
 func (o CertificateProfileOutput) UseCrl() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.BoolPtrOutput { return v.UseCrl }).(pulumi.BoolPtrOutput)
 }
 
-// The UseOcsp param.
+// Use OCSP?
 func (o CertificateProfileOutput) UseOcsp() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.BoolPtrOutput { return v.UseOcsp }).(pulumi.BoolPtrOutput)
 }
 
-// The UsernameField param.
+// Certificate username field
 func (o CertificateProfileOutput) UsernameField() CertificateProfileUsernameFieldPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) CertificateProfileUsernameFieldPtrOutput { return v.UsernameField }).(CertificateProfileUsernameFieldPtrOutput)
 }

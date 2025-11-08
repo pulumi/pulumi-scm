@@ -17,14 +17,14 @@ public final class HipObjectCertificateCriteriaCertificateAttributeArgs extends 
     public static final HipObjectCertificateCriteriaCertificateAttributeArgs Empty = new HipObjectCertificateCriteriaCertificateAttributeArgs();
 
     /**
-     * Attribute Name.
+     * Attribute Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Attribute Name.
+     * @return Attribute Name
      * 
      */
     public Output<String> name() {
@@ -32,14 +32,14 @@ public final class HipObjectCertificateCriteriaCertificateAttributeArgs extends 
     }
 
     /**
-     * Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * Key value
      * 
      */
     @Import(name="value")
     private @Nullable Output<String> value;
 
     /**
-     * @return Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+     * @return Key value
      * 
      */
     public Optional<Output<String>> value() {
@@ -72,7 +72,7 @@ public final class HipObjectCertificateCriteriaCertificateAttributeArgs extends 
         }
 
         /**
-         * @param name Attribute Name.
+         * @param name Attribute Name
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class HipObjectCertificateCriteriaCertificateAttributeArgs extends 
         }
 
         /**
-         * @param name Attribute Name.
+         * @param name Attribute Name
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class HipObjectCertificateCriteriaCertificateAttributeArgs extends 
         }
 
         /**
-         * @param value Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param value Key value
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class HipObjectCertificateCriteriaCertificateAttributeArgs extends 
         }
 
         /**
-         * @param value Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+         * @param value Key value
          * 
          * @return builder
          * 

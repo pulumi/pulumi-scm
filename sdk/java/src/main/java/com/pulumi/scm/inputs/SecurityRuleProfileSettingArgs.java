@@ -17,14 +17,14 @@ public final class SecurityRuleProfileSettingArgs extends com.pulumi.resources.R
     public static final SecurityRuleProfileSettingArgs Empty = new SecurityRuleProfileSettingArgs();
 
     /**
-     * The security profile group.
+     * The security profile group
      * 
      */
     @Import(name="groups")
     private @Nullable Output<List<String>> groups;
 
     /**
-     * @return The security profile group.
+     * @return The security profile group
      * 
      */
     public Optional<Output<List<String>>> groups() {
@@ -56,7 +56,7 @@ public final class SecurityRuleProfileSettingArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param groups The security profile group.
+         * @param groups The security profile group
          * 
          * @return builder
          * 
@@ -67,7 +67,7 @@ public final class SecurityRuleProfileSettingArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param groups The security profile group.
+         * @param groups The security profile group
          * 
          * @return builder
          * 
@@ -77,7 +77,7 @@ public final class SecurityRuleProfileSettingArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param groups The security profile group.
+         * @param groups The security profile group
          * 
          * @return builder
          * 

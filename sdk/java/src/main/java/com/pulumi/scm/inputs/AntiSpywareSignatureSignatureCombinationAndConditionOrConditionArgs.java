@@ -16,14 +16,14 @@ public final class AntiSpywareSignatureSignatureCombinationAndConditionOrConditi
     public static final AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgs Empty = new AntiSpywareSignatureSignatureCombinationAndConditionOrConditionArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -31,14 +31,14 @@ public final class AntiSpywareSignatureSignatureCombinationAndConditionOrConditi
     }
 
     /**
-     * The ThreatId param.
+     * Threat id
      * 
      */
     @Import(name="threatId")
     private @Nullable Output<String> threatId;
 
     /**
-     * @return The ThreatId param.
+     * @return Threat id
      * 
      */
     public Optional<Output<String>> threatId() {
@@ -71,7 +71,7 @@ public final class AntiSpywareSignatureSignatureCombinationAndConditionOrConditi
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AntiSpywareSignatureSignatureCombinationAndConditionOrConditi
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class AntiSpywareSignatureSignatureCombinationAndConditionOrConditi
         }
 
         /**
-         * @param threatId The ThreatId param.
+         * @param threatId Threat id
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AntiSpywareSignatureSignatureCombinationAndConditionOrConditi
         }
 
         /**
-         * @param threatId The ThreatId param.
+         * @param threatId Threat id
          * 
          * @return builder
          * 

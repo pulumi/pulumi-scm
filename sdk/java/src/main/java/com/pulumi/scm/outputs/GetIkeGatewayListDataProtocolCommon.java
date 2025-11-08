@@ -13,38 +13,38 @@ import java.util.Objects;
 @CustomType
 public final class GetIkeGatewayListDataProtocolCommon {
     /**
-     * @return The Fragmentation param.
+     * @return Fragmentation
      * 
      */
     private GetIkeGatewayListDataProtocolCommonFragmentation fragmentation;
     /**
-     * @return The NatTraversal param.
+     * @return Enables NAT traversal for the IKE gateway.
      * 
      */
     private GetIkeGatewayListDataProtocolCommonNatTraversal natTraversal;
     /**
-     * @return The PassiveMode param.
+     * @return Passive mode
      * 
      */
     private Boolean passiveMode;
 
     private GetIkeGatewayListDataProtocolCommon() {}
     /**
-     * @return The Fragmentation param.
+     * @return Fragmentation
      * 
      */
     public GetIkeGatewayListDataProtocolCommonFragmentation fragmentation() {
         return this.fragmentation;
     }
     /**
-     * @return The NatTraversal param.
+     * @return Enables NAT traversal for the IKE gateway.
      * 
      */
     public GetIkeGatewayListDataProtocolCommonNatTraversal natTraversal() {
         return this.natTraversal;
     }
     /**
-     * @return The PassiveMode param.
+     * @return Passive mode
      * 
      */
     public Boolean passiveMode() {

@@ -14,89 +14,90 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetNatRuleListDataResult
     {
         /// <summary>
-        /// The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+        /// Active active device binding
         /// </summary>
         public readonly string ActiveActiveDeviceBinding;
         /// <summary>
-        /// The Description param.
+        /// NAT rule description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// Static destination translation parameter.
-        /// </summary>
-        public readonly Outputs.GetNatRuleListDataDestinationTranslationResult DestinationTranslation;
-        /// <summary>
-        /// The destination address(es).
+        /// Destination address(es) of the original packet
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The Disabled param.
+        /// Disable NAT rule?
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// Dynamic destination translation parameter.
+        /// Distribution method
         /// </summary>
-        public readonly Outputs.GetNatRuleListDataDynamicDestinationTranslationResult DynamicDestinationTranslation;
+        public readonly string Distribution;
         /// <summary>
-        /// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// DNS rewrite
+        /// </summary>
+        public readonly Outputs.GetNatRuleListDataDnsRewriteResult DnsRewrite;
+        /// <summary>
+        /// The folder in which the resource is defined
         /// </summary>
         public readonly string Folder;
         /// <summary>
-        /// The source security zone(s).
+        /// Source zone(s) of the original packet
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
-        /// The GroupTag param.
-        /// </summary>
-        public readonly string GroupTag;
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// NAT rule name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+        /// NAT type
         /// </summary>
         public readonly string NatType;
         /// <summary>
-        /// The Service param.
+        /// The service of the original packet
         /// </summary>
         public readonly string Service;
         /// <summary>
-        /// The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The snippet in which the resource is defined
         /// </summary>
         public readonly string Snippet;
         /// <summary>
-        /// The SourceTranslation param.
+        /// Source translation
         /// </summary>
         public readonly Outputs.GetNatRuleListDataSourceTranslationResult SourceTranslation;
         /// <summary>
-        /// The source address(es).
+        /// Source address(es) of the original packet
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
-        /// The Tags param.
+        /// NAT rule tags
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
         /// <summary>
-        /// The Target param.
-        /// </summary>
-        public readonly Outputs.GetNatRuleListDataTargetResult Target;
-        /// <summary>
-        /// The ToInterface param.
+        /// Destination interface of the original packet
         /// </summary>
         public readonly string ToInterface;
         /// <summary>
-        /// The destination security zone(s).
+        /// Destination zone of the original packet
         /// </summary>
         public readonly ImmutableArray<string> Tos;
+        /// <summary>
+        /// Translated destination IP address
+        /// </summary>
+        public readonly string TranslatedAddressSingle;
+        /// <summary>
+        /// Translated destination port
+        /// </summary>
+        public readonly int TranslatedPort;
 
         [OutputConstructor]
         private GetNatRuleListDataResult(
@@ -104,21 +105,19 @@ namespace Pulumi.Scm.Outputs
 
             string description,
 
-            Outputs.GetNatRuleListDataDestinationTranslationResult destinationTranslation,
-
             ImmutableArray<string> destinations,
 
             string device,
 
             bool disabled,
 
-            Outputs.GetNatRuleListDataDynamicDestinationTranslationResult dynamicDestinationTranslation,
+            string distribution,
+
+            Outputs.GetNatRuleListDataDnsRewriteResult dnsRewrite,
 
             string folder,
 
             ImmutableArray<string> froms,
-
-            string groupTag,
 
             string id,
 
@@ -136,22 +135,25 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> tags,
 
-            Outputs.GetNatRuleListDataTargetResult target,
+            string tfid,
 
             string toInterface,
 
-            ImmutableArray<string> tos)
+            ImmutableArray<string> tos,
+
+            string translatedAddressSingle,
+
+            int translatedPort)
         {
             ActiveActiveDeviceBinding = activeActiveDeviceBinding;
             Description = description;
-            DestinationTranslation = destinationTranslation;
             Destinations = destinations;
             Device = device;
             Disabled = disabled;
-            DynamicDestinationTranslation = dynamicDestinationTranslation;
+            Distribution = distribution;
+            DnsRewrite = dnsRewrite;
             Folder = folder;
             Froms = froms;
-            GroupTag = groupTag;
             Id = id;
             Name = name;
             NatType = natType;
@@ -160,9 +162,11 @@ namespace Pulumi.Scm.Outputs
             SourceTranslation = sourceTranslation;
             Sources = sources;
             Tags = tags;
-            Target = target;
+            Tfid = tfid;
             ToInterface = toInterface;
             Tos = tos;
+            TranslatedAddressSingle = translatedAddressSingle;
+            TranslatedPort = translatedPort;
         }
     }
 }

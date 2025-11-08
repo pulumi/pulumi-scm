@@ -10,163 +10,234 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// SecurityRule resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.SecurityRule("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/securityRule:SecurityRule")]
     public partial class SecurityRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+        /// The action to be taken when the rule is matched
         /// </summary>
         [Output("action")]
-        public Output<string> Action { get; private set; } = null!;
+        public Output<string?> Action { get; private set; } = null!;
 
         /// <summary>
-        /// The application(s) being accessed.
+        /// Allow url category
+        /// </summary>
+        [Output("allowUrlCategories")]
+        public Output<ImmutableArray<Outputs.SecurityRuleAllowUrlCategory>> AllowUrlCategories { get; private set; } = null!;
+
+        /// <summary>
+        /// Allow web application
+        /// </summary>
+        [Output("allowWebApplications")]
+        public Output<ImmutableArray<Outputs.SecurityRuleAllowWebApplication>> AllowWebApplications { get; private set; } = null!;
+
+        /// <summary>
+        /// The application(s) being accessed
         /// </summary>
         [Output("applications")]
         public Output<ImmutableArray<string>> Applications { get; private set; } = null!;
 
         /// <summary>
-        /// The URL categories being accessed.
+        /// Block url category
+        /// </summary>
+        [Output("blockUrlCategories")]
+        public Output<ImmutableArray<string>> BlockUrlCategories { get; private set; } = null!;
+
+        /// <summary>
+        /// Block web application
+        /// </summary>
+        [Output("blockWebApplications")]
+        public Output<ImmutableArray<string>> BlockWebApplications { get; private set; } = null!;
+
+        /// <summary>
+        /// The URL categories being accessed
         /// </summary>
         [Output("categories")]
         public Output<ImmutableArray<string>> Categories { get; private set; } = null!;
 
         /// <summary>
-        /// The description of the security rule.
+        /// Default profile settings
+        /// </summary>
+        [Output("defaultProfileSettings")]
+        public Output<Outputs.SecurityRuleDefaultProfileSettings> DefaultProfileSettings { get; private set; } = null!;
+
+        /// <summary>
+        /// The description of the security rule
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// The destination Host Integrity Profile(s).
+        /// The destination Host Integrity Profile(s)
         /// </summary>
         [Output("destinationHips")]
         public Output<ImmutableArray<string>> DestinationHips { get; private set; } = null!;
 
         /// <summary>
-        /// The destination address(es).
+        /// The destination address(es)
         /// </summary>
         [Output("destinations")]
         public Output<ImmutableArray<string>> Destinations { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The state of the security rule. Default: `False`.
+        /// Devices
+        /// </summary>
+        [Output("devices")]
+        public Output<ImmutableArray<string>> Devices { get; private set; } = null!;
+
+        /// <summary>
+        /// Is the security rule disabled?
         /// </summary>
         [Output("disabled")]
         public Output<bool> Disabled { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The source security zone(s).
+        /// The source security zone(s)
         /// </summary>
         [Output("froms")]
         public Output<ImmutableArray<string>> Froms { get; private set; } = null!;
 
         /// <summary>
-        /// The external log forwarding profile.
+        /// Log at session end?
         /// </summary>
-        [Output("logSetting")]
-        public Output<string?> LogSetting { get; private set; } = null!;
+        [Output("logEnd")]
+        public Output<bool> LogEnd { get; private set; } = null!;
 
         /// <summary>
-        /// The name of the security rule.
+        /// The external log forwarding profile
+        /// </summary>
+        [Output("logSetting")]
+        public Output<string> LogSetting { get; private set; } = null!;
+
+        /// <summary>
+        /// Log settings
+        /// </summary>
+        [Output("logSettings")]
+        public Output<Outputs.SecurityRuleLogSettings> LogSettings { get; private set; } = null!;
+
+        /// <summary>
+        /// Log at session start?
+        /// </summary>
+        [Output("logStart")]
+        public Output<bool> LogStart { get; private set; } = null!;
+
+        /// <summary>
+        /// The name of the security rule
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// Negate the destination addresses(es). Default: `False`.
+        /// Negate the destination addresses(es)?
         /// </summary>
         [Output("negateDestination")]
         public Output<bool> NegateDestination { get; private set; } = null!;
 
         /// <summary>
-        /// Negate the source address(es). Default: `False`.
+        /// Negate the source address(es)?
         /// </summary>
         [Output("negateSource")]
         public Output<bool> NegateSource { get; private set; } = null!;
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// Negate user
+        /// </summary>
+        [Output("negateUser")]
+        public Output<bool> NegateUser { get; private set; } = null!;
+
+        /// <summary>
+        /// Policy type
+        /// </summary>
+        [Output("policyType")]
+        public Output<string> PolicyType { get; private set; } = null!;
+
+        /// <summary>
+        /// The position of a security rule
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
-        /// The security profile object.
+        /// The security profile object
         /// </summary>
         [Output("profileSetting")]
-        public Output<Outputs.SecurityRuleProfileSetting?> ProfileSetting { get; private set; } = null!;
+        public Output<Outputs.SecurityRuleProfileSetting> ProfileSetting { get; private set; } = null!;
 
         /// <summary>
-        /// The service(s) being accessed.
+        /// Schedule in which this rule will be applied
+        /// </summary>
+        [Output("schedule")]
+        public Output<string?> Schedule { get; private set; } = null!;
+
+        /// <summary>
+        /// Security settings
+        /// </summary>
+        [Output("securitySettings")]
+        public Output<Outputs.SecurityRuleSecuritySettings> SecuritySettings { get; private set; } = null!;
+
+        /// <summary>
+        /// The service(s) being accessed
         /// </summary>
         [Output("services")]
         public Output<ImmutableArray<string>> Services { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The source Host Integrity Profile(s).
+        /// The source Host Integrity Profile(s)
         /// </summary>
         [Output("sourceHips")]
         public Output<ImmutableArray<string>> SourceHips { get; private set; } = null!;
 
         /// <summary>
-        /// The source user(s) or group(s).
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         [Output("sourceUsers")]
         public Output<ImmutableArray<string>> SourceUsers { get; private set; } = null!;
 
         /// <summary>
-        /// The source address(es).
+        /// The source addresses(es)
         /// </summary>
         [Output("sources")]
         public Output<ImmutableArray<string>> Sources { get; private set; } = null!;
 
         /// <summary>
-        /// The tags associated with the security rule.
+        /// The tags associated with the security rule
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
+
+        /// <summary>
+        /// Tenant restrictions
+        /// </summary>
+        [Output("tenantRestrictions")]
+        public Output<ImmutableArray<string>> TenantRestrictions { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The destination security zone(s).
+        /// The destination security zone(s)
         /// </summary>
         [Output("tos")]
         public Output<ImmutableArray<string>> Tos { get; private set; } = null!;
@@ -179,7 +250,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public SecurityRule(string name, SecurityRuleArgs args, CustomResourceOptions? options = null)
+        public SecurityRule(string name, SecurityRuleArgs? args = null, CustomResourceOptions? options = null)
             : base("scm:index/securityRule:SecurityRule", name, args ?? new SecurityRuleArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -218,16 +289,40 @@ namespace Pulumi.Scm
     public sealed class SecurityRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+        /// The action to be taken when the rule is matched
         /// </summary>
-        [Input("action", required: true)]
-        public Input<string> Action { get; set; } = null!;
+        [Input("action")]
+        public Input<string>? Action { get; set; }
 
-        [Input("applications", required: true)]
+        [Input("allowUrlCategories")]
+        private InputList<Inputs.SecurityRuleAllowUrlCategoryArgs>? _allowUrlCategories;
+
+        /// <summary>
+        /// Allow url category
+        /// </summary>
+        public InputList<Inputs.SecurityRuleAllowUrlCategoryArgs> AllowUrlCategories
+        {
+            get => _allowUrlCategories ?? (_allowUrlCategories = new InputList<Inputs.SecurityRuleAllowUrlCategoryArgs>());
+            set => _allowUrlCategories = value;
+        }
+
+        [Input("allowWebApplications")]
+        private InputList<Inputs.SecurityRuleAllowWebApplicationArgs>? _allowWebApplications;
+
+        /// <summary>
+        /// Allow web application
+        /// </summary>
+        public InputList<Inputs.SecurityRuleAllowWebApplicationArgs> AllowWebApplications
+        {
+            get => _allowWebApplications ?? (_allowWebApplications = new InputList<Inputs.SecurityRuleAllowWebApplicationArgs>());
+            set => _allowWebApplications = value;
+        }
+
+        [Input("applications")]
         private InputList<string>? _applications;
 
         /// <summary>
-        /// The application(s) being accessed.
+        /// The application(s) being accessed
         /// </summary>
         public InputList<string> Applications
         {
@@ -235,11 +330,35 @@ namespace Pulumi.Scm
             set => _applications = value;
         }
 
-        [Input("categories", required: true)]
+        [Input("blockUrlCategories")]
+        private InputList<string>? _blockUrlCategories;
+
+        /// <summary>
+        /// Block url category
+        /// </summary>
+        public InputList<string> BlockUrlCategories
+        {
+            get => _blockUrlCategories ?? (_blockUrlCategories = new InputList<string>());
+            set => _blockUrlCategories = value;
+        }
+
+        [Input("blockWebApplications")]
+        private InputList<string>? _blockWebApplications;
+
+        /// <summary>
+        /// Block web application
+        /// </summary>
+        public InputList<string> BlockWebApplications
+        {
+            get => _blockWebApplications ?? (_blockWebApplications = new InputList<string>());
+            set => _blockWebApplications = value;
+        }
+
+        [Input("categories")]
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The URL categories being accessed.
+        /// The URL categories being accessed
         /// </summary>
         public InputList<string> Categories
         {
@@ -248,7 +367,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The description of the security rule.
+        /// Default profile settings
+        /// </summary>
+        [Input("defaultProfileSettings")]
+        public Input<Inputs.SecurityRuleDefaultProfileSettingsArgs>? DefaultProfileSettings { get; set; }
+
+        /// <summary>
+        /// The description of the security rule
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -257,7 +382,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinationHips;
 
         /// <summary>
-        /// The destination Host Integrity Profile(s).
+        /// The destination Host Integrity Profile(s)
         /// </summary>
         public InputList<string> DestinationHips
         {
@@ -265,11 +390,11 @@ namespace Pulumi.Scm
             set => _destinationHips = value;
         }
 
-        [Input("destinations", required: true)]
+        [Input("destinations")]
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The destination address(es).
+        /// The destination address(es)
         /// </summary>
         public InputList<string> Destinations
         {
@@ -278,28 +403,40 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        [Input("devices")]
+        private InputList<string>? _devices;
+
         /// <summary>
-        /// The state of the security rule. Default: `False`.
+        /// Devices
+        /// </summary>
+        public InputList<string> Devices
+        {
+            get => _devices ?? (_devices = new InputList<string>());
+            set => _devices = value;
+        }
+
+        /// <summary>
+        /// Is the security rule disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
-        [Input("froms", required: true)]
+        [Input("froms")]
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The source security zone(s).
+        /// The source security zone(s)
         /// </summary>
         public InputList<string> Froms
         {
@@ -308,46 +445,88 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The external log forwarding profile.
+        /// Log at session end?
+        /// </summary>
+        [Input("logEnd")]
+        public Input<bool>? LogEnd { get; set; }
+
+        /// <summary>
+        /// The external log forwarding profile
         /// </summary>
         [Input("logSetting")]
         public Input<string>? LogSetting { get; set; }
 
         /// <summary>
-        /// The name of the security rule.
+        /// Log settings
+        /// </summary>
+        [Input("logSettings")]
+        public Input<Inputs.SecurityRuleLogSettingsArgs>? LogSettings { get; set; }
+
+        /// <summary>
+        /// Log at session start?
+        /// </summary>
+        [Input("logStart")]
+        public Input<bool>? LogStart { get; set; }
+
+        /// <summary>
+        /// The name of the security rule
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Negate the destination addresses(es). Default: `False`.
+        /// Negate the destination addresses(es)?
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// Negate the source address(es). Default: `False`.
+        /// Negate the source address(es)?
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// Negate user
+        /// </summary>
+        [Input("negateUser")]
+        public Input<bool>? NegateUser { get; set; }
+
+        /// <summary>
+        /// Policy type
+        /// </summary>
+        [Input("policyType")]
+        public Input<string>? PolicyType { get; set; }
+
+        /// <summary>
+        /// The position of a security rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// The security profile object.
+        /// The security profile object
         /// </summary>
         [Input("profileSetting")]
         public Input<Inputs.SecurityRuleProfileSettingArgs>? ProfileSetting { get; set; }
 
-        [Input("services", required: true)]
+        /// <summary>
+        /// Schedule in which this rule will be applied
+        /// </summary>
+        [Input("schedule")]
+        public Input<string>? Schedule { get; set; }
+
+        /// <summary>
+        /// Security settings
+        /// </summary>
+        [Input("securitySettings")]
+        public Input<Inputs.SecurityRuleSecuritySettingsArgs>? SecuritySettings { get; set; }
+
+        [Input("services")]
         private InputList<string>? _services;
 
         /// <summary>
-        /// The service(s) being accessed.
+        /// The service(s) being accessed
         /// </summary>
         public InputList<string> Services
         {
@@ -356,7 +535,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -365,7 +544,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceHips;
 
         /// <summary>
-        /// The source Host Integrity Profile(s).
+        /// The source Host Integrity Profile(s)
         /// </summary>
         public InputList<string> SourceHips
         {
@@ -373,11 +552,11 @@ namespace Pulumi.Scm
             set => _sourceHips = value;
         }
 
-        [Input("sourceUsers", required: true)]
+        [Input("sourceUsers")]
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The source user(s) or group(s).
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -385,11 +564,11 @@ namespace Pulumi.Scm
             set => _sourceUsers = value;
         }
 
-        [Input("sources", required: true)]
+        [Input("sources")]
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The source address(es).
+        /// The source addresses(es)
         /// </summary>
         public InputList<string> Sources
         {
@@ -401,7 +580,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The tags associated with the security rule.
+        /// The tags associated with the security rule
         /// </summary>
         public InputList<string> Tags
         {
@@ -409,11 +588,23 @@ namespace Pulumi.Scm
             set => _tags = value;
         }
 
-        [Input("tos", required: true)]
+        [Input("tenantRestrictions")]
+        private InputList<string>? _tenantRestrictions;
+
+        /// <summary>
+        /// Tenant restrictions
+        /// </summary>
+        public InputList<string> TenantRestrictions
+        {
+            get => _tenantRestrictions ?? (_tenantRestrictions = new InputList<string>());
+            set => _tenantRestrictions = value;
+        }
+
+        [Input("tos")]
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The destination security zone(s).
+        /// The destination security zone(s)
         /// </summary>
         public InputList<string> Tos
         {
@@ -430,16 +621,40 @@ namespace Pulumi.Scm
     public sealed class SecurityRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The action to be taken when the rule is matched. String must be one of these: `"allow"`, `"deny"`, `"drop"`, `"reset-client"`, `"reset-server"`, `"reset-both"`.
+        /// The action to be taken when the rule is matched
         /// </summary>
         [Input("action")]
         public Input<string>? Action { get; set; }
+
+        [Input("allowUrlCategories")]
+        private InputList<Inputs.SecurityRuleAllowUrlCategoryGetArgs>? _allowUrlCategories;
+
+        /// <summary>
+        /// Allow url category
+        /// </summary>
+        public InputList<Inputs.SecurityRuleAllowUrlCategoryGetArgs> AllowUrlCategories
+        {
+            get => _allowUrlCategories ?? (_allowUrlCategories = new InputList<Inputs.SecurityRuleAllowUrlCategoryGetArgs>());
+            set => _allowUrlCategories = value;
+        }
+
+        [Input("allowWebApplications")]
+        private InputList<Inputs.SecurityRuleAllowWebApplicationGetArgs>? _allowWebApplications;
+
+        /// <summary>
+        /// Allow web application
+        /// </summary>
+        public InputList<Inputs.SecurityRuleAllowWebApplicationGetArgs> AllowWebApplications
+        {
+            get => _allowWebApplications ?? (_allowWebApplications = new InputList<Inputs.SecurityRuleAllowWebApplicationGetArgs>());
+            set => _allowWebApplications = value;
+        }
 
         [Input("applications")]
         private InputList<string>? _applications;
 
         /// <summary>
-        /// The application(s) being accessed.
+        /// The application(s) being accessed
         /// </summary>
         public InputList<string> Applications
         {
@@ -447,11 +662,35 @@ namespace Pulumi.Scm
             set => _applications = value;
         }
 
+        [Input("blockUrlCategories")]
+        private InputList<string>? _blockUrlCategories;
+
+        /// <summary>
+        /// Block url category
+        /// </summary>
+        public InputList<string> BlockUrlCategories
+        {
+            get => _blockUrlCategories ?? (_blockUrlCategories = new InputList<string>());
+            set => _blockUrlCategories = value;
+        }
+
+        [Input("blockWebApplications")]
+        private InputList<string>? _blockWebApplications;
+
+        /// <summary>
+        /// Block web application
+        /// </summary>
+        public InputList<string> BlockWebApplications
+        {
+            get => _blockWebApplications ?? (_blockWebApplications = new InputList<string>());
+            set => _blockWebApplications = value;
+        }
+
         [Input("categories")]
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The URL categories being accessed.
+        /// The URL categories being accessed
         /// </summary>
         public InputList<string> Categories
         {
@@ -460,7 +699,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The description of the security rule.
+        /// Default profile settings
+        /// </summary>
+        [Input("defaultProfileSettings")]
+        public Input<Inputs.SecurityRuleDefaultProfileSettingsGetArgs>? DefaultProfileSettings { get; set; }
+
+        /// <summary>
+        /// The description of the security rule
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -469,7 +714,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinationHips;
 
         /// <summary>
-        /// The destination Host Integrity Profile(s).
+        /// The destination Host Integrity Profile(s)
         /// </summary>
         public InputList<string> DestinationHips
         {
@@ -481,7 +726,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The destination address(es).
+        /// The destination address(es)
         /// </summary>
         public InputList<string> Destinations
         {
@@ -490,19 +735,31 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
+        [Input("devices")]
+        private InputList<string>? _devices;
+
         /// <summary>
-        /// The state of the security rule. Default: `False`.
+        /// Devices
+        /// </summary>
+        public InputList<string> Devices
+        {
+            get => _devices ?? (_devices = new InputList<string>());
+            set => _devices = value;
+        }
+
+        /// <summary>
+        /// Is the security rule disabled?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -511,7 +768,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The source security zone(s).
+        /// The source security zone(s)
         /// </summary>
         public InputList<string> Froms
         {
@@ -520,46 +777,88 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The external log forwarding profile.
+        /// Log at session end?
+        /// </summary>
+        [Input("logEnd")]
+        public Input<bool>? LogEnd { get; set; }
+
+        /// <summary>
+        /// The external log forwarding profile
         /// </summary>
         [Input("logSetting")]
         public Input<string>? LogSetting { get; set; }
 
         /// <summary>
-        /// The name of the security rule.
+        /// Log settings
+        /// </summary>
+        [Input("logSettings")]
+        public Input<Inputs.SecurityRuleLogSettingsGetArgs>? LogSettings { get; set; }
+
+        /// <summary>
+        /// Log at session start?
+        /// </summary>
+        [Input("logStart")]
+        public Input<bool>? LogStart { get; set; }
+
+        /// <summary>
+        /// The name of the security rule
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// Negate the destination addresses(es). Default: `False`.
+        /// Negate the destination addresses(es)?
         /// </summary>
         [Input("negateDestination")]
         public Input<bool>? NegateDestination { get; set; }
 
         /// <summary>
-        /// Negate the source address(es). Default: `False`.
+        /// Negate the source address(es)?
         /// </summary>
         [Input("negateSource")]
         public Input<bool>? NegateSource { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// Negate user
+        /// </summary>
+        [Input("negateUser")]
+        public Input<bool>? NegateUser { get; set; }
+
+        /// <summary>
+        /// Policy type
+        /// </summary>
+        [Input("policyType")]
+        public Input<string>? PolicyType { get; set; }
+
+        /// <summary>
+        /// The position of a security rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// The security profile object.
+        /// The security profile object
         /// </summary>
         [Input("profileSetting")]
         public Input<Inputs.SecurityRuleProfileSettingGetArgs>? ProfileSetting { get; set; }
+
+        /// <summary>
+        /// Schedule in which this rule will be applied
+        /// </summary>
+        [Input("schedule")]
+        public Input<string>? Schedule { get; set; }
+
+        /// <summary>
+        /// Security settings
+        /// </summary>
+        [Input("securitySettings")]
+        public Input<Inputs.SecurityRuleSecuritySettingsGetArgs>? SecuritySettings { get; set; }
 
         [Input("services")]
         private InputList<string>? _services;
 
         /// <summary>
-        /// The service(s) being accessed.
+        /// The service(s) being accessed
         /// </summary>
         public InputList<string> Services
         {
@@ -568,7 +867,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -577,7 +876,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceHips;
 
         /// <summary>
-        /// The source Host Integrity Profile(s).
+        /// The source Host Integrity Profile(s)
         /// </summary>
         public InputList<string> SourceHips
         {
@@ -589,7 +888,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The source user(s) or group(s).
+        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -601,7 +900,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The source address(es).
+        /// The source addresses(es)
         /// </summary>
         public InputList<string> Sources
         {
@@ -613,12 +912,24 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The tags associated with the security rule.
+        /// The tags associated with the security rule
         /// </summary>
         public InputList<string> Tags
         {
             get => _tags ?? (_tags = new InputList<string>());
             set => _tags = value;
+        }
+
+        [Input("tenantRestrictions")]
+        private InputList<string>? _tenantRestrictions;
+
+        /// <summary>
+        /// Tenant restrictions
+        /// </summary>
+        public InputList<string> TenantRestrictions
+        {
+            get => _tenantRestrictions ?? (_tenantRestrictions = new InputList<string>());
+            set => _tenantRestrictions = value;
         }
 
         [Input("tfid")]
@@ -628,7 +939,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The destination security zone(s).
+        /// The destination security zone(s)
         /// </summary>
         public InputList<string> Tos
         {

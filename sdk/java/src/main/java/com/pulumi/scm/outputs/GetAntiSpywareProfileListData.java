@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataMicaEngineSpywareEnabledList;
+import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataMicaEngineSpywareEnabled;
 import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataRule;
 import com.pulumi.scm.outputs.GetAntiSpywareProfileListDataThreatException;
 import java.lang.Boolean;
@@ -16,110 +16,150 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareProfileListData {
     /**
-     * @return The CloudInlineAnalysis param. Default: `false`.
+     * @return Cloud inline analysis
      * 
      */
     private Boolean cloudInlineAnalysis;
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the anti-spyware profile
      * 
      */
     private String id;
     /**
-     * @return The InlineExceptionEdlUrls param.
+     * @return Inline exception edl url
      * 
      */
     private List<String> inlineExceptionEdlUrls;
     /**
-     * @return The InlineExceptionIpAddresses param.
+     * @return Inline exception ip address
      * 
      */
     private List<String> inlineExceptionIpAddresses;
     /**
-     * @return The MicaEngineSpywareEnabledList param.
+     * @return Mica engine spyware enabled
      * 
      */
-    private List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabledList> micaEngineSpywareEnabledLists;
+    private List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabled> micaEngineSpywareEnableds;
     /**
-     * @return The Name param.
+     * @return The name of the anti-spyware profile
      * 
      */
     private String name;
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     private List<GetAntiSpywareProfileListDataRule> rules;
     /**
-     * @return The ThreatExceptions param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
+    /**
+     * @return Threat exception
      * 
      */
     private List<GetAntiSpywareProfileListDataThreatException> threatExceptions;
 
     private GetAntiSpywareProfileListData() {}
     /**
-     * @return The CloudInlineAnalysis param. Default: `false`.
+     * @return Cloud inline analysis
      * 
      */
     public Boolean cloudInlineAnalysis() {
         return this.cloudInlineAnalysis;
     }
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the anti-spyware profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The InlineExceptionEdlUrls param.
+     * @return Inline exception edl url
      * 
      */
     public List<String> inlineExceptionEdlUrls() {
         return this.inlineExceptionEdlUrls;
     }
     /**
-     * @return The InlineExceptionIpAddresses param.
+     * @return Inline exception ip address
      * 
      */
     public List<String> inlineExceptionIpAddresses() {
         return this.inlineExceptionIpAddresses;
     }
     /**
-     * @return The MicaEngineSpywareEnabledList param.
+     * @return Mica engine spyware enabled
      * 
      */
-    public List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabledList> micaEngineSpywareEnabledLists() {
-        return this.micaEngineSpywareEnabledLists;
+    public List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabled> micaEngineSpywareEnableds() {
+        return this.micaEngineSpywareEnableds;
     }
     /**
-     * @return The Name param.
+     * @return The name of the anti-spyware profile
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     public List<GetAntiSpywareProfileListDataRule> rules() {
         return this.rules;
     }
     /**
-     * @return The ThreatExceptions param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
+    }
+    /**
+     * @return Threat exception
      * 
      */
     public List<GetAntiSpywareProfileListDataThreatException> threatExceptions() {
@@ -137,24 +177,32 @@ public final class GetAntiSpywareProfileListData {
     public static final class Builder {
         private Boolean cloudInlineAnalysis;
         private String description;
+        private String device;
+        private String folder;
         private String id;
         private List<String> inlineExceptionEdlUrls;
         private List<String> inlineExceptionIpAddresses;
-        private List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabledList> micaEngineSpywareEnabledLists;
+        private List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabled> micaEngineSpywareEnableds;
         private String name;
         private List<GetAntiSpywareProfileListDataRule> rules;
+        private String snippet;
+        private String tfid;
         private List<GetAntiSpywareProfileListDataThreatException> threatExceptions;
         public Builder() {}
         public Builder(GetAntiSpywareProfileListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.cloudInlineAnalysis = defaults.cloudInlineAnalysis;
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.inlineExceptionEdlUrls = defaults.inlineExceptionEdlUrls;
     	      this.inlineExceptionIpAddresses = defaults.inlineExceptionIpAddresses;
-    	      this.micaEngineSpywareEnabledLists = defaults.micaEngineSpywareEnabledLists;
+    	      this.micaEngineSpywareEnableds = defaults.micaEngineSpywareEnableds;
     	      this.name = defaults.name;
     	      this.rules = defaults.rules;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
     	      this.threatExceptions = defaults.threatExceptions;
         }
 
@@ -172,6 +220,22 @@ public final class GetAntiSpywareProfileListData {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -205,15 +269,15 @@ public final class GetAntiSpywareProfileListData {
             return inlineExceptionIpAddresses(List.of(inlineExceptionIpAddresses));
         }
         @CustomType.Setter
-        public Builder micaEngineSpywareEnabledLists(List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabledList> micaEngineSpywareEnabledLists) {
-            if (micaEngineSpywareEnabledLists == null) {
-              throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "micaEngineSpywareEnabledLists");
+        public Builder micaEngineSpywareEnableds(List<GetAntiSpywareProfileListDataMicaEngineSpywareEnabled> micaEngineSpywareEnableds) {
+            if (micaEngineSpywareEnableds == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "micaEngineSpywareEnableds");
             }
-            this.micaEngineSpywareEnabledLists = micaEngineSpywareEnabledLists;
+            this.micaEngineSpywareEnableds = micaEngineSpywareEnableds;
             return this;
         }
-        public Builder micaEngineSpywareEnabledLists(GetAntiSpywareProfileListDataMicaEngineSpywareEnabledList... micaEngineSpywareEnabledLists) {
-            return micaEngineSpywareEnabledLists(List.of(micaEngineSpywareEnabledLists));
+        public Builder micaEngineSpywareEnableds(GetAntiSpywareProfileListDataMicaEngineSpywareEnabled... micaEngineSpywareEnableds) {
+            return micaEngineSpywareEnableds(List.of(micaEngineSpywareEnableds));
         }
         @CustomType.Setter
         public Builder name(String name) {
@@ -235,6 +299,22 @@ public final class GetAntiSpywareProfileListData {
             return rules(List.of(rules));
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
+        @CustomType.Setter
         public Builder threatExceptions(List<GetAntiSpywareProfileListDataThreatException> threatExceptions) {
             if (threatExceptions == null) {
               throw new MissingRequiredPropertyException("GetAntiSpywareProfileListData", "threatExceptions");
@@ -249,12 +329,16 @@ public final class GetAntiSpywareProfileListData {
             final var _resultValue = new GetAntiSpywareProfileListData();
             _resultValue.cloudInlineAnalysis = cloudInlineAnalysis;
             _resultValue.description = description;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.inlineExceptionEdlUrls = inlineExceptionEdlUrls;
             _resultValue.inlineExceptionIpAddresses = inlineExceptionIpAddresses;
-            _resultValue.micaEngineSpywareEnabledLists = micaEngineSpywareEnabledLists;
+            _resultValue.micaEngineSpywareEnableds = micaEngineSpywareEnableds;
             _resultValue.name = name;
             _resultValue.rules = rules;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             _resultValue.threatExceptions = threatExceptions;
             return _resultValue;
         }

@@ -16,14 +16,14 @@ public final class HipObjectNetworkInfoCriteriaArgs extends com.pulumi.resources
     public static final HipObjectNetworkInfoCriteriaArgs Empty = new HipObjectNetworkInfoCriteriaArgs();
 
     /**
-     * The Network param.
+     * Network
      * 
      */
     @Import(name="network")
     private @Nullable Output<HipObjectNetworkInfoCriteriaNetworkArgs> network;
 
     /**
-     * @return The Network param.
+     * @return Network
      * 
      */
     public Optional<Output<HipObjectNetworkInfoCriteriaNetworkArgs>> network() {
@@ -55,7 +55,7 @@ public final class HipObjectNetworkInfoCriteriaArgs extends com.pulumi.resources
         }
 
         /**
-         * @param network The Network param.
+         * @param network Network
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class HipObjectNetworkInfoCriteriaArgs extends com.pulumi.resources
         }
 
         /**
-         * @param network The Network param.
+         * @param network Network
          * 
          * @return builder
          * 

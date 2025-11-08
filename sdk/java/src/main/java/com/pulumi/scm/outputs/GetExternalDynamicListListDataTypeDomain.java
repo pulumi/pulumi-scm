@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeDomainDomainAuth;
+import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeDomainAuth;
 import com.pulumi.scm.outputs.GetExternalDynamicListListDataTypeDomainRecurring;
 import java.lang.Boolean;
 import java.lang.String;
@@ -15,86 +15,86 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeDomain {
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    private GetExternalDynamicListListDataTypeDomainAuth auth;
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     private String certificateProfile;
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return The DomainAuth param.
-     * 
-     */
-    private GetExternalDynamicListListDataTypeDomainDomainAuth domainAuth;
-    /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     private List<String> exceptionLists;
     /**
-     * @return Enable/Disable expand domain. Default: `false`.
+     * @return Enable/Disable expand domain
      * 
      */
     private Boolean expandDomain;
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     private GetExternalDynamicListListDataTypeDomainRecurring recurring;
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     private String url;
 
     private GetExternalDynamicListListDataTypeDomain() {}
     /**
-     * @return Profile for authenticating client certificates. Default: `&#34;None&#34;`.
+     * @return Auth
+     * 
+     */
+    public GetExternalDynamicListListDataTypeDomainAuth auth() {
+        return this.auth;
+    }
+    /**
+     * @return Profile for authenticating client certificates
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The DomainAuth param.
-     * 
-     */
-    public GetExternalDynamicListListDataTypeDomainDomainAuth domainAuth() {
-        return this.domainAuth;
-    }
-    /**
-     * @return The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+     * @return Exception list
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists;
     }
     /**
-     * @return Enable/Disable expand domain. Default: `false`.
+     * @return Enable/Disable expand domain
      * 
      */
     public Boolean expandDomain() {
         return this.expandDomain;
     }
     /**
-     * @return The Recurring param.
+     * @return Recurring
      * 
      */
     public GetExternalDynamicListListDataTypeDomainRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return The Url param. String length must not exceed 255 characters. Default: `&#34;http://&#34;`.
+     * @return Url
      * 
      */
     public String url() {
@@ -110,9 +110,9 @@ public final class GetExternalDynamicListListDataTypeDomain {
     }
     @CustomType.Builder
     public static final class Builder {
+        private GetExternalDynamicListListDataTypeDomainAuth auth;
         private String certificateProfile;
         private String description;
-        private GetExternalDynamicListListDataTypeDomainDomainAuth domainAuth;
         private List<String> exceptionLists;
         private Boolean expandDomain;
         private GetExternalDynamicListListDataTypeDomainRecurring recurring;
@@ -120,15 +120,23 @@ public final class GetExternalDynamicListListDataTypeDomain {
         public Builder() {}
         public Builder(GetExternalDynamicListListDataTypeDomain defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.auth = defaults.auth;
     	      this.certificateProfile = defaults.certificateProfile;
     	      this.description = defaults.description;
-    	      this.domainAuth = defaults.domainAuth;
     	      this.exceptionLists = defaults.exceptionLists;
     	      this.expandDomain = defaults.expandDomain;
     	      this.recurring = defaults.recurring;
     	      this.url = defaults.url;
         }
 
+        @CustomType.Setter
+        public Builder auth(GetExternalDynamicListListDataTypeDomainAuth auth) {
+            if (auth == null) {
+              throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeDomain", "auth");
+            }
+            this.auth = auth;
+            return this;
+        }
         @CustomType.Setter
         public Builder certificateProfile(String certificateProfile) {
             if (certificateProfile == null) {
@@ -143,14 +151,6 @@ public final class GetExternalDynamicListListDataTypeDomain {
               throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeDomain", "description");
             }
             this.description = description;
-            return this;
-        }
-        @CustomType.Setter
-        public Builder domainAuth(GetExternalDynamicListListDataTypeDomainDomainAuth domainAuth) {
-            if (domainAuth == null) {
-              throw new MissingRequiredPropertyException("GetExternalDynamicListListDataTypeDomain", "domainAuth");
-            }
-            this.domainAuth = domainAuth;
             return this;
         }
         @CustomType.Setter
@@ -190,9 +190,9 @@ public final class GetExternalDynamicListListDataTypeDomain {
         }
         public GetExternalDynamicListListDataTypeDomain build() {
             final var _resultValue = new GetExternalDynamicListListDataTypeDomain();
+            _resultValue.auth = auth;
             _resultValue.certificateProfile = certificateProfile;
             _resultValue.description = description;
-            _resultValue.domainAuth = domainAuth;
             _resultValue.exceptionLists = exceptionLists;
             _resultValue.expandDomain = expandDomain;
             _resultValue.recurring = recurring;

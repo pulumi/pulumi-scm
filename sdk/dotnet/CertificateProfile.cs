@@ -10,100 +10,87 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// CertificateProfile resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.CertificateProfile("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/certificateProfile:CertificateProfile")]
     public partial class CertificateProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The BlockExpiredCert param.
+        /// Block sessions with expired certificates?
         /// </summary>
         [Output("blockExpiredCert")]
         public Output<bool?> BlockExpiredCert { get; private set; } = null!;
 
         /// <summary>
-        /// The BlockTimeoutCert param.
+        /// Block session if certificate status cannot be retrieved within timeout?
         /// </summary>
         [Output("blockTimeoutCert")]
         public Output<bool?> BlockTimeoutCert { get; private set; } = null!;
 
         /// <summary>
-        /// The BlockUnauthenticatedCert param.
+        /// Block session if the certificate was not issued to the authenticating device?
         /// </summary>
         [Output("blockUnauthenticatedCert")]
         public Output<bool?> BlockUnauthenticatedCert { get; private set; } = null!;
 
         /// <summary>
-        /// The BlockUnknownCert param.
+        /// Block session if certificate status is unknown?
         /// </summary>
         [Output("blockUnknownCert")]
         public Output<bool?> BlockUnknownCert { get; private set; } = null!;
 
         /// <summary>
-        /// The CaCertificates param.
+        /// An ordered list of CA certificates
         /// </summary>
         [Output("caCertificates")]
         public Output<ImmutableArray<Outputs.CertificateProfileCaCertificate>> CaCertificates { get; private set; } = null!;
 
         /// <summary>
-        /// The CertStatusTimeout param.
+        /// Certificate status timeout
         /// </summary>
         [Output("certStatusTimeout")]
         public Output<string?> CertStatusTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// The CrlReceiveTimeout param.
+        /// CRL receive timeout (seconds)
         /// </summary>
         [Output("crlReceiveTimeout")]
         public Output<string?> CrlReceiveTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Domain param.
+        /// User domain
         /// </summary>
         [Output("domain")]
         public Output<string?> Domain { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the certificate profile
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The OcspReceiveTimeout param.
+        /// OCSP receive timeout (seconds)
         /// </summary>
         [Output("ocspReceiveTimeout")]
         public Output<string?> OcspReceiveTimeout { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -112,19 +99,19 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The UseCrl param.
+        /// Use CRL?
         /// </summary>
         [Output("useCrl")]
         public Output<bool?> UseCrl { get; private set; } = null!;
 
         /// <summary>
-        /// The UseOcsp param.
+        /// Use OCSP?
         /// </summary>
         [Output("useOcsp")]
         public Output<bool?> UseOcsp { get; private set; } = null!;
 
         /// <summary>
-        /// The UsernameField param.
+        /// Certificate username field
         /// </summary>
         [Output("usernameField")]
         public Output<Outputs.CertificateProfileUsernameField?> UsernameField { get; private set; } = null!;
@@ -176,25 +163,25 @@ namespace Pulumi.Scm
     public sealed class CertificateProfileArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BlockExpiredCert param.
+        /// Block sessions with expired certificates?
         /// </summary>
         [Input("blockExpiredCert")]
         public Input<bool>? BlockExpiredCert { get; set; }
 
         /// <summary>
-        /// The BlockTimeoutCert param.
+        /// Block session if certificate status cannot be retrieved within timeout?
         /// </summary>
         [Input("blockTimeoutCert")]
         public Input<bool>? BlockTimeoutCert { get; set; }
 
         /// <summary>
-        /// The BlockUnauthenticatedCert param.
+        /// Block session if the certificate was not issued to the authenticating device?
         /// </summary>
         [Input("blockUnauthenticatedCert")]
         public Input<bool>? BlockUnauthenticatedCert { get; set; }
 
         /// <summary>
-        /// The BlockUnknownCert param.
+        /// Block session if certificate status is unknown?
         /// </summary>
         [Input("blockUnknownCert")]
         public Input<bool>? BlockUnknownCert { get; set; }
@@ -203,7 +190,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.CertificateProfileCaCertificateArgs>? _caCertificates;
 
         /// <summary>
-        /// The CaCertificates param.
+        /// An ordered list of CA certificates
         /// </summary>
         public InputList<Inputs.CertificateProfileCaCertificateArgs> CaCertificates
         {
@@ -212,67 +199,67 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The CertStatusTimeout param.
+        /// Certificate status timeout
         /// </summary>
         [Input("certStatusTimeout")]
         public Input<string>? CertStatusTimeout { get; set; }
 
         /// <summary>
-        /// The CrlReceiveTimeout param.
+        /// CRL receive timeout (seconds)
         /// </summary>
         [Input("crlReceiveTimeout")]
         public Input<string>? CrlReceiveTimeout { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Domain param.
+        /// User domain
         /// </summary>
         [Input("domain")]
         public Input<string>? Domain { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the certificate profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The OcspReceiveTimeout param.
+        /// OCSP receive timeout (seconds)
         /// </summary>
         [Input("ocspReceiveTimeout")]
         public Input<string>? OcspReceiveTimeout { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The UseCrl param.
+        /// Use CRL?
         /// </summary>
         [Input("useCrl")]
         public Input<bool>? UseCrl { get; set; }
 
         /// <summary>
-        /// The UseOcsp param.
+        /// Use OCSP?
         /// </summary>
         [Input("useOcsp")]
         public Input<bool>? UseOcsp { get; set; }
 
         /// <summary>
-        /// The UsernameField param.
+        /// Certificate username field
         /// </summary>
         [Input("usernameField")]
         public Input<Inputs.CertificateProfileUsernameFieldArgs>? UsernameField { get; set; }
@@ -286,25 +273,25 @@ namespace Pulumi.Scm
     public sealed class CertificateProfileState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The BlockExpiredCert param.
+        /// Block sessions with expired certificates?
         /// </summary>
         [Input("blockExpiredCert")]
         public Input<bool>? BlockExpiredCert { get; set; }
 
         /// <summary>
-        /// The BlockTimeoutCert param.
+        /// Block session if certificate status cannot be retrieved within timeout?
         /// </summary>
         [Input("blockTimeoutCert")]
         public Input<bool>? BlockTimeoutCert { get; set; }
 
         /// <summary>
-        /// The BlockUnauthenticatedCert param.
+        /// Block session if the certificate was not issued to the authenticating device?
         /// </summary>
         [Input("blockUnauthenticatedCert")]
         public Input<bool>? BlockUnauthenticatedCert { get; set; }
 
         /// <summary>
-        /// The BlockUnknownCert param.
+        /// Block session if certificate status is unknown?
         /// </summary>
         [Input("blockUnknownCert")]
         public Input<bool>? BlockUnknownCert { get; set; }
@@ -313,7 +300,7 @@ namespace Pulumi.Scm
         private InputList<Inputs.CertificateProfileCaCertificateGetArgs>? _caCertificates;
 
         /// <summary>
-        /// The CaCertificates param.
+        /// An ordered list of CA certificates
         /// </summary>
         public InputList<Inputs.CertificateProfileCaCertificateGetArgs> CaCertificates
         {
@@ -322,49 +309,49 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The CertStatusTimeout param.
+        /// Certificate status timeout
         /// </summary>
         [Input("certStatusTimeout")]
         public Input<string>? CertStatusTimeout { get; set; }
 
         /// <summary>
-        /// The CrlReceiveTimeout param.
+        /// CRL receive timeout (seconds)
         /// </summary>
         [Input("crlReceiveTimeout")]
         public Input<string>? CrlReceiveTimeout { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Domain param.
+        /// User domain
         /// </summary>
         [Input("domain")]
         public Input<string>? Domain { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the certificate profile
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The OcspReceiveTimeout param.
+        /// OCSP receive timeout (seconds)
         /// </summary>
         [Input("ocspReceiveTimeout")]
         public Input<string>? OcspReceiveTimeout { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -373,19 +360,19 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The UseCrl param.
+        /// Use CRL?
         /// </summary>
         [Input("useCrl")]
         public Input<bool>? UseCrl { get; set; }
 
         /// <summary>
-        /// The UseOcsp param.
+        /// Use OCSP?
         /// </summary>
         [Input("useOcsp")]
         public Input<bool>? UseOcsp { get; set; }
 
         /// <summary>
-        /// The UsernameField param.
+        /// Certificate username field
         /// </summary>
         [Input("usernameField")]
         public Input<Inputs.CertificateProfileUsernameFieldGetArgs>? UsernameField { get; set; }

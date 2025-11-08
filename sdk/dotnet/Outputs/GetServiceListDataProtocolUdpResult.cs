@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceListDataProtocolUdpResult
     {
         /// <summary>
-        /// The Override param.
+        /// Override
         /// </summary>
         public readonly Outputs.GetServiceListDataProtocolUdpOverrideResult Override;
         /// <summary>
-        /// The Port param. String length must be between 1 and 1023 characters.
+        /// Port
         /// </summary>
         public readonly string Port;
         /// <summary>
-        /// The SourcePort param. String length must be between 1 and 1023 characters.
+        /// Source port
         /// </summary>
         public readonly string SourcePort;
 

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetQosPolicyRuleListDataDscpTosCodepointTypeCustomResult
     {
         /// <summary>
-        /// The Codepoint param.
+        /// Codepoint
         /// </summary>
         public readonly Outputs.GetQosPolicyRuleListDataDscpTosCodepointTypeCustomCodepointResult Codepoint;
 

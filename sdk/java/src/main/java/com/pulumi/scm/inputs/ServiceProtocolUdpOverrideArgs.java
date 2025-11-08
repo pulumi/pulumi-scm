@@ -16,14 +16,14 @@ public final class ServiceProtocolUdpOverrideArgs extends com.pulumi.resources.R
     public static final ServiceProtocolUdpOverrideArgs Empty = new ServiceProtocolUdpOverrideArgs();
 
     /**
-     * udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+     * udp session timeout value (in second)
      * 
      */
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
     /**
-     * @return udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+     * @return udp session timeout value (in second)
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -55,7 +55,7 @@ public final class ServiceProtocolUdpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timeout udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+         * @param timeout udp session timeout value (in second)
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class ServiceProtocolUdpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timeout udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+         * @param timeout udp session timeout value (in second)
          * 
          * @return builder
          * 

@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureListDataSignatureCombinationAndConditionResult
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OrConditions param.
+        /// Or condition
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareSignatureListDataSignatureCombinationAndConditionOrConditionResult> OrConditions;
 

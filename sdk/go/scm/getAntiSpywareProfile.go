@@ -11,7 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// AntiSpywareProfile data source
 //
 // ## Example Usage
 //
@@ -27,12 +27,20 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupAntiSpywareProfile(ctx, &scm.LookupAntiSpywareProfileArgs{
-//				Id: "1234-56-789",
+//			// Look up anti-spyware-profile by ID
+//			scmAntiSpywareProfileDs, err := scm.LookupAntiSpywareProfile(ctx, &scm.LookupAntiSpywareProfileArgs{
+//				Id: "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("scmAntiSpywareProfileOutput", pulumi.Map{
+//				"profileId":           scmAntiSpywareProfileDs.Id,
+//				"folder":              scmAntiSpywareProfileDs.Folder,
+//				"name":                scmAntiSpywareProfileDs.Name,
+//				"description":         scmAntiSpywareProfileDs.Description,
+//				"cloudInlineAnalysis": scmAntiSpywareProfileDs.CloudInlineAnalysis,
+//			})
 //			return nil
 //		})
 //	}
@@ -50,30 +58,38 @@ func LookupAntiSpywareProfile(ctx *pulumi.Context, args *LookupAntiSpywareProfil
 
 // A collection of arguments for invoking getAntiSpywareProfile.
 type LookupAntiSpywareProfileArgs struct {
-	// The Id param.
+	// The UUID of the anti-spyware profile
 	Id string `pulumi:"id"`
+	// The name of the anti-spyware profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getAntiSpywareProfile.
 type LookupAntiSpywareProfileResult struct {
-	// The CloudInlineAnalysis param. Default: `false`.
+	// Cloud inline analysis
 	CloudInlineAnalysis bool `pulumi:"cloudInlineAnalysis"`
-	// The Description param.
+	// Description
 	Description string `pulumi:"description"`
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the anti-spyware profile
 	Id string `pulumi:"id"`
-	// The InlineExceptionEdlUrls param.
+	// Inline exception edl url
 	InlineExceptionEdlUrls []string `pulumi:"inlineExceptionEdlUrls"`
-	// The InlineExceptionIpAddresses param.
+	// Inline exception ip address
 	InlineExceptionIpAddresses []string `pulumi:"inlineExceptionIpAddresses"`
-	// The MicaEngineSpywareEnabledList param.
-	MicaEngineSpywareEnabledLists []GetAntiSpywareProfileMicaEngineSpywareEnabledList `pulumi:"micaEngineSpywareEnabledLists"`
-	// The Name param.
+	// Mica engine spyware enabled
+	MicaEngineSpywareEnableds []GetAntiSpywareProfileMicaEngineSpywareEnabled `pulumi:"micaEngineSpywareEnableds"`
+	// The name of the anti-spyware profile
 	Name string `pulumi:"name"`
-	// The Rules param.
+	// Rules
 	Rules []GetAntiSpywareProfileRule `pulumi:"rules"`
-	Tfid  string                      `pulumi:"tfid"`
-	// The ThreatExceptions param.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// Threat exception
 	ThreatExceptions []GetAntiSpywareProfileThreatException `pulumi:"threatExceptions"`
 }
 
@@ -88,8 +104,10 @@ func LookupAntiSpywareProfileOutput(ctx *pulumi.Context, args LookupAntiSpywareP
 
 // A collection of arguments for invoking getAntiSpywareProfile.
 type LookupAntiSpywareProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the anti-spyware profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the anti-spyware profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupAntiSpywareProfileOutputArgs) ElementType() reflect.Type {
@@ -111,53 +129,68 @@ func (o LookupAntiSpywareProfileResultOutput) ToLookupAntiSpywareProfileResultOu
 	return o
 }
 
-// The CloudInlineAnalysis param. Default: `false`.
+// Cloud inline analysis
 func (o LookupAntiSpywareProfileResultOutput) CloudInlineAnalysis() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) bool { return v.CloudInlineAnalysis }).(pulumi.BoolOutput)
 }
 
-// The Description param.
+// Description
 func (o LookupAntiSpywareProfileResultOutput) Description() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) string { return v.Description }).(pulumi.StringOutput)
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupAntiSpywareProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAntiSpywareProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupAntiSpywareProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAntiSpywareProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the anti-spyware profile
 func (o LookupAntiSpywareProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The InlineExceptionEdlUrls param.
+// Inline exception edl url
 func (o LookupAntiSpywareProfileResultOutput) InlineExceptionEdlUrls() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) []string { return v.InlineExceptionEdlUrls }).(pulumi.StringArrayOutput)
 }
 
-// The InlineExceptionIpAddresses param.
+// Inline exception ip address
 func (o LookupAntiSpywareProfileResultOutput) InlineExceptionIpAddresses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) []string { return v.InlineExceptionIpAddresses }).(pulumi.StringArrayOutput)
 }
 
-// The MicaEngineSpywareEnabledList param.
-func (o LookupAntiSpywareProfileResultOutput) MicaEngineSpywareEnabledLists() GetAntiSpywareProfileMicaEngineSpywareEnabledListArrayOutput {
-	return o.ApplyT(func(v LookupAntiSpywareProfileResult) []GetAntiSpywareProfileMicaEngineSpywareEnabledList {
-		return v.MicaEngineSpywareEnabledLists
-	}).(GetAntiSpywareProfileMicaEngineSpywareEnabledListArrayOutput)
+// Mica engine spyware enabled
+func (o LookupAntiSpywareProfileResultOutput) MicaEngineSpywareEnableds() GetAntiSpywareProfileMicaEngineSpywareEnabledArrayOutput {
+	return o.ApplyT(func(v LookupAntiSpywareProfileResult) []GetAntiSpywareProfileMicaEngineSpywareEnabled {
+		return v.MicaEngineSpywareEnableds
+	}).(GetAntiSpywareProfileMicaEngineSpywareEnabledArrayOutput)
 }
 
-// The Name param.
+// The name of the anti-spyware profile
 func (o LookupAntiSpywareProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Rules param.
+// Rules
 func (o LookupAntiSpywareProfileResultOutput) Rules() GetAntiSpywareProfileRuleArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) []GetAntiSpywareProfileRule { return v.Rules }).(GetAntiSpywareProfileRuleArrayOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupAntiSpywareProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupAntiSpywareProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupAntiSpywareProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The ThreatExceptions param.
+// Threat exception
 func (o LookupAntiSpywareProfileResultOutput) ThreatExceptions() GetAntiSpywareProfileThreatExceptionArrayOutput {
 	return o.ApplyT(func(v LookupAntiSpywareProfileResult) []GetAntiSpywareProfileThreatException {
 		return v.ThreatExceptions

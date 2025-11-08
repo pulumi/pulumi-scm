@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosProfileClassBandwidthType {
     /**
-     * @return The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * @return Mbps
      * 
      */
     private @Nullable QosProfileClassBandwidthTypeMbps mbps;
     /**
-     * @return The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * @return Percentage
      * 
      */
     private @Nullable QosProfileClassBandwidthTypePercentage percentage;
 
     private QosProfileClassBandwidthType() {}
     /**
-     * @return The Mbps param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * @return Mbps
      * 
      */
     public Optional<QosProfileClassBandwidthTypeMbps> mbps() {
         return Optional.ofNullable(this.mbps);
     }
     /**
-     * @return The Percentage param. Ensure that only one of the following is specified: `mbps`, `percentage`
+     * @return Percentage
      * 
      */
     public Optional<QosProfileClassBandwidthTypePercentage> percentage() {

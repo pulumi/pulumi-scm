@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HipObjectDiskEncryptionCriteriaEncryptedLocationArgs>? _encryptedLocations;
 
         /// <summary>
-        /// The EncryptedLocations param.
+        /// Encrypted locations
         /// </summary>
         public InputList<Inputs.HipObjectDiskEncryptionCriteriaEncryptedLocationArgs> EncryptedLocations
         {
@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Is Installed. Default: `True`.
+        /// Is Installed
         /// </summary>
         [Input("isInstalled")]
         public Input<bool>? IsInstalled { get; set; }

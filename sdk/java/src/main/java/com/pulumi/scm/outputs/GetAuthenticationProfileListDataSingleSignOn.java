@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileListDataSingleSignOn {
     /**
-     * @return The KerberosKeytab param. String length must not exceed 8192 characters.
+     * @return Kerberos keytab
      * 
      */
     private String kerberosKeytab;
     /**
-     * @return The Realm param. String length must not exceed 127 characters.
+     * @return Realm
      * 
      */
     private String realm;
 
     private GetAuthenticationProfileListDataSingleSignOn() {}
     /**
-     * @return The KerberosKeytab param. String length must not exceed 8192 characters.
+     * @return Kerberos keytab
      * 
      */
     public String kerberosKeytab() {
         return this.kerberosKeytab;
     }
     /**
-     * @return The Realm param. String length must not exceed 127 characters.
+     * @return Realm
      * 
      */
     public String realm() {

@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureSignatureCombination {
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     private List<GetAntiSpywareSignatureSignatureCombinationAndCondition> andConditions;
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     private Boolean orderFree;
     /**
-     * @return The TimeAttribute param.
+     * @return anti spyware time attribute
      * 
      */
     private GetAntiSpywareSignatureSignatureCombinationTimeAttribute timeAttribute;
 
     private GetAntiSpywareSignatureSignatureCombination() {}
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     public List<GetAntiSpywareSignatureSignatureCombinationAndCondition> andConditions() {
         return this.andConditions;
     }
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     public Boolean orderFree() {
         return this.orderFree;
     }
     /**
-     * @return The TimeAttribute param.
+     * @return anti spyware time attribute
      * 
      */
     public GetAntiSpywareSignatureSignatureCombinationTimeAttribute timeAttribute() {

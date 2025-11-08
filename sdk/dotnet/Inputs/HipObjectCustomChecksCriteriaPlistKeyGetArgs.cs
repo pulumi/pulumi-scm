@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectCustomChecksCriteriaPlistKeyGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Key name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
 
         /// <summary>
-        /// Value does not exist or match specified value data. Default: `False`.
+        /// Value does not exist or match specified value data
         /// </summary>
         [Input("negate")]
         public Input<bool>? Negate { get; set; }
 
         /// <summary>
-        /// Key value. String length must not exceed 1024 characters. String validation regex: `.*`.
+        /// Key value
         /// </summary>
         [Input("value")]
         public Input<string>? Value { get; set; }

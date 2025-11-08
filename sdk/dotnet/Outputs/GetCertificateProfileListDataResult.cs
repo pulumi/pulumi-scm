@@ -14,59 +14,72 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetCertificateProfileListDataResult
     {
         /// <summary>
-        /// The BlockExpiredCert param.
+        /// Block sessions with expired certificates?
         /// </summary>
         public readonly bool BlockExpiredCert;
         /// <summary>
-        /// The BlockTimeoutCert param.
+        /// Block session if certificate status cannot be retrieved within timeout?
         /// </summary>
         public readonly bool BlockTimeoutCert;
         /// <summary>
-        /// The BlockUnauthenticatedCert param.
+        /// Block session if the certificate was not issued to the authenticating device?
         /// </summary>
         public readonly bool BlockUnauthenticatedCert;
         /// <summary>
-        /// The BlockUnknownCert param.
+        /// Block session if certificate status is unknown?
         /// </summary>
         public readonly bool BlockUnknownCert;
         /// <summary>
-        /// The CaCertificates param.
+        /// An ordered list of CA certificates
         /// </summary>
         public readonly ImmutableArray<Outputs.GetCertificateProfileListDataCaCertificateResult> CaCertificates;
         /// <summary>
-        /// The CertStatusTimeout param.
+        /// Certificate status timeout
         /// </summary>
         public readonly string CertStatusTimeout;
         /// <summary>
-        /// The CrlReceiveTimeout param.
+        /// CRL receive timeout (seconds)
         /// </summary>
         public readonly string CrlReceiveTimeout;
         /// <summary>
-        /// The Domain param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// User domain
         /// </summary>
         public readonly string Domain;
         /// <summary>
-        /// UUID of the resource.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the certificate profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the certificate profile
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The OcspReceiveTimeout param.
+        /// OCSP receive timeout (seconds)
         /// </summary>
         public readonly string OcspReceiveTimeout;
         /// <summary>
-        /// The UseCrl param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// Use CRL?
         /// </summary>
         public readonly bool UseCrl;
         /// <summary>
-        /// The UseOcsp param.
+        /// Use OCSP?
         /// </summary>
         public readonly bool UseOcsp;
         /// <summary>
-        /// The UsernameField param.
+        /// Certificate username field
         /// </summary>
         public readonly Outputs.GetCertificateProfileListDataUsernameFieldResult UsernameField;
 
@@ -86,13 +99,21 @@ namespace Pulumi.Scm.Outputs
 
             string crlReceiveTimeout,
 
+            string device,
+
             string domain,
+
+            string folder,
 
             string id,
 
             string name,
 
             string ocspReceiveTimeout,
+
+            string snippet,
+
+            string tfid,
 
             bool useCrl,
 
@@ -107,10 +128,14 @@ namespace Pulumi.Scm.Outputs
             CaCertificates = caCertificates;
             CertStatusTimeout = certStatusTimeout;
             CrlReceiveTimeout = crlReceiveTimeout;
+            Device = device;
             Domain = domain;
+            Folder = folder;
             Id = id;
             Name = name;
             OcspReceiveTimeout = ocspReceiveTimeout;
+            Snippet = snippet;
+            Tfid = tfid;
             UseCrl = useCrl;
             UseOcsp = useOcsp;
             UsernameField = usernameField;

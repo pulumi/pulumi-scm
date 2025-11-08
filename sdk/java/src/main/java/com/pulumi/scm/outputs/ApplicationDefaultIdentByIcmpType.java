@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationDefaultIdentByIcmpType {
     /**
-     * @return The Code param.
+     * @return Code
      * 
      */
     private @Nullable String code;
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     private String type;
 
     private ApplicationDefaultIdentByIcmpType() {}
     /**
-     * @return The Code param.
+     * @return Code
      * 
      */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public String type() {

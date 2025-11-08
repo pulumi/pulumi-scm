@@ -13,66 +13,106 @@ import java.util.Objects;
 @CustomType
 public final class GetServiceListData {
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     private String description;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the service
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the service
      * 
      */
     private String name;
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     private GetServiceListDataProtocol protocol;
     /**
-     * @return Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Tags for service object
      * 
      */
     private List<String> tags;
+    private String tfid;
 
     private GetServiceListData() {}
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return Description
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the service
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the service
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public GetServiceListDataProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Tags for service object
      * 
      */
     public List<String> tags() {
         return this.tags;
+    }
+    public String tfid() {
+        return this.tfid;
     }
 
     public static Builder builder() {
@@ -85,18 +125,26 @@ public final class GetServiceListData {
     @CustomType.Builder
     public static final class Builder {
         private String description;
+        private String device;
+        private String folder;
         private String id;
         private String name;
         private GetServiceListDataProtocol protocol;
+        private String snippet;
         private List<String> tags;
+        private String tfid;
         public Builder() {}
         public Builder(GetServiceListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.protocol = defaults.protocol;
+    	      this.snippet = defaults.snippet;
     	      this.tags = defaults.tags;
+    	      this.tfid = defaults.tfid;
         }
 
         @CustomType.Setter
@@ -105,6 +153,22 @@ public final class GetServiceListData {
               throw new MissingRequiredPropertyException("GetServiceListData", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetServiceListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetServiceListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -132,6 +196,14 @@ public final class GetServiceListData {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetServiceListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tags(List<String> tags) {
             if (tags == null) {
               throw new MissingRequiredPropertyException("GetServiceListData", "tags");
@@ -142,13 +214,25 @@ public final class GetServiceListData {
         public Builder tags(String... tags) {
             return tags(List.of(tags));
         }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetServiceListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
         public GetServiceListData build() {
             final var _resultValue = new GetServiceListData();
             _resultValue.description = description;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.protocol = protocol;
+            _resultValue.snippet = snippet;
             _resultValue.tags = tags;
+            _resultValue.tfid = tfid;
             return _resultValue;
         }
     }

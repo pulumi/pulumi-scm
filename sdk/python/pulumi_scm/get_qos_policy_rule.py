@@ -27,13 +27,16 @@ class GetQosPolicyRuleResult:
     """
     A collection of values returned by getQosPolicyRule.
     """
-    def __init__(__self__, action=None, description=None, dscp_tos=None, folder=None, id=None, name=None, schedule=None, tfid=None):
+    def __init__(__self__, action=None, description=None, device=None, dscp_tos=None, folder=None, id=None, name=None, schedule=None, snippet=None, tfid=None):
         if action and not isinstance(action, dict):
             raise TypeError("Expected argument 'action' to be a dict")
         pulumi.set(__self__, "action", action)
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if dscp_tos and not isinstance(dscp_tos, dict):
             raise TypeError("Expected argument 'dscp_tos' to be a dict")
         pulumi.set(__self__, "dscp_tos", dscp_tos)
@@ -49,6 +52,9 @@ class GetQosPolicyRuleResult:
         if schedule and not isinstance(schedule, str):
             raise TypeError("Expected argument 'schedule' to be a str")
         pulumi.set(__self__, "schedule", schedule)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -57,7 +63,7 @@ class GetQosPolicyRuleResult:
     @pulumi.getter
     def action(self) -> 'outputs.GetQosPolicyRuleActionResult':
         """
-        The Action param.
+        Action
         """
         return pulumi.get(self, "action")
 
@@ -65,23 +71,31 @@ class GetQosPolicyRuleResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        Description
         """
         return pulumi.get(self, "description")
+
+    @_builtins.property
+    @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="dscpTos")
     def dscp_tos(self) -> 'outputs.GetQosPolicyRuleDscpTosResult':
         """
-        The DscpTos param.
+        Dscp tos
         """
         return pulumi.get(self, "dscp_tos")
 
     @_builtins.property
     @pulumi.getter
-    def folder(self) -> Optional[_builtins.str]:
+    def folder(self) -> _builtins.str:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -89,7 +103,7 @@ class GetQosPolicyRuleResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -97,7 +111,7 @@ class GetQosPolicyRuleResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
 
@@ -105,9 +119,17 @@ class GetQosPolicyRuleResult:
     @pulumi.getter
     def schedule(self) -> _builtins.str:
         """
-        The Schedule param.
+        Schedule
         """
         return pulumi.get(self, "schedule")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -123,78 +145,66 @@ class AwaitableGetQosPolicyRuleResult(GetQosPolicyRuleResult):
         return GetQosPolicyRuleResult(
             action=self.action,
             description=self.description,
+            device=self.device,
             dscp_tos=self.dscp_tos,
             folder=self.folder,
             id=self.id,
             name=self.name,
             schedule=self.schedule,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
-def get_qos_policy_rule(folder: Optional[_builtins.str] = None,
-                        id: Optional[_builtins.str] = None,
+def get_qos_policy_rule(id: Optional[_builtins.str] = None,
+                        name: Optional[_builtins.str] = None,
                         opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetQosPolicyRuleResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_qos_policy_rule(id="1234-56-789")
-    ```
+    QosPolicyRule data source
 
 
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getQosPolicyRule:getQosPolicyRule', __args__, opts=opts, typ=GetQosPolicyRuleResult).value
 
     return AwaitableGetQosPolicyRuleResult(
         action=pulumi.get(__ret__, 'action'),
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
         dscp_tos=pulumi.get(__ret__, 'dscp_tos'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         schedule=pulumi.get(__ret__, 'schedule'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
-def get_qos_policy_rule_output(folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
-                               id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_qos_policy_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                               name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetQosPolicyRuleResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_qos_policy_rule(id="1234-56-789")
-    ```
+    QosPolicyRule data source
 
 
-    :param _builtins.str folder: The Folder param.
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
-    __args__['folder'] = folder
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getQosPolicyRule:getQosPolicyRule', __args__, opts=opts, typ=GetQosPolicyRuleResult)
     return __ret__.apply(lambda __response__: GetQosPolicyRuleResult(
         action=pulumi.get(__response__, 'action'),
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
         dscp_tos=pulumi.get(__response__, 'dscp_tos'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         schedule=pulumi.get(__response__, 'schedule'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

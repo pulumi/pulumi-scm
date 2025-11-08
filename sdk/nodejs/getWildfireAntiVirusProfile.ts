@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getWildfireAntiVirusProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * WildfireAntiVirusProfile data source
  */
 export function getWildfireAntiVirusProfile(args: GetWildfireAntiVirusProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetWildfireAntiVirusProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getWildfireAntiVirusProfile(args: GetWildfireAntiVirusProfileArg
  */
 export interface GetWildfireAntiVirusProfileArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Name
+     */
+    name?: string;
 }
 
 /**
@@ -42,53 +36,55 @@ export interface GetWildfireAntiVirusProfileArgs {
  */
 export interface GetWildfireAntiVirusProfileResult {
     /**
-     * The Description param.
+     * Description
      */
     readonly description: string;
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The MlavExceptions param.
+     * Mlav exception
      */
     readonly mlavExceptions: outputs.GetWildfireAntiVirusProfileMlavException[];
     /**
-     * The Name param. String validation regex: `^[a-zA-Z0-9._-]+$`.
+     * Name
      */
     readonly name: string;
     /**
-     * The PacketCapture param.
+     * Packet capture
      */
     readonly packetCapture: boolean;
     /**
-     * The Rules param.
+     * Rules
      */
     readonly rules: outputs.GetWildfireAntiVirusProfileRule[];
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     readonly threatExceptions: outputs.GetWildfireAntiVirusProfileThreatException[];
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getWildfireAntiVirusProfile({
- *     id: "1234-56-789",
- * });
- * ```
+ * WildfireAntiVirusProfile data source
  */
 export function getWildfireAntiVirusProfileOutput(args: GetWildfireAntiVirusProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetWildfireAntiVirusProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getWildfireAntiVirusProfile:getWildfireAntiVirusProfile", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -97,7 +93,11 @@ export function getWildfireAntiVirusProfileOutput(args: GetWildfireAntiVirusProf
  */
 export interface GetWildfireAntiVirusProfileOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Name
+     */
+    name?: pulumi.Input<string>;
 }

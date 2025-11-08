@@ -12,74 +12,74 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileListDataMethodSamlIdp {
     /**
-     * @return The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+     * @return Attribute name usergroup
      * 
      */
     private String attributeNameUsergroup;
     /**
-     * @return The AttributeNameUsername param. String length must be between 1 and 63 characters.
+     * @return Attribute name username
      * 
      */
     private String attributeNameUsername;
     /**
-     * @return The CertificateProfile param. String length must not exceed 31 characters.
+     * @return Certificate profile
      * 
      */
     private String certificateProfile;
     /**
-     * @return The EnableSingleLogout param.
+     * @return Enable single logout
      * 
      */
     private Boolean enableSingleLogout;
     /**
-     * @return The RequestSigningCertificate param. String length must not exceed 64 characters.
+     * @return Request signing certificate
      * 
      */
     private String requestSigningCertificate;
     /**
-     * @return The ServerProfile param. String length must not exceed 63 characters.
+     * @return Server profile
      * 
      */
     private String serverProfile;
 
     private GetAuthenticationProfileListDataMethodSamlIdp() {}
     /**
-     * @return The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+     * @return Attribute name usergroup
      * 
      */
     public String attributeNameUsergroup() {
         return this.attributeNameUsergroup;
     }
     /**
-     * @return The AttributeNameUsername param. String length must be between 1 and 63 characters.
+     * @return Attribute name username
      * 
      */
     public String attributeNameUsername() {
         return this.attributeNameUsername;
     }
     /**
-     * @return The CertificateProfile param. String length must not exceed 31 characters.
+     * @return Certificate profile
      * 
      */
     public String certificateProfile() {
         return this.certificateProfile;
     }
     /**
-     * @return The EnableSingleLogout param.
+     * @return Enable single logout
      * 
      */
     public Boolean enableSingleLogout() {
         return this.enableSingleLogout;
     }
     /**
-     * @return The RequestSigningCertificate param. String length must not exceed 64 characters.
+     * @return Request signing certificate
      * 
      */
     public String requestSigningCertificate() {
         return this.requestSigningCertificate;
     }
     /**
-     * @return The ServerProfile param. String length must not exceed 63 characters.
+     * @return Server profile
      * 
      */
     public String serverProfile() {

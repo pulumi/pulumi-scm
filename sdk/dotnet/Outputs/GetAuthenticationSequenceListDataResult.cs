@@ -14,19 +14,32 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationSequenceListDataResult
     {
         /// <summary>
-        /// The AuthenticationProfiles param.
+        /// An ordered list of authentication profiles
         /// </summary>
         public readonly ImmutableArray<string> AuthenticationProfiles;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the authentication sequence
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication sequence
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The UseDomainFindProfile param. Default: `True`.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// Use domain to determine authentication profile?
         /// </summary>
         public readonly bool UseDomainFindProfile;
 
@@ -34,15 +47,27 @@ namespace Pulumi.Scm.Outputs
         private GetAuthenticationSequenceListDataResult(
             ImmutableArray<string> authenticationProfiles,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
 
+            string snippet,
+
+            string tfid,
+
             bool useDomainFindProfile)
         {
             AuthenticationProfiles = authenticationProfiles;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
             UseDomainFindProfile = useDomainFindProfile;
         }
     }

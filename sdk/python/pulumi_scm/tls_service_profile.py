@@ -29,12 +29,12 @@ class TlsServiceProfileArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a TlsServiceProfile resource.
-        :param pulumi.Input[_builtins.str] certificate: SSL certificate file name. String length must not exceed 255 characters.
-        :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: The ProtocolSettings param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] certificate: Certificate name
+        :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: Protocol settings
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         pulumi.set(__self__, "certificate", certificate)
         pulumi.set(__self__, "protocol_settings", protocol_settings)
@@ -51,7 +51,7 @@ class TlsServiceProfileArgs:
     @pulumi.getter
     def certificate(self) -> pulumi.Input[_builtins.str]:
         """
-        SSL certificate file name. String length must not exceed 255 characters.
+        Certificate name
         """
         return pulumi.get(self, "certificate")
 
@@ -63,7 +63,7 @@ class TlsServiceProfileArgs:
     @pulumi.getter(name="protocolSettings")
     def protocol_settings(self) -> pulumi.Input['TlsServiceProfileProtocolSettingsArgs']:
         """
-        The ProtocolSettings param.
+        Protocol settings
         """
         return pulumi.get(self, "protocol_settings")
 
@@ -75,7 +75,7 @@ class TlsServiceProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -87,7 +87,7 @@ class TlsServiceProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -99,7 +99,7 @@ class TlsServiceProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         """
         return pulumi.get(self, "name")
 
@@ -111,7 +111,7 @@ class TlsServiceProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -132,12 +132,12 @@ class _TlsServiceProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering TlsServiceProfile resources.
-        :param pulumi.Input[_builtins.str] certificate: SSL certificate file name. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: The ProtocolSettings param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] certificate: Certificate name
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+        :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: Protocol settings
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if certificate is not None:
             pulumi.set(__self__, "certificate", certificate)
@@ -158,7 +158,7 @@ class _TlsServiceProfileState:
     @pulumi.getter
     def certificate(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SSL certificate file name. String length must not exceed 255 characters.
+        Certificate name
         """
         return pulumi.get(self, "certificate")
 
@@ -170,7 +170,7 @@ class _TlsServiceProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -182,7 +182,7 @@ class _TlsServiceProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -194,7 +194,7 @@ class _TlsServiceProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         """
         return pulumi.get(self, "name")
 
@@ -206,7 +206,7 @@ class _TlsServiceProfileState:
     @pulumi.getter(name="protocolSettings")
     def protocol_settings(self) -> Optional[pulumi.Input['TlsServiceProfileProtocolSettingsArgs']]:
         """
-        The ProtocolSettings param.
+        Protocol settings
         """
         return pulumi.get(self, "protocol_settings")
 
@@ -218,7 +218,7 @@ class _TlsServiceProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -250,25 +250,16 @@ class TlsServiceProfile(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.TlsServiceProfile("example", folder="Shared")
-        ```
+        TlsServiceProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] certificate: SSL certificate file name. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: The ProtocolSettings param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] certificate: Certificate name
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -277,16 +268,7 @@ class TlsServiceProfile(pulumi.CustomResource):
                  args: TlsServiceProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.TlsServiceProfile("example", folder="Shared")
-        ```
+        TlsServiceProfile resource
 
         :param str resource_name: The name of the resource.
         :param TlsServiceProfileArgs args: The arguments to use to populate this resource's properties.
@@ -353,12 +335,12 @@ class TlsServiceProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] certificate: SSL certificate file name. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
-        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: The ProtocolSettings param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] certificate: Certificate name
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
+        :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -377,7 +359,7 @@ class TlsServiceProfile(pulumi.CustomResource):
     @pulumi.getter
     def certificate(self) -> pulumi.Output[_builtins.str]:
         """
-        SSL certificate file name. String length must not exceed 255 characters.
+        Certificate name
         """
         return pulumi.get(self, "certificate")
 
@@ -385,7 +367,7 @@ class TlsServiceProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -393,7 +375,7 @@ class TlsServiceProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -401,7 +383,7 @@ class TlsServiceProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        SSL TLS Service Profile name, value is muCustomDomainSSLProfile when it is used on mobile-agent infra settings. String length must not exceed 127 characters. String validation regex: `^[a-zA-Z0-9._-]+$`.
+        TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         """
         return pulumi.get(self, "name")
 
@@ -409,7 +391,7 @@ class TlsServiceProfile(pulumi.CustomResource):
     @pulumi.getter(name="protocolSettings")
     def protocol_settings(self) -> pulumi.Output['outputs.TlsServiceProfileProtocolSettings']:
         """
-        The ProtocolSettings param.
+        Protocol settings
         """
         return pulumi.get(self, "protocol_settings")
 
@@ -417,7 +399,7 @@ class TlsServiceProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

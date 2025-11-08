@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectNetworkInfoCriteriaNetworkIsNotWifi {
     /**
-     * @return SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return SSID
      * 
      */
     private @Nullable String ssid;
 
     private HipObjectNetworkInfoCriteriaNetworkIsNotWifi() {}
     /**
-     * @return SSID. String length must not exceed 1023 characters. String validation regex: `.*`.
+     * @return SSID
      * 
      */
     public Optional<String> ssid() {

@@ -27,14 +27,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     public static final HipObjectArgs Empty = new HipObjectArgs();
 
     /**
-     * The AntiMalware param.
+     * Anti malware
      * 
      */
     @Import(name="antiMalware")
     private @Nullable Output<HipObjectAntiMalwareArgs> antiMalware;
 
     /**
-     * @return The AntiMalware param.
+     * @return Anti malware
      * 
      */
     public Optional<Output<HipObjectAntiMalwareArgs>> antiMalware() {
@@ -42,14 +42,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Certificate param.
+     * Certificate
      * 
      */
     @Import(name="certificate")
     private @Nullable Output<HipObjectCertificateArgs> certificate;
 
     /**
-     * @return The Certificate param.
+     * @return Certificate
      * 
      */
     public Optional<Output<HipObjectCertificateArgs>> certificate() {
@@ -57,14 +57,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The CustomChecks param.
+     * Custom checks
      * 
      */
     @Import(name="customChecks")
     private @Nullable Output<HipObjectCustomChecksArgs> customChecks;
 
     /**
-     * @return The CustomChecks param.
+     * @return Custom checks
      * 
      */
     public Optional<Output<HipObjectCustomChecksArgs>> customChecks() {
@@ -72,14 +72,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DataLossPrevention param.
+     * Data loss prevention
      * 
      */
     @Import(name="dataLossPrevention")
     private @Nullable Output<HipObjectDataLossPreventionArgs> dataLossPrevention;
 
     /**
-     * @return The DataLossPrevention param.
+     * @return Data loss prevention
      * 
      */
     public Optional<Output<HipObjectDataLossPreventionArgs>> dataLossPrevention() {
@@ -87,14 +87,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param. String length must not exceed 255 characters.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -102,14 +102,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -117,14 +117,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DiskBackup param.
+     * Disk backup
      * 
      */
     @Import(name="diskBackup")
     private @Nullable Output<HipObjectDiskBackupArgs> diskBackup;
 
     /**
-     * @return The DiskBackup param.
+     * @return Disk backup
      * 
      */
     public Optional<Output<HipObjectDiskBackupArgs>> diskBackup() {
@@ -132,14 +132,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The DiskEncryption param.
+     * Disk encryption
      * 
      */
     @Import(name="diskEncryption")
     private @Nullable Output<HipObjectDiskEncryptionArgs> diskEncryption;
 
     /**
-     * @return The DiskEncryption param.
+     * @return Disk encryption
      * 
      */
     public Optional<Output<HipObjectDiskEncryptionArgs>> diskEncryption() {
@@ -147,14 +147,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Firewall param.
+     * Firewall
      * 
      */
     @Import(name="firewall")
     private @Nullable Output<HipObjectFirewallArgs> firewall;
 
     /**
-     * @return The Firewall param.
+     * @return Firewall
      * 
      */
     public Optional<Output<HipObjectFirewallArgs>> firewall() {
@@ -162,14 +162,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -177,14 +177,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The HostInfo param.
+     * Host info
      * 
      */
     @Import(name="hostInfo")
     private @Nullable Output<HipObjectHostInfoArgs> hostInfo;
 
     /**
-     * @return The HostInfo param.
+     * @return Host info
      * 
      */
     public Optional<Output<HipObjectHostInfoArgs>> hostInfo() {
@@ -192,14 +192,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The MobileDevice param.
+     * Mobile device
      * 
      */
     @Import(name="mobileDevice")
     private @Nullable Output<HipObjectMobileDeviceArgs> mobileDevice;
 
     /**
-     * @return The MobileDevice param.
+     * @return Mobile device
      * 
      */
     public Optional<Output<HipObjectMobileDeviceArgs>> mobileDevice() {
@@ -207,14 +207,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP object
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the HIP object
      * 
      */
     public Optional<Output<String>> name() {
@@ -222,14 +222,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The NetworkInfo param.
+     * Network info
      * 
      */
     @Import(name="networkInfo")
     private @Nullable Output<HipObjectNetworkInfoArgs> networkInfo;
 
     /**
-     * @return The NetworkInfo param.
+     * @return Network info
      * 
      */
     public Optional<Output<HipObjectNetworkInfoArgs>> networkInfo() {
@@ -237,14 +237,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The PatchManagement param.
+     * Patch management
      * 
      */
     @Import(name="patchManagement")
     private @Nullable Output<HipObjectPatchManagementArgs> patchManagement;
 
     /**
-     * @return The PatchManagement param.
+     * @return Patch management
      * 
      */
     public Optional<Output<HipObjectPatchManagementArgs>> patchManagement() {
@@ -252,14 +252,14 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -306,7 +306,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param antiMalware The AntiMalware param.
+         * @param antiMalware Anti malware
          * 
          * @return builder
          * 
@@ -317,7 +317,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param antiMalware The AntiMalware param.
+         * @param antiMalware Anti malware
          * 
          * @return builder
          * 
@@ -327,7 +327,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificate The Certificate param.
+         * @param certificate Certificate
          * 
          * @return builder
          * 
@@ -338,7 +338,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param certificate The Certificate param.
+         * @param certificate Certificate
          * 
          * @return builder
          * 
@@ -348,7 +348,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param customChecks The CustomChecks param.
+         * @param customChecks Custom checks
          * 
          * @return builder
          * 
@@ -359,7 +359,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param customChecks The CustomChecks param.
+         * @param customChecks Custom checks
          * 
          * @return builder
          * 
@@ -369,7 +369,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dataLossPrevention The DataLossPrevention param.
+         * @param dataLossPrevention Data loss prevention
          * 
          * @return builder
          * 
@@ -380,7 +380,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dataLossPrevention The DataLossPrevention param.
+         * @param dataLossPrevention Data loss prevention
          * 
          * @return builder
          * 
@@ -390,7 +390,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -401,7 +401,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param. String length must not exceed 255 characters.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -411,7 +411,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -422,7 +422,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -432,7 +432,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param diskBackup The DiskBackup param.
+         * @param diskBackup Disk backup
          * 
          * @return builder
          * 
@@ -443,7 +443,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param diskBackup The DiskBackup param.
+         * @param diskBackup Disk backup
          * 
          * @return builder
          * 
@@ -453,7 +453,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param diskEncryption The DiskEncryption param.
+         * @param diskEncryption Disk encryption
          * 
          * @return builder
          * 
@@ -464,7 +464,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param diskEncryption The DiskEncryption param.
+         * @param diskEncryption Disk encryption
          * 
          * @return builder
          * 
@@ -474,7 +474,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param firewall The Firewall param.
+         * @param firewall Firewall
          * 
          * @return builder
          * 
@@ -485,7 +485,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param firewall The Firewall param.
+         * @param firewall Firewall
          * 
          * @return builder
          * 
@@ -495,7 +495,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -506,7 +506,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -516,7 +516,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param hostInfo The HostInfo param.
+         * @param hostInfo Host info
          * 
          * @return builder
          * 
@@ -527,7 +527,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param hostInfo The HostInfo param.
+         * @param hostInfo Host info
          * 
          * @return builder
          * 
@@ -537,7 +537,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mobileDevice The MobileDevice param.
+         * @param mobileDevice Mobile device
          * 
          * @return builder
          * 
@@ -548,7 +548,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param mobileDevice The MobileDevice param.
+         * @param mobileDevice Mobile device
          * 
          * @return builder
          * 
@@ -558,7 +558,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the HIP object
          * 
          * @return builder
          * 
@@ -569,7 +569,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name The name of the HIP object
          * 
          * @return builder
          * 
@@ -579,7 +579,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param networkInfo The NetworkInfo param.
+         * @param networkInfo Network info
          * 
          * @return builder
          * 
@@ -590,7 +590,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param networkInfo The NetworkInfo param.
+         * @param networkInfo Network info
          * 
          * @return builder
          * 
@@ -600,7 +600,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param patchManagement The PatchManagement param.
+         * @param patchManagement Patch management
          * 
          * @return builder
          * 
@@ -611,7 +611,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param patchManagement The PatchManagement param.
+         * @param patchManagement Patch management
          * 
          * @return builder
          * 
@@ -621,7 +621,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -632,7 +632,7 @@ public final class HipObjectArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

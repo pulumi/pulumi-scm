@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class IpsecCryptoProfileLifesizeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// specify lifesize in gigabytes(GB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
+        /// specify lifesize in gigabytes(GB)
         /// </summary>
         [Input("gb")]
         public Input<int>? Gb { get; set; }
 
         /// <summary>
-        /// specify lifesize in kilobytes(KB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
+        /// specify lifesize in kilobytes(KB)
         /// </summary>
         [Input("kb")]
         public Input<int>? Kb { get; set; }
 
         /// <summary>
-        /// specify lifesize in megabytes(MB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
+        /// specify lifesize in megabytes(MB)
         /// </summary>
         [Input("mb")]
         public Input<int>? Mb { get; set; }
 
         /// <summary>
-        /// specify lifesize in terabytes(TB). Value must be between 1 and 65535. Ensure that only one of the following is specified: `Gb`, `Kb`, `Mb`, `Tb`
+        /// specify lifesize in terabytes(TB)
         /// </summary>
         [Input("tb")]
         public Input<int>? Tb { get; set; }

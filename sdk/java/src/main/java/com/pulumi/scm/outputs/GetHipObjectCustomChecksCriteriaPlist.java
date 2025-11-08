@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectCustomChecksCriteriaPlist {
     /**
-     * @return The Keys param.
+     * @return Key
      * 
      */
     private List<GetHipObjectCustomChecksCriteriaPlistKey> keys;
     /**
-     * @return Preference list. String length must not exceed 1023 characters.
+     * @return Preference list
      * 
      */
     private String name;
     /**
-     * @return Plist does not exist. Default: `false`.
+     * @return Plist does not exist
      * 
      */
     private Boolean negate;
 
     private GetHipObjectCustomChecksCriteriaPlist() {}
     /**
-     * @return The Keys param.
+     * @return Key
      * 
      */
     public List<GetHipObjectCustomChecksCriteriaPlistKey> keys() {
         return this.keys;
     }
     /**
-     * @return Preference list. String length must not exceed 1023 characters.
+     * @return Preference list
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return Plist does not exist. Default: `false`.
+     * @return Plist does not exist
      * 
      */
     public Boolean negate() {

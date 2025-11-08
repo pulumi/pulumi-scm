@@ -14,29 +14,30 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetFolderListDataResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the folder
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The UUID of the folder
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Labels param.
+        /// Labels assigned to the folder
         /// </summary>
         public readonly ImmutableArray<string> Labels;
         /// <summary>
-        /// The Name param.
+        /// The name of the folder
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Parent param.
+        /// The parent folder
         /// </summary>
         public readonly string Parent;
         /// <summary>
-        /// The Snippets param.
+        /// Snippets associated with the folder
         /// </summary>
         public readonly ImmutableArray<string> Snippets;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetFolderListDataResult(
@@ -50,7 +51,9 @@ namespace Pulumi.Scm.Outputs
 
             string parent,
 
-            ImmutableArray<string> snippets)
+            ImmutableArray<string> snippets,
+
+            string tfid)
         {
             Description = description;
             Id = id;
@@ -58,6 +61,7 @@ namespace Pulumi.Scm.Outputs
             Name = name;
             Parent = parent;
             Snippets = snippets;
+            Tfid = tfid;
         }
     }
 }

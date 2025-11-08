@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceProtocol {
     /**
-     * @return The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * @return Tcp
      * 
      */
     private @Nullable ServiceProtocolTcp tcp;
     /**
-     * @return The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * @return Udp
      * 
      */
     private @Nullable ServiceProtocolUdp udp;
 
     private ServiceProtocol() {}
     /**
-     * @return The Tcp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * @return Tcp
      * 
      */
     public Optional<ServiceProtocolTcp> tcp() {
         return Optional.ofNullable(this.tcp);
     }
     /**
-     * @return The Udp param. Ensure that only one of the following is specified: `tcp`, `udp`
+     * @return Udp
      * 
      */
     public Optional<ServiceProtocolUdp> udp() {

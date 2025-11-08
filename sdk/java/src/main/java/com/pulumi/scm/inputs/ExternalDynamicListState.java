@@ -18,14 +18,14 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
     public static final ExternalDynamicListState Empty = new ExternalDynamicListState();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -33,14 +33,14 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Import(name="encryptedValues")
     private @Nullable Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Optional<Output<Map<String,String>>> encryptedValues() {
@@ -48,14 +48,14 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -63,14 +63,14 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the external dynamic list
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the external dynamic list
      * 
      */
     public Optional<Output<String>> name() {
@@ -78,14 +78,14 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -100,14 +100,14 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
     }
 
     /**
-     * The Type param.
+     * Type
      * 
      */
     @Import(name="type")
     private @Nullable Output<ExternalDynamicListTypeArgs> type;
 
     /**
-     * @return The Type param.
+     * @return Type
      * 
      */
     public Optional<Output<ExternalDynamicListTypeArgs>> type() {
@@ -145,7 +145,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
+         * @param encryptedValues Map of sensitive values returned from the API.
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param encryptedValues (Internal use) Encrypted values returned from the API.
+         * @param encryptedValues Map of sensitive values returned from the API.
          * 
          * @return builder
          * 
@@ -187,7 +187,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -198,7 +198,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -208,7 +208,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the external dynamic list
          * 
          * @return builder
          * 
@@ -219,7 +219,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the external dynamic list
          * 
          * @return builder
          * 
@@ -229,7 +229,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -240,7 +240,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -259,7 +259,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param type The Type param.
+         * @param type Type
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class ExternalDynamicListState extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param type The Type param.
+         * @param type Type
          * 
          * @return builder
          * 

@@ -18,14 +18,14 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
     public static final AntiSpywareSignatureSignatureArgs Empty = new AntiSpywareSignatureSignatureArgs();
 
     /**
-     * The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+     * anti spyware signature combination
      * 
      */
     @Import(name="combination")
     private @Nullable Output<AntiSpywareSignatureSignatureCombinationArgs> combination;
 
     /**
-     * @return The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+     * @return anti spyware signature combination
      * 
      */
     public Optional<Output<AntiSpywareSignatureSignatureCombinationArgs>> combination() {
@@ -33,14 +33,14 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
     }
 
     /**
-     * The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+     * Standard
      * 
      */
     @Import(name="standards")
     private @Nullable Output<List<AntiSpywareSignatureSignatureStandardArgs>> standards;
 
     /**
-     * @return The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+     * @return Standard
      * 
      */
     public Optional<Output<List<AntiSpywareSignatureSignatureStandardArgs>>> standards() {
@@ -73,7 +73,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
         }
 
         /**
-         * @param combination The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+         * @param combination anti spyware signature combination
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
         }
 
         /**
-         * @param combination The Combination param. Ensure that only one of the following is specified: `combination`, `standard`
+         * @param combination anti spyware signature combination
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
         }
 
         /**
-         * @param standards The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+         * @param standards Standard
          * 
          * @return builder
          * 
@@ -105,7 +105,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
         }
 
         /**
-         * @param standards The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+         * @param standards Standard
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class AntiSpywareSignatureSignatureArgs extends com.pulumi.resource
         }
 
         /**
-         * @param standards The Standards param. Ensure that only one of the following is specified: `combination`, `standard`
+         * @param standards Standard
          * 
          * @return builder
          * 

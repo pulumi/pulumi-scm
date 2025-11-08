@@ -17,14 +17,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     public static final RemoteNetworkEcmpTunnelProtocolBgpArgs Empty = new RemoteNetworkEcmpTunnelProtocolBgpArgs();
 
     /**
-     * The DoNotExportRoutes param.
+     * Do not export routes?
      * 
      */
     @Import(name="doNotExportRoutes")
     private @Nullable Output<Boolean> doNotExportRoutes;
 
     /**
-     * @return The DoNotExportRoutes param.
+     * @return Do not export routes?
      * 
      */
     public Optional<Output<Boolean>> doNotExportRoutes() {
@@ -32,14 +32,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * to setup bgp protocol, enable need to set as true.
+     * Enable BGP peering?
      * 
      */
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
     /**
-     * @return to setup bgp protocol, enable need to set as true.
+     * @return Enable BGP peering?
      * 
      */
     public Optional<Output<Boolean>> enable() {
@@ -47,14 +47,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * The LocalIpAddress param.
+     * Local peer IP address
      * 
      */
     @Import(name="localIpAddress")
     private @Nullable Output<String> localIpAddress;
 
     /**
-     * @return The LocalIpAddress param.
+     * @return Local peer IP address
      * 
      */
     public Optional<Output<String>> localIpAddress() {
@@ -62,14 +62,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * The OriginateDefaultRoute param.
+     * Originate default route?
      * 
      */
     @Import(name="originateDefaultRoute")
     private @Nullable Output<Boolean> originateDefaultRoute;
 
     /**
-     * @return The OriginateDefaultRoute param.
+     * @return Originate default route?
      * 
      */
     public Optional<Output<Boolean>> originateDefaultRoute() {
@@ -77,14 +77,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * The PeerAs param.
+     * BGP peer ASN
      * 
      */
     @Import(name="peerAs")
     private @Nullable Output<String> peerAs;
 
     /**
-     * @return The PeerAs param.
+     * @return BGP peer ASN
      * 
      */
     public Optional<Output<String>> peerAs() {
@@ -92,14 +92,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * The PeerIpAddress param.
+     * Remote peer IP address
      * 
      */
     @Import(name="peerIpAddress")
     private @Nullable Output<String> peerIpAddress;
 
     /**
-     * @return The PeerIpAddress param.
+     * @return Remote peer IP address
      * 
      */
     public Optional<Output<String>> peerIpAddress() {
@@ -107,14 +107,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+     * Route exchange types
      * 
      */
     @Import(name="peeringType")
     private @Nullable Output<String> peeringType;
 
     /**
-     * @return Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+     * @return Route exchange types
      * 
      */
     public Optional<Output<String>> peeringType() {
@@ -122,14 +122,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * The Secret param.
+     * BGP peering secret
      * 
      */
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
     /**
-     * @return The Secret param.
+     * @return BGP peering secret
      * 
      */
     public Optional<Output<String>> secret() {
@@ -137,14 +137,14 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
     }
 
     /**
-     * The SummarizeMobileUserRoutes param.
+     * Summarize mobile user routes?
      * 
      */
     @Import(name="summarizeMobileUserRoutes")
     private @Nullable Output<Boolean> summarizeMobileUserRoutes;
 
     /**
-     * @return The SummarizeMobileUserRoutes param.
+     * @return Summarize mobile user routes?
      * 
      */
     public Optional<Output<Boolean>> summarizeMobileUserRoutes() {
@@ -184,7 +184,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param doNotExportRoutes The DoNotExportRoutes param.
+         * @param doNotExportRoutes Do not export routes?
          * 
          * @return builder
          * 
@@ -195,7 +195,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param doNotExportRoutes The DoNotExportRoutes param.
+         * @param doNotExportRoutes Do not export routes?
          * 
          * @return builder
          * 
@@ -205,7 +205,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param enable to setup bgp protocol, enable need to set as true.
+         * @param enable Enable BGP peering?
          * 
          * @return builder
          * 
@@ -216,7 +216,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param enable to setup bgp protocol, enable need to set as true.
+         * @param enable Enable BGP peering?
          * 
          * @return builder
          * 
@@ -226,7 +226,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local peer IP address
          * 
          * @return builder
          * 
@@ -237,7 +237,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param localIpAddress The LocalIpAddress param.
+         * @param localIpAddress Local peer IP address
          * 
          * @return builder
          * 
@@ -247,7 +247,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param originateDefaultRoute The OriginateDefaultRoute param.
+         * @param originateDefaultRoute Originate default route?
          * 
          * @return builder
          * 
@@ -258,7 +258,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param originateDefaultRoute The OriginateDefaultRoute param.
+         * @param originateDefaultRoute Originate default route?
          * 
          * @return builder
          * 
@@ -268,7 +268,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param peerAs The PeerAs param.
+         * @param peerAs BGP peer ASN
          * 
          * @return builder
          * 
@@ -279,7 +279,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param peerAs The PeerAs param.
+         * @param peerAs BGP peer ASN
          * 
          * @return builder
          * 
@@ -289,7 +289,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Remote peer IP address
          * 
          * @return builder
          * 
@@ -300,7 +300,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param peerIpAddress The PeerIpAddress param.
+         * @param peerIpAddress Remote peer IP address
          * 
          * @return builder
          * 
@@ -310,7 +310,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param peeringType Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+         * @param peeringType Route exchange types
          * 
          * @return builder
          * 
@@ -321,7 +321,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param peeringType Exchange Routes: exchange-v4-over-v4 stands for Exchange IPv4 routes over IPv4 peering. exchange-v4-v6-over-v4 stands for Exchange both IPv4 and IPv6 routes over IPv4 peering. exchange-v4-over-v4-v6-over-v6 stands for Exchange IPv4 routes over IPv4 peer and IPv6 route over IPv6 peer. exchange-v6-over-v6 stands for Exchange IPv6 routes over IPv6 peering. String must be one of these: `&#34;exchange-v4-over-v4&#34;`, `&#34;exchange-v4-v6-over-v4&#34;`, `&#34;exchange-v4-over-v4-v6-over-v6&#34;`, `&#34;exchange-v6-over-v6&#34;`.
+         * @param peeringType Route exchange types
          * 
          * @return builder
          * 
@@ -331,7 +331,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param secret The Secret param.
+         * @param secret BGP peering secret
          * 
          * @return builder
          * 
@@ -342,7 +342,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param secret The Secret param.
+         * @param secret BGP peering secret
          * 
          * @return builder
          * 
@@ -352,7 +352,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param summarizeMobileUserRoutes The SummarizeMobileUserRoutes param.
+         * @param summarizeMobileUserRoutes Summarize mobile user routes?
          * 
          * @return builder
          * 
@@ -363,7 +363,7 @@ public final class RemoteNetworkEcmpTunnelProtocolBgpArgs extends com.pulumi.res
         }
 
         /**
-         * @param summarizeMobileUserRoutes The SummarizeMobileUserRoutes param.
+         * @param summarizeMobileUserRoutes Summarize mobile user routes?
          * 
          * @return builder
          * 

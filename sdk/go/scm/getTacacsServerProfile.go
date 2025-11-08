@@ -11,33 +11,7 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupTacacsServerProfile(ctx, &scm.LookupTacacsServerProfileArgs{
-//				Id: "1234-56-789",
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// TacacsServerProfile data source
 func LookupTacacsServerProfile(ctx *pulumi.Context, args *LookupTacacsServerProfileArgs, opts ...pulumi.InvokeOption) (*LookupTacacsServerProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupTacacsServerProfileResult
@@ -50,22 +24,32 @@ func LookupTacacsServerProfile(ctx *pulumi.Context, args *LookupTacacsServerProf
 
 // A collection of arguments for invoking getTacacsServerProfile.
 type LookupTacacsServerProfileArgs struct {
-	// The Id param.
+	// The UUID of the TACACS+ server profile
 	Id string `pulumi:"id"`
+	// The name of the TACACS+ server profile
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getTacacsServerProfile.
 type LookupTacacsServerProfileResult struct {
-	// The Id param.
+	// The device in which the resource is defined
+	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	Folder string `pulumi:"folder"`
+	// The UUID of the TACACS+ server profile
 	Id string `pulumi:"id"`
-	// The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+	// The name of the TACACS+ server profile
+	Name string `pulumi:"name"`
+	// The TACACS+ authentication protocol
 	Protocol string `pulumi:"protocol"`
-	// The Servers param.
+	// The TACACS+ server configuration
 	Servers []GetTacacsServerProfileServer `pulumi:"servers"`
-	Tfid    string                         `pulumi:"tfid"`
-	// The Timeout param. Value must be between 1 and 30.
+	// The snippet in which the resource is defined
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// The TACACS+ timeout (seconds)
 	Timeout int `pulumi:"timeout"`
-	// The UseSingleConnection param.
+	// Use a single TACACS+ connection?
 	UseSingleConnection bool `pulumi:"useSingleConnection"`
 }
 
@@ -80,8 +64,10 @@ func LookupTacacsServerProfileOutput(ctx *pulumi.Context, args LookupTacacsServe
 
 // A collection of arguments for invoking getTacacsServerProfile.
 type LookupTacacsServerProfileOutputArgs struct {
-	// The Id param.
+	// The UUID of the TACACS+ server profile
 	Id pulumi.StringInput `pulumi:"id"`
+	// The name of the TACACS+ server profile
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupTacacsServerProfileOutputArgs) ElementType() reflect.Type {
@@ -103,31 +89,51 @@ func (o LookupTacacsServerProfileResultOutput) ToLookupTacacsServerProfileResult
 	return o
 }
 
-// The Id param.
+// The device in which the resource is defined
+func (o LookupTacacsServerProfileResultOutput) Device() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
+}
+
+// The folder in which the resource is defined
+func (o LookupTacacsServerProfileResultOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
+}
+
+// The UUID of the TACACS+ server profile
 func (o LookupTacacsServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+// The name of the TACACS+ server profile
+func (o LookupTacacsServerProfileResultOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The TACACS+ authentication protocol
 func (o LookupTacacsServerProfileResultOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Protocol }).(pulumi.StringOutput)
 }
 
-// The Servers param.
+// The TACACS+ server configuration
 func (o LookupTacacsServerProfileResultOutput) Servers() GetTacacsServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) []GetTacacsServerProfileServer { return v.Servers }).(GetTacacsServerProfileServerArrayOutput)
+}
+
+// The snippet in which the resource is defined
+func (o LookupTacacsServerProfileResultOutput) Snippet() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupTacacsServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Timeout param. Value must be between 1 and 30.
+// The TACACS+ timeout (seconds)
 func (o LookupTacacsServerProfileResultOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) int { return v.Timeout }).(pulumi.IntOutput)
 }
 
-// The UseSingleConnection param.
+// Use a single TACACS+ connection?
 func (o LookupTacacsServerProfileResultOutput) UseSingleConnection() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) bool { return v.UseSingleConnection }).(pulumi.BoolOutput)
 }

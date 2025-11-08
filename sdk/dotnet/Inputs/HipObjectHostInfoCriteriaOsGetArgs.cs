@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectHostInfoCriteriaOsGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Contains param. Ensure that only one of the following is specified: `Contains`
+        /// Contains
         /// </summary>
         [Input("contains")]
         public Input<Inputs.HipObjectHostInfoCriteriaOsContainsGetArgs>? Contains { get; set; }

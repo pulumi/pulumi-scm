@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _groups;
 
         /// <summary>
-        /// The security profile group.
+        /// The security profile group
         /// </summary>
         public InputList<string> Groups
         {

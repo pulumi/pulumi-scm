@@ -16,14 +16,44 @@ public final class GetLabelListPlainArgs extends com.pulumi.resources.InvokeArgs
     public static final GetLabelListPlainArgs Empty = new GetLabelListPlainArgs();
 
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The device of the item.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable String device;
+
+    /**
+     * @return The device of the item.
+     * 
+     */
+    public Optional<String> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder of the item. Default: Shared.
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return The folder of the item. Default: Shared.
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
+     * The max number of items to return. Default: 200.
      * 
      */
     @Import(name="limit")
     private @Nullable Integer limit;
 
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
     public Optional<Integer> limit() {
@@ -31,14 +61,14 @@ public final class GetLabelListPlainArgs extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The Name param.
+     * The name of the item.
      * 
      */
     @Import(name="name")
     private @Nullable String name;
 
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<String> name() {
@@ -46,26 +76,44 @@ public final class GetLabelListPlainArgs extends com.pulumi.resources.InvokeArgs
     }
 
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      * 
      */
     @Import(name="offset")
     private @Nullable Integer offset;
 
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
     public Optional<Integer> offset() {
         return Optional.ofNullable(this.offset);
     }
 
+    /**
+     * The snippet of the item.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable String snippet;
+
+    /**
+     * @return The snippet of the item.
+     * 
+     */
+    public Optional<String> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetLabelListPlainArgs() {}
 
     private GetLabelListPlainArgs(GetLabelListPlainArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -87,7 +135,29 @@ public final class GetLabelListPlainArgs extends com.pulumi.resources.InvokeArgs
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param device The device of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable String device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param folder The folder of the item. Default: Shared.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -98,7 +168,7 @@ public final class GetLabelListPlainArgs extends com.pulumi.resources.InvokeArgs
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -109,13 +179,24 @@ public final class GetLabelListPlainArgs extends com.pulumi.resources.InvokeArgs
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
          */
         public Builder offset(@Nullable Integer offset) {
             $.offset = offset;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable String snippet) {
+            $.snippet = snippet;
             return this;
         }
 

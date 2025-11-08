@@ -14,30 +14,6 @@ import (
 // Retrieves a listing of config items.
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetRemoteNetworkList(ctx, &scm.GetRemoteNetworkListArgs{
-//				Folder: pulumi.StringRef("Remote Networks"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetRemoteNetworkList(ctx *pulumi.Context, args *GetRemoteNetworkListArgs, opts ...pulumi.InvokeOption) (*GetRemoteNetworkListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetRemoteNetworkListResult
@@ -50,32 +26,40 @@ func GetRemoteNetworkList(ctx *pulumi.Context, args *GetRemoteNetworkListArgs, o
 
 // A collection of arguments for invoking getRemoteNetworkList.
 type GetRemoteNetworkListArgs struct {
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getRemoteNetworkList.
 type GetRemoteNetworkListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetRemoteNetworkListData `pulumi:"datas"`
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-	Folder string `pulumi:"folder"`
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int    `pulumi:"offset"`
-	Tfid   string `pulumi:"tfid"`
-	// The Total param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
+	Tfid    string  `pulumi:"tfid"`
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -90,14 +74,18 @@ func GetRemoteNetworkListOutput(ctx *pulumi.Context, args GetRemoteNetworkListOu
 
 // A collection of arguments for invoking getRemoteNetworkList.
 type GetRemoteNetworkListOutputArgs struct {
-	// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
+	// The device of the item.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (GetRemoteNetworkListOutputArgs) ElementType() reflect.Type {
@@ -119,14 +107,19 @@ func (o GetRemoteNetworkListResultOutput) ToGetRemoteNetworkListResultOutputWith
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetRemoteNetworkListResultOutput) Datas() GetRemoteNetworkListDataArrayOutput {
 	return o.ApplyT(func(v GetRemoteNetworkListResult) []GetRemoteNetworkListData { return v.Datas }).(GetRemoteNetworkListDataArrayOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Remote Networks"`) or match this regex: `^[\s0-9a-zA-Z._-]{1,}$`. Default: `"Remote Networks"`.
-func (o GetRemoteNetworkListResultOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v GetRemoteNetworkListResult) string { return v.Folder }).(pulumi.StringOutput)
+// The device of the item.
+func (o GetRemoteNetworkListResultOutput) Device() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetRemoteNetworkListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetRemoteNetworkListResultOutput) Folder() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetRemoteNetworkListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // The provider-assigned unique ID for this managed resource.
@@ -134,26 +127,31 @@ func (o GetRemoteNetworkListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetRemoteNetworkListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetRemoteNetworkListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetRemoteNetworkListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetRemoteNetworkListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetRemoteNetworkListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetRemoteNetworkListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetRemoteNetworkListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetRemoteNetworkListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetRemoteNetworkListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetRemoteNetworkListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetRemoteNetworkListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The snippet of the item.
+func (o GetRemoteNetworkListResultOutput) Snippet() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetRemoteNetworkListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 func (o GetRemoteNetworkListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetRemoteNetworkListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetRemoteNetworkListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetRemoteNetworkListResult) int { return v.Total }).(pulumi.IntOutput)
 }

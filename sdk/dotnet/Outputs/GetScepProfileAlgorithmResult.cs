@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetScepProfileAlgorithmResult
     {
         /// <summary>
-        /// The Rsa param.
+        /// Key length (bits)
         /// </summary>
         public readonly Outputs.GetScepProfileAlgorithmRsaResult Rsa;
 

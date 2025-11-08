@@ -18,14 +18,14 @@ public final class AuthenticationProfileMultiFactorAuthArgs extends com.pulumi.r
     public static final AuthenticationProfileMultiFactorAuthArgs Empty = new AuthenticationProfileMultiFactorAuthArgs();
 
     /**
-     * The Factors param.
+     * Factors
      * 
      */
     @Import(name="factors")
     private @Nullable Output<List<String>> factors;
 
     /**
-     * @return The Factors param.
+     * @return Factors
      * 
      */
     public Optional<Output<List<String>>> factors() {
@@ -33,14 +33,14 @@ public final class AuthenticationProfileMultiFactorAuthArgs extends com.pulumi.r
     }
 
     /**
-     * The MfaEnable param.
+     * Mfa enable
      * 
      */
     @Import(name="mfaEnable")
     private @Nullable Output<Boolean> mfaEnable;
 
     /**
-     * @return The MfaEnable param.
+     * @return Mfa enable
      * 
      */
     public Optional<Output<Boolean>> mfaEnable() {
@@ -73,7 +73,7 @@ public final class AuthenticationProfileMultiFactorAuthArgs extends com.pulumi.r
         }
 
         /**
-         * @param factors The Factors param.
+         * @param factors Factors
          * 
          * @return builder
          * 
@@ -84,7 +84,7 @@ public final class AuthenticationProfileMultiFactorAuthArgs extends com.pulumi.r
         }
 
         /**
-         * @param factors The Factors param.
+         * @param factors Factors
          * 
          * @return builder
          * 
@@ -94,7 +94,7 @@ public final class AuthenticationProfileMultiFactorAuthArgs extends com.pulumi.r
         }
 
         /**
-         * @param factors The Factors param.
+         * @param factors Factors
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class AuthenticationProfileMultiFactorAuthArgs extends com.pulumi.r
         }
 
         /**
-         * @param mfaEnable The MfaEnable param.
+         * @param mfaEnable Mfa enable
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class AuthenticationProfileMultiFactorAuthArgs extends com.pulumi.r
         }
 
         /**
-         * @param mfaEnable The MfaEnable param.
+         * @param mfaEnable Mfa enable
          * 
          * @return builder
          * 

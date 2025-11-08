@@ -12,30 +12,6 @@ import (
 )
 
 // Retrieves a listing of config items.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetSnippetList(ctx, &scm.GetSnippetListArgs{}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetSnippetList(ctx *pulumi.Context, args *GetSnippetListArgs, opts ...pulumi.InvokeOption) (*GetSnippetListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetSnippetListResult
@@ -48,28 +24,40 @@ func GetSnippetList(ctx *pulumi.Context, args *GetSnippetListArgs, opts ...pulum
 
 // A collection of arguments for invoking getSnippetList.
 type GetSnippetListArgs struct {
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder *string `pulumi:"folder"`
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getSnippetList.
 type GetSnippetListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetSnippetListData `pulumi:"datas"`
+	// The device of the item.
+	Device *string `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int    `pulumi:"offset"`
-	Tfid   string `pulumi:"tfid"`
-	// The Total param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet *string `pulumi:"snippet"`
+	Tfid    string  `pulumi:"tfid"`
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -84,12 +72,18 @@ func GetSnippetListOutput(ctx *pulumi.Context, args GetSnippetListOutputArgs, op
 
 // A collection of arguments for invoking getSnippetList.
 type GetSnippetListOutputArgs struct {
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The device of the item.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder of the item. Default: Shared.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
+	// The snippet of the item.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (GetSnippetListOutputArgs) ElementType() reflect.Type {
@@ -111,9 +105,19 @@ func (o GetSnippetListResultOutput) ToGetSnippetListResultOutputWithContext(ctx 
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetSnippetListResultOutput) Datas() GetSnippetListDataArrayOutput {
 	return o.ApplyT(func(v GetSnippetListResult) []GetSnippetListData { return v.Datas }).(GetSnippetListDataArrayOutput)
+}
+
+// The device of the item.
+func (o GetSnippetListResultOutput) Device() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetSnippetListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
+}
+
+// The folder of the item. Default: Shared.
+func (o GetSnippetListResultOutput) Folder() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetSnippetListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // The provider-assigned unique ID for this managed resource.
@@ -121,26 +125,31 @@ func (o GetSnippetListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSnippetListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetSnippetListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetSnippetListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetSnippetListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetSnippetListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetSnippetListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetSnippetListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetSnippetListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetSnippetListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetSnippetListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetSnippetListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
+}
+
+// The snippet of the item.
+func (o GetSnippetListResultOutput) Snippet() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v GetSnippetListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 func (o GetSnippetListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetSnippetListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetSnippetListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetSnippetListResult) int { return v.Total }).(pulumi.IntOutput)
 }

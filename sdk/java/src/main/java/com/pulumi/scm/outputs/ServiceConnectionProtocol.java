@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceConnectionProtocol {
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     private @Nullable ServiceConnectionProtocolBgp bgp;
 
     private ServiceConnectionProtocol() {}
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public Optional<ServiceConnectionProtocolBgp> bgp() {

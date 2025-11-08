@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Variable data source
  *
  * ## Example Usage
  *
@@ -13,18 +13,23 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getVariable({
- *     id: "1234-56-789",
+ * // Look up the "$example" variable by its name.
+ * const scmVariableDs = scm.getVariable({
+ *     id: "66cbe56c-0300-4905-8455-d384978a0081",
  * });
+ * export const variableOutputs = {
+ *     exampleId: scmVariableDs.then(scmVariableDs => scmVariableDs.id),
+ *     exampleName: scmVariableDs.then(scmVariableDs => scmVariableDs.name),
+ *     exampleType: scmVariableDs.then(scmVariableDs => scmVariableDs.type),
+ *     exampleValue: scmVariableDs.then(scmVariableDs => scmVariableDs.value),
+ * };
  * ```
  */
 export function getVariable(args: GetVariableArgs, opts?: pulumi.InvokeOptions): Promise<GetVariableResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getVariable:getVariable", {
-        "device": args.device,
-        "folder": args.folder,
         "id": args.id,
-        "snippet": args.snippet,
+        "name": args.name,
     }, opts);
 }
 
@@ -33,21 +38,13 @@ export function getVariable(args: GetVariableArgs, opts?: pulumi.InvokeOptions):
  */
 export interface GetVariableArgs {
     /**
-     * The Device param.
-     */
-    device?: string;
-    /**
-     * The Folder param.
-     */
-    folder?: string;
-    /**
-     * The Id param.
+     * UUID of the variable
      */
     id: string;
     /**
-     * The Snippet param.
+     * The name of the variable
      */
-    snippet?: string;
+    name?: string;
 }
 
 /**
@@ -55,45 +52,45 @@ export interface GetVariableArgs {
  */
 export interface GetVariableResult {
     /**
-     * The Description param.
+     * The description of the variable
      */
     readonly description: string;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
-    readonly device?: string;
+    readonly device: string;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
-    readonly folder?: string;
+    readonly folder: string;
     /**
-     * The Id param.
+     * UUID of the variable
      */
     readonly id: string;
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the variable
      */
     readonly name: string;
     /**
-     * The Overridden param.
+     * Is the variable overridden?
      */
     readonly overridden: boolean;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
-    readonly snippet?: string;
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+     * The variable type
      */
     readonly type: string;
     /**
-     * value can accept either string or integer.
+     * The value of the variable
      */
     readonly value: string;
 }
 /**
- * Retrieves a config item.
+ * Variable data source
  *
  * ## Example Usage
  *
@@ -101,18 +98,23 @@ export interface GetVariableResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getVariable({
- *     id: "1234-56-789",
+ * // Look up the "$example" variable by its name.
+ * const scmVariableDs = scm.getVariable({
+ *     id: "66cbe56c-0300-4905-8455-d384978a0081",
  * });
+ * export const variableOutputs = {
+ *     exampleId: scmVariableDs.then(scmVariableDs => scmVariableDs.id),
+ *     exampleName: scmVariableDs.then(scmVariableDs => scmVariableDs.name),
+ *     exampleType: scmVariableDs.then(scmVariableDs => scmVariableDs.type),
+ *     exampleValue: scmVariableDs.then(scmVariableDs => scmVariableDs.value),
+ * };
  * ```
  */
 export function getVariableOutput(args: GetVariableOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetVariableResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getVariable:getVariable", {
-        "device": args.device,
-        "folder": args.folder,
         "id": args.id,
-        "snippet": args.snippet,
+        "name": args.name,
     }, opts);
 }
 
@@ -121,19 +123,11 @@ export function getVariableOutput(args: GetVariableOutputArgs, opts?: pulumi.Inv
  */
 export interface GetVariableOutputArgs {
     /**
-     * The Device param.
-     */
-    device?: pulumi.Input<string>;
-    /**
-     * The Folder param.
-     */
-    folder?: pulumi.Input<string>;
-    /**
-     * The Id param.
+     * UUID of the variable
      */
     id: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The name of the variable
      */
-    snippet?: pulumi.Input<string>;
+    name?: pulumi.Input<string>;
 }

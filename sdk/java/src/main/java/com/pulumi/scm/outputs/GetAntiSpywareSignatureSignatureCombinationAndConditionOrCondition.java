@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAntiSpywareSignatureSignatureCombinationAndConditionOrCondition {
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The ThreatId param.
+     * @return Threat id
      * 
      */
     private String threatId;
 
     private GetAntiSpywareSignatureSignatureCombinationAndConditionOrCondition() {}
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The ThreatId param.
+     * @return Threat id
      * 
      */
     public String threatId() {

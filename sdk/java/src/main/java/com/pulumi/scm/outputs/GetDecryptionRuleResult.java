@@ -14,253 +14,289 @@ import java.util.Objects;
 @CustomType
 public final class GetDecryptionRuleResult {
     /**
-     * @return The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+     * @return The action to be taken
      * 
      */
     private String action;
     /**
-     * @return The Categories param.
+     * @return The destination URL category
      * 
      */
     private List<String> categories;
     /**
-     * @return The Description param.
+     * @return The description of the decryption rule
      * 
      */
     private String description;
     /**
-     * @return The DestinationHips param.
+     * @return The Host Integrity Profile of the destination host
      * 
      */
     private List<String> destinationHips;
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
     private List<String> destinations;
     /**
-     * @return The Disabled param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Is the rule disabled?
      * 
      */
     private Boolean disabled;
     /**
-     * @return The Froms param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The source security zone
      * 
      */
     private List<String> froms;
     /**
-     * @return The Id param.
+     * @return The UUID of the decryption rule
      * 
      */
     private String id;
     /**
-     * @return The LogFail param.
+     * @return Log failed decryption events?
      * 
      */
     private Boolean logFail;
     /**
-     * @return The LogSetting param.
+     * @return The log settings of the decryption rule
      * 
      */
     private String logSetting;
     /**
-     * @return The LogSuccess param.
+     * @return Log successful decryption events?
      * 
      */
     private Boolean logSuccess;
     /**
-     * @return The Name param.
+     * @return The name of the decryption rule
      * 
      */
     private String name;
     /**
-     * @return The NegateDestination param.
+     * @return Negate the destination addresses?
      * 
      */
     private Boolean negateDestination;
     /**
-     * @return The NegateSource param.
+     * @return Negate the source addresses?
      * 
      */
     private Boolean negateSource;
     /**
-     * @return The Profile param.
+     * @return The decryption profile associated with the decryption rule
      * 
      */
     private String profile;
     /**
-     * @return The Services param.
+     * @return The destination services and/or service groups
      * 
      */
     private List<String> services;
     /**
-     * @return The SourceHips param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Source hip
      * 
      */
     private List<String> sourceHips;
     /**
-     * @return The SourceUsers param.
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     private List<String> sourceUsers;
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
     private List<String> sources;
     /**
-     * @return The Tags param.
+     * @return The tags associated with the decryption rule
      * 
      */
     private List<String> tags;
     private String tfid;
     /**
-     * @return The Tos param.
+     * @return The destination security zone
      * 
      */
     private List<String> tos;
     /**
-     * @return The Type param.
+     * @return The type of decryption
      * 
      */
     private GetDecryptionRuleType type;
 
     private GetDecryptionRuleResult() {}
     /**
-     * @return The Action param. String must be one of these: `&#34;decrypt&#34;`, `&#34;no-decrypt&#34;`.
+     * @return The action to be taken
      * 
      */
     public String action() {
         return this.action;
     }
     /**
-     * @return The Categories param.
+     * @return The destination URL category
      * 
      */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * @return The Description param.
+     * @return The description of the decryption rule
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return The DestinationHips param.
+     * @return The Host Integrity Profile of the destination host
      * 
      */
     public List<String> destinationHips() {
         return this.destinationHips;
     }
     /**
-     * @return The Destinations param.
+     * @return The destination addresses
      * 
      */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * @return The Disabled param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Is the rule disabled?
      * 
      */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * @return The Froms param.
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The source security zone
      * 
      */
     public List<String> froms() {
         return this.froms;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the decryption rule
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The LogFail param.
+     * @return Log failed decryption events?
      * 
      */
     public Boolean logFail() {
         return this.logFail;
     }
     /**
-     * @return The LogSetting param.
+     * @return The log settings of the decryption rule
      * 
      */
     public String logSetting() {
         return this.logSetting;
     }
     /**
-     * @return The LogSuccess param.
+     * @return Log successful decryption events?
      * 
      */
     public Boolean logSuccess() {
         return this.logSuccess;
     }
     /**
-     * @return The Name param.
+     * @return The name of the decryption rule
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NegateDestination param.
+     * @return Negate the destination addresses?
      * 
      */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
     /**
-     * @return The NegateSource param.
+     * @return Negate the source addresses?
      * 
      */
     public Boolean negateSource() {
         return this.negateSource;
     }
     /**
-     * @return The Profile param.
+     * @return The decryption profile associated with the decryption rule
      * 
      */
     public String profile() {
         return this.profile;
     }
     /**
-     * @return The Services param.
+     * @return The destination services and/or service groups
      * 
      */
     public List<String> services() {
         return this.services;
     }
     /**
-     * @return The SourceHips param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Source hip
      * 
      */
     public List<String> sourceHips() {
         return this.sourceHips;
     }
     /**
-     * @return The SourceUsers param.
+     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
      * 
      */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
     /**
-     * @return The Sources param.
+     * @return The source addresses
      * 
      */
     public List<String> sources() {
         return this.sources;
     }
     /**
-     * @return The Tags param.
+     * @return The tags associated with the decryption rule
      * 
      */
     public List<String> tags() {
@@ -270,14 +306,14 @@ public final class GetDecryptionRuleResult {
         return this.tfid;
     }
     /**
-     * @return The Tos param.
+     * @return The destination security zone
      * 
      */
     public List<String> tos() {
         return this.tos;
     }
     /**
-     * @return The Type param.
+     * @return The type of decryption
      * 
      */
     public GetDecryptionRuleType type() {
@@ -298,7 +334,9 @@ public final class GetDecryptionRuleResult {
         private String description;
         private List<String> destinationHips;
         private List<String> destinations;
+        private String device;
         private Boolean disabled;
+        private String folder;
         private List<String> froms;
         private String id;
         private Boolean logFail;
@@ -309,6 +347,7 @@ public final class GetDecryptionRuleResult {
         private Boolean negateSource;
         private String profile;
         private List<String> services;
+        private String snippet;
         private List<String> sourceHips;
         private List<String> sourceUsers;
         private List<String> sources;
@@ -324,7 +363,9 @@ public final class GetDecryptionRuleResult {
     	      this.description = defaults.description;
     	      this.destinationHips = defaults.destinationHips;
     	      this.destinations = defaults.destinations;
+    	      this.device = defaults.device;
     	      this.disabled = defaults.disabled;
+    	      this.folder = defaults.folder;
     	      this.froms = defaults.froms;
     	      this.id = defaults.id;
     	      this.logFail = defaults.logFail;
@@ -335,6 +376,7 @@ public final class GetDecryptionRuleResult {
     	      this.negateSource = defaults.negateSource;
     	      this.profile = defaults.profile;
     	      this.services = defaults.services;
+    	      this.snippet = defaults.snippet;
     	      this.sourceHips = defaults.sourceHips;
     	      this.sourceUsers = defaults.sourceUsers;
     	      this.sources = defaults.sources;
@@ -394,11 +436,27 @@ public final class GetDecryptionRuleResult {
             return destinations(List.of(destinations));
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionRuleResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
         public Builder disabled(Boolean disabled) {
             if (disabled == null) {
               throw new MissingRequiredPropertyException("GetDecryptionRuleResult", "disabled");
             }
             this.disabled = disabled;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionRuleResult", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -488,6 +546,14 @@ public final class GetDecryptionRuleResult {
             return services(List.of(services));
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetDecryptionRuleResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder sourceHips(List<String> sourceHips) {
             if (sourceHips == null) {
               throw new MissingRequiredPropertyException("GetDecryptionRuleResult", "sourceHips");
@@ -565,7 +631,9 @@ public final class GetDecryptionRuleResult {
             _resultValue.description = description;
             _resultValue.destinationHips = destinationHips;
             _resultValue.destinations = destinations;
+            _resultValue.device = device;
             _resultValue.disabled = disabled;
+            _resultValue.folder = folder;
             _resultValue.froms = froms;
             _resultValue.id = id;
             _resultValue.logFail = logFail;
@@ -576,6 +644,7 @@ public final class GetDecryptionRuleResult {
             _resultValue.negateSource = negateSource;
             _resultValue.profile = profile;
             _resultValue.services = services;
+            _resultValue.snippet = snippet;
             _resultValue.sourceHips = sourceHips;
             _resultValue.sourceUsers = sourceUsers;
             _resultValue.sources = sources;

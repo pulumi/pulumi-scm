@@ -10,52 +10,33 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// ServiceConnectionGroup resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.ServiceConnectionGroup("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/serviceConnectionGroup:ServiceConnectionGroup")]
     public partial class ServiceConnectionGroup : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The DisableSnat param.
+        /// Disable snat
         /// </summary>
         [Output("disableSnat")]
         public Output<bool?> DisableSnat { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Output("folder")]
-        public Output<string> Folder { get; private set; } = null!;
-
-        /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The PbfOnly param.
+        /// Pbf only
         /// </summary>
         [Output("pbfOnly")]
         public Output<bool?> PbfOnly { get; private set; } = null!;
 
         /// <summary>
-        /// The Targets param.
+        /// Target
         /// </summary>
         [Output("targets")]
         public Output<ImmutableArray<string>> Targets { get; private set; } = null!;
@@ -110,25 +91,19 @@ namespace Pulumi.Scm
     public sealed class ServiceConnectionGroupArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DisableSnat param.
+        /// Disable snat
         /// </summary>
         [Input("disableSnat")]
         public Input<bool>? DisableSnat { get; set; }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The PbfOnly param.
+        /// Pbf only
         /// </summary>
         [Input("pbfOnly")]
         public Input<bool>? PbfOnly { get; set; }
@@ -137,7 +112,7 @@ namespace Pulumi.Scm
         private InputList<string>? _targets;
 
         /// <summary>
-        /// The Targets param.
+        /// Target
         /// </summary>
         public InputList<string> Targets
         {
@@ -154,25 +129,19 @@ namespace Pulumi.Scm
     public sealed class ServiceConnectionGroupState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The DisableSnat param.
+        /// Disable snat
         /// </summary>
         [Input("disableSnat")]
         public Input<bool>? DisableSnat { get; set; }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The PbfOnly param.
+        /// Pbf only
         /// </summary>
         [Input("pbfOnly")]
         public Input<bool>? PbfOnly { get; set; }
@@ -181,7 +150,7 @@ namespace Pulumi.Scm
         private InputList<string>? _targets;
 
         /// <summary>
-        /// The Targets param.
+        /// Target
         /// </summary>
         public InputList<string> Targets
         {

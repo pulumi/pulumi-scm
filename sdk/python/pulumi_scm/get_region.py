@@ -27,10 +27,16 @@ class GetRegionResult:
     """
     A collection of values returned by getRegion.
     """
-    def __init__(__self__, addresses=None, geo_location=None, id=None, name=None, tfid=None):
+    def __init__(__self__, addresses=None, device=None, folder=None, geo_location=None, id=None, name=None, snippet=None, tfid=None):
         if addresses and not isinstance(addresses, list):
             raise TypeError("Expected argument 'addresses' to be a list")
         pulumi.set(__self__, "addresses", addresses)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if geo_location and not isinstance(geo_location, dict):
             raise TypeError("Expected argument 'geo_location' to be a dict")
         pulumi.set(__self__, "geo_location", geo_location)
@@ -40,6 +46,9 @@ class GetRegionResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -48,15 +57,31 @@ class GetRegionResult:
     @pulumi.getter
     def addresses(self) -> Sequence[_builtins.str]:
         """
-        The Addresses param.
+        Address
         """
         return pulumi.get(self, "addresses")
+
+    @_builtins.property
+    @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="geoLocation")
     def geo_location(self) -> 'outputs.GetRegionGeoLocationResult':
         """
-        The GeoLocation param.
+        Geo location
         """
         return pulumi.get(self, "geo_location")
 
@@ -64,7 +89,7 @@ class GetRegionResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the region
         """
         return pulumi.get(self, "id")
 
@@ -72,9 +97,17 @@ class GetRegionResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        The name of the region
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -89,64 +122,61 @@ class AwaitableGetRegionResult(GetRegionResult):
             yield self
         return GetRegionResult(
             addresses=self.addresses,
+            device=self.device,
+            folder=self.folder,
             geo_location=self.geo_location,
             id=self.id,
             name=self.name,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
 def get_region(id: Optional[_builtins.str] = None,
+               name: Optional[_builtins.str] = None,
                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetRegionResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_region(id="1234-56-789")
-    ```
+    Region data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the region
+    :param _builtins.str name: The name of the region
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getRegion:getRegion', __args__, opts=opts, typ=GetRegionResult).value
 
     return AwaitableGetRegionResult(
         addresses=pulumi.get(__ret__, 'addresses'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         geo_location=pulumi.get(__ret__, 'geo_location'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_region_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRegionResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_region(id="1234-56-789")
-    ```
+    Region data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the region
+    :param _builtins.str name: The name of the region
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getRegion:getRegion', __args__, opts=opts, typ=GetRegionResult)
     return __ret__.apply(lambda __response__: GetRegionResult(
         addresses=pulumi.get(__response__, 'addresses'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         geo_location=pulumi.get(__response__, 'geo_location'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

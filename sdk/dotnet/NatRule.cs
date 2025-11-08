@@ -10,141 +10,139 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
+    /// NatRule resource
     /// </summary>
     [ScmResourceType("scm:index/natRule:NatRule")]
     public partial class NatRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+        /// Active active device binding
         /// </summary>
         [Output("activeActiveDeviceBinding")]
         public Output<string?> ActiveActiveDeviceBinding { get; private set; } = null!;
 
         /// <summary>
-        /// The Description param.
+        /// NAT rule description
         /// </summary>
         [Output("description")]
         public Output<string?> Description { get; private set; } = null!;
 
         /// <summary>
-        /// Static destination translation parameter.
-        /// </summary>
-        [Output("destinationTranslation")]
-        public Output<Outputs.NatRuleDestinationTranslation?> DestinationTranslation { get; private set; } = null!;
-
-        /// <summary>
-        /// The destination address(es).
+        /// Destination address(es) of the original packet
         /// </summary>
         [Output("destinations")]
         public Output<ImmutableArray<string>> Destinations { get; private set; } = null!;
 
         /// <summary>
-        /// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Disabled param.
+        /// Disable NAT rule?
         /// </summary>
         [Output("disabled")]
-        public Output<bool?> Disabled { get; private set; } = null!;
+        public Output<bool> Disabled { get; private set; } = null!;
 
         /// <summary>
-        /// Dynamic destination translation parameter.
+        /// Distribution method
         /// </summary>
-        [Output("dynamicDestinationTranslation")]
-        public Output<Outputs.NatRuleDynamicDestinationTranslation?> DynamicDestinationTranslation { get; private set; } = null!;
+        [Output("distribution")]
+        public Output<string?> Distribution { get; private set; } = null!;
 
         /// <summary>
-        /// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// DNS rewrite
+        /// </summary>
+        [Output("dnsRewrite")]
+        public Output<Outputs.NatRuleDnsRewrite?> DnsRewrite { get; private set; } = null!;
+
+        /// <summary>
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The source security zone(s).
+        /// Source zone(s) of the original packet
         /// </summary>
         [Output("froms")]
         public Output<ImmutableArray<string>> Froms { get; private set; } = null!;
 
         /// <summary>
-        /// The GroupTag param.
-        /// </summary>
-        [Output("groupTag")]
-        public Output<string?> GroupTag { get; private set; } = null!;
-
-        /// <summary>
-        /// The Name param.
+        /// NAT rule name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+        /// NAT type
         /// </summary>
         [Output("natType")]
-        public Output<string?> NatType { get; private set; } = null!;
+        public Output<string> NatType { get; private set; } = null!;
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The relative position of the rule
         /// </summary>
         [Output("position")]
         public Output<string> Position { get; private set; } = null!;
 
         /// <summary>
-        /// The Service param.
+        /// The service of the original packet
         /// </summary>
         [Output("service")]
         public Output<string> Service { get; private set; } = null!;
 
         /// <summary>
-        /// The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// The SourceTranslation param.
+        /// Source translation
         /// </summary>
         [Output("sourceTranslation")]
         public Output<Outputs.NatRuleSourceTranslation?> SourceTranslation { get; private set; } = null!;
 
         /// <summary>
-        /// The source address(es).
+        /// Source address(es) of the original packet
         /// </summary>
         [Output("sources")]
         public Output<ImmutableArray<string>> Sources { get; private set; } = null!;
 
         /// <summary>
-        /// The Tags param.
+        /// NAT rule tags
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
-
-        /// <summary>
-        /// The Target param.
-        /// </summary>
-        [Output("target")]
-        public Output<Outputs.NatRuleTarget?> Target { get; private set; } = null!;
 
         [Output("tfid")]
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The ToInterface param.
+        /// Destination interface of the original packet
         /// </summary>
         [Output("toInterface")]
         public Output<string?> ToInterface { get; private set; } = null!;
 
         /// <summary>
-        /// The destination security zone(s).
+        /// Destination zone of the original packet
         /// </summary>
         [Output("tos")]
         public Output<ImmutableArray<string>> Tos { get; private set; } = null!;
+
+        /// <summary>
+        /// Translated destination IP address
+        /// </summary>
+        [Output("translatedAddressSingle")]
+        public Output<string?> TranslatedAddressSingle { get; private set; } = null!;
+
+        /// <summary>
+        /// Translated destination port
+        /// </summary>
+        [Output("translatedPort")]
+        public Output<int?> TranslatedPort { get; private set; } = null!;
 
 
         /// <summary>
@@ -193,28 +191,22 @@ namespace Pulumi.Scm
     public sealed class NatRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+        /// Active active device binding
         /// </summary>
         [Input("activeActiveDeviceBinding")]
         public Input<string>? ActiveActiveDeviceBinding { get; set; }
 
         /// <summary>
-        /// The Description param.
+        /// NAT rule description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
-
-        /// <summary>
-        /// Static destination translation parameter.
-        /// </summary>
-        [Input("destinationTranslation")]
-        public Input<Inputs.NatRuleDestinationTranslationArgs>? DestinationTranslation { get; set; }
 
         [Input("destinations", required: true)]
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The destination address(es).
+        /// Destination address(es) of the original packet
         /// </summary>
         public InputList<string> Destinations
         {
@@ -223,25 +215,31 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param.
+        /// Disable NAT rule?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// Dynamic destination translation parameter.
+        /// Distribution method
         /// </summary>
-        [Input("dynamicDestinationTranslation")]
-        public Input<Inputs.NatRuleDynamicDestinationTranslationArgs>? DynamicDestinationTranslation { get; set; }
+        [Input("distribution")]
+        public Input<string>? Distribution { get; set; }
 
         /// <summary>
-        /// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// DNS rewrite
+        /// </summary>
+        [Input("dnsRewrite")]
+        public Input<Inputs.NatRuleDnsRewriteArgs>? DnsRewrite { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -250,7 +248,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The source security zone(s).
+        /// Source zone(s) of the original packet
         /// </summary>
         public InputList<string> Froms
         {
@@ -259,43 +257,37 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The GroupTag param.
-        /// </summary>
-        [Input("groupTag")]
-        public Input<string>? GroupTag { get; set; }
-
-        /// <summary>
-        /// The Name param.
+        /// NAT rule name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+        /// NAT type
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The relative position of the rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// The Service param.
+        /// The service of the original packet
         /// </summary>
         [Input("service", required: true)]
         public Input<string> Service { get; set; } = null!;
 
         /// <summary>
-        /// The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The SourceTranslation param.
+        /// Source translation
         /// </summary>
         [Input("sourceTranslation")]
         public Input<Inputs.NatRuleSourceTranslationArgs>? SourceTranslation { get; set; }
@@ -304,7 +296,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The source address(es).
+        /// Source address(es) of the original packet
         /// </summary>
         public InputList<string> Sources
         {
@@ -316,7 +308,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// NAT rule tags
         /// </summary>
         public InputList<string> Tags
         {
@@ -325,13 +317,7 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Target param.
-        /// </summary>
-        [Input("target")]
-        public Input<Inputs.NatRuleTargetArgs>? Target { get; set; }
-
-        /// <summary>
-        /// The ToInterface param.
+        /// Destination interface of the original packet
         /// </summary>
         [Input("toInterface")]
         public Input<string>? ToInterface { get; set; }
@@ -340,13 +326,25 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The destination security zone(s).
+        /// Destination zone of the original packet
         /// </summary>
         public InputList<string> Tos
         {
             get => _tos ?? (_tos = new InputList<string>());
             set => _tos = value;
         }
+
+        /// <summary>
+        /// Translated destination IP address
+        /// </summary>
+        [Input("translatedAddressSingle")]
+        public Input<string>? TranslatedAddressSingle { get; set; }
+
+        /// <summary>
+        /// Translated destination port
+        /// </summary>
+        [Input("translatedPort")]
+        public Input<int>? TranslatedPort { get; set; }
 
         public NatRuleArgs()
         {
@@ -357,28 +355,22 @@ namespace Pulumi.Scm
     public sealed class NatRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The ActiveActiveDeviceBinding param. String must be one of these: `"primary"`, `"both"`, `"0"`, `"1"`.
+        /// Active active device binding
         /// </summary>
         [Input("activeActiveDeviceBinding")]
         public Input<string>? ActiveActiveDeviceBinding { get; set; }
 
         /// <summary>
-        /// The Description param.
+        /// NAT rule description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
-
-        /// <summary>
-        /// Static destination translation parameter.
-        /// </summary>
-        [Input("destinationTranslation")]
-        public Input<Inputs.NatRuleDestinationTranslationGetArgs>? DestinationTranslation { get; set; }
 
         [Input("destinations")]
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The destination address(es).
+        /// Destination address(es) of the original packet
         /// </summary>
         public InputList<string> Destinations
         {
@@ -387,25 +379,31 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Disabled param.
+        /// Disable NAT rule?
         /// </summary>
         [Input("disabled")]
         public Input<bool>? Disabled { get; set; }
 
         /// <summary>
-        /// Dynamic destination translation parameter.
+        /// Distribution method
         /// </summary>
-        [Input("dynamicDestinationTranslation")]
-        public Input<Inputs.NatRuleDynamicDestinationTranslationGetArgs>? DynamicDestinationTranslation { get; set; }
+        [Input("distribution")]
+        public Input<string>? Distribution { get; set; }
 
         /// <summary>
-        /// The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// DNS rewrite
+        /// </summary>
+        [Input("dnsRewrite")]
+        public Input<Inputs.NatRuleDnsRewriteGetArgs>? DnsRewrite { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -414,7 +412,7 @@ namespace Pulumi.Scm
         private InputList<string>? _froms;
 
         /// <summary>
-        /// The source security zone(s).
+        /// Source zone(s) of the original packet
         /// </summary>
         public InputList<string> Froms
         {
@@ -423,43 +421,37 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The GroupTag param.
-        /// </summary>
-        [Input("groupTag")]
-        public Input<string>? GroupTag { get; set; }
-
-        /// <summary>
-        /// The Name param.
+        /// NAT rule name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The NatType param. String must be one of these: `"ipv4"`, `"nat64"`, `"nptv6"`.
+        /// NAT type
         /// </summary>
         [Input("natType")]
         public Input<string>? NatType { get; set; }
 
         /// <summary>
-        /// The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        /// The relative position of the rule
         /// </summary>
         [Input("position")]
         public Input<string>? Position { get; set; }
 
         /// <summary>
-        /// The Service param.
+        /// The service of the original packet
         /// </summary>
         [Input("service")]
         public Input<string>? Service { get; set; }
 
         /// <summary>
-        /// The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The SourceTranslation param.
+        /// Source translation
         /// </summary>
         [Input("sourceTranslation")]
         public Input<Inputs.NatRuleSourceTranslationGetArgs>? SourceTranslation { get; set; }
@@ -468,7 +460,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The source address(es).
+        /// Source address(es) of the original packet
         /// </summary>
         public InputList<string> Sources
         {
@@ -480,7 +472,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// The Tags param.
+        /// NAT rule tags
         /// </summary>
         public InputList<string> Tags
         {
@@ -488,17 +480,11 @@ namespace Pulumi.Scm
             set => _tags = value;
         }
 
-        /// <summary>
-        /// The Target param.
-        /// </summary>
-        [Input("target")]
-        public Input<Inputs.NatRuleTargetGetArgs>? Target { get; set; }
-
         [Input("tfid")]
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The ToInterface param.
+        /// Destination interface of the original packet
         /// </summary>
         [Input("toInterface")]
         public Input<string>? ToInterface { get; set; }
@@ -507,13 +493,25 @@ namespace Pulumi.Scm
         private InputList<string>? _tos;
 
         /// <summary>
-        /// The destination security zone(s).
+        /// Destination zone of the original packet
         /// </summary>
         public InputList<string> Tos
         {
             get => _tos ?? (_tos = new InputList<string>());
             set => _tos = value;
         }
+
+        /// <summary>
+        /// Translated destination IP address
+        /// </summary>
+        [Input("translatedAddressSingle")]
+        public Input<string>? TranslatedAddressSingle { get; set; }
+
+        /// <summary>
+        /// Translated destination port
+        /// </summary>
+        [Input("translatedPort")]
+        public Input<int>? TranslatedPort { get; set; }
 
         public NatRuleState()
         {

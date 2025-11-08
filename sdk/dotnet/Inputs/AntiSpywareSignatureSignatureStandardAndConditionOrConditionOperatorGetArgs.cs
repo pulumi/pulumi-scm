@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The EqualTo param.
+        /// Equal to
         /// </summary>
         [Input("equalTo")]
         public Input<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToGetArgs>? EqualTo { get; set; }
 
         /// <summary>
-        /// The GreaterThan param.
+        /// Greater than
         /// </summary>
         [Input("greaterThan")]
         public Input<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorGreaterThanGetArgs>? GreaterThan { get; set; }
 
         /// <summary>
-        /// The LessThan param.
+        /// Less than
         /// </summary>
         [Input("lessThan")]
         public Input<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorLessThanGetArgs>? LessThan { get; set; }
 
         /// <summary>
-        /// The PatternMatch param.
+        /// Pattern match
         /// </summary>
         [Input("patternMatch")]
         public Input<Inputs.AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorPatternMatchGetArgs>? PatternMatch { get; set; }

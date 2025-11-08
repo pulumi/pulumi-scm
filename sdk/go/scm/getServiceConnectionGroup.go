@@ -11,34 +11,9 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
+// ServiceConnectionGroup data source
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.LookupServiceConnectionGroup(ctx, &scm.LookupServiceConnectionGroupArgs{
-//				Id:     "1234-56-789",
-//				Folder: pulumi.StringRef("Service Connections"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func LookupServiceConnectionGroup(ctx *pulumi.Context, args *LookupServiceConnectionGroupArgs, opts ...pulumi.InvokeOption) (*LookupServiceConnectionGroupResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupServiceConnectionGroupResult
@@ -51,25 +26,23 @@ func LookupServiceConnectionGroup(ctx *pulumi.Context, args *LookupServiceConnec
 
 // A collection of arguments for invoking getServiceConnectionGroup.
 type LookupServiceConnectionGroupArgs struct {
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder *string `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the service connection group
 	Id string `pulumi:"id"`
+	// Name
+	Name *string `pulumi:"name"`
 }
 
 // A collection of values returned by getServiceConnectionGroup.
 type LookupServiceConnectionGroupResult struct {
-	// The DisableSnat param.
+	// Disable snat
 	DisableSnat bool `pulumi:"disableSnat"`
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder string `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the service connection group
 	Id string `pulumi:"id"`
-	// The Name param.
+	// Name
 	Name string `pulumi:"name"`
-	// The PbfOnly param.
+	// Pbf only
 	PbfOnly bool `pulumi:"pbfOnly"`
-	// The Targets param.
+	// Target
 	Targets []string `pulumi:"targets"`
 	Tfid    string   `pulumi:"tfid"`
 }
@@ -85,10 +58,10 @@ func LookupServiceConnectionGroupOutput(ctx *pulumi.Context, args LookupServiceC
 
 // A collection of arguments for invoking getServiceConnectionGroup.
 type LookupServiceConnectionGroupOutputArgs struct {
-	// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Id param.
+	// The UUID of the service connection group
 	Id pulumi.StringInput `pulumi:"id"`
+	// Name
+	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
 func (LookupServiceConnectionGroupOutputArgs) ElementType() reflect.Type {
@@ -110,32 +83,27 @@ func (o LookupServiceConnectionGroupResultOutput) ToLookupServiceConnectionGroup
 	return o
 }
 
-// The DisableSnat param.
+// Disable snat
 func (o LookupServiceConnectionGroupResultOutput) DisableSnat() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) bool { return v.DisableSnat }).(pulumi.BoolOutput)
 }
 
-// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
-func (o LookupServiceConnectionGroupResultOutput) Folder() pulumi.StringOutput {
-	return o.ApplyT(func(v LookupServiceConnectionGroupResult) string { return v.Folder }).(pulumi.StringOutput)
-}
-
-// The Id param.
+// The UUID of the service connection group
 func (o LookupServiceConnectionGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Name param.
+// Name
 func (o LookupServiceConnectionGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The PbfOnly param.
+// Pbf only
 func (o LookupServiceConnectionGroupResultOutput) PbfOnly() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) bool { return v.PbfOnly }).(pulumi.BoolOutput)
 }
 
-// The Targets param.
+// Target
 func (o LookupServiceConnectionGroupResultOutput) Targets() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceConnectionGroupResult) []string { return v.Targets }).(pulumi.StringArrayOutput)
 }

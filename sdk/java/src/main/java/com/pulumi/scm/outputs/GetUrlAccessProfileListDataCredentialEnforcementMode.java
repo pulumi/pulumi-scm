@@ -5,60 +5,62 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
+import com.pulumi.scm.outputs.GetUrlAccessProfileListDataCredentialEnforcementModeDisabled;
+import com.pulumi.scm.outputs.GetUrlAccessProfileListDataCredentialEnforcementModeDomainCredentials;
+import com.pulumi.scm.outputs.GetUrlAccessProfileListDataCredentialEnforcementModeIpUser;
 import java.lang.String;
 import java.util.Objects;
 
 @CustomType
 public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
     /**
-     * @return The Disabled param.
+     * @return Disabled
      * 
      */
-    private Boolean disabled;
+    private GetUrlAccessProfileListDataCredentialEnforcementModeDisabled disabled;
     /**
-     * @return The DomainCredentials param.
+     * @return Domain credentials
      * 
      */
-    private Boolean domainCredentials;
+    private GetUrlAccessProfileListDataCredentialEnforcementModeDomainCredentials domainCredentials;
     /**
-     * @return The GroupMapping param.
+     * @return Group mapping
      * 
      */
     private String groupMapping;
     /**
-     * @return The IpUser param.
+     * @return Ip user
      * 
      */
-    private Boolean ipUser;
+    private GetUrlAccessProfileListDataCredentialEnforcementModeIpUser ipUser;
 
     private GetUrlAccessProfileListDataCredentialEnforcementMode() {}
     /**
-     * @return The Disabled param.
+     * @return Disabled
      * 
      */
-    public Boolean disabled() {
+    public GetUrlAccessProfileListDataCredentialEnforcementModeDisabled disabled() {
         return this.disabled;
     }
     /**
-     * @return The DomainCredentials param.
+     * @return Domain credentials
      * 
      */
-    public Boolean domainCredentials() {
+    public GetUrlAccessProfileListDataCredentialEnforcementModeDomainCredentials domainCredentials() {
         return this.domainCredentials;
     }
     /**
-     * @return The GroupMapping param.
+     * @return Group mapping
      * 
      */
     public String groupMapping() {
         return this.groupMapping;
     }
     /**
-     * @return The IpUser param.
+     * @return Ip user
      * 
      */
-    public Boolean ipUser() {
+    public GetUrlAccessProfileListDataCredentialEnforcementModeIpUser ipUser() {
         return this.ipUser;
     }
 
@@ -71,10 +73,10 @@ public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
     }
     @CustomType.Builder
     public static final class Builder {
-        private Boolean disabled;
-        private Boolean domainCredentials;
+        private GetUrlAccessProfileListDataCredentialEnforcementModeDisabled disabled;
+        private GetUrlAccessProfileListDataCredentialEnforcementModeDomainCredentials domainCredentials;
         private String groupMapping;
-        private Boolean ipUser;
+        private GetUrlAccessProfileListDataCredentialEnforcementModeIpUser ipUser;
         public Builder() {}
         public Builder(GetUrlAccessProfileListDataCredentialEnforcementMode defaults) {
     	      Objects.requireNonNull(defaults);
@@ -85,7 +87,7 @@ public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
         }
 
         @CustomType.Setter
-        public Builder disabled(Boolean disabled) {
+        public Builder disabled(GetUrlAccessProfileListDataCredentialEnforcementModeDisabled disabled) {
             if (disabled == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileListDataCredentialEnforcementMode", "disabled");
             }
@@ -93,7 +95,7 @@ public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
             return this;
         }
         @CustomType.Setter
-        public Builder domainCredentials(Boolean domainCredentials) {
+        public Builder domainCredentials(GetUrlAccessProfileListDataCredentialEnforcementModeDomainCredentials domainCredentials) {
             if (domainCredentials == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileListDataCredentialEnforcementMode", "domainCredentials");
             }
@@ -109,7 +111,7 @@ public final class GetUrlAccessProfileListDataCredentialEnforcementMode {
             return this;
         }
         @CustomType.Setter
-        public Builder ipUser(Boolean ipUser) {
+        public Builder ipUser(GetUrlAccessProfileListDataCredentialEnforcementModeIpUser ipUser) {
             if (ipUser == null) {
               throw new MissingRequiredPropertyException("GetUrlAccessProfileListDataCredentialEnforcementMode", "ipUser");
             }

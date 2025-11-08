@@ -10,73 +10,55 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
-    /// 
-    /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.TrafficSteeringRule("example", new()
-    ///     {
-    ///         Folder = "Shared",
-    ///     });
-    /// 
-    /// });
-    /// ```
+    /// TrafficSteeringRule resource
     /// </summary>
     [ScmResourceType("scm:index/trafficSteeringRule:TrafficSteeringRule")]
     public partial class TrafficSteeringRule : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         [Output("action")]
         public Output<Outputs.TrafficSteeringRuleAction?> Action { get; private set; } = null!;
 
         /// <summary>
-        /// The Category param.
+        /// Category
         /// </summary>
         [Output("categories")]
         public Output<ImmutableArray<string>> Categories { get; private set; } = null!;
 
         /// <summary>
-        /// The Destination param.
+        /// Destination
         /// </summary>
         [Output("destinations")]
         public Output<ImmutableArray<string>> Destinations { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+        /// The folder containing the traffic steering rule
         /// </summary>
         [Output("folder")]
         public Output<string> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Service param.
+        /// Service
         /// </summary>
         [Output("services")]
         public Output<ImmutableArray<string>> Services { get; private set; } = null!;
 
         /// <summary>
-        /// The SourceUser param.
+        /// Source user
         /// </summary>
         [Output("sourceUsers")]
         public Output<ImmutableArray<string>> SourceUsers { get; private set; } = null!;
 
         /// <summary>
-        /// The Source param.
+        /// Source
         /// </summary>
         [Output("sources")]
         public Output<ImmutableArray<string>> Sources { get; private set; } = null!;
@@ -131,7 +113,7 @@ namespace Pulumi.Scm
     public sealed class TrafficSteeringRuleArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         [Input("action")]
         public Input<Inputs.TrafficSteeringRuleActionArgs>? Action { get; set; }
@@ -140,7 +122,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Category param.
+        /// Category
         /// </summary>
         public InputList<string> Categories
         {
@@ -152,7 +134,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destination param.
+        /// Destination
         /// </summary>
         public InputList<string> Destinations
         {
@@ -161,13 +143,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+        /// The folder containing the traffic steering rule
         /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
+        [Input("folder", required: true)]
+        public Input<string> Folder { get; set; } = null!;
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -176,7 +158,7 @@ namespace Pulumi.Scm
         private InputList<string>? _services;
 
         /// <summary>
-        /// The Service param.
+        /// Service
         /// </summary>
         public InputList<string> Services
         {
@@ -188,7 +170,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The SourceUser param.
+        /// Source user
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -200,7 +182,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Source param.
+        /// Source
         /// </summary>
         public InputList<string> Sources
         {
@@ -217,7 +199,7 @@ namespace Pulumi.Scm
     public sealed class TrafficSteeringRuleState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Action param.
+        /// Action
         /// </summary>
         [Input("action")]
         public Input<Inputs.TrafficSteeringRuleActionGetArgs>? Action { get; set; }
@@ -226,7 +208,7 @@ namespace Pulumi.Scm
         private InputList<string>? _categories;
 
         /// <summary>
-        /// The Category param.
+        /// Category
         /// </summary>
         public InputList<string> Categories
         {
@@ -238,7 +220,7 @@ namespace Pulumi.Scm
         private InputList<string>? _destinations;
 
         /// <summary>
-        /// The Destination param.
+        /// Destination
         /// </summary>
         public InputList<string> Destinations
         {
@@ -247,13 +229,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param. String can either be a specific string(`"Service Connections"`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `"Service Connections"`.
+        /// The folder containing the traffic steering rule
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
@@ -262,7 +244,7 @@ namespace Pulumi.Scm
         private InputList<string>? _services;
 
         /// <summary>
-        /// The Service param.
+        /// Service
         /// </summary>
         public InputList<string> Services
         {
@@ -274,7 +256,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sourceUsers;
 
         /// <summary>
-        /// The SourceUser param.
+        /// Source user
         /// </summary>
         public InputList<string> SourceUsers
         {
@@ -286,7 +268,7 @@ namespace Pulumi.Scm
         private InputList<string>? _sources;
 
         /// <summary>
-        /// The Source param.
+        /// Source
         /// </summary>
         public InputList<string> Sources
         {

@@ -16,14 +16,14 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
     public static final WildfireAntiVirusProfileMlavExceptionArgs Empty = new WildfireAntiVirusProfileMlavExceptionArgs();
 
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -31,14 +31,14 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
     }
 
     /**
-     * The Filename param.
+     * Filename
      * 
      */
     @Import(name="filename")
     private @Nullable Output<String> filename;
 
     /**
-     * @return The Filename param.
+     * @return Filename
      * 
      */
     public Optional<Output<String>> filename() {
@@ -46,14 +46,14 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -87,7 +87,7 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
         }
 
         /**
-         * @param filename The Filename param.
+         * @param filename Filename
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
         }
 
         /**
-         * @param filename The Filename param.
+         * @param filename Filename
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class WildfireAntiVirusProfileMlavExceptionArgs extends com.pulumi.
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 

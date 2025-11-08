@@ -5,6 +5,8 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import com.pulumi.exceptions.MissingRequiredPropertyException;
+import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,14 +18,14 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     public static final VariableArgs Empty = new VariableArgs();
 
     /**
-     * The Description param.
+     * The description of the variable
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return The description of the variable
      * 
      */
     public Optional<Output<String>> description() {
@@ -31,14 +33,14 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -46,14 +48,14 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -61,14 +63,14 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the variable
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the variable
      * 
      */
     public Optional<Output<String>> name() {
@@ -76,14 +78,29 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Snippet param.
+     * Is the variable overridden?
+     * 
+     */
+    @Import(name="overridden")
+    private @Nullable Output<Boolean> overridden;
+
+    /**
+     * @return Is the variable overridden?
+     * 
+     */
+    public Optional<Output<Boolean>> overridden() {
+        return Optional.ofNullable(this.overridden);
+    }
+
+    /**
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -91,33 +108,33 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * The variable type
      * 
      */
-    @Import(name="type")
-    private @Nullable Output<String> type;
+    @Import(name="type", required=true)
+    private Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * @return The variable type
      * 
      */
-    public Optional<Output<String>> type() {
-        return Optional.ofNullable(this.type);
+    public Output<String> type() {
+        return this.type;
     }
 
     /**
-     * value can accept either string or integer.
+     * The value of the variable
      * 
      */
-    @Import(name="value")
-    private @Nullable Output<String> value;
+    @Import(name="value", required=true)
+    private Output<String> value;
 
     /**
-     * @return value can accept either string or integer.
+     * @return The value of the variable
      * 
      */
-    public Optional<Output<String>> value() {
-        return Optional.ofNullable(this.value);
+    public Output<String> value() {
+        return this.value;
     }
 
     private VariableArgs() {}
@@ -127,6 +144,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         this.device = $.device;
         this.folder = $.folder;
         this.name = $.name;
+        this.overridden = $.overridden;
         this.snippet = $.snippet;
         this.type = $.type;
         this.value = $.value;
@@ -151,7 +169,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the variable
          * 
          * @return builder
          * 
@@ -162,7 +180,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description The description of the variable
          * 
          * @return builder
          * 
@@ -172,7 +190,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -183,7 +201,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -193,7 +211,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -204,7 +222,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -214,7 +232,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the variable
          * 
          * @return builder
          * 
@@ -225,7 +243,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the variable
          * 
          * @return builder
          * 
@@ -235,7 +253,28 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param overridden Is the variable overridden?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder overridden(@Nullable Output<Boolean> overridden) {
+            $.overridden = overridden;
+            return this;
+        }
+
+        /**
+         * @param overridden Is the variable overridden?
+         * 
+         * @return builder
+         * 
+         */
+        public Builder overridden(Boolean overridden) {
+            return overridden(Output.of(overridden));
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -246,7 +285,7 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -256,18 +295,18 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+         * @param type The variable type
          * 
          * @return builder
          * 
          */
-        public Builder type(@Nullable Output<String> type) {
+        public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
         /**
-         * @param type The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+         * @param type The variable type
          * 
          * @return builder
          * 
@@ -277,18 +316,18 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param value value can accept either string or integer.
+         * @param value The value of the variable
          * 
          * @return builder
          * 
          */
-        public Builder value(@Nullable Output<String> value) {
+        public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
         /**
-         * @param value value can accept either string or integer.
+         * @param value The value of the variable
          * 
          * @return builder
          * 
@@ -298,6 +337,12 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         public VariableArgs build() {
+            if ($.type == null) {
+                throw new MissingRequiredPropertyException("VariableArgs", "type");
+            }
+            if ($.value == null) {
+                throw new MissingRequiredPropertyException("VariableArgs", "value");
+            }
             return $;
         }
     }

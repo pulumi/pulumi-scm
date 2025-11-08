@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class IpsecCryptoProfileEsp {
     /**
-     * @return Authentication algorithm.
+     * @return Authentication algorithm
      * 
      */
     private List<String> authentications;
     /**
-     * @return Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`, `&#34;null&#34;`.
+     * @return Encryption algorithm
      * 
      */
     private List<String> encryptions;
 
     private IpsecCryptoProfileEsp() {}
     /**
-     * @return Authentication algorithm.
+     * @return Authentication algorithm
      * 
      */
     public List<String> authentications() {
         return this.authentications;
     }
     /**
-     * @return Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;des&#34;`, `&#34;3des&#34;`, `&#34;aes-128-cbc&#34;`, `&#34;aes-192-cbc&#34;`, `&#34;aes-256-cbc&#34;`, `&#34;aes-128-gcm&#34;`, `&#34;aes-256-gcm&#34;`, `&#34;null&#34;`.
+     * @return Encryption algorithm
      * 
      */
     public List<String> encryptions() {

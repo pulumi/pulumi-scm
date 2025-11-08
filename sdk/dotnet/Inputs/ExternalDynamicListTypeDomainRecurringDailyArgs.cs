@@ -13,10 +13,10 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeDomainRecurringDailyArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `"00"`.
+        /// Time specification hh (e.g. 20)
         /// </summary>
-        [Input("at")]
-        public Input<string>? At { get; set; }
+        [Input("at", required: true)]
+        public Input<string> At { get; set; } = null!;
 
         public ExternalDynamicListTypeDomainRecurringDailyArgs()
         {

@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetQosPolicyRuleAction {
     /**
-     * @return The Class param.
+     * @return Class
      * 
      */
     private String class_;
 
     private GetQosPolicyRuleAction() {}
     /**
-     * @return The Class param.
+     * @return Class
      * 
      */
     public String class_() {

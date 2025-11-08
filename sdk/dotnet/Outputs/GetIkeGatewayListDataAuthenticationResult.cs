@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayListDataAuthenticationResult
     {
         /// <summary>
-        /// The Certificate param.
+        /// Certificate
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataAuthenticationCertificateResult Certificate;
         /// <summary>
-        /// The PreSharedKey param.
+        /// Pre shared key
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataAuthenticationPreSharedKeyResult PreSharedKey;
 

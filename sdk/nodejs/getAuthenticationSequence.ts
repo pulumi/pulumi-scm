@@ -5,23 +5,13 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAuthenticationSequence({
- *     id: "1234-56-789",
- * });
- * ```
+ * AuthenticationSequence data source
  */
 export function getAuthenticationSequence(args: GetAuthenticationSequenceArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationSequenceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getAuthenticationSequence:getAuthenticationSequence", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +20,13 @@ export function getAuthenticationSequence(args: GetAuthenticationSequenceArgs, o
  */
 export interface GetAuthenticationSequenceArgs {
     /**
-     * The Id param.
+     * The UUID of the authentication sequence
      */
     id: string;
+    /**
+     * The name of the authentication sequence
+     */
+    name?: string;
 }
 
 /**
@@ -40,41 +34,43 @@ export interface GetAuthenticationSequenceArgs {
  */
 export interface GetAuthenticationSequenceResult {
     /**
-     * The AuthenticationProfiles param.
+     * An ordered list of authentication profiles
      */
     readonly authenticationProfiles: string[];
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the authentication sequence
      */
     readonly id: string;
     /**
-     * The Name param.
+     * The name of the authentication sequence
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
     /**
-     * The UseDomainFindProfile param. Default: `true`.
+     * Use domain to determine authentication profile?
      */
     readonly useDomainFindProfile: boolean;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getAuthenticationSequence({
- *     id: "1234-56-789",
- * });
- * ```
+ * AuthenticationSequence data source
  */
 export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationSequenceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getAuthenticationSequence:getAuthenticationSequence", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -83,7 +79,11 @@ export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceO
  */
 export interface GetAuthenticationSequenceOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the authentication sequence
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the authentication sequence
+     */
+    name?: pulumi.Input<string>;
 }

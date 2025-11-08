@@ -14,38 +14,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IkeGatewayProtocolCommon {
     /**
-     * @return The Fragmentation param.
+     * @return Fragmentation
      * 
      */
     private @Nullable IkeGatewayProtocolCommonFragmentation fragmentation;
     /**
-     * @return The NatTraversal param.
+     * @return Enables NAT traversal for the IKE gateway.
      * 
      */
     private @Nullable IkeGatewayProtocolCommonNatTraversal natTraversal;
     /**
-     * @return The PassiveMode param.
+     * @return Passive mode
      * 
      */
     private @Nullable Boolean passiveMode;
 
     private IkeGatewayProtocolCommon() {}
     /**
-     * @return The Fragmentation param.
+     * @return Fragmentation
      * 
      */
     public Optional<IkeGatewayProtocolCommonFragmentation> fragmentation() {
         return Optional.ofNullable(this.fragmentation);
     }
     /**
-     * @return The NatTraversal param.
+     * @return Enables NAT traversal for the IKE gateway.
      * 
      */
     public Optional<IkeGatewayProtocolCommonNatTraversal> natTraversal() {
         return Optional.ofNullable(this.natTraversal);
     }
     /**
-     * @return The PassiveMode param.
+     * @return Passive mode
      * 
      */
     public Optional<Boolean> passiveMode() {

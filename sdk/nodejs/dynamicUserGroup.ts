@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * DynamicUserGroup resource
  *
  * ## Example Usage
  *
@@ -13,7 +13,36 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.DynamicUserGroup("example", {});
+ * // First, create the tags that will be used in the dynamic user group's filter.
+ * const scmDugTag1 = new scm.Tag("scm_dug_tag_1", {
+ *     folder: "Shared",
+ *     name: "scm_dug_tag_1",
+ *     color: "Red",
+ * });
+ * const scmDugTag2 = new scm.Tag("scm_dug_tag_2", {
+ *     folder: "Shared",
+ *     name: "scm_dug_tag_2",
+ *     color: "Blue",
+ * });
+ * const scmDugTag3 = new scm.Tag("scm_dug_tag_3", {
+ *     folder: "Shared",
+ *     name: "scm_dug_tag_3",
+ *     color: "Green",
+ * });
+ * // Create the dynamic user group that references the tags above.
+ * const scmDug1 = new scm.DynamicUserGroup("scm_dug_1", {
+ *     folder: "Shared",
+ *     name: "scm_dug_1",
+ *     description: "DUG created for Terraform",
+ *     filter: pulumi.interpolate`'${scmDugTag1.name}' or '${scmDugTag2.name}' and '${scmDugTag3.name}'`,
+ *     tags: [scmDugTag1.name],
+ * }, {
+ *     dependsOn: [
+ *         scmDugTag1,
+ *         scmDugTag2,
+ *         scmDugTag3,
+ *     ],
+ * });
  * ```
  */
 export class DynamicUserGroup extends pulumi.CustomResource {
@@ -45,31 +74,31 @@ export class DynamicUserGroup extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * The description of the dynamic address group
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * tag-based filter. String length must not exceed 2047 characters.
+     * The tag-based filter for the dynamic user group
      */
     declare public readonly filter: pulumi.Output<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the dynamic address group
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the dynamic user group
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -119,31 +148,31 @@ export class DynamicUserGroup extends pulumi.CustomResource {
  */
 export interface DynamicUserGroupState {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * The description of the dynamic address group
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * tag-based filter. String length must not exceed 2047 characters.
+     * The tag-based filter for the dynamic user group
      */
     filter?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the dynamic address group
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the dynamic user group
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -154,31 +183,31 @@ export interface DynamicUserGroupState {
  */
 export interface DynamicUserGroupArgs {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * The description of the dynamic address group
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * tag-based filter. String length must not exceed 2047 characters.
+     * The tag-based filter for the dynamic user group
      */
     filter: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the dynamic address group
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the dynamic user group
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
 }

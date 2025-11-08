@@ -14,50 +14,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpsecTunnelAutoKeyProxyIdV6 {
     /**
-     * @return The Local param.
+     * @return Local
      * 
      */
     private @Nullable String local;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Protocol param.
+     * @return IPv6 type of proxy*id protocol values for protocol
      * 
      */
     private @Nullable IpsecTunnelAutoKeyProxyIdV6Protocol protocol;
     /**
-     * @return The Remote param.
+     * @return Remote
      * 
      */
     private @Nullable String remote;
 
     private IpsecTunnelAutoKeyProxyIdV6() {}
     /**
-     * @return The Local param.
+     * @return Local
      * 
      */
     public Optional<String> local() {
         return Optional.ofNullable(this.local);
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Protocol param.
+     * @return IPv6 type of proxy*id protocol values for protocol
      * 
      */
     public Optional<IpsecTunnelAutoKeyProxyIdV6Protocol> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * @return The Remote param.
+     * @return Remote
      * 
      */
     public Optional<String> remote() {

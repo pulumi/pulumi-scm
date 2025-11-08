@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetDnsSecurityProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDnsSecurityProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DnsSecurityProfile data source
         /// </summary>
         public static Task<GetDnsSecurityProfileResult> InvokeAsync(GetDnsSecurityProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetDnsSecurityProfileResult>("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args ?? new GetDnsSecurityProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDnsSecurityProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DnsSecurityProfile data source
         /// </summary>
         public static Output<GetDnsSecurityProfileResult> Invoke(GetDnsSecurityProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityProfileResult>("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args ?? new GetDnsSecurityProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetDnsSecurityProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// DnsSecurityProfile data source
         /// </summary>
         public static Output<GetDnsSecurityProfileResult> Invoke(GetDnsSecurityProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetDnsSecurityProfileResult>("scm:index/getDnsSecurityProfile:getDnsSecurityProfile", args ?? new GetDnsSecurityProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetDnsSecurityProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the DNS security profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the DNS security profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetDnsSecurityProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetDnsSecurityProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the DNS security profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the DNS security profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetDnsSecurityProfileInvokeArgs()
         {
@@ -118,21 +76,33 @@ namespace Pulumi.Scm
     public sealed class GetDnsSecurityProfileResult
     {
         /// <summary>
-        /// The BotnetDomains param.
+        /// Botnet domains
         /// </summary>
         public readonly Outputs.GetDnsSecurityProfileBotnetDomainsResult BotnetDomains;
         /// <summary>
-        /// The Description param.
+        /// The description of the DNS security profile
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the DNS security profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Name param.
+        /// The name of the DNS security profile
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
@@ -141,16 +111,25 @@ namespace Pulumi.Scm
 
             string description,
 
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
+
+            string snippet,
 
             string tfid)
         {
             BotnetDomains = botnetDomains;
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

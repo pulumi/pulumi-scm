@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Boolean;
+import com.pulumi.scm.inputs.IkeGatewayPeerAddressDynamicArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,29 +17,29 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
     public static final IkeGatewayPeerAddressArgs Empty = new IkeGatewayPeerAddressArgs();
 
     /**
-     * The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * Dynamic
      * 
      */
-    @Import(name="dynamicAddress")
-    private @Nullable Output<Boolean> dynamicAddress;
+    @Import(name="dynamic")
+    private @Nullable Output<IkeGatewayPeerAddressDynamicArgs> dynamic;
 
     /**
-     * @return The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return Dynamic
      * 
      */
-    public Optional<Output<Boolean>> dynamicAddress() {
-        return Optional.ofNullable(this.dynamicAddress);
+    public Optional<Output<IkeGatewayPeerAddressDynamicArgs>> dynamic() {
+        return Optional.ofNullable(this.dynamic);
     }
 
     /**
-     * peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * peer gateway FQDN name
      * 
      */
     @Import(name="fqdn")
     private @Nullable Output<String> fqdn;
 
     /**
-     * @return peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return peer gateway FQDN name
      * 
      */
     public Optional<Output<String>> fqdn() {
@@ -47,14 +47,14 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * peer gateway has static IP address
      * 
      */
     @Import(name="ip")
     private @Nullable Output<String> ip;
 
     /**
-     * @return peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+     * @return peer gateway has static IP address
      * 
      */
     public Optional<Output<String>> ip() {
@@ -64,7 +64,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
     private IkeGatewayPeerAddressArgs() {}
 
     private IkeGatewayPeerAddressArgs(IkeGatewayPeerAddressArgs $) {
-        this.dynamicAddress = $.dynamicAddress;
+        this.dynamic = $.dynamic;
         this.fqdn = $.fqdn;
         this.ip = $.ip;
     }
@@ -88,28 +88,28 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param dynamicAddress The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+         * @param dynamic Dynamic
          * 
          * @return builder
          * 
          */
-        public Builder dynamicAddress(@Nullable Output<Boolean> dynamicAddress) {
-            $.dynamicAddress = dynamicAddress;
+        public Builder dynamic(@Nullable Output<IkeGatewayPeerAddressDynamicArgs> dynamic) {
+            $.dynamic = dynamic;
             return this;
         }
 
         /**
-         * @param dynamicAddress The DynamicAddress param. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+         * @param dynamic Dynamic
          * 
          * @return builder
          * 
          */
-        public Builder dynamicAddress(Boolean dynamicAddress) {
-            return dynamicAddress(Output.of(dynamicAddress));
+        public Builder dynamic(IkeGatewayPeerAddressDynamicArgs dynamic) {
+            return dynamic(Output.of(dynamic));
         }
 
         /**
-         * @param fqdn peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+         * @param fqdn peer gateway FQDN name
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param fqdn peer gateway FQDN name. String length must not exceed 255 characters. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+         * @param fqdn peer gateway FQDN name
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ip peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+         * @param ip peer gateway has static IP address
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param ip peer gateway has static IP address. Ensure that only one of the following is specified: `dynamic`, `fqdn`, `ip`
+         * @param ip peer gateway has static IP address
          * 
          * @return builder
          * 

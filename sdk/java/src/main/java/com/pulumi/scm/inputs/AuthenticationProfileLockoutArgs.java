@@ -16,14 +16,14 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
     public static final AuthenticationProfileLockoutArgs Empty = new AuthenticationProfileLockoutArgs();
 
     /**
-     * The FailedAttempts param. Value must be between 0 and 10.
+     * Failed attempts
      * 
      */
     @Import(name="failedAttempts")
     private @Nullable Output<Integer> failedAttempts;
 
     /**
-     * @return The FailedAttempts param. Value must be between 0 and 10.
+     * @return Failed attempts
      * 
      */
     public Optional<Output<Integer>> failedAttempts() {
@@ -31,14 +31,14 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
     }
 
     /**
-     * The LockoutTime param. Value must be between 0 and 60.
+     * Lockout time
      * 
      */
     @Import(name="lockoutTime")
     private @Nullable Output<Integer> lockoutTime;
 
     /**
-     * @return The LockoutTime param. Value must be between 0 and 60.
+     * @return Lockout time
      * 
      */
     public Optional<Output<Integer>> lockoutTime() {
@@ -71,7 +71,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param failedAttempts The FailedAttempts param. Value must be between 0 and 10.
+         * @param failedAttempts Failed attempts
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param failedAttempts The FailedAttempts param. Value must be between 0 and 10.
+         * @param failedAttempts Failed attempts
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param lockoutTime The LockoutTime param. Value must be between 0 and 60.
+         * @param lockoutTime Lockout time
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param lockoutTime The LockoutTime param. Value must be between 0 and 60.
+         * @param lockoutTime Lockout time
          * 
          * @return builder
          * 

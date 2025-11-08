@@ -11,45 +11,21 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewRegion(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// Region resource
 type Region struct {
 	pulumi.CustomResourceState
 
-	// The Addresses param.
+	// Address
 	Addresses pulumi.StringArrayOutput `pulumi:"addresses"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The GeoLocation param.
+	// Geo location
 	GeoLocation RegionGeoLocationPtrOutput `pulumi:"geoLocation"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the region
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -84,33 +60,33 @@ func GetRegion(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering Region resources.
 type regionState struct {
-	// The Addresses param.
+	// Address
 	Addresses []string `pulumi:"addresses"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The GeoLocation param.
+	// Geo location
 	GeoLocation *RegionGeoLocation `pulumi:"geoLocation"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the region
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type RegionState struct {
-	// The Addresses param.
+	// Address
 	Addresses pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The GeoLocation param.
+	// Geo location
 	GeoLocation RegionGeoLocationPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the region
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -120,33 +96,33 @@ func (RegionState) ElementType() reflect.Type {
 }
 
 type regionArgs struct {
-	// The Addresses param.
+	// Address
 	Addresses []string `pulumi:"addresses"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The GeoLocation param.
+	// Geo location
 	GeoLocation *RegionGeoLocation `pulumi:"geoLocation"`
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the region
 	Name *string `pulumi:"name"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a Region resource.
 type RegionArgs struct {
-	// The Addresses param.
+	// Address
 	Addresses pulumi.StringArrayInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The GeoLocation param.
+	// Geo location
 	GeoLocation RegionGeoLocationPtrInput
-	// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+	// The name of the region
 	Name pulumi.StringPtrInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -237,32 +213,32 @@ func (o RegionOutput) ToRegionOutputWithContext(ctx context.Context) RegionOutpu
 	return o
 }
 
-// The Addresses param.
+// Address
 func (o RegionOutput) Addresses() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *Region) pulumi.StringArrayOutput { return v.Addresses }).(pulumi.StringArrayOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o RegionOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Region) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o RegionOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Region) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The GeoLocation param.
+// Geo location
 func (o RegionOutput) GeoLocation() RegionGeoLocationPtrOutput {
 	return o.ApplyT(func(v *Region) RegionGeoLocationPtrOutput { return v.GeoLocation }).(RegionGeoLocationPtrOutput)
 }
 
-// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+// The name of the region
 func (o RegionOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *Region) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o RegionOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Region) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

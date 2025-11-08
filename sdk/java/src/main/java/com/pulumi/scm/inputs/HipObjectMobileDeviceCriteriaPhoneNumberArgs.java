@@ -16,14 +16,14 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
     public static final HipObjectMobileDeviceCriteriaPhoneNumberArgs Empty = new HipObjectMobileDeviceCriteriaPhoneNumberArgs();
 
     /**
-     * The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * Contains
      * 
      */
     @Import(name="contains")
     private @Nullable Output<String> contains;
 
     /**
-     * @return The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Contains
      * 
      */
     public Optional<Output<String>> contains() {
@@ -31,14 +31,14 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
     }
 
     /**
-     * The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * Is
      * 
      */
     @Import(name="is")
     private @Nullable Output<String> is;
 
     /**
-     * @return The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Is
      * 
      */
     public Optional<Output<String>> is() {
@@ -46,14 +46,14 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
     }
 
     /**
-     * The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * Is not
      * 
      */
     @Import(name="isNot")
     private @Nullable Output<String> isNot;
 
     /**
-     * @return The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+     * @return Is not
      * 
      */
     public Optional<Output<String>> isNot() {
@@ -87,7 +87,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
         }
 
         /**
-         * @param contains The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+         * @param contains Contains
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
         }
 
         /**
-         * @param contains The Contains param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+         * @param contains Contains
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
         }
 
         /**
-         * @param is The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+         * @param is Is
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
         }
 
         /**
-         * @param is The Is param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+         * @param is Is
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
         }
 
         /**
-         * @param isNot The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+         * @param isNot Is not
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class HipObjectMobileDeviceCriteriaPhoneNumberArgs extends com.pulu
         }
 
         /**
-         * @param isNot The IsNot param. String length must not exceed 255 characters. Ensure that only one of the following is specified: `contains`, `is`, `isNot`
+         * @param isNot Is not
          * 
          * @return builder
          * 

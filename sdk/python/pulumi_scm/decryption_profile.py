@@ -31,14 +31,14 @@ class DecryptionProfileArgs:
                  ssl_protocol_settings: Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']] = None):
         """
         The set of arguments for constructing a DecryptionProfile resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input['DecryptionProfileSslForwardProxyArgs'] ssl_forward_proxy: The SslForwardProxy param.
-        :param pulumi.Input['DecryptionProfileSslInboundProxyArgs'] ssl_inbound_proxy: The SslInboundProxy param.
-        :param pulumi.Input['DecryptionProfileSslNoProxyArgs'] ssl_no_proxy: The SslNoProxy param.
-        :param pulumi.Input['DecryptionProfileSslProtocolSettingsArgs'] ssl_protocol_settings: The SslProtocolSettings param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input['DecryptionProfileSslForwardProxyArgs'] ssl_forward_proxy: Ssl forward proxy
+        :param pulumi.Input['DecryptionProfileSslInboundProxyArgs'] ssl_inbound_proxy: Ssl inbound proxy
+        :param pulumi.Input['DecryptionProfileSslNoProxyArgs'] ssl_no_proxy: Ssl no proxy
+        :param pulumi.Input['DecryptionProfileSslProtocolSettingsArgs'] ssl_protocol_settings: Ssl protocol settings
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -61,7 +61,7 @@ class DecryptionProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -73,7 +73,7 @@ class DecryptionProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -85,7 +85,7 @@ class DecryptionProfileArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
+        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         """
         return pulumi.get(self, "name")
 
@@ -97,7 +97,7 @@ class DecryptionProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -109,7 +109,7 @@ class DecryptionProfileArgs:
     @pulumi.getter(name="sslForwardProxy")
     def ssl_forward_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']]:
         """
-        The SslForwardProxy param.
+        Ssl forward proxy
         """
         return pulumi.get(self, "ssl_forward_proxy")
 
@@ -121,7 +121,7 @@ class DecryptionProfileArgs:
     @pulumi.getter(name="sslInboundProxy")
     def ssl_inbound_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']]:
         """
-        The SslInboundProxy param.
+        Ssl inbound proxy
         """
         return pulumi.get(self, "ssl_inbound_proxy")
 
@@ -133,7 +133,7 @@ class DecryptionProfileArgs:
     @pulumi.getter(name="sslNoProxy")
     def ssl_no_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']]:
         """
-        The SslNoProxy param.
+        Ssl no proxy
         """
         return pulumi.get(self, "ssl_no_proxy")
 
@@ -145,7 +145,7 @@ class DecryptionProfileArgs:
     @pulumi.getter(name="sslProtocolSettings")
     def ssl_protocol_settings(self) -> Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']]:
         """
-        The SslProtocolSettings param.
+        Ssl protocol settings
         """
         return pulumi.get(self, "ssl_protocol_settings")
 
@@ -168,14 +168,14 @@ class _DecryptionProfileState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering DecryptionProfile resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input['DecryptionProfileSslForwardProxyArgs'] ssl_forward_proxy: The SslForwardProxy param.
-        :param pulumi.Input['DecryptionProfileSslInboundProxyArgs'] ssl_inbound_proxy: The SslInboundProxy param.
-        :param pulumi.Input['DecryptionProfileSslNoProxyArgs'] ssl_no_proxy: The SslNoProxy param.
-        :param pulumi.Input['DecryptionProfileSslProtocolSettingsArgs'] ssl_protocol_settings: The SslProtocolSettings param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input['DecryptionProfileSslForwardProxyArgs'] ssl_forward_proxy: Ssl forward proxy
+        :param pulumi.Input['DecryptionProfileSslInboundProxyArgs'] ssl_inbound_proxy: Ssl inbound proxy
+        :param pulumi.Input['DecryptionProfileSslNoProxyArgs'] ssl_no_proxy: Ssl no proxy
+        :param pulumi.Input['DecryptionProfileSslProtocolSettingsArgs'] ssl_protocol_settings: Ssl protocol settings
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -200,7 +200,7 @@ class _DecryptionProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -212,7 +212,7 @@ class _DecryptionProfileState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -224,7 +224,7 @@ class _DecryptionProfileState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
+        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         """
         return pulumi.get(self, "name")
 
@@ -236,7 +236,7 @@ class _DecryptionProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -248,7 +248,7 @@ class _DecryptionProfileState:
     @pulumi.getter(name="sslForwardProxy")
     def ssl_forward_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslForwardProxyArgs']]:
         """
-        The SslForwardProxy param.
+        Ssl forward proxy
         """
         return pulumi.get(self, "ssl_forward_proxy")
 
@@ -260,7 +260,7 @@ class _DecryptionProfileState:
     @pulumi.getter(name="sslInboundProxy")
     def ssl_inbound_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslInboundProxyArgs']]:
         """
-        The SslInboundProxy param.
+        Ssl inbound proxy
         """
         return pulumi.get(self, "ssl_inbound_proxy")
 
@@ -272,7 +272,7 @@ class _DecryptionProfileState:
     @pulumi.getter(name="sslNoProxy")
     def ssl_no_proxy(self) -> Optional[pulumi.Input['DecryptionProfileSslNoProxyArgs']]:
         """
-        The SslNoProxy param.
+        Ssl no proxy
         """
         return pulumi.get(self, "ssl_no_proxy")
 
@@ -284,7 +284,7 @@ class _DecryptionProfileState:
     @pulumi.getter(name="sslProtocolSettings")
     def ssl_protocol_settings(self) -> Optional[pulumi.Input['DecryptionProfileSslProtocolSettingsArgs']]:
         """
-        The SslProtocolSettings param.
+        Ssl protocol settings
         """
         return pulumi.get(self, "ssl_protocol_settings")
 
@@ -318,27 +318,18 @@ class DecryptionProfile(pulumi.CustomResource):
                  ssl_protocol_settings: Optional[pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.DecryptionProfile("example")
-        ```
+        DecryptionProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: The SslForwardProxy param.
-        :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: The SslInboundProxy param.
-        :param pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']] ssl_no_proxy: The SslNoProxy param.
-        :param pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']] ssl_protocol_settings: The SslProtocolSettings param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: Ssl forward proxy
+        :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: Ssl inbound proxy
+        :param pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']] ssl_no_proxy: Ssl no proxy
+        :param pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']] ssl_protocol_settings: Ssl protocol settings
         """
         ...
     @overload
@@ -347,16 +338,7 @@ class DecryptionProfile(pulumi.CustomResource):
                  args: Optional[DecryptionProfileArgs] = None,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.DecryptionProfile("example")
-        ```
+        DecryptionProfile resource
 
         :param str resource_name: The name of the resource.
         :param DecryptionProfileArgs args: The arguments to use to populate this resource's properties.
@@ -425,14 +407,14 @@ class DecryptionProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: The SslForwardProxy param.
-        :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: The SslInboundProxy param.
-        :param pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']] ssl_no_proxy: The SslNoProxy param.
-        :param pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']] ssl_protocol_settings: The SslProtocolSettings param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Union['DecryptionProfileSslForwardProxyArgs', 'DecryptionProfileSslForwardProxyArgsDict']] ssl_forward_proxy: Ssl forward proxy
+        :param pulumi.Input[Union['DecryptionProfileSslInboundProxyArgs', 'DecryptionProfileSslInboundProxyArgsDict']] ssl_inbound_proxy: Ssl inbound proxy
+        :param pulumi.Input[Union['DecryptionProfileSslNoProxyArgs', 'DecryptionProfileSslNoProxyArgsDict']] ssl_no_proxy: Ssl no proxy
+        :param pulumi.Input[Union['DecryptionProfileSslProtocolSettingsArgs', 'DecryptionProfileSslProtocolSettingsArgsDict']] ssl_protocol_settings: Ssl protocol settings
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -453,7 +435,7 @@ class DecryptionProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -461,7 +443,7 @@ class DecryptionProfile(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -469,7 +451,7 @@ class DecryptionProfile(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\\-\\.\\s]{0,}$`.
+        Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         """
         return pulumi.get(self, "name")
 
@@ -477,39 +459,39 @@ class DecryptionProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sslForwardProxy")
-    def ssl_forward_proxy(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslForwardProxy']]:
+    def ssl_forward_proxy(self) -> pulumi.Output['outputs.DecryptionProfileSslForwardProxy']:
         """
-        The SslForwardProxy param.
+        Ssl forward proxy
         """
         return pulumi.get(self, "ssl_forward_proxy")
 
     @_builtins.property
     @pulumi.getter(name="sslInboundProxy")
-    def ssl_inbound_proxy(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslInboundProxy']]:
+    def ssl_inbound_proxy(self) -> pulumi.Output['outputs.DecryptionProfileSslInboundProxy']:
         """
-        The SslInboundProxy param.
+        Ssl inbound proxy
         """
         return pulumi.get(self, "ssl_inbound_proxy")
 
     @_builtins.property
     @pulumi.getter(name="sslNoProxy")
-    def ssl_no_proxy(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslNoProxy']]:
+    def ssl_no_proxy(self) -> pulumi.Output['outputs.DecryptionProfileSslNoProxy']:
         """
-        The SslNoProxy param.
+        Ssl no proxy
         """
         return pulumi.get(self, "ssl_no_proxy")
 
     @_builtins.property
     @pulumi.getter(name="sslProtocolSettings")
-    def ssl_protocol_settings(self) -> pulumi.Output[Optional['outputs.DecryptionProfileSslProtocolSettings']]:
+    def ssl_protocol_settings(self) -> pulumi.Output['outputs.DecryptionProfileSslProtocolSettings']:
         """
-        The SslProtocolSettings param.
+        Ssl protocol settings
         """
         return pulumi.get(self, "ssl_protocol_settings")
 

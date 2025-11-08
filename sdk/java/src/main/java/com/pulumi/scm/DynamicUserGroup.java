@@ -16,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * DynamicUserGroup resource
  * 
  * ## Example Usage
  * 
@@ -27,7 +27,11 @@ import javax.annotation.Nullable;
  * import com.pulumi.Context;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Tag;
+ * import com.pulumi.scm.TagArgs;
  * import com.pulumi.scm.DynamicUserGroup;
+ * import com.pulumi.scm.DynamicUserGroupArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -41,7 +45,43 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
- *         var example = new DynamicUserGroup("example");
+ *         // First, create the tags that will be used in the dynamic user group's filter.
+ *         var scmDugTag1 = new Tag("scmDugTag1", TagArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_dug_tag_1")
+ *             .color("Red")
+ *             .build());
+ * 
+ *         var scmDugTag2 = new Tag("scmDugTag2", TagArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_dug_tag_2")
+ *             .color("Blue")
+ *             .build());
+ * 
+ *         var scmDugTag3 = new Tag("scmDugTag3", TagArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_dug_tag_3")
+ *             .color("Green")
+ *             .build());
+ * 
+ *         // Create the dynamic user group that references the tags above.
+ *         var scmDug1 = new DynamicUserGroup("scmDug1", DynamicUserGroupArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_dug_1")
+ *             .description("DUG created for Terraform")
+ *             .filter(Output.tuple(scmDugTag1.name(), scmDugTag2.name(), scmDugTag3.name()).applyValue(values -> {
+ *                 var scmDugTag1Name = values.t1;
+ *                 var scmDugTag2Name = values.t2;
+ *                 var scmDugTag3Name = values.t3;
+ *                 return String.format("'%s' or '%s' and '%s'", scmDugTag1Name,scmDugTag2Name,scmDugTag3Name);
+ *             }))
+ *             .tags(scmDugTag1.name())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(                
+ *                     scmDugTag1,
+ *                     scmDugTag2,
+ *                     scmDugTag3)
+ *                 .build());
  * 
  *     }
  * }
@@ -52,98 +92,98 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/dynamicUserGroup:DynamicUserGroup")
 public class DynamicUserGroup extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * The description of the dynamic address group
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param. String length must not exceed 1023 characters.
+     * @return The description of the dynamic address group
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * tag-based filter. String length must not exceed 2047 characters.
+     * The tag-based filter for the dynamic user group
      * 
      */
     @Export(name="filter", refs={String.class}, tree="[0]")
     private Output<String> filter;
 
     /**
-     * @return tag-based filter. String length must not exceed 2047 characters.
+     * @return The tag-based filter for the dynamic user group
      * 
      */
     public Output<String> filter() {
         return this.filter;
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the dynamic address group
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the dynamic address group
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the dynamic user group
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * @return Tags associated with the dynamic user group
      * 
      */
     public Output<Optional<List<String>>> tags() {

@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class QosPolicyRuleDscpTos
     {
         /// <summary>
-        /// The Codepoints param.
+        /// Codepoints
         /// </summary>
         public readonly ImmutableArray<Outputs.QosPolicyRuleDscpTosCodepoint> Codepoints;
 

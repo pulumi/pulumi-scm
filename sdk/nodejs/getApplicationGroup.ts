@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ApplicationGroup data source
  *
  * ## Example Usage
  *
@@ -13,15 +13,23 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getApplicationGroup({
- *     id: "1234-56-789",
+ * // Look up the application group by its ID from the terraform.tfstate file.
+ * const scmApplicationGroupDs = scm.getApplicationGroup({
+ *     id: "91616221-ddeb-4b49-866d-48d64dedc056",
  * });
+ * export const applicationGroupOutputs = {
+ *     groupId: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.id),
+ *     folder: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.folder),
+ *     name: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.name),
+ *     members: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.members),
+ * };
  * ```
  */
 export function getApplicationGroup(args: GetApplicationGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetApplicationGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getApplicationGroup:getApplicationGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +38,13 @@ export function getApplicationGroup(args: GetApplicationGroupArgs, opts?: pulumi
  */
 export interface GetApplicationGroupArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     */
+    name?: string;
 }
 
 /**
@@ -40,21 +52,33 @@ export interface GetApplicationGroupArgs {
  */
 export interface GetApplicationGroupResult {
     /**
-     * The Id param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     readonly members: string[];
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * ApplicationGroup data source
  *
  * ## Example Usage
  *
@@ -62,15 +86,23 @@ export interface GetApplicationGroupResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getApplicationGroup({
- *     id: "1234-56-789",
+ * // Look up the application group by its ID from the terraform.tfstate file.
+ * const scmApplicationGroupDs = scm.getApplicationGroup({
+ *     id: "91616221-ddeb-4b49-866d-48d64dedc056",
  * });
+ * export const applicationGroupOutputs = {
+ *     groupId: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.id),
+ *     folder: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.folder),
+ *     name: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.name),
+ *     members: scmApplicationGroupDs.then(scmApplicationGroupDs => scmApplicationGroupDs.members),
+ * };
  * ```
  */
 export function getApplicationGroupOutput(args: GetApplicationGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetApplicationGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getApplicationGroup:getApplicationGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -79,7 +111,11 @@ export function getApplicationGroupOutput(args: GetApplicationGroupOutputArgs, o
  */
 export interface GetApplicationGroupOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * Alphanumeric string [ 0-9a-zA-Z._-]
+     */
+    name?: pulumi.Input<string>;
 }

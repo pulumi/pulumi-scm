@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayPeerAddressResult
     {
         /// <summary>
-        /// The DynamicAddress param.
+        /// Dynamic
         /// </summary>
-        public readonly bool DynamicAddress;
+        public readonly Outputs.GetIkeGatewayPeerAddressDynamicResult Dynamic;
         /// <summary>
-        /// peer gateway FQDN name. String length must not exceed 255 characters.
+        /// peer gateway FQDN name
         /// </summary>
         public readonly string Fqdn;
         /// <summary>
-        /// peer gateway has static IP address.
+        /// peer gateway has static IP address
         /// </summary>
         public readonly string Ip;
 
         [OutputConstructor]
         private GetIkeGatewayPeerAddressResult(
-            bool dynamicAddress,
+            Outputs.GetIkeGatewayPeerAddressDynamicResult dynamic,
 
             string fqdn,
 
             string ip)
         {
-            DynamicAddress = dynamicAddress;
+            Dynamic = dynamic;
             Fqdn = fqdn;
             Ip = ip;
         }

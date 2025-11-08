@@ -17,14 +17,14 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
     public static final AntiSpywareSignatureSignatureCombinationTimeAttributeArgs Empty = new AntiSpywareSignatureSignatureCombinationTimeAttributeArgs();
 
     /**
-     * The Interval param. Value must be between 1 and 3600.
+     * Interval
      * 
      */
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
     /**
-     * @return The Interval param. Value must be between 1 and 3600.
+     * @return Interval
      * 
      */
     public Optional<Output<Integer>> interval() {
@@ -32,14 +32,14 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
     }
 
     /**
-     * The Threshold param. Value must be between 1 and 255.
+     * Threshold
      * 
      */
     @Import(name="threshold")
     private @Nullable Output<Integer> threshold;
 
     /**
-     * @return The Threshold param. Value must be between 1 and 255.
+     * @return Threshold
      * 
      */
     public Optional<Output<Integer>> threshold() {
@@ -47,14 +47,14 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
     }
 
     /**
-     * The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`, `&#34;destination&#34;`.
+     * Track by
      * 
      */
     @Import(name="trackBy")
     private @Nullable Output<String> trackBy;
 
     /**
-     * @return The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`, `&#34;destination&#34;`.
+     * @return Track by
      * 
      */
     public Optional<Output<String>> trackBy() {
@@ -88,7 +88,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param interval The Interval param. Value must be between 1 and 3600.
+         * @param interval Interval
          * 
          * @return builder
          * 
@@ -99,7 +99,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param interval The Interval param. Value must be between 1 and 3600.
+         * @param interval Interval
          * 
          * @return builder
          * 
@@ -109,7 +109,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param threshold The Threshold param. Value must be between 1 and 255.
+         * @param threshold Threshold
          * 
          * @return builder
          * 
@@ -120,7 +120,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param threshold The Threshold param. Value must be between 1 and 255.
+         * @param threshold Threshold
          * 
          * @return builder
          * 
@@ -130,7 +130,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param trackBy The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`, `&#34;destination&#34;`.
+         * @param trackBy Track by
          * 
          * @return builder
          * 
@@ -141,7 +141,7 @@ public final class AntiSpywareSignatureSignatureCombinationTimeAttributeArgs ext
         }
 
         /**
-         * @param trackBy The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`, `&#34;destination&#34;`.
+         * @param trackBy Track by
          * 
          * @return builder
          * 

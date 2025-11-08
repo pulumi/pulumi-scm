@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectHostInfoCriteriaOs {
     /**
-     * @return The Contains param. Ensure that only one of the following is specified: `contains`
+     * @return Contains
      * 
      */
     private @Nullable HipObjectHostInfoCriteriaOsContains contains;
 
     private HipObjectHostInfoCriteriaOs() {}
     /**
-     * @return The Contains param. Ensure that only one of the following is specified: `contains`
+     * @return Contains
      * 
      */
     public Optional<HipObjectHostInfoCriteriaOsContains> contains() {

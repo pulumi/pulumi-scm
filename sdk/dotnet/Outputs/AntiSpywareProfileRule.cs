@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class AntiSpywareProfileRule
     {
         /// <summary>
-        /// The Action param.
+        /// anti spyware profiles rules default action
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleAction? Action;
         /// <summary>
-        /// The Category param. String must be one of these: `"dns-proxy"`, `"backdoor"`, `"data-theft"`, `"autogen"`, `"spyware"`, `"dns-security"`, `"downloader"`, `"dns-phishing"`, `"phishing-kit"`, `"cryptominer"`, `"hacktool"`, `"dns-benign"`, `"dns-wildfire"`, `"botnet"`, `"dns-grayware"`, `"inline-cloud-c2"`, `"keylogger"`, `"p2p-communication"`, `"domain-edl"`, `"webshell"`, `"command-and-control"`, `"dns-ddns"`, `"net-worm"`, `"any"`, `"tls-fingerprint"`, `"dns-new-domain"`, `"dns"`, `"fraud"`, `"dns-c2"`, `"adware"`, `"post-exploitation"`, `"dns-malware"`, `"browser-hijack"`, `"dns-parked"`.
+        /// Category
         /// </summary>
         public readonly string? Category;
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         public readonly string? Name;
         /// <summary>
-        /// The PacketCapture param. String must be one of these: `"disable"`, `"single-packet"`, `"extended-capture"`.
+        /// Packet capture
         /// </summary>
         public readonly string? PacketCapture;
         /// <summary>
-        /// The Severities param.
+        /// Severity
         /// </summary>
         public readonly ImmutableArray<string> Severities;
         /// <summary>
-        /// The ThreatName param. String length must exceed 4 characters.
+        /// Threat name
         /// </summary>
         public readonly string? ThreatName;
 

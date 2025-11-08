@@ -14,29 +14,46 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceListDataResult
     {
         /// <summary>
-        /// The Description param. String length must not exceed 1023 characters.
+        /// Description
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the service
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         public readonly Outputs.GetServiceListDataProtocolResult Protocol;
         /// <summary>
-        /// Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Tags for service object
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetServiceListDataResult(
             string description,
+
+            string device,
+
+            string folder,
 
             string id,
 
@@ -44,13 +61,21 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetServiceListDataProtocolResult protocol,
 
-            ImmutableArray<string> tags)
+            string snippet,
+
+            ImmutableArray<string> tags,
+
+            string tfid)
         {
             Description = description;
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
             Protocol = protocol;
+            Snippet = snippet;
             Tags = tags;
+            Tfid = tfid;
         }
     }
 }

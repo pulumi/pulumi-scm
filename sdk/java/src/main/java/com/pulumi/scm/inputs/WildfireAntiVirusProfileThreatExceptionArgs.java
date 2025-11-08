@@ -16,14 +16,14 @@ public final class WildfireAntiVirusProfileThreatExceptionArgs extends com.pulum
     public static final WildfireAntiVirusProfileThreatExceptionArgs Empty = new WildfireAntiVirusProfileThreatExceptionArgs();
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -31,14 +31,14 @@ public final class WildfireAntiVirusProfileThreatExceptionArgs extends com.pulum
     }
 
     /**
-     * The Notes param.
+     * Notes
      * 
      */
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
     /**
-     * @return The Notes param.
+     * @return Notes
      * 
      */
     public Optional<Output<String>> notes() {
@@ -71,7 +71,7 @@ public final class WildfireAntiVirusProfileThreatExceptionArgs extends com.pulum
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class WildfireAntiVirusProfileThreatExceptionArgs extends com.pulum
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class WildfireAntiVirusProfileThreatExceptionArgs extends com.pulum
         }
 
         /**
-         * @param notes The Notes param.
+         * @param notes Notes
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class WildfireAntiVirusProfileThreatExceptionArgs extends com.pulum
         }
 
         /**
-         * @param notes The Notes param.
+         * @param notes Notes
          * 
          * @return builder
          * 

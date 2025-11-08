@@ -19,14 +19,14 @@ public final class ApplicationSignatureAndConditionArgs extends com.pulumi.resou
     public static final ApplicationSignatureAndConditionArgs Empty = new ApplicationSignatureAndConditionArgs();
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public Output<String> name() {
@@ -34,14 +34,14 @@ public final class ApplicationSignatureAndConditionArgs extends com.pulumi.resou
     }
 
     /**
-     * The OrConditions param.
+     * Or condition
      * 
      */
     @Import(name="orConditions")
     private @Nullable Output<List<ApplicationSignatureAndConditionOrConditionArgs>> orConditions;
 
     /**
-     * @return The OrConditions param.
+     * @return Or condition
      * 
      */
     public Optional<Output<List<ApplicationSignatureAndConditionOrConditionArgs>>> orConditions() {
@@ -74,7 +74,7 @@ public final class ApplicationSignatureAndConditionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -85,7 +85,7 @@ public final class ApplicationSignatureAndConditionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -95,7 +95,7 @@ public final class ApplicationSignatureAndConditionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param orConditions The OrConditions param.
+         * @param orConditions Or condition
          * 
          * @return builder
          * 
@@ -106,7 +106,7 @@ public final class ApplicationSignatureAndConditionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param orConditions The OrConditions param.
+         * @param orConditions Or condition
          * 
          * @return builder
          * 
@@ -116,7 +116,7 @@ public final class ApplicationSignatureAndConditionArgs extends com.pulumi.resou
         }
 
         /**
-         * @param orConditions The OrConditions param.
+         * @param orConditions Or condition
          * 
          * @return builder
          * 

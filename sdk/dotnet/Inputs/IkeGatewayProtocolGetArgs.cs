@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeGatewayProtocolGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Ikev1 param.
+        /// Ikev1
         /// </summary>
         [Input("ikev1")]
         public Input<Inputs.IkeGatewayProtocolIkev1GetArgs>? Ikev1 { get; set; }
 
         /// <summary>
-        /// The Ikev2 param.
+        /// Ikev2
         /// </summary>
         [Input("ikev2")]
         public Input<Inputs.IkeGatewayProtocolIkev2GetArgs>? Ikev2 { get; set; }
 
         /// <summary>
-        /// The Version param. String must be one of these: `"ikev2-preferred"`, `"ikev1"`, `"ikev2"`. Default: `"ikev2-preferred"`.
+        /// Version
         /// </summary>
         [Input("version")]
         public Input<string>? Version { get; set; }

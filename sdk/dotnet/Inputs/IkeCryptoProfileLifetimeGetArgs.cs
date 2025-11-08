@@ -13,25 +13,25 @@ namespace Pulumi.Scm.Inputs
     public sealed class IkeCryptoProfileLifetimeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// specify lifetime in days. Value must be between 1 and 365. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
+        /// specify lifetime in days
         /// </summary>
         [Input("days")]
         public Input<int>? Days { get; set; }
 
         /// <summary>
-        /// specify lifetime in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
+        /// specify lifetime in hours
         /// </summary>
         [Input("hours")]
         public Input<int>? Hours { get; set; }
 
         /// <summary>
-        /// specify lifetime in minutes. Value must be between 3 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
+        /// specify lifetime in minutes
         /// </summary>
         [Input("minutes")]
         public Input<int>? Minutes { get; set; }
 
         /// <summary>
-        /// specify lifetime in seconds. Value must be between 180 and 65535. Ensure that only one of the following is specified: `Days`, `Hours`, `Minutes`, `Seconds`
+        /// specify lifetime in seconds
         /// </summary>
         [Input("seconds")]
         public Input<int>? Seconds { get; set; }

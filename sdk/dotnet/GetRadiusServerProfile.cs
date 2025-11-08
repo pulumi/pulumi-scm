@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetRadiusServerProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetRadiusServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// RadiusServerProfile data source
         /// </summary>
         public static Task<GetRadiusServerProfileResult> InvokeAsync(GetRadiusServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetRadiusServerProfileResult>("scm:index/getRadiusServerProfile:getRadiusServerProfile", args ?? new GetRadiusServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetRadiusServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// RadiusServerProfile data source
         /// </summary>
         public static Output<GetRadiusServerProfileResult> Invoke(GetRadiusServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileResult>("scm:index/getRadiusServerProfile:getRadiusServerProfile", args ?? new GetRadiusServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetRadiusServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// RadiusServerProfile data source
         /// </summary>
         public static Output<GetRadiusServerProfileResult> Invoke(GetRadiusServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetRadiusServerProfileResult>("scm:index/getRadiusServerProfile:getRadiusServerProfile", args ?? new GetRadiusServerProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetRadiusServerProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the RADIUS server profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the RADIUS server profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetRadiusServerProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetRadiusServerProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the RADIUS server profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the RADIUS server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetRadiusServerProfileInvokeArgs()
         {
@@ -118,30 +76,52 @@ namespace Pulumi.Scm
     public sealed class GetRadiusServerProfileResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the RADIUS server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Protocol param.
+        /// The name of the RADIUS server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The RADIUS authentication protocol
         /// </summary>
         public readonly Outputs.GetRadiusServerProfileProtocolResult Protocol;
         /// <summary>
-        /// The Retries param. Value must be between 1 and 5.
+        /// The number of RADIUS server retries
         /// </summary>
         public readonly int Retries;
         /// <summary>
-        /// The Servers param.
+        /// Server
         /// </summary>
         public readonly ImmutableArray<Outputs.GetRadiusServerProfileServerResult> Servers;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 120.
+        /// The RADIUS server authentication timeout (seconds)
         /// </summary>
         public readonly int Timeout;
 
         [OutputConstructor]
         private GetRadiusServerProfileResult(
+            string device,
+
+            string folder,
+
             string id,
+
+            string name,
 
             Outputs.GetRadiusServerProfileProtocolResult protocol,
 
@@ -149,14 +129,20 @@ namespace Pulumi.Scm
 
             ImmutableArray<Outputs.GetRadiusServerProfileServerResult> servers,
 
+            string snippet,
+
             string tfid,
 
             int timeout)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
+            Name = name;
             Protocol = protocol;
             Retries = retries;
             Servers = servers;
+            Snippet = snippet;
             Tfid = tfid;
             Timeout = timeout;
         }

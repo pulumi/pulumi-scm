@@ -16,14 +16,14 @@ public final class ServiceConnectionProtocolArgs extends com.pulumi.resources.Re
     public static final ServiceConnectionProtocolArgs Empty = new ServiceConnectionProtocolArgs();
 
     /**
-     * The Bgp param.
+     * Bgp
      * 
      */
     @Import(name="bgp")
     private @Nullable Output<ServiceConnectionProtocolBgpArgs> bgp;
 
     /**
-     * @return The Bgp param.
+     * @return Bgp
      * 
      */
     public Optional<Output<ServiceConnectionProtocolBgpArgs>> bgp() {
@@ -55,7 +55,7 @@ public final class ServiceConnectionProtocolArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param bgp The Bgp param.
+         * @param bgp Bgp
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class ServiceConnectionProtocolArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param bgp The Bgp param.
+         * @param bgp Bgp
          * 
          * @return builder
          * 

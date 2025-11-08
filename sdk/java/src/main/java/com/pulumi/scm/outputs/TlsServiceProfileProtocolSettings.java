@@ -13,170 +13,170 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TlsServiceProfileProtocolSettings {
     /**
-     * @return Allow authentication SHA1.
+     * @return Allow SHA1 authentication?
      * 
      */
     private @Nullable Boolean authAlgoSha1;
     /**
-     * @return Allow authentication SHA256.
+     * @return Allow SHA256 authentication?
      * 
      */
     private @Nullable Boolean authAlgoSha256;
     /**
-     * @return Allow authentication SHA384.
+     * @return Allow SHA384 authentication?
      * 
      */
     private @Nullable Boolean authAlgoSha384;
     /**
-     * @return Allow algorithm 3DES.
+     * @return Allow 3DES algorithm?
      * 
      */
     private @Nullable Boolean encAlgo3des;
     /**
-     * @return Allow algorithm AES-128-CBC.
+     * @return Allow AES-128-CBC algorithm?
      * 
      */
     private @Nullable Boolean encAlgoAes128Cbc;
     /**
-     * @return Allow algorithm AES-128-GCM.
+     * @return Allow AES-128-GCM algorithm?
      * 
      */
     private @Nullable Boolean encAlgoAes128Gcm;
     /**
-     * @return Allow algorithm AES-256-CBC.
+     * @return Allow AES-256-CBC algorithm?
      * 
      */
     private @Nullable Boolean encAlgoAes256Cbc;
     /**
-     * @return Allow algorithm AES-256-GCM.
+     * @return Allow algorithm AES-256-GCM
      * 
      */
     private @Nullable Boolean encAlgoAes256Gcm;
     /**
-     * @return Allow algorithm RC4.
+     * @return Allow RC4 algorithm?
      * 
      */
     private @Nullable Boolean encAlgoRc4;
     /**
-     * @return Allow algorithm DHE.
+     * @return Allow DHE algorithm?
      * 
      */
     private @Nullable Boolean keyxchgAlgoDhe;
     /**
-     * @return Allow algorithm ECDHE.
+     * @return Allow ECDHE algorithm?
      * 
      */
     private @Nullable Boolean keyxchgAlgoEcdhe;
     /**
-     * @return Allow algorithm RSA.
+     * @return Allow RSA algorithm?
      * 
      */
     private @Nullable Boolean keyxchgAlgoRsa;
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;max&#34;`.
+     * @return Maximum TLS version
      * 
      */
     private @Nullable String maxVersion;
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Minimum TLS version
      * 
      */
     private @Nullable String minVersion;
 
     private TlsServiceProfileProtocolSettings() {}
     /**
-     * @return Allow authentication SHA1.
+     * @return Allow SHA1 authentication?
      * 
      */
     public Optional<Boolean> authAlgoSha1() {
         return Optional.ofNullable(this.authAlgoSha1);
     }
     /**
-     * @return Allow authentication SHA256.
+     * @return Allow SHA256 authentication?
      * 
      */
     public Optional<Boolean> authAlgoSha256() {
         return Optional.ofNullable(this.authAlgoSha256);
     }
     /**
-     * @return Allow authentication SHA384.
+     * @return Allow SHA384 authentication?
      * 
      */
     public Optional<Boolean> authAlgoSha384() {
         return Optional.ofNullable(this.authAlgoSha384);
     }
     /**
-     * @return Allow algorithm 3DES.
+     * @return Allow 3DES algorithm?
      * 
      */
     public Optional<Boolean> encAlgo3des() {
         return Optional.ofNullable(this.encAlgo3des);
     }
     /**
-     * @return Allow algorithm AES-128-CBC.
+     * @return Allow AES-128-CBC algorithm?
      * 
      */
     public Optional<Boolean> encAlgoAes128Cbc() {
         return Optional.ofNullable(this.encAlgoAes128Cbc);
     }
     /**
-     * @return Allow algorithm AES-128-GCM.
+     * @return Allow AES-128-GCM algorithm?
      * 
      */
     public Optional<Boolean> encAlgoAes128Gcm() {
         return Optional.ofNullable(this.encAlgoAes128Gcm);
     }
     /**
-     * @return Allow algorithm AES-256-CBC.
+     * @return Allow AES-256-CBC algorithm?
      * 
      */
     public Optional<Boolean> encAlgoAes256Cbc() {
         return Optional.ofNullable(this.encAlgoAes256Cbc);
     }
     /**
-     * @return Allow algorithm AES-256-GCM.
+     * @return Allow algorithm AES-256-GCM
      * 
      */
     public Optional<Boolean> encAlgoAes256Gcm() {
         return Optional.ofNullable(this.encAlgoAes256Gcm);
     }
     /**
-     * @return Allow algorithm RC4.
+     * @return Allow RC4 algorithm?
      * 
      */
     public Optional<Boolean> encAlgoRc4() {
         return Optional.ofNullable(this.encAlgoRc4);
     }
     /**
-     * @return Allow algorithm DHE.
+     * @return Allow DHE algorithm?
      * 
      */
     public Optional<Boolean> keyxchgAlgoDhe() {
         return Optional.ofNullable(this.keyxchgAlgoDhe);
     }
     /**
-     * @return Allow algorithm ECDHE.
+     * @return Allow ECDHE algorithm?
      * 
      */
     public Optional<Boolean> keyxchgAlgoEcdhe() {
         return Optional.ofNullable(this.keyxchgAlgoEcdhe);
     }
     /**
-     * @return Allow algorithm RSA.
+     * @return Allow RSA algorithm?
      * 
      */
     public Optional<Boolean> keyxchgAlgoRsa() {
         return Optional.ofNullable(this.keyxchgAlgoRsa);
     }
     /**
-     * @return The MaxVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`, `&#34;tls1-3&#34;`, `&#34;max&#34;`. Default: `&#34;max&#34;`.
+     * @return Maximum TLS version
      * 
      */
     public Optional<String> maxVersion() {
         return Optional.ofNullable(this.maxVersion);
     }
     /**
-     * @return The MinVersion param. String must be one of these: `&#34;tls1-0&#34;`, `&#34;tls1-1&#34;`, `&#34;tls1-2&#34;`. Default: `&#34;tls1-0&#34;`.
+     * @return Minimum TLS version
      * 
      */
     public Optional<String> minVersion() {

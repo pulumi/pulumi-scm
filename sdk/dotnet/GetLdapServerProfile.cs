@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetLdapServerProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetLdapServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// LdapServerProfile data source
         /// </summary>
         public static Task<GetLdapServerProfileResult> InvokeAsync(GetLdapServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetLdapServerProfileResult>("scm:index/getLdapServerProfile:getLdapServerProfile", args ?? new GetLdapServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetLdapServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// LdapServerProfile data source
         /// </summary>
         public static Output<GetLdapServerProfileResult> Invoke(GetLdapServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetLdapServerProfileResult>("scm:index/getLdapServerProfile:getLdapServerProfile", args ?? new GetLdapServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetLdapServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// LdapServerProfile data source
         /// </summary>
         public static Output<GetLdapServerProfileResult> Invoke(GetLdapServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetLdapServerProfileResult>("scm:index/getLdapServerProfile:getLdapServerProfile", args ?? new GetLdapServerProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetLdapServerProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the LDAP server profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the LDAP server profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetLdapServerProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetLdapServerProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the LDAP server profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the LDAP server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetLdapServerProfileInvokeArgs()
         {
@@ -118,48 +76,68 @@ namespace Pulumi.Scm
     public sealed class GetLdapServerProfileResult
     {
         /// <summary>
-        /// The Base param. String length must not exceed 255 characters.
+        /// The base DN
         /// </summary>
         public readonly string Base;
         /// <summary>
-        /// The BindDn param. String length must not exceed 255 characters.
+        /// The bind DN
         /// </summary>
         public readonly string BindDn;
         /// <summary>
-        /// The BindPassword param. String length must not exceed 121 characters.
+        /// The bind password
         /// </summary>
         public readonly string BindPassword;
         /// <summary>
-        /// The BindTimelimit param.
+        /// The bind timeout (seconds)
         /// </summary>
         public readonly string BindTimelimit;
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Map of sensitive values returned from the API.
+        /// </summary>
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the LDAP server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        /// The LDAP server time
         /// </summary>
         public readonly string LdapType;
         /// <summary>
-        /// The RetryInterval param.
+        /// The name of the LDAP server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The search retry interval (seconds)
         /// </summary>
         public readonly int RetryInterval;
         /// <summary>
-        /// The Servers param.
+        /// The LDAP server configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetLdapServerProfileServerResult> Servers;
         /// <summary>
-        /// The Ssl param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Require SSL/TLS secured connection?
         /// </summary>
         public readonly bool Ssl;
         public readonly string Tfid;
         /// <summary>
-        /// The Timelimit param.
+        /// The search timeout (seconds)
         /// </summary>
         public readonly int Timelimit;
         /// <summary>
-        /// The VerifyServerCertificate param.
+        /// Verify server certificate for SSL sessions?
         /// </summary>
         public readonly bool VerifyServerCertificate;
 
@@ -173,13 +151,23 @@ namespace Pulumi.Scm
 
             string bindTimelimit,
 
+            string device,
+
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
+
             string id,
 
             string ldapType,
 
+            string name,
+
             int retryInterval,
 
             ImmutableArray<Outputs.GetLdapServerProfileServerResult> servers,
+
+            string snippet,
 
             bool ssl,
 
@@ -193,10 +181,15 @@ namespace Pulumi.Scm
             BindDn = bindDn;
             BindPassword = bindPassword;
             BindTimelimit = bindTimelimit;
+            Device = device;
+            EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             LdapType = ldapType;
+            Name = name;
             RetryInterval = retryInterval;
             Servers = servers;
+            Snippet = snippet;
             Ssl = ssl;
             Tfid = tfid;
             Timelimit = timelimit;

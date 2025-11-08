@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectDiskEncryptionVendorArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param. String length must not exceed 103 characters.
+        /// Name
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _products;
 
         /// <summary>
-        /// The Products param. Individual elements in this list are subject to additional validation. String length must not exceed 1023 characters. String validation regex: `.*`.
+        /// Product
         /// </summary>
         public InputList<string> Products
         {

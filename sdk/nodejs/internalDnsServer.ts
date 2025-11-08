@@ -5,16 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.InternalDnsServer("example", {});
- * ```
+ * InternalDnsServer resource
  */
 export class InternalDnsServer extends pulumi.CustomResource {
     /**
@@ -45,19 +36,19 @@ export class InternalDnsServer extends pulumi.CustomResource {
     }
 
     /**
-     * The DomainNames param.
+     * The DNS domain name(s)
      */
     declare public readonly domainNames: pulumi.Output<string[]>;
     /**
-     * The Name param.
+     * The name of the internet DNS server resource
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Primary param.
+     * The IP address of the primary DNS server
      */
     declare public readonly primary: pulumi.Output<string>;
     /**
-     * The Secondary param.
+     * The IP address of the secondary DNS server
      */
     declare public readonly secondary: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -104,19 +95,19 @@ export class InternalDnsServer extends pulumi.CustomResource {
  */
 export interface InternalDnsServerState {
     /**
-     * The DomainNames param.
+     * The DNS domain name(s)
      */
     domainNames?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * The name of the internet DNS server resource
      */
     name?: pulumi.Input<string>;
     /**
-     * The Primary param.
+     * The IP address of the primary DNS server
      */
     primary?: pulumi.Input<string>;
     /**
-     * The Secondary param.
+     * The IP address of the secondary DNS server
      */
     secondary?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -127,19 +118,19 @@ export interface InternalDnsServerState {
  */
 export interface InternalDnsServerArgs {
     /**
-     * The DomainNames param.
+     * The DNS domain name(s)
      */
     domainNames: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The Name param.
+     * The name of the internet DNS server resource
      */
     name?: pulumi.Input<string>;
     /**
-     * The Primary param.
+     * The IP address of the primary DNS server
      */
     primary: pulumi.Input<string>;
     /**
-     * The Secondary param.
+     * The IP address of the secondary DNS server
      */
     secondary?: pulumi.Input<string>;
 }

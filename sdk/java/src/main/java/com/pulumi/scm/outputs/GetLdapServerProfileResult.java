@@ -10,126 +10,187 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetLdapServerProfileResult {
     /**
-     * @return The Base param. String length must not exceed 255 characters.
+     * @return The base DN
      * 
      */
     private String base;
     /**
-     * @return The BindDn param. String length must not exceed 255 characters.
+     * @return The bind DN
      * 
      */
     private String bindDn;
     /**
-     * @return The BindPassword param. String length must not exceed 121 characters.
+     * @return The bind password
      * 
      */
     private String bindPassword;
     /**
-     * @return The BindTimelimit param.
+     * @return The bind timeout (seconds)
      * 
      */
     private String bindTimelimit;
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    private Map<String,String> encryptedValues;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the LDAP server profile
      * 
      */
     private String id;
     /**
-     * @return The LdapType param. String must be one of these: `&#34;active-directory&#34;`, `&#34;e-directory&#34;`, `&#34;sun&#34;`, `&#34;other&#34;`.
+     * @return The LDAP server time
      * 
      */
     private String ldapType;
     /**
-     * @return The RetryInterval param.
+     * @return The name of the LDAP server profile
+     * 
+     */
+    private String name;
+    /**
+     * @return The search retry interval (seconds)
      * 
      */
     private Integer retryInterval;
     /**
-     * @return The Servers param.
+     * @return The LDAP server configuration
      * 
      */
     private List<GetLdapServerProfileServer> servers;
     /**
-     * @return The Ssl param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    /**
+     * @return Require SSL/TLS secured connection?
      * 
      */
     private Boolean ssl;
     private String tfid;
     /**
-     * @return The Timelimit param.
+     * @return The search timeout (seconds)
      * 
      */
     private Integer timelimit;
     /**
-     * @return The VerifyServerCertificate param.
+     * @return Verify server certificate for SSL sessions?
      * 
      */
     private Boolean verifyServerCertificate;
 
     private GetLdapServerProfileResult() {}
     /**
-     * @return The Base param. String length must not exceed 255 characters.
+     * @return The base DN
      * 
      */
     public String base() {
         return this.base;
     }
     /**
-     * @return The BindDn param. String length must not exceed 255 characters.
+     * @return The bind DN
      * 
      */
     public String bindDn() {
         return this.bindDn;
     }
     /**
-     * @return The BindPassword param. String length must not exceed 121 characters.
+     * @return The bind password
      * 
      */
     public String bindPassword() {
         return this.bindPassword;
     }
     /**
-     * @return The BindTimelimit param.
+     * @return The bind timeout (seconds)
      * 
      */
     public String bindTimelimit() {
         return this.bindTimelimit;
     }
     /**
-     * @return The Id param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return Map of sensitive values returned from the API.
+     * 
+     */
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the LDAP server profile
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The LdapType param. String must be one of these: `&#34;active-directory&#34;`, `&#34;e-directory&#34;`, `&#34;sun&#34;`, `&#34;other&#34;`.
+     * @return The LDAP server time
      * 
      */
     public String ldapType() {
         return this.ldapType;
     }
     /**
-     * @return The RetryInterval param.
+     * @return The name of the LDAP server profile
+     * 
+     */
+    public String name() {
+        return this.name;
+    }
+    /**
+     * @return The search retry interval (seconds)
      * 
      */
     public Integer retryInterval() {
         return this.retryInterval;
     }
     /**
-     * @return The Servers param.
+     * @return The LDAP server configuration
      * 
      */
     public List<GetLdapServerProfileServer> servers() {
         return this.servers;
     }
     /**
-     * @return The Ssl param.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    /**
+     * @return Require SSL/TLS secured connection?
      * 
      */
     public Boolean ssl() {
@@ -139,14 +200,14 @@ public final class GetLdapServerProfileResult {
         return this.tfid;
     }
     /**
-     * @return The Timelimit param.
+     * @return The search timeout (seconds)
      * 
      */
     public Integer timelimit() {
         return this.timelimit;
     }
     /**
-     * @return The VerifyServerCertificate param.
+     * @return Verify server certificate for SSL sessions?
      * 
      */
     public Boolean verifyServerCertificate() {
@@ -166,10 +227,15 @@ public final class GetLdapServerProfileResult {
         private String bindDn;
         private String bindPassword;
         private String bindTimelimit;
+        private String device;
+        private Map<String,String> encryptedValues;
+        private String folder;
         private String id;
         private String ldapType;
+        private String name;
         private Integer retryInterval;
         private List<GetLdapServerProfileServer> servers;
+        private String snippet;
         private Boolean ssl;
         private String tfid;
         private Integer timelimit;
@@ -181,10 +247,15 @@ public final class GetLdapServerProfileResult {
     	      this.bindDn = defaults.bindDn;
     	      this.bindPassword = defaults.bindPassword;
     	      this.bindTimelimit = defaults.bindTimelimit;
+    	      this.device = defaults.device;
+    	      this.encryptedValues = defaults.encryptedValues;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.ldapType = defaults.ldapType;
+    	      this.name = defaults.name;
     	      this.retryInterval = defaults.retryInterval;
     	      this.servers = defaults.servers;
+    	      this.snippet = defaults.snippet;
     	      this.ssl = defaults.ssl;
     	      this.tfid = defaults.tfid;
     	      this.timelimit = defaults.timelimit;
@@ -224,6 +295,30 @@ public final class GetLdapServerProfileResult {
             return this;
         }
         @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetLdapServerProfileResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetLdapServerProfileResult", "encryptedValues");
+            }
+            this.encryptedValues = encryptedValues;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetLdapServerProfileResult", "folder");
+            }
+            this.folder = folder;
+            return this;
+        }
+        @CustomType.Setter
         public Builder id(String id) {
             if (id == null) {
               throw new MissingRequiredPropertyException("GetLdapServerProfileResult", "id");
@@ -237,6 +332,14 @@ public final class GetLdapServerProfileResult {
               throw new MissingRequiredPropertyException("GetLdapServerProfileResult", "ldapType");
             }
             this.ldapType = ldapType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder name(String name) {
+            if (name == null) {
+              throw new MissingRequiredPropertyException("GetLdapServerProfileResult", "name");
+            }
+            this.name = name;
             return this;
         }
         @CustomType.Setter
@@ -257,6 +360,14 @@ public final class GetLdapServerProfileResult {
         }
         public Builder servers(GetLdapServerProfileServer... servers) {
             return servers(List.of(servers));
+        }
+        @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetLdapServerProfileResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
         }
         @CustomType.Setter
         public Builder ssl(Boolean ssl) {
@@ -296,10 +407,15 @@ public final class GetLdapServerProfileResult {
             _resultValue.bindDn = bindDn;
             _resultValue.bindPassword = bindPassword;
             _resultValue.bindTimelimit = bindTimelimit;
+            _resultValue.device = device;
+            _resultValue.encryptedValues = encryptedValues;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.ldapType = ldapType;
+            _resultValue.name = name;
             _resultValue.retryInterval = retryInterval;
             _resultValue.servers = servers;
+            _resultValue.snippet = snippet;
             _resultValue.ssl = ssl;
             _resultValue.tfid = tfid;
             _resultValue.timelimit = timelimit;

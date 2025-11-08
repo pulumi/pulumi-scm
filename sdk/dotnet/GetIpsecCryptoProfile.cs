@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetIpsecCryptoProfile
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// IpsecCryptoProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIpsecCryptoProfile.Invoke(new()
+        ///     // Example of looking up an individual IPsec Crypto Profile by its ID.
+        ///     var scmIpsecCryptoProfileDs = Scm.GetIpsecCryptoProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "b89e8fe1-9e92-46fa-8a67-de84313128c9",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ipsecProfileById"] = scmIpsecCryptoProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +41,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetIpsecCryptoProfileResult>("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", args ?? new GetIpsecCryptoProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// IpsecCryptoProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +53,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIpsecCryptoProfile.Invoke(new()
+        ///     // Example of looking up an individual IPsec Crypto Profile by its ID.
+        ///     var scmIpsecCryptoProfileDs = Scm.GetIpsecCryptoProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "b89e8fe1-9e92-46fa-8a67-de84313128c9",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ipsecProfileById"] = scmIpsecCryptoProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +70,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetIpsecCryptoProfileResult>("scm:index/getIpsecCryptoProfile:getIpsecCryptoProfile", args ?? new GetIpsecCryptoProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// IpsecCryptoProfile data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +82,16 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIpsecCryptoProfile.Invoke(new()
+        ///     // Example of looking up an individual IPsec Crypto Profile by its ID.
+        ///     var scmIpsecCryptoProfileDs = Scm.GetIpsecCryptoProfile.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "b89e8fe1-9e92-46fa-8a67-de84313128c9",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ipsecProfileById"] = scmIpsecCryptoProfileDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,28 +103,16 @@ namespace Pulumi.Scm
     public sealed class GetIpsecCryptoProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
-        /// </summary>
-        [Input("device")]
-        public string? Device { get; set; }
-
-        /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
-        [Input("snippet")]
-        public string? Snippet { get; set; }
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetIpsecCryptoProfileArgs()
         {
@@ -120,28 +123,16 @@ namespace Pulumi.Scm
     public sealed class GetIpsecCryptoProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
-        /// </summary>
-        [Input("device")]
-        public Input<string>? Device { get; set; }
-
-        /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
-        [Input("snippet")]
-        public Input<string>? Snippet { get; set; }
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetIpsecCryptoProfileInvokeArgs()
         {
@@ -154,58 +145,58 @@ namespace Pulumi.Scm
     public sealed class GetIpsecCryptoProfileResult
     {
         /// <summary>
-        /// The Ah param.
+        /// Ah
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileAhResult Ah;
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
-        public readonly string? Device;
+        public readonly string Device;
         /// <summary>
-        /// phase-2 DH group (PFS DH group). String must be one of these: `"no-pfs"`, `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`. Default: `"group2"`.
+        /// phase-2 DH group (PFS DH group)
         /// </summary>
         public readonly string DhGroup;
         /// <summary>
-        /// The Esp param.
+        /// Esp
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileEspResult Esp;
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
-        public readonly string? Folder;
+        public readonly string Folder;
         /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Lifesize param.
+        /// Lifesize
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileLifesizeResult Lifesize;
         /// <summary>
-        /// The Lifetime param.
+        /// Ipsec crypto profile lifetime
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileLifetimeResult Lifetime;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
-        public readonly string? Snippet;
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetIpsecCryptoProfileResult(
             Outputs.GetIpsecCryptoProfileAhResult ah,
 
-            string? device,
+            string device,
 
             string dhGroup,
 
             Outputs.GetIpsecCryptoProfileEspResult esp,
 
-            string? folder,
+            string folder,
 
             string id,
 
@@ -215,7 +206,7 @@ namespace Pulumi.Scm
 
             string name,
 
-            string? snippet,
+            string snippet,
 
             string tfid)
         {

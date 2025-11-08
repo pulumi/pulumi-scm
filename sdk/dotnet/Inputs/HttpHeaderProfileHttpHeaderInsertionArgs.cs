@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class HttpHeaderProfileHttpHeaderInsertionArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param.
+        /// The name of the HTTP header insertion rule
         /// </summary>
         [Input("name", required: true)]
         public Input<string> Name { get; set; } = null!;
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionTypeArgs>? _types;
 
         /// <summary>
-        /// The Types param.
+        /// A list of HTTP header insertion definitions (*This should be an object rather than an array*)
         /// </summary>
         public InputList<Inputs.HttpHeaderProfileHttpHeaderInsertionTypeArgs> Types
         {

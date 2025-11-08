@@ -27,7 +27,7 @@ class GetCertificateProfileResult:
     """
     A collection of values returned by getCertificateProfile.
     """
-    def __init__(__self__, block_expired_cert=None, block_timeout_cert=None, block_unauthenticated_cert=None, block_unknown_cert=None, ca_certificates=None, cert_status_timeout=None, crl_receive_timeout=None, domain=None, id=None, name=None, ocsp_receive_timeout=None, tfid=None, use_crl=None, use_ocsp=None, username_field=None):
+    def __init__(__self__, block_expired_cert=None, block_timeout_cert=None, block_unauthenticated_cert=None, block_unknown_cert=None, ca_certificates=None, cert_status_timeout=None, crl_receive_timeout=None, device=None, domain=None, folder=None, id=None, name=None, ocsp_receive_timeout=None, snippet=None, tfid=None, use_crl=None, use_ocsp=None, username_field=None):
         if block_expired_cert and not isinstance(block_expired_cert, bool):
             raise TypeError("Expected argument 'block_expired_cert' to be a bool")
         pulumi.set(__self__, "block_expired_cert", block_expired_cert)
@@ -49,9 +49,15 @@ class GetCertificateProfileResult:
         if crl_receive_timeout and not isinstance(crl_receive_timeout, str):
             raise TypeError("Expected argument 'crl_receive_timeout' to be a str")
         pulumi.set(__self__, "crl_receive_timeout", crl_receive_timeout)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if domain and not isinstance(domain, str):
             raise TypeError("Expected argument 'domain' to be a str")
         pulumi.set(__self__, "domain", domain)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -61,6 +67,9 @@ class GetCertificateProfileResult:
         if ocsp_receive_timeout and not isinstance(ocsp_receive_timeout, str):
             raise TypeError("Expected argument 'ocsp_receive_timeout' to be a str")
         pulumi.set(__self__, "ocsp_receive_timeout", ocsp_receive_timeout)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -78,7 +87,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="blockExpiredCert")
     def block_expired_cert(self) -> _builtins.bool:
         """
-        The BlockExpiredCert param.
+        Block sessions with expired certificates?
         """
         return pulumi.get(self, "block_expired_cert")
 
@@ -86,7 +95,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="blockTimeoutCert")
     def block_timeout_cert(self) -> _builtins.bool:
         """
-        The BlockTimeoutCert param.
+        Block session if certificate status cannot be retrieved within timeout?
         """
         return pulumi.get(self, "block_timeout_cert")
 
@@ -94,7 +103,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="blockUnauthenticatedCert")
     def block_unauthenticated_cert(self) -> _builtins.bool:
         """
-        The BlockUnauthenticatedCert param.
+        Block session if the certificate was not issued to the authenticating device?
         """
         return pulumi.get(self, "block_unauthenticated_cert")
 
@@ -102,7 +111,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="blockUnknownCert")
     def block_unknown_cert(self) -> _builtins.bool:
         """
-        The BlockUnknownCert param.
+        Block session if certificate status is unknown?
         """
         return pulumi.get(self, "block_unknown_cert")
 
@@ -110,7 +119,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="caCertificates")
     def ca_certificates(self) -> Sequence['outputs.GetCertificateProfileCaCertificateResult']:
         """
-        The CaCertificates param.
+        An ordered list of CA certificates
         """
         return pulumi.get(self, "ca_certificates")
 
@@ -118,7 +127,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="certStatusTimeout")
     def cert_status_timeout(self) -> _builtins.str:
         """
-        The CertStatusTimeout param.
+        Certificate status timeout
         """
         return pulumi.get(self, "cert_status_timeout")
 
@@ -126,23 +135,39 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="crlReceiveTimeout")
     def crl_receive_timeout(self) -> _builtins.str:
         """
-        The CrlReceiveTimeout param.
+        CRL receive timeout (seconds)
         """
         return pulumi.get(self, "crl_receive_timeout")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def domain(self) -> _builtins.str:
         """
-        The Domain param.
+        User domain
         """
         return pulumi.get(self, "domain")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the certificate profile
         """
         return pulumi.get(self, "id")
 
@@ -150,7 +175,7 @@ class GetCertificateProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the certificate profile
         """
         return pulumi.get(self, "name")
 
@@ -158,9 +183,17 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="ocspReceiveTimeout")
     def ocsp_receive_timeout(self) -> _builtins.str:
         """
-        The OcspReceiveTimeout param.
+        OCSP receive timeout (seconds)
         """
         return pulumi.get(self, "ocsp_receive_timeout")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -171,7 +204,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="useCrl")
     def use_crl(self) -> _builtins.bool:
         """
-        The UseCrl param.
+        Use CRL?
         """
         return pulumi.get(self, "use_crl")
 
@@ -179,7 +212,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="useOcsp")
     def use_ocsp(self) -> _builtins.bool:
         """
-        The UseOcsp param.
+        Use OCSP?
         """
         return pulumi.get(self, "use_ocsp")
 
@@ -187,7 +220,7 @@ class GetCertificateProfileResult:
     @pulumi.getter(name="usernameField")
     def username_field(self) -> 'outputs.GetCertificateProfileUsernameFieldResult':
         """
-        The UsernameField param.
+        Certificate username field
         """
         return pulumi.get(self, "username_field")
 
@@ -205,10 +238,13 @@ class AwaitableGetCertificateProfileResult(GetCertificateProfileResult):
             ca_certificates=self.ca_certificates,
             cert_status_timeout=self.cert_status_timeout,
             crl_receive_timeout=self.crl_receive_timeout,
+            device=self.device,
             domain=self.domain,
+            folder=self.folder,
             id=self.id,
             name=self.name,
             ocsp_receive_timeout=self.ocsp_receive_timeout,
+            snippet=self.snippet,
             tfid=self.tfid,
             use_crl=self.use_crl,
             use_ocsp=self.use_ocsp,
@@ -216,9 +252,10 @@ class AwaitableGetCertificateProfileResult(GetCertificateProfileResult):
 
 
 def get_certificate_profile(id: Optional[_builtins.str] = None,
+                            name: Optional[_builtins.str] = None,
                             opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetCertificateProfileResult:
     """
-    Retrieves a config item.
+    CertificateProfile data source
 
     ## Example Usage
 
@@ -226,14 +263,19 @@ def get_certificate_profile(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_certificate_profile(id="1234-56-789")
+    # Look up a single certificate profile object by its ID.
+    # The ID used here is from the API response log you provided.
+    scm_certificate_profile_ds = scm.get_certificate_profile(id="8e64859b-eba9-4e25-9005-754c90c2b02d")
+    pulumi.export("exampleCpDsResult", scm_certificate_profile_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the certificate profile
+    :param _builtins.str name: The name of the certificate profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getCertificateProfile:getCertificateProfile', __args__, opts=opts, typ=GetCertificateProfileResult).value
 
@@ -245,18 +287,22 @@ def get_certificate_profile(id: Optional[_builtins.str] = None,
         ca_certificates=pulumi.get(__ret__, 'ca_certificates'),
         cert_status_timeout=pulumi.get(__ret__, 'cert_status_timeout'),
         crl_receive_timeout=pulumi.get(__ret__, 'crl_receive_timeout'),
+        device=pulumi.get(__ret__, 'device'),
         domain=pulumi.get(__ret__, 'domain'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         ocsp_receive_timeout=pulumi.get(__ret__, 'ocsp_receive_timeout'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         use_crl=pulumi.get(__ret__, 'use_crl'),
         use_ocsp=pulumi.get(__ret__, 'use_ocsp'),
         username_field=pulumi.get(__ret__, 'username_field'))
 def get_certificate_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                   name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                    opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetCertificateProfileResult]:
     """
-    Retrieves a config item.
+    CertificateProfile data source
 
     ## Example Usage
 
@@ -264,14 +310,19 @@ def get_certificate_profile_output(id: Optional[pulumi.Input[_builtins.str]] = N
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_certificate_profile(id="1234-56-789")
+    # Look up a single certificate profile object by its ID.
+    # The ID used here is from the API response log you provided.
+    scm_certificate_profile_ds = scm.get_certificate_profile(id="8e64859b-eba9-4e25-9005-754c90c2b02d")
+    pulumi.export("exampleCpDsResult", scm_certificate_profile_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the certificate profile
+    :param _builtins.str name: The name of the certificate profile
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getCertificateProfile:getCertificateProfile', __args__, opts=opts, typ=GetCertificateProfileResult)
     return __ret__.apply(lambda __response__: GetCertificateProfileResult(
@@ -282,10 +333,13 @@ def get_certificate_profile_output(id: Optional[pulumi.Input[_builtins.str]] = N
         ca_certificates=pulumi.get(__response__, 'ca_certificates'),
         cert_status_timeout=pulumi.get(__response__, 'cert_status_timeout'),
         crl_receive_timeout=pulumi.get(__response__, 'crl_receive_timeout'),
+        device=pulumi.get(__response__, 'device'),
         domain=pulumi.get(__response__, 'domain'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         ocsp_receive_timeout=pulumi.get(__response__, 'ocsp_receive_timeout'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         use_crl=pulumi.get(__response__, 'use_crl'),
         use_ocsp=pulumi.get(__response__, 'use_ocsp'),

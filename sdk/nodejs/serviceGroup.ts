@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * ServiceGroup resource
  *
  * ## Example Usage
  *
@@ -13,7 +13,50 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.ServiceGroup("example", {});
+ * // TCP Service with multiple destination ports custom timeout
+ * const scmServiceTcpPorts = new scm.Service("scm_service_tcp_ports", {
+ *     folder: "Shared",
+ *     name: "scm_service_tcp_ports",
+ *     description: "Managed by Pulumi",
+ *     protocol: {
+ *         tcp: {
+ *             port: "80,443",
+ *             override: {
+ *                 timeout: 3600,
+ *             },
+ *         },
+ *     },
+ * });
+ * // UDP Service with single destination port
+ * const scmServiceUdpPort = new scm.Service("scm_service_udp_port", {
+ *     folder: "Shared",
+ *     name: "scm_service_udp_port",
+ *     description: "Managed by Pulumi",
+ *     protocol: {
+ *         udp: {
+ *             port: "53",
+ *         },
+ *     },
+ * });
+ * // Service Group containing multiple services
+ * const scmServicegroup = new scm.ServiceGroup("scm_servicegroup", {
+ *     folder: "Shared",
+ *     name: "scm_servicegroup",
+ *     members: [
+ *         scmServiceTcpPorts.name,
+ *         scmServiceUdpPort.name,
+ *     ],
+ * });
+ * // Service Group containing multiple services and another servicegroup
+ * const scmServicegroupNested = new scm.ServiceGroup("scm_servicegroup_nested", {
+ *     folder: "Shared",
+ *     name: "scm_servicegroup_nested",
+ *     members: [
+ *         scmServiceTcpPorts.name,
+ *         scmServiceUdpPort.name,
+ *         scmServicegroup.name,
+ *     ],
+ * });
  * ```
  */
 export class ServiceGroup extends pulumi.CustomResource {
@@ -45,27 +88,27 @@ export class ServiceGroup extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     declare public readonly members: pulumi.Output<string[]>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service group
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the service group
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -113,27 +156,27 @@ export class ServiceGroup extends pulumi.CustomResource {
  */
 export interface ServiceGroupState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     members?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service group
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the service group
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -144,27 +187,27 @@ export interface ServiceGroupState {
  */
 export interface ServiceGroupArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      */
     members: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service group
      */
     name?: pulumi.Input<string>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags associated with the service group
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
 }

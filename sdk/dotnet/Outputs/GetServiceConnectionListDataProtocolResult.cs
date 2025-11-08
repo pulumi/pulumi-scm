@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetServiceConnectionListDataProtocolResult
     {
         /// <summary>
-        /// The Bgp param.
+        /// Bgp
         /// </summary>
         public readonly Outputs.GetServiceConnectionListDataProtocolBgpResult Bgp;
 

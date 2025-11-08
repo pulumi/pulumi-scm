@@ -14,19 +14,19 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetTacacsServerProfileServerResult
     {
         /// <summary>
-        /// The Address param.
+        /// The IP address of the TACACS+ server
         /// </summary>
         public readonly string Address;
         /// <summary>
-        /// The Name param.
+        /// The name of the TACACS+ server
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The TACACS+ server port
         /// </summary>
         public readonly int Port;
         /// <summary>
-        /// The Secret param. String length must not exceed 64 characters.
+        /// The TACACS+ secret
         /// </summary>
         public readonly string Secret;
 

@@ -14,30 +14,6 @@ import (
 // Retrieves a listing of config items.
 //
 // ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetDynamicUserGroupList(ctx, &scm.GetDynamicUserGroupListArgs{
-//				Folder: pulumi.StringRef("Shared"),
-//			}, nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
 func GetDynamicUserGroupList(ctx *pulumi.Context, args *GetDynamicUserGroupListArgs, opts ...pulumi.InvokeOption) (*GetDynamicUserGroupListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetDynamicUserGroupListResult
@@ -50,40 +26,40 @@ func GetDynamicUserGroupList(ctx *pulumi.Context, args *GetDynamicUserGroupListA
 
 // A collection of arguments for invoking getDynamicUserGroupList.
 type GetDynamicUserGroupListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getDynamicUserGroupList.
 type GetDynamicUserGroupListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetDynamicUserGroupListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +74,17 @@ func GetDynamicUserGroupListOutput(ctx *pulumi.Context, args GetDynamicUserGroup
 
 // A collection of arguments for invoking getDynamicUserGroupList.
 type GetDynamicUserGroupListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +107,17 @@ func (o GetDynamicUserGroupListResultOutput) ToGetDynamicUserGroupListResultOutp
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetDynamicUserGroupListResultOutput) Datas() GetDynamicUserGroupListDataArrayOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) []GetDynamicUserGroupListData { return v.Datas }).(GetDynamicUserGroupListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetDynamicUserGroupListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetDynamicUserGroupListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +127,22 @@ func (o GetDynamicUserGroupListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetDynamicUserGroupListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetDynamicUserGroupListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetDynamicUserGroupListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetDynamicUserGroupListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetDynamicUserGroupListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetDynamicUserGroupListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetDynamicUserGroupListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetDynamicUserGroupListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetDynamicUserGroupListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetDynamicUserGroupListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +151,7 @@ func (o GetDynamicUserGroupListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetDynamicUserGroupListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetDynamicUserGroupListResult) int { return v.Total }).(pulumi.IntOutput)
 }

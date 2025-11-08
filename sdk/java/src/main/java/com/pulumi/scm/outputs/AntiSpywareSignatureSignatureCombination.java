@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareSignatureSignatureCombination {
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     private @Nullable List<AntiSpywareSignatureSignatureCombinationAndCondition> andConditions;
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     private @Nullable Boolean orderFree;
     /**
-     * @return The TimeAttribute param.
+     * @return anti spyware time attribute
      * 
      */
     private @Nullable AntiSpywareSignatureSignatureCombinationTimeAttribute timeAttribute;
 
     private AntiSpywareSignatureSignatureCombination() {}
     /**
-     * @return The AndConditions param.
+     * @return And condition
      * 
      */
     public List<AntiSpywareSignatureSignatureCombinationAndCondition> andConditions() {
         return this.andConditions == null ? List.of() : this.andConditions;
     }
     /**
-     * @return The OrderFree param. Default: `false`.
+     * @return Order free
      * 
      */
     public Optional<Boolean> orderFree() {
         return Optional.ofNullable(this.orderFree);
     }
     /**
-     * @return The TimeAttribute param.
+     * @return anti spyware time attribute
      * 
      */
     public Optional<AntiSpywareSignatureSignatureCombinationTimeAttribute> timeAttribute() {

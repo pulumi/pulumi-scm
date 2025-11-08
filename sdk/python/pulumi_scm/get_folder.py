@@ -53,7 +53,7 @@ class GetFolderResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param.
+        The description of the folder
         """
         return pulumi.get(self, "description")
 
@@ -61,7 +61,7 @@ class GetFolderResult:
     @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the folder
         """
         return pulumi.get(self, "id")
 
@@ -69,7 +69,7 @@ class GetFolderResult:
     @pulumi.getter
     def labels(self) -> Sequence[_builtins.str]:
         """
-        The Labels param.
+        Labels assigned to the folder
         """
         return pulumi.get(self, "labels")
 
@@ -77,7 +77,7 @@ class GetFolderResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        The name of the folder
         """
         return pulumi.get(self, "name")
 
@@ -85,7 +85,7 @@ class GetFolderResult:
     @pulumi.getter
     def parent(self) -> _builtins.str:
         """
-        The Parent param.
+        The parent folder
         """
         return pulumi.get(self, "parent")
 
@@ -93,7 +93,7 @@ class GetFolderResult:
     @pulumi.getter
     def snippets(self) -> Sequence[_builtins.str]:
         """
-        The Snippets param.
+        Snippets associated with the folder
         """
         return pulumi.get(self, "snippets")
 
@@ -119,24 +119,18 @@ class AwaitableGetFolderResult(GetFolderResult):
 
 
 def get_folder(id: Optional[_builtins.str] = None,
+               name: Optional[_builtins.str] = None,
                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetFolderResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_folder(id="1234-56-789")
-    ```
+    Folder data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the folder
+    :param _builtins.str name: The name of the folder
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getFolder:getFolder', __args__, opts=opts, typ=GetFolderResult).value
 
@@ -149,24 +143,18 @@ def get_folder(id: Optional[_builtins.str] = None,
         snippets=pulumi.get(__ret__, 'snippets'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_folder_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                      name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFolderResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_folder(id="1234-56-789")
-    ```
+    Folder data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the folder
+    :param _builtins.str name: The name of the folder
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getFolder:getFolder', __args__, opts=opts, typ=GetFolderResult)
     return __ret__.apply(lambda __response__: GetFolderResult(

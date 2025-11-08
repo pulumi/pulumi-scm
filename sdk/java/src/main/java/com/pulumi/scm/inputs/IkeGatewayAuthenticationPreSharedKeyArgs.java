@@ -16,14 +16,14 @@ public final class IkeGatewayAuthenticationPreSharedKeyArgs extends com.pulumi.r
     public static final IkeGatewayAuthenticationPreSharedKeyArgs Empty = new IkeGatewayAuthenticationPreSharedKeyArgs();
 
     /**
-     * The Key param.
+     * Key
      * 
      */
     @Import(name="key")
     private @Nullable Output<String> key;
 
     /**
-     * @return The Key param.
+     * @return Key
      * 
      */
     public Optional<Output<String>> key() {
@@ -55,7 +55,7 @@ public final class IkeGatewayAuthenticationPreSharedKeyArgs extends com.pulumi.r
         }
 
         /**
-         * @param key The Key param.
+         * @param key Key
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class IkeGatewayAuthenticationPreSharedKeyArgs extends com.pulumi.r
         }
 
         /**
-         * @param key The Key param.
+         * @param key Key
          * 
          * @return builder
          * 

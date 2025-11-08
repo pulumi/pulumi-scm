@@ -11,14 +11,14 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeIpRecurringDaily {
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
     private String at;
 
     private GetExternalDynamicListTypeIpRecurringDaily() {}
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
     public String at() {

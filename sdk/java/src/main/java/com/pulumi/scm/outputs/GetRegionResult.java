@@ -13,55 +13,91 @@ import java.util.Objects;
 @CustomType
 public final class GetRegionResult {
     /**
-     * @return The Addresses param.
+     * @return Address
      * 
      */
     private List<String> addresses;
     /**
-     * @return The GeoLocation param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return Geo location
      * 
      */
     private GetRegionGeoLocation geoLocation;
     /**
-     * @return The Id param.
+     * @return The UUID of the region
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the region
      * 
      */
     private String name;
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
     private String tfid;
 
     private GetRegionResult() {}
     /**
-     * @return The Addresses param.
+     * @return Address
      * 
      */
     public List<String> addresses() {
         return this.addresses;
     }
     /**
-     * @return The GeoLocation param.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return Geo location
      * 
      */
     public GetRegionGeoLocation geoLocation() {
         return this.geoLocation;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the region
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the region
      * 
      */
     public String name() {
         return this.name;
+    }
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
     }
     public String tfid() {
         return this.tfid;
@@ -77,17 +113,23 @@ public final class GetRegionResult {
     @CustomType.Builder
     public static final class Builder {
         private List<String> addresses;
+        private String device;
+        private String folder;
         private GetRegionGeoLocation geoLocation;
         private String id;
         private String name;
+        private String snippet;
         private String tfid;
         public Builder() {}
         public Builder(GetRegionResult defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.addresses = defaults.addresses;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.geoLocation = defaults.geoLocation;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
+    	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
         }
 
@@ -101,6 +143,22 @@ public final class GetRegionResult {
         }
         public Builder addresses(String... addresses) {
             return addresses(List.of(addresses));
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetRegionResult", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetRegionResult", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder geoLocation(GetRegionGeoLocation geoLocation) {
@@ -127,6 +185,14 @@ public final class GetRegionResult {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetRegionResult", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
         public Builder tfid(String tfid) {
             if (tfid == null) {
               throw new MissingRequiredPropertyException("GetRegionResult", "tfid");
@@ -137,9 +203,12 @@ public final class GetRegionResult {
         public GetRegionResult build() {
             final var _resultValue = new GetRegionResult();
             _resultValue.addresses = addresses;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.geoLocation = geoLocation;
             _resultValue.id = id;
             _resultValue.name = name;
+            _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
             return _resultValue;
         }

@@ -27,10 +27,16 @@ class GetServiceResult:
     """
     A collection of values returned by getService.
     """
-    def __init__(__self__, description=None, id=None, name=None, protocol=None, tags=None, tfid=None):
+    def __init__(__self__, description=None, device=None, folder=None, id=None, name=None, protocol=None, snippet=None, tags=None, tfid=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -40,6 +46,9 @@ class GetServiceResult:
         if protocol and not isinstance(protocol, dict):
             raise TypeError("Expected argument 'protocol' to be a dict")
         pulumi.set(__self__, "protocol", protocol)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tags and not isinstance(tags, list):
             raise TypeError("Expected argument 'tags' to be a list")
         pulumi.set(__self__, "tags", tags)
@@ -51,15 +60,31 @@ class GetServiceResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param. String length must not exceed 1023 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the service
         """
         return pulumi.get(self, "id")
 
@@ -67,7 +92,7 @@ class GetServiceResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the service
         """
         return pulumi.get(self, "name")
 
@@ -75,15 +100,23 @@ class GetServiceResult:
     @pulumi.getter
     def protocol(self) -> 'outputs.GetServiceProtocolResult':
         """
-        The Protocol param.
+        Protocol
         """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
         """
-        Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags for service object
         """
         return pulumi.get(self, "tags")
 
@@ -100,17 +133,21 @@ class AwaitableGetServiceResult(GetServiceResult):
             yield self
         return GetServiceResult(
             description=self.description,
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             name=self.name,
             protocol=self.protocol,
+            snippet=self.snippet,
             tags=self.tags,
             tfid=self.tfid)
 
 
 def get_service(id: Optional[_builtins.str] = None,
+                name: Optional[_builtins.str] = None,
                 opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetServiceResult:
     """
-    Retrieves a config item.
+    Service data source
 
     ## Example Usage
 
@@ -118,28 +155,39 @@ def get_service(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_service(id="1234-56-789")
+    # Data source to look up a single service by its ID.
+    scm_service_tcp_ds = scm.get_service(id="ff135641-6735-4d7d-85c6-3401bba9dee8")
+    pulumi.export("serviceDetailsTcp", scm_service_tcp_ds)
+    # Data source to look up a single service by its ID.
+    scm_service_udp_ds = scm.get_service(id="e087b703-aede-437e-853e-b11576f6dcbe")
+    pulumi.export("serviceDetailsUdp", scm_service_udp_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service
+    :param _builtins.str name: The name of the service
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getService:getService', __args__, opts=opts, typ=GetServiceResult).value
 
     return AwaitableGetServiceResult(
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
         protocol=pulumi.get(__ret__, 'protocol'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_service_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                       name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetServiceResult]:
     """
-    Retrieves a config item.
+    Service data source
 
     ## Example Usage
 
@@ -147,20 +195,30 @@ def get_service_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_service(id="1234-56-789")
+    # Data source to look up a single service by its ID.
+    scm_service_tcp_ds = scm.get_service(id="ff135641-6735-4d7d-85c6-3401bba9dee8")
+    pulumi.export("serviceDetailsTcp", scm_service_tcp_ds)
+    # Data source to look up a single service by its ID.
+    scm_service_udp_ds = scm.get_service(id="e087b703-aede-437e-853e-b11576f6dcbe")
+    pulumi.export("serviceDetailsUdp", scm_service_udp_ds)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the service
+    :param _builtins.str name: The name of the service
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getService:getService', __args__, opts=opts, typ=GetServiceResult)
     return __ret__.apply(lambda __response__: GetServiceResult(
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
         protocol=pulumi.get(__response__, 'protocol'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tags=pulumi.get(__response__, 'tags'),
         tfid=pulumi.get(__response__, 'tfid')))

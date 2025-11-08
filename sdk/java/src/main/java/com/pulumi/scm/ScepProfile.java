@@ -21,250 +21,220 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.ScepProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new ScepProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * ScepProfile resource
  * 
  */
 @ResourceType(type="scm:index/scepProfile:ScepProfile")
 public class ScepProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Algorithm param.
+     * Algorithm
      * 
      */
     @Export(name="algorithm", refs={ScepProfileAlgorithm.class}, tree="[0]")
-    private Output</* @Nullable */ ScepProfileAlgorithm> algorithm;
+    private Output<ScepProfileAlgorithm> algorithm;
 
     /**
-     * @return The Algorithm param.
+     * @return Algorithm
      * 
      */
-    public Output<Optional<ScepProfileAlgorithm>> algorithm() {
-        return Codegen.optional(this.algorithm);
+    public Output<ScepProfileAlgorithm> algorithm() {
+        return this.algorithm;
     }
     /**
-     * The CaIdentityName param.
+     * Certificate Authority identity
      * 
      */
     @Export(name="caIdentityName", refs={String.class}, tree="[0]")
     private Output<String> caIdentityName;
 
     /**
-     * @return The CaIdentityName param.
+     * @return Certificate Authority identity
      * 
      */
     public Output<String> caIdentityName() {
         return this.caIdentityName;
     }
     /**
-     * The CertificateAttributes param.
+     * Subject Alternative name type
      * 
      */
     @Export(name="certificateAttributes", refs={ScepProfileCertificateAttributes.class}, tree="[0]")
     private Output</* @Nullable */ ScepProfileCertificateAttributes> certificateAttributes;
 
     /**
-     * @return The CertificateAttributes param.
+     * @return Subject Alternative name type
      * 
      */
     public Output<Optional<ScepProfileCertificateAttributes>> certificateAttributes() {
         return Codegen.optional(this.certificateAttributes);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Digest param.
+     * Digest for CSR
      * 
      */
     @Export(name="digest", refs={String.class}, tree="[0]")
     private Output<String> digest;
 
     /**
-     * @return The Digest param.
+     * @return Digest for CSR
      * 
      */
     public Output<String> digest() {
         return this.digest;
     }
     /**
-     * (Internal use) Encrypted values returned from the API.
+     * Map of sensitive values returned from the API.
      * 
      */
     @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
     private Output<Map<String,String>> encryptedValues;
 
     /**
-     * @return (Internal use) Encrypted values returned from the API.
+     * @return Map of sensitive values returned from the API.
      * 
      */
     public Output<Map<String,String>> encryptedValues() {
         return this.encryptedValues;
     }
     /**
-     * The Fingerprint param.
+     * CA certificate fingerprint
      * 
      */
     @Export(name="fingerprint", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> fingerprint;
 
     /**
-     * @return The Fingerprint param.
+     * @return CA certificate fingerprint
      * 
      */
     public Output<Optional<String>> fingerprint() {
         return Codegen.optional(this.fingerprint);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the SCEP profile
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return The name of the SCEP profile
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The ScepCaCert param.
+     * SCEP server CA certificate
      * 
      */
     @Export(name="scepCaCert", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> scepCaCert;
 
     /**
-     * @return The ScepCaCert param.
+     * @return SCEP server CA certificate
      * 
      */
     public Output<Optional<String>> scepCaCert() {
         return Codegen.optional(this.scepCaCert);
     }
     /**
-     * The ScepChallenge param.
+     * One Time Password challenge
      * 
      */
     @Export(name="scepChallenge", refs={ScepProfileScepChallenge.class}, tree="[0]")
-    private Output</* @Nullable */ ScepProfileScepChallenge> scepChallenge;
+    private Output<ScepProfileScepChallenge> scepChallenge;
 
     /**
-     * @return The ScepChallenge param.
+     * @return One Time Password challenge
      * 
      */
-    public Output<Optional<ScepProfileScepChallenge>> scepChallenge() {
-        return Codegen.optional(this.scepChallenge);
+    public Output<ScepProfileScepChallenge> scepChallenge() {
+        return this.scepChallenge;
     }
     /**
-     * The ScepClientCert param.
+     * SCEP client ceertificate
      * 
      */
     @Export(name="scepClientCert", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> scepClientCert;
 
     /**
-     * @return The ScepClientCert param.
+     * @return SCEP client ceertificate
      * 
      */
     public Output<Optional<String>> scepClientCert() {
         return Codegen.optional(this.scepClientCert);
     }
     /**
-     * The ScepUrl param.
+     * SCEP server URL
      * 
      */
     @Export(name="scepUrl", refs={String.class}, tree="[0]")
     private Output<String> scepUrl;
 
     /**
-     * @return The ScepUrl param.
+     * @return SCEP server URL
      * 
      */
     public Output<String> scepUrl() {
         return this.scepUrl;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The Subject param.
+     * Subject
      * 
      */
     @Export(name="subject", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> subject;
+    private Output<String> subject;
 
     /**
-     * @return The Subject param.
+     * @return Subject
      * 
      */
-    public Output<Optional<String>> subject() {
-        return Codegen.optional(this.subject);
+    public Output<String> subject() {
+        return this.subject;
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
@@ -273,28 +243,28 @@ public class ScepProfile extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The UseAsDigitalSignature param.
+     * Use as digital signature?
      * 
      */
     @Export(name="useAsDigitalSignature", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useAsDigitalSignature;
 
     /**
-     * @return The UseAsDigitalSignature param.
+     * @return Use as digital signature?
      * 
      */
     public Output<Optional<Boolean>> useAsDigitalSignature() {
         return Codegen.optional(this.useAsDigitalSignature);
     }
     /**
-     * The UseForKeyEncipherment param.
+     * Use for key encipherment?
      * 
      */
     @Export(name="useForKeyEncipherment", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useForKeyEncipherment;
 
     /**
-     * @return The UseForKeyEncipherment param.
+     * @return Use for key encipherment?
      * 
      */
     public Output<Optional<Boolean>> useForKeyEncipherment() {

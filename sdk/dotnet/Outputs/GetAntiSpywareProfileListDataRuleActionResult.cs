@@ -14,49 +14,49 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareProfileListDataRuleActionResult
     {
         /// <summary>
-        /// The Alert param.
+        /// Alert
         /// </summary>
-        public readonly bool Alert;
+        public readonly Outputs.GetAntiSpywareProfileListDataRuleActionAlertResult Alert;
         /// <summary>
-        /// The Allow param.
+        /// Allow
         /// </summary>
-        public readonly bool Allow;
+        public readonly Outputs.GetAntiSpywareProfileListDataRuleActionAllowResult Allow;
         /// <summary>
-        /// The BlockIp param.
+        /// anti spyware profiles rules action block ip
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionBlockIpResult BlockIp;
         /// <summary>
-        /// The Drop param.
+        /// Drop
         /// </summary>
-        public readonly bool Drop;
+        public readonly Outputs.GetAntiSpywareProfileListDataRuleActionDropResult Drop;
         /// <summary>
-        /// The ResetBoth param.
+        /// Reset both
         /// </summary>
-        public readonly bool ResetBoth;
+        public readonly Outputs.GetAntiSpywareProfileListDataRuleActionResetBothResult ResetBoth;
         /// <summary>
-        /// The ResetClient param.
+        /// Reset client
         /// </summary>
-        public readonly bool ResetClient;
+        public readonly Outputs.GetAntiSpywareProfileListDataRuleActionResetClientResult ResetClient;
         /// <summary>
-        /// The ResetServer param.
+        /// Reset server
         /// </summary>
-        public readonly bool ResetServer;
+        public readonly Outputs.GetAntiSpywareProfileListDataRuleActionResetServerResult ResetServer;
 
         [OutputConstructor]
         private GetAntiSpywareProfileListDataRuleActionResult(
-            bool alert,
+            Outputs.GetAntiSpywareProfileListDataRuleActionAlertResult alert,
 
-            bool allow,
+            Outputs.GetAntiSpywareProfileListDataRuleActionAllowResult allow,
 
             Outputs.GetAntiSpywareProfileListDataRuleActionBlockIpResult blockIp,
 
-            bool drop,
+            Outputs.GetAntiSpywareProfileListDataRuleActionDropResult drop,
 
-            bool resetBoth,
+            Outputs.GetAntiSpywareProfileListDataRuleActionResetBothResult resetBoth,
 
-            bool resetClient,
+            Outputs.GetAntiSpywareProfileListDataRuleActionResetClientResult resetClient,
 
-            bool resetServer)
+            Outputs.GetAntiSpywareProfileListDataRuleActionResetServerResult resetServer)
         {
             Alert = alert;
             Allow = allow;

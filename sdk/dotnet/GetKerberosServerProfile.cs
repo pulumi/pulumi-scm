@@ -12,73 +12,19 @@ namespace Pulumi.Scm
     public static class GetKerberosServerProfile
     {
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetKerberosServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// KerberosServerProfile data source
         /// </summary>
         public static Task<GetKerberosServerProfileResult> InvokeAsync(GetKerberosServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetKerberosServerProfileResult>("scm:index/getKerberosServerProfile:getKerberosServerProfile", args ?? new GetKerberosServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetKerberosServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// KerberosServerProfile data source
         /// </summary>
         public static Output<GetKerberosServerProfileResult> Invoke(GetKerberosServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetKerberosServerProfileResult>("scm:index/getKerberosServerProfile:getKerberosServerProfile", args ?? new GetKerberosServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
-        /// 
-        /// ## Example Usage
-        /// 
-        /// ```csharp
-        /// using System.Collections.Generic;
-        /// using System.Linq;
-        /// using Pulumi;
-        /// using Scm = Pulumi.Scm;
-        /// 
-        /// return await Deployment.RunAsync(() =&gt; 
-        /// {
-        ///     var example = Scm.GetKerberosServerProfile.Invoke(new()
-        ///     {
-        ///         Id = "1234-56-789",
-        ///     });
-        /// 
-        /// });
-        /// ```
+        /// KerberosServerProfile data source
         /// </summary>
         public static Output<GetKerberosServerProfileResult> Invoke(GetKerberosServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetKerberosServerProfileResult>("scm:index/getKerberosServerProfile:getKerberosServerProfile", args ?? new GetKerberosServerProfileInvokeArgs(), options.WithDefaults());
@@ -88,10 +34,16 @@ namespace Pulumi.Scm
     public sealed class GetKerberosServerProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the Kerberos server profile
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the Kerberos server profile
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetKerberosServerProfileArgs()
         {
@@ -102,10 +54,16 @@ namespace Pulumi.Scm
     public sealed class GetKerberosServerProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the Kerberos server profile
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the Kerberos server profile
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetKerberosServerProfileInvokeArgs()
         {
@@ -118,25 +76,53 @@ namespace Pulumi.Scm
     public sealed class GetKerberosServerProfileResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the Kerberos server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Servers param.
+        /// The name of the Kerberos server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The Kerberos server configuration
         /// </summary>
         public readonly ImmutableArray<Outputs.GetKerberosServerProfileServerResult> Servers;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetKerberosServerProfileResult(
+            string device,
+
+            string folder,
+
             string id,
+
+            string name,
 
             ImmutableArray<Outputs.GetKerberosServerProfileServerResult> servers,
 
+            string snippet,
+
             string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
+            Name = name;
             Servers = servers;
+            Snippet = snippet;
             Tfid = tfid;
         }
     }

@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class HipObjectDiskBackupCriteriaLastBackupTimeGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The NotAvailable param. Ensure that only one of the following is specified: `NotAvailable`, `NotWithin`, `Within`
+        /// Not available
         /// </summary>
         [Input("notAvailable")]
-        public Input<bool>? NotAvailable { get; set; }
+        public Input<Inputs.HipObjectDiskBackupCriteriaLastBackupTimeNotAvailableGetArgs>? NotAvailable { get; set; }
 
         /// <summary>
-        /// The NotWithin param. Ensure that only one of the following is specified: `NotAvailable`, `NotWithin`, `Within`
+        /// Not within
         /// </summary>
         [Input("notWithin")]
         public Input<Inputs.HipObjectDiskBackupCriteriaLastBackupTimeNotWithinGetArgs>? NotWithin { get; set; }
 
         /// <summary>
-        /// The Within param. Ensure that only one of the following is specified: `NotAvailable`, `NotWithin`, `Within`
+        /// Within
         /// </summary>
         [Input("within")]
         public Input<Inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithinGetArgs>? Within { get; set; }

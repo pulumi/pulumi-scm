@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetIkeGateway
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// IkeGateway data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIkeGateway.Invoke(new()
+        ///     // Data source to retrieve a single IKE Gateway by its ID.
+        ///     // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
+        ///     var exampleSingularIkeGatewayDs = Scm.GetIkeGateway.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ikeGatewaySingularExample"] = exampleSingularIkeGatewayDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +42,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetIkeGatewayResult>("scm:index/getIkeGateway:getIkeGateway", args ?? new GetIkeGatewayArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// IkeGateway data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +54,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIkeGateway.Invoke(new()
+        ///     // Data source to retrieve a single IKE Gateway by its ID.
+        ///     // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
+        ///     var exampleSingularIkeGatewayDs = Scm.GetIkeGateway.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ikeGatewaySingularExample"] = exampleSingularIkeGatewayDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +72,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetIkeGatewayResult>("scm:index/getIkeGateway:getIkeGateway", args ?? new GetIkeGatewayInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// IkeGateway data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +84,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetIkeGateway.Invoke(new()
+        ///     // Data source to retrieve a single IKE Gateway by its ID.
+        ///     // Replace the placeholder ID with the actual UUID of the gateway you want to fetch.
+        ///     var exampleSingularIkeGatewayDs = Scm.GetIkeGateway.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "1ba42513-2985-4783-8bdf-c83cf20d6dd1",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["ikeGatewaySingularExample"] = exampleSingularIkeGatewayDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,28 +106,16 @@ namespace Pulumi.Scm
     public sealed class GetIkeGatewayArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
-        /// </summary>
-        [Input("device")]
-        public string? Device { get; set; }
-
-        /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
-        [Input("snippet")]
-        public string? Snippet { get; set; }
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetIkeGatewayArgs()
         {
@@ -120,28 +126,16 @@ namespace Pulumi.Scm
     public sealed class GetIkeGatewayInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
-        /// </summary>
-        [Input("device")]
-        public Input<string>? Device { get; set; }
-
-        /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
-        [Input("snippet")]
-        public Input<string>? Snippet { get; set; }
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetIkeGatewayInvokeArgs()
         {
@@ -154,60 +148,72 @@ namespace Pulumi.Scm
     public sealed class GetIkeGatewayResult
     {
         /// <summary>
-        /// The Authentication param.
+        /// Authentication
         /// </summary>
         public readonly Outputs.GetIkeGatewayAuthenticationResult Authentication;
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
-        public readonly string? Device;
+        public readonly string Device;
         /// <summary>
-        /// The Folder param.
+        /// Map of sensitive values returned from the API.
         /// </summary>
-        public readonly string? Folder;
+        public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
-        /// The Id param.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LocalId param.
+        /// Local address
+        /// </summary>
+        public readonly Outputs.GetIkeGatewayLocalAddressResult LocalAddress;
+        /// <summary>
+        /// Local id
         /// </summary>
         public readonly Outputs.GetIkeGatewayLocalIdResult LocalId;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The PeerAddress param.
+        /// Peer address
         /// </summary>
         public readonly Outputs.GetIkeGatewayPeerAddressResult PeerAddress;
         /// <summary>
-        /// The PeerId param.
+        /// Peer id
         /// </summary>
         public readonly Outputs.GetIkeGatewayPeerIdResult PeerId;
         /// <summary>
-        /// The Protocol param.
+        /// Protocol
         /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolResult Protocol;
         /// <summary>
-        /// The ProtocolCommon param.
+        /// Protocol common
         /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolCommonResult ProtocolCommon;
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
-        public readonly string? Snippet;
+        public readonly string Snippet;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetIkeGatewayResult(
             Outputs.GetIkeGatewayAuthenticationResult authentication,
 
-            string? device,
+            string device,
 
-            string? folder,
+            ImmutableDictionary<string, string> encryptedValues,
+
+            string folder,
 
             string id,
+
+            Outputs.GetIkeGatewayLocalAddressResult localAddress,
 
             Outputs.GetIkeGatewayLocalIdResult localId,
 
@@ -221,14 +227,16 @@ namespace Pulumi.Scm
 
             Outputs.GetIkeGatewayProtocolCommonResult protocolCommon,
 
-            string? snippet,
+            string snippet,
 
             string tfid)
         {
             Authentication = authentication;
             Device = device;
+            EncryptedValues = encryptedValues;
             Folder = folder;
             Id = id;
+            LocalAddress = localAddress;
             LocalId = localId;
             Name = name;
             PeerAddress = peerAddress;

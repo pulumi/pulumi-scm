@@ -11,45 +11,21 @@ import (
 	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 )
 
-// Retrieves a config item.
-//
-// ## Example Usage
-//
-// ```go
-// package main
-//
-// import (
-//
-//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//
-// )
-//
-//	func main() {
-//		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.NewFileBlockingProfile(ctx, "example", nil)
-//			if err != nil {
-//				return err
-//			}
-//			return nil
-//		})
-//	}
-//
-// ```
+// FileBlockingProfile resource
 type FileBlockingProfile struct {
 	pulumi.CustomResourceState
 
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// The Name param.
+	// The name of the file blocking profile
 	Name pulumi.StringOutput `pulumi:"name"`
-	// The Rules param.
+	// A list of file blocking rules
 	Rules FileBlockingProfileRuleArrayOutput `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -84,33 +60,33 @@ func GetFileBlockingProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering FileBlockingProfile resources.
 type fileBlockingProfileState struct {
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// The name of the file blocking profile
 	Name *string `pulumi:"name"`
-	// The Rules param.
+	// A list of file blocking rules
 	Rules []FileBlockingProfileRule `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
 
 type FileBlockingProfileState struct {
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param.
+	// The name of the file blocking profile
 	Name pulumi.StringPtrInput
-	// The Rules param.
+	// A list of file blocking rules
 	Rules FileBlockingProfileRuleArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -120,33 +96,33 @@ func (FileBlockingProfileState) ElementType() reflect.Type {
 }
 
 type fileBlockingProfileArgs struct {
-	// The Description param.
+	// Description
 	Description *string `pulumi:"description"`
-	// The Device param.
+	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder *string `pulumi:"folder"`
-	// The Name param.
+	// The name of the file blocking profile
 	Name *string `pulumi:"name"`
-	// The Rules param.
+	// A list of file blocking rules
 	Rules []FileBlockingProfileRule `pulumi:"rules"`
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet *string `pulumi:"snippet"`
 }
 
 // The set of arguments for constructing a FileBlockingProfile resource.
 type FileBlockingProfileArgs struct {
-	// The Description param.
+	// Description
 	Description pulumi.StringPtrInput
-	// The Device param.
+	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
-	// The Folder param.
+	// The folder in which the resource is defined
 	Folder pulumi.StringPtrInput
-	// The Name param.
+	// The name of the file blocking profile
 	Name pulumi.StringPtrInput
-	// The Rules param.
+	// A list of file blocking rules
 	Rules FileBlockingProfileRuleArrayInput
-	// The Snippet param.
+	// The snippet in which the resource is defined
 	Snippet pulumi.StringPtrInput
 }
 
@@ -237,32 +213,32 @@ func (o FileBlockingProfileOutput) ToFileBlockingProfileOutputWithContext(ctx co
 	return o
 }
 
-// The Description param.
+// Description
 func (o FileBlockingProfileOutput) Description() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) pulumi.StringPtrOutput { return v.Description }).(pulumi.StringPtrOutput)
 }
 
-// The Device param.
+// The device in which the resource is defined
 func (o FileBlockingProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder in which the resource is defined
 func (o FileBlockingProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// The Name param.
+// The name of the file blocking profile
 func (o FileBlockingProfileOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) pulumi.StringOutput { return v.Name }).(pulumi.StringOutput)
 }
 
-// The Rules param.
+// A list of file blocking rules
 func (o FileBlockingProfileOutput) Rules() FileBlockingProfileRuleArrayOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) FileBlockingProfileRuleArrayOutput { return v.Rules }).(FileBlockingProfileRuleArrayOutput)
 }
 
-// The Snippet param.
+// The snippet in which the resource is defined
 func (o FileBlockingProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

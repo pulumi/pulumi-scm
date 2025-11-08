@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceProtocolUdpOverride {
     /**
-     * @return udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+     * @return udp session timeout value (in second)
      * 
      */
     private @Nullable Integer timeout;
 
     private ServiceProtocolUdpOverride() {}
     /**
-     * @return udp session timeout value (in second). Value must be between 1 and 604800. Default: `30`.
+     * @return udp session timeout value (in second)
      * 
      */
     public Optional<Integer> timeout() {

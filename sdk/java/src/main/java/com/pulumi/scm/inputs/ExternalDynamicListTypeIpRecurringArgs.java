@@ -6,9 +6,10 @@ package com.pulumi.scm.inputs;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringDailyArgs;
+import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringFiveMinuteArgs;
+import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringHourlyArgs;
 import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringMonthlyArgs;
 import com.pulumi.scm.inputs.ExternalDynamicListTypeIpRecurringWeeklyArgs;
-import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,14 +20,14 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     public static final ExternalDynamicListTypeIpRecurringArgs Empty = new ExternalDynamicListTypeIpRecurringArgs();
 
     /**
-     * The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * Daily
      * 
      */
     @Import(name="daily")
     private @Nullable Output<ExternalDynamicListTypeIpRecurringDailyArgs> daily;
 
     /**
-     * @return The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Daily
      * 
      */
     public Optional<Output<ExternalDynamicListTypeIpRecurringDailyArgs>> daily() {
@@ -34,44 +35,44 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     }
 
     /**
-     * The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * Five minute
      * 
      */
     @Import(name="fiveMinute")
-    private @Nullable Output<Boolean> fiveMinute;
+    private @Nullable Output<ExternalDynamicListTypeIpRecurringFiveMinuteArgs> fiveMinute;
 
     /**
-     * @return The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Five minute
      * 
      */
-    public Optional<Output<Boolean>> fiveMinute() {
+    public Optional<Output<ExternalDynamicListTypeIpRecurringFiveMinuteArgs>> fiveMinute() {
         return Optional.ofNullable(this.fiveMinute);
     }
 
     /**
-     * The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * Hourly
      * 
      */
     @Import(name="hourly")
-    private @Nullable Output<Boolean> hourly;
+    private @Nullable Output<ExternalDynamicListTypeIpRecurringHourlyArgs> hourly;
 
     /**
-     * @return The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Hourly
      * 
      */
-    public Optional<Output<Boolean>> hourly() {
+    public Optional<Output<ExternalDynamicListTypeIpRecurringHourlyArgs>> hourly() {
         return Optional.ofNullable(this.hourly);
     }
 
     /**
-     * The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * Monthly
      * 
      */
     @Import(name="monthly")
     private @Nullable Output<ExternalDynamicListTypeIpRecurringMonthlyArgs> monthly;
 
     /**
-     * @return The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Monthly
      * 
      */
     public Optional<Output<ExternalDynamicListTypeIpRecurringMonthlyArgs>> monthly() {
@@ -79,14 +80,14 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
     }
 
     /**
-     * The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * Weekly
      * 
      */
     @Import(name="weekly")
     private @Nullable Output<ExternalDynamicListTypeIpRecurringWeeklyArgs> weekly;
 
     /**
-     * @return The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+     * @return Weekly
      * 
      */
     public Optional<Output<ExternalDynamicListTypeIpRecurringWeeklyArgs>> weekly() {
@@ -122,7 +123,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param daily The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param daily Daily
          * 
          * @return builder
          * 
@@ -133,7 +134,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param daily The Daily param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param daily Daily
          * 
          * @return builder
          * 
@@ -143,49 +144,49 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param fiveMinute The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param fiveMinute Five minute
          * 
          * @return builder
          * 
          */
-        public Builder fiveMinute(@Nullable Output<Boolean> fiveMinute) {
+        public Builder fiveMinute(@Nullable Output<ExternalDynamicListTypeIpRecurringFiveMinuteArgs> fiveMinute) {
             $.fiveMinute = fiveMinute;
             return this;
         }
 
         /**
-         * @param fiveMinute The FiveMinute param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param fiveMinute Five minute
          * 
          * @return builder
          * 
          */
-        public Builder fiveMinute(Boolean fiveMinute) {
+        public Builder fiveMinute(ExternalDynamicListTypeIpRecurringFiveMinuteArgs fiveMinute) {
             return fiveMinute(Output.of(fiveMinute));
         }
 
         /**
-         * @param hourly The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param hourly Hourly
          * 
          * @return builder
          * 
          */
-        public Builder hourly(@Nullable Output<Boolean> hourly) {
+        public Builder hourly(@Nullable Output<ExternalDynamicListTypeIpRecurringHourlyArgs> hourly) {
             $.hourly = hourly;
             return this;
         }
 
         /**
-         * @param hourly The Hourly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param hourly Hourly
          * 
          * @return builder
          * 
          */
-        public Builder hourly(Boolean hourly) {
+        public Builder hourly(ExternalDynamicListTypeIpRecurringHourlyArgs hourly) {
             return hourly(Output.of(hourly));
         }
 
         /**
-         * @param monthly The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param monthly Monthly
          * 
          * @return builder
          * 
@@ -196,7 +197,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param monthly The Monthly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param monthly Monthly
          * 
          * @return builder
          * 
@@ -206,7 +207,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param weekly The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param weekly Weekly
          * 
          * @return builder
          * 
@@ -217,7 +218,7 @@ public final class ExternalDynamicListTypeIpRecurringArgs extends com.pulumi.res
         }
 
         /**
-         * @param weekly The Weekly param. Ensure that only one of the following is specified: `daily`, `fiveMinute`, `hourly`, `monthly`, `weekly`
+         * @param weekly Weekly
          * 
          * @return builder
          * 

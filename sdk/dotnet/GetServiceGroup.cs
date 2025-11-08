@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetServiceGroup
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetServiceGroup.Invoke(new()
+        ///     // Look up a single service group object by its ID.
+        ///     // The ID used here is from the terraform.tfstate file.
+        ///     var scmServiceGroupDs = Scm.GetServiceGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "dc430d61-52ca-44bc-a797-e65123a94134",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["serviceGroupDsResult"] = scmServiceGroupDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +42,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetServiceGroupResult>("scm:index/getServiceGroup:getServiceGroup", args ?? new GetServiceGroupArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +54,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetServiceGroup.Invoke(new()
+        ///     // Look up a single service group object by its ID.
+        ///     // The ID used here is from the terraform.tfstate file.
+        ///     var scmServiceGroupDs = Scm.GetServiceGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "dc430d61-52ca-44bc-a797-e65123a94134",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["serviceGroupDsResult"] = scmServiceGroupDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +72,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetServiceGroupResult>("scm:index/getServiceGroup:getServiceGroup", args ?? new GetServiceGroupInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// ServiceGroup data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +84,17 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetServiceGroup.Invoke(new()
+        ///     // Look up a single service group object by its ID.
+        ///     // The ID used here is from the terraform.tfstate file.
+        ///     var scmServiceGroupDs = Scm.GetServiceGroup.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "dc430d61-52ca-44bc-a797-e65123a94134",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["serviceGroupDsResult"] = scmServiceGroupDs,
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,10 +106,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceGroupArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the service group
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the service group
+        /// </summary>
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetServiceGroupArgs()
         {
@@ -102,10 +126,16 @@ namespace Pulumi.Scm
     public sealed class GetServiceGroupInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Id param.
+        /// The UUID of the service group
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
+
+        /// <summary>
+        /// The name of the service group
+        /// </summary>
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetServiceGroupInvokeArgs()
         {
@@ -118,38 +148,59 @@ namespace Pulumi.Scm
     public sealed class GetServiceGroupResult
     {
         /// <summary>
-        /// The Id param.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the service group
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public readonly ImmutableArray<string> Members;
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service group
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Tags associated with the service group
         /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetServiceGroupResult(
+            string device,
+
+            string folder,
+
             string id,
 
             ImmutableArray<string> members,
 
             string name,
 
+            string snippet,
+
             ImmutableArray<string> tags,
 
             string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
             Members = members;
             Name = name;
+            Snippet = snippet;
             Tags = tags;
             Tfid = tfid;
         }

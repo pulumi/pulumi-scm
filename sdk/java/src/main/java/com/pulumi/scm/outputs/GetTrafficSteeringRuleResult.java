@@ -13,42 +13,47 @@ import java.util.Objects;
 @CustomType
 public final class GetTrafficSteeringRuleResult {
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     private GetTrafficSteeringRuleAction action;
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     private List<String> categories;
     /**
-     * @return The Destination param.
+     * @return Destination
      * 
      */
     private List<String> destinations;
     /**
-     * @return The Id param.
+     * @return The folder containing the traffic steering rule
+     * 
+     */
+    private String folder;
+    /**
+     * @return The UUID of the traffic steering rule
      * 
      */
     private String id;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The Service param.
+     * @return Service
      * 
      */
     private List<String> services;
     /**
-     * @return The SourceUser param.
+     * @return Source user
      * 
      */
     private List<String> sourceUsers;
     /**
-     * @return The Source param.
+     * @return Source
      * 
      */
     private List<String> sources;
@@ -56,56 +61,63 @@ public final class GetTrafficSteeringRuleResult {
 
     private GetTrafficSteeringRuleResult() {}
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public GetTrafficSteeringRuleAction action() {
         return this.action;
     }
     /**
-     * @return The Category param.
+     * @return Category
      * 
      */
     public List<String> categories() {
         return this.categories;
     }
     /**
-     * @return The Destination param.
+     * @return Destination
      * 
      */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * @return The Id param.
+     * @return The folder containing the traffic steering rule
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return The UUID of the traffic steering rule
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Service param.
+     * @return Service
      * 
      */
     public List<String> services() {
         return this.services;
     }
     /**
-     * @return The SourceUser param.
+     * @return Source user
      * 
      */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
     /**
-     * @return The Source param.
+     * @return Source
      * 
      */
     public List<String> sources() {
@@ -127,6 +139,7 @@ public final class GetTrafficSteeringRuleResult {
         private GetTrafficSteeringRuleAction action;
         private List<String> categories;
         private List<String> destinations;
+        private String folder;
         private String id;
         private String name;
         private List<String> services;
@@ -139,6 +152,7 @@ public final class GetTrafficSteeringRuleResult {
     	      this.action = defaults.action;
     	      this.categories = defaults.categories;
     	      this.destinations = defaults.destinations;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.services = defaults.services;
@@ -176,6 +190,14 @@ public final class GetTrafficSteeringRuleResult {
         }
         public Builder destinations(String... destinations) {
             return destinations(List.of(destinations));
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetTrafficSteeringRuleResult", "folder");
+            }
+            this.folder = folder;
+            return this;
         }
         @CustomType.Setter
         public Builder id(String id) {
@@ -239,6 +261,7 @@ public final class GetTrafficSteeringRuleResult {
             _resultValue.action = action;
             _resultValue.categories = categories;
             _resultValue.destinations = destinations;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.services = services;

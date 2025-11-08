@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * HipObject data source
  *
  * ## Example Usage
  *
@@ -15,15 +15,18 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getHipObject({
- *     id: "1234-56-789",
+ * // Look up a single HIP Profile by its ID.
+ * const scmHipObjectDs = scm.getHipObject({
+ *     id: "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
  * });
+ * export const hipObjectsDsResult = scmHipObjectDs;
  * ```
  */
 export function getHipObject(args: GetHipObjectArgs, opts?: pulumi.InvokeOptions): Promise<GetHipObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getHipObject:getHipObject", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +35,13 @@ export function getHipObject(args: GetHipObjectArgs, opts?: pulumi.InvokeOptions
  */
 export interface GetHipObjectArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: string;
+    /**
+     * The name of the HIP object
+     */
+    name?: string;
 }
 
 /**
@@ -42,65 +49,77 @@ export interface GetHipObjectArgs {
  */
 export interface GetHipObjectResult {
     /**
-     * The AntiMalware param.
+     * Anti malware
      */
     readonly antiMalware: outputs.GetHipObjectAntiMalware;
     /**
-     * The Certificate param.
+     * Certificate
      */
     readonly certificate: outputs.GetHipObjectCertificate;
     /**
-     * The CustomChecks param.
+     * Custom checks
      */
     readonly customChecks: outputs.GetHipObjectCustomChecks;
     /**
-     * The DataLossPrevention param.
+     * Data loss prevention
      */
     readonly dataLossPrevention: outputs.GetHipObjectDataLossPrevention;
     /**
-     * The Description param. String length must not exceed 255 characters.
+     * Description
      */
     readonly description: string;
     /**
-     * The DiskBackup param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * Disk backup
      */
     readonly diskBackup: outputs.GetHipObjectDiskBackup;
     /**
-     * The DiskEncryption param.
+     * Disk encryption
      */
     readonly diskEncryption: outputs.GetHipObjectDiskEncryption;
     /**
-     * The Firewall param.
+     * Firewall
      */
     readonly firewall: outputs.GetHipObjectFirewall;
     /**
-     * The HostInfo param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * Host info
      */
     readonly hostInfo: outputs.GetHipObjectHostInfo;
     /**
-     * The Id param.
+     * UUID of the resource
      */
     readonly id: string;
     /**
-     * The MobileDevice param.
+     * Mobile device
      */
     readonly mobileDevice: outputs.GetHipObjectMobileDevice;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the HIP object
      */
     readonly name: string;
     /**
-     * The NetworkInfo param.
+     * Network info
      */
     readonly networkInfo: outputs.GetHipObjectNetworkInfo;
     /**
-     * The PatchManagement param.
+     * Patch management
      */
     readonly patchManagement: outputs.GetHipObjectPatchManagement;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * HipObject data source
  *
  * ## Example Usage
  *
@@ -108,15 +127,18 @@ export interface GetHipObjectResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getHipObject({
- *     id: "1234-56-789",
+ * // Look up a single HIP Profile by its ID.
+ * const scmHipObjectDs = scm.getHipObject({
+ *     id: "aba16b3c-8d43-4bac-aa76-572f1d36dbc5",
  * });
+ * export const hipObjectsDsResult = scmHipObjectDs;
  * ```
  */
 export function getHipObjectOutput(args: GetHipObjectOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetHipObjectResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getHipObject:getHipObject", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -125,7 +147,11 @@ export function getHipObjectOutput(args: GetHipObjectOutputArgs, opts?: pulumi.I
  */
 export interface GetHipObjectOutputArgs {
     /**
-     * The Id param.
+     * UUID of the resource
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the HIP object
+     */
+    name?: pulumi.Input<string>;
 }

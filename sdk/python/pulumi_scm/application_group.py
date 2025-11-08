@@ -26,11 +26,11 @@ class ApplicationGroupArgs:
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a ApplicationGroup resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         pulumi.set(__self__, "members", members)
         if device is not None:
@@ -46,7 +46,7 @@ class ApplicationGroupArgs:
     @pulumi.getter
     def members(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -58,7 +58,7 @@ class ApplicationGroupArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -70,7 +70,7 @@ class ApplicationGroupArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -82,7 +82,7 @@ class ApplicationGroupArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -94,7 +94,7 @@ class ApplicationGroupArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -114,11 +114,11 @@ class _ApplicationGroupState:
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering ApplicationGroup resources.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -137,7 +137,7 @@ class _ApplicationGroupState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -149,7 +149,7 @@ class _ApplicationGroupState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -161,7 +161,7 @@ class _ApplicationGroupState:
     @pulumi.getter
     def members(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -173,7 +173,7 @@ class _ApplicationGroupState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -185,7 +185,7 @@ class _ApplicationGroupState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -216,7 +216,7 @@ class ApplicationGroup(pulumi.CustomResource):
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        ApplicationGroup resource
 
         ## Example Usage
 
@@ -224,16 +224,40 @@ class ApplicationGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.ApplicationGroup("example")
+        # First, create some applications that will be used in the application group.
+        scm_ag_app1 = scm.Application("scm_ag_app_1",
+            folder="Shared",
+            name="scm_ag_app_1",
+            description="First test application",
+            category="business-systems",
+            subcategory="database",
+            technology="client-server",
+            risk="3")
+        scm_ag_app2 = scm.Application("scm_ag_app_2",
+            folder="Shared",
+            name="scm_ag_app_2",
+            description="Second test application",
+            category="business-systems",
+            subcategory="database",
+            technology="client-server",
+            risk="4")
+        # Create the application group that references the applications above.
+        scm_app_group1 = scm.ApplicationGroup("scm_app_group_1",
+            folder="Shared",
+            name="scm_app_group_1",
+            members=[
+                scm_ag_app1.name,
+                scm_ag_app2.name,
+            ])
         ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         ...
     @overload
@@ -242,7 +266,7 @@ class ApplicationGroup(pulumi.CustomResource):
                  args: ApplicationGroupArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        ApplicationGroup resource
 
         ## Example Usage
 
@@ -250,7 +274,31 @@ class ApplicationGroup(pulumi.CustomResource):
         import pulumi
         import pulumi_scm as scm
 
-        example = scm.ApplicationGroup("example")
+        # First, create some applications that will be used in the application group.
+        scm_ag_app1 = scm.Application("scm_ag_app_1",
+            folder="Shared",
+            name="scm_ag_app_1",
+            description="First test application",
+            category="business-systems",
+            subcategory="database",
+            technology="client-server",
+            risk="3")
+        scm_ag_app2 = scm.Application("scm_ag_app_2",
+            folder="Shared",
+            name="scm_ag_app_2",
+            description="Second test application",
+            category="business-systems",
+            subcategory="database",
+            technology="client-server",
+            risk="4")
+        # Create the application group that references the applications above.
+        scm_app_group1 = scm.ApplicationGroup("scm_app_group_1",
+            folder="Shared",
+            name="scm_app_group_1",
+            members=[
+                scm_ag_app1.name,
+                scm_ag_app2.name,
+            ])
         ```
 
         :param str resource_name: The name of the resource.
@@ -313,11 +361,11 @@ class ApplicationGroup(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
-        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] members: Members
+        :param pulumi.Input[_builtins.str] name: Alphanumeric string [ 0-9a-zA-Z._-]
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -335,7 +383,7 @@ class ApplicationGroup(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -343,7 +391,7 @@ class ApplicationGroup(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -351,7 +399,7 @@ class ApplicationGroup(pulumi.CustomResource):
     @pulumi.getter
     def members(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        Members
         """
         return pulumi.get(self, "members")
 
@@ -359,7 +407,7 @@ class ApplicationGroup(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        Alphanumeric string [ 0-9a-zA-Z._-]
         """
         return pulumi.get(self, "name")
 
@@ -367,7 +415,7 @@ class ApplicationGroup(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 

@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetApplicationSignatureAndConditionOrConditionOperatorLessThanQualifier {
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     private String name;
     /**
-     * @return The Value param.
+     * @return Value
      * 
      */
     private String value;
 
     private GetApplicationSignatureAndConditionOrConditionOperatorLessThanQualifier() {}
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Value param.
+     * @return Value
      * 
      */
     public String value() {

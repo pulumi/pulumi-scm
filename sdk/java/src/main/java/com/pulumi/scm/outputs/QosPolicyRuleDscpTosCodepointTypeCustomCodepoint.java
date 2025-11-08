@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosPolicyRuleDscpTosCodepointTypeCustomCodepoint {
     /**
-     * @return The BinaryValue param.
+     * @return Binary value
      * 
      */
     private @Nullable String binaryValue;
     /**
-     * @return The CodepointName param.
+     * @return Codepoint name
      * 
      */
     private @Nullable String codepointName;
 
     private QosPolicyRuleDscpTosCodepointTypeCustomCodepoint() {}
     /**
-     * @return The BinaryValue param.
+     * @return Binary value
      * 
      */
     public Optional<String> binaryValue() {
         return Optional.ofNullable(this.binaryValue);
     }
     /**
-     * @return The CodepointName param.
+     * @return Codepoint name
      * 
      */
     public Optional<String> codepointName() {

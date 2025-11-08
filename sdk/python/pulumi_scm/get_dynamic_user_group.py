@@ -26,19 +26,28 @@ class GetDynamicUserGroupResult:
     """
     A collection of values returned by getDynamicUserGroup.
     """
-    def __init__(__self__, description=None, filter=None, id=None, name=None, tags=None, tfid=None):
+    def __init__(__self__, description=None, device=None, filter=None, folder=None, id=None, name=None, snippet=None, tags=None, tfid=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if filter and not isinstance(filter, str):
             raise TypeError("Expected argument 'filter' to be a str")
         pulumi.set(__self__, "filter", filter)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tags and not isinstance(tags, list):
             raise TypeError("Expected argument 'tags' to be a list")
         pulumi.set(__self__, "tags", tags)
@@ -50,23 +59,39 @@ class GetDynamicUserGroupResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param. String length must not exceed 1023 characters.
+        The description of the dynamic address group
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def filter(self) -> _builtins.str:
         """
-        tag-based filter. String length must not exceed 2047 characters.
+        The tag-based filter for the dynamic user group
         """
         return pulumi.get(self, "filter")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        The UUID of the dynamic user group
         """
         return pulumi.get(self, "id")
 
@@ -74,15 +99,23 @@ class GetDynamicUserGroupResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        The name of the dynamic address group
         """
         return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
+
+    @_builtins.property
+    @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
         """
-        Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        Tags associated with the dynamic user group
         """
         return pulumi.get(self, "tags")
 
@@ -99,17 +132,21 @@ class AwaitableGetDynamicUserGroupResult(GetDynamicUserGroupResult):
             yield self
         return GetDynamicUserGroupResult(
             description=self.description,
+            device=self.device,
             filter=self.filter,
+            folder=self.folder,
             id=self.id,
             name=self.name,
+            snippet=self.snippet,
             tags=self.tags,
             tfid=self.tfid)
 
 
 def get_dynamic_user_group(id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetDynamicUserGroupResult:
     """
-    Retrieves a config item.
+    DynamicUserGroup data source
 
     ## Example Usage
 
@@ -117,28 +154,43 @@ def get_dynamic_user_group(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_dynamic_user_group(id="1234-56-789")
+    # Look up the dynamic user group by its ID.
+    scm_dynamic_user_group_ds = scm.get_dynamic_user_group(id="c8ac5c18-023b-4be5-bc39-65e585cff9c7")
+    pulumi.export("dynamicUserGroupDetails", {
+        "id": scm_dynamic_user_group_ds.id,
+        "name": scm_dynamic_user_group_ds.name,
+        "folder": scm_dynamic_user_group_ds.folder,
+        "description": scm_dynamic_user_group_ds.description,
+        "filter": scm_dynamic_user_group_ds.filter,
+        "tags": scm_dynamic_user_group_ds.tags,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the dynamic user group
+    :param _builtins.str name: The name of the dynamic address group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getDynamicUserGroup:getDynamicUserGroup', __args__, opts=opts, typ=GetDynamicUserGroupResult).value
 
     return AwaitableGetDynamicUserGroupResult(
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
         filter=pulumi.get(__ret__, 'filter'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         name=pulumi.get(__ret__, 'name'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tags=pulumi.get(__ret__, 'tags'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_dynamic_user_group_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetDynamicUserGroupResult]:
     """
-    Retrieves a config item.
+    DynamicUserGroup data source
 
     ## Example Usage
 
@@ -146,20 +198,34 @@ def get_dynamic_user_group_output(id: Optional[pulumi.Input[_builtins.str]] = No
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_dynamic_user_group(id="1234-56-789")
+    # Look up the dynamic user group by its ID.
+    scm_dynamic_user_group_ds = scm.get_dynamic_user_group(id="c8ac5c18-023b-4be5-bc39-65e585cff9c7")
+    pulumi.export("dynamicUserGroupDetails", {
+        "id": scm_dynamic_user_group_ds.id,
+        "name": scm_dynamic_user_group_ds.name,
+        "folder": scm_dynamic_user_group_ds.folder,
+        "description": scm_dynamic_user_group_ds.description,
+        "filter": scm_dynamic_user_group_ds.filter,
+        "tags": scm_dynamic_user_group_ds.tags,
+    })
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: The UUID of the dynamic user group
+    :param _builtins.str name: The name of the dynamic address group
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getDynamicUserGroup:getDynamicUserGroup', __args__, opts=opts, typ=GetDynamicUserGroupResult)
     return __ret__.apply(lambda __response__: GetDynamicUserGroupResult(
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
         filter=pulumi.get(__response__, 'filter'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         name=pulumi.get(__response__, 'name'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tags=pulumi.get(__response__, 'tags'),
         tfid=pulumi.get(__response__, 'tfid')))

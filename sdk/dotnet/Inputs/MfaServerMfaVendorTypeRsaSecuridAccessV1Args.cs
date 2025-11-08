@@ -13,40 +13,50 @@ namespace Pulumi.Scm.Inputs
     public sealed class MfaServerMfaVendorTypeRsaSecuridAccessV1Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The RsaAccessid param.
+        /// RSA SecurID access ID
         /// </summary>
         [Input("rsaAccessid")]
         public Input<string>? RsaAccessid { get; set; }
 
-        /// <summary>
-        /// The RsaAccesskey param.
-        /// </summary>
         [Input("rsaAccesskey")]
-        public Input<string>? RsaAccesskey { get; set; }
+        private Input<string>? _rsaAccesskey;
 
         /// <summary>
-        /// The RsaApiHost param.
+        /// RSA SecurID access key
+        /// </summary>
+        public Input<string>? RsaAccesskey
+        {
+            get => _rsaAccesskey;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _rsaAccesskey = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// RSA SecurID hostname
         /// </summary>
         [Input("rsaApiHost")]
         public Input<string>? RsaApiHost { get; set; }
 
         /// <summary>
-        /// The RsaAssurancepolicyid param.
+        /// RSA SecurID assurance level
         /// </summary>
         [Input("rsaAssurancepolicyid")]
         public Input<string>? RsaAssurancepolicyid { get; set; }
 
         /// <summary>
-        /// The RsaBaseuri param.
+        /// RSA SecurID API base URI
         /// </summary>
         [Input("rsaBaseuri")]
         public Input<string>? RsaBaseuri { get; set; }
 
         /// <summary>
-        /// The RsaTimeout param.
+        /// RSA SecurID timeout (seconds)
         /// </summary>
         [Input("rsaTimeout")]
-        public Input<string>? RsaTimeout { get; set; }
+        public Input<int>? RsaTimeout { get; set; }
 
         public MfaServerMfaVendorTypeRsaSecuridAccessV1Args()
         {

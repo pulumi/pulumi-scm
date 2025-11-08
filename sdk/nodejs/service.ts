@@ -7,7 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * Service resource
  *
  * ## Example Usage
  *
@@ -15,7 +15,48 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = new scm.Service("example", {});
+ * // TCP Service with multiple destination ports custom timeout
+ * const scmServiceTcpPorts = new scm.Service("scm_service_tcp_ports", {
+ *     folder: "Shared",
+ *     name: "scm_service_tcp_ports",
+ *     description: "Managed by Pulumi",
+ *     protocol: {
+ *         tcp: {
+ *             port: "80,443",
+ *             override: {
+ *                 timeout: 3600,
+ *             },
+ *         },
+ *     },
+ * });
+ * // TCP Service with source port, destination port and custom timeout values
+ * const scmServiceTcpPortSrcDst = new scm.Service("scm_service_tcp_port_src_dst", {
+ *     folder: "Shared",
+ *     name: "scm_service_tcp_port_src_dst",
+ *     description: "Managed by Pulumi",
+ *     protocol: {
+ *         tcp: {
+ *             port: "80",
+ *             sourcePort: "49152-65535",
+ *             override: {
+ *                 timeout: 3600,
+ *                 halfcloseTimeout: 240,
+ *                 timewaitTimeout: 30,
+ *             },
+ *         },
+ *     },
+ * });
+ * // UDP Service with single destination port
+ * const scmServiceUdpPort = new scm.Service("scm_service_udp_port", {
+ *     folder: "Shared",
+ *     name: "scm_service_udp_port",
+ *     description: "Managed by Pulumi",
+ *     protocol: {
+ *         udp: {
+ *             port: "53",
+ *         },
+ *     },
+ * });
  * ```
  */
 export class Service extends pulumi.CustomResource {
@@ -47,31 +88,31 @@ export class Service extends pulumi.CustomResource {
     }
 
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     declare public readonly protocol: pulumi.Output<outputs.ServiceProtocol>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
-     * Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for service object
      */
     declare public readonly tags: pulumi.Output<string[] | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -83,7 +124,7 @@ export class Service extends pulumi.CustomResource {
      * @param args The arguments to use to populate this resource's properties.
      * @param opts A bag of options that control this resource's behavior.
      */
-    constructor(name: string, args: ServiceArgs, opts?: pulumi.CustomResourceOptions)
+    constructor(name: string, args?: ServiceArgs, opts?: pulumi.CustomResourceOptions)
     constructor(name: string, argsOrState?: ServiceArgs | ServiceState, opts?: pulumi.CustomResourceOptions) {
         let resourceInputs: pulumi.Inputs = {};
         opts = opts || {};
@@ -99,9 +140,6 @@ export class Service extends pulumi.CustomResource {
             resourceInputs["tfid"] = state?.tfid;
         } else {
             const args = argsOrState as ServiceArgs | undefined;
-            if (args?.protocol === undefined && !opts.urn) {
-                throw new Error("Missing required property 'protocol'");
-            }
             resourceInputs["description"] = args?.description;
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
@@ -121,31 +159,31 @@ export class Service extends pulumi.CustomResource {
  */
 export interface ServiceState {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service
      */
     name?: pulumi.Input<string>;
     /**
-     * The Protocol param.
+     * Protocol
      */
     protocol?: pulumi.Input<inputs.ServiceProtocol>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for service object
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
     tfid?: pulumi.Input<string>;
@@ -156,31 +194,31 @@ export interface ServiceState {
  */
 export interface ServiceArgs {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the service
      */
     name?: pulumi.Input<string>;
     /**
-     * The Protocol param.
+     * Protocol
      */
-    protocol: pulumi.Input<inputs.ServiceProtocol>;
+    protocol?: pulumi.Input<inputs.ServiceProtocol>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * Tags for service object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * Tags for service object
      */
     tags?: pulumi.Input<pulumi.Input<string>[]>;
 }

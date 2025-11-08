@@ -12,74 +12,114 @@ import java.util.Objects;
 @CustomType
 public final class GetVariableListData {
     /**
-     * @return The Description param.
+     * @return The description of the variable
      * 
      */
     private String description;
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    private String folder;
+    /**
+     * @return UUID of the variable
      * 
      */
     private String id;
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the variable
      * 
      */
     private String name;
     /**
-     * @return The Overridden param.
+     * @return Is the variable overridden?
      * 
      */
     private Boolean overridden;
     /**
-     * @return The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    private String snippet;
+    private String tfid;
+    /**
+     * @return The variable type
      * 
      */
     private String type;
     /**
-     * @return value can accept either string or integer.
+     * @return The value of the variable
      * 
      */
     private String value;
 
     private GetVariableListData() {}
     /**
-     * @return The Description param.
+     * @return The description of the variable
      * 
      */
     public String description() {
         return this.description;
     }
     /**
-     * @return UUID of the resource.
+     * @return The device in which the resource is defined
+     * 
+     */
+    public String device() {
+        return this.device;
+    }
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public String folder() {
+        return this.folder;
+    }
+    /**
+     * @return UUID of the variable
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the variable
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The Overridden param.
+     * @return Is the variable overridden?
      * 
      */
     public Boolean overridden() {
         return this.overridden;
     }
     /**
-     * @return The Type param. String must be one of these: `&#34;percent&#34;`, `&#34;count&#34;`, `&#34;ip-netmask&#34;`, `&#34;zone&#34;`, `&#34;ip-range&#34;`, `&#34;ip-wildcard&#34;`, `&#34;device-priority&#34;`, `&#34;device-id&#34;`, `&#34;egress-max&#34;`, `&#34;as-number&#34;`, `&#34;fqdn&#34;`, `&#34;port&#34;`, `&#34;link-tag&#34;`, `&#34;group-id&#34;`, `&#34;rate&#34;`, `&#34;router-id&#34;`, `&#34;qos-profile&#34;`, `&#34;timer&#34;`.
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public String snippet() {
+        return this.snippet;
+    }
+    public String tfid() {
+        return this.tfid;
+    }
+    /**
+     * @return The variable type
      * 
      */
     public String type() {
         return this.type;
     }
     /**
-     * @return value can accept either string or integer.
+     * @return The value of the variable
      * 
      */
     public String value() {
@@ -96,18 +136,26 @@ public final class GetVariableListData {
     @CustomType.Builder
     public static final class Builder {
         private String description;
+        private String device;
+        private String folder;
         private String id;
         private String name;
         private Boolean overridden;
+        private String snippet;
+        private String tfid;
         private String type;
         private String value;
         public Builder() {}
         public Builder(GetVariableListData defaults) {
     	      Objects.requireNonNull(defaults);
     	      this.description = defaults.description;
+    	      this.device = defaults.device;
+    	      this.folder = defaults.folder;
     	      this.id = defaults.id;
     	      this.name = defaults.name;
     	      this.overridden = defaults.overridden;
+    	      this.snippet = defaults.snippet;
+    	      this.tfid = defaults.tfid;
     	      this.type = defaults.type;
     	      this.value = defaults.value;
         }
@@ -118,6 +166,22 @@ public final class GetVariableListData {
               throw new MissingRequiredPropertyException("GetVariableListData", "description");
             }
             this.description = description;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder device(String device) {
+            if (device == null) {
+              throw new MissingRequiredPropertyException("GetVariableListData", "device");
+            }
+            this.device = device;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder folder(String folder) {
+            if (folder == null) {
+              throw new MissingRequiredPropertyException("GetVariableListData", "folder");
+            }
+            this.folder = folder;
             return this;
         }
         @CustomType.Setter
@@ -145,6 +209,22 @@ public final class GetVariableListData {
             return this;
         }
         @CustomType.Setter
+        public Builder snippet(String snippet) {
+            if (snippet == null) {
+              throw new MissingRequiredPropertyException("GetVariableListData", "snippet");
+            }
+            this.snippet = snippet;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder tfid(String tfid) {
+            if (tfid == null) {
+              throw new MissingRequiredPropertyException("GetVariableListData", "tfid");
+            }
+            this.tfid = tfid;
+            return this;
+        }
+        @CustomType.Setter
         public Builder type(String type) {
             if (type == null) {
               throw new MissingRequiredPropertyException("GetVariableListData", "type");
@@ -163,9 +243,13 @@ public final class GetVariableListData {
         public GetVariableListData build() {
             final var _resultValue = new GetVariableListData();
             _resultValue.description = description;
+            _resultValue.device = device;
+            _resultValue.folder = folder;
             _resultValue.id = id;
             _resultValue.name = name;
             _resultValue.overridden = overridden;
+            _resultValue.snippet = snippet;
+            _resultValue.tfid = tfid;
             _resultValue.type = type;
             _resultValue.value = value;
             return _resultValue;

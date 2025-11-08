@@ -19,15 +19,18 @@ __all__ = ['AuthenticationRuleArgs', 'AuthenticationRule']
 @pulumi.input_type
 class AuthenticationRuleArgs:
     def __init__(__self__, *,
+                 destinations: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
+                 froms: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
+                 services: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
+                 sources: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
+                 tos: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]],
                  authentication_enforcement: Optional[pulumi.Input[_builtins.str]] = None,
                  categories: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  destination_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 destinations: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  disabled: Optional[pulumi.Input[_builtins.bool]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 froms: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  group_tag: Optional[pulumi.Input[_builtins.str]] = None,
                  hip_profiles: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  log_authentication_timeout: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -36,42 +39,44 @@ class AuthenticationRuleArgs:
                  negate_destination: Optional[pulumi.Input[_builtins.bool]] = None,
                  negate_source: Optional[pulumi.Input[_builtins.bool]] = None,
                  position: Optional[pulumi.Input[_builtins.str]] = None,
-                 services: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  source_hips: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  source_users: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 sources: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  tags: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 timeout: Optional[pulumi.Input[_builtins.int]] = None,
-                 tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
+                 timeout: Optional[pulumi.Input[_builtins.int]] = None):
         """
         The set of arguments for constructing a AuthenticationRule resource.
-        :param pulumi.Input[_builtins.str] authentication_enforcement: the authentication profile name to apply to authentication rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The HipProfiles param.
-        :param pulumi.Input[_builtins.bool] log_authentication_timeout: The LogAuthenticationTimeout param. Default: `false`.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 1440.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
+        :param pulumi.Input[_builtins.str] authentication_enforcement: The authentication profile name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL categories
+        :param pulumi.Input[_builtins.str] description: The description of the authentication rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile (HIP)
+        :param pulumi.Input[_builtins.str] device: Device
+        :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
+        :param pulumi.Input[_builtins.str] folder: Folder
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[_builtins.bool] log_authentication_timeout: Log authentication timeouts?
+        :param pulumi.Input[_builtins.str] log_setting: The log forwarding profile name
+        :param pulumi.Input[_builtins.str] name: The name of the authentication rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
+        :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[_builtins.str] snippet: Snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
         """
+        pulumi.set(__self__, "destinations", destinations)
+        pulumi.set(__self__, "froms", froms)
+        pulumi.set(__self__, "services", services)
+        pulumi.set(__self__, "sources", sources)
+        pulumi.set(__self__, "tos", tos)
         if authentication_enforcement is not None:
             pulumi.set(__self__, "authentication_enforcement", authentication_enforcement)
         if categories is not None:
@@ -80,16 +85,12 @@ class AuthenticationRuleArgs:
             pulumi.set(__self__, "description", description)
         if destination_hips is not None:
             pulumi.set(__self__, "destination_hips", destination_hips)
-        if destinations is not None:
-            pulumi.set(__self__, "destinations", destinations)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if disabled is not None:
             pulumi.set(__self__, "disabled", disabled)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
-        if froms is not None:
-            pulumi.set(__self__, "froms", froms)
         if group_tag is not None:
             pulumi.set(__self__, "group_tag", group_tag)
         if hip_profiles is not None:
@@ -106,28 +107,82 @@ class AuthenticationRuleArgs:
             pulumi.set(__self__, "negate_source", negate_source)
         if position is not None:
             pulumi.set(__self__, "position", position)
-        if services is not None:
-            pulumi.set(__self__, "services", services)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if source_hips is not None:
             pulumi.set(__self__, "source_hips", source_hips)
         if source_users is not None:
             pulumi.set(__self__, "source_users", source_users)
-        if sources is not None:
-            pulumi.set(__self__, "sources", sources)
         if tags is not None:
             pulumi.set(__self__, "tags", tags)
         if timeout is not None:
             pulumi.set(__self__, "timeout", timeout)
-        if tos is not None:
-            pulumi.set(__self__, "tos", tos)
+
+    @_builtins.property
+    @pulumi.getter
+    def destinations(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        The destination addresses
+        """
+        return pulumi.get(self, "destinations")
+
+    @destinations.setter
+    def destinations(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
+        pulumi.set(self, "destinations", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def froms(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        The source security zones
+        """
+        return pulumi.get(self, "froms")
+
+    @froms.setter
+    def froms(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
+        pulumi.set(self, "froms", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def services(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        The destination ports
+        """
+        return pulumi.get(self, "services")
+
+    @services.setter
+    def services(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
+        pulumi.set(self, "services", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def sources(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        The source addresses
+        """
+        return pulumi.get(self, "sources")
+
+    @sources.setter
+    def sources(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
+        pulumi.set(self, "sources", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def tos(self) -> pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]:
+        """
+        The destination security zones
+        """
+        return pulumi.get(self, "tos")
+
+    @tos.setter
+    def tos(self, value: pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]):
+        pulumi.set(self, "tos", value)
 
     @_builtins.property
     @pulumi.getter(name="authenticationEnforcement")
     def authentication_enforcement(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        the authentication profile name to apply to authentication rule.
+        The authentication profile name
         """
         return pulumi.get(self, "authentication_enforcement")
 
@@ -139,7 +194,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Categories param.
+        The destination URL categories
         """
         return pulumi.get(self, "categories")
 
@@ -151,7 +206,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the authentication rule
         """
         return pulumi.get(self, "description")
 
@@ -163,7 +218,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The DestinationHips param.
+        The destination Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "destination_hips")
 
@@ -173,21 +228,9 @@ class AuthenticationRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The Destinations param.
-        """
-        return pulumi.get(self, "destinations")
-
-    @destinations.setter
-    def destinations(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "destinations", value)
-
-    @_builtins.property
-    @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        Device
         """
         return pulumi.get(self, "device")
 
@@ -199,7 +242,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param. Default: `false`.
+        Is the authentication rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -211,7 +254,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        Folder
         """
         return pulumi.get(self, "folder")
 
@@ -220,22 +263,10 @@ class AuthenticationRuleArgs:
         pulumi.set(self, "folder", value)
 
     @_builtins.property
-    @pulumi.getter
-    def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The Froms param.
-        """
-        return pulumi.get(self, "froms")
-
-    @froms.setter
-    def froms(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "froms", value)
-
-    @_builtins.property
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -247,7 +278,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="hipProfiles")
     def hip_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The HipProfiles param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "hip_profiles")
 
@@ -259,7 +290,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="logAuthenticationTimeout")
     def log_authentication_timeout(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogAuthenticationTimeout param. Default: `false`.
+        Log authentication timeouts?
         """
         return pulumi.get(self, "log_authentication_timeout")
 
@@ -271,7 +302,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The LogSetting param.
+        The log forwarding profile name
         """
         return pulumi.get(self, "log_setting")
 
@@ -283,7 +314,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the authentication rule
         """
         return pulumi.get(self, "name")
 
@@ -295,7 +326,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateDestination param. Default: `false`.
+        Are the destination addresses negated?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -307,7 +338,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateSource param. Default: `false`.
+        Are the source addresses negated?
         """
         return pulumi.get(self, "negate_source")
 
@@ -319,7 +350,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -329,21 +360,9 @@ class AuthenticationRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The Services param.
-        """
-        return pulumi.get(self, "services")
-
-    @services.setter
-    def services(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "services", value)
-
-    @_builtins.property
-    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        Snippet
         """
         return pulumi.get(self, "snippet")
 
@@ -355,7 +374,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SourceHips param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "source_hips")
 
@@ -367,7 +386,7 @@ class AuthenticationRuleArgs:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SourceUsers param.
+        The source users
         """
         return pulumi.get(self, "source_users")
 
@@ -377,21 +396,9 @@ class AuthenticationRuleArgs:
 
     @_builtins.property
     @pulumi.getter
-    def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The Sources param.
-        """
-        return pulumi.get(self, "sources")
-
-    @sources.setter
-    def sources(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "sources", value)
-
-    @_builtins.property
-    @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        The authentication rule tags
         """
         return pulumi.get(self, "tags")
 
@@ -403,25 +410,13 @@ class AuthenticationRuleArgs:
     @pulumi.getter
     def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The Timeout param. Value must be between 1 and 1440.
+        The authentication session timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
     @timeout.setter
     def timeout(self, value: Optional[pulumi.Input[_builtins.int]]):
         pulumi.set(self, "timeout", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
-        """
-        The Tos param.
-        """
-        return pulumi.get(self, "tos")
-
-    @tos.setter
-    def tos(self, value: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]):
-        pulumi.set(self, "tos", value)
 
 
 @pulumi.input_type
@@ -455,31 +450,31 @@ class _AuthenticationRuleState:
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AuthenticationRule resources.
-        :param pulumi.Input[_builtins.str] authentication_enforcement: the authentication profile name to apply to authentication rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The HipProfiles param.
-        :param pulumi.Input[_builtins.bool] log_authentication_timeout: The LogAuthenticationTimeout param. Default: `false`.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 1440.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
+        :param pulumi.Input[_builtins.str] authentication_enforcement: The authentication profile name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL categories
+        :param pulumi.Input[_builtins.str] description: The description of the authentication rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile (HIP)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[_builtins.str] device: Device
+        :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
+        :param pulumi.Input[_builtins.str] folder: Folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[_builtins.bool] log_authentication_timeout: Log authentication timeouts?
+        :param pulumi.Input[_builtins.str] log_setting: The log forwarding profile name
+        :param pulumi.Input[_builtins.str] name: The name of the authentication rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
+        :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
+        :param pulumi.Input[_builtins.str] snippet: Snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
         if authentication_enforcement is not None:
             pulumi.set(__self__, "authentication_enforcement", authentication_enforcement)
@@ -538,7 +533,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="authenticationEnforcement")
     def authentication_enforcement(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        the authentication profile name to apply to authentication rule.
+        The authentication profile name
         """
         return pulumi.get(self, "authentication_enforcement")
 
@@ -550,7 +545,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def categories(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Categories param.
+        The destination URL categories
         """
         return pulumi.get(self, "categories")
 
@@ -562,7 +557,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def description(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Description param.
+        The description of the authentication rule
         """
         return pulumi.get(self, "description")
 
@@ -574,7 +569,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The DestinationHips param.
+        The destination Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "destination_hips")
 
@@ -586,7 +581,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def destinations(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Destinations param.
+        The destination addresses
         """
         return pulumi.get(self, "destinations")
 
@@ -598,7 +593,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        Device
         """
         return pulumi.get(self, "device")
 
@@ -610,7 +605,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def disabled(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Disabled param. Default: `false`.
+        Is the authentication rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -622,7 +617,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        Folder
         """
         return pulumi.get(self, "folder")
 
@@ -634,7 +629,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def froms(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Froms param.
+        The source security zones
         """
         return pulumi.get(self, "froms")
 
@@ -646,7 +641,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -658,7 +653,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="hipProfiles")
     def hip_profiles(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The HipProfiles param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "hip_profiles")
 
@@ -670,7 +665,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="logAuthenticationTimeout")
     def log_authentication_timeout(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The LogAuthenticationTimeout param. Default: `false`.
+        Log authentication timeouts?
         """
         return pulumi.get(self, "log_authentication_timeout")
 
@@ -682,7 +677,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The LogSetting param.
+        The log forwarding profile name
         """
         return pulumi.get(self, "log_setting")
 
@@ -694,7 +689,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def name(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Name param.
+        The name of the authentication rule
         """
         return pulumi.get(self, "name")
 
@@ -706,7 +701,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateDestination param. Default: `false`.
+        Are the destination addresses negated?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -718,7 +713,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The NegateSource param. Default: `false`.
+        Are the source addresses negated?
         """
         return pulumi.get(self, "negate_source")
 
@@ -730,7 +725,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def position(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
@@ -742,7 +737,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def services(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Services param.
+        The destination ports
         """
         return pulumi.get(self, "services")
 
@@ -754,7 +749,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        Snippet
         """
         return pulumi.get(self, "snippet")
 
@@ -766,7 +761,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SourceHips param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "source_hips")
 
@@ -778,7 +773,7 @@ class _AuthenticationRuleState:
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The SourceUsers param.
+        The source users
         """
         return pulumi.get(self, "source_users")
 
@@ -790,7 +785,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def sources(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Sources param.
+        The source addresses
         """
         return pulumi.get(self, "sources")
 
@@ -802,7 +797,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def tags(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tags param.
+        The authentication rule tags
         """
         return pulumi.get(self, "tags")
 
@@ -823,7 +818,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def timeout(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The Timeout param. Value must be between 1 and 1440.
+        The authentication session timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
@@ -835,7 +830,7 @@ class _AuthenticationRuleState:
     @pulumi.getter
     def tos(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Tos param.
+        The destination security zones
         """
         return pulumi.get(self, "tos")
 
@@ -877,62 +872,44 @@ class AuthenticationRule(pulumi.CustomResource):
                  tos: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AuthenticationRule("example")
-        ```
+        AuthenticationRule resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] authentication_enforcement: the authentication profile name to apply to authentication rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The HipProfiles param.
-        :param pulumi.Input[_builtins.bool] log_authentication_timeout: The LogAuthenticationTimeout param. Default: `false`.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 1440.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
+        :param pulumi.Input[_builtins.str] authentication_enforcement: The authentication profile name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL categories
+        :param pulumi.Input[_builtins.str] description: The description of the authentication rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile (HIP)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[_builtins.str] device: Device
+        :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
+        :param pulumi.Input[_builtins.str] folder: Folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[_builtins.bool] log_authentication_timeout: Log authentication timeouts?
+        :param pulumi.Input[_builtins.str] log_setting: The log forwarding profile name
+        :param pulumi.Input[_builtins.str] name: The name of the authentication rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
+        :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
+        :param pulumi.Input[_builtins.str] snippet: Snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[AuthenticationRuleArgs] = None,
+                 args: AuthenticationRuleArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AuthenticationRule("example")
-        ```
+        AuthenticationRule resource
 
         :param str resource_name: The name of the resource.
         :param AuthenticationRuleArgs args: The arguments to use to populate this resource's properties.
@@ -987,10 +964,14 @@ class AuthenticationRule(pulumi.CustomResource):
             __props__.__dict__["categories"] = categories
             __props__.__dict__["description"] = description
             __props__.__dict__["destination_hips"] = destination_hips
+            if destinations is None and not opts.urn:
+                raise TypeError("Missing required property 'destinations'")
             __props__.__dict__["destinations"] = destinations
             __props__.__dict__["device"] = device
             __props__.__dict__["disabled"] = disabled
             __props__.__dict__["folder"] = folder
+            if froms is None and not opts.urn:
+                raise TypeError("Missing required property 'froms'")
             __props__.__dict__["froms"] = froms
             __props__.__dict__["group_tag"] = group_tag
             __props__.__dict__["hip_profiles"] = hip_profiles
@@ -1000,13 +981,19 @@ class AuthenticationRule(pulumi.CustomResource):
             __props__.__dict__["negate_destination"] = negate_destination
             __props__.__dict__["negate_source"] = negate_source
             __props__.__dict__["position"] = position
+            if services is None and not opts.urn:
+                raise TypeError("Missing required property 'services'")
             __props__.__dict__["services"] = services
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["source_hips"] = source_hips
             __props__.__dict__["source_users"] = source_users
+            if sources is None and not opts.urn:
+                raise TypeError("Missing required property 'sources'")
             __props__.__dict__["sources"] = sources
             __props__.__dict__["tags"] = tags
             __props__.__dict__["timeout"] = timeout
+            if tos is None and not opts.urn:
+                raise TypeError("Missing required property 'tos'")
             __props__.__dict__["tos"] = tos
             __props__.__dict__["tfid"] = None
         super(AuthenticationRule, __self__).__init__(
@@ -1052,31 +1039,31 @@ class AuthenticationRule(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] authentication_enforcement: the authentication profile name to apply to authentication rule.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The Categories param.
-        :param pulumi.Input[_builtins.str] description: The Description param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The DestinationHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The Destinations param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.bool] disabled: The Disabled param. Default: `false`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The Froms param.
-        :param pulumi.Input[_builtins.str] group_tag: The GroupTag param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The HipProfiles param.
-        :param pulumi.Input[_builtins.bool] log_authentication_timeout: The LogAuthenticationTimeout param. Default: `false`.
-        :param pulumi.Input[_builtins.str] log_setting: The LogSetting param.
-        :param pulumi.Input[_builtins.str] name: The Name param.
-        :param pulumi.Input[_builtins.bool] negate_destination: The NegateDestination param. Default: `false`.
-        :param pulumi.Input[_builtins.bool] negate_source: The NegateSource param. Default: `false`.
-        :param pulumi.Input[_builtins.str] position: The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The Services param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The SourceHips param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The SourceUsers param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The Sources param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The Tags param.
-        :param pulumi.Input[_builtins.int] timeout: The Timeout param. Value must be between 1 and 1440.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The Tos param.
+        :param pulumi.Input[_builtins.str] authentication_enforcement: The authentication profile name
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] categories: The destination URL categories
+        :param pulumi.Input[_builtins.str] description: The description of the authentication rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destination_hips: The destination Host Integrity Profile (HIP)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: The destination addresses
+        :param pulumi.Input[_builtins.str] device: Device
+        :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
+        :param pulumi.Input[_builtins.str] folder: Folder
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
+        :param pulumi.Input[_builtins.str] group_tag: Group tag
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[_builtins.bool] log_authentication_timeout: Log authentication timeouts?
+        :param pulumi.Input[_builtins.str] log_setting: The log forwarding profile name
+        :param pulumi.Input[_builtins.str] name: The name of the authentication rule
+        :param pulumi.Input[_builtins.bool] negate_destination: Are the destination addresses negated?
+        :param pulumi.Input[_builtins.bool] negate_source: Are the source addresses negated?
+        :param pulumi.Input[_builtins.str] position: The relative position of the rule
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
+        :param pulumi.Input[_builtins.str] snippet: Snippet
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
+        :param pulumi.Input[_builtins.int] timeout: The authentication session timeout (seconds)
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tos: The destination security zones
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -1114,7 +1101,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="authenticationEnforcement")
     def authentication_enforcement(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        the authentication profile name to apply to authentication rule.
+        The authentication profile name
         """
         return pulumi.get(self, "authentication_enforcement")
 
@@ -1122,7 +1109,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def categories(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Categories param.
+        The destination URL categories
         """
         return pulumi.get(self, "categories")
 
@@ -1130,7 +1117,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def description(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Description param.
+        The description of the authentication rule
         """
         return pulumi.get(self, "description")
 
@@ -1138,15 +1125,15 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="destinationHips")
     def destination_hips(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The DestinationHips param.
+        The destination Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "destination_hips")
 
     @_builtins.property
     @pulumi.getter
-    def destinations(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def destinations(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Destinations param.
+        The destination addresses
         """
         return pulumi.get(self, "destinations")
 
@@ -1154,7 +1141,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        Device
         """
         return pulumi.get(self, "device")
 
@@ -1162,7 +1149,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def disabled(self) -> pulumi.Output[_builtins.bool]:
         """
-        The Disabled param. Default: `false`.
+        Is the authentication rule disabled?
         """
         return pulumi.get(self, "disabled")
 
@@ -1170,15 +1157,15 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        Folder
         """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
-    def froms(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def froms(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Froms param.
+        The source security zones
         """
         return pulumi.get(self, "froms")
 
@@ -1186,7 +1173,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The GroupTag param.
+        Group tag
         """
         return pulumi.get(self, "group_tag")
 
@@ -1194,7 +1181,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="hipProfiles")
     def hip_profiles(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The HipProfiles param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "hip_profiles")
 
@@ -1202,7 +1189,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="logAuthenticationTimeout")
     def log_authentication_timeout(self) -> pulumi.Output[_builtins.bool]:
         """
-        The LogAuthenticationTimeout param. Default: `false`.
+        Log authentication timeouts?
         """
         return pulumi.get(self, "log_authentication_timeout")
 
@@ -1210,7 +1197,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The LogSetting param.
+        The log forwarding profile name
         """
         return pulumi.get(self, "log_setting")
 
@@ -1218,7 +1205,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def name(self) -> pulumi.Output[_builtins.str]:
         """
-        The Name param.
+        The name of the authentication rule
         """
         return pulumi.get(self, "name")
 
@@ -1226,7 +1213,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> pulumi.Output[_builtins.bool]:
         """
-        The NegateDestination param. Default: `false`.
+        Are the destination addresses negated?
         """
         return pulumi.get(self, "negate_destination")
 
@@ -1234,7 +1221,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> pulumi.Output[_builtins.bool]:
         """
-        The NegateSource param. Default: `false`.
+        Are the source addresses negated?
         """
         return pulumi.get(self, "negate_source")
 
@@ -1242,15 +1229,15 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def position(self) -> pulumi.Output[_builtins.str]:
         """
-        The Position param. String must be one of these: `"pre"`, `"post"`. Default: `"pre"`.
+        The relative position of the rule
         """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
-    def services(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def services(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Services param.
+        The destination ports
         """
         return pulumi.get(self, "services")
 
@@ -1258,7 +1245,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        Snippet
         """
         return pulumi.get(self, "snippet")
 
@@ -1266,7 +1253,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The SourceHips param.
+        The source Host Integrity Profile (HIP)
         """
         return pulumi.get(self, "source_hips")
 
@@ -1274,15 +1261,15 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The SourceUsers param.
+        The source users
         """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
-    def sources(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def sources(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Sources param.
+        The source addresses
         """
         return pulumi.get(self, "sources")
 
@@ -1290,7 +1277,7 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def tags(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Tags param.
+        The authentication rule tags
         """
         return pulumi.get(self, "tags")
 
@@ -1303,15 +1290,15 @@ class AuthenticationRule(pulumi.CustomResource):
     @pulumi.getter
     def timeout(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        The Timeout param. Value must be between 1 and 1440.
+        The authentication session timeout (seconds)
         """
         return pulumi.get(self, "timeout")
 
     @_builtins.property
     @pulumi.getter
-    def tos(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
+    def tos(self) -> pulumi.Output[Sequence[_builtins.str]]:
         """
-        The Tos param.
+        The destination security zones
         """
         return pulumi.get(self, "tos")
 

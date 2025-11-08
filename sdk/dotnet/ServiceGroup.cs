@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// ServiceGroup resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,7 +22,64 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.ServiceGroup("example");
+    ///     // TCP Service with multiple destination ports custom timeout
+    ///     var scmServiceTcpPorts = new Scm.Service("scm_service_tcp_ports", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_service_tcp_ports",
+    ///         Description = "Managed by Pulumi",
+    ///         Protocol = new Scm.Inputs.ServiceProtocolArgs
+    ///         {
+    ///             Tcp = new Scm.Inputs.ServiceProtocolTcpArgs
+    ///             {
+    ///                 Port = "80,443",
+    ///                 Override = new Scm.Inputs.ServiceProtocolTcpOverrideArgs
+    ///                 {
+    ///                     Timeout = 3600,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // UDP Service with single destination port
+    ///     var scmServiceUdpPort = new Scm.Service("scm_service_udp_port", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_service_udp_port",
+    ///         Description = "Managed by Pulumi",
+    ///         Protocol = new Scm.Inputs.ServiceProtocolArgs
+    ///         {
+    ///             Udp = new Scm.Inputs.ServiceProtocolUdpArgs
+    ///             {
+    ///                 Port = "53",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     // Service Group containing multiple services
+    ///     var scmServicegroup = new Scm.ServiceGroup("scm_servicegroup", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_servicegroup",
+    ///         Members = new[]
+    ///         {
+    ///             scmServiceTcpPorts.Name,
+    ///             scmServiceUdpPort.Name,
+    ///         },
+    ///     });
+    /// 
+    ///     // Service Group containing multiple services and another servicegroup
+    ///     var scmServicegroupNested = new Scm.ServiceGroup("scm_servicegroup_nested", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_servicegroup_nested",
+    ///         Members = new[]
+    ///         {
+    ///             scmServiceTcpPorts.Name,
+    ///             scmServiceUdpPort.Name,
+    ///             scmServicegroup.Name,
+    ///         },
+    ///     });
     /// 
     /// });
     /// ```
@@ -31,37 +88,37 @@ namespace Pulumi.Scm
     public partial class ServiceGroup : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         [Output("members")]
         public Output<ImmutableArray<string>> Members { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service group
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
-        /// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags associated with the service group
         /// </summary>
         [Output("tags")]
         public Output<ImmutableArray<string>> Tags { get; private set; } = null!;
@@ -116,13 +173,13 @@ namespace Pulumi.Scm
     public sealed class ServiceGroupArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -131,7 +188,7 @@ namespace Pulumi.Scm
         private InputList<string>? _members;
 
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public InputList<string> Members
         {
@@ -140,13 +197,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service group
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -155,7 +212,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags associated with the service group
         /// </summary>
         public InputList<string> Tags
         {
@@ -172,13 +229,13 @@ namespace Pulumi.Scm
     public sealed class ServiceGroupState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -187,7 +244,7 @@ namespace Pulumi.Scm
         private InputList<string>? _members;
 
         /// <summary>
-        /// The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+        /// Members
         /// </summary>
         public InputList<string> Members
         {
@@ -196,13 +253,13 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the service group
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -211,7 +268,7 @@ namespace Pulumi.Scm
         private InputList<string>? _tags;
 
         /// <summary>
-        /// Tags for service group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+        /// Tags associated with the service group
         /// </summary>
         public InputList<string> Tags
         {

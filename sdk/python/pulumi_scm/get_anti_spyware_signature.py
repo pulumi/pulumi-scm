@@ -27,7 +27,7 @@ class GetAntiSpywareSignatureResult:
     """
     A collection of values returned by getAntiSpywareSignature.
     """
-    def __init__(__self__, bugtraqs=None, comment=None, cves=None, default_action=None, direction=None, id=None, references=None, severity=None, signature=None, tfid=None, threat_id=None, threatname=None, vendors=None):
+    def __init__(__self__, bugtraqs=None, comment=None, cves=None, default_action=None, device=None, direction=None, folder=None, id=None, references=None, severity=None, signature=None, snippet=None, tfid=None, threat_id=None, threatname=None, vendors=None):
         if bugtraqs and not isinstance(bugtraqs, list):
             raise TypeError("Expected argument 'bugtraqs' to be a list")
         pulumi.set(__self__, "bugtraqs", bugtraqs)
@@ -40,9 +40,15 @@ class GetAntiSpywareSignatureResult:
         if default_action and not isinstance(default_action, dict):
             raise TypeError("Expected argument 'default_action' to be a dict")
         pulumi.set(__self__, "default_action", default_action)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
         if direction and not isinstance(direction, str):
             raise TypeError("Expected argument 'direction' to be a str")
         pulumi.set(__self__, "direction", direction)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -55,6 +61,9 @@ class GetAntiSpywareSignatureResult:
         if signature and not isinstance(signature, dict):
             raise TypeError("Expected argument 'signature' to be a dict")
         pulumi.set(__self__, "signature", signature)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -72,7 +81,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def bugtraqs(self) -> Sequence[_builtins.str]:
         """
-        The Bugtraqs param.
+        Bugtraq
         """
         return pulumi.get(self, "bugtraqs")
 
@@ -80,7 +89,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def comment(self) -> _builtins.str:
         """
-        The Comment param. String length must not exceed 256 characters.
+        Comment
         """
         return pulumi.get(self, "comment")
 
@@ -88,7 +97,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def cves(self) -> Sequence[_builtins.str]:
         """
-        The Cves param.
+        Cve
         """
         return pulumi.get(self, "cves")
 
@@ -96,23 +105,39 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> 'outputs.GetAntiSpywareSignatureDefaultActionResult':
         """
-        The DefaultAction param.
+        anti spyware signature default action
         """
         return pulumi.get(self, "default_action")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
     def direction(self) -> _builtins.str:
         """
-        The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        Direction
         """
         return pulumi.get(self, "direction")
 
     @_builtins.property
     @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -120,7 +145,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def references(self) -> Sequence[_builtins.str]:
         """
-        The References param.
+        Reference
         """
         return pulumi.get(self, "references")
 
@@ -128,7 +153,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def severity(self) -> _builtins.str:
         """
-        The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        Severity
         """
         return pulumi.get(self, "severity")
 
@@ -136,9 +161,17 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def signature(self) -> 'outputs.GetAntiSpywareSignatureSignatureResult':
         """
-        The Signature param.
+        anti spyware signature
         """
         return pulumi.get(self, "signature")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -149,7 +182,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter(name="threatId")
     def threat_id(self) -> _builtins.int:
         """
-        threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
+        threat id range \\n\\n and \\n\\n
         """
         return pulumi.get(self, "threat_id")
 
@@ -157,7 +190,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def threatname(self) -> _builtins.str:
         """
-        The Threatname param. String length must not exceed 1024 characters.
+        Threatname
         """
         return pulumi.get(self, "threatname")
 
@@ -165,7 +198,7 @@ class GetAntiSpywareSignatureResult:
     @pulumi.getter
     def vendors(self) -> Sequence[_builtins.str]:
         """
-        The Vendors param.
+        Vendor
         """
         return pulumi.get(self, "vendors")
 
@@ -180,11 +213,14 @@ class AwaitableGetAntiSpywareSignatureResult(GetAntiSpywareSignatureResult):
             comment=self.comment,
             cves=self.cves,
             default_action=self.default_action,
+            device=self.device,
             direction=self.direction,
+            folder=self.folder,
             id=self.id,
             references=self.references,
             severity=self.severity,
             signature=self.signature,
+            snippet=self.snippet,
             tfid=self.tfid,
             threat_id=self.threat_id,
             threatname=self.threatname,
@@ -194,19 +230,10 @@ class AwaitableGetAntiSpywareSignatureResult(GetAntiSpywareSignatureResult):
 def get_anti_spyware_signature(id: Optional[_builtins.str] = None,
                                opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetAntiSpywareSignatureResult:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_anti_spyware_signature(id="1234-56-789")
-    ```
+    AntiSpywareSignature data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
     """
     __args__ = dict()
     __args__['id'] = id
@@ -218,11 +245,14 @@ def get_anti_spyware_signature(id: Optional[_builtins.str] = None,
         comment=pulumi.get(__ret__, 'comment'),
         cves=pulumi.get(__ret__, 'cves'),
         default_action=pulumi.get(__ret__, 'default_action'),
+        device=pulumi.get(__ret__, 'device'),
         direction=pulumi.get(__ret__, 'direction'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         references=pulumi.get(__ret__, 'references'),
         severity=pulumi.get(__ret__, 'severity'),
         signature=pulumi.get(__ret__, 'signature'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'),
         threat_id=pulumi.get(__ret__, 'threat_id'),
         threatname=pulumi.get(__ret__, 'threatname'),
@@ -230,19 +260,10 @@ def get_anti_spyware_signature(id: Optional[_builtins.str] = None,
 def get_anti_spyware_signature_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAntiSpywareSignatureResult]:
     """
-    Retrieves a config item.
-
-    ## Example Usage
-
-    ```python
-    import pulumi
-    import pulumi_scm as scm
-
-    example = scm.get_anti_spyware_signature(id="1234-56-789")
-    ```
+    AntiSpywareSignature data source
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
     """
     __args__ = dict()
     __args__['id'] = id
@@ -253,11 +274,14 @@ def get_anti_spyware_signature_output(id: Optional[pulumi.Input[_builtins.str]] 
         comment=pulumi.get(__response__, 'comment'),
         cves=pulumi.get(__response__, 'cves'),
         default_action=pulumi.get(__response__, 'default_action'),
+        device=pulumi.get(__response__, 'device'),
         direction=pulumi.get(__response__, 'direction'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         references=pulumi.get(__response__, 'references'),
         severity=pulumi.get(__response__, 'severity'),
         signature=pulumi.get(__response__, 'signature'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid'),
         threat_id=pulumi.get(__response__, 'threat_id'),
         threatname=pulumi.get(__response__, 'threatname'),

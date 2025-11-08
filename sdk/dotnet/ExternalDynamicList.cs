@@ -10,52 +10,39 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// ExternalDynamicList resource
     /// 
     /// ## Example Usage
-    /// 
-    /// ```csharp
-    /// using System.Collections.Generic;
-    /// using System.Linq;
-    /// using Pulumi;
-    /// using Scm = Pulumi.Scm;
-    /// 
-    /// return await Deployment.RunAsync(() =&gt; 
-    /// {
-    ///     var example = new Scm.ExternalDynamicList("example");
-    /// 
-    /// });
-    /// ```
     /// </summary>
     [ScmResourceType("scm:index/externalDynamicList:ExternalDynamicList")]
     public partial class ExternalDynamicList : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         [Output("encryptedValues")]
         public Output<ImmutableDictionary<string, string>> EncryptedValues { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the external dynamic list
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -64,7 +51,7 @@ namespace Pulumi.Scm
         public Output<string> Tfid { get; private set; } = null!;
 
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         [Output("type")]
         public Output<Outputs.ExternalDynamicListType> Type { get; private set; } = null!;
@@ -77,7 +64,7 @@ namespace Pulumi.Scm
         /// <param name="name">The unique name of the resource</param>
         /// <param name="args">The arguments used to populate this resource's properties</param>
         /// <param name="options">A bag of options that control this resource's behavior</param>
-        public ExternalDynamicList(string name, ExternalDynamicListArgs args, CustomResourceOptions? options = null)
+        public ExternalDynamicList(string name, ExternalDynamicListArgs? args = null, CustomResourceOptions? options = null)
             : base("scm:index/externalDynamicList:ExternalDynamicList", name, args ?? new ExternalDynamicListArgs(), MakeResourceOptions(options, ""))
         {
         }
@@ -120,34 +107,34 @@ namespace Pulumi.Scm
     public sealed class ExternalDynamicListArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the external dynamic list
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
-        [Input("type", required: true)]
-        public Input<Inputs.ExternalDynamicListTypeArgs> Type { get; set; } = null!;
+        [Input("type")]
+        public Input<Inputs.ExternalDynamicListTypeArgs>? Type { get; set; }
 
         public ExternalDynamicListArgs()
         {
@@ -158,7 +145,7 @@ namespace Pulumi.Scm
     public sealed class ExternalDynamicListState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -167,7 +154,7 @@ namespace Pulumi.Scm
         private InputMap<string>? _encryptedValues;
 
         /// <summary>
-        /// (Internal use) Encrypted values returned from the API.
+        /// Map of sensitive values returned from the API.
         /// </summary>
         public InputMap<string> EncryptedValues
         {
@@ -180,19 +167,19 @@ namespace Pulumi.Scm
         }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the external dynamic list
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -201,7 +188,7 @@ namespace Pulumi.Scm
         public Input<string>? Tfid { get; set; }
 
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         [Input("type")]
         public Input<Inputs.ExternalDynamicListTypeGetArgs>? Type { get; set; }

@@ -20,14 +20,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     public static final CertificateProfileState Empty = new CertificateProfileState();
 
     /**
-     * The BlockExpiredCert param.
+     * Block sessions with expired certificates?
      * 
      */
     @Import(name="blockExpiredCert")
     private @Nullable Output<Boolean> blockExpiredCert;
 
     /**
-     * @return The BlockExpiredCert param.
+     * @return Block sessions with expired certificates?
      * 
      */
     public Optional<Output<Boolean>> blockExpiredCert() {
@@ -35,14 +35,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The BlockTimeoutCert param.
+     * Block session if certificate status cannot be retrieved within timeout?
      * 
      */
     @Import(name="blockTimeoutCert")
     private @Nullable Output<Boolean> blockTimeoutCert;
 
     /**
-     * @return The BlockTimeoutCert param.
+     * @return Block session if certificate status cannot be retrieved within timeout?
      * 
      */
     public Optional<Output<Boolean>> blockTimeoutCert() {
@@ -50,14 +50,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The BlockUnauthenticatedCert param.
+     * Block session if the certificate was not issued to the authenticating device?
      * 
      */
     @Import(name="blockUnauthenticatedCert")
     private @Nullable Output<Boolean> blockUnauthenticatedCert;
 
     /**
-     * @return The BlockUnauthenticatedCert param.
+     * @return Block session if the certificate was not issued to the authenticating device?
      * 
      */
     public Optional<Output<Boolean>> blockUnauthenticatedCert() {
@@ -65,14 +65,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The BlockUnknownCert param.
+     * Block session if certificate status is unknown?
      * 
      */
     @Import(name="blockUnknownCert")
     private @Nullable Output<Boolean> blockUnknownCert;
 
     /**
-     * @return The BlockUnknownCert param.
+     * @return Block session if certificate status is unknown?
      * 
      */
     public Optional<Output<Boolean>> blockUnknownCert() {
@@ -80,14 +80,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The CaCertificates param.
+     * An ordered list of CA certificates
      * 
      */
     @Import(name="caCertificates")
     private @Nullable Output<List<CertificateProfileCaCertificateArgs>> caCertificates;
 
     /**
-     * @return The CaCertificates param.
+     * @return An ordered list of CA certificates
      * 
      */
     public Optional<Output<List<CertificateProfileCaCertificateArgs>>> caCertificates() {
@@ -95,14 +95,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The CertStatusTimeout param.
+     * Certificate status timeout
      * 
      */
     @Import(name="certStatusTimeout")
     private @Nullable Output<String> certStatusTimeout;
 
     /**
-     * @return The CertStatusTimeout param.
+     * @return Certificate status timeout
      * 
      */
     public Optional<Output<String>> certStatusTimeout() {
@@ -110,14 +110,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The CrlReceiveTimeout param.
+     * CRL receive timeout (seconds)
      * 
      */
     @Import(name="crlReceiveTimeout")
     private @Nullable Output<String> crlReceiveTimeout;
 
     /**
-     * @return The CrlReceiveTimeout param.
+     * @return CRL receive timeout (seconds)
      * 
      */
     public Optional<Output<String>> crlReceiveTimeout() {
@@ -125,14 +125,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -140,14 +140,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Domain param.
+     * User domain
      * 
      */
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
     /**
-     * @return The Domain param.
+     * @return User domain
      * 
      */
     public Optional<Output<String>> domain() {
@@ -155,14 +155,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -170,14 +170,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the certificate profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * @return The name of the certificate profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -185,14 +185,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The OcspReceiveTimeout param.
+     * OCSP receive timeout (seconds)
      * 
      */
     @Import(name="ocspReceiveTimeout")
     private @Nullable Output<String> ocspReceiveTimeout;
 
     /**
-     * @return The OcspReceiveTimeout param.
+     * @return OCSP receive timeout (seconds)
      * 
      */
     public Optional<Output<String>> ocspReceiveTimeout() {
@@ -200,14 +200,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -222,14 +222,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The UseCrl param.
+     * Use CRL?
      * 
      */
     @Import(name="useCrl")
     private @Nullable Output<Boolean> useCrl;
 
     /**
-     * @return The UseCrl param.
+     * @return Use CRL?
      * 
      */
     public Optional<Output<Boolean>> useCrl() {
@@ -237,14 +237,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The UseOcsp param.
+     * Use OCSP?
      * 
      */
     @Import(name="useOcsp")
     private @Nullable Output<Boolean> useOcsp;
 
     /**
-     * @return The UseOcsp param.
+     * @return Use OCSP?
      * 
      */
     public Optional<Output<Boolean>> useOcsp() {
@@ -252,14 +252,14 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The UsernameField param.
+     * Certificate username field
      * 
      */
     @Import(name="usernameField")
     private @Nullable Output<CertificateProfileUsernameFieldArgs> usernameField;
 
     /**
-     * @return The UsernameField param.
+     * @return Certificate username field
      * 
      */
     public Optional<Output<CertificateProfileUsernameFieldArgs>> usernameField() {
@@ -307,7 +307,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockExpiredCert The BlockExpiredCert param.
+         * @param blockExpiredCert Block sessions with expired certificates?
          * 
          * @return builder
          * 
@@ -318,7 +318,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockExpiredCert The BlockExpiredCert param.
+         * @param blockExpiredCert Block sessions with expired certificates?
          * 
          * @return builder
          * 
@@ -328,7 +328,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockTimeoutCert The BlockTimeoutCert param.
+         * @param blockTimeoutCert Block session if certificate status cannot be retrieved within timeout?
          * 
          * @return builder
          * 
@@ -339,7 +339,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockTimeoutCert The BlockTimeoutCert param.
+         * @param blockTimeoutCert Block session if certificate status cannot be retrieved within timeout?
          * 
          * @return builder
          * 
@@ -349,7 +349,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockUnauthenticatedCert The BlockUnauthenticatedCert param.
+         * @param blockUnauthenticatedCert Block session if the certificate was not issued to the authenticating device?
          * 
          * @return builder
          * 
@@ -360,7 +360,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockUnauthenticatedCert The BlockUnauthenticatedCert param.
+         * @param blockUnauthenticatedCert Block session if the certificate was not issued to the authenticating device?
          * 
          * @return builder
          * 
@@ -370,7 +370,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockUnknownCert The BlockUnknownCert param.
+         * @param blockUnknownCert Block session if certificate status is unknown?
          * 
          * @return builder
          * 
@@ -381,7 +381,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param blockUnknownCert The BlockUnknownCert param.
+         * @param blockUnknownCert Block session if certificate status is unknown?
          * 
          * @return builder
          * 
@@ -391,7 +391,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param caCertificates The CaCertificates param.
+         * @param caCertificates An ordered list of CA certificates
          * 
          * @return builder
          * 
@@ -402,7 +402,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param caCertificates The CaCertificates param.
+         * @param caCertificates An ordered list of CA certificates
          * 
          * @return builder
          * 
@@ -412,7 +412,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param caCertificates The CaCertificates param.
+         * @param caCertificates An ordered list of CA certificates
          * 
          * @return builder
          * 
@@ -422,7 +422,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param certStatusTimeout The CertStatusTimeout param.
+         * @param certStatusTimeout Certificate status timeout
          * 
          * @return builder
          * 
@@ -433,7 +433,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param certStatusTimeout The CertStatusTimeout param.
+         * @param certStatusTimeout Certificate status timeout
          * 
          * @return builder
          * 
@@ -443,7 +443,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param crlReceiveTimeout The CrlReceiveTimeout param.
+         * @param crlReceiveTimeout CRL receive timeout (seconds)
          * 
          * @return builder
          * 
@@ -454,7 +454,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param crlReceiveTimeout The CrlReceiveTimeout param.
+         * @param crlReceiveTimeout CRL receive timeout (seconds)
          * 
          * @return builder
          * 
@@ -464,7 +464,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -475,7 +475,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -485,7 +485,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param domain The Domain param.
+         * @param domain User domain
          * 
          * @return builder
          * 
@@ -496,7 +496,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param domain The Domain param.
+         * @param domain User domain
          * 
          * @return builder
          * 
@@ -506,7 +506,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -517,7 +517,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -527,7 +527,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the certificate profile
          * 
          * @return builder
          * 
@@ -538,7 +538,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+         * @param name The name of the certificate profile
          * 
          * @return builder
          * 
@@ -548,7 +548,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ocspReceiveTimeout The OcspReceiveTimeout param.
+         * @param ocspReceiveTimeout OCSP receive timeout (seconds)
          * 
          * @return builder
          * 
@@ -559,7 +559,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param ocspReceiveTimeout The OcspReceiveTimeout param.
+         * @param ocspReceiveTimeout OCSP receive timeout (seconds)
          * 
          * @return builder
          * 
@@ -569,7 +569,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -580,7 +580,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -599,7 +599,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param useCrl The UseCrl param.
+         * @param useCrl Use CRL?
          * 
          * @return builder
          * 
@@ -610,7 +610,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param useCrl The UseCrl param.
+         * @param useCrl Use CRL?
          * 
          * @return builder
          * 
@@ -620,7 +620,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param useOcsp The UseOcsp param.
+         * @param useOcsp Use OCSP?
          * 
          * @return builder
          * 
@@ -631,7 +631,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param useOcsp The UseOcsp param.
+         * @param useOcsp Use OCSP?
          * 
          * @return builder
          * 
@@ -641,7 +641,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param usernameField The UsernameField param.
+         * @param usernameField Certificate username field
          * 
          * @return builder
          * 
@@ -652,7 +652,7 @@ public final class CertificateProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param usernameField The UsernameField param.
+         * @param usernameField Certificate username field
          * 
          * @return builder
          * 

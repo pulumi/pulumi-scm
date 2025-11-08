@@ -7,16 +7,7 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.TacacsServerProfile("example", {});
- * ```
+ * TacacsServerProfile resource
  */
 export class TacacsServerProfile extends pulumi.CustomResource {
     /**
@@ -47,36 +38,36 @@ export class TacacsServerProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * (Internal use) Encrypted values returned from the API.
-     */
-    declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
-    /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+     * The name of the TACACS+ server profile
+     */
+    declare public readonly name: pulumi.Output<string>;
+    /**
+     * The TACACS+ authentication protocol
      */
     declare public readonly protocol: pulumi.Output<string>;
     /**
-     * The Servers param.
+     * The TACACS+ server configuration
      */
     declare public readonly servers: pulumi.Output<outputs.TacacsServerProfileServer[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The Timeout param. Value must be between 1 and 30.
+     * The TACACS+ timeout (seconds)
      */
     declare public readonly timeout: pulumi.Output<number | undefined>;
     /**
-     * The UseSingleConnection param.
+     * Use a single TACACS+ connection?
      */
     declare public readonly useSingleConnection: pulumi.Output<boolean | undefined>;
 
@@ -94,8 +85,8 @@ export class TacacsServerProfile extends pulumi.CustomResource {
         if (opts.id) {
             const state = argsOrState as TacacsServerProfileState | undefined;
             resourceInputs["device"] = state?.device;
-            resourceInputs["encryptedValues"] = state?.encryptedValues;
             resourceInputs["folder"] = state?.folder;
+            resourceInputs["name"] = state?.name;
             resourceInputs["protocol"] = state?.protocol;
             resourceInputs["servers"] = state?.servers;
             resourceInputs["snippet"] = state?.snippet;
@@ -112,17 +103,15 @@ export class TacacsServerProfile extends pulumi.CustomResource {
             }
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
+            resourceInputs["name"] = args?.name;
             resourceInputs["protocol"] = args?.protocol;
             resourceInputs["servers"] = args?.servers;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["timeout"] = args?.timeout;
             resourceInputs["useSingleConnection"] = args?.useSingleConnection;
-            resourceInputs["encryptedValues"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        const secretOpts = { additionalSecretOutputs: ["encryptedValues"] };
-        opts = pulumi.mergeOptions(opts, secretOpts);
         super(TacacsServerProfile.__pulumiType, name, resourceInputs, opts);
     }
 }
@@ -132,36 +121,36 @@ export class TacacsServerProfile extends pulumi.CustomResource {
  */
 export interface TacacsServerProfileState {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * (Internal use) Encrypted values returned from the API.
-     */
-    encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
-    /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+     * The name of the TACACS+ server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The TACACS+ authentication protocol
      */
     protocol?: pulumi.Input<string>;
     /**
-     * The Servers param.
+     * The TACACS+ server configuration
      */
     servers?: pulumi.Input<pulumi.Input<inputs.TacacsServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The Timeout param. Value must be between 1 and 30.
+     * The TACACS+ timeout (seconds)
      */
     timeout?: pulumi.Input<number>;
     /**
-     * The UseSingleConnection param.
+     * Use a single TACACS+ connection?
      */
     useSingleConnection?: pulumi.Input<boolean>;
 }
@@ -171,31 +160,35 @@ export interface TacacsServerProfileState {
  */
 export interface TacacsServerProfileArgs {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The Protocol param. String must be one of these: `"CHAP"`, `"PAP"`.
+     * The name of the TACACS+ server profile
+     */
+    name?: pulumi.Input<string>;
+    /**
+     * The TACACS+ authentication protocol
      */
     protocol: pulumi.Input<string>;
     /**
-     * The Servers param.
+     * The TACACS+ server configuration
      */
     servers: pulumi.Input<pulumi.Input<inputs.TacacsServerProfileServer>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The Timeout param. Value must be between 1 and 30.
+     * The TACACS+ timeout (seconds)
      */
     timeout?: pulumi.Input<number>;
     /**
-     * The UseSingleConnection param.
+     * Use a single TACACS+ connection?
      */
     useSingleConnection?: pulumi.Input<boolean>;
 }

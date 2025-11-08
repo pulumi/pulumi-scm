@@ -21,14 +21,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     public static final AuthenticationProfileArgs Empty = new AuthenticationProfileArgs();
 
     /**
-     * The AllowList param.
+     * Allow list
      * 
      */
     @Import(name="allowLists")
     private @Nullable Output<List<String>> allowLists;
 
     /**
-     * @return The AllowList param.
+     * @return Allow list
      * 
      */
     public Optional<Output<List<String>>> allowLists() {
@@ -36,14 +36,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -51,14 +51,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -66,14 +66,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Lockout param.
+     * Lockout
      * 
      */
     @Import(name="lockout")
     private @Nullable Output<AuthenticationProfileLockoutArgs> lockout;
 
     /**
-     * @return The Lockout param.
+     * @return Lockout
      * 
      */
     public Optional<Output<AuthenticationProfileLockoutArgs>> lockout() {
@@ -81,14 +81,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Method param.
+     * Method
      * 
      */
     @Import(name="method")
     private @Nullable Output<AuthenticationProfileMethodArgs> method;
 
     /**
-     * @return The Method param.
+     * @return Method
      * 
      */
     public Optional<Output<AuthenticationProfileMethodArgs>> method() {
@@ -96,14 +96,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The MultiFactorAuth param.
+     * Multi factor auth
      * 
      */
     @Import(name="multiFactorAuth")
     private @Nullable Output<AuthenticationProfileMultiFactorAuthArgs> multiFactorAuth;
 
     /**
-     * @return The MultiFactorAuth param.
+     * @return Multi factor auth
      * 
      */
     public Optional<Output<AuthenticationProfileMultiFactorAuthArgs>> multiFactorAuth() {
@@ -111,14 +111,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Name param.
+     * The name of the authentication profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the authentication profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -126,14 +126,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The SingleSignOn param.
+     * Single sign on
      * 
      */
     @Import(name="singleSignOn")
     private @Nullable Output<AuthenticationProfileSingleSignOnArgs> singleSignOn;
 
     /**
-     * @return The SingleSignOn param.
+     * @return Single sign on
      * 
      */
     public Optional<Output<AuthenticationProfileSingleSignOnArgs>> singleSignOn() {
@@ -141,14 +141,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -156,14 +156,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The UserDomain param. String length must not exceed 63 characters.
+     * User domain
      * 
      */
     @Import(name="userDomain")
     private @Nullable Output<String> userDomain;
 
     /**
-     * @return The UserDomain param. String length must not exceed 63 characters.
+     * @return User domain
      * 
      */
     public Optional<Output<String>> userDomain() {
@@ -171,14 +171,14 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
     }
 
     /**
-     * The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * Username modifier
      * 
      */
     @Import(name="usernameModifier")
     private @Nullable Output<String> usernameModifier;
 
     /**
-     * @return The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+     * @return Username modifier
      * 
      */
     public Optional<Output<String>> usernameModifier() {
@@ -220,7 +220,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param allowLists The AllowList param.
+         * @param allowLists Allow list
          * 
          * @return builder
          * 
@@ -231,7 +231,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param allowLists The AllowList param.
+         * @param allowLists Allow list
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param allowLists The AllowList param.
+         * @param allowLists Allow list
          * 
          * @return builder
          * 
@@ -251,7 +251,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -262,7 +262,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -272,7 +272,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -283,7 +283,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -293,7 +293,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param lockout The Lockout param.
+         * @param lockout Lockout
          * 
          * @return builder
          * 
@@ -304,7 +304,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param lockout The Lockout param.
+         * @param lockout Lockout
          * 
          * @return builder
          * 
@@ -314,7 +314,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param method The Method param.
+         * @param method Method
          * 
          * @return builder
          * 
@@ -325,7 +325,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param method The Method param.
+         * @param method Method
          * 
          * @return builder
          * 
@@ -335,7 +335,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param multiFactorAuth The MultiFactorAuth param.
+         * @param multiFactorAuth Multi factor auth
          * 
          * @return builder
          * 
@@ -346,7 +346,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param multiFactorAuth The MultiFactorAuth param.
+         * @param multiFactorAuth Multi factor auth
          * 
          * @return builder
          * 
@@ -356,7 +356,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the authentication profile
          * 
          * @return builder
          * 
@@ -367,7 +367,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the authentication profile
          * 
          * @return builder
          * 
@@ -377,7 +377,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param singleSignOn The SingleSignOn param.
+         * @param singleSignOn Single sign on
          * 
          * @return builder
          * 
@@ -388,7 +388,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param singleSignOn The SingleSignOn param.
+         * @param singleSignOn Single sign on
          * 
          * @return builder
          * 
@@ -398,7 +398,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -409,7 +409,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -419,7 +419,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param userDomain The UserDomain param. String length must not exceed 63 characters.
+         * @param userDomain User domain
          * 
          * @return builder
          * 
@@ -430,7 +430,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param userDomain The UserDomain param. String length must not exceed 63 characters.
+         * @param userDomain User domain
          * 
          * @return builder
          * 
@@ -440,7 +440,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param usernameModifier The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+         * @param usernameModifier Username modifier
          * 
          * @return builder
          * 
@@ -451,7 +451,7 @@ public final class AuthenticationProfileArgs extends com.pulumi.resources.Resour
         }
 
         /**
-         * @param usernameModifier The UsernameModifier param. String must be one of these: `&#34;%USERINPUT%&#34;`, `&#34;%USERINPUT%{@literal @}%USERDOMAIN%&#34;`, `&#34;%USERDOMAIN%\\%USERINPUT%&#34;`.
+         * @param usernameModifier Username modifier
          * 
          * @return builder
          * 

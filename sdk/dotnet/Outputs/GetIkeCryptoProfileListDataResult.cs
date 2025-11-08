@@ -14,41 +14,58 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeCryptoProfileListDataResult
     {
         /// <summary>
-        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled. Value must be less than or equal to 50. Default: `0`.
+        /// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
         /// </summary>
         public readonly int AuthenticationMultiple;
         /// <summary>
-        /// The DhGroups param. Individual elements in this list are subject to additional validation. String must be one of these: `"group1"`, `"group2"`, `"group5"`, `"group14"`, `"group19"`, `"group20"`.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Dh group
         /// </summary>
         public readonly ImmutableArray<string> DhGroups;
         /// <summary>
-        /// Encryption algorithm. Individual elements in this list are subject to additional validation. String must be one of these: `"des"`, `"3des"`, `"aes-128-cbc"`, `"aes-192-cbc"`, `"aes-256-cbc"`, `"aes-128-gcm"`, `"aes-256-gcm"`.
+        /// Encryption algorithm
         /// </summary>
         public readonly ImmutableArray<string> Encryptions;
         /// <summary>
-        /// The Hashes param. Individual elements in this list are subject to additional validation. String must be one of these: `"md5"`, `"sha1"`, `"sha256"`, `"sha384"`, `"sha512"`.
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// Hash
         /// </summary>
         public readonly ImmutableArray<string> Hashes;
         /// <summary>
-        /// UUID of the resource.
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Lifetime param.
+        /// Ike crypto profile lifetime
         /// </summary>
         public readonly Outputs.GetIkeCryptoProfileListDataLifetimeResult Lifetime;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetIkeCryptoProfileListDataResult(
             int authenticationMultiple,
 
+            string device,
+
             ImmutableArray<string> dhGroups,
 
             ImmutableArray<string> encryptions,
+
+            string folder,
 
             ImmutableArray<string> hashes,
 
@@ -56,15 +73,23 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetIkeCryptoProfileListDataLifetimeResult lifetime,
 
-            string name)
+            string name,
+
+            string snippet,
+
+            string tfid)
         {
             AuthenticationMultiple = authenticationMultiple;
+            Device = device;
             DhGroups = dhGroups;
             Encryptions = encryptions;
+            Folder = folder;
             Hashes = hashes;
             Id = id;
             Lifetime = lifetime;
             Name = name;
+            Snippet = snippet;
+            Tfid = tfid;
         }
     }
 }

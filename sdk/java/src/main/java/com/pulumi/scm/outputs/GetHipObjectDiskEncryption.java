@@ -14,38 +14,38 @@ import java.util.Objects;
 @CustomType
 public final class GetHipObjectDiskEncryption {
     /**
-     * @return Encryption locations.
+     * @return Encryption locations
      * 
      */
     private GetHipObjectDiskEncryptionCriteria criteria;
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     private Boolean excludeVendor;
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     private List<GetHipObjectDiskEncryptionVendor> vendors;
 
     private GetHipObjectDiskEncryption() {}
     /**
-     * @return Encryption locations.
+     * @return Encryption locations
      * 
      */
     public GetHipObjectDiskEncryptionCriteria criteria() {
         return this.criteria;
     }
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Boolean excludeVendor() {
         return this.excludeVendor;
     }
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public List<GetHipObjectDiskEncryptionVendor> vendors() {

@@ -14,35 +14,54 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetDecryptionProfileListDataResult
     {
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space. String validation regex: `^[A-Za-z0-9]{1}[A-Za-z0-9_\-\.\s]{0,}$`.
+        /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The SslForwardProxy param.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// Ssl forward proxy
         /// </summary>
         public readonly Outputs.GetDecryptionProfileListDataSslForwardProxyResult SslForwardProxy;
         /// <summary>
-        /// The SslInboundProxy param.
+        /// Ssl inbound proxy
         /// </summary>
         public readonly Outputs.GetDecryptionProfileListDataSslInboundProxyResult SslInboundProxy;
         /// <summary>
-        /// The SslNoProxy param.
+        /// Ssl no proxy
         /// </summary>
         public readonly Outputs.GetDecryptionProfileListDataSslNoProxyResult SslNoProxy;
         /// <summary>
-        /// The SslProtocolSettings param.
+        /// Ssl protocol settings
         /// </summary>
         public readonly Outputs.GetDecryptionProfileListDataSslProtocolSettingsResult SslProtocolSettings;
+        public readonly string Tfid;
 
         [OutputConstructor]
         private GetDecryptionProfileListDataResult(
+            string device,
+
+            string folder,
+
             string id,
 
             string name,
+
+            string snippet,
 
             Outputs.GetDecryptionProfileListDataSslForwardProxyResult sslForwardProxy,
 
@@ -50,14 +69,20 @@ namespace Pulumi.Scm.Outputs
 
             Outputs.GetDecryptionProfileListDataSslNoProxyResult sslNoProxy,
 
-            Outputs.GetDecryptionProfileListDataSslProtocolSettingsResult sslProtocolSettings)
+            Outputs.GetDecryptionProfileListDataSslProtocolSettingsResult sslProtocolSettings,
+
+            string tfid)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
             Name = name;
+            Snippet = snippet;
             SslForwardProxy = sslForwardProxy;
             SslInboundProxy = sslInboundProxy;
             SslNoProxy = sslNoProxy;
             SslProtocolSettings = sslProtocolSettings;
+            Tfid = tfid;
         }
     }
 }

@@ -5,11 +5,10 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.NatRuleDestinationTranslationArgs;
-import com.pulumi.scm.inputs.NatRuleDynamicDestinationTranslationArgs;
+import com.pulumi.scm.inputs.NatRuleDnsRewriteArgs;
 import com.pulumi.scm.inputs.NatRuleSourceTranslationArgs;
-import com.pulumi.scm.inputs.NatRuleTargetArgs;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +21,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     public static final NatRuleState Empty = new NatRuleState();
 
     /**
-     * The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+     * Active active device binding
      * 
      */
     @Import(name="activeActiveDeviceBinding")
     private @Nullable Output<String> activeActiveDeviceBinding;
 
     /**
-     * @return The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+     * @return Active active device binding
      * 
      */
     public Optional<Output<String>> activeActiveDeviceBinding() {
@@ -37,14 +36,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Description param.
+     * NAT rule description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return NAT rule description
      * 
      */
     public Optional<Output<String>> description() {
@@ -52,29 +51,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Static destination translation parameter.
-     * 
-     */
-    @Import(name="destinationTranslation")
-    private @Nullable Output<NatRuleDestinationTranslationArgs> destinationTranslation;
-
-    /**
-     * @return Static destination translation parameter.
-     * 
-     */
-    public Optional<Output<NatRuleDestinationTranslationArgs>> destinationTranslation() {
-        return Optional.ofNullable(this.destinationTranslation);
-    }
-
-    /**
-     * The destination address(es).
+     * Destination address(es) of the original packet
      * 
      */
     @Import(name="destinations")
     private @Nullable Output<List<String>> destinations;
 
     /**
-     * @return The destination address(es).
+     * @return Destination address(es) of the original packet
      * 
      */
     public Optional<Output<List<String>>> destinations() {
@@ -82,14 +66,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -97,14 +81,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Disabled param.
+     * Disable NAT rule?
      * 
      */
     @Import(name="disabled")
     private @Nullable Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param.
+     * @return Disable NAT rule?
      * 
      */
     public Optional<Output<Boolean>> disabled() {
@@ -112,29 +96,44 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Dynamic destination translation parameter.
+     * Distribution method
      * 
      */
-    @Import(name="dynamicDestinationTranslation")
-    private @Nullable Output<NatRuleDynamicDestinationTranslationArgs> dynamicDestinationTranslation;
+    @Import(name="distribution")
+    private @Nullable Output<String> distribution;
 
     /**
-     * @return Dynamic destination translation parameter.
+     * @return Distribution method
      * 
      */
-    public Optional<Output<NatRuleDynamicDestinationTranslationArgs>> dynamicDestinationTranslation() {
-        return Optional.ofNullable(this.dynamicDestinationTranslation);
+    public Optional<Output<String>> distribution() {
+        return Optional.ofNullable(this.distribution);
     }
 
     /**
-     * The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * DNS rewrite
+     * 
+     */
+    @Import(name="dnsRewrite")
+    private @Nullable Output<NatRuleDnsRewriteArgs> dnsRewrite;
+
+    /**
+     * @return DNS rewrite
+     * 
+     */
+    public Optional<Output<NatRuleDnsRewriteArgs>> dnsRewrite() {
+        return Optional.ofNullable(this.dnsRewrite);
+    }
+
+    /**
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -142,14 +141,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source security zone(s).
+     * Source zone(s) of the original packet
      * 
      */
     @Import(name="froms")
     private @Nullable Output<List<String>> froms;
 
     /**
-     * @return The source security zone(s).
+     * @return Source zone(s) of the original packet
      * 
      */
     public Optional<Output<List<String>>> froms() {
@@ -157,29 +156,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The GroupTag param.
-     * 
-     */
-    @Import(name="groupTag")
-    private @Nullable Output<String> groupTag;
-
-    /**
-     * @return The GroupTag param.
-     * 
-     */
-    public Optional<Output<String>> groupTag() {
-        return Optional.ofNullable(this.groupTag);
-    }
-
-    /**
-     * The Name param.
+     * NAT rule name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return NAT rule name
      * 
      */
     public Optional<Output<String>> name() {
@@ -187,14 +171,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+     * NAT type
      * 
      */
     @Import(name="natType")
     private @Nullable Output<String> natType;
 
     /**
-     * @return The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+     * @return NAT type
      * 
      */
     public Optional<Output<String>> natType() {
@@ -202,14 +186,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The relative position of the rule
      * 
      */
     @Import(name="position")
     private @Nullable Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The relative position of the rule
      * 
      */
     public Optional<Output<String>> position() {
@@ -217,14 +201,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Service param.
+     * The service of the original packet
      * 
      */
     @Import(name="service")
     private @Nullable Output<String> service;
 
     /**
-     * @return The Service param.
+     * @return The service of the original packet
      * 
      */
     public Optional<Output<String>> service() {
@@ -232,14 +216,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -247,14 +231,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The SourceTranslation param.
+     * Source translation
      * 
      */
     @Import(name="sourceTranslation")
     private @Nullable Output<NatRuleSourceTranslationArgs> sourceTranslation;
 
     /**
-     * @return The SourceTranslation param.
+     * @return Source translation
      * 
      */
     public Optional<Output<NatRuleSourceTranslationArgs>> sourceTranslation() {
@@ -262,14 +246,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The source address(es).
+     * Source address(es) of the original packet
      * 
      */
     @Import(name="sources")
     private @Nullable Output<List<String>> sources;
 
     /**
-     * @return The source address(es).
+     * @return Source address(es) of the original packet
      * 
      */
     public Optional<Output<List<String>>> sources() {
@@ -277,33 +261,18 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The Tags param.
+     * NAT rule tags
      * 
      */
     @Import(name="tags")
     private @Nullable Output<List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return NAT rule tags
      * 
      */
     public Optional<Output<List<String>>> tags() {
         return Optional.ofNullable(this.tags);
-    }
-
-    /**
-     * The Target param.
-     * 
-     */
-    @Import(name="target")
-    private @Nullable Output<NatRuleTargetArgs> target;
-
-    /**
-     * @return The Target param.
-     * 
-     */
-    public Optional<Output<NatRuleTargetArgs>> target() {
-        return Optional.ofNullable(this.target);
     }
 
     @Import(name="tfid")
@@ -314,14 +283,14 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The ToInterface param.
+     * Destination interface of the original packet
      * 
      */
     @Import(name="toInterface")
     private @Nullable Output<String> toInterface;
 
     /**
-     * @return The ToInterface param.
+     * @return Destination interface of the original packet
      * 
      */
     public Optional<Output<String>> toInterface() {
@@ -329,18 +298,48 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * The destination security zone(s).
+     * Destination zone of the original packet
      * 
      */
     @Import(name="tos")
     private @Nullable Output<List<String>> tos;
 
     /**
-     * @return The destination security zone(s).
+     * @return Destination zone of the original packet
      * 
      */
     public Optional<Output<List<String>>> tos() {
         return Optional.ofNullable(this.tos);
+    }
+
+    /**
+     * Translated destination IP address
+     * 
+     */
+    @Import(name="translatedAddressSingle")
+    private @Nullable Output<String> translatedAddressSingle;
+
+    /**
+     * @return Translated destination IP address
+     * 
+     */
+    public Optional<Output<String>> translatedAddressSingle() {
+        return Optional.ofNullable(this.translatedAddressSingle);
+    }
+
+    /**
+     * Translated destination port
+     * 
+     */
+    @Import(name="translatedPort")
+    private @Nullable Output<Integer> translatedPort;
+
+    /**
+     * @return Translated destination port
+     * 
+     */
+    public Optional<Output<Integer>> translatedPort() {
+        return Optional.ofNullable(this.translatedPort);
     }
 
     private NatRuleState() {}
@@ -348,14 +347,13 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
     private NatRuleState(NatRuleState $) {
         this.activeActiveDeviceBinding = $.activeActiveDeviceBinding;
         this.description = $.description;
-        this.destinationTranslation = $.destinationTranslation;
         this.destinations = $.destinations;
         this.device = $.device;
         this.disabled = $.disabled;
-        this.dynamicDestinationTranslation = $.dynamicDestinationTranslation;
+        this.distribution = $.distribution;
+        this.dnsRewrite = $.dnsRewrite;
         this.folder = $.folder;
         this.froms = $.froms;
-        this.groupTag = $.groupTag;
         this.name = $.name;
         this.natType = $.natType;
         this.position = $.position;
@@ -364,10 +362,11 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         this.sourceTranslation = $.sourceTranslation;
         this.sources = $.sources;
         this.tags = $.tags;
-        this.target = $.target;
         this.tfid = $.tfid;
         this.toInterface = $.toInterface;
         this.tos = $.tos;
+        this.translatedAddressSingle = $.translatedAddressSingle;
+        this.translatedPort = $.translatedPort;
     }
 
     public static Builder builder() {
@@ -389,7 +388,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param activeActiveDeviceBinding The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+         * @param activeActiveDeviceBinding Active active device binding
          * 
          * @return builder
          * 
@@ -400,7 +399,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param activeActiveDeviceBinding The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+         * @param activeActiveDeviceBinding Active active device binding
          * 
          * @return builder
          * 
@@ -410,7 +409,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description NAT rule description
          * 
          * @return builder
          * 
@@ -421,7 +420,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param description The Description param.
+         * @param description NAT rule description
          * 
          * @return builder
          * 
@@ -431,28 +430,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinationTranslation Static destination translation parameter.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder destinationTranslation(@Nullable Output<NatRuleDestinationTranslationArgs> destinationTranslation) {
-            $.destinationTranslation = destinationTranslation;
-            return this;
-        }
-
-        /**
-         * @param destinationTranslation Static destination translation parameter.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder destinationTranslation(NatRuleDestinationTranslationArgs destinationTranslation) {
-            return destinationTranslation(Output.of(destinationTranslation));
-        }
-
-        /**
-         * @param destinations The destination address(es).
+         * @param destinations Destination address(es) of the original packet
          * 
          * @return builder
          * 
@@ -463,7 +441,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinations The destination address(es).
+         * @param destinations Destination address(es) of the original packet
          * 
          * @return builder
          * 
@@ -473,7 +451,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param destinations The destination address(es).
+         * @param destinations Destination address(es) of the original packet
          * 
          * @return builder
          * 
@@ -483,7 +461,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -494,7 +472,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param device The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -504,7 +482,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disabled The Disabled param.
+         * @param disabled Disable NAT rule?
          * 
          * @return builder
          * 
@@ -515,7 +493,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param disabled The Disabled param.
+         * @param disabled Disable NAT rule?
          * 
          * @return builder
          * 
@@ -525,28 +503,49 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param dynamicDestinationTranslation Dynamic destination translation parameter.
+         * @param distribution Distribution method
          * 
          * @return builder
          * 
          */
-        public Builder dynamicDestinationTranslation(@Nullable Output<NatRuleDynamicDestinationTranslationArgs> dynamicDestinationTranslation) {
-            $.dynamicDestinationTranslation = dynamicDestinationTranslation;
+        public Builder distribution(@Nullable Output<String> distribution) {
+            $.distribution = distribution;
             return this;
         }
 
         /**
-         * @param dynamicDestinationTranslation Dynamic destination translation parameter.
+         * @param distribution Distribution method
          * 
          * @return builder
          * 
          */
-        public Builder dynamicDestinationTranslation(NatRuleDynamicDestinationTranslationArgs dynamicDestinationTranslation) {
-            return dynamicDestinationTranslation(Output.of(dynamicDestinationTranslation));
+        public Builder distribution(String distribution) {
+            return distribution(Output.of(distribution));
         }
 
         /**
-         * @param folder The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+         * @param dnsRewrite DNS rewrite
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsRewrite(@Nullable Output<NatRuleDnsRewriteArgs> dnsRewrite) {
+            $.dnsRewrite = dnsRewrite;
+            return this;
+        }
+
+        /**
+         * @param dnsRewrite DNS rewrite
+         * 
+         * @return builder
+         * 
+         */
+        public Builder dnsRewrite(NatRuleDnsRewriteArgs dnsRewrite) {
+            return dnsRewrite(Output.of(dnsRewrite));
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -557,7 +556,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param folder The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -567,7 +566,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s).
+         * @param froms Source zone(s) of the original packet
          * 
          * @return builder
          * 
@@ -578,7 +577,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s).
+         * @param froms Source zone(s) of the original packet
          * 
          * @return builder
          * 
@@ -588,7 +587,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param froms The source security zone(s).
+         * @param froms Source zone(s) of the original packet
          * 
          * @return builder
          * 
@@ -598,28 +597,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param groupTag The GroupTag param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder groupTag(@Nullable Output<String> groupTag) {
-            $.groupTag = groupTag;
-            return this;
-        }
-
-        /**
-         * @param groupTag The GroupTag param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder groupTag(String groupTag) {
-            return groupTag(Output.of(groupTag));
-        }
-
-        /**
-         * @param name The Name param.
+         * @param name NAT rule name
          * 
          * @return builder
          * 
@@ -630,7 +608,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name NAT rule name
          * 
          * @return builder
          * 
@@ -640,7 +618,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param natType The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+         * @param natType NAT type
          * 
          * @return builder
          * 
@@ -651,7 +629,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param natType The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+         * @param natType NAT type
          * 
          * @return builder
          * 
@@ -661,7 +639,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The relative position of the rule
          * 
          * @return builder
          * 
@@ -672,7 +650,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param position The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+         * @param position The relative position of the rule
          * 
          * @return builder
          * 
@@ -682,7 +660,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param service The Service param.
+         * @param service The service of the original packet
          * 
          * @return builder
          * 
@@ -693,7 +671,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param service The Service param.
+         * @param service The service of the original packet
          * 
          * @return builder
          * 
@@ -703,7 +681,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -714,7 +692,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param snippet The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -724,7 +702,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sourceTranslation The SourceTranslation param.
+         * @param sourceTranslation Source translation
          * 
          * @return builder
          * 
@@ -735,7 +713,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sourceTranslation The SourceTranslation param.
+         * @param sourceTranslation Source translation
          * 
          * @return builder
          * 
@@ -745,7 +723,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es).
+         * @param sources Source address(es) of the original packet
          * 
          * @return builder
          * 
@@ -756,7 +734,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es).
+         * @param sources Source address(es) of the original packet
          * 
          * @return builder
          * 
@@ -766,7 +744,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param sources The source address(es).
+         * @param sources Source address(es) of the original packet
          * 
          * @return builder
          * 
@@ -776,7 +754,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags NAT rule tags
          * 
          * @return builder
          * 
@@ -787,7 +765,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags NAT rule tags
          * 
          * @return builder
          * 
@@ -797,34 +775,13 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tags The Tags param.
+         * @param tags NAT rule tags
          * 
          * @return builder
          * 
          */
         public Builder tags(String... tags) {
             return tags(List.of(tags));
-        }
-
-        /**
-         * @param target The Target param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder target(@Nullable Output<NatRuleTargetArgs> target) {
-            $.target = target;
-            return this;
-        }
-
-        /**
-         * @param target The Target param.
-         * 
-         * @return builder
-         * 
-         */
-        public Builder target(NatRuleTargetArgs target) {
-            return target(Output.of(target));
         }
 
         public Builder tfid(@Nullable Output<String> tfid) {
@@ -837,7 +794,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param toInterface The ToInterface param.
+         * @param toInterface Destination interface of the original packet
          * 
          * @return builder
          * 
@@ -848,7 +805,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param toInterface The ToInterface param.
+         * @param toInterface Destination interface of the original packet
          * 
          * @return builder
          * 
@@ -858,7 +815,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tos The destination security zone(s).
+         * @param tos Destination zone of the original packet
          * 
          * @return builder
          * 
@@ -869,7 +826,7 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tos The destination security zone(s).
+         * @param tos Destination zone of the original packet
          * 
          * @return builder
          * 
@@ -879,13 +836,55 @@ public final class NatRuleState extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param tos The destination security zone(s).
+         * @param tos Destination zone of the original packet
          * 
          * @return builder
          * 
          */
         public Builder tos(String... tos) {
             return tos(List.of(tos));
+        }
+
+        /**
+         * @param translatedAddressSingle Translated destination IP address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translatedAddressSingle(@Nullable Output<String> translatedAddressSingle) {
+            $.translatedAddressSingle = translatedAddressSingle;
+            return this;
+        }
+
+        /**
+         * @param translatedAddressSingle Translated destination IP address
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translatedAddressSingle(String translatedAddressSingle) {
+            return translatedAddressSingle(Output.of(translatedAddressSingle));
+        }
+
+        /**
+         * @param translatedPort Translated destination port
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translatedPort(@Nullable Output<Integer> translatedPort) {
+            $.translatedPort = translatedPort;
+            return this;
+        }
+
+        /**
+         * @param translatedPort Translated destination port
+         * 
+         * @return builder
+         * 
+         */
+        public Builder translatedPort(Integer translatedPort) {
+            return translatedPort(Output.of(translatedPort));
         }
 
         public NatRuleState build() {

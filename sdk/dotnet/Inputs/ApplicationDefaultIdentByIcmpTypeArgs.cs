@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ApplicationDefaultIdentByIcmpTypeArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Code param.
+        /// Code
         /// </summary>
         [Input("code")]
         public Input<string>? Code { get; set; }
 
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         [Input("type", required: true)]
         public Input<string> Type { get; set; } = null!;

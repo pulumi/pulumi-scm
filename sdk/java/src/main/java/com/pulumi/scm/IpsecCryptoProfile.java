@@ -19,162 +19,134 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * IpsecCryptoProfile resource
  * 
  * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.IpsecCryptoProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new IpsecCryptoProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
  * 
  */
 @ResourceType(type="scm:index/ipsecCryptoProfile:IpsecCryptoProfile")
 public class IpsecCryptoProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Ah
      * 
      */
     @Export(name="ah", refs={IpsecCryptoProfileAh.class}, tree="[0]")
     private Output</* @Nullable */ IpsecCryptoProfileAh> ah;
 
     /**
-     * @return The Ah param. Ensure that only one of the following is specified: `ah`, `esp`
+     * @return Ah
      * 
      */
     public Output<Optional<IpsecCryptoProfileAh>> ah() {
         return Codegen.optional(this.ah);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+     * phase-2 DH group (PFS DH group)
      * 
      */
     @Export(name="dhGroup", refs={String.class}, tree="[0]")
     private Output<String> dhGroup;
 
     /**
-     * @return phase-2 DH group (PFS DH group). String must be one of these: `&#34;no-pfs&#34;`, `&#34;group1&#34;`, `&#34;group2&#34;`, `&#34;group5&#34;`, `&#34;group14&#34;`, `&#34;group19&#34;`, `&#34;group20&#34;`. Default: `&#34;group2&#34;`.
+     * @return phase-2 DH group (PFS DH group)
      * 
      */
     public Output<String> dhGroup() {
         return this.dhGroup;
     }
     /**
-     * The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+     * Esp
      * 
      */
     @Export(name="esp", refs={IpsecCryptoProfileEsp.class}, tree="[0]")
     private Output</* @Nullable */ IpsecCryptoProfileEsp> esp;
 
     /**
-     * @return The Esp param. Ensure that only one of the following is specified: `ah`, `esp`
+     * @return Esp
      * 
      */
     public Output<Optional<IpsecCryptoProfileEsp>> esp() {
         return Codegen.optional(this.esp);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Lifesize param.
+     * Lifesize
      * 
      */
     @Export(name="lifesize", refs={IpsecCryptoProfileLifesize.class}, tree="[0]")
     private Output</* @Nullable */ IpsecCryptoProfileLifesize> lifesize;
 
     /**
-     * @return The Lifesize param.
+     * @return Lifesize
      * 
      */
     public Output<Optional<IpsecCryptoProfileLifesize>> lifesize() {
         return Codegen.optional(this.lifesize);
     }
     /**
-     * The Lifetime param.
+     * Ipsec crypto profile lifetime
      * 
      */
     @Export(name="lifetime", refs={IpsecCryptoProfileLifetime.class}, tree="[0]")
     private Output<IpsecCryptoProfileLifetime> lifetime;
 
     /**
-     * @return The Lifetime param.
+     * @return Ipsec crypto profile lifetime
      * 
      */
     public Output<IpsecCryptoProfileLifetime> lifetime() {
         return this.lifetime;
     }
     /**
-     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

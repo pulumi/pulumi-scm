@@ -18,14 +18,14 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
     public static final UrlAccessProfileCredentialEnforcementArgs Empty = new UrlAccessProfileCredentialEnforcementArgs();
 
     /**
-     * The Alerts param.
+     * Alert
      * 
      */
     @Import(name="alerts")
     private @Nullable Output<List<String>> alerts;
 
     /**
-     * @return The Alerts param.
+     * @return Alert
      * 
      */
     public Optional<Output<List<String>>> alerts() {
@@ -33,14 +33,14 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
     }
 
     /**
-     * The Allows param.
+     * Allow
      * 
      */
     @Import(name="allows")
     private @Nullable Output<List<String>> allows;
 
     /**
-     * @return The Allows param.
+     * @return Allow
      * 
      */
     public Optional<Output<List<String>>> allows() {
@@ -48,14 +48,14 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
     }
 
     /**
-     * The Blocks param.
+     * Block
      * 
      */
     @Import(name="blocks")
     private @Nullable Output<List<String>> blocks;
 
     /**
-     * @return The Blocks param.
+     * @return Block
      * 
      */
     public Optional<Output<List<String>>> blocks() {
@@ -63,14 +63,14 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
     }
 
     /**
-     * The Continues param.
+     * Continue
      * 
      */
     @Import(name="continues")
     private @Nullable Output<List<String>> continues;
 
     /**
-     * @return The Continues param.
+     * @return Continue
      * 
      */
     public Optional<Output<List<String>>> continues() {
@@ -78,14 +78,14 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
     }
 
     /**
-     * The LogSeverity param. Default: `&#34;medium&#34;`.
+     * Log severity
      * 
      */
     @Import(name="logSeverity")
     private @Nullable Output<String> logSeverity;
 
     /**
-     * @return The LogSeverity param. Default: `&#34;medium&#34;`.
+     * @return Log severity
      * 
      */
     public Optional<Output<String>> logSeverity() {
@@ -93,14 +93,14 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
     }
 
     /**
-     * The Mode param.
+     * Mode
      * 
      */
     @Import(name="mode")
     private @Nullable Output<UrlAccessProfileCredentialEnforcementModeArgs> mode;
 
     /**
-     * @return The Mode param.
+     * @return Mode
      * 
      */
     public Optional<Output<UrlAccessProfileCredentialEnforcementModeArgs>> mode() {
@@ -137,7 +137,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param alerts The Alerts param.
+         * @param alerts Alert
          * 
          * @return builder
          * 
@@ -148,7 +148,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param alerts The Alerts param.
+         * @param alerts Alert
          * 
          * @return builder
          * 
@@ -158,7 +158,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param alerts The Alerts param.
+         * @param alerts Alert
          * 
          * @return builder
          * 
@@ -168,7 +168,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param allows The Allows param.
+         * @param allows Allow
          * 
          * @return builder
          * 
@@ -179,7 +179,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param allows The Allows param.
+         * @param allows Allow
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param allows The Allows param.
+         * @param allows Allow
          * 
          * @return builder
          * 
@@ -199,7 +199,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param blocks The Blocks param.
+         * @param blocks Block
          * 
          * @return builder
          * 
@@ -210,7 +210,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param blocks The Blocks param.
+         * @param blocks Block
          * 
          * @return builder
          * 
@@ -220,7 +220,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param blocks The Blocks param.
+         * @param blocks Block
          * 
          * @return builder
          * 
@@ -230,7 +230,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param continues The Continues param.
+         * @param continues Continue
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param continues The Continues param.
+         * @param continues Continue
          * 
          * @return builder
          * 
@@ -251,7 +251,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param continues The Continues param.
+         * @param continues Continue
          * 
          * @return builder
          * 
@@ -261,7 +261,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param logSeverity The LogSeverity param. Default: `&#34;medium&#34;`.
+         * @param logSeverity Log severity
          * 
          * @return builder
          * 
@@ -272,7 +272,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param logSeverity The LogSeverity param. Default: `&#34;medium&#34;`.
+         * @param logSeverity Log severity
          * 
          * @return builder
          * 
@@ -282,7 +282,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param mode The Mode param.
+         * @param mode Mode
          * 
          * @return builder
          * 
@@ -293,7 +293,7 @@ public final class UrlAccessProfileCredentialEnforcementArgs extends com.pulumi.
         }
 
         /**
-         * @param mode The Mode param.
+         * @param mode Mode
          * 
          * @return builder
          * 

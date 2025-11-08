@@ -16,7 +16,7 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
+ * UrlCategory resource
  * 
  * ## Example Usage
  * 
@@ -42,8 +42,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a custom URL Category object.
+ *         //
  *         var example = new UrlCategory("example", UrlCategoryArgs.builder()
  *             .folder("Shared")
+ *             .name("example_url_category")
+ *             .description("Test URL Category for create API")
+ *             .lists(            
+ *                 "example.com",
+ *                 "test-create.com")
+ *             .type("URL List")
  *             .build());
  * 
  *     }
@@ -55,84 +64,84 @@ import javax.annotation.Nullable;
 @ResourceType(type="scm:index/urlCategory:UrlCategory")
 public class UrlCategory extends com.pulumi.resources.CustomResource {
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The List param.
+     * List
      * 
      */
     @Export(name="lists", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> lists;
 
     /**
-     * @return The List param.
+     * @return List
      * 
      */
     public Output<Optional<List<String>>> lists() {
         return Codegen.optional(this.lists);
     }
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -145,14 +154,14 @@ public class UrlCategory extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Type param. String must be one of these: `&#34;URL List&#34;`, `&#34;Category Match&#34;`. Default: `&#34;URL List&#34;`.
+     * Type
      * 
      */
     @Export(name="type", refs={String.class}, tree="[0]")
     private Output<String> type;
 
     /**
-     * @return The Type param. String must be one of these: `&#34;URL List&#34;`, `&#34;Category Match&#34;`. Default: `&#34;URL List&#34;`.
+     * @return Type
      * 
      */
     public Output<String> type() {

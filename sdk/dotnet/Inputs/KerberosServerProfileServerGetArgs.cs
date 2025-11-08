@@ -13,19 +13,19 @@ namespace Pulumi.Scm.Inputs
     public sealed class KerberosServerProfileServerGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Host param.
+        /// The Kerberos server IP address
         /// </summary>
         [Input("host")]
         public Input<string>? Host { get; set; }
 
         /// <summary>
-        /// The Name param.
+        /// The Kerberos server name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Port param. Value must be between 1 and 65535.
+        /// The Kerberos server port
         /// </summary>
         [Input("port")]
         public Input<int>? Port { get; set; }

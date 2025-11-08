@@ -11,82 +11,83 @@ import com.pulumi.scm.outputs.GetServiceConnectionQos;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 
 @CustomType
 public final class GetServiceConnectionResult {
     /**
-     * @return The BackupSC param.
+     * @return Backup s c
      * 
      */
     private String backupSC;
     /**
-     * @return The BgpPeer param.
+     * @return Bgp peer
      * 
      */
     private GetServiceConnectionBgpPeer bgpPeer;
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * @return Map of sensitive values returned from the API.
      * 
      */
-    private String folder;
+    private Map<String,String> encryptedValues;
     /**
-     * @return The Id param.
+     * @return The UUID of the service connection
      * 
      */
     private String id;
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     private String ipsecTunnel;
     /**
-     * @return The Name param.
+     * @return The name of the service connection
      * 
      */
     private String name;
     /**
-     * @return The NatPool param.
+     * @return Nat pool
      * 
      */
     private String natPool;
     /**
-     * @return The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+     * @return No export community
      * 
      */
     private String noExportCommunity;
     /**
-     * @return The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+     * @return Onboarding type
      * 
      */
     private String onboardingType;
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     private GetServiceConnectionProtocol protocol;
     /**
-     * @return The Qos param.
+     * @return Qos
      * 
      */
     private GetServiceConnectionQos qos;
     /**
-     * @return The Region param.
+     * @return Region
      * 
      */
     private String region;
     /**
-     * @return The SecondaryIpsecTunnel param.
+     * @return Secondary ipsec tunnel
      * 
      */
     private String secondaryIpsecTunnel;
     /**
-     * @return The SourceNat param.
+     * @return Source nat
      * 
      */
     private Boolean sourceNat;
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     private List<String> subnets;
@@ -94,105 +95,105 @@ public final class GetServiceConnectionResult {
 
     private GetServiceConnectionResult() {}
     /**
-     * @return The BackupSC param.
+     * @return Backup s c
      * 
      */
     public String backupSC() {
         return this.backupSC;
     }
     /**
-     * @return The BgpPeer param.
+     * @return Bgp peer
      * 
      */
     public GetServiceConnectionBgpPeer bgpPeer() {
         return this.bgpPeer;
     }
     /**
-     * @return The Folder param. String can either be a specific string(`&#34;Service Connections&#34;`) or match this regex: `^[0-9a-zA-Z._\s-]{1,}$`. Default: `&#34;Service Connections&#34;`.
+     * @return Map of sensitive values returned from the API.
      * 
      */
-    public String folder() {
-        return this.folder;
+    public Map<String,String> encryptedValues() {
+        return this.encryptedValues;
     }
     /**
-     * @return The Id param.
+     * @return The UUID of the service connection
      * 
      */
     public String id() {
         return this.id;
     }
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     public String ipsecTunnel() {
         return this.ipsecTunnel;
     }
     /**
-     * @return The Name param.
+     * @return The name of the service connection
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The NatPool param.
+     * @return Nat pool
      * 
      */
     public String natPool() {
         return this.natPool;
     }
     /**
-     * @return The NoExportCommunity param. String must be one of these: `&#34;Disabled&#34;`, `&#34;Enabled-In&#34;`, `&#34;Enabled-Out&#34;`, `&#34;Enabled-Both&#34;`.
+     * @return No export community
      * 
      */
     public String noExportCommunity() {
         return this.noExportCommunity;
     }
     /**
-     * @return The OnboardingType param. String must be one of these: `&#34;classic&#34;`. Default: `&#34;classic&#34;`.
+     * @return Onboarding type
      * 
      */
     public String onboardingType() {
         return this.onboardingType;
     }
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public GetServiceConnectionProtocol protocol() {
         return this.protocol;
     }
     /**
-     * @return The Qos param.
+     * @return Qos
      * 
      */
     public GetServiceConnectionQos qos() {
         return this.qos;
     }
     /**
-     * @return The Region param.
+     * @return Region
      * 
      */
     public String region() {
         return this.region;
     }
     /**
-     * @return The SecondaryIpsecTunnel param.
+     * @return Secondary ipsec tunnel
      * 
      */
     public String secondaryIpsecTunnel() {
         return this.secondaryIpsecTunnel;
     }
     /**
-     * @return The SourceNat param.
+     * @return Source nat
      * 
      */
     public Boolean sourceNat() {
         return this.sourceNat;
     }
     /**
-     * @return The Subnets param.
+     * @return Subnets
      * 
      */
     public List<String> subnets() {
@@ -213,7 +214,7 @@ public final class GetServiceConnectionResult {
     public static final class Builder {
         private String backupSC;
         private GetServiceConnectionBgpPeer bgpPeer;
-        private String folder;
+        private Map<String,String> encryptedValues;
         private String id;
         private String ipsecTunnel;
         private String name;
@@ -232,7 +233,7 @@ public final class GetServiceConnectionResult {
     	      Objects.requireNonNull(defaults);
     	      this.backupSC = defaults.backupSC;
     	      this.bgpPeer = defaults.bgpPeer;
-    	      this.folder = defaults.folder;
+    	      this.encryptedValues = defaults.encryptedValues;
     	      this.id = defaults.id;
     	      this.ipsecTunnel = defaults.ipsecTunnel;
     	      this.name = defaults.name;
@@ -265,11 +266,11 @@ public final class GetServiceConnectionResult {
             return this;
         }
         @CustomType.Setter
-        public Builder folder(String folder) {
-            if (folder == null) {
-              throw new MissingRequiredPropertyException("GetServiceConnectionResult", "folder");
+        public Builder encryptedValues(Map<String,String> encryptedValues) {
+            if (encryptedValues == null) {
+              throw new MissingRequiredPropertyException("GetServiceConnectionResult", "encryptedValues");
             }
-            this.folder = folder;
+            this.encryptedValues = encryptedValues;
             return this;
         }
         @CustomType.Setter
@@ -383,7 +384,7 @@ public final class GetServiceConnectionResult {
             final var _resultValue = new GetServiceConnectionResult();
             _resultValue.backupSC = backupSC;
             _resultValue.bgpPeer = bgpPeer;
-            _resultValue.folder = folder;
+            _resultValue.encryptedValues = encryptedValues;
             _resultValue.id = id;
             _resultValue.ipsecTunnel = ipsecTunnel;
             _resultValue.name = name;

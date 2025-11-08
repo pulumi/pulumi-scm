@@ -10,289 +10,258 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.NatRuleArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.NatRuleState;
-import com.pulumi.scm.outputs.NatRuleDestinationTranslation;
-import com.pulumi.scm.outputs.NatRuleDynamicDestinationTranslation;
+import com.pulumi.scm.outputs.NatRuleDnsRewrite;
 import com.pulumi.scm.outputs.NatRuleSourceTranslation;
-import com.pulumi.scm.outputs.NatRuleTarget;
 import java.lang.Boolean;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
+ * NatRule resource
  * 
  */
 @ResourceType(type="scm:index/natRule:NatRule")
 public class NatRule extends com.pulumi.resources.CustomResource {
     /**
-     * The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+     * Active active device binding
      * 
      */
     @Export(name="activeActiveDeviceBinding", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> activeActiveDeviceBinding;
 
     /**
-     * @return The ActiveActiveDeviceBinding param. String must be one of these: `&#34;primary&#34;`, `&#34;both&#34;`, `&#34;0&#34;`, `&#34;1&#34;`.
+     * @return Active active device binding
      * 
      */
     public Output<Optional<String>> activeActiveDeviceBinding() {
         return Codegen.optional(this.activeActiveDeviceBinding);
     }
     /**
-     * The Description param.
+     * NAT rule description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return NAT rule description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * Static destination translation parameter.
-     * 
-     */
-    @Export(name="destinationTranslation", refs={NatRuleDestinationTranslation.class}, tree="[0]")
-    private Output</* @Nullable */ NatRuleDestinationTranslation> destinationTranslation;
-
-    /**
-     * @return Static destination translation parameter.
-     * 
-     */
-    public Output<Optional<NatRuleDestinationTranslation>> destinationTranslation() {
-        return Codegen.optional(this.destinationTranslation);
-    }
-    /**
-     * The destination address(es).
+     * Destination address(es) of the original packet
      * 
      */
     @Export(name="destinations", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> destinations;
 
     /**
-     * @return The destination address(es).
+     * @return Destination address(es) of the original packet
      * 
      */
     public Output<List<String>> destinations() {
         return this.destinations;
     }
     /**
-     * The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The device in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The Disabled param.
+     * Disable NAT rule?
      * 
      */
     @Export(name="disabled", refs={Boolean.class}, tree="[0]")
-    private Output</* @Nullable */ Boolean> disabled;
+    private Output<Boolean> disabled;
 
     /**
-     * @return The Disabled param.
+     * @return Disable NAT rule?
      * 
      */
-    public Output<Optional<Boolean>> disabled() {
-        return Codegen.optional(this.disabled);
+    public Output<Boolean> disabled() {
+        return this.disabled;
     }
     /**
-     * Dynamic destination translation parameter.
+     * Distribution method
      * 
      */
-    @Export(name="dynamicDestinationTranslation", refs={NatRuleDynamicDestinationTranslation.class}, tree="[0]")
-    private Output</* @Nullable */ NatRuleDynamicDestinationTranslation> dynamicDestinationTranslation;
+    @Export(name="distribution", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> distribution;
 
     /**
-     * @return Dynamic destination translation parameter.
+     * @return Distribution method
      * 
      */
-    public Output<Optional<NatRuleDynamicDestinationTranslation>> dynamicDestinationTranslation() {
-        return Codegen.optional(this.dynamicDestinationTranslation);
+    public Output<Optional<String>> distribution() {
+        return Codegen.optional(this.distribution);
     }
     /**
-     * The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * DNS rewrite
+     * 
+     */
+    @Export(name="dnsRewrite", refs={NatRuleDnsRewrite.class}, tree="[0]")
+    private Output</* @Nullable */ NatRuleDnsRewrite> dnsRewrite;
+
+    /**
+     * @return DNS rewrite
+     * 
+     */
+    public Output<Optional<NatRuleDnsRewrite>> dnsRewrite() {
+        return Codegen.optional(this.dnsRewrite);
+    }
+    /**
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The folder in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The source security zone(s).
+     * Source zone(s) of the original packet
      * 
      */
     @Export(name="froms", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> froms;
 
     /**
-     * @return The source security zone(s).
+     * @return Source zone(s) of the original packet
      * 
      */
     public Output<List<String>> froms() {
         return this.froms;
     }
     /**
-     * The GroupTag param.
-     * 
-     */
-    @Export(name="groupTag", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> groupTag;
-
-    /**
-     * @return The GroupTag param.
-     * 
-     */
-    public Output<Optional<String>> groupTag() {
-        return Codegen.optional(this.groupTag);
-    }
-    /**
-     * The Name param.
+     * NAT rule name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return NAT rule name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+     * NAT type
      * 
      */
     @Export(name="natType", refs={String.class}, tree="[0]")
-    private Output</* @Nullable */ String> natType;
+    private Output<String> natType;
 
     /**
-     * @return The NatType param. String must be one of these: `&#34;ipv4&#34;`, `&#34;nat64&#34;`, `&#34;nptv6&#34;`.
+     * @return NAT type
      * 
      */
-    public Output<Optional<String>> natType() {
-        return Codegen.optional(this.natType);
+    public Output<String> natType() {
+        return this.natType;
     }
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The relative position of the rule
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The relative position of the rule
      * 
      */
     public Output<String> position() {
         return this.position;
     }
     /**
-     * The Service param.
+     * The service of the original packet
      * 
      */
     @Export(name="service", refs={String.class}, tree="[0]")
     private Output<String> service;
 
     /**
-     * @return The Service param.
+     * @return The service of the original packet
      * 
      */
     public Output<String> service() {
         return this.service;
     }
     /**
-     * The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The snippet in which the resource is defined. String length must not exceed 64 characters. String validation regex: `^[a-zA-Z\d-_\. ]+$`.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
         return Codegen.optional(this.snippet);
     }
     /**
-     * The SourceTranslation param.
+     * Source translation
      * 
      */
     @Export(name="sourceTranslation", refs={NatRuleSourceTranslation.class}, tree="[0]")
     private Output</* @Nullable */ NatRuleSourceTranslation> sourceTranslation;
 
     /**
-     * @return The SourceTranslation param.
+     * @return Source translation
      * 
      */
     public Output<Optional<NatRuleSourceTranslation>> sourceTranslation() {
         return Codegen.optional(this.sourceTranslation);
     }
     /**
-     * The source address(es).
+     * Source address(es) of the original packet
      * 
      */
     @Export(name="sources", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> sources;
 
     /**
-     * @return The source address(es).
+     * @return Source address(es) of the original packet
      * 
      */
     public Output<List<String>> sources() {
         return this.sources;
     }
     /**
-     * The Tags param.
+     * NAT rule tags
      * 
      */
     @Export(name="tags", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> tags;
 
     /**
-     * @return The Tags param.
+     * @return NAT rule tags
      * 
      */
     public Output<Optional<List<String>>> tags() {
         return Codegen.optional(this.tags);
-    }
-    /**
-     * The Target param.
-     * 
-     */
-    @Export(name="target", refs={NatRuleTarget.class}, tree="[0]")
-    private Output</* @Nullable */ NatRuleTarget> target;
-
-    /**
-     * @return The Target param.
-     * 
-     */
-    public Output<Optional<NatRuleTarget>> target() {
-        return Codegen.optional(this.target);
     }
     @Export(name="tfid", refs={String.class}, tree="[0]")
     private Output<String> tfid;
@@ -301,32 +270,60 @@ public class NatRule extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The ToInterface param.
+     * Destination interface of the original packet
      * 
      */
     @Export(name="toInterface", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> toInterface;
 
     /**
-     * @return The ToInterface param.
+     * @return Destination interface of the original packet
      * 
      */
     public Output<Optional<String>> toInterface() {
         return Codegen.optional(this.toInterface);
     }
     /**
-     * The destination security zone(s).
+     * Destination zone of the original packet
      * 
      */
     @Export(name="tos", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> tos;
 
     /**
-     * @return The destination security zone(s).
+     * @return Destination zone of the original packet
      * 
      */
     public Output<List<String>> tos() {
         return this.tos;
+    }
+    /**
+     * Translated destination IP address
+     * 
+     */
+    @Export(name="translatedAddressSingle", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> translatedAddressSingle;
+
+    /**
+     * @return Translated destination IP address
+     * 
+     */
+    public Output<Optional<String>> translatedAddressSingle() {
+        return Codegen.optional(this.translatedAddressSingle);
+    }
+    /**
+     * Translated destination port
+     * 
+     */
+    @Export(name="translatedPort", refs={Integer.class}, tree="[0]")
+    private Output</* @Nullable */ Integer> translatedPort;
+
+    /**
+     * @return Translated destination port
+     * 
+     */
+    public Output<Optional<Integer>> translatedPort() {
+        return Codegen.optional(this.translatedPort);
     }
 
     /**

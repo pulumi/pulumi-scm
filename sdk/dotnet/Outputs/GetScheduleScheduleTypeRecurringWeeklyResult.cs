@@ -14,57 +14,57 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetScheduleScheduleTypeRecurringWeeklyResult
     {
         /// <summary>
-        /// The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Friday
         /// </summary>
-        public readonly ImmutableArray<string> FridayLists;
+        public readonly ImmutableArray<string> Fridays;
         /// <summary>
-        /// The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Monday
         /// </summary>
-        public readonly ImmutableArray<string> MondayLists;
+        public readonly ImmutableArray<string> Mondays;
         /// <summary>
-        /// The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Saturday
         /// </summary>
-        public readonly ImmutableArray<string> SaturdayLists;
+        public readonly ImmutableArray<string> Saturdays;
         /// <summary>
-        /// The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Sunday
         /// </summary>
-        public readonly ImmutableArray<string> SundayLists;
+        public readonly ImmutableArray<string> Sundays;
         /// <summary>
-        /// The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Thursday
         /// </summary>
-        public readonly ImmutableArray<string> ThursdayLists;
+        public readonly ImmutableArray<string> Thursdays;
         /// <summary>
-        /// The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Tuesday
         /// </summary>
-        public readonly ImmutableArray<string> TuesdayLists;
+        public readonly ImmutableArray<string> Tuesdays;
         /// <summary>
-        /// The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+        /// Wednesday
         /// </summary>
-        public readonly ImmutableArray<string> WednesdayLists;
+        public readonly ImmutableArray<string> Wednesdays;
 
         [OutputConstructor]
         private GetScheduleScheduleTypeRecurringWeeklyResult(
-            ImmutableArray<string> fridayLists,
+            ImmutableArray<string> fridays,
 
-            ImmutableArray<string> mondayLists,
+            ImmutableArray<string> mondays,
 
-            ImmutableArray<string> saturdayLists,
+            ImmutableArray<string> saturdays,
 
-            ImmutableArray<string> sundayLists,
+            ImmutableArray<string> sundays,
 
-            ImmutableArray<string> thursdayLists,
+            ImmutableArray<string> thursdays,
 
-            ImmutableArray<string> tuesdayLists,
+            ImmutableArray<string> tuesdays,
 
-            ImmutableArray<string> wednesdayLists)
+            ImmutableArray<string> wednesdays)
         {
-            FridayLists = fridayLists;
-            MondayLists = mondayLists;
-            SaturdayLists = saturdayLists;
-            SundayLists = sundayLists;
-            ThursdayLists = thursdayLists;
-            TuesdayLists = tuesdayLists;
-            WednesdayLists = wednesdayLists;
+            Fridays = fridays;
+            Mondays = mondays;
+            Saturdays = saturdays;
+            Sundays = sundays;
+            Thursdays = thursdays;
+            Tuesdays = tuesdays;
+            Wednesdays = wednesdays;
         }
     }
 }

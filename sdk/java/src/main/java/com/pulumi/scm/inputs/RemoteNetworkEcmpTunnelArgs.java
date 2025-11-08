@@ -16,14 +16,14 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
     public static final RemoteNetworkEcmpTunnelArgs Empty = new RemoteNetworkEcmpTunnelArgs();
 
     /**
-     * The IpsecTunnel param.
+     * Ipsec tunnel
      * 
      */
     @Import(name="ipsecTunnel", required=true)
     private Output<String> ipsecTunnel;
 
     /**
-     * @return The IpsecTunnel param.
+     * @return Ipsec tunnel
      * 
      */
     public Output<String> ipsecTunnel() {
@@ -31,14 +31,14 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
@@ -46,14 +46,14 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
     }
 
     /**
-     * The Protocol param.
+     * Protocol
      * 
      */
     @Import(name="protocol", required=true)
     private Output<RemoteNetworkEcmpTunnelProtocolArgs> protocol;
 
     /**
-     * @return The Protocol param.
+     * @return Protocol
      * 
      */
     public Output<RemoteNetworkEcmpTunnelProtocolArgs> protocol() {
@@ -87,7 +87,7 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ipsecTunnel The IpsecTunnel param.
+         * @param ipsecTunnel Ipsec tunnel
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ipsecTunnel The IpsecTunnel param.
+         * @param ipsecTunnel Ipsec tunnel
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class RemoteNetworkEcmpTunnelArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param protocol The Protocol param.
+         * @param protocol Protocol
          * 
          * @return builder
          * 

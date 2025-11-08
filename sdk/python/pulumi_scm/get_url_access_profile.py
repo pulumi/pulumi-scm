@@ -27,7 +27,7 @@ class GetUrlAccessProfileResult:
     """
     A collection of values returned by getUrlAccessProfile.
     """
-    def __init__(__self__, alerts=None, allows=None, blocks=None, cloud_inline_cat=None, continues=None, credential_enforcement=None, description=None, id=None, local_inline_cat=None, log_container_page_only=None, log_http_hdr_referer=None, log_http_hdr_user_agent=None, log_http_hdr_xff=None, mlav_category_exceptions=None, name=None, safe_search_enforcement=None, tfid=None):
+    def __init__(__self__, alerts=None, allows=None, blocks=None, cloud_inline_cat=None, continues=None, credential_enforcement=None, description=None, device=None, folder=None, id=None, local_inline_cat=None, log_container_page_only=None, log_http_hdr_referer=None, log_http_hdr_user_agent=None, log_http_hdr_xff=None, mlav_category_exceptions=None, name=None, redirects=None, safe_search_enforcement=None, snippet=None, tfid=None):
         if alerts and not isinstance(alerts, list):
             raise TypeError("Expected argument 'alerts' to be a list")
         pulumi.set(__self__, "alerts", alerts)
@@ -49,6 +49,12 @@ class GetUrlAccessProfileResult:
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
+        if device and not isinstance(device, str):
+            raise TypeError("Expected argument 'device' to be a str")
+        pulumi.set(__self__, "device", device)
+        if folder and not isinstance(folder, str):
+            raise TypeError("Expected argument 'folder' to be a str")
+        pulumi.set(__self__, "folder", folder)
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
@@ -73,9 +79,15 @@ class GetUrlAccessProfileResult:
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
+        if redirects and not isinstance(redirects, list):
+            raise TypeError("Expected argument 'redirects' to be a list")
+        pulumi.set(__self__, "redirects", redirects)
         if safe_search_enforcement and not isinstance(safe_search_enforcement, bool):
             raise TypeError("Expected argument 'safe_search_enforcement' to be a bool")
         pulumi.set(__self__, "safe_search_enforcement", safe_search_enforcement)
+        if snippet and not isinstance(snippet, str):
+            raise TypeError("Expected argument 'snippet' to be a str")
+        pulumi.set(__self__, "snippet", snippet)
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
@@ -84,7 +96,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter
     def alerts(self) -> Sequence[_builtins.str]:
         """
-        The Alerts param.
+        Alert
         """
         return pulumi.get(self, "alerts")
 
@@ -92,7 +104,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter
     def allows(self) -> Sequence[_builtins.str]:
         """
-        The Allows param.
+        Allow
         """
         return pulumi.get(self, "allows")
 
@@ -100,7 +112,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter
     def blocks(self) -> Sequence[_builtins.str]:
         """
-        The Blocks param.
+        Block
         """
         return pulumi.get(self, "blocks")
 
@@ -108,7 +120,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="cloudInlineCat")
     def cloud_inline_cat(self) -> _builtins.bool:
         """
-        The CloudInlineCat param.
+        Cloud inline cat
         """
         return pulumi.get(self, "cloud_inline_cat")
 
@@ -116,7 +128,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter
     def continues(self) -> Sequence[_builtins.str]:
         """
-        The Continues param.
+        Continue
         """
         return pulumi.get(self, "continues")
 
@@ -124,7 +136,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="credentialEnforcement")
     def credential_enforcement(self) -> 'outputs.GetUrlAccessProfileCredentialEnforcementResult':
         """
-        The CredentialEnforcement param.
+        Credential enforcement
         """
         return pulumi.get(self, "credential_enforcement")
 
@@ -132,15 +144,31 @@ class GetUrlAccessProfileResult:
     @pulumi.getter
     def description(self) -> _builtins.str:
         """
-        The Description param. String length must not exceed 255 characters.
+        Description
         """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
+    def device(self) -> _builtins.str:
+        """
+        The device in which the resource is defined
+        """
+        return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter
+    def folder(self) -> _builtins.str:
+        """
+        The folder in which the resource is defined
+        """
+        return pulumi.get(self, "folder")
+
+    @_builtins.property
+    @pulumi.getter
     def id(self) -> _builtins.str:
         """
-        The Id param.
+        UUID of the resource
         """
         return pulumi.get(self, "id")
 
@@ -148,7 +176,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="localInlineCat")
     def local_inline_cat(self) -> _builtins.bool:
         """
-        The LocalInlineCat param.
+        Local inline cat
         """
         return pulumi.get(self, "local_inline_cat")
 
@@ -156,7 +184,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="logContainerPageOnly")
     def log_container_page_only(self) -> _builtins.bool:
         """
-        The LogContainerPageOnly param. Default: `true`.
+        Log container page only
         """
         return pulumi.get(self, "log_container_page_only")
 
@@ -164,7 +192,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="logHttpHdrReferer")
     def log_http_hdr_referer(self) -> _builtins.bool:
         """
-        The LogHttpHdrReferer param. Default: `false`.
+        Log http hdr referer
         """
         return pulumi.get(self, "log_http_hdr_referer")
 
@@ -172,7 +200,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="logHttpHdrUserAgent")
     def log_http_hdr_user_agent(self) -> _builtins.bool:
         """
-        The LogHttpHdrUserAgent param. Default: `false`.
+        Log http hdr user agent
         """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
@@ -180,7 +208,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="logHttpHdrXff")
     def log_http_hdr_xff(self) -> _builtins.bool:
         """
-        The LogHttpHdrXff param. Default: `false`.
+        Log http hdr xff
         """
         return pulumi.get(self, "log_http_hdr_xff")
 
@@ -188,7 +216,7 @@ class GetUrlAccessProfileResult:
     @pulumi.getter(name="mlavCategoryExceptions")
     def mlav_category_exceptions(self) -> Sequence[_builtins.str]:
         """
-        The MlavCategoryExceptions param.
+        Mlav category exception
         """
         return pulumi.get(self, "mlav_category_exceptions")
 
@@ -196,17 +224,33 @@ class GetUrlAccessProfileResult:
     @pulumi.getter
     def name(self) -> _builtins.str:
         """
-        The Name param.
+        Name
         """
         return pulumi.get(self, "name")
+
+    @_builtins.property
+    @pulumi.getter
+    def redirects(self) -> Sequence[_builtins.str]:
+        """
+        Redirect
+        """
+        return pulumi.get(self, "redirects")
 
     @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
     def safe_search_enforcement(self) -> _builtins.bool:
         """
-        The SafeSearchEnforcement param. Default: `false`.
+        Safe search enforcement
         """
         return pulumi.get(self, "safe_search_enforcement")
+
+    @_builtins.property
+    @pulumi.getter
+    def snippet(self) -> _builtins.str:
+        """
+        The snippet in which the resource is defined
+        """
+        return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
@@ -227,6 +271,8 @@ class AwaitableGetUrlAccessProfileResult(GetUrlAccessProfileResult):
             continues=self.continues,
             credential_enforcement=self.credential_enforcement,
             description=self.description,
+            device=self.device,
+            folder=self.folder,
             id=self.id,
             local_inline_cat=self.local_inline_cat,
             log_container_page_only=self.log_container_page_only,
@@ -235,14 +281,17 @@ class AwaitableGetUrlAccessProfileResult(GetUrlAccessProfileResult):
             log_http_hdr_xff=self.log_http_hdr_xff,
             mlav_category_exceptions=self.mlav_category_exceptions,
             name=self.name,
+            redirects=self.redirects,
             safe_search_enforcement=self.safe_search_enforcement,
+            snippet=self.snippet,
             tfid=self.tfid)
 
 
 def get_url_access_profile(id: Optional[_builtins.str] = None,
+                           name: Optional[_builtins.str] = None,
                            opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetUrlAccessProfileResult:
     """
-    Retrieves a config item.
+    UrlAccessProfile data source
 
     ## Example Usage
 
@@ -250,14 +299,21 @@ def get_url_access_profile(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_url_access_profile(id="1234-56-789")
+    #
+    # Data source to retrieve a single URL Access Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the URL Access Profile you want to find.
+    example = scm.get_url_access_profile(id="e97c7e7e-9906-42d6-90a8-606ed5527125")
+    pulumi.export("urlAccessProfileDetails", example)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getUrlAccessProfile:getUrlAccessProfile', __args__, opts=opts, typ=GetUrlAccessProfileResult).value
 
@@ -269,6 +325,8 @@ def get_url_access_profile(id: Optional[_builtins.str] = None,
         continues=pulumi.get(__ret__, 'continues'),
         credential_enforcement=pulumi.get(__ret__, 'credential_enforcement'),
         description=pulumi.get(__ret__, 'description'),
+        device=pulumi.get(__ret__, 'device'),
+        folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
         local_inline_cat=pulumi.get(__ret__, 'local_inline_cat'),
         log_container_page_only=pulumi.get(__ret__, 'log_container_page_only'),
@@ -277,12 +335,15 @@ def get_url_access_profile(id: Optional[_builtins.str] = None,
         log_http_hdr_xff=pulumi.get(__ret__, 'log_http_hdr_xff'),
         mlav_category_exceptions=pulumi.get(__ret__, 'mlav_category_exceptions'),
         name=pulumi.get(__ret__, 'name'),
+        redirects=pulumi.get(__ret__, 'redirects'),
         safe_search_enforcement=pulumi.get(__ret__, 'safe_search_enforcement'),
+        snippet=pulumi.get(__ret__, 'snippet'),
         tfid=pulumi.get(__ret__, 'tfid'))
 def get_url_access_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetUrlAccessProfileResult]:
     """
-    Retrieves a config item.
+    UrlAccessProfile data source
 
     ## Example Usage
 
@@ -290,14 +351,21 @@ def get_url_access_profile_output(id: Optional[pulumi.Input[_builtins.str]] = No
     import pulumi
     import pulumi_scm as scm
 
-    example = scm.get_url_access_profile(id="1234-56-789")
+    #
+    # Data source to retrieve a single URL Access Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the URL Access Profile you want to find.
+    example = scm.get_url_access_profile(id="e97c7e7e-9906-42d6-90a8-606ed5527125")
+    pulumi.export("urlAccessProfileDetails", example)
     ```
 
 
-    :param _builtins.str id: The Id param.
+    :param _builtins.str id: UUID of the resource
+    :param _builtins.str name: Name
     """
     __args__ = dict()
     __args__['id'] = id
+    __args__['name'] = name
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getUrlAccessProfile:getUrlAccessProfile', __args__, opts=opts, typ=GetUrlAccessProfileResult)
     return __ret__.apply(lambda __response__: GetUrlAccessProfileResult(
@@ -308,6 +376,8 @@ def get_url_access_profile_output(id: Optional[pulumi.Input[_builtins.str]] = No
         continues=pulumi.get(__response__, 'continues'),
         credential_enforcement=pulumi.get(__response__, 'credential_enforcement'),
         description=pulumi.get(__response__, 'description'),
+        device=pulumi.get(__response__, 'device'),
+        folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
         local_inline_cat=pulumi.get(__response__, 'local_inline_cat'),
         log_container_page_only=pulumi.get(__response__, 'log_container_page_only'),
@@ -316,5 +386,7 @@ def get_url_access_profile_output(id: Optional[pulumi.Input[_builtins.str]] = No
         log_http_hdr_xff=pulumi.get(__response__, 'log_http_hdr_xff'),
         mlav_category_exceptions=pulumi.get(__response__, 'mlav_category_exceptions'),
         name=pulumi.get(__response__, 'name'),
+        redirects=pulumi.get(__response__, 'redirects'),
         safe_search_enforcement=pulumi.get(__response__, 'safe_search_enforcement'),
+        snippet=pulumi.get(__response__, 'snippet'),
         tfid=pulumi.get(__response__, 'tfid')))

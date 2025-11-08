@@ -7,16 +7,9 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * AntiSpywareProfile resource
  *
  * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = new scm.AntiSpywareProfile("example", {});
- * ```
  */
 export class AntiSpywareProfile extends pulumi.CustomResource {
     /**
@@ -47,48 +40,48 @@ export class AntiSpywareProfile extends pulumi.CustomResource {
     }
 
     /**
-     * The CloudInlineAnalysis param. Default: `false`.
+     * Cloud inline analysis
      */
     declare public readonly cloudInlineAnalysis: pulumi.Output<boolean>;
     /**
-     * The Description param.
+     * Description
      */
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * The InlineExceptionEdlUrls param.
+     * Inline exception edl url
      */
     declare public readonly inlineExceptionEdlUrls: pulumi.Output<string[] | undefined>;
     /**
-     * The InlineExceptionIpAddresses param.
+     * Inline exception ip address
      */
     declare public readonly inlineExceptionIpAddresses: pulumi.Output<string[] | undefined>;
     /**
-     * The MicaEngineSpywareEnabledList param.
+     * Mica engine spyware enabled
      */
-    declare public readonly micaEngineSpywareEnabledLists: pulumi.Output<outputs.AntiSpywareProfileMicaEngineSpywareEnabledList[] | undefined>;
+    declare public readonly micaEngineSpywareEnableds: pulumi.Output<outputs.AntiSpywareProfileMicaEngineSpywareEnabled[] | undefined>;
     /**
-     * The Name param.
+     * The name of the anti-spyware profile
      */
     declare public readonly name: pulumi.Output<string>;
     /**
-     * The Rules param.
+     * Rules
      */
     declare public readonly rules: pulumi.Output<outputs.AntiSpywareProfileRule[] | undefined>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     declare public readonly threatExceptions: pulumi.Output<outputs.AntiSpywareProfileThreatException[] | undefined>;
 
@@ -111,7 +104,7 @@ export class AntiSpywareProfile extends pulumi.CustomResource {
             resourceInputs["folder"] = state?.folder;
             resourceInputs["inlineExceptionEdlUrls"] = state?.inlineExceptionEdlUrls;
             resourceInputs["inlineExceptionIpAddresses"] = state?.inlineExceptionIpAddresses;
-            resourceInputs["micaEngineSpywareEnabledLists"] = state?.micaEngineSpywareEnabledLists;
+            resourceInputs["micaEngineSpywareEnableds"] = state?.micaEngineSpywareEnableds;
             resourceInputs["name"] = state?.name;
             resourceInputs["rules"] = state?.rules;
             resourceInputs["snippet"] = state?.snippet;
@@ -125,7 +118,7 @@ export class AntiSpywareProfile extends pulumi.CustomResource {
             resourceInputs["folder"] = args?.folder;
             resourceInputs["inlineExceptionEdlUrls"] = args?.inlineExceptionEdlUrls;
             resourceInputs["inlineExceptionIpAddresses"] = args?.inlineExceptionIpAddresses;
-            resourceInputs["micaEngineSpywareEnabledLists"] = args?.micaEngineSpywareEnabledLists;
+            resourceInputs["micaEngineSpywareEnableds"] = args?.micaEngineSpywareEnableds;
             resourceInputs["name"] = args?.name;
             resourceInputs["rules"] = args?.rules;
             resourceInputs["snippet"] = args?.snippet;
@@ -142,48 +135,48 @@ export class AntiSpywareProfile extends pulumi.CustomResource {
  */
 export interface AntiSpywareProfileState {
     /**
-     * The CloudInlineAnalysis param. Default: `false`.
+     * Cloud inline analysis
      */
     cloudInlineAnalysis?: pulumi.Input<boolean>;
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The InlineExceptionEdlUrls param.
+     * Inline exception edl url
      */
     inlineExceptionEdlUrls?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The InlineExceptionIpAddresses param.
+     * Inline exception ip address
      */
     inlineExceptionIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The MicaEngineSpywareEnabledList param.
+     * Mica engine spyware enabled
      */
-    micaEngineSpywareEnabledLists?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileMicaEngineSpywareEnabledList>[]>;
+    micaEngineSpywareEnableds?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileMicaEngineSpywareEnabled>[]>;
     /**
-     * The Name param.
+     * The name of the anti-spyware profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Rules param.
+     * Rules
      */
     rules?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileRule>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     threatExceptions?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileThreatException>[]>;
 }
@@ -193,47 +186,47 @@ export interface AntiSpywareProfileState {
  */
 export interface AntiSpywareProfileArgs {
     /**
-     * The CloudInlineAnalysis param. Default: `false`.
+     * Cloud inline analysis
      */
     cloudInlineAnalysis?: pulumi.Input<boolean>;
     /**
-     * The Description param.
+     * Description
      */
     description?: pulumi.Input<string>;
     /**
-     * The Device param.
+     * The device in which the resource is defined
      */
     device?: pulumi.Input<string>;
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      */
     folder?: pulumi.Input<string>;
     /**
-     * The InlineExceptionEdlUrls param.
+     * Inline exception edl url
      */
     inlineExceptionEdlUrls?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The InlineExceptionIpAddresses param.
+     * Inline exception ip address
      */
     inlineExceptionIpAddresses?: pulumi.Input<pulumi.Input<string>[]>;
     /**
-     * The MicaEngineSpywareEnabledList param.
+     * Mica engine spyware enabled
      */
-    micaEngineSpywareEnabledLists?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileMicaEngineSpywareEnabledList>[]>;
+    micaEngineSpywareEnableds?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileMicaEngineSpywareEnabled>[]>;
     /**
-     * The Name param.
+     * The name of the anti-spyware profile
      */
     name?: pulumi.Input<string>;
     /**
-     * The Rules param.
+     * Rules
      */
     rules?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileRule>[]>;
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      */
     snippet?: pulumi.Input<string>;
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      */
     threatExceptions?: pulumi.Input<pulumi.Input<inputs.AntiSpywareProfileThreatException>[]>;
 }

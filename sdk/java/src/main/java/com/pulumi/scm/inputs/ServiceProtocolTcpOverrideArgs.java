@@ -16,14 +16,14 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
     public static final ServiceProtocolTcpOverrideArgs Empty = new ServiceProtocolTcpOverrideArgs();
 
     /**
-     * tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+     * tcp session half-close timeout value (in second)
      * 
      */
     @Import(name="halfcloseTimeout")
     private @Nullable Output<Integer> halfcloseTimeout;
 
     /**
-     * @return tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+     * @return tcp session half-close timeout value (in second)
      * 
      */
     public Optional<Output<Integer>> halfcloseTimeout() {
@@ -31,14 +31,14 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
     }
 
     /**
-     * tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+     * tcp session timeout value (in second)
      * 
      */
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
     /**
-     * @return tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+     * @return tcp session timeout value (in second)
      * 
      */
     public Optional<Output<Integer>> timeout() {
@@ -46,14 +46,14 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
     }
 
     /**
-     * tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+     * tcp session time-wait timeout value (in second)
      * 
      */
     @Import(name="timewaitTimeout")
     private @Nullable Output<Integer> timewaitTimeout;
 
     /**
-     * @return tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+     * @return tcp session time-wait timeout value (in second)
      * 
      */
     public Optional<Output<Integer>> timewaitTimeout() {
@@ -87,7 +87,7 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param halfcloseTimeout tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+         * @param halfcloseTimeout tcp session half-close timeout value (in second)
          * 
          * @return builder
          * 
@@ -98,7 +98,7 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param halfcloseTimeout tcp session half-close timeout value (in second). Value must be between 1 and 604800. Default: `120`.
+         * @param halfcloseTimeout tcp session half-close timeout value (in second)
          * 
          * @return builder
          * 
@@ -108,7 +108,7 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timeout tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+         * @param timeout tcp session timeout value (in second)
          * 
          * @return builder
          * 
@@ -119,7 +119,7 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timeout tcp session timeout value (in second). Value must be between 1 and 604800. Default: `3600`.
+         * @param timeout tcp session timeout value (in second)
          * 
          * @return builder
          * 
@@ -129,7 +129,7 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timewaitTimeout tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+         * @param timewaitTimeout tcp session time-wait timeout value (in second)
          * 
          * @return builder
          * 
@@ -140,7 +140,7 @@ public final class ServiceProtocolTcpOverrideArgs extends com.pulumi.resources.R
         }
 
         /**
-         * @param timewaitTimeout tcp session time-wait timeout value (in second). Value must be between 1 and 600. Default: `15`.
+         * @param timewaitTimeout tcp session time-wait timeout value (in second)
          * 
          * @return builder
          * 

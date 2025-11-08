@@ -13,74 +13,74 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethodSamlIdp {
     /**
-     * @return The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+     * @return Attribute name usergroup
      * 
      */
     private @Nullable String attributeNameUsergroup;
     /**
-     * @return The AttributeNameUsername param. String length must be between 1 and 63 characters.
+     * @return Attribute name username
      * 
      */
     private @Nullable String attributeNameUsername;
     /**
-     * @return The CertificateProfile param. String length must not exceed 31 characters.
+     * @return Certificate profile
      * 
      */
     private @Nullable String certificateProfile;
     /**
-     * @return The EnableSingleLogout param.
+     * @return Enable single logout
      * 
      */
     private @Nullable Boolean enableSingleLogout;
     /**
-     * @return The RequestSigningCertificate param. String length must not exceed 64 characters.
+     * @return Request signing certificate
      * 
      */
     private @Nullable String requestSigningCertificate;
     /**
-     * @return The ServerProfile param. String length must not exceed 63 characters.
+     * @return Server profile
      * 
      */
     private @Nullable String serverProfile;
 
     private AuthenticationProfileMethodSamlIdp() {}
     /**
-     * @return The AttributeNameUsergroup param. String length must be between 1 and 63 characters.
+     * @return Attribute name usergroup
      * 
      */
     public Optional<String> attributeNameUsergroup() {
         return Optional.ofNullable(this.attributeNameUsergroup);
     }
     /**
-     * @return The AttributeNameUsername param. String length must be between 1 and 63 characters.
+     * @return Attribute name username
      * 
      */
     public Optional<String> attributeNameUsername() {
         return Optional.ofNullable(this.attributeNameUsername);
     }
     /**
-     * @return The CertificateProfile param. String length must not exceed 31 characters.
+     * @return Certificate profile
      * 
      */
     public Optional<String> certificateProfile() {
         return Optional.ofNullable(this.certificateProfile);
     }
     /**
-     * @return The EnableSingleLogout param.
+     * @return Enable single logout
      * 
      */
     public Optional<Boolean> enableSingleLogout() {
         return Optional.ofNullable(this.enableSingleLogout);
     }
     /**
-     * @return The RequestSigningCertificate param. String length must not exceed 64 characters.
+     * @return Request signing certificate
      * 
      */
     public Optional<String> requestSigningCertificate() {
         return Optional.ofNullable(this.requestSigningCertificate);
     }
     /**
-     * @return The ServerProfile param. String length must not exceed 63 characters.
+     * @return Server profile
      * 
      */
     public Optional<String> serverProfile() {

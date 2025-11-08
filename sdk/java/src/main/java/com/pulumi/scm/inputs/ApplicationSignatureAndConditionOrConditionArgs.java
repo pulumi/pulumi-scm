@@ -16,14 +16,14 @@ public final class ApplicationSignatureAndConditionOrConditionArgs extends com.p
     public static final ApplicationSignatureAndConditionOrConditionArgs Empty = new ApplicationSignatureAndConditionOrConditionArgs();
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     @Import(name="name", required=true)
     private Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public Output<String> name() {
@@ -31,14 +31,14 @@ public final class ApplicationSignatureAndConditionOrConditionArgs extends com.p
     }
 
     /**
-     * The Operator param.
+     * Operator
      * 
      */
     @Import(name="operator", required=true)
     private Output<ApplicationSignatureAndConditionOrConditionOperatorArgs> operator;
 
     /**
-     * @return The Operator param.
+     * @return Operator
      * 
      */
     public Output<ApplicationSignatureAndConditionOrConditionOperatorArgs> operator() {
@@ -71,7 +71,7 @@ public final class ApplicationSignatureAndConditionOrConditionArgs extends com.p
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class ApplicationSignatureAndConditionOrConditionArgs extends com.p
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class ApplicationSignatureAndConditionOrConditionArgs extends com.p
         }
 
         /**
-         * @param operator The Operator param.
+         * @param operator Operator
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class ApplicationSignatureAndConditionOrConditionArgs extends com.p
         }
 
         /**
-         * @param operator The Operator param.
+         * @param operator Operator
          * 
          * @return builder
          * 

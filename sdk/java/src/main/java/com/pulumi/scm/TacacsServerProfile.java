@@ -15,125 +15,94 @@ import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
-import java.util.Map;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.TacacsServerProfile;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new TacacsServerProfile("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * TacacsServerProfile resource
  * 
  */
 @ResourceType(type="scm:index/tacacsServerProfile:TacacsServerProfile")
 public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * (Internal use) Encrypted values returned from the API.
-     * 
-     */
-    @Export(name="encryptedValues", refs={Map.class,String.class}, tree="[0,1,1]")
-    private Output<Map<String,String>> encryptedValues;
-
-    /**
-     * @return (Internal use) Encrypted values returned from the API.
-     * 
-     */
-    public Output<Map<String,String>> encryptedValues() {
-        return this.encryptedValues;
-    }
-    /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+     * The name of the TACACS+ server profile
+     * 
+     */
+    @Export(name="name", refs={String.class}, tree="[0]")
+    private Output<String> name;
+
+    /**
+     * @return The name of the TACACS+ server profile
+     * 
+     */
+    public Output<String> name() {
+        return this.name;
+    }
+    /**
+     * The TACACS+ authentication protocol
      * 
      */
     @Export(name="protocol", refs={String.class}, tree="[0]")
     private Output<String> protocol;
 
     /**
-     * @return The Protocol param. String must be one of these: `&#34;CHAP&#34;`, `&#34;PAP&#34;`.
+     * @return The TACACS+ authentication protocol
      * 
      */
     public Output<String> protocol() {
         return this.protocol;
     }
     /**
-     * The Servers param.
+     * The TACACS+ server configuration
      * 
      */
     @Export(name="servers", refs={List.class,TacacsServerProfileServer.class}, tree="[0,1]")
     private Output<List<TacacsServerProfileServer>> servers;
 
     /**
-     * @return The Servers param.
+     * @return The TACACS+ server configuration
      * 
      */
     public Output<List<TacacsServerProfileServer>> servers() {
         return this.servers;
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -146,28 +115,28 @@ public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
         return this.tfid;
     }
     /**
-     * The Timeout param. Value must be between 1 and 30.
+     * The TACACS+ timeout (seconds)
      * 
      */
     @Export(name="timeout", refs={Integer.class}, tree="[0]")
     private Output</* @Nullable */ Integer> timeout;
 
     /**
-     * @return The Timeout param. Value must be between 1 and 30.
+     * @return The TACACS+ timeout (seconds)
      * 
      */
     public Output<Optional<Integer>> timeout() {
         return Codegen.optional(this.timeout);
     }
     /**
-     * The UseSingleConnection param.
+     * Use a single TACACS+ connection?
      * 
      */
     @Export(name="useSingleConnection", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> useSingleConnection;
 
     /**
-     * @return The UseSingleConnection param.
+     * @return Use a single TACACS+ connection?
      * 
      */
     public Output<Optional<Boolean>> useSingleConnection() {
@@ -213,9 +182,6 @@ public class TacacsServerProfile extends com.pulumi.resources.CustomResource {
     private static com.pulumi.resources.CustomResourceOptions makeResourceOptions(@Nullable com.pulumi.resources.CustomResourceOptions options, @Nullable Output<java.lang.String> id) {
         var defaultOptions = com.pulumi.resources.CustomResourceOptions.builder()
             .version(Utilities.getVersion())
-            .additionalSecretOutputs(List.of(
-                "encryptedValues"
-            ))
             .build();
         return com.pulumi.resources.CustomResourceOptions.merge(defaultOptions, options, id);
     }

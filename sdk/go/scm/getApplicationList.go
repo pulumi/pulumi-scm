@@ -27,12 +27,15 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetApplicationList(ctx, &scm.GetApplicationListArgs{
+//			// Fetch a list of all application objects.
+//			// This data source will call the "List" API endpoint.
+//			allApps, err := scm.GetApplicationList(ctx, &scm.GetApplicationListArgs{
 //				Folder: pulumi.StringRef("Shared"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("applicationsListRaw", allApps.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +53,40 @@ func GetApplicationList(ctx *pulumi.Context, args *GetApplicationListArgs, opts 
 
 // A collection of arguments for invoking getApplicationList.
 type GetApplicationListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getApplicationList.
 type GetApplicationListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetApplicationListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +101,17 @@ func GetApplicationListOutput(ctx *pulumi.Context, args GetApplicationListOutput
 
 // A collection of arguments for invoking getApplicationList.
 type GetApplicationListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +134,17 @@ func (o GetApplicationListResultOutput) ToGetApplicationListResultOutputWithCont
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetApplicationListResultOutput) Datas() GetApplicationListDataArrayOutput {
 	return o.ApplyT(func(v GetApplicationListResult) []GetApplicationListData { return v.Datas }).(GetApplicationListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetApplicationListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetApplicationListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetApplicationListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetApplicationListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +154,22 @@ func (o GetApplicationListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetApplicationListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetApplicationListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetApplicationListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetApplicationListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetApplicationListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetApplicationListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetApplicationListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetApplicationListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetApplicationListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetApplicationListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetApplicationListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetApplicationListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +178,7 @@ func (o GetApplicationListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetApplicationListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetApplicationListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetApplicationListResult) int { return v.Total }).(pulumi.IntOutput)
 }

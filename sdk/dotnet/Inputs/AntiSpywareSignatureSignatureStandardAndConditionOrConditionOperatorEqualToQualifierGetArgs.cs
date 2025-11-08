@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class AntiSpywareSignatureSignatureStandardAndConditionOrConditionOperatorEqualToQualifierGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Name param.
+        /// Name
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Value param.
+        /// Value
         /// </summary>
         [Input("value")]
         public Input<string>? Value { get; set; }

@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetIkeGatewayPeerIdResult
     {
         /// <summary>
-        /// Peer ID string. String length must be between 1 and 1024 characters. String validation regex: `^(.+\@[\*a-zA-Z0-9.-]+)$|^([\*$a-zA-Z0-9_:.-]+)$|^(([[:xdigit:]][[:xdigit:]])+)$|^([a-zA-Z0-9.]+=(\\,|[^,])+[, ]+)*([a-zA-Z0-9.]+=(\\,|[^,])+)$`.
+        /// Peer ID string
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Type param. String must be one of these: `"ipaddr"`, `"keyid"`, `"fqdn"`, `"ufqdn"`.
+        /// Type
         /// </summary>
         public readonly string Type;
 

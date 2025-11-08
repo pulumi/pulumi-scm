@@ -5,6 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
+import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,14 +17,14 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
     public static final MfaServerMfaVendorTypeRsaSecuridAccessV1Args Empty = new MfaServerMfaVendorTypeRsaSecuridAccessV1Args();
 
     /**
-     * The RsaAccessid param.
+     * RSA SecurID access ID
      * 
      */
     @Import(name="rsaAccessid")
     private @Nullable Output<String> rsaAccessid;
 
     /**
-     * @return The RsaAccessid param.
+     * @return RSA SecurID access ID
      * 
      */
     public Optional<Output<String>> rsaAccessid() {
@@ -31,14 +32,14 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
     }
 
     /**
-     * The RsaAccesskey param.
+     * RSA SecurID access key
      * 
      */
     @Import(name="rsaAccesskey")
     private @Nullable Output<String> rsaAccesskey;
 
     /**
-     * @return The RsaAccesskey param.
+     * @return RSA SecurID access key
      * 
      */
     public Optional<Output<String>> rsaAccesskey() {
@@ -46,14 +47,14 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
     }
 
     /**
-     * The RsaApiHost param.
+     * RSA SecurID hostname
      * 
      */
     @Import(name="rsaApiHost")
     private @Nullable Output<String> rsaApiHost;
 
     /**
-     * @return The RsaApiHost param.
+     * @return RSA SecurID hostname
      * 
      */
     public Optional<Output<String>> rsaApiHost() {
@@ -61,14 +62,14 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
     }
 
     /**
-     * The RsaAssurancepolicyid param.
+     * RSA SecurID assurance level
      * 
      */
     @Import(name="rsaAssurancepolicyid")
     private @Nullable Output<String> rsaAssurancepolicyid;
 
     /**
-     * @return The RsaAssurancepolicyid param.
+     * @return RSA SecurID assurance level
      * 
      */
     public Optional<Output<String>> rsaAssurancepolicyid() {
@@ -76,14 +77,14 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
     }
 
     /**
-     * The RsaBaseuri param.
+     * RSA SecurID API base URI
      * 
      */
     @Import(name="rsaBaseuri")
     private @Nullable Output<String> rsaBaseuri;
 
     /**
-     * @return The RsaBaseuri param.
+     * @return RSA SecurID API base URI
      * 
      */
     public Optional<Output<String>> rsaBaseuri() {
@@ -91,17 +92,17 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
     }
 
     /**
-     * The RsaTimeout param.
+     * RSA SecurID timeout (seconds)
      * 
      */
     @Import(name="rsaTimeout")
-    private @Nullable Output<String> rsaTimeout;
+    private @Nullable Output<Integer> rsaTimeout;
 
     /**
-     * @return The RsaTimeout param.
+     * @return RSA SecurID timeout (seconds)
      * 
      */
-    public Optional<Output<String>> rsaTimeout() {
+    public Optional<Output<Integer>> rsaTimeout() {
         return Optional.ofNullable(this.rsaTimeout);
     }
 
@@ -135,7 +136,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaAccessid The RsaAccessid param.
+         * @param rsaAccessid RSA SecurID access ID
          * 
          * @return builder
          * 
@@ -146,7 +147,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaAccessid The RsaAccessid param.
+         * @param rsaAccessid RSA SecurID access ID
          * 
          * @return builder
          * 
@@ -156,7 +157,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaAccesskey The RsaAccesskey param.
+         * @param rsaAccesskey RSA SecurID access key
          * 
          * @return builder
          * 
@@ -167,7 +168,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaAccesskey The RsaAccesskey param.
+         * @param rsaAccesskey RSA SecurID access key
          * 
          * @return builder
          * 
@@ -177,7 +178,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaApiHost The RsaApiHost param.
+         * @param rsaApiHost RSA SecurID hostname
          * 
          * @return builder
          * 
@@ -188,7 +189,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaApiHost The RsaApiHost param.
+         * @param rsaApiHost RSA SecurID hostname
          * 
          * @return builder
          * 
@@ -198,7 +199,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaAssurancepolicyid The RsaAssurancepolicyid param.
+         * @param rsaAssurancepolicyid RSA SecurID assurance level
          * 
          * @return builder
          * 
@@ -209,7 +210,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaAssurancepolicyid The RsaAssurancepolicyid param.
+         * @param rsaAssurancepolicyid RSA SecurID assurance level
          * 
          * @return builder
          * 
@@ -219,7 +220,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaBaseuri The RsaBaseuri param.
+         * @param rsaBaseuri RSA SecurID API base URI
          * 
          * @return builder
          * 
@@ -230,7 +231,7 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaBaseuri The RsaBaseuri param.
+         * @param rsaBaseuri RSA SecurID API base URI
          * 
          * @return builder
          * 
@@ -240,23 +241,23 @@ public final class MfaServerMfaVendorTypeRsaSecuridAccessV1Args extends com.pulu
         }
 
         /**
-         * @param rsaTimeout The RsaTimeout param.
+         * @param rsaTimeout RSA SecurID timeout (seconds)
          * 
          * @return builder
          * 
          */
-        public Builder rsaTimeout(@Nullable Output<String> rsaTimeout) {
+        public Builder rsaTimeout(@Nullable Output<Integer> rsaTimeout) {
             $.rsaTimeout = rsaTimeout;
             return this;
         }
 
         /**
-         * @param rsaTimeout The RsaTimeout param.
+         * @param rsaTimeout RSA SecurID timeout (seconds)
          * 
          * @return builder
          * 
          */
-        public Builder rsaTimeout(String rsaTimeout) {
+        public Builder rsaTimeout(Integer rsaTimeout) {
             return rsaTimeout(Output.of(rsaTimeout));
         }
 

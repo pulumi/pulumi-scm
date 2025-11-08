@@ -16,7 +16,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _alerts;
 
         /// <summary>
-        /// The Alerts param.
+        /// Alert
         /// </summary>
         public InputList<string> Alerts
         {
@@ -28,7 +28,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _allows;
 
         /// <summary>
-        /// The Allows param.
+        /// Allow
         /// </summary>
         public InputList<string> Allows
         {
@@ -40,7 +40,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _blocks;
 
         /// <summary>
-        /// The Blocks param.
+        /// Block
         /// </summary>
         public InputList<string> Blocks
         {
@@ -52,7 +52,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _continues;
 
         /// <summary>
-        /// The Continues param.
+        /// Continue
         /// </summary>
         public InputList<string> Continues
         {
@@ -61,13 +61,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The LogSeverity param. Default: `"medium"`.
+        /// Log severity
         /// </summary>
         [Input("logSeverity")]
         public Input<string>? LogSeverity { get; set; }
 
         /// <summary>
-        /// The Mode param.
+        /// Mode
         /// </summary>
         [Input("mode")]
         public Input<Inputs.UrlAccessProfileCredentialEnforcementModeGetArgs>? Mode { get; set; }

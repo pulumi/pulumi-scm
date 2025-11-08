@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeIpRecurring
     {
         /// <summary>
-        /// The Daily param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Daily
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIpRecurringDaily? Daily;
         /// <summary>
-        /// The FiveMinute param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Five minute
         /// </summary>
-        public readonly bool? FiveMinute;
+        public readonly Outputs.ExternalDynamicListTypeIpRecurringFiveMinute? FiveMinute;
         /// <summary>
-        /// The Hourly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Hourly
         /// </summary>
-        public readonly bool? Hourly;
+        public readonly Outputs.ExternalDynamicListTypeIpRecurringHourly? Hourly;
         /// <summary>
-        /// The Monthly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Monthly
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIpRecurringMonthly? Monthly;
         /// <summary>
-        /// The Weekly param. Ensure that only one of the following is specified: `Daily`, `FiveMinute`, `Hourly`, `Monthly`, `Weekly`
+        /// Weekly
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeIpRecurringWeekly? Weekly;
 
@@ -38,9 +38,9 @@ namespace Pulumi.Scm.Outputs
         private ExternalDynamicListTypeIpRecurring(
             Outputs.ExternalDynamicListTypeIpRecurringDaily? daily,
 
-            bool? fiveMinute,
+            Outputs.ExternalDynamicListTypeIpRecurringFiveMinute? fiveMinute,
 
-            bool? hourly,
+            Outputs.ExternalDynamicListTypeIpRecurringHourly? hourly,
 
             Outputs.ExternalDynamicListTypeIpRecurringMonthly? monthly,
 

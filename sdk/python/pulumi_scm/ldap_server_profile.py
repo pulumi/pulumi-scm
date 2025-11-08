@@ -29,6 +29,7 @@ class LdapServerProfileArgs:
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  ssl: Optional[pulumi.Input[_builtins.bool]] = None,
@@ -36,19 +37,20 @@ class LdapServerProfileArgs:
                  verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a LdapServerProfile resource.
-        :param pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] base: The Base param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_dn: The BindDn param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_password: The BindPassword param. String length must not exceed 121 characters.
-        :param pulumi.Input[_builtins.str] bind_timelimit: The BindTimelimit param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] ldap_type: The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
-        :param pulumi.Input[_builtins.int] retry_interval: The RetryInterval param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] ssl: The Ssl param.
-        :param pulumi.Input[_builtins.int] timelimit: The Timelimit param.
-        :param pulumi.Input[_builtins.bool] verify_server_certificate: The VerifyServerCertificate param.
+        :param pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]] servers: The LDAP server configuration
+        :param pulumi.Input[_builtins.str] base: The base DN
+        :param pulumi.Input[_builtins.str] bind_dn: The bind DN
+        :param pulumi.Input[_builtins.str] bind_password: The bind password
+        :param pulumi.Input[_builtins.str] bind_timelimit: The bind timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
+        :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
+        :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
+        :param pulumi.Input[_builtins.bool] verify_server_certificate: Verify server certificate for SSL sessions?
         """
         pulumi.set(__self__, "servers", servers)
         if base is not None:
@@ -65,6 +67,8 @@ class LdapServerProfileArgs:
             pulumi.set(__self__, "folder", folder)
         if ldap_type is not None:
             pulumi.set(__self__, "ldap_type", ldap_type)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
         if retry_interval is not None:
             pulumi.set(__self__, "retry_interval", retry_interval)
         if snippet is not None:
@@ -80,7 +84,7 @@ class LdapServerProfileArgs:
     @pulumi.getter
     def servers(self) -> pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]:
         """
-        The Servers param.
+        The LDAP server configuration
         """
         return pulumi.get(self, "servers")
 
@@ -92,7 +96,7 @@ class LdapServerProfileArgs:
     @pulumi.getter
     def base(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Base param. String length must not exceed 255 characters.
+        The base DN
         """
         return pulumi.get(self, "base")
 
@@ -104,7 +108,7 @@ class LdapServerProfileArgs:
     @pulumi.getter(name="bindDn")
     def bind_dn(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BindDn param. String length must not exceed 255 characters.
+        The bind DN
         """
         return pulumi.get(self, "bind_dn")
 
@@ -116,7 +120,7 @@ class LdapServerProfileArgs:
     @pulumi.getter(name="bindPassword")
     def bind_password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BindPassword param. String length must not exceed 121 characters.
+        The bind password
         """
         return pulumi.get(self, "bind_password")
 
@@ -128,7 +132,7 @@ class LdapServerProfileArgs:
     @pulumi.getter(name="bindTimelimit")
     def bind_timelimit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BindTimelimit param.
+        The bind timeout (seconds)
         """
         return pulumi.get(self, "bind_timelimit")
 
@@ -140,7 +144,7 @@ class LdapServerProfileArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -152,7 +156,7 @@ class LdapServerProfileArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -164,7 +168,7 @@ class LdapServerProfileArgs:
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        The LDAP server time
         """
         return pulumi.get(self, "ldap_type")
 
@@ -173,10 +177,22 @@ class LdapServerProfileArgs:
         pulumi.set(self, "ldap_type", value)
 
     @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name of the LDAP server profile
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
     @pulumi.getter(name="retryInterval")
     def retry_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The RetryInterval param.
+        The search retry interval (seconds)
         """
         return pulumi.get(self, "retry_interval")
 
@@ -188,7 +204,7 @@ class LdapServerProfileArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -200,7 +216,7 @@ class LdapServerProfileArgs:
     @pulumi.getter
     def ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Ssl param.
+        Require SSL/TLS secured connection?
         """
         return pulumi.get(self, "ssl")
 
@@ -212,7 +228,7 @@ class LdapServerProfileArgs:
     @pulumi.getter
     def timelimit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The Timelimit param.
+        The search timeout (seconds)
         """
         return pulumi.get(self, "timelimit")
 
@@ -224,7 +240,7 @@ class LdapServerProfileArgs:
     @pulumi.getter(name="verifyServerCertificate")
     def verify_server_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The VerifyServerCertificate param.
+        Verify server certificate for SSL sessions?
         """
         return pulumi.get(self, "verify_server_certificate")
 
@@ -241,8 +257,10 @@ class _LdapServerProfileState:
                  bind_password: Optional[pulumi.Input[_builtins.str]] = None,
                  bind_timelimit: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
+                 encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -252,19 +270,21 @@ class _LdapServerProfileState:
                  verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering LdapServerProfile resources.
-        :param pulumi.Input[_builtins.str] base: The Base param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_dn: The BindDn param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_password: The BindPassword param. String length must not exceed 121 characters.
-        :param pulumi.Input[_builtins.str] bind_timelimit: The BindTimelimit param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] ldap_type: The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
-        :param pulumi.Input[_builtins.int] retry_interval: The RetryInterval param.
-        :param pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] ssl: The Ssl param.
-        :param pulumi.Input[_builtins.int] timelimit: The Timelimit param.
-        :param pulumi.Input[_builtins.bool] verify_server_certificate: The VerifyServerCertificate param.
+        :param pulumi.Input[_builtins.str] base: The base DN
+        :param pulumi.Input[_builtins.str] bind_dn: The bind DN
+        :param pulumi.Input[_builtins.str] bind_password: The bind password
+        :param pulumi.Input[_builtins.str] bind_timelimit: The bind timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
+        :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
+        :param pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]] servers: The LDAP server configuration
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
+        :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
+        :param pulumi.Input[_builtins.bool] verify_server_certificate: Verify server certificate for SSL sessions?
         """
         if base is not None:
             pulumi.set(__self__, "base", base)
@@ -276,10 +296,14 @@ class _LdapServerProfileState:
             pulumi.set(__self__, "bind_timelimit", bind_timelimit)
         if device is not None:
             pulumi.set(__self__, "device", device)
+        if encrypted_values is not None:
+            pulumi.set(__self__, "encrypted_values", encrypted_values)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
         if ldap_type is not None:
             pulumi.set(__self__, "ldap_type", ldap_type)
+        if name is not None:
+            pulumi.set(__self__, "name", name)
         if retry_interval is not None:
             pulumi.set(__self__, "retry_interval", retry_interval)
         if servers is not None:
@@ -299,7 +323,7 @@ class _LdapServerProfileState:
     @pulumi.getter
     def base(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Base param. String length must not exceed 255 characters.
+        The base DN
         """
         return pulumi.get(self, "base")
 
@@ -311,7 +335,7 @@ class _LdapServerProfileState:
     @pulumi.getter(name="bindDn")
     def bind_dn(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BindDn param. String length must not exceed 255 characters.
+        The bind DN
         """
         return pulumi.get(self, "bind_dn")
 
@@ -323,7 +347,7 @@ class _LdapServerProfileState:
     @pulumi.getter(name="bindPassword")
     def bind_password(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BindPassword param. String length must not exceed 121 characters.
+        The bind password
         """
         return pulumi.get(self, "bind_password")
 
@@ -335,7 +359,7 @@ class _LdapServerProfileState:
     @pulumi.getter(name="bindTimelimit")
     def bind_timelimit(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The BindTimelimit param.
+        The bind timeout (seconds)
         """
         return pulumi.get(self, "bind_timelimit")
 
@@ -347,7 +371,7 @@ class _LdapServerProfileState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -356,10 +380,22 @@ class _LdapServerProfileState:
         pulumi.set(self, "device", value)
 
     @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]:
+        """
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
+
+    @encrypted_values.setter
+    def encrypted_values(self, value: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]):
+        pulumi.set(self, "encrypted_values", value)
+
+    @_builtins.property
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -371,7 +407,7 @@ class _LdapServerProfileState:
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        The LDAP server time
         """
         return pulumi.get(self, "ldap_type")
 
@@ -380,10 +416,22 @@ class _LdapServerProfileState:
         pulumi.set(self, "ldap_type", value)
 
     @_builtins.property
+    @pulumi.getter
+    def name(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        The name of the LDAP server profile
+        """
+        return pulumi.get(self, "name")
+
+    @name.setter
+    def name(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "name", value)
+
+    @_builtins.property
     @pulumi.getter(name="retryInterval")
     def retry_interval(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The RetryInterval param.
+        The search retry interval (seconds)
         """
         return pulumi.get(self, "retry_interval")
 
@@ -395,7 +443,7 @@ class _LdapServerProfileState:
     @pulumi.getter
     def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['LdapServerProfileServerArgs']]]]:
         """
-        The Servers param.
+        The LDAP server configuration
         """
         return pulumi.get(self, "servers")
 
@@ -407,7 +455,7 @@ class _LdapServerProfileState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -419,7 +467,7 @@ class _LdapServerProfileState:
     @pulumi.getter
     def ssl(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The Ssl param.
+        Require SSL/TLS secured connection?
         """
         return pulumi.get(self, "ssl")
 
@@ -440,7 +488,7 @@ class _LdapServerProfileState:
     @pulumi.getter
     def timelimit(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        The Timelimit param.
+        The search timeout (seconds)
         """
         return pulumi.get(self, "timelimit")
 
@@ -452,7 +500,7 @@ class _LdapServerProfileState:
     @pulumi.getter(name="verifyServerCertificate")
     def verify_server_certificate(self) -> Optional[pulumi.Input[_builtins.bool]]:
         """
-        The VerifyServerCertificate param.
+        Verify server certificate for SSL sessions?
         """
         return pulumi.get(self, "verify_server_certificate")
 
@@ -474,6 +522,7 @@ class LdapServerProfile(pulumi.CustomResource):
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -482,32 +531,24 @@ class LdapServerProfile(pulumi.CustomResource):
                  verify_server_certificate: Optional[pulumi.Input[_builtins.bool]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.LdapServerProfile("example")
-        ```
+        LdapServerProfile resource
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] base: The Base param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_dn: The BindDn param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_password: The BindPassword param. String length must not exceed 121 characters.
-        :param pulumi.Input[_builtins.str] bind_timelimit: The BindTimelimit param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] ldap_type: The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
-        :param pulumi.Input[_builtins.int] retry_interval: The RetryInterval param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] ssl: The Ssl param.
-        :param pulumi.Input[_builtins.int] timelimit: The Timelimit param.
-        :param pulumi.Input[_builtins.bool] verify_server_certificate: The VerifyServerCertificate param.
+        :param pulumi.Input[_builtins.str] base: The base DN
+        :param pulumi.Input[_builtins.str] bind_dn: The bind DN
+        :param pulumi.Input[_builtins.str] bind_password: The bind password
+        :param pulumi.Input[_builtins.str] bind_timelimit: The bind timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
+        :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The LDAP server configuration
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
+        :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
+        :param pulumi.Input[_builtins.bool] verify_server_certificate: Verify server certificate for SSL sessions?
         """
         ...
     @overload
@@ -516,16 +557,7 @@ class LdapServerProfile(pulumi.CustomResource):
                  args: LdapServerProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
-
-        ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.LdapServerProfile("example")
-        ```
+        LdapServerProfile resource
 
         :param str resource_name: The name of the resource.
         :param LdapServerProfileArgs args: The arguments to use to populate this resource's properties.
@@ -549,6 +581,7 @@ class LdapServerProfile(pulumi.CustomResource):
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
+                 name: Optional[pulumi.Input[_builtins.str]] = None,
                  retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
                  servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -571,6 +604,7 @@ class LdapServerProfile(pulumi.CustomResource):
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
             __props__.__dict__["ldap_type"] = ldap_type
+            __props__.__dict__["name"] = name
             __props__.__dict__["retry_interval"] = retry_interval
             if servers is None and not opts.urn:
                 raise TypeError("Missing required property 'servers'")
@@ -579,8 +613,9 @@ class LdapServerProfile(pulumi.CustomResource):
             __props__.__dict__["ssl"] = ssl
             __props__.__dict__["timelimit"] = timelimit
             __props__.__dict__["verify_server_certificate"] = verify_server_certificate
+            __props__.__dict__["encrypted_values"] = None
             __props__.__dict__["tfid"] = None
-        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["bindPassword"])
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["bindPassword", "encryptedValues"])
         opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(LdapServerProfile, __self__).__init__(
             'scm:index/ldapServerProfile:LdapServerProfile',
@@ -597,8 +632,10 @@ class LdapServerProfile(pulumi.CustomResource):
             bind_password: Optional[pulumi.Input[_builtins.str]] = None,
             bind_timelimit: Optional[pulumi.Input[_builtins.str]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
+            encrypted_values: Optional[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             ldap_type: Optional[pulumi.Input[_builtins.str]] = None,
+            name: Optional[pulumi.Input[_builtins.str]] = None,
             retry_interval: Optional[pulumi.Input[_builtins.int]] = None,
             servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
@@ -613,19 +650,21 @@ class LdapServerProfile(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[_builtins.str] base: The Base param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_dn: The BindDn param. String length must not exceed 255 characters.
-        :param pulumi.Input[_builtins.str] bind_password: The BindPassword param. String length must not exceed 121 characters.
-        :param pulumi.Input[_builtins.str] bind_timelimit: The BindTimelimit param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[_builtins.str] ldap_type: The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
-        :param pulumi.Input[_builtins.int] retry_interval: The RetryInterval param.
-        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The Servers param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.bool] ssl: The Ssl param.
-        :param pulumi.Input[_builtins.int] timelimit: The Timelimit param.
-        :param pulumi.Input[_builtins.bool] verify_server_certificate: The VerifyServerCertificate param.
+        :param pulumi.Input[_builtins.str] base: The base DN
+        :param pulumi.Input[_builtins.str] bind_dn: The bind DN
+        :param pulumi.Input[_builtins.str] bind_password: The bind password
+        :param pulumi.Input[_builtins.str] bind_timelimit: The bind timeout (seconds)
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[_builtins.str] ldap_type: The LDAP server time
+        :param pulumi.Input[_builtins.str] name: The name of the LDAP server profile
+        :param pulumi.Input[_builtins.int] retry_interval: The search retry interval (seconds)
+        :param pulumi.Input[Sequence[pulumi.Input[Union['LdapServerProfileServerArgs', 'LdapServerProfileServerArgsDict']]]] servers: The LDAP server configuration
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.bool] ssl: Require SSL/TLS secured connection?
+        :param pulumi.Input[_builtins.int] timelimit: The search timeout (seconds)
+        :param pulumi.Input[_builtins.bool] verify_server_certificate: Verify server certificate for SSL sessions?
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -636,8 +675,10 @@ class LdapServerProfile(pulumi.CustomResource):
         __props__.__dict__["bind_password"] = bind_password
         __props__.__dict__["bind_timelimit"] = bind_timelimit
         __props__.__dict__["device"] = device
+        __props__.__dict__["encrypted_values"] = encrypted_values
         __props__.__dict__["folder"] = folder
         __props__.__dict__["ldap_type"] = ldap_type
+        __props__.__dict__["name"] = name
         __props__.__dict__["retry_interval"] = retry_interval
         __props__.__dict__["servers"] = servers
         __props__.__dict__["snippet"] = snippet
@@ -651,7 +692,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def base(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Base param. String length must not exceed 255 characters.
+        The base DN
         """
         return pulumi.get(self, "base")
 
@@ -659,7 +700,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="bindDn")
     def bind_dn(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The BindDn param. String length must not exceed 255 characters.
+        The bind DN
         """
         return pulumi.get(self, "bind_dn")
 
@@ -667,7 +708,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="bindPassword")
     def bind_password(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The BindPassword param. String length must not exceed 121 characters.
+        The bind password
         """
         return pulumi.get(self, "bind_password")
 
@@ -675,7 +716,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="bindTimelimit")
     def bind_timelimit(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The BindTimelimit param.
+        The bind timeout (seconds)
         """
         return pulumi.get(self, "bind_timelimit")
 
@@ -683,15 +724,23 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
+
+    @_builtins.property
+    @pulumi.getter(name="encryptedValues")
+    def encrypted_values(self) -> pulumi.Output[Mapping[str, _builtins.str]]:
+        """
+        Map of sensitive values returned from the API.
+        """
+        return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -699,15 +748,23 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The LdapType param. String must be one of these: `"active-directory"`, `"e-directory"`, `"sun"`, `"other"`.
+        The LDAP server time
         """
         return pulumi.get(self, "ldap_type")
+
+    @_builtins.property
+    @pulumi.getter
+    def name(self) -> pulumi.Output[_builtins.str]:
+        """
+        The name of the LDAP server profile
+        """
+        return pulumi.get(self, "name")
 
     @_builtins.property
     @pulumi.getter(name="retryInterval")
     def retry_interval(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        The RetryInterval param.
+        The search retry interval (seconds)
         """
         return pulumi.get(self, "retry_interval")
 
@@ -715,7 +772,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def servers(self) -> pulumi.Output[Sequence['outputs.LdapServerProfileServer']]:
         """
-        The Servers param.
+        The LDAP server configuration
         """
         return pulumi.get(self, "servers")
 
@@ -723,7 +780,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -731,7 +788,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def ssl(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The Ssl param.
+        Require SSL/TLS secured connection?
         """
         return pulumi.get(self, "ssl")
 
@@ -744,7 +801,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter
     def timelimit(self) -> pulumi.Output[Optional[_builtins.int]]:
         """
-        The Timelimit param.
+        The search timeout (seconds)
         """
         return pulumi.get(self, "timelimit")
 
@@ -752,7 +809,7 @@ class LdapServerProfile(pulumi.CustomResource):
     @pulumi.getter(name="verifyServerCertificate")
     def verify_server_certificate(self) -> pulumi.Output[Optional[_builtins.bool]]:
         """
-        The VerifyServerCertificate param.
+        Verify server certificate for SSL sessions?
         """
         return pulumi.get(self, "verify_server_certificate")
 

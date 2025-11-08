@@ -10,7 +10,7 @@ using Pulumi.Serialization;
 namespace Pulumi.Scm
 {
     /// <summary>
-    /// Retrieves a config item.
+    /// Tag resource
     /// 
     /// ## Example Usage
     /// 
@@ -22,12 +22,27 @@ namespace Pulumi.Scm
     /// 
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
-    ///     var example = new Scm.Tag("example", new()
+    ///     // This file is embedded using go:embed
+    ///     // Tags for organizing and categorizing resources
+    ///     var scmTag1 = new Scm.Tag("scm_tag_1", new()
     ///     {
     ///         Folder = "Shared",
-    ///         Name = "myColor",
-    ///         Color = "Green",
-    ///         Comments = "Made by Pulumi",
+    ///         Name = "scm_tag_1",
+    ///         Color = "Red",
+    ///     });
+    /// 
+    ///     var scmTag2 = new Scm.Tag("scm_tag_2", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_tag_2",
+    ///         Color = "Blue",
+    ///     });
+    /// 
+    ///     var scmTag3 = new Scm.Tag("scm_tag_3", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_tag_3",
+    ///         Color = "Orange",
     ///     });
     /// 
     /// });
@@ -37,37 +52,37 @@ namespace Pulumi.Scm
     public partial class Tag : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+        /// The color of the tag
         /// </summary>
         [Output("color")]
         public Output<string?> Color { get; private set; } = null!;
 
         /// <summary>
-        /// The Comments param. String length must not exceed 1023 characters.
+        /// The description of the tag
         /// </summary>
         [Output("comments")]
         public Output<string?> Comments { get; private set; } = null!;
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// The Name param. String length must not exceed 127 characters.
+        /// The name of the tag
         /// </summary>
         [Output("name")]
         public Output<string> Name { get; private set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -122,37 +137,37 @@ namespace Pulumi.Scm
     public sealed class TagArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+        /// The color of the tag
         /// </summary>
         [Input("color")]
         public Input<string>? Color { get; set; }
 
         /// <summary>
-        /// The Comments param. String length must not exceed 1023 characters.
+        /// The description of the tag
         /// </summary>
         [Input("comments")]
         public Input<string>? Comments { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param. String length must not exceed 127 characters.
+        /// The name of the tag
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -166,37 +181,37 @@ namespace Pulumi.Scm
     public sealed class TagState : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Color param. String must be one of these: `"Red"`, `"Green"`, `"Blue"`, `"Yellow"`, `"Copper"`, `"Orange"`, `"Purple"`, `"Gray"`, `"Light Green"`, `"Cyan"`, `"Light Gray"`, `"Blue Gray"`, `"Lime"`, `"Black"`, `"Gold"`, `"Brown"`, `"Olive"`, `"Maroon"`, `"Red-Orange"`, `"Yellow-Orange"`, `"Forest Green"`, `"Turquoise Blue"`, `"Azure Blue"`, `"Cerulean Blue"`, `"Midnight Blue"`, `"Medium Blue"`, `"Cobalt Blue"`, `"Violet Blue"`, `"Blue Violet"`, `"Medium Violet"`, `"Medium Rose"`, `"Lavender"`, `"Orchid"`, `"Thistle"`, `"Peach"`, `"Salmon"`, `"Magenta"`, `"Red Violet"`, `"Mahogany"`, `"Burnt Sienna"`, `"Chestnut"`.
+        /// The color of the tag
         /// </summary>
         [Input("color")]
         public Input<string>? Color { get; set; }
 
         /// <summary>
-        /// The Comments param. String length must not exceed 1023 characters.
+        /// The description of the tag
         /// </summary>
         [Input("comments")]
         public Input<string>? Comments { get; set; }
 
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// The Name param. String length must not exceed 127 characters.
+        /// The name of the tag
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
 
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

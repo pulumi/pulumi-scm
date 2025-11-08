@@ -15,50 +15,50 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MfaServerMfaVendorType {
     /**
-     * @return The DuoSecurityV2 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integration with [Duo Security](https://duo.com/product)
      * 
      */
     private @Nullable MfaServerMfaVendorTypeDuoSecurityV2 duoSecurityV2;
     /**
-     * @return The OktaAdaptiveV1 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
      * 
      */
     private @Nullable MfaServerMfaVendorTypeOktaAdaptiveV1 oktaAdaptiveV1;
     /**
-     * @return The PingIdentityV1 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
      * 
      */
     private @Nullable MfaServerMfaVendorTypePingIdentityV1 pingIdentityV1;
     /**
-     * @return The RsaSecuridAccessV1 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
      * 
      */
     private @Nullable MfaServerMfaVendorTypeRsaSecuridAccessV1 rsaSecuridAccessV1;
 
     private MfaServerMfaVendorType() {}
     /**
-     * @return The DuoSecurityV2 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integration with [Duo Security](https://duo.com/product)
      * 
      */
     public Optional<MfaServerMfaVendorTypeDuoSecurityV2> duoSecurityV2() {
         return Optional.ofNullable(this.duoSecurityV2);
     }
     /**
-     * @return The OktaAdaptiveV1 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
      * 
      */
     public Optional<MfaServerMfaVendorTypeOktaAdaptiveV1> oktaAdaptiveV1() {
         return Optional.ofNullable(this.oktaAdaptiveV1);
     }
     /**
-     * @return The PingIdentityV1 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
      * 
      */
     public Optional<MfaServerMfaVendorTypePingIdentityV1> pingIdentityV1() {
         return Optional.ofNullable(this.pingIdentityV1);
     }
     /**
-     * @return The RsaSecuridAccessV1 param. Ensure that only one of the following is specified: `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, `rsaSecuridAccessV1`
+     * @return Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
      * 
      */
     public Optional<MfaServerMfaVendorTypeRsaSecuridAccessV1> rsaSecuridAccessV1() {

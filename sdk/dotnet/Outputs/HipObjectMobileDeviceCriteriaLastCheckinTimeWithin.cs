@@ -14,12 +14,12 @@ namespace Pulumi.Scm.Outputs
     public sealed class HipObjectMobileDeviceCriteriaLastCheckinTimeWithin
     {
         /// <summary>
-        /// specify time in days. Value must be between 1 and 365. Default: `30`.
+        /// specify time in days
         /// </summary>
-        public readonly int? Days;
+        public readonly int Days;
 
         [OutputConstructor]
-        private HipObjectMobileDeviceCriteriaLastCheckinTimeWithin(int? days)
+        private HipObjectMobileDeviceCriteriaLastCheckinTimeWithin(int days)
         {
             Days = days;
         }

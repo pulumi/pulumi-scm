@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetHipObjectNetworkInfoCriteriaNetworkResult
     {
         /// <summary>
-        /// The Is param.
+        /// Is
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsResult Is;
         /// <summary>
-        /// The IsNot param.
+        /// Is not
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotResult IsNot;
 

@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypePredefinedUrlArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The Description param. String length must not exceed 255 characters.
+        /// Description
         /// </summary>
         [Input("description")]
         public Input<string>? Description { get; set; }
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// The ExceptionList param. Individual elements in this list are subject to additional validation. String length must not exceed 255 characters.
+        /// Exception list
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -31,7 +31,7 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// The Url param.
+        /// Url
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

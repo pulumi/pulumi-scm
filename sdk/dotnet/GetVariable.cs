@@ -12,7 +12,7 @@ namespace Pulumi.Scm
     public static class GetVariable
     {
         /// <summary>
-        /// Retrieves a config item.
+        /// Variable data source
         /// 
         /// ## Example Usage
         /// 
@@ -24,11 +24,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetVariable.Invoke(new()
+        ///     // Look up the "$example" variable by its name.
+        ///     var scmVariableDs = Scm.GetVariable.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "66cbe56c-0300-4905-8455-d384978a0081",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["variableOutputs"] = 
+        ///         {
+        ///             { "exampleId", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id) },
+        ///             { "exampleName", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name) },
+        ///             { "exampleType", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type) },
+        ///             { "exampleValue", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -36,7 +47,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetVariableResult>("scm:index/getVariable:getVariable", args ?? new GetVariableArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// Variable data source
         /// 
         /// ## Example Usage
         /// 
@@ -48,11 +59,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetVariable.Invoke(new()
+        ///     // Look up the "$example" variable by its name.
+        ///     var scmVariableDs = Scm.GetVariable.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "66cbe56c-0300-4905-8455-d384978a0081",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["variableOutputs"] = 
+        ///         {
+        ///             { "exampleId", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id) },
+        ///             { "exampleName", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name) },
+        ///             { "exampleType", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type) },
+        ///             { "exampleValue", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -60,7 +82,7 @@ namespace Pulumi.Scm
             => global::Pulumi.Deployment.Instance.Invoke<GetVariableResult>("scm:index/getVariable:getVariable", args ?? new GetVariableInvokeArgs(), options.WithDefaults());
 
         /// <summary>
-        /// Retrieves a config item.
+        /// Variable data source
         /// 
         /// ## Example Usage
         /// 
@@ -72,11 +94,22 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var example = Scm.GetVariable.Invoke(new()
+        ///     // Look up the "$example" variable by its name.
+        ///     var scmVariableDs = Scm.GetVariable.Invoke(new()
         ///     {
-        ///         Id = "1234-56-789",
+        ///         Id = "66cbe56c-0300-4905-8455-d384978a0081",
         ///     });
         /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["variableOutputs"] = 
+        ///         {
+        ///             { "exampleId", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Id) },
+        ///             { "exampleName", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Name) },
+        ///             { "exampleType", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Type) },
+        ///             { "exampleValue", scmVariableDs.Apply(getVariableResult =&gt; getVariableResult.Value) },
+        ///         },
+        ///     };
         /// });
         /// ```
         /// </summary>
@@ -88,28 +121,16 @@ namespace Pulumi.Scm
     public sealed class GetVariableArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
-        /// </summary>
-        [Input("device")]
-        public string? Device { get; set; }
-
-        /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public string? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the variable
         /// </summary>
         [Input("id", required: true)]
         public string Id { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The name of the variable
         /// </summary>
-        [Input("snippet")]
-        public string? Snippet { get; set; }
+        [Input("name")]
+        public string? Name { get; set; }
 
         public GetVariableArgs()
         {
@@ -120,28 +141,16 @@ namespace Pulumi.Scm
     public sealed class GetVariableInvokeArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
-        /// The Device param.
-        /// </summary>
-        [Input("device")]
-        public Input<string>? Device { get; set; }
-
-        /// <summary>
-        /// The Folder param.
-        /// </summary>
-        [Input("folder")]
-        public Input<string>? Folder { get; set; }
-
-        /// <summary>
-        /// The Id param.
+        /// UUID of the variable
         /// </summary>
         [Input("id", required: true)]
         public Input<string> Id { get; set; } = null!;
 
         /// <summary>
-        /// The Snippet param.
+        /// The name of the variable
         /// </summary>
-        [Input("snippet")]
-        public Input<string>? Snippet { get; set; }
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         public GetVariableInvokeArgs()
         {
@@ -154,40 +163,40 @@ namespace Pulumi.Scm
     public sealed class GetVariableResult
     {
         /// <summary>
-        /// The Description param.
+        /// The description of the variable
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The Device param.
+        /// The device in which the resource is defined
         /// </summary>
-        public readonly string? Device;
+        public readonly string Device;
         /// <summary>
-        /// The Folder param.
+        /// The folder in which the resource is defined
         /// </summary>
-        public readonly string? Folder;
+        public readonly string Folder;
         /// <summary>
-        /// The Id param.
+        /// UUID of the variable
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]. String length must not exceed 63 characters.
+        /// The name of the variable
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The Overridden param.
+        /// Is the variable overridden?
         /// </summary>
         public readonly bool Overridden;
         /// <summary>
-        /// The Snippet param.
+        /// The snippet in which the resource is defined
         /// </summary>
-        public readonly string? Snippet;
+        public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// The Type param. String must be one of these: `"percent"`, `"count"`, `"ip-netmask"`, `"zone"`, `"ip-range"`, `"ip-wildcard"`, `"device-priority"`, `"device-id"`, `"egress-max"`, `"as-number"`, `"fqdn"`, `"port"`, `"link-tag"`, `"group-id"`, `"rate"`, `"router-id"`, `"qos-profile"`, `"timer"`.
+        /// The variable type
         /// </summary>
         public readonly string Type;
         /// <summary>
-        /// value can accept either string or integer.
+        /// The value of the variable
         /// </summary>
         public readonly string Value;
 
@@ -195,9 +204,9 @@ namespace Pulumi.Scm
         private GetVariableResult(
             string description,
 
-            string? device,
+            string device,
 
-            string? folder,
+            string folder,
 
             string id,
 
@@ -205,7 +214,7 @@ namespace Pulumi.Scm
 
             bool overridden,
 
-            string? snippet,
+            string snippet,
 
             string tfid,
 

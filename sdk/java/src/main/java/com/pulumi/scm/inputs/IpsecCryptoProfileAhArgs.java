@@ -16,14 +16,14 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
     public static final IpsecCryptoProfileAhArgs Empty = new IpsecCryptoProfileAhArgs();
 
     /**
-     * The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * Authentication
      * 
      */
     @Import(name="authentications", required=true)
     private Output<List<String>> authentications;
 
     /**
-     * @return The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+     * @return Authentication
      * 
      */
     public Output<List<String>> authentications() {
@@ -55,7 +55,7 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param authentications The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+         * @param authentications Authentication
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param authentications The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+         * @param authentications Authentication
          * 
          * @return builder
          * 
@@ -76,7 +76,7 @@ public final class IpsecCryptoProfileAhArgs extends com.pulumi.resources.Resourc
         }
 
         /**
-         * @param authentications The Authentications param. Individual elements in this list are subject to additional validation. String must be one of these: `&#34;md5&#34;`, `&#34;sha1&#34;`, `&#34;sha256&#34;`, `&#34;sha384&#34;`, `&#34;sha512&#34;`.
+         * @param authentications Authentication
          * 
          * @return builder
          * 

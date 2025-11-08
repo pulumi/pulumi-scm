@@ -16,14 +16,14 @@ public final class HipObjectHostInfoCriteriaOsArgs extends com.pulumi.resources.
     public static final HipObjectHostInfoCriteriaOsArgs Empty = new HipObjectHostInfoCriteriaOsArgs();
 
     /**
-     * The Contains param. Ensure that only one of the following is specified: `contains`
+     * Contains
      * 
      */
     @Import(name="contains")
     private @Nullable Output<HipObjectHostInfoCriteriaOsContainsArgs> contains;
 
     /**
-     * @return The Contains param. Ensure that only one of the following is specified: `contains`
+     * @return Contains
      * 
      */
     public Optional<Output<HipObjectHostInfoCriteriaOsContainsArgs>> contains() {
@@ -55,7 +55,7 @@ public final class HipObjectHostInfoCriteriaOsArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param contains The Contains param. Ensure that only one of the following is specified: `contains`
+         * @param contains Contains
          * 
          * @return builder
          * 
@@ -66,7 +66,7 @@ public final class HipObjectHostInfoCriteriaOsArgs extends com.pulumi.resources.
         }
 
         /**
-         * @param contains The Contains param. Ensure that only one of the following is specified: `contains`
+         * @param contains Contains
          * 
          * @return builder
          * 

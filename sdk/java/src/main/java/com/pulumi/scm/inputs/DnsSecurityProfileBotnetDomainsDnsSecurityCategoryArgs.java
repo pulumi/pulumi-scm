@@ -16,14 +16,14 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
     public static final DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs Empty = new DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs();
 
     /**
-     * The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+     * Action
      * 
      */
     @Import(name="action")
     private @Nullable Output<String> action;
 
     /**
-     * @return The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+     * @return Action
      * 
      */
     public Optional<Output<String>> action() {
@@ -31,14 +31,14 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
     }
 
     /**
-     * The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+     * Log level
      * 
      */
     @Import(name="logLevel")
     private @Nullable Output<String> logLevel;
 
     /**
-     * @return The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+     * @return Log level
      * 
      */
     public Optional<Output<String>> logLevel() {
@@ -46,14 +46,14 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
     }
 
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Optional<Output<String>> name() {
@@ -61,14 +61,14 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
     }
 
     /**
-     * The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * Packet capture
      * 
      */
     @Import(name="packetCapture")
     private @Nullable Output<String> packetCapture;
 
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public Optional<Output<String>> packetCapture() {
@@ -103,7 +103,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param action The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -114,7 +114,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param action The Action param. String must be one of these: `&#34;default&#34;`, `&#34;allow&#34;`, `&#34;block&#34;`, `&#34;sinkhole&#34;`. Default: `&#34;default&#34;`.
+         * @param action Action
          * 
          * @return builder
          * 
@@ -124,7 +124,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param logLevel The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+         * @param logLevel Log level
          * 
          * @return builder
          * 
@@ -135,7 +135,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param logLevel The LogLevel param. String must be one of these: `&#34;default&#34;`, `&#34;none&#34;`, `&#34;low&#34;`, `&#34;informational&#34;`, `&#34;medium&#34;`, `&#34;high&#34;`, `&#34;critical&#34;`. Default: `&#34;default&#34;`.
+         * @param logLevel Log level
          * 
          * @return builder
          * 
@@ -145,7 +145,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -156,7 +156,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param name The Name param.
+         * @param name Name
          * 
          * @return builder
          * 
@@ -166,7 +166,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 
@@ -177,7 +177,7 @@ public final class DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs extend
         }
 
         /**
-         * @param packetCapture The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+         * @param packetCapture Packet capture
          * 
          * @return builder
          * 

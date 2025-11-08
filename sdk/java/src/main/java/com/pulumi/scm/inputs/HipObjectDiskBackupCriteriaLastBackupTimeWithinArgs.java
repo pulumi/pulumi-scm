@@ -16,14 +16,14 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
     public static final HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs Empty = new HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs();
 
     /**
-     * specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+     * specify time in days
      * 
      */
     @Import(name="days")
     private @Nullable Output<Integer> days;
 
     /**
-     * @return specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+     * @return specify time in days
      * 
      */
     public Optional<Output<Integer>> days() {
@@ -31,14 +31,14 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
     }
 
     /**
-     * specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+     * specify time in hours
      * 
      */
     @Import(name="hours")
     private @Nullable Output<Integer> hours;
 
     /**
-     * @return specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+     * @return specify time in hours
      * 
      */
     public Optional<Output<Integer>> hours() {
@@ -71,7 +71,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
         }
 
         /**
-         * @param days specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+         * @param days specify time in days
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
         }
 
         /**
-         * @param days specify time in days. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+         * @param days specify time in days
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
         }
 
         /**
-         * @param hours specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+         * @param hours specify time in hours
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs extends c
         }
 
         /**
-         * @param hours specify time in hours. Value must be between 1 and 65535. Ensure that only one of the following is specified: `days`, `hours`
+         * @param hours specify time in hours
          * 
          * @return builder
          * 

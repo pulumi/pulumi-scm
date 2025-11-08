@@ -5,7 +5,9 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import java.lang.Boolean;
+import com.pulumi.scm.inputs.UrlAccessProfileCredentialEnforcementModeDisabledArgs;
+import com.pulumi.scm.inputs.UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs;
+import com.pulumi.scm.inputs.UrlAccessProfileCredentialEnforcementModeIpUserArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,44 +19,44 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
     public static final UrlAccessProfileCredentialEnforcementModeArgs Empty = new UrlAccessProfileCredentialEnforcementModeArgs();
 
     /**
-     * The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * Disabled
      * 
      */
     @Import(name="disabled")
-    private @Nullable Output<Boolean> disabled;
+    private @Nullable Output<UrlAccessProfileCredentialEnforcementModeDisabledArgs> disabled;
 
     /**
-     * @return The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Disabled
      * 
      */
-    public Optional<Output<Boolean>> disabled() {
+    public Optional<Output<UrlAccessProfileCredentialEnforcementModeDisabledArgs>> disabled() {
         return Optional.ofNullable(this.disabled);
     }
 
     /**
-     * The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * Domain credentials
      * 
      */
     @Import(name="domainCredentials")
-    private @Nullable Output<Boolean> domainCredentials;
+    private @Nullable Output<UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs> domainCredentials;
 
     /**
-     * @return The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Domain credentials
      * 
      */
-    public Optional<Output<Boolean>> domainCredentials() {
+    public Optional<Output<UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs>> domainCredentials() {
         return Optional.ofNullable(this.domainCredentials);
     }
 
     /**
-     * The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * Group mapping
      * 
      */
     @Import(name="groupMapping")
     private @Nullable Output<String> groupMapping;
 
     /**
-     * @return The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Group mapping
      * 
      */
     public Optional<Output<String>> groupMapping() {
@@ -62,17 +64,17 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
     }
 
     /**
-     * The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * Ip user
      * 
      */
     @Import(name="ipUser")
-    private @Nullable Output<Boolean> ipUser;
+    private @Nullable Output<UrlAccessProfileCredentialEnforcementModeIpUserArgs> ipUser;
 
     /**
-     * @return The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+     * @return Ip user
      * 
      */
-    public Optional<Output<Boolean>> ipUser() {
+    public Optional<Output<UrlAccessProfileCredentialEnforcementModeIpUserArgs>> ipUser() {
         return Optional.ofNullable(this.ipUser);
     }
 
@@ -104,49 +106,49 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param disabled The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param disabled Disabled
          * 
          * @return builder
          * 
          */
-        public Builder disabled(@Nullable Output<Boolean> disabled) {
+        public Builder disabled(@Nullable Output<UrlAccessProfileCredentialEnforcementModeDisabledArgs> disabled) {
             $.disabled = disabled;
             return this;
         }
 
         /**
-         * @param disabled The Disabled param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param disabled Disabled
          * 
          * @return builder
          * 
          */
-        public Builder disabled(Boolean disabled) {
+        public Builder disabled(UrlAccessProfileCredentialEnforcementModeDisabledArgs disabled) {
             return disabled(Output.of(disabled));
         }
 
         /**
-         * @param domainCredentials The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param domainCredentials Domain credentials
          * 
          * @return builder
          * 
          */
-        public Builder domainCredentials(@Nullable Output<Boolean> domainCredentials) {
+        public Builder domainCredentials(@Nullable Output<UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs> domainCredentials) {
             $.domainCredentials = domainCredentials;
             return this;
         }
 
         /**
-         * @param domainCredentials The DomainCredentials param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param domainCredentials Domain credentials
          * 
          * @return builder
          * 
          */
-        public Builder domainCredentials(Boolean domainCredentials) {
+        public Builder domainCredentials(UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs domainCredentials) {
             return domainCredentials(Output.of(domainCredentials));
         }
 
         /**
-         * @param groupMapping The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param groupMapping Group mapping
          * 
          * @return builder
          * 
@@ -157,7 +159,7 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param groupMapping The GroupMapping param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param groupMapping Group mapping
          * 
          * @return builder
          * 
@@ -167,23 +169,23 @@ public final class UrlAccessProfileCredentialEnforcementModeArgs extends com.pul
         }
 
         /**
-         * @param ipUser The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param ipUser Ip user
          * 
          * @return builder
          * 
          */
-        public Builder ipUser(@Nullable Output<Boolean> ipUser) {
+        public Builder ipUser(@Nullable Output<UrlAccessProfileCredentialEnforcementModeIpUserArgs> ipUser) {
             $.ipUser = ipUser;
             return this;
         }
 
         /**
-         * @param ipUser The IpUser param. Ensure that only one of the following is specified: `disabled`, `domainCredentials`, `groupMapping`, `ipUser`
+         * @param ipUser Ip user
          * 
          * @return builder
          * 
          */
-        public Builder ipUser(Boolean ipUser) {
+        public Builder ipUser(UrlAccessProfileCredentialEnforcementModeIpUserArgs ipUser) {
             return ipUser(Output.of(ipUser));
         }
 

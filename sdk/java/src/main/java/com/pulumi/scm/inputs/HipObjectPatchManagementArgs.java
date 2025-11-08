@@ -19,14 +19,14 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
     public static final HipObjectPatchManagementArgs Empty = new HipObjectPatchManagementArgs();
 
     /**
-     * The Criteria param.
+     * Criteria
      * 
      */
     @Import(name="criteria")
     private @Nullable Output<HipObjectPatchManagementCriteriaArgs> criteria;
 
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Optional<Output<HipObjectPatchManagementCriteriaArgs>> criteria() {
@@ -34,14 +34,14 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * The ExcludeVendor param. Default: `false`.
+     * Exclude vendor
      * 
      */
     @Import(name="excludeVendor")
     private @Nullable Output<Boolean> excludeVendor;
 
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Optional<Output<Boolean>> excludeVendor() {
@@ -49,14 +49,14 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
     }
 
     /**
-     * Vendor name.
+     * Vendor name
      * 
      */
     @Import(name="vendors")
     private @Nullable Output<List<HipObjectPatchManagementVendorArgs>> vendors;
 
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public Optional<Output<List<HipObjectPatchManagementVendorArgs>>> vendors() {
@@ -90,7 +90,7 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 
@@ -101,7 +101,7 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param criteria The Criteria param.
+         * @param criteria Criteria
          * 
          * @return builder
          * 
@@ -111,7 +111,7 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param excludeVendor The ExcludeVendor param. Default: `false`.
+         * @param excludeVendor Exclude vendor
          * 
          * @return builder
          * 
@@ -122,7 +122,7 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param excludeVendor The ExcludeVendor param. Default: `false`.
+         * @param excludeVendor Exclude vendor
          * 
          * @return builder
          * 
@@ -132,7 +132,7 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param vendors Vendor name.
+         * @param vendors Vendor name
          * 
          * @return builder
          * 
@@ -143,7 +143,7 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param vendors Vendor name.
+         * @param vendors Vendor name
          * 
          * @return builder
          * 
@@ -153,7 +153,7 @@ public final class HipObjectPatchManagementArgs extends com.pulumi.resources.Res
         }
 
         /**
-         * @param vendors Vendor name.
+         * @param vendors Vendor name
          * 
          * @return builder
          * 

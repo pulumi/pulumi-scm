@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HipObjectFirewall {
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     private @Nullable HipObjectFirewallCriteria criteria;
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     private @Nullable Boolean excludeVendor;
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     private @Nullable List<HipObjectFirewallVendor> vendors;
 
     private HipObjectFirewall() {}
     /**
-     * @return The Criteria param.
+     * @return Criteria
      * 
      */
     public Optional<HipObjectFirewallCriteria> criteria() {
         return Optional.ofNullable(this.criteria);
     }
     /**
-     * @return The ExcludeVendor param. Default: `false`.
+     * @return Exclude vendor
      * 
      */
     public Optional<Boolean> excludeVendor() {
         return Optional.ofNullable(this.excludeVendor);
     }
     /**
-     * @return Vendor name.
+     * @return Vendor name
      * 
      */
     public List<HipObjectFirewallVendor> vendors() {

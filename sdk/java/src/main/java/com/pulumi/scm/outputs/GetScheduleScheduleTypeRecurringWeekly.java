@@ -12,90 +12,90 @@ import java.util.Objects;
 @CustomType
 public final class GetScheduleScheduleTypeRecurringWeekly {
     /**
-     * @return The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Friday
      * 
      */
-    private List<String> fridayLists;
+    private List<String> fridays;
     /**
-     * @return The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Monday
      * 
      */
-    private List<String> mondayLists;
+    private List<String> mondays;
     /**
-     * @return The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Saturday
      * 
      */
-    private List<String> saturdayLists;
+    private List<String> saturdays;
     /**
-     * @return The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Sunday
      * 
      */
-    private List<String> sundayLists;
+    private List<String> sundays;
     /**
-     * @return The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Thursday
      * 
      */
-    private List<String> thursdayLists;
+    private List<String> thursdays;
     /**
-     * @return The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Tuesday
      * 
      */
-    private List<String> tuesdayLists;
+    private List<String> tuesdays;
     /**
-     * @return The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Wednesday
      * 
      */
-    private List<String> wednesdayLists;
+    private List<String> wednesdays;
 
     private GetScheduleScheduleTypeRecurringWeekly() {}
     /**
-     * @return The FridayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Friday
      * 
      */
-    public List<String> fridayLists() {
-        return this.fridayLists;
+    public List<String> fridays() {
+        return this.fridays;
     }
     /**
-     * @return The MondayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Monday
      * 
      */
-    public List<String> mondayLists() {
-        return this.mondayLists;
+    public List<String> mondays() {
+        return this.mondays;
     }
     /**
-     * @return The SaturdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Saturday
      * 
      */
-    public List<String> saturdayLists() {
-        return this.saturdayLists;
+    public List<String> saturdays() {
+        return this.saturdays;
     }
     /**
-     * @return The SundayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Sunday
      * 
      */
-    public List<String> sundayLists() {
-        return this.sundayLists;
+    public List<String> sundays() {
+        return this.sundays;
     }
     /**
-     * @return The ThursdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Thursday
      * 
      */
-    public List<String> thursdayLists() {
-        return this.thursdayLists;
+    public List<String> thursdays() {
+        return this.thursdays;
     }
     /**
-     * @return The TuesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Tuesday
      * 
      */
-    public List<String> tuesdayLists() {
-        return this.tuesdayLists;
+    public List<String> tuesdays() {
+        return this.tuesdays;
     }
     /**
-     * @return The WednesdayList param. Individual elements in this list are subject to additional validation. String length must be between 11 and 11 characters. String validation regex: `([01][0-9]|[2][0-3]):([0-5][0-9])-([01][0-9]|[2][0-3]):([0-5][0-9])`.
+     * @return Wednesday
      * 
      */
-    public List<String> wednesdayLists() {
-        return this.wednesdayLists;
+    public List<String> wednesdays() {
+        return this.wednesdays;
     }
 
     public static Builder builder() {
@@ -107,111 +107,111 @@ public final class GetScheduleScheduleTypeRecurringWeekly {
     }
     @CustomType.Builder
     public static final class Builder {
-        private List<String> fridayLists;
-        private List<String> mondayLists;
-        private List<String> saturdayLists;
-        private List<String> sundayLists;
-        private List<String> thursdayLists;
-        private List<String> tuesdayLists;
-        private List<String> wednesdayLists;
+        private List<String> fridays;
+        private List<String> mondays;
+        private List<String> saturdays;
+        private List<String> sundays;
+        private List<String> thursdays;
+        private List<String> tuesdays;
+        private List<String> wednesdays;
         public Builder() {}
         public Builder(GetScheduleScheduleTypeRecurringWeekly defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.fridayLists = defaults.fridayLists;
-    	      this.mondayLists = defaults.mondayLists;
-    	      this.saturdayLists = defaults.saturdayLists;
-    	      this.sundayLists = defaults.sundayLists;
-    	      this.thursdayLists = defaults.thursdayLists;
-    	      this.tuesdayLists = defaults.tuesdayLists;
-    	      this.wednesdayLists = defaults.wednesdayLists;
+    	      this.fridays = defaults.fridays;
+    	      this.mondays = defaults.mondays;
+    	      this.saturdays = defaults.saturdays;
+    	      this.sundays = defaults.sundays;
+    	      this.thursdays = defaults.thursdays;
+    	      this.tuesdays = defaults.tuesdays;
+    	      this.wednesdays = defaults.wednesdays;
         }
 
         @CustomType.Setter
-        public Builder fridayLists(List<String> fridayLists) {
-            if (fridayLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "fridayLists");
+        public Builder fridays(List<String> fridays) {
+            if (fridays == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "fridays");
             }
-            this.fridayLists = fridayLists;
+            this.fridays = fridays;
             return this;
         }
-        public Builder fridayLists(String... fridayLists) {
-            return fridayLists(List.of(fridayLists));
+        public Builder fridays(String... fridays) {
+            return fridays(List.of(fridays));
         }
         @CustomType.Setter
-        public Builder mondayLists(List<String> mondayLists) {
-            if (mondayLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "mondayLists");
+        public Builder mondays(List<String> mondays) {
+            if (mondays == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "mondays");
             }
-            this.mondayLists = mondayLists;
+            this.mondays = mondays;
             return this;
         }
-        public Builder mondayLists(String... mondayLists) {
-            return mondayLists(List.of(mondayLists));
+        public Builder mondays(String... mondays) {
+            return mondays(List.of(mondays));
         }
         @CustomType.Setter
-        public Builder saturdayLists(List<String> saturdayLists) {
-            if (saturdayLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "saturdayLists");
+        public Builder saturdays(List<String> saturdays) {
+            if (saturdays == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "saturdays");
             }
-            this.saturdayLists = saturdayLists;
+            this.saturdays = saturdays;
             return this;
         }
-        public Builder saturdayLists(String... saturdayLists) {
-            return saturdayLists(List.of(saturdayLists));
+        public Builder saturdays(String... saturdays) {
+            return saturdays(List.of(saturdays));
         }
         @CustomType.Setter
-        public Builder sundayLists(List<String> sundayLists) {
-            if (sundayLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "sundayLists");
+        public Builder sundays(List<String> sundays) {
+            if (sundays == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "sundays");
             }
-            this.sundayLists = sundayLists;
+            this.sundays = sundays;
             return this;
         }
-        public Builder sundayLists(String... sundayLists) {
-            return sundayLists(List.of(sundayLists));
+        public Builder sundays(String... sundays) {
+            return sundays(List.of(sundays));
         }
         @CustomType.Setter
-        public Builder thursdayLists(List<String> thursdayLists) {
-            if (thursdayLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "thursdayLists");
+        public Builder thursdays(List<String> thursdays) {
+            if (thursdays == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "thursdays");
             }
-            this.thursdayLists = thursdayLists;
+            this.thursdays = thursdays;
             return this;
         }
-        public Builder thursdayLists(String... thursdayLists) {
-            return thursdayLists(List.of(thursdayLists));
+        public Builder thursdays(String... thursdays) {
+            return thursdays(List.of(thursdays));
         }
         @CustomType.Setter
-        public Builder tuesdayLists(List<String> tuesdayLists) {
-            if (tuesdayLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "tuesdayLists");
+        public Builder tuesdays(List<String> tuesdays) {
+            if (tuesdays == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "tuesdays");
             }
-            this.tuesdayLists = tuesdayLists;
+            this.tuesdays = tuesdays;
             return this;
         }
-        public Builder tuesdayLists(String... tuesdayLists) {
-            return tuesdayLists(List.of(tuesdayLists));
+        public Builder tuesdays(String... tuesdays) {
+            return tuesdays(List.of(tuesdays));
         }
         @CustomType.Setter
-        public Builder wednesdayLists(List<String> wednesdayLists) {
-            if (wednesdayLists == null) {
-              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "wednesdayLists");
+        public Builder wednesdays(List<String> wednesdays) {
+            if (wednesdays == null) {
+              throw new MissingRequiredPropertyException("GetScheduleScheduleTypeRecurringWeekly", "wednesdays");
             }
-            this.wednesdayLists = wednesdayLists;
+            this.wednesdays = wednesdays;
             return this;
         }
-        public Builder wednesdayLists(String... wednesdayLists) {
-            return wednesdayLists(List.of(wednesdayLists));
+        public Builder wednesdays(String... wednesdays) {
+            return wednesdays(List.of(wednesdays));
         }
         public GetScheduleScheduleTypeRecurringWeekly build() {
             final var _resultValue = new GetScheduleScheduleTypeRecurringWeekly();
-            _resultValue.fridayLists = fridayLists;
-            _resultValue.mondayLists = mondayLists;
-            _resultValue.saturdayLists = saturdayLists;
-            _resultValue.sundayLists = sundayLists;
-            _resultValue.thursdayLists = thursdayLists;
-            _resultValue.tuesdayLists = tuesdayLists;
-            _resultValue.wednesdayLists = wednesdayLists;
+            _resultValue.fridays = fridays;
+            _resultValue.mondays = mondays;
+            _resultValue.saturdays = saturdays;
+            _resultValue.sundays = sundays;
+            _resultValue.thursdays = thursdays;
+            _resultValue.tuesdays = tuesdays;
+            _resultValue.wednesdays = wednesdays;
             return _resultValue;
         }
     }

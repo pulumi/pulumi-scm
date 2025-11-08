@@ -14,91 +14,104 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationRuleListDataResult
     {
         /// <summary>
-        /// the authentication profile name to apply to authentication rule.
+        /// The authentication profile name
         /// </summary>
         public readonly string AuthenticationEnforcement;
         /// <summary>
-        /// The Categories param.
+        /// The destination URL categories
         /// </summary>
         public readonly ImmutableArray<string> Categories;
         /// <summary>
-        /// The Description param.
+        /// The description of the authentication rule
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The DestinationHips param.
+        /// The destination Host Integrity Profile (HIP)
         /// </summary>
         public readonly ImmutableArray<string> DestinationHips;
         /// <summary>
-        /// The Destinations param.
+        /// The destination addresses
         /// </summary>
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
-        /// The Disabled param. Default: `False`.
+        /// Device
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// Is the authentication rule disabled?
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The Froms param.
+        /// Folder
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The source security zones
         /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
-        /// The GroupTag param.
+        /// Group tag
         /// </summary>
         public readonly string GroupTag;
         /// <summary>
-        /// The HipProfiles param.
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         public readonly ImmutableArray<string> HipProfiles;
         /// <summary>
-        /// UUID of the resource.
+        /// The UUID of the authentication rule
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The LogAuthenticationTimeout param. Default: `False`.
+        /// Log authentication timeouts?
         /// </summary>
         public readonly bool LogAuthenticationTimeout;
         /// <summary>
-        /// The LogSetting param.
+        /// The log forwarding profile name
         /// </summary>
         public readonly string LogSetting;
         /// <summary>
-        /// The Name param.
+        /// The name of the authentication rule
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The NegateDestination param. Default: `False`.
+        /// Are the destination addresses negated?
         /// </summary>
         public readonly bool NegateDestination;
         /// <summary>
-        /// The NegateSource param. Default: `False`.
+        /// Are the source addresses negated?
         /// </summary>
         public readonly bool NegateSource;
         /// <summary>
-        /// The Services param.
+        /// The destination ports
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The SourceHips param.
+        /// Snippet
+        /// </summary>
+        public readonly string Snippet;
+        /// <summary>
+        /// The source Host Integrity Profile (HIP)
         /// </summary>
         public readonly ImmutableArray<string> SourceHips;
         /// <summary>
-        /// The SourceUsers param.
+        /// The source users
         /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
         /// <summary>
-        /// The Sources param.
+        /// The source addresses
         /// </summary>
         public readonly ImmutableArray<string> Sources;
         /// <summary>
-        /// The Tags param.
+        /// The authentication rule tags
         /// </summary>
         public readonly ImmutableArray<string> Tags;
+        public readonly string Tfid;
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 1440.
+        /// The authentication session timeout (seconds)
         /// </summary>
         public readonly int Timeout;
         /// <summary>
-        /// The Tos param.
+        /// The destination security zones
         /// </summary>
         public readonly ImmutableArray<string> Tos;
 
@@ -114,7 +127,11 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> destinations,
 
+            string device,
+
             bool disabled,
+
+            string folder,
 
             ImmutableArray<string> froms,
 
@@ -136,6 +153,8 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<string> services,
 
+            string snippet,
+
             ImmutableArray<string> sourceHips,
 
             ImmutableArray<string> sourceUsers,
@@ -143,6 +162,8 @@ namespace Pulumi.Scm.Outputs
             ImmutableArray<string> sources,
 
             ImmutableArray<string> tags,
+
+            string tfid,
 
             int timeout,
 
@@ -153,7 +174,9 @@ namespace Pulumi.Scm.Outputs
             Description = description;
             DestinationHips = destinationHips;
             Destinations = destinations;
+            Device = device;
             Disabled = disabled;
+            Folder = folder;
             Froms = froms;
             GroupTag = groupTag;
             HipProfiles = hipProfiles;
@@ -164,10 +187,12 @@ namespace Pulumi.Scm.Outputs
             NegateDestination = negateDestination;
             NegateSource = negateSource;
             Services = services;
+            Snippet = snippet;
             SourceHips = sourceHips;
             SourceUsers = sourceUsers;
             Sources = sources;
             Tags = tags;
+            Tfid = tfid;
             Timeout = timeout;
             Tos = tos;
         }

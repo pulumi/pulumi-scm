@@ -27,12 +27,24 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			_, err := scm.GetHipObjectList(ctx, &scm.GetHipObjectListArgs{
+//			// Fetch a list of all HIP Object objects in the Shared folder.
+//			allShared, err := scm.GetHipObjectList(ctx, &scm.GetHipObjectListArgs{
 //				Folder: pulumi.StringRef("Shared"),
 //			}, nil)
 //			if err != nil {
 //				return err
 //			}
+//			ctx.Export("hipObjectsListAllShared", allShared.Datas)
+//			// Example of using pagination to get the first 10 HIP objects.
+//			paginated, err := scm.GetHipObjectList(ctx, &scm.GetHipObjectListArgs{
+//				Folder: pulumi.StringRef("Shared"),
+//				Limit:  pulumi.IntRef(10),
+//				Offset: pulumi.IntRef(0),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("hipObjectsListPaginated", paginated.Datas)
 //			return nil
 //		})
 //	}
@@ -50,40 +62,40 @@ func GetHipObjectList(ctx *pulumi.Context, args *GetHipObjectListArgs, opts ...p
 
 // A collection of arguments for invoking getHipObjectList.
 type GetHipObjectListArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit *int `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset *int `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getHipObjectList.
 type GetHipObjectListResult struct {
-	// The Data param.
+	// The data.
 	Datas []GetHipObjectListData `pulumi:"datas"`
-	// The Device param.
+	// The device of the item.
 	Device *string `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder *string `pulumi:"folder"`
 	// The provider-assigned unique ID for this managed resource.
 	Id string `pulumi:"id"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-	Limit int `pulumi:"limit"`
-	// The Name param.
+	// The max number of items to return. Default: 200.
+	Limit *int `pulumi:"limit"`
+	// The name of the item.
 	Name *string `pulumi:"name"`
-	// The Offset param. Default: `0`.
-	Offset int `pulumi:"offset"`
-	// The Snippet param.
+	// The offset of the first item to return.
+	Offset *int `pulumi:"offset"`
+	// The snippet of the item.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    string  `pulumi:"tfid"`
-	// The Total param.
+	// The total number of items.
 	Total int `pulumi:"total"`
 }
 
@@ -98,17 +110,17 @@ func GetHipObjectListOutput(ctx *pulumi.Context, args GetHipObjectListOutputArgs
 
 // A collection of arguments for invoking getHipObjectList.
 type GetHipObjectListOutputArgs struct {
-	// The Device param.
+	// The device of the item.
 	Device pulumi.StringPtrInput `pulumi:"device"`
-	// The Folder param.
+	// The folder of the item. Default: Shared.
 	Folder pulumi.StringPtrInput `pulumi:"folder"`
-	// The Limit param. A limit of -1 will return all configured items. Default: `200`.
+	// The max number of items to return. Default: 200.
 	Limit pulumi.IntPtrInput `pulumi:"limit"`
-	// The Name param.
+	// The name of the item.
 	Name pulumi.StringPtrInput `pulumi:"name"`
-	// The Offset param. Default: `0`.
+	// The offset of the first item to return.
 	Offset pulumi.IntPtrInput `pulumi:"offset"`
-	// The Snippet param.
+	// The snippet of the item.
 	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
@@ -131,17 +143,17 @@ func (o GetHipObjectListResultOutput) ToGetHipObjectListResultOutputWithContext(
 	return o
 }
 
-// The Data param.
+// The data.
 func (o GetHipObjectListResultOutput) Datas() GetHipObjectListDataArrayOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) []GetHipObjectListData { return v.Datas }).(GetHipObjectListDataArrayOutput)
 }
 
-// The Device param.
+// The device of the item.
 func (o GetHipObjectListResultOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) *string { return v.Device }).(pulumi.StringPtrOutput)
 }
 
-// The Folder param.
+// The folder of the item. Default: Shared.
 func (o GetHipObjectListResultOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) *string { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -151,22 +163,22 @@ func (o GetHipObjectListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// The Limit param. A limit of -1 will return all configured items. Default: `200`.
-func (o GetHipObjectListResultOutput) Limit() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectListResult) int { return v.Limit }).(pulumi.IntOutput)
+// The max number of items to return. Default: 200.
+func (o GetHipObjectListResultOutput) Limit() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetHipObjectListResult) *int { return v.Limit }).(pulumi.IntPtrOutput)
 }
 
-// The Name param.
+// The name of the item.
 func (o GetHipObjectListResultOutput) Name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) *string { return v.Name }).(pulumi.StringPtrOutput)
 }
 
-// The Offset param. Default: `0`.
-func (o GetHipObjectListResultOutput) Offset() pulumi.IntOutput {
-	return o.ApplyT(func(v GetHipObjectListResult) int { return v.Offset }).(pulumi.IntOutput)
+// The offset of the first item to return.
+func (o GetHipObjectListResultOutput) Offset() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v GetHipObjectListResult) *int { return v.Offset }).(pulumi.IntPtrOutput)
 }
 
-// The Snippet param.
+// The snippet of the item.
 func (o GetHipObjectListResultOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) *string { return v.Snippet }).(pulumi.StringPtrOutput)
 }
@@ -175,7 +187,7 @@ func (o GetHipObjectListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The Total param.
+// The total number of items.
 func (o GetHipObjectListResultOutput) Total() pulumi.IntOutput {
 	return o.ApplyT(func(v GetHipObjectListResult) int { return v.Total }).(pulumi.IntOutput)
 }

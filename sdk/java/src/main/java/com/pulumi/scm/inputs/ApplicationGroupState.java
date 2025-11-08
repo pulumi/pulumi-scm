@@ -17,14 +17,14 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
     public static final ApplicationGroupState Empty = new ApplicationGroupState();
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -32,14 +32,14 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -47,14 +47,14 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * Members
      * 
      */
     @Import(name="members")
     private @Nullable Output<List<String>> members;
 
     /**
-     * @return The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+     * @return Members
      * 
      */
     public Optional<Output<List<String>>> members() {
@@ -62,14 +62,14 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * @return Alphanumeric string [ 0-9a-zA-Z._-]
      * 
      */
     public Optional<Output<String>> name() {
@@ -77,14 +77,14 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -128,7 +128,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -139,7 +139,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -149,7 +149,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -160,7 +160,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -170,7 +170,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param members The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+         * @param members Members
          * 
          * @return builder
          * 
@@ -181,7 +181,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param members The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+         * @param members Members
          * 
          * @return builder
          * 
@@ -191,7 +191,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param members The Members param. Individual elements in this list are subject to additional validation. String length must not exceed 63 characters.
+         * @param members Members
          * 
          * @return builder
          * 
@@ -201,7 +201,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -212,7 +212,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param name Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+         * @param name Alphanumeric string [ 0-9a-zA-Z._-]
          * 
          * @return builder
          * 
@@ -222,7 +222,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -233,7 +233,7 @@ public final class ApplicationGroupState extends com.pulumi.resources.ResourceAr
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 

@@ -14,23 +14,23 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListTypeIpRecurringResult
     {
         /// <summary>
-        /// The Daily param.
+        /// Daily
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringDailyResult Daily;
         /// <summary>
-        /// The FiveMinute param.
+        /// Five minute
         /// </summary>
-        public readonly bool FiveMinute;
+        public readonly Outputs.GetExternalDynamicListTypeIpRecurringFiveMinuteResult FiveMinute;
         /// <summary>
-        /// The Hourly param.
+        /// Hourly
         /// </summary>
-        public readonly bool Hourly;
+        public readonly Outputs.GetExternalDynamicListTypeIpRecurringHourlyResult Hourly;
         /// <summary>
-        /// The Monthly param.
+        /// Monthly
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringMonthlyResult Monthly;
         /// <summary>
-        /// The Weekly param.
+        /// Weekly
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringWeeklyResult Weekly;
 
@@ -38,9 +38,9 @@ namespace Pulumi.Scm.Outputs
         private GetExternalDynamicListTypeIpRecurringResult(
             Outputs.GetExternalDynamicListTypeIpRecurringDailyResult daily,
 
-            bool fiveMinute,
+            Outputs.GetExternalDynamicListTypeIpRecurringFiveMinuteResult fiveMinute,
 
-            bool hourly,
+            Outputs.GetExternalDynamicListTypeIpRecurringHourlyResult hourly,
 
             Outputs.GetExternalDynamicListTypeIpRecurringMonthlyResult monthly,
 

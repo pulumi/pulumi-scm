@@ -12,38 +12,38 @@ import java.util.Objects;
 @CustomType
 public final class GetDnsSecurityProfileListDataBotnetDomainsList {
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     private GetDnsSecurityProfileListDataBotnetDomainsListAction action;
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     private String name;
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     private String packetCapture;
 
     private GetDnsSecurityProfileListDataBotnetDomainsList() {}
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public GetDnsSecurityProfileListDataBotnetDomainsListAction action() {
         return this.action;
     }
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public String name() {
         return this.name;
     }
     /**
-     * @return The PacketCapture param. String must be one of these: `&#34;disable&#34;`, `&#34;single-packet&#34;`, `&#34;extended-capture&#34;`.
+     * @return Packet capture
      * 
      */
     public String packetCapture() {

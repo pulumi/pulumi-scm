@@ -5,7 +5,7 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.AntiSpywareProfileMicaEngineSpywareEnabledListArgs;
+import com.pulumi.scm.inputs.AntiSpywareProfileMicaEngineSpywareEnabledArgs;
 import com.pulumi.scm.inputs.AntiSpywareProfileRuleArgs;
 import com.pulumi.scm.inputs.AntiSpywareProfileThreatExceptionArgs;
 import java.lang.Boolean;
@@ -21,14 +21,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     public static final AntiSpywareProfileState Empty = new AntiSpywareProfileState();
 
     /**
-     * The CloudInlineAnalysis param. Default: `false`.
+     * Cloud inline analysis
      * 
      */
     @Import(name="cloudInlineAnalysis")
     private @Nullable Output<Boolean> cloudInlineAnalysis;
 
     /**
-     * @return The CloudInlineAnalysis param. Default: `false`.
+     * @return Cloud inline analysis
      * 
      */
     public Optional<Output<Boolean>> cloudInlineAnalysis() {
@@ -36,14 +36,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Import(name="description")
     private @Nullable Output<String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Optional<Output<String>> description() {
@@ -51,14 +51,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Import(name="device")
     private @Nullable Output<String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Optional<Output<String>> device() {
@@ -66,14 +66,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Optional<Output<String>> folder() {
@@ -81,14 +81,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The InlineExceptionEdlUrls param.
+     * Inline exception edl url
      * 
      */
     @Import(name="inlineExceptionEdlUrls")
     private @Nullable Output<List<String>> inlineExceptionEdlUrls;
 
     /**
-     * @return The InlineExceptionEdlUrls param.
+     * @return Inline exception edl url
      * 
      */
     public Optional<Output<List<String>>> inlineExceptionEdlUrls() {
@@ -96,14 +96,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The InlineExceptionIpAddresses param.
+     * Inline exception ip address
      * 
      */
     @Import(name="inlineExceptionIpAddresses")
     private @Nullable Output<List<String>> inlineExceptionIpAddresses;
 
     /**
-     * @return The InlineExceptionIpAddresses param.
+     * @return Inline exception ip address
      * 
      */
     public Optional<Output<List<String>>> inlineExceptionIpAddresses() {
@@ -111,29 +111,29 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The MicaEngineSpywareEnabledList param.
+     * Mica engine spyware enabled
      * 
      */
-    @Import(name="micaEngineSpywareEnabledLists")
-    private @Nullable Output<List<AntiSpywareProfileMicaEngineSpywareEnabledListArgs>> micaEngineSpywareEnabledLists;
+    @Import(name="micaEngineSpywareEnableds")
+    private @Nullable Output<List<AntiSpywareProfileMicaEngineSpywareEnabledArgs>> micaEngineSpywareEnableds;
 
     /**
-     * @return The MicaEngineSpywareEnabledList param.
+     * @return Mica engine spyware enabled
      * 
      */
-    public Optional<Output<List<AntiSpywareProfileMicaEngineSpywareEnabledListArgs>>> micaEngineSpywareEnabledLists() {
-        return Optional.ofNullable(this.micaEngineSpywareEnabledLists);
+    public Optional<Output<List<AntiSpywareProfileMicaEngineSpywareEnabledArgs>>> micaEngineSpywareEnableds() {
+        return Optional.ofNullable(this.micaEngineSpywareEnableds);
     }
 
     /**
-     * The Name param.
+     * The name of the anti-spyware profile
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the anti-spyware profile
      * 
      */
     public Optional<Output<String>> name() {
@@ -141,14 +141,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Rules param.
+     * Rules
      * 
      */
     @Import(name="rules")
     private @Nullable Output<List<AntiSpywareProfileRuleArgs>> rules;
 
     /**
-     * @return The Rules param.
+     * @return Rules
      * 
      */
     public Optional<Output<List<AntiSpywareProfileRuleArgs>>> rules() {
@@ -156,14 +156,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -178,14 +178,14 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
     }
 
     /**
-     * The ThreatExceptions param.
+     * Threat exception
      * 
      */
     @Import(name="threatExceptions")
     private @Nullable Output<List<AntiSpywareProfileThreatExceptionArgs>> threatExceptions;
 
     /**
-     * @return The ThreatExceptions param.
+     * @return Threat exception
      * 
      */
     public Optional<Output<List<AntiSpywareProfileThreatExceptionArgs>>> threatExceptions() {
@@ -201,7 +201,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         this.folder = $.folder;
         this.inlineExceptionEdlUrls = $.inlineExceptionEdlUrls;
         this.inlineExceptionIpAddresses = $.inlineExceptionIpAddresses;
-        this.micaEngineSpywareEnabledLists = $.micaEngineSpywareEnabledLists;
+        this.micaEngineSpywareEnableds = $.micaEngineSpywareEnableds;
         this.name = $.name;
         this.rules = $.rules;
         this.snippet = $.snippet;
@@ -228,7 +228,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param cloudInlineAnalysis The CloudInlineAnalysis param. Default: `false`.
+         * @param cloudInlineAnalysis Cloud inline analysis
          * 
          * @return builder
          * 
@@ -239,7 +239,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param cloudInlineAnalysis The CloudInlineAnalysis param. Default: `false`.
+         * @param cloudInlineAnalysis Cloud inline analysis
          * 
          * @return builder
          * 
@@ -249,7 +249,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -260,7 +260,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param description The Description param.
+         * @param description Description
          * 
          * @return builder
          * 
@@ -270,7 +270,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -281,7 +281,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param device The Device param.
+         * @param device The device in which the resource is defined
          * 
          * @return builder
          * 
@@ -291,7 +291,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -302,7 +302,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param folder The Folder param.
+         * @param folder The folder in which the resource is defined
          * 
          * @return builder
          * 
@@ -312,7 +312,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param inlineExceptionEdlUrls The InlineExceptionEdlUrls param.
+         * @param inlineExceptionEdlUrls Inline exception edl url
          * 
          * @return builder
          * 
@@ -323,7 +323,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param inlineExceptionEdlUrls The InlineExceptionEdlUrls param.
+         * @param inlineExceptionEdlUrls Inline exception edl url
          * 
          * @return builder
          * 
@@ -333,7 +333,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param inlineExceptionEdlUrls The InlineExceptionEdlUrls param.
+         * @param inlineExceptionEdlUrls Inline exception edl url
          * 
          * @return builder
          * 
@@ -343,7 +343,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param inlineExceptionIpAddresses The InlineExceptionIpAddresses param.
+         * @param inlineExceptionIpAddresses Inline exception ip address
          * 
          * @return builder
          * 
@@ -354,7 +354,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param inlineExceptionIpAddresses The InlineExceptionIpAddresses param.
+         * @param inlineExceptionIpAddresses Inline exception ip address
          * 
          * @return builder
          * 
@@ -364,7 +364,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param inlineExceptionIpAddresses The InlineExceptionIpAddresses param.
+         * @param inlineExceptionIpAddresses Inline exception ip address
          * 
          * @return builder
          * 
@@ -374,38 +374,38 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param micaEngineSpywareEnabledLists The MicaEngineSpywareEnabledList param.
+         * @param micaEngineSpywareEnableds Mica engine spyware enabled
          * 
          * @return builder
          * 
          */
-        public Builder micaEngineSpywareEnabledLists(@Nullable Output<List<AntiSpywareProfileMicaEngineSpywareEnabledListArgs>> micaEngineSpywareEnabledLists) {
-            $.micaEngineSpywareEnabledLists = micaEngineSpywareEnabledLists;
+        public Builder micaEngineSpywareEnableds(@Nullable Output<List<AntiSpywareProfileMicaEngineSpywareEnabledArgs>> micaEngineSpywareEnableds) {
+            $.micaEngineSpywareEnableds = micaEngineSpywareEnableds;
             return this;
         }
 
         /**
-         * @param micaEngineSpywareEnabledLists The MicaEngineSpywareEnabledList param.
+         * @param micaEngineSpywareEnableds Mica engine spyware enabled
          * 
          * @return builder
          * 
          */
-        public Builder micaEngineSpywareEnabledLists(List<AntiSpywareProfileMicaEngineSpywareEnabledListArgs> micaEngineSpywareEnabledLists) {
-            return micaEngineSpywareEnabledLists(Output.of(micaEngineSpywareEnabledLists));
+        public Builder micaEngineSpywareEnableds(List<AntiSpywareProfileMicaEngineSpywareEnabledArgs> micaEngineSpywareEnableds) {
+            return micaEngineSpywareEnableds(Output.of(micaEngineSpywareEnableds));
         }
 
         /**
-         * @param micaEngineSpywareEnabledLists The MicaEngineSpywareEnabledList param.
+         * @param micaEngineSpywareEnableds Mica engine spyware enabled
          * 
          * @return builder
          * 
          */
-        public Builder micaEngineSpywareEnabledLists(AntiSpywareProfileMicaEngineSpywareEnabledListArgs... micaEngineSpywareEnabledLists) {
-            return micaEngineSpywareEnabledLists(List.of(micaEngineSpywareEnabledLists));
+        public Builder micaEngineSpywareEnableds(AntiSpywareProfileMicaEngineSpywareEnabledArgs... micaEngineSpywareEnableds) {
+            return micaEngineSpywareEnableds(List.of(micaEngineSpywareEnableds));
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the anti-spyware profile
          * 
          * @return builder
          * 
@@ -416,7 +416,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the anti-spyware profile
          * 
          * @return builder
          * 
@@ -426,7 +426,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules Rules
          * 
          * @return builder
          * 
@@ -437,7 +437,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules Rules
          * 
          * @return builder
          * 
@@ -447,7 +447,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param rules The Rules param.
+         * @param rules Rules
          * 
          * @return builder
          * 
@@ -457,7 +457,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -468,7 +468,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param snippet The Snippet param.
+         * @param snippet The snippet in which the resource is defined
          * 
          * @return builder
          * 
@@ -487,7 +487,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param threatExceptions The ThreatExceptions param.
+         * @param threatExceptions Threat exception
          * 
          * @return builder
          * 
@@ -498,7 +498,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param threatExceptions The ThreatExceptions param.
+         * @param threatExceptions Threat exception
          * 
          * @return builder
          * 
@@ -508,7 +508,7 @@ public final class AntiSpywareProfileState extends com.pulumi.resources.Resource
         }
 
         /**
-         * @param threatExceptions The ThreatExceptions param.
+         * @param threatExceptions Threat exception
          * 
          * @return builder
          * 

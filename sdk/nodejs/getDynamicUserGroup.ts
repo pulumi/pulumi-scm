@@ -5,7 +5,7 @@ import * as pulumi from "@pulumi/pulumi";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
+ * DynamicUserGroup data source
  *
  * ## Example Usage
  *
@@ -13,15 +13,25 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getDynamicUserGroup({
- *     id: "1234-56-789",
+ * // Look up the dynamic user group by its ID.
+ * const scmDynamicUserGroupDs = scm.getDynamicUserGroup({
+ *     id: "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
  * });
+ * export const dynamicUserGroupDetails = {
+ *     id: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.id),
+ *     name: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.name),
+ *     folder: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.folder),
+ *     description: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.description),
+ *     filter: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.filter),
+ *     tags: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.tags),
+ * };
  * ```
  */
 export function getDynamicUserGroup(args: GetDynamicUserGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetDynamicUserGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDynamicUserGroup:getDynamicUserGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -30,9 +40,13 @@ export function getDynamicUserGroup(args: GetDynamicUserGroupArgs, opts?: pulumi
  */
 export interface GetDynamicUserGroupArgs {
     /**
-     * The Id param.
+     * The UUID of the dynamic user group
      */
     id: string;
+    /**
+     * The name of the dynamic address group
+     */
+    name?: string;
 }
 
 /**
@@ -40,29 +54,41 @@ export interface GetDynamicUserGroupArgs {
  */
 export interface GetDynamicUserGroupResult {
     /**
-     * The Description param. String length must not exceed 1023 characters.
+     * The description of the dynamic address group
      */
     readonly description: string;
     /**
-     * tag-based filter. String length must not exceed 2047 characters.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The tag-based filter for the dynamic user group
      */
     readonly filter: string;
     /**
-     * The Id param.
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * The UUID of the dynamic user group
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 63 characters.
+     * The name of the dynamic address group
      */
     readonly name: string;
     /**
-     * Tags for dynamic user group object. List must contain at most 64 elements. Individual elements in this list are subject to additional validation. String length must not exceed 127 characters.
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
+    /**
+     * Tags associated with the dynamic user group
      */
     readonly tags: string[];
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
+ * DynamicUserGroup data source
  *
  * ## Example Usage
  *
@@ -70,15 +96,25 @@ export interface GetDynamicUserGroupResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const example = scm.getDynamicUserGroup({
- *     id: "1234-56-789",
+ * // Look up the dynamic user group by its ID.
+ * const scmDynamicUserGroupDs = scm.getDynamicUserGroup({
+ *     id: "c8ac5c18-023b-4be5-bc39-65e585cff9c7",
  * });
+ * export const dynamicUserGroupDetails = {
+ *     id: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.id),
+ *     name: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.name),
+ *     folder: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.folder),
+ *     description: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.description),
+ *     filter: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.filter),
+ *     tags: scmDynamicUserGroupDs.then(scmDynamicUserGroupDs => scmDynamicUserGroupDs.tags),
+ * };
  * ```
  */
 export function getDynamicUserGroupOutput(args: GetDynamicUserGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDynamicUserGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDynamicUserGroup:getDynamicUserGroup", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -87,7 +123,11 @@ export function getDynamicUserGroupOutput(args: GetDynamicUserGroupOutputArgs, o
  */
 export interface GetDynamicUserGroupOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the dynamic user group
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the dynamic address group
+     */
+    name?: pulumi.Input<string>;
 }

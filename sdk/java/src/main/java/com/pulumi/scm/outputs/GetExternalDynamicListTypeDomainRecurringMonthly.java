@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListTypeDomainRecurringMonthly {
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
     private String at;
     /**
-     * @return The DayOfMonth param. Value must be between 1 and 31.
+     * @return Day of month
      * 
      */
     private Integer dayOfMonth;
 
     private GetExternalDynamicListTypeDomainRecurringMonthly() {}
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
     public String at() {
         return this.at;
     }
     /**
-     * @return The DayOfMonth param. Value must be between 1 and 31.
+     * @return Day of month
      * 
      */
     public Integer dayOfMonth() {

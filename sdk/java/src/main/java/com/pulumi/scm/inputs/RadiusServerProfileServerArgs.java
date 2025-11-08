@@ -17,14 +17,14 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
     public static final RadiusServerProfileServerArgs Empty = new RadiusServerProfileServerArgs();
 
     /**
-     * The IpAddress param.
+     * The IP address of the RADIUS server
      * 
      */
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
     /**
-     * @return The IpAddress param.
+     * @return The IP address of the RADIUS server
      * 
      */
     public Optional<Output<String>> ipAddress() {
@@ -32,14 +32,14 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Name param.
+     * The name of the RADIUS server
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the RADIUS server
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,14 +47,14 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Port param. Value must be between 1 and 65535.
+     * The RADIUS server port
      * 
      */
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
     /**
-     * @return The Port param. Value must be between 1 and 65535.
+     * @return The RADIUS server port
      * 
      */
     public Optional<Output<Integer>> port() {
@@ -62,14 +62,14 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * The Secret param. String length must not exceed 64 characters.
+     * The RADIUS secret
      * 
      */
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
     /**
-     * @return The Secret param. String length must not exceed 64 characters.
+     * @return The RADIUS secret
      * 
      */
     public Optional<Output<String>> secret() {
@@ -104,7 +104,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipAddress The IpAddress param.
+         * @param ipAddress The IP address of the RADIUS server
          * 
          * @return builder
          * 
@@ -115,7 +115,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param ipAddress The IpAddress param.
+         * @param ipAddress The IP address of the RADIUS server
          * 
          * @return builder
          * 
@@ -125,7 +125,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the RADIUS server
          * 
          * @return builder
          * 
@@ -136,7 +136,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the RADIUS server
          * 
          * @return builder
          * 
@@ -146,7 +146,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The RADIUS server port
          * 
          * @return builder
          * 
@@ -157,7 +157,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param port The Port param. Value must be between 1 and 65535.
+         * @param port The RADIUS server port
          * 
          * @return builder
          * 
@@ -167,7 +167,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param secret The Secret param. String length must not exceed 64 characters.
+         * @param secret The RADIUS secret
          * 
          * @return builder
          * 
@@ -178,7 +178,7 @@ public final class RadiusServerProfileServerArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param secret The Secret param. String length must not exceed 64 characters.
+         * @param secret The RADIUS secret
          * 
          * @return builder
          * 

@@ -13,34 +13,44 @@ namespace Pulumi.Scm.Inputs
     public sealed class MfaServerMfaVendorTypeOktaAdaptiveV1Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// The OktaApiHost param.
+        /// Okta API hostname
         /// </summary>
-        [Input("oktaApiHost")]
-        public Input<string>? OktaApiHost { get; set; }
+        [Input("oktaApiHost", required: true)]
+        public Input<string> OktaApiHost { get; set; } = null!;
 
         /// <summary>
-        /// The OktaBaseuri param.
+        /// Okta baseuri
         /// </summary>
-        [Input("oktaBaseuri")]
-        public Input<string>? OktaBaseuri { get; set; }
+        [Input("oktaBaseuri", required: true)]
+        public Input<string> OktaBaseuri { get; set; } = null!;
 
         /// <summary>
-        /// The OktaOrg param.
+        /// Okta organization
         /// </summary>
-        [Input("oktaOrg")]
-        public Input<string>? OktaOrg { get; set; }
+        [Input("oktaOrg", required: true)]
+        public Input<string> OktaOrg { get; set; } = null!;
 
         /// <summary>
-        /// The OktaTimeout param.
+        /// Okta timeout (seconds)
         /// </summary>
-        [Input("oktaTimeout")]
-        public Input<string>? OktaTimeout { get; set; }
+        [Input("oktaTimeout", required: true)]
+        public Input<int> OktaTimeout { get; set; } = null!;
+
+        [Input("oktaToken", required: true)]
+        private Input<string>? _oktaToken;
 
         /// <summary>
-        /// The OktaToken param.
+        /// Okta API token
         /// </summary>
-        [Input("oktaToken")]
-        public Input<string>? OktaToken { get; set; }
+        public Input<string>? OktaToken
+        {
+            get => _oktaToken;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _oktaToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
 
         public MfaServerMfaVendorTypeOktaAdaptiveV1Args()
         {

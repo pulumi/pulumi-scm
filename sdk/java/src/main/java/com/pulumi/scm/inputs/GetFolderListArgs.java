@@ -17,14 +17,44 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetFolderListArgs Empty = new GetFolderListArgs();
 
     /**
-     * The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * The device of the item.
+     * 
+     */
+    @Import(name="device")
+    private @Nullable Output<String> device;
+
+    /**
+     * @return The device of the item.
+     * 
+     */
+    public Optional<Output<String>> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder of the item. Default: Shared.
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable Output<String> folder;
+
+    /**
+     * @return The folder of the item. Default: Shared.
+     * 
+     */
+    public Optional<Output<String>> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
+     * The max number of items to return. Default: 200.
      * 
      */
     @Import(name="limit")
     private @Nullable Output<Integer> limit;
 
     /**
-     * @return The Limit param. A limit of -1 will return all configured items. Default: `200`.
+     * @return The max number of items to return. Default: 200.
      * 
      */
     public Optional<Output<Integer>> limit() {
@@ -32,14 +62,14 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The Name param.
+     * The name of the item.
      * 
      */
     @Import(name="name")
     private @Nullable Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return The name of the item.
      * 
      */
     public Optional<Output<String>> name() {
@@ -47,26 +77,44 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
     }
 
     /**
-     * The Offset param. Default: `0`.
+     * The offset of the first item to return.
      * 
      */
     @Import(name="offset")
     private @Nullable Output<Integer> offset;
 
     /**
-     * @return The Offset param. Default: `0`.
+     * @return The offset of the first item to return.
      * 
      */
     public Optional<Output<Integer>> offset() {
         return Optional.ofNullable(this.offset);
     }
 
+    /**
+     * The snippet of the item.
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable Output<String> snippet;
+
+    /**
+     * @return The snippet of the item.
+     * 
+     */
+    public Optional<Output<String>> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetFolderListArgs() {}
 
     private GetFolderListArgs(GetFolderListArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.limit = $.limit;
         this.name = $.name;
         this.offset = $.offset;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -88,7 +136,49 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param device The device of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable Output<String> device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param device The device of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(String device) {
+            return device(Output.of(device));
+        }
+
+        /**
+         * @param folder The folder of the item. Default: Shared.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable Output<String> folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
+         * @param folder The folder of the item. Default: Shared.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(String folder) {
+            return folder(Output.of(folder));
+        }
+
+        /**
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -99,7 +189,7 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param limit The Limit param. A limit of -1 will return all configured items. Default: `200`.
+         * @param limit The max number of items to return. Default: 200.
          * 
          * @return builder
          * 
@@ -109,7 +199,7 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -120,7 +210,7 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param name The Name param.
+         * @param name The name of the item.
          * 
          * @return builder
          * 
@@ -130,7 +220,7 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
@@ -141,13 +231,34 @@ public final class GetFolderListArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
-         * @param offset The Offset param. Default: `0`.
+         * @param offset The offset of the first item to return.
          * 
          * @return builder
          * 
          */
         public Builder offset(Integer offset) {
             return offset(Output.of(offset));
+        }
+
+        /**
+         * @param snippet The snippet of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable Output<String> snippet) {
+            $.snippet = snippet;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet of the item.
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(String snippet) {
+            return snippet(Output.of(snippet));
         }
 
         public GetFolderListArgs build() {

@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetApplicationDefaultIdentByIcmp6TypeResult
     {
         /// <summary>
-        /// The Code param.
+        /// Code
         /// </summary>
         public readonly string Code;
         /// <summary>
-        /// The Type param.
+        /// Type
         /// </summary>
         public readonly string Type;
 

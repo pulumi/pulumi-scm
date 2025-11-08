@@ -17,162 +17,132 @@ import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
- * Retrieves a config item.
- * 
- * ## Example Usage
- * 
- * <pre>
- * {@code
- * package generated_program;
- * 
- * import com.pulumi.Context;
- * import com.pulumi.Pulumi;
- * import com.pulumi.core.Output;
- * import com.pulumi.scm.QosPolicyRule;
- * import java.util.List;
- * import java.util.ArrayList;
- * import java.util.Map;
- * import java.io.File;
- * import java.nio.file.Files;
- * import java.nio.file.Paths;
- * 
- * public class App {
- *     public static void main(String[] args) {
- *         Pulumi.run(App::stack);
- *     }
- * 
- *     public static void stack(Context ctx) {
- *         var example = new QosPolicyRule("example");
- * 
- *     }
- * }
- * }
- * </pre>
+ * QosPolicyRule resource
  * 
  */
 @ResourceType(type="scm:index/qosPolicyRule:QosPolicyRule")
 public class QosPolicyRule extends com.pulumi.resources.CustomResource {
     /**
-     * The Action param.
+     * Action
      * 
      */
     @Export(name="action", refs={QosPolicyRuleAction.class}, tree="[0]")
     private Output<QosPolicyRuleAction> action;
 
     /**
-     * @return The Action param.
+     * @return Action
      * 
      */
     public Output<QosPolicyRuleAction> action() {
         return this.action;
     }
     /**
-     * The Description param.
+     * Description
      * 
      */
     @Export(name="description", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> description;
 
     /**
-     * @return The Description param.
+     * @return Description
      * 
      */
     public Output<Optional<String>> description() {
         return Codegen.optional(this.description);
     }
     /**
-     * The Device param.
+     * The device in which the resource is defined
      * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
-     * @return The Device param.
+     * @return The device in which the resource is defined
      * 
      */
     public Output<Optional<String>> device() {
         return Codegen.optional(this.device);
     }
     /**
-     * The DscpTos param.
+     * Dscp tos
      * 
      */
     @Export(name="dscpTos", refs={QosPolicyRuleDscpTos.class}, tree="[0]")
     private Output</* @Nullable */ QosPolicyRuleDscpTos> dscpTos;
 
     /**
-     * @return The DscpTos param.
+     * @return Dscp tos
      * 
      */
     public Output<Optional<QosPolicyRuleDscpTos>> dscpTos() {
         return Codegen.optional(this.dscpTos);
     }
     /**
-     * The Folder param.
+     * The folder in which the resource is defined
      * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
-     * @return The Folder param.
+     * @return The folder in which the resource is defined
      * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * The Name param.
+     * Name
      * 
      */
     @Export(name="name", refs={String.class}, tree="[0]")
     private Output<String> name;
 
     /**
-     * @return The Name param.
+     * @return Name
      * 
      */
     public Output<String> name() {
         return this.name;
     }
     /**
-     * The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * The relative position of the rule
      * 
      */
     @Export(name="position", refs={String.class}, tree="[0]")
     private Output<String> position;
 
     /**
-     * @return The Position param. String must be one of these: `&#34;pre&#34;`, `&#34;post&#34;`. Default: `&#34;pre&#34;`.
+     * @return The relative position of the rule
      * 
      */
     public Output<String> position() {
         return this.position;
     }
     /**
-     * The Schedule param.
+     * Schedule
      * 
      */
     @Export(name="schedule", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> schedule;
 
     /**
-     * @return The Schedule param.
+     * @return Schedule
      * 
      */
     public Output<Optional<String>> schedule() {
         return Codegen.optional(this.schedule);
     }
     /**
-     * The Snippet param.
+     * The snippet in which the resource is defined
      * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
-     * @return The Snippet param.
+     * @return The snippet in which the resource is defined
      * 
      */
     public Output<Optional<String>> snippet() {

@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AntiSpywareProfileThreatExceptionActionBlockIp {
     /**
-     * @return The Duration param. Value must be between 1 and 3600.
+     * @return Duration
      * 
      */
     private @Nullable Integer duration;
     /**
-     * @return The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`.
+     * @return Track by
      * 
      */
     private @Nullable String trackBy;
 
     private AntiSpywareProfileThreatExceptionActionBlockIp() {}
     /**
-     * @return The Duration param. Value must be between 1 and 3600.
+     * @return Duration
      * 
      */
     public Optional<Integer> duration() {
         return Optional.ofNullable(this.duration);
     }
     /**
-     * @return The TrackBy param. String must be one of these: `&#34;source-and-destination&#34;`, `&#34;source&#34;`.
+     * @return Track by
      * 
      */
     public Optional<String> trackBy() {

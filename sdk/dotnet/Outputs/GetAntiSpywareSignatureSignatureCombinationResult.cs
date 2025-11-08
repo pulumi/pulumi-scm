@@ -14,15 +14,15 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAntiSpywareSignatureSignatureCombinationResult
     {
         /// <summary>
-        /// The AndConditions param.
+        /// And condition
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareSignatureSignatureCombinationAndConditionResult> AndConditions;
         /// <summary>
-        /// The OrderFree param. Default: `False`.
+        /// Order free
         /// </summary>
         public readonly bool OrderFree;
         /// <summary>
-        /// The TimeAttribute param.
+        /// anti spyware time attribute
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureSignatureCombinationTimeAttributeResult TimeAttribute;
 

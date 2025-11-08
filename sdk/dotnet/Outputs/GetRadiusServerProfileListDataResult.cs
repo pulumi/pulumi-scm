@@ -14,29 +14,52 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetRadiusServerProfileListDataResult
     {
         /// <summary>
-        /// UUID of the resource.
+        /// The device in which the resource is defined
+        /// </summary>
+        public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
+        /// The UUID of the RADIUS server profile
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// The Protocol param.
+        /// The name of the RADIUS server profile
+        /// </summary>
+        public readonly string Name;
+        /// <summary>
+        /// The RADIUS authentication protocol
         /// </summary>
         public readonly Outputs.GetRadiusServerProfileListDataProtocolResult Protocol;
         /// <summary>
-        /// The Retries param. Value must be between 1 and 5.
+        /// The number of RADIUS server retries
         /// </summary>
         public readonly int Retries;
         /// <summary>
-        /// The Servers param.
+        /// Server
         /// </summary>
         public readonly ImmutableArray<Outputs.GetRadiusServerProfileListDataServerResult> Servers;
         /// <summary>
-        /// The Timeout param. Value must be between 1 and 120.
+        /// The snippet in which the resource is defined
+        /// </summary>
+        public readonly string Snippet;
+        public readonly string Tfid;
+        /// <summary>
+        /// The RADIUS server authentication timeout (seconds)
         /// </summary>
         public readonly int Timeout;
 
         [OutputConstructor]
         private GetRadiusServerProfileListDataResult(
+            string device,
+
+            string folder,
+
             string id,
+
+            string name,
 
             Outputs.GetRadiusServerProfileListDataProtocolResult protocol,
 
@@ -44,12 +67,21 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableArray<Outputs.GetRadiusServerProfileListDataServerResult> servers,
 
+            string snippet,
+
+            string tfid,
+
             int timeout)
         {
+            Device = device;
+            Folder = folder;
             Id = id;
+            Name = name;
             Protocol = protocol;
             Retries = retries;
             Servers = servers;
+            Snippet = snippet;
+            Tfid = tfid;
             Timeout = timeout;
         }
     }

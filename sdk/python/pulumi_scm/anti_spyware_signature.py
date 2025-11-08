@@ -37,20 +37,20 @@ class AntiSpywareSignatureArgs:
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a AntiSpywareSignature resource.
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
-        :param pulumi.Input[_builtins.str] threatname: The Threatname param. String length must not exceed 1024 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: The Bugtraqs param.
-        :param pulumi.Input[_builtins.str] comment: The Comment param. String length must not exceed 256 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: The Cves param.
-        :param pulumi.Input['AntiSpywareSignatureDefaultActionArgs'] default_action: The DefaultAction param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] direction: The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: The References param.
-        :param pulumi.Input[_builtins.str] severity: The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
-        :param pulumi.Input['AntiSpywareSignatureSignatureArgs'] signature: The Signature param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: The Vendors param.
+        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threatname: Threatname
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
+        :param pulumi.Input[_builtins.str] comment: Comment
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
+        :param pulumi.Input['AntiSpywareSignatureDefaultActionArgs'] default_action: anti spyware signature default action
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] direction: Direction
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
+        :param pulumi.Input[_builtins.str] severity: Severity
+        :param pulumi.Input['AntiSpywareSignatureSignatureArgs'] signature: anti spyware signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
         pulumi.set(__self__, "threat_id", threat_id)
         pulumi.set(__self__, "threatname", threatname)
@@ -83,7 +83,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter(name="threatId")
     def threat_id(self) -> pulumi.Input[_builtins.int]:
         """
-        threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
+        threat id range \\n\\n and \\n\\n
         """
         return pulumi.get(self, "threat_id")
 
@@ -95,7 +95,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def threatname(self) -> pulumi.Input[_builtins.str]:
         """
-        The Threatname param. String length must not exceed 1024 characters.
+        Threatname
         """
         return pulumi.get(self, "threatname")
 
@@ -107,7 +107,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def bugtraqs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Bugtraqs param.
+        Bugtraq
         """
         return pulumi.get(self, "bugtraqs")
 
@@ -119,7 +119,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Comment param. String length must not exceed 256 characters.
+        Comment
         """
         return pulumi.get(self, "comment")
 
@@ -131,7 +131,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def cves(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Cves param.
+        Cve
         """
         return pulumi.get(self, "cves")
 
@@ -143,7 +143,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']]:
         """
-        The DefaultAction param.
+        anti spyware signature default action
         """
         return pulumi.get(self, "default_action")
 
@@ -155,7 +155,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -167,7 +167,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def direction(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        Direction
         """
         return pulumi.get(self, "direction")
 
@@ -179,7 +179,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -191,7 +191,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def references(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The References param.
+        Reference
         """
         return pulumi.get(self, "references")
 
@@ -203,7 +203,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def severity(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        Severity
         """
         return pulumi.get(self, "severity")
 
@@ -215,7 +215,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def signature(self) -> Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']]:
         """
-        The Signature param.
+        anti spyware signature
         """
         return pulumi.get(self, "signature")
 
@@ -227,7 +227,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -239,7 +239,7 @@ class AntiSpywareSignatureArgs:
     @pulumi.getter
     def vendors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Vendors param.
+        Vendor
         """
         return pulumi.get(self, "vendors")
 
@@ -268,20 +268,20 @@ class _AntiSpywareSignatureState:
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering AntiSpywareSignature resources.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: The Bugtraqs param.
-        :param pulumi.Input[_builtins.str] comment: The Comment param. String length must not exceed 256 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: The Cves param.
-        :param pulumi.Input['AntiSpywareSignatureDefaultActionArgs'] default_action: The DefaultAction param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] direction: The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: The References param.
-        :param pulumi.Input[_builtins.str] severity: The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
-        :param pulumi.Input['AntiSpywareSignatureSignatureArgs'] signature: The Signature param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
-        :param pulumi.Input[_builtins.str] threatname: The Threatname param. String length must not exceed 1024 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: The Vendors param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
+        :param pulumi.Input[_builtins.str] comment: Comment
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
+        :param pulumi.Input['AntiSpywareSignatureDefaultActionArgs'] default_action: anti spyware signature default action
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] direction: Direction
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
+        :param pulumi.Input[_builtins.str] severity: Severity
+        :param pulumi.Input['AntiSpywareSignatureSignatureArgs'] signature: anti spyware signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threatname: Threatname
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
         if bugtraqs is not None:
             pulumi.set(__self__, "bugtraqs", bugtraqs)
@@ -318,7 +318,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def bugtraqs(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Bugtraqs param.
+        Bugtraq
         """
         return pulumi.get(self, "bugtraqs")
 
@@ -330,7 +330,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def comment(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Comment param. String length must not exceed 256 characters.
+        Comment
         """
         return pulumi.get(self, "comment")
 
@@ -342,7 +342,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def cves(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Cves param.
+        Cve
         """
         return pulumi.get(self, "cves")
 
@@ -354,7 +354,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> Optional[pulumi.Input['AntiSpywareSignatureDefaultActionArgs']]:
         """
-        The DefaultAction param.
+        anti spyware signature default action
         """
         return pulumi.get(self, "default_action")
 
@@ -366,7 +366,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -378,7 +378,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def direction(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        Direction
         """
         return pulumi.get(self, "direction")
 
@@ -390,7 +390,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -402,7 +402,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def references(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The References param.
+        Reference
         """
         return pulumi.get(self, "references")
 
@@ -414,7 +414,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def severity(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        Severity
         """
         return pulumi.get(self, "severity")
 
@@ -426,7 +426,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def signature(self) -> Optional[pulumi.Input['AntiSpywareSignatureSignatureArgs']]:
         """
-        The Signature param.
+        anti spyware signature
         """
         return pulumi.get(self, "signature")
 
@@ -438,7 +438,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -459,7 +459,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter(name="threatId")
     def threat_id(self) -> Optional[pulumi.Input[_builtins.int]]:
         """
-        threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
+        threat id range \\n\\n and \\n\\n
         """
         return pulumi.get(self, "threat_id")
 
@@ -471,7 +471,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def threatname(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        The Threatname param. String length must not exceed 1024 characters.
+        Threatname
         """
         return pulumi.get(self, "threatname")
 
@@ -483,7 +483,7 @@ class _AntiSpywareSignatureState:
     @pulumi.getter
     def vendors(self) -> Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]]:
         """
-        The Vendors param.
+        Vendor
         """
         return pulumi.get(self, "vendors")
 
@@ -514,33 +514,26 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  vendors: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  __props__=None):
         """
-        Retrieves a config item.
+        AntiSpywareSignature resource
 
         ## Example Usage
 
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AntiSpywareSignature("example")
-        ```
-
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: The Bugtraqs param.
-        :param pulumi.Input[_builtins.str] comment: The Comment param. String length must not exceed 256 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: The Cves param.
-        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: The DefaultAction param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] direction: The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: The References param.
-        :param pulumi.Input[_builtins.str] severity: The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
-        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: The Signature param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
-        :param pulumi.Input[_builtins.str] threatname: The Threatname param. String length must not exceed 1024 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: The Vendors param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
+        :param pulumi.Input[_builtins.str] comment: Comment
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
+        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: anti spyware signature default action
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] direction: Direction
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
+        :param pulumi.Input[_builtins.str] severity: Severity
+        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threatname: Threatname
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
         ...
     @overload
@@ -549,16 +542,9 @@ class AntiSpywareSignature(pulumi.CustomResource):
                  args: AntiSpywareSignatureArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
-        Retrieves a config item.
+        AntiSpywareSignature resource
 
         ## Example Usage
-
-        ```python
-        import pulumi
-        import pulumi_scm as scm
-
-        example = scm.AntiSpywareSignature("example")
-        ```
 
         :param str resource_name: The name of the resource.
         :param AntiSpywareSignatureArgs args: The arguments to use to populate this resource's properties.
@@ -649,20 +635,20 @@ class AntiSpywareSignature(pulumi.CustomResource):
         :param str resource_name: The unique name of the resulting resource.
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: The Bugtraqs param.
-        :param pulumi.Input[_builtins.str] comment: The Comment param. String length must not exceed 256 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: The Cves param.
-        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: The DefaultAction param.
-        :param pulumi.Input[_builtins.str] device: The Device param.
-        :param pulumi.Input[_builtins.str] direction: The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
-        :param pulumi.Input[_builtins.str] folder: The Folder param.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: The References param.
-        :param pulumi.Input[_builtins.str] severity: The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
-        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: The Signature param.
-        :param pulumi.Input[_builtins.str] snippet: The Snippet param.
-        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
-        :param pulumi.Input[_builtins.str] threatname: The Threatname param. String length must not exceed 1024 characters.
-        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: The Vendors param.
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
+        :param pulumi.Input[_builtins.str] comment: Comment
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] cves: Cve
+        :param pulumi.Input[Union['AntiSpywareSignatureDefaultActionArgs', 'AntiSpywareSignatureDefaultActionArgsDict']] default_action: anti spyware signature default action
+        :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+        :param pulumi.Input[_builtins.str] direction: Direction
+        :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] references: Reference
+        :param pulumi.Input[_builtins.str] severity: Severity
+        :param pulumi.Input[Union['AntiSpywareSignatureSignatureArgs', 'AntiSpywareSignatureSignatureArgsDict']] signature: anti spyware signature
+        :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+        :param pulumi.Input[_builtins.int] threat_id: threat id range \\n\\n and \\n\\n
+        :param pulumi.Input[_builtins.str] threatname: Threatname
+        :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] vendors: Vendor
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -689,7 +675,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def bugtraqs(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Bugtraqs param.
+        Bugtraq
         """
         return pulumi.get(self, "bugtraqs")
 
@@ -697,7 +683,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def comment(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Comment param. String length must not exceed 256 characters.
+        Comment
         """
         return pulumi.get(self, "comment")
 
@@ -705,7 +691,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def cves(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Cves param.
+        Cve
         """
         return pulumi.get(self, "cves")
 
@@ -713,7 +699,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter(name="defaultAction")
     def default_action(self) -> pulumi.Output[Optional['outputs.AntiSpywareSignatureDefaultAction']]:
         """
-        The DefaultAction param.
+        anti spyware signature default action
         """
         return pulumi.get(self, "default_action")
 
@@ -721,7 +707,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Device param.
+        The device in which the resource is defined
         """
         return pulumi.get(self, "device")
 
@@ -729,7 +715,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def direction(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Direction param. String must be one of these: `"client2server"`, `"server2client"`, `"both"`.
+        Direction
         """
         return pulumi.get(self, "direction")
 
@@ -737,7 +723,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Folder param.
+        The folder in which the resource is defined
         """
         return pulumi.get(self, "folder")
 
@@ -745,7 +731,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def references(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The References param.
+        Reference
         """
         return pulumi.get(self, "references")
 
@@ -753,15 +739,15 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def severity(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Severity param. String must be one of these: `"critical"`, `"low"`, `"high"`, `"medium"`, `"informational"`.
+        Severity
         """
         return pulumi.get(self, "severity")
 
     @_builtins.property
     @pulumi.getter
-    def signature(self) -> pulumi.Output[Optional['outputs.AntiSpywareSignatureSignature']]:
+    def signature(self) -> pulumi.Output['outputs.AntiSpywareSignatureSignature']:
         """
-        The Signature param.
+        anti spyware signature
         """
         return pulumi.get(self, "signature")
 
@@ -769,7 +755,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        The Snippet param.
+        The snippet in which the resource is defined
         """
         return pulumi.get(self, "snippet")
 
@@ -782,7 +768,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter(name="threatId")
     def threat_id(self) -> pulumi.Output[_builtins.int]:
         """
-        threat id range \\n\\n and \\n\\n. Value must be between 15000 and 70000000.
+        threat id range \\n\\n and \\n\\n
         """
         return pulumi.get(self, "threat_id")
 
@@ -790,7 +776,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def threatname(self) -> pulumi.Output[_builtins.str]:
         """
-        The Threatname param. String length must not exceed 1024 characters.
+        Threatname
         """
         return pulumi.get(self, "threatname")
 
@@ -798,7 +784,7 @@ class AntiSpywareSignature(pulumi.CustomResource):
     @pulumi.getter
     def vendors(self) -> pulumi.Output[Optional[Sequence[_builtins.str]]]:
         """
-        The Vendors param.
+        Vendor
         """
         return pulumi.get(self, "vendors")
 

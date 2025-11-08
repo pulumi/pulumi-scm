@@ -7,23 +7,13 @@ import * as outputs from "./types/output";
 import * as utilities from "./utilities";
 
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getRegion({
- *     id: "1234-56-789",
- * });
- * ```
+ * Region data source
  */
 export function getRegion(args: GetRegionArgs, opts?: pulumi.InvokeOptions): Promise<GetRegionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRegion:getRegion", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -32,9 +22,13 @@ export function getRegion(args: GetRegionArgs, opts?: pulumi.InvokeOptions): Pro
  */
 export interface GetRegionArgs {
     /**
-     * The Id param.
+     * The UUID of the region
      */
     id: string;
+    /**
+     * The name of the region
+     */
+    name?: string;
 }
 
 /**
@@ -42,41 +36,43 @@ export interface GetRegionArgs {
  */
 export interface GetRegionResult {
     /**
-     * The Addresses param.
+     * Address
      */
     readonly addresses: string[];
     /**
-     * The GeoLocation param.
+     * The device in which the resource is defined
+     */
+    readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     */
+    readonly folder: string;
+    /**
+     * Geo location
      */
     readonly geoLocation: outputs.GetRegionGeoLocation;
     /**
-     * The Id param.
+     * The UUID of the region
      */
     readonly id: string;
     /**
-     * Alphanumeric string [ 0-9a-zA-Z._-]. String length must not exceed 31 characters.
+     * The name of the region
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     */
+    readonly snippet: string;
     readonly tfid: string;
 }
 /**
- * Retrieves a config item.
- *
- * ## Example Usage
- *
- * ```typescript
- * import * as pulumi from "@pulumi/pulumi";
- * import * as scm from "@pulumi/scm";
- *
- * const example = scm.getRegion({
- *     id: "1234-56-789",
- * });
- * ```
+ * Region data source
  */
 export function getRegionOutput(args: GetRegionOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRegionResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRegion:getRegion", {
         "id": args.id,
+        "name": args.name,
     }, opts);
 }
 
@@ -85,7 +81,11 @@ export function getRegionOutput(args: GetRegionOutputArgs, opts?: pulumi.InvokeO
  */
 export interface GetRegionOutputArgs {
     /**
-     * The Id param.
+     * The UUID of the region
      */
     id: pulumi.Input<string>;
+    /**
+     * The name of the region
+     */
+    name?: pulumi.Input<string>;
 }

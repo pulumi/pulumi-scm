@@ -9,8 +9,6 @@ import com.pulumi.exceptions.MissingRequiredPropertyException;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
-import java.util.Optional;
-import javax.annotation.Nullable;
 
 
 public final class ExternalDynamicListTypeIpRecurringMonthlyArgs extends com.pulumi.resources.ResourceArgs {
@@ -18,29 +16,29 @@ public final class ExternalDynamicListTypeIpRecurringMonthlyArgs extends com.pul
     public static final ExternalDynamicListTypeIpRecurringMonthlyArgs Empty = new ExternalDynamicListTypeIpRecurringMonthlyArgs();
 
     /**
-     * Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * Time specification hh (e.g. 20)
      * 
      */
-    @Import(name="at")
-    private @Nullable Output<String> at;
+    @Import(name="at", required=true)
+    private Output<String> at;
 
     /**
-     * @return Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+     * @return Time specification hh (e.g. 20)
      * 
      */
-    public Optional<Output<String>> at() {
-        return Optional.ofNullable(this.at);
+    public Output<String> at() {
+        return this.at;
     }
 
     /**
-     * The DayOfMonth param. Value must be between 1 and 31.
+     * Day of month
      * 
      */
     @Import(name="dayOfMonth", required=true)
     private Output<Integer> dayOfMonth;
 
     /**
-     * @return The DayOfMonth param. Value must be between 1 and 31.
+     * @return Day of month
      * 
      */
     public Output<Integer> dayOfMonth() {
@@ -73,18 +71,18 @@ public final class ExternalDynamicListTypeIpRecurringMonthlyArgs extends com.pul
         }
 
         /**
-         * @param at Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+         * @param at Time specification hh (e.g. 20)
          * 
          * @return builder
          * 
          */
-        public Builder at(@Nullable Output<String> at) {
+        public Builder at(Output<String> at) {
             $.at = at;
             return this;
         }
 
         /**
-         * @param at Time specification hh (e.g. 20). String length must be between 2 and 2 characters. String validation regex: `([01][0-9]|[2][0-3])`. Default: `&#34;00&#34;`.
+         * @param at Time specification hh (e.g. 20)
          * 
          * @return builder
          * 
@@ -94,7 +92,7 @@ public final class ExternalDynamicListTypeIpRecurringMonthlyArgs extends com.pul
         }
 
         /**
-         * @param dayOfMonth The DayOfMonth param. Value must be between 1 and 31.
+         * @param dayOfMonth Day of month
          * 
          * @return builder
          * 
@@ -105,7 +103,7 @@ public final class ExternalDynamicListTypeIpRecurringMonthlyArgs extends com.pul
         }
 
         /**
-         * @param dayOfMonth The DayOfMonth param. Value must be between 1 and 31.
+         * @param dayOfMonth Day of month
          * 
          * @return builder
          * 
@@ -115,6 +113,9 @@ public final class ExternalDynamicListTypeIpRecurringMonthlyArgs extends com.pul
         }
 
         public ExternalDynamicListTypeIpRecurringMonthlyArgs build() {
+            if ($.at == null) {
+                throw new MissingRequiredPropertyException("ExternalDynamicListTypeIpRecurringMonthlyArgs", "at");
+            }
             if ($.dayOfMonth == null) {
                 throw new MissingRequiredPropertyException("ExternalDynamicListTypeIpRecurringMonthlyArgs", "dayOfMonth");
             }

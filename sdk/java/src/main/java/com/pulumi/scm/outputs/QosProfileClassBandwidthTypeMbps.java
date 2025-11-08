@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QosProfileClassBandwidthTypeMbps {
     /**
-     * @return QoS setting for traffic classes.
+     * @return QoS setting for traffic classes
      * 
      */
     private @Nullable List<QosProfileClassBandwidthTypeMbpsClass> classes;
 
     private QosProfileClassBandwidthTypeMbps() {}
     /**
-     * @return QoS setting for traffic classes.
+     * @return QoS setting for traffic classes
      * 
      */
     public List<QosProfileClassBandwidthTypeMbpsClass> classes() {
