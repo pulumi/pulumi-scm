@@ -1,8 +1,8 @@
 module github.com/pulumi/pulumi-scm/examples
 
-go 1.23.11
+go 1.24.7
 
-toolchain go1.24.6
+toolchain go1.24.10
 
 require github.com/stretchr/testify v1.10.0
 
