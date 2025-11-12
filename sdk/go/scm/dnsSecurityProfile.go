@@ -14,6 +14,166 @@ import (
 // DnsSecurityProfile resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewDnsSecurityProfile(ctx, "scm_dns_security_profile_base", &scm.DnsSecurityProfileArgs{
+//				Folder: pulumi.String("All"),
+//				Name:   pulumi.String("dns_base"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_security_categories", &scm.DnsSecurityProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("test_dns_sec_categories"),
+//				Description: pulumi.String("dns security profile w/ dns security categories"),
+//				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
+//					DnsSecurityCategories: scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArray{
+//						&scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs{
+//							Name: pulumi.String("pan-dns-sec-recent"),
+//						},
+//						&scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs{
+//							Name:          pulumi.String("pan-dns-sec-grayware"),
+//							Action:        pulumi.String("allow"),
+//							LogLevel:      pulumi.String("high"),
+//							PacketCapture: pulumi.String("disable"),
+//						},
+//						&scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs{
+//							Name:          pulumi.String("pan-dns-sec-proxy"),
+//							Action:        pulumi.String("block"),
+//							LogLevel:      pulumi.String("default"),
+//							PacketCapture: pulumi.String("single-packet"),
+//						},
+//						&scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs{
+//							Name:          pulumi.String("pan-dns-sec-phishing"),
+//							Action:        pulumi.String("sinkhole"),
+//							LogLevel:      pulumi.String("critical"),
+//							PacketCapture: pulumi.String("extended-capture"),
+//						},
+//						&scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs{
+//							Name:          pulumi.String("pan-dns-sec-malware"),
+//							Action:        pulumi.String("default"),
+//							LogLevel:      pulumi.String("informational"),
+//							PacketCapture: pulumi.String("disable"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_lists", &scm.DnsSecurityProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("test_dns_lists"),
+//				Description: pulumi.String("dns security profile w/ dns lists"),
+//				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
+//					DnsLists: []interface{}{
+//						map[string]interface{}{
+//							"name":          "default-paloalto-dns",
+//							"packetCapture": "disable",
+//							"action": map[string]interface{}{
+//								"alert": map[string]interface{}{},
+//							},
+//						},
+//						map[string]interface{}{
+//							"name":          "update-edl",
+//							"packetCapture": "extended-capture",
+//							"action": map[string]interface{}{
+//								"allow": map[string]interface{}{},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_sinkhole", &scm.DnsSecurityProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("test_dns_sinkhole"),
+//				Description: pulumi.String("dns security profile w/ sinkhole"),
+//				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
+//					Sinkhole: &scm.DnsSecurityProfileBotnetDomainsSinkholeArgs{
+//						Ipv4Address: pulumi.String("127.0.0.1"),
+//						Ipv6Address: pulumi.String("::1"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_whitelist", &scm.DnsSecurityProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("test_dns_whitelist"),
+//				Description: pulumi.String("dns security profile w/ whitelist"),
+//				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
+//					Whitelists: scm.DnsSecurityProfileBotnetDomainsWhitelistArray{
+//						&scm.DnsSecurityProfileBotnetDomainsWhitelistArgs{
+//							Name: pulumi.String("example.com"),
+//						},
+//						&scm.DnsSecurityProfileBotnetDomainsWhitelistArgs{
+//							Name:        pulumi.String("example2.com"),
+//							Description: pulumi.String("creating whitelist"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewDnsSecurityProfile(ctx, "scm_dns_all", &scm.DnsSecurityProfileArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("test_dns_all_test"),
+//				Description: pulumi.String("dns security profile w/ all"),
+//				BotnetDomains: &scm.DnsSecurityProfileBotnetDomainsArgs{
+//					DnsSecurityCategories: scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArray{
+//						&scm.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs{
+//							Name:          pulumi.String("pan-dns-sec-ddns"),
+//							Action:        pulumi.String("block"),
+//							LogLevel:      pulumi.String("low"),
+//							PacketCapture: pulumi.String("disable"),
+//						},
+//					},
+//					DnsLists: []map[string]interface{}{
+//						map[string]interface{}{
+//							"name":          "scm_edl_1",
+//							"packetCapture": "single-packet",
+//							"action": map[string]interface{}{
+//								"block": map[string]interface{}{},
+//							},
+//						},
+//					},
+//					Sinkhole: &scm.DnsSecurityProfileBotnetDomainsSinkholeArgs{
+//						Ipv4Address: pulumi.String("pan-sinkhole-default-ip"),
+//						Ipv6Address: pulumi.String("::1"),
+//					},
+//					Whitelists: scm.DnsSecurityProfileBotnetDomainsWhitelistArray{
+//						&scm.DnsSecurityProfileBotnetDomainsWhitelistArgs{
+//							Name:        pulumi.String("ebay.com"),
+//							Description: pulumi.String("creating whitelist"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type DnsSecurityProfile struct {
 	pulumi.CustomResourceState
 

@@ -1079,6 +1079,72 @@ class Application(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # Custom Application
+        scm_media_app = scm.Application("scm_media_app",
+            folder="All",
+            name="scm_media_app",
+            description="Managed by Pulumi",
+            category="media",
+            subcategory="gaming",
+            technology="client-server",
+            risk="4",
+            evasive_behavior=True,
+            pervasive_use=True,
+            consume_big_bandwidth=True,
+            has_known_vulnerability=True,
+            prone_to_misuse=True)
+        # Custom Application with tweaked timeouts and additional settings
+        scm_risky_app = scm.Application("scm_risky_app",
+            folder="All",
+            name="scm_risky_app",
+            description="Managed by Pulumi",
+            category="media",
+            subcategory="gaming",
+            technology="client-server",
+            risk="4",
+            timeout=3600,
+            tcp_timeout=3600,
+            tcp_half_closed_timeout=60,
+            tcp_time_wait_timeout=10,
+            evasive_behavior=True,
+            pervasive_use=True,
+            consume_big_bandwidth=True,
+            has_known_vulnerability=True,
+            prone_to_misuse=True,
+            tunnel_other_application=True,
+            tunnel_applications=True,
+            no_appid_caching=True,
+            parent_app="bittorrent")
+        # Custom Application based on Custom Signature
+        scm_custom_app = scm.Application("scm_custom_app",
+            folder="All",
+            name="scm_custom_app",
+            description="Managed by Pulumi",
+            category="media",
+            subcategory="gaming",
+            technology="client-server",
+            risk="4",
+            signatures=[{
+                "name": "Custom Signature",
+                "comment": "Managed by Pulumi",
+                "scope": "session",
+                "order_free": False,
+                "and_condition": [{
+                    "name": "Example Condition",
+                    "operator": {
+                        "patternMatch": {
+                            "context": "file-data",
+                            "pattern": "^malware$",
+                        },
+                    },
+                }],
+            }])
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] able_to_transfer_file: Able to transfer file
@@ -1123,6 +1189,72 @@ class Application(pulumi.CustomResource):
         Application resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # Custom Application
+        scm_media_app = scm.Application("scm_media_app",
+            folder="All",
+            name="scm_media_app",
+            description="Managed by Pulumi",
+            category="media",
+            subcategory="gaming",
+            technology="client-server",
+            risk="4",
+            evasive_behavior=True,
+            pervasive_use=True,
+            consume_big_bandwidth=True,
+            has_known_vulnerability=True,
+            prone_to_misuse=True)
+        # Custom Application with tweaked timeouts and additional settings
+        scm_risky_app = scm.Application("scm_risky_app",
+            folder="All",
+            name="scm_risky_app",
+            description="Managed by Pulumi",
+            category="media",
+            subcategory="gaming",
+            technology="client-server",
+            risk="4",
+            timeout=3600,
+            tcp_timeout=3600,
+            tcp_half_closed_timeout=60,
+            tcp_time_wait_timeout=10,
+            evasive_behavior=True,
+            pervasive_use=True,
+            consume_big_bandwidth=True,
+            has_known_vulnerability=True,
+            prone_to_misuse=True,
+            tunnel_other_application=True,
+            tunnel_applications=True,
+            no_appid_caching=True,
+            parent_app="bittorrent")
+        # Custom Application based on Custom Signature
+        scm_custom_app = scm.Application("scm_custom_app",
+            folder="All",
+            name="scm_custom_app",
+            description="Managed by Pulumi",
+            category="media",
+            subcategory="gaming",
+            technology="client-server",
+            risk="4",
+            signatures=[{
+                "name": "Custom Signature",
+                "comment": "Managed by Pulumi",
+                "scope": "session",
+                "order_free": False,
+                "and_condition": [{
+                    "name": "Example Condition",
+                    "operator": {
+                        "patternMatch": {
+                            "context": "file-data",
+                            "pattern": "^malware$",
+                        },
+                    },
+                }],
+            }])
+        ```
 
         :param str resource_name: The name of the resource.
         :param ApplicationArgs args: The arguments to use to populate this resource's properties.

@@ -24,6 +24,80 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.AntiSpywareProfile;
+ * import com.pulumi.scm.AntiSpywareProfileArgs;
+ * import com.pulumi.scm.Address;
+ * import com.pulumi.scm.AddressArgs;
+ * import com.pulumi.scm.inputs.AntiSpywareProfileRuleArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // Basic Anti-Spyware Profile
+ *         var scmAntiSpywareProfile1 = new AntiSpywareProfile("scmAntiSpywareProfile1", AntiSpywareProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm_anti_spyware_profile_1")
+ *             .description("Managed by Pulumi")
+ *             .cloudInlineAnalysis(true)
+ *             .build());
+ * 
+ *         // Required object that will be referenced in examples
+ *         var scmAddress1 = new Address("scmAddress1", AddressArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_address_1")
+ *             .description("Made by Pulumi")
+ *             .ipNetmask("10.2.3.4")
+ *             .build());
+ * 
+ *         // Anti-Spyware Profile with exception EDL
+ *         var scmAntiSpywareProfile2 = new AntiSpywareProfile("scmAntiSpywareProfile2", AntiSpywareProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm_anti_spyware_profile_2")
+ *             .description("Managed by Pulumi")
+ *             .cloudInlineAnalysis(true)
+ *             .inlineExceptionIpAddresses("scm_address_1")
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmAddress1)
+ *                 .build());
+ * 
+ *         // Anti-Spyware Profile with rules
+ *         var scmAntiSpywareProfile3 = new AntiSpywareProfile("scmAntiSpywareProfile3", AntiSpywareProfileArgs.builder()
+ *             .folder("All")
+ *             .name("scm_anti_spyware_profile_3")
+ *             .description("Managed by Pulumi")
+ *             .cloudInlineAnalysis(true)
+ *             .rules(AntiSpywareProfileRuleArgs.builder()
+ *                 .name("Custom Rule")
+ *                 .notes("Managed by Pulumi")
+ *                 .packetCapture("single-packet")
+ *                 .category("net-worm")
+ *                 .severity(List.of("critical"))
+ *                 .threatName("data-theft")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/antiSpywareProfile:AntiSpywareProfile")
 public class AntiSpywareProfile extends com.pulumi.resources.CustomResource {

@@ -13,6 +13,132 @@ namespace Pulumi.Scm
     /// AggregateInterface resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a layer 2 aggregate interface without vlan configuration
+    ///     //
+    ///     var scmAggregateIntfL2 = new Scm.AggregateInterface("scm_aggregate_intf_l2", new()
+    ///     {
+    ///         Name = "$scm_aggregate_intf_l2",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer2 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer 2 aggregate interface with vlan and lacp configuration
+    ///     //
+    ///     var scmAggregateIntfL2Lacp = new Scm.AggregateInterface("scm_aggregate_intf_l2_lacp", new()
+    ///     {
+    ///         Name = "$scm_aggregate_intf_l2_lacp",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer2 = new Scm.Inputs.AggregateInterfaceLayer2Args
+    ///         {
+    ///             VlanTag = "1234",
+    ///             Lacp = new Scm.Inputs.AggregateInterfaceLayer2LacpArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 FastFailover = true,
+    ///                 SystenPriority = 32768,
+    ///                 TransmissionRate = "fast",
+    ///             },
+    ///             Lldp = 
+    ///             {
+    ///                 { "enable", false },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 aggregate interface without ip configuration
+    ///     //
+    ///     var scmAggregateIntfL3 = new Scm.AggregateInterface("scm_aggregate_intf_l3", new()
+    ///     {
+    ///         Name = "$scm_aggregate_intf_l3",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 aggregate interface with static ip address and lacp
+    ///     //
+    ///     var scmAggregateIntfL3Static = new Scm.AggregateInterface("scm_aggregate_intf_l3_static", new()
+    ///     {
+    ///         Name = "$scm_aggregate_intf_l3_static",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.AggregateInterfaceLayer3Args
+    ///         {
+    ///             Ips = new[]
+    ///             {
+    ///                 new Scm.Inputs.AggregateInterfaceLayer3IpArgs
+    ///                 {
+    ///                     Name = "198.18.1.1/24",
+    ///                 },
+    ///             },
+    ///             Lacp = new Scm.Inputs.AggregateInterfaceLayer3LacpArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 FastFailover = true,
+    ///                 SystenPriority = 32768,
+    ///                 TransmissionRate = "fast",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 aggregate interface with dhcp-assigned ip address
+    ///     //
+    ///     var scmAggregateIntfL3Dhcp = new Scm.AggregateInterface("scm_aggregate_intf_l3_dhcp", new()
+    ///     {
+    ///         Name = "$scm_aggregate_intf_l3_dhcp",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.AggregateInterfaceLayer3Args
+    ///         {
+    ///             DhcpClient = new Scm.Inputs.AggregateInterfaceLayer3DhcpClientArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 CreateDefaultRoute = true,
+    ///                 DefaultRouteMetric = 10,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 aggregate interface with multiple static ip addresses
+    ///     //
+    ///     var scmAggregateIntfL3Complex = new Scm.AggregateInterface("scm_aggregate_intf_l3_complex", new()
+    ///     {
+    ///         Name = "$scm_aggregate_intf_l3_complex",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.AggregateInterfaceLayer3Args
+    ///         {
+    ///             Ips = new[]
+    ///             {
+    ///                 new Scm.Inputs.AggregateInterfaceLayer3IpArgs
+    ///                 {
+    ///                     Name = "198.18.1.1/24",
+    ///                     Name = "198.18.1.2/32",
+    ///                 },
+    ///             },
+    ///             Mtu = 1500,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/aggregateInterface:AggregateInterface")]
     public partial class AggregateInterface : global::Pulumi.CustomResource

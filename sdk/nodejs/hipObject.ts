@@ -10,6 +10,162 @@ import * as utilities from "./utilities";
  * HipObject resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // This resource creates a comprehensive HIP Object with many criteria enabled.
+ * // This showcases the use of nested objects and lists of objects that the
+ * // corrected provider schema now supports.
+ * const scmHipObject1 = new scm.HipObject("scm_hip_object_1", {
+ *     folder: "Shared",
+ *     name: "scm_hip_object_1",
+ *     description: "HIP object with multiple advanced criteria configured",
+ *     antiMalware: {
+ *         criteria: {
+ *             isInstalled: true,
+ *             realTimeProtection: "yes",
+ *             virdefVersion: {
+ *                 notWithin: {
+ *                     days: 10,
+ *                 },
+ *             },
+ *         },
+ *         vendors: [{
+ *             name: "Microsoft",
+ *             product: ["Microsoft Defender"],
+ *         }],
+ *     },
+ *     dataLossPrevention: {
+ *         criteria: {
+ *             isInstalled: true,
+ *             isEnabled: "yes",
+ *         },
+ *         vendors: [{
+ *             name: "Symantec",
+ *         }],
+ *     },
+ *     diskBackup: {
+ *         criteria: {
+ *             isInstalled: true,
+ *             lastBackupTime: {
+ *                 within: {
+ *                     days: 7,
+ *                 },
+ *             },
+ *         },
+ *         vendors: [{
+ *             name: "Veeam",
+ *         }],
+ *     },
+ *     diskEncryption: {
+ *         criteria: {
+ *             isInstalled: true,
+ *             encryptedLocations: [
+ *                 {
+ *                     name: "C:\\",
+ *                     encryptionState: {
+ *                         is: "encrypted",
+ *                     },
+ *                 },
+ *                 {
+ *                     name: "D:\\Users\\",
+ *                     encryptionState: {
+ *                         isNot: "unencrypted",
+ *                     },
+ *                 },
+ *             ],
+ *         },
+ *         vendors: [{
+ *             name: "BitLocker",
+ *         }],
+ *     },
+ *     firewall: {
+ *         criteria: {
+ *             isInstalled: true,
+ *             isEnabled: "yes",
+ *         },
+ *         vendors: [{
+ *             name: "Microsoft",
+ *         }],
+ *     },
+ *     hostInfo: {
+ *         criteria: {
+ *             os: {
+ *                 contains: {
+ *                     microsoft: "Microsoft Windows 11",
+ *                 },
+ *             },
+ *             domain: {
+ *                 is: "corp.example.com",
+ *             },
+ *         },
+ *     },
+ *     mobileDevice: {
+ *         criteria: {
+ *             jailbroken: false,
+ *             passcodeSet: true,
+ *             applications: {
+ *                 hasUnmanagedApp: false,
+ *                 hasMalware: {
+ *                     no: {},
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     networkInfo: {
+ *         criteria: {
+ *             network: {
+ *                 is: {
+ *                     wifi: {
+ *                         ssid: "Corporate-WLAN",
+ *                     },
+ *                 },
+ *             },
+ *         },
+ *     },
+ *     patchManagement: {
+ *         criteria: {
+ *             isInstalled: true,
+ *             missingPatches: {
+ *                 check: "has-none",
+ *                 patches: [
+ *                     "KB4012212",
+ *                     "KB4012213",
+ *                 ],
+ *                 severity: {
+ *                     greaterThan: 5,
+ *                 },
+ *             },
+ *         },
+ *         vendors: [{
+ *             name: "Microsoft",
+ *         }],
+ *     },
+ *     customChecks: {
+ *         criteria: {
+ *             processLists: [
+ *                 {
+ *                     name: "evil_process.exe",
+ *                     running: false,
+ *                 },
+ *                 {
+ *                     name: "corp_security_agent.exe",
+ *                     running: true,
+ *                 },
+ *             ],
+ *             registryKeys: [{
+ *                 name: "HKEY_LOCAL_MACHINE\\Software\\PaloAltoNetworks",
+ *                 registryValue: [{
+ *                     name: "AllowRemoteAccess",
+ *                     valueData: "false",
+ *                 }],
+ *             }],
+ *         },
+ *     },
+ * });
+ * ```
  */
 export class HipObject extends pulumi.CustomResource {
     /**

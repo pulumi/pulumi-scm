@@ -13,6 +13,181 @@ namespace Pulumi.Scm
     /// DnsSecurityProfile resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmDnsSecurityProfileBase = new Scm.DnsSecurityProfile("scm_dns_security_profile_base", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "dns_base",
+    ///     });
+    /// 
+    ///     var scmDnsSecurityCategories = new Scm.DnsSecurityProfile("scm_dns_security_categories", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "test_dns_sec_categories",
+    ///         Description = "dns security profile w/ dns security categories",
+    ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
+    ///         {
+    ///             DnsSecurityCategories = new[]
+    ///             {
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs
+    ///                 {
+    ///                     Name = "pan-dns-sec-recent",
+    ///                 },
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs
+    ///                 {
+    ///                     Name = "pan-dns-sec-grayware",
+    ///                     Action = "allow",
+    ///                     LogLevel = "high",
+    ///                     PacketCapture = "disable",
+    ///                 },
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs
+    ///                 {
+    ///                     Name = "pan-dns-sec-proxy",
+    ///                     Action = "block",
+    ///                     LogLevel = "default",
+    ///                     PacketCapture = "single-packet",
+    ///                 },
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs
+    ///                 {
+    ///                     Name = "pan-dns-sec-phishing",
+    ///                     Action = "sinkhole",
+    ///                     LogLevel = "critical",
+    ///                     PacketCapture = "extended-capture",
+    ///                 },
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs
+    ///                 {
+    ///                     Name = "pan-dns-sec-malware",
+    ///                     Action = "default",
+    ///                     LogLevel = "informational",
+    ///                     PacketCapture = "disable",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmDnsLists = new Scm.DnsSecurityProfile("scm_dns_lists", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "test_dns_lists",
+    ///         Description = "dns security profile w/ dns lists",
+    ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
+    ///         {
+    ///             DnsLists = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "name", "default-paloalto-dns" },
+    ///                     { "packetCapture", "disable" },
+    ///                     { "action", 
+    ///                     {
+    ///                         { "alert", null },
+    ///                     } },
+    ///                 },
+    ///                 
+    ///                 {
+    ///                     { "name", "update-edl" },
+    ///                     { "packetCapture", "extended-capture" },
+    ///                     { "action", 
+    ///                     {
+    ///                         { "allow", null },
+    ///                     } },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmDnsSinkhole = new Scm.DnsSecurityProfile("scm_dns_sinkhole", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "test_dns_sinkhole",
+    ///         Description = "dns security profile w/ sinkhole",
+    ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
+    ///         {
+    ///             Sinkhole = new Scm.Inputs.DnsSecurityProfileBotnetDomainsSinkholeArgs
+    ///             {
+    ///                 Ipv4Address = "127.0.0.1",
+    ///                 Ipv6Address = "::1",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmDnsWhitelist = new Scm.DnsSecurityProfile("scm_dns_whitelist", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "test_dns_whitelist",
+    ///         Description = "dns security profile w/ whitelist",
+    ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
+    ///         {
+    ///             Whitelists = new[]
+    ///             {
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsWhitelistArgs
+    ///                 {
+    ///                     Name = "example.com",
+    ///                 },
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsWhitelistArgs
+    ///                 {
+    ///                     Name = "example2.com",
+    ///                     Description = "creating whitelist",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmDnsAll = new Scm.DnsSecurityProfile("scm_dns_all", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "test_dns_all_test",
+    ///         Description = "dns security profile w/ all",
+    ///         BotnetDomains = new Scm.Inputs.DnsSecurityProfileBotnetDomainsArgs
+    ///         {
+    ///             DnsSecurityCategories = new[]
+    ///             {
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs
+    ///                 {
+    ///                     Name = "pan-dns-sec-ddns",
+    ///                     Action = "block",
+    ///                     LogLevel = "low",
+    ///                     PacketCapture = "disable",
+    ///                 },
+    ///             },
+    ///             DnsLists = new[]
+    ///             {
+    ///                 
+    ///                 {
+    ///                     { "name", "scm_edl_1" },
+    ///                     { "packetCapture", "single-packet" },
+    ///                     { "action", 
+    ///                     {
+    ///                         { "block", null },
+    ///                     } },
+    ///                 },
+    ///             },
+    ///             Sinkhole = new Scm.Inputs.DnsSecurityProfileBotnetDomainsSinkholeArgs
+    ///             {
+    ///                 Ipv4Address = "pan-sinkhole-default-ip",
+    ///                 Ipv6Address = "::1",
+    ///             },
+    ///             Whitelists = new[]
+    ///             {
+    ///                 new Scm.Inputs.DnsSecurityProfileBotnetDomainsWhitelistArgs
+    ///                 {
+    ///                     Name = "ebay.com",
+    ///                     Description = "creating whitelist",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/dnsSecurityProfile:DnsSecurityProfile")]
     public partial class DnsSecurityProfile : global::Pulumi.CustomResource

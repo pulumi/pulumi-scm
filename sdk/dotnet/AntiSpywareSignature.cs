@@ -13,6 +13,59 @@ namespace Pulumi.Scm
     /// AntiSpywareSignature resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmAntiSpywareSignature1 = new Scm.AntiSpywareSignature("scm_anti_spyware_signature_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         ThreatId = "6900001",
+    ///         Comment = "Managed by Pulumi",
+    ///         Direction = "client2server",
+    ///         Severity = "critical",
+    ///         Threatname = "Example Threat",
+    ///         DefaultAction = new Scm.Inputs.AntiSpywareSignatureDefaultActionArgs
+    ///         {
+    ///             Alert = null,
+    ///         },
+    ///         Signature = new Scm.Inputs.AntiSpywareSignatureSignatureArgs
+    ///         {
+    ///             Combination = new Scm.Inputs.AntiSpywareSignatureSignatureCombinationArgs
+    ///             {
+    ///                 AndConditions = new[]
+    ///                 {
+    ///                     new Scm.Inputs.AntiSpywareSignatureSignatureCombinationAndConditionArgs
+    ///                     {
+    ///                         Name = "And Condition 1",
+    ///                         OrCondition = new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "Test" },
+    ///                                 { "threat_id", "10001" },
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///                 OrderFree = false,
+    ///                 TimeAttribute = new Scm.Inputs.AntiSpywareSignatureSignatureCombinationTimeAttributeArgs
+    ///                 {
+    ///                     Interval = 3600,
+    ///                     Threshold = 60,
+    ///                     TrackBy = "source",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/antiSpywareSignature:AntiSpywareSignature")]
     public partial class AntiSpywareSignature : global::Pulumi.CustomResource

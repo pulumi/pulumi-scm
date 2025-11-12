@@ -10,6 +10,154 @@ import * as utilities from "./utilities";
  * LogicalRouter resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates various resources used for subsequent examples
+ * //
+ * const scmNextHop = new scm.Variable("scm_next_hop", {
+ *     folder: "All",
+ *     name: "$scm_next_hop",
+ *     description: "Managed by Pulumi",
+ *     type: "ip-netmask",
+ *     value: "198.18.1.1",
+ * });
+ * const scmNextHopFqdn = new scm.Variable("scm_next_hop_fqdn", {
+ *     folder: "All",
+ *     name: "$scm_next_hop_fqdn",
+ *     description: "Managed by Pulumi",
+ *     type: "fqdn",
+ *     value: "nexthop.example.com",
+ * });
+ * const scmEthernetInterface = new scm.EthernetInterface("scm_ethernet_interface", {
+ *     name: "$scm_ethernet_interface",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {
+ *         ips: [{
+ *             name: "198.18.11.1/24",
+ *         }],
+ *     },
+ * });
+ * const scmBgpInterface = new scm.EthernetInterface("scm_bgp_interface", {
+ *     name: "$scm_bgp_interface",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {
+ *         ips: [{
+ *             name: "198.18.12.1/24",
+ *         }],
+ *     },
+ * });
+ * const bgpAuthProfile = new scm.BgpAuthProfile("bgp_auth_profile", {
+ *     folder: "ngfw-shared",
+ *     name: "bgp_auth_profile",
+ *     secret: "Example123",
+ * });
+ * //
+ * // Creates a logical router with static routes
+ * //
+ * const scmLogicalRouter = new scm.LogicalRouter("scm_logical_router", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_logical_router",
+ *     routingStack: "advanced",
+ *     vrves: [{
+ *         name: "default",
+ *         "interface": ["$scm_ethernet_interface"],
+ *         routingTable: {
+ *             ip: {
+ *                 staticRoute: [
+ *                     {
+ *                         name: "default-route",
+ *                         destination: "0.0.0.0/0",
+ *                         preference: 10,
+ *                         nexthop: {
+ *                             ipAddress: "198.18.1.1",
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "internal-route",
+ *                         "interface": "$scm_ethernet_interface",
+ *                         destination: "192.168.1.0/24",
+ *                         preference: 1,
+ *                         nexthop: {
+ *                             ipAddress: "$scm_next_hop",
+ *                         },
+ *                     },
+ *                     {
+ *                         name: "route-with-fqdn-nh",
+ *                         "interface": "$scm_ethernet_interface",
+ *                         destination: "192.168.2.0/24",
+ *                         preference: 1,
+ *                         nexthop: {
+ *                             fqdn: "$scm_next_hop",
+ *                         },
+ *                         bfd: {
+ *                             profile: "default",
+ *                         },
+ *                     },
+ *                 ],
+ *             },
+ *         },
+ *     }],
+ * }, {
+ *     dependsOn: [
+ *         scmNextHop,
+ *         scmNextHopFqdn,
+ *         scmEthernetInterface,
+ *     ],
+ * });
+ * //
+ * // Creates a logical router with bgp configuration
+ * //
+ * const scmBgpRouter = new scm.LogicalRouter("scm_bgp_router", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_router",
+ *     routingStack: "advanced",
+ *     vrves: [{
+ *         name: "default",
+ *         "interface": ["$scm_bgp_interface"],
+ *         bgp: {
+ *             enable: true,
+ *             routerId: "198.18.1.254",
+ *             localAs: "65535",
+ *             installRoute: true,
+ *             rejectDefaultRoute: false,
+ *             peerGroup: [{
+ *                 name: "prisma-access",
+ *                 addressFamily: {
+ *                     ipv4: "default",
+ *                 },
+ *                 connectionOptions: {
+ *                     authentication: "bgp_auth_profile",
+ *                 },
+ *                 peer: [{
+ *                     name: "primary-access-primary",
+ *                     enable: true,
+ *                     peerAs: 65515,
+ *                     peerAddress: {
+ *                         ip: "198.18.1.100",
+ *                     },
+ *                     localAddress: {
+ *                         "interface": "$scm_bgp_interface",
+ *                     },
+ *                     connectionOptions: {
+ *                         multihop: "3",
+ *                     },
+ *                 }],
+ *             }],
+ *         },
+ *     }],
+ * }, {
+ *     dependsOn: [
+ *         scmBgpInterface,
+ *         bgpAuthProfile,
+ *     ],
+ * });
+ * ```
  */
 export class LogicalRouter extends pulumi.CustomResource {
     /**

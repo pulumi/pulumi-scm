@@ -14,6 +14,135 @@ import (
 // EthernetInterface resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a layer 2 ethernet interface without vlan configuration
+//			_, err := scm.NewEthernetInterface(ctx, "scm_l2_intf", &scm.EthernetInterfaceArgs{
+//				Name:       pulumi.String("$scm_l2_intf"),
+//				Comment:    pulumi.String("Managed by Pulumi"),
+//				Folder:     pulumi.String("ngfw-shared"),
+//				LinkSpeed:  pulumi.String("auto"),
+//				LinkDuplex: pulumi.String("full"),
+//				LinkState:  pulumi.String("auto"),
+//				Layer2:     &scm.EthernetInterfaceLayer2Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a tap ethernet interface without vlan configuration
+//			_, err = scm.NewEthernetInterface(ctx, "scm_tap_intf", &scm.EthernetInterfaceArgs{
+//				Name:       pulumi.String("$scm_tap_intf"),
+//				Comment:    pulumi.String("Managed by Pulumi"),
+//				Folder:     pulumi.String("ngfw-shared"),
+//				LinkSpeed:  pulumi.String("auto"),
+//				LinkDuplex: pulumi.String("full"),
+//				LinkState:  pulumi.String("auto"),
+//				Tap:        &scm.EthernetInterfaceTapArgs{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 ethernet interface without ip configuration
+//			_, err = scm.NewEthernetInterface(ctx, "scm_l3_intf", &scm.EthernetInterfaceArgs{
+//				Name:       pulumi.String("$scm_l3_intf"),
+//				Comment:    pulumi.String("Managed by Pulumi"),
+//				Folder:     pulumi.String("ngfw-shared"),
+//				LinkSpeed:  pulumi.String("auto"),
+//				LinkDuplex: pulumi.String("full"),
+//				LinkState:  pulumi.String("auto"),
+//				Layer3:     &scm.EthernetInterfaceLayer3Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 ethernet interface with static ip address
+//			_, err = scm.NewEthernetInterface(ctx, "scm_l3_intf_static", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_l3_intf_static"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.EthernetInterfaceLayer3Args{
+//					Ips: scm.EthernetInterfaceLayer3IpArray{
+//						&scm.EthernetInterfaceLayer3IpArgs{
+//							Name: pulumi.String("198.18.1.1/24"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 ethernet interface with dhcp-assigned ip address
+//			_, err = scm.NewEthernetInterface(ctx, "scm_l3_intf_dhcp", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_l3_intf_dhcp"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.EthernetInterfaceLayer3Args{
+//					DhcpClient: &scm.EthernetInterfaceLayer3DhcpClientArgs{
+//						Enable:             pulumi.Bool(true),
+//						CreateDefaultRoute: pulumi.Bool(true),
+//						DefaultRouteMetric: pulumi.Int(10),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 ethernet interface with pppoe
+//			_, err = scm.NewEthernetInterface(ctx, "scm_l3_intf_pppoe", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_l3_intf_pppoe"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.EthernetInterfaceLayer3Args{
+//					Pppoe: &scm.EthernetInterfaceLayer3PppoeArgs{
+//						Authentication:     pulumi.String("auto"),
+//						Enable:             pulumi.Bool(true),
+//						Username:           pulumi.String("testname"),
+//						Password:           pulumi.String("testpass"),
+//						CreateDefaultRoute: true,
+//						DefaultRouteMetric: pulumi.Int(10),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 ethernet interface with multiple static ip addresses
+//			_, err = scm.NewEthernetInterface(ctx, "scm_l3_intf_complex", &scm.EthernetInterfaceArgs{
+//				Name:       pulumi.String("$scm_l3_intf_complex"),
+//				Comment:    pulumi.String("Managed by Pulumi"),
+//				Folder:     pulumi.String("ngfw-shared"),
+//				LinkSpeed:  pulumi.String("auto"),
+//				LinkDuplex: pulumi.String("full"),
+//				LinkState:  pulumi.String("auto"),
+//				Layer3: &scm.EthernetInterfaceLayer3Args{
+//					Ips: scm.EthernetInterfaceLayer3IpArray{
+//						&scm.EthernetInterfaceLayer3IpArgs{
+//							Name: pulumi.String("198.18.1.1/24"),
+//							Name: pulumi.String("198.18.1.2/32"),
+//						},
+//					},
+//					Mtu: pulumi.Int(1500),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type EthernetInterface struct {
 	pulumi.CustomResourceState
 

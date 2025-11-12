@@ -586,6 +586,161 @@ class HipObject(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # This resource creates a comprehensive HIP Object with many criteria enabled.
+        # This showcases the use of nested objects and lists of objects that the
+        # corrected provider schema now supports.
+        scm_hip_object1 = scm.HipObject("scm_hip_object_1",
+            folder="Shared",
+            name="scm_hip_object_1",
+            description="HIP object with multiple advanced criteria configured",
+            anti_malware={
+                "criteria": {
+                    "is_installed": True,
+                    "real_time_protection": "yes",
+                    "virdef_version": {
+                        "not_within": {
+                            "days": 10,
+                        },
+                    },
+                },
+                "vendors": [{
+                    "name": "Microsoft",
+                    "product": ["Microsoft Defender"],
+                }],
+            },
+            data_loss_prevention={
+                "criteria": {
+                    "is_installed": True,
+                    "is_enabled": "yes",
+                },
+                "vendors": [{
+                    "name": "Symantec",
+                }],
+            },
+            disk_backup={
+                "criteria": {
+                    "is_installed": True,
+                    "last_backup_time": {
+                        "within": {
+                            "days": 7,
+                        },
+                    },
+                },
+                "vendors": [{
+                    "name": "Veeam",
+                }],
+            },
+            disk_encryption={
+                "criteria": {
+                    "is_installed": True,
+                    "encrypted_locations": [
+                        {
+                            "name": "C:\\\\",
+                            "encryption_state": {
+                                "is_": "encrypted",
+                            },
+                        },
+                        {
+                            "name": "D:\\\\Users\\\\",
+                            "encryption_state": {
+                                "is_not": "unencrypted",
+                            },
+                        },
+                    ],
+                },
+                "vendors": [{
+                    "name": "BitLocker",
+                }],
+            },
+            firewall={
+                "criteria": {
+                    "is_installed": True,
+                    "is_enabled": "yes",
+                },
+                "vendors": [{
+                    "name": "Microsoft",
+                }],
+            },
+            host_info={
+                "criteria": {
+                    "os": {
+                        "contains": {
+                            "microsoft": "Microsoft Windows 11",
+                        },
+                    },
+                    "domain": {
+                        "is_": "corp.example.com",
+                    },
+                },
+            },
+            mobile_device={
+                "criteria": {
+                    "jailbroken": False,
+                    "passcode_set": True,
+                    "applications": {
+                        "has_unmanaged_app": False,
+                        "has_malware": {
+                            "no": {},
+                        },
+                    },
+                },
+            },
+            network_info={
+                "criteria": {
+                    "network": {
+                        "is_": {
+                            "wifi": {
+                                "ssid": "Corporate-WLAN",
+                            },
+                        },
+                    },
+                },
+            },
+            patch_management={
+                "criteria": {
+                    "is_installed": True,
+                    "missing_patches": {
+                        "check": "has-none",
+                        "patches": [
+                            "KB4012212",
+                            "KB4012213",
+                        ],
+                        "severity": {
+                            "greater_than": 5,
+                        },
+                    },
+                },
+                "vendors": [{
+                    "name": "Microsoft",
+                }],
+            },
+            custom_checks={
+                "criteria": {
+                    "process_lists": [
+                        {
+                            "name": "evil_process.exe",
+                            "running": False,
+                        },
+                        {
+                            "name": "corp_security_agent.exe",
+                            "running": True,
+                        },
+                    ],
+                    "registry_keys": [{
+                        "name": "HKEY_LOCAL_MACHINE\\\\Software\\\\PaloAltoNetworks",
+                        "registry_value": [{
+                            "name": "AllowRemoteAccess",
+                            "valueData": "false",
+                        }],
+                    }],
+                },
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['HipObjectAntiMalwareArgs', 'HipObjectAntiMalwareArgsDict']] anti_malware: Anti malware
@@ -615,6 +770,161 @@ class HipObject(pulumi.CustomResource):
         HipObject resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # This resource creates a comprehensive HIP Object with many criteria enabled.
+        # This showcases the use of nested objects and lists of objects that the
+        # corrected provider schema now supports.
+        scm_hip_object1 = scm.HipObject("scm_hip_object_1",
+            folder="Shared",
+            name="scm_hip_object_1",
+            description="HIP object with multiple advanced criteria configured",
+            anti_malware={
+                "criteria": {
+                    "is_installed": True,
+                    "real_time_protection": "yes",
+                    "virdef_version": {
+                        "not_within": {
+                            "days": 10,
+                        },
+                    },
+                },
+                "vendors": [{
+                    "name": "Microsoft",
+                    "product": ["Microsoft Defender"],
+                }],
+            },
+            data_loss_prevention={
+                "criteria": {
+                    "is_installed": True,
+                    "is_enabled": "yes",
+                },
+                "vendors": [{
+                    "name": "Symantec",
+                }],
+            },
+            disk_backup={
+                "criteria": {
+                    "is_installed": True,
+                    "last_backup_time": {
+                        "within": {
+                            "days": 7,
+                        },
+                    },
+                },
+                "vendors": [{
+                    "name": "Veeam",
+                }],
+            },
+            disk_encryption={
+                "criteria": {
+                    "is_installed": True,
+                    "encrypted_locations": [
+                        {
+                            "name": "C:\\\\",
+                            "encryption_state": {
+                                "is_": "encrypted",
+                            },
+                        },
+                        {
+                            "name": "D:\\\\Users\\\\",
+                            "encryption_state": {
+                                "is_not": "unencrypted",
+                            },
+                        },
+                    ],
+                },
+                "vendors": [{
+                    "name": "BitLocker",
+                }],
+            },
+            firewall={
+                "criteria": {
+                    "is_installed": True,
+                    "is_enabled": "yes",
+                },
+                "vendors": [{
+                    "name": "Microsoft",
+                }],
+            },
+            host_info={
+                "criteria": {
+                    "os": {
+                        "contains": {
+                            "microsoft": "Microsoft Windows 11",
+                        },
+                    },
+                    "domain": {
+                        "is_": "corp.example.com",
+                    },
+                },
+            },
+            mobile_device={
+                "criteria": {
+                    "jailbroken": False,
+                    "passcode_set": True,
+                    "applications": {
+                        "has_unmanaged_app": False,
+                        "has_malware": {
+                            "no": {},
+                        },
+                    },
+                },
+            },
+            network_info={
+                "criteria": {
+                    "network": {
+                        "is_": {
+                            "wifi": {
+                                "ssid": "Corporate-WLAN",
+                            },
+                        },
+                    },
+                },
+            },
+            patch_management={
+                "criteria": {
+                    "is_installed": True,
+                    "missing_patches": {
+                        "check": "has-none",
+                        "patches": [
+                            "KB4012212",
+                            "KB4012213",
+                        ],
+                        "severity": {
+                            "greater_than": 5,
+                        },
+                    },
+                },
+                "vendors": [{
+                    "name": "Microsoft",
+                }],
+            },
+            custom_checks={
+                "criteria": {
+                    "process_lists": [
+                        {
+                            "name": "evil_process.exe",
+                            "running": False,
+                        },
+                        {
+                            "name": "corp_security_agent.exe",
+                            "running": True,
+                        },
+                    ],
+                    "registry_keys": [{
+                        "name": "HKEY_LOCAL_MACHINE\\\\Software\\\\PaloAltoNetworks",
+                        "registry_value": [{
+                            "name": "AllowRemoteAccess",
+                            "valueData": "false",
+                        }],
+                    }],
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param HipObjectArgs args: The arguments to use to populate this resource's properties.

@@ -25,6 +25,148 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.EthernetInterface;
+ * import com.pulumi.scm.EthernetInterfaceArgs;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer2Args;
+ * import com.pulumi.scm.inputs.EthernetInterfaceTapArgs;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3DhcpClientArgs;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3PppoeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a layer 2 ethernet interface without vlan configuration
+ *         //
+ *         var scmL2Intf = new EthernetInterface("scmL2Intf", EthernetInterfaceArgs.builder()
+ *             .name("$scm_l2_intf")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .linkSpeed("auto")
+ *             .linkDuplex("full")
+ *             .linkState("auto")
+ *             .layer2(EthernetInterfaceLayer2Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a tap ethernet interface without vlan configuration
+ *         //
+ *         var scmTapIntf = new EthernetInterface("scmTapIntf", EthernetInterfaceArgs.builder()
+ *             .name("$scm_tap_intf")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .linkSpeed("auto")
+ *             .linkDuplex("full")
+ *             .linkState("auto")
+ *             .tap(EthernetInterfaceTapArgs.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 ethernet interface without ip configuration
+ *         //
+ *         var scmL3Intf = new EthernetInterface("scmL3Intf", EthernetInterfaceArgs.builder()
+ *             .name("$scm_l3_intf")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .linkSpeed("auto")
+ *             .linkDuplex("full")
+ *             .linkState("auto")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 ethernet interface with static ip address
+ *         //
+ *         var scmL3IntfStatic = new EthernetInterface("scmL3IntfStatic", EthernetInterfaceArgs.builder()
+ *             .name("$scm_l3_intf_static")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .ips(EthernetInterfaceLayer3IpArgs.builder()
+ *                     .name("198.18.1.1/24")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 ethernet interface with dhcp-assigned ip address
+ *         //
+ *         var scmL3IntfDhcp = new EthernetInterface("scmL3IntfDhcp", EthernetInterfaceArgs.builder()
+ *             .name("$scm_l3_intf_dhcp")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .dhcpClient(EthernetInterfaceLayer3DhcpClientArgs.builder()
+ *                     .enable(true)
+ *                     .createDefaultRoute(true)
+ *                     .defaultRouteMetric(10)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 ethernet interface with pppoe
+ *         //
+ *         var scmL3IntfPppoe = new EthernetInterface("scmL3IntfPppoe", EthernetInterfaceArgs.builder()
+ *             .name("$scm_l3_intf_pppoe")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .pppoe(EthernetInterfaceLayer3PppoeArgs.builder()
+ *                     .authentication("auto")
+ *                     .enable(true)
+ *                     .username("testname")
+ *                     .password("testpass")
+ *                     .createDefaultRoute(true)
+ *                     .defaultRouteMetric(10)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 ethernet interface with multiple static ip addresses
+ *         //
+ *         var scmL3IntfComplex = new EthernetInterface("scmL3IntfComplex", EthernetInterfaceArgs.builder()
+ *             .name("$scm_l3_intf_complex")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .linkSpeed("auto")
+ *             .linkDuplex("full")
+ *             .linkState("auto")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .ips(EthernetInterfaceLayer3IpArgs.builder()
+ *                     .name("198.18.1.1/24")
+ *                     .name("198.18.1.2/32")
+ *                     .build())
+ *                 .mtu(1500)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/ethernetInterface:EthernetInterface")
 public class EthernetInterface extends com.pulumi.resources.CustomResource {

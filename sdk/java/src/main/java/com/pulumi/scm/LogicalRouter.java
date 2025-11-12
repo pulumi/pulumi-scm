@@ -21,6 +21,173 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Variable;
+ * import com.pulumi.scm.VariableArgs;
+ * import com.pulumi.scm.EthernetInterface;
+ * import com.pulumi.scm.EthernetInterfaceArgs;
+ * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
+ * import com.pulumi.scm.BgpAuthProfile;
+ * import com.pulumi.scm.BgpAuthProfileArgs;
+ * import com.pulumi.scm.LogicalRouter;
+ * import com.pulumi.scm.LogicalRouterArgs;
+ * import com.pulumi.scm.inputs.LogicalRouterVrfArgs;
+ * import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableArgs;
+ * import com.pulumi.scm.inputs.LogicalRouterVrfRoutingTableIpArgs;
+ * import com.pulumi.scm.inputs.LogicalRouterVrfBgpArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates various resources used for subsequent examples
+ *         //
+ *         var scmNextHop = new Variable("scmNextHop", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_next_hop")
+ *             .description("Managed by Pulumi")
+ *             .type("ip-netmask")
+ *             .value("198.18.1.1")
+ *             .build());
+ * 
+ *         var scmNextHopFqdn = new Variable("scmNextHopFqdn", VariableArgs.builder()
+ *             .folder("All")
+ *             .name("$scm_next_hop_fqdn")
+ *             .description("Managed by Pulumi")
+ *             .type("fqdn")
+ *             .value("nexthop.example.com")
+ *             .build());
+ * 
+ *         var scmEthernetInterface = new EthernetInterface("scmEthernetInterface", EthernetInterfaceArgs.builder()
+ *             .name("$scm_ethernet_interface")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .ips(EthernetInterfaceLayer3IpArgs.builder()
+ *                     .name("198.18.11.1/24")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmBgpInterface = new EthernetInterface("scmBgpInterface", EthernetInterfaceArgs.builder()
+ *             .name("$scm_bgp_interface")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(EthernetInterfaceLayer3Args.builder()
+ *                 .ips(EthernetInterfaceLayer3IpArgs.builder()
+ *                     .name("198.18.12.1/24")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var bgpAuthProfile = new BgpAuthProfile("bgpAuthProfile", BgpAuthProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("bgp_auth_profile")
+ *             .secret("Example123")
+ *             .build());
+ * 
+ *         //
+ *         // Creates a logical router with static routes
+ *         //
+ *         var scmLogicalRouter = new LogicalRouter("scmLogicalRouter", LogicalRouterArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_logical_router")
+ *             .routingStack("advanced")
+ *             .vrves(LogicalRouterVrfArgs.builder()
+ *                 .name("default")
+ *                 .interface_(List.of("$scm_ethernet_interface"))
+ *                 .routingTable(LogicalRouterVrfRoutingTableArgs.builder()
+ *                     .ip(LogicalRouterVrfRoutingTableIpArgs.builder()
+ *                         .staticRoute(List.of(                        
+ *                             Map.ofEntries(
+ *                                 Map.entry("name", "default-route"),
+ *                                 Map.entry("destination", "0.0.0.0/0"),
+ *                                 Map.entry("preference", 10),
+ *                                 Map.entry("nexthop", Map.of("ipAddress", "198.18.1.1"))
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry("name", "internal-route"),
+ *                                 Map.entry("interface", "$scm_ethernet_interface"),
+ *                                 Map.entry("destination", "192.168.1.0/24"),
+ *                                 Map.entry("preference", 1),
+ *                                 Map.entry("nexthop", Map.of("ipAddress", "$scm_next_hop"))
+ *                             ),
+ *                             Map.ofEntries(
+ *                                 Map.entry("name", "route-with-fqdn-nh"),
+ *                                 Map.entry("interface", "$scm_ethernet_interface"),
+ *                                 Map.entry("destination", "192.168.2.0/24"),
+ *                                 Map.entry("preference", 1),
+ *                                 Map.entry("nexthop", Map.of("fqdn", "$scm_next_hop")),
+ *                                 Map.entry("bfd", Map.of("profile", "default"))
+ *                             )))
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(                
+ *                     scmNextHop,
+ *                     scmNextHopFqdn,
+ *                     scmEthernetInterface)
+ *                 .build());
+ * 
+ *         //
+ *         // Creates a logical router with bgp configuration
+ *         //
+ *         var scmBgpRouter = new LogicalRouter("scmBgpRouter", LogicalRouterArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_router")
+ *             .routingStack("advanced")
+ *             .vrves(LogicalRouterVrfArgs.builder()
+ *                 .name("default")
+ *                 .interface_(List.of("$scm_bgp_interface"))
+ *                 .bgp(LogicalRouterVrfBgpArgs.builder()
+ *                     .enable(true)
+ *                     .routerId("198.18.1.254")
+ *                     .localAs("65535")
+ *                     .installRoute(true)
+ *                     .rejectDefaultRoute(false)
+ *                     .peerGroup(List.of(Map.ofEntries(
+ *                         Map.entry("name", "prisma-access"),
+ *                         Map.entry("addressFamily", Map.of("ipv4", "default")),
+ *                         Map.entry("connectionOptions", Map.of("authentication", "bgp_auth_profile")),
+ *                         Map.entry("peer", List.of(Map.ofEntries(
+ *                             Map.entry("name", "primary-access-primary"),
+ *                             Map.entry("enable", true),
+ *                             Map.entry("peerAs", 65515),
+ *                             Map.entry("peerAddress", Map.of("ip", "198.18.1.100")),
+ *                             Map.entry("localAddress", Map.of("interface", "$scm_bgp_interface")),
+ *                             Map.entry("connectionOptions", Map.of("multihop", "3"))
+ *                         )))
+ *                     )))
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(                
+ *                     scmBgpInterface,
+ *                     bgpAuthProfile)
+ *                 .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/logicalRouter:LogicalRouter")
 public class LogicalRouter extends com.pulumi.resources.CustomResource {

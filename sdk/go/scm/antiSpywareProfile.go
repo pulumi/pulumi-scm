@@ -14,6 +14,81 @@ import (
 // AntiSpywareProfile resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Basic Anti-Spyware Profile
+//			_, err := scm.NewAntiSpywareProfile(ctx, "scm_anti_spyware_profile_1", &scm.AntiSpywareProfileArgs{
+//				Folder:              pulumi.String("All"),
+//				Name:                pulumi.String("scm_anti_spyware_profile_1"),
+//				Description:         pulumi.String("Managed by Pulumi"),
+//				CloudInlineAnalysis: pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Required object that will be referenced in examples
+//			scmAddress1, err := scm.NewAddress(ctx, "scm_address_1", &scm.AddressArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_address_1"),
+//				Description: pulumi.String("Made by Pulumi"),
+//				IpNetmask:   pulumi.String("10.2.3.4"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Anti-Spyware Profile with exception EDL
+//			_, err = scm.NewAntiSpywareProfile(ctx, "scm_anti_spyware_profile_2", &scm.AntiSpywareProfileArgs{
+//				Folder:              pulumi.String("All"),
+//				Name:                pulumi.String("scm_anti_spyware_profile_2"),
+//				Description:         pulumi.String("Managed by Pulumi"),
+//				CloudInlineAnalysis: pulumi.Bool(true),
+//				InlineExceptionIpAddresses: pulumi.StringArray{
+//					pulumi.String("scm_address_1"),
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmAddress1,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			// Anti-Spyware Profile with rules
+//			_, err = scm.NewAntiSpywareProfile(ctx, "scm_anti_spyware_profile_3", &scm.AntiSpywareProfileArgs{
+//				Folder:              pulumi.String("All"),
+//				Name:                pulumi.String("scm_anti_spyware_profile_3"),
+//				Description:         pulumi.String("Managed by Pulumi"),
+//				CloudInlineAnalysis: pulumi.Bool(true),
+//				Rules: scm.AntiSpywareProfileRuleArray{
+//					&scm.AntiSpywareProfileRuleArgs{
+//						Name:          pulumi.String("Custom Rule"),
+//						Notes:         "Managed by Pulumi",
+//						PacketCapture: pulumi.String("single-packet"),
+//						Category:      pulumi.String("net-worm"),
+//						Severity: []string{
+//							"critical",
+//						},
+//						ThreatName: pulumi.String("data-theft"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type AntiSpywareProfile struct {
 	pulumi.CustomResourceState
 
