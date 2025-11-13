@@ -10,6 +10,40 @@ import * as utilities from "./utilities";
  * AntiSpywareSignature resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmAntiSpywareSignature1 = new scm.AntiSpywareSignature("scm_anti_spyware_signature_1", {
+ *     folder: "All",
+ *     threatId: "6900001",
+ *     comment: "Managed by Pulumi",
+ *     direction: "client2server",
+ *     severity: "critical",
+ *     threatname: "Example Threat",
+ *     defaultAction: {
+ *         alert: {},
+ *     },
+ *     signature: {
+ *         combination: {
+ *             andConditions: [{
+ *                 name: "And Condition 1",
+ *                 orCondition: [{
+ *                     name: "Test",
+ *                     threat_id: "10001",
+ *                 }],
+ *             }],
+ *             orderFree: false,
+ *             timeAttribute: {
+ *                 interval: 3600,
+ *                 threshold: 60,
+ *                 trackBy: "source",
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
  */
 export class AntiSpywareSignature extends pulumi.CustomResource {
     /**

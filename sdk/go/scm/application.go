@@ -15,6 +15,100 @@ import (
 // Application resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Custom Application
+//			_, err := scm.NewApplication(ctx, "scm_media_app", &scm.ApplicationArgs{
+//				Folder:                pulumi.String("All"),
+//				Name:                  pulumi.String("scm_media_app"),
+//				Description:           pulumi.String("Managed by Pulumi"),
+//				Category:              pulumi.String("media"),
+//				Subcategory:           pulumi.String("gaming"),
+//				Technology:            pulumi.String("client-server"),
+//				Risk:                  pulumi.String("4"),
+//				EvasiveBehavior:       pulumi.Bool(true),
+//				PervasiveUse:          pulumi.Bool(true),
+//				ConsumeBigBandwidth:   pulumi.Bool(true),
+//				HasKnownVulnerability: pulumi.Bool(true),
+//				ProneToMisuse:         pulumi.Bool(true),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Custom Application with tweaked timeouts and additional settings
+//			_, err = scm.NewApplication(ctx, "scm_risky_app", &scm.ApplicationArgs{
+//				Folder:                 pulumi.String("All"),
+//				Name:                   pulumi.String("scm_risky_app"),
+//				Description:            pulumi.String("Managed by Pulumi"),
+//				Category:               pulumi.String("media"),
+//				Subcategory:            pulumi.String("gaming"),
+//				Technology:             pulumi.String("client-server"),
+//				Risk:                   pulumi.String("4"),
+//				Timeout:                pulumi.Int(3600),
+//				TcpTimeout:             pulumi.Int(3600),
+//				TcpHalfClosedTimeout:   pulumi.Int(60),
+//				TcpTimeWaitTimeout:     pulumi.Int(10),
+//				EvasiveBehavior:        pulumi.Bool(true),
+//				PervasiveUse:           pulumi.Bool(true),
+//				ConsumeBigBandwidth:    pulumi.Bool(true),
+//				HasKnownVulnerability:  pulumi.Bool(true),
+//				ProneToMisuse:          pulumi.Bool(true),
+//				TunnelOtherApplication: pulumi.Bool(true),
+//				TunnelApplications:     pulumi.Bool(true),
+//				NoAppidCaching:         pulumi.Bool(true),
+//				ParentApp:              pulumi.String("bittorrent"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Custom Application based on Custom Signature
+//			_, err = scm.NewApplication(ctx, "scm_custom_app", &scm.ApplicationArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("scm_custom_app"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Category:    pulumi.String("media"),
+//				Subcategory: pulumi.String("gaming"),
+//				Technology:  pulumi.String("client-server"),
+//				Risk:        pulumi.String("4"),
+//				Signatures: scm.ApplicationSignatureArray{
+//					&scm.ApplicationSignatureArgs{
+//						Name:      pulumi.String("Custom Signature"),
+//						Comment:   pulumi.String("Managed by Pulumi"),
+//						Scope:     pulumi.String("session"),
+//						OrderFree: pulumi.Bool(false),
+//						AndCondition: []map[string]interface{}{
+//							map[string]interface{}{
+//								"name": "Example Condition",
+//								"operator": map[string]interface{}{
+//									"patternMatch": map[string]interface{}{
+//										"context": "file-data",
+//										"pattern": "^malware$",
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type Application struct {
 	pulumi.CustomResourceState
 

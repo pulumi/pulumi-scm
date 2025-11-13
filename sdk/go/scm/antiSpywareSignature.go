@@ -15,6 +15,59 @@ import (
 // AntiSpywareSignature resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewAntiSpywareSignature(ctx, "scm_anti_spyware_signature_1", &scm.AntiSpywareSignatureArgs{
+//				Folder:     pulumi.String("All"),
+//				ThreatId:   pulumi.String("6900001"),
+//				Comment:    pulumi.String("Managed by Pulumi"),
+//				Direction:  pulumi.String("client2server"),
+//				Severity:   pulumi.String("critical"),
+//				Threatname: pulumi.String("Example Threat"),
+//				DefaultAction: &scm.AntiSpywareSignatureDefaultActionArgs{
+//					Alert: &scm.AntiSpywareSignatureDefaultActionAlertArgs{},
+//				},
+//				Signature: &scm.AntiSpywareSignatureSignatureArgs{
+//					Combination: &scm.AntiSpywareSignatureSignatureCombinationArgs{
+//						AndConditions: scm.AntiSpywareSignatureSignatureCombinationAndConditionArray{
+//							&scm.AntiSpywareSignatureSignatureCombinationAndConditionArgs{
+//								Name: pulumi.String("And Condition 1"),
+//								OrCondition: []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":      "Test",
+//										"threat_id": "10001",
+//									},
+//								},
+//							},
+//						},
+//						OrderFree: pulumi.Bool(false),
+//						TimeAttribute: &scm.AntiSpywareSignatureSignatureCombinationTimeAttributeArgs{
+//							Interval:  pulumi.Int(3600),
+//							Threshold: pulumi.Int(60),
+//							TrackBy:   pulumi.String("source"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type AntiSpywareSignature struct {
 	pulumi.CustomResourceState
 

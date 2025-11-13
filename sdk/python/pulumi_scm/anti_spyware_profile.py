@@ -421,6 +421,46 @@ class AntiSpywareProfile(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # Basic Anti-Spyware Profile
+        scm_anti_spyware_profile1 = scm.AntiSpywareProfile("scm_anti_spyware_profile_1",
+            folder="All",
+            name="scm_anti_spyware_profile_1",
+            description="Managed by Pulumi",
+            cloud_inline_analysis=True)
+        # Required object that will be referenced in examples
+        scm_address1 = scm.Address("scm_address_1",
+            folder="Shared",
+            name="scm_address_1",
+            description="Made by Pulumi",
+            ip_netmask="10.2.3.4")
+        # Anti-Spyware Profile with exception EDL
+        scm_anti_spyware_profile2 = scm.AntiSpywareProfile("scm_anti_spyware_profile_2",
+            folder="All",
+            name="scm_anti_spyware_profile_2",
+            description="Managed by Pulumi",
+            cloud_inline_analysis=True,
+            inline_exception_ip_addresses=["scm_address_1"],
+            opts = pulumi.ResourceOptions(depends_on=[scm_address1]))
+        # Anti-Spyware Profile with rules
+        scm_anti_spyware_profile3 = scm.AntiSpywareProfile("scm_anti_spyware_profile_3",
+            folder="All",
+            name="scm_anti_spyware_profile_3",
+            description="Managed by Pulumi",
+            cloud_inline_analysis=True,
+            rules=[{
+                "name": "Custom Rule",
+                "notes": "Managed by Pulumi",
+                "packet_capture": "single-packet",
+                "category": "net-worm",
+                "severity": ["critical"],
+                "threat_name": "data-theft",
+            }])
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] cloud_inline_analysis: Cloud inline analysis
@@ -445,6 +485,46 @@ class AntiSpywareProfile(pulumi.CustomResource):
         AntiSpywareProfile resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        # Basic Anti-Spyware Profile
+        scm_anti_spyware_profile1 = scm.AntiSpywareProfile("scm_anti_spyware_profile_1",
+            folder="All",
+            name="scm_anti_spyware_profile_1",
+            description="Managed by Pulumi",
+            cloud_inline_analysis=True)
+        # Required object that will be referenced in examples
+        scm_address1 = scm.Address("scm_address_1",
+            folder="Shared",
+            name="scm_address_1",
+            description="Made by Pulumi",
+            ip_netmask="10.2.3.4")
+        # Anti-Spyware Profile with exception EDL
+        scm_anti_spyware_profile2 = scm.AntiSpywareProfile("scm_anti_spyware_profile_2",
+            folder="All",
+            name="scm_anti_spyware_profile_2",
+            description="Managed by Pulumi",
+            cloud_inline_analysis=True,
+            inline_exception_ip_addresses=["scm_address_1"],
+            opts = pulumi.ResourceOptions(depends_on=[scm_address1]))
+        # Anti-Spyware Profile with rules
+        scm_anti_spyware_profile3 = scm.AntiSpywareProfile("scm_anti_spyware_profile_3",
+            folder="All",
+            name="scm_anti_spyware_profile_3",
+            description="Managed by Pulumi",
+            cloud_inline_analysis=True,
+            rules=[{
+                "name": "Custom Rule",
+                "notes": "Managed by Pulumi",
+                "packet_capture": "single-packet",
+                "category": "net-worm",
+                "severity": ["critical"],
+                "threat_name": "data-theft",
+            }])
+        ```
 
         :param str resource_name: The name of the resource.
         :param AntiSpywareProfileArgs args: The arguments to use to populate this resource's properties.

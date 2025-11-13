@@ -10,6 +10,130 @@ import * as utilities from "./utilities";
  * DnsSecurityProfile resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmDnsSecurityProfileBase = new scm.DnsSecurityProfile("scm_dns_security_profile_base", {
+ *     folder: "All",
+ *     name: "dns_base",
+ * });
+ * const scmDnsSecurityCategories = new scm.DnsSecurityProfile("scm_dns_security_categories", {
+ *     folder: "All",
+ *     name: "test_dns_sec_categories",
+ *     description: "dns security profile w/ dns security categories",
+ *     botnetDomains: {
+ *         dnsSecurityCategories: [
+ *             {
+ *                 name: "pan-dns-sec-recent",
+ *             },
+ *             {
+ *                 name: "pan-dns-sec-grayware",
+ *                 action: "allow",
+ *                 logLevel: "high",
+ *                 packetCapture: "disable",
+ *             },
+ *             {
+ *                 name: "pan-dns-sec-proxy",
+ *                 action: "block",
+ *                 logLevel: "default",
+ *                 packetCapture: "single-packet",
+ *             },
+ *             {
+ *                 name: "pan-dns-sec-phishing",
+ *                 action: "sinkhole",
+ *                 logLevel: "critical",
+ *                 packetCapture: "extended-capture",
+ *             },
+ *             {
+ *                 name: "pan-dns-sec-malware",
+ *                 action: "default",
+ *                 logLevel: "informational",
+ *                 packetCapture: "disable",
+ *             },
+ *         ],
+ *     },
+ * });
+ * const scmDnsLists = new scm.DnsSecurityProfile("scm_dns_lists", {
+ *     folder: "All",
+ *     name: "test_dns_lists",
+ *     description: "dns security profile w/ dns lists",
+ *     botnetDomains: {
+ *         dnsLists: [
+ *             {
+ *                 name: "default-paloalto-dns",
+ *                 packetCapture: "disable",
+ *                 action: {
+ *                     alert: {},
+ *                 },
+ *             },
+ *             {
+ *                 name: "update-edl",
+ *                 packetCapture: "extended-capture",
+ *                 action: {
+ *                     allow: {},
+ *                 },
+ *             },
+ *         ],
+ *     },
+ * });
+ * const scmDnsSinkhole = new scm.DnsSecurityProfile("scm_dns_sinkhole", {
+ *     folder: "All",
+ *     name: "test_dns_sinkhole",
+ *     description: "dns security profile w/ sinkhole",
+ *     botnetDomains: {
+ *         sinkhole: {
+ *             ipv4Address: "127.0.0.1",
+ *             ipv6Address: "::1",
+ *         },
+ *     },
+ * });
+ * const scmDnsWhitelist = new scm.DnsSecurityProfile("scm_dns_whitelist", {
+ *     folder: "All",
+ *     name: "test_dns_whitelist",
+ *     description: "dns security profile w/ whitelist",
+ *     botnetDomains: {
+ *         whitelists: [
+ *             {
+ *                 name: "example.com",
+ *             },
+ *             {
+ *                 name: "example2.com",
+ *                 description: "creating whitelist",
+ *             },
+ *         ],
+ *     },
+ * });
+ * const scmDnsAll = new scm.DnsSecurityProfile("scm_dns_all", {
+ *     folder: "All",
+ *     name: "test_dns_all_test",
+ *     description: "dns security profile w/ all",
+ *     botnetDomains: {
+ *         dnsSecurityCategories: [{
+ *             name: "pan-dns-sec-ddns",
+ *             action: "block",
+ *             logLevel: "low",
+ *             packetCapture: "disable",
+ *         }],
+ *         dnsLists: [{
+ *             name: "scm_edl_1",
+ *             packetCapture: "single-packet",
+ *             action: {
+ *                 block: {},
+ *             },
+ *         }],
+ *         sinkhole: {
+ *             ipv4Address: "pan-sinkhole-default-ip",
+ *             ipv6Address: "::1",
+ *         },
+ *         whitelists: [{
+ *             name: "ebay.com",
+ *             description: "creating whitelist",
+ *         }],
+ *     },
+ * });
+ * ```
  */
 export class DnsSecurityProfile extends pulumi.CustomResource {
     /**

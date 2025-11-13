@@ -21,6 +21,131 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.AggregateInterface;
+ * import com.pulumi.scm.AggregateInterfaceArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer2Args;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer2LacpArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer3Args;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer3LacpArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer3DhcpClientArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates a layer 2 aggregate interface without vlan configuration
+ *         //
+ *         var scmAggregateIntfL2 = new AggregateInterface("scmAggregateIntfL2", AggregateInterfaceArgs.builder()
+ *             .name("$scm_aggregate_intf_l2")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer2(AggregateInterfaceLayer2Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer 2 aggregate interface with vlan and lacp configuration
+ *         //
+ *         var scmAggregateIntfL2Lacp = new AggregateInterface("scmAggregateIntfL2Lacp", AggregateInterfaceArgs.builder()
+ *             .name("$scm_aggregate_intf_l2_lacp")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer2(AggregateInterfaceLayer2Args.builder()
+ *                 .vlanTag("1234")
+ *                 .lacp(AggregateInterfaceLayer2LacpArgs.builder()
+ *                     .enable(true)
+ *                     .fastFailover(true)
+ *                     .systenPriority(32768)
+ *                     .transmissionRate("fast")
+ *                     .build())
+ *                 .lldp(Map.of("enable", false))
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 aggregate interface without ip configuration
+ *         //
+ *         var scmAggregateIntfL3 = new AggregateInterface("scmAggregateIntfL3", AggregateInterfaceArgs.builder()
+ *             .name("$scm_aggregate_intf_l3")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(AggregateInterfaceLayer3Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 aggregate interface with static ip address and lacp
+ *         //
+ *         var scmAggregateIntfL3Static = new AggregateInterface("scmAggregateIntfL3Static", AggregateInterfaceArgs.builder()
+ *             .name("$scm_aggregate_intf_l3_static")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(AggregateInterfaceLayer3Args.builder()
+ *                 .ips(AggregateInterfaceLayer3IpArgs.builder()
+ *                     .name("198.18.1.1/24")
+ *                     .build())
+ *                 .lacp(AggregateInterfaceLayer3LacpArgs.builder()
+ *                     .enable(true)
+ *                     .fastFailover(true)
+ *                     .systenPriority(32768)
+ *                     .transmissionRate("fast")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 aggregate interface with dhcp-assigned ip address
+ *         //
+ *         var scmAggregateIntfL3Dhcp = new AggregateInterface("scmAggregateIntfL3Dhcp", AggregateInterfaceArgs.builder()
+ *             .name("$scm_aggregate_intf_l3_dhcp")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(AggregateInterfaceLayer3Args.builder()
+ *                 .dhcpClient(AggregateInterfaceLayer3DhcpClientArgs.builder()
+ *                     .enable(true)
+ *                     .createDefaultRoute(true)
+ *                     .defaultRouteMetric(10)
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a layer3 aggregate interface with multiple static ip addresses
+ *         //
+ *         var scmAggregateIntfL3Complex = new AggregateInterface("scmAggregateIntfL3Complex", AggregateInterfaceArgs.builder()
+ *             .name("$scm_aggregate_intf_l3_complex")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer3(AggregateInterfaceLayer3Args.builder()
+ *                 .ips(AggregateInterfaceLayer3IpArgs.builder()
+ *                     .name("198.18.1.1/24")
+ *                     .name("198.18.1.2/32")
+ *                     .build())
+ *                 .mtu(1500)
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/aggregateInterface:AggregateInterface")
 public class AggregateInterface extends com.pulumi.resources.CustomResource {

@@ -2128,12 +2128,96 @@ public final class ScmFunctions {
     /**
      * AntiSpywareSignature data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up anti-spyware-profile by ID
+     *         final var scmAntiSpywareSignatureDs = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
+     *             .id("7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+     *             .build());
+     * 
+     *         ctx.export("scmAntiSpywareSignatureOutput", Map.ofEntries(
+     *             Map.entry("threadId", scmAntiSpywareSignatureDs.id()),
+     *             Map.entry("folder", scmAntiSpywareSignatureDs.folder()),
+     *             Map.entry("name", scmAntiSpywareSignatureDs.name()),
+     *             Map.entry("comment", scmAntiSpywareSignatureDs.comment()),
+     *             Map.entry("severity", scmAntiSpywareSignatureDs.severity()),
+     *             Map.entry("signature", scmAntiSpywareSignatureDs.signature())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAntiSpywareSignatureResult> getAntiSpywareSignature(GetAntiSpywareSignatureArgs args) {
         return getAntiSpywareSignature(args, InvokeOptions.Empty);
     }
     /**
      * AntiSpywareSignature data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up anti-spyware-profile by ID
+     *         final var scmAntiSpywareSignatureDs = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
+     *             .id("7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+     *             .build());
+     * 
+     *         ctx.export("scmAntiSpywareSignatureOutput", Map.ofEntries(
+     *             Map.entry("threadId", scmAntiSpywareSignatureDs.id()),
+     *             Map.entry("folder", scmAntiSpywareSignatureDs.folder()),
+     *             Map.entry("name", scmAntiSpywareSignatureDs.name()),
+     *             Map.entry("comment", scmAntiSpywareSignatureDs.comment()),
+     *             Map.entry("severity", scmAntiSpywareSignatureDs.severity()),
+     *             Map.entry("signature", scmAntiSpywareSignatureDs.signature())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetAntiSpywareSignatureResult> getAntiSpywareSignaturePlain(GetAntiSpywareSignaturePlainArgs args) {
@@ -2142,6 +2226,48 @@ public final class ScmFunctions {
     /**
      * AntiSpywareSignature data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up anti-spyware-profile by ID
+     *         final var scmAntiSpywareSignatureDs = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
+     *             .id("7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+     *             .build());
+     * 
+     *         ctx.export("scmAntiSpywareSignatureOutput", Map.ofEntries(
+     *             Map.entry("threadId", scmAntiSpywareSignatureDs.id()),
+     *             Map.entry("folder", scmAntiSpywareSignatureDs.folder()),
+     *             Map.entry("name", scmAntiSpywareSignatureDs.name()),
+     *             Map.entry("comment", scmAntiSpywareSignatureDs.comment()),
+     *             Map.entry("severity", scmAntiSpywareSignatureDs.severity()),
+     *             Map.entry("signature", scmAntiSpywareSignatureDs.signature())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAntiSpywareSignatureResult> getAntiSpywareSignature(GetAntiSpywareSignatureArgs args, InvokeOptions options) {
         return Deployment.getInstance().invoke("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", TypeShape.of(GetAntiSpywareSignatureResult.class), args, Utilities.withVersion(options));
@@ -2149,12 +2275,96 @@ public final class ScmFunctions {
     /**
      * AntiSpywareSignature data source
      * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up anti-spyware-profile by ID
+     *         final var scmAntiSpywareSignatureDs = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
+     *             .id("7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+     *             .build());
+     * 
+     *         ctx.export("scmAntiSpywareSignatureOutput", Map.ofEntries(
+     *             Map.entry("threadId", scmAntiSpywareSignatureDs.id()),
+     *             Map.entry("folder", scmAntiSpywareSignatureDs.folder()),
+     *             Map.entry("name", scmAntiSpywareSignatureDs.name()),
+     *             Map.entry("comment", scmAntiSpywareSignatureDs.comment()),
+     *             Map.entry("severity", scmAntiSpywareSignatureDs.severity()),
+     *             Map.entry("signature", scmAntiSpywareSignatureDs.signature())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
+     * 
      */
     public static Output<GetAntiSpywareSignatureResult> getAntiSpywareSignature(GetAntiSpywareSignatureArgs args, InvokeOutputOptions options) {
         return Deployment.getInstance().invoke("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", TypeShape.of(GetAntiSpywareSignatureResult.class), args, Utilities.withVersion(options));
     }
     /**
      * AntiSpywareSignature data source
+     * 
+     * ## Example Usage
+     * 
+     * <pre>
+     * {@code
+     * package generated_program;
+     * 
+     * import com.pulumi.Context;
+     * import com.pulumi.Pulumi;
+     * import com.pulumi.core.Output;
+     * import com.pulumi.scm.ScmFunctions;
+     * import com.pulumi.scm.inputs.GetAntiSpywareSignatureArgs;
+     * import java.util.List;
+     * import java.util.ArrayList;
+     * import java.util.Map;
+     * import java.io.File;
+     * import java.nio.file.Files;
+     * import java.nio.file.Paths;
+     * 
+     * public class App {
+     *     public static void main(String[] args) {
+     *         Pulumi.run(App::stack);
+     *     }
+     * 
+     *     public static void stack(Context ctx) {
+     *         // Look up anti-spyware-profile by ID
+     *         final var scmAntiSpywareSignatureDs = ScmFunctions.getAntiSpywareSignature(GetAntiSpywareSignatureArgs.builder()
+     *             .id("7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+     *             .build());
+     * 
+     *         ctx.export("scmAntiSpywareSignatureOutput", Map.ofEntries(
+     *             Map.entry("threadId", scmAntiSpywareSignatureDs.id()),
+     *             Map.entry("folder", scmAntiSpywareSignatureDs.folder()),
+     *             Map.entry("name", scmAntiSpywareSignatureDs.name()),
+     *             Map.entry("comment", scmAntiSpywareSignatureDs.comment()),
+     *             Map.entry("severity", scmAntiSpywareSignatureDs.severity()),
+     *             Map.entry("signature", scmAntiSpywareSignatureDs.signature())
+     *         ));
+     *     }
+     * }
+     * }
+     * </pre>
      * 
      */
     public static CompletableFuture<GetAntiSpywareSignatureResult> getAntiSpywareSignaturePlain(GetAntiSpywareSignaturePlainArgs args, InvokeOptions options) {

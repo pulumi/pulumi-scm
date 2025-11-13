@@ -13,6 +13,145 @@ namespace Pulumi.Scm
     /// EthernetInterface resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates a layer 2 ethernet interface without vlan configuration
+    ///     //
+    ///     var scmL2Intf = new Scm.EthernetInterface("scm_l2_intf", new()
+    ///     {
+    ///         Name = "$scm_l2_intf",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         LinkSpeed = "auto",
+    ///         LinkDuplex = "full",
+    ///         LinkState = "auto",
+    ///         Layer2 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a tap ethernet interface without vlan configuration
+    ///     //
+    ///     var scmTapIntf = new Scm.EthernetInterface("scm_tap_intf", new()
+    ///     {
+    ///         Name = "$scm_tap_intf",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         LinkSpeed = "auto",
+    ///         LinkDuplex = "full",
+    ///         LinkState = "auto",
+    ///         Tap = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 ethernet interface without ip configuration
+    ///     //
+    ///     var scmL3Intf = new Scm.EthernetInterface("scm_l3_intf", new()
+    ///     {
+    ///         Name = "$scm_l3_intf",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         LinkSpeed = "auto",
+    ///         LinkDuplex = "full",
+    ///         LinkState = "auto",
+    ///         Layer3 = null,
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 ethernet interface with static ip address
+    ///     //
+    ///     var scmL3IntfStatic = new Scm.EthernetInterface("scm_l3_intf_static", new()
+    ///     {
+    ///         Name = "$scm_l3_intf_static",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.EthernetInterfaceLayer3Args
+    ///         {
+    ///             Ips = new[]
+    ///             {
+    ///                 new Scm.Inputs.EthernetInterfaceLayer3IpArgs
+    ///                 {
+    ///                     Name = "198.18.1.1/24",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 ethernet interface with dhcp-assigned ip address
+    ///     //
+    ///     var scmL3IntfDhcp = new Scm.EthernetInterface("scm_l3_intf_dhcp", new()
+    ///     {
+    ///         Name = "$scm_l3_intf_dhcp",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.EthernetInterfaceLayer3Args
+    ///         {
+    ///             DhcpClient = new Scm.Inputs.EthernetInterfaceLayer3DhcpClientArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 CreateDefaultRoute = true,
+    ///                 DefaultRouteMetric = 10,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 ethernet interface with pppoe
+    ///     //
+    ///     var scmL3IntfPppoe = new Scm.EthernetInterface("scm_l3_intf_pppoe", new()
+    ///     {
+    ///         Name = "$scm_l3_intf_pppoe",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.EthernetInterfaceLayer3Args
+    ///         {
+    ///             Pppoe = new Scm.Inputs.EthernetInterfaceLayer3PppoeArgs
+    ///             {
+    ///                 Authentication = "auto",
+    ///                 Enable = true,
+    ///                 Username = "testname",
+    ///                 Password = "testpass",
+    ///                 CreateDefaultRoute = true,
+    ///                 DefaultRouteMetric = 10,
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a layer3 ethernet interface with multiple static ip addresses
+    ///     //
+    ///     var scmL3IntfComplex = new Scm.EthernetInterface("scm_l3_intf_complex", new()
+    ///     {
+    ///         Name = "$scm_l3_intf_complex",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         LinkSpeed = "auto",
+    ///         LinkDuplex = "full",
+    ///         LinkState = "auto",
+    ///         Layer3 = new Scm.Inputs.EthernetInterfaceLayer3Args
+    ///         {
+    ///             Ips = new[]
+    ///             {
+    ///                 new Scm.Inputs.EthernetInterfaceLayer3IpArgs
+    ///                 {
+    ///                     Name = "198.18.1.1/24",
+    ///                     Name = "198.18.1.2/32",
+    ///                 },
+    ///             },
+    ///             Mtu = 1500,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/ethernetInterface:EthernetInterface")]
     public partial class EthernetInterface : global::Pulumi.CustomResource

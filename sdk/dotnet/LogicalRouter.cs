@@ -13,6 +13,225 @@ namespace Pulumi.Scm
     /// LogicalRouter resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates various resources used for subsequent examples
+    ///     //
+    ///     var scmNextHop = new Scm.Variable("scm_next_hop", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_next_hop",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "ip-netmask",
+    ///         Value = "198.18.1.1",
+    ///     });
+    /// 
+    ///     var scmNextHopFqdn = new Scm.Variable("scm_next_hop_fqdn", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "$scm_next_hop_fqdn",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = "fqdn",
+    ///         Value = "nexthop.example.com",
+    ///     });
+    /// 
+    ///     var scmEthernetInterface = new Scm.EthernetInterface("scm_ethernet_interface", new()
+    ///     {
+    ///         Name = "$scm_ethernet_interface",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.EthernetInterfaceLayer3Args
+    ///         {
+    ///             Ips = new[]
+    ///             {
+    ///                 new Scm.Inputs.EthernetInterfaceLayer3IpArgs
+    ///                 {
+    ///                     Name = "198.18.11.1/24",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var scmBgpInterface = new Scm.EthernetInterface("scm_bgp_interface", new()
+    ///     {
+    ///         Name = "$scm_bgp_interface",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer3 = new Scm.Inputs.EthernetInterfaceLayer3Args
+    ///         {
+    ///             Ips = new[]
+    ///             {
+    ///                 new Scm.Inputs.EthernetInterfaceLayer3IpArgs
+    ///                 {
+    ///                     Name = "198.18.12.1/24",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     var bgpAuthProfile = new Scm.BgpAuthProfile("bgp_auth_profile", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "bgp_auth_profile",
+    ///         Secret = "Example123",
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a logical router with static routes
+    ///     //
+    ///     var scmLogicalRouter = new Scm.LogicalRouter("scm_logical_router", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_logical_router",
+    ///         RoutingStack = "advanced",
+    ///         Vrves = new[]
+    ///         {
+    ///             new Scm.Inputs.LogicalRouterVrfArgs
+    ///             {
+    ///                 Name = "default",
+    ///                 Interface = new[]
+    ///                 {
+    ///                     "$scm_ethernet_interface",
+    ///                 },
+    ///                 RoutingTable = new Scm.Inputs.LogicalRouterVrfRoutingTableArgs
+    ///                 {
+    ///                     Ip = new Scm.Inputs.LogicalRouterVrfRoutingTableIpArgs
+    ///                     {
+    ///                         StaticRoute = new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "default-route" },
+    ///                                 { "destination", "0.0.0.0/0" },
+    ///                                 { "preference", 10 },
+    ///                                 { "nexthop", 
+    ///                                 {
+    ///                                     { "ipAddress", "198.18.1.1" },
+    ///                                 } },
+    ///                             },
+    ///                             
+    ///                             {
+    ///                                 { "name", "internal-route" },
+    ///                                 { "interface", "$scm_ethernet_interface" },
+    ///                                 { "destination", "192.168.1.0/24" },
+    ///                                 { "preference", 1 },
+    ///                                 { "nexthop", 
+    ///                                 {
+    ///                                     { "ipAddress", "$scm_next_hop" },
+    ///                                 } },
+    ///                             },
+    ///                             
+    ///                             {
+    ///                                 { "name", "route-with-fqdn-nh" },
+    ///                                 { "interface", "$scm_ethernet_interface" },
+    ///                                 { "destination", "192.168.2.0/24" },
+    ///                                 { "preference", 1 },
+    ///                                 { "nexthop", 
+    ///                                 {
+    ///                                     { "fqdn", "$scm_next_hop" },
+    ///                                 } },
+    ///                                 { "bfd", 
+    ///                                 {
+    ///                                     { "profile", "default" },
+    ///                                 } },
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmNextHop,
+    ///             scmNextHopFqdn,
+    ///             scmEthernetInterface,
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a logical router with bgp configuration
+    ///     //
+    ///     var scmBgpRouter = new Scm.LogicalRouter("scm_bgp_router", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_bgp_router",
+    ///         RoutingStack = "advanced",
+    ///         Vrves = new[]
+    ///         {
+    ///             new Scm.Inputs.LogicalRouterVrfArgs
+    ///             {
+    ///                 Name = "default",
+    ///                 Interface = new[]
+    ///                 {
+    ///                     "$scm_bgp_interface",
+    ///                 },
+    ///                 Bgp = new Scm.Inputs.LogicalRouterVrfBgpArgs
+    ///                 {
+    ///                     Enable = true,
+    ///                     RouterId = "198.18.1.254",
+    ///                     LocalAs = "65535",
+    ///                     InstallRoute = true,
+    ///                     RejectDefaultRoute = false,
+    ///                     PeerGroup = new[]
+    ///                     {
+    ///                         
+    ///                         {
+    ///                             { "name", "prisma-access" },
+    ///                             { "addressFamily", 
+    ///                             {
+    ///                                 { "ipv4", "default" },
+    ///                             } },
+    ///                             { "connectionOptions", 
+    ///                             {
+    ///                                 { "authentication", "bgp_auth_profile" },
+    ///                             } },
+    ///                             { "peer", new[]
+    ///                             {
+    ///                                 
+    ///                                 {
+    ///                                     { "name", "primary-access-primary" },
+    ///                                     { "enable", true },
+    ///                                     { "peerAs", 65515 },
+    ///                                     { "peerAddress", 
+    ///                                     {
+    ///                                         { "ip", "198.18.1.100" },
+    ///                                     } },
+    ///                                     { "localAddress", 
+    ///                                     {
+    ///                                         { "interface", "$scm_bgp_interface" },
+    ///                                     } },
+    ///                                     { "connectionOptions", 
+    ///                                     {
+    ///                                         { "multihop", "3" },
+    ///                                     } },
+    ///                                 },
+    ///                             } },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmBgpInterface,
+    ///             bgpAuthProfile,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/logicalRouter:LogicalRouter")]
     public partial class LogicalRouter : global::Pulumi.CustomResource

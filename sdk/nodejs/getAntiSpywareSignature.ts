@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * AntiSpywareSignature data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up anti-spyware-profile by ID
+ * const scmAntiSpywareSignatureDs = scm.getAntiSpywareSignature({
+ *     id: "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
+ * });
+ * export const scmAntiSpywareSignatureOutput = {
+ *     threadId: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.id),
+ *     folder: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.folder),
+ *     name: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.name),
+ *     comment: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.comment),
+ *     severity: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.severity),
+ *     signature: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.signature),
+ * };
+ * ```
  */
 export function getAntiSpywareSignature(args: GetAntiSpywareSignatureArgs, opts?: pulumi.InvokeOptions): Promise<GetAntiSpywareSignatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -94,6 +114,26 @@ export interface GetAntiSpywareSignatureResult {
 }
 /**
  * AntiSpywareSignature data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up anti-spyware-profile by ID
+ * const scmAntiSpywareSignatureDs = scm.getAntiSpywareSignature({
+ *     id: "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
+ * });
+ * export const scmAntiSpywareSignatureOutput = {
+ *     threadId: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.id),
+ *     folder: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.folder),
+ *     name: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.name),
+ *     comment: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.comment),
+ *     severity: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.severity),
+ *     signature: scmAntiSpywareSignatureDs.then(scmAntiSpywareSignatureDs => scmAntiSpywareSignatureDs.signature),
+ * };
+ * ```
  */
 export function getAntiSpywareSignatureOutput(args: GetAntiSpywareSignatureOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAntiSpywareSignatureResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

@@ -13,6 +13,96 @@ namespace Pulumi.Scm
     /// Application resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // Custom Application
+    ///     var scmMediaApp = new Scm.Application("scm_media_app", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_media_app",
+    ///         Description = "Managed by Pulumi",
+    ///         Category = "media",
+    ///         Subcategory = "gaming",
+    ///         Technology = "client-server",
+    ///         Risk = "4",
+    ///         EvasiveBehavior = true,
+    ///         PervasiveUse = true,
+    ///         ConsumeBigBandwidth = true,
+    ///         HasKnownVulnerability = true,
+    ///         ProneToMisuse = true,
+    ///     });
+    /// 
+    ///     // Custom Application with tweaked timeouts and additional settings
+    ///     var scmRiskyApp = new Scm.Application("scm_risky_app", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_risky_app",
+    ///         Description = "Managed by Pulumi",
+    ///         Category = "media",
+    ///         Subcategory = "gaming",
+    ///         Technology = "client-server",
+    ///         Risk = "4",
+    ///         Timeout = 3600,
+    ///         TcpTimeout = 3600,
+    ///         TcpHalfClosedTimeout = 60,
+    ///         TcpTimeWaitTimeout = 10,
+    ///         EvasiveBehavior = true,
+    ///         PervasiveUse = true,
+    ///         ConsumeBigBandwidth = true,
+    ///         HasKnownVulnerability = true,
+    ///         ProneToMisuse = true,
+    ///         TunnelOtherApplication = true,
+    ///         TunnelApplications = true,
+    ///         NoAppidCaching = true,
+    ///         ParentApp = "bittorrent",
+    ///     });
+    /// 
+    ///     // Custom Application based on Custom Signature
+    ///     var scmCustomApp = new Scm.Application("scm_custom_app", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_custom_app",
+    ///         Description = "Managed by Pulumi",
+    ///         Category = "media",
+    ///         Subcategory = "gaming",
+    ///         Technology = "client-server",
+    ///         Risk = "4",
+    ///         Signatures = new[]
+    ///         {
+    ///             new Scm.Inputs.ApplicationSignatureArgs
+    ///             {
+    ///                 Name = "Custom Signature",
+    ///                 Comment = "Managed by Pulumi",
+    ///                 Scope = "session",
+    ///                 OrderFree = false,
+    ///                 AndCondition = new[]
+    ///                 {
+    ///                     
+    ///                     {
+    ///                         { "name", "Example Condition" },
+    ///                         { "operator", 
+    ///                         {
+    ///                             { "patternMatch", 
+    ///                             {
+    ///                                 { "context", "file-data" },
+    ///                                 { "pattern", "^malware$" },
+    ///                             } },
+    ///                         } },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/application:Application")]
     public partial class Application : global::Pulumi.CustomResource

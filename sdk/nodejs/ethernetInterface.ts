@@ -10,6 +10,112 @@ import * as utilities from "./utilities";
  * EthernetInterface resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates a layer 2 ethernet interface without vlan configuration
+ * //
+ * const scmL2Intf = new scm.EthernetInterface("scm_l2_intf", {
+ *     name: "$scm_l2_intf",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     linkSpeed: "auto",
+ *     linkDuplex: "full",
+ *     linkState: "auto",
+ *     layer2: {},
+ * });
+ * //
+ * // Creates a tap ethernet interface without vlan configuration
+ * //
+ * const scmTapIntf = new scm.EthernetInterface("scm_tap_intf", {
+ *     name: "$scm_tap_intf",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     linkSpeed: "auto",
+ *     linkDuplex: "full",
+ *     linkState: "auto",
+ *     tap: {},
+ * });
+ * //
+ * // Creates a layer3 ethernet interface without ip configuration
+ * //
+ * const scmL3Intf = new scm.EthernetInterface("scm_l3_intf", {
+ *     name: "$scm_l3_intf",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     linkSpeed: "auto",
+ *     linkDuplex: "full",
+ *     linkState: "auto",
+ *     layer3: {},
+ * });
+ * //
+ * // Creates a layer3 ethernet interface with static ip address
+ * //
+ * const scmL3IntfStatic = new scm.EthernetInterface("scm_l3_intf_static", {
+ *     name: "$scm_l3_intf_static",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {
+ *         ips: [{
+ *             name: "198.18.1.1/24",
+ *         }],
+ *     },
+ * });
+ * //
+ * // Creates a layer3 ethernet interface with dhcp-assigned ip address
+ * //
+ * const scmL3IntfDhcp = new scm.EthernetInterface("scm_l3_intf_dhcp", {
+ *     name: "$scm_l3_intf_dhcp",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {
+ *         dhcpClient: {
+ *             enable: true,
+ *             createDefaultRoute: true,
+ *             defaultRouteMetric: 10,
+ *         },
+ *     },
+ * });
+ * //
+ * // Creates a layer3 ethernet interface with pppoe
+ * //
+ * const scmL3IntfPppoe = new scm.EthernetInterface("scm_l3_intf_pppoe", {
+ *     name: "$scm_l3_intf_pppoe",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     layer3: {
+ *         pppoe: {
+ *             authentication: "auto",
+ *             enable: true,
+ *             username: "testname",
+ *             password: "testpass",
+ *             createDefaultRoute: true,
+ *             defaultRouteMetric: 10,
+ *         },
+ *     },
+ * });
+ * //
+ * // Creates a layer3 ethernet interface with multiple static ip addresses
+ * //
+ * const scmL3IntfComplex = new scm.EthernetInterface("scm_l3_intf_complex", {
+ *     name: "$scm_l3_intf_complex",
+ *     comment: "Managed by Pulumi",
+ *     folder: "ngfw-shared",
+ *     linkSpeed: "auto",
+ *     linkDuplex: "full",
+ *     linkState: "auto",
+ *     layer3: {
+ *         ips: [{
+ *             name: "198.18.1.1/24",
+ *             name: "198.18.1.2/32",
+ *         }],
+ *         mtu: 1500,
+ *     },
+ * });
+ * ```
  */
 export class EthernetInterface extends pulumi.CustomResource {
     /**

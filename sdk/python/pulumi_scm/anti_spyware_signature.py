@@ -518,6 +518,39 @@ class AntiSpywareSignature(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_anti_spyware_signature1 = scm.AntiSpywareSignature("scm_anti_spyware_signature_1",
+            folder="All",
+            threat_id="6900001",
+            comment="Managed by Pulumi",
+            direction="client2server",
+            severity="critical",
+            threatname="Example Threat",
+            default_action={
+                "alert": {},
+            },
+            signature={
+                "combination": {
+                    "and_conditions": [{
+                        "name": "And Condition 1",
+                        "or_condition": [{
+                            "name": "Test",
+                            "threat_id": "10001",
+                        }],
+                    }],
+                    "order_free": False,
+                    "time_attribute": {
+                        "interval": 3600,
+                        "threshold": 60,
+                        "track_by": "source",
+                    },
+                },
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] bugtraqs: Bugtraq
@@ -545,6 +578,39 @@ class AntiSpywareSignature(pulumi.CustomResource):
         AntiSpywareSignature resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_anti_spyware_signature1 = scm.AntiSpywareSignature("scm_anti_spyware_signature_1",
+            folder="All",
+            threat_id="6900001",
+            comment="Managed by Pulumi",
+            direction="client2server",
+            severity="critical",
+            threatname="Example Threat",
+            default_action={
+                "alert": {},
+            },
+            signature={
+                "combination": {
+                    "and_conditions": [{
+                        "name": "And Condition 1",
+                        "or_condition": [{
+                            "name": "Test",
+                            "threat_id": "10001",
+                        }],
+                    }],
+                    "order_free": False,
+                    "time_attribute": {
+                        "interval": 3600,
+                        "threshold": 60,
+                        "track_by": "source",
+                    },
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param AntiSpywareSignatureArgs args: The arguments to use to populate this resource's properties.

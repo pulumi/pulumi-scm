@@ -256,6 +256,145 @@ class LogicalRouter(pulumi.CustomResource):
 
         ## Example Usage
 
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates various resources used for subsequent examples
+        #
+        scm_next_hop = scm.Variable("scm_next_hop",
+            folder="All",
+            name="$scm_next_hop",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="198.18.1.1")
+        scm_next_hop_fqdn = scm.Variable("scm_next_hop_fqdn",
+            folder="All",
+            name="$scm_next_hop_fqdn",
+            description="Managed by Pulumi",
+            type="fqdn",
+            value="nexthop.example.com")
+        scm_ethernet_interface = scm.EthernetInterface("scm_ethernet_interface",
+            name="$scm_ethernet_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer3={
+                "ips": [{
+                    "name": "198.18.11.1/24",
+                }],
+            })
+        scm_bgp_interface = scm.EthernetInterface("scm_bgp_interface",
+            name="$scm_bgp_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer3={
+                "ips": [{
+                    "name": "198.18.12.1/24",
+                }],
+            })
+        bgp_auth_profile = scm.BgpAuthProfile("bgp_auth_profile",
+            folder="ngfw-shared",
+            name="bgp_auth_profile",
+            secret="Example123")
+        #
+        # Creates a logical router with static routes
+        #
+        scm_logical_router = scm.LogicalRouter("scm_logical_router",
+            folder="ngfw-shared",
+            name="scm_logical_router",
+            routing_stack="advanced",
+            vrves=[{
+                "name": "default",
+                "interface": ["$scm_ethernet_interface"],
+                "routing_table": {
+                    "ip": {
+                        "static_route": [
+                            {
+                                "name": "default-route",
+                                "destination": "0.0.0.0/0",
+                                "preference": 10,
+                                "nexthop": {
+                                    "ipAddress": "198.18.1.1",
+                                },
+                            },
+                            {
+                                "name": "internal-route",
+                                "interface": "$scm_ethernet_interface",
+                                "destination": "192.168.1.0/24",
+                                "preference": 1,
+                                "nexthop": {
+                                    "ipAddress": "$scm_next_hop",
+                                },
+                            },
+                            {
+                                "name": "route-with-fqdn-nh",
+                                "interface": "$scm_ethernet_interface",
+                                "destination": "192.168.2.0/24",
+                                "preference": 1,
+                                "nexthop": {
+                                    "fqdn": "$scm_next_hop",
+                                },
+                                "bfd": {
+                                    "profile": "default",
+                                },
+                            },
+                        ],
+                    },
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_next_hop,
+                    scm_next_hop_fqdn,
+                    scm_ethernet_interface,
+                ]))
+        #
+        # Creates a logical router with bgp configuration
+        #
+        scm_bgp_router = scm.LogicalRouter("scm_bgp_router",
+            folder="ngfw-shared",
+            name="scm_bgp_router",
+            routing_stack="advanced",
+            vrves=[{
+                "name": "default",
+                "interface": ["$scm_bgp_interface"],
+                "bgp": {
+                    "enable": True,
+                    "router_id": "198.18.1.254",
+                    "local_as": "65535",
+                    "install_route": True,
+                    "reject_default_route": False,
+                    "peer_group": [{
+                        "name": "prisma-access",
+                        "addressFamily": {
+                            "ipv4": "default",
+                        },
+                        "connectionOptions": {
+                            "authentication": "bgp_auth_profile",
+                        },
+                        "peer": [{
+                            "name": "primary-access-primary",
+                            "enable": True,
+                            "peerAs": 65515,
+                            "peerAddress": {
+                                "ip": "198.18.1.100",
+                            },
+                            "localAddress": {
+                                "interface": "$scm_bgp_interface",
+                            },
+                            "connectionOptions": {
+                                "multihop": "3",
+                            },
+                        }],
+                    }],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_bgp_interface,
+                    bgp_auth_profile,
+                ]))
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
@@ -275,6 +414,145 @@ class LogicalRouter(pulumi.CustomResource):
         LogicalRouter resource
 
         ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates various resources used for subsequent examples
+        #
+        scm_next_hop = scm.Variable("scm_next_hop",
+            folder="All",
+            name="$scm_next_hop",
+            description="Managed by Pulumi",
+            type="ip-netmask",
+            value="198.18.1.1")
+        scm_next_hop_fqdn = scm.Variable("scm_next_hop_fqdn",
+            folder="All",
+            name="$scm_next_hop_fqdn",
+            description="Managed by Pulumi",
+            type="fqdn",
+            value="nexthop.example.com")
+        scm_ethernet_interface = scm.EthernetInterface("scm_ethernet_interface",
+            name="$scm_ethernet_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer3={
+                "ips": [{
+                    "name": "198.18.11.1/24",
+                }],
+            })
+        scm_bgp_interface = scm.EthernetInterface("scm_bgp_interface",
+            name="$scm_bgp_interface",
+            comment="Managed by Pulumi",
+            folder="ngfw-shared",
+            layer3={
+                "ips": [{
+                    "name": "198.18.12.1/24",
+                }],
+            })
+        bgp_auth_profile = scm.BgpAuthProfile("bgp_auth_profile",
+            folder="ngfw-shared",
+            name="bgp_auth_profile",
+            secret="Example123")
+        #
+        # Creates a logical router with static routes
+        #
+        scm_logical_router = scm.LogicalRouter("scm_logical_router",
+            folder="ngfw-shared",
+            name="scm_logical_router",
+            routing_stack="advanced",
+            vrves=[{
+                "name": "default",
+                "interface": ["$scm_ethernet_interface"],
+                "routing_table": {
+                    "ip": {
+                        "static_route": [
+                            {
+                                "name": "default-route",
+                                "destination": "0.0.0.0/0",
+                                "preference": 10,
+                                "nexthop": {
+                                    "ipAddress": "198.18.1.1",
+                                },
+                            },
+                            {
+                                "name": "internal-route",
+                                "interface": "$scm_ethernet_interface",
+                                "destination": "192.168.1.0/24",
+                                "preference": 1,
+                                "nexthop": {
+                                    "ipAddress": "$scm_next_hop",
+                                },
+                            },
+                            {
+                                "name": "route-with-fqdn-nh",
+                                "interface": "$scm_ethernet_interface",
+                                "destination": "192.168.2.0/24",
+                                "preference": 1,
+                                "nexthop": {
+                                    "fqdn": "$scm_next_hop",
+                                },
+                                "bfd": {
+                                    "profile": "default",
+                                },
+                            },
+                        ],
+                    },
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_next_hop,
+                    scm_next_hop_fqdn,
+                    scm_ethernet_interface,
+                ]))
+        #
+        # Creates a logical router with bgp configuration
+        #
+        scm_bgp_router = scm.LogicalRouter("scm_bgp_router",
+            folder="ngfw-shared",
+            name="scm_bgp_router",
+            routing_stack="advanced",
+            vrves=[{
+                "name": "default",
+                "interface": ["$scm_bgp_interface"],
+                "bgp": {
+                    "enable": True,
+                    "router_id": "198.18.1.254",
+                    "local_as": "65535",
+                    "install_route": True,
+                    "reject_default_route": False,
+                    "peer_group": [{
+                        "name": "prisma-access",
+                        "addressFamily": {
+                            "ipv4": "default",
+                        },
+                        "connectionOptions": {
+                            "authentication": "bgp_auth_profile",
+                        },
+                        "peer": [{
+                            "name": "primary-access-primary",
+                            "enable": True,
+                            "peerAs": 65515,
+                            "peerAddress": {
+                                "ip": "198.18.1.100",
+                            },
+                            "localAddress": {
+                                "interface": "$scm_bgp_interface",
+                            },
+                            "connectionOptions": {
+                                "multihop": "3",
+                            },
+                        }],
+                    }],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[
+                    scm_bgp_interface,
+                    bgp_auth_profile,
+                ]))
+        ```
 
         :param str resource_name: The name of the resource.
         :param LogicalRouterArgs args: The arguments to use to populate this resource's properties.

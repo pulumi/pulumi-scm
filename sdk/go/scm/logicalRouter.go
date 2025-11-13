@@ -14,6 +14,193 @@ import (
 // LogicalRouter resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates various resources used for subsequent examples
+//			scmNextHop, err := scm.NewVariable(ctx, "scm_next_hop", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_next_hop"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("ip-netmask"),
+//				Value:       pulumi.String("198.18.1.1"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmNextHopFqdn, err := scm.NewVariable(ctx, "scm_next_hop_fqdn", &scm.VariableArgs{
+//				Folder:      pulumi.String("All"),
+//				Name:        pulumi.String("$scm_next_hop_fqdn"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type:        pulumi.String("fqdn"),
+//				Value:       pulumi.String("nexthop.example.com"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmEthernetInterface, err := scm.NewEthernetInterface(ctx, "scm_ethernet_interface", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_ethernet_interface"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.EthernetInterfaceLayer3Args{
+//					Ips: scm.EthernetInterfaceLayer3IpArray{
+//						&scm.EthernetInterfaceLayer3IpArgs{
+//							Name: pulumi.String("198.18.11.1/24"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			scmBgpInterface, err := scm.NewEthernetInterface(ctx, "scm_bgp_interface", &scm.EthernetInterfaceArgs{
+//				Name:    pulumi.String("$scm_bgp_interface"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.EthernetInterfaceLayer3Args{
+//					Ips: scm.EthernetInterfaceLayer3IpArray{
+//						&scm.EthernetInterfaceLayer3IpArgs{
+//							Name: pulumi.String("198.18.12.1/24"),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			bgpAuthProfile, err := scm.NewBgpAuthProfile(ctx, "bgp_auth_profile", &scm.BgpAuthProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("bgp_auth_profile"),
+//				Secret: pulumi.String("Example123"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a logical router with static routes
+//			_, err = scm.NewLogicalRouter(ctx, "scm_logical_router", &scm.LogicalRouterArgs{
+//				Folder:       pulumi.String("ngfw-shared"),
+//				Name:         pulumi.String("scm_logical_router"),
+//				RoutingStack: pulumi.String("advanced"),
+//				Vrves: scm.LogicalRouterVrfArray{
+//					&scm.LogicalRouterVrfArgs{
+//						Name: pulumi.String("default"),
+//						Interface: []string{
+//							"$scm_ethernet_interface",
+//						},
+//						RoutingTable: &scm.LogicalRouterVrfRoutingTableArgs{
+//							Ip: &scm.LogicalRouterVrfRoutingTableIpArgs{
+//								StaticRoute: []interface{}{
+//									map[string]interface{}{
+//										"name":        "default-route",
+//										"destination": "0.0.0.0/0",
+//										"preference":  10,
+//										"nexthop": map[string]interface{}{
+//											"ipAddress": "198.18.1.1",
+//										},
+//									},
+//									map[string]interface{}{
+//										"name":        "internal-route",
+//										"interface":   "$scm_ethernet_interface",
+//										"destination": "192.168.1.0/24",
+//										"preference":  1,
+//										"nexthop": map[string]interface{}{
+//											"ipAddress": "$scm_next_hop",
+//										},
+//									},
+//									map[string]interface{}{
+//										"name":        "route-with-fqdn-nh",
+//										"interface":   "$scm_ethernet_interface",
+//										"destination": "192.168.2.0/24",
+//										"preference":  1,
+//										"nexthop": map[string]interface{}{
+//											"fqdn": "$scm_next_hop",
+//										},
+//										"bfd": map[string]interface{}{
+//											"profile": "default",
+//										},
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmNextHop,
+//				scmNextHopFqdn,
+//				scmEthernetInterface,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a logical router with bgp configuration
+//			_, err = scm.NewLogicalRouter(ctx, "scm_bgp_router", &scm.LogicalRouterArgs{
+//				Folder:       pulumi.String("ngfw-shared"),
+//				Name:         pulumi.String("scm_bgp_router"),
+//				RoutingStack: pulumi.String("advanced"),
+//				Vrves: scm.LogicalRouterVrfArray{
+//					&scm.LogicalRouterVrfArgs{
+//						Name: pulumi.String("default"),
+//						Interface: []string{
+//							"$scm_bgp_interface",
+//						},
+//						Bgp: &scm.LogicalRouterVrfBgpArgs{
+//							Enable:             pulumi.Bool(true),
+//							RouterId:           pulumi.String("198.18.1.254"),
+//							LocalAs:            pulumi.String("65535"),
+//							InstallRoute:       pulumi.Bool(true),
+//							RejectDefaultRoute: pulumi.Bool(false),
+//							PeerGroup: []map[string]interface{}{
+//								map[string]interface{}{
+//									"name": "prisma-access",
+//									"addressFamily": map[string]interface{}{
+//										"ipv4": "default",
+//									},
+//									"connectionOptions": map[string]interface{}{
+//										"authentication": "bgp_auth_profile",
+//									},
+//									"peer": []map[string]interface{}{
+//										map[string]interface{}{
+//											"name":   "primary-access-primary",
+//											"enable": true,
+//											"peerAs": 65515,
+//											"peerAddress": map[string]interface{}{
+//												"ip": "198.18.1.100",
+//											},
+//											"localAddress": map[string]interface{}{
+//												"interface": "$scm_bgp_interface",
+//											},
+//											"connectionOptions": map[string]interface{}{
+//												"multihop": "3",
+//											},
+//										},
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmBgpInterface,
+//				bgpAuthProfile,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type LogicalRouter struct {
 	pulumi.CustomResourceState
 
