@@ -12,6 +12,41 @@ import (
 )
 
 // AntiSpywareSignature data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up anti-spyware-profile by ID
+//			scmAntiSpywareSignatureDs, err := scm.LookupAntiSpywareSignature(ctx, &scm.LookupAntiSpywareSignatureArgs{
+//				Id: "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmAntiSpywareSignatureOutput", pulumi.Map{
+//				"threadId":  scmAntiSpywareSignatureDs.Id,
+//				"folder":    scmAntiSpywareSignatureDs.Folder,
+//				"name":      scmAntiSpywareSignatureDs.Name,
+//				"comment":   scmAntiSpywareSignatureDs.Comment,
+//				"severity":  scmAntiSpywareSignatureDs.Severity,
+//				"signature": scmAntiSpywareSignatureDs.Signature,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupAntiSpywareSignature(ctx *pulumi.Context, args *LookupAntiSpywareSignatureArgs, opts ...pulumi.InvokeOption) (*LookupAntiSpywareSignatureResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAntiSpywareSignatureResult

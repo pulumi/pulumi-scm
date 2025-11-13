@@ -14,6 +14,195 @@ import (
 // HipObject resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// This resource creates a comprehensive HIP Object with many criteria enabled.
+//			// This showcases the use of nested objects and lists of objects that the
+//			// corrected provider schema now supports.
+//			_, err := scm.NewHipObject(ctx, "scm_hip_object_1", &scm.HipObjectArgs{
+//				Folder:      pulumi.String("Shared"),
+//				Name:        pulumi.String("scm_hip_object_1"),
+//				Description: pulumi.String("HIP object with multiple advanced criteria configured"),
+//				AntiMalware: &scm.HipObjectAntiMalwareArgs{
+//					Criteria: &scm.HipObjectAntiMalwareCriteriaArgs{
+//						IsInstalled:        pulumi.Bool(true),
+//						RealTimeProtection: pulumi.String("yes"),
+//						VirdefVersion: &scm.HipObjectAntiMalwareCriteriaVirdefVersionArgs{
+//							NotWithin: &scm.HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs{
+//								Days: pulumi.Int(10),
+//							},
+//						},
+//					},
+//					Vendors: scm.HipObjectAntiMalwareVendorArray{
+//						&scm.HipObjectAntiMalwareVendorArgs{
+//							Name: pulumi.String("Microsoft"),
+//							Product: []string{
+//								"Microsoft Defender",
+//							},
+//						},
+//					},
+//				},
+//				DataLossPrevention: &scm.HipObjectDataLossPreventionArgs{
+//					Criteria: &scm.HipObjectDataLossPreventionCriteriaArgs{
+//						IsInstalled: pulumi.Bool(true),
+//						IsEnabled:   pulumi.String("yes"),
+//					},
+//					Vendors: scm.HipObjectDataLossPreventionVendorArray{
+//						&scm.HipObjectDataLossPreventionVendorArgs{
+//							Name: pulumi.String("Symantec"),
+//						},
+//					},
+//				},
+//				DiskBackup: &scm.HipObjectDiskBackupArgs{
+//					Criteria: &scm.HipObjectDiskBackupCriteriaArgs{
+//						IsInstalled: pulumi.Bool(true),
+//						LastBackupTime: &scm.HipObjectDiskBackupCriteriaLastBackupTimeArgs{
+//							Within: &scm.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs{
+//								Days: pulumi.Int(7),
+//							},
+//						},
+//					},
+//					Vendors: scm.HipObjectDiskBackupVendorArray{
+//						&scm.HipObjectDiskBackupVendorArgs{
+//							Name: pulumi.String("Veeam"),
+//						},
+//					},
+//				},
+//				DiskEncryption: &scm.HipObjectDiskEncryptionArgs{
+//					Criteria: &scm.HipObjectDiskEncryptionCriteriaArgs{
+//						IsInstalled: pulumi.Bool(true),
+//						EncryptedLocations: scm.HipObjectDiskEncryptionCriteriaEncryptedLocationArray{
+//							&scm.HipObjectDiskEncryptionCriteriaEncryptedLocationArgs{
+//								Name: pulumi.String("C:\\"),
+//								EncryptionState: &scm.HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs{
+//									Is: pulumi.String("encrypted"),
+//								},
+//							},
+//							&scm.HipObjectDiskEncryptionCriteriaEncryptedLocationArgs{
+//								Name: pulumi.String("D:\\Users\\"),
+//								EncryptionState: &scm.HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs{
+//									IsNot: pulumi.String("unencrypted"),
+//								},
+//							},
+//						},
+//					},
+//					Vendors: scm.HipObjectDiskEncryptionVendorArray{
+//						&scm.HipObjectDiskEncryptionVendorArgs{
+//							Name: pulumi.String("BitLocker"),
+//						},
+//					},
+//				},
+//				Firewall: &scm.HipObjectFirewallArgs{
+//					Criteria: &scm.HipObjectFirewallCriteriaArgs{
+//						IsInstalled: pulumi.Bool(true),
+//						IsEnabled:   pulumi.String("yes"),
+//					},
+//					Vendors: scm.HipObjectFirewallVendorArray{
+//						&scm.HipObjectFirewallVendorArgs{
+//							Name: pulumi.String("Microsoft"),
+//						},
+//					},
+//				},
+//				HostInfo: &scm.HipObjectHostInfoArgs{
+//					Criteria: &scm.HipObjectHostInfoCriteriaArgs{
+//						Os: &scm.HipObjectHostInfoCriteriaOsArgs{
+//							Contains: &scm.HipObjectHostInfoCriteriaOsContainsArgs{
+//								Microsoft: pulumi.String("Microsoft Windows 11"),
+//							},
+//						},
+//						Domain: &scm.HipObjectHostInfoCriteriaDomainArgs{
+//							Is: pulumi.String("corp.example.com"),
+//						},
+//					},
+//				},
+//				MobileDevice: &scm.HipObjectMobileDeviceArgs{
+//					Criteria: &scm.HipObjectMobileDeviceCriteriaArgs{
+//						Jailbroken:  pulumi.Bool(false),
+//						PasscodeSet: pulumi.Bool(true),
+//						Applications: &scm.HipObjectMobileDeviceCriteriaApplicationsArgs{
+//							HasUnmanagedApp: pulumi.Bool(false),
+//							HasMalware: &scm.HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs{
+//								No: &scm.HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoArgs{},
+//							},
+//						},
+//					},
+//				},
+//				NetworkInfo: &scm.HipObjectNetworkInfoArgs{
+//					Criteria: &scm.HipObjectNetworkInfoCriteriaArgs{
+//						Network: &scm.HipObjectNetworkInfoCriteriaNetworkArgs{
+//							Is: &scm.HipObjectNetworkInfoCriteriaNetworkIsArgs{
+//								Wifi: &scm.HipObjectNetworkInfoCriteriaNetworkIsWifiArgs{
+//									Ssid: pulumi.String("Corporate-WLAN"),
+//								},
+//							},
+//						},
+//					},
+//				},
+//				PatchManagement: &scm.HipObjectPatchManagementArgs{
+//					Criteria: &scm.HipObjectPatchManagementCriteriaArgs{
+//						IsInstalled: pulumi.Bool(true),
+//						MissingPatches: &scm.HipObjectPatchManagementCriteriaMissingPatchesArgs{
+//							Check: pulumi.String("has-none"),
+//							Patches: pulumi.StringArray{
+//								pulumi.String("KB4012212"),
+//								pulumi.String("KB4012213"),
+//							},
+//							Severity: &scm.HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs{
+//								GreaterThan: pulumi.Int(5),
+//							},
+//						},
+//					},
+//					Vendors: scm.HipObjectPatchManagementVendorArray{
+//						&scm.HipObjectPatchManagementVendorArgs{
+//							Name: pulumi.String("Microsoft"),
+//						},
+//					},
+//				},
+//				CustomChecks: &scm.HipObjectCustomChecksArgs{
+//					Criteria: &scm.HipObjectCustomChecksCriteriaArgs{
+//						ProcessLists: scm.HipObjectCustomChecksCriteriaProcessListArray{
+//							&scm.HipObjectCustomChecksCriteriaProcessListArgs{
+//								Name:    pulumi.String("evil_process.exe"),
+//								Running: pulumi.Bool(false),
+//							},
+//							&scm.HipObjectCustomChecksCriteriaProcessListArgs{
+//								Name:    pulumi.String("corp_security_agent.exe"),
+//								Running: pulumi.Bool(true),
+//							},
+//						},
+//						RegistryKeys: scm.HipObjectCustomChecksCriteriaRegistryKeyArray{
+//							&scm.HipObjectCustomChecksCriteriaRegistryKeyArgs{
+//								Name: pulumi.String("HKEY_LOCAL_MACHINE\\Software\\PaloAltoNetworks"),
+//								RegistryValue: []map[string]interface{}{
+//									map[string]interface{}{
+//										"name":      "AllowRemoteAccess",
+//										"valueData": "false",
+//									},
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type HipObject struct {
 	pulumi.CustomResourceState
 

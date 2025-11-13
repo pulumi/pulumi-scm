@@ -10,6 +10,75 @@ import * as utilities from "./utilities";
  * Application resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Custom Application
+ * const scmMediaApp = new scm.Application("scm_media_app", {
+ *     folder: "All",
+ *     name: "scm_media_app",
+ *     description: "Managed by Pulumi",
+ *     category: "media",
+ *     subcategory: "gaming",
+ *     technology: "client-server",
+ *     risk: "4",
+ *     evasiveBehavior: true,
+ *     pervasiveUse: true,
+ *     consumeBigBandwidth: true,
+ *     hasKnownVulnerability: true,
+ *     proneToMisuse: true,
+ * });
+ * // Custom Application with tweaked timeouts and additional settings
+ * const scmRiskyApp = new scm.Application("scm_risky_app", {
+ *     folder: "All",
+ *     name: "scm_risky_app",
+ *     description: "Managed by Pulumi",
+ *     category: "media",
+ *     subcategory: "gaming",
+ *     technology: "client-server",
+ *     risk: "4",
+ *     timeout: 3600,
+ *     tcpTimeout: 3600,
+ *     tcpHalfClosedTimeout: 60,
+ *     tcpTimeWaitTimeout: 10,
+ *     evasiveBehavior: true,
+ *     pervasiveUse: true,
+ *     consumeBigBandwidth: true,
+ *     hasKnownVulnerability: true,
+ *     proneToMisuse: true,
+ *     tunnelOtherApplication: true,
+ *     tunnelApplications: true,
+ *     noAppidCaching: true,
+ *     parentApp: "bittorrent",
+ * });
+ * // Custom Application based on Custom Signature
+ * const scmCustomApp = new scm.Application("scm_custom_app", {
+ *     folder: "All",
+ *     name: "scm_custom_app",
+ *     description: "Managed by Pulumi",
+ *     category: "media",
+ *     subcategory: "gaming",
+ *     technology: "client-server",
+ *     risk: "4",
+ *     signatures: [{
+ *         name: "Custom Signature",
+ *         comment: "Managed by Pulumi",
+ *         scope: "session",
+ *         orderFree: false,
+ *         andCondition: [{
+ *             name: "Example Condition",
+ *             operator: {
+ *                 patternMatch: {
+ *                     context: "file-data",
+ *                     pattern: "^malware$",
+ *                 },
+ *             },
+ *         }],
+ *     }],
+ * });
+ * ```
  */
 export class Application extends pulumi.CustomResource {
     /**

@@ -13,6 +13,247 @@ namespace Pulumi.Scm
     /// HipObject resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // This resource creates a comprehensive HIP Object with many criteria enabled.
+    ///     // This showcases the use of nested objects and lists of objects that the
+    ///     // corrected provider schema now supports.
+    ///     var scmHipObject1 = new Scm.HipObject("scm_hip_object_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_hip_object_1",
+    ///         Description = "HIP object with multiple advanced criteria configured",
+    ///         AntiMalware = new Scm.Inputs.HipObjectAntiMalwareArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectAntiMalwareCriteriaArgs
+    ///             {
+    ///                 IsInstalled = true,
+    ///                 RealTimeProtection = "yes",
+    ///                 VirdefVersion = new Scm.Inputs.HipObjectAntiMalwareCriteriaVirdefVersionArgs
+    ///                 {
+    ///                     NotWithin = new Scm.Inputs.HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs
+    ///                     {
+    ///                         Days = 10,
+    ///                     },
+    ///                 },
+    ///             },
+    ///             Vendors = new[]
+    ///             {
+    ///                 new Scm.Inputs.HipObjectAntiMalwareVendorArgs
+    ///                 {
+    ///                     Name = "Microsoft",
+    ///                     Product = new[]
+    ///                     {
+    ///                         "Microsoft Defender",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         DataLossPrevention = new Scm.Inputs.HipObjectDataLossPreventionArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectDataLossPreventionCriteriaArgs
+    ///             {
+    ///                 IsInstalled = true,
+    ///                 IsEnabled = "yes",
+    ///             },
+    ///             Vendors = new[]
+    ///             {
+    ///                 new Scm.Inputs.HipObjectDataLossPreventionVendorArgs
+    ///                 {
+    ///                     Name = "Symantec",
+    ///                 },
+    ///             },
+    ///         },
+    ///         DiskBackup = new Scm.Inputs.HipObjectDiskBackupArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectDiskBackupCriteriaArgs
+    ///             {
+    ///                 IsInstalled = true,
+    ///                 LastBackupTime = new Scm.Inputs.HipObjectDiskBackupCriteriaLastBackupTimeArgs
+    ///                 {
+    ///                     Within = new Scm.Inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs
+    ///                     {
+    ///                         Days = 7,
+    ///                     },
+    ///                 },
+    ///             },
+    ///             Vendors = new[]
+    ///             {
+    ///                 new Scm.Inputs.HipObjectDiskBackupVendorArgs
+    ///                 {
+    ///                     Name = "Veeam",
+    ///                 },
+    ///             },
+    ///         },
+    ///         DiskEncryption = new Scm.Inputs.HipObjectDiskEncryptionArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectDiskEncryptionCriteriaArgs
+    ///             {
+    ///                 IsInstalled = true,
+    ///                 EncryptedLocations = new[]
+    ///                 {
+    ///                     new Scm.Inputs.HipObjectDiskEncryptionCriteriaEncryptedLocationArgs
+    ///                     {
+    ///                         Name = "C:\\",
+    ///                         EncryptionState = new Scm.Inputs.HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs
+    ///                         {
+    ///                             Is = "encrypted",
+    ///                         },
+    ///                     },
+    ///                     new Scm.Inputs.HipObjectDiskEncryptionCriteriaEncryptedLocationArgs
+    ///                     {
+    ///                         Name = "D:\\Users\\",
+    ///                         EncryptionState = new Scm.Inputs.HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs
+    ///                         {
+    ///                             IsNot = "unencrypted",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///             Vendors = new[]
+    ///             {
+    ///                 new Scm.Inputs.HipObjectDiskEncryptionVendorArgs
+    ///                 {
+    ///                     Name = "BitLocker",
+    ///                 },
+    ///             },
+    ///         },
+    ///         Firewall = new Scm.Inputs.HipObjectFirewallArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectFirewallCriteriaArgs
+    ///             {
+    ///                 IsInstalled = true,
+    ///                 IsEnabled = "yes",
+    ///             },
+    ///             Vendors = new[]
+    ///             {
+    ///                 new Scm.Inputs.HipObjectFirewallVendorArgs
+    ///                 {
+    ///                     Name = "Microsoft",
+    ///                 },
+    ///             },
+    ///         },
+    ///         HostInfo = new Scm.Inputs.HipObjectHostInfoArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectHostInfoCriteriaArgs
+    ///             {
+    ///                 Os = new Scm.Inputs.HipObjectHostInfoCriteriaOsArgs
+    ///                 {
+    ///                     Contains = new Scm.Inputs.HipObjectHostInfoCriteriaOsContainsArgs
+    ///                     {
+    ///                         Microsoft = "Microsoft Windows 11",
+    ///                     },
+    ///                 },
+    ///                 Domain = new Scm.Inputs.HipObjectHostInfoCriteriaDomainArgs
+    ///                 {
+    ///                     Is = "corp.example.com",
+    ///                 },
+    ///             },
+    ///         },
+    ///         MobileDevice = new Scm.Inputs.HipObjectMobileDeviceArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectMobileDeviceCriteriaArgs
+    ///             {
+    ///                 Jailbroken = false,
+    ///                 PasscodeSet = true,
+    ///                 Applications = new Scm.Inputs.HipObjectMobileDeviceCriteriaApplicationsArgs
+    ///                 {
+    ///                     HasUnmanagedApp = false,
+    ///                     HasMalware = new Scm.Inputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs
+    ///                     {
+    ///                         No = null,
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         NetworkInfo = new Scm.Inputs.HipObjectNetworkInfoArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectNetworkInfoCriteriaArgs
+    ///             {
+    ///                 Network = new Scm.Inputs.HipObjectNetworkInfoCriteriaNetworkArgs
+    ///                 {
+    ///                     Is = new Scm.Inputs.HipObjectNetworkInfoCriteriaNetworkIsArgs
+    ///                     {
+    ///                         Wifi = new Scm.Inputs.HipObjectNetworkInfoCriteriaNetworkIsWifiArgs
+    ///                         {
+    ///                             Ssid = "Corporate-WLAN",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///         PatchManagement = new Scm.Inputs.HipObjectPatchManagementArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectPatchManagementCriteriaArgs
+    ///             {
+    ///                 IsInstalled = true,
+    ///                 MissingPatches = new Scm.Inputs.HipObjectPatchManagementCriteriaMissingPatchesArgs
+    ///                 {
+    ///                     Check = "has-none",
+    ///                     Patches = new[]
+    ///                     {
+    ///                         "KB4012212",
+    ///                         "KB4012213",
+    ///                     },
+    ///                     Severity = new Scm.Inputs.HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs
+    ///                     {
+    ///                         GreaterThan = 5,
+    ///                     },
+    ///                 },
+    ///             },
+    ///             Vendors = new[]
+    ///             {
+    ///                 new Scm.Inputs.HipObjectPatchManagementVendorArgs
+    ///                 {
+    ///                     Name = "Microsoft",
+    ///                 },
+    ///             },
+    ///         },
+    ///         CustomChecks = new Scm.Inputs.HipObjectCustomChecksArgs
+    ///         {
+    ///             Criteria = new Scm.Inputs.HipObjectCustomChecksCriteriaArgs
+    ///             {
+    ///                 ProcessLists = new[]
+    ///                 {
+    ///                     new Scm.Inputs.HipObjectCustomChecksCriteriaProcessListArgs
+    ///                     {
+    ///                         Name = "evil_process.exe",
+    ///                         Running = false,
+    ///                     },
+    ///                     new Scm.Inputs.HipObjectCustomChecksCriteriaProcessListArgs
+    ///                     {
+    ///                         Name = "corp_security_agent.exe",
+    ///                         Running = true,
+    ///                     },
+    ///                 },
+    ///                 RegistryKeys = new[]
+    ///                 {
+    ///                     new Scm.Inputs.HipObjectCustomChecksCriteriaRegistryKeyArgs
+    ///                     {
+    ///                         Name = "HKEY_LOCAL_MACHINE\\Software\\PaloAltoNetworks",
+    ///                         RegistryValue = new[]
+    ///                         {
+    ///                             
+    ///                             {
+    ///                                 { "name", "AllowRemoteAccess" },
+    ///                                 { "valueData", "false" },
+    ///                             },
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/hipObject:HipObject")]
     public partial class HipObject : global::Pulumi.CustomResource

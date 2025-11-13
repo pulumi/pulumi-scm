@@ -22,6 +22,68 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.AntiSpywareSignature;
+ * import com.pulumi.scm.AntiSpywareSignatureArgs;
+ * import com.pulumi.scm.inputs.AntiSpywareSignatureDefaultActionArgs;
+ * import com.pulumi.scm.inputs.AntiSpywareSignatureDefaultActionAlertArgs;
+ * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureArgs;
+ * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureCombinationArgs;
+ * import com.pulumi.scm.inputs.AntiSpywareSignatureSignatureCombinationTimeAttributeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmAntiSpywareSignature1 = new AntiSpywareSignature("scmAntiSpywareSignature1", AntiSpywareSignatureArgs.builder()
+ *             .folder("All")
+ *             .threatId("6900001")
+ *             .comment("Managed by Pulumi")
+ *             .direction("client2server")
+ *             .severity("critical")
+ *             .threatname("Example Threat")
+ *             .defaultAction(AntiSpywareSignatureDefaultActionArgs.builder()
+ *                 .alert(AntiSpywareSignatureDefaultActionAlertArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .signature(AntiSpywareSignatureSignatureArgs.builder()
+ *                 .combination(AntiSpywareSignatureSignatureCombinationArgs.builder()
+ *                     .andConditions(AntiSpywareSignatureSignatureCombinationAndConditionArgs.builder()
+ *                         .name("And Condition 1")
+ *                         .orCondition(List.of(Map.ofEntries(
+ *                             Map.entry("name", "Test"),
+ *                             Map.entry("threat_id", "10001")
+ *                         )))
+ *                         .build())
+ *                     .orderFree(false)
+ *                     .timeAttribute(AntiSpywareSignatureSignatureCombinationTimeAttributeArgs.builder()
+ *                         .interval(3600)
+ *                         .threshold(60)
+ *                         .trackBy("source")
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/antiSpywareSignature:AntiSpywareSignature")
 public class AntiSpywareSignature extends com.pulumi.resources.CustomResource {

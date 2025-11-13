@@ -14,6 +14,121 @@ import (
 // AggregateInterface resource
 //
 // ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates a layer 2 aggregate interface without vlan configuration
+//			_, err := scm.NewAggregateInterface(ctx, "scm_aggregate_intf_l2", &scm.AggregateInterfaceArgs{
+//				Name:    pulumi.String("$scm_aggregate_intf_l2"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer2:  &scm.AggregateInterfaceLayer2Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer 2 aggregate interface with vlan and lacp configuration
+//			_, err = scm.NewAggregateInterface(ctx, "scm_aggregate_intf_l2_lacp", &scm.AggregateInterfaceArgs{
+//				Name:    pulumi.String("$scm_aggregate_intf_l2_lacp"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer2: &scm.AggregateInterfaceLayer2Args{
+//					VlanTag: pulumi.String("1234"),
+//					Lacp: &scm.AggregateInterfaceLayer2LacpArgs{
+//						Enable:           pulumi.Bool(true),
+//						FastFailover:     pulumi.Bool(true),
+//						SystenPriority:   32768,
+//						TransmissionRate: pulumi.String("fast"),
+//					},
+//					Lldp: map[string]interface{}{
+//						"enable": false,
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 aggregate interface without ip configuration
+//			_, err = scm.NewAggregateInterface(ctx, "scm_aggregate_intf_l3", &scm.AggregateInterfaceArgs{
+//				Name:    pulumi.String("$scm_aggregate_intf_l3"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3:  &scm.AggregateInterfaceLayer3Args{},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 aggregate interface with static ip address and lacp
+//			_, err = scm.NewAggregateInterface(ctx, "scm_aggregate_intf_l3_static", &scm.AggregateInterfaceArgs{
+//				Name:    pulumi.String("$scm_aggregate_intf_l3_static"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.AggregateInterfaceLayer3Args{
+//					Ips: scm.AggregateInterfaceLayer3IpArray{
+//						&scm.AggregateInterfaceLayer3IpArgs{
+//							Name: pulumi.String("198.18.1.1/24"),
+//						},
+//					},
+//					Lacp: &scm.AggregateInterfaceLayer3LacpArgs{
+//						Enable:           pulumi.Bool(true),
+//						FastFailover:     pulumi.Bool(true),
+//						SystenPriority:   32768,
+//						TransmissionRate: pulumi.String("fast"),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 aggregate interface with dhcp-assigned ip address
+//			_, err = scm.NewAggregateInterface(ctx, "scm_aggregate_intf_l3_dhcp", &scm.AggregateInterfaceArgs{
+//				Name:    pulumi.String("$scm_aggregate_intf_l3_dhcp"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.AggregateInterfaceLayer3Args{
+//					DhcpClient: &scm.AggregateInterfaceLayer3DhcpClientArgs{
+//						Enable:             pulumi.Bool(true),
+//						CreateDefaultRoute: pulumi.Bool(true),
+//						DefaultRouteMetric: pulumi.Int(10),
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a layer3 aggregate interface with multiple static ip addresses
+//			_, err = scm.NewAggregateInterface(ctx, "scm_aggregate_intf_l3_complex", &scm.AggregateInterfaceArgs{
+//				Name:    pulumi.String("$scm_aggregate_intf_l3_complex"),
+//				Comment: pulumi.String("Managed by Pulumi"),
+//				Folder:  pulumi.String("ngfw-shared"),
+//				Layer3: &scm.AggregateInterfaceLayer3Args{
+//					Ips: scm.AggregateInterfaceLayer3IpArray{
+//						&scm.AggregateInterfaceLayer3IpArgs{
+//							Name: pulumi.String("198.18.1.1/24"),
+//							Name: pulumi.String("198.18.1.2/32"),
+//						},
+//					},
+//					Mtu: pulumi.Int(1500),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type AggregateInterface struct {
 	pulumi.CustomResourceState
 

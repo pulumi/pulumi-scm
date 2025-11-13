@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// AntiSpywareSignature data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up anti-spyware-profile by ID
+        ///     var scmAntiSpywareSignatureDs = Scm.GetAntiSpywareSignature.Invoke(new()
+        ///     {
+        ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAntiSpywareSignatureOutput"] = 
+        ///         {
+        ///             { "threadId", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id) },
+        ///             { "folder", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder) },
+        ///             { "name", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name) },
+        ///             { "comment", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment) },
+        ///             { "severity", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity) },
+        ///             { "signature", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetAntiSpywareSignatureResult> InvokeAsync(GetAntiSpywareSignatureArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureArgs(), options.WithDefaults());
 
         /// <summary>
         /// AntiSpywareSignature data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up anti-spyware-profile by ID
+        ///     var scmAntiSpywareSignatureDs = Scm.GetAntiSpywareSignature.Invoke(new()
+        ///     {
+        ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAntiSpywareSignatureOutput"] = 
+        ///         {
+        ///             { "threadId", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id) },
+        ///             { "folder", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder) },
+        ///             { "name", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name) },
+        ///             { "comment", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment) },
+        ///             { "severity", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity) },
+        ///             { "signature", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAntiSpywareSignatureResult> Invoke(GetAntiSpywareSignatureInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// AntiSpywareSignature data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up anti-spyware-profile by ID
+        ///     var scmAntiSpywareSignatureDs = Scm.GetAntiSpywareSignature.Invoke(new()
+        ///     {
+        ///         Id = "7720ab77-d9fe-42c1-8001-6ef2202aae8c",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAntiSpywareSignatureOutput"] = 
+        ///         {
+        ///             { "threadId", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Id) },
+        ///             { "folder", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Folder) },
+        ///             { "name", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Name) },
+        ///             { "comment", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Comment) },
+        ///             { "severity", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Severity) },
+        ///             { "signature", scmAntiSpywareSignatureDs.Apply(getAntiSpywareSignatureResult =&gt; getAntiSpywareSignatureResult.Signature) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAntiSpywareSignatureResult> Invoke(GetAntiSpywareSignatureInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAntiSpywareSignatureResult>("scm:index/getAntiSpywareSignature:getAntiSpywareSignature", args ?? new GetAntiSpywareSignatureInvokeArgs(), options.WithDefaults());

@@ -10,6 +10,51 @@ import * as utilities from "./utilities";
  * AntiSpywareProfile resource
  *
  * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Basic Anti-Spyware Profile
+ * const scmAntiSpywareProfile1 = new scm.AntiSpywareProfile("scm_anti_spyware_profile_1", {
+ *     folder: "All",
+ *     name: "scm_anti_spyware_profile_1",
+ *     description: "Managed by Pulumi",
+ *     cloudInlineAnalysis: true,
+ * });
+ * // Required object that will be referenced in examples
+ * const scmAddress1 = new scm.Address("scm_address_1", {
+ *     folder: "Shared",
+ *     name: "scm_address_1",
+ *     description: "Made by Pulumi",
+ *     ipNetmask: "10.2.3.4",
+ * });
+ * // Anti-Spyware Profile with exception EDL
+ * const scmAntiSpywareProfile2 = new scm.AntiSpywareProfile("scm_anti_spyware_profile_2", {
+ *     folder: "All",
+ *     name: "scm_anti_spyware_profile_2",
+ *     description: "Managed by Pulumi",
+ *     cloudInlineAnalysis: true,
+ *     inlineExceptionIpAddresses: ["scm_address_1"],
+ * }, {
+ *     dependsOn: [scmAddress1],
+ * });
+ * // Anti-Spyware Profile with rules
+ * const scmAntiSpywareProfile3 = new scm.AntiSpywareProfile("scm_anti_spyware_profile_3", {
+ *     folder: "All",
+ *     name: "scm_anti_spyware_profile_3",
+ *     description: "Managed by Pulumi",
+ *     cloudInlineAnalysis: true,
+ *     rules: [{
+ *         name: "Custom Rule",
+ *         notes: "Managed by Pulumi",
+ *         packetCapture: "single-packet",
+ *         category: "net-worm",
+ *         severity: ["critical"],
+ *         threatName: "data-theft",
+ *     }],
+ * });
+ * ```
  */
 export class AntiSpywareProfile extends pulumi.CustomResource {
     /**

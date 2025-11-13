@@ -24,6 +24,98 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.Application;
+ * import com.pulumi.scm.ApplicationArgs;
+ * import com.pulumi.scm.inputs.ApplicationSignatureArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // Custom Application
+ *         var scmMediaApp = new Application("scmMediaApp", ApplicationArgs.builder()
+ *             .folder("All")
+ *             .name("scm_media_app")
+ *             .description("Managed by Pulumi")
+ *             .category("media")
+ *             .subcategory("gaming")
+ *             .technology("client-server")
+ *             .risk("4")
+ *             .evasiveBehavior(true)
+ *             .pervasiveUse(true)
+ *             .consumeBigBandwidth(true)
+ *             .hasKnownVulnerability(true)
+ *             .proneToMisuse(true)
+ *             .build());
+ * 
+ *         // Custom Application with tweaked timeouts and additional settings
+ *         var scmRiskyApp = new Application("scmRiskyApp", ApplicationArgs.builder()
+ *             .folder("All")
+ *             .name("scm_risky_app")
+ *             .description("Managed by Pulumi")
+ *             .category("media")
+ *             .subcategory("gaming")
+ *             .technology("client-server")
+ *             .risk("4")
+ *             .timeout(3600)
+ *             .tcpTimeout(3600)
+ *             .tcpHalfClosedTimeout(60)
+ *             .tcpTimeWaitTimeout(10)
+ *             .evasiveBehavior(true)
+ *             .pervasiveUse(true)
+ *             .consumeBigBandwidth(true)
+ *             .hasKnownVulnerability(true)
+ *             .proneToMisuse(true)
+ *             .tunnelOtherApplication(true)
+ *             .tunnelApplications(true)
+ *             .noAppidCaching(true)
+ *             .parentApp("bittorrent")
+ *             .build());
+ * 
+ *         // Custom Application based on Custom Signature
+ *         var scmCustomApp = new Application("scmCustomApp", ApplicationArgs.builder()
+ *             .folder("All")
+ *             .name("scm_custom_app")
+ *             .description("Managed by Pulumi")
+ *             .category("media")
+ *             .subcategory("gaming")
+ *             .technology("client-server")
+ *             .risk("4")
+ *             .signatures(ApplicationSignatureArgs.builder()
+ *                 .name("Custom Signature")
+ *                 .comment("Managed by Pulumi")
+ *                 .scope("session")
+ *                 .orderFree(false)
+ *                 .andCondition(List.of(Map.ofEntries(
+ *                     Map.entry("name", "Example Condition"),
+ *                     Map.entry("operator", Map.of("patternMatch", Map.ofEntries(
+ *                         Map.entry("context", "file-data"),
+ *                         Map.entry("pattern", "^malware$")
+ *                     )))
+ *                 )))
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/application:Application")
 public class Application extends com.pulumi.resources.CustomResource {

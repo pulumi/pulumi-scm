@@ -20,6 +20,153 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.DnsSecurityProfile;
+ * import com.pulumi.scm.DnsSecurityProfileArgs;
+ * import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsArgs;
+ * import com.pulumi.scm.inputs.DnsSecurityProfileBotnetDomainsSinkholeArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmDnsSecurityProfileBase = new DnsSecurityProfile("scmDnsSecurityProfileBase", DnsSecurityProfileArgs.builder()
+ *             .folder("All")
+ *             .name("dns_base")
+ *             .build());
+ * 
+ *         var scmDnsSecurityCategories = new DnsSecurityProfile("scmDnsSecurityCategories", DnsSecurityProfileArgs.builder()
+ *             .folder("All")
+ *             .name("test_dns_sec_categories")
+ *             .description("dns security profile w/ dns security categories")
+ *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
+ *                 .dnsSecurityCategories(                
+ *                     DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs.builder()
+ *                         .name("pan-dns-sec-recent")
+ *                         .build(),
+ *                     DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs.builder()
+ *                         .name("pan-dns-sec-grayware")
+ *                         .action("allow")
+ *                         .logLevel("high")
+ *                         .packetCapture("disable")
+ *                         .build(),
+ *                     DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs.builder()
+ *                         .name("pan-dns-sec-proxy")
+ *                         .action("block")
+ *                         .logLevel("default")
+ *                         .packetCapture("single-packet")
+ *                         .build(),
+ *                     DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs.builder()
+ *                         .name("pan-dns-sec-phishing")
+ *                         .action("sinkhole")
+ *                         .logLevel("critical")
+ *                         .packetCapture("extended-capture")
+ *                         .build(),
+ *                     DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs.builder()
+ *                         .name("pan-dns-sec-malware")
+ *                         .action("default")
+ *                         .logLevel("informational")
+ *                         .packetCapture("disable")
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmDnsLists = new DnsSecurityProfile("scmDnsLists", DnsSecurityProfileArgs.builder()
+ *             .folder("All")
+ *             .name("test_dns_lists")
+ *             .description("dns security profile w/ dns lists")
+ *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
+ *                 .dnsLists(List.of(                
+ *                     Map.ofEntries(
+ *                         Map.entry("name", "default-paloalto-dns"),
+ *                         Map.entry("packetCapture", "disable"),
+ *                         Map.entry("action", Map.of("alert", Map.ofEntries(
+ *                         )))
+ *                     ),
+ *                     Map.ofEntries(
+ *                         Map.entry("name", "update-edl"),
+ *                         Map.entry("packetCapture", "extended-capture"),
+ *                         Map.entry("action", Map.of("allow", Map.ofEntries(
+ *                         )))
+ *                     )))
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmDnsSinkhole = new DnsSecurityProfile("scmDnsSinkhole", DnsSecurityProfileArgs.builder()
+ *             .folder("All")
+ *             .name("test_dns_sinkhole")
+ *             .description("dns security profile w/ sinkhole")
+ *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
+ *                 .sinkhole(DnsSecurityProfileBotnetDomainsSinkholeArgs.builder()
+ *                     .ipv4Address("127.0.0.1")
+ *                     .ipv6Address("::1")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmDnsWhitelist = new DnsSecurityProfile("scmDnsWhitelist", DnsSecurityProfileArgs.builder()
+ *             .folder("All")
+ *             .name("test_dns_whitelist")
+ *             .description("dns security profile w/ whitelist")
+ *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
+ *                 .whitelists(                
+ *                     DnsSecurityProfileBotnetDomainsWhitelistArgs.builder()
+ *                         .name("example.com")
+ *                         .build(),
+ *                     DnsSecurityProfileBotnetDomainsWhitelistArgs.builder()
+ *                         .name("example2.com")
+ *                         .description("creating whitelist")
+ *                         .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmDnsAll = new DnsSecurityProfile("scmDnsAll", DnsSecurityProfileArgs.builder()
+ *             .folder("All")
+ *             .name("test_dns_all_test")
+ *             .description("dns security profile w/ all")
+ *             .botnetDomains(DnsSecurityProfileBotnetDomainsArgs.builder()
+ *                 .dnsSecurityCategories(DnsSecurityProfileBotnetDomainsDnsSecurityCategoryArgs.builder()
+ *                     .name("pan-dns-sec-ddns")
+ *                     .action("block")
+ *                     .logLevel("low")
+ *                     .packetCapture("disable")
+ *                     .build())
+ *                 .dnsLists(List.of(Map.ofEntries(
+ *                     Map.entry("name", "scm_edl_1"),
+ *                     Map.entry("packetCapture", "single-packet"),
+ *                     Map.entry("action", Map.of("block", Map.ofEntries(
+ *                     )))
+ *                 )))
+ *                 .sinkhole(DnsSecurityProfileBotnetDomainsSinkholeArgs.builder()
+ *                     .ipv4Address("pan-sinkhole-default-ip")
+ *                     .ipv6Address("::1")
+ *                     .build())
+ *                 .whitelists(DnsSecurityProfileBotnetDomainsWhitelistArgs.builder()
+ *                     .name("ebay.com")
+ *                     .description("creating whitelist")
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/dnsSecurityProfile:DnsSecurityProfile")
 public class DnsSecurityProfile extends com.pulumi.resources.CustomResource {

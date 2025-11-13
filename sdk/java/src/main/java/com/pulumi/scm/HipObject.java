@@ -30,6 +30,217 @@ import javax.annotation.Nullable;
  * 
  * ## Example Usage
  * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.HipObject;
+ * import com.pulumi.scm.HipObjectArgs;
+ * import com.pulumi.scm.inputs.HipObjectAntiMalwareArgs;
+ * import com.pulumi.scm.inputs.HipObjectAntiMalwareCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectAntiMalwareCriteriaVirdefVersionArgs;
+ * import com.pulumi.scm.inputs.HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs;
+ * import com.pulumi.scm.inputs.HipObjectDataLossPreventionArgs;
+ * import com.pulumi.scm.inputs.HipObjectDataLossPreventionCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaLastBackupTimeArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskEncryptionArgs;
+ * import com.pulumi.scm.inputs.HipObjectDiskEncryptionCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectFirewallArgs;
+ * import com.pulumi.scm.inputs.HipObjectFirewallCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectHostInfoArgs;
+ * import com.pulumi.scm.inputs.HipObjectHostInfoCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectHostInfoCriteriaOsArgs;
+ * import com.pulumi.scm.inputs.HipObjectHostInfoCriteriaOsContainsArgs;
+ * import com.pulumi.scm.inputs.HipObjectHostInfoCriteriaDomainArgs;
+ * import com.pulumi.scm.inputs.HipObjectMobileDeviceArgs;
+ * import com.pulumi.scm.inputs.HipObjectMobileDeviceCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectMobileDeviceCriteriaApplicationsArgs;
+ * import com.pulumi.scm.inputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs;
+ * import com.pulumi.scm.inputs.HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoArgs;
+ * import com.pulumi.scm.inputs.HipObjectNetworkInfoArgs;
+ * import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkArgs;
+ * import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsArgs;
+ * import com.pulumi.scm.inputs.HipObjectNetworkInfoCriteriaNetworkIsWifiArgs;
+ * import com.pulumi.scm.inputs.HipObjectPatchManagementArgs;
+ * import com.pulumi.scm.inputs.HipObjectPatchManagementCriteriaArgs;
+ * import com.pulumi.scm.inputs.HipObjectPatchManagementCriteriaMissingPatchesArgs;
+ * import com.pulumi.scm.inputs.HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs;
+ * import com.pulumi.scm.inputs.HipObjectCustomChecksArgs;
+ * import com.pulumi.scm.inputs.HipObjectCustomChecksCriteriaArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         // This resource creates a comprehensive HIP Object with many criteria enabled.
+ *         // This showcases the use of nested objects and lists of objects that the
+ *         // corrected provider schema now supports.
+ *         var scmHipObject1 = new HipObject("scmHipObject1", HipObjectArgs.builder()
+ *             .folder("Shared")
+ *             .name("scm_hip_object_1")
+ *             .description("HIP object with multiple advanced criteria configured")
+ *             .antiMalware(HipObjectAntiMalwareArgs.builder()
+ *                 .criteria(HipObjectAntiMalwareCriteriaArgs.builder()
+ *                     .isInstalled(true)
+ *                     .realTimeProtection("yes")
+ *                     .virdefVersion(HipObjectAntiMalwareCriteriaVirdefVersionArgs.builder()
+ *                         .notWithin(HipObjectAntiMalwareCriteriaVirdefVersionNotWithinArgs.builder()
+ *                             .days(10)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .vendors(HipObjectAntiMalwareVendorArgs.builder()
+ *                     .name("Microsoft")
+ *                     .product(List.of("Microsoft Defender"))
+ *                     .build())
+ *                 .build())
+ *             .dataLossPrevention(HipObjectDataLossPreventionArgs.builder()
+ *                 .criteria(HipObjectDataLossPreventionCriteriaArgs.builder()
+ *                     .isInstalled(true)
+ *                     .isEnabled("yes")
+ *                     .build())
+ *                 .vendors(HipObjectDataLossPreventionVendorArgs.builder()
+ *                     .name("Symantec")
+ *                     .build())
+ *                 .build())
+ *             .diskBackup(HipObjectDiskBackupArgs.builder()
+ *                 .criteria(HipObjectDiskBackupCriteriaArgs.builder()
+ *                     .isInstalled(true)
+ *                     .lastBackupTime(HipObjectDiskBackupCriteriaLastBackupTimeArgs.builder()
+ *                         .within(HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs.builder()
+ *                             .days(7)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .vendors(HipObjectDiskBackupVendorArgs.builder()
+ *                     .name("Veeam")
+ *                     .build())
+ *                 .build())
+ *             .diskEncryption(HipObjectDiskEncryptionArgs.builder()
+ *                 .criteria(HipObjectDiskEncryptionCriteriaArgs.builder()
+ *                     .isInstalled(true)
+ *                     .encryptedLocations(                    
+ *                         HipObjectDiskEncryptionCriteriaEncryptedLocationArgs.builder()
+ *                             .name("C:\\")
+ *                             .encryptionState(HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs.builder()
+ *                                 .is("encrypted")
+ *                                 .build())
+ *                             .build(),
+ *                         HipObjectDiskEncryptionCriteriaEncryptedLocationArgs.builder()
+ *                             .name("D:\\Users\\")
+ *                             .encryptionState(HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionStateArgs.builder()
+ *                                 .isNot("unencrypted")
+ *                                 .build())
+ *                             .build())
+ *                     .build())
+ *                 .vendors(HipObjectDiskEncryptionVendorArgs.builder()
+ *                     .name("BitLocker")
+ *                     .build())
+ *                 .build())
+ *             .firewall(HipObjectFirewallArgs.builder()
+ *                 .criteria(HipObjectFirewallCriteriaArgs.builder()
+ *                     .isInstalled(true)
+ *                     .isEnabled("yes")
+ *                     .build())
+ *                 .vendors(HipObjectFirewallVendorArgs.builder()
+ *                     .name("Microsoft")
+ *                     .build())
+ *                 .build())
+ *             .hostInfo(HipObjectHostInfoArgs.builder()
+ *                 .criteria(HipObjectHostInfoCriteriaArgs.builder()
+ *                     .os(HipObjectHostInfoCriteriaOsArgs.builder()
+ *                         .contains(HipObjectHostInfoCriteriaOsContainsArgs.builder()
+ *                             .microsoft("Microsoft Windows 11")
+ *                             .build())
+ *                         .build())
+ *                     .domain(HipObjectHostInfoCriteriaDomainArgs.builder()
+ *                         .is("corp.example.com")
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .mobileDevice(HipObjectMobileDeviceArgs.builder()
+ *                 .criteria(HipObjectMobileDeviceCriteriaArgs.builder()
+ *                     .jailbroken(false)
+ *                     .passcodeSet(true)
+ *                     .applications(HipObjectMobileDeviceCriteriaApplicationsArgs.builder()
+ *                         .hasUnmanagedApp(false)
+ *                         .hasMalware(HipObjectMobileDeviceCriteriaApplicationsHasMalwareArgs.builder()
+ *                             .no(HipObjectMobileDeviceCriteriaApplicationsHasMalwareNoArgs.builder()
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .networkInfo(HipObjectNetworkInfoArgs.builder()
+ *                 .criteria(HipObjectNetworkInfoCriteriaArgs.builder()
+ *                     .network(HipObjectNetworkInfoCriteriaNetworkArgs.builder()
+ *                         .is(HipObjectNetworkInfoCriteriaNetworkIsArgs.builder()
+ *                             .wifi(HipObjectNetworkInfoCriteriaNetworkIsWifiArgs.builder()
+ *                                 .ssid("Corporate-WLAN")
+ *                                 .build())
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .patchManagement(HipObjectPatchManagementArgs.builder()
+ *                 .criteria(HipObjectPatchManagementCriteriaArgs.builder()
+ *                     .isInstalled(true)
+ *                     .missingPatches(HipObjectPatchManagementCriteriaMissingPatchesArgs.builder()
+ *                         .check("has-none")
+ *                         .patches(                        
+ *                             "KB4012212",
+ *                             "KB4012213")
+ *                         .severity(HipObjectPatchManagementCriteriaMissingPatchesSeverityArgs.builder()
+ *                             .greaterThan(5)
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .vendors(HipObjectPatchManagementVendorArgs.builder()
+ *                     .name("Microsoft")
+ *                     .build())
+ *                 .build())
+ *             .customChecks(HipObjectCustomChecksArgs.builder()
+ *                 .criteria(HipObjectCustomChecksCriteriaArgs.builder()
+ *                     .processLists(                    
+ *                         HipObjectCustomChecksCriteriaProcessListArgs.builder()
+ *                             .name("evil_process.exe")
+ *                             .running(false)
+ *                             .build(),
+ *                         HipObjectCustomChecksCriteriaProcessListArgs.builder()
+ *                             .name("corp_security_agent.exe")
+ *                             .running(true)
+ *                             .build())
+ *                     .registryKeys(HipObjectCustomChecksCriteriaRegistryKeyArgs.builder()
+ *                         .name("HKEY_LOCAL_MACHINE\\Software\\PaloAltoNetworks")
+ *                         .registryValue(List.of(Map.ofEntries(
+ *                             Map.entry("name", "AllowRemoteAccess"),
+ *                             Map.entry("valueData", "false")
+ *                         )))
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/hipObject:HipObject")
 public class HipObject extends com.pulumi.resources.CustomResource {

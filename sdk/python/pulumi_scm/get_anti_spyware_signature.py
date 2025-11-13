@@ -232,6 +232,24 @@ def get_anti_spyware_signature(id: Optional[_builtins.str] = None,
     """
     AntiSpywareSignature data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up anti-spyware-profile by ID
+    scm_anti_spyware_signature_ds = scm.get_anti_spyware_signature(id="7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+    pulumi.export("scmAntiSpywareSignatureOutput", {
+        "threadId": scm_anti_spyware_signature_ds.id,
+        "folder": scm_anti_spyware_signature_ds.folder,
+        "name": scm_anti_spyware_signature_ds.name,
+        "comment": scm_anti_spyware_signature_ds.comment,
+        "severity": scm_anti_spyware_signature_ds.severity,
+        "signature": scm_anti_spyware_signature_ds.signature,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     """
@@ -261,6 +279,24 @@ def get_anti_spyware_signature_output(id: Optional[pulumi.Input[_builtins.str]] 
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAntiSpywareSignatureResult]:
     """
     AntiSpywareSignature data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up anti-spyware-profile by ID
+    scm_anti_spyware_signature_ds = scm.get_anti_spyware_signature(id="7720ab77-d9fe-42c1-8001-6ef2202aae8c")
+    pulumi.export("scmAntiSpywareSignatureOutput", {
+        "threadId": scm_anti_spyware_signature_ds.id,
+        "folder": scm_anti_spyware_signature_ds.folder,
+        "name": scm_anti_spyware_signature_ds.name,
+        "comment": scm_anti_spyware_signature_ds.comment,
+        "severity": scm_anti_spyware_signature_ds.severity,
+        "signature": scm_anti_spyware_signature_ds.signature,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

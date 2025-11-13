@@ -13,6 +13,78 @@ namespace Pulumi.Scm
     /// AntiSpywareProfile resource
     /// 
     /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     // Basic Anti-Spyware Profile
+    ///     var scmAntiSpywareProfile1 = new Scm.AntiSpywareProfile("scm_anti_spyware_profile_1", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_anti_spyware_profile_1",
+    ///         Description = "Managed by Pulumi",
+    ///         CloudInlineAnalysis = true,
+    ///     });
+    /// 
+    ///     // Required object that will be referenced in examples
+    ///     var scmAddress1 = new Scm.Address("scm_address_1", new()
+    ///     {
+    ///         Folder = "Shared",
+    ///         Name = "scm_address_1",
+    ///         Description = "Made by Pulumi",
+    ///         IpNetmask = "10.2.3.4",
+    ///     });
+    /// 
+    ///     // Anti-Spyware Profile with exception EDL
+    ///     var scmAntiSpywareProfile2 = new Scm.AntiSpywareProfile("scm_anti_spyware_profile_2", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_anti_spyware_profile_2",
+    ///         Description = "Managed by Pulumi",
+    ///         CloudInlineAnalysis = true,
+    ///         InlineExceptionIpAddresses = new[]
+    ///         {
+    ///             "scm_address_1",
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmAddress1,
+    ///         },
+    ///     });
+    /// 
+    ///     // Anti-Spyware Profile with rules
+    ///     var scmAntiSpywareProfile3 = new Scm.AntiSpywareProfile("scm_anti_spyware_profile_3", new()
+    ///     {
+    ///         Folder = "All",
+    ///         Name = "scm_anti_spyware_profile_3",
+    ///         Description = "Managed by Pulumi",
+    ///         CloudInlineAnalysis = true,
+    ///         Rules = new[]
+    ///         {
+    ///             new Scm.Inputs.AntiSpywareProfileRuleArgs
+    ///             {
+    ///                 Name = "Custom Rule",
+    ///                 Notes = "Managed by Pulumi",
+    ///                 PacketCapture = "single-packet",
+    ///                 Category = "net-worm",
+    ///                 Severity = new[]
+    ///                 {
+    ///                     "critical",
+    ///                 },
+    ///                 ThreatName = "data-theft",
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/antiSpywareProfile:AntiSpywareProfile")]
     public partial class AntiSpywareProfile : global::Pulumi.CustomResource
