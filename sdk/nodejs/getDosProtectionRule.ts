@@ -51,66 +51,27 @@ export interface GetDosProtectionRuleResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Rule disabled?
-     */
     readonly disabled: boolean;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * List of source zones
-     */
     readonly froms: string[];
     /**
      * The UUID of the DNS security profile
      */
     readonly id: string;
-    /**
-     * Log forwarding profile name
-     */
     readonly logSetting: string;
     /**
      * Rule name
      */
     readonly name: string;
-    /**
-     * Position relative to local device rules
-     */
     readonly position: string;
-    /**
-     * Protection
-     */
     readonly protection: outputs.GetDosProtectionRuleProtection;
-    /**
-     * Schedule on which to enforce the rule
-     */
     readonly schedule: string;
-    /**
-     * List of services
-     */
     readonly services: string[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-     */
     readonly sourceUsers: string[];
-    /**
-     * List of source addresses
-     */
     readonly sources: string[];
-    /**
-     * List of tags
-     */
     readonly tags: string[];
     readonly tfid: string;
-    /**
-     * List of destination zones
-     */
     readonly tos: string[];
 }
 /**

@@ -12,6 +12,79 @@ import (
 )
 
 // BgpRouteMap resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Creates various resources used for subsequent examples
+//			scmRoutePrefixList, err := scm.NewRoutePrefixList(ctx, "scm_route_prefix_list", &scm.RoutePrefixListArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_bgp_prefix_list"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type: &scm.RoutePrefixListTypeArgs{
+//					Ipv4: &scm.RoutePrefixListTypeIpv4Args{
+//						Ipv4Entries: scm.RoutePrefixListTypeIpv4Ipv4EntryArray{
+//							&scm.RoutePrefixListTypeIpv4Ipv4EntryArgs{
+//								Name:   pulumi.Int(10),
+//								Action: pulumi.String("permit"),
+//								Prefix: &scm.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{
+//									GreaterThanOrEqual: 24,
+//									Network:            pulumi.String("198.18.1.0/24"),
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			// Creates a bgp route map that sets no-export community for traffic matching prefix-list
+//			// Requires: scm_bgp_prefix_list
+//			_, err = scm.NewBgpRouteMap(ctx, "scm_bgp_route_map", &scm.BgpRouteMapArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_bgp_route_map"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				RouteMaps: scm.BgpRouteMapRouteMapArray{
+//					&scm.BgpRouteMapRouteMapArgs{
+//						Name:        pulumi.Int(10),
+//						Description: pulumi.String("No Export"),
+//						Match: &scm.BgpRouteMapRouteMapMatchArgs{
+//							Ipv4: &scm.BgpRouteMapRouteMapMatchIpv4Args{
+//								Address: &scm.BgpRouteMapRouteMapMatchIpv4AddressArgs{
+//									PrefixList: pulumi.String("scm_bgp_prefix_list"),
+//								},
+//							},
+//						},
+//						Set: &scm.BgpRouteMapRouteMapSetArgs{
+//							RegularCommunity: []string{
+//								"no-export",
+//							},
+//						},
+//					},
+//				},
+//			}, pulumi.DependsOn([]pulumi.Resource{
+//				scmRoutePrefixList,
+//			}))
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type BgpRouteMap struct {
 	pulumi.CustomResourceState
 
@@ -20,12 +93,16 @@ type BgpRouteMap struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Route map
 	RouteMaps BgpRouteMapRouteMapArrayOutput `pulumi:"routeMaps"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -65,12 +142,16 @@ type bgpRouteMapState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
 	Name *string `pulumi:"name"`
 	// Route map
 	RouteMaps []BgpRouteMapRouteMap `pulumi:"routeMaps"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
@@ -81,12 +162,16 @@ type BgpRouteMapState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// Route map
 	RouteMaps BgpRouteMapRouteMapArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -101,12 +186,16 @@ type bgpRouteMapArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
 	Name *string `pulumi:"name"`
 	// Route map
 	RouteMaps []BgpRouteMapRouteMap `pulumi:"routeMaps"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -117,12 +206,16 @@ type BgpRouteMapArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// Route map
 	RouteMaps BgpRouteMapRouteMapArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -224,6 +317,8 @@ func (o BgpRouteMapOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMap) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -239,6 +334,8 @@ func (o BgpRouteMapOutput) RouteMaps() BgpRouteMapRouteMapArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMap) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

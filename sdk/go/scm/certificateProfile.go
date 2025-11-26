@@ -83,12 +83,16 @@ type CertificateProfile struct {
 	// User domain
 	Domain pulumi.StringPtrOutput `pulumi:"domain"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the certificate profile
 	Name pulumi.StringOutput `pulumi:"name"`
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrOutput `pulumi:"ocspReceiveTimeout"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// Use CRL?
@@ -151,12 +155,16 @@ type certificateProfileState struct {
 	// User domain
 	Domain *string `pulumi:"domain"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the certificate profile
 	Name *string `pulumi:"name"`
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout *string `pulumi:"ocspReceiveTimeout"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// Use CRL?
@@ -187,12 +195,16 @@ type CertificateProfileState struct {
 	// User domain
 	Domain pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the certificate profile
 	Name pulumi.StringPtrInput
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// Use CRL?
@@ -227,12 +239,16 @@ type certificateProfileArgs struct {
 	// User domain
 	Domain *string `pulumi:"domain"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the certificate profile
 	Name *string `pulumi:"name"`
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout *string `pulumi:"ocspReceiveTimeout"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Use CRL?
 	UseCrl *bool `pulumi:"useCrl"`
@@ -263,12 +279,16 @@ type CertificateProfileArgs struct {
 	// User domain
 	Domain pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the certificate profile
 	Name pulumi.StringPtrInput
 	// OCSP receive timeout (seconds)
 	OcspReceiveTimeout pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Use CRL?
 	UseCrl pulumi.BoolPtrInput
@@ -411,6 +431,8 @@ func (o CertificateProfileOutput) Domain() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o CertificateProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -426,6 +448,8 @@ func (o CertificateProfileOutput) OcspReceiveTimeout() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o CertificateProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *CertificateProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

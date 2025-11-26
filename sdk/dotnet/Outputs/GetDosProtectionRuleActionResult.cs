@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetDosProtectionRuleActionAllowResult Allow;
         /// <summary>
         /// Deny
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         public readonly Outputs.GetDosProtectionRuleActionDenyResult Deny;
         /// <summary>
         /// Protect
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow`, `Deny`, and `Protect`.
         /// </summary>
         public readonly Outputs.GetDosProtectionRuleActionProtectResult Protect;
 

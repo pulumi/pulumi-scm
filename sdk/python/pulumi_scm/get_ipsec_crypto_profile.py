@@ -73,33 +73,21 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def device(self) -> _builtins.str:
-        """
-        The device in which the resource is defined
-        """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="dhGroup")
     def dh_group(self) -> _builtins.str:
-        """
-        phase-2 DH group (PFS DH group)
-        """
         return pulumi.get(self, "dh_group")
 
     @_builtins.property
     @pulumi.getter
     def esp(self) -> 'outputs.GetIpsecCryptoProfileEspResult':
-        """
-        Esp
-        """
         return pulumi.get(self, "esp")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -113,17 +101,11 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def lifesize(self) -> 'outputs.GetIpsecCryptoProfileLifesizeResult':
-        """
-        Lifesize
-        """
         return pulumi.get(self, "lifesize")
 
     @_builtins.property
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIpsecCryptoProfileLifetimeResult':
-        """
-        Ipsec crypto profile lifetime
-        """
         return pulumi.get(self, "lifetime")
 
     @_builtins.property
@@ -137,9 +119,6 @@ class GetIpsecCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

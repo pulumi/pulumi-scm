@@ -83,53 +83,23 @@ export interface GetUrlAccessProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Local inline cat
-     */
     readonly localInlineCat: boolean;
-    /**
-     * Log container page only
-     */
     readonly logContainerPageOnly: boolean;
-    /**
-     * Log http hdr referer
-     */
     readonly logHttpHdrReferer: boolean;
-    /**
-     * Log http hdr user agent
-     */
     readonly logHttpHdrUserAgent: boolean;
-    /**
-     * Log http hdr xff
-     */
     readonly logHttpHdrXff: boolean;
-    /**
-     * Mlav category exception
-     */
     readonly mlavCategoryExceptions: string[];
     /**
      * Name
      */
     readonly name: string;
-    /**
-     * Redirect
-     */
     readonly redirects: string[];
-    /**
-     * Safe search enforcement
-     */
     readonly safeSearchEnforcement: boolean;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

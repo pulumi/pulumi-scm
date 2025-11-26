@@ -20,10 +20,14 @@ public final class GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType {
     /**
      * @return P2mp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+     * 
      */
     private GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mp p2mp;
     /**
      * @return P2p
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2p p2p;
@@ -39,12 +43,16 @@ public final class GetLogicalRouterListDataVrfOspfAreaInterfaceLinkType {
     /**
      * @return P2mp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+     * 
      */
     public GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2mp p2mp() {
         return this.p2mp;
     }
     /**
      * @return P2p
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfAreaInterfaceLinkTypeP2p p2p() {

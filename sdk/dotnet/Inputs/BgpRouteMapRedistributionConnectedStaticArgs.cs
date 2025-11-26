@@ -20,12 +20,16 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ospf
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `Ospf`, and `Rib`.
         /// </summary>
         [Input("ospf")]
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticOspfArgs>? Ospf { get; set; }
 
         /// <summary>
         /// Rib
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `Ospf`, and `Rib`.
         /// </summary>
         [Input("rib")]
         public Input<Inputs.BgpRouteMapRedistributionConnectedStaticRibArgs>? Rib { get; set; }

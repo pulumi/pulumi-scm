@@ -1494,6 +1494,32 @@ class SecurityRule(pulumi.CustomResource):
             tags=[web_tag.name])
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] action: The action to be taken when the rule is matched
@@ -1694,6 +1720,32 @@ class SecurityRule(pulumi.CustomResource):
             services=["service-https"],
             log_end=True,
             tags=[web_tag.name])
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
         ```
 
         :param str resource_name: The name of the resource.

@@ -34,12 +34,16 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
     /**
      * BGP Root RIB
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
+     * 
      */
     @Import(name="rib")
     private @Nullable Output<BgpRouteMapRedistributionBgpRibArgs> rib;
 
     /**
      * @return BGP Root RIB
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     public Optional<Output<BgpRouteMapRedistributionBgpRibArgs>> rib() {
@@ -95,6 +99,8 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
         /**
          * @param rib BGP Root RIB
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class BgpRouteMapRedistributionBgpArgs extends com.pulumi.resources
 
         /**
          * @param rib BGP Root RIB
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
          * 
          * @return builder
          * 

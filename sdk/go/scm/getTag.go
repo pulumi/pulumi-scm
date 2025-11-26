@@ -72,13 +72,11 @@ type LookupTagResult struct {
 	Comments string `pulumi:"comments"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the tag
 	Id string `pulumi:"id"`
 	// The name of the tag
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -134,7 +132,6 @@ func (o LookupTagResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupTagResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -149,7 +146,6 @@ func (o LookupTagResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupTagResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTagResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

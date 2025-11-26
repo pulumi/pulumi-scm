@@ -13,18 +13,84 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Site data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var singleSiteById = Scm.GetSite.Invoke(new()
+        ///     {
+        ///         Id = "d037fe30-68ae-47ee-9a74-71bc63ac2c10",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleSiteDetails"] = singleSiteById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSiteResult> InvokeAsync(GetSiteArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSiteResult>("scm:index/getSite:getSite", args ?? new GetSiteArgs(), options.WithDefaults());
 
         /// <summary>
         /// Site data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var singleSiteById = Scm.GetSite.Invoke(new()
+        ///     {
+        ///         Id = "d037fe30-68ae-47ee-9a74-71bc63ac2c10",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleSiteDetails"] = singleSiteById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSiteResult> Invoke(GetSiteInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSiteResult>("scm:index/getSite:getSite", args ?? new GetSiteInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Site data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var singleSiteById = Scm.GetSite.Invoke(new()
+        ///     {
+        ///         Id = "d037fe30-68ae-47ee-9a74-71bc63ac2c10",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["singleSiteDetails"] = singleSiteById,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSiteResult> Invoke(GetSiteInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSiteResult>("scm:index/getSite:getSite", args ?? new GetSiteInvokeArgs(), options.WithDefaults());
@@ -98,11 +164,15 @@ namespace Pulumi.Scm
         /// <summary>
         /// The latitude coordinate for the site
         /// </summary>
-        public readonly double Latitude;
+        public readonly string Latitude;
+        /// <summary>
+        /// The license type of the site
+        /// </summary>
+        public readonly string LicenseType;
         /// <summary>
         /// The longitude coordinate for the site
         /// </summary>
-        public readonly double Longitude;
+        public readonly string Longitude;
         /// <summary>
         /// Members
         /// </summary>
@@ -141,9 +211,11 @@ namespace Pulumi.Scm
 
             string id,
 
-            double latitude,
+            string latitude,
 
-            double longitude,
+            string licenseType,
+
+            string longitude,
 
             ImmutableArray<Outputs.GetSiteMemberResult> members,
 
@@ -165,6 +237,7 @@ namespace Pulumi.Scm
             Country = country;
             Id = id;
             Latitude = latitude;
+            LicenseType = licenseType;
             Longitude = longitude;
             Members = members;
             Name = name;

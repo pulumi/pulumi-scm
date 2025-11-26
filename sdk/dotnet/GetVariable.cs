@@ -170,9 +170,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the variable
@@ -182,22 +179,10 @@ namespace Pulumi.Scm
         /// The name of the variable
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Is the variable overridden?
-        /// </summary>
         public readonly bool Overridden;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// The variable type
-        /// </summary>
         public readonly string Type;
-        /// <summary>
-        /// The value of the variable
-        /// </summary>
         public readonly string Value;
 
         [OutputConstructor]

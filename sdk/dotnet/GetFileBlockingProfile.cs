@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// FileBlockingProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM File Blocking Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
+        ///     var scmFileBlockingProf = Scm.GetFileBlockingProfile.Invoke(new()
+        ///     {
+        ///         Id = "f32697f8-a98b-4097-b249-22c89f7d8f7f",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFileBlockingProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id) },
+        ///             { "folder", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder) },
+        ///             { "name", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetFileBlockingProfileResult> InvokeAsync(GetFileBlockingProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetFileBlockingProfileResult>("scm:index/getFileBlockingProfile:getFileBlockingProfile", args ?? new GetFileBlockingProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// FileBlockingProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM File Blocking Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
+        ///     var scmFileBlockingProf = Scm.GetFileBlockingProfile.Invoke(new()
+        ///     {
+        ///         Id = "f32697f8-a98b-4097-b249-22c89f7d8f7f",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFileBlockingProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id) },
+        ///             { "folder", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder) },
+        ///             { "name", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetFileBlockingProfileResult> Invoke(GetFileBlockingProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFileBlockingProfileResult>("scm:index/getFileBlockingProfile:getFileBlockingProfile", args ?? new GetFileBlockingProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// FileBlockingProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM File Blocking Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
+        ///     var scmFileBlockingProf = Scm.GetFileBlockingProfile.Invoke(new()
+        ///     {
+        ///         Id = "f32697f8-a98b-4097-b249-22c89f7d8f7f",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFileBlockingProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Id) },
+        ///             { "folder", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Folder) },
+        ///             { "name", scmFileBlockingProf.Apply(getFileBlockingProfileResult =&gt; getFileBlockingProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetFileBlockingProfileResult> Invoke(GetFileBlockingProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetFileBlockingProfileResult>("scm:index/getFileBlockingProfile:getFileBlockingProfile", args ?? new GetFileBlockingProfileInvokeArgs(), options.WithDefaults());
@@ -83,9 +176,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the file blocking profile
@@ -95,13 +185,7 @@ namespace Pulumi.Scm
         /// The name of the file blocking profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// A list of file blocking rules
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetFileBlockingProfileRuleResult> Rules;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

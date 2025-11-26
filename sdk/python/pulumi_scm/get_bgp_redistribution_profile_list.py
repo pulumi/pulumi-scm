@@ -165,6 +165,17 @@ def get_bgp_redistribution_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all bgp redistribution profiles
+    all_bgp_redistribution_profiles = scm.get_bgp_redistribution_profile_list(folder="ngfw-shared")
+    pulumi.export("scmBgpRedistributionProfileList", {profile.id: profile for profile in all_bgp_redistribution_profiles.datas})
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +214,17 @@ def get_bgp_redistribution_profile_list_output(device: Optional[pulumi.Input[Opt
                                                opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBgpRedistributionProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all bgp redistribution profiles
+    all_bgp_redistribution_profiles = scm.get_bgp_redistribution_profile_list(folder="ngfw-shared")
+    pulumi.export("scmBgpRedistributionProfileList", {profile.id: profile for profile in all_bgp_redistribution_profiles.datas})
+    ```
 
 
     :param _builtins.str device: The device of the item.

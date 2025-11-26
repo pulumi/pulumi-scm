@@ -33,8 +33,12 @@ class TlsServiceProfileArgs:
         :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "certificate", certificate)
         pulumi.set(__self__, "protocol_settings", protocol_settings)
@@ -88,6 +92,8 @@ class TlsServiceProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -112,6 +118,8 @@ class TlsServiceProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -135,9 +143,13 @@ class _TlsServiceProfileState:
         :param pulumi.Input[_builtins.str] certificate: Certificate name
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input['TlsServiceProfileProtocolSettingsArgs'] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if certificate is not None:
             pulumi.set(__self__, "certificate", certificate)
@@ -183,6 +195,8 @@ class _TlsServiceProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -219,6 +233,8 @@ class _TlsServiceProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -257,9 +273,13 @@ class TlsServiceProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] certificate: Certificate name
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -338,9 +358,13 @@ class TlsServiceProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] certificate: Certificate name
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         :param pulumi.Input[Union['TlsServiceProfileProtocolSettingsArgs', 'TlsServiceProfileProtocolSettingsArgsDict']] protocol_settings: Protocol settings
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -376,6 +400,8 @@ class TlsServiceProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -400,6 +426,8 @@ class TlsServiceProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

@@ -25,46 +25,22 @@ public final class GetWildfireAntiVirusProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Mlav exception
-     * 
-     */
     private List<GetWildfireAntiVirusProfileMlavException> mlavExceptions;
     /**
      * @return Name
      * 
      */
     private String name;
-    /**
-     * @return Packet capture
-     * 
-     */
     private Boolean packetCapture;
-    /**
-     * @return Rules
-     * 
-     */
     private List<GetWildfireAntiVirusProfileRule> rules;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Threat exception
-     * 
-     */
     private List<GetWildfireAntiVirusProfileThreatException> threatExceptions;
 
     private GetWildfireAntiVirusProfileResult() {}
@@ -82,10 +58,6 @@ public final class GetWildfireAntiVirusProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -96,10 +68,6 @@ public final class GetWildfireAntiVirusProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Mlav exception
-     * 
-     */
     public List<GetWildfireAntiVirusProfileMlavException> mlavExceptions() {
         return this.mlavExceptions;
     }
@@ -110,34 +78,18 @@ public final class GetWildfireAntiVirusProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Packet capture
-     * 
-     */
     public Boolean packetCapture() {
         return this.packetCapture;
     }
-    /**
-     * @return Rules
-     * 
-     */
     public List<GetWildfireAntiVirusProfileRule> rules() {
         return this.rules;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Threat exception
-     * 
-     */
     public List<GetWildfireAntiVirusProfileThreatException> threatExceptions() {
         return this.threatExceptions;
     }

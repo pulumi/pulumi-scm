@@ -83,13 +83,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Flood
-        /// </summary>
         public readonly Outputs.GetDosProtectionProfileFloodResult Flood;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the DNS security profile
@@ -99,18 +93,9 @@ namespace Pulumi.Scm
         /// Profile name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Resource
-        /// </summary>
         public readonly Outputs.GetDosProtectionProfileResourceResult Resource;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// Type
-        /// </summary>
         public readonly string Type;
 
         [OutputConstructor]

@@ -211,6 +211,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/securityRule:SecurityRule")
 public class SecurityRule extends com.pulumi.resources.CustomResource {

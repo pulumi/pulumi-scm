@@ -21,10 +21,14 @@ public final class HipObjectDiskBackupCriteriaLastBackupTime {
     /**
      * @return Not within
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+     * 
      */
     private @Nullable HipObjectDiskBackupCriteriaLastBackupTimeNotWithin notWithin;
     /**
      * @return Within
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     private @Nullable HipObjectDiskBackupCriteriaLastBackupTimeWithin within;
@@ -40,12 +44,16 @@ public final class HipObjectDiskBackupCriteriaLastBackupTime {
     /**
      * @return Not within
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+     * 
      */
     public Optional<HipObjectDiskBackupCriteriaLastBackupTimeNotWithin> notWithin() {
         return Optional.ofNullable(this.notWithin);
     }
     /**
      * @return Within
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     public Optional<HipObjectDiskBackupCriteriaLastBackupTimeWithin> within() {

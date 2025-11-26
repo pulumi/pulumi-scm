@@ -70,9 +70,6 @@ class GetTacacsServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -94,25 +91,16 @@ class GetTacacsServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> _builtins.str:
-        """
-        The TACACS+ authentication protocol
-        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetTacacsServerProfileServerResult']:
-        """
-        The TACACS+ server configuration
-        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -123,17 +111,11 @@ class GetTacacsServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
-        """
-        The TACACS+ timeout (seconds)
-        """
         return pulumi.get(self, "timeout")
 
     @_builtins.property
     @pulumi.getter(name="useSingleConnection")
     def use_single_connection(self) -> _builtins.bool:
-        """
-        Use a single TACACS+ connection?
-        """
         return pulumi.get(self, "use_single_connection")
 
 

@@ -69,22 +69,17 @@ type LookupAddressGroupResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Dynamic
+	Device  string                 `pulumi:"device"`
 	Dynamic GetAddressGroupDynamic `pulumi:"dynamic"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Folder  string                 `pulumi:"folder"`
 	// The UUID of the address group
 	Id string `pulumi:"id"`
 	// The name of the address group
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Static
+	Name    string   `pulumi:"name"`
+	Snippet string   `pulumi:"snippet"`
 	Statics []string `pulumi:"statics"`
-	// Tags for address group object
-	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	Tags    []string `pulumi:"tags"`
+	Tfid    string   `pulumi:"tfid"`
 }
 
 func LookupAddressGroupOutput(ctx *pulumi.Context, args LookupAddressGroupOutputArgs, opts ...pulumi.InvokeOption) LookupAddressGroupResultOutput {
@@ -133,12 +128,10 @@ func (o LookupAddressGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Dynamic
 func (o LookupAddressGroupResultOutput) Dynamic() GetAddressGroupDynamicOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) GetAddressGroupDynamic { return v.Dynamic }).(GetAddressGroupDynamicOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupAddressGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -153,17 +146,14 @@ func (o LookupAddressGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupAddressGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Static
 func (o LookupAddressGroupResultOutput) Statics() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Statics }).(pulumi.StringArrayOutput)
 }
 
-// Tags for address group object
 func (o LookupAddressGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAddressGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

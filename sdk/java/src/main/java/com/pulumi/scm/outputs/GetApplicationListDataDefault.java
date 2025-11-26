@@ -21,15 +21,21 @@ public final class GetApplicationListDataDefault {
     /**
      * @return Ident by icmp type
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     private GetApplicationListDataDefaultIdentByIcmpType identByIcmpType;
     /**
      * @return Ident by ip protocol
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     private String identByIpProtocol;
     /**
      * @return Port
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private List<String> ports;
@@ -45,6 +51,8 @@ public final class GetApplicationListDataDefault {
     /**
      * @return Ident by icmp type
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     public GetApplicationListDataDefaultIdentByIcmpType identByIcmpType() {
         return this.identByIcmpType;
@@ -52,12 +60,16 @@ public final class GetApplicationListDataDefault {
     /**
      * @return Ident by ip protocol
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     public String identByIpProtocol() {
         return this.identByIpProtocol;
     }
     /**
      * @return Port
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     public List<String> ports() {

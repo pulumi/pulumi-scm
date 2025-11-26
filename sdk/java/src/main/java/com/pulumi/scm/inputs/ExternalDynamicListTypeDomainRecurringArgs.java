@@ -37,12 +37,16 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
     /**
      * Five minute
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     @Import(name="fiveMinute")
     private @Nullable Output<ExternalDynamicListTypeDomainRecurringFiveMinuteArgs> fiveMinute;
 
     /**
      * @return Five minute
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeDomainRecurringFiveMinuteArgs>> fiveMinute() {
@@ -52,12 +56,16 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
     /**
      * Hourly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     @Import(name="hourly")
     private @Nullable Output<ExternalDynamicListTypeDomainRecurringHourlyArgs> hourly;
 
     /**
      * @return Hourly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeDomainRecurringHourlyArgs>> hourly() {
@@ -67,12 +75,16 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
     /**
      * Monthly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     @Import(name="monthly")
     private @Nullable Output<ExternalDynamicListTypeDomainRecurringMonthlyArgs> monthly;
 
     /**
      * @return Monthly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeDomainRecurringMonthlyArgs>> monthly() {
@@ -82,12 +94,16 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
     /**
      * Weekly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     @Import(name="weekly")
     private @Nullable Output<ExternalDynamicListTypeDomainRecurringWeeklyArgs> weekly;
 
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<Output<ExternalDynamicListTypeDomainRecurringWeeklyArgs>> weekly() {
@@ -146,6 +162,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
         /**
          * @param fiveMinute Five minute
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+         * 
          * @return builder
          * 
          */
@@ -157,6 +175,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
         /**
          * @param fiveMinute Five minute
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+         * 
          * @return builder
          * 
          */
@@ -166,6 +186,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
 
         /**
          * @param hourly Hourly
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -178,6 +200,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
         /**
          * @param hourly Hourly
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+         * 
          * @return builder
          * 
          */
@@ -187,6 +211,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
 
         /**
          * @param monthly Monthly
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -199,6 +225,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
         /**
          * @param monthly Monthly
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+         * 
          * @return builder
          * 
          */
@@ -208,6 +236,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
 
         /**
          * @param weekly Weekly
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 
@@ -219,6 +249,8 @@ public final class ExternalDynamicListTypeDomainRecurringArgs extends com.pulumi
 
         /**
          * @param weekly Weekly
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
          * 
          * @return builder
          * 

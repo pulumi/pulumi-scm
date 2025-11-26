@@ -13,18 +13,105 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// BgpRedistributionProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up BGP Redistribution Profile by its ID.
+        ///     var scmBgpRedistributionProfileDs = Scm.GetBgpRedistributionProfile.Invoke(new()
+        ///     {
+        ///         Id = "491918e9-0205-4a08-955a-7e59a38d5dc4",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpRedistributionProfileDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id) },
+        ///             { "name", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name) },
+        ///             { "ipv4", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4) },
+        ///             { "folder", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetBgpRedistributionProfileResult> InvokeAsync(GetBgpRedistributionProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetBgpRedistributionProfileResult>("scm:index/getBgpRedistributionProfile:getBgpRedistributionProfile", args ?? new GetBgpRedistributionProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpRedistributionProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up BGP Redistribution Profile by its ID.
+        ///     var scmBgpRedistributionProfileDs = Scm.GetBgpRedistributionProfile.Invoke(new()
+        ///     {
+        ///         Id = "491918e9-0205-4a08-955a-7e59a38d5dc4",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpRedistributionProfileDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id) },
+        ///             { "name", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name) },
+        ///             { "ipv4", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4) },
+        ///             { "folder", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRedistributionProfileResult> Invoke(GetBgpRedistributionProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRedistributionProfileResult>("scm:index/getBgpRedistributionProfile:getBgpRedistributionProfile", args ?? new GetBgpRedistributionProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpRedistributionProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up BGP Redistribution Profile by its ID.
+        ///     var scmBgpRedistributionProfileDs = Scm.GetBgpRedistributionProfile.Invoke(new()
+        ///     {
+        ///         Id = "491918e9-0205-4a08-955a-7e59a38d5dc4",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpRedistributionProfileDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Id) },
+        ///             { "name", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Name) },
+        ///             { "ipv4", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Ipv4) },
+        ///             { "folder", scmBgpRedistributionProfileDs.Apply(getBgpRedistributionProfileResult =&gt; getBgpRedistributionProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRedistributionProfileResult> Invoke(GetBgpRedistributionProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRedistributionProfileResult>("scm:index/getBgpRedistributionProfile:getBgpRedistributionProfile", args ?? new GetBgpRedistributionProfileInvokeArgs(), options.WithDefaults());
@@ -79,25 +166,16 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Ipv4
-        /// </summary>
         public readonly Outputs.GetBgpRedistributionProfileIpv4Result Ipv4;
         /// <summary>
         /// Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

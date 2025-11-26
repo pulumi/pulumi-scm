@@ -78,31 +78,21 @@ type LookupUrlAccessProfileResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Local inline cat
-	LocalInlineCat bool `pulumi:"localInlineCat"`
-	// Log container page only
-	LogContainerPageOnly bool `pulumi:"logContainerPageOnly"`
-	// Log http hdr referer
-	LogHttpHdrReferer bool `pulumi:"logHttpHdrReferer"`
-	// Log http hdr user agent
-	LogHttpHdrUserAgent bool `pulumi:"logHttpHdrUserAgent"`
-	// Log http hdr xff
-	LogHttpHdrXff bool `pulumi:"logHttpHdrXff"`
-	// Mlav category exception
+	Id                     string   `pulumi:"id"`
+	LocalInlineCat         bool     `pulumi:"localInlineCat"`
+	LogContainerPageOnly   bool     `pulumi:"logContainerPageOnly"`
+	LogHttpHdrReferer      bool     `pulumi:"logHttpHdrReferer"`
+	LogHttpHdrUserAgent    bool     `pulumi:"logHttpHdrUserAgent"`
+	LogHttpHdrXff          bool     `pulumi:"logHttpHdrXff"`
 	MlavCategoryExceptions []string `pulumi:"mlavCategoryExceptions"`
 	// Name
-	Name string `pulumi:"name"`
-	// Redirect
-	Redirects []string `pulumi:"redirects"`
-	// Safe search enforcement
-	SafeSearchEnforcement bool `pulumi:"safeSearchEnforcement"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Name                  string   `pulumi:"name"`
+	Redirects             []string `pulumi:"redirects"`
+	SafeSearchEnforcement bool     `pulumi:"safeSearchEnforcement"`
+	Snippet               string   `pulumi:"snippet"`
+	Tfid                  string   `pulumi:"tfid"`
 }
 
 func LookupUrlAccessProfileOutput(ctx *pulumi.Context, args LookupUrlAccessProfileOutputArgs, opts ...pulumi.InvokeOption) LookupUrlAccessProfileResultOutput {
@@ -183,7 +173,6 @@ func (o LookupUrlAccessProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupUrlAccessProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -193,32 +182,26 @@ func (o LookupUrlAccessProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Local inline cat
 func (o LookupUrlAccessProfileResultOutput) LocalInlineCat() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) bool { return v.LocalInlineCat }).(pulumi.BoolOutput)
 }
 
-// Log container page only
 func (o LookupUrlAccessProfileResultOutput) LogContainerPageOnly() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) bool { return v.LogContainerPageOnly }).(pulumi.BoolOutput)
 }
 
-// Log http hdr referer
 func (o LookupUrlAccessProfileResultOutput) LogHttpHdrReferer() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) bool { return v.LogHttpHdrReferer }).(pulumi.BoolOutput)
 }
 
-// Log http hdr user agent
 func (o LookupUrlAccessProfileResultOutput) LogHttpHdrUserAgent() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) bool { return v.LogHttpHdrUserAgent }).(pulumi.BoolOutput)
 }
 
-// Log http hdr xff
 func (o LookupUrlAccessProfileResultOutput) LogHttpHdrXff() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) bool { return v.LogHttpHdrXff }).(pulumi.BoolOutput)
 }
 
-// Mlav category exception
 func (o LookupUrlAccessProfileResultOutput) MlavCategoryExceptions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) []string { return v.MlavCategoryExceptions }).(pulumi.StringArrayOutput)
 }
@@ -228,17 +211,14 @@ func (o LookupUrlAccessProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Redirect
 func (o LookupUrlAccessProfileResultOutput) Redirects() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) []string { return v.Redirects }).(pulumi.StringArrayOutput)
 }
 
-// Safe search enforcement
 func (o LookupUrlAccessProfileResultOutput) SafeSearchEnforcement() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) bool { return v.SafeSearchEnforcement }).(pulumi.BoolOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupUrlAccessProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlAccessProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -83,13 +83,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// Geo location
-        /// </summary>
         public readonly Outputs.GetRegionGeoLocationResult GeoLocation;
         /// <summary>
         /// The UUID of the region
@@ -99,9 +93,6 @@ namespace Pulumi.Scm
         /// The name of the region
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

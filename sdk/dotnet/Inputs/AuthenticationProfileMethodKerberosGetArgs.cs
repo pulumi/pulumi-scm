@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileMethodKerberosGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Realm
+        /// method kerberos object realm of authentication profile
         /// </summary>
         [Input("realm")]
         public Input<string>? Realm { get; set; }
 
         /// <summary>
-        /// Server profile
+        /// method kerberos object server profile of authentication profile
         /// </summary>
         [Input("serverProfile")]
         public Input<string>? ServerProfile { get; set; }

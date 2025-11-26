@@ -20,12 +20,16 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Rfc822name
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dnsname`, `Rfc822name`, and `UniformResourceIdentifier`.
         /// </summary>
         [Input("rfc822name")]
         public Input<string>? Rfc822name { get; set; }
 
         /// <summary>
         /// Uniform resource identifier
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dnsname`, `Rfc822name`, and `UniformResourceIdentifier`.
         /// </summary>
         [Input("uniformResourceIdentifier")]
         public Input<string>? UniformResourceIdentifier { get; set; }

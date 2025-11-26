@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// AuthenticationProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var profileData = Scm.GetAuthenticationProfile.Invoke(new()
+        ///     {
+        ///         Id = "de491856-1987-4b53-a3f7-e4f4a52067e3",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAuthenticationProfile"] = profileData.Apply(getAuthenticationProfileResult =&gt; getAuthenticationProfileResult.Id),
+        ///         ["fetchedProfile"] = profileData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetAuthenticationProfileResult> InvokeAsync(GetAuthenticationProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationProfileResult>("scm:index/getAuthenticationProfile:getAuthenticationProfile", args ?? new GetAuthenticationProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// AuthenticationProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var profileData = Scm.GetAuthenticationProfile.Invoke(new()
+        ///     {
+        ///         Id = "de491856-1987-4b53-a3f7-e4f4a52067e3",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAuthenticationProfile"] = profileData.Apply(getAuthenticationProfileResult =&gt; getAuthenticationProfileResult.Id),
+        ///         ["fetchedProfile"] = profileData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationProfileResult> Invoke(GetAuthenticationProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileResult>("scm:index/getAuthenticationProfile:getAuthenticationProfile", args ?? new GetAuthenticationProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// AuthenticationProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var profileData = Scm.GetAuthenticationProfile.Invoke(new()
+        ///     {
+        ///         Id = "de491856-1987-4b53-a3f7-e4f4a52067e3",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAuthenticationProfile"] = profileData.Apply(getAuthenticationProfileResult =&gt; getAuthenticationProfileResult.Id),
+        ///         ["fetchedProfile"] = profileData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationProfileResult> Invoke(GetAuthenticationProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileResult>("scm:index/getAuthenticationProfile:getAuthenticationProfile", args ?? new GetAuthenticationProfileInvokeArgs(), options.WithDefaults());
@@ -76,53 +145,29 @@ namespace Pulumi.Scm
     public sealed class GetAuthenticationProfileResult
     {
         /// <summary>
-        /// Allow list
+        /// The AllowList of the authentication profile
         /// </summary>
         public readonly ImmutableArray<string> AllowLists;
         /// <summary>
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the authentication profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Lockout
-        /// </summary>
         public readonly Outputs.GetAuthenticationProfileLockoutResult Lockout;
-        /// <summary>
-        /// Method
-        /// </summary>
         public readonly Outputs.GetAuthenticationProfileMethodResult Method;
-        /// <summary>
-        /// Multi factor auth
-        /// </summary>
         public readonly Outputs.GetAuthenticationProfileMultiFactorAuthResult MultiFactorAuth;
         /// <summary>
         /// The name of the authentication profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Single sign on
-        /// </summary>
         public readonly Outputs.GetAuthenticationProfileSingleSignOnResult SingleSignOn;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// User domain
-        /// </summary>
         public readonly string UserDomain;
-        /// <summary>
-        /// Username modifier
-        /// </summary>
         public readonly string UsernameModifier;
 
         [OutputConstructor]

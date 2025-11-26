@@ -126,12 +126,16 @@ type Zone struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrOutput `pulumi:"enableUserIdentification"`
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Network
 	Network ZoneNetworkPtrOutput `pulumi:"network"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// User acl
@@ -181,12 +185,16 @@ type zoneState struct {
 	// Enable user identification
 	EnableUserIdentification *bool `pulumi:"enableUserIdentification"`
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// Network
 	Network *ZoneNetwork `pulumi:"network"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// User acl
@@ -207,12 +215,16 @@ type ZoneState struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrInput
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// Network
 	Network ZoneNetworkPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// User acl
@@ -237,12 +249,16 @@ type zoneArgs struct {
 	// Enable user identification
 	EnableUserIdentification *bool `pulumi:"enableUserIdentification"`
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// Network
 	Network *ZoneNetwork `pulumi:"network"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// User acl
 	UserAcl *ZoneUserAcl `pulumi:"userAcl"`
@@ -263,12 +279,16 @@ type ZoneArgs struct {
 	// Enable user identification
 	EnableUserIdentification pulumi.BoolPtrInput
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// Network
 	Network ZoneNetworkPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// User acl
 	UserAcl ZoneUserAclPtrInput
@@ -392,6 +412,8 @@ func (o ZoneOutput) EnableUserIdentification() pulumi.BoolPtrOutput {
 }
 
 // Folder
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Zone) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -407,6 +429,8 @@ func (o ZoneOutput) Network() ZoneNetworkPtrOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ZoneOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Zone) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

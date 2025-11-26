@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise? Advertise;
         /// <summary>
         /// Disable
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Advertise` and `Disable`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable? Disable;
 

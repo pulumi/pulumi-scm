@@ -177,42 +177,21 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the anti-spyware profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Inline exception edl url
-        /// </summary>
         public readonly ImmutableArray<string> InlineExceptionEdlUrls;
-        /// <summary>
-        /// Inline exception ip address
-        /// </summary>
         public readonly ImmutableArray<string> InlineExceptionIpAddresses;
-        /// <summary>
-        /// Mica engine spyware enabled
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledResult> MicaEngineSpywareEnableds;
         /// <summary>
         /// The name of the anti-spyware profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Rules
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileRuleResult> Rules;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// Threat exception
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareProfileThreatExceptionResult> ThreatExceptions;
 
         [OutputConstructor]

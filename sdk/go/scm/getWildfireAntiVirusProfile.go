@@ -36,22 +36,16 @@ type LookupWildfireAntiVirusProfileResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Mlav exception
+	Id             string                                     `pulumi:"id"`
 	MlavExceptions []GetWildfireAntiVirusProfileMlavException `pulumi:"mlavExceptions"`
 	// Name
-	Name string `pulumi:"name"`
-	// Packet capture
-	PacketCapture bool `pulumi:"packetCapture"`
-	// Rules
-	Rules []GetWildfireAntiVirusProfileRule `pulumi:"rules"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Threat exception
+	Name             string                                       `pulumi:"name"`
+	PacketCapture    bool                                         `pulumi:"packetCapture"`
+	Rules            []GetWildfireAntiVirusProfileRule            `pulumi:"rules"`
+	Snippet          string                                       `pulumi:"snippet"`
+	Tfid             string                                       `pulumi:"tfid"`
 	ThreatExceptions []GetWildfireAntiVirusProfileThreatException `pulumi:"threatExceptions"`
 }
 
@@ -101,7 +95,6 @@ func (o LookupWildfireAntiVirusProfileResultOutput) Device() pulumi.StringOutput
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupWildfireAntiVirusProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -111,7 +104,6 @@ func (o LookupWildfireAntiVirusProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Mlav exception
 func (o LookupWildfireAntiVirusProfileResultOutput) MlavExceptions() GetWildfireAntiVirusProfileMlavExceptionArrayOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) []GetWildfireAntiVirusProfileMlavException {
 		return v.MlavExceptions
@@ -123,17 +115,14 @@ func (o LookupWildfireAntiVirusProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Packet capture
 func (o LookupWildfireAntiVirusProfileResultOutput) PacketCapture() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) bool { return v.PacketCapture }).(pulumi.BoolOutput)
 }
 
-// Rules
 func (o LookupWildfireAntiVirusProfileResultOutput) Rules() GetWildfireAntiVirusProfileRuleArrayOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) []GetWildfireAntiVirusProfileRule { return v.Rules }).(GetWildfireAntiVirusProfileRuleArrayOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupWildfireAntiVirusProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -142,7 +131,6 @@ func (o LookupWildfireAntiVirusProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Threat exception
 func (o LookupWildfireAntiVirusProfileResultOutput) ThreatExceptions() GetWildfireAntiVirusProfileThreatExceptionArrayOutput {
 	return o.ApplyT(func(v LookupWildfireAntiVirusProfileResult) []GetWildfireAntiVirusProfileThreatException {
 		return v.ThreatExceptions

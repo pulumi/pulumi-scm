@@ -5,9 +5,11 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Ipv4Args;
+import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4MulticastArgs;
+import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4UnicastArgs;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class BgpAddressFamilyProfileIpv4Args extends com.pulumi.resources.ResourceArgs {
@@ -15,24 +17,40 @@ public final class BgpAddressFamilyProfileIpv4Args extends com.pulumi.resources.
     public static final BgpAddressFamilyProfileIpv4Args Empty = new BgpAddressFamilyProfileIpv4Args();
 
     /**
-     * Ipv4
+     * Multicast
      * 
      */
-    @Import(name="ipv4", required=true)
-    private Output<BgpAddressFamilyProfileIpv4Ipv4Args> ipv4;
+    @Import(name="multicast")
+    private @Nullable Output<BgpAddressFamilyProfileIpv4MulticastArgs> multicast;
 
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    public Output<BgpAddressFamilyProfileIpv4Ipv4Args> ipv4() {
-        return this.ipv4;
+    public Optional<Output<BgpAddressFamilyProfileIpv4MulticastArgs>> multicast() {
+        return Optional.ofNullable(this.multicast);
+    }
+
+    /**
+     * Unicast
+     * 
+     */
+    @Import(name="unicast")
+    private @Nullable Output<BgpAddressFamilyProfileIpv4UnicastArgs> unicast;
+
+    /**
+     * @return Unicast
+     * 
+     */
+    public Optional<Output<BgpAddressFamilyProfileIpv4UnicastArgs>> unicast() {
+        return Optional.ofNullable(this.unicast);
     }
 
     private BgpAddressFamilyProfileIpv4Args() {}
 
     private BgpAddressFamilyProfileIpv4Args(BgpAddressFamilyProfileIpv4Args $) {
-        this.ipv4 = $.ipv4;
+        this.multicast = $.multicast;
+        this.unicast = $.unicast;
     }
 
     public static Builder builder() {
@@ -54,30 +72,48 @@ public final class BgpAddressFamilyProfileIpv4Args extends com.pulumi.resources.
         }
 
         /**
-         * @param ipv4 Ipv4
+         * @param multicast Multicast
          * 
          * @return builder
          * 
          */
-        public Builder ipv4(Output<BgpAddressFamilyProfileIpv4Ipv4Args> ipv4) {
-            $.ipv4 = ipv4;
+        public Builder multicast(@Nullable Output<BgpAddressFamilyProfileIpv4MulticastArgs> multicast) {
+            $.multicast = multicast;
             return this;
         }
 
         /**
-         * @param ipv4 Ipv4
+         * @param multicast Multicast
          * 
          * @return builder
          * 
          */
-        public Builder ipv4(BgpAddressFamilyProfileIpv4Ipv4Args ipv4) {
-            return ipv4(Output.of(ipv4));
+        public Builder multicast(BgpAddressFamilyProfileIpv4MulticastArgs multicast) {
+            return multicast(Output.of(multicast));
+        }
+
+        /**
+         * @param unicast Unicast
+         * 
+         * @return builder
+         * 
+         */
+        public Builder unicast(@Nullable Output<BgpAddressFamilyProfileIpv4UnicastArgs> unicast) {
+            $.unicast = unicast;
+            return this;
+        }
+
+        /**
+         * @param unicast Unicast
+         * 
+         * @return builder
+         * 
+         */
+        public Builder unicast(BgpAddressFamilyProfileIpv4UnicastArgs unicast) {
+            return unicast(Output.of(unicast));
         }
 
         public BgpAddressFamilyProfileIpv4Args build() {
-            if ($.ipv4 == null) {
-                throw new MissingRequiredPropertyException("BgpAddressFamilyProfileIpv4Args", "ipv4");
-            }
             return $;
         }
     }

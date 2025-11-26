@@ -129,33 +129,21 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
-        """
-        Disabled
-        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
-        """
-        From
-        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
     @pulumi.getter(name="groupTag")
     def group_tag(self) -> _builtins.str:
-        """
-        Group tag
-        """
         return pulumi.get(self, "group_tag")
 
     @_builtins.property
@@ -177,81 +165,51 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
-        """
-        Negate destination
-        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
-        """
-        Negate source
-        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
     def port(self) -> _builtins.str:
-        """
-        Port
-        """
         return pulumi.get(self, "port")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
-        """
-        The position of a security rule
-        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> _builtins.str:
-        """
-        Protocol
-        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter(name="relativePosition")
     def relative_position(self) -> _builtins.str:
-        """
-        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        """
         return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
-        """
-        Source
-        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
-        """
-        Tag
-        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
-        """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
-        """
         return pulumi.get(self, "target_rule")
 
     @_builtins.property
@@ -262,9 +220,6 @@ class GetAppOverrideRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
-        """
-        To
-        """
         return pulumi.get(self, "tos")
 
 
@@ -310,20 +265,7 @@ def get_app_override_rule(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
-    test_app_override_rule = scm.AppOverrideRule("test_app_override_rule",
-        name="data-source-app-override-test",
-        description="Rule created specifically for data source testing.",
-        folder="All",
-        position="pre",
-        application="ssl",
-        protocol="tcp",
-        port="8443",
-        froms=["trust"],
-        tos=["untrust"],
-        sources=["any"],
-        destinations=["any"])
-    single_rule_by_id = scm.get_app_override_rule_output(id=test_app_override_rule.id)
+    single_rule_by_id = scm.get_app_override_rule(id="8c285335-3c95-47c9-9bbd-829105b4a15c")
     pulumi.export("singleAppOverrideRuleName", single_rule_by_id)
     ```
 
@@ -372,20 +314,7 @@ def get_app_override_rule_output(id: Optional[pulumi.Input[_builtins.str]] = Non
     import pulumi
     import pulumi_scm as scm
 
-    # 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
-    test_app_override_rule = scm.AppOverrideRule("test_app_override_rule",
-        name="data-source-app-override-test",
-        description="Rule created specifically for data source testing.",
-        folder="All",
-        position="pre",
-        application="ssl",
-        protocol="tcp",
-        port="8443",
-        froms=["trust"],
-        tos=["untrust"],
-        sources=["any"],
-        destinations=["any"])
-    single_rule_by_id = scm.get_app_override_rule_output(id=test_app_override_rule.id)
+    single_rule_by_id = scm.get_app_override_rule(id="8c285335-3c95-47c9-9bbd-829105b4a15c")
     pulumi.export("singleAppOverrideRuleName", single_rule_by_id)
     ```
 

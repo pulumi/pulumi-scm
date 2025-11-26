@@ -73,6 +73,8 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
     declare public readonly ah: pulumi.Output<outputs.IpsecCryptoProfileAh | undefined>;
     /**
      * The device in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -81,10 +83,14 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
     declare public readonly dhGroup: pulumi.Output<string>;
     /**
      * Esp
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     declare public readonly esp: pulumi.Output<outputs.IpsecCryptoProfileEsp | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -101,6 +107,8 @@ export class IpsecCryptoProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -159,6 +167,8 @@ export interface IpsecCryptoProfileState {
     ah?: pulumi.Input<inputs.IpsecCryptoProfileAh>;
     /**
      * The device in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -167,10 +177,14 @@ export interface IpsecCryptoProfileState {
     dhGroup?: pulumi.Input<string>;
     /**
      * Esp
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -187,6 +201,8 @@ export interface IpsecCryptoProfileState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -202,6 +218,8 @@ export interface IpsecCryptoProfileArgs {
     ah?: pulumi.Input<inputs.IpsecCryptoProfileAh>;
     /**
      * The device in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -210,10 +228,14 @@ export interface IpsecCryptoProfileArgs {
     dhGroup?: pulumi.Input<string>;
     /**
      * Esp
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
      */
     esp?: pulumi.Input<inputs.IpsecCryptoProfileEsp>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -230,6 +252,8 @@ export interface IpsecCryptoProfileArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
 }

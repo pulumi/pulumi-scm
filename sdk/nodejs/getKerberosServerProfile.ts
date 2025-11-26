@@ -39,9 +39,6 @@ export interface GetKerberosServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the Kerberos server profile
@@ -51,13 +48,7 @@ export interface GetKerberosServerProfileResult {
      * The name of the Kerberos server profile
      */
     readonly name: string;
-    /**
-     * The Kerberos server configuration
-     */
     readonly servers: outputs.GetKerberosServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

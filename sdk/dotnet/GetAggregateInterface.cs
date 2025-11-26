@@ -177,29 +177,17 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Layer2
-        /// </summary>
         public readonly Outputs.GetAggregateInterfaceLayer2Result Layer2;
-        /// <summary>
-        /// Aggregate Interface Layer 3 configuration
-        /// </summary>
         public readonly Outputs.GetAggregateInterfaceLayer3Result Layer3;
         /// <summary>
         /// Aggregate interface name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

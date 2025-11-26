@@ -34,12 +34,16 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgs extends com.
     /**
      * Disable
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
+     * 
      */
     @Import(name="disable")
     private @Nullable Output<LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisableArgs> disable;
 
     /**
      * @return Disable
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisableArgs>> disable() {
@@ -95,6 +99,8 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgs extends com.
         /**
          * @param disable Disable
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgs extends com.
 
         /**
          * @param disable Disable
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
          * 
          * @return builder
          * 

@@ -51,15 +51,15 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
      * An auto-generated name (*This should be removed*)
      * 
      */
-    @Import(name="name", required=true)
-    private Output<String> name;
+    @Import(name="name")
+    private @Nullable Output<String> name;
 
     /**
      * @return An auto-generated name (*This should be removed*)
      * 
      */
-    public Output<String> name() {
-        return this.name;
+    public Optional<Output<String>> name() {
+        return Optional.ofNullable(this.name);
     }
 
     /**
@@ -152,7 +152,7 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
          * @return builder
          * 
          */
-        public Builder name(Output<String> name) {
+        public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
@@ -191,9 +191,6 @@ public final class HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs extends co
         public HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs build() {
             if ($.header == null) {
                 throw new MissingRequiredPropertyException("HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs", "header");
-            }
-            if ($.name == null) {
-                throw new MissingRequiredPropertyException("HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs", "name");
             }
             if ($.value == null) {
                 throw new MissingRequiredPropertyException("HttpHeaderProfileHttpHeaderInsertionTypeHeaderArgs", "value");

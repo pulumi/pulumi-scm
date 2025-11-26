@@ -72,17 +72,11 @@ class GetHttpHeaderProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="httpHeaderInsertions")
     def http_header_insertions(self) -> Sequence['outputs.GetHttpHeaderProfileHttpHeaderInsertionResult']:
-        """
-        A list of HTTP header profile rules
-        """
         return pulumi.get(self, "http_header_insertions")
 
     @_builtins.property
@@ -104,9 +98,6 @@ class GetHttpHeaderProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

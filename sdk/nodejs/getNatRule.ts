@@ -15,35 +15,15 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define the resource (the item to be created via API POST/PUT)
- * const dnatExternalWebTestCreate = new scm.NatRule("dnat_external_web_test_create", {
- *     name: "DNAT-External-data-src-test_1",
- *     description: "Translate public VIP to internal web server.",
- *     froms: ["zone-untrust"],
- *     tos: ["zone-untrust"],
- *     sources: ["any"],
- *     destinations: ["any"],
- *     service: "service-http",
- *     folder: "All",
- *     natType: "ipv4",
- *     position: "pre",
- *     destinationTranslation: {
- *         translatedAddress: "10.1.1.16",
- *         translatedPort: 112,
- *         dnsRewrite: {
- *             direction: "reverse",
- *         },
- *     },
- * });
  * // Define the data source (the item to be retrieved via API GET)
- * const dnatExternalWebTestGet = scm.getNatRuleOutput({
- *     id: dnatExternalWebTestCreate.id,
+ * const dnatExternalWebTestGet = scm.getNatRule({
+ *     id: "574717ac-8a63-4b6f-bf77-f05a66ba6322",
  * });
  * export const retrievedIDAndName = {
- *     id: dnatExternalWebTestGet.apply(dnatExternalWebTestGet => dnatExternalWebTestGet.id),
- *     name: dnatExternalWebTestGet.apply(dnatExternalWebTestGet => dnatExternalWebTestGet.name),
+ *     id: dnatExternalWebTestGet.then(dnatExternalWebTestGet => dnatExternalWebTestGet.id),
+ *     name: dnatExternalWebTestGet.then(dnatExternalWebTestGet => dnatExternalWebTestGet.name),
  * };
- * export const retrievedDestinationTranslation = dnatExternalWebTestGet.apply(dnatExternalWebTestGet => dnatExternalWebTestGet.destinationTranslation);
+ * export const retrievedDestinationTranslation = dnatExternalWebTestGet.then(dnatExternalWebTestGet => dnatExternalWebTestGet.destinationTranslation);
  * export const recievedResponse = dnatExternalWebTestGet;
  * ```
  */
@@ -164,35 +144,15 @@ export interface GetNatRuleResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * // Define the resource (the item to be created via API POST/PUT)
- * const dnatExternalWebTestCreate = new scm.NatRule("dnat_external_web_test_create", {
- *     name: "DNAT-External-data-src-test_1",
- *     description: "Translate public VIP to internal web server.",
- *     froms: ["zone-untrust"],
- *     tos: ["zone-untrust"],
- *     sources: ["any"],
- *     destinations: ["any"],
- *     service: "service-http",
- *     folder: "All",
- *     natType: "ipv4",
- *     position: "pre",
- *     destinationTranslation: {
- *         translatedAddress: "10.1.1.16",
- *         translatedPort: 112,
- *         dnsRewrite: {
- *             direction: "reverse",
- *         },
- *     },
- * });
  * // Define the data source (the item to be retrieved via API GET)
- * const dnatExternalWebTestGet = scm.getNatRuleOutput({
- *     id: dnatExternalWebTestCreate.id,
+ * const dnatExternalWebTestGet = scm.getNatRule({
+ *     id: "574717ac-8a63-4b6f-bf77-f05a66ba6322",
  * });
  * export const retrievedIDAndName = {
- *     id: dnatExternalWebTestGet.apply(dnatExternalWebTestGet => dnatExternalWebTestGet.id),
- *     name: dnatExternalWebTestGet.apply(dnatExternalWebTestGet => dnatExternalWebTestGet.name),
+ *     id: dnatExternalWebTestGet.then(dnatExternalWebTestGet => dnatExternalWebTestGet.id),
+ *     name: dnatExternalWebTestGet.then(dnatExternalWebTestGet => dnatExternalWebTestGet.name),
  * };
- * export const retrievedDestinationTranslation = dnatExternalWebTestGet.apply(dnatExternalWebTestGet => dnatExternalWebTestGet.destinationTranslation);
+ * export const retrievedDestinationTranslation = dnatExternalWebTestGet.then(dnatExternalWebTestGet => dnatExternalWebTestGet.destinationTranslation);
  * export const recievedResponse = dnatExternalWebTestGet;
  * ```
  */

@@ -66,19 +66,15 @@ type LookupUrlCategoryResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// List
+	Id    string   `pulumi:"id"`
 	Lists []string `pulumi:"lists"`
 	// Name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
-	// Type
-	Type string `pulumi:"type"`
+	Type    string `pulumi:"type"`
 }
 
 func LookupUrlCategoryOutput(ctx *pulumi.Context, args LookupUrlCategoryOutputArgs, opts ...pulumi.InvokeOption) LookupUrlCategoryResultOutput {
@@ -127,7 +123,6 @@ func (o LookupUrlCategoryResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupUrlCategoryResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -137,7 +132,6 @@ func (o LookupUrlCategoryResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// List
 func (o LookupUrlCategoryResultOutput) Lists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) []string { return v.Lists }).(pulumi.StringArrayOutput)
 }
@@ -147,7 +141,6 @@ func (o LookupUrlCategoryResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupUrlCategoryResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -156,7 +149,6 @@ func (o LookupUrlCategoryResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Type
 func (o LookupUrlCategoryResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupUrlCategoryResult) string { return v.Type }).(pulumi.StringOutput)
 }

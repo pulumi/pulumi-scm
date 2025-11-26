@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string AttributeNameUsername;
         /// <summary>
-        /// Certificate profile
+        /// method object saml idp certificate profile of authentication profile
         /// </summary>
         public readonly string CertificateProfile;
         /// <summary>
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string RequestSigningCertificate;
         /// <summary>
-        /// Server profile
+        /// method object saml idp server profile of authentication profile
         /// </summary>
         public readonly string ServerProfile;
 

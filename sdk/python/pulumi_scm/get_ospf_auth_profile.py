@@ -67,17 +67,11 @@ class GetOspfAuthProfileResult:
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
-        """
-        Map of sensitive values returned from the API.
-        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -91,9 +85,6 @@ class GetOspfAuthProfileResult:
     @_builtins.property
     @pulumi.getter
     def md5s(self) -> Sequence['outputs.GetOspfAuthProfileMd5Result']:
-        """
-        MD5s
-        """
         return pulumi.get(self, "md5s")
 
     @_builtins.property
@@ -107,17 +98,11 @@ class GetOspfAuthProfileResult:
     @_builtins.property
     @pulumi.getter
     def password(self) -> _builtins.str:
-        """
-        Password
-        """
         return pulumi.get(self, "password")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

@@ -26,6 +26,8 @@ type DosProtectionRule struct {
 	// Rule disabled?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// List of source zones
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
@@ -42,6 +44,8 @@ type DosProtectionRule struct {
 	// List of services
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
@@ -95,6 +99,8 @@ type dosProtectionRuleState struct {
 	// Rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List of source zones
 	Froms []string `pulumi:"froms"`
@@ -111,6 +117,8 @@ type dosProtectionRuleState struct {
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -135,6 +143,8 @@ type DosProtectionRuleState struct {
 	// Rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List of source zones
 	Froms pulumi.StringArrayInput
@@ -151,6 +161,8 @@ type DosProtectionRuleState struct {
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
@@ -179,6 +191,8 @@ type dosProtectionRuleArgs struct {
 	// Rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List of source zones
 	Froms []string `pulumi:"froms"`
@@ -195,6 +209,8 @@ type dosProtectionRuleArgs struct {
 	// List of services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -219,6 +235,8 @@ type DosProtectionRuleArgs struct {
 	// Rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List of source zones
 	Froms pulumi.StringArrayInput
@@ -235,6 +253,8 @@ type DosProtectionRuleArgs struct {
 	// List of services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
 	SourceUsers pulumi.StringArrayInput
@@ -359,6 +379,8 @@ func (o DosProtectionRuleOutput) Disabled() pulumi.BoolOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -399,6 +421,8 @@ func (o DosProtectionRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

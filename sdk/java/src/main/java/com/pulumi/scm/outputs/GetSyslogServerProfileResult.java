@@ -17,15 +17,7 @@ public final class GetSyslogServerProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
-    /**
-     * @return Format
-     * 
-     */
     private GetSyslogServerProfileFormat format;
     /**
      * @return The UUID of the syslog server profile
@@ -37,15 +29,7 @@ public final class GetSyslogServerProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return Servers
-     * 
-     */
     private GetSyslogServerProfileServers servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -57,17 +41,9 @@ public final class GetSyslogServerProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Format
-     * 
-     */
     public GetSyslogServerProfileFormat format() {
         return this.format;
     }
@@ -85,17 +61,9 @@ public final class GetSyslogServerProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Servers
-     * 
-     */
     public GetSyslogServerProfileServers servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

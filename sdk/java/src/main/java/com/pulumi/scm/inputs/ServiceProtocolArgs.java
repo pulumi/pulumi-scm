@@ -34,12 +34,16 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
     /**
      * Udp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
+     * 
      */
     @Import(name="udp")
     private @Nullable Output<ServiceProtocolUdpArgs> udp;
 
     /**
      * @return Udp
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public Optional<Output<ServiceProtocolUdpArgs>> udp() {
@@ -95,6 +99,8 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
         /**
          * @param udp Udp
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class ServiceProtocolArgs extends com.pulumi.resources.ResourceArgs
 
         /**
          * @param udp Udp
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
          * 
          * @return builder
          * 

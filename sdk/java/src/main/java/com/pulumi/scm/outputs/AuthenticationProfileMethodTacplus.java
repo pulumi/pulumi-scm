@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethodTacplus {
     /**
-     * @return Checkgroup
+     * @return method tacplus object check group of authentication profile
      * 
      */
     private @Nullable Boolean checkgroup;
     /**
-     * @return Server profile
+     * @return method tacplus object check group of authentication profile
      * 
      */
     private @Nullable String serverProfile;
 
     private AuthenticationProfileMethodTacplus() {}
     /**
-     * @return Checkgroup
+     * @return method tacplus object check group of authentication profile
      * 
      */
     public Optional<Boolean> checkgroup() {
         return Optional.ofNullable(this.checkgroup);
     }
     /**
-     * @return Server profile
+     * @return method tacplus object check group of authentication profile
      * 
      */
     public Optional<String> serverProfile() {

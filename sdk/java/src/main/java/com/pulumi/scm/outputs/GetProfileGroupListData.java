@@ -37,7 +37,7 @@ public final class GetProfileGroupListData {
      */
     private List<String> fileBlockings;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -57,7 +57,7 @@ public final class GetProfileGroupListData {
      */
     private List<String> saasSecurities;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -120,7 +120,7 @@ public final class GetProfileGroupListData {
         return this.fileBlockings;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -148,7 +148,7 @@ public final class GetProfileGroupListData {
         return this.saasSecurities;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

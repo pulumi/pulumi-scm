@@ -13,6 +13,3102 @@ import (
 
 var _ = internal.GetEnvOrDefault
 
+type HttpServerProfileFormatWildfireParam struct {
+	// Parameter name
+	Name *string `pulumi:"name"`
+	// Parameter value
+	Value *string `pulumi:"value"`
+}
+
+// HttpServerProfileFormatWildfireParamInput is an input type that accepts HttpServerProfileFormatWildfireParamArgs and HttpServerProfileFormatWildfireParamOutput values.
+// You can construct a concrete instance of `HttpServerProfileFormatWildfireParamInput` via:
+//
+//	HttpServerProfileFormatWildfireParamArgs{...}
+type HttpServerProfileFormatWildfireParamInput interface {
+	pulumi.Input
+
+	ToHttpServerProfileFormatWildfireParamOutput() HttpServerProfileFormatWildfireParamOutput
+	ToHttpServerProfileFormatWildfireParamOutputWithContext(context.Context) HttpServerProfileFormatWildfireParamOutput
+}
+
+type HttpServerProfileFormatWildfireParamArgs struct {
+	// Parameter name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// Parameter value
+	Value pulumi.StringPtrInput `pulumi:"value"`
+}
+
+func (HttpServerProfileFormatWildfireParamArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*HttpServerProfileFormatWildfireParam)(nil)).Elem()
+}
+
+func (i HttpServerProfileFormatWildfireParamArgs) ToHttpServerProfileFormatWildfireParamOutput() HttpServerProfileFormatWildfireParamOutput {
+	return i.ToHttpServerProfileFormatWildfireParamOutputWithContext(context.Background())
+}
+
+func (i HttpServerProfileFormatWildfireParamArgs) ToHttpServerProfileFormatWildfireParamOutputWithContext(ctx context.Context) HttpServerProfileFormatWildfireParamOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatWildfireParamOutput)
+}
+
+// HttpServerProfileFormatWildfireParamArrayInput is an input type that accepts HttpServerProfileFormatWildfireParamArray and HttpServerProfileFormatWildfireParamArrayOutput values.
+// You can construct a concrete instance of `HttpServerProfileFormatWildfireParamArrayInput` via:
+//
+//	HttpServerProfileFormatWildfireParamArray{ HttpServerProfileFormatWildfireParamArgs{...} }
+type HttpServerProfileFormatWildfireParamArrayInput interface {
+	pulumi.Input
+
+	ToHttpServerProfileFormatWildfireParamArrayOutput() HttpServerProfileFormatWildfireParamArrayOutput
+	ToHttpServerProfileFormatWildfireParamArrayOutputWithContext(context.Context) HttpServerProfileFormatWildfireParamArrayOutput
+}
+
+type HttpServerProfileFormatWildfireParamArray []HttpServerProfileFormatWildfireParamInput
+
+func (HttpServerProfileFormatWildfireParamArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]HttpServerProfileFormatWildfireParam)(nil)).Elem()
+}
+
+func (i HttpServerProfileFormatWildfireParamArray) ToHttpServerProfileFormatWildfireParamArrayOutput() HttpServerProfileFormatWildfireParamArrayOutput {
+	return i.ToHttpServerProfileFormatWildfireParamArrayOutputWithContext(context.Background())
+}
+
+func (i HttpServerProfileFormatWildfireParamArray) ToHttpServerProfileFormatWildfireParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatWildfireParamArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileFormatWildfireParamArrayOutput)
+}
+
+type HttpServerProfileFormatWildfireParamOutput struct{ *pulumi.OutputState }
+
+func (HttpServerProfileFormatWildfireParamOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*HttpServerProfileFormatWildfireParam)(nil)).Elem()
+}
+
+func (o HttpServerProfileFormatWildfireParamOutput) ToHttpServerProfileFormatWildfireParamOutput() HttpServerProfileFormatWildfireParamOutput {
+	return o
+}
+
+func (o HttpServerProfileFormatWildfireParamOutput) ToHttpServerProfileFormatWildfireParamOutputWithContext(ctx context.Context) HttpServerProfileFormatWildfireParamOutput {
+	return o
+}
+
+// Parameter name
+func (o HttpServerProfileFormatWildfireParamOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileFormatWildfireParam) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// Parameter value
+func (o HttpServerProfileFormatWildfireParamOutput) Value() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileFormatWildfireParam) *string { return v.Value }).(pulumi.StringPtrOutput)
+}
+
+type HttpServerProfileFormatWildfireParamArrayOutput struct{ *pulumi.OutputState }
+
+func (HttpServerProfileFormatWildfireParamArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]HttpServerProfileFormatWildfireParam)(nil)).Elem()
+}
+
+func (o HttpServerProfileFormatWildfireParamArrayOutput) ToHttpServerProfileFormatWildfireParamArrayOutput() HttpServerProfileFormatWildfireParamArrayOutput {
+	return o
+}
+
+func (o HttpServerProfileFormatWildfireParamArrayOutput) ToHttpServerProfileFormatWildfireParamArrayOutputWithContext(ctx context.Context) HttpServerProfileFormatWildfireParamArrayOutput {
+	return o
+}
+
+func (o HttpServerProfileFormatWildfireParamArrayOutput) Index(i pulumi.IntInput) HttpServerProfileFormatWildfireParamOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileFormatWildfireParam {
+		return vs[0].([]HttpServerProfileFormatWildfireParam)[vs[1].(int)]
+	}).(HttpServerProfileFormatWildfireParamOutput)
+}
+
+type HttpServerProfileServer struct {
+	// HTTP server address
+	Address *string `pulumi:"address"`
+	// HTTP server certificate profile
+	CertificateProfile *string `pulumi:"certificateProfile"`
+	// HTTP operation to perform
+	HttpMethod *string `pulumi:"httpMethod"`
+	// HTTP server name
+	Name *string `pulumi:"name"`
+	// HTTP server port
+	Port *int `pulumi:"port"`
+	// HTTP server protocol
+	Protocol *string `pulumi:"protocol"`
+	// HTTP server TLS version
+	TlsVersion *string `pulumi:"tlsVersion"`
+}
+
+// HttpServerProfileServerInput is an input type that accepts HttpServerProfileServerArgs and HttpServerProfileServerOutput values.
+// You can construct a concrete instance of `HttpServerProfileServerInput` via:
+//
+//	HttpServerProfileServerArgs{...}
+type HttpServerProfileServerInput interface {
+	pulumi.Input
+
+	ToHttpServerProfileServerOutput() HttpServerProfileServerOutput
+	ToHttpServerProfileServerOutputWithContext(context.Context) HttpServerProfileServerOutput
+}
+
+type HttpServerProfileServerArgs struct {
+	// HTTP server address
+	Address pulumi.StringPtrInput `pulumi:"address"`
+	// HTTP server certificate profile
+	CertificateProfile pulumi.StringPtrInput `pulumi:"certificateProfile"`
+	// HTTP operation to perform
+	HttpMethod pulumi.StringPtrInput `pulumi:"httpMethod"`
+	// HTTP server name
+	Name pulumi.StringPtrInput `pulumi:"name"`
+	// HTTP server port
+	Port pulumi.IntPtrInput `pulumi:"port"`
+	// HTTP server protocol
+	Protocol pulumi.StringPtrInput `pulumi:"protocol"`
+	// HTTP server TLS version
+	TlsVersion pulumi.StringPtrInput `pulumi:"tlsVersion"`
+}
+
+func (HttpServerProfileServerArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*HttpServerProfileServer)(nil)).Elem()
+}
+
+func (i HttpServerProfileServerArgs) ToHttpServerProfileServerOutput() HttpServerProfileServerOutput {
+	return i.ToHttpServerProfileServerOutputWithContext(context.Background())
+}
+
+func (i HttpServerProfileServerArgs) ToHttpServerProfileServerOutputWithContext(ctx context.Context) HttpServerProfileServerOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileServerOutput)
+}
+
+// HttpServerProfileServerArrayInput is an input type that accepts HttpServerProfileServerArray and HttpServerProfileServerArrayOutput values.
+// You can construct a concrete instance of `HttpServerProfileServerArrayInput` via:
+//
+//	HttpServerProfileServerArray{ HttpServerProfileServerArgs{...} }
+type HttpServerProfileServerArrayInput interface {
+	pulumi.Input
+
+	ToHttpServerProfileServerArrayOutput() HttpServerProfileServerArrayOutput
+	ToHttpServerProfileServerArrayOutputWithContext(context.Context) HttpServerProfileServerArrayOutput
+}
+
+type HttpServerProfileServerArray []HttpServerProfileServerInput
+
+func (HttpServerProfileServerArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]HttpServerProfileServer)(nil)).Elem()
+}
+
+func (i HttpServerProfileServerArray) ToHttpServerProfileServerArrayOutput() HttpServerProfileServerArrayOutput {
+	return i.ToHttpServerProfileServerArrayOutputWithContext(context.Background())
+}
+
+func (i HttpServerProfileServerArray) ToHttpServerProfileServerArrayOutputWithContext(ctx context.Context) HttpServerProfileServerArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(HttpServerProfileServerArrayOutput)
+}
+
+type HttpServerProfileServerOutput struct{ *pulumi.OutputState }
+
+func (HttpServerProfileServerOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*HttpServerProfileServer)(nil)).Elem()
+}
+
+func (o HttpServerProfileServerOutput) ToHttpServerProfileServerOutput() HttpServerProfileServerOutput {
+	return o
+}
+
+func (o HttpServerProfileServerOutput) ToHttpServerProfileServerOutputWithContext(ctx context.Context) HttpServerProfileServerOutput {
+	return o
+}
+
+// HTTP server address
+func (o HttpServerProfileServerOutput) Address() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileServer) *string { return v.Address }).(pulumi.StringPtrOutput)
+}
+
+// HTTP server certificate profile
+func (o HttpServerProfileServerOutput) CertificateProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileServer) *string { return v.CertificateProfile }).(pulumi.StringPtrOutput)
+}
+
+// HTTP operation to perform
+func (o HttpServerProfileServerOutput) HttpMethod() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileServer) *string { return v.HttpMethod }).(pulumi.StringPtrOutput)
+}
+
+// HTTP server name
+func (o HttpServerProfileServerOutput) Name() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileServer) *string { return v.Name }).(pulumi.StringPtrOutput)
+}
+
+// HTTP server port
+func (o HttpServerProfileServerOutput) Port() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileServer) *int { return v.Port }).(pulumi.IntPtrOutput)
+}
+
+// HTTP server protocol
+func (o HttpServerProfileServerOutput) Protocol() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileServer) *string { return v.Protocol }).(pulumi.StringPtrOutput)
+}
+
+// HTTP server TLS version
+func (o HttpServerProfileServerOutput) TlsVersion() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v HttpServerProfileServer) *string { return v.TlsVersion }).(pulumi.StringPtrOutput)
+}
+
+type HttpServerProfileServerArrayOutput struct{ *pulumi.OutputState }
+
+func (HttpServerProfileServerArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]HttpServerProfileServer)(nil)).Elem()
+}
+
+func (o HttpServerProfileServerArrayOutput) ToHttpServerProfileServerArrayOutput() HttpServerProfileServerArrayOutput {
+	return o
+}
+
+func (o HttpServerProfileServerArrayOutput) ToHttpServerProfileServerArrayOutputWithContext(ctx context.Context) HttpServerProfileServerArrayOutput {
+	return o
+}
+
+func (o HttpServerProfileServerArrayOutput) Index(i pulumi.IntInput) HttpServerProfileServerOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) HttpServerProfileServer {
+		return vs[0].([]HttpServerProfileServer)[vs[1].(int)]
+	}).(HttpServerProfileServerOutput)
+}
+
+type IkeCryptoProfileLifetime struct {
+	// specify lifetime in days
+	Days *int `pulumi:"days"`
+	// specify lifetime in hours
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+	Hours *int `pulumi:"hours"`
+	// specify lifetime in minutes
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+	Minutes *int `pulumi:"minutes"`
+	// specify lifetime in seconds
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+	Seconds *int `pulumi:"seconds"`
+}
+
+// IkeCryptoProfileLifetimeInput is an input type that accepts IkeCryptoProfileLifetimeArgs and IkeCryptoProfileLifetimeOutput values.
+// You can construct a concrete instance of `IkeCryptoProfileLifetimeInput` via:
+//
+//	IkeCryptoProfileLifetimeArgs{...}
+type IkeCryptoProfileLifetimeInput interface {
+	pulumi.Input
+
+	ToIkeCryptoProfileLifetimeOutput() IkeCryptoProfileLifetimeOutput
+	ToIkeCryptoProfileLifetimeOutputWithContext(context.Context) IkeCryptoProfileLifetimeOutput
+}
+
+type IkeCryptoProfileLifetimeArgs struct {
+	// specify lifetime in days
+	Days pulumi.IntPtrInput `pulumi:"days"`
+	// specify lifetime in hours
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+	Hours pulumi.IntPtrInput `pulumi:"hours"`
+	// specify lifetime in minutes
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+	Minutes pulumi.IntPtrInput `pulumi:"minutes"`
+	// specify lifetime in seconds
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+	Seconds pulumi.IntPtrInput `pulumi:"seconds"`
+}
+
+func (IkeCryptoProfileLifetimeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeCryptoProfileLifetime)(nil)).Elem()
+}
+
+func (i IkeCryptoProfileLifetimeArgs) ToIkeCryptoProfileLifetimeOutput() IkeCryptoProfileLifetimeOutput {
+	return i.ToIkeCryptoProfileLifetimeOutputWithContext(context.Background())
+}
+
+func (i IkeCryptoProfileLifetimeArgs) ToIkeCryptoProfileLifetimeOutputWithContext(ctx context.Context) IkeCryptoProfileLifetimeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeCryptoProfileLifetimeOutput)
+}
+
+func (i IkeCryptoProfileLifetimeArgs) ToIkeCryptoProfileLifetimePtrOutput() IkeCryptoProfileLifetimePtrOutput {
+	return i.ToIkeCryptoProfileLifetimePtrOutputWithContext(context.Background())
+}
+
+func (i IkeCryptoProfileLifetimeArgs) ToIkeCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IkeCryptoProfileLifetimePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeCryptoProfileLifetimeOutput).ToIkeCryptoProfileLifetimePtrOutputWithContext(ctx)
+}
+
+// IkeCryptoProfileLifetimePtrInput is an input type that accepts IkeCryptoProfileLifetimeArgs, IkeCryptoProfileLifetimePtr and IkeCryptoProfileLifetimePtrOutput values.
+// You can construct a concrete instance of `IkeCryptoProfileLifetimePtrInput` via:
+//
+//	        IkeCryptoProfileLifetimeArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeCryptoProfileLifetimePtrInput interface {
+	pulumi.Input
+
+	ToIkeCryptoProfileLifetimePtrOutput() IkeCryptoProfileLifetimePtrOutput
+	ToIkeCryptoProfileLifetimePtrOutputWithContext(context.Context) IkeCryptoProfileLifetimePtrOutput
+}
+
+type ikeCryptoProfileLifetimePtrType IkeCryptoProfileLifetimeArgs
+
+func IkeCryptoProfileLifetimePtr(v *IkeCryptoProfileLifetimeArgs) IkeCryptoProfileLifetimePtrInput {
+	return (*ikeCryptoProfileLifetimePtrType)(v)
+}
+
+func (*ikeCryptoProfileLifetimePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeCryptoProfileLifetime)(nil)).Elem()
+}
+
+func (i *ikeCryptoProfileLifetimePtrType) ToIkeCryptoProfileLifetimePtrOutput() IkeCryptoProfileLifetimePtrOutput {
+	return i.ToIkeCryptoProfileLifetimePtrOutputWithContext(context.Background())
+}
+
+func (i *ikeCryptoProfileLifetimePtrType) ToIkeCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IkeCryptoProfileLifetimePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeCryptoProfileLifetimePtrOutput)
+}
+
+type IkeCryptoProfileLifetimeOutput struct{ *pulumi.OutputState }
+
+func (IkeCryptoProfileLifetimeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeCryptoProfileLifetime)(nil)).Elem()
+}
+
+func (o IkeCryptoProfileLifetimeOutput) ToIkeCryptoProfileLifetimeOutput() IkeCryptoProfileLifetimeOutput {
+	return o
+}
+
+func (o IkeCryptoProfileLifetimeOutput) ToIkeCryptoProfileLifetimeOutputWithContext(ctx context.Context) IkeCryptoProfileLifetimeOutput {
+	return o
+}
+
+func (o IkeCryptoProfileLifetimeOutput) ToIkeCryptoProfileLifetimePtrOutput() IkeCryptoProfileLifetimePtrOutput {
+	return o.ToIkeCryptoProfileLifetimePtrOutputWithContext(context.Background())
+}
+
+func (o IkeCryptoProfileLifetimeOutput) ToIkeCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IkeCryptoProfileLifetimePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeCryptoProfileLifetime) *IkeCryptoProfileLifetime {
+		return &v
+	}).(IkeCryptoProfileLifetimePtrOutput)
+}
+
+// specify lifetime in days
+func (o IkeCryptoProfileLifetimeOutput) Days() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v IkeCryptoProfileLifetime) *int { return v.Days }).(pulumi.IntPtrOutput)
+}
+
+// specify lifetime in hours
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+func (o IkeCryptoProfileLifetimeOutput) Hours() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v IkeCryptoProfileLifetime) *int { return v.Hours }).(pulumi.IntPtrOutput)
+}
+
+// specify lifetime in minutes
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+func (o IkeCryptoProfileLifetimeOutput) Minutes() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v IkeCryptoProfileLifetime) *int { return v.Minutes }).(pulumi.IntPtrOutput)
+}
+
+// specify lifetime in seconds
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+func (o IkeCryptoProfileLifetimeOutput) Seconds() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v IkeCryptoProfileLifetime) *int { return v.Seconds }).(pulumi.IntPtrOutput)
+}
+
+type IkeCryptoProfileLifetimePtrOutput struct{ *pulumi.OutputState }
+
+func (IkeCryptoProfileLifetimePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeCryptoProfileLifetime)(nil)).Elem()
+}
+
+func (o IkeCryptoProfileLifetimePtrOutput) ToIkeCryptoProfileLifetimePtrOutput() IkeCryptoProfileLifetimePtrOutput {
+	return o
+}
+
+func (o IkeCryptoProfileLifetimePtrOutput) ToIkeCryptoProfileLifetimePtrOutputWithContext(ctx context.Context) IkeCryptoProfileLifetimePtrOutput {
+	return o
+}
+
+func (o IkeCryptoProfileLifetimePtrOutput) Elem() IkeCryptoProfileLifetimeOutput {
+	return o.ApplyT(func(v *IkeCryptoProfileLifetime) IkeCryptoProfileLifetime {
+		if v != nil {
+			return *v
+		}
+		var ret IkeCryptoProfileLifetime
+		return ret
+	}).(IkeCryptoProfileLifetimeOutput)
+}
+
+// specify lifetime in days
+func (o IkeCryptoProfileLifetimePtrOutput) Days() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *IkeCryptoProfileLifetime) *int {
+		if v == nil {
+			return nil
+		}
+		return v.Days
+	}).(pulumi.IntPtrOutput)
+}
+
+// specify lifetime in hours
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+func (o IkeCryptoProfileLifetimePtrOutput) Hours() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *IkeCryptoProfileLifetime) *int {
+		if v == nil {
+			return nil
+		}
+		return v.Hours
+	}).(pulumi.IntPtrOutput)
+}
+
+// specify lifetime in minutes
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+func (o IkeCryptoProfileLifetimePtrOutput) Minutes() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *IkeCryptoProfileLifetime) *int {
+		if v == nil {
+			return nil
+		}
+		return v.Minutes
+	}).(pulumi.IntPtrOutput)
+}
+
+// specify lifetime in seconds
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
+func (o IkeCryptoProfileLifetimePtrOutput) Seconds() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *IkeCryptoProfileLifetime) *int {
+		if v == nil {
+			return nil
+		}
+		return v.Seconds
+	}).(pulumi.IntPtrOutput)
+}
+
+type IkeGatewayAuthentication struct {
+	// Certificate
+	Certificate *IkeGatewayAuthenticationCertificate `pulumi:"certificate"`
+	// Pre shared key
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
+	PreSharedKey *IkeGatewayAuthenticationPreSharedKey `pulumi:"preSharedKey"`
+}
+
+// IkeGatewayAuthenticationInput is an input type that accepts IkeGatewayAuthenticationArgs and IkeGatewayAuthenticationOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationInput` via:
+//
+//	IkeGatewayAuthenticationArgs{...}
+type IkeGatewayAuthenticationInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationOutput() IkeGatewayAuthenticationOutput
+	ToIkeGatewayAuthenticationOutputWithContext(context.Context) IkeGatewayAuthenticationOutput
+}
+
+type IkeGatewayAuthenticationArgs struct {
+	// Certificate
+	Certificate IkeGatewayAuthenticationCertificatePtrInput `pulumi:"certificate"`
+	// Pre shared key
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
+	PreSharedKey IkeGatewayAuthenticationPreSharedKeyPtrInput `pulumi:"preSharedKey"`
+}
+
+func (IkeGatewayAuthenticationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthentication)(nil)).Elem()
+}
+
+func (i IkeGatewayAuthenticationArgs) ToIkeGatewayAuthenticationOutput() IkeGatewayAuthenticationOutput {
+	return i.ToIkeGatewayAuthenticationOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationArgs) ToIkeGatewayAuthenticationOutputWithContext(ctx context.Context) IkeGatewayAuthenticationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationOutput)
+}
+
+func (i IkeGatewayAuthenticationArgs) ToIkeGatewayAuthenticationPtrOutput() IkeGatewayAuthenticationPtrOutput {
+	return i.ToIkeGatewayAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationArgs) ToIkeGatewayAuthenticationPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationOutput).ToIkeGatewayAuthenticationPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayAuthenticationPtrInput is an input type that accepts IkeGatewayAuthenticationArgs, IkeGatewayAuthenticationPtr and IkeGatewayAuthenticationPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationPtrInput` via:
+//
+//	        IkeGatewayAuthenticationArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayAuthenticationPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationPtrOutput() IkeGatewayAuthenticationPtrOutput
+	ToIkeGatewayAuthenticationPtrOutputWithContext(context.Context) IkeGatewayAuthenticationPtrOutput
+}
+
+type ikeGatewayAuthenticationPtrType IkeGatewayAuthenticationArgs
+
+func IkeGatewayAuthenticationPtr(v *IkeGatewayAuthenticationArgs) IkeGatewayAuthenticationPtrInput {
+	return (*ikeGatewayAuthenticationPtrType)(v)
+}
+
+func (*ikeGatewayAuthenticationPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthentication)(nil)).Elem()
+}
+
+func (i *ikeGatewayAuthenticationPtrType) ToIkeGatewayAuthenticationPtrOutput() IkeGatewayAuthenticationPtrOutput {
+	return i.ToIkeGatewayAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayAuthenticationPtrType) ToIkeGatewayAuthenticationPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationPtrOutput)
+}
+
+type IkeGatewayAuthenticationOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthentication)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationOutput) ToIkeGatewayAuthenticationOutput() IkeGatewayAuthenticationOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationOutput) ToIkeGatewayAuthenticationOutputWithContext(ctx context.Context) IkeGatewayAuthenticationOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationOutput) ToIkeGatewayAuthenticationPtrOutput() IkeGatewayAuthenticationPtrOutput {
+	return o.ToIkeGatewayAuthenticationPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayAuthenticationOutput) ToIkeGatewayAuthenticationPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayAuthentication) *IkeGatewayAuthentication {
+		return &v
+	}).(IkeGatewayAuthenticationPtrOutput)
+}
+
+// Certificate
+func (o IkeGatewayAuthenticationOutput) Certificate() IkeGatewayAuthenticationCertificatePtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthentication) *IkeGatewayAuthenticationCertificate { return v.Certificate }).(IkeGatewayAuthenticationCertificatePtrOutput)
+}
+
+// Pre shared key
+//
+// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
+func (o IkeGatewayAuthenticationOutput) PreSharedKey() IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthentication) *IkeGatewayAuthenticationPreSharedKey { return v.PreSharedKey }).(IkeGatewayAuthenticationPreSharedKeyPtrOutput)
+}
+
+type IkeGatewayAuthenticationPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthentication)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationPtrOutput) ToIkeGatewayAuthenticationPtrOutput() IkeGatewayAuthenticationPtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationPtrOutput) ToIkeGatewayAuthenticationPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationPtrOutput) Elem() IkeGatewayAuthenticationOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthentication) IkeGatewayAuthentication {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayAuthentication
+		return ret
+	}).(IkeGatewayAuthenticationOutput)
+}
+
+// Certificate
+func (o IkeGatewayAuthenticationPtrOutput) Certificate() IkeGatewayAuthenticationCertificatePtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthentication) *IkeGatewayAuthenticationCertificate {
+		if v == nil {
+			return nil
+		}
+		return v.Certificate
+	}).(IkeGatewayAuthenticationCertificatePtrOutput)
+}
+
+// Pre shared key
+//
+// > ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
+func (o IkeGatewayAuthenticationPtrOutput) PreSharedKey() IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthentication) *IkeGatewayAuthenticationPreSharedKey {
+		if v == nil {
+			return nil
+		}
+		return v.PreSharedKey
+	}).(IkeGatewayAuthenticationPreSharedKeyPtrOutput)
+}
+
+type IkeGatewayAuthenticationCertificate struct {
+	// Allow id payload mismatch
+	AllowIdPayloadMismatch *bool `pulumi:"allowIdPayloadMismatch"`
+	// Certificate profile
+	CertificateProfile *string `pulumi:"certificateProfile"`
+	// Local certificate
+	LocalCertificate *IkeGatewayAuthenticationCertificateLocalCertificate `pulumi:"localCertificate"`
+	// Strict validation revocation
+	StrictValidationRevocation *bool `pulumi:"strictValidationRevocation"`
+	// Use management as source
+	UseManagementAsSource *bool `pulumi:"useManagementAsSource"`
+}
+
+// IkeGatewayAuthenticationCertificateInput is an input type that accepts IkeGatewayAuthenticationCertificateArgs and IkeGatewayAuthenticationCertificateOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationCertificateInput` via:
+//
+//	IkeGatewayAuthenticationCertificateArgs{...}
+type IkeGatewayAuthenticationCertificateInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationCertificateOutput() IkeGatewayAuthenticationCertificateOutput
+	ToIkeGatewayAuthenticationCertificateOutputWithContext(context.Context) IkeGatewayAuthenticationCertificateOutput
+}
+
+type IkeGatewayAuthenticationCertificateArgs struct {
+	// Allow id payload mismatch
+	AllowIdPayloadMismatch pulumi.BoolPtrInput `pulumi:"allowIdPayloadMismatch"`
+	// Certificate profile
+	CertificateProfile pulumi.StringPtrInput `pulumi:"certificateProfile"`
+	// Local certificate
+	LocalCertificate IkeGatewayAuthenticationCertificateLocalCertificatePtrInput `pulumi:"localCertificate"`
+	// Strict validation revocation
+	StrictValidationRevocation pulumi.BoolPtrInput `pulumi:"strictValidationRevocation"`
+	// Use management as source
+	UseManagementAsSource pulumi.BoolPtrInput `pulumi:"useManagementAsSource"`
+}
+
+func (IkeGatewayAuthenticationCertificateArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthenticationCertificate)(nil)).Elem()
+}
+
+func (i IkeGatewayAuthenticationCertificateArgs) ToIkeGatewayAuthenticationCertificateOutput() IkeGatewayAuthenticationCertificateOutput {
+	return i.ToIkeGatewayAuthenticationCertificateOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationCertificateArgs) ToIkeGatewayAuthenticationCertificateOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationCertificateOutput)
+}
+
+func (i IkeGatewayAuthenticationCertificateArgs) ToIkeGatewayAuthenticationCertificatePtrOutput() IkeGatewayAuthenticationCertificatePtrOutput {
+	return i.ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationCertificateArgs) ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationCertificateOutput).ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(ctx)
+}
+
+// IkeGatewayAuthenticationCertificatePtrInput is an input type that accepts IkeGatewayAuthenticationCertificateArgs, IkeGatewayAuthenticationCertificatePtr and IkeGatewayAuthenticationCertificatePtrOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationCertificatePtrInput` via:
+//
+//	        IkeGatewayAuthenticationCertificateArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayAuthenticationCertificatePtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationCertificatePtrOutput() IkeGatewayAuthenticationCertificatePtrOutput
+	ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(context.Context) IkeGatewayAuthenticationCertificatePtrOutput
+}
+
+type ikeGatewayAuthenticationCertificatePtrType IkeGatewayAuthenticationCertificateArgs
+
+func IkeGatewayAuthenticationCertificatePtr(v *IkeGatewayAuthenticationCertificateArgs) IkeGatewayAuthenticationCertificatePtrInput {
+	return (*ikeGatewayAuthenticationCertificatePtrType)(v)
+}
+
+func (*ikeGatewayAuthenticationCertificatePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthenticationCertificate)(nil)).Elem()
+}
+
+func (i *ikeGatewayAuthenticationCertificatePtrType) ToIkeGatewayAuthenticationCertificatePtrOutput() IkeGatewayAuthenticationCertificatePtrOutput {
+	return i.ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayAuthenticationCertificatePtrType) ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationCertificatePtrOutput)
+}
+
+type IkeGatewayAuthenticationCertificateOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationCertificateOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthenticationCertificate)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationCertificateOutput) ToIkeGatewayAuthenticationCertificateOutput() IkeGatewayAuthenticationCertificateOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificateOutput) ToIkeGatewayAuthenticationCertificateOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificateOutput) ToIkeGatewayAuthenticationCertificatePtrOutput() IkeGatewayAuthenticationCertificatePtrOutput {
+	return o.ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayAuthenticationCertificateOutput) ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificatePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayAuthenticationCertificate) *IkeGatewayAuthenticationCertificate {
+		return &v
+	}).(IkeGatewayAuthenticationCertificatePtrOutput)
+}
+
+// Allow id payload mismatch
+func (o IkeGatewayAuthenticationCertificateOutput) AllowIdPayloadMismatch() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthenticationCertificate) *bool { return v.AllowIdPayloadMismatch }).(pulumi.BoolPtrOutput)
+}
+
+// Certificate profile
+func (o IkeGatewayAuthenticationCertificateOutput) CertificateProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthenticationCertificate) *string { return v.CertificateProfile }).(pulumi.StringPtrOutput)
+}
+
+// Local certificate
+func (o IkeGatewayAuthenticationCertificateOutput) LocalCertificate() IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthenticationCertificate) *IkeGatewayAuthenticationCertificateLocalCertificate {
+		return v.LocalCertificate
+	}).(IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput)
+}
+
+// Strict validation revocation
+func (o IkeGatewayAuthenticationCertificateOutput) StrictValidationRevocation() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthenticationCertificate) *bool { return v.StrictValidationRevocation }).(pulumi.BoolPtrOutput)
+}
+
+// Use management as source
+func (o IkeGatewayAuthenticationCertificateOutput) UseManagementAsSource() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthenticationCertificate) *bool { return v.UseManagementAsSource }).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayAuthenticationCertificatePtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationCertificatePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthenticationCertificate)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationCertificatePtrOutput) ToIkeGatewayAuthenticationCertificatePtrOutput() IkeGatewayAuthenticationCertificatePtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificatePtrOutput) ToIkeGatewayAuthenticationCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificatePtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificatePtrOutput) Elem() IkeGatewayAuthenticationCertificateOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificate) IkeGatewayAuthenticationCertificate {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayAuthenticationCertificate
+		return ret
+	}).(IkeGatewayAuthenticationCertificateOutput)
+}
+
+// Allow id payload mismatch
+func (o IkeGatewayAuthenticationCertificatePtrOutput) AllowIdPayloadMismatch() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificate) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.AllowIdPayloadMismatch
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Certificate profile
+func (o IkeGatewayAuthenticationCertificatePtrOutput) CertificateProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificate) *string {
+		if v == nil {
+			return nil
+		}
+		return v.CertificateProfile
+	}).(pulumi.StringPtrOutput)
+}
+
+// Local certificate
+func (o IkeGatewayAuthenticationCertificatePtrOutput) LocalCertificate() IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificate) *IkeGatewayAuthenticationCertificateLocalCertificate {
+		if v == nil {
+			return nil
+		}
+		return v.LocalCertificate
+	}).(IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput)
+}
+
+// Strict validation revocation
+func (o IkeGatewayAuthenticationCertificatePtrOutput) StrictValidationRevocation() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificate) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.StrictValidationRevocation
+	}).(pulumi.BoolPtrOutput)
+}
+
+// Use management as source
+func (o IkeGatewayAuthenticationCertificatePtrOutput) UseManagementAsSource() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificate) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.UseManagementAsSource
+	}).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayAuthenticationCertificateLocalCertificate struct {
+	// Local certificate name
+	LocalCertificateName *string `pulumi:"localCertificateName"`
+}
+
+// IkeGatewayAuthenticationCertificateLocalCertificateInput is an input type that accepts IkeGatewayAuthenticationCertificateLocalCertificateArgs and IkeGatewayAuthenticationCertificateLocalCertificateOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationCertificateLocalCertificateInput` via:
+//
+//	IkeGatewayAuthenticationCertificateLocalCertificateArgs{...}
+type IkeGatewayAuthenticationCertificateLocalCertificateInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationCertificateLocalCertificateOutput() IkeGatewayAuthenticationCertificateLocalCertificateOutput
+	ToIkeGatewayAuthenticationCertificateLocalCertificateOutputWithContext(context.Context) IkeGatewayAuthenticationCertificateLocalCertificateOutput
+}
+
+type IkeGatewayAuthenticationCertificateLocalCertificateArgs struct {
+	// Local certificate name
+	LocalCertificateName pulumi.StringPtrInput `pulumi:"localCertificateName"`
+}
+
+func (IkeGatewayAuthenticationCertificateLocalCertificateArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthenticationCertificateLocalCertificate)(nil)).Elem()
+}
+
+func (i IkeGatewayAuthenticationCertificateLocalCertificateArgs) ToIkeGatewayAuthenticationCertificateLocalCertificateOutput() IkeGatewayAuthenticationCertificateLocalCertificateOutput {
+	return i.ToIkeGatewayAuthenticationCertificateLocalCertificateOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationCertificateLocalCertificateArgs) ToIkeGatewayAuthenticationCertificateLocalCertificateOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateLocalCertificateOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationCertificateLocalCertificateOutput)
+}
+
+func (i IkeGatewayAuthenticationCertificateLocalCertificateArgs) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutput() IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return i.ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationCertificateLocalCertificateArgs) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationCertificateLocalCertificateOutput).ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(ctx)
+}
+
+// IkeGatewayAuthenticationCertificateLocalCertificatePtrInput is an input type that accepts IkeGatewayAuthenticationCertificateLocalCertificateArgs, IkeGatewayAuthenticationCertificateLocalCertificatePtr and IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationCertificateLocalCertificatePtrInput` via:
+//
+//	        IkeGatewayAuthenticationCertificateLocalCertificateArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayAuthenticationCertificateLocalCertificatePtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutput() IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput
+	ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(context.Context) IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput
+}
+
+type ikeGatewayAuthenticationCertificateLocalCertificatePtrType IkeGatewayAuthenticationCertificateLocalCertificateArgs
+
+func IkeGatewayAuthenticationCertificateLocalCertificatePtr(v *IkeGatewayAuthenticationCertificateLocalCertificateArgs) IkeGatewayAuthenticationCertificateLocalCertificatePtrInput {
+	return (*ikeGatewayAuthenticationCertificateLocalCertificatePtrType)(v)
+}
+
+func (*ikeGatewayAuthenticationCertificateLocalCertificatePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthenticationCertificateLocalCertificate)(nil)).Elem()
+}
+
+func (i *ikeGatewayAuthenticationCertificateLocalCertificatePtrType) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutput() IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return i.ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayAuthenticationCertificateLocalCertificatePtrType) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput)
+}
+
+type IkeGatewayAuthenticationCertificateLocalCertificateOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationCertificateLocalCertificateOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthenticationCertificateLocalCertificate)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationCertificateLocalCertificateOutput) ToIkeGatewayAuthenticationCertificateLocalCertificateOutput() IkeGatewayAuthenticationCertificateLocalCertificateOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificateLocalCertificateOutput) ToIkeGatewayAuthenticationCertificateLocalCertificateOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateLocalCertificateOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificateLocalCertificateOutput) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutput() IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return o.ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayAuthenticationCertificateLocalCertificateOutput) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayAuthenticationCertificateLocalCertificate) *IkeGatewayAuthenticationCertificateLocalCertificate {
+		return &v
+	}).(IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput)
+}
+
+// Local certificate name
+func (o IkeGatewayAuthenticationCertificateLocalCertificateOutput) LocalCertificateName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthenticationCertificateLocalCertificate) *string { return v.LocalCertificateName }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthenticationCertificateLocalCertificate)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutput() IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput) ToIkeGatewayAuthenticationCertificateLocalCertificatePtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput) Elem() IkeGatewayAuthenticationCertificateLocalCertificateOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificateLocalCertificate) IkeGatewayAuthenticationCertificateLocalCertificate {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayAuthenticationCertificateLocalCertificate
+		return ret
+	}).(IkeGatewayAuthenticationCertificateLocalCertificateOutput)
+}
+
+// Local certificate name
+func (o IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput) LocalCertificateName() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationCertificateLocalCertificate) *string {
+		if v == nil {
+			return nil
+		}
+		return v.LocalCertificateName
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayAuthenticationPreSharedKey struct {
+	// Key
+	Key *string `pulumi:"key"`
+}
+
+// IkeGatewayAuthenticationPreSharedKeyInput is an input type that accepts IkeGatewayAuthenticationPreSharedKeyArgs and IkeGatewayAuthenticationPreSharedKeyOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationPreSharedKeyInput` via:
+//
+//	IkeGatewayAuthenticationPreSharedKeyArgs{...}
+type IkeGatewayAuthenticationPreSharedKeyInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationPreSharedKeyOutput() IkeGatewayAuthenticationPreSharedKeyOutput
+	ToIkeGatewayAuthenticationPreSharedKeyOutputWithContext(context.Context) IkeGatewayAuthenticationPreSharedKeyOutput
+}
+
+type IkeGatewayAuthenticationPreSharedKeyArgs struct {
+	// Key
+	Key pulumi.StringPtrInput `pulumi:"key"`
+}
+
+func (IkeGatewayAuthenticationPreSharedKeyArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthenticationPreSharedKey)(nil)).Elem()
+}
+
+func (i IkeGatewayAuthenticationPreSharedKeyArgs) ToIkeGatewayAuthenticationPreSharedKeyOutput() IkeGatewayAuthenticationPreSharedKeyOutput {
+	return i.ToIkeGatewayAuthenticationPreSharedKeyOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationPreSharedKeyArgs) ToIkeGatewayAuthenticationPreSharedKeyOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPreSharedKeyOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationPreSharedKeyOutput)
+}
+
+func (i IkeGatewayAuthenticationPreSharedKeyArgs) ToIkeGatewayAuthenticationPreSharedKeyPtrOutput() IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return i.ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayAuthenticationPreSharedKeyArgs) ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationPreSharedKeyOutput).ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayAuthenticationPreSharedKeyPtrInput is an input type that accepts IkeGatewayAuthenticationPreSharedKeyArgs, IkeGatewayAuthenticationPreSharedKeyPtr and IkeGatewayAuthenticationPreSharedKeyPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayAuthenticationPreSharedKeyPtrInput` via:
+//
+//	        IkeGatewayAuthenticationPreSharedKeyArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayAuthenticationPreSharedKeyPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayAuthenticationPreSharedKeyPtrOutput() IkeGatewayAuthenticationPreSharedKeyPtrOutput
+	ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(context.Context) IkeGatewayAuthenticationPreSharedKeyPtrOutput
+}
+
+type ikeGatewayAuthenticationPreSharedKeyPtrType IkeGatewayAuthenticationPreSharedKeyArgs
+
+func IkeGatewayAuthenticationPreSharedKeyPtr(v *IkeGatewayAuthenticationPreSharedKeyArgs) IkeGatewayAuthenticationPreSharedKeyPtrInput {
+	return (*ikeGatewayAuthenticationPreSharedKeyPtrType)(v)
+}
+
+func (*ikeGatewayAuthenticationPreSharedKeyPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthenticationPreSharedKey)(nil)).Elem()
+}
+
+func (i *ikeGatewayAuthenticationPreSharedKeyPtrType) ToIkeGatewayAuthenticationPreSharedKeyPtrOutput() IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return i.ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayAuthenticationPreSharedKeyPtrType) ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayAuthenticationPreSharedKeyPtrOutput)
+}
+
+type IkeGatewayAuthenticationPreSharedKeyOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationPreSharedKeyOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayAuthenticationPreSharedKey)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationPreSharedKeyOutput) ToIkeGatewayAuthenticationPreSharedKeyOutput() IkeGatewayAuthenticationPreSharedKeyOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationPreSharedKeyOutput) ToIkeGatewayAuthenticationPreSharedKeyOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPreSharedKeyOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationPreSharedKeyOutput) ToIkeGatewayAuthenticationPreSharedKeyPtrOutput() IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return o.ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayAuthenticationPreSharedKeyOutput) ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayAuthenticationPreSharedKey) *IkeGatewayAuthenticationPreSharedKey {
+		return &v
+	}).(IkeGatewayAuthenticationPreSharedKeyPtrOutput)
+}
+
+// Key
+func (o IkeGatewayAuthenticationPreSharedKeyOutput) Key() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayAuthenticationPreSharedKey) *string { return v.Key }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayAuthenticationPreSharedKeyPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayAuthenticationPreSharedKeyPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayAuthenticationPreSharedKey)(nil)).Elem()
+}
+
+func (o IkeGatewayAuthenticationPreSharedKeyPtrOutput) ToIkeGatewayAuthenticationPreSharedKeyPtrOutput() IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationPreSharedKeyPtrOutput) ToIkeGatewayAuthenticationPreSharedKeyPtrOutputWithContext(ctx context.Context) IkeGatewayAuthenticationPreSharedKeyPtrOutput {
+	return o
+}
+
+func (o IkeGatewayAuthenticationPreSharedKeyPtrOutput) Elem() IkeGatewayAuthenticationPreSharedKeyOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationPreSharedKey) IkeGatewayAuthenticationPreSharedKey {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayAuthenticationPreSharedKey
+		return ret
+	}).(IkeGatewayAuthenticationPreSharedKeyOutput)
+}
+
+// Key
+func (o IkeGatewayAuthenticationPreSharedKeyPtrOutput) Key() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayAuthenticationPreSharedKey) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Key
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayLocalAddress struct {
+	// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
+	Interface *string `pulumi:"interface"`
+}
+
+// IkeGatewayLocalAddressInput is an input type that accepts IkeGatewayLocalAddressArgs and IkeGatewayLocalAddressOutput values.
+// You can construct a concrete instance of `IkeGatewayLocalAddressInput` via:
+//
+//	IkeGatewayLocalAddressArgs{...}
+type IkeGatewayLocalAddressInput interface {
+	pulumi.Input
+
+	ToIkeGatewayLocalAddressOutput() IkeGatewayLocalAddressOutput
+	ToIkeGatewayLocalAddressOutputWithContext(context.Context) IkeGatewayLocalAddressOutput
+}
+
+type IkeGatewayLocalAddressArgs struct {
+	// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
+	Interface pulumi.StringPtrInput `pulumi:"interface"`
+}
+
+func (IkeGatewayLocalAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayLocalAddress)(nil)).Elem()
+}
+
+func (i IkeGatewayLocalAddressArgs) ToIkeGatewayLocalAddressOutput() IkeGatewayLocalAddressOutput {
+	return i.ToIkeGatewayLocalAddressOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayLocalAddressArgs) ToIkeGatewayLocalAddressOutputWithContext(ctx context.Context) IkeGatewayLocalAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayLocalAddressOutput)
+}
+
+func (i IkeGatewayLocalAddressArgs) ToIkeGatewayLocalAddressPtrOutput() IkeGatewayLocalAddressPtrOutput {
+	return i.ToIkeGatewayLocalAddressPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayLocalAddressArgs) ToIkeGatewayLocalAddressPtrOutputWithContext(ctx context.Context) IkeGatewayLocalAddressPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayLocalAddressOutput).ToIkeGatewayLocalAddressPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayLocalAddressPtrInput is an input type that accepts IkeGatewayLocalAddressArgs, IkeGatewayLocalAddressPtr and IkeGatewayLocalAddressPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayLocalAddressPtrInput` via:
+//
+//	        IkeGatewayLocalAddressArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayLocalAddressPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayLocalAddressPtrOutput() IkeGatewayLocalAddressPtrOutput
+	ToIkeGatewayLocalAddressPtrOutputWithContext(context.Context) IkeGatewayLocalAddressPtrOutput
+}
+
+type ikeGatewayLocalAddressPtrType IkeGatewayLocalAddressArgs
+
+func IkeGatewayLocalAddressPtr(v *IkeGatewayLocalAddressArgs) IkeGatewayLocalAddressPtrInput {
+	return (*ikeGatewayLocalAddressPtrType)(v)
+}
+
+func (*ikeGatewayLocalAddressPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayLocalAddress)(nil)).Elem()
+}
+
+func (i *ikeGatewayLocalAddressPtrType) ToIkeGatewayLocalAddressPtrOutput() IkeGatewayLocalAddressPtrOutput {
+	return i.ToIkeGatewayLocalAddressPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayLocalAddressPtrType) ToIkeGatewayLocalAddressPtrOutputWithContext(ctx context.Context) IkeGatewayLocalAddressPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayLocalAddressPtrOutput)
+}
+
+type IkeGatewayLocalAddressOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayLocalAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayLocalAddress)(nil)).Elem()
+}
+
+func (o IkeGatewayLocalAddressOutput) ToIkeGatewayLocalAddressOutput() IkeGatewayLocalAddressOutput {
+	return o
+}
+
+func (o IkeGatewayLocalAddressOutput) ToIkeGatewayLocalAddressOutputWithContext(ctx context.Context) IkeGatewayLocalAddressOutput {
+	return o
+}
+
+func (o IkeGatewayLocalAddressOutput) ToIkeGatewayLocalAddressPtrOutput() IkeGatewayLocalAddressPtrOutput {
+	return o.ToIkeGatewayLocalAddressPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayLocalAddressOutput) ToIkeGatewayLocalAddressPtrOutputWithContext(ctx context.Context) IkeGatewayLocalAddressPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayLocalAddress) *IkeGatewayLocalAddress {
+		return &v
+	}).(IkeGatewayLocalAddressPtrOutput)
+}
+
+// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
+func (o IkeGatewayLocalAddressOutput) Interface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayLocalAddress) *string { return v.Interface }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayLocalAddressPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayLocalAddressPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayLocalAddress)(nil)).Elem()
+}
+
+func (o IkeGatewayLocalAddressPtrOutput) ToIkeGatewayLocalAddressPtrOutput() IkeGatewayLocalAddressPtrOutput {
+	return o
+}
+
+func (o IkeGatewayLocalAddressPtrOutput) ToIkeGatewayLocalAddressPtrOutputWithContext(ctx context.Context) IkeGatewayLocalAddressPtrOutput {
+	return o
+}
+
+func (o IkeGatewayLocalAddressPtrOutput) Elem() IkeGatewayLocalAddressOutput {
+	return o.ApplyT(func(v *IkeGatewayLocalAddress) IkeGatewayLocalAddress {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayLocalAddress
+		return ret
+	}).(IkeGatewayLocalAddressOutput)
+}
+
+// Interface variable or hardcoded vlan/loopback. vlan will be passed as default value
+func (o IkeGatewayLocalAddressPtrOutput) Interface() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayLocalAddress) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Interface
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayLocalId struct {
+	// Local ID string
+	Id *string `pulumi:"id"`
+	// Type
+	Type *string `pulumi:"type"`
+}
+
+// IkeGatewayLocalIdInput is an input type that accepts IkeGatewayLocalIdArgs and IkeGatewayLocalIdOutput values.
+// You can construct a concrete instance of `IkeGatewayLocalIdInput` via:
+//
+//	IkeGatewayLocalIdArgs{...}
+type IkeGatewayLocalIdInput interface {
+	pulumi.Input
+
+	ToIkeGatewayLocalIdOutput() IkeGatewayLocalIdOutput
+	ToIkeGatewayLocalIdOutputWithContext(context.Context) IkeGatewayLocalIdOutput
+}
+
+type IkeGatewayLocalIdArgs struct {
+	// Local ID string
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Type
+	Type pulumi.StringPtrInput `pulumi:"type"`
+}
+
+func (IkeGatewayLocalIdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayLocalId)(nil)).Elem()
+}
+
+func (i IkeGatewayLocalIdArgs) ToIkeGatewayLocalIdOutput() IkeGatewayLocalIdOutput {
+	return i.ToIkeGatewayLocalIdOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayLocalIdArgs) ToIkeGatewayLocalIdOutputWithContext(ctx context.Context) IkeGatewayLocalIdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayLocalIdOutput)
+}
+
+func (i IkeGatewayLocalIdArgs) ToIkeGatewayLocalIdPtrOutput() IkeGatewayLocalIdPtrOutput {
+	return i.ToIkeGatewayLocalIdPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayLocalIdArgs) ToIkeGatewayLocalIdPtrOutputWithContext(ctx context.Context) IkeGatewayLocalIdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayLocalIdOutput).ToIkeGatewayLocalIdPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayLocalIdPtrInput is an input type that accepts IkeGatewayLocalIdArgs, IkeGatewayLocalIdPtr and IkeGatewayLocalIdPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayLocalIdPtrInput` via:
+//
+//	        IkeGatewayLocalIdArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayLocalIdPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayLocalIdPtrOutput() IkeGatewayLocalIdPtrOutput
+	ToIkeGatewayLocalIdPtrOutputWithContext(context.Context) IkeGatewayLocalIdPtrOutput
+}
+
+type ikeGatewayLocalIdPtrType IkeGatewayLocalIdArgs
+
+func IkeGatewayLocalIdPtr(v *IkeGatewayLocalIdArgs) IkeGatewayLocalIdPtrInput {
+	return (*ikeGatewayLocalIdPtrType)(v)
+}
+
+func (*ikeGatewayLocalIdPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayLocalId)(nil)).Elem()
+}
+
+func (i *ikeGatewayLocalIdPtrType) ToIkeGatewayLocalIdPtrOutput() IkeGatewayLocalIdPtrOutput {
+	return i.ToIkeGatewayLocalIdPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayLocalIdPtrType) ToIkeGatewayLocalIdPtrOutputWithContext(ctx context.Context) IkeGatewayLocalIdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayLocalIdPtrOutput)
+}
+
+type IkeGatewayLocalIdOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayLocalIdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayLocalId)(nil)).Elem()
+}
+
+func (o IkeGatewayLocalIdOutput) ToIkeGatewayLocalIdOutput() IkeGatewayLocalIdOutput {
+	return o
+}
+
+func (o IkeGatewayLocalIdOutput) ToIkeGatewayLocalIdOutputWithContext(ctx context.Context) IkeGatewayLocalIdOutput {
+	return o
+}
+
+func (o IkeGatewayLocalIdOutput) ToIkeGatewayLocalIdPtrOutput() IkeGatewayLocalIdPtrOutput {
+	return o.ToIkeGatewayLocalIdPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayLocalIdOutput) ToIkeGatewayLocalIdPtrOutputWithContext(ctx context.Context) IkeGatewayLocalIdPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayLocalId) *IkeGatewayLocalId {
+		return &v
+	}).(IkeGatewayLocalIdPtrOutput)
+}
+
+// Local ID string
+func (o IkeGatewayLocalIdOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayLocalId) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Type
+func (o IkeGatewayLocalIdOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayLocalId) *string { return v.Type }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayLocalIdPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayLocalIdPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayLocalId)(nil)).Elem()
+}
+
+func (o IkeGatewayLocalIdPtrOutput) ToIkeGatewayLocalIdPtrOutput() IkeGatewayLocalIdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayLocalIdPtrOutput) ToIkeGatewayLocalIdPtrOutputWithContext(ctx context.Context) IkeGatewayLocalIdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayLocalIdPtrOutput) Elem() IkeGatewayLocalIdOutput {
+	return o.ApplyT(func(v *IkeGatewayLocalId) IkeGatewayLocalId {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayLocalId
+		return ret
+	}).(IkeGatewayLocalIdOutput)
+}
+
+// Local ID string
+func (o IkeGatewayLocalIdPtrOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayLocalId) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Id
+	}).(pulumi.StringPtrOutput)
+}
+
+// Type
+func (o IkeGatewayLocalIdPtrOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayLocalId) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Type
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayPeerAddress struct {
+	// Dynamic
+	Dynamic *IkeGatewayPeerAddressDynamic `pulumi:"dynamic"`
+	// peer gateway FQDN name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+	Fqdn *string `pulumi:"fqdn"`
+	// peer gateway has static IP address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+	Ip *string `pulumi:"ip"`
+}
+
+// IkeGatewayPeerAddressInput is an input type that accepts IkeGatewayPeerAddressArgs and IkeGatewayPeerAddressOutput values.
+// You can construct a concrete instance of `IkeGatewayPeerAddressInput` via:
+//
+//	IkeGatewayPeerAddressArgs{...}
+type IkeGatewayPeerAddressInput interface {
+	pulumi.Input
+
+	ToIkeGatewayPeerAddressOutput() IkeGatewayPeerAddressOutput
+	ToIkeGatewayPeerAddressOutputWithContext(context.Context) IkeGatewayPeerAddressOutput
+}
+
+type IkeGatewayPeerAddressArgs struct {
+	// Dynamic
+	Dynamic IkeGatewayPeerAddressDynamicPtrInput `pulumi:"dynamic"`
+	// peer gateway FQDN name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
+	// peer gateway has static IP address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+	Ip pulumi.StringPtrInput `pulumi:"ip"`
+}
+
+func (IkeGatewayPeerAddressArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayPeerAddress)(nil)).Elem()
+}
+
+func (i IkeGatewayPeerAddressArgs) ToIkeGatewayPeerAddressOutput() IkeGatewayPeerAddressOutput {
+	return i.ToIkeGatewayPeerAddressOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayPeerAddressArgs) ToIkeGatewayPeerAddressOutputWithContext(ctx context.Context) IkeGatewayPeerAddressOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerAddressOutput)
+}
+
+func (i IkeGatewayPeerAddressArgs) ToIkeGatewayPeerAddressPtrOutput() IkeGatewayPeerAddressPtrOutput {
+	return i.ToIkeGatewayPeerAddressPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayPeerAddressArgs) ToIkeGatewayPeerAddressPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerAddressOutput).ToIkeGatewayPeerAddressPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayPeerAddressPtrInput is an input type that accepts IkeGatewayPeerAddressArgs, IkeGatewayPeerAddressPtr and IkeGatewayPeerAddressPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayPeerAddressPtrInput` via:
+//
+//	        IkeGatewayPeerAddressArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayPeerAddressPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayPeerAddressPtrOutput() IkeGatewayPeerAddressPtrOutput
+	ToIkeGatewayPeerAddressPtrOutputWithContext(context.Context) IkeGatewayPeerAddressPtrOutput
+}
+
+type ikeGatewayPeerAddressPtrType IkeGatewayPeerAddressArgs
+
+func IkeGatewayPeerAddressPtr(v *IkeGatewayPeerAddressArgs) IkeGatewayPeerAddressPtrInput {
+	return (*ikeGatewayPeerAddressPtrType)(v)
+}
+
+func (*ikeGatewayPeerAddressPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayPeerAddress)(nil)).Elem()
+}
+
+func (i *ikeGatewayPeerAddressPtrType) ToIkeGatewayPeerAddressPtrOutput() IkeGatewayPeerAddressPtrOutput {
+	return i.ToIkeGatewayPeerAddressPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayPeerAddressPtrType) ToIkeGatewayPeerAddressPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerAddressPtrOutput)
+}
+
+type IkeGatewayPeerAddressOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayPeerAddressOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayPeerAddress)(nil)).Elem()
+}
+
+func (o IkeGatewayPeerAddressOutput) ToIkeGatewayPeerAddressOutput() IkeGatewayPeerAddressOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressOutput) ToIkeGatewayPeerAddressOutputWithContext(ctx context.Context) IkeGatewayPeerAddressOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressOutput) ToIkeGatewayPeerAddressPtrOutput() IkeGatewayPeerAddressPtrOutput {
+	return o.ToIkeGatewayPeerAddressPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayPeerAddressOutput) ToIkeGatewayPeerAddressPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayPeerAddress) *IkeGatewayPeerAddress {
+		return &v
+	}).(IkeGatewayPeerAddressPtrOutput)
+}
+
+// Dynamic
+func (o IkeGatewayPeerAddressOutput) Dynamic() IkeGatewayPeerAddressDynamicPtrOutput {
+	return o.ApplyT(func(v IkeGatewayPeerAddress) *IkeGatewayPeerAddressDynamic { return v.Dynamic }).(IkeGatewayPeerAddressDynamicPtrOutput)
+}
+
+// peer gateway FQDN name
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+func (o IkeGatewayPeerAddressOutput) Fqdn() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayPeerAddress) *string { return v.Fqdn }).(pulumi.StringPtrOutput)
+}
+
+// peer gateway has static IP address
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+func (o IkeGatewayPeerAddressOutput) Ip() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayPeerAddress) *string { return v.Ip }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayPeerAddressPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayPeerAddressPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayPeerAddress)(nil)).Elem()
+}
+
+func (o IkeGatewayPeerAddressPtrOutput) ToIkeGatewayPeerAddressPtrOutput() IkeGatewayPeerAddressPtrOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressPtrOutput) ToIkeGatewayPeerAddressPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressPtrOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressPtrOutput) Elem() IkeGatewayPeerAddressOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerAddress) IkeGatewayPeerAddress {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayPeerAddress
+		return ret
+	}).(IkeGatewayPeerAddressOutput)
+}
+
+// Dynamic
+func (o IkeGatewayPeerAddressPtrOutput) Dynamic() IkeGatewayPeerAddressDynamicPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerAddress) *IkeGatewayPeerAddressDynamic {
+		if v == nil {
+			return nil
+		}
+		return v.Dynamic
+	}).(IkeGatewayPeerAddressDynamicPtrOutput)
+}
+
+// peer gateway FQDN name
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+func (o IkeGatewayPeerAddressPtrOutput) Fqdn() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerAddress) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Fqdn
+	}).(pulumi.StringPtrOutput)
+}
+
+// peer gateway has static IP address
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
+func (o IkeGatewayPeerAddressPtrOutput) Ip() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerAddress) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Ip
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayPeerAddressDynamic struct {
+}
+
+// IkeGatewayPeerAddressDynamicInput is an input type that accepts IkeGatewayPeerAddressDynamicArgs and IkeGatewayPeerAddressDynamicOutput values.
+// You can construct a concrete instance of `IkeGatewayPeerAddressDynamicInput` via:
+//
+//	IkeGatewayPeerAddressDynamicArgs{...}
+type IkeGatewayPeerAddressDynamicInput interface {
+	pulumi.Input
+
+	ToIkeGatewayPeerAddressDynamicOutput() IkeGatewayPeerAddressDynamicOutput
+	ToIkeGatewayPeerAddressDynamicOutputWithContext(context.Context) IkeGatewayPeerAddressDynamicOutput
+}
+
+type IkeGatewayPeerAddressDynamicArgs struct {
+}
+
+func (IkeGatewayPeerAddressDynamicArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayPeerAddressDynamic)(nil)).Elem()
+}
+
+func (i IkeGatewayPeerAddressDynamicArgs) ToIkeGatewayPeerAddressDynamicOutput() IkeGatewayPeerAddressDynamicOutput {
+	return i.ToIkeGatewayPeerAddressDynamicOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayPeerAddressDynamicArgs) ToIkeGatewayPeerAddressDynamicOutputWithContext(ctx context.Context) IkeGatewayPeerAddressDynamicOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerAddressDynamicOutput)
+}
+
+func (i IkeGatewayPeerAddressDynamicArgs) ToIkeGatewayPeerAddressDynamicPtrOutput() IkeGatewayPeerAddressDynamicPtrOutput {
+	return i.ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayPeerAddressDynamicArgs) ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressDynamicPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerAddressDynamicOutput).ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayPeerAddressDynamicPtrInput is an input type that accepts IkeGatewayPeerAddressDynamicArgs, IkeGatewayPeerAddressDynamicPtr and IkeGatewayPeerAddressDynamicPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayPeerAddressDynamicPtrInput` via:
+//
+//	        IkeGatewayPeerAddressDynamicArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayPeerAddressDynamicPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayPeerAddressDynamicPtrOutput() IkeGatewayPeerAddressDynamicPtrOutput
+	ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(context.Context) IkeGatewayPeerAddressDynamicPtrOutput
+}
+
+type ikeGatewayPeerAddressDynamicPtrType IkeGatewayPeerAddressDynamicArgs
+
+func IkeGatewayPeerAddressDynamicPtr(v *IkeGatewayPeerAddressDynamicArgs) IkeGatewayPeerAddressDynamicPtrInput {
+	return (*ikeGatewayPeerAddressDynamicPtrType)(v)
+}
+
+func (*ikeGatewayPeerAddressDynamicPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayPeerAddressDynamic)(nil)).Elem()
+}
+
+func (i *ikeGatewayPeerAddressDynamicPtrType) ToIkeGatewayPeerAddressDynamicPtrOutput() IkeGatewayPeerAddressDynamicPtrOutput {
+	return i.ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayPeerAddressDynamicPtrType) ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressDynamicPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerAddressDynamicPtrOutput)
+}
+
+type IkeGatewayPeerAddressDynamicOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayPeerAddressDynamicOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayPeerAddressDynamic)(nil)).Elem()
+}
+
+func (o IkeGatewayPeerAddressDynamicOutput) ToIkeGatewayPeerAddressDynamicOutput() IkeGatewayPeerAddressDynamicOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressDynamicOutput) ToIkeGatewayPeerAddressDynamicOutputWithContext(ctx context.Context) IkeGatewayPeerAddressDynamicOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressDynamicOutput) ToIkeGatewayPeerAddressDynamicPtrOutput() IkeGatewayPeerAddressDynamicPtrOutput {
+	return o.ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayPeerAddressDynamicOutput) ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressDynamicPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayPeerAddressDynamic) *IkeGatewayPeerAddressDynamic {
+		return &v
+	}).(IkeGatewayPeerAddressDynamicPtrOutput)
+}
+
+type IkeGatewayPeerAddressDynamicPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayPeerAddressDynamicPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayPeerAddressDynamic)(nil)).Elem()
+}
+
+func (o IkeGatewayPeerAddressDynamicPtrOutput) ToIkeGatewayPeerAddressDynamicPtrOutput() IkeGatewayPeerAddressDynamicPtrOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressDynamicPtrOutput) ToIkeGatewayPeerAddressDynamicPtrOutputWithContext(ctx context.Context) IkeGatewayPeerAddressDynamicPtrOutput {
+	return o
+}
+
+func (o IkeGatewayPeerAddressDynamicPtrOutput) Elem() IkeGatewayPeerAddressDynamicOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerAddressDynamic) IkeGatewayPeerAddressDynamic {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayPeerAddressDynamic
+		return ret
+	}).(IkeGatewayPeerAddressDynamicOutput)
+}
+
+type IkeGatewayPeerId struct {
+	// Peer ID string
+	Id *string `pulumi:"id"`
+	// Type
+	Type *string `pulumi:"type"`
+}
+
+// IkeGatewayPeerIdInput is an input type that accepts IkeGatewayPeerIdArgs and IkeGatewayPeerIdOutput values.
+// You can construct a concrete instance of `IkeGatewayPeerIdInput` via:
+//
+//	IkeGatewayPeerIdArgs{...}
+type IkeGatewayPeerIdInput interface {
+	pulumi.Input
+
+	ToIkeGatewayPeerIdOutput() IkeGatewayPeerIdOutput
+	ToIkeGatewayPeerIdOutputWithContext(context.Context) IkeGatewayPeerIdOutput
+}
+
+type IkeGatewayPeerIdArgs struct {
+	// Peer ID string
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// Type
+	Type pulumi.StringPtrInput `pulumi:"type"`
+}
+
+func (IkeGatewayPeerIdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayPeerId)(nil)).Elem()
+}
+
+func (i IkeGatewayPeerIdArgs) ToIkeGatewayPeerIdOutput() IkeGatewayPeerIdOutput {
+	return i.ToIkeGatewayPeerIdOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayPeerIdArgs) ToIkeGatewayPeerIdOutputWithContext(ctx context.Context) IkeGatewayPeerIdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerIdOutput)
+}
+
+func (i IkeGatewayPeerIdArgs) ToIkeGatewayPeerIdPtrOutput() IkeGatewayPeerIdPtrOutput {
+	return i.ToIkeGatewayPeerIdPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayPeerIdArgs) ToIkeGatewayPeerIdPtrOutputWithContext(ctx context.Context) IkeGatewayPeerIdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerIdOutput).ToIkeGatewayPeerIdPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayPeerIdPtrInput is an input type that accepts IkeGatewayPeerIdArgs, IkeGatewayPeerIdPtr and IkeGatewayPeerIdPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayPeerIdPtrInput` via:
+//
+//	        IkeGatewayPeerIdArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayPeerIdPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayPeerIdPtrOutput() IkeGatewayPeerIdPtrOutput
+	ToIkeGatewayPeerIdPtrOutputWithContext(context.Context) IkeGatewayPeerIdPtrOutput
+}
+
+type ikeGatewayPeerIdPtrType IkeGatewayPeerIdArgs
+
+func IkeGatewayPeerIdPtr(v *IkeGatewayPeerIdArgs) IkeGatewayPeerIdPtrInput {
+	return (*ikeGatewayPeerIdPtrType)(v)
+}
+
+func (*ikeGatewayPeerIdPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayPeerId)(nil)).Elem()
+}
+
+func (i *ikeGatewayPeerIdPtrType) ToIkeGatewayPeerIdPtrOutput() IkeGatewayPeerIdPtrOutput {
+	return i.ToIkeGatewayPeerIdPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayPeerIdPtrType) ToIkeGatewayPeerIdPtrOutputWithContext(ctx context.Context) IkeGatewayPeerIdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayPeerIdPtrOutput)
+}
+
+type IkeGatewayPeerIdOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayPeerIdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayPeerId)(nil)).Elem()
+}
+
+func (o IkeGatewayPeerIdOutput) ToIkeGatewayPeerIdOutput() IkeGatewayPeerIdOutput {
+	return o
+}
+
+func (o IkeGatewayPeerIdOutput) ToIkeGatewayPeerIdOutputWithContext(ctx context.Context) IkeGatewayPeerIdOutput {
+	return o
+}
+
+func (o IkeGatewayPeerIdOutput) ToIkeGatewayPeerIdPtrOutput() IkeGatewayPeerIdPtrOutput {
+	return o.ToIkeGatewayPeerIdPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayPeerIdOutput) ToIkeGatewayPeerIdPtrOutputWithContext(ctx context.Context) IkeGatewayPeerIdPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayPeerId) *IkeGatewayPeerId {
+		return &v
+	}).(IkeGatewayPeerIdPtrOutput)
+}
+
+// Peer ID string
+func (o IkeGatewayPeerIdOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayPeerId) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// Type
+func (o IkeGatewayPeerIdOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayPeerId) *string { return v.Type }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayPeerIdPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayPeerIdPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayPeerId)(nil)).Elem()
+}
+
+func (o IkeGatewayPeerIdPtrOutput) ToIkeGatewayPeerIdPtrOutput() IkeGatewayPeerIdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayPeerIdPtrOutput) ToIkeGatewayPeerIdPtrOutputWithContext(ctx context.Context) IkeGatewayPeerIdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayPeerIdPtrOutput) Elem() IkeGatewayPeerIdOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerId) IkeGatewayPeerId {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayPeerId
+		return ret
+	}).(IkeGatewayPeerIdOutput)
+}
+
+// Peer ID string
+func (o IkeGatewayPeerIdPtrOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerId) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Id
+	}).(pulumi.StringPtrOutput)
+}
+
+// Type
+func (o IkeGatewayPeerIdPtrOutput) Type() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayPeerId) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Type
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayProtocol struct {
+	// Ikev1
+	Ikev1 *IkeGatewayProtocolIkev1 `pulumi:"ikev1"`
+	// Ikev2
+	Ikev2 *IkeGatewayProtocolIkev2 `pulumi:"ikev2"`
+	// Version
+	Version *string `pulumi:"version"`
+}
+
+// IkeGatewayProtocolInput is an input type that accepts IkeGatewayProtocolArgs and IkeGatewayProtocolOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolInput` via:
+//
+//	IkeGatewayProtocolArgs{...}
+type IkeGatewayProtocolInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolOutput() IkeGatewayProtocolOutput
+	ToIkeGatewayProtocolOutputWithContext(context.Context) IkeGatewayProtocolOutput
+}
+
+type IkeGatewayProtocolArgs struct {
+	// Ikev1
+	Ikev1 IkeGatewayProtocolIkev1PtrInput `pulumi:"ikev1"`
+	// Ikev2
+	Ikev2 IkeGatewayProtocolIkev2PtrInput `pulumi:"ikev2"`
+	// Version
+	Version pulumi.StringPtrInput `pulumi:"version"`
+}
+
+func (IkeGatewayProtocolArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocol)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolArgs) ToIkeGatewayProtocolOutput() IkeGatewayProtocolOutput {
+	return i.ToIkeGatewayProtocolOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolArgs) ToIkeGatewayProtocolOutputWithContext(ctx context.Context) IkeGatewayProtocolOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolOutput)
+}
+
+func (i IkeGatewayProtocolArgs) ToIkeGatewayProtocolPtrOutput() IkeGatewayProtocolPtrOutput {
+	return i.ToIkeGatewayProtocolPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolArgs) ToIkeGatewayProtocolPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolOutput).ToIkeGatewayProtocolPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolPtrInput is an input type that accepts IkeGatewayProtocolArgs, IkeGatewayProtocolPtr and IkeGatewayProtocolPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolPtrInput` via:
+//
+//	        IkeGatewayProtocolArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolPtrOutput() IkeGatewayProtocolPtrOutput
+	ToIkeGatewayProtocolPtrOutputWithContext(context.Context) IkeGatewayProtocolPtrOutput
+}
+
+type ikeGatewayProtocolPtrType IkeGatewayProtocolArgs
+
+func IkeGatewayProtocolPtr(v *IkeGatewayProtocolArgs) IkeGatewayProtocolPtrInput {
+	return (*ikeGatewayProtocolPtrType)(v)
+}
+
+func (*ikeGatewayProtocolPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocol)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolPtrType) ToIkeGatewayProtocolPtrOutput() IkeGatewayProtocolPtrOutput {
+	return i.ToIkeGatewayProtocolPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolPtrType) ToIkeGatewayProtocolPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolPtrOutput)
+}
+
+type IkeGatewayProtocolOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocol)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolOutput) ToIkeGatewayProtocolOutput() IkeGatewayProtocolOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolOutput) ToIkeGatewayProtocolOutputWithContext(ctx context.Context) IkeGatewayProtocolOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolOutput) ToIkeGatewayProtocolPtrOutput() IkeGatewayProtocolPtrOutput {
+	return o.ToIkeGatewayProtocolPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolOutput) ToIkeGatewayProtocolPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocol) *IkeGatewayProtocol {
+		return &v
+	}).(IkeGatewayProtocolPtrOutput)
+}
+
+// Ikev1
+func (o IkeGatewayProtocolOutput) Ikev1() IkeGatewayProtocolIkev1PtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocol) *IkeGatewayProtocolIkev1 { return v.Ikev1 }).(IkeGatewayProtocolIkev1PtrOutput)
+}
+
+// Ikev2
+func (o IkeGatewayProtocolOutput) Ikev2() IkeGatewayProtocolIkev2PtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocol) *IkeGatewayProtocolIkev2 { return v.Ikev2 }).(IkeGatewayProtocolIkev2PtrOutput)
+}
+
+// Version
+func (o IkeGatewayProtocolOutput) Version() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocol) *string { return v.Version }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayProtocolPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocol)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolPtrOutput) ToIkeGatewayProtocolPtrOutput() IkeGatewayProtocolPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolPtrOutput) ToIkeGatewayProtocolPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolPtrOutput) Elem() IkeGatewayProtocolOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocol) IkeGatewayProtocol {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocol
+		return ret
+	}).(IkeGatewayProtocolOutput)
+}
+
+// Ikev1
+func (o IkeGatewayProtocolPtrOutput) Ikev1() IkeGatewayProtocolIkev1PtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocol) *IkeGatewayProtocolIkev1 {
+		if v == nil {
+			return nil
+		}
+		return v.Ikev1
+	}).(IkeGatewayProtocolIkev1PtrOutput)
+}
+
+// Ikev2
+func (o IkeGatewayProtocolPtrOutput) Ikev2() IkeGatewayProtocolIkev2PtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocol) *IkeGatewayProtocolIkev2 {
+		if v == nil {
+			return nil
+		}
+		return v.Ikev2
+	}).(IkeGatewayProtocolIkev2PtrOutput)
+}
+
+// Version
+func (o IkeGatewayProtocolPtrOutput) Version() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocol) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Version
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayProtocolCommon struct {
+	// Fragmentation
+	Fragmentation *IkeGatewayProtocolCommonFragmentation `pulumi:"fragmentation"`
+	// Enables NAT traversal for the IKE gateway.
+	NatTraversal *IkeGatewayProtocolCommonNatTraversal `pulumi:"natTraversal"`
+	// Passive mode
+	PassiveMode *bool `pulumi:"passiveMode"`
+}
+
+// IkeGatewayProtocolCommonInput is an input type that accepts IkeGatewayProtocolCommonArgs and IkeGatewayProtocolCommonOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolCommonInput` via:
+//
+//	IkeGatewayProtocolCommonArgs{...}
+type IkeGatewayProtocolCommonInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolCommonOutput() IkeGatewayProtocolCommonOutput
+	ToIkeGatewayProtocolCommonOutputWithContext(context.Context) IkeGatewayProtocolCommonOutput
+}
+
+type IkeGatewayProtocolCommonArgs struct {
+	// Fragmentation
+	Fragmentation IkeGatewayProtocolCommonFragmentationPtrInput `pulumi:"fragmentation"`
+	// Enables NAT traversal for the IKE gateway.
+	NatTraversal IkeGatewayProtocolCommonNatTraversalPtrInput `pulumi:"natTraversal"`
+	// Passive mode
+	PassiveMode pulumi.BoolPtrInput `pulumi:"passiveMode"`
+}
+
+func (IkeGatewayProtocolCommonArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolCommon)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolCommonArgs) ToIkeGatewayProtocolCommonOutput() IkeGatewayProtocolCommonOutput {
+	return i.ToIkeGatewayProtocolCommonOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolCommonArgs) ToIkeGatewayProtocolCommonOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonOutput)
+}
+
+func (i IkeGatewayProtocolCommonArgs) ToIkeGatewayProtocolCommonPtrOutput() IkeGatewayProtocolCommonPtrOutput {
+	return i.ToIkeGatewayProtocolCommonPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolCommonArgs) ToIkeGatewayProtocolCommonPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonOutput).ToIkeGatewayProtocolCommonPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolCommonPtrInput is an input type that accepts IkeGatewayProtocolCommonArgs, IkeGatewayProtocolCommonPtr and IkeGatewayProtocolCommonPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolCommonPtrInput` via:
+//
+//	        IkeGatewayProtocolCommonArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolCommonPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolCommonPtrOutput() IkeGatewayProtocolCommonPtrOutput
+	ToIkeGatewayProtocolCommonPtrOutputWithContext(context.Context) IkeGatewayProtocolCommonPtrOutput
+}
+
+type ikeGatewayProtocolCommonPtrType IkeGatewayProtocolCommonArgs
+
+func IkeGatewayProtocolCommonPtr(v *IkeGatewayProtocolCommonArgs) IkeGatewayProtocolCommonPtrInput {
+	return (*ikeGatewayProtocolCommonPtrType)(v)
+}
+
+func (*ikeGatewayProtocolCommonPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolCommon)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolCommonPtrType) ToIkeGatewayProtocolCommonPtrOutput() IkeGatewayProtocolCommonPtrOutput {
+	return i.ToIkeGatewayProtocolCommonPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolCommonPtrType) ToIkeGatewayProtocolCommonPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonPtrOutput)
+}
+
+type IkeGatewayProtocolCommonOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolCommonOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolCommon)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolCommonOutput) ToIkeGatewayProtocolCommonOutput() IkeGatewayProtocolCommonOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonOutput) ToIkeGatewayProtocolCommonOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonOutput) ToIkeGatewayProtocolCommonPtrOutput() IkeGatewayProtocolCommonPtrOutput {
+	return o.ToIkeGatewayProtocolCommonPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolCommonOutput) ToIkeGatewayProtocolCommonPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocolCommon) *IkeGatewayProtocolCommon {
+		return &v
+	}).(IkeGatewayProtocolCommonPtrOutput)
+}
+
+// Fragmentation
+func (o IkeGatewayProtocolCommonOutput) Fragmentation() IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolCommon) *IkeGatewayProtocolCommonFragmentation { return v.Fragmentation }).(IkeGatewayProtocolCommonFragmentationPtrOutput)
+}
+
+// Enables NAT traversal for the IKE gateway.
+func (o IkeGatewayProtocolCommonOutput) NatTraversal() IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolCommon) *IkeGatewayProtocolCommonNatTraversal { return v.NatTraversal }).(IkeGatewayProtocolCommonNatTraversalPtrOutput)
+}
+
+// Passive mode
+func (o IkeGatewayProtocolCommonOutput) PassiveMode() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolCommon) *bool { return v.PassiveMode }).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolCommonPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolCommonPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolCommon)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolCommonPtrOutput) ToIkeGatewayProtocolCommonPtrOutput() IkeGatewayProtocolCommonPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonPtrOutput) ToIkeGatewayProtocolCommonPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonPtrOutput) Elem() IkeGatewayProtocolCommonOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommon) IkeGatewayProtocolCommon {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocolCommon
+		return ret
+	}).(IkeGatewayProtocolCommonOutput)
+}
+
+// Fragmentation
+func (o IkeGatewayProtocolCommonPtrOutput) Fragmentation() IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommon) *IkeGatewayProtocolCommonFragmentation {
+		if v == nil {
+			return nil
+		}
+		return v.Fragmentation
+	}).(IkeGatewayProtocolCommonFragmentationPtrOutput)
+}
+
+// Enables NAT traversal for the IKE gateway.
+func (o IkeGatewayProtocolCommonPtrOutput) NatTraversal() IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommon) *IkeGatewayProtocolCommonNatTraversal {
+		if v == nil {
+			return nil
+		}
+		return v.NatTraversal
+	}).(IkeGatewayProtocolCommonNatTraversalPtrOutput)
+}
+
+// Passive mode
+func (o IkeGatewayProtocolCommonPtrOutput) PassiveMode() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommon) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.PassiveMode
+	}).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolCommonFragmentation struct {
+	// Enable
+	Enable *bool `pulumi:"enable"`
+}
+
+// IkeGatewayProtocolCommonFragmentationInput is an input type that accepts IkeGatewayProtocolCommonFragmentationArgs and IkeGatewayProtocolCommonFragmentationOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolCommonFragmentationInput` via:
+//
+//	IkeGatewayProtocolCommonFragmentationArgs{...}
+type IkeGatewayProtocolCommonFragmentationInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolCommonFragmentationOutput() IkeGatewayProtocolCommonFragmentationOutput
+	ToIkeGatewayProtocolCommonFragmentationOutputWithContext(context.Context) IkeGatewayProtocolCommonFragmentationOutput
+}
+
+type IkeGatewayProtocolCommonFragmentationArgs struct {
+	// Enable
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+}
+
+func (IkeGatewayProtocolCommonFragmentationArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolCommonFragmentation)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolCommonFragmentationArgs) ToIkeGatewayProtocolCommonFragmentationOutput() IkeGatewayProtocolCommonFragmentationOutput {
+	return i.ToIkeGatewayProtocolCommonFragmentationOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolCommonFragmentationArgs) ToIkeGatewayProtocolCommonFragmentationOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonFragmentationOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonFragmentationOutput)
+}
+
+func (i IkeGatewayProtocolCommonFragmentationArgs) ToIkeGatewayProtocolCommonFragmentationPtrOutput() IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return i.ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolCommonFragmentationArgs) ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonFragmentationOutput).ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolCommonFragmentationPtrInput is an input type that accepts IkeGatewayProtocolCommonFragmentationArgs, IkeGatewayProtocolCommonFragmentationPtr and IkeGatewayProtocolCommonFragmentationPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolCommonFragmentationPtrInput` via:
+//
+//	        IkeGatewayProtocolCommonFragmentationArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolCommonFragmentationPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolCommonFragmentationPtrOutput() IkeGatewayProtocolCommonFragmentationPtrOutput
+	ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(context.Context) IkeGatewayProtocolCommonFragmentationPtrOutput
+}
+
+type ikeGatewayProtocolCommonFragmentationPtrType IkeGatewayProtocolCommonFragmentationArgs
+
+func IkeGatewayProtocolCommonFragmentationPtr(v *IkeGatewayProtocolCommonFragmentationArgs) IkeGatewayProtocolCommonFragmentationPtrInput {
+	return (*ikeGatewayProtocolCommonFragmentationPtrType)(v)
+}
+
+func (*ikeGatewayProtocolCommonFragmentationPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolCommonFragmentation)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolCommonFragmentationPtrType) ToIkeGatewayProtocolCommonFragmentationPtrOutput() IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return i.ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolCommonFragmentationPtrType) ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonFragmentationPtrOutput)
+}
+
+type IkeGatewayProtocolCommonFragmentationOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolCommonFragmentationOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolCommonFragmentation)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolCommonFragmentationOutput) ToIkeGatewayProtocolCommonFragmentationOutput() IkeGatewayProtocolCommonFragmentationOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonFragmentationOutput) ToIkeGatewayProtocolCommonFragmentationOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonFragmentationOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonFragmentationOutput) ToIkeGatewayProtocolCommonFragmentationPtrOutput() IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return o.ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolCommonFragmentationOutput) ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocolCommonFragmentation) *IkeGatewayProtocolCommonFragmentation {
+		return &v
+	}).(IkeGatewayProtocolCommonFragmentationPtrOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolCommonFragmentationOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolCommonFragmentation) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolCommonFragmentationPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolCommonFragmentationPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolCommonFragmentation)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolCommonFragmentationPtrOutput) ToIkeGatewayProtocolCommonFragmentationPtrOutput() IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonFragmentationPtrOutput) ToIkeGatewayProtocolCommonFragmentationPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonFragmentationPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonFragmentationPtrOutput) Elem() IkeGatewayProtocolCommonFragmentationOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommonFragmentation) IkeGatewayProtocolCommonFragmentation {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocolCommonFragmentation
+		return ret
+	}).(IkeGatewayProtocolCommonFragmentationOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolCommonFragmentationPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommonFragmentation) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolCommonNatTraversal struct {
+	// Enable
+	Enable *bool `pulumi:"enable"`
+}
+
+// IkeGatewayProtocolCommonNatTraversalInput is an input type that accepts IkeGatewayProtocolCommonNatTraversalArgs and IkeGatewayProtocolCommonNatTraversalOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolCommonNatTraversalInput` via:
+//
+//	IkeGatewayProtocolCommonNatTraversalArgs{...}
+type IkeGatewayProtocolCommonNatTraversalInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolCommonNatTraversalOutput() IkeGatewayProtocolCommonNatTraversalOutput
+	ToIkeGatewayProtocolCommonNatTraversalOutputWithContext(context.Context) IkeGatewayProtocolCommonNatTraversalOutput
+}
+
+type IkeGatewayProtocolCommonNatTraversalArgs struct {
+	// Enable
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+}
+
+func (IkeGatewayProtocolCommonNatTraversalArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolCommonNatTraversal)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolCommonNatTraversalArgs) ToIkeGatewayProtocolCommonNatTraversalOutput() IkeGatewayProtocolCommonNatTraversalOutput {
+	return i.ToIkeGatewayProtocolCommonNatTraversalOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolCommonNatTraversalArgs) ToIkeGatewayProtocolCommonNatTraversalOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonNatTraversalOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonNatTraversalOutput)
+}
+
+func (i IkeGatewayProtocolCommonNatTraversalArgs) ToIkeGatewayProtocolCommonNatTraversalPtrOutput() IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return i.ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolCommonNatTraversalArgs) ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonNatTraversalOutput).ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolCommonNatTraversalPtrInput is an input type that accepts IkeGatewayProtocolCommonNatTraversalArgs, IkeGatewayProtocolCommonNatTraversalPtr and IkeGatewayProtocolCommonNatTraversalPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolCommonNatTraversalPtrInput` via:
+//
+//	        IkeGatewayProtocolCommonNatTraversalArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolCommonNatTraversalPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolCommonNatTraversalPtrOutput() IkeGatewayProtocolCommonNatTraversalPtrOutput
+	ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(context.Context) IkeGatewayProtocolCommonNatTraversalPtrOutput
+}
+
+type ikeGatewayProtocolCommonNatTraversalPtrType IkeGatewayProtocolCommonNatTraversalArgs
+
+func IkeGatewayProtocolCommonNatTraversalPtr(v *IkeGatewayProtocolCommonNatTraversalArgs) IkeGatewayProtocolCommonNatTraversalPtrInput {
+	return (*ikeGatewayProtocolCommonNatTraversalPtrType)(v)
+}
+
+func (*ikeGatewayProtocolCommonNatTraversalPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolCommonNatTraversal)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolCommonNatTraversalPtrType) ToIkeGatewayProtocolCommonNatTraversalPtrOutput() IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return i.ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolCommonNatTraversalPtrType) ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolCommonNatTraversalPtrOutput)
+}
+
+type IkeGatewayProtocolCommonNatTraversalOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolCommonNatTraversalOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolCommonNatTraversal)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolCommonNatTraversalOutput) ToIkeGatewayProtocolCommonNatTraversalOutput() IkeGatewayProtocolCommonNatTraversalOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonNatTraversalOutput) ToIkeGatewayProtocolCommonNatTraversalOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonNatTraversalOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonNatTraversalOutput) ToIkeGatewayProtocolCommonNatTraversalPtrOutput() IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return o.ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolCommonNatTraversalOutput) ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocolCommonNatTraversal) *IkeGatewayProtocolCommonNatTraversal {
+		return &v
+	}).(IkeGatewayProtocolCommonNatTraversalPtrOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolCommonNatTraversalOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolCommonNatTraversal) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolCommonNatTraversalPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolCommonNatTraversalPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolCommonNatTraversal)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolCommonNatTraversalPtrOutput) ToIkeGatewayProtocolCommonNatTraversalPtrOutput() IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonNatTraversalPtrOutput) ToIkeGatewayProtocolCommonNatTraversalPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolCommonNatTraversalPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolCommonNatTraversalPtrOutput) Elem() IkeGatewayProtocolCommonNatTraversalOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommonNatTraversal) IkeGatewayProtocolCommonNatTraversal {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocolCommonNatTraversal
+		return ret
+	}).(IkeGatewayProtocolCommonNatTraversalOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolCommonNatTraversalPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolCommonNatTraversal) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolIkev1 struct {
+	// Dpd
+	Dpd *IkeGatewayProtocolIkev1Dpd `pulumi:"dpd"`
+	// Ike crypto profile
+	IkeCryptoProfile *string `pulumi:"ikeCryptoProfile"`
+}
+
+// IkeGatewayProtocolIkev1Input is an input type that accepts IkeGatewayProtocolIkev1Args and IkeGatewayProtocolIkev1Output values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev1Input` via:
+//
+//	IkeGatewayProtocolIkev1Args{...}
+type IkeGatewayProtocolIkev1Input interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev1Output() IkeGatewayProtocolIkev1Output
+	ToIkeGatewayProtocolIkev1OutputWithContext(context.Context) IkeGatewayProtocolIkev1Output
+}
+
+type IkeGatewayProtocolIkev1Args struct {
+	// Dpd
+	Dpd IkeGatewayProtocolIkev1DpdPtrInput `pulumi:"dpd"`
+	// Ike crypto profile
+	IkeCryptoProfile pulumi.StringPtrInput `pulumi:"ikeCryptoProfile"`
+}
+
+func (IkeGatewayProtocolIkev1Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev1)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolIkev1Args) ToIkeGatewayProtocolIkev1Output() IkeGatewayProtocolIkev1Output {
+	return i.ToIkeGatewayProtocolIkev1OutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev1Args) ToIkeGatewayProtocolIkev1OutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1Output {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev1Output)
+}
+
+func (i IkeGatewayProtocolIkev1Args) ToIkeGatewayProtocolIkev1PtrOutput() IkeGatewayProtocolIkev1PtrOutput {
+	return i.ToIkeGatewayProtocolIkev1PtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev1Args) ToIkeGatewayProtocolIkev1PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev1Output).ToIkeGatewayProtocolIkev1PtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolIkev1PtrInput is an input type that accepts IkeGatewayProtocolIkev1Args, IkeGatewayProtocolIkev1Ptr and IkeGatewayProtocolIkev1PtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev1PtrInput` via:
+//
+//	        IkeGatewayProtocolIkev1Args{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolIkev1PtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev1PtrOutput() IkeGatewayProtocolIkev1PtrOutput
+	ToIkeGatewayProtocolIkev1PtrOutputWithContext(context.Context) IkeGatewayProtocolIkev1PtrOutput
+}
+
+type ikeGatewayProtocolIkev1PtrType IkeGatewayProtocolIkev1Args
+
+func IkeGatewayProtocolIkev1Ptr(v *IkeGatewayProtocolIkev1Args) IkeGatewayProtocolIkev1PtrInput {
+	return (*ikeGatewayProtocolIkev1PtrType)(v)
+}
+
+func (*ikeGatewayProtocolIkev1PtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev1)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolIkev1PtrType) ToIkeGatewayProtocolIkev1PtrOutput() IkeGatewayProtocolIkev1PtrOutput {
+	return i.ToIkeGatewayProtocolIkev1PtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolIkev1PtrType) ToIkeGatewayProtocolIkev1PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev1PtrOutput)
+}
+
+type IkeGatewayProtocolIkev1Output struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev1Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev1)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev1Output) ToIkeGatewayProtocolIkev1Output() IkeGatewayProtocolIkev1Output {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1Output) ToIkeGatewayProtocolIkev1OutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1Output {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1Output) ToIkeGatewayProtocolIkev1PtrOutput() IkeGatewayProtocolIkev1PtrOutput {
+	return o.ToIkeGatewayProtocolIkev1PtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolIkev1Output) ToIkeGatewayProtocolIkev1PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1PtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocolIkev1) *IkeGatewayProtocolIkev1 {
+		return &v
+	}).(IkeGatewayProtocolIkev1PtrOutput)
+}
+
+// Dpd
+func (o IkeGatewayProtocolIkev1Output) Dpd() IkeGatewayProtocolIkev1DpdPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolIkev1) *IkeGatewayProtocolIkev1Dpd { return v.Dpd }).(IkeGatewayProtocolIkev1DpdPtrOutput)
+}
+
+// Ike crypto profile
+func (o IkeGatewayProtocolIkev1Output) IkeCryptoProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolIkev1) *string { return v.IkeCryptoProfile }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayProtocolIkev1PtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev1PtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev1)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev1PtrOutput) ToIkeGatewayProtocolIkev1PtrOutput() IkeGatewayProtocolIkev1PtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1PtrOutput) ToIkeGatewayProtocolIkev1PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1PtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1PtrOutput) Elem() IkeGatewayProtocolIkev1Output {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev1) IkeGatewayProtocolIkev1 {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocolIkev1
+		return ret
+	}).(IkeGatewayProtocolIkev1Output)
+}
+
+// Dpd
+func (o IkeGatewayProtocolIkev1PtrOutput) Dpd() IkeGatewayProtocolIkev1DpdPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev1) *IkeGatewayProtocolIkev1Dpd {
+		if v == nil {
+			return nil
+		}
+		return v.Dpd
+	}).(IkeGatewayProtocolIkev1DpdPtrOutput)
+}
+
+// Ike crypto profile
+func (o IkeGatewayProtocolIkev1PtrOutput) IkeCryptoProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev1) *string {
+		if v == nil {
+			return nil
+		}
+		return v.IkeCryptoProfile
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayProtocolIkev1Dpd struct {
+	// Enable
+	Enable *bool `pulumi:"enable"`
+}
+
+// IkeGatewayProtocolIkev1DpdInput is an input type that accepts IkeGatewayProtocolIkev1DpdArgs and IkeGatewayProtocolIkev1DpdOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev1DpdInput` via:
+//
+//	IkeGatewayProtocolIkev1DpdArgs{...}
+type IkeGatewayProtocolIkev1DpdInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev1DpdOutput() IkeGatewayProtocolIkev1DpdOutput
+	ToIkeGatewayProtocolIkev1DpdOutputWithContext(context.Context) IkeGatewayProtocolIkev1DpdOutput
+}
+
+type IkeGatewayProtocolIkev1DpdArgs struct {
+	// Enable
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+}
+
+func (IkeGatewayProtocolIkev1DpdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev1Dpd)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolIkev1DpdArgs) ToIkeGatewayProtocolIkev1DpdOutput() IkeGatewayProtocolIkev1DpdOutput {
+	return i.ToIkeGatewayProtocolIkev1DpdOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev1DpdArgs) ToIkeGatewayProtocolIkev1DpdOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1DpdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev1DpdOutput)
+}
+
+func (i IkeGatewayProtocolIkev1DpdArgs) ToIkeGatewayProtocolIkev1DpdPtrOutput() IkeGatewayProtocolIkev1DpdPtrOutput {
+	return i.ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev1DpdArgs) ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1DpdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev1DpdOutput).ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolIkev1DpdPtrInput is an input type that accepts IkeGatewayProtocolIkev1DpdArgs, IkeGatewayProtocolIkev1DpdPtr and IkeGatewayProtocolIkev1DpdPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev1DpdPtrInput` via:
+//
+//	        IkeGatewayProtocolIkev1DpdArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolIkev1DpdPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev1DpdPtrOutput() IkeGatewayProtocolIkev1DpdPtrOutput
+	ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(context.Context) IkeGatewayProtocolIkev1DpdPtrOutput
+}
+
+type ikeGatewayProtocolIkev1DpdPtrType IkeGatewayProtocolIkev1DpdArgs
+
+func IkeGatewayProtocolIkev1DpdPtr(v *IkeGatewayProtocolIkev1DpdArgs) IkeGatewayProtocolIkev1DpdPtrInput {
+	return (*ikeGatewayProtocolIkev1DpdPtrType)(v)
+}
+
+func (*ikeGatewayProtocolIkev1DpdPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev1Dpd)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolIkev1DpdPtrType) ToIkeGatewayProtocolIkev1DpdPtrOutput() IkeGatewayProtocolIkev1DpdPtrOutput {
+	return i.ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolIkev1DpdPtrType) ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1DpdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev1DpdPtrOutput)
+}
+
+type IkeGatewayProtocolIkev1DpdOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev1DpdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev1Dpd)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev1DpdOutput) ToIkeGatewayProtocolIkev1DpdOutput() IkeGatewayProtocolIkev1DpdOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1DpdOutput) ToIkeGatewayProtocolIkev1DpdOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1DpdOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1DpdOutput) ToIkeGatewayProtocolIkev1DpdPtrOutput() IkeGatewayProtocolIkev1DpdPtrOutput {
+	return o.ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolIkev1DpdOutput) ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1DpdPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocolIkev1Dpd) *IkeGatewayProtocolIkev1Dpd {
+		return &v
+	}).(IkeGatewayProtocolIkev1DpdPtrOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolIkev1DpdOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolIkev1Dpd) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolIkev1DpdPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev1DpdPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev1Dpd)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev1DpdPtrOutput) ToIkeGatewayProtocolIkev1DpdPtrOutput() IkeGatewayProtocolIkev1DpdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1DpdPtrOutput) ToIkeGatewayProtocolIkev1DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev1DpdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev1DpdPtrOutput) Elem() IkeGatewayProtocolIkev1DpdOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev1Dpd) IkeGatewayProtocolIkev1Dpd {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocolIkev1Dpd
+		return ret
+	}).(IkeGatewayProtocolIkev1DpdOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolIkev1DpdPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev1Dpd) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolIkev2 struct {
+	// Dpd
+	Dpd *IkeGatewayProtocolIkev2Dpd `pulumi:"dpd"`
+	// Ike crypto profile
+	IkeCryptoProfile *string `pulumi:"ikeCryptoProfile"`
+}
+
+// IkeGatewayProtocolIkev2Input is an input type that accepts IkeGatewayProtocolIkev2Args and IkeGatewayProtocolIkev2Output values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev2Input` via:
+//
+//	IkeGatewayProtocolIkev2Args{...}
+type IkeGatewayProtocolIkev2Input interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev2Output() IkeGatewayProtocolIkev2Output
+	ToIkeGatewayProtocolIkev2OutputWithContext(context.Context) IkeGatewayProtocolIkev2Output
+}
+
+type IkeGatewayProtocolIkev2Args struct {
+	// Dpd
+	Dpd IkeGatewayProtocolIkev2DpdPtrInput `pulumi:"dpd"`
+	// Ike crypto profile
+	IkeCryptoProfile pulumi.StringPtrInput `pulumi:"ikeCryptoProfile"`
+}
+
+func (IkeGatewayProtocolIkev2Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev2)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolIkev2Args) ToIkeGatewayProtocolIkev2Output() IkeGatewayProtocolIkev2Output {
+	return i.ToIkeGatewayProtocolIkev2OutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev2Args) ToIkeGatewayProtocolIkev2OutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2Output {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev2Output)
+}
+
+func (i IkeGatewayProtocolIkev2Args) ToIkeGatewayProtocolIkev2PtrOutput() IkeGatewayProtocolIkev2PtrOutput {
+	return i.ToIkeGatewayProtocolIkev2PtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev2Args) ToIkeGatewayProtocolIkev2PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev2Output).ToIkeGatewayProtocolIkev2PtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolIkev2PtrInput is an input type that accepts IkeGatewayProtocolIkev2Args, IkeGatewayProtocolIkev2Ptr and IkeGatewayProtocolIkev2PtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev2PtrInput` via:
+//
+//	        IkeGatewayProtocolIkev2Args{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolIkev2PtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev2PtrOutput() IkeGatewayProtocolIkev2PtrOutput
+	ToIkeGatewayProtocolIkev2PtrOutputWithContext(context.Context) IkeGatewayProtocolIkev2PtrOutput
+}
+
+type ikeGatewayProtocolIkev2PtrType IkeGatewayProtocolIkev2Args
+
+func IkeGatewayProtocolIkev2Ptr(v *IkeGatewayProtocolIkev2Args) IkeGatewayProtocolIkev2PtrInput {
+	return (*ikeGatewayProtocolIkev2PtrType)(v)
+}
+
+func (*ikeGatewayProtocolIkev2PtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev2)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolIkev2PtrType) ToIkeGatewayProtocolIkev2PtrOutput() IkeGatewayProtocolIkev2PtrOutput {
+	return i.ToIkeGatewayProtocolIkev2PtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolIkev2PtrType) ToIkeGatewayProtocolIkev2PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev2PtrOutput)
+}
+
+type IkeGatewayProtocolIkev2Output struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev2Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev2)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev2Output) ToIkeGatewayProtocolIkev2Output() IkeGatewayProtocolIkev2Output {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2Output) ToIkeGatewayProtocolIkev2OutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2Output {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2Output) ToIkeGatewayProtocolIkev2PtrOutput() IkeGatewayProtocolIkev2PtrOutput {
+	return o.ToIkeGatewayProtocolIkev2PtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolIkev2Output) ToIkeGatewayProtocolIkev2PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2PtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocolIkev2) *IkeGatewayProtocolIkev2 {
+		return &v
+	}).(IkeGatewayProtocolIkev2PtrOutput)
+}
+
+// Dpd
+func (o IkeGatewayProtocolIkev2Output) Dpd() IkeGatewayProtocolIkev2DpdPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolIkev2) *IkeGatewayProtocolIkev2Dpd { return v.Dpd }).(IkeGatewayProtocolIkev2DpdPtrOutput)
+}
+
+// Ike crypto profile
+func (o IkeGatewayProtocolIkev2Output) IkeCryptoProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolIkev2) *string { return v.IkeCryptoProfile }).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayProtocolIkev2PtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev2PtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev2)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev2PtrOutput) ToIkeGatewayProtocolIkev2PtrOutput() IkeGatewayProtocolIkev2PtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2PtrOutput) ToIkeGatewayProtocolIkev2PtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2PtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2PtrOutput) Elem() IkeGatewayProtocolIkev2Output {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev2) IkeGatewayProtocolIkev2 {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocolIkev2
+		return ret
+	}).(IkeGatewayProtocolIkev2Output)
+}
+
+// Dpd
+func (o IkeGatewayProtocolIkev2PtrOutput) Dpd() IkeGatewayProtocolIkev2DpdPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev2) *IkeGatewayProtocolIkev2Dpd {
+		if v == nil {
+			return nil
+		}
+		return v.Dpd
+	}).(IkeGatewayProtocolIkev2DpdPtrOutput)
+}
+
+// Ike crypto profile
+func (o IkeGatewayProtocolIkev2PtrOutput) IkeCryptoProfile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev2) *string {
+		if v == nil {
+			return nil
+		}
+		return v.IkeCryptoProfile
+	}).(pulumi.StringPtrOutput)
+}
+
+type IkeGatewayProtocolIkev2Dpd struct {
+	// Enable
+	Enable *bool `pulumi:"enable"`
+}
+
+// IkeGatewayProtocolIkev2DpdInput is an input type that accepts IkeGatewayProtocolIkev2DpdArgs and IkeGatewayProtocolIkev2DpdOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev2DpdInput` via:
+//
+//	IkeGatewayProtocolIkev2DpdArgs{...}
+type IkeGatewayProtocolIkev2DpdInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev2DpdOutput() IkeGatewayProtocolIkev2DpdOutput
+	ToIkeGatewayProtocolIkev2DpdOutputWithContext(context.Context) IkeGatewayProtocolIkev2DpdOutput
+}
+
+type IkeGatewayProtocolIkev2DpdArgs struct {
+	// Enable
+	Enable pulumi.BoolPtrInput `pulumi:"enable"`
+}
+
+func (IkeGatewayProtocolIkev2DpdArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev2Dpd)(nil)).Elem()
+}
+
+func (i IkeGatewayProtocolIkev2DpdArgs) ToIkeGatewayProtocolIkev2DpdOutput() IkeGatewayProtocolIkev2DpdOutput {
+	return i.ToIkeGatewayProtocolIkev2DpdOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev2DpdArgs) ToIkeGatewayProtocolIkev2DpdOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2DpdOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev2DpdOutput)
+}
+
+func (i IkeGatewayProtocolIkev2DpdArgs) ToIkeGatewayProtocolIkev2DpdPtrOutput() IkeGatewayProtocolIkev2DpdPtrOutput {
+	return i.ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(context.Background())
+}
+
+func (i IkeGatewayProtocolIkev2DpdArgs) ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2DpdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev2DpdOutput).ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(ctx)
+}
+
+// IkeGatewayProtocolIkev2DpdPtrInput is an input type that accepts IkeGatewayProtocolIkev2DpdArgs, IkeGatewayProtocolIkev2DpdPtr and IkeGatewayProtocolIkev2DpdPtrOutput values.
+// You can construct a concrete instance of `IkeGatewayProtocolIkev2DpdPtrInput` via:
+//
+//	        IkeGatewayProtocolIkev2DpdArgs{...}
+//
+//	or:
+//
+//	        nil
+type IkeGatewayProtocolIkev2DpdPtrInput interface {
+	pulumi.Input
+
+	ToIkeGatewayProtocolIkev2DpdPtrOutput() IkeGatewayProtocolIkev2DpdPtrOutput
+	ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(context.Context) IkeGatewayProtocolIkev2DpdPtrOutput
+}
+
+type ikeGatewayProtocolIkev2DpdPtrType IkeGatewayProtocolIkev2DpdArgs
+
+func IkeGatewayProtocolIkev2DpdPtr(v *IkeGatewayProtocolIkev2DpdArgs) IkeGatewayProtocolIkev2DpdPtrInput {
+	return (*ikeGatewayProtocolIkev2DpdPtrType)(v)
+}
+
+func (*ikeGatewayProtocolIkev2DpdPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev2Dpd)(nil)).Elem()
+}
+
+func (i *ikeGatewayProtocolIkev2DpdPtrType) ToIkeGatewayProtocolIkev2DpdPtrOutput() IkeGatewayProtocolIkev2DpdPtrOutput {
+	return i.ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(context.Background())
+}
+
+func (i *ikeGatewayProtocolIkev2DpdPtrType) ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2DpdPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(IkeGatewayProtocolIkev2DpdPtrOutput)
+}
+
+type IkeGatewayProtocolIkev2DpdOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev2DpdOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*IkeGatewayProtocolIkev2Dpd)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev2DpdOutput) ToIkeGatewayProtocolIkev2DpdOutput() IkeGatewayProtocolIkev2DpdOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2DpdOutput) ToIkeGatewayProtocolIkev2DpdOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2DpdOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2DpdOutput) ToIkeGatewayProtocolIkev2DpdPtrOutput() IkeGatewayProtocolIkev2DpdPtrOutput {
+	return o.ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(context.Background())
+}
+
+func (o IkeGatewayProtocolIkev2DpdOutput) ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2DpdPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v IkeGatewayProtocolIkev2Dpd) *IkeGatewayProtocolIkev2Dpd {
+		return &v
+	}).(IkeGatewayProtocolIkev2DpdPtrOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolIkev2DpdOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v IkeGatewayProtocolIkev2Dpd) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
+}
+
+type IkeGatewayProtocolIkev2DpdPtrOutput struct{ *pulumi.OutputState }
+
+func (IkeGatewayProtocolIkev2DpdPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**IkeGatewayProtocolIkev2Dpd)(nil)).Elem()
+}
+
+func (o IkeGatewayProtocolIkev2DpdPtrOutput) ToIkeGatewayProtocolIkev2DpdPtrOutput() IkeGatewayProtocolIkev2DpdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2DpdPtrOutput) ToIkeGatewayProtocolIkev2DpdPtrOutputWithContext(ctx context.Context) IkeGatewayProtocolIkev2DpdPtrOutput {
+	return o
+}
+
+func (o IkeGatewayProtocolIkev2DpdPtrOutput) Elem() IkeGatewayProtocolIkev2DpdOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev2Dpd) IkeGatewayProtocolIkev2Dpd {
+		if v != nil {
+			return *v
+		}
+		var ret IkeGatewayProtocolIkev2Dpd
+		return ret
+	}).(IkeGatewayProtocolIkev2DpdOutput)
+}
+
+// Enable
+func (o IkeGatewayProtocolIkev2DpdPtrOutput) Enable() pulumi.BoolPtrOutput {
+	return o.ApplyT(func(v *IkeGatewayProtocolIkev2Dpd) *bool {
+		if v == nil {
+			return nil
+		}
+		return v.Enable
+	}).(pulumi.BoolPtrOutput)
+}
+
 type InterfaceManagementProfilePermittedIp struct {
 	// The allowed IP address or CIDR block.
 	Name string `pulumi:"name"`
@@ -407,10 +3503,16 @@ type IpsecCryptoProfileLifesize struct {
 	// specify lifesize in gigabytes(GB)
 	Gb *int `pulumi:"gb"`
 	// specify lifesize in kilobytes(KB)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Kb *int `pulumi:"kb"`
 	// specify lifesize in megabytes(MB)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Mb *int `pulumi:"mb"`
 	// specify lifesize in terabytes(TB)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Tb *int `pulumi:"tb"`
 }
 
@@ -429,10 +3531,16 @@ type IpsecCryptoProfileLifesizeArgs struct {
 	// specify lifesize in gigabytes(GB)
 	Gb pulumi.IntPtrInput `pulumi:"gb"`
 	// specify lifesize in kilobytes(KB)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Kb pulumi.IntPtrInput `pulumi:"kb"`
 	// specify lifesize in megabytes(MB)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Mb pulumi.IntPtrInput `pulumi:"mb"`
 	// specify lifesize in terabytes(TB)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 	Tb pulumi.IntPtrInput `pulumi:"tb"`
 }
 
@@ -519,16 +3627,22 @@ func (o IpsecCryptoProfileLifesizeOutput) Gb() pulumi.IntPtrOutput {
 }
 
 // specify lifesize in kilobytes(KB)
+//
+// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o IpsecCryptoProfileLifesizeOutput) Kb() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v IpsecCryptoProfileLifesize) *int { return v.Kb }).(pulumi.IntPtrOutput)
 }
 
 // specify lifesize in megabytes(MB)
+//
+// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o IpsecCryptoProfileLifesizeOutput) Mb() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v IpsecCryptoProfileLifesize) *int { return v.Mb }).(pulumi.IntPtrOutput)
 }
 
 // specify lifesize in terabytes(TB)
+//
+// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o IpsecCryptoProfileLifesizeOutput) Tb() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v IpsecCryptoProfileLifesize) *int { return v.Tb }).(pulumi.IntPtrOutput)
 }
@@ -568,6 +3682,8 @@ func (o IpsecCryptoProfileLifesizePtrOutput) Gb() pulumi.IntPtrOutput {
 }
 
 // specify lifesize in kilobytes(KB)
+//
+// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o IpsecCryptoProfileLifesizePtrOutput) Kb() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) *int {
 		if v == nil {
@@ -578,6 +3694,8 @@ func (o IpsecCryptoProfileLifesizePtrOutput) Kb() pulumi.IntPtrOutput {
 }
 
 // specify lifesize in megabytes(MB)
+//
+// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o IpsecCryptoProfileLifesizePtrOutput) Mb() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) *int {
 		if v == nil {
@@ -588,6 +3706,8 @@ func (o IpsecCryptoProfileLifesizePtrOutput) Mb() pulumi.IntPtrOutput {
 }
 
 // specify lifesize in terabytes(TB)
+//
+// > ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
 func (o IpsecCryptoProfileLifesizePtrOutput) Tb() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfileLifesize) *int {
 		if v == nil {
@@ -601,10 +3721,16 @@ type IpsecCryptoProfileLifetime struct {
 	// specify lifetime in days
 	Days *int `pulumi:"days"`
 	// specify lifetime in hours
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours *int `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes *int `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds *int `pulumi:"seconds"`
 }
 
@@ -623,10 +3749,16 @@ type IpsecCryptoProfileLifetimeArgs struct {
 	// specify lifetime in days
 	Days pulumi.IntPtrInput `pulumi:"days"`
 	// specify lifetime in hours
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Hours pulumi.IntPtrInput `pulumi:"hours"`
 	// specify lifetime in minutes
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Minutes pulumi.IntPtrInput `pulumi:"minutes"`
 	// specify lifetime in seconds
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 	Seconds pulumi.IntPtrInput `pulumi:"seconds"`
 }
 
@@ -713,16 +3845,22 @@ func (o IpsecCryptoProfileLifetimeOutput) Days() pulumi.IntPtrOutput {
 }
 
 // specify lifetime in hours
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o IpsecCryptoProfileLifetimeOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v IpsecCryptoProfileLifetime) *int { return v.Hours }).(pulumi.IntPtrOutput)
 }
 
 // specify lifetime in minutes
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o IpsecCryptoProfileLifetimeOutput) Minutes() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v IpsecCryptoProfileLifetime) *int { return v.Minutes }).(pulumi.IntPtrOutput)
 }
 
 // specify lifetime in seconds
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o IpsecCryptoProfileLifetimeOutput) Seconds() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v IpsecCryptoProfileLifetime) *int { return v.Seconds }).(pulumi.IntPtrOutput)
 }
@@ -762,6 +3900,8 @@ func (o IpsecCryptoProfileLifetimePtrOutput) Days() pulumi.IntPtrOutput {
 }
 
 // specify lifetime in hours
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o IpsecCryptoProfileLifetimePtrOutput) Hours() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) *int {
 		if v == nil {
@@ -772,6 +3912,8 @@ func (o IpsecCryptoProfileLifetimePtrOutput) Hours() pulumi.IntPtrOutput {
 }
 
 // specify lifetime in minutes
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o IpsecCryptoProfileLifetimePtrOutput) Minutes() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) *int {
 		if v == nil {
@@ -782,6 +3924,8 @@ func (o IpsecCryptoProfileLifetimePtrOutput) Minutes() pulumi.IntPtrOutput {
 }
 
 // specify lifetime in seconds
+//
+// > ℹ️ **Note:** You must specify exactly one of `days`, `hours`, `minutes`, and `seconds`.
 func (o IpsecCryptoProfileLifetimePtrOutput) Seconds() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *IpsecCryptoProfileLifetime) *int {
 		if v == nil {
@@ -1209,9 +4353,13 @@ func (o IpsecTunnelAutoKeyProxyIdArrayOutput) Index(i pulumi.IntInput) IpsecTunn
 type IpsecTunnelAutoKeyProxyIdProtocol struct {
 	// IP protocol number
 	Number *int `pulumi:"number"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
+	// IPv4 type of proxyId protocol values for TCP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp *IpsecTunnelAutoKeyProxyIdProtocolTcp `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp *IpsecTunnelAutoKeyProxyIdProtocolUdp `pulumi:"udp"`
 }
 
@@ -1229,9 +4377,13 @@ type IpsecTunnelAutoKeyProxyIdProtocolInput interface {
 type IpsecTunnelAutoKeyProxyIdProtocolArgs struct {
 	// IP protocol number
 	Number pulumi.IntPtrInput `pulumi:"number"`
-	// IPv4 type of proxy*id protocol values for TCP protocol
+	// IPv4 type of proxyId protocol values for TCP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp IpsecTunnelAutoKeyProxyIdProtocolTcpPtrInput `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp IpsecTunnelAutoKeyProxyIdProtocolUdpPtrInput `pulumi:"udp"`
 }
 
@@ -1317,12 +4469,16 @@ func (o IpsecTunnelAutoKeyProxyIdProtocolOutput) Number() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyIdProtocol) *int { return v.Number }).(pulumi.IntPtrOutput)
 }
 
-// IPv4 type of proxy*id protocol values for TCP protocol
+// IPv4 type of proxyId protocol values for TCP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdProtocolOutput) Tcp() IpsecTunnelAutoKeyProxyIdProtocolTcpPtrOutput {
 	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyIdProtocol) *IpsecTunnelAutoKeyProxyIdProtocolTcp { return v.Tcp }).(IpsecTunnelAutoKeyProxyIdProtocolTcpPtrOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdProtocolOutput) Udp() IpsecTunnelAutoKeyProxyIdProtocolUdpPtrOutput {
 	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyIdProtocol) *IpsecTunnelAutoKeyProxyIdProtocolUdp { return v.Udp }).(IpsecTunnelAutoKeyProxyIdProtocolUdpPtrOutput)
 }
@@ -1361,7 +4517,9 @@ func (o IpsecTunnelAutoKeyProxyIdProtocolPtrOutput) Number() pulumi.IntPtrOutput
 	}).(pulumi.IntPtrOutput)
 }
 
-// IPv4 type of proxy*id protocol values for TCP protocol
+// IPv4 type of proxyId protocol values for TCP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdProtocolPtrOutput) Tcp() IpsecTunnelAutoKeyProxyIdProtocolTcpPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnelAutoKeyProxyIdProtocol) *IpsecTunnelAutoKeyProxyIdProtocolTcp {
 		if v == nil {
@@ -1371,7 +4529,9 @@ func (o IpsecTunnelAutoKeyProxyIdProtocolPtrOutput) Tcp() IpsecTunnelAutoKeyProx
 	}).(IpsecTunnelAutoKeyProxyIdProtocolTcpPtrOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdProtocolPtrOutput) Udp() IpsecTunnelAutoKeyProxyIdProtocolUdpPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnelAutoKeyProxyIdProtocol) *IpsecTunnelAutoKeyProxyIdProtocolUdp {
 		if v == nil {
@@ -1820,9 +4980,13 @@ func (o IpsecTunnelAutoKeyProxyIdV6ArrayOutput) Index(i pulumi.IntInput) IpsecTu
 type IpsecTunnelAutoKeyProxyIdV6Protocol struct {
 	// IP protocol number
 	Number *int `pulumi:"number"`
-	// IPv6 type of proxy*id protocol values for TCP protocol
+	// IPv6 type of proxyId protocol values for TCP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp *IpsecTunnelAutoKeyProxyIdV6ProtocolTcp `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp *IpsecTunnelAutoKeyProxyIdV6ProtocolUdp `pulumi:"udp"`
 }
 
@@ -1840,9 +5004,13 @@ type IpsecTunnelAutoKeyProxyIdV6ProtocolInput interface {
 type IpsecTunnelAutoKeyProxyIdV6ProtocolArgs struct {
 	// IP protocol number
 	Number pulumi.IntPtrInput `pulumi:"number"`
-	// IPv6 type of proxy*id protocol values for TCP protocol
+	// IPv6 type of proxyId protocol values for TCP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Tcp IpsecTunnelAutoKeyProxyIdV6ProtocolTcpPtrInput `pulumi:"tcp"`
-	// IPv6 type of proxy*id protocol values for UDP protocol
+	// IPv6 type of proxyId protocol values for UDP protocol
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 	Udp IpsecTunnelAutoKeyProxyIdV6ProtocolUdpPtrInput `pulumi:"udp"`
 }
 
@@ -1928,12 +5096,16 @@ func (o IpsecTunnelAutoKeyProxyIdV6ProtocolOutput) Number() pulumi.IntPtrOutput 
 	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyIdV6Protocol) *int { return v.Number }).(pulumi.IntPtrOutput)
 }
 
-// IPv6 type of proxy*id protocol values for TCP protocol
+// IPv6 type of proxyId protocol values for TCP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdV6ProtocolOutput) Tcp() IpsecTunnelAutoKeyProxyIdV6ProtocolTcpPtrOutput {
 	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyIdV6Protocol) *IpsecTunnelAutoKeyProxyIdV6ProtocolTcp { return v.Tcp }).(IpsecTunnelAutoKeyProxyIdV6ProtocolTcpPtrOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdV6ProtocolOutput) Udp() IpsecTunnelAutoKeyProxyIdV6ProtocolUdpPtrOutput {
 	return o.ApplyT(func(v IpsecTunnelAutoKeyProxyIdV6Protocol) *IpsecTunnelAutoKeyProxyIdV6ProtocolUdp { return v.Udp }).(IpsecTunnelAutoKeyProxyIdV6ProtocolUdpPtrOutput)
 }
@@ -1972,7 +5144,9 @@ func (o IpsecTunnelAutoKeyProxyIdV6ProtocolPtrOutput) Number() pulumi.IntPtrOutp
 	}).(pulumi.IntPtrOutput)
 }
 
-// IPv6 type of proxy*id protocol values for TCP protocol
+// IPv6 type of proxyId protocol values for TCP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdV6ProtocolPtrOutput) Tcp() IpsecTunnelAutoKeyProxyIdV6ProtocolTcpPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnelAutoKeyProxyIdV6Protocol) *IpsecTunnelAutoKeyProxyIdV6ProtocolTcp {
 		if v == nil {
@@ -1982,7 +5156,9 @@ func (o IpsecTunnelAutoKeyProxyIdV6ProtocolPtrOutput) Tcp() IpsecTunnelAutoKeyPr
 	}).(IpsecTunnelAutoKeyProxyIdV6ProtocolTcpPtrOutput)
 }
 
-// IPv6 type of proxy*id protocol values for UDP protocol
+// IPv6 type of proxyId protocol values for UDP protocol
+//
+// > ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
 func (o IpsecTunnelAutoKeyProxyIdV6ProtocolPtrOutput) Udp() IpsecTunnelAutoKeyProxyIdV6ProtocolUdpPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnelAutoKeyProxyIdV6Protocol) *IpsecTunnelAutoKeyProxyIdV6ProtocolUdp {
 		if v == nil {
@@ -5754,6 +8930,8 @@ type LogicalRouterVrfBgpAggregateRouteType struct {
 	// Ipv4
 	Ipv4 *LogicalRouterVrfBgpAggregateRouteTypeIpv4 `pulumi:"ipv4"`
 	// Ipv6
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv6 *LogicalRouterVrfBgpAggregateRouteTypeIpv6 `pulumi:"ipv6"`
 }
 
@@ -5772,6 +8950,8 @@ type LogicalRouterVrfBgpAggregateRouteTypeArgs struct {
 	// Ipv4
 	Ipv4 LogicalRouterVrfBgpAggregateRouteTypeIpv4PtrInput `pulumi:"ipv4"`
 	// Ipv6
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 	Ipv6 LogicalRouterVrfBgpAggregateRouteTypeIpv6PtrInput `pulumi:"ipv6"`
 }
 
@@ -5860,6 +9040,8 @@ func (o LogicalRouterVrfBgpAggregateRouteTypeOutput) Ipv4() LogicalRouterVrfBgpA
 }
 
 // Ipv6
+//
+// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 func (o LogicalRouterVrfBgpAggregateRouteTypeOutput) Ipv6() LogicalRouterVrfBgpAggregateRouteTypeIpv6PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpAggregateRouteType) *LogicalRouterVrfBgpAggregateRouteTypeIpv6 {
 		return v.Ipv6
@@ -5901,6 +9083,8 @@ func (o LogicalRouterVrfBgpAggregateRouteTypePtrOutput) Ipv4() LogicalRouterVrfB
 }
 
 // Ipv6
+//
+// > ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
 func (o LogicalRouterVrfBgpAggregateRouteTypePtrOutput) Ipv6() LogicalRouterVrfBgpAggregateRouteTypeIpv6PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpAggregateRouteType) *LogicalRouterVrfBgpAggregateRouteTypeIpv6 {
 		if v == nil {
@@ -8615,6 +11799,8 @@ type LogicalRouterVrfBgpPeerGroupPeerInherit struct {
 	// No
 	No *LogicalRouterVrfBgpPeerGroupPeerInheritNo `pulumi:"no"`
 	// Yes
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	Yes *LogicalRouterVrfBgpPeerGroupPeerInheritYes `pulumi:"yes"`
 }
 
@@ -8633,6 +11819,8 @@ type LogicalRouterVrfBgpPeerGroupPeerInheritArgs struct {
 	// No
 	No LogicalRouterVrfBgpPeerGroupPeerInheritNoPtrInput `pulumi:"no"`
 	// Yes
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 	Yes LogicalRouterVrfBgpPeerGroupPeerInheritYesPtrInput `pulumi:"yes"`
 }
 
@@ -8721,6 +11909,8 @@ func (o LogicalRouterVrfBgpPeerGroupPeerInheritOutput) No() LogicalRouterVrfBgpP
 }
 
 // Yes
+//
+// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 func (o LogicalRouterVrfBgpPeerGroupPeerInheritOutput) Yes() LogicalRouterVrfBgpPeerGroupPeerInheritYesPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPeerGroupPeerInherit) *LogicalRouterVrfBgpPeerGroupPeerInheritYes {
 		return v.Yes
@@ -8762,6 +11952,8 @@ func (o LogicalRouterVrfBgpPeerGroupPeerInheritPtrOutput) No() LogicalRouterVrfB
 }
 
 // Yes
+//
+// > ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
 func (o LogicalRouterVrfBgpPeerGroupPeerInheritPtrOutput) Yes() LogicalRouterVrfBgpPeerGroupPeerInheritYesPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPeerGroupPeerInherit) *LogicalRouterVrfBgpPeerGroupPeerInheritYes {
 		if v == nil {
@@ -9521,6 +12713,8 @@ type LogicalRouterVrfBgpPeerGroupPeerPeerAddress struct {
 	// Fqdn
 	Fqdn *string `pulumi:"fqdn"`
 	// Ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip *string `pulumi:"ip"`
 }
 
@@ -9539,6 +12733,8 @@ type LogicalRouterVrfBgpPeerGroupPeerPeerAddressArgs struct {
 	// Fqdn
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// Ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip pulumi.StringPtrInput `pulumi:"ip"`
 }
 
@@ -9625,6 +12821,8 @@ func (o LogicalRouterVrfBgpPeerGroupPeerPeerAddressOutput) Fqdn() pulumi.StringP
 }
 
 // Ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o LogicalRouterVrfBgpPeerGroupPeerPeerAddressOutput) Ip() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPeerGroupPeerPeerAddress) *string { return v.Ip }).(pulumi.StringPtrOutput)
 }
@@ -9664,6 +12862,8 @@ func (o LogicalRouterVrfBgpPeerGroupPeerPeerAddressPtrOutput) Fqdn() pulumi.Stri
 }
 
 // Ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o LogicalRouterVrfBgpPeerGroupPeerPeerAddressPtrOutput) Ip() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPeerGroupPeerPeerAddress) *string {
 		if v == nil {
@@ -9833,10 +13033,16 @@ type LogicalRouterVrfBgpPeerGroupType struct {
 	// Ebgp
 	Ebgp *LogicalRouterVrfBgpPeerGroupTypeEbgp `pulumi:"ebgp"`
 	// Ebgp confed
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	EbgpConfed *LogicalRouterVrfBgpPeerGroupTypeEbgpConfed `pulumi:"ebgpConfed"`
 	// Ibgp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ibgp *LogicalRouterVrfBgpPeerGroupTypeIbgp `pulumi:"ibgp"`
 	// Ibgp confed
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	IbgpConfed *LogicalRouterVrfBgpPeerGroupTypeIbgpConfed `pulumi:"ibgpConfed"`
 }
 
@@ -9855,10 +13061,16 @@ type LogicalRouterVrfBgpPeerGroupTypeArgs struct {
 	// Ebgp
 	Ebgp LogicalRouterVrfBgpPeerGroupTypeEbgpPtrInput `pulumi:"ebgp"`
 	// Ebgp confed
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	EbgpConfed LogicalRouterVrfBgpPeerGroupTypeEbgpConfedPtrInput `pulumi:"ebgpConfed"`
 	// Ibgp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	Ibgp LogicalRouterVrfBgpPeerGroupTypeIbgpPtrInput `pulumi:"ibgp"`
 	// Ibgp confed
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 	IbgpConfed LogicalRouterVrfBgpPeerGroupTypeIbgpConfedPtrInput `pulumi:"ibgpConfed"`
 }
 
@@ -9945,6 +13157,8 @@ func (o LogicalRouterVrfBgpPeerGroupTypeOutput) Ebgp() LogicalRouterVrfBgpPeerGr
 }
 
 // Ebgp confed
+//
+// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o LogicalRouterVrfBgpPeerGroupTypeOutput) EbgpConfed() LogicalRouterVrfBgpPeerGroupTypeEbgpConfedPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPeerGroupType) *LogicalRouterVrfBgpPeerGroupTypeEbgpConfed {
 		return v.EbgpConfed
@@ -9952,11 +13166,15 @@ func (o LogicalRouterVrfBgpPeerGroupTypeOutput) EbgpConfed() LogicalRouterVrfBgp
 }
 
 // Ibgp
+//
+// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o LogicalRouterVrfBgpPeerGroupTypeOutput) Ibgp() LogicalRouterVrfBgpPeerGroupTypeIbgpPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPeerGroupType) *LogicalRouterVrfBgpPeerGroupTypeIbgp { return v.Ibgp }).(LogicalRouterVrfBgpPeerGroupTypeIbgpPtrOutput)
 }
 
 // Ibgp confed
+//
+// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o LogicalRouterVrfBgpPeerGroupTypeOutput) IbgpConfed() LogicalRouterVrfBgpPeerGroupTypeIbgpConfedPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPeerGroupType) *LogicalRouterVrfBgpPeerGroupTypeIbgpConfed {
 		return v.IbgpConfed
@@ -9998,6 +13216,8 @@ func (o LogicalRouterVrfBgpPeerGroupTypePtrOutput) Ebgp() LogicalRouterVrfBgpPee
 }
 
 // Ebgp confed
+//
+// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o LogicalRouterVrfBgpPeerGroupTypePtrOutput) EbgpConfed() LogicalRouterVrfBgpPeerGroupTypeEbgpConfedPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPeerGroupType) *LogicalRouterVrfBgpPeerGroupTypeEbgpConfed {
 		if v == nil {
@@ -10008,6 +13228,8 @@ func (o LogicalRouterVrfBgpPeerGroupTypePtrOutput) EbgpConfed() LogicalRouterVrf
 }
 
 // Ibgp
+//
+// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o LogicalRouterVrfBgpPeerGroupTypePtrOutput) Ibgp() LogicalRouterVrfBgpPeerGroupTypeIbgpPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPeerGroupType) *LogicalRouterVrfBgpPeerGroupTypeIbgp {
 		if v == nil {
@@ -10018,6 +13240,8 @@ func (o LogicalRouterVrfBgpPeerGroupTypePtrOutput) Ibgp() LogicalRouterVrfBgpPee
 }
 
 // Ibgp confed
+//
+// > ℹ️ **Note:** You must specify exactly one of `ebgp`, `ebgpConfed`, `ibgp`, and `ibgpConfed`.
 func (o LogicalRouterVrfBgpPeerGroupTypePtrOutput) IbgpConfed() LogicalRouterVrfBgpPeerGroupTypeIbgpConfedPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPeerGroupType) *LogicalRouterVrfBgpPeerGroupTypeIbgpConfed {
 		if v == nil {
@@ -12373,10 +15597,16 @@ type LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath s
 	// None
 	None *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone `pulumi:"none"`
 	// Prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend *int `pulumi:"prepend"`
 	// Remove
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend *int `pulumi:"removeAndPrepend"`
 }
 
@@ -12395,10 +15625,16 @@ type LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathAr
 	// None
 	None LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNonePtrInput `pulumi:"none"`
 	// Prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntPtrInput `pulumi:"prepend"`
 	// Remove
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemovePtrInput `pulumi:"remove"`
 	// Remove and prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntPtrInput `pulumi:"removeAndPrepend"`
 }
 
@@ -12487,6 +15723,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPat
 }
 
 // Prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) Prepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) *int {
 		return v.Prepend
@@ -12494,6 +15732,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPat
 }
 
 // Remove
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) Remove() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemovePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove {
 		return v.Remove
@@ -12501,6 +15741,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPat
 }
 
 // Remove and prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathOutput) RemoveAndPrepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) *int {
 		return v.RemoveAndPrepend
@@ -12542,6 +15784,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPat
 }
 
 // Prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathPtrOutput) Prepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) *int {
 		if v == nil {
@@ -12552,6 +15796,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPat
 }
 
 // Remove
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathPtrOutput) Remove() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemovePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove {
 		if v == nil {
@@ -12562,6 +15808,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPat
 }
 
 // Remove and prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathPtrOutput) RemoveAndPrepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPath) *int {
 		if v == nil {
@@ -12811,12 +16059,20 @@ type LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunit
 	// Append
 	Appends []string `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex *string `pulumi:"removeRegex"`
 }
 
@@ -12835,12 +16091,20 @@ type LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunit
 	// Append
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNonePtrInput `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllPtrInput `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringPtrInput `pulumi:"removeRegex"`
 }
 
@@ -12929,6 +16193,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) None() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNonePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone {
 		return v.None
@@ -12936,6 +16202,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) []string {
 		return v.Overwrites
@@ -12943,6 +16211,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) RemoveAll() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll {
 		return v.RemoveAll
@@ -12950,6 +16220,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) *string {
 		return v.RemoveRegex
@@ -12991,6 +16263,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityPtrOutput) None() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNonePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone {
 		if v == nil {
@@ -13001,6 +16275,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityPtrOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) []string {
 		if v == nil {
@@ -13011,6 +16287,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityPtrOutput) RemoveAll() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll {
 		if v == nil {
@@ -13021,6 +16299,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommu
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityPtrOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunity) *string {
 		if v == nil {
@@ -13270,12 +16550,20 @@ type LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtended
 	// Append
 	Appends []string `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex *string `pulumi:"removeRegex"`
 }
 
@@ -13294,12 +16582,20 @@ type LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtended
 	// Append
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNonePtrInput `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllPtrInput `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringPtrInput `pulumi:"removeRegex"`
 }
 
@@ -13388,6 +16684,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) None() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNonePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone {
 		return v.None
@@ -13395,6 +16693,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) []string {
 		return v.Overwrites
@@ -13402,6 +16702,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) RemoveAll() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll {
 		return v.RemoveAll
@@ -13409,6 +16711,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) *string {
 		return v.RemoveRegex
@@ -13450,6 +16754,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityPtrOutput) None() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNonePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityNone {
 		if v == nil {
@@ -13460,6 +16766,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityPtrOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) []string {
 		if v == nil {
@@ -13470,6 +16778,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityPtrOutput) RemoveAll() LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityRemoveAll {
 		if v == nil {
@@ -13480,6 +16790,8 @@ func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExten
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunityPtrOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesExtendedCommunity) *string {
 		if v == nil {
@@ -17175,6 +20487,8 @@ type LogicalRouterVrfBgpPolicyExportRuleAction struct {
 	// Allow
 	Allow *LogicalRouterVrfBgpPolicyExportRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny *LogicalRouterVrfBgpPolicyExportRuleActionDeny `pulumi:"deny"`
 }
 
@@ -17193,6 +20507,8 @@ type LogicalRouterVrfBgpPolicyExportRuleActionArgs struct {
 	// Allow
 	Allow LogicalRouterVrfBgpPolicyExportRuleActionAllowPtrInput `pulumi:"allow"`
 	// Deny
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny LogicalRouterVrfBgpPolicyExportRuleActionDenyPtrInput `pulumi:"deny"`
 }
 
@@ -17281,6 +20597,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionOutput) Allow() LogicalRouterVr
 }
 
 // Deny
+//
+// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionOutput) Deny() LogicalRouterVrfBgpPolicyExportRuleActionDenyPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleAction) *LogicalRouterVrfBgpPolicyExportRuleActionDeny {
 		return v.Deny
@@ -17322,6 +20640,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionPtrOutput) Allow() LogicalRoute
 }
 
 // Deny
+//
+// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionPtrOutput) Deny() LogicalRouterVrfBgpPolicyExportRuleActionDenyPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleAction) *LogicalRouterVrfBgpPolicyExportRuleActionDeny {
 		if v == nil {
@@ -17750,10 +21070,16 @@ type LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath struct {
 	// None
 	None *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNone `pulumi:"none"`
 	// Prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend *int `pulumi:"prepend"`
 	// Remove
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend *int `pulumi:"removeAndPrepend"`
 }
 
@@ -17772,10 +21098,16 @@ type LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathArgs struct {
 	// None
 	None LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathNonePtrInput `pulumi:"none"`
 	// Prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntPtrInput `pulumi:"prepend"`
 	// Remove
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemovePtrInput `pulumi:"remove"`
 	// Remove and prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntPtrInput `pulumi:"removeAndPrepend"`
 }
 
@@ -17864,11 +21196,15 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) None()
 }
 
 // Prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Prepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) *int { return v.Prepend }).(pulumi.IntPtrOutput)
 }
 
 // Remove
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Remove() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemovePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove {
 		return v.Remove
@@ -17876,6 +21212,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) Remove
 }
 
 // Remove and prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathOutput) RemoveAndPrepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) *int { return v.RemoveAndPrepend }).(pulumi.IntPtrOutput)
 }
@@ -17915,6 +21253,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathPtrOutput) Non
 }
 
 // Prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathPtrOutput) Prepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) *int {
 		if v == nil {
@@ -17925,6 +21265,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathPtrOutput) Pre
 }
 
 // Remove
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathPtrOutput) Remove() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemovePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove {
 		if v == nil {
@@ -17935,6 +21277,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathPtrOutput) Rem
 }
 
 // Remove and prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathPtrOutput) RemoveAndPrepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath) *int {
 		if v == nil {
@@ -18184,12 +21528,20 @@ type LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity struct {
 	// Append
 	Appends []string `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex *string `pulumi:"removeRegex"`
 }
 
@@ -18208,12 +21560,20 @@ type LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityArgs struct {
 	// Append
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNonePtrInput `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllPtrInput `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringPtrInput `pulumi:"removeRegex"`
 }
 
@@ -18300,6 +21660,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) App
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) None() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNonePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone {
 		return v.None
@@ -18307,11 +21669,15 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) Non
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) []string { return v.Overwrites }).(pulumi.StringArrayOutput)
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) RemoveAll() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll {
 		return v.RemoveAll
@@ -18319,6 +21685,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) Rem
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) *string { return v.RemoveRegex }).(pulumi.StringPtrOutput)
 }
@@ -18358,6 +21726,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) None() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNonePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityNone {
 		if v == nil {
@@ -18368,6 +21738,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) []string {
 		if v == nil {
@@ -18378,6 +21750,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) RemoveAll() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityRemoveAll {
 		if v == nil {
@@ -18388,6 +21762,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunityPtrOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateCommunity) *string {
 		if v == nil {
@@ -18637,12 +22013,20 @@ type LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity struc
 	// Append
 	Appends []string `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex *string `pulumi:"removeRegex"`
 }
 
@@ -18661,12 +22045,20 @@ type LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityArgs s
 	// Append
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNonePtrInput `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllPtrInput `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringPtrInput `pulumi:"removeRegex"`
 }
 
@@ -18755,6 +22147,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) None() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNonePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone {
 		return v.None
@@ -18762,6 +22156,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) []string {
 		return v.Overwrites
@@ -18769,6 +22165,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) RemoveAll() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll {
 		return v.RemoveAll
@@ -18776,6 +22174,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) *string {
 		return v.RemoveRegex
@@ -18817,6 +22217,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtrOutput) None() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNonePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone {
 		if v == nil {
@@ -18827,6 +22229,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtrOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) []string {
 		if v == nil {
@@ -18837,6 +22241,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtrOutput) RemoveAll() LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll {
 		if v == nil {
@@ -18847,6 +22253,8 @@ func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityPtrOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunity) *string {
 		if v == nil {
@@ -20319,6 +23727,8 @@ type LogicalRouterVrfBgpPolicyImportRuleAction struct {
 	// Allow
 	Allow *LogicalRouterVrfBgpPolicyImportRuleActionAllow `pulumi:"allow"`
 	// Deny
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny *LogicalRouterVrfBgpPolicyImportRuleActionDeny `pulumi:"deny"`
 }
 
@@ -20337,6 +23747,8 @@ type LogicalRouterVrfBgpPolicyImportRuleActionArgs struct {
 	// Allow
 	Allow LogicalRouterVrfBgpPolicyImportRuleActionAllowPtrInput `pulumi:"allow"`
 	// Deny
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 	Deny LogicalRouterVrfBgpPolicyImportRuleActionDenyPtrInput `pulumi:"deny"`
 }
 
@@ -20425,6 +23837,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionOutput) Allow() LogicalRouterVr
 }
 
 // Deny
+//
+// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionOutput) Deny() LogicalRouterVrfBgpPolicyImportRuleActionDenyPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleAction) *LogicalRouterVrfBgpPolicyImportRuleActionDeny {
 		return v.Deny
@@ -20466,6 +23880,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionPtrOutput) Allow() LogicalRoute
 }
 
 // Deny
+//
+// > ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionPtrOutput) Deny() LogicalRouterVrfBgpPolicyImportRuleActionDenyPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleAction) *LogicalRouterVrfBgpPolicyImportRuleActionDeny {
 		if v == nil {
@@ -20932,10 +24348,16 @@ type LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath struct {
 	// None
 	None *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNone `pulumi:"none"`
 	// Prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend *int `pulumi:"prepend"`
 	// Remove
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove `pulumi:"remove"`
 	// Remove and prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend *int `pulumi:"removeAndPrepend"`
 }
 
@@ -20954,10 +24376,16 @@ type LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathArgs struct {
 	// None
 	None LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathNonePtrInput `pulumi:"none"`
 	// Prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Prepend pulumi.IntPtrInput `pulumi:"prepend"`
 	// Remove
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	Remove LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemovePtrInput `pulumi:"remove"`
 	// Remove and prepend
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 	RemoveAndPrepend pulumi.IntPtrInput `pulumi:"removeAndPrepend"`
 }
 
@@ -21046,11 +24474,15 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) None()
 }
 
 // Prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Prepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) *int { return v.Prepend }).(pulumi.IntPtrOutput)
 }
 
 // Remove
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Remove() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemovePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove {
 		return v.Remove
@@ -21058,6 +24490,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) Remove
 }
 
 // Remove and prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathOutput) RemoveAndPrepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) *int { return v.RemoveAndPrepend }).(pulumi.IntPtrOutput)
 }
@@ -21097,6 +24531,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathPtrOutput) Non
 }
 
 // Prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathPtrOutput) Prepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) *int {
 		if v == nil {
@@ -21107,6 +24543,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathPtrOutput) Pre
 }
 
 // Remove
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathPtrOutput) Remove() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemovePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemove {
 		if v == nil {
@@ -21117,6 +24555,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathPtrOutput) Rem
 }
 
 // Remove and prepend
+//
+// > ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathPtrOutput) RemoveAndPrepend() pulumi.IntPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPath) *int {
 		if v == nil {
@@ -21366,12 +24806,20 @@ type LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity struct {
 	// Append
 	Appends []string `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex *string `pulumi:"removeRegex"`
 }
 
@@ -21390,12 +24838,20 @@ type LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityArgs struct {
 	// Append
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNonePtrInput `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllPtrInput `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringPtrInput `pulumi:"removeRegex"`
 }
 
@@ -21482,6 +24938,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) App
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) None() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNonePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone {
 		return v.None
@@ -21489,11 +24947,15 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) Non
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) []string { return v.Overwrites }).(pulumi.StringArrayOutput)
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) RemoveAll() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll {
 		return v.RemoveAll
@@ -21501,6 +24963,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) Rem
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) *string { return v.RemoveRegex }).(pulumi.StringPtrOutput)
 }
@@ -21540,6 +25004,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) None() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNonePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone {
 		if v == nil {
@@ -21550,6 +25016,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) []string {
 		if v == nil {
@@ -21560,6 +25028,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) RemoveAll() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll {
 		if v == nil {
@@ -21570,6 +25040,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) 
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityPtrOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity) *string {
 		if v == nil {
@@ -21819,12 +25291,20 @@ type LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity struc
 	// Append
 	Appends []string `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites []string `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex *string `pulumi:"removeRegex"`
 }
 
@@ -21843,12 +25323,20 @@ type LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityArgs s
 	// Append
 	Appends pulumi.StringArrayInput `pulumi:"appends"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	None LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNonePtrInput `pulumi:"none"`
 	// Overwrite
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	Overwrites pulumi.StringArrayInput `pulumi:"overwrites"`
 	// Remove all
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveAll LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllPtrInput `pulumi:"removeAll"`
 	// Remove regex
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 	RemoveRegex pulumi.StringPtrInput `pulumi:"removeRegex"`
 }
 
@@ -21937,6 +25425,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) None() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNonePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone {
 		return v.None
@@ -21944,6 +25434,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) []string {
 		return v.Overwrites
@@ -21951,6 +25443,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) RemoveAll() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll {
 		return v.RemoveAll
@@ -21958,6 +25452,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOut
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) *string {
 		return v.RemoveRegex
@@ -21999,6 +25495,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtrOutput) None() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNonePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityNone {
 		if v == nil {
@@ -22009,6 +25507,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // Overwrite
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtrOutput) Overwrites() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) []string {
 		if v == nil {
@@ -22019,6 +25519,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // Remove all
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtrOutput) RemoveAll() LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAllPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityRemoveAll {
 		if v == nil {
@@ -22029,6 +25531,8 @@ func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtr
 }
 
 // Remove regex
+//
+// > ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
 func (o LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunityPtrOutput) RemoveRegex() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateExtendedCommunity) *string {
 		if v == nil {
@@ -24063,10 +27567,16 @@ type LogicalRouterVrfEcmpAlgorithm struct {
 	// Balanced round robin
 	BalancedRoundRobin *LogicalRouterVrfEcmpAlgorithmBalancedRoundRobin `pulumi:"balancedRoundRobin"`
 	// Ip hash
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpHash *LogicalRouterVrfEcmpAlgorithmIpHash `pulumi:"ipHash"`
 	// Ip modulo
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpModulo *LogicalRouterVrfEcmpAlgorithmIpModulo `pulumi:"ipModulo"`
 	// Weighted round robin
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	WeightedRoundRobin *LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin `pulumi:"weightedRoundRobin"`
 }
 
@@ -24085,10 +27595,16 @@ type LogicalRouterVrfEcmpAlgorithmArgs struct {
 	// Balanced round robin
 	BalancedRoundRobin LogicalRouterVrfEcmpAlgorithmBalancedRoundRobinPtrInput `pulumi:"balancedRoundRobin"`
 	// Ip hash
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpHash LogicalRouterVrfEcmpAlgorithmIpHashPtrInput `pulumi:"ipHash"`
 	// Ip modulo
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	IpModulo LogicalRouterVrfEcmpAlgorithmIpModuloPtrInput `pulumi:"ipModulo"`
 	// Weighted round robin
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 	WeightedRoundRobin LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinPtrInput `pulumi:"weightedRoundRobin"`
 }
 
@@ -24177,16 +27693,22 @@ func (o LogicalRouterVrfEcmpAlgorithmOutput) BalancedRoundRobin() LogicalRouterV
 }
 
 // Ip hash
+//
+// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o LogicalRouterVrfEcmpAlgorithmOutput) IpHash() LogicalRouterVrfEcmpAlgorithmIpHashPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfEcmpAlgorithm) *LogicalRouterVrfEcmpAlgorithmIpHash { return v.IpHash }).(LogicalRouterVrfEcmpAlgorithmIpHashPtrOutput)
 }
 
 // Ip modulo
+//
+// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o LogicalRouterVrfEcmpAlgorithmOutput) IpModulo() LogicalRouterVrfEcmpAlgorithmIpModuloPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfEcmpAlgorithm) *LogicalRouterVrfEcmpAlgorithmIpModulo { return v.IpModulo }).(LogicalRouterVrfEcmpAlgorithmIpModuloPtrOutput)
 }
 
 // Weighted round robin
+//
+// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o LogicalRouterVrfEcmpAlgorithmOutput) WeightedRoundRobin() LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfEcmpAlgorithm) *LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin {
 		return v.WeightedRoundRobin
@@ -24228,6 +27750,8 @@ func (o LogicalRouterVrfEcmpAlgorithmPtrOutput) BalancedRoundRobin() LogicalRout
 }
 
 // Ip hash
+//
+// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o LogicalRouterVrfEcmpAlgorithmPtrOutput) IpHash() LogicalRouterVrfEcmpAlgorithmIpHashPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfEcmpAlgorithm) *LogicalRouterVrfEcmpAlgorithmIpHash {
 		if v == nil {
@@ -24238,6 +27762,8 @@ func (o LogicalRouterVrfEcmpAlgorithmPtrOutput) IpHash() LogicalRouterVrfEcmpAlg
 }
 
 // Ip modulo
+//
+// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o LogicalRouterVrfEcmpAlgorithmPtrOutput) IpModulo() LogicalRouterVrfEcmpAlgorithmIpModuloPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfEcmpAlgorithm) *LogicalRouterVrfEcmpAlgorithmIpModulo {
 		if v == nil {
@@ -24248,6 +27774,8 @@ func (o LogicalRouterVrfEcmpAlgorithmPtrOutput) IpModulo() LogicalRouterVrfEcmpA
 }
 
 // Weighted round robin
+//
+// > ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
 func (o LogicalRouterVrfEcmpAlgorithmPtrOutput) WeightedRoundRobin() LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfEcmpAlgorithm) *LogicalRouterVrfEcmpAlgorithmWeightedRoundRobin {
 		if v == nil {
@@ -27799,6 +31327,8 @@ type LogicalRouterVrfMulticastMsdpPeerPeerAddress struct {
 	// Fqdn
 	Fqdn *string `pulumi:"fqdn"`
 	// Ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip *string `pulumi:"ip"`
 }
 
@@ -27817,6 +31347,8 @@ type LogicalRouterVrfMulticastMsdpPeerPeerAddressArgs struct {
 	// Fqdn
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// Ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 	Ip pulumi.StringPtrInput `pulumi:"ip"`
 }
 
@@ -27903,6 +31435,8 @@ func (o LogicalRouterVrfMulticastMsdpPeerPeerAddressOutput) Fqdn() pulumi.String
 }
 
 // Ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o LogicalRouterVrfMulticastMsdpPeerPeerAddressOutput) Ip() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfMulticastMsdpPeerPeerAddress) *string { return v.Ip }).(pulumi.StringPtrOutput)
 }
@@ -27942,6 +31476,8 @@ func (o LogicalRouterVrfMulticastMsdpPeerPeerAddressPtrOutput) Fqdn() pulumi.Str
 }
 
 // Ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
 func (o LogicalRouterVrfMulticastMsdpPeerPeerAddressPtrOutput) Ip() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfMulticastMsdpPeerPeerAddress) *string {
 		if v == nil {
@@ -28663,6 +32199,8 @@ type LogicalRouterVrfMulticastPimRpLocalRp struct {
 	// Candidate rp
 	CandidateRp *LogicalRouterVrfMulticastPimRpLocalRpCandidateRp `pulumi:"candidateRp"`
 	// Static rp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp *LogicalRouterVrfMulticastPimRpLocalRpStaticRp `pulumi:"staticRp"`
 }
 
@@ -28681,6 +32219,8 @@ type LogicalRouterVrfMulticastPimRpLocalRpArgs struct {
 	// Candidate rp
 	CandidateRp LogicalRouterVrfMulticastPimRpLocalRpCandidateRpPtrInput `pulumi:"candidateRp"`
 	// Static rp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp LogicalRouterVrfMulticastPimRpLocalRpStaticRpPtrInput `pulumi:"staticRp"`
 }
 
@@ -28769,6 +32309,8 @@ func (o LogicalRouterVrfMulticastPimRpLocalRpOutput) CandidateRp() LogicalRouter
 }
 
 // Static rp
+//
+// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o LogicalRouterVrfMulticastPimRpLocalRpOutput) StaticRp() LogicalRouterVrfMulticastPimRpLocalRpStaticRpPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfMulticastPimRpLocalRp) *LogicalRouterVrfMulticastPimRpLocalRpStaticRp {
 		return v.StaticRp
@@ -28810,6 +32352,8 @@ func (o LogicalRouterVrfMulticastPimRpLocalRpPtrOutput) CandidateRp() LogicalRou
 }
 
 // Static rp
+//
+// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o LogicalRouterVrfMulticastPimRpLocalRpPtrOutput) StaticRp() LogicalRouterVrfMulticastPimRpLocalRpStaticRpPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfMulticastPimRpLocalRp) *LogicalRouterVrfMulticastPimRpLocalRpStaticRp {
 		if v == nil {
@@ -29744,6 +33288,8 @@ type LogicalRouterVrfMulticastRpLocalRp struct {
 	// Candidate rp
 	CandidateRp *LogicalRouterVrfMulticastRpLocalRpCandidateRp `pulumi:"candidateRp"`
 	// Static rp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp *LogicalRouterVrfMulticastRpLocalRpStaticRp `pulumi:"staticRp"`
 }
 
@@ -29762,6 +33308,8 @@ type LogicalRouterVrfMulticastRpLocalRpArgs struct {
 	// Candidate rp
 	CandidateRp LogicalRouterVrfMulticastRpLocalRpCandidateRpPtrInput `pulumi:"candidateRp"`
 	// Static rp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 	StaticRp LogicalRouterVrfMulticastRpLocalRpStaticRpPtrInput `pulumi:"staticRp"`
 }
 
@@ -29850,6 +33398,8 @@ func (o LogicalRouterVrfMulticastRpLocalRpOutput) CandidateRp() LogicalRouterVrf
 }
 
 // Static rp
+//
+// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o LogicalRouterVrfMulticastRpLocalRpOutput) StaticRp() LogicalRouterVrfMulticastRpLocalRpStaticRpPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfMulticastRpLocalRp) *LogicalRouterVrfMulticastRpLocalRpStaticRp {
 		return v.StaticRp
@@ -29891,6 +33441,8 @@ func (o LogicalRouterVrfMulticastRpLocalRpPtrOutput) CandidateRp() LogicalRouter
 }
 
 // Static rp
+//
+// > ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
 func (o LogicalRouterVrfMulticastRpLocalRpPtrOutput) StaticRp() LogicalRouterVrfMulticastRpLocalRpStaticRpPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfMulticastRpLocalRp) *LogicalRouterVrfMulticastRpLocalRpStaticRp {
 		if v == nil {
@@ -31686,8 +35238,12 @@ type LogicalRouterVrfOspfAreaInterfaceLinkType struct {
 	// Broadcast
 	Broadcast *LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcast `pulumi:"broadcast"`
 	// P2mp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp *LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp `pulumi:"p2mp"`
 	// P2p
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p *LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p `pulumi:"p2p"`
 }
 
@@ -31706,8 +35262,12 @@ type LogicalRouterVrfOspfAreaInterfaceLinkTypeArgs struct {
 	// Broadcast
 	Broadcast LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcastPtrInput `pulumi:"broadcast"`
 	// P2mp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpPtrInput `pulumi:"p2mp"`
 	// P2p
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pPtrInput `pulumi:"p2p"`
 }
 
@@ -31796,6 +35356,8 @@ func (o LogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) Broadcast() LogicalRout
 }
 
 // P2mp
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) P2mp() LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfAreaInterfaceLinkType) *LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp {
 		return v.P2mp
@@ -31803,6 +35365,8 @@ func (o LogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) P2mp() LogicalRouterVrf
 }
 
 // P2p
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfAreaInterfaceLinkTypeOutput) P2p() LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfAreaInterfaceLinkType) *LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p {
 		return v.P2p
@@ -31844,6 +35408,8 @@ func (o LogicalRouterVrfOspfAreaInterfaceLinkTypePtrOutput) Broadcast() LogicalR
 }
 
 // P2mp
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfAreaInterfaceLinkTypePtrOutput) P2mp() LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mpPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfAreaInterfaceLinkType) *LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp {
 		if v == nil {
@@ -31854,6 +35420,8 @@ func (o LogicalRouterVrfOspfAreaInterfaceLinkTypePtrOutput) P2mp() LogicalRouter
 }
 
 // P2p
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfAreaInterfaceLinkTypePtrOutput) P2p() LogicalRouterVrfOspfAreaInterfaceLinkTypeP2pPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfAreaInterfaceLinkType) *LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p {
 		if v == nil {
@@ -32676,8 +36244,12 @@ type LogicalRouterVrfOspfAreaType struct {
 	// Normal
 	Normal *LogicalRouterVrfOspfAreaTypeNormal `pulumi:"normal"`
 	// Nssa
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa *LogicalRouterVrfOspfAreaTypeNssa `pulumi:"nssa"`
 	// Stub
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub *LogicalRouterVrfOspfAreaTypeStub `pulumi:"stub"`
 }
 
@@ -32696,8 +36268,12 @@ type LogicalRouterVrfOspfAreaTypeArgs struct {
 	// Normal
 	Normal LogicalRouterVrfOspfAreaTypeNormalPtrInput `pulumi:"normal"`
 	// Nssa
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa LogicalRouterVrfOspfAreaTypeNssaPtrInput `pulumi:"nssa"`
 	// Stub
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub LogicalRouterVrfOspfAreaTypeStubPtrInput `pulumi:"stub"`
 }
 
@@ -32784,11 +36360,15 @@ func (o LogicalRouterVrfOspfAreaTypeOutput) Normal() LogicalRouterVrfOspfAreaTyp
 }
 
 // Nssa
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfAreaTypeOutput) Nssa() LogicalRouterVrfOspfAreaTypeNssaPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfAreaType) *LogicalRouterVrfOspfAreaTypeNssa { return v.Nssa }).(LogicalRouterVrfOspfAreaTypeNssaPtrOutput)
 }
 
 // Stub
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfAreaTypeOutput) Stub() LogicalRouterVrfOspfAreaTypeStubPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfAreaType) *LogicalRouterVrfOspfAreaTypeStub { return v.Stub }).(LogicalRouterVrfOspfAreaTypeStubPtrOutput)
 }
@@ -32828,6 +36408,8 @@ func (o LogicalRouterVrfOspfAreaTypePtrOutput) Normal() LogicalRouterVrfOspfArea
 }
 
 // Nssa
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfAreaTypePtrOutput) Nssa() LogicalRouterVrfOspfAreaTypeNssaPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfAreaType) *LogicalRouterVrfOspfAreaTypeNssa {
 		if v == nil {
@@ -32838,6 +36420,8 @@ func (o LogicalRouterVrfOspfAreaTypePtrOutput) Nssa() LogicalRouterVrfOspfAreaTy
 }
 
 // Stub
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfAreaTypePtrOutput) Stub() LogicalRouterVrfOspfAreaTypeStubPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfAreaType) *LogicalRouterVrfOspfAreaTypeStub {
 		if v == nil {
@@ -33906,6 +37490,8 @@ type LogicalRouterVrfOspfAreaTypeNssaDefaultRoute struct {
 	// Advertise
 	Advertise *LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable *LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable `pulumi:"disable"`
 }
 
@@ -33924,6 +37510,8 @@ type LogicalRouterVrfOspfAreaTypeNssaDefaultRouteArgs struct {
 	// Advertise
 	Advertise LogicalRouterVrfOspfAreaTypeNssaDefaultRouteAdvertisePtrInput `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisablePtrInput `pulumi:"disable"`
 }
 
@@ -34012,6 +37600,8 @@ func (o LogicalRouterVrfOspfAreaTypeNssaDefaultRouteOutput) Advertise() LogicalR
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfAreaTypeNssaDefaultRouteOutput) Disable() LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfAreaTypeNssaDefaultRoute) *LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable {
 		return v.Disable
@@ -34053,6 +37643,8 @@ func (o LogicalRouterVrfOspfAreaTypeNssaDefaultRoutePtrOutput) Advertise() Logic
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfAreaTypeNssaDefaultRoutePtrOutput) Disable() LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfAreaTypeNssaDefaultRoute) *LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisable {
 		if v == nil {
@@ -35104,6 +38696,8 @@ type LogicalRouterVrfOspfAreaTypeStubDefaultRoute struct {
 	// Advertise
 	Advertise *LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable *LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable `pulumi:"disable"`
 }
 
@@ -35122,6 +38716,8 @@ type LogicalRouterVrfOspfAreaTypeStubDefaultRouteArgs struct {
 	// Advertise
 	Advertise LogicalRouterVrfOspfAreaTypeStubDefaultRouteAdvertisePtrInput `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisablePtrInput `pulumi:"disable"`
 }
 
@@ -35210,6 +38806,8 @@ func (o LogicalRouterVrfOspfAreaTypeStubDefaultRouteOutput) Advertise() LogicalR
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfAreaTypeStubDefaultRouteOutput) Disable() LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfAreaTypeStubDefaultRoute) *LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable {
 		return v.Disable
@@ -35251,6 +38849,8 @@ func (o LogicalRouterVrfOspfAreaTypeStubDefaultRoutePtrOutput) Advertise() Logic
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfAreaTypeStubDefaultRoutePtrOutput) Disable() LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfAreaTypeStubDefaultRoute) *LogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable {
 		if v == nil {
@@ -38601,8 +42201,12 @@ type LogicalRouterVrfOspfv3AreaInterfaceLinkType struct {
 	// Broadcast
 	Broadcast *LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcast `pulumi:"broadcast"`
 	// P2mp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp *LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp `pulumi:"p2mp"`
 	// P2p
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p *LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p `pulumi:"p2p"`
 }
 
@@ -38621,8 +42225,12 @@ type LogicalRouterVrfOspfv3AreaInterfaceLinkTypeArgs struct {
 	// Broadcast
 	Broadcast LogicalRouterVrfOspfv3AreaInterfaceLinkTypeBroadcastPtrInput `pulumi:"broadcast"`
 	// P2mp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2mp LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpPtrInput `pulumi:"p2mp"`
 	// P2p
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 	P2p LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pPtrInput `pulumi:"p2p"`
 }
 
@@ -38711,6 +42319,8 @@ func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) Broadcast() LogicalRo
 }
 
 // P2mp
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) P2mp() LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AreaInterfaceLinkType) *LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp {
 		return v.P2mp
@@ -38718,6 +42328,8 @@ func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) P2mp() LogicalRouterV
 }
 
 // P2p
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypeOutput) P2p() LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AreaInterfaceLinkType) *LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p {
 		return v.P2p
@@ -38759,6 +42371,8 @@ func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypePtrOutput) Broadcast() Logica
 }
 
 // P2mp
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypePtrOutput) P2mp() LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AreaInterfaceLinkType) *LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mp {
 		if v == nil {
@@ -38769,6 +42383,8 @@ func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypePtrOutput) P2mp() LogicalRout
 }
 
 // P2p
+//
+// > ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
 func (o LogicalRouterVrfOspfv3AreaInterfaceLinkTypePtrOutput) P2p() LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AreaInterfaceLinkType) *LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2p {
 		if v == nil {
@@ -39679,8 +43295,12 @@ type LogicalRouterVrfOspfv3AreaType struct {
 	// Normal
 	Normal *LogicalRouterVrfOspfv3AreaTypeNormal `pulumi:"normal"`
 	// Nssa
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa *LogicalRouterVrfOspfv3AreaTypeNssa `pulumi:"nssa"`
 	// Stub
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub *LogicalRouterVrfOspfv3AreaTypeStub `pulumi:"stub"`
 }
 
@@ -39699,8 +43319,12 @@ type LogicalRouterVrfOspfv3AreaTypeArgs struct {
 	// Normal
 	Normal LogicalRouterVrfOspfv3AreaTypeNormalPtrInput `pulumi:"normal"`
 	// Nssa
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Nssa LogicalRouterVrfOspfv3AreaTypeNssaPtrInput `pulumi:"nssa"`
 	// Stub
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 	Stub LogicalRouterVrfOspfv3AreaTypeStubPtrInput `pulumi:"stub"`
 }
 
@@ -39787,11 +43411,15 @@ func (o LogicalRouterVrfOspfv3AreaTypeOutput) Normal() LogicalRouterVrfOspfv3Are
 }
 
 // Nssa
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfv3AreaTypeOutput) Nssa() LogicalRouterVrfOspfv3AreaTypeNssaPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AreaType) *LogicalRouterVrfOspfv3AreaTypeNssa { return v.Nssa }).(LogicalRouterVrfOspfv3AreaTypeNssaPtrOutput)
 }
 
 // Stub
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfv3AreaTypeOutput) Stub() LogicalRouterVrfOspfv3AreaTypeStubPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AreaType) *LogicalRouterVrfOspfv3AreaTypeStub { return v.Stub }).(LogicalRouterVrfOspfv3AreaTypeStubPtrOutput)
 }
@@ -39831,6 +43459,8 @@ func (o LogicalRouterVrfOspfv3AreaTypePtrOutput) Normal() LogicalRouterVrfOspfv3
 }
 
 // Nssa
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfv3AreaTypePtrOutput) Nssa() LogicalRouterVrfOspfv3AreaTypeNssaPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AreaType) *LogicalRouterVrfOspfv3AreaTypeNssa {
 		if v == nil {
@@ -39841,6 +43471,8 @@ func (o LogicalRouterVrfOspfv3AreaTypePtrOutput) Nssa() LogicalRouterVrfOspfv3Ar
 }
 
 // Stub
+//
+// > ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
 func (o LogicalRouterVrfOspfv3AreaTypePtrOutput) Stub() LogicalRouterVrfOspfv3AreaTypeStubPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AreaType) *LogicalRouterVrfOspfv3AreaTypeStub {
 		if v == nil {
@@ -41158,6 +44790,8 @@ type LogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute struct {
 	// Advertise
 	Advertise *LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable *LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable `pulumi:"disable"`
 }
 
@@ -41176,6 +44810,8 @@ type LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteArgs struct {
 	// Advertise
 	Advertise LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteAdvertisePtrInput `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisablePtrInput `pulumi:"disable"`
 }
 
@@ -41264,6 +44900,8 @@ func (o LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteOutput) Advertise() Logica
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteOutput) Disable() LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute) *LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable {
 		return v.Disable
@@ -41305,6 +44943,8 @@ func (o LogicalRouterVrfOspfv3AreaTypeNssaDefaultRoutePtrOutput) Advertise() Log
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfv3AreaTypeNssaDefaultRoutePtrOutput) Disable() LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AreaTypeNssaDefaultRoute) *LogicalRouterVrfOspfv3AreaTypeNssaDefaultRouteDisable {
 		if v == nil {
@@ -42365,6 +46005,8 @@ type LogicalRouterVrfOspfv3AreaTypeStubDefaultRoute struct {
 	// Advertise
 	Advertise *LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertise `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable *LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable `pulumi:"disable"`
 }
 
@@ -42383,6 +46025,8 @@ type LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteArgs struct {
 	// Advertise
 	Advertise LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteAdvertisePtrInput `pulumi:"advertise"`
 	// Disable
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 	Disable LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisablePtrInput `pulumi:"disable"`
 }
 
@@ -42471,6 +46115,8 @@ func (o LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteOutput) Advertise() Logica
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteOutput) Disable() LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AreaTypeStubDefaultRoute) *LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable {
 		return v.Disable
@@ -42512,6 +46158,8 @@ func (o LogicalRouterVrfOspfv3AreaTypeStubDefaultRoutePtrOutput) Advertise() Log
 }
 
 // Disable
+//
+// > ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
 func (o LogicalRouterVrfOspfv3AreaTypeStubDefaultRoutePtrOutput) Disable() LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisablePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AreaTypeStubDefaultRoute) *LogicalRouterVrfOspfv3AreaTypeStubDefaultRouteDisable {
 		if v == nil {
@@ -43779,12 +47427,20 @@ type LogicalRouterVrfOspfv3AuthProfileAh struct {
 	// Md5
 	Md5 *LogicalRouterVrfOspfv3AuthProfileAhMd5 `pulumi:"md5"`
 	// Sha1
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 *LogicalRouterVrfOspfv3AuthProfileAhSha1 `pulumi:"sha1"`
 	// Sha256
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 *LogicalRouterVrfOspfv3AuthProfileAhSha256 `pulumi:"sha256"`
 	// Sha384
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 *LogicalRouterVrfOspfv3AuthProfileAhSha384 `pulumi:"sha384"`
 	// Sha512
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 *LogicalRouterVrfOspfv3AuthProfileAhSha512 `pulumi:"sha512"`
 }
 
@@ -43803,12 +47459,20 @@ type LogicalRouterVrfOspfv3AuthProfileAhArgs struct {
 	// Md5
 	Md5 LogicalRouterVrfOspfv3AuthProfileAhMd5PtrInput `pulumi:"md5"`
 	// Sha1
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 LogicalRouterVrfOspfv3AuthProfileAhSha1PtrInput `pulumi:"sha1"`
 	// Sha256
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 LogicalRouterVrfOspfv3AuthProfileAhSha256PtrInput `pulumi:"sha256"`
 	// Sha384
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 LogicalRouterVrfOspfv3AuthProfileAhSha384PtrInput `pulumi:"sha384"`
 	// Sha512
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 LogicalRouterVrfOspfv3AuthProfileAhSha512PtrInput `pulumi:"sha512"`
 }
 
@@ -43895,11 +47559,15 @@ func (o LogicalRouterVrfOspfv3AuthProfileAhOutput) Md5() LogicalRouterVrfOspfv3A
 }
 
 // Sha1
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhOutput) Sha1() LogicalRouterVrfOspfv3AuthProfileAhSha1PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha1 { return v.Sha1 }).(LogicalRouterVrfOspfv3AuthProfileAhSha1PtrOutput)
 }
 
 // Sha256
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhOutput) Sha256() LogicalRouterVrfOspfv3AuthProfileAhSha256PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha256 {
 		return v.Sha256
@@ -43907,6 +47575,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileAhOutput) Sha256() LogicalRouterVrfOspf
 }
 
 // Sha384
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhOutput) Sha384() LogicalRouterVrfOspfv3AuthProfileAhSha384PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha384 {
 		return v.Sha384
@@ -43914,6 +47584,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileAhOutput) Sha384() LogicalRouterVrfOspf
 }
 
 // Sha512
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhOutput) Sha512() LogicalRouterVrfOspfv3AuthProfileAhSha512PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha512 {
 		return v.Sha512
@@ -43955,6 +47627,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Md5() LogicalRouterVrfOspf
 }
 
 // Sha1
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Sha1() LogicalRouterVrfOspfv3AuthProfileAhSha1PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha1 {
 		if v == nil {
@@ -43965,6 +47639,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Sha1() LogicalRouterVrfOsp
 }
 
 // Sha256
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Sha256() LogicalRouterVrfOspfv3AuthProfileAhSha256PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha256 {
 		if v == nil {
@@ -43975,6 +47651,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Sha256() LogicalRouterVrfO
 }
 
 // Sha384
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Sha384() LogicalRouterVrfOspfv3AuthProfileAhSha384PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha384 {
 		if v == nil {
@@ -43985,6 +47663,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Sha384() LogicalRouterVrfO
 }
 
 // Sha512
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileAhPtrOutput) Sha512() LogicalRouterVrfOspfv3AuthProfileAhSha512PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileAh) *LogicalRouterVrfOspfv3AuthProfileAhSha512 {
 		if v == nil {
@@ -44843,14 +48523,24 @@ type LogicalRouterVrfOspfv3AuthProfileEspAuthentication struct {
 	// Md5
 	Md5 *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5 `pulumi:"md5"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	None *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone `pulumi:"none"`
 	// Sha1
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1 `pulumi:"sha1"`
 	// Sha256
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256 `pulumi:"sha256"`
 	// Sha384
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384 `pulumi:"sha384"`
 	// Sha512
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512 `pulumi:"sha512"`
 }
 
@@ -44869,14 +48559,24 @@ type LogicalRouterVrfOspfv3AuthProfileEspAuthenticationArgs struct {
 	// Md5
 	Md5 LogicalRouterVrfOspfv3AuthProfileEspAuthenticationMd5PtrInput `pulumi:"md5"`
 	// None
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	None LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNonePtrInput `pulumi:"none"`
 	// Sha1
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha1 LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1PtrInput `pulumi:"sha1"`
 	// Sha256
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha256 LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256PtrInput `pulumi:"sha256"`
 	// Sha384
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha384 LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384PtrInput `pulumi:"sha384"`
 	// Sha512
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 	Sha512 LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512PtrInput `pulumi:"sha512"`
 }
 
@@ -44965,6 +48665,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Md5() LogicalR
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) None() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNonePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone {
 		return v.None
@@ -44972,6 +48674,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) None() Logical
 }
 
 // Sha1
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha1() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1 {
 		return v.Sha1
@@ -44979,6 +48683,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha1() Logical
 }
 
 // Sha256
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha256() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256 {
 		return v.Sha256
@@ -44986,6 +48692,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha256() Logic
 }
 
 // Sha384
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha384() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384 {
 		return v.Sha384
@@ -44993,6 +48701,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha384() Logic
 }
 
 // Sha512
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationOutput) Sha512() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512PtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512 {
 		return v.Sha512
@@ -45034,6 +48744,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Md5() Logic
 }
 
 // None
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) None() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNonePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNone {
 		if v == nil {
@@ -45044,6 +48756,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) None() Logi
 }
 
 // Sha1
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Sha1() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1 {
 		if v == nil {
@@ -45054,6 +48768,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Sha1() Logi
 }
 
 // Sha256
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Sha256() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256 {
 		if v == nil {
@@ -45064,6 +48780,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Sha256() Lo
 }
 
 // Sha384
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Sha384() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384 {
 		if v == nil {
@@ -45074,6 +48792,8 @@ func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Sha384() Lo
 }
 
 // Sha512
+//
+// > ℹ️ **Note:** You must specify exactly one of `md5`, `none`, `sha1`, `sha256`, `sha384`, and `sha512`.
 func (o LogicalRouterVrfOspfv3AuthProfileEspAuthenticationPtrOutput) Sha512() LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512PtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfOspfv3AuthProfileEspAuthentication) *LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512 {
 		if v == nil {
@@ -50086,18 +53806,32 @@ type LogicalRouterVrfRoutingTableIpStaticRouteNexthop struct {
 	// Discard
 	Discard *LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscard `pulumi:"discard"`
 	// Fqdn
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn *string `pulumi:"fqdn"`
 	// Ip address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	IpAddress *string `pulumi:"ipAddress"`
 	// Ipv6 address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Next lr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr *string `pulumi:"nextLr"`
 	// Next vr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr *string `pulumi:"nextVr"`
 	// Receive
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive *LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive `pulumi:"receive"`
 	// Tunnel
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel *string `pulumi:"tunnel"`
 }
 
@@ -50116,18 +53850,32 @@ type LogicalRouterVrfRoutingTableIpStaticRouteNexthopArgs struct {
 	// Discard
 	Discard LogicalRouterVrfRoutingTableIpStaticRouteNexthopDiscardPtrInput `pulumi:"discard"`
 	// Fqdn
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// Ip address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
 	// Ipv6 address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address pulumi.StringPtrInput `pulumi:"ipv6Address"`
 	// Next lr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr pulumi.StringPtrInput `pulumi:"nextLr"`
 	// Next vr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr pulumi.StringPtrInput `pulumi:"nextVr"`
 	// Receive
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceivePtrInput `pulumi:"receive"`
 	// Tunnel
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel pulumi.StringPtrInput `pulumi:"tunnel"`
 }
 
@@ -50216,31 +53964,43 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Discard() Logica
 }
 
 // Fqdn
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string { return v.Fqdn }).(pulumi.StringPtrOutput)
 }
 
 // Ip address
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
 }
 
 // Ipv6 address
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string { return v.Ipv6Address }).(pulumi.StringPtrOutput)
 }
 
 // Next lr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) NextLr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string { return v.NextLr }).(pulumi.StringPtrOutput)
 }
 
 // Next vr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) NextVr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string { return v.NextVr }).(pulumi.StringPtrOutput)
 }
 
 // Receive
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Receive() LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceivePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive {
 		return v.Receive
@@ -50248,6 +54008,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Receive() Logica
 }
 
 // Tunnel
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopOutput) Tunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string { return v.Tunnel }).(pulumi.StringPtrOutput)
 }
@@ -50287,6 +54049,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Discard() Log
 }
 
 // Fqdn
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string {
 		if v == nil {
@@ -50297,6 +54061,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Fqdn() pulumi
 }
 
 // Ip address
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string {
 		if v == nil {
@@ -50307,6 +54073,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) IpAddress() p
 }
 
 // Ipv6 address
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string {
 		if v == nil {
@@ -50317,6 +54085,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Ipv6Address()
 }
 
 // Next lr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) NextLr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string {
 		if v == nil {
@@ -50327,6 +54097,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) NextLr() pulu
 }
 
 // Next vr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) NextVr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string {
 		if v == nil {
@@ -50337,6 +54109,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) NextVr() pulu
 }
 
 // Receive
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Receive() LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceivePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceive {
 		if v == nil {
@@ -50347,6 +54121,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Receive() Log
 }
 
 // Tunnel
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipAddress`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteNexthopPtrOutput) Tunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteNexthop) *string {
 		if v == nil {
@@ -50949,10 +54725,16 @@ type LogicalRouterVrfRoutingTableIpStaticRouteRouteTable struct {
 	// Both
 	Both *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBoth `pulumi:"both"`
 	// Multicast
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Multicast *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast `pulumi:"multicast"`
 	// No install
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	NoInstall *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall `pulumi:"noInstall"`
 	// Unicast
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Unicast *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast `pulumi:"unicast"`
 }
 
@@ -50971,10 +54753,16 @@ type LogicalRouterVrfRoutingTableIpStaticRouteRouteTableArgs struct {
 	// Both
 	Both LogicalRouterVrfRoutingTableIpStaticRouteRouteTableBothPtrInput `pulumi:"both"`
 	// Multicast
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Multicast LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastPtrInput `pulumi:"multicast"`
 	// No install
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	NoInstall LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallPtrInput `pulumi:"noInstall"`
 	// Unicast
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 	Unicast LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastPtrInput `pulumi:"unicast"`
 }
 
@@ -51063,6 +54851,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Both() Logica
 }
 
 // Multicast
+//
+// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Multicast() LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteRouteTable) *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast {
 		return v.Multicast
@@ -51070,6 +54860,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Multicast() L
 }
 
 // No install
+//
+// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) NoInstall() LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteRouteTable) *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall {
 		return v.NoInstall
@@ -51077,6 +54869,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) NoInstall() L
 }
 
 // Unicast
+//
+// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTableOutput) Unicast() LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpStaticRouteRouteTable) *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast {
 		return v.Unicast
@@ -51118,6 +54912,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTablePtrOutput) Both() Log
 }
 
 // Multicast
+//
+// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTablePtrOutput) Multicast() LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteRouteTable) *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticast {
 		if v == nil {
@@ -51128,6 +54924,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTablePtrOutput) Multicast(
 }
 
 // No install
+//
+// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTablePtrOutput) NoInstall() LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteRouteTable) *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstall {
 		if v == nil {
@@ -51138,6 +54936,8 @@ func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTablePtrOutput) NoInstall(
 }
 
 // Unicast
+//
+// > ℹ️ **Note:** You must specify exactly one of `both`, `multicast`, `noInstall`, and `unicast`.
 func (o LogicalRouterVrfRoutingTableIpStaticRouteRouteTablePtrOutput) Unicast() LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpStaticRouteRouteTable) *LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicast {
 		if v == nil {
@@ -52087,16 +55887,28 @@ type LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop struct {
 	// Discard
 	Discard *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscard `pulumi:"discard"`
 	// Fqdn
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn *string `pulumi:"fqdn"`
 	// Ipv6 address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address *string `pulumi:"ipv6Address"`
 	// Next lr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr *string `pulumi:"nextLr"`
 	// Next vr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr *string `pulumi:"nextVr"`
 	// Receive
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive `pulumi:"receive"`
 	// Tunnel
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel *string `pulumi:"tunnel"`
 }
 
@@ -52115,16 +55927,28 @@ type LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopArgs struct {
 	// Discard
 	Discard LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopDiscardPtrInput `pulumi:"discard"`
 	// Fqdn
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// Ipv6 address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Ipv6Address pulumi.StringPtrInput `pulumi:"ipv6Address"`
 	// Next lr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextLr pulumi.StringPtrInput `pulumi:"nextLr"`
 	// Next vr
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	NextVr pulumi.StringPtrInput `pulumi:"nextVr"`
 	// Receive
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Receive LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceivePtrInput `pulumi:"receive"`
 	// Tunnel
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 	Tunnel pulumi.StringPtrInput `pulumi:"tunnel"`
 }
 
@@ -52213,26 +56037,36 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Discard() Logi
 }
 
 // Fqdn
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string { return v.Fqdn }).(pulumi.StringPtrOutput)
 }
 
 // Ipv6 address
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string { return v.Ipv6Address }).(pulumi.StringPtrOutput)
 }
 
 // Next lr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) NextLr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string { return v.NextLr }).(pulumi.StringPtrOutput)
 }
 
 // Next vr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) NextVr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string { return v.NextVr }).(pulumi.StringPtrOutput)
 }
 
 // Receive
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Receive() LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceivePtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive {
 		return v.Receive
@@ -52240,6 +56074,8 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Receive() Logi
 }
 
 // Tunnel
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopOutput) Tunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string { return v.Tunnel }).(pulumi.StringPtrOutput)
 }
@@ -52279,6 +56115,8 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Discard() L
 }
 
 // Fqdn
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string {
 		if v == nil {
@@ -52289,6 +56127,8 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Fqdn() pulu
 }
 
 // Ipv6 address
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Ipv6Address() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string {
 		if v == nil {
@@ -52299,6 +56139,8 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Ipv6Address
 }
 
 // Next lr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) NextLr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string {
 		if v == nil {
@@ -52309,6 +56151,8 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) NextLr() pu
 }
 
 // Next vr
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) NextVr() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string {
 		if v == nil {
@@ -52319,6 +56163,8 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) NextVr() pu
 }
 
 // Receive
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Receive() LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceivePtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopReceive {
 		if v == nil {
@@ -52329,6 +56175,8 @@ func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Receive() L
 }
 
 // Tunnel
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `fqdn`, `ipv6Address`, `nextLr`, `nextVr`, `receive`, and `tunnel`.
 func (o LogicalRouterVrfRoutingTableIpv6StaticRouteNexthopPtrOutput) Tunnel() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouterVrfRoutingTableIpv6StaticRouteNexthop) *string {
 		if v == nil {
@@ -54523,10 +58371,16 @@ type MfaServerMfaVendorType struct {
 	// Integration with [Duo Security](https://duo.com/product)
 	DuoSecurityV2 *MfaServerMfaVendorTypeDuoSecurityV2 `pulumi:"duoSecurityV2"`
 	// Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 	OktaAdaptiveV1 *MfaServerMfaVendorTypeOktaAdaptiveV1 `pulumi:"oktaAdaptiveV1"`
 	// Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 	PingIdentityV1 *MfaServerMfaVendorTypePingIdentityV1 `pulumi:"pingIdentityV1"`
 	// Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 	RsaSecuridAccessV1 *MfaServerMfaVendorTypeRsaSecuridAccessV1 `pulumi:"rsaSecuridAccessV1"`
 }
 
@@ -54545,10 +58399,16 @@ type MfaServerMfaVendorTypeArgs struct {
 	// Integration with [Duo Security](https://duo.com/product)
 	DuoSecurityV2 MfaServerMfaVendorTypeDuoSecurityV2PtrInput `pulumi:"duoSecurityV2"`
 	// Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 	OktaAdaptiveV1 MfaServerMfaVendorTypeOktaAdaptiveV1PtrInput `pulumi:"oktaAdaptiveV1"`
 	// Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 	PingIdentityV1 MfaServerMfaVendorTypePingIdentityV1PtrInput `pulumi:"pingIdentityV1"`
 	// Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 	RsaSecuridAccessV1 MfaServerMfaVendorTypeRsaSecuridAccessV1PtrInput `pulumi:"rsaSecuridAccessV1"`
 }
 
@@ -54635,16 +58495,22 @@ func (o MfaServerMfaVendorTypeOutput) DuoSecurityV2() MfaServerMfaVendorTypeDuoS
 }
 
 // Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+//
+// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 func (o MfaServerMfaVendorTypeOutput) OktaAdaptiveV1() MfaServerMfaVendorTypeOktaAdaptiveV1PtrOutput {
 	return o.ApplyT(func(v MfaServerMfaVendorType) *MfaServerMfaVendorTypeOktaAdaptiveV1 { return v.OktaAdaptiveV1 }).(MfaServerMfaVendorTypeOktaAdaptiveV1PtrOutput)
 }
 
 // Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+//
+// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 func (o MfaServerMfaVendorTypeOutput) PingIdentityV1() MfaServerMfaVendorTypePingIdentityV1PtrOutput {
 	return o.ApplyT(func(v MfaServerMfaVendorType) *MfaServerMfaVendorTypePingIdentityV1 { return v.PingIdentityV1 }).(MfaServerMfaVendorTypePingIdentityV1PtrOutput)
 }
 
 // Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+//
+// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 func (o MfaServerMfaVendorTypeOutput) RsaSecuridAccessV1() MfaServerMfaVendorTypeRsaSecuridAccessV1PtrOutput {
 	return o.ApplyT(func(v MfaServerMfaVendorType) *MfaServerMfaVendorTypeRsaSecuridAccessV1 { return v.RsaSecuridAccessV1 }).(MfaServerMfaVendorTypeRsaSecuridAccessV1PtrOutput)
 }
@@ -54684,6 +58550,8 @@ func (o MfaServerMfaVendorTypePtrOutput) DuoSecurityV2() MfaServerMfaVendorTypeD
 }
 
 // Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+//
+// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 func (o MfaServerMfaVendorTypePtrOutput) OktaAdaptiveV1() MfaServerMfaVendorTypeOktaAdaptiveV1PtrOutput {
 	return o.ApplyT(func(v *MfaServerMfaVendorType) *MfaServerMfaVendorTypeOktaAdaptiveV1 {
 		if v == nil {
@@ -54694,6 +58562,8 @@ func (o MfaServerMfaVendorTypePtrOutput) OktaAdaptiveV1() MfaServerMfaVendorType
 }
 
 // Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+//
+// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 func (o MfaServerMfaVendorTypePtrOutput) PingIdentityV1() MfaServerMfaVendorTypePingIdentityV1PtrOutput {
 	return o.ApplyT(func(v *MfaServerMfaVendorType) *MfaServerMfaVendorTypePingIdentityV1 {
 		if v == nil {
@@ -54704,6 +58574,8 @@ func (o MfaServerMfaVendorTypePtrOutput) PingIdentityV1() MfaServerMfaVendorType
 }
 
 // Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+//
+// > ℹ️ **Note:** You must specify exactly one of `duoSecurityV2`, `oktaAdaptiveV1`, `pingIdentityV1`, and `rsaSecuridAccessV1`.
 func (o MfaServerMfaVendorTypePtrOutput) RsaSecuridAccessV1() MfaServerMfaVendorTypeRsaSecuridAccessV1PtrOutput {
 	return o.ApplyT(func(v *MfaServerMfaVendorType) *MfaServerMfaVendorTypeRsaSecuridAccessV1 {
 		if v == nil {
@@ -57364,8 +61236,12 @@ type PbfRuleAction struct {
 	// Discard
 	Discard *PbfRuleActionDiscard `pulumi:"discard"`
 	// Forward
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 	Forward *PbfRuleActionForward `pulumi:"forward"`
 	// No pbf
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 	NoPbf *PbfRuleActionNoPbf `pulumi:"noPbf"`
 }
 
@@ -57384,8 +61260,12 @@ type PbfRuleActionArgs struct {
 	// Discard
 	Discard PbfRuleActionDiscardPtrInput `pulumi:"discard"`
 	// Forward
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 	Forward PbfRuleActionForwardPtrInput `pulumi:"forward"`
 	// No pbf
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 	NoPbf PbfRuleActionNoPbfPtrInput `pulumi:"noPbf"`
 }
 
@@ -57472,11 +61352,15 @@ func (o PbfRuleActionOutput) Discard() PbfRuleActionDiscardPtrOutput {
 }
 
 // Forward
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 func (o PbfRuleActionOutput) Forward() PbfRuleActionForwardPtrOutput {
 	return o.ApplyT(func(v PbfRuleAction) *PbfRuleActionForward { return v.Forward }).(PbfRuleActionForwardPtrOutput)
 }
 
 // No pbf
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 func (o PbfRuleActionOutput) NoPbf() PbfRuleActionNoPbfPtrOutput {
 	return o.ApplyT(func(v PbfRuleAction) *PbfRuleActionNoPbf { return v.NoPbf }).(PbfRuleActionNoPbfPtrOutput)
 }
@@ -57516,6 +61400,8 @@ func (o PbfRuleActionPtrOutput) Discard() PbfRuleActionDiscardPtrOutput {
 }
 
 // Forward
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 func (o PbfRuleActionPtrOutput) Forward() PbfRuleActionForwardPtrOutput {
 	return o.ApplyT(func(v *PbfRuleAction) *PbfRuleActionForward {
 		if v == nil {
@@ -57526,6 +61412,8 @@ func (o PbfRuleActionPtrOutput) Forward() PbfRuleActionForwardPtrOutput {
 }
 
 // No pbf
+//
+// > ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
 func (o PbfRuleActionPtrOutput) NoPbf() PbfRuleActionNoPbfPtrOutput {
 	return o.ApplyT(func(v *PbfRuleAction) *PbfRuleActionNoPbf {
 		if v == nil {
@@ -58007,6 +61895,8 @@ type PbfRuleActionForwardNexthop struct {
 	// Next hop FQDN
 	Fqdn *string `pulumi:"fqdn"`
 	// Next hop IP address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress *string `pulumi:"ipAddress"`
 }
 
@@ -58025,6 +61915,8 @@ type PbfRuleActionForwardNexthopArgs struct {
 	// Next hop FQDN
 	Fqdn pulumi.StringPtrInput `pulumi:"fqdn"`
 	// Next hop IP address
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddress pulumi.StringPtrInput `pulumi:"ipAddress"`
 }
 
@@ -58111,6 +62003,8 @@ func (o PbfRuleActionForwardNexthopOutput) Fqdn() pulumi.StringPtrOutput {
 }
 
 // Next hop IP address
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o PbfRuleActionForwardNexthopOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v PbfRuleActionForwardNexthop) *string { return v.IpAddress }).(pulumi.StringPtrOutput)
 }
@@ -58150,6 +62044,8 @@ func (o PbfRuleActionForwardNexthopPtrOutput) Fqdn() pulumi.StringPtrOutput {
 }
 
 // Next hop IP address
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o PbfRuleActionForwardNexthopPtrOutput) IpAddress() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRuleActionForwardNexthop) *string {
 		if v == nil {
@@ -58536,6 +62432,8 @@ type PbfRuleFrom struct {
 	// Source interfaces
 	Interfaces []string `pulumi:"interfaces"`
 	// Source zones
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
 	Zones []string `pulumi:"zones"`
 }
 
@@ -58554,6 +62452,8 @@ type PbfRuleFromArgs struct {
 	// Source interfaces
 	Interfaces pulumi.StringArrayInput `pulumi:"interfaces"`
 	// Source zones
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
 	Zones pulumi.StringArrayInput `pulumi:"zones"`
 }
 
@@ -58640,6 +62540,8 @@ func (o PbfRuleFromOutput) Interfaces() pulumi.StringArrayOutput {
 }
 
 // Source zones
+//
+// > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
 func (o PbfRuleFromOutput) Zones() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v PbfRuleFrom) []string { return v.Zones }).(pulumi.StringArrayOutput)
 }
@@ -58679,6 +62581,8 @@ func (o PbfRuleFromPtrOutput) Interfaces() pulumi.StringArrayOutput {
 }
 
 // Source zones
+//
+// > ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
 func (o PbfRuleFromPtrOutput) Zones() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *PbfRuleFrom) []string {
 		if v == nil {
@@ -59072,12 +62976,20 @@ type QosPolicyRuleDscpTosCodepointType struct {
 	// Af
 	Af *QosPolicyRuleDscpTosCodepointTypeAf `pulumi:"af"`
 	// Cs
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Cs *QosPolicyRuleDscpTosCodepointTypeCs `pulumi:"cs"`
 	// Custom
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Custom *QosPolicyRuleDscpTosCodepointTypeCustom `pulumi:"custom"`
 	// Ef
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Ef *QosPolicyRuleDscpTosCodepointTypeEf `pulumi:"ef"`
 	// Tos
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Tos *QosPolicyRuleDscpTosCodepointTypeTos `pulumi:"tos"`
 }
 
@@ -59096,12 +63008,20 @@ type QosPolicyRuleDscpTosCodepointTypeArgs struct {
 	// Af
 	Af QosPolicyRuleDscpTosCodepointTypeAfPtrInput `pulumi:"af"`
 	// Cs
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Cs QosPolicyRuleDscpTosCodepointTypeCsPtrInput `pulumi:"cs"`
 	// Custom
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Custom QosPolicyRuleDscpTosCodepointTypeCustomPtrInput `pulumi:"custom"`
 	// Ef
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Ef QosPolicyRuleDscpTosCodepointTypeEfPtrInput `pulumi:"ef"`
 	// Tos
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 	Tos QosPolicyRuleDscpTosCodepointTypeTosPtrInput `pulumi:"tos"`
 }
 
@@ -59188,21 +63108,29 @@ func (o QosPolicyRuleDscpTosCodepointTypeOutput) Af() QosPolicyRuleDscpTosCodepo
 }
 
 // Cs
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypeOutput) Cs() QosPolicyRuleDscpTosCodepointTypeCsPtrOutput {
 	return o.ApplyT(func(v QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeCs { return v.Cs }).(QosPolicyRuleDscpTosCodepointTypeCsPtrOutput)
 }
 
 // Custom
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypeOutput) Custom() QosPolicyRuleDscpTosCodepointTypeCustomPtrOutput {
 	return o.ApplyT(func(v QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeCustom { return v.Custom }).(QosPolicyRuleDscpTosCodepointTypeCustomPtrOutput)
 }
 
 // Ef
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypeOutput) Ef() QosPolicyRuleDscpTosCodepointTypeEfPtrOutput {
 	return o.ApplyT(func(v QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeEf { return v.Ef }).(QosPolicyRuleDscpTosCodepointTypeEfPtrOutput)
 }
 
 // Tos
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypeOutput) Tos() QosPolicyRuleDscpTosCodepointTypeTosPtrOutput {
 	return o.ApplyT(func(v QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeTos { return v.Tos }).(QosPolicyRuleDscpTosCodepointTypeTosPtrOutput)
 }
@@ -59242,6 +63170,8 @@ func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Af() QosPolicyRuleDscpTosCod
 }
 
 // Cs
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Cs() QosPolicyRuleDscpTosCodepointTypeCsPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeCs {
 		if v == nil {
@@ -59252,6 +63182,8 @@ func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Cs() QosPolicyRuleDscpTosCod
 }
 
 // Custom
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Custom() QosPolicyRuleDscpTosCodepointTypeCustomPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeCustom {
 		if v == nil {
@@ -59262,6 +63194,8 @@ func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Custom() QosPolicyRuleDscpTo
 }
 
 // Ef
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Ef() QosPolicyRuleDscpTosCodepointTypeEfPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeEf {
 		if v == nil {
@@ -59272,6 +63206,8 @@ func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Ef() QosPolicyRuleDscpTosCod
 }
 
 // Tos
+//
+// > ℹ️ **Note:** You must specify exactly one of `af`, `cs`, `custom`, `ef`, and `tos`.
 func (o QosPolicyRuleDscpTosCodepointTypePtrOutput) Tos() QosPolicyRuleDscpTosCodepointTypeTosPtrOutput {
 	return o.ApplyT(func(v *QosPolicyRuleDscpTosCodepointType) *QosPolicyRuleDscpTosCodepointTypeTos {
 		if v == nil {
@@ -60265,6 +64201,8 @@ type QosProfileClassBandwidthType struct {
 	// Mbps
 	Mbps *QosProfileClassBandwidthTypeMbps `pulumi:"mbps"`
 	// Percentage
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
 	Percentage *QosProfileClassBandwidthTypePercentage `pulumi:"percentage"`
 }
 
@@ -60283,6 +64221,8 @@ type QosProfileClassBandwidthTypeArgs struct {
 	// Mbps
 	Mbps QosProfileClassBandwidthTypeMbpsPtrInput `pulumi:"mbps"`
 	// Percentage
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
 	Percentage QosProfileClassBandwidthTypePercentagePtrInput `pulumi:"percentage"`
 }
 
@@ -60369,6 +64309,8 @@ func (o QosProfileClassBandwidthTypeOutput) Mbps() QosProfileClassBandwidthTypeM
 }
 
 // Percentage
+//
+// > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
 func (o QosProfileClassBandwidthTypeOutput) Percentage() QosProfileClassBandwidthTypePercentagePtrOutput {
 	return o.ApplyT(func(v QosProfileClassBandwidthType) *QosProfileClassBandwidthTypePercentage { return v.Percentage }).(QosProfileClassBandwidthTypePercentagePtrOutput)
 }
@@ -60408,6 +64350,8 @@ func (o QosProfileClassBandwidthTypePtrOutput) Mbps() QosProfileClassBandwidthTy
 }
 
 // Percentage
+//
+// > ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
 func (o QosProfileClassBandwidthTypePtrOutput) Percentage() QosProfileClassBandwidthTypePercentagePtrOutput {
 	return o.ApplyT(func(v *QosProfileClassBandwidthType) *QosProfileClassBandwidthTypePercentage {
 		if v == nil {
@@ -64567,8 +68511,12 @@ type RouteCommunityListType struct {
 	// Extended
 	Extended *RouteCommunityListTypeExtended `pulumi:"extended"`
 	// Large
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 	Large *RouteCommunityListTypeLarge `pulumi:"large"`
 	// Regular
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 	Regular *RouteCommunityListTypeRegular `pulumi:"regular"`
 }
 
@@ -64587,8 +68535,12 @@ type RouteCommunityListTypeArgs struct {
 	// Extended
 	Extended RouteCommunityListTypeExtendedPtrInput `pulumi:"extended"`
 	// Large
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 	Large RouteCommunityListTypeLargePtrInput `pulumi:"large"`
 	// Regular
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 	Regular RouteCommunityListTypeRegularPtrInput `pulumi:"regular"`
 }
 
@@ -64675,11 +68627,15 @@ func (o RouteCommunityListTypeOutput) Extended() RouteCommunityListTypeExtendedP
 }
 
 // Large
+//
+// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 func (o RouteCommunityListTypeOutput) Large() RouteCommunityListTypeLargePtrOutput {
 	return o.ApplyT(func(v RouteCommunityListType) *RouteCommunityListTypeLarge { return v.Large }).(RouteCommunityListTypeLargePtrOutput)
 }
 
 // Regular
+//
+// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 func (o RouteCommunityListTypeOutput) Regular() RouteCommunityListTypeRegularPtrOutput {
 	return o.ApplyT(func(v RouteCommunityListType) *RouteCommunityListTypeRegular { return v.Regular }).(RouteCommunityListTypeRegularPtrOutput)
 }
@@ -64719,6 +68675,8 @@ func (o RouteCommunityListTypePtrOutput) Extended() RouteCommunityListTypeExtend
 }
 
 // Large
+//
+// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 func (o RouteCommunityListTypePtrOutput) Large() RouteCommunityListTypeLargePtrOutput {
 	return o.ApplyT(func(v *RouteCommunityListType) *RouteCommunityListTypeLarge {
 		if v == nil {
@@ -64729,6 +68687,8 @@ func (o RouteCommunityListTypePtrOutput) Large() RouteCommunityListTypeLargePtrO
 }
 
 // Regular
+//
+// > ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
 func (o RouteCommunityListTypePtrOutput) Regular() RouteCommunityListTypeRegularPtrOutput {
 	return o.ApplyT(func(v *RouteCommunityListType) *RouteCommunityListTypeRegular {
 		if v == nil {
@@ -65613,407 +69573,554 @@ func (o RoutePathAccessListAspathEntryArrayOutput) Index(i pulumi.IntInput) Rout
 	}).(RoutePathAccessListAspathEntryOutput)
 }
 
-type RoutePrefixListIpv4 struct {
-	// IPv4 prefix lists
-	Ipv4Entries []RoutePrefixListIpv4Ipv4Entry `pulumi:"ipv4Entries"`
+type RoutePrefixListType struct {
+	// Ipv4
+	Ipv4 RoutePrefixListTypeIpv4 `pulumi:"ipv4"`
 }
 
-// RoutePrefixListIpv4Input is an input type that accepts RoutePrefixListIpv4Args and RoutePrefixListIpv4Output values.
-// You can construct a concrete instance of `RoutePrefixListIpv4Input` via:
+// RoutePrefixListTypeInput is an input type that accepts RoutePrefixListTypeArgs and RoutePrefixListTypeOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeInput` via:
 //
-//	RoutePrefixListIpv4Args{...}
-type RoutePrefixListIpv4Input interface {
+//	RoutePrefixListTypeArgs{...}
+type RoutePrefixListTypeInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4Output() RoutePrefixListIpv4Output
-	ToRoutePrefixListIpv4OutputWithContext(context.Context) RoutePrefixListIpv4Output
+	ToRoutePrefixListTypeOutput() RoutePrefixListTypeOutput
+	ToRoutePrefixListTypeOutputWithContext(context.Context) RoutePrefixListTypeOutput
 }
 
-type RoutePrefixListIpv4Args struct {
-	// IPv4 prefix lists
-	Ipv4Entries RoutePrefixListIpv4Ipv4EntryArrayInput `pulumi:"ipv4Entries"`
+type RoutePrefixListTypeArgs struct {
+	// Ipv4
+	Ipv4 RoutePrefixListTypeIpv4Input `pulumi:"ipv4"`
 }
 
-func (RoutePrefixListIpv4Args) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4)(nil)).Elem()
+func (RoutePrefixListTypeArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListType)(nil)).Elem()
 }
 
-func (i RoutePrefixListIpv4Args) ToRoutePrefixListIpv4Output() RoutePrefixListIpv4Output {
-	return i.ToRoutePrefixListIpv4OutputWithContext(context.Background())
+func (i RoutePrefixListTypeArgs) ToRoutePrefixListTypeOutput() RoutePrefixListTypeOutput {
+	return i.ToRoutePrefixListTypeOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Args) ToRoutePrefixListIpv4OutputWithContext(ctx context.Context) RoutePrefixListIpv4Output {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Output)
+func (i RoutePrefixListTypeArgs) ToRoutePrefixListTypeOutputWithContext(ctx context.Context) RoutePrefixListTypeOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeOutput)
 }
 
-func (i RoutePrefixListIpv4Args) ToRoutePrefixListIpv4PtrOutput() RoutePrefixListIpv4PtrOutput {
-	return i.ToRoutePrefixListIpv4PtrOutputWithContext(context.Background())
+func (i RoutePrefixListTypeArgs) ToRoutePrefixListTypePtrOutput() RoutePrefixListTypePtrOutput {
+	return i.ToRoutePrefixListTypePtrOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Args) ToRoutePrefixListIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4PtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Output).ToRoutePrefixListIpv4PtrOutputWithContext(ctx)
+func (i RoutePrefixListTypeArgs) ToRoutePrefixListTypePtrOutputWithContext(ctx context.Context) RoutePrefixListTypePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeOutput).ToRoutePrefixListTypePtrOutputWithContext(ctx)
 }
 
-// RoutePrefixListIpv4PtrInput is an input type that accepts RoutePrefixListIpv4Args, RoutePrefixListIpv4Ptr and RoutePrefixListIpv4PtrOutput values.
-// You can construct a concrete instance of `RoutePrefixListIpv4PtrInput` via:
+// RoutePrefixListTypePtrInput is an input type that accepts RoutePrefixListTypeArgs, RoutePrefixListTypePtr and RoutePrefixListTypePtrOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypePtrInput` via:
 //
-//	        RoutePrefixListIpv4Args{...}
+//	        RoutePrefixListTypeArgs{...}
 //
 //	or:
 //
 //	        nil
-type RoutePrefixListIpv4PtrInput interface {
+type RoutePrefixListTypePtrInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4PtrOutput() RoutePrefixListIpv4PtrOutput
-	ToRoutePrefixListIpv4PtrOutputWithContext(context.Context) RoutePrefixListIpv4PtrOutput
+	ToRoutePrefixListTypePtrOutput() RoutePrefixListTypePtrOutput
+	ToRoutePrefixListTypePtrOutputWithContext(context.Context) RoutePrefixListTypePtrOutput
 }
 
-type routePrefixListIpv4PtrType RoutePrefixListIpv4Args
+type routePrefixListTypePtrType RoutePrefixListTypeArgs
 
-func RoutePrefixListIpv4Ptr(v *RoutePrefixListIpv4Args) RoutePrefixListIpv4PtrInput {
-	return (*routePrefixListIpv4PtrType)(v)
+func RoutePrefixListTypePtr(v *RoutePrefixListTypeArgs) RoutePrefixListTypePtrInput {
+	return (*routePrefixListTypePtrType)(v)
 }
 
-func (*routePrefixListIpv4PtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**RoutePrefixListIpv4)(nil)).Elem()
+func (*routePrefixListTypePtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListType)(nil)).Elem()
 }
 
-func (i *routePrefixListIpv4PtrType) ToRoutePrefixListIpv4PtrOutput() RoutePrefixListIpv4PtrOutput {
-	return i.ToRoutePrefixListIpv4PtrOutputWithContext(context.Background())
+func (i *routePrefixListTypePtrType) ToRoutePrefixListTypePtrOutput() RoutePrefixListTypePtrOutput {
+	return i.ToRoutePrefixListTypePtrOutputWithContext(context.Background())
 }
 
-func (i *routePrefixListIpv4PtrType) ToRoutePrefixListIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4PtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4PtrOutput)
+func (i *routePrefixListTypePtrType) ToRoutePrefixListTypePtrOutputWithContext(ctx context.Context) RoutePrefixListTypePtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypePtrOutput)
 }
 
-type RoutePrefixListIpv4Output struct{ *pulumi.OutputState }
+type RoutePrefixListTypeOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4Output) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4)(nil)).Elem()
+func (RoutePrefixListTypeOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListType)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4Output) ToRoutePrefixListIpv4Output() RoutePrefixListIpv4Output {
+func (o RoutePrefixListTypeOutput) ToRoutePrefixListTypeOutput() RoutePrefixListTypeOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Output) ToRoutePrefixListIpv4OutputWithContext(ctx context.Context) RoutePrefixListIpv4Output {
+func (o RoutePrefixListTypeOutput) ToRoutePrefixListTypeOutputWithContext(ctx context.Context) RoutePrefixListTypeOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Output) ToRoutePrefixListIpv4PtrOutput() RoutePrefixListIpv4PtrOutput {
-	return o.ToRoutePrefixListIpv4PtrOutputWithContext(context.Background())
+func (o RoutePrefixListTypeOutput) ToRoutePrefixListTypePtrOutput() RoutePrefixListTypePtrOutput {
+	return o.ToRoutePrefixListTypePtrOutputWithContext(context.Background())
 }
 
-func (o RoutePrefixListIpv4Output) ToRoutePrefixListIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4PtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v RoutePrefixListIpv4) *RoutePrefixListIpv4 {
+func (o RoutePrefixListTypeOutput) ToRoutePrefixListTypePtrOutputWithContext(ctx context.Context) RoutePrefixListTypePtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v RoutePrefixListType) *RoutePrefixListType {
 		return &v
-	}).(RoutePrefixListIpv4PtrOutput)
+	}).(RoutePrefixListTypePtrOutput)
 }
 
-// IPv4 prefix lists
-func (o RoutePrefixListIpv4Output) Ipv4Entries() RoutePrefixListIpv4Ipv4EntryArrayOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4) []RoutePrefixListIpv4Ipv4Entry { return v.Ipv4Entries }).(RoutePrefixListIpv4Ipv4EntryArrayOutput)
+// Ipv4
+func (o RoutePrefixListTypeOutput) Ipv4() RoutePrefixListTypeIpv4Output {
+	return o.ApplyT(func(v RoutePrefixListType) RoutePrefixListTypeIpv4 { return v.Ipv4 }).(RoutePrefixListTypeIpv4Output)
 }
 
-type RoutePrefixListIpv4PtrOutput struct{ *pulumi.OutputState }
+type RoutePrefixListTypePtrOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4PtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**RoutePrefixListIpv4)(nil)).Elem()
+func (RoutePrefixListTypePtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListType)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4PtrOutput) ToRoutePrefixListIpv4PtrOutput() RoutePrefixListIpv4PtrOutput {
+func (o RoutePrefixListTypePtrOutput) ToRoutePrefixListTypePtrOutput() RoutePrefixListTypePtrOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4PtrOutput) ToRoutePrefixListIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4PtrOutput {
+func (o RoutePrefixListTypePtrOutput) ToRoutePrefixListTypePtrOutputWithContext(ctx context.Context) RoutePrefixListTypePtrOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4PtrOutput) Elem() RoutePrefixListIpv4Output {
-	return o.ApplyT(func(v *RoutePrefixListIpv4) RoutePrefixListIpv4 {
+func (o RoutePrefixListTypePtrOutput) Elem() RoutePrefixListTypeOutput {
+	return o.ApplyT(func(v *RoutePrefixListType) RoutePrefixListType {
 		if v != nil {
 			return *v
 		}
-		var ret RoutePrefixListIpv4
+		var ret RoutePrefixListType
 		return ret
-	}).(RoutePrefixListIpv4Output)
+	}).(RoutePrefixListTypeOutput)
+}
+
+// Ipv4
+func (o RoutePrefixListTypePtrOutput) Ipv4() RoutePrefixListTypeIpv4PtrOutput {
+	return o.ApplyT(func(v *RoutePrefixListType) *RoutePrefixListTypeIpv4 {
+		if v == nil {
+			return nil
+		}
+		return &v.Ipv4
+	}).(RoutePrefixListTypeIpv4PtrOutput)
+}
+
+type RoutePrefixListTypeIpv4 struct {
+	// IPv4 prefix lists
+	Ipv4Entries []RoutePrefixListTypeIpv4Ipv4Entry `pulumi:"ipv4Entries"`
+}
+
+// RoutePrefixListTypeIpv4Input is an input type that accepts RoutePrefixListTypeIpv4Args and RoutePrefixListTypeIpv4Output values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4Input` via:
+//
+//	RoutePrefixListTypeIpv4Args{...}
+type RoutePrefixListTypeIpv4Input interface {
+	pulumi.Input
+
+	ToRoutePrefixListTypeIpv4Output() RoutePrefixListTypeIpv4Output
+	ToRoutePrefixListTypeIpv4OutputWithContext(context.Context) RoutePrefixListTypeIpv4Output
+}
+
+type RoutePrefixListTypeIpv4Args struct {
+	// IPv4 prefix lists
+	Ipv4Entries RoutePrefixListTypeIpv4Ipv4EntryArrayInput `pulumi:"ipv4Entries"`
+}
+
+func (RoutePrefixListTypeIpv4Args) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4)(nil)).Elem()
+}
+
+func (i RoutePrefixListTypeIpv4Args) ToRoutePrefixListTypeIpv4Output() RoutePrefixListTypeIpv4Output {
+	return i.ToRoutePrefixListTypeIpv4OutputWithContext(context.Background())
+}
+
+func (i RoutePrefixListTypeIpv4Args) ToRoutePrefixListTypeIpv4OutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Output {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Output)
+}
+
+func (i RoutePrefixListTypeIpv4Args) ToRoutePrefixListTypeIpv4PtrOutput() RoutePrefixListTypeIpv4PtrOutput {
+	return i.ToRoutePrefixListTypeIpv4PtrOutputWithContext(context.Background())
+}
+
+func (i RoutePrefixListTypeIpv4Args) ToRoutePrefixListTypeIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Output).ToRoutePrefixListTypeIpv4PtrOutputWithContext(ctx)
+}
+
+// RoutePrefixListTypeIpv4PtrInput is an input type that accepts RoutePrefixListTypeIpv4Args, RoutePrefixListTypeIpv4Ptr and RoutePrefixListTypeIpv4PtrOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4PtrInput` via:
+//
+//	        RoutePrefixListTypeIpv4Args{...}
+//
+//	or:
+//
+//	        nil
+type RoutePrefixListTypeIpv4PtrInput interface {
+	pulumi.Input
+
+	ToRoutePrefixListTypeIpv4PtrOutput() RoutePrefixListTypeIpv4PtrOutput
+	ToRoutePrefixListTypeIpv4PtrOutputWithContext(context.Context) RoutePrefixListTypeIpv4PtrOutput
+}
+
+type routePrefixListTypeIpv4PtrType RoutePrefixListTypeIpv4Args
+
+func RoutePrefixListTypeIpv4Ptr(v *RoutePrefixListTypeIpv4Args) RoutePrefixListTypeIpv4PtrInput {
+	return (*routePrefixListTypeIpv4PtrType)(v)
+}
+
+func (*routePrefixListTypeIpv4PtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListTypeIpv4)(nil)).Elem()
+}
+
+func (i *routePrefixListTypeIpv4PtrType) ToRoutePrefixListTypeIpv4PtrOutput() RoutePrefixListTypeIpv4PtrOutput {
+	return i.ToRoutePrefixListTypeIpv4PtrOutputWithContext(context.Background())
+}
+
+func (i *routePrefixListTypeIpv4PtrType) ToRoutePrefixListTypeIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4PtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4PtrOutput)
+}
+
+type RoutePrefixListTypeIpv4Output struct{ *pulumi.OutputState }
+
+func (RoutePrefixListTypeIpv4Output) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4)(nil)).Elem()
+}
+
+func (o RoutePrefixListTypeIpv4Output) ToRoutePrefixListTypeIpv4Output() RoutePrefixListTypeIpv4Output {
+	return o
+}
+
+func (o RoutePrefixListTypeIpv4Output) ToRoutePrefixListTypeIpv4OutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Output {
+	return o
+}
+
+func (o RoutePrefixListTypeIpv4Output) ToRoutePrefixListTypeIpv4PtrOutput() RoutePrefixListTypeIpv4PtrOutput {
+	return o.ToRoutePrefixListTypeIpv4PtrOutputWithContext(context.Background())
+}
+
+func (o RoutePrefixListTypeIpv4Output) ToRoutePrefixListTypeIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4PtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v RoutePrefixListTypeIpv4) *RoutePrefixListTypeIpv4 {
+		return &v
+	}).(RoutePrefixListTypeIpv4PtrOutput)
 }
 
 // IPv4 prefix lists
-func (o RoutePrefixListIpv4PtrOutput) Ipv4Entries() RoutePrefixListIpv4Ipv4EntryArrayOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4) []RoutePrefixListIpv4Ipv4Entry {
+func (o RoutePrefixListTypeIpv4Output) Ipv4Entries() RoutePrefixListTypeIpv4Ipv4EntryArrayOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4) []RoutePrefixListTypeIpv4Ipv4Entry { return v.Ipv4Entries }).(RoutePrefixListTypeIpv4Ipv4EntryArrayOutput)
+}
+
+type RoutePrefixListTypeIpv4PtrOutput struct{ *pulumi.OutputState }
+
+func (RoutePrefixListTypeIpv4PtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListTypeIpv4)(nil)).Elem()
+}
+
+func (o RoutePrefixListTypeIpv4PtrOutput) ToRoutePrefixListTypeIpv4PtrOutput() RoutePrefixListTypeIpv4PtrOutput {
+	return o
+}
+
+func (o RoutePrefixListTypeIpv4PtrOutput) ToRoutePrefixListTypeIpv4PtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4PtrOutput {
+	return o
+}
+
+func (o RoutePrefixListTypeIpv4PtrOutput) Elem() RoutePrefixListTypeIpv4Output {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4) RoutePrefixListTypeIpv4 {
+		if v != nil {
+			return *v
+		}
+		var ret RoutePrefixListTypeIpv4
+		return ret
+	}).(RoutePrefixListTypeIpv4Output)
+}
+
+// IPv4 prefix lists
+func (o RoutePrefixListTypeIpv4PtrOutput) Ipv4Entries() RoutePrefixListTypeIpv4Ipv4EntryArrayOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4) []RoutePrefixListTypeIpv4Ipv4Entry {
 		if v == nil {
 			return nil
 		}
 		return v.Ipv4Entries
-	}).(RoutePrefixListIpv4Ipv4EntryArrayOutput)
+	}).(RoutePrefixListTypeIpv4Ipv4EntryArrayOutput)
 }
 
-type RoutePrefixListIpv4Ipv4Entry struct {
+type RoutePrefixListTypeIpv4Ipv4Entry struct {
 	// Action
 	Action *string `pulumi:"action"`
 	// Sequence number
 	Name *int `pulumi:"name"`
 	// Prefix
-	Prefix *RoutePrefixListIpv4Ipv4EntryPrefix `pulumi:"prefix"`
+	Prefix *RoutePrefixListTypeIpv4Ipv4EntryPrefix `pulumi:"prefix"`
 }
 
-// RoutePrefixListIpv4Ipv4EntryInput is an input type that accepts RoutePrefixListIpv4Ipv4EntryArgs and RoutePrefixListIpv4Ipv4EntryOutput values.
-// You can construct a concrete instance of `RoutePrefixListIpv4Ipv4EntryInput` via:
+// RoutePrefixListTypeIpv4Ipv4EntryInput is an input type that accepts RoutePrefixListTypeIpv4Ipv4EntryArgs and RoutePrefixListTypeIpv4Ipv4EntryOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4Ipv4EntryInput` via:
 //
-//	RoutePrefixListIpv4Ipv4EntryArgs{...}
-type RoutePrefixListIpv4Ipv4EntryInput interface {
+//	RoutePrefixListTypeIpv4Ipv4EntryArgs{...}
+type RoutePrefixListTypeIpv4Ipv4EntryInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4Ipv4EntryOutput() RoutePrefixListIpv4Ipv4EntryOutput
-	ToRoutePrefixListIpv4Ipv4EntryOutputWithContext(context.Context) RoutePrefixListIpv4Ipv4EntryOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryOutput() RoutePrefixListTypeIpv4Ipv4EntryOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryOutputWithContext(context.Context) RoutePrefixListTypeIpv4Ipv4EntryOutput
 }
 
-type RoutePrefixListIpv4Ipv4EntryArgs struct {
+type RoutePrefixListTypeIpv4Ipv4EntryArgs struct {
 	// Action
 	Action pulumi.StringPtrInput `pulumi:"action"`
 	// Sequence number
 	Name pulumi.IntPtrInput `pulumi:"name"`
 	// Prefix
-	Prefix RoutePrefixListIpv4Ipv4EntryPrefixPtrInput `pulumi:"prefix"`
+	Prefix RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrInput `pulumi:"prefix"`
 }
 
-func (RoutePrefixListIpv4Ipv4EntryArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4Ipv4Entry)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4Entry)(nil)).Elem()
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryArgs) ToRoutePrefixListIpv4Ipv4EntryOutput() RoutePrefixListIpv4Ipv4EntryOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryOutputWithContext(context.Background())
+func (i RoutePrefixListTypeIpv4Ipv4EntryArgs) ToRoutePrefixListTypeIpv4Ipv4EntryOutput() RoutePrefixListTypeIpv4Ipv4EntryOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryArgs) ToRoutePrefixListIpv4Ipv4EntryOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryOutput)
+func (i RoutePrefixListTypeIpv4Ipv4EntryArgs) ToRoutePrefixListTypeIpv4Ipv4EntryOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryOutput)
 }
 
-// RoutePrefixListIpv4Ipv4EntryArrayInput is an input type that accepts RoutePrefixListIpv4Ipv4EntryArray and RoutePrefixListIpv4Ipv4EntryArrayOutput values.
-// You can construct a concrete instance of `RoutePrefixListIpv4Ipv4EntryArrayInput` via:
+// RoutePrefixListTypeIpv4Ipv4EntryArrayInput is an input type that accepts RoutePrefixListTypeIpv4Ipv4EntryArray and RoutePrefixListTypeIpv4Ipv4EntryArrayOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4Ipv4EntryArrayInput` via:
 //
-//	RoutePrefixListIpv4Ipv4EntryArray{ RoutePrefixListIpv4Ipv4EntryArgs{...} }
-type RoutePrefixListIpv4Ipv4EntryArrayInput interface {
+//	RoutePrefixListTypeIpv4Ipv4EntryArray{ RoutePrefixListTypeIpv4Ipv4EntryArgs{...} }
+type RoutePrefixListTypeIpv4Ipv4EntryArrayInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4Ipv4EntryArrayOutput() RoutePrefixListIpv4Ipv4EntryArrayOutput
-	ToRoutePrefixListIpv4Ipv4EntryArrayOutputWithContext(context.Context) RoutePrefixListIpv4Ipv4EntryArrayOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryArrayOutput() RoutePrefixListTypeIpv4Ipv4EntryArrayOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryArrayOutputWithContext(context.Context) RoutePrefixListTypeIpv4Ipv4EntryArrayOutput
 }
 
-type RoutePrefixListIpv4Ipv4EntryArray []RoutePrefixListIpv4Ipv4EntryInput
+type RoutePrefixListTypeIpv4Ipv4EntryArray []RoutePrefixListTypeIpv4Ipv4EntryInput
 
-func (RoutePrefixListIpv4Ipv4EntryArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]RoutePrefixListIpv4Ipv4Entry)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]RoutePrefixListTypeIpv4Ipv4Entry)(nil)).Elem()
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryArray) ToRoutePrefixListIpv4Ipv4EntryArrayOutput() RoutePrefixListIpv4Ipv4EntryArrayOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryArrayOutputWithContext(context.Background())
+func (i RoutePrefixListTypeIpv4Ipv4EntryArray) ToRoutePrefixListTypeIpv4Ipv4EntryArrayOutput() RoutePrefixListTypeIpv4Ipv4EntryArrayOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryArrayOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryArray) ToRoutePrefixListIpv4Ipv4EntryArrayOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryArrayOutput)
+func (i RoutePrefixListTypeIpv4Ipv4EntryArray) ToRoutePrefixListTypeIpv4Ipv4EntryArrayOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryArrayOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryOutput struct{ *pulumi.OutputState }
+type RoutePrefixListTypeIpv4Ipv4EntryOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4Ipv4EntryOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4Ipv4Entry)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4Entry)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryOutput) ToRoutePrefixListIpv4Ipv4EntryOutput() RoutePrefixListIpv4Ipv4EntryOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryOutput) ToRoutePrefixListTypeIpv4Ipv4EntryOutput() RoutePrefixListTypeIpv4Ipv4EntryOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryOutput) ToRoutePrefixListIpv4Ipv4EntryOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryOutput) ToRoutePrefixListTypeIpv4Ipv4EntryOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryOutput {
 	return o
 }
 
 // Action
-func (o RoutePrefixListIpv4Ipv4EntryOutput) Action() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4Entry) *string { return v.Action }).(pulumi.StringPtrOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryOutput) Action() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4Entry) *string { return v.Action }).(pulumi.StringPtrOutput)
 }
 
 // Sequence number
-func (o RoutePrefixListIpv4Ipv4EntryOutput) Name() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4Entry) *int { return v.Name }).(pulumi.IntPtrOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryOutput) Name() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4Entry) *int { return v.Name }).(pulumi.IntPtrOutput)
 }
 
 // Prefix
-func (o RoutePrefixListIpv4Ipv4EntryOutput) Prefix() RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4Entry) *RoutePrefixListIpv4Ipv4EntryPrefix { return v.Prefix }).(RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryOutput) Prefix() RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4Entry) *RoutePrefixListTypeIpv4Ipv4EntryPrefix { return v.Prefix }).(RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryArrayOutput struct{ *pulumi.OutputState }
+type RoutePrefixListTypeIpv4Ipv4EntryArrayOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4Ipv4EntryArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]RoutePrefixListIpv4Ipv4Entry)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]RoutePrefixListTypeIpv4Ipv4Entry)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryArrayOutput) ToRoutePrefixListIpv4Ipv4EntryArrayOutput() RoutePrefixListIpv4Ipv4EntryArrayOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryArrayOutput) ToRoutePrefixListTypeIpv4Ipv4EntryArrayOutput() RoutePrefixListTypeIpv4Ipv4EntryArrayOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryArrayOutput) ToRoutePrefixListIpv4Ipv4EntryArrayOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryArrayOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryArrayOutput) ToRoutePrefixListTypeIpv4Ipv4EntryArrayOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryArrayOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryArrayOutput) Index(i pulumi.IntInput) RoutePrefixListIpv4Ipv4EntryOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) RoutePrefixListIpv4Ipv4Entry {
-		return vs[0].([]RoutePrefixListIpv4Ipv4Entry)[vs[1].(int)]
-	}).(RoutePrefixListIpv4Ipv4EntryOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryArrayOutput) Index(i pulumi.IntInput) RoutePrefixListTypeIpv4Ipv4EntryOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) RoutePrefixListTypeIpv4Ipv4Entry {
+		return vs[0].([]RoutePrefixListTypeIpv4Ipv4Entry)[vs[1].(int)]
+	}).(RoutePrefixListTypeIpv4Ipv4EntryOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefix struct {
+type RoutePrefixListTypeIpv4Ipv4EntryPrefix struct {
 	// Entry
-	Entry *RoutePrefixListIpv4Ipv4EntryPrefixEntry `pulumi:"entry"`
+	Entry *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry `pulumi:"entry"`
 	// Network
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
 	Network *string `pulumi:"network"`
 }
 
-// RoutePrefixListIpv4Ipv4EntryPrefixInput is an input type that accepts RoutePrefixListIpv4Ipv4EntryPrefixArgs and RoutePrefixListIpv4Ipv4EntryPrefixOutput values.
-// You can construct a concrete instance of `RoutePrefixListIpv4Ipv4EntryPrefixInput` via:
+// RoutePrefixListTypeIpv4Ipv4EntryPrefixInput is an input type that accepts RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs and RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4Ipv4EntryPrefixInput` via:
 //
-//	RoutePrefixListIpv4Ipv4EntryPrefixArgs{...}
-type RoutePrefixListIpv4Ipv4EntryPrefixInput interface {
+//	RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{...}
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4Ipv4EntryPrefixOutput() RoutePrefixListIpv4Ipv4EntryPrefixOutput
-	ToRoutePrefixListIpv4Ipv4EntryPrefixOutputWithContext(context.Context) RoutePrefixListIpv4Ipv4EntryPrefixOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixOutputWithContext(context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefixArgs struct {
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs struct {
 	// Entry
-	Entry RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrInput `pulumi:"entry"`
+	Entry RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrInput `pulumi:"entry"`
 	// Network
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
 	Network pulumi.StringPtrInput `pulumi:"network"`
 }
 
-func (RoutePrefixListIpv4Ipv4EntryPrefixArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefix)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefix)(nil)).Elem()
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixOutput() RoutePrefixListIpv4Ipv4EntryPrefixOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryPrefixOutputWithContext(context.Background())
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryPrefixOutput)
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput)
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Background())
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryPrefixOutput).ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx)
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput).ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx)
 }
 
-// RoutePrefixListIpv4Ipv4EntryPrefixPtrInput is an input type that accepts RoutePrefixListIpv4Ipv4EntryPrefixArgs, RoutePrefixListIpv4Ipv4EntryPrefixPtr and RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput values.
-// You can construct a concrete instance of `RoutePrefixListIpv4Ipv4EntryPrefixPtrInput` via:
+// RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrInput is an input type that accepts RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs, RoutePrefixListTypeIpv4Ipv4EntryPrefixPtr and RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrInput` via:
 //
-//	        RoutePrefixListIpv4Ipv4EntryPrefixArgs{...}
+//	        RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{...}
 //
 //	or:
 //
 //	        nil
-type RoutePrefixListIpv4Ipv4EntryPrefixPtrInput interface {
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput
-	ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Context) RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput
 }
 
-type routePrefixListIpv4Ipv4EntryPrefixPtrType RoutePrefixListIpv4Ipv4EntryPrefixArgs
+type routePrefixListTypeIpv4Ipv4EntryPrefixPtrType RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs
 
-func RoutePrefixListIpv4Ipv4EntryPrefixPtr(v *RoutePrefixListIpv4Ipv4EntryPrefixArgs) RoutePrefixListIpv4Ipv4EntryPrefixPtrInput {
-	return (*routePrefixListIpv4Ipv4EntryPrefixPtrType)(v)
+func RoutePrefixListTypeIpv4Ipv4EntryPrefixPtr(v *RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs) RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrInput {
+	return (*routePrefixListTypeIpv4Ipv4EntryPrefixPtrType)(v)
 }
 
-func (*routePrefixListIpv4Ipv4EntryPrefixPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**RoutePrefixListIpv4Ipv4EntryPrefix)(nil)).Elem()
+func (*routePrefixListTypeIpv4Ipv4EntryPrefixPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListTypeIpv4Ipv4EntryPrefix)(nil)).Elem()
 }
 
-func (i *routePrefixListIpv4Ipv4EntryPrefixPtrType) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Background())
+func (i *routePrefixListTypeIpv4Ipv4EntryPrefixPtrType) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Background())
 }
 
-func (i *routePrefixListIpv4Ipv4EntryPrefixPtrType) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput)
+func (i *routePrefixListTypeIpv4Ipv4EntryPrefixPtrType) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefixOutput struct{ *pulumi.OutputState }
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4Ipv4EntryPrefixOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefix)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefix)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixOutput() RoutePrefixListIpv4Ipv4EntryPrefixOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
-	return o.ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Background())
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
+	return o.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(context.Background())
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v RoutePrefixListIpv4Ipv4EntryPrefix) *RoutePrefixListIpv4Ipv4EntryPrefix {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v RoutePrefixListTypeIpv4Ipv4EntryPrefix) *RoutePrefixListTypeIpv4Ipv4EntryPrefix {
 		return &v
-	}).(RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput)
+	}).(RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput)
 }
 
 // Entry
-func (o RoutePrefixListIpv4Ipv4EntryPrefixOutput) Entry() RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4EntryPrefix) *RoutePrefixListIpv4Ipv4EntryPrefixEntry { return v.Entry }).(RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput) Entry() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4EntryPrefix) *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry {
+		return v.Entry
+	}).(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput)
 }
 
 // Network
-func (o RoutePrefixListIpv4Ipv4EntryPrefixOutput) Network() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4EntryPrefix) *string { return v.Network }).(pulumi.StringPtrOutput)
+//
+// > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput) Network() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4EntryPrefix) *string { return v.Network }).(pulumi.StringPtrOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput struct{ *pulumi.OutputState }
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**RoutePrefixListIpv4Ipv4EntryPrefix)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListTypeIpv4Ipv4EntryPrefix)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput) Elem() RoutePrefixListIpv4Ipv4EntryPrefixOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4Ipv4EntryPrefix) RoutePrefixListIpv4Ipv4EntryPrefix {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput) Elem() RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4Ipv4EntryPrefix) RoutePrefixListTypeIpv4Ipv4EntryPrefix {
 		if v != nil {
 			return *v
 		}
-		var ret RoutePrefixListIpv4Ipv4EntryPrefix
+		var ret RoutePrefixListTypeIpv4Ipv4EntryPrefix
 		return ret
-	}).(RoutePrefixListIpv4Ipv4EntryPrefixOutput)
+	}).(RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput)
 }
 
 // Entry
-func (o RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput) Entry() RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4Ipv4EntryPrefix) *RoutePrefixListIpv4Ipv4EntryPrefixEntry {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput) Entry() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4Ipv4EntryPrefix) *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry {
 		if v == nil {
 			return nil
 		}
 		return v.Entry
-	}).(RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput)
+	}).(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput)
 }
 
 // Network
-func (o RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput) Network() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4Ipv4EntryPrefix) *string {
+//
+// > ℹ️ **Note:** You must specify exactly one of `entry` and `network`.
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput) Network() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4Ipv4EntryPrefix) *string {
 		if v == nil {
 			return nil
 		}
@@ -66021,7 +70128,7 @@ func (o RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput) Network() pulumi.StringPtrO
 	}).(pulumi.StringPtrOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefixEntry struct {
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry struct {
 	// Greater than or equal to
 	GreaterThanOrEqual *int `pulumi:"greaterThanOrEqual"`
 	// Less than or equal to
@@ -66030,18 +70137,18 @@ type RoutePrefixListIpv4Ipv4EntryPrefixEntry struct {
 	Network *string `pulumi:"network"`
 }
 
-// RoutePrefixListIpv4Ipv4EntryPrefixEntryInput is an input type that accepts RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs and RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput values.
-// You can construct a concrete instance of `RoutePrefixListIpv4Ipv4EntryPrefixEntryInput` via:
+// RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryInput is an input type that accepts RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs and RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryInput` via:
 //
-//	RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs{...}
-type RoutePrefixListIpv4Ipv4EntryPrefixEntryInput interface {
+//	RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs{...}
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4Ipv4EntryPrefixEntryOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput
-	ToRoutePrefixListIpv4Ipv4EntryPrefixEntryOutputWithContext(context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutputWithContext(context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs struct {
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs struct {
 	// Greater than or equal to
 	GreaterThanOrEqual pulumi.IntPtrInput `pulumi:"greaterThanOrEqual"`
 	// Less than or equal to
@@ -66050,125 +70157,125 @@ type RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs struct {
 	Network pulumi.StringPtrInput `pulumi:"network"`
 }
 
-func (RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryPrefixEntryOutputWithContext(context.Background())
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput)
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput)
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Background())
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Background())
 }
 
-func (i RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput).ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx)
+func (i RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput).ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx)
 }
 
-// RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrInput is an input type that accepts RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs, RoutePrefixListIpv4Ipv4EntryPrefixEntryPtr and RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput values.
-// You can construct a concrete instance of `RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrInput` via:
+// RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrInput is an input type that accepts RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs, RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtr and RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput values.
+// You can construct a concrete instance of `RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrInput` via:
 //
-//	        RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs{...}
+//	        RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs{...}
 //
 //	or:
 //
 //	        nil
-type RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrInput interface {
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrInput interface {
 	pulumi.Input
 
-	ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput
-	ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput
+	ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput
 }
 
-type routePrefixListIpv4Ipv4EntryPrefixEntryPtrType RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs
+type routePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrType RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs
 
-func RoutePrefixListIpv4Ipv4EntryPrefixEntryPtr(v *RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs) RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrInput {
-	return (*routePrefixListIpv4Ipv4EntryPrefixEntryPtrType)(v)
+func RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtr(v *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrInput {
+	return (*routePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrType)(v)
 }
 
-func (*routePrefixListIpv4Ipv4EntryPrefixEntryPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**RoutePrefixListIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
+func (*routePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
 }
 
-func (i *routePrefixListIpv4Ipv4EntryPrefixEntryPtrType) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return i.ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Background())
+func (i *routePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrType) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return i.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Background())
 }
 
-func (i *routePrefixListIpv4Ipv4EntryPrefixEntryPtrType) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput)
+func (i *routePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrType) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput struct{ *pulumi.OutputState }
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return o.ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Background())
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return o.ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(context.Background())
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v RoutePrefixListIpv4Ipv4EntryPrefixEntry) *RoutePrefixListIpv4Ipv4EntryPrefixEntry {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry {
 		return &v
-	}).(RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput)
+	}).(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput)
 }
 
 // Greater than or equal to
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) GreaterThanOrEqual() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4EntryPrefixEntry) *int { return v.GreaterThanOrEqual }).(pulumi.IntPtrOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) GreaterThanOrEqual() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) *int { return v.GreaterThanOrEqual }).(pulumi.IntPtrOutput)
 }
 
 // Less than or equal to
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) LessThanOrEqual() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4EntryPrefixEntry) *int { return v.LessThanOrEqual }).(pulumi.IntPtrOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) LessThanOrEqual() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) *int { return v.LessThanOrEqual }).(pulumi.IntPtrOutput)
 }
 
 // Network
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput) Network() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v RoutePrefixListIpv4Ipv4EntryPrefixEntry) *string { return v.Network }).(pulumi.StringPtrOutput)
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput) Network() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) *string { return v.Network }).(pulumi.StringPtrOutput)
 }
 
-type RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput struct{ *pulumi.OutputState }
+type RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput struct{ *pulumi.OutputState }
 
-func (RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**RoutePrefixListIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
+func (RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry)(nil)).Elem()
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) ToRoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput) ToRoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutputWithContext(ctx context.Context) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput {
 	return o
 }
 
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) Elem() RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4Ipv4EntryPrefixEntry) RoutePrefixListIpv4Ipv4EntryPrefixEntry {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput) Elem() RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry {
 		if v != nil {
 			return *v
 		}
-		var ret RoutePrefixListIpv4Ipv4EntryPrefixEntry
+		var ret RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry
 		return ret
-	}).(RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput)
+	}).(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput)
 }
 
 // Greater than or equal to
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) GreaterThanOrEqual() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4Ipv4EntryPrefixEntry) *int {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput) GreaterThanOrEqual() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) *int {
 		if v == nil {
 			return nil
 		}
@@ -66177,8 +70284,8 @@ func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) GreaterThanOrEqual() p
 }
 
 // Less than or equal to
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) LessThanOrEqual() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4Ipv4EntryPrefixEntry) *int {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput) LessThanOrEqual() pulumi.IntPtrOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) *int {
 		if v == nil {
 			return nil
 		}
@@ -66187,8 +70294,8 @@ func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) LessThanOrEqual() pulu
 }
 
 // Network
-func (o RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput) Network() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *RoutePrefixListIpv4Ipv4EntryPrefixEntry) *string {
+func (o RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput) Network() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *RoutePrefixListTypeIpv4Ipv4EntryPrefixEntry) *string {
 		if v == nil {
 			return nil
 		}
@@ -66474,8 +70581,12 @@ type ScepProfileCertificateAttributes struct {
 	// Dnsname
 	Dnsname *string `pulumi:"dnsname"`
 	// Rfc822name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 	Rfc822name *string `pulumi:"rfc822name"`
 	// Uniform resource identifier
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 	UniformResourceIdentifier *string `pulumi:"uniformResourceIdentifier"`
 }
 
@@ -66494,8 +70605,12 @@ type ScepProfileCertificateAttributesArgs struct {
 	// Dnsname
 	Dnsname pulumi.StringPtrInput `pulumi:"dnsname"`
 	// Rfc822name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 	Rfc822name pulumi.StringPtrInput `pulumi:"rfc822name"`
 	// Uniform resource identifier
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 	UniformResourceIdentifier pulumi.StringPtrInput `pulumi:"uniformResourceIdentifier"`
 }
 
@@ -66582,11 +70697,15 @@ func (o ScepProfileCertificateAttributesOutput) Dnsname() pulumi.StringPtrOutput
 }
 
 // Rfc822name
+//
+// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 func (o ScepProfileCertificateAttributesOutput) Rfc822name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ScepProfileCertificateAttributes) *string { return v.Rfc822name }).(pulumi.StringPtrOutput)
 }
 
 // Uniform resource identifier
+//
+// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 func (o ScepProfileCertificateAttributesOutput) UniformResourceIdentifier() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ScepProfileCertificateAttributes) *string { return v.UniformResourceIdentifier }).(pulumi.StringPtrOutput)
 }
@@ -66626,6 +70745,8 @@ func (o ScepProfileCertificateAttributesPtrOutput) Dnsname() pulumi.StringPtrOut
 }
 
 // Rfc822name
+//
+// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 func (o ScepProfileCertificateAttributesPtrOutput) Rfc822name() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfileCertificateAttributes) *string {
 		if v == nil {
@@ -66636,6 +70757,8 @@ func (o ScepProfileCertificateAttributesPtrOutput) Rfc822name() pulumi.StringPtr
 }
 
 // Uniform resource identifier
+//
+// > ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
 func (o ScepProfileCertificateAttributesPtrOutput) UniformResourceIdentifier() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfileCertificateAttributes) *string {
 		if v == nil {
@@ -66649,8 +70772,12 @@ type ScepProfileScepChallenge struct {
 	// Dynamic
 	Dynamic *ScepProfileScepChallengeDynamic `pulumi:"dynamic"`
 	// Challenge to use for SCEP server on mobile clients
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 	Fixed *string `pulumi:"fixed"`
 	// No OTP
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 	None *string `pulumi:"none"`
 }
 
@@ -66669,8 +70796,12 @@ type ScepProfileScepChallengeArgs struct {
 	// Dynamic
 	Dynamic ScepProfileScepChallengeDynamicPtrInput `pulumi:"dynamic"`
 	// Challenge to use for SCEP server on mobile clients
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 	Fixed pulumi.StringPtrInput `pulumi:"fixed"`
 	// No OTP
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 	None pulumi.StringPtrInput `pulumi:"none"`
 }
 
@@ -66757,11 +70888,15 @@ func (o ScepProfileScepChallengeOutput) Dynamic() ScepProfileScepChallengeDynami
 }
 
 // Challenge to use for SCEP server on mobile clients
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 func (o ScepProfileScepChallengeOutput) Fixed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ScepProfileScepChallenge) *string { return v.Fixed }).(pulumi.StringPtrOutput)
 }
 
 // No OTP
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 func (o ScepProfileScepChallengeOutput) None() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v ScepProfileScepChallenge) *string { return v.None }).(pulumi.StringPtrOutput)
 }
@@ -66801,6 +70936,8 @@ func (o ScepProfileScepChallengePtrOutput) Dynamic() ScepProfileScepChallengeDyn
 }
 
 // Challenge to use for SCEP server on mobile clients
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 func (o ScepProfileScepChallengePtrOutput) Fixed() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfileScepChallenge) *string {
 		if v == nil {
@@ -66811,6 +70948,8 @@ func (o ScepProfileScepChallengePtrOutput) Fixed() pulumi.StringPtrOutput {
 }
 
 // No OTP
+//
+// > ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
 func (o ScepProfileScepChallengePtrOutput) None() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *ScepProfileScepChallenge) *string {
 		if v == nil {
@@ -66999,6 +71138,8 @@ type ScheduleScheduleType struct {
 	// Non recurring
 	NonRecurrings []string `pulumi:"nonRecurrings"`
 	// Recurring
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
 	Recurring *ScheduleScheduleTypeRecurring `pulumi:"recurring"`
 }
 
@@ -67017,6 +71158,8 @@ type ScheduleScheduleTypeArgs struct {
 	// Non recurring
 	NonRecurrings pulumi.StringArrayInput `pulumi:"nonRecurrings"`
 	// Recurring
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
 	Recurring ScheduleScheduleTypeRecurringPtrInput `pulumi:"recurring"`
 }
 
@@ -67103,6 +71246,8 @@ func (o ScheduleScheduleTypeOutput) NonRecurrings() pulumi.StringArrayOutput {
 }
 
 // Recurring
+//
+// > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
 func (o ScheduleScheduleTypeOutput) Recurring() ScheduleScheduleTypeRecurringPtrOutput {
 	return o.ApplyT(func(v ScheduleScheduleType) *ScheduleScheduleTypeRecurring { return v.Recurring }).(ScheduleScheduleTypeRecurringPtrOutput)
 }
@@ -67142,6 +71287,8 @@ func (o ScheduleScheduleTypePtrOutput) NonRecurrings() pulumi.StringArrayOutput 
 }
 
 // Recurring
+//
+// > ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
 func (o ScheduleScheduleTypePtrOutput) Recurring() ScheduleScheduleTypeRecurringPtrOutput {
 	return o.ApplyT(func(v *ScheduleScheduleType) *ScheduleScheduleTypeRecurring {
 		if v == nil {
@@ -67155,6 +71302,8 @@ type ScheduleScheduleTypeRecurring struct {
 	// Daily
 	Dailies []string `pulumi:"dailies"`
 	// Weekly
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
 	Weekly *ScheduleScheduleTypeRecurringWeekly `pulumi:"weekly"`
 }
 
@@ -67173,6 +71322,8 @@ type ScheduleScheduleTypeRecurringArgs struct {
 	// Daily
 	Dailies pulumi.StringArrayInput `pulumi:"dailies"`
 	// Weekly
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
 	Weekly ScheduleScheduleTypeRecurringWeeklyPtrInput `pulumi:"weekly"`
 }
 
@@ -67259,6 +71410,8 @@ func (o ScheduleScheduleTypeRecurringOutput) Dailies() pulumi.StringArrayOutput 
 }
 
 // Weekly
+//
+// > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
 func (o ScheduleScheduleTypeRecurringOutput) Weekly() ScheduleScheduleTypeRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v ScheduleScheduleTypeRecurring) *ScheduleScheduleTypeRecurringWeekly { return v.Weekly }).(ScheduleScheduleTypeRecurringWeeklyPtrOutput)
 }
@@ -67298,6 +71451,8 @@ func (o ScheduleScheduleTypeRecurringPtrOutput) Dailies() pulumi.StringArrayOutp
 }
 
 // Weekly
+//
+// > ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
 func (o ScheduleScheduleTypeRecurringPtrOutput) Weekly() ScheduleScheduleTypeRecurringWeeklyPtrOutput {
 	return o.ApplyT(func(v *ScheduleScheduleTypeRecurring) *ScheduleScheduleTypeRecurringWeekly {
 		if v == nil {
@@ -67562,6 +71717,8 @@ type SdwanErrorCorrectionProfileMode struct {
 	// Forward error correction
 	ForwardErrorCorrection *SdwanErrorCorrectionProfileModeForwardErrorCorrection `pulumi:"forwardErrorCorrection"`
 	// Packet duplication
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
 	PacketDuplication *SdwanErrorCorrectionProfileModePacketDuplication `pulumi:"packetDuplication"`
 }
 
@@ -67580,6 +71737,8 @@ type SdwanErrorCorrectionProfileModeArgs struct {
 	// Forward error correction
 	ForwardErrorCorrection SdwanErrorCorrectionProfileModeForwardErrorCorrectionPtrInput `pulumi:"forwardErrorCorrection"`
 	// Packet duplication
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
 	PacketDuplication SdwanErrorCorrectionProfileModePacketDuplicationPtrInput `pulumi:"packetDuplication"`
 }
 
@@ -67668,6 +71827,8 @@ func (o SdwanErrorCorrectionProfileModeOutput) ForwardErrorCorrection() SdwanErr
 }
 
 // Packet duplication
+//
+// > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
 func (o SdwanErrorCorrectionProfileModeOutput) PacketDuplication() SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
 	return o.ApplyT(func(v SdwanErrorCorrectionProfileMode) *SdwanErrorCorrectionProfileModePacketDuplication {
 		return v.PacketDuplication
@@ -67709,6 +71870,8 @@ func (o SdwanErrorCorrectionProfileModePtrOutput) ForwardErrorCorrection() Sdwan
 }
 
 // Packet duplication
+//
+// > ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
 func (o SdwanErrorCorrectionProfileModePtrOutput) PacketDuplication() SdwanErrorCorrectionProfileModePacketDuplicationPtrOutput {
 	return o.ApplyT(func(v *SdwanErrorCorrectionProfileMode) *SdwanErrorCorrectionProfileModePacketDuplication {
 		if v == nil {
@@ -68795,8 +72958,12 @@ type SdwanSaasQualityProfileMonitorMode struct {
 	// Adaptive
 	Adaptive *SdwanSaasQualityProfileMonitorModeAdaptive `pulumi:"adaptive"`
 	// Http https
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 	HttpHttps *SdwanSaasQualityProfileMonitorModeHttpHttps `pulumi:"httpHttps"`
 	// Static ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 	StaticIp *SdwanSaasQualityProfileMonitorModeStaticIp `pulumi:"staticIp"`
 }
 
@@ -68815,8 +72982,12 @@ type SdwanSaasQualityProfileMonitorModeArgs struct {
 	// Adaptive
 	Adaptive SdwanSaasQualityProfileMonitorModeAdaptivePtrInput `pulumi:"adaptive"`
 	// Http https
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 	HttpHttps SdwanSaasQualityProfileMonitorModeHttpHttpsPtrInput `pulumi:"httpHttps"`
 	// Static ip
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 	StaticIp SdwanSaasQualityProfileMonitorModeStaticIpPtrInput `pulumi:"staticIp"`
 }
 
@@ -68905,6 +73076,8 @@ func (o SdwanSaasQualityProfileMonitorModeOutput) Adaptive() SdwanSaasQualityPro
 }
 
 // Http https
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 func (o SdwanSaasQualityProfileMonitorModeOutput) HttpHttps() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
 	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeHttpHttps {
 		return v.HttpHttps
@@ -68912,6 +73085,8 @@ func (o SdwanSaasQualityProfileMonitorModeOutput) HttpHttps() SdwanSaasQualityPr
 }
 
 // Static ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 func (o SdwanSaasQualityProfileMonitorModeOutput) StaticIp() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
 	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeStaticIp {
 		return v.StaticIp
@@ -68953,6 +73128,8 @@ func (o SdwanSaasQualityProfileMonitorModePtrOutput) Adaptive() SdwanSaasQuality
 }
 
 // Http https
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 func (o SdwanSaasQualityProfileMonitorModePtrOutput) HttpHttps() SdwanSaasQualityProfileMonitorModeHttpHttpsPtrOutput {
 	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeHttpHttps {
 		if v == nil {
@@ -68963,6 +73140,8 @@ func (o SdwanSaasQualityProfileMonitorModePtrOutput) HttpHttps() SdwanSaasQualit
 }
 
 // Static ip
+//
+// > ℹ️ **Note:** You must specify exactly one of `adaptive`, `httpHttps`, and `staticIp`.
 func (o SdwanSaasQualityProfileMonitorModePtrOutput) StaticIp() SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput {
 	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorMode) *SdwanSaasQualityProfileMonitorModeStaticIp {
 		if v == nil {
@@ -69250,6 +73429,8 @@ type SdwanSaasQualityProfileMonitorModeStaticIp struct {
 	// Fqdn
 	Fqdn *SdwanSaasQualityProfileMonitorModeStaticIpFqdn `pulumi:"fqdn"`
 	// List of IP addresses
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddresses []SdwanSaasQualityProfileMonitorModeStaticIpIpAddress `pulumi:"ipAddresses"`
 }
 
@@ -69268,6 +73449,8 @@ type SdwanSaasQualityProfileMonitorModeStaticIpArgs struct {
 	// Fqdn
 	Fqdn SdwanSaasQualityProfileMonitorModeStaticIpFqdnPtrInput `pulumi:"fqdn"`
 	// List of IP addresses
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 	IpAddresses SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayInput `pulumi:"ipAddresses"`
 }
 
@@ -69356,6 +73539,8 @@ func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) Fqdn() SdwanSaasQualit
 }
 
 // List of IP addresses
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o SdwanSaasQualityProfileMonitorModeStaticIpOutput) IpAddresses() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
 	return o.ApplyT(func(v SdwanSaasQualityProfileMonitorModeStaticIp) []SdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
 		return v.IpAddresses
@@ -69397,6 +73582,8 @@ func (o SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) Fqdn() SdwanSaasQua
 }
 
 // List of IP addresses
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
 func (o SdwanSaasQualityProfileMonitorModeStaticIpPtrOutput) IpAddresses() SdwanSaasQualityProfileMonitorModeStaticIpIpAddressArrayOutput {
 	return o.ApplyT(func(v *SdwanSaasQualityProfileMonitorModeStaticIp) []SdwanSaasQualityProfileMonitorModeStaticIpIpAddress {
 		if v == nil {
@@ -72623,6 +76810,8 @@ type ServiceProtocol struct {
 	// Tcp
 	Tcp *ServiceProtocolTcp `pulumi:"tcp"`
 	// Udp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
 	Udp *ServiceProtocolUdp `pulumi:"udp"`
 }
 
@@ -72641,6 +76830,8 @@ type ServiceProtocolArgs struct {
 	// Tcp
 	Tcp ServiceProtocolTcpPtrInput `pulumi:"tcp"`
 	// Udp
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
 	Udp ServiceProtocolUdpPtrInput `pulumi:"udp"`
 }
 
@@ -72727,6 +76918,8 @@ func (o ServiceProtocolOutput) Tcp() ServiceProtocolTcpPtrOutput {
 }
 
 // Udp
+//
+// > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
 func (o ServiceProtocolOutput) Udp() ServiceProtocolUdpPtrOutput {
 	return o.ApplyT(func(v ServiceProtocol) *ServiceProtocolUdp { return v.Udp }).(ServiceProtocolUdpPtrOutput)
 }
@@ -72766,6 +76959,8 @@ func (o ServiceProtocolPtrOutput) Tcp() ServiceProtocolTcpPtrOutput {
 }
 
 // Udp
+//
+// > ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
 func (o ServiceProtocolPtrOutput) Udp() ServiceProtocolUdpPtrOutput {
 	return o.ApplyT(func(v *ServiceProtocol) *ServiceProtocolUdp {
 		if v == nil {
@@ -73435,6 +77630,305 @@ func (o ServiceProtocolUdpOverridePtrOutput) Timeout() pulumi.IntPtrOutput {
 		}
 		return v.Timeout
 	}).(pulumi.IntPtrOutput)
+}
+
+type SiteMember struct {
+	// UUID of the remote network
+	Id *string `pulumi:"id"`
+	// The mode of the remote network
+	Mode string `pulumi:"mode"`
+	// The member name
+	Name string `pulumi:"name"`
+	// The remote network name
+	RemoteNetwork *string `pulumi:"remoteNetwork"`
+}
+
+// SiteMemberInput is an input type that accepts SiteMemberArgs and SiteMemberOutput values.
+// You can construct a concrete instance of `SiteMemberInput` via:
+//
+//	SiteMemberArgs{...}
+type SiteMemberInput interface {
+	pulumi.Input
+
+	ToSiteMemberOutput() SiteMemberOutput
+	ToSiteMemberOutputWithContext(context.Context) SiteMemberOutput
+}
+
+type SiteMemberArgs struct {
+	// UUID of the remote network
+	Id pulumi.StringPtrInput `pulumi:"id"`
+	// The mode of the remote network
+	Mode pulumi.StringInput `pulumi:"mode"`
+	// The member name
+	Name pulumi.StringInput `pulumi:"name"`
+	// The remote network name
+	RemoteNetwork pulumi.StringPtrInput `pulumi:"remoteNetwork"`
+}
+
+func (SiteMemberArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SiteMember)(nil)).Elem()
+}
+
+func (i SiteMemberArgs) ToSiteMemberOutput() SiteMemberOutput {
+	return i.ToSiteMemberOutputWithContext(context.Background())
+}
+
+func (i SiteMemberArgs) ToSiteMemberOutputWithContext(ctx context.Context) SiteMemberOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SiteMemberOutput)
+}
+
+// SiteMemberArrayInput is an input type that accepts SiteMemberArray and SiteMemberArrayOutput values.
+// You can construct a concrete instance of `SiteMemberArrayInput` via:
+//
+//	SiteMemberArray{ SiteMemberArgs{...} }
+type SiteMemberArrayInput interface {
+	pulumi.Input
+
+	ToSiteMemberArrayOutput() SiteMemberArrayOutput
+	ToSiteMemberArrayOutputWithContext(context.Context) SiteMemberArrayOutput
+}
+
+type SiteMemberArray []SiteMemberInput
+
+func (SiteMemberArray) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SiteMember)(nil)).Elem()
+}
+
+func (i SiteMemberArray) ToSiteMemberArrayOutput() SiteMemberArrayOutput {
+	return i.ToSiteMemberArrayOutputWithContext(context.Background())
+}
+
+func (i SiteMemberArray) ToSiteMemberArrayOutputWithContext(ctx context.Context) SiteMemberArrayOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SiteMemberArrayOutput)
+}
+
+type SiteMemberOutput struct{ *pulumi.OutputState }
+
+func (SiteMemberOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SiteMember)(nil)).Elem()
+}
+
+func (o SiteMemberOutput) ToSiteMemberOutput() SiteMemberOutput {
+	return o
+}
+
+func (o SiteMemberOutput) ToSiteMemberOutputWithContext(ctx context.Context) SiteMemberOutput {
+	return o
+}
+
+// UUID of the remote network
+func (o SiteMemberOutput) Id() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SiteMember) *string { return v.Id }).(pulumi.StringPtrOutput)
+}
+
+// The mode of the remote network
+func (o SiteMemberOutput) Mode() pulumi.StringOutput {
+	return o.ApplyT(func(v SiteMember) string { return v.Mode }).(pulumi.StringOutput)
+}
+
+// The member name
+func (o SiteMemberOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v SiteMember) string { return v.Name }).(pulumi.StringOutput)
+}
+
+// The remote network name
+func (o SiteMemberOutput) RemoteNetwork() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SiteMember) *string { return v.RemoteNetwork }).(pulumi.StringPtrOutput)
+}
+
+type SiteMemberArrayOutput struct{ *pulumi.OutputState }
+
+func (SiteMemberArrayOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*[]SiteMember)(nil)).Elem()
+}
+
+func (o SiteMemberArrayOutput) ToSiteMemberArrayOutput() SiteMemberArrayOutput {
+	return o
+}
+
+func (o SiteMemberArrayOutput) ToSiteMemberArrayOutputWithContext(ctx context.Context) SiteMemberArrayOutput {
+	return o
+}
+
+func (o SiteMemberArrayOutput) Index(i pulumi.IntInput) SiteMemberOutput {
+	return pulumi.All(o, i).ApplyT(func(vs []interface{}) SiteMember {
+		return vs[0].([]SiteMember)[vs[1].(int)]
+	}).(SiteMemberOutput)
+}
+
+type SiteQos struct {
+	// The backup CIR in Mbps. This is distributed equally for all tunnels in the site.
+	BackupCir *float64 `pulumi:"backupCir"`
+	// The CIR in Mbps. This is distributed equally for all tunnels in the site.
+	Cir *float64 `pulumi:"cir"`
+	// The name of the site QoS profile
+	Profile *string `pulumi:"profile"`
+}
+
+// SiteQosInput is an input type that accepts SiteQosArgs and SiteQosOutput values.
+// You can construct a concrete instance of `SiteQosInput` via:
+//
+//	SiteQosArgs{...}
+type SiteQosInput interface {
+	pulumi.Input
+
+	ToSiteQosOutput() SiteQosOutput
+	ToSiteQosOutputWithContext(context.Context) SiteQosOutput
+}
+
+type SiteQosArgs struct {
+	// The backup CIR in Mbps. This is distributed equally for all tunnels in the site.
+	BackupCir pulumi.Float64PtrInput `pulumi:"backupCir"`
+	// The CIR in Mbps. This is distributed equally for all tunnels in the site.
+	Cir pulumi.Float64PtrInput `pulumi:"cir"`
+	// The name of the site QoS profile
+	Profile pulumi.StringPtrInput `pulumi:"profile"`
+}
+
+func (SiteQosArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*SiteQos)(nil)).Elem()
+}
+
+func (i SiteQosArgs) ToSiteQosOutput() SiteQosOutput {
+	return i.ToSiteQosOutputWithContext(context.Background())
+}
+
+func (i SiteQosArgs) ToSiteQosOutputWithContext(ctx context.Context) SiteQosOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SiteQosOutput)
+}
+
+func (i SiteQosArgs) ToSiteQosPtrOutput() SiteQosPtrOutput {
+	return i.ToSiteQosPtrOutputWithContext(context.Background())
+}
+
+func (i SiteQosArgs) ToSiteQosPtrOutputWithContext(ctx context.Context) SiteQosPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SiteQosOutput).ToSiteQosPtrOutputWithContext(ctx)
+}
+
+// SiteQosPtrInput is an input type that accepts SiteQosArgs, SiteQosPtr and SiteQosPtrOutput values.
+// You can construct a concrete instance of `SiteQosPtrInput` via:
+//
+//	        SiteQosArgs{...}
+//
+//	or:
+//
+//	        nil
+type SiteQosPtrInput interface {
+	pulumi.Input
+
+	ToSiteQosPtrOutput() SiteQosPtrOutput
+	ToSiteQosPtrOutputWithContext(context.Context) SiteQosPtrOutput
+}
+
+type siteQosPtrType SiteQosArgs
+
+func SiteQosPtr(v *SiteQosArgs) SiteQosPtrInput {
+	return (*siteQosPtrType)(v)
+}
+
+func (*siteQosPtrType) ElementType() reflect.Type {
+	return reflect.TypeOf((**SiteQos)(nil)).Elem()
+}
+
+func (i *siteQosPtrType) ToSiteQosPtrOutput() SiteQosPtrOutput {
+	return i.ToSiteQosPtrOutputWithContext(context.Background())
+}
+
+func (i *siteQosPtrType) ToSiteQosPtrOutputWithContext(ctx context.Context) SiteQosPtrOutput {
+	return pulumi.ToOutputWithContext(ctx, i).(SiteQosPtrOutput)
+}
+
+type SiteQosOutput struct{ *pulumi.OutputState }
+
+func (SiteQosOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*SiteQos)(nil)).Elem()
+}
+
+func (o SiteQosOutput) ToSiteQosOutput() SiteQosOutput {
+	return o
+}
+
+func (o SiteQosOutput) ToSiteQosOutputWithContext(ctx context.Context) SiteQosOutput {
+	return o
+}
+
+func (o SiteQosOutput) ToSiteQosPtrOutput() SiteQosPtrOutput {
+	return o.ToSiteQosPtrOutputWithContext(context.Background())
+}
+
+func (o SiteQosOutput) ToSiteQosPtrOutputWithContext(ctx context.Context) SiteQosPtrOutput {
+	return o.ApplyTWithContext(ctx, func(_ context.Context, v SiteQos) *SiteQos {
+		return &v
+	}).(SiteQosPtrOutput)
+}
+
+// The backup CIR in Mbps. This is distributed equally for all tunnels in the site.
+func (o SiteQosOutput) BackupCir() pulumi.Float64PtrOutput {
+	return o.ApplyT(func(v SiteQos) *float64 { return v.BackupCir }).(pulumi.Float64PtrOutput)
+}
+
+// The CIR in Mbps. This is distributed equally for all tunnels in the site.
+func (o SiteQosOutput) Cir() pulumi.Float64PtrOutput {
+	return o.ApplyT(func(v SiteQos) *float64 { return v.Cir }).(pulumi.Float64PtrOutput)
+}
+
+// The name of the site QoS profile
+func (o SiteQosOutput) Profile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v SiteQos) *string { return v.Profile }).(pulumi.StringPtrOutput)
+}
+
+type SiteQosPtrOutput struct{ *pulumi.OutputState }
+
+func (SiteQosPtrOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((**SiteQos)(nil)).Elem()
+}
+
+func (o SiteQosPtrOutput) ToSiteQosPtrOutput() SiteQosPtrOutput {
+	return o
+}
+
+func (o SiteQosPtrOutput) ToSiteQosPtrOutputWithContext(ctx context.Context) SiteQosPtrOutput {
+	return o
+}
+
+func (o SiteQosPtrOutput) Elem() SiteQosOutput {
+	return o.ApplyT(func(v *SiteQos) SiteQos {
+		if v != nil {
+			return *v
+		}
+		var ret SiteQos
+		return ret
+	}).(SiteQosOutput)
+}
+
+// The backup CIR in Mbps. This is distributed equally for all tunnels in the site.
+func (o SiteQosPtrOutput) BackupCir() pulumi.Float64PtrOutput {
+	return o.ApplyT(func(v *SiteQos) *float64 {
+		if v == nil {
+			return nil
+		}
+		return v.BackupCir
+	}).(pulumi.Float64PtrOutput)
+}
+
+// The CIR in Mbps. This is distributed equally for all tunnels in the site.
+func (o SiteQosPtrOutput) Cir() pulumi.Float64PtrOutput {
+	return o.ApplyT(func(v *SiteQos) *float64 {
+		if v == nil {
+			return nil
+		}
+		return v.Cir
+	}).(pulumi.Float64PtrOutput)
+}
+
+// The name of the site QoS profile
+func (o SiteQosPtrOutput) Profile() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *SiteQos) *string {
+		if v == nil {
+			return nil
+		}
+		return v.Profile
+	}).(pulumi.StringPtrOutput)
 }
 
 type SyslogServerProfileFormat struct {
@@ -76226,3437 +80720,47 @@ func (o UrlAccessProfileCredentialEnforcementModeIpUserPtrOutput) Elem() UrlAcce
 	}).(UrlAccessProfileCredentialEnforcementModeIpUserOutput)
 }
 
-type VlanInterfaceArp struct {
-	// MAC address
-	HwAddress *string `pulumi:"hwAddress"`
-	// ARP interface
-	Interface *string `pulumi:"interface"`
-	// IP address
-	Name *string `pulumi:"name"`
-}
-
-// VlanInterfaceArpInput is an input type that accepts VlanInterfaceArpArgs and VlanInterfaceArpOutput values.
-// You can construct a concrete instance of `VlanInterfaceArpInput` via:
-//
-//	VlanInterfaceArpArgs{...}
-type VlanInterfaceArpInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceArpOutput() VlanInterfaceArpOutput
-	ToVlanInterfaceArpOutputWithContext(context.Context) VlanInterfaceArpOutput
-}
-
-type VlanInterfaceArpArgs struct {
-	// MAC address
-	HwAddress pulumi.StringPtrInput `pulumi:"hwAddress"`
-	// ARP interface
-	Interface pulumi.StringPtrInput `pulumi:"interface"`
-	// IP address
-	Name pulumi.StringPtrInput `pulumi:"name"`
-}
-
-func (VlanInterfaceArpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceArp)(nil)).Elem()
-}
-
-func (i VlanInterfaceArpArgs) ToVlanInterfaceArpOutput() VlanInterfaceArpOutput {
-	return i.ToVlanInterfaceArpOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceArpArgs) ToVlanInterfaceArpOutputWithContext(ctx context.Context) VlanInterfaceArpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceArpOutput)
-}
-
-// VlanInterfaceArpArrayInput is an input type that accepts VlanInterfaceArpArray and VlanInterfaceArpArrayOutput values.
-// You can construct a concrete instance of `VlanInterfaceArpArrayInput` via:
-//
-//	VlanInterfaceArpArray{ VlanInterfaceArpArgs{...} }
-type VlanInterfaceArpArrayInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceArpArrayOutput() VlanInterfaceArpArrayOutput
-	ToVlanInterfaceArpArrayOutputWithContext(context.Context) VlanInterfaceArpArrayOutput
-}
-
-type VlanInterfaceArpArray []VlanInterfaceArpInput
-
-func (VlanInterfaceArpArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VlanInterfaceArp)(nil)).Elem()
-}
-
-func (i VlanInterfaceArpArray) ToVlanInterfaceArpArrayOutput() VlanInterfaceArpArrayOutput {
-	return i.ToVlanInterfaceArpArrayOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceArpArray) ToVlanInterfaceArpArrayOutputWithContext(ctx context.Context) VlanInterfaceArpArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceArpArrayOutput)
-}
-
-type VlanInterfaceArpOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceArpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceArp)(nil)).Elem()
-}
-
-func (o VlanInterfaceArpOutput) ToVlanInterfaceArpOutput() VlanInterfaceArpOutput {
-	return o
-}
-
-func (o VlanInterfaceArpOutput) ToVlanInterfaceArpOutputWithContext(ctx context.Context) VlanInterfaceArpOutput {
-	return o
-}
-
-// MAC address
-func (o VlanInterfaceArpOutput) HwAddress() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceArp) *string { return v.HwAddress }).(pulumi.StringPtrOutput)
-}
-
-// ARP interface
-func (o VlanInterfaceArpOutput) Interface() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceArp) *string { return v.Interface }).(pulumi.StringPtrOutput)
-}
-
-// IP address
-func (o VlanInterfaceArpOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceArp) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-type VlanInterfaceArpArrayOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceArpArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VlanInterfaceArp)(nil)).Elem()
-}
-
-func (o VlanInterfaceArpArrayOutput) ToVlanInterfaceArpArrayOutput() VlanInterfaceArpArrayOutput {
-	return o
-}
-
-func (o VlanInterfaceArpArrayOutput) ToVlanInterfaceArpArrayOutputWithContext(ctx context.Context) VlanInterfaceArpArrayOutput {
-	return o
-}
-
-func (o VlanInterfaceArpArrayOutput) Index(i pulumi.IntInput) VlanInterfaceArpOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VlanInterfaceArp {
-		return vs[0].([]VlanInterfaceArp)[vs[1].(int)]
-	}).(VlanInterfaceArpOutput)
-}
-
-type VlanInterfaceDdnsConfig struct {
-	// Certificate profile
-	DdnsCertProfile string `pulumi:"ddnsCertProfile"`
-	// Enable DDNS?
-	DdnsEnabled *bool `pulumi:"ddnsEnabled"`
-	// Ddns hostname
-	DdnsHostname string `pulumi:"ddnsHostname"`
-	// IP to register (static only)
-	DdnsIp *string `pulumi:"ddnsIp"`
-	// Update interval (days)
-	DdnsUpdateInterval *int `pulumi:"ddnsUpdateInterval"`
-	// DDNS vendor
-	DdnsVendor string `pulumi:"ddnsVendor"`
-	// DDNS vendor
-	DdnsVendorConfig string `pulumi:"ddnsVendorConfig"`
-}
-
-// VlanInterfaceDdnsConfigInput is an input type that accepts VlanInterfaceDdnsConfigArgs and VlanInterfaceDdnsConfigOutput values.
-// You can construct a concrete instance of `VlanInterfaceDdnsConfigInput` via:
-//
-//	VlanInterfaceDdnsConfigArgs{...}
-type VlanInterfaceDdnsConfigInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceDdnsConfigOutput() VlanInterfaceDdnsConfigOutput
-	ToVlanInterfaceDdnsConfigOutputWithContext(context.Context) VlanInterfaceDdnsConfigOutput
-}
-
-type VlanInterfaceDdnsConfigArgs struct {
-	// Certificate profile
-	DdnsCertProfile pulumi.StringInput `pulumi:"ddnsCertProfile"`
-	// Enable DDNS?
-	DdnsEnabled pulumi.BoolPtrInput `pulumi:"ddnsEnabled"`
-	// Ddns hostname
-	DdnsHostname pulumi.StringInput `pulumi:"ddnsHostname"`
-	// IP to register (static only)
-	DdnsIp pulumi.StringPtrInput `pulumi:"ddnsIp"`
-	// Update interval (days)
-	DdnsUpdateInterval pulumi.IntPtrInput `pulumi:"ddnsUpdateInterval"`
-	// DDNS vendor
-	DdnsVendor pulumi.StringInput `pulumi:"ddnsVendor"`
-	// DDNS vendor
-	DdnsVendorConfig pulumi.StringInput `pulumi:"ddnsVendorConfig"`
-}
-
-func (VlanInterfaceDdnsConfigArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceDdnsConfig)(nil)).Elem()
-}
-
-func (i VlanInterfaceDdnsConfigArgs) ToVlanInterfaceDdnsConfigOutput() VlanInterfaceDdnsConfigOutput {
-	return i.ToVlanInterfaceDdnsConfigOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceDdnsConfigArgs) ToVlanInterfaceDdnsConfigOutputWithContext(ctx context.Context) VlanInterfaceDdnsConfigOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDdnsConfigOutput)
-}
-
-func (i VlanInterfaceDdnsConfigArgs) ToVlanInterfaceDdnsConfigPtrOutput() VlanInterfaceDdnsConfigPtrOutput {
-	return i.ToVlanInterfaceDdnsConfigPtrOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceDdnsConfigArgs) ToVlanInterfaceDdnsConfigPtrOutputWithContext(ctx context.Context) VlanInterfaceDdnsConfigPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDdnsConfigOutput).ToVlanInterfaceDdnsConfigPtrOutputWithContext(ctx)
-}
-
-// VlanInterfaceDdnsConfigPtrInput is an input type that accepts VlanInterfaceDdnsConfigArgs, VlanInterfaceDdnsConfigPtr and VlanInterfaceDdnsConfigPtrOutput values.
-// You can construct a concrete instance of `VlanInterfaceDdnsConfigPtrInput` via:
-//
-//	        VlanInterfaceDdnsConfigArgs{...}
-//
-//	or:
-//
-//	        nil
-type VlanInterfaceDdnsConfigPtrInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceDdnsConfigPtrOutput() VlanInterfaceDdnsConfigPtrOutput
-	ToVlanInterfaceDdnsConfigPtrOutputWithContext(context.Context) VlanInterfaceDdnsConfigPtrOutput
-}
-
-type vlanInterfaceDdnsConfigPtrType VlanInterfaceDdnsConfigArgs
-
-func VlanInterfaceDdnsConfigPtr(v *VlanInterfaceDdnsConfigArgs) VlanInterfaceDdnsConfigPtrInput {
-	return (*vlanInterfaceDdnsConfigPtrType)(v)
-}
-
-func (*vlanInterfaceDdnsConfigPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VlanInterfaceDdnsConfig)(nil)).Elem()
-}
-
-func (i *vlanInterfaceDdnsConfigPtrType) ToVlanInterfaceDdnsConfigPtrOutput() VlanInterfaceDdnsConfigPtrOutput {
-	return i.ToVlanInterfaceDdnsConfigPtrOutputWithContext(context.Background())
-}
-
-func (i *vlanInterfaceDdnsConfigPtrType) ToVlanInterfaceDdnsConfigPtrOutputWithContext(ctx context.Context) VlanInterfaceDdnsConfigPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDdnsConfigPtrOutput)
-}
-
-type VlanInterfaceDdnsConfigOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceDdnsConfigOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceDdnsConfig)(nil)).Elem()
-}
-
-func (o VlanInterfaceDdnsConfigOutput) ToVlanInterfaceDdnsConfigOutput() VlanInterfaceDdnsConfigOutput {
-	return o
-}
-
-func (o VlanInterfaceDdnsConfigOutput) ToVlanInterfaceDdnsConfigOutputWithContext(ctx context.Context) VlanInterfaceDdnsConfigOutput {
-	return o
-}
-
-func (o VlanInterfaceDdnsConfigOutput) ToVlanInterfaceDdnsConfigPtrOutput() VlanInterfaceDdnsConfigPtrOutput {
-	return o.ToVlanInterfaceDdnsConfigPtrOutputWithContext(context.Background())
-}
-
-func (o VlanInterfaceDdnsConfigOutput) ToVlanInterfaceDdnsConfigPtrOutputWithContext(ctx context.Context) VlanInterfaceDdnsConfigPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VlanInterfaceDdnsConfig) *VlanInterfaceDdnsConfig {
-		return &v
-	}).(VlanInterfaceDdnsConfigPtrOutput)
-}
-
-// Certificate profile
-func (o VlanInterfaceDdnsConfigOutput) DdnsCertProfile() pulumi.StringOutput {
-	return o.ApplyT(func(v VlanInterfaceDdnsConfig) string { return v.DdnsCertProfile }).(pulumi.StringOutput)
-}
-
-// Enable DDNS?
-func (o VlanInterfaceDdnsConfigOutput) DdnsEnabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDdnsConfig) *bool { return v.DdnsEnabled }).(pulumi.BoolPtrOutput)
-}
-
-// Ddns hostname
-func (o VlanInterfaceDdnsConfigOutput) DdnsHostname() pulumi.StringOutput {
-	return o.ApplyT(func(v VlanInterfaceDdnsConfig) string { return v.DdnsHostname }).(pulumi.StringOutput)
-}
-
-// IP to register (static only)
-func (o VlanInterfaceDdnsConfigOutput) DdnsIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDdnsConfig) *string { return v.DdnsIp }).(pulumi.StringPtrOutput)
-}
-
-// Update interval (days)
-func (o VlanInterfaceDdnsConfigOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDdnsConfig) *int { return v.DdnsUpdateInterval }).(pulumi.IntPtrOutput)
-}
-
-// DDNS vendor
-func (o VlanInterfaceDdnsConfigOutput) DdnsVendor() pulumi.StringOutput {
-	return o.ApplyT(func(v VlanInterfaceDdnsConfig) string { return v.DdnsVendor }).(pulumi.StringOutput)
-}
-
-// DDNS vendor
-func (o VlanInterfaceDdnsConfigOutput) DdnsVendorConfig() pulumi.StringOutput {
-	return o.ApplyT(func(v VlanInterfaceDdnsConfig) string { return v.DdnsVendorConfig }).(pulumi.StringOutput)
-}
-
-type VlanInterfaceDdnsConfigPtrOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceDdnsConfigPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VlanInterfaceDdnsConfig)(nil)).Elem()
-}
-
-func (o VlanInterfaceDdnsConfigPtrOutput) ToVlanInterfaceDdnsConfigPtrOutput() VlanInterfaceDdnsConfigPtrOutput {
-	return o
-}
-
-func (o VlanInterfaceDdnsConfigPtrOutput) ToVlanInterfaceDdnsConfigPtrOutputWithContext(ctx context.Context) VlanInterfaceDdnsConfigPtrOutput {
-	return o
-}
-
-func (o VlanInterfaceDdnsConfigPtrOutput) Elem() VlanInterfaceDdnsConfigOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) VlanInterfaceDdnsConfig {
-		if v != nil {
-			return *v
-		}
-		var ret VlanInterfaceDdnsConfig
-		return ret
-	}).(VlanInterfaceDdnsConfigOutput)
-}
-
-// Certificate profile
-func (o VlanInterfaceDdnsConfigPtrOutput) DdnsCertProfile() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) *string {
-		if v == nil {
-			return nil
-		}
-		return &v.DdnsCertProfile
-	}).(pulumi.StringPtrOutput)
-}
-
-// Enable DDNS?
-func (o VlanInterfaceDdnsConfigPtrOutput) DdnsEnabled() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) *bool {
-		if v == nil {
-			return nil
-		}
-		return v.DdnsEnabled
-	}).(pulumi.BoolPtrOutput)
-}
-
-// Ddns hostname
-func (o VlanInterfaceDdnsConfigPtrOutput) DdnsHostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) *string {
-		if v == nil {
-			return nil
-		}
-		return &v.DdnsHostname
-	}).(pulumi.StringPtrOutput)
-}
-
-// IP to register (static only)
-func (o VlanInterfaceDdnsConfigPtrOutput) DdnsIp() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) *string {
-		if v == nil {
-			return nil
-		}
-		return v.DdnsIp
-	}).(pulumi.StringPtrOutput)
-}
-
-// Update interval (days)
-func (o VlanInterfaceDdnsConfigPtrOutput) DdnsUpdateInterval() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) *int {
-		if v == nil {
-			return nil
-		}
-		return v.DdnsUpdateInterval
-	}).(pulumi.IntPtrOutput)
-}
-
-// DDNS vendor
-func (o VlanInterfaceDdnsConfigPtrOutput) DdnsVendor() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) *string {
-		if v == nil {
-			return nil
-		}
-		return &v.DdnsVendor
-	}).(pulumi.StringPtrOutput)
-}
-
-// DDNS vendor
-func (o VlanInterfaceDdnsConfigPtrOutput) DdnsVendorConfig() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDdnsConfig) *string {
-		if v == nil {
-			return nil
-		}
-		return &v.DdnsVendorConfig
-	}).(pulumi.StringPtrOutput)
-}
-
-type VlanInterfaceDhcpClient struct {
-	// Automatically create default route pointing to default gateway provided by server
-	CreateDefaultRoute *bool `pulumi:"createDefaultRoute"`
-	// Metric of the default route created
-	DefaultRouteMetric *int `pulumi:"defaultRouteMetric"`
-	// Enable DHCP?
-	Enable *bool `pulumi:"enable"`
-	// Send hostname
-	SendHostname *VlanInterfaceDhcpClientSendHostname `pulumi:"sendHostname"`
-}
-
-// VlanInterfaceDhcpClientInput is an input type that accepts VlanInterfaceDhcpClientArgs and VlanInterfaceDhcpClientOutput values.
-// You can construct a concrete instance of `VlanInterfaceDhcpClientInput` via:
-//
-//	VlanInterfaceDhcpClientArgs{...}
-type VlanInterfaceDhcpClientInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceDhcpClientOutput() VlanInterfaceDhcpClientOutput
-	ToVlanInterfaceDhcpClientOutputWithContext(context.Context) VlanInterfaceDhcpClientOutput
-}
-
-type VlanInterfaceDhcpClientArgs struct {
-	// Automatically create default route pointing to default gateway provided by server
-	CreateDefaultRoute pulumi.BoolPtrInput `pulumi:"createDefaultRoute"`
-	// Metric of the default route created
-	DefaultRouteMetric pulumi.IntPtrInput `pulumi:"defaultRouteMetric"`
-	// Enable DHCP?
-	Enable pulumi.BoolPtrInput `pulumi:"enable"`
-	// Send hostname
-	SendHostname VlanInterfaceDhcpClientSendHostnamePtrInput `pulumi:"sendHostname"`
-}
-
-func (VlanInterfaceDhcpClientArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceDhcpClient)(nil)).Elem()
-}
-
-func (i VlanInterfaceDhcpClientArgs) ToVlanInterfaceDhcpClientOutput() VlanInterfaceDhcpClientOutput {
-	return i.ToVlanInterfaceDhcpClientOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceDhcpClientArgs) ToVlanInterfaceDhcpClientOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDhcpClientOutput)
-}
-
-func (i VlanInterfaceDhcpClientArgs) ToVlanInterfaceDhcpClientPtrOutput() VlanInterfaceDhcpClientPtrOutput {
-	return i.ToVlanInterfaceDhcpClientPtrOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceDhcpClientArgs) ToVlanInterfaceDhcpClientPtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDhcpClientOutput).ToVlanInterfaceDhcpClientPtrOutputWithContext(ctx)
-}
-
-// VlanInterfaceDhcpClientPtrInput is an input type that accepts VlanInterfaceDhcpClientArgs, VlanInterfaceDhcpClientPtr and VlanInterfaceDhcpClientPtrOutput values.
-// You can construct a concrete instance of `VlanInterfaceDhcpClientPtrInput` via:
-//
-//	        VlanInterfaceDhcpClientArgs{...}
-//
-//	or:
-//
-//	        nil
-type VlanInterfaceDhcpClientPtrInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceDhcpClientPtrOutput() VlanInterfaceDhcpClientPtrOutput
-	ToVlanInterfaceDhcpClientPtrOutputWithContext(context.Context) VlanInterfaceDhcpClientPtrOutput
-}
-
-type vlanInterfaceDhcpClientPtrType VlanInterfaceDhcpClientArgs
-
-func VlanInterfaceDhcpClientPtr(v *VlanInterfaceDhcpClientArgs) VlanInterfaceDhcpClientPtrInput {
-	return (*vlanInterfaceDhcpClientPtrType)(v)
-}
-
-func (*vlanInterfaceDhcpClientPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VlanInterfaceDhcpClient)(nil)).Elem()
-}
-
-func (i *vlanInterfaceDhcpClientPtrType) ToVlanInterfaceDhcpClientPtrOutput() VlanInterfaceDhcpClientPtrOutput {
-	return i.ToVlanInterfaceDhcpClientPtrOutputWithContext(context.Background())
-}
-
-func (i *vlanInterfaceDhcpClientPtrType) ToVlanInterfaceDhcpClientPtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDhcpClientPtrOutput)
-}
-
-type VlanInterfaceDhcpClientOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceDhcpClientOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceDhcpClient)(nil)).Elem()
-}
-
-func (o VlanInterfaceDhcpClientOutput) ToVlanInterfaceDhcpClientOutput() VlanInterfaceDhcpClientOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientOutput) ToVlanInterfaceDhcpClientOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientOutput) ToVlanInterfaceDhcpClientPtrOutput() VlanInterfaceDhcpClientPtrOutput {
-	return o.ToVlanInterfaceDhcpClientPtrOutputWithContext(context.Background())
-}
-
-func (o VlanInterfaceDhcpClientOutput) ToVlanInterfaceDhcpClientPtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VlanInterfaceDhcpClient) *VlanInterfaceDhcpClient {
-		return &v
-	}).(VlanInterfaceDhcpClientPtrOutput)
-}
-
-// Automatically create default route pointing to default gateway provided by server
-func (o VlanInterfaceDhcpClientOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDhcpClient) *bool { return v.CreateDefaultRoute }).(pulumi.BoolPtrOutput)
-}
-
-// Metric of the default route created
-func (o VlanInterfaceDhcpClientOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDhcpClient) *int { return v.DefaultRouteMetric }).(pulumi.IntPtrOutput)
-}
-
-// Enable DHCP?
-func (o VlanInterfaceDhcpClientOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDhcpClient) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
-}
-
-// Send hostname
-func (o VlanInterfaceDhcpClientOutput) SendHostname() VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDhcpClient) *VlanInterfaceDhcpClientSendHostname { return v.SendHostname }).(VlanInterfaceDhcpClientSendHostnamePtrOutput)
-}
-
-type VlanInterfaceDhcpClientPtrOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceDhcpClientPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VlanInterfaceDhcpClient)(nil)).Elem()
-}
-
-func (o VlanInterfaceDhcpClientPtrOutput) ToVlanInterfaceDhcpClientPtrOutput() VlanInterfaceDhcpClientPtrOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientPtrOutput) ToVlanInterfaceDhcpClientPtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientPtrOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientPtrOutput) Elem() VlanInterfaceDhcpClientOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClient) VlanInterfaceDhcpClient {
-		if v != nil {
-			return *v
-		}
-		var ret VlanInterfaceDhcpClient
-		return ret
-	}).(VlanInterfaceDhcpClientOutput)
-}
-
-// Automatically create default route pointing to default gateway provided by server
-func (o VlanInterfaceDhcpClientPtrOutput) CreateDefaultRoute() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClient) *bool {
-		if v == nil {
-			return nil
-		}
-		return v.CreateDefaultRoute
-	}).(pulumi.BoolPtrOutput)
-}
-
-// Metric of the default route created
-func (o VlanInterfaceDhcpClientPtrOutput) DefaultRouteMetric() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClient) *int {
-		if v == nil {
-			return nil
-		}
-		return v.DefaultRouteMetric
-	}).(pulumi.IntPtrOutput)
-}
-
-// Enable DHCP?
-func (o VlanInterfaceDhcpClientPtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClient) *bool {
-		if v == nil {
-			return nil
-		}
-		return v.Enable
-	}).(pulumi.BoolPtrOutput)
-}
-
-// Send hostname
-func (o VlanInterfaceDhcpClientPtrOutput) SendHostname() VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClient) *VlanInterfaceDhcpClientSendHostname {
-		if v == nil {
-			return nil
-		}
-		return v.SendHostname
-	}).(VlanInterfaceDhcpClientSendHostnamePtrOutput)
-}
-
-type VlanInterfaceDhcpClientSendHostname struct {
-	// Enable
-	Enable *bool `pulumi:"enable"`
-	// Set interface hostname
-	Hostname *string `pulumi:"hostname"`
-}
-
-// VlanInterfaceDhcpClientSendHostnameInput is an input type that accepts VlanInterfaceDhcpClientSendHostnameArgs and VlanInterfaceDhcpClientSendHostnameOutput values.
-// You can construct a concrete instance of `VlanInterfaceDhcpClientSendHostnameInput` via:
-//
-//	VlanInterfaceDhcpClientSendHostnameArgs{...}
-type VlanInterfaceDhcpClientSendHostnameInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceDhcpClientSendHostnameOutput() VlanInterfaceDhcpClientSendHostnameOutput
-	ToVlanInterfaceDhcpClientSendHostnameOutputWithContext(context.Context) VlanInterfaceDhcpClientSendHostnameOutput
-}
-
-type VlanInterfaceDhcpClientSendHostnameArgs struct {
-	// Enable
-	Enable pulumi.BoolPtrInput `pulumi:"enable"`
-	// Set interface hostname
-	Hostname pulumi.StringPtrInput `pulumi:"hostname"`
-}
-
-func (VlanInterfaceDhcpClientSendHostnameArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceDhcpClientSendHostname)(nil)).Elem()
-}
-
-func (i VlanInterfaceDhcpClientSendHostnameArgs) ToVlanInterfaceDhcpClientSendHostnameOutput() VlanInterfaceDhcpClientSendHostnameOutput {
-	return i.ToVlanInterfaceDhcpClientSendHostnameOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceDhcpClientSendHostnameArgs) ToVlanInterfaceDhcpClientSendHostnameOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientSendHostnameOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDhcpClientSendHostnameOutput)
-}
-
-func (i VlanInterfaceDhcpClientSendHostnameArgs) ToVlanInterfaceDhcpClientSendHostnamePtrOutput() VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return i.ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceDhcpClientSendHostnameArgs) ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDhcpClientSendHostnameOutput).ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(ctx)
-}
-
-// VlanInterfaceDhcpClientSendHostnamePtrInput is an input type that accepts VlanInterfaceDhcpClientSendHostnameArgs, VlanInterfaceDhcpClientSendHostnamePtr and VlanInterfaceDhcpClientSendHostnamePtrOutput values.
-// You can construct a concrete instance of `VlanInterfaceDhcpClientSendHostnamePtrInput` via:
-//
-//	        VlanInterfaceDhcpClientSendHostnameArgs{...}
-//
-//	or:
-//
-//	        nil
-type VlanInterfaceDhcpClientSendHostnamePtrInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceDhcpClientSendHostnamePtrOutput() VlanInterfaceDhcpClientSendHostnamePtrOutput
-	ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(context.Context) VlanInterfaceDhcpClientSendHostnamePtrOutput
-}
-
-type vlanInterfaceDhcpClientSendHostnamePtrType VlanInterfaceDhcpClientSendHostnameArgs
-
-func VlanInterfaceDhcpClientSendHostnamePtr(v *VlanInterfaceDhcpClientSendHostnameArgs) VlanInterfaceDhcpClientSendHostnamePtrInput {
-	return (*vlanInterfaceDhcpClientSendHostnamePtrType)(v)
-}
-
-func (*vlanInterfaceDhcpClientSendHostnamePtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VlanInterfaceDhcpClientSendHostname)(nil)).Elem()
-}
-
-func (i *vlanInterfaceDhcpClientSendHostnamePtrType) ToVlanInterfaceDhcpClientSendHostnamePtrOutput() VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return i.ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(context.Background())
-}
-
-func (i *vlanInterfaceDhcpClientSendHostnamePtrType) ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceDhcpClientSendHostnamePtrOutput)
-}
-
-type VlanInterfaceDhcpClientSendHostnameOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceDhcpClientSendHostnameOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceDhcpClientSendHostname)(nil)).Elem()
-}
-
-func (o VlanInterfaceDhcpClientSendHostnameOutput) ToVlanInterfaceDhcpClientSendHostnameOutput() VlanInterfaceDhcpClientSendHostnameOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientSendHostnameOutput) ToVlanInterfaceDhcpClientSendHostnameOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientSendHostnameOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientSendHostnameOutput) ToVlanInterfaceDhcpClientSendHostnamePtrOutput() VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return o.ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(context.Background())
-}
-
-func (o VlanInterfaceDhcpClientSendHostnameOutput) ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VlanInterfaceDhcpClientSendHostname) *VlanInterfaceDhcpClientSendHostname {
-		return &v
-	}).(VlanInterfaceDhcpClientSendHostnamePtrOutput)
-}
-
-// Enable
-func (o VlanInterfaceDhcpClientSendHostnameOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDhcpClientSendHostname) *bool { return v.Enable }).(pulumi.BoolPtrOutput)
-}
-
-// Set interface hostname
-func (o VlanInterfaceDhcpClientSendHostnameOutput) Hostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VlanInterfaceDhcpClientSendHostname) *string { return v.Hostname }).(pulumi.StringPtrOutput)
-}
-
-type VlanInterfaceDhcpClientSendHostnamePtrOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceDhcpClientSendHostnamePtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VlanInterfaceDhcpClientSendHostname)(nil)).Elem()
-}
-
-func (o VlanInterfaceDhcpClientSendHostnamePtrOutput) ToVlanInterfaceDhcpClientSendHostnamePtrOutput() VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientSendHostnamePtrOutput) ToVlanInterfaceDhcpClientSendHostnamePtrOutputWithContext(ctx context.Context) VlanInterfaceDhcpClientSendHostnamePtrOutput {
-	return o
-}
-
-func (o VlanInterfaceDhcpClientSendHostnamePtrOutput) Elem() VlanInterfaceDhcpClientSendHostnameOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClientSendHostname) VlanInterfaceDhcpClientSendHostname {
-		if v != nil {
-			return *v
-		}
-		var ret VlanInterfaceDhcpClientSendHostname
-		return ret
-	}).(VlanInterfaceDhcpClientSendHostnameOutput)
-}
-
-// Enable
-func (o VlanInterfaceDhcpClientSendHostnamePtrOutput) Enable() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClientSendHostname) *bool {
-		if v == nil {
-			return nil
-		}
-		return v.Enable
-	}).(pulumi.BoolPtrOutput)
-}
-
-// Set interface hostname
-func (o VlanInterfaceDhcpClientSendHostnamePtrOutput) Hostname() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VlanInterfaceDhcpClientSendHostname) *string {
-		if v == nil {
-			return nil
-		}
-		return v.Hostname
-	}).(pulumi.StringPtrOutput)
-}
-
-type VlanInterfaceIp struct {
-	// VLAN Interface IP address(es)
-	Name string `pulumi:"name"`
-}
-
-// VlanInterfaceIpInput is an input type that accepts VlanInterfaceIpArgs and VlanInterfaceIpOutput values.
-// You can construct a concrete instance of `VlanInterfaceIpInput` via:
-//
-//	VlanInterfaceIpArgs{...}
-type VlanInterfaceIpInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceIpOutput() VlanInterfaceIpOutput
-	ToVlanInterfaceIpOutputWithContext(context.Context) VlanInterfaceIpOutput
-}
-
-type VlanInterfaceIpArgs struct {
-	// VLAN Interface IP address(es)
-	Name pulumi.StringInput `pulumi:"name"`
-}
-
-func (VlanInterfaceIpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceIp)(nil)).Elem()
-}
-
-func (i VlanInterfaceIpArgs) ToVlanInterfaceIpOutput() VlanInterfaceIpOutput {
-	return i.ToVlanInterfaceIpOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceIpArgs) ToVlanInterfaceIpOutputWithContext(ctx context.Context) VlanInterfaceIpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceIpOutput)
-}
-
-// VlanInterfaceIpArrayInput is an input type that accepts VlanInterfaceIpArray and VlanInterfaceIpArrayOutput values.
-// You can construct a concrete instance of `VlanInterfaceIpArrayInput` via:
-//
-//	VlanInterfaceIpArray{ VlanInterfaceIpArgs{...} }
-type VlanInterfaceIpArrayInput interface {
-	pulumi.Input
-
-	ToVlanInterfaceIpArrayOutput() VlanInterfaceIpArrayOutput
-	ToVlanInterfaceIpArrayOutputWithContext(context.Context) VlanInterfaceIpArrayOutput
-}
-
-type VlanInterfaceIpArray []VlanInterfaceIpInput
-
-func (VlanInterfaceIpArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VlanInterfaceIp)(nil)).Elem()
-}
-
-func (i VlanInterfaceIpArray) ToVlanInterfaceIpArrayOutput() VlanInterfaceIpArrayOutput {
-	return i.ToVlanInterfaceIpArrayOutputWithContext(context.Background())
-}
-
-func (i VlanInterfaceIpArray) ToVlanInterfaceIpArrayOutputWithContext(ctx context.Context) VlanInterfaceIpArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VlanInterfaceIpArrayOutput)
-}
-
-type VlanInterfaceIpOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceIpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VlanInterfaceIp)(nil)).Elem()
-}
-
-func (o VlanInterfaceIpOutput) ToVlanInterfaceIpOutput() VlanInterfaceIpOutput {
-	return o
-}
-
-func (o VlanInterfaceIpOutput) ToVlanInterfaceIpOutputWithContext(ctx context.Context) VlanInterfaceIpOutput {
-	return o
-}
-
-// VLAN Interface IP address(es)
-func (o VlanInterfaceIpOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v VlanInterfaceIp) string { return v.Name }).(pulumi.StringOutput)
-}
-
-type VlanInterfaceIpArrayOutput struct{ *pulumi.OutputState }
-
-func (VlanInterfaceIpArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VlanInterfaceIp)(nil)).Elem()
-}
-
-func (o VlanInterfaceIpArrayOutput) ToVlanInterfaceIpArrayOutput() VlanInterfaceIpArrayOutput {
-	return o
-}
-
-func (o VlanInterfaceIpArrayOutput) ToVlanInterfaceIpArrayOutputWithContext(ctx context.Context) VlanInterfaceIpArrayOutput {
-	return o
-}
-
-func (o VlanInterfaceIpArrayOutput) Index(i pulumi.IntInput) VlanInterfaceIpOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VlanInterfaceIp {
-		return vs[0].([]VlanInterfaceIp)[vs[1].(int)]
-	}).(VlanInterfaceIpOutput)
-}
-
-type VulnerabilityProtectionProfileRule struct {
-	// vulnerability profiles threat exception default action
-	Action *VulnerabilityProtectionProfileRuleAction `pulumi:"action"`
-	// Category
-	Category *string `pulumi:"category"`
-	// Cve
-	Cves []string `pulumi:"cves"`
-	// Host
-	Host *string `pulumi:"host"`
-	// Name
-	Name *string `pulumi:"name"`
-	// Packet capture
-	PacketCapture *string `pulumi:"packetCapture"`
-	// Severity
-	Severities []string `pulumi:"severities"`
-	// Threat name
-	ThreatName *string `pulumi:"threatName"`
-	// Vendor id
-	VendorIds []string `pulumi:"vendorIds"`
-}
-
-// VulnerabilityProtectionProfileRuleInput is an input type that accepts VulnerabilityProtectionProfileRuleArgs and VulnerabilityProtectionProfileRuleOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleInput` via:
-//
-//	VulnerabilityProtectionProfileRuleArgs{...}
-type VulnerabilityProtectionProfileRuleInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleOutput() VulnerabilityProtectionProfileRuleOutput
-	ToVulnerabilityProtectionProfileRuleOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleOutput
-}
-
-type VulnerabilityProtectionProfileRuleArgs struct {
-	// vulnerability profiles threat exception default action
-	Action VulnerabilityProtectionProfileRuleActionPtrInput `pulumi:"action"`
-	// Category
-	Category pulumi.StringPtrInput `pulumi:"category"`
-	// Cve
-	Cves pulumi.StringArrayInput `pulumi:"cves"`
-	// Host
-	Host pulumi.StringPtrInput `pulumi:"host"`
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Packet capture
-	PacketCapture pulumi.StringPtrInput `pulumi:"packetCapture"`
-	// Severity
-	Severities pulumi.StringArrayInput `pulumi:"severities"`
-	// Threat name
-	ThreatName pulumi.StringPtrInput `pulumi:"threatName"`
-	// Vendor id
-	VendorIds pulumi.StringArrayInput `pulumi:"vendorIds"`
-}
-
-func (VulnerabilityProtectionProfileRuleArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRule)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleArgs) ToVulnerabilityProtectionProfileRuleOutput() VulnerabilityProtectionProfileRuleOutput {
-	return i.ToVulnerabilityProtectionProfileRuleOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleArgs) ToVulnerabilityProtectionProfileRuleOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleOutput)
-}
-
-// VulnerabilityProtectionProfileRuleArrayInput is an input type that accepts VulnerabilityProtectionProfileRuleArray and VulnerabilityProtectionProfileRuleArrayOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleArrayInput` via:
-//
-//	VulnerabilityProtectionProfileRuleArray{ VulnerabilityProtectionProfileRuleArgs{...} }
-type VulnerabilityProtectionProfileRuleArrayInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleArrayOutput() VulnerabilityProtectionProfileRuleArrayOutput
-	ToVulnerabilityProtectionProfileRuleArrayOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleArrayOutput
-}
-
-type VulnerabilityProtectionProfileRuleArray []VulnerabilityProtectionProfileRuleInput
-
-func (VulnerabilityProtectionProfileRuleArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VulnerabilityProtectionProfileRule)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleArray) ToVulnerabilityProtectionProfileRuleArrayOutput() VulnerabilityProtectionProfileRuleArrayOutput {
-	return i.ToVulnerabilityProtectionProfileRuleArrayOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleArray) ToVulnerabilityProtectionProfileRuleArrayOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleArrayOutput)
-}
-
-type VulnerabilityProtectionProfileRuleOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRule)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleOutput) ToVulnerabilityProtectionProfileRuleOutput() VulnerabilityProtectionProfileRuleOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleOutput) ToVulnerabilityProtectionProfileRuleOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleOutput {
-	return o
-}
-
-// vulnerability profiles threat exception default action
-func (o VulnerabilityProtectionProfileRuleOutput) Action() VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) *VulnerabilityProtectionProfileRuleAction { return v.Action }).(VulnerabilityProtectionProfileRuleActionPtrOutput)
-}
-
-// Category
-func (o VulnerabilityProtectionProfileRuleOutput) Category() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) *string { return v.Category }).(pulumi.StringPtrOutput)
-}
-
-// Cve
-func (o VulnerabilityProtectionProfileRuleOutput) Cves() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) []string { return v.Cves }).(pulumi.StringArrayOutput)
-}
-
-// Host
-func (o VulnerabilityProtectionProfileRuleOutput) Host() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) *string { return v.Host }).(pulumi.StringPtrOutput)
-}
-
-// Name
-func (o VulnerabilityProtectionProfileRuleOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Packet capture
-func (o VulnerabilityProtectionProfileRuleOutput) PacketCapture() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) *string { return v.PacketCapture }).(pulumi.StringPtrOutput)
-}
-
-// Severity
-func (o VulnerabilityProtectionProfileRuleOutput) Severities() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) []string { return v.Severities }).(pulumi.StringArrayOutput)
-}
-
-// Threat name
-func (o VulnerabilityProtectionProfileRuleOutput) ThreatName() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) *string { return v.ThreatName }).(pulumi.StringPtrOutput)
-}
-
-// Vendor id
-func (o VulnerabilityProtectionProfileRuleOutput) VendorIds() pulumi.StringArrayOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRule) []string { return v.VendorIds }).(pulumi.StringArrayOutput)
-}
-
-type VulnerabilityProtectionProfileRuleArrayOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VulnerabilityProtectionProfileRule)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleArrayOutput) ToVulnerabilityProtectionProfileRuleArrayOutput() VulnerabilityProtectionProfileRuleArrayOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleArrayOutput) ToVulnerabilityProtectionProfileRuleArrayOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleArrayOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleArrayOutput) Index(i pulumi.IntInput) VulnerabilityProtectionProfileRuleOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VulnerabilityProtectionProfileRule {
-		return vs[0].([]VulnerabilityProtectionProfileRule)[vs[1].(int)]
-	}).(VulnerabilityProtectionProfileRuleOutput)
-}
-
-type VulnerabilityProtectionProfileRuleAction struct {
-	// Alert
-	Alert *VulnerabilityProtectionProfileRuleActionAlert `pulumi:"alert"`
-	// Allow
-	Allow *VulnerabilityProtectionProfileRuleActionAllow `pulumi:"allow"`
-	// vulnerability protection block ip
-	BlockIp *VulnerabilityProtectionProfileRuleActionBlockIp `pulumi:"blockIp"`
-	// Default
-	Default *VulnerabilityProtectionProfileRuleActionDefault `pulumi:"default"`
-	// Drop
-	Drop *VulnerabilityProtectionProfileRuleActionDrop `pulumi:"drop"`
-	// Reset both
-	ResetBoth *VulnerabilityProtectionProfileRuleActionResetBoth `pulumi:"resetBoth"`
-	// Reset client
-	ResetClient *VulnerabilityProtectionProfileRuleActionResetClient `pulumi:"resetClient"`
-	// Reset server
-	ResetServer *VulnerabilityProtectionProfileRuleActionResetServer `pulumi:"resetServer"`
-}
-
-// VulnerabilityProtectionProfileRuleActionInput is an input type that accepts VulnerabilityProtectionProfileRuleActionArgs and VulnerabilityProtectionProfileRuleActionOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionArgs{...}
-type VulnerabilityProtectionProfileRuleActionInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionOutput() VulnerabilityProtectionProfileRuleActionOutput
-	ToVulnerabilityProtectionProfileRuleActionOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionArgs struct {
-	// Alert
-	Alert VulnerabilityProtectionProfileRuleActionAlertPtrInput `pulumi:"alert"`
-	// Allow
-	Allow VulnerabilityProtectionProfileRuleActionAllowPtrInput `pulumi:"allow"`
-	// vulnerability protection block ip
-	BlockIp VulnerabilityProtectionProfileRuleActionBlockIpPtrInput `pulumi:"blockIp"`
-	// Default
-	Default VulnerabilityProtectionProfileRuleActionDefaultPtrInput `pulumi:"default"`
-	// Drop
-	Drop VulnerabilityProtectionProfileRuleActionDropPtrInput `pulumi:"drop"`
-	// Reset both
-	ResetBoth VulnerabilityProtectionProfileRuleActionResetBothPtrInput `pulumi:"resetBoth"`
-	// Reset client
-	ResetClient VulnerabilityProtectionProfileRuleActionResetClientPtrInput `pulumi:"resetClient"`
-	// Reset server
-	ResetServer VulnerabilityProtectionProfileRuleActionResetServerPtrInput `pulumi:"resetServer"`
-}
-
-func (VulnerabilityProtectionProfileRuleActionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleAction)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionArgs) ToVulnerabilityProtectionProfileRuleActionOutput() VulnerabilityProtectionProfileRuleActionOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionArgs) ToVulnerabilityProtectionProfileRuleActionOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionArgs) ToVulnerabilityProtectionProfileRuleActionPtrOutput() VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionArgs) ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionOutput).ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionArgs, VulnerabilityProtectionProfileRuleActionPtr and VulnerabilityProtectionProfileRuleActionPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionPtrOutput() VulnerabilityProtectionProfileRuleActionPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionPtrType VulnerabilityProtectionProfileRuleActionArgs
-
-func VulnerabilityProtectionProfileRuleActionPtr(v *VulnerabilityProtectionProfileRuleActionArgs) VulnerabilityProtectionProfileRuleActionPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleAction)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionPtrType) ToVulnerabilityProtectionProfileRuleActionPtrOutput() VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionPtrType) ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleAction)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionOutput) ToVulnerabilityProtectionProfileRuleActionOutput() VulnerabilityProtectionProfileRuleActionOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionOutput) ToVulnerabilityProtectionProfileRuleActionOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionOutput) ToVulnerabilityProtectionProfileRuleActionPtrOutput() VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionOutput) ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleAction {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionPtrOutput)
-}
-
-// Alert
-func (o VulnerabilityProtectionProfileRuleActionOutput) Alert() VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionAlert {
-		return v.Alert
-	}).(VulnerabilityProtectionProfileRuleActionAlertPtrOutput)
-}
-
-// Allow
-func (o VulnerabilityProtectionProfileRuleActionOutput) Allow() VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionAllow {
-		return v.Allow
-	}).(VulnerabilityProtectionProfileRuleActionAllowPtrOutput)
-}
-
-// vulnerability protection block ip
-func (o VulnerabilityProtectionProfileRuleActionOutput) BlockIp() VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionBlockIp {
-		return v.BlockIp
-	}).(VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput)
-}
-
-// Default
-func (o VulnerabilityProtectionProfileRuleActionOutput) Default() VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionDefault {
-		return v.Default
-	}).(VulnerabilityProtectionProfileRuleActionDefaultPtrOutput)
-}
-
-// Drop
-func (o VulnerabilityProtectionProfileRuleActionOutput) Drop() VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionDrop {
-		return v.Drop
-	}).(VulnerabilityProtectionProfileRuleActionDropPtrOutput)
-}
-
-// Reset both
-func (o VulnerabilityProtectionProfileRuleActionOutput) ResetBoth() VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionResetBoth {
-		return v.ResetBoth
-	}).(VulnerabilityProtectionProfileRuleActionResetBothPtrOutput)
-}
-
-// Reset client
-func (o VulnerabilityProtectionProfileRuleActionOutput) ResetClient() VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionResetClient {
-		return v.ResetClient
-	}).(VulnerabilityProtectionProfileRuleActionResetClientPtrOutput)
-}
-
-// Reset server
-func (o VulnerabilityProtectionProfileRuleActionOutput) ResetServer() VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionResetServer {
-		return v.ResetServer
-	}).(VulnerabilityProtectionProfileRuleActionResetServerPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleAction)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) ToVulnerabilityProtectionProfileRuleActionPtrOutput() VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) ToVulnerabilityProtectionProfileRuleActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) VulnerabilityProtectionProfileRuleAction {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleAction
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionOutput)
-}
-
-// Alert
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) Alert() VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionAlert {
-		if v == nil {
-			return nil
-		}
-		return v.Alert
-	}).(VulnerabilityProtectionProfileRuleActionAlertPtrOutput)
-}
-
-// Allow
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) Allow() VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionAllow {
-		if v == nil {
-			return nil
-		}
-		return v.Allow
-	}).(VulnerabilityProtectionProfileRuleActionAllowPtrOutput)
-}
-
-// vulnerability protection block ip
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) BlockIp() VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionBlockIp {
-		if v == nil {
-			return nil
-		}
-		return v.BlockIp
-	}).(VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput)
-}
-
-// Default
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) Default() VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionDefault {
-		if v == nil {
-			return nil
-		}
-		return v.Default
-	}).(VulnerabilityProtectionProfileRuleActionDefaultPtrOutput)
-}
-
-// Drop
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) Drop() VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionDrop {
-		if v == nil {
-			return nil
-		}
-		return v.Drop
-	}).(VulnerabilityProtectionProfileRuleActionDropPtrOutput)
-}
-
-// Reset both
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) ResetBoth() VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionResetBoth {
-		if v == nil {
-			return nil
-		}
-		return v.ResetBoth
-	}).(VulnerabilityProtectionProfileRuleActionResetBothPtrOutput)
-}
-
-// Reset client
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) ResetClient() VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionResetClient {
-		if v == nil {
-			return nil
-		}
-		return v.ResetClient
-	}).(VulnerabilityProtectionProfileRuleActionResetClientPtrOutput)
-}
-
-// Reset server
-func (o VulnerabilityProtectionProfileRuleActionPtrOutput) ResetServer() VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleAction) *VulnerabilityProtectionProfileRuleActionResetServer {
-		if v == nil {
-			return nil
-		}
-		return v.ResetServer
-	}).(VulnerabilityProtectionProfileRuleActionResetServerPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionAlert struct {
-}
-
-// VulnerabilityProtectionProfileRuleActionAlertInput is an input type that accepts VulnerabilityProtectionProfileRuleActionAlertArgs and VulnerabilityProtectionProfileRuleActionAlertOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionAlertInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionAlertArgs{...}
-type VulnerabilityProtectionProfileRuleActionAlertInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionAlertOutput() VulnerabilityProtectionProfileRuleActionAlertOutput
-	ToVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionAlertOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionAlertArgs struct {
-}
-
-func (VulnerabilityProtectionProfileRuleActionAlertArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAlert)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAlertArgs) ToVulnerabilityProtectionProfileRuleActionAlertOutput() VulnerabilityProtectionProfileRuleActionAlertOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAlertArgs) ToVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAlertOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionAlertOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAlertArgs) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutput() VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAlertArgs) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionAlertOutput).ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionAlertPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionAlertArgs, VulnerabilityProtectionProfileRuleActionAlertPtr and VulnerabilityProtectionProfileRuleActionAlertPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionAlertPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionAlertArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionAlertPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionAlertPtrOutput() VulnerabilityProtectionProfileRuleActionAlertPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionAlertPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionAlertPtrType VulnerabilityProtectionProfileRuleActionAlertArgs
-
-func VulnerabilityProtectionProfileRuleActionAlertPtr(v *VulnerabilityProtectionProfileRuleActionAlertArgs) VulnerabilityProtectionProfileRuleActionAlertPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionAlertPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionAlertPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionAlert)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionAlertPtrType) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutput() VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionAlertPtrType) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionAlertPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionAlertOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionAlertOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAlert)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAlertOutput) ToVulnerabilityProtectionProfileRuleActionAlertOutput() VulnerabilityProtectionProfileRuleActionAlertOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAlertOutput) ToVulnerabilityProtectionProfileRuleActionAlertOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAlertOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAlertOutput) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutput() VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAlertOutput) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionAlert) *VulnerabilityProtectionProfileRuleActionAlert {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionAlertPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionAlertPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionAlertPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionAlert)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAlertPtrOutput) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutput() VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAlertPtrOutput) ToVulnerabilityProtectionProfileRuleActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAlertPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAlertPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionAlertOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionAlert) VulnerabilityProtectionProfileRuleActionAlert {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionAlert
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionAlertOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionAllow struct {
-}
-
-// VulnerabilityProtectionProfileRuleActionAllowInput is an input type that accepts VulnerabilityProtectionProfileRuleActionAllowArgs and VulnerabilityProtectionProfileRuleActionAllowOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionAllowInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionAllowArgs{...}
-type VulnerabilityProtectionProfileRuleActionAllowInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionAllowOutput() VulnerabilityProtectionProfileRuleActionAllowOutput
-	ToVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionAllowOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionAllowArgs struct {
-}
-
-func (VulnerabilityProtectionProfileRuleActionAllowArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAllow)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAllowArgs) ToVulnerabilityProtectionProfileRuleActionAllowOutput() VulnerabilityProtectionProfileRuleActionAllowOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAllowArgs) ToVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAllowOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionAllowOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAllowArgs) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutput() VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionAllowArgs) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionAllowOutput).ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionAllowPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionAllowArgs, VulnerabilityProtectionProfileRuleActionAllowPtr and VulnerabilityProtectionProfileRuleActionAllowPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionAllowPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionAllowArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionAllowPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionAllowPtrOutput() VulnerabilityProtectionProfileRuleActionAllowPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionAllowPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionAllowPtrType VulnerabilityProtectionProfileRuleActionAllowArgs
-
-func VulnerabilityProtectionProfileRuleActionAllowPtr(v *VulnerabilityProtectionProfileRuleActionAllowArgs) VulnerabilityProtectionProfileRuleActionAllowPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionAllowPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionAllowPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionAllow)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionAllowPtrType) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutput() VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionAllowPtrType) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionAllowPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionAllowOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionAllowOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAllow)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAllowOutput) ToVulnerabilityProtectionProfileRuleActionAllowOutput() VulnerabilityProtectionProfileRuleActionAllowOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAllowOutput) ToVulnerabilityProtectionProfileRuleActionAllowOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAllowOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAllowOutput) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutput() VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAllowOutput) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionAllow) *VulnerabilityProtectionProfileRuleActionAllow {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionAllowPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionAllowPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionAllowPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionAllow)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAllowPtrOutput) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutput() VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAllowPtrOutput) ToVulnerabilityProtectionProfileRuleActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionAllowPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionAllowPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionAllowOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionAllow) VulnerabilityProtectionProfileRuleActionAllow {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionAllow
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionAllowOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionBlockIp struct {
-	// Duration
-	Duration *int `pulumi:"duration"`
-	// Track by
-	TrackBy *string `pulumi:"trackBy"`
-}
-
-// VulnerabilityProtectionProfileRuleActionBlockIpInput is an input type that accepts VulnerabilityProtectionProfileRuleActionBlockIpArgs and VulnerabilityProtectionProfileRuleActionBlockIpOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionBlockIpInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionBlockIpArgs{...}
-type VulnerabilityProtectionProfileRuleActionBlockIpInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionBlockIpOutput() VulnerabilityProtectionProfileRuleActionBlockIpOutput
-	ToVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionBlockIpOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionBlockIpArgs struct {
-	// Duration
-	Duration pulumi.IntPtrInput `pulumi:"duration"`
-	// Track by
-	TrackBy pulumi.StringPtrInput `pulumi:"trackBy"`
-}
-
-func (VulnerabilityProtectionProfileRuleActionBlockIpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionBlockIp)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionBlockIpArgs) ToVulnerabilityProtectionProfileRuleActionBlockIpOutput() VulnerabilityProtectionProfileRuleActionBlockIpOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionBlockIpArgs) ToVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionBlockIpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionBlockIpOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionBlockIpArgs) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutput() VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionBlockIpArgs) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionBlockIpOutput).ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionBlockIpPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionBlockIpArgs, VulnerabilityProtectionProfileRuleActionBlockIpPtr and VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionBlockIpPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionBlockIpArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionBlockIpPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutput() VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionBlockIpPtrType VulnerabilityProtectionProfileRuleActionBlockIpArgs
-
-func VulnerabilityProtectionProfileRuleActionBlockIpPtr(v *VulnerabilityProtectionProfileRuleActionBlockIpArgs) VulnerabilityProtectionProfileRuleActionBlockIpPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionBlockIpPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionBlockIpPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionBlockIp)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionBlockIpPtrType) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutput() VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionBlockIpPtrType) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionBlockIpOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionBlockIpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionBlockIp)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionBlockIpOutput) ToVulnerabilityProtectionProfileRuleActionBlockIpOutput() VulnerabilityProtectionProfileRuleActionBlockIpOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionBlockIpOutput) ToVulnerabilityProtectionProfileRuleActionBlockIpOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionBlockIpOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionBlockIpOutput) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutput() VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionBlockIpOutput) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionBlockIp) *VulnerabilityProtectionProfileRuleActionBlockIp {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput)
-}
-
-// Duration
-func (o VulnerabilityProtectionProfileRuleActionBlockIpOutput) Duration() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleActionBlockIp) *int { return v.Duration }).(pulumi.IntPtrOutput)
-}
-
-// Track by
-func (o VulnerabilityProtectionProfileRuleActionBlockIpOutput) TrackBy() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileRuleActionBlockIp) *string { return v.TrackBy }).(pulumi.StringPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionBlockIp)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutput() VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput) ToVulnerabilityProtectionProfileRuleActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionBlockIpOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionBlockIp) VulnerabilityProtectionProfileRuleActionBlockIp {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionBlockIp
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionBlockIpOutput)
-}
-
-// Duration
-func (o VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput) Duration() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionBlockIp) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Duration
-	}).(pulumi.IntPtrOutput)
-}
-
-// Track by
-func (o VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput) TrackBy() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionBlockIp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.TrackBy
-	}).(pulumi.StringPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionDefault struct {
-}
-
-// VulnerabilityProtectionProfileRuleActionDefaultInput is an input type that accepts VulnerabilityProtectionProfileRuleActionDefaultArgs and VulnerabilityProtectionProfileRuleActionDefaultOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionDefaultInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionDefaultArgs{...}
-type VulnerabilityProtectionProfileRuleActionDefaultInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionDefaultOutput() VulnerabilityProtectionProfileRuleActionDefaultOutput
-	ToVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionDefaultOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionDefaultArgs struct {
-}
-
-func (VulnerabilityProtectionProfileRuleActionDefaultArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDefault)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDefaultArgs) ToVulnerabilityProtectionProfileRuleActionDefaultOutput() VulnerabilityProtectionProfileRuleActionDefaultOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDefaultArgs) ToVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDefaultOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionDefaultOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDefaultArgs) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutput() VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDefaultArgs) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionDefaultOutput).ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionDefaultPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionDefaultArgs, VulnerabilityProtectionProfileRuleActionDefaultPtr and VulnerabilityProtectionProfileRuleActionDefaultPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionDefaultPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionDefaultArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionDefaultPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutput() VulnerabilityProtectionProfileRuleActionDefaultPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionDefaultPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionDefaultPtrType VulnerabilityProtectionProfileRuleActionDefaultArgs
-
-func VulnerabilityProtectionProfileRuleActionDefaultPtr(v *VulnerabilityProtectionProfileRuleActionDefaultArgs) VulnerabilityProtectionProfileRuleActionDefaultPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionDefaultPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionDefaultPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionDefault)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionDefaultPtrType) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutput() VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionDefaultPtrType) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionDefaultPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionDefaultOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionDefaultOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDefault)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDefaultOutput) ToVulnerabilityProtectionProfileRuleActionDefaultOutput() VulnerabilityProtectionProfileRuleActionDefaultOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDefaultOutput) ToVulnerabilityProtectionProfileRuleActionDefaultOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDefaultOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDefaultOutput) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutput() VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDefaultOutput) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionDefault) *VulnerabilityProtectionProfileRuleActionDefault {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionDefaultPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionDefaultPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionDefaultPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionDefault)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDefaultPtrOutput) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutput() VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDefaultPtrOutput) ToVulnerabilityProtectionProfileRuleActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDefaultPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDefaultPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionDefaultOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionDefault) VulnerabilityProtectionProfileRuleActionDefault {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionDefault
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionDefaultOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionDrop struct {
-}
-
-// VulnerabilityProtectionProfileRuleActionDropInput is an input type that accepts VulnerabilityProtectionProfileRuleActionDropArgs and VulnerabilityProtectionProfileRuleActionDropOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionDropInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionDropArgs{...}
-type VulnerabilityProtectionProfileRuleActionDropInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionDropOutput() VulnerabilityProtectionProfileRuleActionDropOutput
-	ToVulnerabilityProtectionProfileRuleActionDropOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionDropOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionDropArgs struct {
-}
-
-func (VulnerabilityProtectionProfileRuleActionDropArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDrop)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDropArgs) ToVulnerabilityProtectionProfileRuleActionDropOutput() VulnerabilityProtectionProfileRuleActionDropOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionDropOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDropArgs) ToVulnerabilityProtectionProfileRuleActionDropOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDropOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionDropOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDropArgs) ToVulnerabilityProtectionProfileRuleActionDropPtrOutput() VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionDropArgs) ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionDropOutput).ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionDropPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionDropArgs, VulnerabilityProtectionProfileRuleActionDropPtr and VulnerabilityProtectionProfileRuleActionDropPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionDropPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionDropArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionDropPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionDropPtrOutput() VulnerabilityProtectionProfileRuleActionDropPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionDropPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionDropPtrType VulnerabilityProtectionProfileRuleActionDropArgs
-
-func VulnerabilityProtectionProfileRuleActionDropPtr(v *VulnerabilityProtectionProfileRuleActionDropArgs) VulnerabilityProtectionProfileRuleActionDropPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionDropPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionDropPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionDrop)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionDropPtrType) ToVulnerabilityProtectionProfileRuleActionDropPtrOutput() VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionDropPtrType) ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionDropPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionDropOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionDropOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDrop)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDropOutput) ToVulnerabilityProtectionProfileRuleActionDropOutput() VulnerabilityProtectionProfileRuleActionDropOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDropOutput) ToVulnerabilityProtectionProfileRuleActionDropOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDropOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDropOutput) ToVulnerabilityProtectionProfileRuleActionDropPtrOutput() VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDropOutput) ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionDrop) *VulnerabilityProtectionProfileRuleActionDrop {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionDropPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionDropPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionDropPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionDrop)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDropPtrOutput) ToVulnerabilityProtectionProfileRuleActionDropPtrOutput() VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDropPtrOutput) ToVulnerabilityProtectionProfileRuleActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionDropPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionDropPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionDropOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionDrop) VulnerabilityProtectionProfileRuleActionDrop {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionDrop
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionDropOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetBoth struct {
-}
-
-// VulnerabilityProtectionProfileRuleActionResetBothInput is an input type that accepts VulnerabilityProtectionProfileRuleActionResetBothArgs and VulnerabilityProtectionProfileRuleActionResetBothOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionResetBothInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionResetBothArgs{...}
-type VulnerabilityProtectionProfileRuleActionResetBothInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionResetBothOutput() VulnerabilityProtectionProfileRuleActionResetBothOutput
-	ToVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionResetBothOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionResetBothArgs struct {
-}
-
-func (VulnerabilityProtectionProfileRuleActionResetBothArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetBoth)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetBothArgs) ToVulnerabilityProtectionProfileRuleActionResetBothOutput() VulnerabilityProtectionProfileRuleActionResetBothOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetBothArgs) ToVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetBothOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetBothOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetBothArgs) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutput() VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetBothArgs) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetBothOutput).ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionResetBothPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionResetBothArgs, VulnerabilityProtectionProfileRuleActionResetBothPtr and VulnerabilityProtectionProfileRuleActionResetBothPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionResetBothPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionResetBothArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionResetBothPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutput() VulnerabilityProtectionProfileRuleActionResetBothPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionResetBothPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionResetBothPtrType VulnerabilityProtectionProfileRuleActionResetBothArgs
-
-func VulnerabilityProtectionProfileRuleActionResetBothPtr(v *VulnerabilityProtectionProfileRuleActionResetBothArgs) VulnerabilityProtectionProfileRuleActionResetBothPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionResetBothPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionResetBothPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionResetBoth)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionResetBothPtrType) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutput() VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionResetBothPtrType) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetBothPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetBothOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionResetBothOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetBoth)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetBothOutput) ToVulnerabilityProtectionProfileRuleActionResetBothOutput() VulnerabilityProtectionProfileRuleActionResetBothOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetBothOutput) ToVulnerabilityProtectionProfileRuleActionResetBothOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetBothOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetBothOutput) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutput() VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetBothOutput) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionResetBoth) *VulnerabilityProtectionProfileRuleActionResetBoth {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionResetBothPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetBothPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionResetBothPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionResetBoth)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetBothPtrOutput) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutput() VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetBothPtrOutput) ToVulnerabilityProtectionProfileRuleActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetBothPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetBothPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionResetBothOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionResetBoth) VulnerabilityProtectionProfileRuleActionResetBoth {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionResetBoth
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionResetBothOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetClient struct {
-}
-
-// VulnerabilityProtectionProfileRuleActionResetClientInput is an input type that accepts VulnerabilityProtectionProfileRuleActionResetClientArgs and VulnerabilityProtectionProfileRuleActionResetClientOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionResetClientInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionResetClientArgs{...}
-type VulnerabilityProtectionProfileRuleActionResetClientInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionResetClientOutput() VulnerabilityProtectionProfileRuleActionResetClientOutput
-	ToVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionResetClientOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionResetClientArgs struct {
-}
-
-func (VulnerabilityProtectionProfileRuleActionResetClientArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetClient)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetClientArgs) ToVulnerabilityProtectionProfileRuleActionResetClientOutput() VulnerabilityProtectionProfileRuleActionResetClientOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetClientArgs) ToVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetClientOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetClientOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetClientArgs) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutput() VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetClientArgs) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetClientOutput).ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionResetClientPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionResetClientArgs, VulnerabilityProtectionProfileRuleActionResetClientPtr and VulnerabilityProtectionProfileRuleActionResetClientPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionResetClientPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionResetClientArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionResetClientPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutput() VulnerabilityProtectionProfileRuleActionResetClientPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionResetClientPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionResetClientPtrType VulnerabilityProtectionProfileRuleActionResetClientArgs
-
-func VulnerabilityProtectionProfileRuleActionResetClientPtr(v *VulnerabilityProtectionProfileRuleActionResetClientArgs) VulnerabilityProtectionProfileRuleActionResetClientPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionResetClientPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionResetClientPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionResetClient)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionResetClientPtrType) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutput() VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionResetClientPtrType) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetClientPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetClientOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionResetClientOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetClient)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetClientOutput) ToVulnerabilityProtectionProfileRuleActionResetClientOutput() VulnerabilityProtectionProfileRuleActionResetClientOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetClientOutput) ToVulnerabilityProtectionProfileRuleActionResetClientOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetClientOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetClientOutput) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutput() VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetClientOutput) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionResetClient) *VulnerabilityProtectionProfileRuleActionResetClient {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionResetClientPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetClientPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionResetClientPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionResetClient)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetClientPtrOutput) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutput() VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetClientPtrOutput) ToVulnerabilityProtectionProfileRuleActionResetClientPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetClientPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetClientPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionResetClientOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionResetClient) VulnerabilityProtectionProfileRuleActionResetClient {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionResetClient
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionResetClientOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetServer struct {
-}
-
-// VulnerabilityProtectionProfileRuleActionResetServerInput is an input type that accepts VulnerabilityProtectionProfileRuleActionResetServerArgs and VulnerabilityProtectionProfileRuleActionResetServerOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionResetServerInput` via:
-//
-//	VulnerabilityProtectionProfileRuleActionResetServerArgs{...}
-type VulnerabilityProtectionProfileRuleActionResetServerInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionResetServerOutput() VulnerabilityProtectionProfileRuleActionResetServerOutput
-	ToVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionResetServerOutput
-}
-
-type VulnerabilityProtectionProfileRuleActionResetServerArgs struct {
-}
-
-func (VulnerabilityProtectionProfileRuleActionResetServerArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetServer)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetServerArgs) ToVulnerabilityProtectionProfileRuleActionResetServerOutput() VulnerabilityProtectionProfileRuleActionResetServerOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetServerArgs) ToVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetServerOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetServerOutput)
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetServerArgs) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutput() VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileRuleActionResetServerArgs) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetServerOutput).ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileRuleActionResetServerPtrInput is an input type that accepts VulnerabilityProtectionProfileRuleActionResetServerArgs, VulnerabilityProtectionProfileRuleActionResetServerPtr and VulnerabilityProtectionProfileRuleActionResetServerPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileRuleActionResetServerPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileRuleActionResetServerArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileRuleActionResetServerPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutput() VulnerabilityProtectionProfileRuleActionResetServerPtrOutput
-	ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileRuleActionResetServerPtrOutput
-}
-
-type vulnerabilityProtectionProfileRuleActionResetServerPtrType VulnerabilityProtectionProfileRuleActionResetServerArgs
-
-func VulnerabilityProtectionProfileRuleActionResetServerPtr(v *VulnerabilityProtectionProfileRuleActionResetServerArgs) VulnerabilityProtectionProfileRuleActionResetServerPtrInput {
-	return (*vulnerabilityProtectionProfileRuleActionResetServerPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileRuleActionResetServerPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionResetServer)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionResetServerPtrType) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutput() VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return i.ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileRuleActionResetServerPtrType) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileRuleActionResetServerPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetServerOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionResetServerOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetServer)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetServerOutput) ToVulnerabilityProtectionProfileRuleActionResetServerOutput() VulnerabilityProtectionProfileRuleActionResetServerOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetServerOutput) ToVulnerabilityProtectionProfileRuleActionResetServerOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetServerOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetServerOutput) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutput() VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return o.ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetServerOutput) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileRuleActionResetServer) *VulnerabilityProtectionProfileRuleActionResetServer {
-		return &v
-	}).(VulnerabilityProtectionProfileRuleActionResetServerPtrOutput)
-}
-
-type VulnerabilityProtectionProfileRuleActionResetServerPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileRuleActionResetServerPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileRuleActionResetServer)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetServerPtrOutput) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutput() VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetServerPtrOutput) ToVulnerabilityProtectionProfileRuleActionResetServerPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileRuleActionResetServerPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileRuleActionResetServerPtrOutput) Elem() VulnerabilityProtectionProfileRuleActionResetServerOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileRuleActionResetServer) VulnerabilityProtectionProfileRuleActionResetServer {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileRuleActionResetServer
-		return ret
-	}).(VulnerabilityProtectionProfileRuleActionResetServerOutput)
-}
-
-type VulnerabilityProtectionProfileThreatException struct {
-	// vulnerability threat exception default action
-	Action *VulnerabilityProtectionProfileThreatExceptionAction `pulumi:"action"`
-	// Exempt ip
-	ExemptIps []VulnerabilityProtectionProfileThreatExceptionExemptIp `pulumi:"exemptIps"`
-	// Name
-	Name *string `pulumi:"name"`
-	// Notes
-	Notes *string `pulumi:"notes"`
-	// Packet capture
-	PacketCapture *string `pulumi:"packetCapture"`
-	// vulnerability time attribute
-	TimeAttribute *VulnerabilityProtectionProfileThreatExceptionTimeAttribute `pulumi:"timeAttribute"`
-}
-
-// VulnerabilityProtectionProfileThreatExceptionInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionArgs and VulnerabilityProtectionProfileThreatExceptionOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionOutput() VulnerabilityProtectionProfileThreatExceptionOutput
-	ToVulnerabilityProtectionProfileThreatExceptionOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionArgs struct {
-	// vulnerability threat exception default action
-	Action VulnerabilityProtectionProfileThreatExceptionActionPtrInput `pulumi:"action"`
-	// Exempt ip
-	ExemptIps VulnerabilityProtectionProfileThreatExceptionExemptIpArrayInput `pulumi:"exemptIps"`
-	// Name
-	Name pulumi.StringPtrInput `pulumi:"name"`
-	// Notes
-	Notes pulumi.StringPtrInput `pulumi:"notes"`
-	// Packet capture
-	PacketCapture pulumi.StringPtrInput `pulumi:"packetCapture"`
-	// vulnerability time attribute
-	TimeAttribute VulnerabilityProtectionProfileThreatExceptionTimeAttributePtrInput `pulumi:"timeAttribute"`
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatException)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionArgs) ToVulnerabilityProtectionProfileThreatExceptionOutput() VulnerabilityProtectionProfileThreatExceptionOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionArgs) ToVulnerabilityProtectionProfileThreatExceptionOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionOutput)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionArrayInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionArray and VulnerabilityProtectionProfileThreatExceptionArrayOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionArrayInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionArray{ VulnerabilityProtectionProfileThreatExceptionArgs{...} }
-type VulnerabilityProtectionProfileThreatExceptionArrayInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionArrayOutput() VulnerabilityProtectionProfileThreatExceptionArrayOutput
-	ToVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionArrayOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionArray []VulnerabilityProtectionProfileThreatExceptionInput
-
-func (VulnerabilityProtectionProfileThreatExceptionArray) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VulnerabilityProtectionProfileThreatException)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionArray) ToVulnerabilityProtectionProfileThreatExceptionArrayOutput() VulnerabilityProtectionProfileThreatExceptionArrayOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionArray) ToVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionArrayOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionArrayOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatException)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) ToVulnerabilityProtectionProfileThreatExceptionOutput() VulnerabilityProtectionProfileThreatExceptionOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) ToVulnerabilityProtectionProfileThreatExceptionOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionOutput {
-	return o
-}
-
-// vulnerability threat exception default action
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) Action() VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatException) *VulnerabilityProtectionProfileThreatExceptionAction {
-		return v.Action
-	}).(VulnerabilityProtectionProfileThreatExceptionActionPtrOutput)
-}
-
-// Exempt ip
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) ExemptIps() VulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatException) []VulnerabilityProtectionProfileThreatExceptionExemptIp {
-		return v.ExemptIps
-	}).(VulnerabilityProtectionProfileThreatExceptionExemptIpArrayOutput)
-}
-
-// Name
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) Name() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatException) *string { return v.Name }).(pulumi.StringPtrOutput)
-}
-
-// Notes
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) Notes() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatException) *string { return v.Notes }).(pulumi.StringPtrOutput)
-}
-
-// Packet capture
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) PacketCapture() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatException) *string { return v.PacketCapture }).(pulumi.StringPtrOutput)
-}
-
-// vulnerability time attribute
-func (o VulnerabilityProtectionProfileThreatExceptionOutput) TimeAttribute() VulnerabilityProtectionProfileThreatExceptionTimeAttributePtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatException) *VulnerabilityProtectionProfileThreatExceptionTimeAttribute {
-		return v.TimeAttribute
-	}).(VulnerabilityProtectionProfileThreatExceptionTimeAttributePtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionArrayOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionArrayOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*[]VulnerabilityProtectionProfileThreatException)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionArrayOutput) ToVulnerabilityProtectionProfileThreatExceptionArrayOutput() VulnerabilityProtectionProfileThreatExceptionArrayOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionArrayOutput) ToVulnerabilityProtectionProfileThreatExceptionArrayOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionArrayOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionArrayOutput) Index(i pulumi.IntInput) VulnerabilityProtectionProfileThreatExceptionOutput {
-	return pulumi.All(o, i).ApplyT(func(vs []interface{}) VulnerabilityProtectionProfileThreatException {
-		return vs[0].([]VulnerabilityProtectionProfileThreatException)[vs[1].(int)]
-	}).(VulnerabilityProtectionProfileThreatExceptionOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionAction struct {
-	// Alert
-	Alert *VulnerabilityProtectionProfileThreatExceptionActionAlert `pulumi:"alert"`
-	// Allow
-	Allow *VulnerabilityProtectionProfileThreatExceptionActionAllow `pulumi:"allow"`
-	// vulnerability protection threat exception block ip
-	BlockIp *VulnerabilityProtectionProfileThreatExceptionActionBlockIp `pulumi:"blockIp"`
-	// Default
-	Default *VulnerabilityProtectionProfileThreatExceptionActionDefault `pulumi:"default"`
-	// Drop
-	Drop *VulnerabilityProtectionProfileThreatExceptionActionDrop `pulumi:"drop"`
-	// Reset both
-	ResetBoth *VulnerabilityProtectionProfileThreatExceptionActionResetBoth `pulumi:"resetBoth"`
-	// Reset client
-	ResetClient *VulnerabilityProtectionProfileThreatExceptionActionResetClient `pulumi:"resetClient"`
-	// Reset server
-	ResetServer *VulnerabilityProtectionProfileThreatExceptionActionResetServer `pulumi:"resetServer"`
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionArgs and VulnerabilityProtectionProfileThreatExceptionActionOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionActionArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionActionInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionOutput() VulnerabilityProtectionProfileThreatExceptionActionOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionArgs struct {
-	// Alert
-	Alert VulnerabilityProtectionProfileThreatExceptionActionAlertPtrInput `pulumi:"alert"`
-	// Allow
-	Allow VulnerabilityProtectionProfileThreatExceptionActionAllowPtrInput `pulumi:"allow"`
-	// vulnerability protection threat exception block ip
-	BlockIp VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrInput `pulumi:"blockIp"`
-	// Default
-	Default VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrInput `pulumi:"default"`
-	// Drop
-	Drop VulnerabilityProtectionProfileThreatExceptionActionDropPtrInput `pulumi:"drop"`
-	// Reset both
-	ResetBoth VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrInput `pulumi:"resetBoth"`
-	// Reset client
-	ResetClient VulnerabilityProtectionProfileThreatExceptionActionResetClientPtrInput `pulumi:"resetClient"`
-	// Reset server
-	ResetServer VulnerabilityProtectionProfileThreatExceptionActionResetServerPtrInput `pulumi:"resetServer"`
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionActionArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionAction)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionArgs) ToVulnerabilityProtectionProfileThreatExceptionActionOutput() VulnerabilityProtectionProfileThreatExceptionActionOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionArgs) ToVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionOutput)
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionArgs) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionArgs) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionOutput).ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionPtrInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionArgs, VulnerabilityProtectionProfileThreatExceptionActionPtr and VulnerabilityProtectionProfileThreatExceptionActionPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileThreatExceptionActionArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileThreatExceptionActionPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionPtrOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionPtrOutput
-}
-
-type vulnerabilityProtectionProfileThreatExceptionActionPtrType VulnerabilityProtectionProfileThreatExceptionActionArgs
-
-func VulnerabilityProtectionProfileThreatExceptionActionPtr(v *VulnerabilityProtectionProfileThreatExceptionActionArgs) VulnerabilityProtectionProfileThreatExceptionActionPtrInput {
-	return (*vulnerabilityProtectionProfileThreatExceptionActionPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileThreatExceptionActionPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionAction)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionAction)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) ToVulnerabilityProtectionProfileThreatExceptionActionOutput() VulnerabilityProtectionProfileThreatExceptionActionOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) ToVulnerabilityProtectionProfileThreatExceptionActionOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return o.ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionAction {
-		return &v
-	}).(VulnerabilityProtectionProfileThreatExceptionActionPtrOutput)
-}
-
-// Alert
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) Alert() VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionAlert {
-		return v.Alert
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput)
-}
-
-// Allow
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) Allow() VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionAllow {
-		return v.Allow
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput)
-}
-
-// vulnerability protection threat exception block ip
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) BlockIp() VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionBlockIp {
-		return v.BlockIp
-	}).(VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput)
-}
-
-// Default
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) Default() VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionDefault {
-		return v.Default
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput)
-}
-
-// Drop
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) Drop() VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionDrop {
-		return v.Drop
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput)
-}
-
-// Reset both
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) ResetBoth() VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionResetBoth {
-		return v.ResetBoth
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput)
-}
-
-// Reset client
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) ResetClient() VulnerabilityProtectionProfileThreatExceptionActionResetClientPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionResetClient {
-		return v.ResetClient
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetClientPtrOutput)
-}
-
-// Reset server
-func (o VulnerabilityProtectionProfileThreatExceptionActionOutput) ResetServer() VulnerabilityProtectionProfileThreatExceptionActionResetServerPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionResetServer {
-		return v.ResetServer
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetServerPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionAction)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) Elem() VulnerabilityProtectionProfileThreatExceptionActionOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) VulnerabilityProtectionProfileThreatExceptionAction {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileThreatExceptionAction
-		return ret
-	}).(VulnerabilityProtectionProfileThreatExceptionActionOutput)
-}
-
-// Alert
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) Alert() VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionAlert {
-		if v == nil {
-			return nil
-		}
-		return v.Alert
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput)
-}
-
-// Allow
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) Allow() VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionAllow {
-		if v == nil {
-			return nil
-		}
-		return v.Allow
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput)
-}
-
-// vulnerability protection threat exception block ip
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) BlockIp() VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionBlockIp {
-		if v == nil {
-			return nil
-		}
-		return v.BlockIp
-	}).(VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput)
-}
-
-// Default
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) Default() VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionDefault {
-		if v == nil {
-			return nil
-		}
-		return v.Default
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput)
-}
-
-// Drop
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) Drop() VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionDrop {
-		if v == nil {
-			return nil
-		}
-		return v.Drop
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput)
-}
-
-// Reset both
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) ResetBoth() VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionResetBoth {
-		if v == nil {
-			return nil
-		}
-		return v.ResetBoth
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput)
-}
-
-// Reset client
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) ResetClient() VulnerabilityProtectionProfileThreatExceptionActionResetClientPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionResetClient {
-		if v == nil {
-			return nil
-		}
-		return v.ResetClient
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetClientPtrOutput)
-}
-
-// Reset server
-func (o VulnerabilityProtectionProfileThreatExceptionActionPtrOutput) ResetServer() VulnerabilityProtectionProfileThreatExceptionActionResetServerPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionAction) *VulnerabilityProtectionProfileThreatExceptionActionResetServer {
-		if v == nil {
-			return nil
-		}
-		return v.ResetServer
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetServerPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAlert struct {
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionAlertInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionAlertArgs and VulnerabilityProtectionProfileThreatExceptionActionAlertOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionAlertInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionActionAlertArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionActionAlertInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionAlertOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAlertArgs struct {
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAlert)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAlertOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionAlertOutput)
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAlertArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionAlertOutput).ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionAlertPtrInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionAlertArgs, VulnerabilityProtectionProfileThreatExceptionActionAlertPtr and VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionAlertPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileThreatExceptionActionAlertArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileThreatExceptionActionAlertPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput
-}
-
-type vulnerabilityProtectionProfileThreatExceptionActionAlertPtrType VulnerabilityProtectionProfileThreatExceptionActionAlertArgs
-
-func VulnerabilityProtectionProfileThreatExceptionActionAlertPtr(v *VulnerabilityProtectionProfileThreatExceptionActionAlertArgs) VulnerabilityProtectionProfileThreatExceptionActionAlertPtrInput {
-	return (*vulnerabilityProtectionProfileThreatExceptionActionAlertPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileThreatExceptionActionAlertPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionAlert)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionAlertPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionAlertPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAlertOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAlert)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAlertOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAlertOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return o.ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAlertOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileThreatExceptionActionAlert) *VulnerabilityProtectionProfileThreatExceptionActionAlert {
-		return &v
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionAlert)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput) Elem() VulnerabilityProtectionProfileThreatExceptionActionAlertOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionAlert) VulnerabilityProtectionProfileThreatExceptionActionAlert {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileThreatExceptionActionAlert
-		return ret
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAlertOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAllow struct {
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionAllowInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionAllowArgs and VulnerabilityProtectionProfileThreatExceptionActionAllowOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionAllowInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionActionAllowArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionActionAllowInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionAllowOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAllowArgs struct {
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAllow)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAllowOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionAllowOutput)
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionAllowArgs) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionAllowOutput).ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionAllowPtrInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionAllowArgs, VulnerabilityProtectionProfileThreatExceptionActionAllowPtr and VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionAllowPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileThreatExceptionActionAllowArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileThreatExceptionActionAllowPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput
-}
-
-type vulnerabilityProtectionProfileThreatExceptionActionAllowPtrType VulnerabilityProtectionProfileThreatExceptionActionAllowArgs
-
-func VulnerabilityProtectionProfileThreatExceptionActionAllowPtr(v *VulnerabilityProtectionProfileThreatExceptionActionAllowArgs) VulnerabilityProtectionProfileThreatExceptionActionAllowPtrInput {
-	return (*vulnerabilityProtectionProfileThreatExceptionActionAllowPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileThreatExceptionActionAllowPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionAllow)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionAllowPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionAllowPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAllowOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAllow)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAllowOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAllowOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return o.ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAllowOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileThreatExceptionActionAllow) *VulnerabilityProtectionProfileThreatExceptionActionAllow {
-		return &v
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionAllow)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput) Elem() VulnerabilityProtectionProfileThreatExceptionActionAllowOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionAllow) VulnerabilityProtectionProfileThreatExceptionActionAllow {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileThreatExceptionActionAllow
-		return ret
-	}).(VulnerabilityProtectionProfileThreatExceptionActionAllowOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionBlockIp struct {
-	// Duration
-	Duration *int `pulumi:"duration"`
-	// Track by
-	TrackBy *string `pulumi:"trackBy"`
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionBlockIpInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs and VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionBlockIpInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionActionBlockIpInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs struct {
-	// Duration
-	Duration pulumi.IntPtrInput `pulumi:"duration"`
-	// Track by
-	TrackBy pulumi.StringPtrInput `pulumi:"trackBy"`
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionBlockIp)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput)
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput).ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs, VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtr and VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput
-}
-
-type vulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrType VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs
-
-func VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtr(v *VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs) VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrInput {
-	return (*vulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionBlockIp)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionBlockIp)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return o.ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileThreatExceptionActionBlockIp) *VulnerabilityProtectionProfileThreatExceptionActionBlockIp {
-		return &v
-	}).(VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput)
-}
-
-// Duration
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) Duration() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionActionBlockIp) *int { return v.Duration }).(pulumi.IntPtrOutput)
-}
-
-// Track by
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput) TrackBy() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v VulnerabilityProtectionProfileThreatExceptionActionBlockIp) *string { return v.TrackBy }).(pulumi.StringPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionBlockIp)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput) Elem() VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionBlockIp) VulnerabilityProtectionProfileThreatExceptionActionBlockIp {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileThreatExceptionActionBlockIp
-		return ret
-	}).(VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput)
-}
-
-// Duration
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput) Duration() pulumi.IntPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionBlockIp) *int {
-		if v == nil {
-			return nil
-		}
-		return v.Duration
-	}).(pulumi.IntPtrOutput)
-}
-
-// Track by
-func (o VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput) TrackBy() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionBlockIp) *string {
-		if v == nil {
-			return nil
-		}
-		return v.TrackBy
-	}).(pulumi.StringPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDefault struct {
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionDefaultInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs and VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionDefaultInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionActionDefaultInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs struct {
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDefault)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput)
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput).ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs, VulnerabilityProtectionProfileThreatExceptionActionDefaultPtr and VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput
-}
-
-type vulnerabilityProtectionProfileThreatExceptionActionDefaultPtrType VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs
-
-func VulnerabilityProtectionProfileThreatExceptionActionDefaultPtr(v *VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs) VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrInput {
-	return (*vulnerabilityProtectionProfileThreatExceptionActionDefaultPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileThreatExceptionActionDefaultPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionDefault)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionDefaultPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionDefaultPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDefault)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return o.ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileThreatExceptionActionDefault) *VulnerabilityProtectionProfileThreatExceptionActionDefault {
-		return &v
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionDefault)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput) Elem() VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionDefault) VulnerabilityProtectionProfileThreatExceptionActionDefault {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileThreatExceptionActionDefault
-		return ret
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDrop struct {
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionDropInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionDropArgs and VulnerabilityProtectionProfileThreatExceptionActionDropOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionDropInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionActionDropArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionActionDropInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionDropOutput() VulnerabilityProtectionProfileThreatExceptionActionDropOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDropArgs struct {
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionActionDropArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDrop)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDropArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDropOutput() VulnerabilityProtectionProfileThreatExceptionActionDropOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDropArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionDropOutput)
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDropArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionDropArgs) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionDropOutput).ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionDropPtrInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionDropArgs, VulnerabilityProtectionProfileThreatExceptionActionDropPtr and VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionDropPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileThreatExceptionActionDropArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileThreatExceptionActionDropPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput
-}
-
-type vulnerabilityProtectionProfileThreatExceptionActionDropPtrType VulnerabilityProtectionProfileThreatExceptionActionDropArgs
-
-func VulnerabilityProtectionProfileThreatExceptionActionDropPtr(v *VulnerabilityProtectionProfileThreatExceptionActionDropArgs) VulnerabilityProtectionProfileThreatExceptionActionDropPtrInput {
-	return (*vulnerabilityProtectionProfileThreatExceptionActionDropPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileThreatExceptionActionDropPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionDrop)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionDropPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionDropPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDropOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionDropOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDrop)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDropOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDropOutput() VulnerabilityProtectionProfileThreatExceptionActionDropOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDropOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDropOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDropOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return o.ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDropOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileThreatExceptionActionDrop) *VulnerabilityProtectionProfileThreatExceptionActionDrop {
-		return &v
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionDrop)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionDropPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput) Elem() VulnerabilityProtectionProfileThreatExceptionActionDropOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionDrop) VulnerabilityProtectionProfileThreatExceptionActionDrop {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileThreatExceptionActionDrop
-		return ret
-	}).(VulnerabilityProtectionProfileThreatExceptionActionDropOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionResetBoth struct {
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionResetBothInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs and VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionResetBothInput` via:
-//
-//	VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs{...}
-type VulnerabilityProtectionProfileThreatExceptionActionResetBothInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs struct {
-}
-
-func (VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionResetBoth)(nil)).Elem()
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput)
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(context.Background())
-}
-
-func (i VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput).ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(ctx)
-}
-
-// VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrInput is an input type that accepts VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs, VulnerabilityProtectionProfileThreatExceptionActionResetBothPtr and VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput values.
-// You can construct a concrete instance of `VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrInput` via:
-//
-//	        VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs{...}
-//
-//	or:
-//
-//	        nil
-type VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrInput interface {
-	pulumi.Input
-
-	ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput
-	ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput
-}
-
-type vulnerabilityProtectionProfileThreatExceptionActionResetBothPtrType VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs
-
-func VulnerabilityProtectionProfileThreatExceptionActionResetBothPtr(v *VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs) VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrInput {
-	return (*vulnerabilityProtectionProfileThreatExceptionActionResetBothPtrType)(v)
-}
-
-func (*vulnerabilityProtectionProfileThreatExceptionActionResetBothPtrType) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionResetBoth)(nil)).Elem()
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionResetBothPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return i.ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(context.Background())
-}
-
-func (i *vulnerabilityProtectionProfileThreatExceptionActionResetBothPtrType) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return pulumi.ToOutputWithContext(ctx, i).(VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionResetBoth)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return o.ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(context.Background())
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return o.ApplyTWithContext(ctx, func(_ context.Context, v VulnerabilityProtectionProfileThreatExceptionActionResetBoth) *VulnerabilityProtectionProfileThreatExceptionActionResetBoth {
-		return &v
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput)
-}
-
-type VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput struct{ *pulumi.OutputState }
-
-func (VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((**VulnerabilityProtectionProfileThreatExceptionActionResetBoth)(nil)).Elem()
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput() VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput) ToVulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutputWithContext(ctx context.Context) VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput {
-	return o
-}
-
-func (o VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput) Elem() VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput {
-	return o.ApplyT(func(v *VulnerabilityProtectionProfileThreatExceptionActionResetBoth) VulnerabilityProtectionProfileThreatExceptionActionResetBoth {
-		if v != nil {
-			return *v
-		}
-		var ret VulnerabilityProtectionProfileThreatExceptionActionResetBoth
-		return ret
-	}).(VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput)
-}
-
 func init() {
+	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatWildfireParamInput)(nil)).Elem(), HttpServerProfileFormatWildfireParamArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileFormatWildfireParamArrayInput)(nil)).Elem(), HttpServerProfileFormatWildfireParamArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileServerInput)(nil)).Elem(), HttpServerProfileServerArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*HttpServerProfileServerArrayInput)(nil)).Elem(), HttpServerProfileServerArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeCryptoProfileLifetimeInput)(nil)).Elem(), IkeCryptoProfileLifetimeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeCryptoProfileLifetimePtrInput)(nil)).Elem(), IkeCryptoProfileLifetimeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationInput)(nil)).Elem(), IkeGatewayAuthenticationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationPtrInput)(nil)).Elem(), IkeGatewayAuthenticationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationCertificateInput)(nil)).Elem(), IkeGatewayAuthenticationCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationCertificatePtrInput)(nil)).Elem(), IkeGatewayAuthenticationCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationCertificateLocalCertificateInput)(nil)).Elem(), IkeGatewayAuthenticationCertificateLocalCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationCertificateLocalCertificatePtrInput)(nil)).Elem(), IkeGatewayAuthenticationCertificateLocalCertificateArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationPreSharedKeyInput)(nil)).Elem(), IkeGatewayAuthenticationPreSharedKeyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayAuthenticationPreSharedKeyPtrInput)(nil)).Elem(), IkeGatewayAuthenticationPreSharedKeyArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayLocalAddressInput)(nil)).Elem(), IkeGatewayLocalAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayLocalAddressPtrInput)(nil)).Elem(), IkeGatewayLocalAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayLocalIdInput)(nil)).Elem(), IkeGatewayLocalIdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayLocalIdPtrInput)(nil)).Elem(), IkeGatewayLocalIdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayPeerAddressInput)(nil)).Elem(), IkeGatewayPeerAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayPeerAddressPtrInput)(nil)).Elem(), IkeGatewayPeerAddressArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayPeerAddressDynamicInput)(nil)).Elem(), IkeGatewayPeerAddressDynamicArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayPeerAddressDynamicPtrInput)(nil)).Elem(), IkeGatewayPeerAddressDynamicArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayPeerIdInput)(nil)).Elem(), IkeGatewayPeerIdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayPeerIdPtrInput)(nil)).Elem(), IkeGatewayPeerIdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolInput)(nil)).Elem(), IkeGatewayProtocolArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolPtrInput)(nil)).Elem(), IkeGatewayProtocolArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolCommonInput)(nil)).Elem(), IkeGatewayProtocolCommonArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolCommonPtrInput)(nil)).Elem(), IkeGatewayProtocolCommonArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolCommonFragmentationInput)(nil)).Elem(), IkeGatewayProtocolCommonFragmentationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolCommonFragmentationPtrInput)(nil)).Elem(), IkeGatewayProtocolCommonFragmentationArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolCommonNatTraversalInput)(nil)).Elem(), IkeGatewayProtocolCommonNatTraversalArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolCommonNatTraversalPtrInput)(nil)).Elem(), IkeGatewayProtocolCommonNatTraversalArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev1Input)(nil)).Elem(), IkeGatewayProtocolIkev1Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev1PtrInput)(nil)).Elem(), IkeGatewayProtocolIkev1Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev1DpdInput)(nil)).Elem(), IkeGatewayProtocolIkev1DpdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev1DpdPtrInput)(nil)).Elem(), IkeGatewayProtocolIkev1DpdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev2Input)(nil)).Elem(), IkeGatewayProtocolIkev2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev2PtrInput)(nil)).Elem(), IkeGatewayProtocolIkev2Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev2DpdInput)(nil)).Elem(), IkeGatewayProtocolIkev2DpdArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*IkeGatewayProtocolIkev2DpdPtrInput)(nil)).Elem(), IkeGatewayProtocolIkev2DpdArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*InterfaceManagementProfilePermittedIpInput)(nil)).Elem(), InterfaceManagementProfilePermittedIpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*InterfaceManagementProfilePermittedIpArrayInput)(nil)).Elem(), InterfaceManagementProfilePermittedIpArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*IpsecCryptoProfileAhInput)(nil)).Elem(), IpsecCryptoProfileAhArgs{})
@@ -80482,14 +81586,16 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*RouteCommunityListTypeRegularRegularEntryArrayInput)(nil)).Elem(), RouteCommunityListTypeRegularRegularEntryArray{})
 	pulumi.RegisterInputType(reflect.TypeOf((*RoutePathAccessListAspathEntryInput)(nil)).Elem(), RoutePathAccessListAspathEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*RoutePathAccessListAspathEntryArrayInput)(nil)).Elem(), RoutePathAccessListAspathEntryArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4Input)(nil)).Elem(), RoutePrefixListIpv4Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4PtrInput)(nil)).Elem(), RoutePrefixListIpv4Args{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryInput)(nil)).Elem(), RoutePrefixListIpv4Ipv4EntryArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryArrayInput)(nil)).Elem(), RoutePrefixListIpv4Ipv4EntryArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefixInput)(nil)).Elem(), RoutePrefixListIpv4Ipv4EntryPrefixArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefixPtrInput)(nil)).Elem(), RoutePrefixListIpv4Ipv4EntryPrefixArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefixEntryInput)(nil)).Elem(), RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrInput)(nil)).Elem(), RoutePrefixListIpv4Ipv4EntryPrefixEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeInput)(nil)).Elem(), RoutePrefixListTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypePtrInput)(nil)).Elem(), RoutePrefixListTypeArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4Input)(nil)).Elem(), RoutePrefixListTypeIpv4Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4PtrInput)(nil)).Elem(), RoutePrefixListTypeIpv4Args{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryInput)(nil)).Elem(), RoutePrefixListTypeIpv4Ipv4EntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryArrayInput)(nil)).Elem(), RoutePrefixListTypeIpv4Ipv4EntryArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefixInput)(nil)).Elem(), RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrInput)(nil)).Elem(), RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryInput)(nil)).Elem(), RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrInput)(nil)).Elem(), RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ScepProfileAlgorithmInput)(nil)).Elem(), ScepProfileAlgorithmArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ScepProfileAlgorithmPtrInput)(nil)).Elem(), ScepProfileAlgorithmArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ScepProfileAlgorithmRsaInput)(nil)).Elem(), ScepProfileAlgorithmRsaArgs{})
@@ -80580,6 +81686,10 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceProtocolUdpPtrInput)(nil)).Elem(), ServiceProtocolUdpArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceProtocolUdpOverrideInput)(nil)).Elem(), ServiceProtocolUdpOverrideArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*ServiceProtocolUdpOverridePtrInput)(nil)).Elem(), ServiceProtocolUdpOverrideArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SiteMemberInput)(nil)).Elem(), SiteMemberArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SiteMemberArrayInput)(nil)).Elem(), SiteMemberArray{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SiteQosInput)(nil)).Elem(), SiteQosArgs{})
+	pulumi.RegisterInputType(reflect.TypeOf((*SiteQosPtrInput)(nil)).Elem(), SiteQosArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SyslogServerProfileFormatInput)(nil)).Elem(), SyslogServerProfileFormatArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SyslogServerProfileFormatPtrInput)(nil)).Elem(), SyslogServerProfileFormatArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*SyslogServerProfileFormatEscapingInput)(nil)).Elem(), SyslogServerProfileFormatEscapingArgs{})
@@ -80610,52 +81720,46 @@ func init() {
 	pulumi.RegisterInputType(reflect.TypeOf((*UrlAccessProfileCredentialEnforcementModeDomainCredentialsPtrInput)(nil)).Elem(), UrlAccessProfileCredentialEnforcementModeDomainCredentialsArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*UrlAccessProfileCredentialEnforcementModeIpUserInput)(nil)).Elem(), UrlAccessProfileCredentialEnforcementModeIpUserArgs{})
 	pulumi.RegisterInputType(reflect.TypeOf((*UrlAccessProfileCredentialEnforcementModeIpUserPtrInput)(nil)).Elem(), UrlAccessProfileCredentialEnforcementModeIpUserArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceArpInput)(nil)).Elem(), VlanInterfaceArpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceArpArrayInput)(nil)).Elem(), VlanInterfaceArpArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceDdnsConfigInput)(nil)).Elem(), VlanInterfaceDdnsConfigArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceDdnsConfigPtrInput)(nil)).Elem(), VlanInterfaceDdnsConfigArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceDhcpClientInput)(nil)).Elem(), VlanInterfaceDhcpClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceDhcpClientPtrInput)(nil)).Elem(), VlanInterfaceDhcpClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceDhcpClientSendHostnameInput)(nil)).Elem(), VlanInterfaceDhcpClientSendHostnameArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceDhcpClientSendHostnamePtrInput)(nil)).Elem(), VlanInterfaceDhcpClientSendHostnameArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceIpInput)(nil)).Elem(), VlanInterfaceIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VlanInterfaceIpArrayInput)(nil)).Elem(), VlanInterfaceIpArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleArrayInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAlertInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionAlertArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAlertPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionAlertArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAllowInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionAllowArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionAllowPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionAllowArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionBlockIpInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionBlockIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionBlockIpPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionBlockIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDefaultInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionDefaultArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDefaultPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionDefaultArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDropInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionDropArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionDropPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionDropArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetBothInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionResetBothArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetBothPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionResetBothArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetClientInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionResetClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetClientPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionResetClientArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetServerInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionResetServerArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileRuleActionResetServerPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileRuleActionResetServerArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionArrayInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionArray{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAlertInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionAlertArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAlertPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionAlertArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAllowInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionAllowArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionAllowPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionAllowArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionBlockIpInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionBlockIpArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDefaultInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionDefaultArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDropInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionDropArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionDropPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionDropArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionResetBothInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs{})
-	pulumi.RegisterInputType(reflect.TypeOf((*VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrInput)(nil)).Elem(), VulnerabilityProtectionProfileThreatExceptionActionResetBothArgs{})
+	pulumi.RegisterOutputType(HttpServerProfileFormatWildfireParamOutput{})
+	pulumi.RegisterOutputType(HttpServerProfileFormatWildfireParamArrayOutput{})
+	pulumi.RegisterOutputType(HttpServerProfileServerOutput{})
+	pulumi.RegisterOutputType(HttpServerProfileServerArrayOutput{})
+	pulumi.RegisterOutputType(IkeCryptoProfileLifetimeOutput{})
+	pulumi.RegisterOutputType(IkeCryptoProfileLifetimePtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationCertificateOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationCertificatePtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationCertificateLocalCertificateOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationCertificateLocalCertificatePtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationPreSharedKeyOutput{})
+	pulumi.RegisterOutputType(IkeGatewayAuthenticationPreSharedKeyPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayLocalAddressOutput{})
+	pulumi.RegisterOutputType(IkeGatewayLocalAddressPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayLocalIdOutput{})
+	pulumi.RegisterOutputType(IkeGatewayLocalIdPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayPeerAddressOutput{})
+	pulumi.RegisterOutputType(IkeGatewayPeerAddressPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayPeerAddressDynamicOutput{})
+	pulumi.RegisterOutputType(IkeGatewayPeerAddressDynamicPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayPeerIdOutput{})
+	pulumi.RegisterOutputType(IkeGatewayPeerIdPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolCommonOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolCommonPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolCommonFragmentationOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolCommonFragmentationPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolCommonNatTraversalOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolCommonNatTraversalPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev1Output{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev1PtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev1DpdOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev1DpdPtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev2Output{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev2PtrOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev2DpdOutput{})
+	pulumi.RegisterOutputType(IkeGatewayProtocolIkev2DpdPtrOutput{})
 	pulumi.RegisterOutputType(InterfaceManagementProfilePermittedIpOutput{})
 	pulumi.RegisterOutputType(InterfaceManagementProfilePermittedIpArrayOutput{})
 	pulumi.RegisterOutputType(IpsecCryptoProfileAhOutput{})
@@ -81481,14 +82585,16 @@ func init() {
 	pulumi.RegisterOutputType(RouteCommunityListTypeRegularRegularEntryArrayOutput{})
 	pulumi.RegisterOutputType(RoutePathAccessListAspathEntryOutput{})
 	pulumi.RegisterOutputType(RoutePathAccessListAspathEntryArrayOutput{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4Output{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4PtrOutput{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4Ipv4EntryOutput{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4Ipv4EntryArrayOutput{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4Ipv4EntryPrefixOutput{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4Ipv4EntryPrefixPtrOutput{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4Ipv4EntryPrefixEntryOutput{})
-	pulumi.RegisterOutputType(RoutePrefixListIpv4Ipv4EntryPrefixEntryPtrOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypePtrOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4Output{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4PtrOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4Ipv4EntryOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4Ipv4EntryArrayOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4Ipv4EntryPrefixOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4Ipv4EntryPrefixPtrOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryOutput{})
+	pulumi.RegisterOutputType(RoutePrefixListTypeIpv4Ipv4EntryPrefixEntryPtrOutput{})
 	pulumi.RegisterOutputType(ScepProfileAlgorithmOutput{})
 	pulumi.RegisterOutputType(ScepProfileAlgorithmPtrOutput{})
 	pulumi.RegisterOutputType(ScepProfileAlgorithmRsaOutput{})
@@ -81579,6 +82685,10 @@ func init() {
 	pulumi.RegisterOutputType(ServiceProtocolUdpPtrOutput{})
 	pulumi.RegisterOutputType(ServiceProtocolUdpOverrideOutput{})
 	pulumi.RegisterOutputType(ServiceProtocolUdpOverridePtrOutput{})
+	pulumi.RegisterOutputType(SiteMemberOutput{})
+	pulumi.RegisterOutputType(SiteMemberArrayOutput{})
+	pulumi.RegisterOutputType(SiteQosOutput{})
+	pulumi.RegisterOutputType(SiteQosPtrOutput{})
 	pulumi.RegisterOutputType(SyslogServerProfileFormatOutput{})
 	pulumi.RegisterOutputType(SyslogServerProfileFormatPtrOutput{})
 	pulumi.RegisterOutputType(SyslogServerProfileFormatEscapingOutput{})
@@ -81609,50 +82719,4 @@ func init() {
 	pulumi.RegisterOutputType(UrlAccessProfileCredentialEnforcementModeDomainCredentialsPtrOutput{})
 	pulumi.RegisterOutputType(UrlAccessProfileCredentialEnforcementModeIpUserOutput{})
 	pulumi.RegisterOutputType(UrlAccessProfileCredentialEnforcementModeIpUserPtrOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceArpOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceArpArrayOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceDdnsConfigOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceDdnsConfigPtrOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceDhcpClientOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceDhcpClientPtrOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceDhcpClientSendHostnameOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceDhcpClientSendHostnamePtrOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceIpOutput{})
-	pulumi.RegisterOutputType(VlanInterfaceIpArrayOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleArrayOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionAlertOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionAlertPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionAllowOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionAllowPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionBlockIpOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionBlockIpPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionDefaultOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionDefaultPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionDropOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionDropPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionResetBothOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionResetBothPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionResetClientOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionResetClientPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionResetServerOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileRuleActionResetServerPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionArrayOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionAlertOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionAlertPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionAllowOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionAllowPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionBlockIpOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionBlockIpPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionDefaultOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionDefaultPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionDropOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionDropPtrOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionResetBothOutput{})
-	pulumi.RegisterOutputType(VulnerabilityProtectionProfileThreatExceptionActionResetBothPtrOutput{})
 }

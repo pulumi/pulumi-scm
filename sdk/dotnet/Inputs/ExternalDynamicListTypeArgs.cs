@@ -20,36 +20,48 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Imei
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("imei")]
         public Input<Inputs.ExternalDynamicListTypeImeiArgs>? Imei { get; set; }
 
         /// <summary>
         /// Imsi
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("imsi")]
         public Input<Inputs.ExternalDynamicListTypeImsiArgs>? Imsi { get; set; }
 
         /// <summary>
         /// Ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("ip")]
         public Input<Inputs.ExternalDynamicListTypeIpArgs>? Ip { get; set; }
 
         /// <summary>
         /// Predefined ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("predefinedIp")]
         public Input<Inputs.ExternalDynamicListTypePredefinedIpArgs>? PredefinedIp { get; set; }
 
         /// <summary>
         /// Predefined url
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("predefinedUrl")]
         public Input<Inputs.ExternalDynamicListTypePredefinedUrlArgs>? PredefinedUrl { get; set; }
 
         /// <summary>
         /// Url
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         [Input("url")]
         public Input<Inputs.ExternalDynamicListTypeUrlArgs>? Url { get; set; }

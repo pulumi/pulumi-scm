@@ -34,12 +34,16 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionArgs extends com.pul
     /**
      * Deny
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
+     * 
      */
     @Import(name="deny")
     private @Nullable Output<LogicalRouterVrfBgpPolicyImportRuleActionDenyArgs> deny;
 
     /**
      * @return Deny
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpPolicyImportRuleActionDenyArgs>> deny() {
@@ -95,6 +99,8 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionArgs extends com.pul
         /**
          * @param deny Deny
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionArgs extends com.pul
 
         /**
          * @param deny Deny
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
          * 
          * @return builder
          * 

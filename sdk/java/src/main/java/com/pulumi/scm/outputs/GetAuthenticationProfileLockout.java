@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileLockout {
     /**
-     * @return Failed attempts
+     * @return Lockout object - failedAttempts of authentication profile
      * 
      */
     private Integer failedAttempts;
     /**
-     * @return Lockout time
+     * @return Lockout object - lockout-time of authentication profile
      * 
      */
     private Integer lockoutTime;
 
     private GetAuthenticationProfileLockout() {}
     /**
-     * @return Failed attempts
+     * @return Lockout object - failedAttempts of authentication profile
      * 
      */
     public Integer failedAttempts() {
         return this.failedAttempts;
     }
     /**
-     * @return Lockout time
+     * @return Lockout object - lockout-time of authentication profile
      * 
      */
     public Integer lockoutTime() {

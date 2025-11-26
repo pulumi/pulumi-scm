@@ -33,22 +33,17 @@ type LookupOspfAuthProfileArgs struct {
 // A collection of values returned by getOspfAuthProfile.
 type LookupOspfAuthProfileResult struct {
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Map of sensitive values returned from the API.
+	Device          string            `pulumi:"device"`
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Folder          string            `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// MD5s
+	Id   string                  `pulumi:"id"`
 	Md5s []GetOspfAuthProfileMd5 `pulumi:"md5s"`
 	// Profile name
-	Name string `pulumi:"name"`
-	// Password
+	Name     string `pulumi:"name"`
 	Password string `pulumi:"password"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet  string `pulumi:"snippet"`
+	Tfid     string `pulumi:"tfid"`
 }
 
 func LookupOspfAuthProfileOutput(ctx *pulumi.Context, args LookupOspfAuthProfileOutputArgs, opts ...pulumi.InvokeOption) LookupOspfAuthProfileResultOutput {
@@ -92,12 +87,10 @@ func (o LookupOspfAuthProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Map of sensitive values returned from the API.
 func (o LookupOspfAuthProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupOspfAuthProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -107,7 +100,6 @@ func (o LookupOspfAuthProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// MD5s
 func (o LookupOspfAuthProfileResultOutput) Md5s() GetOspfAuthProfileMd5ArrayOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) []GetOspfAuthProfileMd5 { return v.Md5s }).(GetOspfAuthProfileMd5ArrayOutput)
 }
@@ -117,12 +109,10 @@ func (o LookupOspfAuthProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Password
 func (o LookupOspfAuthProfileResultOutput) Password() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Password }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupOspfAuthProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupOspfAuthProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

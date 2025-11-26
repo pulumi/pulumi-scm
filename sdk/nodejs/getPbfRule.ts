@@ -15,40 +15,13 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const exampleTag = new scm.Tag("example_tag", {
- *     folder: "All",
- *     name: "pbf-rule-tag-ds-test-1",
- *     color: "Red",
- * });
- * // --- PBF Rule Resource with discard action---
- * const examplePbfRule = new scm.PbfRule("example_pbf_rule", {
- *     name: "pbf-test-ds-rule-discard",
- *     folder: "All",
- *     description: "Data Source testing pbf rule.",
- *     from: {
- *         zones: ["zone-untrust"],
- *     },
- *     sources: ["any"],
- *     destinations: ["any"],
- *     applications: ["any"],
- *     services: ["service-http"],
- *     sourceUsers: ["any"],
- *     action: {
- *         discard: {},
- *     },
- *     tags: [exampleTag.name],
- *     enforceSymmetricReturn: {
- *         enabled: false,
- *     },
- *     schedule: "non-work-hours",
- * });
  * // Define the data source (the item to be retrieved via API GET)
- * const pbfExternalWebTestGet = scm.getPbfRuleOutput({
- *     id: examplePbfRule.id,
+ * const pbfExternalWebTestGet = scm.getPbfRule({
+ *     id: "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
  * });
  * export const retrievedIDAndName = {
- *     id: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.id),
- *     name: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.name),
+ *     id: pbfExternalWebTestGet.then(pbfExternalWebTestGet => pbfExternalWebTestGet.id),
+ *     name: pbfExternalWebTestGet.then(pbfExternalWebTestGet => pbfExternalWebTestGet.name),
  * };
  * export const recievedResponse = pbfExternalWebTestGet;
  * ```
@@ -99,17 +72,8 @@ export interface GetPbfRuleResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Enforce symmetric return
-     */
     readonly enforceSymmetricReturn: outputs.GetPbfRuleEnforceSymmetricReturn;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * From
-     */
     readonly from: outputs.GetPbfRuleFrom;
     /**
      * UUID of the resource
@@ -119,29 +83,11 @@ export interface GetPbfRuleResult {
      * PBF rule name
      */
     readonly name: string;
-    /**
-     * Schedule
-     */
     readonly schedule: string;
-    /**
-     * Services
-     */
     readonly services: string[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Source users
-     */
     readonly sourceUsers: string[];
-    /**
-     * Source addresses
-     */
     readonly sources: string[];
-    /**
-     * Tags
-     */
     readonly tags: string[];
     readonly tfid: string;
 }
@@ -154,40 +100,13 @@ export interface GetPbfRuleResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const exampleTag = new scm.Tag("example_tag", {
- *     folder: "All",
- *     name: "pbf-rule-tag-ds-test-1",
- *     color: "Red",
- * });
- * // --- PBF Rule Resource with discard action---
- * const examplePbfRule = new scm.PbfRule("example_pbf_rule", {
- *     name: "pbf-test-ds-rule-discard",
- *     folder: "All",
- *     description: "Data Source testing pbf rule.",
- *     from: {
- *         zones: ["zone-untrust"],
- *     },
- *     sources: ["any"],
- *     destinations: ["any"],
- *     applications: ["any"],
- *     services: ["service-http"],
- *     sourceUsers: ["any"],
- *     action: {
- *         discard: {},
- *     },
- *     tags: [exampleTag.name],
- *     enforceSymmetricReturn: {
- *         enabled: false,
- *     },
- *     schedule: "non-work-hours",
- * });
  * // Define the data source (the item to be retrieved via API GET)
- * const pbfExternalWebTestGet = scm.getPbfRuleOutput({
- *     id: examplePbfRule.id,
+ * const pbfExternalWebTestGet = scm.getPbfRule({
+ *     id: "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
  * });
  * export const retrievedIDAndName = {
- *     id: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.id),
- *     name: pbfExternalWebTestGet.apply(pbfExternalWebTestGet => pbfExternalWebTestGet.name),
+ *     id: pbfExternalWebTestGet.then(pbfExternalWebTestGet => pbfExternalWebTestGet.id),
+ *     name: pbfExternalWebTestGet.then(pbfExternalWebTestGet => pbfExternalWebTestGet.name),
  * };
  * export const recievedResponse = pbfExternalWebTestGet;
  * ```

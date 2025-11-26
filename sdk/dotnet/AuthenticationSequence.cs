@@ -11,6 +11,42 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// AuthenticationSequence resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var testSequence = new Scm.AuthenticationSequence("test_sequence", new()
+    ///     {
+    ///         Name = "test_auth_sequence_1",
+    ///         Folder = "All",
+    ///         AuthenticationProfiles = new[]
+    ///         {
+    ///             "test_auth_profile",
+    ///         },
+    ///         UseDomainFindProfile = false,
+    ///     });
+    /// 
+    ///     var testSequence2 = new Scm.AuthenticationSequence("test_sequence_2", new()
+    ///     {
+    ///         Name = "test_auth_sequence_2",
+    ///         Folder = "All",
+    ///         AuthenticationProfiles = new[]
+    ///         {
+    ///             "Test_UI",
+    ///             "test_auth_profile",
+    ///         },
+    ///         UseDomainFindProfile = false,
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/authenticationSequence:AuthenticationSequence")]
     public partial class AuthenticationSequence : global::Pulumi.CustomResource
@@ -29,6 +65,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -41,6 +79,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -120,6 +160,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -132,6 +174,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -170,6 +214,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -182,6 +228,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

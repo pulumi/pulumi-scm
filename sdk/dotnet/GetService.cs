@@ -173,9 +173,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the service
@@ -185,17 +182,8 @@ namespace Pulumi.Scm
         /// The name of the service
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Protocol
-        /// </summary>
         public readonly Outputs.GetServiceProtocolResult Protocol;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Tags for service object
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 

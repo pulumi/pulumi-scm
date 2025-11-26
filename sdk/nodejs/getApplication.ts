@@ -81,21 +81,9 @@ export interface GetApplicationResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Evasive behavior
-     */
     readonly evasiveBehavior: boolean;
-    /**
-     * File type ident
-     */
     readonly fileTypeIdent: boolean;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * Has known vulnerability
-     */
     readonly hasKnownVulnerability: boolean;
     /**
      * The UUID of the application
@@ -105,78 +93,24 @@ export interface GetApplicationResult {
      * The name of the application
      */
     readonly name: string;
-    /**
-     * No appid caching
-     */
     readonly noAppidCaching: boolean;
-    /**
-     * Parent app
-     */
     readonly parentApp: string;
-    /**
-     * Pervasive use
-     */
     readonly pervasiveUse: boolean;
-    /**
-     * Prone to misuse
-     */
     readonly proneToMisuse: boolean;
-    /**
-     * Risk
-     */
     readonly risk: string;
-    /**
-     * Signature
-     */
     readonly signatures: outputs.GetApplicationSignature[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Subcategory
-     */
     readonly subcategory: string;
-    /**
-     * timeout for half-close session in seconds
-     */
     readonly tcpHalfClosedTimeout: number;
-    /**
-     * timeout for session in timeWait state in seconds
-     */
     readonly tcpTimeWaitTimeout: number;
-    /**
-     * timeout in seconds
-     */
     readonly tcpTimeout: number;
-    /**
-     * Technology
-     */
     readonly technology: string;
     readonly tfid: string;
-    /**
-     * timeout in seconds
-     */
     readonly timeout: number;
-    /**
-     * Tunnel applications
-     */
     readonly tunnelApplications: boolean;
-    /**
-     * Tunnel other application
-     */
     readonly tunnelOtherApplication: boolean;
-    /**
-     * timeout in seconds
-     */
     readonly udpTimeout: number;
-    /**
-     * Used by malware
-     */
     readonly usedByMalware: boolean;
-    /**
-     * Virus ident
-     */
     readonly virusIdent: boolean;
 }
 /**

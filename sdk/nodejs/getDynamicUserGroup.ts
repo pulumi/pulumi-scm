@@ -61,13 +61,7 @@ export interface GetDynamicUserGroupResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The tag-based filter for the dynamic user group
-     */
     readonly filter: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the dynamic user group
@@ -77,13 +71,7 @@ export interface GetDynamicUserGroupResult {
      * The name of the dynamic address group
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Tags associated with the dynamic user group
-     */
     readonly tags: string[];
     readonly tfid: string;
 }

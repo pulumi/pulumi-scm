@@ -39,12 +39,16 @@ class IkeGatewayArgs:
         :param pulumi.Input['IkeGatewayProtocolArgs'] protocol: Protocol
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['IkeGatewayLocalAddressArgs'] local_address: Local address
         :param pulumi.Input['IkeGatewayLocalIdArgs'] local_id: Local id
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input['IkeGatewayPeerIdArgs'] peer_id: Peer id
         :param pulumi.Input['IkeGatewayProtocolCommonArgs'] protocol_common: Protocol common
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "authentication", authentication)
         pulumi.set(__self__, "peer_address", peer_address)
@@ -119,6 +123,8 @@ class IkeGatewayArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -191,6 +197,8 @@ class IkeGatewayArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -221,6 +229,8 @@ class _IkeGatewayState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['IkeGatewayLocalAddressArgs'] local_address: Local address
         :param pulumi.Input['IkeGatewayLocalIdArgs'] local_id: Local id
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -229,6 +239,8 @@ class _IkeGatewayState:
         :param pulumi.Input['IkeGatewayProtocolArgs'] protocol: Protocol
         :param pulumi.Input['IkeGatewayProtocolCommonArgs'] protocol_common: Protocol common
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if authentication is not None:
             pulumi.set(__self__, "authentication", authentication)
@@ -298,6 +310,8 @@ class _IkeGatewayState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -394,6 +408,8 @@ class _IkeGatewayState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -486,6 +502,8 @@ class IkeGateway(pulumi.CustomResource):
         :param pulumi.Input[Union['IkeGatewayAuthenticationArgs', 'IkeGatewayAuthenticationArgsDict']] authentication: Authentication
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['IkeGatewayLocalAddressArgs', 'IkeGatewayLocalAddressArgsDict']] local_address: Local address
         :param pulumi.Input[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict']] local_id: Local id
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -494,6 +512,8 @@ class IkeGateway(pulumi.CustomResource):
         :param pulumi.Input[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict']] protocol: Protocol
         :param pulumi.Input[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict']] protocol_common: Protocol common
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -643,6 +663,8 @@ class IkeGateway(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]] encrypted_values: Map of sensitive values returned from the API.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['IkeGatewayLocalAddressArgs', 'IkeGatewayLocalAddressArgsDict']] local_address: Local address
         :param pulumi.Input[Union['IkeGatewayLocalIdArgs', 'IkeGatewayLocalIdArgsDict']] local_id: Local id
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
@@ -651,6 +673,8 @@ class IkeGateway(pulumi.CustomResource):
         :param pulumi.Input[Union['IkeGatewayProtocolArgs', 'IkeGatewayProtocolArgsDict']] protocol: Protocol
         :param pulumi.Input[Union['IkeGatewayProtocolCommonArgs', 'IkeGatewayProtocolCommonArgsDict']] protocol_common: Protocol common
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -700,6 +724,8 @@ class IkeGateway(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -764,6 +790,8 @@ class IkeGateway(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

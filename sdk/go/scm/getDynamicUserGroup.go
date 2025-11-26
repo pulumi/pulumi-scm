@@ -71,19 +71,15 @@ type LookupDynamicUserGroupResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The tag-based filter for the dynamic user group
 	Filter string `pulumi:"filter"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the dynamic user group
 	Id string `pulumi:"id"`
 	// The name of the dynamic address group
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Tags associated with the dynamic user group
-	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	Name    string   `pulumi:"name"`
+	Snippet string   `pulumi:"snippet"`
+	Tags    []string `pulumi:"tags"`
+	Tfid    string   `pulumi:"tfid"`
 }
 
 func LookupDynamicUserGroupOutput(ctx *pulumi.Context, args LookupDynamicUserGroupOutputArgs, opts ...pulumi.InvokeOption) LookupDynamicUserGroupResultOutput {
@@ -132,12 +128,10 @@ func (o LookupDynamicUserGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The tag-based filter for the dynamic user group
 func (o LookupDynamicUserGroupResultOutput) Filter() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Filter }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupDynamicUserGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -152,12 +146,10 @@ func (o LookupDynamicUserGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupDynamicUserGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Tags associated with the dynamic user group
 func (o LookupDynamicUserGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupDynamicUserGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

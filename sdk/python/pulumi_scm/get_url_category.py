@@ -74,9 +74,6 @@ class GetUrlCategoryResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -90,9 +87,6 @@ class GetUrlCategoryResult:
     @_builtins.property
     @pulumi.getter
     def lists(self) -> Sequence[_builtins.str]:
-        """
-        List
-        """
         return pulumi.get(self, "lists")
 
     @_builtins.property
@@ -106,9 +100,6 @@ class GetUrlCategoryResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -119,9 +110,6 @@ class GetUrlCategoryResult:
     @_builtins.property
     @pulumi.getter
     def type(self) -> _builtins.str:
-        """
-        Type
-        """
         return pulumi.get(self, "type")
 
 

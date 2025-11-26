@@ -35,12 +35,16 @@ public final class DosProtectionRuleActionArgs extends com.pulumi.resources.Reso
     /**
      * Deny
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
+     * 
      */
     @Import(name="deny")
     private @Nullable Output<DosProtectionRuleActionDenyArgs> deny;
 
     /**
      * @return Deny
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     public Optional<Output<DosProtectionRuleActionDenyArgs>> deny() {
@@ -50,12 +54,16 @@ public final class DosProtectionRuleActionArgs extends com.pulumi.resources.Reso
     /**
      * Protect
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
+     * 
      */
     @Import(name="protect")
     private @Nullable Output<DosProtectionRuleActionProtectArgs> protect;
 
     /**
      * @return Protect
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     public Optional<Output<DosProtectionRuleActionProtectArgs>> protect() {
@@ -112,6 +120,8 @@ public final class DosProtectionRuleActionArgs extends com.pulumi.resources.Reso
         /**
          * @param deny Deny
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
+         * 
          * @return builder
          * 
          */
@@ -123,6 +133,8 @@ public final class DosProtectionRuleActionArgs extends com.pulumi.resources.Reso
         /**
          * @param deny Deny
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
+         * 
          * @return builder
          * 
          */
@@ -132,6 +144,8 @@ public final class DosProtectionRuleActionArgs extends com.pulumi.resources.Reso
 
         /**
          * @param protect Protect
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
          * 
          * @return builder
          * 
@@ -143,6 +157,8 @@ public final class DosProtectionRuleActionArgs extends com.pulumi.resources.Reso
 
         /**
          * @param protect Protect
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
          * 
          * @return builder
          * 

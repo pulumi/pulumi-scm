@@ -20,6 +20,8 @@ type WildfireAntiVirusProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Mlav exception
 	MlavExceptions WildfireAntiVirusProfileMlavExceptionArrayOutput `pulumi:"mlavExceptions"`
@@ -30,6 +32,8 @@ type WildfireAntiVirusProfile struct {
 	// Rules
 	Rules WildfireAntiVirusProfileRuleArrayOutput `pulumi:"rules"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// Threat exception
@@ -71,6 +75,8 @@ type wildfireAntiVirusProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Mlav exception
 	MlavExceptions []WildfireAntiVirusProfileMlavException `pulumi:"mlavExceptions"`
@@ -81,6 +87,8 @@ type wildfireAntiVirusProfileState struct {
 	// Rules
 	Rules []WildfireAntiVirusProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// Threat exception
@@ -93,6 +101,8 @@ type WildfireAntiVirusProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Mlav exception
 	MlavExceptions WildfireAntiVirusProfileMlavExceptionArrayInput
@@ -103,6 +113,8 @@ type WildfireAntiVirusProfileState struct {
 	// Rules
 	Rules WildfireAntiVirusProfileRuleArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// Threat exception
@@ -119,6 +131,8 @@ type wildfireAntiVirusProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Mlav exception
 	MlavExceptions []WildfireAntiVirusProfileMlavException `pulumi:"mlavExceptions"`
@@ -129,6 +143,8 @@ type wildfireAntiVirusProfileArgs struct {
 	// Rules
 	Rules []WildfireAntiVirusProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Threat exception
 	ThreatExceptions []WildfireAntiVirusProfileThreatException `pulumi:"threatExceptions"`
@@ -141,6 +157,8 @@ type WildfireAntiVirusProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Mlav exception
 	MlavExceptions WildfireAntiVirusProfileMlavExceptionArrayInput
@@ -151,6 +169,8 @@ type WildfireAntiVirusProfileArgs struct {
 	// Rules
 	Rules WildfireAntiVirusProfileRuleArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Threat exception
 	ThreatExceptions WildfireAntiVirusProfileThreatExceptionArrayInput
@@ -254,6 +274,8 @@ func (o WildfireAntiVirusProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o WildfireAntiVirusProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -281,6 +303,8 @@ func (o WildfireAntiVirusProfileOutput) Rules() WildfireAntiVirusProfileRuleArra
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o WildfireAntiVirusProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *WildfireAntiVirusProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

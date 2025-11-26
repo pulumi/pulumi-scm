@@ -27,52 +27,18 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			// Define the resource (the item to be created via API POST/PUT)
-//			dnatExternalWebTestCreate, err := scm.NewNatRule(ctx, "dnat_external_web_test_create", &scm.NatRuleArgs{
-//				Name:        pulumi.String("DNAT-External-data-src-test_1"),
-//				Description: pulumi.String("Translate public VIP to internal web server."),
-//				Froms: pulumi.StringArray{
-//					pulumi.String("zone-untrust"),
-//				},
-//				Tos: pulumi.StringArray{
-//					pulumi.String("zone-untrust"),
-//				},
-//				Sources: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Destinations: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Service:  pulumi.String("service-http"),
-//				Folder:   pulumi.String("All"),
-//				NatType:  pulumi.String("ipv4"),
-//				Position: pulumi.String("pre"),
-//				DestinationTranslation: &scm.NatRuleDestinationTranslationArgs{
-//					TranslatedAddress: pulumi.String("10.1.1.16"),
-//					TranslatedPort:    pulumi.Int(112),
-//					DnsRewrite: &scm.NatRuleDestinationTranslationDnsRewriteArgs{
-//						Direction: pulumi.String("reverse"),
-//					},
-//				},
-//			})
+//			// Define the data source (the item to be retrieved via API GET)
+//			dnatExternalWebTestGet, err := scm.LookupNatRule(ctx, &scm.LookupNatRuleArgs{
+//				Id: "574717ac-8a63-4b6f-bf77-f05a66ba6322",
+//			}, nil)
 //			if err != nil {
 //				return err
 //			}
-//			// Define the data source (the item to be retrieved via API GET)
-//			dnatExternalWebTestGet := scm.LookupNatRuleOutput(ctx, scm.GetNatRuleOutputArgs{
-//				Id: dnatExternalWebTestCreate.ID(),
-//			}, nil)
 //			ctx.Export("retrievedIDAndName", pulumi.StringMap{
-//				"id": dnatExternalWebTestGet.ApplyT(func(dnatExternalWebTestGet scm.GetNatRuleResult) (*string, error) {
-//					return &dnatExternalWebTestGet.Id, nil
-//				}).(pulumi.StringPtrOutput),
-//				"name": dnatExternalWebTestGet.ApplyT(func(dnatExternalWebTestGet scm.GetNatRuleResult) (*string, error) {
-//					return &dnatExternalWebTestGet.Name, nil
-//				}).(pulumi.StringPtrOutput),
+//				"id":   dnatExternalWebTestGet.Id,
+//				"name": dnatExternalWebTestGet.Name,
 //			})
-//			ctx.Export("retrievedDestinationTranslation", dnatExternalWebTestGet.ApplyT(func(dnatExternalWebTestGet scm.GetNatRuleResult) (scm.GetNatRuleDestinationTranslation, error) {
-//				return dnatExternalWebTestGet.DestinationTranslation, nil
-//			}).(scm.GetNatRuleDestinationTranslationOutput))
+//			ctx.Export("retrievedDestinationTranslation", dnatExternalWebTestGet.DestinationTranslation)
 //			ctx.Export("recievedResponse", dnatExternalWebTestGet)
 //			return nil
 //		})

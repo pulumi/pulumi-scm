@@ -6,6 +6,29 @@ import * as utilities from "./utilities";
 
 /**
  * AuthenticationSequence resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const testSequence = new scm.AuthenticationSequence("test_sequence", {
+ *     name: "test_auth_sequence_1",
+ *     folder: "All",
+ *     authenticationProfiles: ["test_auth_profile"],
+ *     useDomainFindProfile: false,
+ * });
+ * const testSequence2 = new scm.AuthenticationSequence("test_sequence_2", {
+ *     name: "test_auth_sequence_2",
+ *     folder: "All",
+ *     authenticationProfiles: [
+ *         "Test_UI",
+ *         "test_auth_profile",
+ *     ],
+ *     useDomainFindProfile: false,
+ * });
+ * ```
  */
 export class AuthenticationSequence extends pulumi.CustomResource {
     /**
@@ -45,6 +68,8 @@ export class AuthenticationSequence extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -53,6 +78,8 @@ export class AuthenticationSequence extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -110,6 +137,8 @@ export interface AuthenticationSequenceState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -118,6 +147,8 @@ export interface AuthenticationSequenceState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -141,6 +172,8 @@ export interface AuthenticationSequenceArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -149,6 +182,8 @@ export interface AuthenticationSequenceArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

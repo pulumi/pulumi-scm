@@ -123,25 +123,16 @@ class GetPbfRuleResult:
     @_builtins.property
     @pulumi.getter(name="enforceSymmetricReturn")
     def enforce_symmetric_return(self) -> 'outputs.GetPbfRuleEnforceSymmetricReturnResult':
-        """
-        Enforce symmetric return
-        """
         return pulumi.get(self, "enforce_symmetric_return")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="from")
     def from_(self) -> 'outputs.GetPbfRuleFromResult':
-        """
-        From
-        """
         return pulumi.get(self, "from_")
 
     @_builtins.property
@@ -163,49 +154,31 @@ class GetPbfRuleResult:
     @_builtins.property
     @pulumi.getter
     def schedule(self) -> _builtins.str:
-        """
-        Schedule
-        """
         return pulumi.get(self, "schedule")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
-        """
-        Services
-        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
-        """
-        Source users
-        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
-        """
-        Source addresses
-        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
-        """
-        Tags
-        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
@@ -251,33 +224,8 @@ def get_pbf_rule(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example_tag = scm.Tag("example_tag",
-        folder="All",
-        name="pbf-rule-tag-ds-test-1",
-        color="Red")
-    # --- PBF Rule Resource with discard action---
-    example_pbf_rule = scm.PbfRule("example_pbf_rule",
-        name="pbf-test-ds-rule-discard",
-        folder="All",
-        description="Data Source testing pbf rule.",
-        from_={
-            "zones": ["zone-untrust"],
-        },
-        sources=["any"],
-        destinations=["any"],
-        applications=["any"],
-        services=["service-http"],
-        source_users=["any"],
-        action={
-            "discard": {},
-        },
-        tags=[example_tag.name],
-        enforce_symmetric_return={
-            "enabled": False,
-        },
-        schedule="non-work-hours")
     # Define the data source (the item to be retrieved via API GET)
-    pbf_external_web_test_get = scm.get_pbf_rule_output(id=example_pbf_rule.id)
+    pbf_external_web_test_get = scm.get_pbf_rule(id="044d67ad-1c36-4b97-bbf4-584445fe8a7d")
     pulumi.export("retrievedIDAndName", {
         "id": pbf_external_web_test_get.id,
         "name": pbf_external_web_test_get.name,
@@ -325,33 +273,8 @@ def get_pbf_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    example_tag = scm.Tag("example_tag",
-        folder="All",
-        name="pbf-rule-tag-ds-test-1",
-        color="Red")
-    # --- PBF Rule Resource with discard action---
-    example_pbf_rule = scm.PbfRule("example_pbf_rule",
-        name="pbf-test-ds-rule-discard",
-        folder="All",
-        description="Data Source testing pbf rule.",
-        from_={
-            "zones": ["zone-untrust"],
-        },
-        sources=["any"],
-        destinations=["any"],
-        applications=["any"],
-        services=["service-http"],
-        source_users=["any"],
-        action={
-            "discard": {},
-        },
-        tags=[example_tag.name],
-        enforce_symmetric_return={
-            "enabled": False,
-        },
-        schedule="non-work-hours")
     # Define the data source (the item to be retrieved via API GET)
-    pbf_external_web_test_get = scm.get_pbf_rule_output(id=example_pbf_rule.id)
+    pbf_external_web_test_get = scm.get_pbf_rule(id="044d67ad-1c36-4b97-bbf4-584445fe8a7d")
     pulumi.export("retrievedIDAndName", {
         "id": pbf_external_web_test_get.id,
         "name": pbf_external_web_test_get.name,

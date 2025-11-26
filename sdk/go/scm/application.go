@@ -133,6 +133,8 @@ type Application struct {
 	// File type ident
 	FileTypeIdent pulumi.BoolPtrOutput `pulumi:"fileTypeIdent"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Has known vulnerability
 	HasKnownVulnerability pulumi.BoolPtrOutput `pulumi:"hasKnownVulnerability"`
@@ -151,6 +153,8 @@ type Application struct {
 	// Signature
 	Signatures ApplicationSignatureArrayOutput `pulumi:"signatures"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Subcategory
 	Subcategory pulumi.StringPtrOutput `pulumi:"subcategory"`
@@ -234,6 +238,8 @@ type applicationState struct {
 	// File type ident
 	FileTypeIdent *bool `pulumi:"fileTypeIdent"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Has known vulnerability
 	HasKnownVulnerability *bool `pulumi:"hasKnownVulnerability"`
@@ -252,6 +258,8 @@ type applicationState struct {
 	// Signature
 	Signatures []ApplicationSignature `pulumi:"signatures"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subcategory
 	Subcategory *string `pulumi:"subcategory"`
@@ -300,6 +308,8 @@ type ApplicationState struct {
 	// File type ident
 	FileTypeIdent pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Has known vulnerability
 	HasKnownVulnerability pulumi.BoolPtrInput
@@ -318,6 +328,8 @@ type ApplicationState struct {
 	// Signature
 	Signatures ApplicationSignatureArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subcategory
 	Subcategory pulumi.StringPtrInput
@@ -370,6 +382,8 @@ type applicationArgs struct {
 	// File type ident
 	FileTypeIdent *bool `pulumi:"fileTypeIdent"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Has known vulnerability
 	HasKnownVulnerability *bool `pulumi:"hasKnownVulnerability"`
@@ -388,6 +402,8 @@ type applicationArgs struct {
 	// Signature
 	Signatures []ApplicationSignature `pulumi:"signatures"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Subcategory
 	Subcategory *string `pulumi:"subcategory"`
@@ -436,6 +452,8 @@ type ApplicationArgs struct {
 	// File type ident
 	FileTypeIdent pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Has known vulnerability
 	HasKnownVulnerability pulumi.BoolPtrInput
@@ -454,6 +472,8 @@ type ApplicationArgs struct {
 	// Signature
 	Signatures ApplicationSignatureArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Subcategory
 	Subcategory pulumi.StringPtrInput
@@ -617,6 +637,8 @@ func (o ApplicationOutput) FileTypeIdent() pulumi.BoolPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -662,6 +684,8 @@ func (o ApplicationOutput) Signatures() ApplicationSignatureArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o ApplicationOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Application) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

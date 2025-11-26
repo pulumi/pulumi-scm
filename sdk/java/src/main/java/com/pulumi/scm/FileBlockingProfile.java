@@ -19,6 +19,99 @@ import javax.annotation.Nullable;
 /**
  * FileBlockingProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.FileBlockingProfile;
+ * import com.pulumi.scm.FileBlockingProfileArgs;
+ * import com.pulumi.scm.inputs.FileBlockingProfileRuleArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmFileBlockingBase = new FileBlockingProfile("scmFileBlockingBase", FileBlockingProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("base_file_blocking")
+ *             .build());
+ * 
+ *         var scmFileBlockingProfile = new FileBlockingProfile("scmFileBlockingProfile", FileBlockingProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("file_blocking_profile_complete")
+ *             .description("alert, block, and continue")
+ *             .rules(            
+ *                 FileBlockingProfileRuleArgs.builder()
+ *                     .name("block_rule")
+ *                     .action("block")
+ *                     .application(List.of("any"))
+ *                     .direction("upload")
+ *                     .fileType(List.of("any"))
+ *                     .build(),
+ *                 FileBlockingProfileRuleArgs.builder()
+ *                     .name("block_rule_two")
+ *                     .action("block")
+ *                     .application(List.of("8x8"))
+ *                     .direction("upload")
+ *                     .fileType(List.of(                    
+ *                         "7z",
+ *                         "bat",
+ *                         "chm",
+ *                         "class",
+ *                         "cpl",
+ *                         "dll",
+ *                         "hlp",
+ *                         "hta",
+ *                         "jar",
+ *                         "ocx",
+ *                         "pif",
+ *                         "scr",
+ *                         "torrent",
+ *                         "vbe",
+ *                         "wsf"))
+ *                     .build(),
+ *                 FileBlockingProfileRuleArgs.builder()
+ *                     .name("alert_rule")
+ *                     .action("alert")
+ *                     .application(List.of(                    
+ *                         "access-grid",
+ *                         "adobe-update"))
+ *                     .direction("both")
+ *                     .fileType(List.of("ico"))
+ *                     .build(),
+ *                 FileBlockingProfileRuleArgs.builder()
+ *                     .name("continue_rule")
+ *                     .action("continue")
+ *                     .application(List.of(                    
+ *                         "apple-appstore",
+ *                         "limelight"))
+ *                     .direction("download")
+ *                     .fileType(List.of(                    
+ *                         "doc",
+ *                         "bmp",
+ *                         "dsn",
+ *                         "dwf"))
+ *                     .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/fileBlockingProfile:FileBlockingProfile")
 public class FileBlockingProfile extends com.pulumi.resources.CustomResource {
@@ -53,12 +146,16 @@ public class FileBlockingProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -95,12 +192,16 @@ public class FileBlockingProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

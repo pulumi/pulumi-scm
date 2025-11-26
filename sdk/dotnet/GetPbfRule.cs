@@ -24,65 +24,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var exampleTag = new Scm.Tag("example_tag", new()
-        ///     {
-        ///         Folder = "All",
-        ///         Name = "pbf-rule-tag-ds-test-1",
-        ///         Color = "Red",
-        ///     });
-        /// 
-        ///     // --- PBF Rule Resource with discard action---
-        ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
-        ///     {
-        ///         Name = "pbf-test-ds-rule-discard",
-        ///         Folder = "All",
-        ///         Description = "Data Source testing pbf rule.",
-        ///         From = new Scm.Inputs.PbfRuleFromArgs
-        ///         {
-        ///             Zones = new[]
-        ///             {
-        ///                 "zone-untrust",
-        ///             },
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Applications = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-http",
-        ///         },
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Action = new Scm.Inputs.PbfRuleActionArgs
-        ///         {
-        ///             Discard = null,
-        ///         },
-        ///         Tags = new[]
-        ///         {
-        ///             exampleTag.Name,
-        ///         },
-        ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
-        ///         {
-        ///             Enabled = false,
-        ///         },
-        ///         Schedule = "non-work-hours",
-        ///     });
-        /// 
         ///     // Define the data source (the item to be retrieved via API GET)
         ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
         ///     {
-        ///         Id = examplePbfRule.Id,
+        ///         Id = "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -113,65 +58,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var exampleTag = new Scm.Tag("example_tag", new()
-        ///     {
-        ///         Folder = "All",
-        ///         Name = "pbf-rule-tag-ds-test-1",
-        ///         Color = "Red",
-        ///     });
-        /// 
-        ///     // --- PBF Rule Resource with discard action---
-        ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
-        ///     {
-        ///         Name = "pbf-test-ds-rule-discard",
-        ///         Folder = "All",
-        ///         Description = "Data Source testing pbf rule.",
-        ///         From = new Scm.Inputs.PbfRuleFromArgs
-        ///         {
-        ///             Zones = new[]
-        ///             {
-        ///                 "zone-untrust",
-        ///             },
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Applications = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-http",
-        ///         },
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Action = new Scm.Inputs.PbfRuleActionArgs
-        ///         {
-        ///             Discard = null,
-        ///         },
-        ///         Tags = new[]
-        ///         {
-        ///             exampleTag.Name,
-        ///         },
-        ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
-        ///         {
-        ///             Enabled = false,
-        ///         },
-        ///         Schedule = "non-work-hours",
-        ///     });
-        /// 
         ///     // Define the data source (the item to be retrieved via API GET)
         ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
         ///     {
-        ///         Id = examplePbfRule.Id,
+        ///         Id = "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -202,65 +92,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var exampleTag = new Scm.Tag("example_tag", new()
-        ///     {
-        ///         Folder = "All",
-        ///         Name = "pbf-rule-tag-ds-test-1",
-        ///         Color = "Red",
-        ///     });
-        /// 
-        ///     // --- PBF Rule Resource with discard action---
-        ///     var examplePbfRule = new Scm.PbfRule("example_pbf_rule", new()
-        ///     {
-        ///         Name = "pbf-test-ds-rule-discard",
-        ///         Folder = "All",
-        ///         Description = "Data Source testing pbf rule.",
-        ///         From = new Scm.Inputs.PbfRuleFromArgs
-        ///         {
-        ///             Zones = new[]
-        ///             {
-        ///                 "zone-untrust",
-        ///             },
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Applications = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-http",
-        ///         },
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Action = new Scm.Inputs.PbfRuleActionArgs
-        ///         {
-        ///             Discard = null,
-        ///         },
-        ///         Tags = new[]
-        ///         {
-        ///             exampleTag.Name,
-        ///         },
-        ///         EnforceSymmetricReturn = new Scm.Inputs.PbfRuleEnforceSymmetricReturnArgs
-        ///         {
-        ///             Enabled = false,
-        ///         },
-        ///         Schedule = "non-work-hours",
-        ///     });
-        /// 
         ///     // Define the data source (the item to be retrieved via API GET)
         ///     var pbfExternalWebTestGet = Scm.GetPbfRule.Invoke(new()
         ///     {
-        ///         Id = examplePbfRule.Id,
+        ///         Id = "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -344,17 +179,8 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Enforce symmetric return
-        /// </summary>
         public readonly Outputs.GetPbfRuleEnforceSymmetricReturnResult EnforceSymmetricReturn;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// From
-        /// </summary>
         public readonly Outputs.GetPbfRuleFromResult From;
         /// <summary>
         /// UUID of the resource
@@ -364,29 +190,11 @@ namespace Pulumi.Scm
         /// PBF rule name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Schedule
-        /// </summary>
         public readonly string Schedule;
-        /// <summary>
-        /// Services
-        /// </summary>
         public readonly ImmutableArray<string> Services;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Source users
-        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
-        /// <summary>
-        /// Source addresses
-        /// </summary>
         public readonly ImmutableArray<string> Sources;
-        /// <summary>
-        /// Tags
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 

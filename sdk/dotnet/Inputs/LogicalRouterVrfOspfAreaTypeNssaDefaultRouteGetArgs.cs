@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Disable
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Advertise` and `Disable`.
         /// </summary>
         [Input("disable")]
         public Input<Inputs.LogicalRouterVrfOspfAreaTypeNssaDefaultRouteDisableGetArgs>? Disable { get; set; }

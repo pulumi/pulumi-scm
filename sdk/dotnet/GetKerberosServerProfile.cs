@@ -79,9 +79,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the Kerberos server profile
@@ -91,13 +88,7 @@ namespace Pulumi.Scm
         /// The name of the Kerberos server profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The Kerberos server configuration
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetKerberosServerProfileServerResult> Servers;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

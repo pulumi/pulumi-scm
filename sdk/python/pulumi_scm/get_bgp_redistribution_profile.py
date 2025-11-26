@@ -61,9 +61,6 @@ class GetBgpRedistributionProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -77,9 +74,6 @@ class GetBgpRedistributionProfileResult:
     @_builtins.property
     @pulumi.getter
     def ipv4(self) -> 'outputs.GetBgpRedistributionProfileIpv4Result':
-        """
-        Ipv4
-        """
         return pulumi.get(self, "ipv4")
 
     @_builtins.property
@@ -93,9 +87,6 @@ class GetBgpRedistributionProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -125,6 +116,22 @@ def get_bgp_redistribution_profile(id: Optional[_builtins.str] = None,
     """
     BgpRedistributionProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up BGP Redistribution Profile by its ID.
+    scm_bgp_redistribution_profile_ds = scm.get_bgp_redistribution_profile(id="491918e9-0205-4a08-955a-7e59a38d5dc4")
+    pulumi.export("bgpRedistributionProfileDataSourceResults", {
+        "id": scm_bgp_redistribution_profile_ds.id,
+        "name": scm_bgp_redistribution_profile_ds.name,
+        "ipv4": scm_bgp_redistribution_profile_ds.ipv4,
+        "folder": scm_bgp_redistribution_profile_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Name
@@ -148,6 +155,22 @@ def get_bgp_redistribution_profile_output(id: Optional[pulumi.Input[_builtins.st
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBgpRedistributionProfileResult]:
     """
     BgpRedistributionProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up BGP Redistribution Profile by its ID.
+    scm_bgp_redistribution_profile_ds = scm.get_bgp_redistribution_profile(id="491918e9-0205-4a08-955a-7e59a38d5dc4")
+    pulumi.export("bgpRedistributionProfileDataSourceResults", {
+        "id": scm_bgp_redistribution_profile_ds.id,
+        "name": scm_bgp_redistribution_profile_ds.name,
+        "ipv4": scm_bgp_redistribution_profile_ds.ipv4,
+        "folder": scm_bgp_redistribution_profile_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

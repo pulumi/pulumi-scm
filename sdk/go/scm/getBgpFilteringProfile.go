@@ -36,15 +36,12 @@ type LookupBgpFilteringProfileResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Ipv4
+	Id   string                     `pulumi:"id"`
 	Ipv4 GetBgpFilteringProfileIpv4 `pulumi:"ipv4"`
 	// Name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -95,7 +92,6 @@ func (o LookupBgpFilteringProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupBgpFilteringProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -105,7 +101,6 @@ func (o LookupBgpFilteringProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Ipv4
 func (o LookupBgpFilteringProfileResultOutput) Ipv4() GetBgpFilteringProfileIpv4Output {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) GetBgpFilteringProfileIpv4 { return v.Ipv4 }).(GetBgpFilteringProfileIpv4Output)
 }
@@ -115,7 +110,6 @@ func (o LookupBgpFilteringProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupBgpFilteringProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpFilteringProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -37,9 +37,6 @@ export interface GetLocalUserGroupResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the local user group
@@ -49,14 +46,8 @@ export interface GetLocalUserGroupResult {
      * The name of the local user group
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * The local user group users
-     */
     readonly users: string[];
 }
 /**

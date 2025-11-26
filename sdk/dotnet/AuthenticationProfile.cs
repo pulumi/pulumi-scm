@@ -11,12 +11,79 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// AuthenticationProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var globalRadiusAccess = new Scm.AuthenticationProfile("global_radius_access", new()
+    ///     {
+    ///         Name = "test_auth_profile_radius_1",
+    ///         Folder = "All",
+    ///         UserDomain = "default",
+    ///         UsernameModifier = "%USERINPUT%",
+    ///         AllowLists = new[]
+    ///         {
+    ///             "all",
+    ///         },
+    ///         Lockout = new Scm.Inputs.AuthenticationProfileLockoutArgs
+    ///         {
+    ///             FailedAttempts = 1,
+    ///             LockoutTime = 3,
+    ///         },
+    ///         Method = new Scm.Inputs.AuthenticationProfileMethodArgs
+    ///         {
+    ///             Radius = new Scm.Inputs.AuthenticationProfileMethodRadiusArgs
+    ///             {
+    ///                 Checkgroup = true,
+    ///                 ServerProfile = "CHAP_only_rsp_1",
+    ///             },
+    ///         },
+    ///         SingleSignOn = new Scm.Inputs.AuthenticationProfileSingleSignOnArgs
+    ///         {
+    ///             Realm = "EXAMPLE.COM",
+    ///         },
+    ///     });
+    /// 
+    ///     var globalDbAccess = new Scm.AuthenticationProfile("global_db_access", new()
+    ///     {
+    ///         Name = "test_auth_profile_db_1",
+    ///         Folder = "All",
+    ///         UserDomain = "default",
+    ///         UsernameModifier = "%USERINPUT%",
+    ///         AllowLists = new[]
+    ///         {
+    ///             "all",
+    ///         },
+    ///         Lockout = new Scm.Inputs.AuthenticationProfileLockoutArgs
+    ///         {
+    ///             FailedAttempts = 3,
+    ///             LockoutTime = 1,
+    ///         },
+    ///         Method = new Scm.Inputs.AuthenticationProfileMethodArgs
+    ///         {
+    ///             LocalDatabase = null,
+    ///         },
+    ///         SingleSignOn = new Scm.Inputs.AuthenticationProfileSingleSignOnArgs
+    ///         {
+    ///             Realm = "EXAMPLE.COM",
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/authenticationProfile:AuthenticationProfile")]
     public partial class AuthenticationProfile : global::Pulumi.CustomResource
     {
         /// <summary>
-        /// Allow list
+        /// The AllowList of the authentication profile
         /// </summary>
         [Output("allowLists")]
         public Output<ImmutableArray<string>> AllowLists { get; private set; } = null!;
@@ -29,18 +96,20 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Lockout
+        /// Lockout object of the authentication profile
         /// </summary>
         [Output("lockout")]
         public Output<Outputs.AuthenticationProfileLockout?> Lockout { get; private set; } = null!;
 
         /// <summary>
-        /// Method
+        /// method object of authentication profile
         /// </summary>
         [Output("method")]
         public Output<Outputs.AuthenticationProfileMethod?> Method { get; private set; } = null!;
@@ -65,6 +134,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -134,7 +205,7 @@ namespace Pulumi.Scm
         private InputList<string>? _allowLists;
 
         /// <summary>
-        /// Allow list
+        /// The AllowList of the authentication profile
         /// </summary>
         public InputList<string> AllowLists
         {
@@ -150,18 +221,20 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Lockout
+        /// Lockout object of the authentication profile
         /// </summary>
         [Input("lockout")]
         public Input<Inputs.AuthenticationProfileLockoutArgs>? Lockout { get; set; }
 
         /// <summary>
-        /// Method
+        /// method object of authentication profile
         /// </summary>
         [Input("method")]
         public Input<Inputs.AuthenticationProfileMethodArgs>? Method { get; set; }
@@ -186,6 +259,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -214,7 +289,7 @@ namespace Pulumi.Scm
         private InputList<string>? _allowLists;
 
         /// <summary>
-        /// Allow list
+        /// The AllowList of the authentication profile
         /// </summary>
         public InputList<string> AllowLists
         {
@@ -230,18 +305,20 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Lockout
+        /// Lockout object of the authentication profile
         /// </summary>
         [Input("lockout")]
         public Input<Inputs.AuthenticationProfileLockoutGetArgs>? Lockout { get; set; }
 
         /// <summary>
-        /// Method
+        /// method object of authentication profile
         /// </summary>
         [Input("method")]
         public Input<Inputs.AuthenticationProfileMethodGetArgs>? Method { get; set; }
@@ -266,6 +343,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

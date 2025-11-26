@@ -19,26 +19,38 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.AuthenticationProfileMethodCloud? Cloud;
         /// <summary>
         /// Kerberos
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodKerberos? Kerberos;
         /// <summary>
         /// Ldap
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodLdap? Ldap;
         /// <summary>
         /// Local database
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodLocalDatabase? LocalDatabase;
         /// <summary>
         /// Radius
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodRadius? Radius;
         /// <summary>
         /// Saml idp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodSamlIdp? SamlIdp;
         /// <summary>
         /// Tacplus
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         public readonly Outputs.AuthenticationProfileMethodTacplus? Tacplus;
 

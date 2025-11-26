@@ -19,14 +19,20 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.MfaServerMfaVendorTypeDuoSecurityV2? DuoSecurityV2;
         /// <summary>
         /// Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, and `RsaSecuridAccessV1`.
         /// </summary>
         public readonly Outputs.MfaServerMfaVendorTypeOktaAdaptiveV1? OktaAdaptiveV1;
         /// <summary>
         /// Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, and `RsaSecuridAccessV1`.
         /// </summary>
         public readonly Outputs.MfaServerMfaVendorTypePingIdentityV1? PingIdentityV1;
         /// <summary>
         /// Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, and `RsaSecuridAccessV1`.
         /// </summary>
         public readonly Outputs.MfaServerMfaVendorTypeRsaSecuridAccessV1? RsaSecuridAccessV1;
 

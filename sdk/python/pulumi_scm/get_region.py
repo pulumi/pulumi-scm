@@ -72,17 +72,11 @@ class GetRegionResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="geoLocation")
     def geo_location(self) -> 'outputs.GetRegionGeoLocationResult':
-        """
-        Geo location
-        """
         return pulumi.get(self, "geo_location")
 
     @_builtins.property
@@ -104,9 +98,6 @@ class GetRegionResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

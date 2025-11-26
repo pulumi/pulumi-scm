@@ -21,14 +21,12 @@ class SnippetArgs:
     def __init__(__self__, *,
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  labels: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
-                 name: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None):
+                 name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Snippet resource.
         :param pulumi.Input[_builtins.str] description: The description of the snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
         :param pulumi.Input[_builtins.str] name: The name of the snippet
-        :param pulumi.Input[_builtins.str] type: The snippet type
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -36,8 +34,6 @@ class SnippetArgs:
             pulumi.set(__self__, "labels", labels)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if type is not None:
-            pulumi.set(__self__, "type", type)
 
     @_builtins.property
     @pulumi.getter
@@ -74,18 +70,6 @@ class SnippetArgs:
     @name.setter
     def name(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "name", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def type(self) -> Optional[pulumi.Input[_builtins.str]]:
-        """
-        The snippet type
-        """
-        return pulumi.get(self, "type")
-
-    @type.setter
-    def type(self, value: Optional[pulumi.Input[_builtins.str]]):
-        pulumi.set(self, "type", value)
 
 
 @pulumi.input_type
@@ -181,7 +165,6 @@ class Snippet(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  labels: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         Snippet resource
@@ -211,7 +194,6 @@ class Snippet(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the snippet
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] labels: Labels applied to the snippet
         :param pulumi.Input[_builtins.str] name: The name of the snippet
-        :param pulumi.Input[_builtins.str] type: The snippet type
         """
         ...
     @overload
@@ -260,7 +242,6 @@ class Snippet(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  labels: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 type: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -273,8 +254,8 @@ class Snippet(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["labels"] = labels
             __props__.__dict__["name"] = name
-            __props__.__dict__["type"] = type
             __props__.__dict__["tfid"] = None
+            __props__.__dict__["type"] = None
         super(Snippet, __self__).__init__(
             'scm:index/snippet:Snippet',
             resource_name,
@@ -344,7 +325,7 @@ class Snippet(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def type(self) -> pulumi.Output[Optional[_builtins.str]]:
+    def type(self) -> pulumi.Output[_builtins.str]:
         """
         The snippet type
         """

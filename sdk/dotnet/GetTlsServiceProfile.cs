@@ -83,9 +83,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the TLS service profile
@@ -95,13 +92,7 @@ namespace Pulumi.Scm
         /// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Protocol settings
-        /// </summary>
         public readonly Outputs.GetTlsServiceProfileProtocolSettingsResult ProtocolSettings;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

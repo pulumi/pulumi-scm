@@ -39,36 +39,24 @@ type LookupScepProfileResult struct {
 	// Subject Alternative name type
 	CertificateAttributes GetScepProfileCertificateAttributes `pulumi:"certificateAttributes"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Digest for CSR
-	Digest string `pulumi:"digest"`
-	// Map of sensitive values returned from the API.
+	Device          string            `pulumi:"device"`
+	Digest          string            `pulumi:"digest"`
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// CA certificate fingerprint
-	Fingerprint string `pulumi:"fingerprint"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Fingerprint     string            `pulumi:"fingerprint"`
+	Folder          string            `pulumi:"folder"`
 	// The UUID of the SCEP profile
 	Id string `pulumi:"id"`
 	// The name of the SCEP profile
-	Name string `pulumi:"name"`
-	// SCEP server CA certificate
-	ScepCaCert string `pulumi:"scepCaCert"`
-	// One Time Password challenge
-	ScepChallenge GetScepProfileScepChallenge `pulumi:"scepChallenge"`
-	// SCEP client ceertificate
-	ScepClientCert string `pulumi:"scepClientCert"`
-	// SCEP server URL
-	ScepUrl string `pulumi:"scepUrl"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Subject
-	Subject string `pulumi:"subject"`
-	Tfid    string `pulumi:"tfid"`
-	// Use as digital signature?
-	UseAsDigitalSignature bool `pulumi:"useAsDigitalSignature"`
-	// Use for key encipherment?
-	UseForKeyEncipherment bool `pulumi:"useForKeyEncipherment"`
+	Name                  string                      `pulumi:"name"`
+	ScepCaCert            string                      `pulumi:"scepCaCert"`
+	ScepChallenge         GetScepProfileScepChallenge `pulumi:"scepChallenge"`
+	ScepClientCert        string                      `pulumi:"scepClientCert"`
+	ScepUrl               string                      `pulumi:"scepUrl"`
+	Snippet               string                      `pulumi:"snippet"`
+	Subject               string                      `pulumi:"subject"`
+	Tfid                  string                      `pulumi:"tfid"`
+	UseAsDigitalSignature bool                        `pulumi:"useAsDigitalSignature"`
+	UseForKeyEncipherment bool                        `pulumi:"useForKeyEncipherment"`
 }
 
 func LookupScepProfileOutput(ctx *pulumi.Context, args LookupScepProfileOutputArgs, opts ...pulumi.InvokeOption) LookupScepProfileResultOutput {
@@ -127,22 +115,18 @@ func (o LookupScepProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Digest for CSR
 func (o LookupScepProfileResultOutput) Digest() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Digest }).(pulumi.StringOutput)
 }
 
-// Map of sensitive values returned from the API.
 func (o LookupScepProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// CA certificate fingerprint
 func (o LookupScepProfileResultOutput) Fingerprint() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Fingerprint }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupScepProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -157,32 +141,26 @@ func (o LookupScepProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// SCEP server CA certificate
 func (o LookupScepProfileResultOutput) ScepCaCert() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.ScepCaCert }).(pulumi.StringOutput)
 }
 
-// One Time Password challenge
 func (o LookupScepProfileResultOutput) ScepChallenge() GetScepProfileScepChallengeOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) GetScepProfileScepChallenge { return v.ScepChallenge }).(GetScepProfileScepChallengeOutput)
 }
 
-// SCEP client ceertificate
 func (o LookupScepProfileResultOutput) ScepClientCert() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.ScepClientCert }).(pulumi.StringOutput)
 }
 
-// SCEP server URL
 func (o LookupScepProfileResultOutput) ScepUrl() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.ScepUrl }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupScepProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Subject
 func (o LookupScepProfileResultOutput) Subject() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Subject }).(pulumi.StringOutput)
 }
@@ -191,12 +169,10 @@ func (o LookupScepProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Use as digital signature?
 func (o LookupScepProfileResultOutput) UseAsDigitalSignature() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) bool { return v.UseAsDigitalSignature }).(pulumi.BoolOutput)
 }
 
-// Use for key encipherment?
 func (o LookupScepProfileResultOutput) UseForKeyEncipherment() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupScepProfileResult) bool { return v.UseForKeyEncipherment }).(pulumi.BoolOutput)
 }

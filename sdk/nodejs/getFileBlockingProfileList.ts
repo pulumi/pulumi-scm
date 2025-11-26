@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM File Blocking Profile objects.
+ * //
+ * // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+ * const allShared = scm.getFileBlockingProfileList({
+ *     folder: "All",
+ * });
+ * export const scmFileBlockingProfileAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getFileBlockingProfileList(args?: GetFileBlockingProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetFileBlockingProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetFileBlockingProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM File Blocking Profile objects.
+ * //
+ * // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+ * const allShared = scm.getFileBlockingProfileList({
+ *     folder: "All",
+ * });
+ * export const scmFileBlockingProfileAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getFileBlockingProfileListOutput(args?: GetFileBlockingProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFileBlockingProfileListResult> {
     args = args || {};

@@ -8,6 +8,80 @@ import * as utilities from "./utilities";
 
 /**
  * FileBlockingProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmFileBlockingBase = new scm.FileBlockingProfile("scm_file_blocking_base", {
+ *     folder: "ngfw-shared",
+ *     name: "base_file_blocking",
+ * });
+ * const scmFileBlockingProfile = new scm.FileBlockingProfile("scm_file_blocking_profile", {
+ *     folder: "ngfw-shared",
+ *     name: "file_blocking_profile_complete",
+ *     description: "alert, block, and continue",
+ *     rules: [
+ *         {
+ *             name: "block_rule",
+ *             action: "block",
+ *             application: ["any"],
+ *             direction: "upload",
+ *             fileType: ["any"],
+ *         },
+ *         {
+ *             name: "block_rule_two",
+ *             action: "block",
+ *             application: ["8x8"],
+ *             direction: "upload",
+ *             fileType: [
+ *                 "7z",
+ *                 "bat",
+ *                 "chm",
+ *                 "class",
+ *                 "cpl",
+ *                 "dll",
+ *                 "hlp",
+ *                 "hta",
+ *                 "jar",
+ *                 "ocx",
+ *                 "pif",
+ *                 "scr",
+ *                 "torrent",
+ *                 "vbe",
+ *                 "wsf",
+ *             ],
+ *         },
+ *         {
+ *             name: "alert_rule",
+ *             action: "alert",
+ *             application: [
+ *                 "access-grid",
+ *                 "adobe-update",
+ *             ],
+ *             direction: "both",
+ *             fileType: ["ico"],
+ *         },
+ *         {
+ *             name: "continue_rule",
+ *             action: "continue",
+ *             application: [
+ *                 "apple-appstore",
+ *                 "limelight",
+ *             ],
+ *             direction: "download",
+ *             fileType: [
+ *                 "doc",
+ *                 "bmp",
+ *                 "dsn",
+ *                 "dwf",
+ *             ],
+ *         },
+ *     ],
+ * });
+ * ```
  */
 export class FileBlockingProfile extends pulumi.CustomResource {
     /**
@@ -47,6 +121,8 @@ export class FileBlockingProfile extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -59,6 +135,8 @@ export class FileBlockingProfile extends pulumi.CustomResource {
     declare public readonly rules: pulumi.Output<outputs.FileBlockingProfileRule[] | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -112,6 +190,8 @@ export interface FileBlockingProfileState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -124,6 +204,8 @@ export interface FileBlockingProfileState {
     rules?: pulumi.Input<pulumi.Input<inputs.FileBlockingProfileRule>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -143,6 +225,8 @@ export interface FileBlockingProfileArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -155,6 +239,8 @@ export interface FileBlockingProfileArgs {
     rules?: pulumi.Input<pulumi.Input<inputs.FileBlockingProfileRule>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
 }

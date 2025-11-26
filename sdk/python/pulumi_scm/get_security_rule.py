@@ -539,39 +539,8 @@ def get_security_rule(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    standard_web_access = scm.SecurityRule("standard_web_access",
-        folder="All",
-        name="Allow Standard Web Access DS1",
-        description="Allow outbound web traffic to any destination...",
-        position="pre",
-        action="allow",
-        categories=["any"],
-        applications=[
-            "web-browsing",
-            "ssl",
-        ],
-        services=[
-            "service-http",
-            "service-https",
-        ],
-        froms=[
-            "untrust",
-            "trust",
-        ],
-        tos=["trust"],
-        sources=["any"],
-        destinations=["any"],
-        negate_source=False,
-        negate_destination=False,
-        source_users=["any"],
-        source_hips=["any"],
-        destination_hips=["any"],
-        log_start=True,
-        log_end=True,
-        disabled=False)
-    # --- Data Source Calls to Fetch Existing Rules ---
     # 1. Fetch by ID (Best for direct lookup)
-    standard_web_access_by_id = scm.get_security_rule_output(id=standard_web_access.id)
+    standard_web_access_by_id = scm.get_security_rule(id="2a550f26-3e98-47d0-984f-b51e4ff367de")
     pulumi.export("fetchedStandardWebId", standard_web_access_by_id.id)
     pulumi.export("fetchedStandardWebName", standard_web_access_by_id.name)
     pulumi.export("fetchedStandardWebDescription", standard_web_access_by_id.description)
@@ -641,39 +610,8 @@ def get_security_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    standard_web_access = scm.SecurityRule("standard_web_access",
-        folder="All",
-        name="Allow Standard Web Access DS1",
-        description="Allow outbound web traffic to any destination...",
-        position="pre",
-        action="allow",
-        categories=["any"],
-        applications=[
-            "web-browsing",
-            "ssl",
-        ],
-        services=[
-            "service-http",
-            "service-https",
-        ],
-        froms=[
-            "untrust",
-            "trust",
-        ],
-        tos=["trust"],
-        sources=["any"],
-        destinations=["any"],
-        negate_source=False,
-        negate_destination=False,
-        source_users=["any"],
-        source_hips=["any"],
-        destination_hips=["any"],
-        log_start=True,
-        log_end=True,
-        disabled=False)
-    # --- Data Source Calls to Fetch Existing Rules ---
     # 1. Fetch by ID (Best for direct lookup)
-    standard_web_access_by_id = scm.get_security_rule_output(id=standard_web_access.id)
+    standard_web_access_by_id = scm.get_security_rule(id="2a550f26-3e98-47d0-984f-b51e4ff367de")
     pulumi.export("fetchedStandardWebId", standard_web_access_by_id.id)
     pulumi.export("fetchedStandardWebName", standard_web_access_by_id.name)
     pulumi.export("fetchedStandardWebDescription", standard_web_access_by_id.description)

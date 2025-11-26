@@ -35,22 +35,17 @@ type LookupDosProtectionProfileResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Flood
-	Flood GetDosProtectionProfileFlood `pulumi:"flood"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Device string                       `pulumi:"device"`
+	Flood  GetDosProtectionProfileFlood `pulumi:"flood"`
+	Folder string                       `pulumi:"folder"`
 	// The UUID of the DNS security profile
 	Id string `pulumi:"id"`
 	// Profile name
-	Name string `pulumi:"name"`
-	// Resource
+	Name     string                          `pulumi:"name"`
 	Resource GetDosProtectionProfileResource `pulumi:"resource"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Type
-	Type string `pulumi:"type"`
+	Snippet  string                          `pulumi:"snippet"`
+	Tfid     string                          `pulumi:"tfid"`
+	Type     string                          `pulumi:"type"`
 }
 
 func LookupDosProtectionProfileOutput(ctx *pulumi.Context, args LookupDosProtectionProfileOutputArgs, opts ...pulumi.InvokeOption) LookupDosProtectionProfileResultOutput {
@@ -99,12 +94,10 @@ func (o LookupDosProtectionProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Flood
 func (o LookupDosProtectionProfileResultOutput) Flood() GetDosProtectionProfileFloodOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) GetDosProtectionProfileFlood { return v.Flood }).(GetDosProtectionProfileFloodOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupDosProtectionProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -119,12 +112,10 @@ func (o LookupDosProtectionProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Resource
 func (o LookupDosProtectionProfileResultOutput) Resource() GetDosProtectionProfileResourceOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) GetDosProtectionProfileResource { return v.Resource }).(GetDosProtectionProfileResourceOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupDosProtectionProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -133,7 +124,6 @@ func (o LookupDosProtectionProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Type
 func (o LookupDosProtectionProfileResultOutput) Type() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDosProtectionProfileResult) string { return v.Type }).(pulumi.StringOutput)
 }

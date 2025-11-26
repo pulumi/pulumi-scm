@@ -117,17 +117,11 @@ class GetVlanInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="dhcpClient")
     def dhcp_client(self) -> 'outputs.GetVlanInterfaceDhcpClientResult':
-        """
-        Vlan interfaces DHCP Client Object
-        """
         return pulumi.get(self, "dhcp_client")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -141,25 +135,16 @@ class GetVlanInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
-        """
-        Interface management profile
-        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetVlanInterfaceIpResult']:
-        """
-        VLAN Interface IP Parent
-        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
-        """
-        MTU
-        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
@@ -173,9 +158,6 @@ class GetVlanInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -186,9 +168,6 @@ class GetVlanInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="vlanTag")
     def vlan_tag(self) -> _builtins.str:
-        """
-        VLAN tag
-        """
         return pulumi.get(self, "vlan_tag")
 
 

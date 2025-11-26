@@ -91,33 +91,21 @@ class GetInterfaceManagementProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def http(self) -> _builtins.bool:
-        """
-        Allow HTTP?
-        """
         return pulumi.get(self, "http")
 
     @_builtins.property
     @pulumi.getter(name="httpOcsp")
     def http_ocsp(self) -> _builtins.bool:
-        """
-        Allow HTTP OCSP?
-        """
         return pulumi.get(self, "http_ocsp")
 
     @_builtins.property
     @pulumi.getter
     def https(self) -> _builtins.bool:
-        """
-        Allow HTTPS?
-        """
         return pulumi.get(self, "https")
 
     @_builtins.property
@@ -139,49 +127,31 @@ class GetInterfaceManagementProfileResult:
     @_builtins.property
     @pulumi.getter(name="permittedIps")
     def permitted_ips(self) -> Sequence['outputs.GetInterfaceManagementProfilePermittedIpResult']:
-        """
-        Allowed IP address(es)
-        """
         return pulumi.get(self, "permitted_ips")
 
     @_builtins.property
     @pulumi.getter
     def ping(self) -> _builtins.bool:
-        """
-        Allow ping?
-        """
         return pulumi.get(self, "ping")
 
     @_builtins.property
     @pulumi.getter(name="responsePages")
     def response_pages(self) -> _builtins.bool:
-        """
-        Allow response pages?
-        """
         return pulumi.get(self, "response_pages")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def ssh(self) -> _builtins.bool:
-        """
-        Allow SSH?
-        """
         return pulumi.get(self, "ssh")
 
     @_builtins.property
     @pulumi.getter
     def telnet(self) -> _builtins.bool:
-        """
-        Allow telnet? Seriously, why would you do this?!?
-        """
         return pulumi.get(self, "telnet")
 
     @_builtins.property
@@ -192,25 +162,16 @@ class GetInterfaceManagementProfileResult:
     @_builtins.property
     @pulumi.getter(name="useridService")
     def userid_service(self) -> _builtins.bool:
-        """
-        Allow User-ID?
-        """
         return pulumi.get(self, "userid_service")
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerSsl")
     def userid_syslog_listener_ssl(self) -> _builtins.bool:
-        """
-        Allow User-ID syslog listener (SSL)?
-        """
         return pulumi.get(self, "userid_syslog_listener_ssl")
 
     @_builtins.property
     @pulumi.getter(name="useridSyslogListenerUdp")
     def userid_syslog_listener_udp(self) -> _builtins.bool:
-        """
-        Allow User-ID syslog listener (UDP)?
-        """
         return pulumi.get(self, "userid_syslog_listener_udp")
 
 
@@ -251,33 +212,7 @@ def get_interface_management_profile(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # 1. Resource: Create the Interface Management Profile
-    # This block creates the profile with your specified configuration.
-    test_inf_mgmt_profile = scm.InterfaceManagementProfile("test_inf_mgmt_profile",
-        name="test_inf_mgmt_profile_ds_1",
-        folder="All",
-        permitted_ips=[
-            {
-                "name": "10.0.0.0/24",
-            },
-            {
-                "name": "10.0.0.0/32",
-            },
-        ],
-        http=True,
-        https=False,
-        telnet=False,
-        ssh=True,
-        ping=False,
-        http_ocsp=True,
-        userid_service=True,
-        userid_syslog_listener_ssl=True,
-        userid_syslog_listener_udp=True,
-        response_pages=False)
-    # --------------------------------------------------------------------------------
-    # 2. Data Source: Retrieve the Interface Management Profile by ID
-    # We use the resource's generated 'id' attribute to fetch the profile.
-    single_profile_by_id = scm.get_interface_management_profile_output(id=test_inf_mgmt_profile.id)
+    single_profile_by_id = scm.get_interface_management_profile(id="f4358615-daba-4b71-a0ea-bd3ebb412fe3")
     pulumi.export("fetchedProfileName", single_profile_by_id.name)
     pulumi.export("fetchedProfile", single_profile_by_id)
     ```
@@ -322,33 +257,7 @@ def get_interface_management_profile_output(id: Optional[pulumi.Input[_builtins.
     import pulumi
     import pulumi_scm as scm
 
-    # 1. Resource: Create the Interface Management Profile
-    # This block creates the profile with your specified configuration.
-    test_inf_mgmt_profile = scm.InterfaceManagementProfile("test_inf_mgmt_profile",
-        name="test_inf_mgmt_profile_ds_1",
-        folder="All",
-        permitted_ips=[
-            {
-                "name": "10.0.0.0/24",
-            },
-            {
-                "name": "10.0.0.0/32",
-            },
-        ],
-        http=True,
-        https=False,
-        telnet=False,
-        ssh=True,
-        ping=False,
-        http_ocsp=True,
-        userid_service=True,
-        userid_syslog_listener_ssl=True,
-        userid_syslog_listener_udp=True,
-        response_pages=False)
-    # --------------------------------------------------------------------------------
-    # 2. Data Source: Retrieve the Interface Management Profile by ID
-    # We use the resource's generated 'id' attribute to fetch the profile.
-    single_profile_by_id = scm.get_interface_management_profile_output(id=test_inf_mgmt_profile.id)
+    single_profile_by_id = scm.get_interface_management_profile(id="f4358615-daba-4b71-a0ea-bd3ebb412fe3")
     pulumi.export("fetchedProfileName", single_profile_by_id.name)
     pulumi.export("fetchedProfile", single_profile_by_id)
     ```

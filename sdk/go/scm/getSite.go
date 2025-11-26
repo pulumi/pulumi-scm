@@ -12,9 +12,36 @@ import (
 )
 
 // Site data source
-func GetSite(ctx *pulumi.Context, args *GetSiteArgs, opts ...pulumi.InvokeOption) (*GetSiteResult, error) {
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			singleSiteById, err := scm.LookupSite(ctx, &scm.LookupSiteArgs{
+//				Id: "d037fe30-68ae-47ee-9a74-71bc63ac2c10",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("singleSiteDetails", singleSiteById)
+//			return nil
+//		})
+//	}
+//
+// ```
+func LookupSite(ctx *pulumi.Context, args *LookupSiteArgs, opts ...pulumi.InvokeOption) (*LookupSiteResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
-	var rv GetSiteResult
+	var rv LookupSiteResult
 	err := ctx.Invoke("scm:index/getSite:getSite", args, &rv, opts...)
 	if err != nil {
 		return nil, err
@@ -23,7 +50,7 @@ func GetSite(ctx *pulumi.Context, args *GetSiteArgs, opts ...pulumi.InvokeOption
 }
 
 // A collection of arguments for invoking getSite.
-type GetSiteArgs struct {
+type LookupSiteArgs struct {
 	// The UUID of the site
 	Id string `pulumi:"id"`
 	// The name of the site
@@ -31,7 +58,7 @@ type GetSiteArgs struct {
 }
 
 // A collection of values returned by getSite.
-type GetSiteResult struct {
+type LookupSiteResult struct {
 	// The address in which the site exists
 	AddressLine1 string `pulumi:"addressLine1"`
 	// The address in which the site exists (continued)
@@ -43,9 +70,11 @@ type GetSiteResult struct {
 	// The UUID of the site
 	Id string `pulumi:"id"`
 	// The latitude coordinate for the site
-	Latitude float64 `pulumi:"latitude"`
+	Latitude string `pulumi:"latitude"`
+	// The license type of the site
+	LicenseType string `pulumi:"licenseType"`
 	// The longitude coordinate for the site
-	Longitude float64 `pulumi:"longitude"`
+	Longitude string `pulumi:"longitude"`
 	// Members
 	Members []GetSiteMember `pulumi:"members"`
 	// The name of the site
@@ -61,111 +90,116 @@ type GetSiteResult struct {
 	ZipCode string `pulumi:"zipCode"`
 }
 
-func GetSiteOutput(ctx *pulumi.Context, args GetSiteOutputArgs, opts ...pulumi.InvokeOption) GetSiteResultOutput {
+func LookupSiteOutput(ctx *pulumi.Context, args LookupSiteOutputArgs, opts ...pulumi.InvokeOption) LookupSiteResultOutput {
 	return pulumi.ToOutputWithContext(ctx.Context(), args).
-		ApplyT(func(v interface{}) (GetSiteResultOutput, error) {
-			args := v.(GetSiteArgs)
+		ApplyT(func(v interface{}) (LookupSiteResultOutput, error) {
+			args := v.(LookupSiteArgs)
 			options := pulumi.InvokeOutputOptions{InvokeOptions: internal.PkgInvokeDefaultOpts(opts)}
-			return ctx.InvokeOutput("scm:index/getSite:getSite", args, GetSiteResultOutput{}, options).(GetSiteResultOutput), nil
-		}).(GetSiteResultOutput)
+			return ctx.InvokeOutput("scm:index/getSite:getSite", args, LookupSiteResultOutput{}, options).(LookupSiteResultOutput), nil
+		}).(LookupSiteResultOutput)
 }
 
 // A collection of arguments for invoking getSite.
-type GetSiteOutputArgs struct {
+type LookupSiteOutputArgs struct {
 	// The UUID of the site
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the site
 	Name pulumi.StringPtrInput `pulumi:"name"`
 }
 
-func (GetSiteOutputArgs) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSiteArgs)(nil)).Elem()
+func (LookupSiteOutputArgs) ElementType() reflect.Type {
+	return reflect.TypeOf((*LookupSiteArgs)(nil)).Elem()
 }
 
 // A collection of values returned by getSite.
-type GetSiteResultOutput struct{ *pulumi.OutputState }
+type LookupSiteResultOutput struct{ *pulumi.OutputState }
 
-func (GetSiteResultOutput) ElementType() reflect.Type {
-	return reflect.TypeOf((*GetSiteResult)(nil)).Elem()
+func (LookupSiteResultOutput) ElementType() reflect.Type {
+	return reflect.TypeOf((*LookupSiteResult)(nil)).Elem()
 }
 
-func (o GetSiteResultOutput) ToGetSiteResultOutput() GetSiteResultOutput {
+func (o LookupSiteResultOutput) ToLookupSiteResultOutput() LookupSiteResultOutput {
 	return o
 }
 
-func (o GetSiteResultOutput) ToGetSiteResultOutputWithContext(ctx context.Context) GetSiteResultOutput {
+func (o LookupSiteResultOutput) ToLookupSiteResultOutputWithContext(ctx context.Context) LookupSiteResultOutput {
 	return o
 }
 
 // The address in which the site exists
-func (o GetSiteResultOutput) AddressLine1() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.AddressLine1 }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) AddressLine1() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.AddressLine1 }).(pulumi.StringOutput)
 }
 
 // The address in which the site exists (continued)
-func (o GetSiteResultOutput) AddressLine2() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.AddressLine2 }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) AddressLine2() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.AddressLine2 }).(pulumi.StringOutput)
 }
 
 // The city in which the site exists
-func (o GetSiteResultOutput) City() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.City }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) City() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.City }).(pulumi.StringOutput)
 }
 
 // The country in which the site exists
-func (o GetSiteResultOutput) Country() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.Country }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) Country() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Country }).(pulumi.StringOutput)
 }
 
 // The UUID of the site
-func (o GetSiteResultOutput) Id() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.Id }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) Id() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
 // The latitude coordinate for the site
-func (o GetSiteResultOutput) Latitude() pulumi.Float64Output {
-	return o.ApplyT(func(v GetSiteResult) float64 { return v.Latitude }).(pulumi.Float64Output)
+func (o LookupSiteResultOutput) Latitude() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Latitude }).(pulumi.StringOutput)
+}
+
+// The license type of the site
+func (o LookupSiteResultOutput) LicenseType() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.LicenseType }).(pulumi.StringOutput)
 }
 
 // The longitude coordinate for the site
-func (o GetSiteResultOutput) Longitude() pulumi.Float64Output {
-	return o.ApplyT(func(v GetSiteResult) float64 { return v.Longitude }).(pulumi.Float64Output)
+func (o LookupSiteResultOutput) Longitude() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Longitude }).(pulumi.StringOutput)
 }
 
 // Members
-func (o GetSiteResultOutput) Members() GetSiteMemberArrayOutput {
-	return o.ApplyT(func(v GetSiteResult) []GetSiteMember { return v.Members }).(GetSiteMemberArrayOutput)
+func (o LookupSiteResultOutput) Members() GetSiteMemberArrayOutput {
+	return o.ApplyT(func(v LookupSiteResult) []GetSiteMember { return v.Members }).(GetSiteMemberArrayOutput)
 }
 
 // The name of the site
-func (o GetSiteResultOutput) Name() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.Name }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) Name() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
 // Qos
-func (o GetSiteResultOutput) Qos() GetSiteQosOutput {
-	return o.ApplyT(func(v GetSiteResult) GetSiteQos { return v.Qos }).(GetSiteQosOutput)
+func (o LookupSiteResultOutput) Qos() GetSiteQosOutput {
+	return o.ApplyT(func(v LookupSiteResult) GetSiteQos { return v.Qos }).(GetSiteQosOutput)
 }
 
 // The state in which the site exists
-func (o GetSiteResultOutput) State() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.State }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) State() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.State }).(pulumi.StringOutput)
 }
 
-func (o GetSiteResultOutput) Tfid() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.Tfid }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) Tfid() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
 // The site type
-func (o GetSiteResultOutput) Type() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.Type }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) Type() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.Type }).(pulumi.StringOutput)
 }
 
 // The postal code in which the site exists
-func (o GetSiteResultOutput) ZipCode() pulumi.StringOutput {
-	return o.ApplyT(func(v GetSiteResult) string { return v.ZipCode }).(pulumi.StringOutput)
+func (o LookupSiteResultOutput) ZipCode() pulumi.StringOutput {
+	return o.ApplyT(func(v LookupSiteResult) string { return v.ZipCode }).(pulumi.StringOutput)
 }
 
 func init() {
-	pulumi.RegisterOutputType(GetSiteResultOutput{})
+	pulumi.RegisterOutputType(LookupSiteResultOutput{})
 }

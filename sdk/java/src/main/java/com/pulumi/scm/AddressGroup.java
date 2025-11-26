@@ -138,12 +138,16 @@ public class AddressGroup extends com.pulumi.resources.CustomResource {
     /**
      * Dynamic
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
+     * 
      */
     @Export(name="dynamic", refs={AddressGroupDynamic.class}, tree="[0]")
     private Output</* @Nullable */ AddressGroupDynamic> dynamic;
 
     /**
      * @return Dynamic
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
      * 
      */
     public Output<Optional<AddressGroupDynamic>> dynamic() {
@@ -152,12 +156,16 @@ public class AddressGroup extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -180,12 +188,16 @@ public class AddressGroup extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -194,12 +206,16 @@ public class AddressGroup extends com.pulumi.resources.CustomResource {
     /**
      * Static
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
+     * 
      */
     @Export(name="statics", refs={List.class,String.class}, tree="[0,1]")
     private Output</* @Nullable */ List<String>> statics;
 
     /**
      * @return Static
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic` and `static`.
      * 
      */
     public Output<Optional<List<String>>> statics() {

@@ -64,9 +64,6 @@ class GetLogicalRouterResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -88,17 +85,11 @@ class GetLogicalRouterResult:
     @_builtins.property
     @pulumi.getter(name="routingStack")
     def routing_stack(self) -> _builtins.str:
-        """
-        Routing stack
-        """
         return pulumi.get(self, "routing_stack")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -109,9 +100,6 @@ class GetLogicalRouterResult:
     @_builtins.property
     @pulumi.getter
     def vrves(self) -> Sequence['outputs.GetLogicalRouterVrfResult']:
-        """
-        Vrf
-        """
         return pulumi.get(self, "vrves")
 
 

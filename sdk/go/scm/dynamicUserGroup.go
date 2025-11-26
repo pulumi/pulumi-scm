@@ -92,10 +92,14 @@ type DynamicUserGroup struct {
 	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringOutput `pulumi:"filter"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the dynamic address group
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
@@ -142,10 +146,14 @@ type dynamicUserGroupState struct {
 	// The tag-based filter for the dynamic user group
 	Filter *string `pulumi:"filter"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the dynamic address group
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
 	Tags []string `pulumi:"tags"`
@@ -160,10 +168,14 @@ type DynamicUserGroupState struct {
 	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the dynamic address group
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayInput
@@ -182,10 +194,14 @@ type dynamicUserGroupArgs struct {
 	// The tag-based filter for the dynamic user group
 	Filter string `pulumi:"filter"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the dynamic address group
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags associated with the dynamic user group
 	Tags []string `pulumi:"tags"`
@@ -200,10 +216,14 @@ type DynamicUserGroupArgs struct {
 	// The tag-based filter for the dynamic user group
 	Filter pulumi.StringInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the dynamic address group
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags associated with the dynamic user group
 	Tags pulumi.StringArrayInput
@@ -312,6 +332,8 @@ func (o DynamicUserGroupOutput) Filter() pulumi.StringOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DynamicUserGroupOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -322,6 +344,8 @@ func (o DynamicUserGroupOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DynamicUserGroupOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DynamicUserGroup) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

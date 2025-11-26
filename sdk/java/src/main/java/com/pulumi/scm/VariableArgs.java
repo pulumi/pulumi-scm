@@ -6,7 +6,6 @@ package com.pulumi.scm;
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -50,12 +49,16 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -78,22 +81,9 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
     }
 
     /**
-     * Is the variable overridden?
-     * 
-     */
-    @Import(name="overridden")
-    private @Nullable Output<Boolean> overridden;
-
-    /**
-     * @return Is the variable overridden?
-     * 
-     */
-    public Optional<Output<Boolean>> overridden() {
-        return Optional.ofNullable(this.overridden);
-    }
-
-    /**
      * The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="snippet")
@@ -101,6 +91,8 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -144,7 +136,6 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         this.device = $.device;
         this.folder = $.folder;
         this.name = $.name;
-        this.overridden = $.overridden;
         this.snippet = $.snippet;
         this.type = $.type;
         this.value = $.value;
@@ -213,6 +204,8 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -223,6 +216,8 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -253,28 +248,9 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
         }
 
         /**
-         * @param overridden Is the variable overridden?
-         * 
-         * @return builder
-         * 
-         */
-        public Builder overridden(@Nullable Output<Boolean> overridden) {
-            $.overridden = overridden;
-            return this;
-        }
-
-        /**
-         * @param overridden Is the variable overridden?
-         * 
-         * @return builder
-         * 
-         */
-        public Builder overridden(Boolean overridden) {
-            return overridden(Output.of(overridden));
-        }
-
-        /**
          * @param snippet The snippet in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -286,6 +262,8 @@ public final class VariableArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

@@ -19,14 +19,20 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathNone? None;
         /// <summary>
         /// Prepend
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `None`, `Prepend`, `Remove`, and `RemoveAndPrepend`.
         /// </summary>
         public readonly int? Prepend;
         /// <summary>
         /// Remove
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `None`, `Prepend`, `Remove`, and `RemoveAndPrepend`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesAsPathRemove? Remove;
         /// <summary>
         /// Remove and prepend
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `None`, `Prepend`, `Remove`, and `RemoveAndPrepend`.
         /// </summary>
         public readonly int? RemoveAndPrepend;
 

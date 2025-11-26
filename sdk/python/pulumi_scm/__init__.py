@@ -15,15 +15,19 @@ from .app_override_rule import *
 from .application import *
 from .application_filter import *
 from .application_group import *
+from .authentication_portal import *
 from .authentication_profile import *
 from .authentication_rule import *
 from .authentication_sequence import *
+from .auto_vpn_cluster import *
+from .auto_vpn_setting import *
 from .bgp_address_family_profile import *
 from .bgp_auth_profile import *
 from .bgp_filtering_profile import *
 from .bgp_redistribution_profile import *
 from .bgp_route_map import *
 from .bgp_route_map_redistribution import *
+from .bgp_routing import *
 from .certificate_profile import *
 from .decryption_exclusion import *
 from .decryption_profile import *
@@ -62,6 +66,9 @@ from .get_authentication_rule import *
 from .get_authentication_rule_list import *
 from .get_authentication_sequence import *
 from .get_authentication_sequence_list import *
+from .get_auto_vpn_cluster import *
+from .get_auto_vpn_cluster_list import *
+from .get_auto_vpn_setting import *
 from .get_bgp_address_family_profile import *
 from .get_bgp_address_family_profile_list import *
 from .get_bgp_auth_profile import *
@@ -74,6 +81,7 @@ from .get_bgp_route_map import *
 from .get_bgp_route_map_list import *
 from .get_bgp_route_map_redistribution import *
 from .get_bgp_route_map_redistribution_list import *
+from .get_bgp_routing import *
 from .get_certificate_profile import *
 from .get_certificate_profile_list import *
 from .get_decryption_exclusion import *
@@ -277,6 +285,7 @@ from .service import *
 from .service_connection import *
 from .service_connection_group import *
 from .service_group import *
+from .site import *
 from .snippet import *
 from .syslog_server_profile import *
 from .tacacs_server_profile import *
@@ -380,6 +389,14 @@ _utilities.register(
  },
  {
   "pkg": "scm",
+  "mod": "index/authenticationPortal",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/authenticationPortal:AuthenticationPortal": "AuthenticationPortal"
+  }
+ },
+ {
+  "pkg": "scm",
   "mod": "index/authenticationProfile",
   "fqn": "pulumi_scm",
   "classes": {
@@ -400,6 +417,22 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/authenticationSequence:AuthenticationSequence": "AuthenticationSequence"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/autoVpnCluster",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/autoVpnCluster:AutoVpnCluster": "AutoVpnCluster"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/autoVpnSetting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/autoVpnSetting:AutoVpnSetting": "AutoVpnSetting"
   }
  },
  {
@@ -448,6 +481,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution": "BgpRouteMapRedistribution"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/bgpRouting",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/bgpRouting:BgpRouting": "BgpRouting"
   }
  },
  {
@@ -944,6 +985,14 @@ _utilities.register(
   "fqn": "pulumi_scm",
   "classes": {
    "scm:index/serviceGroup:ServiceGroup": "ServiceGroup"
+  }
+ },
+ {
+  "pkg": "scm",
+  "mod": "index/site",
+  "fqn": "pulumi_scm",
+  "classes": {
+   "scm:index/site:Site": "Site"
   }
  },
  {

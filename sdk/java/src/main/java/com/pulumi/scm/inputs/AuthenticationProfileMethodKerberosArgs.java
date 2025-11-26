@@ -16,14 +16,14 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
     public static final AuthenticationProfileMethodKerberosArgs Empty = new AuthenticationProfileMethodKerberosArgs();
 
     /**
-     * Realm
+     * method kerberos object realm of authentication profile
      * 
      */
     @Import(name="realm")
     private @Nullable Output<String> realm;
 
     /**
-     * @return Realm
+     * @return method kerberos object realm of authentication profile
      * 
      */
     public Optional<Output<String>> realm() {
@@ -31,14 +31,14 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
     }
 
     /**
-     * Server profile
+     * method kerberos object server profile of authentication profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return Server profile
+     * @return method kerberos object server profile of authentication profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -71,7 +71,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param realm Realm
+         * @param realm method kerberos object realm of authentication profile
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param realm Realm
+         * @param realm method kerberos object realm of authentication profile
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method kerberos object server profile of authentication profile
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AuthenticationProfileMethodKerberosArgs extends com.pulumi.re
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method kerberos object server profile of authentication profile
          * 
          * @return builder
          * 

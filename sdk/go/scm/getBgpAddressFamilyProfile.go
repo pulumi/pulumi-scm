@@ -12,6 +12,39 @@ import (
 )
 
 // BgpAddressFamilyProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up bgp address family profile by its ID.
+//			scmBgpAddressFamilyProfileDs, err := scm.LookupBgpAddressFamilyProfile(ctx, &scm.LookupBgpAddressFamilyProfileArgs{
+//				Id: "83ccef34-c29a-4e88-a99b-d0355440174e",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmBgpAddressFamilyProfileDsResults", pulumi.Map{
+//				"id":     scmBgpAddressFamilyProfileDs.Id,
+//				"name":   scmBgpAddressFamilyProfileDs.Name,
+//				"ipv4":   scmBgpAddressFamilyProfileDs.Ipv4,
+//				"folder": scmBgpAddressFamilyProfileDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupBgpAddressFamilyProfile(ctx *pulumi.Context, args *LookupBgpAddressFamilyProfileArgs, opts ...pulumi.InvokeOption) (*LookupBgpAddressFamilyProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupBgpAddressFamilyProfileResult
@@ -34,15 +67,12 @@ type LookupBgpAddressFamilyProfileArgs struct {
 type LookupBgpAddressFamilyProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Ipv4
+	Id   string                         `pulumi:"id"`
 	Ipv4 GetBgpAddressFamilyProfileIpv4 `pulumi:"ipv4"`
 	// Name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -88,7 +118,6 @@ func (o LookupBgpAddressFamilyProfileResultOutput) Device() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupBgpAddressFamilyProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupBgpAddressFamilyProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAddressFamilyProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -98,7 +127,6 @@ func (o LookupBgpAddressFamilyProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAddressFamilyProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Ipv4
 func (o LookupBgpAddressFamilyProfileResultOutput) Ipv4() GetBgpAddressFamilyProfileIpv4Output {
 	return o.ApplyT(func(v LookupBgpAddressFamilyProfileResult) GetBgpAddressFamilyProfileIpv4 { return v.Ipv4 }).(GetBgpAddressFamilyProfileIpv4Output)
 }
@@ -108,7 +136,6 @@ func (o LookupBgpAddressFamilyProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAddressFamilyProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupBgpAddressFamilyProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAddressFamilyProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

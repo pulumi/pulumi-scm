@@ -35,11 +35,15 @@ class WildfireAntiVirusProfileArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]] mlav_exceptions: Mlav exception
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
         :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]] rules: Rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]] threat_exceptions: Threat exception
         """
         if description is not None:
@@ -90,6 +94,8 @@ class WildfireAntiVirusProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -150,6 +156,8 @@ class WildfireAntiVirusProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -188,11 +196,15 @@ class _WildfireAntiVirusProfileState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileMlavExceptionArgs']]] mlav_exceptions: Mlav exception
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
         :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileRuleArgs']]] rules: Rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input['WildfireAntiVirusProfileThreatExceptionArgs']]] threat_exceptions: Threat exception
         """
         if description is not None:
@@ -245,6 +257,8 @@ class _WildfireAntiVirusProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -305,6 +319,8 @@ class _WildfireAntiVirusProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -358,11 +374,15 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileMlavExceptionArgs', 'WildfireAntiVirusProfileMlavExceptionArgsDict']]]] mlav_exceptions: Mlav exception
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
         :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileRuleArgs', 'WildfireAntiVirusProfileRuleArgsDict']]]] rules: Rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileThreatExceptionArgs', 'WildfireAntiVirusProfileThreatExceptionArgsDict']]]] threat_exceptions: Threat exception
         """
         ...
@@ -447,11 +467,15 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileMlavExceptionArgs', 'WildfireAntiVirusProfileMlavExceptionArgsDict']]]] mlav_exceptions: Mlav exception
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.bool] packet_capture: Packet capture
         :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileRuleArgs', 'WildfireAntiVirusProfileRuleArgsDict']]]] rules: Rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[Union['WildfireAntiVirusProfileThreatExceptionArgs', 'WildfireAntiVirusProfileThreatExceptionArgsDict']]]] threat_exceptions: Threat exception
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -491,6 +515,8 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -531,6 +557,8 @@ class WildfireAntiVirusProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

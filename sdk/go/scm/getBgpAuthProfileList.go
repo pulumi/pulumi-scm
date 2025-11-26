@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetBgpAuthProfileList(ctx *pulumi.Context, args *GetBgpAuthProfileListArgs, opts ...pulumi.InvokeOption) (*GetBgpAuthProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetBgpAuthProfileListResult

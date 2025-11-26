@@ -23,7 +23,7 @@ public final class GetExternalDynamicListListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -38,7 +38,7 @@ public final class GetExternalDynamicListListData {
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -65,7 +65,7 @@ public final class GetExternalDynamicListListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -86,7 +86,7 @@ public final class GetExternalDynamicListListData {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

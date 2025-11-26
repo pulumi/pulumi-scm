@@ -47,14 +47,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     }
 
     /**
-     * Certificate profile
+     * method object saml idp certificate profile of authentication profile
      * 
      */
     @Import(name="certificateProfile")
     private @Nullable Output<String> certificateProfile;
 
     /**
-     * @return Certificate profile
+     * @return method object saml idp certificate profile of authentication profile
      * 
      */
     public Optional<Output<String>> certificateProfile() {
@@ -92,14 +92,14 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
     }
 
     /**
-     * Server profile
+     * method object saml idp server profile of authentication profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return Server profile
+     * @return method object saml idp server profile of authentication profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -178,7 +178,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param certificateProfile Certificate profile
+         * @param certificateProfile method object saml idp certificate profile of authentication profile
          * 
          * @return builder
          * 
@@ -189,7 +189,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param certificateProfile Certificate profile
+         * @param certificateProfile method object saml idp certificate profile of authentication profile
          * 
          * @return builder
          * 
@@ -241,7 +241,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method object saml idp server profile of authentication profile
          * 
          * @return builder
          * 
@@ -252,7 +252,7 @@ public final class AuthenticationProfileMethodSamlIdpArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method object saml idp server profile of authentication profile
          * 
          * @return builder
          * 

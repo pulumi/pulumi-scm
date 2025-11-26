@@ -22,15 +22,7 @@ public final class GetDosProtectionProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return Flood
-     * 
-     */
     private GetDosProtectionProfileFlood flood;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the DNS security profile
@@ -42,21 +34,9 @@ public final class GetDosProtectionProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return Resource
-     * 
-     */
     private GetDosProtectionProfileResource resource;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Type
-     * 
-     */
     private String type;
 
     private GetDosProtectionProfileResult() {}
@@ -74,17 +54,9 @@ public final class GetDosProtectionProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Flood
-     * 
-     */
     public GetDosProtectionProfileFlood flood() {
         return this.flood;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -102,27 +74,15 @@ public final class GetDosProtectionProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Resource
-     * 
-     */
     public GetDosProtectionProfileResource resource() {
         return this.resource;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Type
-     * 
-     */
     public String type() {
         return this.type;
     }

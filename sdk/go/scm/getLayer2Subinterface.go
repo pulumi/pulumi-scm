@@ -71,19 +71,15 @@ type LookupLayer2SubinterfaceResult struct {
 	Comment string `pulumi:"comment"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// L2 sub-interface name
-	Name string `pulumi:"name"`
-	// Parent interface
+	Name            string `pulumi:"name"`
 	ParentInterface string `pulumi:"parentInterface"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// VLAN tag
-	VlanTag string `pulumi:"vlanTag"`
+	Snippet         string `pulumi:"snippet"`
+	Tfid            string `pulumi:"tfid"`
+	VlanTag         string `pulumi:"vlanTag"`
 }
 
 func LookupLayer2SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer2SubinterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLayer2SubinterfaceResultOutput {
@@ -132,7 +128,6 @@ func (o LookupLayer2SubinterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupLayer2SubinterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -147,12 +142,10 @@ func (o LookupLayer2SubinterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Parent interface
 func (o LookupLayer2SubinterfaceResultOutput) ParentInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.ParentInterface }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupLayer2SubinterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -161,7 +154,6 @@ func (o LookupLayer2SubinterfaceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// VLAN tag
 func (o LookupLayer2SubinterfaceResultOutput) VlanTag() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer2SubinterfaceResult) string { return v.VlanTag }).(pulumi.StringOutput)
 }

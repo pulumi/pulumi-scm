@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetRoutePrefixListListDataIpv4;
+import com.pulumi.scm.outputs.GetRoutePrefixListListDataType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GetRoutePrefixListListData {
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -32,21 +32,21 @@ public final class GetRoutePrefixListListData {
      */
     private String id;
     /**
-     * @return Ipv4
-     * 
-     */
-    private GetRoutePrefixListListDataIpv4 ipv4;
-    /**
      * @return Filter prefix list name
      * 
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
     private String tfid;
+    /**
+     * @return Address Family Type
+     * 
+     */
+    private GetRoutePrefixListListDataType type;
 
     private GetRoutePrefixListListData() {}
     /**
@@ -64,7 +64,7 @@ public final class GetRoutePrefixListListData {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -78,13 +78,6 @@ public final class GetRoutePrefixListListData {
         return this.id;
     }
     /**
-     * @return Ipv4
-     * 
-     */
-    public GetRoutePrefixListListDataIpv4 ipv4() {
-        return this.ipv4;
-    }
-    /**
      * @return Filter prefix list name
      * 
      */
@@ -92,7 +85,7 @@ public final class GetRoutePrefixListListData {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {
@@ -100,6 +93,13 @@ public final class GetRoutePrefixListListData {
     }
     public String tfid() {
         return this.tfid;
+    }
+    /**
+     * @return Address Family Type
+     * 
+     */
+    public GetRoutePrefixListListDataType type() {
+        return this.type;
     }
 
     public static Builder builder() {
@@ -115,10 +115,10 @@ public final class GetRoutePrefixListListData {
         private String device;
         private String folder;
         private String id;
-        private GetRoutePrefixListListDataIpv4 ipv4;
         private String name;
         private String snippet;
         private String tfid;
+        private GetRoutePrefixListListDataType type;
         public Builder() {}
         public Builder(GetRoutePrefixListListData defaults) {
     	      Objects.requireNonNull(defaults);
@@ -126,10 +126,10 @@ public final class GetRoutePrefixListListData {
     	      this.device = defaults.device;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
-    	      this.ipv4 = defaults.ipv4;
     	      this.name = defaults.name;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
+    	      this.type = defaults.type;
         }
 
         @CustomType.Setter
@@ -165,14 +165,6 @@ public final class GetRoutePrefixListListData {
             return this;
         }
         @CustomType.Setter
-        public Builder ipv4(GetRoutePrefixListListDataIpv4 ipv4) {
-            if (ipv4 == null) {
-              throw new MissingRequiredPropertyException("GetRoutePrefixListListData", "ipv4");
-            }
-            this.ipv4 = ipv4;
-            return this;
-        }
-        @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetRoutePrefixListListData", "name");
@@ -196,16 +188,24 @@ public final class GetRoutePrefixListListData {
             this.tfid = tfid;
             return this;
         }
+        @CustomType.Setter
+        public Builder type(GetRoutePrefixListListDataType type) {
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetRoutePrefixListListData", "type");
+            }
+            this.type = type;
+            return this;
+        }
         public GetRoutePrefixListListData build() {
             final var _resultValue = new GetRoutePrefixListListData();
             _resultValue.description = description;
             _resultValue.device = device;
             _resultValue.folder = folder;
             _resultValue.id = id;
-            _resultValue.ipv4 = ipv4;
             _resultValue.name = name;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
+            _resultValue.type = type;
             return _resultValue;
         }
     }

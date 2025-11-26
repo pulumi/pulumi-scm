@@ -24,30 +24,42 @@ public final class GetAntiSpywareProfileListDataRuleAction {
     /**
      * @return Allow
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     private GetAntiSpywareProfileListDataRuleActionAllow allow;
     /**
      * @return anti spyware profiles rules action block ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileListDataRuleActionBlockIp blockIp;
     /**
      * @return Drop
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     private GetAntiSpywareProfileListDataRuleActionDrop drop;
     /**
      * @return Reset both
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileListDataRuleActionResetBoth resetBoth;
     /**
      * @return Reset client
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     private GetAntiSpywareProfileListDataRuleActionResetClient resetClient;
     /**
      * @return Reset server
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     private GetAntiSpywareProfileListDataRuleActionResetServer resetServer;
@@ -63,12 +75,16 @@ public final class GetAntiSpywareProfileListDataRuleAction {
     /**
      * @return Allow
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     public GetAntiSpywareProfileListDataRuleActionAllow allow() {
         return this.allow;
     }
     /**
      * @return anti spyware profiles rules action block ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public GetAntiSpywareProfileListDataRuleActionBlockIp blockIp() {
@@ -77,12 +93,16 @@ public final class GetAntiSpywareProfileListDataRuleAction {
     /**
      * @return Drop
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     public GetAntiSpywareProfileListDataRuleActionDrop drop() {
         return this.drop;
     }
     /**
      * @return Reset both
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public GetAntiSpywareProfileListDataRuleActionResetBoth resetBoth() {
@@ -91,12 +111,16 @@ public final class GetAntiSpywareProfileListDataRuleAction {
     /**
      * @return Reset client
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     public GetAntiSpywareProfileListDataRuleActionResetClient resetClient() {
         return this.resetClient;
     }
     /**
      * @return Reset server
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public GetAntiSpywareProfileListDataRuleActionResetServer resetServer() {

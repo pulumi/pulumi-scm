@@ -39,21 +39,9 @@ export interface GetBgpRouteMapRedistributionResult {
      * Bgp
      */
     readonly bgp: outputs.GetBgpRouteMapRedistributionBgp;
-    /**
-     * Connected static
-     */
     readonly connectedStatic: outputs.GetBgpRouteMapRedistributionConnectedStatic;
-    /**
-     * BGP Route Map Redistributions Description
-     */
     readonly description: string;
-    /**
-     * The device in which the resource is defined
-     */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * BGP Route Map Redistributions UUID of the resource
@@ -63,13 +51,7 @@ export interface GetBgpRouteMapRedistributionResult {
      * BGP Route Map Redistributions Name
      */
     readonly name: string;
-    /**
-     * Ospf
-     */
     readonly ospf: outputs.GetBgpRouteMapRedistributionOspf;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

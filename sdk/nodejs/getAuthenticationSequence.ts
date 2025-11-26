@@ -6,6 +6,19 @@ import * as utilities from "./utilities";
 
 /**
  * AuthenticationSequence data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const sequenceData = scm.getAuthenticationSequence({
+ *     id: "1ee14ac7-760c-401f-8dbc-c887db16106a",
+ * });
+ * export const scmAuthenticationSequence = sequenceData.then(sequenceData => sequenceData.id);
+ * export const fetchedSequence = sequenceData;
+ * ```
  */
 export function getAuthenticationSequence(args: GetAuthenticationSequenceArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationSequenceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -41,9 +54,6 @@ export interface GetAuthenticationSequenceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the authentication sequence
@@ -53,18 +63,25 @@ export interface GetAuthenticationSequenceResult {
      * The name of the authentication sequence
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Use domain to determine authentication profile?
-     */
     readonly useDomainFindProfile: boolean;
 }
 /**
  * AuthenticationSequence data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const sequenceData = scm.getAuthenticationSequence({
+ *     id: "1ee14ac7-760c-401f-8dbc-c887db16106a",
+ * });
+ * export const scmAuthenticationSequence = sequenceData.then(sequenceData => sequenceData.id);
+ * export const fetchedSequence = sequenceData;
+ * ```
  */
 export function getAuthenticationSequenceOutput(args: GetAuthenticationSequenceOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationSequenceResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

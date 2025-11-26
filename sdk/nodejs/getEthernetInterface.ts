@@ -55,64 +55,29 @@ export interface GetEthernetInterfaceArgs {
  */
 export interface GetEthernetInterfaceResult {
     /**
-     * Interface description
+     * Aggregate group
      */
+    readonly aggregateGroup: string;
     readonly comment: string;
-    /**
-     * Default interface assignment
-     */
     readonly defaultValue: string;
-    /**
-     * The device in which the resource is defined
-     */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Layer2
-     */
     readonly layer2: outputs.GetEthernetInterfaceLayer2;
-    /**
-     * Ethernet Interface Layer 3 configuration
-     */
     readonly layer3: outputs.GetEthernetInterfaceLayer3;
-    /**
-     * Link duplex
-     */
     readonly linkDuplex: string;
-    /**
-     * Link speed
-     */
     readonly linkSpeed: string;
-    /**
-     * Link state
-     */
     readonly linkState: string;
     /**
      * Interface name
      */
     readonly name: string;
-    /**
-     * Poe
-     */
     readonly poe: outputs.GetEthernetInterfacePoe;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Tap
-     */
     readonly tap: outputs.GetEthernetInterfaceTap;
     readonly tfid: string;
 }

@@ -18,12 +18,16 @@ public final class GetIpsecTunnelListDataAutoKeyProxyIdProtocol {
      */
     private Integer number;
     /**
-     * @return IPv4 type of proxy*id protocol values for TCP protocol
+     * @return IPv4 type of proxyId protocol values for TCP protocol
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     private GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcp tcp;
     /**
-     * @return IPv6 type of proxy*id protocol values for UDP protocol
+     * @return IPv6 type of proxyId protocol values for UDP protocol
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     private GetIpsecTunnelListDataAutoKeyProxyIdProtocolUdp udp;
@@ -37,14 +41,18 @@ public final class GetIpsecTunnelListDataAutoKeyProxyIdProtocol {
         return this.number;
     }
     /**
-     * @return IPv4 type of proxy*id protocol values for TCP protocol
+     * @return IPv4 type of proxyId protocol values for TCP protocol
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     public GetIpsecTunnelListDataAutoKeyProxyIdProtocolTcp tcp() {
         return this.tcp;
     }
     /**
-     * @return IPv6 type of proxy*id protocol values for UDP protocol
+     * @return IPv6 type of proxyId protocol values for UDP protocol
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `number`, `tcp`, and `udp`.
      * 
      */
     public GetIpsecTunnelListDataAutoKeyProxyIdProtocolUdp udp() {

@@ -24,36 +24,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var testQosPolicyRule = new Scm.QosPolicyRule("test_qos_policy_rule", new()
-        ///     {
-        ///         Name = "data-source-qos-test",
-        ///         Description = "Rule created specifically for data source testing with DSCP/TOS.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Schedule = "non-work-hours",
-        ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
-        ///         {
-        ///             Class = "1",
-        ///         },
-        ///         DscpTos = new Scm.Inputs.QosPolicyRuleDscpTosArgs
-        ///         {
-        ///             Codepoints = new[]
-        ///             {
-        ///                 new Scm.Inputs.QosPolicyRuleDscpTosCodepointArgs
-        ///                 {
-        ///                     Name = "Expedited Forwarding",
-        ///                     Type = new Scm.Inputs.QosPolicyRuleDscpTosCodepointTypeArgs
-        ///                     {
-        ///                         Ef = null,
-        ///                     },
-        ///                 },
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
         ///     {
-        ///         Id = testQosPolicyRule.Id,
+        ///         Id = "fbc3fdb2-8513-4949-be8a-f1be03b492da",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -79,36 +52,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var testQosPolicyRule = new Scm.QosPolicyRule("test_qos_policy_rule", new()
-        ///     {
-        ///         Name = "data-source-qos-test",
-        ///         Description = "Rule created specifically for data source testing with DSCP/TOS.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Schedule = "non-work-hours",
-        ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
-        ///         {
-        ///             Class = "1",
-        ///         },
-        ///         DscpTos = new Scm.Inputs.QosPolicyRuleDscpTosArgs
-        ///         {
-        ///             Codepoints = new[]
-        ///             {
-        ///                 new Scm.Inputs.QosPolicyRuleDscpTosCodepointArgs
-        ///                 {
-        ///                     Name = "Expedited Forwarding",
-        ///                     Type = new Scm.Inputs.QosPolicyRuleDscpTosCodepointTypeArgs
-        ///                     {
-        ///                         Ef = null,
-        ///                     },
-        ///                 },
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
         ///     {
-        ///         Id = testQosPolicyRule.Id,
+        ///         Id = "fbc3fdb2-8513-4949-be8a-f1be03b492da",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -134,36 +80,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var testQosPolicyRule = new Scm.QosPolicyRule("test_qos_policy_rule", new()
-        ///     {
-        ///         Name = "data-source-qos-test",
-        ///         Description = "Rule created specifically for data source testing with DSCP/TOS.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Schedule = "non-work-hours",
-        ///         Action = new Scm.Inputs.QosPolicyRuleActionArgs
-        ///         {
-        ///             Class = "1",
-        ///         },
-        ///         DscpTos = new Scm.Inputs.QosPolicyRuleDscpTosArgs
-        ///         {
-        ///             Codepoints = new[]
-        ///             {
-        ///                 new Scm.Inputs.QosPolicyRuleDscpTosCodepointArgs
-        ///                 {
-        ///                     Name = "Expedited Forwarding",
-        ///                     Type = new Scm.Inputs.QosPolicyRuleDscpTosCodepointTypeArgs
-        ///                     {
-        ///                         Ef = null,
-        ///                     },
-        ///                 },
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     var singleRuleById = Scm.GetQosPolicyRule.Invoke(new()
         ///     {
-        ///         Id = testQosPolicyRule.Id,
+        ///         Id = "fbc3fdb2-8513-4949-be8a-f1be03b492da",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -234,13 +153,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Dscp tos
-        /// </summary>
         public readonly Outputs.GetQosPolicyRuleDscpTosResult DscpTos;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -250,25 +163,10 @@ namespace Pulumi.Scm
         /// Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The relative position of the rule
-        /// </summary>
         public readonly string Position;
-        /// <summary>
-        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        /// </summary>
         public readonly string RelativePosition;
-        /// <summary>
-        /// Schedule
-        /// </summary>
         public readonly string Schedule;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
-        /// </summary>
         public readonly string TargetRule;
         public readonly string Tfid;
 

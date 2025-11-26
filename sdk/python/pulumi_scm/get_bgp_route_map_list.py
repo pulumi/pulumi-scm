@@ -165,6 +165,17 @@ def get_bgp_route_map_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all bgp route maps
+    all_bgp_route_maps = scm.get_bgp_route_map_list(folder="ngfw-shared")
+    pulumi.export("scmBgpRouteMapList", {route_map.id: route_map for routeMap in all_bgp_route_maps.datas})
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +214,17 @@ def get_bgp_route_map_list_output(device: Optional[pulumi.Input[Optional[_builti
                                   opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBgpRouteMapListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Fetch a list of all bgp route maps
+    all_bgp_route_maps = scm.get_bgp_route_map_list(folder="ngfw-shared")
+    pulumi.export("scmBgpRouteMapList", {route_map.id: route_map for routeMap in all_bgp_route_maps.datas})
+    ```
 
 
     :param _builtins.str device: The device of the item.

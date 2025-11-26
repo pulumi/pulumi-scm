@@ -20,10 +20,14 @@ public final class GetDosProtectionRuleListDataAction {
     /**
      * @return Deny
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
+     * 
      */
     private GetDosProtectionRuleListDataActionDeny deny;
     /**
      * @return Protect
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     private GetDosProtectionRuleListDataActionProtect protect;
@@ -39,12 +43,16 @@ public final class GetDosProtectionRuleListDataAction {
     /**
      * @return Deny
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
+     * 
      */
     public GetDosProtectionRuleListDataActionDeny deny() {
         return this.deny;
     }
     /**
      * @return Protect
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow`, `deny`, and `protect`.
      * 
      */
     public GetDosProtectionRuleListDataActionProtect protect() {

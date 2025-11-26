@@ -41,51 +41,23 @@ public final class GetVlanInterfaceResult {
      * 
      */
     private String device;
-    /**
-     * @return Vlan interfaces DHCP Client Object
-     * 
-     */
     private GetVlanInterfaceDhcpClient dhcpClient;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Interface management profile
-     * 
-     */
     private String interfaceManagementProfile;
-    /**
-     * @return VLAN Interface IP Parent
-     * 
-     */
     private List<GetVlanInterfaceIp> ips;
-    /**
-     * @return MTU
-     * 
-     */
     private Integer mtu;
     /**
      * @return L3 sub-interface name
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return VLAN tag
-     * 
-     */
     private String vlanTag;
 
     private GetVlanInterfaceResult() {}
@@ -124,17 +96,9 @@ public final class GetVlanInterfaceResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Vlan interfaces DHCP Client Object
-     * 
-     */
     public GetVlanInterfaceDhcpClient dhcpClient() {
         return this.dhcpClient;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -145,24 +109,12 @@ public final class GetVlanInterfaceResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Interface management profile
-     * 
-     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
-    /**
-     * @return VLAN Interface IP Parent
-     * 
-     */
     public List<GetVlanInterfaceIp> ips() {
         return this.ips;
     }
-    /**
-     * @return MTU
-     * 
-     */
     public Integer mtu() {
         return this.mtu;
     }
@@ -173,20 +125,12 @@ public final class GetVlanInterfaceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return VLAN tag
-     * 
-     */
     public String vlanTag() {
         return this.vlanTag;
     }

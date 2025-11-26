@@ -20,24 +20,32 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Cs
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("cs")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeCsGetArgs>? Cs { get; set; }
 
         /// <summary>
         /// Custom
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("custom")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeCustomGetArgs>? Custom { get; set; }
 
         /// <summary>
         /// Ef
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("ef")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeEfGetArgs>? Ef { get; set; }
 
         /// <summary>
         /// Tos
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Af`, `Cs`, `Custom`, `Ef`, and `Tos`.
         /// </summary>
         [Input("tos")]
         public Input<Inputs.QosPolicyRuleDscpTosCodepointTypeTosGetArgs>? Tos { get; set; }

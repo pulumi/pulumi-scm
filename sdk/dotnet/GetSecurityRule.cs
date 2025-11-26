@@ -24,68 +24,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
-        ///     {
-        ///         Folder = "All",
-        ///         Name = "Allow Standard Web Access DS1",
-        ///         Description = "Allow outbound web traffic to any destination...",
-        ///         Position = "pre",
-        ///         Action = "allow",
-        ///         Categories = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Applications = new[]
-        ///         {
-        ///             "web-browsing",
-        ///             "ssl",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-http",
-        ///             "service-https",
-        ///         },
-        ///         Froms = new[]
-        ///         {
-        ///             "untrust",
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         NegateSource = false,
-        ///         NegateDestination = false,
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         SourceHips = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         DestinationHips = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         LogStart = true,
-        ///         LogEnd = true,
-        ///         Disabled = false,
-        ///     });
-        /// 
-        ///     // --- Data Source Calls to Fetch Existing Rules ---
         ///     // 1. Fetch by ID (Best for direct lookup)
         ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
         ///     {
-        ///         Id = standardWebAccess.Id,
+        ///         Id = "2a550f26-3e98-47d0-984f-b51e4ff367de",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -113,68 +55,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
-        ///     {
-        ///         Folder = "All",
-        ///         Name = "Allow Standard Web Access DS1",
-        ///         Description = "Allow outbound web traffic to any destination...",
-        ///         Position = "pre",
-        ///         Action = "allow",
-        ///         Categories = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Applications = new[]
-        ///         {
-        ///             "web-browsing",
-        ///             "ssl",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-http",
-        ///             "service-https",
-        ///         },
-        ///         Froms = new[]
-        ///         {
-        ///             "untrust",
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         NegateSource = false,
-        ///         NegateDestination = false,
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         SourceHips = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         DestinationHips = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         LogStart = true,
-        ///         LogEnd = true,
-        ///         Disabled = false,
-        ///     });
-        /// 
-        ///     // --- Data Source Calls to Fetch Existing Rules ---
         ///     // 1. Fetch by ID (Best for direct lookup)
         ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
         ///     {
-        ///         Id = standardWebAccess.Id,
+        ///         Id = "2a550f26-3e98-47d0-984f-b51e4ff367de",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -202,68 +86,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var standardWebAccess = new Scm.SecurityRule("standard_web_access", new()
-        ///     {
-        ///         Folder = "All",
-        ///         Name = "Allow Standard Web Access DS1",
-        ///         Description = "Allow outbound web traffic to any destination...",
-        ///         Position = "pre",
-        ///         Action = "allow",
-        ///         Categories = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Applications = new[]
-        ///         {
-        ///             "web-browsing",
-        ///             "ssl",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-http",
-        ///             "service-https",
-        ///         },
-        ///         Froms = new[]
-        ///         {
-        ///             "untrust",
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         NegateSource = false,
-        ///         NegateDestination = false,
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         SourceHips = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         DestinationHips = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         LogStart = true,
-        ///         LogEnd = true,
-        ///         Disabled = false,
-        ///     });
-        /// 
-        ///     // --- Data Source Calls to Fetch Existing Rules ---
         ///     // 1. Fetch by ID (Best for direct lookup)
         ///     var standardWebAccessById = Scm.GetSecurityRule.Invoke(new()
         ///     {
-        ///         Id = standardWebAccess.Id,
+        ///         Id = "2a550f26-3e98-47d0-984f-b51e4ff367de",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

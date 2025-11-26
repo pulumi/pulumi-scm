@@ -162,12 +162,16 @@ type Variable struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the variable
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Is the variable overridden?
-	Overridden pulumi.BoolPtrOutput `pulumi:"overridden"`
+	Overridden pulumi.BoolOutput `pulumi:"overridden"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// The variable type
@@ -217,12 +221,16 @@ type variableState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the variable
 	Name *string `pulumi:"name"`
 	// Is the variable overridden?
 	Overridden *bool `pulumi:"overridden"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// The variable type
@@ -237,12 +245,16 @@ type VariableState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the variable
 	Name pulumi.StringPtrInput
 	// Is the variable overridden?
 	Overridden pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// The variable type
@@ -261,12 +273,14 @@ type variableArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the variable
 	Name *string `pulumi:"name"`
-	// Is the variable overridden?
-	Overridden *bool `pulumi:"overridden"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The variable type
 	Type string `pulumi:"type"`
@@ -281,12 +295,14 @@ type VariableArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the variable
 	Name pulumi.StringPtrInput
-	// Is the variable overridden?
-	Overridden pulumi.BoolPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The variable type
 	Type pulumi.StringInput
@@ -392,6 +408,8 @@ func (o VariableOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VariableOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -402,11 +420,13 @@ func (o VariableOutput) Name() pulumi.StringOutput {
 }
 
 // Is the variable overridden?
-func (o VariableOutput) Overridden() pulumi.BoolPtrOutput {
-	return o.ApplyT(func(v *Variable) pulumi.BoolPtrOutput { return v.Overridden }).(pulumi.BoolPtrOutput)
+func (o VariableOutput) Overridden() pulumi.BoolOutput {
+	return o.ApplyT(func(v *Variable) pulumi.BoolOutput { return v.Overridden }).(pulumi.BoolOutput)
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o VariableOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Variable) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

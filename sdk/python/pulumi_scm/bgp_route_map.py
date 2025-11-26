@@ -32,9 +32,13 @@ class BgpRouteMapArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRouteMapArgs']]] route_maps: Route map
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -78,6 +82,8 @@ class BgpRouteMapArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -114,6 +120,8 @@ class BgpRouteMapArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -137,9 +145,13 @@ class _BgpRouteMapState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[Sequence[pulumi.Input['BgpRouteMapRouteMapArgs']]] route_maps: Route map
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -185,6 +197,8 @@ class _BgpRouteMapState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -221,6 +235,8 @@ class _BgpRouteMapState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -254,14 +270,68 @@ class BgpRouteMap(pulumi.CustomResource):
         """
         BgpRouteMap resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates various resources used for subsequent examples
+        #
+        scm_route_prefix_list = scm.RoutePrefixList("scm_route_prefix_list",
+            folder="ngfw-shared",
+            name="scm_bgp_prefix_list",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "198.18.1.0/24",
+                        },
+                    }],
+                },
+            })
+        #
+        # Creates a bgp route map that sets no-export community for traffic matching prefix-list
+        # Requires: scm_bgp_prefix_list
+        #
+        scm_bgp_route_map = scm.BgpRouteMap("scm_bgp_route_map",
+            folder="ngfw-shared",
+            name="scm_bgp_route_map",
+            description="Managed by Pulumi",
+            route_maps=[{
+                "name": 10,
+                "description": "No Export",
+                "match": {
+                    "ipv4": {
+                        "address": {
+                            "prefix_list": "scm_bgp_prefix_list",
+                        },
+                    },
+                },
+                "set": {
+                    "regular_community": ["no-export"],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[scm_route_prefix_list]))
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[Sequence[pulumi.Input[Union['BgpRouteMapRouteMapArgs', 'BgpRouteMapRouteMapArgsDict']]]] route_maps: Route map
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -271,6 +341,56 @@ class BgpRouteMap(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         BgpRouteMap resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        #
+        # Creates various resources used for subsequent examples
+        #
+        scm_route_prefix_list = scm.RoutePrefixList("scm_route_prefix_list",
+            folder="ngfw-shared",
+            name="scm_bgp_prefix_list",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "198.18.1.0/24",
+                        },
+                    }],
+                },
+            })
+        #
+        # Creates a bgp route map that sets no-export community for traffic matching prefix-list
+        # Requires: scm_bgp_prefix_list
+        #
+        scm_bgp_route_map = scm.BgpRouteMap("scm_bgp_route_map",
+            folder="ngfw-shared",
+            name="scm_bgp_route_map",
+            description="Managed by Pulumi",
+            route_maps=[{
+                "name": 10,
+                "description": "No Export",
+                "match": {
+                    "ipv4": {
+                        "address": {
+                            "prefix_list": "scm_bgp_prefix_list",
+                        },
+                    },
+                },
+                "set": {
+                    "regular_community": ["no-export"],
+                },
+            }],
+            opts = pulumi.ResourceOptions(depends_on=[scm_route_prefix_list]))
+        ```
 
         :param str resource_name: The name of the resource.
         :param BgpRouteMapArgs args: The arguments to use to populate this resource's properties.
@@ -336,9 +456,13 @@ class BgpRouteMap(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[Sequence[pulumi.Input[Union['BgpRouteMapRouteMapArgs', 'BgpRouteMapRouteMapArgsDict']]]] route_maps: Route map
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -374,6 +498,8 @@ class BgpRouteMap(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -398,6 +524,8 @@ class BgpRouteMap(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

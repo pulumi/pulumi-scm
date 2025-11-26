@@ -83,25 +83,16 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the log server profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Match list
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetLogForwardingProfileMatchListResult> MatchLists;
         /// <summary>
         /// The name of the log forwarding profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

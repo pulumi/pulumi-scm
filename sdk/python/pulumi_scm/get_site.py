@@ -27,7 +27,7 @@ class GetSiteResult:
     """
     A collection of values returned by getSite.
     """
-    def __init__(__self__, address_line1=None, address_line2=None, city=None, country=None, id=None, latitude=None, longitude=None, members=None, name=None, qos=None, state=None, tfid=None, type=None, zip_code=None):
+    def __init__(__self__, address_line1=None, address_line2=None, city=None, country=None, id=None, latitude=None, license_type=None, longitude=None, members=None, name=None, qos=None, state=None, tfid=None, type=None, zip_code=None):
         if address_line1 and not isinstance(address_line1, str):
             raise TypeError("Expected argument 'address_line1' to be a str")
         pulumi.set(__self__, "address_line1", address_line1)
@@ -43,11 +43,14 @@ class GetSiteResult:
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
-        if latitude and not isinstance(latitude, float):
-            raise TypeError("Expected argument 'latitude' to be a float")
+        if latitude and not isinstance(latitude, str):
+            raise TypeError("Expected argument 'latitude' to be a str")
         pulumi.set(__self__, "latitude", latitude)
-        if longitude and not isinstance(longitude, float):
-            raise TypeError("Expected argument 'longitude' to be a float")
+        if license_type and not isinstance(license_type, str):
+            raise TypeError("Expected argument 'license_type' to be a str")
+        pulumi.set(__self__, "license_type", license_type)
+        if longitude and not isinstance(longitude, str):
+            raise TypeError("Expected argument 'longitude' to be a str")
         pulumi.set(__self__, "longitude", longitude)
         if members and not isinstance(members, list):
             raise TypeError("Expected argument 'members' to be a list")
@@ -113,15 +116,23 @@ class GetSiteResult:
 
     @_builtins.property
     @pulumi.getter
-    def latitude(self) -> _builtins.float:
+    def latitude(self) -> _builtins.str:
         """
         The latitude coordinate for the site
         """
         return pulumi.get(self, "latitude")
 
     @_builtins.property
+    @pulumi.getter(name="licenseType")
+    def license_type(self) -> _builtins.str:
+        """
+        The license type of the site
+        """
+        return pulumi.get(self, "license_type")
+
+    @_builtins.property
     @pulumi.getter
-    def longitude(self) -> _builtins.float:
+    def longitude(self) -> _builtins.str:
         """
         The longitude coordinate for the site
         """
@@ -193,6 +204,7 @@ class AwaitableGetSiteResult(GetSiteResult):
             country=self.country,
             id=self.id,
             latitude=self.latitude,
+            license_type=self.license_type,
             longitude=self.longitude,
             members=self.members,
             name=self.name,
@@ -208,6 +220,16 @@ def get_site(id: Optional[_builtins.str] = None,
              opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetSiteResult:
     """
     Site data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    single_site_by_id = scm.get_site(id="d037fe30-68ae-47ee-9a74-71bc63ac2c10")
+    pulumi.export("singleSiteDetails", single_site_by_id)
+    ```
 
 
     :param _builtins.str id: The UUID of the site
@@ -226,6 +248,7 @@ def get_site(id: Optional[_builtins.str] = None,
         country=pulumi.get(__ret__, 'country'),
         id=pulumi.get(__ret__, 'id'),
         latitude=pulumi.get(__ret__, 'latitude'),
+        license_type=pulumi.get(__ret__, 'license_type'),
         longitude=pulumi.get(__ret__, 'longitude'),
         members=pulumi.get(__ret__, 'members'),
         name=pulumi.get(__ret__, 'name'),
@@ -239,6 +262,16 @@ def get_site_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                     opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSiteResult]:
     """
     Site data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    single_site_by_id = scm.get_site(id="d037fe30-68ae-47ee-9a74-71bc63ac2c10")
+    pulumi.export("singleSiteDetails", single_site_by_id)
+    ```
 
 
     :param _builtins.str id: The UUID of the site
@@ -256,6 +289,7 @@ def get_site_output(id: Optional[pulumi.Input[_builtins.str]] = None,
         country=pulumi.get(__response__, 'country'),
         id=pulumi.get(__response__, 'id'),
         latitude=pulumi.get(__response__, 'latitude'),
+        license_type=pulumi.get(__response__, 'license_type'),
         longitude=pulumi.get(__response__, 'longitude'),
         members=pulumi.get(__response__, 'members'),
         name=pulumi.get(__response__, 'name'),

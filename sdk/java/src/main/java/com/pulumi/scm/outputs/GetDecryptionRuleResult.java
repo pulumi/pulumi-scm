@@ -43,116 +43,36 @@ public final class GetDecryptionRuleResult {
      * 
      */
     private String device;
-    /**
-     * @return Is the rule disabled?
-     * 
-     */
     private Boolean disabled;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
-    /**
-     * @return The source security zone
-     * 
-     */
     private List<String> froms;
     /**
      * @return The UUID of the decryption rule
      * 
      */
     private String id;
-    /**
-     * @return Log failed decryption events?
-     * 
-     */
     private Boolean logFail;
-    /**
-     * @return The log settings of the decryption rule
-     * 
-     */
     private String logSetting;
-    /**
-     * @return Log successful decryption events?
-     * 
-     */
     private Boolean logSuccess;
     /**
      * @return The name of the decryption rule
      * 
      */
     private String name;
-    /**
-     * @return Negate the destination addresses?
-     * 
-     */
     private Boolean negateDestination;
-    /**
-     * @return Negate the source addresses?
-     * 
-     */
     private Boolean negateSource;
-    /**
-     * @return The position of a security rule
-     * 
-     */
     private String position;
-    /**
-     * @return The decryption profile associated with the decryption rule
-     * 
-     */
     private String profile;
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     private String relativePosition;
-    /**
-     * @return The destination services and/or service groups
-     * 
-     */
     private List<String> services;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Source hip
-     * 
-     */
     private List<String> sourceHips;
-    /**
-     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-     * 
-     */
     private List<String> sourceUsers;
-    /**
-     * @return The source addresses
-     * 
-     */
     private List<String> sources;
-    /**
-     * @return The tags associated with the decryption rule
-     * 
-     */
     private List<String> tags;
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     private String targetRule;
     private String tfid;
-    /**
-     * @return The destination security zone
-     * 
-     */
     private List<String> tos;
-    /**
-     * @return The type of decryption
-     * 
-     */
     private GetDecryptionRuleType type;
 
     private GetDecryptionRuleResult() {}
@@ -198,24 +118,12 @@ public final class GetDecryptionRuleResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Is the rule disabled?
-     * 
-     */
     public Boolean disabled() {
         return this.disabled;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return The source security zone
-     * 
-     */
     public List<String> froms() {
         return this.froms;
     }
@@ -226,24 +134,12 @@ public final class GetDecryptionRuleResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Log failed decryption events?
-     * 
-     */
     public Boolean logFail() {
         return this.logFail;
     }
-    /**
-     * @return The log settings of the decryption rule
-     * 
-     */
     public String logSetting() {
         return this.logSetting;
     }
-    /**
-     * @return Log successful decryption events?
-     * 
-     */
     public Boolean logSuccess() {
         return this.logSuccess;
     }
@@ -254,104 +150,48 @@ public final class GetDecryptionRuleResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Negate the destination addresses?
-     * 
-     */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
-    /**
-     * @return Negate the source addresses?
-     * 
-     */
     public Boolean negateSource() {
         return this.negateSource;
     }
-    /**
-     * @return The position of a security rule
-     * 
-     */
     public String position() {
         return this.position;
     }
-    /**
-     * @return The decryption profile associated with the decryption rule
-     * 
-     */
     public String profile() {
         return this.profile;
     }
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     public String relativePosition() {
         return this.relativePosition;
     }
-    /**
-     * @return The destination services and/or service groups
-     * 
-     */
     public List<String> services() {
         return this.services;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Source hip
-     * 
-     */
     public List<String> sourceHips() {
         return this.sourceHips;
     }
-    /**
-     * @return List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-     * 
-     */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
-    /**
-     * @return The source addresses
-     * 
-     */
     public List<String> sources() {
         return this.sources;
     }
-    /**
-     * @return The tags associated with the decryption rule
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     public String targetRule() {
         return this.targetRule;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return The destination security zone
-     * 
-     */
     public List<String> tos() {
         return this.tos;
     }
-    /**
-     * @return The type of decryption
-     * 
-     */
     public GetDecryptionRuleType type() {
         return this.type;
     }

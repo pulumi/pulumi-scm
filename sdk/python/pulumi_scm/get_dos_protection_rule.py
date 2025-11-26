@@ -124,25 +124,16 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
-        """
-        Rule disabled?
-        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
-        """
-        List of source zones
-        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
@@ -156,9 +147,6 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
-        """
-        Log forwarding profile name
-        """
         return pulumi.get(self, "log_setting")
 
     @_builtins.property
@@ -172,65 +160,41 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
-        """
-        Position relative to local device rules
-        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def protection(self) -> 'outputs.GetDosProtectionRuleProtectionResult':
-        """
-        Protection
-        """
         return pulumi.get(self, "protection")
 
     @_builtins.property
     @pulumi.getter
     def schedule(self) -> _builtins.str:
-        """
-        Schedule on which to enforce the rule
-        """
         return pulumi.get(self, "schedule")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
-        """
-        List of services
-        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
-        """
-        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
-        """
-        List of source addresses
-        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
-        """
-        List of tags
-        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
@@ -241,9 +205,6 @@ class GetDosProtectionRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
-        """
-        List of destination zones
-        """
         return pulumi.get(self, "tos")
 
 

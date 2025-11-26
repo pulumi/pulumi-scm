@@ -27,35 +27,19 @@ public final class GetAggregateInterfaceResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Layer2
-     * 
-     */
     private GetAggregateInterfaceLayer2 layer2;
-    /**
-     * @return Aggregate Interface Layer 3 configuration
-     * 
-     */
     private GetAggregateInterfaceLayer3 layer3;
     /**
      * @return Aggregate interface name
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -81,10 +65,6 @@ public final class GetAggregateInterfaceResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -95,17 +75,9 @@ public final class GetAggregateInterfaceResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Layer2
-     * 
-     */
     public GetAggregateInterfaceLayer2 layer2() {
         return this.layer2;
     }
-    /**
-     * @return Aggregate Interface Layer 3 configuration
-     * 
-     */
     public GetAggregateInterfaceLayer3 layer3() {
         return this.layer3;
     }
@@ -116,10 +88,6 @@ public final class GetAggregateInterfaceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

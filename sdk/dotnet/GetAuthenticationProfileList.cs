@@ -13,18 +13,99 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allProfiles = Scm.GetAuthenticationProfileList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfileListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total) },
+        ///             { "firstRuleName", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetAuthenticationProfileListResult> InvokeAsync(GetAuthenticationProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationProfileListResult>("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", args ?? new GetAuthenticationProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allProfiles = Scm.GetAuthenticationProfileList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfileListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total) },
+        ///             { "firstRuleName", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationProfileListResult> Invoke(GetAuthenticationProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileListResult>("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", args ?? new GetAuthenticationProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allProfiles = Scm.GetAuthenticationProfileList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedProfileListSummary"] = 
+        ///         {
+        ///             { "countOfRulesFetched", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Total) },
+        ///             { "firstRuleName", allProfiles.Apply(getAuthenticationProfileListResult =&gt; getAuthenticationProfileListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationProfileListResult> Invoke(GetAuthenticationProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationProfileListResult>("scm:index/getAuthenticationProfileList:getAuthenticationProfileList", args ?? new GetAuthenticationProfileListInvokeArgs(), options.WithDefaults());

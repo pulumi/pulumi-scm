@@ -54,15 +54,7 @@ public final class GetCertificateProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return User domain
-     * 
-     */
     private String domain;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the certificate profile
@@ -74,31 +66,11 @@ public final class GetCertificateProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return OCSP receive timeout (seconds)
-     * 
-     */
     private String ocspReceiveTimeout;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Use CRL?
-     * 
-     */
     private Boolean useCrl;
-    /**
-     * @return Use OCSP?
-     * 
-     */
     private Boolean useOcsp;
-    /**
-     * @return Certificate username field
-     * 
-     */
     private GetCertificateProfileUsernameField usernameField;
 
     private GetCertificateProfileResult() {}
@@ -158,17 +130,9 @@ public final class GetCertificateProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return User domain
-     * 
-     */
     public String domain() {
         return this.domain;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -186,41 +150,21 @@ public final class GetCertificateProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return OCSP receive timeout (seconds)
-     * 
-     */
     public String ocspReceiveTimeout() {
         return this.ocspReceiveTimeout;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Use CRL?
-     * 
-     */
     public Boolean useCrl() {
         return this.useCrl;
     }
-    /**
-     * @return Use OCSP?
-     * 
-     */
     public Boolean useOcsp() {
         return this.useOcsp;
     }
-    /**
-     * @return Certificate username field
-     * 
-     */
     public GetCertificateProfileUsernameField usernameField() {
         return this.usernameField;
     }

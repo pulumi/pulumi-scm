@@ -22,15 +22,21 @@ public final class ApplicationDefault {
     /**
      * @return Ident by icmp type
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     private @Nullable ApplicationDefaultIdentByIcmpType identByIcmpType;
     /**
      * @return Ident by ip protocol
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     private @Nullable String identByIpProtocol;
     /**
      * @return Port
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     private @Nullable List<String> ports;
@@ -46,6 +52,8 @@ public final class ApplicationDefault {
     /**
      * @return Ident by icmp type
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     public Optional<ApplicationDefaultIdentByIcmpType> identByIcmpType() {
         return Optional.ofNullable(this.identByIcmpType);
@@ -53,12 +61,16 @@ public final class ApplicationDefault {
     /**
      * @return Ident by ip protocol
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
+     * 
      */
     public Optional<String> identByIpProtocol() {
         return Optional.ofNullable(this.identByIpProtocol);
     }
     /**
      * @return Port
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `identByIcmp6Type`, `identByIcmpType`, `identByIpProtocol`, and `port`.
      * 
      */
     public List<String> ports() {

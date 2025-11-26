@@ -55,21 +55,9 @@ export interface GetSdwanRuleResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Disable rule?
-     */
     readonly disabled: boolean;
-    /**
-     * Error correction profile
-     */
     readonly errorCorrectionProfile: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * List of source zones
-     */
     readonly froms: string[];
     /**
      * UUID of the resource
@@ -79,50 +67,17 @@ export interface GetSdwanRuleResult {
      * Rule name
      */
     readonly name: string;
-    /**
-     * Negate destination address(es)?
-     */
     readonly negateDestination: boolean;
-    /**
-     * Negate source address(es)?
-     */
     readonly negateSource: boolean;
-    /**
-     * Path quality profile
-     */
     readonly pathQualityProfile: string;
-    /**
-     * Rule postion relative to device rules
-     */
     readonly position: string;
-    /**
-     * SaaS quality profile
-     */
     readonly saasQualityProfile: string;
-    /**
-     * List of services
-     */
     readonly services: string[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * List of source users
-     */
     readonly sourceUsers: string[];
-    /**
-     * List of source addresses
-     */
     readonly sources: string[];
-    /**
-     * List of tags
-     */
     readonly tags: string[];
     readonly tfid: string;
-    /**
-     * List of destination zones
-     */
     readonly tos: string[];
 }
 /**

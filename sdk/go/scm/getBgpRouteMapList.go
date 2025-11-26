@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetBgpRouteMapList(ctx *pulumi.Context, args *GetBgpRouteMapListArgs, opts ...pulumi.InvokeOption) (*GetBgpRouteMapListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetBgpRouteMapListResult

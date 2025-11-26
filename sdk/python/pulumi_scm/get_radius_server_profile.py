@@ -70,9 +70,6 @@ class GetRadiusServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -94,33 +91,21 @@ class GetRadiusServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def protocol(self) -> 'outputs.GetRadiusServerProfileProtocolResult':
-        """
-        The RADIUS authentication protocol
-        """
         return pulumi.get(self, "protocol")
 
     @_builtins.property
     @pulumi.getter
     def retries(self) -> _builtins.int:
-        """
-        The number of RADIUS server retries
-        """
         return pulumi.get(self, "retries")
 
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetRadiusServerProfileServerResult']:
-        """
-        Server
-        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -131,9 +116,6 @@ class GetRadiusServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def timeout(self) -> _builtins.int:
-        """
-        The RADIUS server authentication timeout (seconds)
-        """
         return pulumi.get(self, "timeout")
 
 
@@ -167,21 +149,7 @@ def get_radius_server_profile(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
-        name="CHAP_only_rsp_ds_1",
-        folder="All",
-        retries=5,
-        timeout=60,
-        protocol={
-            "c_hap": {},
-        },
-        servers=[{
-            "name": "Chap_Server_Primary",
-            "ip_address": "10.1.1.10",
-            "port": 1812,
-            "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
-        }])
-    single_profile_by_id = scm.get_radius_server_profile_output(id=chap_radius_profile.id)
+    single_profile_by_id = scm.get_radius_server_profile(id="50e5f694-19a2-467b-90a8-9db168600327")
     pulumi.export("singleRspDump", single_profile_by_id.name)
     ```
 
@@ -218,21 +186,7 @@ def get_radius_server_profile_output(id: Optional[pulumi.Input[_builtins.str]] =
     import pulumi
     import pulumi_scm as scm
 
-    chap_radius_profile = scm.RadiusServerProfile("chap_radius_profile",
-        name="CHAP_only_rsp_ds_1",
-        folder="All",
-        retries=5,
-        timeout=60,
-        protocol={
-            "c_hap": {},
-        },
-        servers=[{
-            "name": "Chap_Server_Primary",
-            "ip_address": "10.1.1.10",
-            "port": 1812,
-            "secret": "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
-        }])
-    single_profile_by_id = scm.get_radius_server_profile_output(id=chap_radius_profile.id)
+    single_profile_by_id = scm.get_radius_server_profile(id="50e5f694-19a2-467b-90a8-9db168600327")
     pulumi.export("singleRspDump", single_profile_by_id.name)
     ```
 

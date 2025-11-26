@@ -18,25 +18,9 @@ public final class GetBgpRouteMapRedistributionResult {
      * 
      */
     private GetBgpRouteMapRedistributionBgp bgp;
-    /**
-     * @return Connected static
-     * 
-     */
     private GetBgpRouteMapRedistributionConnectedStatic connectedStatic;
-    /**
-     * @return BGP Route Map Redistributions Description
-     * 
-     */
     private String description;
-    /**
-     * @return The device in which the resource is defined
-     * 
-     */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return BGP Route Map Redistributions UUID of the resource
@@ -48,15 +32,7 @@ public final class GetBgpRouteMapRedistributionResult {
      * 
      */
     private String name;
-    /**
-     * @return Ospf
-     * 
-     */
     private GetBgpRouteMapRedistributionOspf ospf;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -68,31 +44,15 @@ public final class GetBgpRouteMapRedistributionResult {
     public GetBgpRouteMapRedistributionBgp bgp() {
         return this.bgp;
     }
-    /**
-     * @return Connected static
-     * 
-     */
     public GetBgpRouteMapRedistributionConnectedStatic connectedStatic() {
         return this.connectedStatic;
     }
-    /**
-     * @return BGP Route Map Redistributions Description
-     * 
-     */
     public String description() {
         return this.description;
     }
-    /**
-     * @return The device in which the resource is defined
-     * 
-     */
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -110,17 +70,9 @@ public final class GetBgpRouteMapRedistributionResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Ospf
-     * 
-     */
     public GetBgpRouteMapRedistributionOspf ospf() {
         return this.ospf;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

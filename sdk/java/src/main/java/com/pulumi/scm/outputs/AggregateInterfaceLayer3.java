@@ -41,6 +41,8 @@ public final class AggregateInterfaceLayer3 {
     /**
      * @return Aggregate Interface IP addresses
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     private @Nullable List<AggregateInterfaceLayer3Ip> ips;
     /**
@@ -85,6 +87,8 @@ public final class AggregateInterfaceLayer3 {
     }
     /**
      * @return Aggregate Interface IP addresses
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public List<AggregateInterfaceLayer3Ip> ips() {

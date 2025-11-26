@@ -8,6 +8,33 @@ import * as utilities from "./utilities";
 
 /**
  * BgpRedistributionProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmBgpRedistributionProfile = new scm.BgpRedistributionProfile("scm_bgp_redistribution_profile", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_redistribution_profile",
+ *     ipv4: {
+ *         unicast: {
+ *             static: {
+ *                 enable: true,
+ *                 metric: 10,
+ *             },
+ *             connected: {
+ *                 enable: true,
+ *                 metric: 10,
+ *             },
+ *             ospf: {
+ *                 enable: false,
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
  */
 export class BgpRedistributionProfile extends pulumi.CustomResource {
     /**
@@ -43,6 +70,8 @@ export class BgpRedistributionProfile extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -55,6 +84,8 @@ export class BgpRedistributionProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -105,6 +136,8 @@ export interface BgpRedistributionProfileState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -117,6 +150,8 @@ export interface BgpRedistributionProfileState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -132,6 +167,8 @@ export interface BgpRedistributionProfileArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -144,6 +181,8 @@ export interface BgpRedistributionProfileArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
 }

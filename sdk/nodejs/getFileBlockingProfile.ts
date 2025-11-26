@@ -8,6 +8,26 @@ import * as utilities from "./utilities";
 
 /**
  * FileBlockingProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM File Blocking Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
+ * const scmFileBlockingProf = scm.getFileBlockingProfile({
+ *     id: "f32697f8-a98b-4097-b249-22c89f7d8f7f",
+ * });
+ * export const scmFileBlockingProfileDetails = {
+ *     profileId: scmFileBlockingProf.then(scmFileBlockingProf => scmFileBlockingProf.id),
+ *     folder: scmFileBlockingProf.then(scmFileBlockingProf => scmFileBlockingProf.folder),
+ *     name: scmFileBlockingProf.then(scmFileBlockingProf => scmFileBlockingProf.name),
+ * };
+ * ```
  */
 export function getFileBlockingProfile(args: GetFileBlockingProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetFileBlockingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -43,9 +63,6 @@ export interface GetFileBlockingProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the file blocking profile
@@ -55,18 +72,32 @@ export interface GetFileBlockingProfileResult {
      * The name of the file blocking profile
      */
     readonly name: string;
-    /**
-     * A list of file blocking rules
-     */
     readonly rules: outputs.GetFileBlockingProfileRule[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * FileBlockingProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM File Blocking Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
+ * const scmFileBlockingProf = scm.getFileBlockingProfile({
+ *     id: "f32697f8-a98b-4097-b249-22c89f7d8f7f",
+ * });
+ * export const scmFileBlockingProfileDetails = {
+ *     profileId: scmFileBlockingProf.then(scmFileBlockingProf => scmFileBlockingProf.id),
+ *     folder: scmFileBlockingProf.then(scmFileBlockingProf => scmFileBlockingProf.folder),
+ *     name: scmFileBlockingProf.then(scmFileBlockingProf => scmFileBlockingProf.name),
+ * };
+ * ```
  */
 export function getFileBlockingProfileOutput(args: GetFileBlockingProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetFileBlockingProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

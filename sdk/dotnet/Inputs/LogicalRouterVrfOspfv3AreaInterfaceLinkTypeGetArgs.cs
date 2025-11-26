@@ -20,12 +20,16 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// P2mp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         [Input("p2mp")]
         public Input<Inputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2mpGetArgs>? P2mp { get; set; }
 
         /// <summary>
         /// P2p
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         [Input("p2p")]
         public Input<Inputs.LogicalRouterVrfOspfv3AreaInterfaceLinkTypeP2pGetArgs>? P2p { get; set; }

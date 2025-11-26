@@ -35,10 +35,12 @@ namespace Pulumi.Scm.Outputs
         public readonly string Device;
         /// <summary>
         /// Vlan interfaces DHCP Client Object
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly Outputs.GetVlanInterfaceListDataDhcpClientResult DhcpClient;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -51,6 +53,8 @@ namespace Pulumi.Scm.Outputs
         public readonly string InterfaceManagementProfile;
         /// <summary>
         /// VLAN Interface IP Parent
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetVlanInterfaceListDataIpResult> Ips;
         /// <summary>
@@ -62,7 +66,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;

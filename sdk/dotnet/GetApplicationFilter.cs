@@ -149,90 +149,33 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool Evasive;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool ExcessiveBandwidthUse;
-        /// <summary>
-        /// Exclude
-        /// </summary>
         public readonly ImmutableArray<string> Excludes;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool HasKnownVulnerabilities;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool IsSaas;
         /// <summary>
         /// Alphanumeric string [ 0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool NewAppid;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool Pervasive;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool ProneToMisuse;
-        /// <summary>
-        /// Risk
-        /// </summary>
         public readonly ImmutableArray<int> Risks;
-        /// <summary>
-        /// Saas certifications
-        /// </summary>
         public readonly ImmutableArray<string> SaasCertifications;
-        /// <summary>
-        /// Saas risk
-        /// </summary>
         public readonly ImmutableArray<string> SaasRisks;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Subcategory
-        /// </summary>
         public readonly ImmutableArray<string> Subcategories;
-        /// <summary>
-        /// Tagging
-        /// </summary>
         public readonly Outputs.GetApplicationFilterTaggingResult Tagging;
-        /// <summary>
-        /// Technology
-        /// </summary>
         public readonly ImmutableArray<string> Technologies;
         public readonly string Tfid;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool TransfersFiles;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool TunnelsOtherApps;
-        /// <summary>
-        /// only True is a valid value
-        /// </summary>
         public readonly bool UsedByMalware;
 
         [OutputConstructor]

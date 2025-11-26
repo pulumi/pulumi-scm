@@ -34,12 +34,16 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
     /**
      * Unlimited
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
+     * 
      */
     @Import(name="unlimited")
     private @Nullable Output<DhcpInterfaceServerOptionLeaseUnlimitedArgs> unlimited;
 
     /**
      * @return Unlimited
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     public Optional<Output<DhcpInterfaceServerOptionLeaseUnlimitedArgs>> unlimited() {
@@ -95,6 +99,8 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
         /**
          * @param unlimited Unlimited
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class DhcpInterfaceServerOptionLeaseArgs extends com.pulumi.resourc
 
         /**
          * @param unlimited Unlimited
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
          * 
          * @return builder
          * 

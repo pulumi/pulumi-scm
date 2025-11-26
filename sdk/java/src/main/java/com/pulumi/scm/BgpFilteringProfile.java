@@ -18,6 +18,70 @@ import javax.annotation.Nullable;
 /**
  * BgpFilteringProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.BgpFilteringProfile;
+ * import com.pulumi.scm.BgpFilteringProfileArgs;
+ * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4Args;
+ * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastArgs;
+ * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastFilterListArgs;
+ * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs;
+ * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs;
+ * import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastRouteMapsArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmBgpFilteringProfile = new BgpFilteringProfile("scmBgpFilteringProfile", BgpFilteringProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_filtering_profile")
+ *             .ipv4(BgpFilteringProfileIpv4Args.builder()
+ *                 .build())
+ *             .build());
+ * 
+ *         var scmBgpFilteringProfileComplex = new BgpFilteringProfile("scmBgpFilteringProfileComplex", BgpFilteringProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_filtering_profile_complex")
+ *             .ipv4(BgpFilteringProfileIpv4Args.builder()
+ *                 .unicast(BgpFilteringProfileIpv4UnicastArgs.builder()
+ *                     .filterList(BgpFilteringProfileIpv4UnicastFilterListArgs.builder()
+ *                         .inbound("scm_filter_list")
+ *                         .build())
+ *                     .inboundNetworkFilters(BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs.builder()
+ *                         .prefixList("scm_pl_inbound")
+ *                         .build())
+ *                     .outboundNetworkFilters(BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs.builder()
+ *                         .distributeList("scm_distribute_list")
+ *                         .build())
+ *                     .routeMaps(BgpFilteringProfileIpv4UnicastRouteMapsArgs.builder()
+ *                         .inbound("scm_rm_inbound")
+ *                         .outbound("scm_rm_outbound")
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/bgpFilteringProfile:BgpFilteringProfile")
 public class BgpFilteringProfile extends com.pulumi.resources.CustomResource {
@@ -52,12 +116,16 @@ public class BgpFilteringProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -94,12 +162,16 @@ public class BgpFilteringProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

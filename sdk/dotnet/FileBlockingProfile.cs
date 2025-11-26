@@ -11,6 +11,110 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// FileBlockingProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmFileBlockingBase = new Scm.FileBlockingProfile("scm_file_blocking_base", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "base_file_blocking",
+    ///     });
+    /// 
+    ///     var scmFileBlockingProfile = new Scm.FileBlockingProfile("scm_file_blocking_profile", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "file_blocking_profile_complete",
+    ///         Description = "alert, block, and continue",
+    ///         Rules = new[]
+    ///         {
+    ///             new Scm.Inputs.FileBlockingProfileRuleArgs
+    ///             {
+    ///                 Name = "block_rule",
+    ///                 Action = "block",
+    ///                 Application = new[]
+    ///                 {
+    ///                     "any",
+    ///                 },
+    ///                 Direction = "upload",
+    ///                 FileType = new[]
+    ///                 {
+    ///                     "any",
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.FileBlockingProfileRuleArgs
+    ///             {
+    ///                 Name = "block_rule_two",
+    ///                 Action = "block",
+    ///                 Application = new[]
+    ///                 {
+    ///                     "8x8",
+    ///                 },
+    ///                 Direction = "upload",
+    ///                 FileType = new[]
+    ///                 {
+    ///                     "7z",
+    ///                     "bat",
+    ///                     "chm",
+    ///                     "class",
+    ///                     "cpl",
+    ///                     "dll",
+    ///                     "hlp",
+    ///                     "hta",
+    ///                     "jar",
+    ///                     "ocx",
+    ///                     "pif",
+    ///                     "scr",
+    ///                     "torrent",
+    ///                     "vbe",
+    ///                     "wsf",
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.FileBlockingProfileRuleArgs
+    ///             {
+    ///                 Name = "alert_rule",
+    ///                 Action = "alert",
+    ///                 Application = new[]
+    ///                 {
+    ///                     "access-grid",
+    ///                     "adobe-update",
+    ///                 },
+    ///                 Direction = "both",
+    ///                 FileType = new[]
+    ///                 {
+    ///                     "ico",
+    ///                 },
+    ///             },
+    ///             new Scm.Inputs.FileBlockingProfileRuleArgs
+    ///             {
+    ///                 Name = "continue_rule",
+    ///                 Action = "continue",
+    ///                 Application = new[]
+    ///                 {
+    ///                     "apple-appstore",
+    ///                     "limelight",
+    ///                 },
+    ///                 Direction = "download",
+    ///                 FileType = new[]
+    ///                 {
+    ///                     "doc",
+    ///                     "bmp",
+    ///                     "dsn",
+    ///                     "dwf",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/fileBlockingProfile:FileBlockingProfile")]
     public partial class FileBlockingProfile : global::Pulumi.CustomResource
@@ -29,6 +133,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -47,6 +153,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -114,6 +222,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -138,6 +248,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -164,6 +276,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -188,6 +302,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

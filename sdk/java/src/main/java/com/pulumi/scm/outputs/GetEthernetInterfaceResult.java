@@ -16,115 +16,55 @@ import java.util.Objects;
 @CustomType
 public final class GetEthernetInterfaceResult {
     /**
-     * @return Interface description
+     * @return Aggregate group
      * 
      */
+    private String aggregateGroup;
     private String comment;
-    /**
-     * @return Default interface assignment
-     * 
-     */
     private String defaultValue;
-    /**
-     * @return The device in which the resource is defined
-     * 
-     */
     private String device;
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     private Map<String,String> encryptedValues;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Layer2
-     * 
-     */
     private GetEthernetInterfaceLayer2 layer2;
-    /**
-     * @return Ethernet Interface Layer 3 configuration
-     * 
-     */
     private GetEthernetInterfaceLayer3 layer3;
-    /**
-     * @return Link duplex
-     * 
-     */
     private String linkDuplex;
-    /**
-     * @return Link speed
-     * 
-     */
     private String linkSpeed;
-    /**
-     * @return Link state
-     * 
-     */
     private String linkState;
     /**
      * @return Interface name
      * 
      */
     private String name;
-    /**
-     * @return Poe
-     * 
-     */
     private GetEthernetInterfacePoe poe;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Tap
-     * 
-     */
     private GetEthernetInterfaceTap tap;
     private String tfid;
 
     private GetEthernetInterfaceResult() {}
     /**
-     * @return Interface description
+     * @return Aggregate group
      * 
      */
+    public String aggregateGroup() {
+        return this.aggregateGroup;
+    }
     public String comment() {
         return this.comment;
     }
-    /**
-     * @return Default interface assignment
-     * 
-     */
     public String defaultValue() {
         return this.defaultValue;
     }
-    /**
-     * @return The device in which the resource is defined
-     * 
-     */
     public String device() {
         return this.device;
     }
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -135,38 +75,18 @@ public final class GetEthernetInterfaceResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Layer2
-     * 
-     */
     public GetEthernetInterfaceLayer2 layer2() {
         return this.layer2;
     }
-    /**
-     * @return Ethernet Interface Layer 3 configuration
-     * 
-     */
     public GetEthernetInterfaceLayer3 layer3() {
         return this.layer3;
     }
-    /**
-     * @return Link duplex
-     * 
-     */
     public String linkDuplex() {
         return this.linkDuplex;
     }
-    /**
-     * @return Link speed
-     * 
-     */
     public String linkSpeed() {
         return this.linkSpeed;
     }
-    /**
-     * @return Link state
-     * 
-     */
     public String linkState() {
         return this.linkState;
     }
@@ -177,24 +97,12 @@ public final class GetEthernetInterfaceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Poe
-     * 
-     */
     public GetEthernetInterfacePoe poe() {
         return this.poe;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Tap
-     * 
-     */
     public GetEthernetInterfaceTap tap() {
         return this.tap;
     }
@@ -211,6 +119,7 @@ public final class GetEthernetInterfaceResult {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String aggregateGroup;
         private String comment;
         private String defaultValue;
         private String device;
@@ -230,6 +139,7 @@ public final class GetEthernetInterfaceResult {
         public Builder() {}
         public Builder(GetEthernetInterfaceResult defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.aggregateGroup = defaults.aggregateGroup;
     	      this.comment = defaults.comment;
     	      this.defaultValue = defaults.defaultValue;
     	      this.device = defaults.device;
@@ -248,6 +158,14 @@ public final class GetEthernetInterfaceResult {
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder aggregateGroup(String aggregateGroup) {
+            if (aggregateGroup == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceResult", "aggregateGroup");
+            }
+            this.aggregateGroup = aggregateGroup;
+            return this;
+        }
         @CustomType.Setter
         public Builder comment(String comment) {
             if (comment == null) {
@@ -378,6 +296,7 @@ public final class GetEthernetInterfaceResult {
         }
         public GetEthernetInterfaceResult build() {
             final var _resultValue = new GetEthernetInterfaceResult();
+            _resultValue.aggregateGroup = aggregateGroup;
             _resultValue.comment = comment;
             _resultValue.defaultValue = defaultValue;
             _resultValue.device = device;

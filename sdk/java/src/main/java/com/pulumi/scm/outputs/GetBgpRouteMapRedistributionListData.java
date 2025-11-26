@@ -21,6 +21,8 @@ public final class GetBgpRouteMapRedistributionListData {
     /**
      * @return Connected static
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
+     * 
      */
     private GetBgpRouteMapRedistributionListDataConnectedStatic connectedStatic;
     /**
@@ -29,12 +31,12 @@ public final class GetBgpRouteMapRedistributionListData {
      */
     private String description;
     /**
-     * @return The device in which the resource is defined
+     * @return The device of the item.
      * 
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -51,10 +53,12 @@ public final class GetBgpRouteMapRedistributionListData {
     /**
      * @return Ospf
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
+     * 
      */
     private GetBgpRouteMapRedistributionListDataOspf ospf;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -71,6 +75,8 @@ public final class GetBgpRouteMapRedistributionListData {
     /**
      * @return Connected static
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
+     * 
      */
     public GetBgpRouteMapRedistributionListDataConnectedStatic connectedStatic() {
         return this.connectedStatic;
@@ -83,14 +89,14 @@ public final class GetBgpRouteMapRedistributionListData {
         return this.description;
     }
     /**
-     * @return The device in which the resource is defined
+     * @return The device of the item.
      * 
      */
     public String device() {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -113,12 +119,14 @@ public final class GetBgpRouteMapRedistributionListData {
     /**
      * @return Ospf
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
+     * 
      */
     public GetBgpRouteMapRedistributionListDataOspf ospf() {
         return this.ospf;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

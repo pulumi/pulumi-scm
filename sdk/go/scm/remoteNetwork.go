@@ -32,7 +32,7 @@ import (
 //			// This profile defines the encryption and authentication algorithms for the IKE Gateway.
 //			// The values are taken from the 'createTestIKECryptoProfile' helper function.
 //			example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
-//				Name:   pulumi.String("example-ike-crypto-prf-for-rn"),
+//				Name:   pulumi.String("example-ike-crypto-11"),
 //				Folder: pulumi.String("Remote Networks"),
 //				Hashes: pulumi.StringArray{
 //					pulumi.String("sha256"),
@@ -51,7 +51,7 @@ import (
 //			// This defines the VPN peer. It depends on the IKE Crypto Profile created above.
 //			// The values are taken from the 'createTestIKEGateway' helper function.
 //			exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
-//				Name:   pulumi.String("example-ike-gateway-for-rn"),
+//				Name:   pulumi.String("example-ike-gateway-11"),
 //				Folder: pulumi.String("Remote Networks"),
 //				Authentication: &scm.IkeGatewayAuthenticationArgs{
 //					PreSharedKey: &scm.IkeGatewayAuthenticationPreSharedKeyArgs{
@@ -76,7 +76,7 @@ import (
 //			// This defines the tunnel interface itself and uses the IKE Gateway.
 //			// The values are taken from the 'createTestIPsecTunnel' helper function.
 //			exampleIpsecTunnel, err := scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
-//				Name:                   pulumi.String("example-ipsec-tunnel-for-rn"),
+//				Name:                   pulumi.String("example-ipsec-tunnel-11"),
 //				Folder:                 pulumi.String("Remote Networks"),
 //				AntiReplay:             pulumi.Bool(true),
 //				CopyTos:                pulumi.Bool(false),
@@ -99,7 +99,7 @@ import (
 //			// This is the final resource, which uses the IPsec Tunnel created above.
 //			// The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
 //			_, err = scm.NewRemoteNetwork(ctx, "example", &scm.RemoteNetworkArgs{
-//				Name:        pulumi.String("example-remote-network"),
+//				Name:        pulumi.String("example-remote-network-11"),
 //				Folder:      pulumi.String("Remote Networks"),
 //				LicenseType: pulumi.String("FWAAS-AGGREGATE"),
 //				Region:      pulumi.String("us-west-2"),

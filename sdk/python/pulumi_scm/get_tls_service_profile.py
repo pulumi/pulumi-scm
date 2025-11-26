@@ -72,9 +72,6 @@ class GetTlsServiceProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -96,17 +93,11 @@ class GetTlsServiceProfileResult:
     @_builtins.property
     @pulumi.getter(name="protocolSettings")
     def protocol_settings(self) -> 'outputs.GetTlsServiceProfileProtocolSettingsResult':
-        """
-        Protocol settings
-        """
         return pulumi.get(self, "protocol_settings")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

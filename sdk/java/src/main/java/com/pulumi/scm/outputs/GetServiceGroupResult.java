@@ -16,35 +16,19 @@ public final class GetServiceGroupResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the service group
      * 
      */
     private String id;
-    /**
-     * @return Members
-     * 
-     */
     private List<String> members;
     /**
      * @return The name of the service group
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Tags associated with the service group
-     * 
-     */
     private List<String> tags;
     private String tfid;
 
@@ -56,10 +40,6 @@ public final class GetServiceGroupResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -70,10 +50,6 @@ public final class GetServiceGroupResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Members
-     * 
-     */
     public List<String> members() {
         return this.members;
     }
@@ -84,17 +60,9 @@ public final class GetServiceGroupResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Tags associated with the service group
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }

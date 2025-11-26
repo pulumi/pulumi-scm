@@ -178,12 +178,16 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     /**
      * Layer3 sub interfaces DHCP Client Object
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     @Export(name="dhcpClient", refs={Layer3SubinterfaceDhcpClient.class}, tree="[0]")
     private Output<Layer3SubinterfaceDhcpClient> dhcpClient;
 
     /**
      * @return Layer3 sub interfaces DHCP Client Object
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Output<Layer3SubinterfaceDhcpClient> dhcpClient() {
@@ -192,12 +196,16 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -220,12 +228,16 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     /**
      * L3 sub-interface IP Parent
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     @Export(name="ips", refs={List.class,Layer3SubinterfaceIp.class}, tree="[0,1]")
     private Output</* @Nullable */ List<Layer3SubinterfaceIp>> ips;
 
     /**
      * @return L3 sub-interface IP Parent
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Output<Optional<List<Layer3SubinterfaceIp>>> ips() {
@@ -276,12 +288,16 @@ public class Layer3Subinterface extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

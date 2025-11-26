@@ -18,18 +18,28 @@ type BgpRouteMapRedistribution struct {
 	// Bgp
 	Bgp BgpRouteMapRedistributionBgpPtrOutput `pulumi:"bgp"`
 	// Connected static
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	ConnectedStatic BgpRouteMapRedistributionConnectedStaticPtrOutput `pulumi:"connectedStatic"`
 	// BGP Route Map Redistributions Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// BGP Route Map Redistributions Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Ospf
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Ospf BgpRouteMapRedistributionOspfPtrOutput `pulumi:"ospf"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -67,18 +77,28 @@ type bgpRouteMapRedistributionState struct {
 	// Bgp
 	Bgp *BgpRouteMapRedistributionBgp `pulumi:"bgp"`
 	// Connected static
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	ConnectedStatic *BgpRouteMapRedistributionConnectedStatic `pulumi:"connectedStatic"`
 	// BGP Route Map Redistributions Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// BGP Route Map Redistributions Name
 	Name *string `pulumi:"name"`
 	// Ospf
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Ospf *BgpRouteMapRedistributionOspf `pulumi:"ospf"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
@@ -87,18 +107,28 @@ type BgpRouteMapRedistributionState struct {
 	// Bgp
 	Bgp BgpRouteMapRedistributionBgpPtrInput
 	// Connected static
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	ConnectedStatic BgpRouteMapRedistributionConnectedStaticPtrInput
 	// BGP Route Map Redistributions Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// BGP Route Map Redistributions Name
 	Name pulumi.StringPtrInput
 	// Ospf
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Ospf BgpRouteMapRedistributionOspfPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -111,18 +141,28 @@ type bgpRouteMapRedistributionArgs struct {
 	// Bgp
 	Bgp *BgpRouteMapRedistributionBgp `pulumi:"bgp"`
 	// Connected static
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	ConnectedStatic *BgpRouteMapRedistributionConnectedStatic `pulumi:"connectedStatic"`
 	// BGP Route Map Redistributions Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// BGP Route Map Redistributions Name
 	Name *string `pulumi:"name"`
 	// Ospf
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Ospf *BgpRouteMapRedistributionOspf `pulumi:"ospf"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -131,18 +171,28 @@ type BgpRouteMapRedistributionArgs struct {
 	// Bgp
 	Bgp BgpRouteMapRedistributionBgpPtrInput
 	// Connected static
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	ConnectedStatic BgpRouteMapRedistributionConnectedStaticPtrInput
 	// BGP Route Map Redistributions Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// BGP Route Map Redistributions Name
 	Name pulumi.StringPtrInput
 	// Ospf
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 	Ospf BgpRouteMapRedistributionOspfPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -239,6 +289,8 @@ func (o BgpRouteMapRedistributionOutput) Bgp() BgpRouteMapRedistributionBgpPtrOu
 }
 
 // Connected static
+//
+// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o BgpRouteMapRedistributionOutput) ConnectedStatic() BgpRouteMapRedistributionConnectedStaticPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) BgpRouteMapRedistributionConnectedStaticPtrOutput {
 		return v.ConnectedStatic
@@ -251,11 +303,15 @@ func (o BgpRouteMapRedistributionOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapRedistributionOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapRedistributionOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -266,11 +322,15 @@ func (o BgpRouteMapRedistributionOutput) Name() pulumi.StringOutput {
 }
 
 // Ospf
+//
+// > ℹ️ **Note:** You must specify exactly one of `bgp`, `connectedStatic`, and `ospf`.
 func (o BgpRouteMapRedistributionOutput) Ospf() BgpRouteMapRedistributionOspfPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) BgpRouteMapRedistributionOspfPtrOutput { return v.Ospf }).(BgpRouteMapRedistributionOspfPtrOutput)
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRouteMapRedistributionOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRouteMapRedistribution) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -12,6 +12,39 @@ import (
 )
 
 // BgpAuthProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up BGP Auth Profile by its ID.
+//			scmBgpAuthProfileDs, err := scm.LookupBgpAuthProfile(ctx, &scm.LookupBgpAuthProfileArgs{
+//				Id: "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("bgpAuthProfileDataSourceResults", pulumi.StringMap{
+//				"id":     scmBgpAuthProfileDs.Id,
+//				"name":   scmBgpAuthProfileDs.Name,
+//				"secret": scmBgpAuthProfileDs.Secret,
+//				"folder": scmBgpAuthProfileDs.Folder,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupBgpAuthProfile(ctx *pulumi.Context, args *LookupBgpAuthProfileArgs, opts ...pulumi.InvokeOption) (*LookupBgpAuthProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupBgpAuthProfileResult
@@ -33,18 +66,14 @@ type LookupBgpAuthProfileArgs struct {
 // A collection of values returned by getBgpAuthProfile.
 type LookupBgpAuthProfileResult struct {
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Map of sensitive values returned from the API.
+	Device          string            `pulumi:"device"`
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Folder          string            `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Profile name
-	Name string `pulumi:"name"`
-	// BGP authentication key
-	Secret string `pulumi:"secret"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
+	Secret  string `pulumi:"secret"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -90,12 +119,10 @@ func (o LookupBgpAuthProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Map of sensitive values returned from the API.
 func (o LookupBgpAuthProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupBgpAuthProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -110,12 +137,10 @@ func (o LookupBgpAuthProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// BGP authentication key
 func (o LookupBgpAuthProfileResultOutput) Secret() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Secret }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupBgpAuthProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupBgpAuthProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

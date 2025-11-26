@@ -150,17 +150,11 @@ class GetCertificateProfileResult:
     @_builtins.property
     @pulumi.getter
     def domain(self) -> _builtins.str:
-        """
-        User domain
-        """
         return pulumi.get(self, "domain")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -182,17 +176,11 @@ class GetCertificateProfileResult:
     @_builtins.property
     @pulumi.getter(name="ocspReceiveTimeout")
     def ocsp_receive_timeout(self) -> _builtins.str:
-        """
-        OCSP receive timeout (seconds)
-        """
         return pulumi.get(self, "ocsp_receive_timeout")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -203,25 +191,16 @@ class GetCertificateProfileResult:
     @_builtins.property
     @pulumi.getter(name="useCrl")
     def use_crl(self) -> _builtins.bool:
-        """
-        Use CRL?
-        """
         return pulumi.get(self, "use_crl")
 
     @_builtins.property
     @pulumi.getter(name="useOcsp")
     def use_ocsp(self) -> _builtins.bool:
-        """
-        Use OCSP?
-        """
         return pulumi.get(self, "use_ocsp")
 
     @_builtins.property
     @pulumi.getter(name="usernameField")
     def username_field(self) -> 'outputs.GetCertificateProfileUsernameFieldResult':
-        """
-        Certificate username field
-        """
         return pulumi.get(self, "username_field")
 
 

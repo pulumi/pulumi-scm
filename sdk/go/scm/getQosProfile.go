@@ -38,13 +38,11 @@ type LookupQosProfileResult struct {
 	ClassBandwidthType GetQosProfileClassBandwidthType `pulumi:"classBandwidthType"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -100,7 +98,6 @@ func (o LookupQosProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupQosProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -115,7 +112,6 @@ func (o LookupQosProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupQosProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupQosProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

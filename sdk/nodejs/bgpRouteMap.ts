@@ -8,6 +8,59 @@ import * as utilities from "./utilities";
 
 /**
  * BgpRouteMap resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Creates various resources used for subsequent examples
+ * //
+ * const scmRoutePrefixList = new scm.RoutePrefixList("scm_route_prefix_list", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_prefix_list",
+ *     description: "Managed by Pulumi",
+ *     type: {
+ *         ipv4: {
+ *             ipv4Entries: [{
+ *                 name: 10,
+ *                 action: "permit",
+ *                 prefix: {
+ *                     greaterThanOrEqual: 24,
+ *                     network: "198.18.1.0/24",
+ *                 },
+ *             }],
+ *         },
+ *     },
+ * });
+ * //
+ * // Creates a bgp route map that sets no-export community for traffic matching prefix-list
+ * // Requires: scm_bgp_prefix_list
+ * //
+ * const scmBgpRouteMap = new scm.BgpRouteMap("scm_bgp_route_map", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_route_map",
+ *     description: "Managed by Pulumi",
+ *     routeMaps: [{
+ *         name: 10,
+ *         description: "No Export",
+ *         match: {
+ *             ipv4: {
+ *                 address: {
+ *                     prefixList: "scm_bgp_prefix_list",
+ *                 },
+ *             },
+ *         },
+ *         set: {
+ *             regularCommunity: ["no-export"],
+ *         },
+ *     }],
+ * }, {
+ *     dependsOn: [scmRoutePrefixList],
+ * });
+ * ```
  */
 export class BgpRouteMap extends pulumi.CustomResource {
     /**
@@ -47,6 +100,8 @@ export class BgpRouteMap extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -59,6 +114,8 @@ export class BgpRouteMap extends pulumi.CustomResource {
     declare public readonly routeMaps: pulumi.Output<outputs.BgpRouteMapRouteMap[] | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -112,6 +169,8 @@ export interface BgpRouteMapState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -124,6 +183,8 @@ export interface BgpRouteMapState {
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRouteMap>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -143,6 +204,8 @@ export interface BgpRouteMapArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -155,6 +218,8 @@ export interface BgpRouteMapArgs {
     routeMaps?: pulumi.Input<pulumi.Input<inputs.BgpRouteMapRouteMap>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
 }

@@ -19,6 +19,51 @@ import javax.annotation.Nullable;
 /**
  * AuthenticationSequence resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.AuthenticationSequence;
+ * import com.pulumi.scm.AuthenticationSequenceArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var testSequence = new AuthenticationSequence("testSequence", AuthenticationSequenceArgs.builder()
+ *             .name("test_auth_sequence_1")
+ *             .folder("All")
+ *             .authenticationProfiles("test_auth_profile")
+ *             .useDomainFindProfile(false)
+ *             .build());
+ * 
+ *         var testSequence2 = new AuthenticationSequence("testSequence2", AuthenticationSequenceArgs.builder()
+ *             .name("test_auth_sequence_2")
+ *             .folder("All")
+ *             .authenticationProfiles(            
+ *                 "Test_UI",
+ *                 "test_auth_profile")
+ *             .useDomainFindProfile(false)
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/authenticationSequence:AuthenticationSequence")
 public class AuthenticationSequence extends com.pulumi.resources.CustomResource {
@@ -53,12 +98,16 @@ public class AuthenticationSequence extends com.pulumi.resources.CustomResource 
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -81,12 +130,16 @@ public class AuthenticationSequence extends com.pulumi.resources.CustomResource 
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

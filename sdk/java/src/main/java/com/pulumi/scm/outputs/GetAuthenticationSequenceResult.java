@@ -22,10 +22,6 @@ public final class GetAuthenticationSequenceResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the authentication sequence
@@ -37,16 +33,8 @@ public final class GetAuthenticationSequenceResult {
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Use domain to determine authentication profile?
-     * 
-     */
     private Boolean useDomainFindProfile;
 
     private GetAuthenticationSequenceResult() {}
@@ -64,10 +52,6 @@ public final class GetAuthenticationSequenceResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -85,20 +69,12 @@ public final class GetAuthenticationSequenceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Use domain to determine authentication profile?
-     * 
-     */
     public Boolean useDomainFindProfile() {
         return this.useDomainFindProfile;
     }

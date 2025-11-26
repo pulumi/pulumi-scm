@@ -39,25 +39,16 @@ export interface GetSdwanSaasQualityProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Monitor mode
-     */
     readonly monitorMode: outputs.GetSdwanSaasQualityProfileMonitorMode;
     /**
      * Profile name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

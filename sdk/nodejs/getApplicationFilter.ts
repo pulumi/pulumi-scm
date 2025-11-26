@@ -55,90 +55,33 @@ export interface GetApplicationFilterResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * only True is a valid value
-     */
     readonly evasive: boolean;
-    /**
-     * only True is a valid value
-     */
     readonly excessiveBandwidthUse: boolean;
-    /**
-     * Exclude
-     */
     readonly excludes: string[];
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * only True is a valid value
-     */
     readonly hasKnownVulnerabilities: boolean;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * only True is a valid value
-     */
     readonly isSaas: boolean;
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     readonly name: string;
-    /**
-     * only True is a valid value
-     */
     readonly newAppid: boolean;
-    /**
-     * only True is a valid value
-     */
     readonly pervasive: boolean;
-    /**
-     * only True is a valid value
-     */
     readonly proneToMisuse: boolean;
-    /**
-     * Risk
-     */
     readonly risks: number[];
-    /**
-     * Saas certifications
-     */
     readonly saasCertifications: string[];
-    /**
-     * Saas risk
-     */
     readonly saasRisks: string[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Subcategory
-     */
     readonly subcategories: string[];
-    /**
-     * Tagging
-     */
     readonly tagging: outputs.GetApplicationFilterTagging;
-    /**
-     * Technology
-     */
     readonly technologies: string[];
     readonly tfid: string;
-    /**
-     * only True is a valid value
-     */
     readonly transfersFiles: boolean;
-    /**
-     * only True is a valid value
-     */
     readonly tunnelsOtherApps: boolean;
-    /**
-     * only True is a valid value
-     */
     readonly usedByMalware: boolean;
 }
 /**

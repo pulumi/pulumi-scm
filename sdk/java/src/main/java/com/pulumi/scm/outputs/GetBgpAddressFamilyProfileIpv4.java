@@ -5,24 +5,37 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Ipv4;
+import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Multicast;
+import com.pulumi.scm.outputs.GetBgpAddressFamilyProfileIpv4Unicast;
 import java.util.Objects;
 
 @CustomType
 public final class GetBgpAddressFamilyProfileIpv4 {
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    private GetBgpAddressFamilyProfileIpv4Ipv4 ipv4;
+    private GetBgpAddressFamilyProfileIpv4Multicast multicast;
+    /**
+     * @return Unicast
+     * 
+     */
+    private GetBgpAddressFamilyProfileIpv4Unicast unicast;
 
     private GetBgpAddressFamilyProfileIpv4() {}
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    public GetBgpAddressFamilyProfileIpv4Ipv4 ipv4() {
-        return this.ipv4;
+    public GetBgpAddressFamilyProfileIpv4Multicast multicast() {
+        return this.multicast;
+    }
+    /**
+     * @return Unicast
+     * 
+     */
+    public GetBgpAddressFamilyProfileIpv4Unicast unicast() {
+        return this.unicast;
     }
 
     public static Builder builder() {
@@ -34,24 +47,35 @@ public final class GetBgpAddressFamilyProfileIpv4 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private GetBgpAddressFamilyProfileIpv4Ipv4 ipv4;
+        private GetBgpAddressFamilyProfileIpv4Multicast multicast;
+        private GetBgpAddressFamilyProfileIpv4Unicast unicast;
         public Builder() {}
         public Builder(GetBgpAddressFamilyProfileIpv4 defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.ipv4 = defaults.ipv4;
+    	      this.multicast = defaults.multicast;
+    	      this.unicast = defaults.unicast;
         }
 
         @CustomType.Setter
-        public Builder ipv4(GetBgpAddressFamilyProfileIpv4Ipv4 ipv4) {
-            if (ipv4 == null) {
-              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileIpv4", "ipv4");
+        public Builder multicast(GetBgpAddressFamilyProfileIpv4Multicast multicast) {
+            if (multicast == null) {
+              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileIpv4", "multicast");
             }
-            this.ipv4 = ipv4;
+            this.multicast = multicast;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder unicast(GetBgpAddressFamilyProfileIpv4Unicast unicast) {
+            if (unicast == null) {
+              throw new MissingRequiredPropertyException("GetBgpAddressFamilyProfileIpv4", "unicast");
+            }
+            this.unicast = unicast;
             return this;
         }
         public GetBgpAddressFamilyProfileIpv4 build() {
             final var _resultValue = new GetBgpAddressFamilyProfileIpv4();
-            _resultValue.ipv4 = ipv4;
+            _resultValue.multicast = multicast;
+            _resultValue.unicast = unicast;
             return _resultValue;
         }
     }

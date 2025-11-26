@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Integration with [Okta Adaptive MFA](https://www.okta.com/products/adaptive-multi-factor-authentication)
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, and `RsaSecuridAccessV1`.
         /// </summary>
         [Input("oktaAdaptiveV1")]
         public Input<Inputs.MfaServerMfaVendorTypeOktaAdaptiveV1GetArgs>? OktaAdaptiveV1 { get; set; }
 
         /// <summary>
         /// Integation with [Ping Identity](https://www.pingidentity.com/en/platform.html)
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, and `RsaSecuridAccessV1`.
         /// </summary>
         [Input("pingIdentityV1")]
         public Input<Inputs.MfaServerMfaVendorTypePingIdentityV1GetArgs>? PingIdentityV1 { get; set; }
 
         /// <summary>
         /// Integration with [RSA SecurID](https://www.rsa.com/products/securid/)
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DuoSecurityV2`, `OktaAdaptiveV1`, `PingIdentityV1`, and `RsaSecuridAccessV1`.
         /// </summary>
         [Input("rsaSecuridAccessV1")]
         public Input<Inputs.MfaServerMfaVendorTypeRsaSecuridAccessV1GetArgs>? RsaSecuridAccessV1 { get; set; }

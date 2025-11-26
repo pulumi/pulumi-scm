@@ -43,25 +43,16 @@ export interface GetLogForwardingProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the log server profile
      */
     readonly id: string;
-    /**
-     * Match list
-     */
     readonly matchLists: outputs.GetLogForwardingProfileMatchList[];
     /**
      * The name of the log forwarding profile
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

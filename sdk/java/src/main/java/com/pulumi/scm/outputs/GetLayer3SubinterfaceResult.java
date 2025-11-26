@@ -36,55 +36,23 @@ public final class GetLayer3SubinterfaceResult {
      * 
      */
     private String device;
-    /**
-     * @return Layer3 sub interfaces DHCP Client Object
-     * 
-     */
     private GetLayer3SubinterfaceDhcpClient dhcpClient;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Interface management profile
-     * 
-     */
     private String interfaceManagementProfile;
-    /**
-     * @return L3 sub-interface IP Parent
-     * 
-     */
     private List<GetLayer3SubinterfaceIp> ips;
-    /**
-     * @return MTU
-     * 
-     */
     private Integer mtu;
     /**
      * @return L3 sub-interface name
      * 
      */
     private String name;
-    /**
-     * @return Parent interface
-     * 
-     */
     private String parentInterface;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return VLAN tag
-     * 
-     */
     private Integer tag;
     private String tfid;
 
@@ -117,17 +85,9 @@ public final class GetLayer3SubinterfaceResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Layer3 sub interfaces DHCP Client Object
-     * 
-     */
     public GetLayer3SubinterfaceDhcpClient dhcpClient() {
         return this.dhcpClient;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -138,24 +98,12 @@ public final class GetLayer3SubinterfaceResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Interface management profile
-     * 
-     */
     public String interfaceManagementProfile() {
         return this.interfaceManagementProfile;
     }
-    /**
-     * @return L3 sub-interface IP Parent
-     * 
-     */
     public List<GetLayer3SubinterfaceIp> ips() {
         return this.ips;
     }
-    /**
-     * @return MTU
-     * 
-     */
     public Integer mtu() {
         return this.mtu;
     }
@@ -166,24 +114,12 @@ public final class GetLayer3SubinterfaceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Parent interface
-     * 
-     */
     public String parentInterface() {
         return this.parentInterface;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return VLAN tag
-     * 
-     */
     public Integer tag() {
         return this.tag;
     }

@@ -13,18 +13,105 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// BgpRouteMap data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up bgp route map by its ID.
+        ///     var scmBgpRouteMapDs = Scm.GetBgpRouteMap.Invoke(new()
+        ///     {
+        ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpRouteMapDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id) },
+        ///             { "name", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name) },
+        ///             { "routeMap", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps) },
+        ///             { "folder", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetBgpRouteMapResult> InvokeAsync(GetBgpRouteMapArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetBgpRouteMapResult>("scm:index/getBgpRouteMap:getBgpRouteMap", args ?? new GetBgpRouteMapArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpRouteMap data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up bgp route map by its ID.
+        ///     var scmBgpRouteMapDs = Scm.GetBgpRouteMap.Invoke(new()
+        ///     {
+        ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpRouteMapDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id) },
+        ///             { "name", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name) },
+        ///             { "routeMap", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps) },
+        ///             { "folder", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRouteMapResult> Invoke(GetBgpRouteMapInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRouteMapResult>("scm:index/getBgpRouteMap:getBgpRouteMap", args ?? new GetBgpRouteMapInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpRouteMap data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up bgp route map by its ID.
+        ///     var scmBgpRouteMapDs = Scm.GetBgpRouteMap.Invoke(new()
+        ///     {
+        ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpRouteMapDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Id) },
+        ///             { "name", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Name) },
+        ///             { "routeMap", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.RouteMaps) },
+        ///             { "folder", scmBgpRouteMapDs.Apply(getBgpRouteMapResult =&gt; getBgpRouteMapResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRouteMapResult> Invoke(GetBgpRouteMapInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRouteMapResult>("scm:index/getBgpRouteMap:getBgpRouteMap", args ?? new GetBgpRouteMapInvokeArgs(), options.WithDefaults());
@@ -83,9 +170,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -95,13 +179,7 @@ namespace Pulumi.Scm
         /// Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Route map
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetBgpRouteMapRouteMapResult> RouteMaps;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

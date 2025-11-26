@@ -245,41 +245,20 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// Fully qualified domain name
-        /// </summary>
         public readonly string Fqdn;
         /// <summary>
         /// The UUID of the address object
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// IP address with or without CIDR notation
-        /// </summary>
         public readonly string IpNetmask;
-        /// <summary>
-        /// Ip range
-        /// </summary>
         public readonly string IpRange;
-        /// <summary>
-        /// IP wildcard mask
-        /// </summary>
         public readonly string IpWildcard;
         /// <summary>
         /// The name of the address object
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Tags assocaited with the address object
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 

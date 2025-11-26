@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ebgp confed
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         [Input("ebgpConfed")]
         public Input<Inputs.LogicalRouterVrfBgpPeerGroupTypeEbgpConfedArgs>? EbgpConfed { get; set; }
 
         /// <summary>
         /// Ibgp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         [Input("ibgp")]
         public Input<Inputs.LogicalRouterVrfBgpPeerGroupTypeIbgpArgs>? Ibgp { get; set; }
 
         /// <summary>
         /// Ibgp confed
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         [Input("ibgpConfed")]
         public Input<Inputs.LogicalRouterVrfBgpPeerGroupTypeIbgpConfedArgs>? IbgpConfed { get; set; }

@@ -43,9 +43,6 @@ export interface GetTlsServiceProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the TLS service profile
@@ -55,13 +52,7 @@ export interface GetTlsServiceProfileResult {
      * TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
      */
     readonly name: string;
-    /**
-     * Protocol settings
-     */
     readonly protocolSettings: outputs.GetTlsServiceProfileProtocolSettings;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

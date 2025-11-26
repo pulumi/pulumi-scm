@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Allow
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `Block`, and `Sinkhole`.
         /// </summary>
         [Input("allow")]
         public Input<Inputs.DnsSecurityProfileBotnetDomainsListActionAllowGetArgs>? Allow { get; set; }
 
         /// <summary>
         /// Block
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `Block`, and `Sinkhole`.
         /// </summary>
         [Input("block")]
         public Input<Inputs.DnsSecurityProfileBotnetDomainsListActionBlockGetArgs>? Block { get; set; }
 
         /// <summary>
         /// Sinkhole
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `Block`, and `Sinkhole`.
         /// </summary>
         [Input("sinkhole")]
         public Input<Inputs.DnsSecurityProfileBotnetDomainsListActionSinkholeGetArgs>? Sinkhole { get; set; }

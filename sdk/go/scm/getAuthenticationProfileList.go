@@ -12,6 +12,37 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			allProfiles, err := scm.GetAuthenticationProfileList(ctx, &scm.GetAuthenticationProfileListArgs{
+//				Limit:  pulumi.IntRef(10),
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("fetchedProfileListSummary", pulumi.Map{
+//				"countOfRulesFetched": allProfiles.Total,
+//				"firstRuleName":       allProfiles.Datas[0].Name,
+//			})
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetAuthenticationProfileList(ctx *pulumi.Context, args *GetAuthenticationProfileListArgs, opts ...pulumi.InvokeOption) (*GetAuthenticationProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetAuthenticationProfileListResult

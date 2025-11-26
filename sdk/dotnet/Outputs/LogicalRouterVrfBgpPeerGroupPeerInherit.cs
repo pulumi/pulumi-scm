@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.LogicalRouterVrfBgpPeerGroupPeerInheritNo? No;
         /// <summary>
         /// Yes
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4`, `No`, and `Yes`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfBgpPeerGroupPeerInheritYes? Yes;
 

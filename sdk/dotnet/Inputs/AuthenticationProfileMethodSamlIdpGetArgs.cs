@@ -25,7 +25,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? AttributeNameUsername { get; set; }
 
         /// <summary>
-        /// Certificate profile
+        /// method object saml idp certificate profile of authentication profile
         /// </summary>
         [Input("certificateProfile")]
         public Input<string>? CertificateProfile { get; set; }
@@ -43,7 +43,7 @@ namespace Pulumi.Scm.Inputs
         public Input<string>? RequestSigningCertificate { get; set; }
 
         /// <summary>
-        /// Server profile
+        /// method object saml idp server profile of authentication profile
         /// </summary>
         [Input("serverProfile")]
         public Input<string>? ServerProfile { get; set; }

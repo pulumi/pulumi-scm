@@ -22,20 +22,28 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     /**
      * @return Sha1
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1 sha1;
     /**
      * @return Sha256
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256 sha256;
     /**
      * @return Sha384
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384 sha384;
     /**
      * @return Sha512
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     private GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha512 sha512;
@@ -51,12 +59,16 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     /**
      * @return Sha1
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     public GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha1 sha1() {
         return this.sha1;
     }
     /**
      * @return Sha256
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha256 sha256() {
@@ -65,12 +77,16 @@ public final class GetLogicalRouterListDataVrfOspfv3AuthProfileAh {
     /**
      * @return Sha384
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     public GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha384 sha384() {
         return this.sha384;
     }
     /**
      * @return Sha512
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public GetLogicalRouterListDataVrfOspfv3AuthProfileAhSha512 sha512() {

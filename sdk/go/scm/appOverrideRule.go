@@ -188,6 +188,8 @@ type AppOverrideRule struct {
 	// Disabled
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// From
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
@@ -208,6 +210,8 @@ type AppOverrideRule struct {
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrOutput `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Source
 	Sources pulumi.StringArrayOutput `pulumi:"sources"`
@@ -282,6 +286,8 @@ type appOverrideRuleState struct {
 	// Disabled
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
 	Froms []string `pulumi:"froms"`
@@ -302,6 +308,8 @@ type appOverrideRuleState struct {
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition *string `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source
 	Sources []string `pulumi:"sources"`
@@ -326,6 +334,8 @@ type AppOverrideRuleState struct {
 	// Disabled
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
 	Froms pulumi.StringArrayInput
@@ -346,6 +356,8 @@ type AppOverrideRuleState struct {
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source
 	Sources pulumi.StringArrayInput
@@ -374,6 +386,8 @@ type appOverrideRuleArgs struct {
 	// Disabled
 	Disabled *bool `pulumi:"disabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
 	Froms []string `pulumi:"froms"`
@@ -394,6 +408,8 @@ type appOverrideRuleArgs struct {
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition *string `pulumi:"relativePosition"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source
 	Sources []string `pulumi:"sources"`
@@ -418,6 +434,8 @@ type AppOverrideRuleArgs struct {
 	// Disabled
 	Disabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
 	Froms pulumi.StringArrayInput
@@ -438,6 +456,8 @@ type AppOverrideRuleArgs struct {
 	// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
 	RelativePosition pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source
 	Sources pulumi.StringArrayInput
@@ -562,6 +582,8 @@ func (o AppOverrideRuleOutput) Disabled() pulumi.BoolOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AppOverrideRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -612,6 +634,8 @@ func (o AppOverrideRuleOutput) RelativePosition() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AppOverrideRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AppOverrideRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

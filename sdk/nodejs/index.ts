@@ -50,6 +50,11 @@ export type ApplicationGroup = import("./applicationGroup").ApplicationGroup;
 export const ApplicationGroup: typeof import("./applicationGroup").ApplicationGroup = null as any;
 utilities.lazyLoad(exports, ["ApplicationGroup"], () => require("./applicationGroup"));
 
+export { AuthenticationPortalArgs, AuthenticationPortalState } from "./authenticationPortal";
+export type AuthenticationPortal = import("./authenticationPortal").AuthenticationPortal;
+export const AuthenticationPortal: typeof import("./authenticationPortal").AuthenticationPortal = null as any;
+utilities.lazyLoad(exports, ["AuthenticationPortal"], () => require("./authenticationPortal"));
+
 export { AuthenticationProfileArgs, AuthenticationProfileState } from "./authenticationProfile";
 export type AuthenticationProfile = import("./authenticationProfile").AuthenticationProfile;
 export const AuthenticationProfile: typeof import("./authenticationProfile").AuthenticationProfile = null as any;
@@ -64,6 +69,16 @@ export { AuthenticationSequenceArgs, AuthenticationSequenceState } from "./authe
 export type AuthenticationSequence = import("./authenticationSequence").AuthenticationSequence;
 export const AuthenticationSequence: typeof import("./authenticationSequence").AuthenticationSequence = null as any;
 utilities.lazyLoad(exports, ["AuthenticationSequence"], () => require("./authenticationSequence"));
+
+export { AutoVpnClusterArgs, AutoVpnClusterState } from "./autoVpnCluster";
+export type AutoVpnCluster = import("./autoVpnCluster").AutoVpnCluster;
+export const AutoVpnCluster: typeof import("./autoVpnCluster").AutoVpnCluster = null as any;
+utilities.lazyLoad(exports, ["AutoVpnCluster"], () => require("./autoVpnCluster"));
+
+export { AutoVpnSettingArgs, AutoVpnSettingState } from "./autoVpnSetting";
+export type AutoVpnSetting = import("./autoVpnSetting").AutoVpnSetting;
+export const AutoVpnSetting: typeof import("./autoVpnSetting").AutoVpnSetting = null as any;
+utilities.lazyLoad(exports, ["AutoVpnSetting"], () => require("./autoVpnSetting"));
 
 export { BgpAddressFamilyProfileArgs, BgpAddressFamilyProfileState } from "./bgpAddressFamilyProfile";
 export type BgpAddressFamilyProfile = import("./bgpAddressFamilyProfile").BgpAddressFamilyProfile;
@@ -94,6 +109,11 @@ export { BgpRouteMapRedistributionArgs, BgpRouteMapRedistributionState } from ".
 export type BgpRouteMapRedistribution = import("./bgpRouteMapRedistribution").BgpRouteMapRedistribution;
 export const BgpRouteMapRedistribution: typeof import("./bgpRouteMapRedistribution").BgpRouteMapRedistribution = null as any;
 utilities.lazyLoad(exports, ["BgpRouteMapRedistribution"], () => require("./bgpRouteMapRedistribution"));
+
+export { BgpRoutingArgs, BgpRoutingState } from "./bgpRouting";
+export type BgpRouting = import("./bgpRouting").BgpRouting;
+export const BgpRouting: typeof import("./bgpRouting").BgpRouting = null as any;
+utilities.lazyLoad(exports, ["BgpRouting"], () => require("./bgpRouting"));
 
 export { CertificateProfileArgs, CertificateProfileState } from "./certificateProfile";
 export type CertificateProfile = import("./certificateProfile").CertificateProfile;
@@ -285,6 +305,21 @@ export const getAuthenticationSequenceList: typeof import("./getAuthenticationSe
 export const getAuthenticationSequenceListOutput: typeof import("./getAuthenticationSequenceList").getAuthenticationSequenceListOutput = null as any;
 utilities.lazyLoad(exports, ["getAuthenticationSequenceList","getAuthenticationSequenceListOutput"], () => require("./getAuthenticationSequenceList"));
 
+export { GetAutoVpnClusterArgs, GetAutoVpnClusterResult, GetAutoVpnClusterOutputArgs } from "./getAutoVpnCluster";
+export const getAutoVpnCluster: typeof import("./getAutoVpnCluster").getAutoVpnCluster = null as any;
+export const getAutoVpnClusterOutput: typeof import("./getAutoVpnCluster").getAutoVpnClusterOutput = null as any;
+utilities.lazyLoad(exports, ["getAutoVpnCluster","getAutoVpnClusterOutput"], () => require("./getAutoVpnCluster"));
+
+export { GetAutoVpnClusterListArgs, GetAutoVpnClusterListResult, GetAutoVpnClusterListOutputArgs } from "./getAutoVpnClusterList";
+export const getAutoVpnClusterList: typeof import("./getAutoVpnClusterList").getAutoVpnClusterList = null as any;
+export const getAutoVpnClusterListOutput: typeof import("./getAutoVpnClusterList").getAutoVpnClusterListOutput = null as any;
+utilities.lazyLoad(exports, ["getAutoVpnClusterList","getAutoVpnClusterListOutput"], () => require("./getAutoVpnClusterList"));
+
+export { GetAutoVpnSettingResult } from "./getAutoVpnSetting";
+export const getAutoVpnSetting: typeof import("./getAutoVpnSetting").getAutoVpnSetting = null as any;
+export const getAutoVpnSettingOutput: typeof import("./getAutoVpnSetting").getAutoVpnSettingOutput = null as any;
+utilities.lazyLoad(exports, ["getAutoVpnSetting","getAutoVpnSettingOutput"], () => require("./getAutoVpnSetting"));
+
 export { GetBgpAddressFamilyProfileArgs, GetBgpAddressFamilyProfileResult, GetBgpAddressFamilyProfileOutputArgs } from "./getBgpAddressFamilyProfile";
 export const getBgpAddressFamilyProfile: typeof import("./getBgpAddressFamilyProfile").getBgpAddressFamilyProfile = null as any;
 export const getBgpAddressFamilyProfileOutput: typeof import("./getBgpAddressFamilyProfile").getBgpAddressFamilyProfileOutput = null as any;
@@ -344,6 +379,11 @@ export { GetBgpRouteMapRedistributionListArgs, GetBgpRouteMapRedistributionListR
 export const getBgpRouteMapRedistributionList: typeof import("./getBgpRouteMapRedistributionList").getBgpRouteMapRedistributionList = null as any;
 export const getBgpRouteMapRedistributionListOutput: typeof import("./getBgpRouteMapRedistributionList").getBgpRouteMapRedistributionListOutput = null as any;
 utilities.lazyLoad(exports, ["getBgpRouteMapRedistributionList","getBgpRouteMapRedistributionListOutput"], () => require("./getBgpRouteMapRedistributionList"));
+
+export { GetBgpRoutingResult } from "./getBgpRouting";
+export const getBgpRouting: typeof import("./getBgpRouting").getBgpRouting = null as any;
+export const getBgpRoutingOutput: typeof import("./getBgpRouting").getBgpRoutingOutput = null as any;
+utilities.lazyLoad(exports, ["getBgpRouting","getBgpRoutingOutput"], () => require("./getBgpRouting"));
 
 export { GetCertificateProfileArgs, GetCertificateProfileResult, GetCertificateProfileOutputArgs } from "./getCertificateProfile";
 export const getCertificateProfile: typeof import("./getCertificateProfile").getCertificateProfile = null as any;
@@ -1358,6 +1398,11 @@ export type ServiceGroup = import("./serviceGroup").ServiceGroup;
 export const ServiceGroup: typeof import("./serviceGroup").ServiceGroup = null as any;
 utilities.lazyLoad(exports, ["ServiceGroup"], () => require("./serviceGroup"));
 
+export { SiteArgs, SiteState } from "./site";
+export type Site = import("./site").Site;
+export const Site: typeof import("./site").Site = null as any;
+utilities.lazyLoad(exports, ["Site"], () => require("./site"));
+
 export { SnippetArgs, SnippetState } from "./snippet";
 export type Snippet = import("./snippet").Snippet;
 export const Snippet: typeof import("./snippet").Snippet = null as any;
@@ -1470,12 +1515,18 @@ const _module = {
                 return new ApplicationFilter(name, <any>undefined, { urn })
             case "scm:index/applicationGroup:ApplicationGroup":
                 return new ApplicationGroup(name, <any>undefined, { urn })
+            case "scm:index/authenticationPortal:AuthenticationPortal":
+                return new AuthenticationPortal(name, <any>undefined, { urn })
             case "scm:index/authenticationProfile:AuthenticationProfile":
                 return new AuthenticationProfile(name, <any>undefined, { urn })
             case "scm:index/authenticationRule:AuthenticationRule":
                 return new AuthenticationRule(name, <any>undefined, { urn })
             case "scm:index/authenticationSequence:AuthenticationSequence":
                 return new AuthenticationSequence(name, <any>undefined, { urn })
+            case "scm:index/autoVpnCluster:AutoVpnCluster":
+                return new AutoVpnCluster(name, <any>undefined, { urn })
+            case "scm:index/autoVpnSetting:AutoVpnSetting":
+                return new AutoVpnSetting(name, <any>undefined, { urn })
             case "scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile":
                 return new BgpAddressFamilyProfile(name, <any>undefined, { urn })
             case "scm:index/bgpAuthProfile:BgpAuthProfile":
@@ -1488,6 +1539,8 @@ const _module = {
                 return new BgpRouteMap(name, <any>undefined, { urn })
             case "scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution":
                 return new BgpRouteMapRedistribution(name, <any>undefined, { urn })
+            case "scm:index/bgpRouting:BgpRouting":
+                return new BgpRouting(name, <any>undefined, { urn })
             case "scm:index/certificateProfile:CertificateProfile":
                 return new CertificateProfile(name, <any>undefined, { urn })
             case "scm:index/decryptionExclusion:DecryptionExclusion":
@@ -1612,6 +1665,8 @@ const _module = {
                 return new ServiceConnectionGroup(name, <any>undefined, { urn })
             case "scm:index/serviceGroup:ServiceGroup":
                 return new ServiceGroup(name, <any>undefined, { urn })
+            case "scm:index/site:Site":
+                return new Site(name, <any>undefined, { urn })
             case "scm:index/snippet:Snippet":
                 return new Snippet(name, <any>undefined, { urn })
             case "scm:index/syslogServerProfile:SyslogServerProfile":
@@ -1658,15 +1713,19 @@ pulumi.runtime.registerResourceModule("scm", "index/appOverrideRule", _module)
 pulumi.runtime.registerResourceModule("scm", "index/application", _module)
 pulumi.runtime.registerResourceModule("scm", "index/applicationFilter", _module)
 pulumi.runtime.registerResourceModule("scm", "index/applicationGroup", _module)
+pulumi.runtime.registerResourceModule("scm", "index/authenticationPortal", _module)
 pulumi.runtime.registerResourceModule("scm", "index/authenticationProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/authenticationRule", _module)
 pulumi.runtime.registerResourceModule("scm", "index/authenticationSequence", _module)
+pulumi.runtime.registerResourceModule("scm", "index/autoVpnCluster", _module)
+pulumi.runtime.registerResourceModule("scm", "index/autoVpnSetting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpAddressFamilyProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpAuthProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpFilteringProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpRedistributionProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpRouteMap", _module)
 pulumi.runtime.registerResourceModule("scm", "index/bgpRouteMapRedistribution", _module)
+pulumi.runtime.registerResourceModule("scm", "index/bgpRouting", _module)
 pulumi.runtime.registerResourceModule("scm", "index/certificateProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionExclusion", _module)
 pulumi.runtime.registerResourceModule("scm", "index/decryptionProfile", _module)
@@ -1729,6 +1788,7 @@ pulumi.runtime.registerResourceModule("scm", "index/service", _module)
 pulumi.runtime.registerResourceModule("scm", "index/serviceConnection", _module)
 pulumi.runtime.registerResourceModule("scm", "index/serviceConnectionGroup", _module)
 pulumi.runtime.registerResourceModule("scm", "index/serviceGroup", _module)
+pulumi.runtime.registerResourceModule("scm", "index/site", _module)
 pulumi.runtime.registerResourceModule("scm", "index/snippet", _module)
 pulumi.runtime.registerResourceModule("scm", "index/syslogServerProfile", _module)
 pulumi.runtime.registerResourceModule("scm", "index/tacacsServerProfile", _module)

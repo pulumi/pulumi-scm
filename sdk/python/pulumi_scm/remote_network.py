@@ -442,7 +442,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This profile defines the encryption and authentication algorithms for the IKE Gateway.
         # The values are taken from the 'createTestIKECryptoProfile' helper function.
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto-prf-for-rn",
+            name="example-ike-crypto-11",
             folder="Remote Networks",
             hashes=["sha256"],
             dh_groups=["group14"],
@@ -451,7 +451,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This defines the VPN peer. It depends on the IKE Crypto Profile created above.
         # The values are taken from the 'createTestIKEGateway' helper function.
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-ike-gateway-for-rn",
+            name="example-ike-gateway-11",
             folder="Remote Networks",
             authentication={
                 "pre_shared_key": {
@@ -471,7 +471,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This defines the tunnel interface itself and uses the IKE Gateway.
         # The values are taken from the 'createTestIPsecTunnel' helper function.
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-ipsec-tunnel-for-rn",
+            name="example-ipsec-tunnel-11",
             folder="Remote Networks",
             anti_replay=True,
             copy_tos=False,
@@ -487,7 +487,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This is the final resource, which uses the IPsec Tunnel created above.
         # The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
         example_remote_network = scm.RemoteNetwork("example",
-            name="example-remote-network",
+            name="example-remote-network-11",
             folder="Remote Networks",
             license_type="FWAAS-AGGREGATE",
             region="us-west-2",
@@ -541,7 +541,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This profile defines the encryption and authentication algorithms for the IKE Gateway.
         # The values are taken from the 'createTestIKECryptoProfile' helper function.
         example = scm.IkeCryptoProfile("example",
-            name="example-ike-crypto-prf-for-rn",
+            name="example-ike-crypto-11",
             folder="Remote Networks",
             hashes=["sha256"],
             dh_groups=["group14"],
@@ -550,7 +550,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This defines the VPN peer. It depends on the IKE Crypto Profile created above.
         # The values are taken from the 'createTestIKEGateway' helper function.
         example_ike_gateway = scm.IkeGateway("example",
-            name="example-ike-gateway-for-rn",
+            name="example-ike-gateway-11",
             folder="Remote Networks",
             authentication={
                 "pre_shared_key": {
@@ -570,7 +570,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This defines the tunnel interface itself and uses the IKE Gateway.
         # The values are taken from the 'createTestIPsecTunnel' helper function.
         example_ipsec_tunnel = scm.IpsecTunnel("example",
-            name="example-ipsec-tunnel-for-rn",
+            name="example-ipsec-tunnel-11",
             folder="Remote Networks",
             anti_replay=True,
             copy_tos=False,
@@ -586,7 +586,7 @@ class RemoteNetwork(pulumi.CustomResource):
         # This is the final resource, which uses the IPsec Tunnel created above.
         # The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
         example_remote_network = scm.RemoteNetwork("example",
-            name="example-remote-network",
+            name="example-remote-network-11",
             folder="Remote Networks",
             license_type="FWAAS-AGGREGATE",
             region="us-west-2",

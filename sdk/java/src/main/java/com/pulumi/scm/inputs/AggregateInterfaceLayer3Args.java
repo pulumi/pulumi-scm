@@ -85,12 +85,16 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
     /**
      * Aggregate Interface IP addresses
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     @Import(name="ips")
     private @Nullable Output<List<AggregateInterfaceLayer3IpArgs>> ips;
 
     /**
      * @return Aggregate Interface IP addresses
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Optional<Output<List<AggregateInterfaceLayer3IpArgs>>> ips() {
@@ -254,6 +258,8 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
         /**
          * @param ips Aggregate Interface IP addresses
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+         * 
          * @return builder
          * 
          */
@@ -265,6 +271,8 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
         /**
          * @param ips Aggregate Interface IP addresses
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+         * 
          * @return builder
          * 
          */
@@ -274,6 +282,8 @@ public final class AggregateInterfaceLayer3Args extends com.pulumi.resources.Res
 
         /**
          * @param ips Aggregate Interface IP addresses
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
          * 

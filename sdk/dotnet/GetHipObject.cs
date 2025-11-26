@@ -168,49 +168,22 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Disk backup
-        /// </summary>
         public readonly Outputs.GetHipObjectDiskBackupResult DiskBackup;
-        /// <summary>
-        /// Disk encryption
-        /// </summary>
         public readonly Outputs.GetHipObjectDiskEncryptionResult DiskEncryption;
-        /// <summary>
-        /// Firewall
-        /// </summary>
         public readonly Outputs.GetHipObjectFirewallResult Firewall;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// Host info
-        /// </summary>
         public readonly Outputs.GetHipObjectHostInfoResult HostInfo;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Mobile device
-        /// </summary>
         public readonly Outputs.GetHipObjectMobileDeviceResult MobileDevice;
         /// <summary>
         /// The name of the HIP object
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Network info
-        /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoResult NetworkInfo;
-        /// <summary>
-        /// Patch management
-        /// </summary>
         public readonly Outputs.GetHipObjectPatchManagementResult PatchManagement;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

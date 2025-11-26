@@ -86,9 +86,6 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -102,17 +99,11 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def layer2(self) -> 'outputs.GetAggregateInterfaceLayer2Result':
-        """
-        Layer2
-        """
         return pulumi.get(self, "layer2")
 
     @_builtins.property
     @pulumi.getter
     def layer3(self) -> 'outputs.GetAggregateInterfaceLayer3Result':
-        """
-        Aggregate Interface Layer 3 configuration
-        """
         return pulumi.get(self, "layer3")
 
     @_builtins.property
@@ -126,9 +117,6 @@ class GetAggregateInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

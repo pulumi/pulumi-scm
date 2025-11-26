@@ -39,30 +39,18 @@ export interface GetSdwanTrafficDistributionProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Link-Tags for interfaces identified by defined tags
-     */
     readonly linkTags: outputs.GetSdwanTrafficDistributionProfileLinkTag[];
     /**
      * Profile name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Traffic distribution
-     */
     readonly trafficDistribution: string;
 }
 /**

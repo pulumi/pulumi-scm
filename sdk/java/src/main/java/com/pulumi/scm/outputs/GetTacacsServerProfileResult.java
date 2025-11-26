@@ -19,10 +19,6 @@ public final class GetTacacsServerProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the TACACS+ server profile
@@ -34,31 +30,11 @@ public final class GetTacacsServerProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return The TACACS+ authentication protocol
-     * 
-     */
     private String protocol;
-    /**
-     * @return The TACACS+ server configuration
-     * 
-     */
     private List<GetTacacsServerProfileServer> servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return The TACACS+ timeout (seconds)
-     * 
-     */
     private Integer timeout;
-    /**
-     * @return Use a single TACACS+ connection?
-     * 
-     */
     private Boolean useSingleConnection;
 
     private GetTacacsServerProfileResult() {}
@@ -69,10 +45,6 @@ public final class GetTacacsServerProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -90,41 +62,21 @@ public final class GetTacacsServerProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The TACACS+ authentication protocol
-     * 
-     */
     public String protocol() {
         return this.protocol;
     }
-    /**
-     * @return The TACACS+ server configuration
-     * 
-     */
     public List<GetTacacsServerProfileServer> servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return The TACACS+ timeout (seconds)
-     * 
-     */
     public Integer timeout() {
         return this.timeout;
     }
-    /**
-     * @return Use a single TACACS+ connection?
-     * 
-     */
     public Boolean useSingleConnection() {
         return this.useSingleConnection;
     }

@@ -36,17 +36,14 @@ type LookupTlsServiceProfileResult struct {
 	Certificate string `pulumi:"certificate"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the TLS service profile
 	Id string `pulumi:"id"`
 	// TLS service profile name. The value is `muCustomDomainSSLProfile` when it is used on mobile-agent infra settings.
-	Name string `pulumi:"name"`
-	// Protocol settings
+	Name             string                               `pulumi:"name"`
 	ProtocolSettings GetTlsServiceProfileProtocolSettings `pulumi:"protocolSettings"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet          string                               `pulumi:"snippet"`
+	Tfid             string                               `pulumi:"tfid"`
 }
 
 func LookupTlsServiceProfileOutput(ctx *pulumi.Context, args LookupTlsServiceProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTlsServiceProfileResultOutput {
@@ -95,7 +92,6 @@ func (o LookupTlsServiceProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupTlsServiceProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -110,12 +106,10 @@ func (o LookupTlsServiceProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Protocol settings
 func (o LookupTlsServiceProfileResultOutput) ProtocolSettings() GetTlsServiceProfileProtocolSettingsOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) GetTlsServiceProfileProtocolSettings { return v.ProtocolSettings }).(GetTlsServiceProfileProtocolSettingsOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupTlsServiceProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTlsServiceProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

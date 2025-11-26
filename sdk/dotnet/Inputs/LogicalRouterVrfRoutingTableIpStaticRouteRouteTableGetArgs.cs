@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Multicast
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         [Input("multicast")]
         public Input<Inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableMulticastGetArgs>? Multicast { get; set; }
 
         /// <summary>
         /// No install
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         [Input("noInstall")]
         public Input<Inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableNoInstallGetArgs>? NoInstall { get; set; }
 
         /// <summary>
         /// Unicast
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Both`, `Multicast`, `NoInstall`, and `Unicast`.
         /// </summary>
         [Input("unicast")]
         public Input<Inputs.LogicalRouterVrfRoutingTableIpStaticRouteRouteTableUnicastGetArgs>? Unicast { get; set; }

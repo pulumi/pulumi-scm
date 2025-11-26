@@ -34,12 +34,16 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
     /**
      * Percentage
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
+     * 
      */
     @Import(name="percentage")
     private @Nullable Output<QosProfileClassBandwidthTypePercentageArgs> percentage;
 
     /**
      * @return Percentage
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
     public Optional<Output<QosProfileClassBandwidthTypePercentageArgs>> percentage() {
@@ -95,6 +99,8 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
         /**
          * @param percentage Percentage
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class QosProfileClassBandwidthTypeArgs extends com.pulumi.resources
 
         /**
          * @param percentage Percentage
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
          * 
          * @return builder
          * 

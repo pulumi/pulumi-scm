@@ -172,9 +172,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -184,25 +181,10 @@ namespace Pulumi.Scm
         /// Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Ssl forward proxy
-        /// </summary>
         public readonly Outputs.GetDecryptionProfileSslForwardProxyResult SslForwardProxy;
-        /// <summary>
-        /// Ssl inbound proxy
-        /// </summary>
         public readonly Outputs.GetDecryptionProfileSslInboundProxyResult SslInboundProxy;
-        /// <summary>
-        /// Ssl no proxy
-        /// </summary>
         public readonly Outputs.GetDecryptionProfileSslNoProxyResult SslNoProxy;
-        /// <summary>
-        /// Ssl protocol settings
-        /// </summary>
         public readonly Outputs.GetDecryptionProfileSslProtocolSettingsResult SslProtocolSettings;
         public readonly string Tfid;
 

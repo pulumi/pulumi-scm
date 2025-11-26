@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetSdwanSaasQualityProfileListDataMonitorModeAdaptiveResult Adaptive;
         /// <summary>
         /// Http https
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         public readonly Outputs.GetSdwanSaasQualityProfileListDataMonitorModeHttpHttpsResult HttpHttps;
         /// <summary>
         /// Static ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Adaptive`, `HttpHttps`, and `StaticIp`.
         /// </summary>
         public readonly Outputs.GetSdwanSaasQualityProfileListDataMonitorModeStaticIpResult StaticIp;
 

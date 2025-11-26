@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Static rp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `CandidateRp` and `StaticRp`.
         /// </summary>
         [Input("staticRp")]
         public Input<Inputs.LogicalRouterVrfMulticastPimRpLocalRpStaticRpArgs>? StaticRp { get; set; }

@@ -19,26 +19,38 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.AntiSpywareProfileRuleActionAlert? Alert;
         /// <summary>
         /// Allow
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleActionAllow? Allow;
         /// <summary>
         /// anti spyware profiles rules action block ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleActionBlockIp? BlockIp;
         /// <summary>
         /// Drop
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleActionDrop? Drop;
         /// <summary>
         /// Reset both
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleActionResetBoth? ResetBoth;
         /// <summary>
         /// Reset client
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleActionResetClient? ResetClient;
         /// <summary>
         /// Reset server
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.AntiSpywareProfileRuleActionResetServer? ResetServer;
 

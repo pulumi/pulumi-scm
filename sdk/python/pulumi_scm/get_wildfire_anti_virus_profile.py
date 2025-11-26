@@ -81,9 +81,6 @@ class GetWildfireAntiVirusProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -97,9 +94,6 @@ class GetWildfireAntiVirusProfileResult:
     @_builtins.property
     @pulumi.getter(name="mlavExceptions")
     def mlav_exceptions(self) -> Sequence['outputs.GetWildfireAntiVirusProfileMlavExceptionResult']:
-        """
-        Mlav exception
-        """
         return pulumi.get(self, "mlav_exceptions")
 
     @_builtins.property
@@ -113,25 +107,16 @@ class GetWildfireAntiVirusProfileResult:
     @_builtins.property
     @pulumi.getter(name="packetCapture")
     def packet_capture(self) -> _builtins.bool:
-        """
-        Packet capture
-        """
         return pulumi.get(self, "packet_capture")
 
     @_builtins.property
     @pulumi.getter
     def rules(self) -> Sequence['outputs.GetWildfireAntiVirusProfileRuleResult']:
-        """
-        Rules
-        """
         return pulumi.get(self, "rules")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -142,9 +127,6 @@ class GetWildfireAntiVirusProfileResult:
     @_builtins.property
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> Sequence['outputs.GetWildfireAntiVirusProfileThreatExceptionResult']:
-        """
-        Threat exception
-        """
         return pulumi.get(self, "threat_exceptions")
 
 

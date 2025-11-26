@@ -40,6 +40,8 @@ public final class GetAggregateInterfaceListDataLayer3 {
     /**
      * @return Aggregate Interface IP addresses
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     private List<GetAggregateInterfaceListDataLayer3Ip> ips;
     /**
@@ -84,6 +86,8 @@ public final class GetAggregateInterfaceListDataLayer3 {
     }
     /**
      * @return Aggregate Interface IP addresses
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public List<GetAggregateInterfaceListDataLayer3Ip> ips() {

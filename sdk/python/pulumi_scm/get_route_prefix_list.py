@@ -27,7 +27,7 @@ class GetRoutePrefixListResult:
     """
     A collection of values returned by getRoutePrefixList.
     """
-    def __init__(__self__, description=None, device=None, folder=None, id=None, ipv4=None, name=None, snippet=None, tfid=None):
+    def __init__(__self__, description=None, device=None, folder=None, id=None, name=None, snippet=None, tfid=None, type=None):
         if description and not isinstance(description, str):
             raise TypeError("Expected argument 'description' to be a str")
         pulumi.set(__self__, "description", description)
@@ -40,9 +40,6 @@ class GetRoutePrefixListResult:
         if id and not isinstance(id, str):
             raise TypeError("Expected argument 'id' to be a str")
         pulumi.set(__self__, "id", id)
-        if ipv4 and not isinstance(ipv4, dict):
-            raise TypeError("Expected argument 'ipv4' to be a dict")
-        pulumi.set(__self__, "ipv4", ipv4)
         if name and not isinstance(name, str):
             raise TypeError("Expected argument 'name' to be a str")
         pulumi.set(__self__, "name", name)
@@ -52,6 +49,9 @@ class GetRoutePrefixListResult:
         if tfid and not isinstance(tfid, str):
             raise TypeError("Expected argument 'tfid' to be a str")
         pulumi.set(__self__, "tfid", tfid)
+        if type and not isinstance(type, dict):
+            raise TypeError("Expected argument 'type' to be a dict")
+        pulumi.set(__self__, "type", type)
 
     @_builtins.property
     @pulumi.getter
@@ -72,9 +72,6 @@ class GetRoutePrefixListResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -87,14 +84,6 @@ class GetRoutePrefixListResult:
 
     @_builtins.property
     @pulumi.getter
-    def ipv4(self) -> 'outputs.GetRoutePrefixListIpv4Result':
-        """
-        Ipv4
-        """
-        return pulumi.get(self, "ipv4")
-
-    @_builtins.property
-    @pulumi.getter
     def name(self) -> _builtins.str:
         """
         Filter prefix list name
@@ -104,15 +93,17 @@ class GetRoutePrefixListResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tfid(self) -> _builtins.str:
         return pulumi.get(self, "tfid")
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> 'outputs.GetRoutePrefixListTypeResult':
+        return pulumi.get(self, "type")
 
 
 class AwaitableGetRoutePrefixListResult(GetRoutePrefixListResult):
@@ -125,10 +116,10 @@ class AwaitableGetRoutePrefixListResult(GetRoutePrefixListResult):
             device=self.device,
             folder=self.folder,
             id=self.id,
-            ipv4=self.ipv4,
             name=self.name,
             snippet=self.snippet,
-            tfid=self.tfid)
+            tfid=self.tfid,
+            type=self.type)
 
 
 def get_route_prefix_list(id: Optional[_builtins.str] = None,
@@ -152,10 +143,10 @@ def get_route_prefix_list(id: Optional[_builtins.str] = None,
         device=pulumi.get(__ret__, 'device'),
         folder=pulumi.get(__ret__, 'folder'),
         id=pulumi.get(__ret__, 'id'),
-        ipv4=pulumi.get(__ret__, 'ipv4'),
         name=pulumi.get(__ret__, 'name'),
         snippet=pulumi.get(__ret__, 'snippet'),
-        tfid=pulumi.get(__ret__, 'tfid'))
+        tfid=pulumi.get(__ret__, 'tfid'),
+        type=pulumi.get(__ret__, 'type'))
 def get_route_prefix_list_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                                  name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                                  opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetRoutePrefixListResult]:
@@ -176,7 +167,7 @@ def get_route_prefix_list_output(id: Optional[pulumi.Input[_builtins.str]] = Non
         device=pulumi.get(__response__, 'device'),
         folder=pulumi.get(__response__, 'folder'),
         id=pulumi.get(__response__, 'id'),
-        ipv4=pulumi.get(__response__, 'ipv4'),
         name=pulumi.get(__response__, 'name'),
         snippet=pulumi.get(__response__, 'snippet'),
-        tfid=pulumi.get(__response__, 'tfid')))
+        tfid=pulumi.get(__response__, 'tfid'),
+        type=pulumi.get(__response__, 'type')))

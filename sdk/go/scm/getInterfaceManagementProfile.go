@@ -27,41 +27,13 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			// 1. Resource: Create the Interface Management Profile
-//			// This block creates the profile with your specified configuration.
-//			testInfMgmtProfile, err := scm.NewInterfaceManagementProfile(ctx, "test_inf_mgmt_profile", &scm.InterfaceManagementProfileArgs{
-//				Name:   pulumi.String("test_inf_mgmt_profile_ds_1"),
-//				Folder: pulumi.String("All"),
-//				PermittedIps: scm.InterfaceManagementProfilePermittedIpArray{
-//					&scm.InterfaceManagementProfilePermittedIpArgs{
-//						Name: pulumi.String("10.0.0.0/24"),
-//					},
-//					&scm.InterfaceManagementProfilePermittedIpArgs{
-//						Name: pulumi.String("10.0.0.0/32"),
-//					},
-//				},
-//				Http:                    pulumi.Bool(true),
-//				Https:                   pulumi.Bool(false),
-//				Telnet:                  pulumi.Bool(false),
-//				Ssh:                     pulumi.Bool(true),
-//				Ping:                    pulumi.Bool(false),
-//				HttpOcsp:                pulumi.Bool(true),
-//				UseridService:           pulumi.Bool(true),
-//				UseridSyslogListenerSsl: pulumi.Bool(true),
-//				UseridSyslogListenerUdp: pulumi.Bool(true),
-//				ResponsePages:           pulumi.Bool(false),
-//			})
+//			singleProfileById, err := scm.LookupInterfaceManagementProfile(ctx, &scm.LookupInterfaceManagementProfileArgs{
+//				Id: "f4358615-daba-4b71-a0ea-bd3ebb412fe3",
+//			}, nil)
 //			if err != nil {
 //				return err
 //			}
-//			// 2. Data Source: Retrieve the Interface Management Profile by ID
-//			// We use the resource's generated 'id' attribute to fetch the profile.
-//			singleProfileById := scm.LookupInterfaceManagementProfileOutput(ctx, scm.GetInterfaceManagementProfileOutputArgs{
-//				Id: testInfMgmtProfile.ID(),
-//			}, nil)
-//			ctx.Export("fetchedProfileName", singleProfileById.ApplyT(func(singleProfileById scm.GetInterfaceManagementProfileResult) (*string, error) {
-//				return &singleProfileById.Name, nil
-//			}).(pulumi.StringPtrOutput))
+//			ctx.Export("fetchedProfileName", singleProfileById.Name)
 //			ctx.Export("fetchedProfile", singleProfileById)
 //			return nil
 //		})
@@ -89,38 +61,25 @@ type LookupInterfaceManagementProfileArgs struct {
 // A collection of values returned by getInterfaceManagementProfile.
 type LookupInterfaceManagementProfileResult struct {
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
-	// Allow HTTP?
-	Http bool `pulumi:"http"`
-	// Allow HTTP OCSP?
-	HttpOcsp bool `pulumi:"httpOcsp"`
-	// Allow HTTPS?
-	Https bool `pulumi:"https"`
+	Device   string `pulumi:"device"`
+	Folder   string `pulumi:"folder"`
+	Http     bool   `pulumi:"http"`
+	HttpOcsp bool   `pulumi:"httpOcsp"`
+	Https    bool   `pulumi:"https"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Name
-	Name string `pulumi:"name"`
-	// Allowed IP address(es)
-	PermittedIps []GetInterfaceManagementProfilePermittedIp `pulumi:"permittedIps"`
-	// Allow ping?
-	Ping bool `pulumi:"ping"`
-	// Allow response pages?
-	ResponsePages bool `pulumi:"responsePages"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Allow SSH?
-	Ssh bool `pulumi:"ssh"`
-	// Allow telnet? Seriously, why would you do this?!?
-	Telnet bool   `pulumi:"telnet"`
-	Tfid   string `pulumi:"tfid"`
-	// Allow User-ID?
-	UseridService bool `pulumi:"useridService"`
-	// Allow User-ID syslog listener (SSL)?
-	UseridSyslogListenerSsl bool `pulumi:"useridSyslogListenerSsl"`
-	// Allow User-ID syslog listener (UDP)?
-	UseridSyslogListenerUdp bool `pulumi:"useridSyslogListenerUdp"`
+	Name                    string                                     `pulumi:"name"`
+	PermittedIps            []GetInterfaceManagementProfilePermittedIp `pulumi:"permittedIps"`
+	Ping                    bool                                       `pulumi:"ping"`
+	ResponsePages           bool                                       `pulumi:"responsePages"`
+	Snippet                 string                                     `pulumi:"snippet"`
+	Ssh                     bool                                       `pulumi:"ssh"`
+	Telnet                  bool                                       `pulumi:"telnet"`
+	Tfid                    string                                     `pulumi:"tfid"`
+	UseridService           bool                                       `pulumi:"useridService"`
+	UseridSyslogListenerSsl bool                                       `pulumi:"useridSyslogListenerSsl"`
+	UseridSyslogListenerUdp bool                                       `pulumi:"useridSyslogListenerUdp"`
 }
 
 func LookupInterfaceManagementProfileOutput(ctx *pulumi.Context, args LookupInterfaceManagementProfileOutputArgs, opts ...pulumi.InvokeOption) LookupInterfaceManagementProfileResultOutput {
@@ -164,22 +123,18 @@ func (o LookupInterfaceManagementProfileResultOutput) Device() pulumi.StringOutp
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupInterfaceManagementProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Allow HTTP?
 func (o LookupInterfaceManagementProfileResultOutput) Http() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.Http }).(pulumi.BoolOutput)
 }
 
-// Allow HTTP OCSP?
 func (o LookupInterfaceManagementProfileResultOutput) HttpOcsp() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.HttpOcsp }).(pulumi.BoolOutput)
 }
 
-// Allow HTTPS?
 func (o LookupInterfaceManagementProfileResultOutput) Https() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.Https }).(pulumi.BoolOutput)
 }
@@ -194,34 +149,28 @@ func (o LookupInterfaceManagementProfileResultOutput) Name() pulumi.StringOutput
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Allowed IP address(es)
 func (o LookupInterfaceManagementProfileResultOutput) PermittedIps() GetInterfaceManagementProfilePermittedIpArrayOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) []GetInterfaceManagementProfilePermittedIp {
 		return v.PermittedIps
 	}).(GetInterfaceManagementProfilePermittedIpArrayOutput)
 }
 
-// Allow ping?
 func (o LookupInterfaceManagementProfileResultOutput) Ping() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.Ping }).(pulumi.BoolOutput)
 }
 
-// Allow response pages?
 func (o LookupInterfaceManagementProfileResultOutput) ResponsePages() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.ResponsePages }).(pulumi.BoolOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupInterfaceManagementProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Allow SSH?
 func (o LookupInterfaceManagementProfileResultOutput) Ssh() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.Ssh }).(pulumi.BoolOutput)
 }
 
-// Allow telnet? Seriously, why would you do this?!?
 func (o LookupInterfaceManagementProfileResultOutput) Telnet() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.Telnet }).(pulumi.BoolOutput)
 }
@@ -230,17 +179,14 @@ func (o LookupInterfaceManagementProfileResultOutput) Tfid() pulumi.StringOutput
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Allow User-ID?
 func (o LookupInterfaceManagementProfileResultOutput) UseridService() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.UseridService }).(pulumi.BoolOutput)
 }
 
-// Allow User-ID syslog listener (SSL)?
 func (o LookupInterfaceManagementProfileResultOutput) UseridSyslogListenerSsl() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.UseridSyslogListenerSsl }).(pulumi.BoolOutput)
 }
 
-// Allow User-ID syslog listener (UDP)?
 func (o LookupInterfaceManagementProfileResultOutput) UseridSyslogListenerUdp() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupInterfaceManagementProfileResult) bool { return v.UseridSyslogListenerUdp }).(pulumi.BoolOutput)
 }

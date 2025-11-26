@@ -33,56 +33,24 @@ public final class GetDnsProxyResult {
      * 
      */
     private String device;
-    /**
-     * @return DNS proxy rules
-     * 
-     */
     private List<GetDnsProxyDomainServer> domainServers;
-    /**
-     * @return Enable DNS proxy?
-     * 
-     */
     private Boolean enabled;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Interfaces on which to enable DNS proxy service
-     * 
-     */
     private List<String> interfaces;
     /**
      * @return DNS proxy name
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Static entries
-     * 
-     */
     private List<GetDnsProxyStaticEntry> staticEntries;
-    /**
-     * @return Tcp queries
-     * 
-     */
     private GetDnsProxyTcpQueries tcpQueries;
     private String tfid;
-    /**
-     * @return Udp queries
-     * 
-     */
     private GetDnsProxyUdpQueries udpQueries;
 
     private GetDnsProxyResult() {}
@@ -107,24 +75,12 @@ public final class GetDnsProxyResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return DNS proxy rules
-     * 
-     */
     public List<GetDnsProxyDomainServer> domainServers() {
         return this.domainServers;
     }
-    /**
-     * @return Enable DNS proxy?
-     * 
-     */
     public Boolean enabled() {
         return this.enabled;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -135,10 +91,6 @@ public final class GetDnsProxyResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Interfaces on which to enable DNS proxy service
-     * 
-     */
     public List<String> interfaces() {
         return this.interfaces;
     }
@@ -149,34 +101,18 @@ public final class GetDnsProxyResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Static entries
-     * 
-     */
     public List<GetDnsProxyStaticEntry> staticEntries() {
         return this.staticEntries;
     }
-    /**
-     * @return Tcp queries
-     * 
-     */
     public GetDnsProxyTcpQueries tcpQueries() {
         return this.tcpQueries;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Udp queries
-     * 
-     */
     public GetDnsProxyUdpQueries udpQueries() {
         return this.udpQueries;
     }

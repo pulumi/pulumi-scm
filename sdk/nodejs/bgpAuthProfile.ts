@@ -6,6 +6,19 @@ import * as utilities from "./utilities";
 
 /**
  * BgpAuthProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmBgpAuthProfile = new scm.BgpAuthProfile("scm_bgp_auth_profile", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_auth_profile",
+ *     secret: "ExampleSecret123",
+ * });
+ * ```
  */
 export class BgpAuthProfile extends pulumi.CustomResource {
     /**
@@ -45,6 +58,8 @@ export class BgpAuthProfile extends pulumi.CustomResource {
     declare public /*out*/ readonly encryptedValues: pulumi.Output<{[key: string]: string}>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -57,6 +72,8 @@ export class BgpAuthProfile extends pulumi.CustomResource {
     declare public readonly secret: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -112,6 +129,8 @@ export interface BgpAuthProfileState {
     encryptedValues?: pulumi.Input<{[key: string]: pulumi.Input<string>}>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -124,6 +143,8 @@ export interface BgpAuthProfileState {
     secret?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -139,6 +160,8 @@ export interface BgpAuthProfileArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -151,6 +174,8 @@ export interface BgpAuthProfileArgs {
     secret?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
 }

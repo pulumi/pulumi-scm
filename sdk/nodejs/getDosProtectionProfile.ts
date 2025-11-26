@@ -43,13 +43,7 @@ export interface GetDosProtectionProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Flood
-     */
     readonly flood: outputs.GetDosProtectionProfileFlood;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the DNS security profile
@@ -59,18 +53,9 @@ export interface GetDosProtectionProfileResult {
      * Profile name
      */
     readonly name: string;
-    /**
-     * Resource
-     */
     readonly resource: outputs.GetDosProtectionProfileResource;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Type
-     */
     readonly type: string;
 }
 /**

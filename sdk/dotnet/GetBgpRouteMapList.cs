@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp route maps
+        ///     var allBgpRouteMaps = Scm.GetBgpRouteMapList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpRouteMapList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetBgpRouteMapListResult> InvokeAsync(GetBgpRouteMapListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetBgpRouteMapListResult>("scm:index/getBgpRouteMapList:getBgpRouteMapList", args ?? new GetBgpRouteMapListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp route maps
+        ///     var allBgpRouteMaps = Scm.GetBgpRouteMapList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpRouteMapList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRouteMapListResult> Invoke(GetBgpRouteMapListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRouteMapListResult>("scm:index/getBgpRouteMapList:getBgpRouteMapList", args ?? new GetBgpRouteMapListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp route maps
+        ///     var allBgpRouteMaps = Scm.GetBgpRouteMapList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpRouteMapList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRouteMapListResult> Invoke(GetBgpRouteMapListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRouteMapListResult>("scm:index/getBgpRouteMapList:getBgpRouteMapList", args ?? new GetBgpRouteMapListInvokeArgs(), options.WithDefaults());

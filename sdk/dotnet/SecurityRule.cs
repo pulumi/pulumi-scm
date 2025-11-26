@@ -343,6 +343,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/securityRule:SecurityRule")]
     public partial class SecurityRule : global::Pulumi.CustomResource

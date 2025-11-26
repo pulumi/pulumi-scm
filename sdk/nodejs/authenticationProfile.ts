@@ -8,6 +8,51 @@ import * as utilities from "./utilities";
 
 /**
  * AuthenticationProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const globalRadiusAccess = new scm.AuthenticationProfile("global_radius_access", {
+ *     name: "test_auth_profile_radius_1",
+ *     folder: "All",
+ *     userDomain: "default",
+ *     usernameModifier: "%USERINPUT%",
+ *     allowLists: ["all"],
+ *     lockout: {
+ *         failedAttempts: 1,
+ *         lockoutTime: 3,
+ *     },
+ *     method: {
+ *         radius: {
+ *             checkgroup: true,
+ *             serverProfile: "CHAP_only_rsp_1",
+ *         },
+ *     },
+ *     singleSignOn: {
+ *         realm: "EXAMPLE.COM",
+ *     },
+ * });
+ * const globalDbAccess = new scm.AuthenticationProfile("global_db_access", {
+ *     name: "test_auth_profile_db_1",
+ *     folder: "All",
+ *     userDomain: "default",
+ *     usernameModifier: "%USERINPUT%",
+ *     allowLists: ["all"],
+ *     lockout: {
+ *         failedAttempts: 3,
+ *         lockoutTime: 1,
+ *     },
+ *     method: {
+ *         localDatabase: {},
+ *     },
+ *     singleSignOn: {
+ *         realm: "EXAMPLE.COM",
+ *     },
+ * });
+ * ```
  */
 export class AuthenticationProfile extends pulumi.CustomResource {
     /**
@@ -38,7 +83,7 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     }
 
     /**
-     * Allow list
+     * The allowList of the authentication profile
      */
     declare public readonly allowLists: pulumi.Output<string[]>;
     /**
@@ -47,14 +92,16 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
-     * Lockout
+     * Lockout object of the authentication profile
      */
     declare public readonly lockout: pulumi.Output<outputs.AuthenticationProfileLockout | undefined>;
     /**
-     * Method
+     * method object of authentication profile
      */
     declare public readonly method: pulumi.Output<outputs.AuthenticationProfileMethod | undefined>;
     /**
@@ -71,6 +118,8 @@ export class AuthenticationProfile extends pulumi.CustomResource {
     declare public readonly singleSignOn: pulumi.Output<outputs.AuthenticationProfileSingleSignOn | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -133,7 +182,7 @@ export class AuthenticationProfile extends pulumi.CustomResource {
  */
 export interface AuthenticationProfileState {
     /**
-     * Allow list
+     * The allowList of the authentication profile
      */
     allowLists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -142,14 +191,16 @@ export interface AuthenticationProfileState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
-     * Lockout
+     * Lockout object of the authentication profile
      */
     lockout?: pulumi.Input<inputs.AuthenticationProfileLockout>;
     /**
-     * Method
+     * method object of authentication profile
      */
     method?: pulumi.Input<inputs.AuthenticationProfileMethod>;
     /**
@@ -166,6 +217,8 @@ export interface AuthenticationProfileState {
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -184,7 +237,7 @@ export interface AuthenticationProfileState {
  */
 export interface AuthenticationProfileArgs {
     /**
-     * Allow list
+     * The allowList of the authentication profile
      */
     allowLists?: pulumi.Input<pulumi.Input<string>[]>;
     /**
@@ -193,14 +246,16 @@ export interface AuthenticationProfileArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
-     * Lockout
+     * Lockout object of the authentication profile
      */
     lockout?: pulumi.Input<inputs.AuthenticationProfileLockout>;
     /**
-     * Method
+     * method object of authentication profile
      */
     method?: pulumi.Input<inputs.AuthenticationProfileMethod>;
     /**
@@ -217,6 +272,8 @@ export interface AuthenticationProfileArgs {
     singleSignOn?: pulumi.Input<inputs.AuthenticationProfileSingleSignOn>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

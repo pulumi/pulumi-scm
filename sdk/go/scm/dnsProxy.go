@@ -27,12 +27,16 @@ type DnsProxy struct {
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrOutput `pulumi:"enabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
 	Interfaces pulumi.StringArrayOutput `pulumi:"interfaces"`
 	// DNS proxy name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Static entries
 	StaticEntries DnsProxyStaticEntryArrayOutput `pulumi:"staticEntries"`
@@ -87,12 +91,16 @@ type dnsProxyState struct {
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
 	Interfaces []string `pulumi:"interfaces"`
 	// DNS proxy name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static entries
 	StaticEntries []DnsProxyStaticEntry `pulumi:"staticEntries"`
@@ -115,12 +123,16 @@ type DnsProxyState struct {
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interfaces on which to enable DNS proxy service
 	Interfaces pulumi.StringArrayInput
 	// DNS proxy name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static entries
 	StaticEntries DnsProxyStaticEntryArrayInput
@@ -147,12 +159,16 @@ type dnsProxyArgs struct {
 	// Enable DNS proxy?
 	Enabled *bool `pulumi:"enabled"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Interfaces on which to enable DNS proxy service
 	Interfaces []string `pulumi:"interfaces"`
 	// DNS proxy name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Static entries
 	StaticEntries []DnsProxyStaticEntry `pulumi:"staticEntries"`
@@ -175,12 +191,16 @@ type DnsProxyArgs struct {
 	// Enable DNS proxy?
 	Enabled pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Interfaces on which to enable DNS proxy service
 	Interfaces pulumi.StringArrayInput
 	// DNS proxy name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Static entries
 	StaticEntries DnsProxyStaticEntryArrayInput
@@ -303,6 +323,8 @@ func (o DnsProxyOutput) Enabled() pulumi.BoolPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -318,6 +340,8 @@ func (o DnsProxyOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DnsProxyOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DnsProxy) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

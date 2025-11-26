@@ -99,6 +99,8 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
     declare public readonly direction: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -115,6 +117,8 @@ export class AntiSpywareSignature extends pulumi.CustomResource {
     declare public readonly signature: pulumi.Output<outputs.AntiSpywareSignatureSignature>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -218,6 +222,8 @@ export interface AntiSpywareSignatureState {
     direction?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -234,6 +240,8 @@ export interface AntiSpywareSignatureState {
     signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -281,6 +289,8 @@ export interface AntiSpywareSignatureArgs {
     direction?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -297,6 +307,8 @@ export interface AntiSpywareSignatureArgs {
     signature?: pulumi.Input<inputs.AntiSpywareSignatureSignature>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

@@ -24,7 +24,7 @@ public final class GetOspfAuthProfileListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -36,6 +36,8 @@ public final class GetOspfAuthProfileListData {
     /**
      * @return MD5s
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
      */
     private List<GetOspfAuthProfileListDataMd5> md5s;
     /**
@@ -46,10 +48,12 @@ public final class GetOspfAuthProfileListData {
     /**
      * @return Password
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
      */
     private String password;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -71,7 +75,7 @@ public final class GetOspfAuthProfileListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -87,6 +91,8 @@ public final class GetOspfAuthProfileListData {
     /**
      * @return MD5s
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
      */
     public List<GetOspfAuthProfileListDataMd5> md5s() {
         return this.md5s;
@@ -101,12 +107,14 @@ public final class GetOspfAuthProfileListData {
     /**
      * @return Password
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5` and `password`.
+     * 
      */
     public String password() {
         return this.password;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

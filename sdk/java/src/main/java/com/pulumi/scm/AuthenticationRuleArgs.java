@@ -127,12 +127,16 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     /**
      * Folder
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return Folder
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -307,12 +311,16 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
     /**
      * Snippet
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return Snippet
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -654,6 +662,8 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         /**
          * @param folder Folder
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -664,6 +674,8 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param folder Folder
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -936,6 +948,8 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
         /**
          * @param snippet Snippet
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -946,6 +960,8 @@ public final class AuthenticationRuleArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param snippet Snippet
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

@@ -72,9 +72,6 @@ class GetFileBlockingProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -96,17 +93,11 @@ class GetFileBlockingProfileResult:
     @_builtins.property
     @pulumi.getter
     def rules(self) -> Sequence['outputs.GetFileBlockingProfileRuleResult']:
-        """
-        A list of file blocking rules
-        """
         return pulumi.get(self, "rules")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -137,6 +128,24 @@ def get_file_blocking_profile(id: Optional[_builtins.str] = None,
     """
     FileBlockingProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM File Blocking Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
+    scm_file_blocking_prof = scm.get_file_blocking_profile(id="f32697f8-a98b-4097-b249-22c89f7d8f7f")
+    pulumi.export("scmFileBlockingProfileDetails", {
+        "profileId": scm_file_blocking_prof.id,
+        "folder": scm_file_blocking_prof.folder,
+        "name": scm_file_blocking_prof.name,
+    })
+    ```
+
 
     :param _builtins.str id: The UUID of the file blocking profile
     :param _builtins.str name: The name of the file blocking profile
@@ -161,6 +170,24 @@ def get_file_blocking_profile_output(id: Optional[pulumi.Input[_builtins.str]] =
                                      opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFileBlockingProfileResult]:
     """
     FileBlockingProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a single SCM File Blocking Profile object by its ID.
+    #
+    # Replace the ID with the UUID of the SCM File Blocking Profile you want to find.
+    scm_file_blocking_prof = scm.get_file_blocking_profile(id="f32697f8-a98b-4097-b249-22c89f7d8f7f")
+    pulumi.export("scmFileBlockingProfileDetails", {
+        "profileId": scm_file_blocking_prof.id,
+        "folder": scm_file_blocking_prof.folder,
+        "name": scm_file_blocking_prof.name,
+    })
+    ```
 
 
     :param _builtins.str id: The UUID of the file blocking profile

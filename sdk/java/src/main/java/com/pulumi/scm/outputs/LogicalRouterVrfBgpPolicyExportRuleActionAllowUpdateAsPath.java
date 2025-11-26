@@ -21,15 +21,21 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     /**
      * @return Prepend
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
+     * 
      */
     private @Nullable Integer prepend;
     /**
      * @return Remove
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
+     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove remove;
     /**
      * @return Remove and prepend
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     private @Nullable Integer removeAndPrepend;
@@ -45,6 +51,8 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     /**
      * @return Prepend
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
+     * 
      */
     public Optional<Integer> prepend() {
         return Optional.ofNullable(this.prepend);
@@ -52,12 +60,16 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPath {
     /**
      * @return Remove
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
+     * 
      */
     public Optional<LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateAsPathRemove> remove() {
         return Optional.ofNullable(this.remove);
     }
     /**
      * @return Remove and prepend
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `none`, `prepend`, `remove`, and `removeAndPrepend`.
      * 
      */
     public Optional<Integer> removeAndPrepend() {

@@ -72,45 +72,21 @@ export interface GetLayer3SubinterfaceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Layer3 sub interfaces DHCP Client Object
-     */
     readonly dhcpClient: outputs.GetLayer3SubinterfaceDhcpClient;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface management profile
-     */
     readonly interfaceManagementProfile: string;
-    /**
-     * L3 sub-interface IP Parent
-     */
     readonly ips: outputs.GetLayer3SubinterfaceIp[];
-    /**
-     * MTU
-     */
     readonly mtu: number;
     /**
      * L3 sub-interface name
      */
     readonly name: string;
-    /**
-     * Parent interface
-     */
     readonly parentInterface: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * VLAN tag
-     */
     readonly tag: number;
     readonly tfid: string;
 }

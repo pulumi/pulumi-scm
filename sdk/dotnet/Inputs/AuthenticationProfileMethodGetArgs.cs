@@ -20,36 +20,48 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Kerberos
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("kerberos")]
         public Input<Inputs.AuthenticationProfileMethodKerberosGetArgs>? Kerberos { get; set; }
 
         /// <summary>
         /// Ldap
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("ldap")]
         public Input<Inputs.AuthenticationProfileMethodLdapGetArgs>? Ldap { get; set; }
 
         /// <summary>
         /// Local database
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("localDatabase")]
         public Input<Inputs.AuthenticationProfileMethodLocalDatabaseGetArgs>? LocalDatabase { get; set; }
 
         /// <summary>
         /// Radius
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("radius")]
         public Input<Inputs.AuthenticationProfileMethodRadiusGetArgs>? Radius { get; set; }
 
         /// <summary>
         /// Saml idp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("samlIdp")]
         public Input<Inputs.AuthenticationProfileMethodSamlIdpGetArgs>? SamlIdp { get; set; }
 
         /// <summary>
         /// Tacplus
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Cloud`, `Kerberos`, `Ldap`, `LocalDatabase`, `Radius`, `SamlIdp`, and `Tacplus`.
         /// </summary>
         [Input("tacplus")]
         public Input<Inputs.AuthenticationProfileMethodTacplusGetArgs>? Tacplus { get; set; }

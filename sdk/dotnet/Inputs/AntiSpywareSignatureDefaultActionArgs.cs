@@ -20,36 +20,48 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Allow
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("allow")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionAllowArgs>? Allow { get; set; }
 
         /// <summary>
         /// anti spyware signature block ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("blockIp")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionBlockIpArgs>? BlockIp { get; set; }
 
         /// <summary>
         /// Drop
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("drop")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionDropArgs>? Drop { get; set; }
 
         /// <summary>
         /// Reset both
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("resetBoth")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionResetBothArgs>? ResetBoth { get; set; }
 
         /// <summary>
         /// Reset client
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("resetClient")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionResetClientArgs>? ResetClient { get; set; }
 
         /// <summary>
         /// Reset server
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("resetServer")]
         public Input<Inputs.AntiSpywareSignatureDefaultActionResetServerArgs>? ResetServer { get; set; }

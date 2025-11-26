@@ -17,7 +17,7 @@ public final class GetBgpAddressFamilyProfileListData {
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -27,7 +27,7 @@ public final class GetBgpAddressFamilyProfileListData {
      */
     private String id;
     /**
-     * @return Ipv4
+     * @return IPv4 Address Family
      * 
      */
     private GetBgpAddressFamilyProfileListDataIpv4 ipv4;
@@ -37,7 +37,7 @@ public final class GetBgpAddressFamilyProfileListData {
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -52,7 +52,7 @@ public final class GetBgpAddressFamilyProfileListData {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -66,7 +66,7 @@ public final class GetBgpAddressFamilyProfileListData {
         return this.id;
     }
     /**
-     * @return Ipv4
+     * @return IPv4 Address Family
      * 
      */
     public GetBgpAddressFamilyProfileListDataIpv4 ipv4() {
@@ -80,7 +80,7 @@ public final class GetBgpAddressFamilyProfileListData {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

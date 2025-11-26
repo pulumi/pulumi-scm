@@ -13,26 +13,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethodRadius {
     /**
-     * @return Checkgroup
+     * @return method radius object check group of authentication profile
      * 
      */
     private @Nullable Boolean checkgroup;
     /**
-     * @return Server profile
+     * @return method radius object server profile of authentication profile
      * 
      */
     private @Nullable String serverProfile;
 
     private AuthenticationProfileMethodRadius() {}
     /**
-     * @return Checkgroup
+     * @return method radius object check group of authentication profile
      * 
      */
     public Optional<Boolean> checkgroup() {
         return Optional.ofNullable(this.checkgroup);
     }
     /**
-     * @return Server profile
+     * @return method radius object server profile of authentication profile
      * 
      */
     public Optional<String> serverProfile() {

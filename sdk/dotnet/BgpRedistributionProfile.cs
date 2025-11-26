@@ -11,6 +11,45 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// BgpRedistributionProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmBgpRedistributionProfile = new Scm.BgpRedistributionProfile("scm_bgp_redistribution_profile", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_bgp_redistribution_profile",
+    ///         Ipv4 = new Scm.Inputs.BgpRedistributionProfileIpv4Args
+    ///         {
+    ///             Unicast = new Scm.Inputs.BgpRedistributionProfileIpv4UnicastArgs
+    ///             {
+    ///                 Static = new Scm.Inputs.BgpRedistributionProfileIpv4UnicastStaticArgs
+    ///                 {
+    ///                     Enable = true,
+    ///                     Metric = 10,
+    ///                 },
+    ///                 Connected = new Scm.Inputs.BgpRedistributionProfileIpv4UnicastConnectedArgs
+    ///                 {
+    ///                     Enable = true,
+    ///                     Metric = 10,
+    ///                 },
+    ///                 Ospf = new Scm.Inputs.BgpRedistributionProfileIpv4UnicastOspfArgs
+    ///                 {
+    ///                     Enable = false,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/bgpRedistributionProfile:BgpRedistributionProfile")]
     public partial class BgpRedistributionProfile : global::Pulumi.CustomResource
@@ -23,6 +62,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -41,6 +82,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -102,6 +145,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -120,6 +165,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -140,6 +187,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -158,6 +207,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

@@ -10,13 +10,62 @@ import com.pulumi.core.internal.Codegen;
 import com.pulumi.scm.RoutePrefixListArgs;
 import com.pulumi.scm.Utilities;
 import com.pulumi.scm.inputs.RoutePrefixListState;
-import com.pulumi.scm.outputs.RoutePrefixListIpv4;
+import com.pulumi.scm.outputs.RoutePrefixListType;
 import java.lang.String;
 import java.util.Optional;
 import javax.annotation.Nullable;
 
 /**
  * RoutePrefixList resource
+ * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.RoutePrefixList;
+ * import com.pulumi.scm.RoutePrefixListArgs;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeArgs;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeIpv4Args;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmRoutePrefixList = new RoutePrefixList("scmRoutePrefixList", RoutePrefixListArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_prefix_list")
+ *             .description("Managed by Pulumi")
+ *             .type(RoutePrefixListTypeArgs.builder()
+ *                 .ipv4(RoutePrefixListTypeIpv4Args.builder()
+ *                     .ipv4Entries(RoutePrefixListTypeIpv4Ipv4EntryArgs.builder()
+ *                         .name(10)
+ *                         .action("permit")
+ *                         .prefix(RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs.builder()
+ *                             .greaterThanOrEqual(24)
+ *                             .network("198.18.1.0/24")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
  * 
  */
 @ResourceType(type="scm:index/routePrefixList:RoutePrefixList")
@@ -52,6 +101,8 @@ public class RoutePrefixList extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
@@ -59,23 +110,11 @@ public class RoutePrefixList extends com.pulumi.resources.CustomResource {
     /**
      * @return The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
-    }
-    /**
-     * Ipv4
-     * 
-     */
-    @Export(name="ipv4", refs={RoutePrefixListIpv4.class}, tree="[0]")
-    private Output</* @Nullable */ RoutePrefixListIpv4> ipv4;
-
-    /**
-     * @return Ipv4
-     * 
-     */
-    public Output<Optional<RoutePrefixListIpv4>> ipv4() {
-        return Codegen.optional(this.ipv4);
     }
     /**
      * Filter prefix list name
@@ -94,12 +133,16 @@ public class RoutePrefixList extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -110,6 +153,20 @@ public class RoutePrefixList extends com.pulumi.resources.CustomResource {
 
     public Output<String> tfid() {
         return this.tfid;
+    }
+    /**
+     * Address Family Type
+     * 
+     */
+    @Export(name="type", refs={RoutePrefixListType.class}, tree="[0]")
+    private Output</* @Nullable */ RoutePrefixListType> type;
+
+    /**
+     * @return Address Family Type
+     * 
+     */
+    public Output<Optional<RoutePrefixListType>> type() {
+        return Codegen.optional(this.type);
     }
 
     /**

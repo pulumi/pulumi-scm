@@ -22,10 +22,6 @@ public final class GetServiceResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the service
@@ -37,20 +33,8 @@ public final class GetServiceResult {
      * 
      */
     private String name;
-    /**
-     * @return Protocol
-     * 
-     */
     private GetServiceProtocol protocol;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Tags for service object
-     * 
-     */
     private List<String> tags;
     private String tfid;
 
@@ -69,10 +53,6 @@ public final class GetServiceResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -90,24 +70,12 @@ public final class GetServiceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Protocol
-     * 
-     */
     public GetServiceProtocol protocol() {
         return this.protocol;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Tags for service object
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }

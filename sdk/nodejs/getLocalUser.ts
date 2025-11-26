@@ -37,17 +37,8 @@ export interface GetLocalUserResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Is the local user disabled?
-     */
     readonly disabled: boolean;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the local user
@@ -57,13 +48,7 @@ export interface GetLocalUserResult {
      * The name of the local user
      */
     readonly name: string;
-    /**
-     * The password of the local user
-     */
     readonly password: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

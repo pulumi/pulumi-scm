@@ -27,32 +27,13 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			chapRadiusProfile, err := scm.NewRadiusServerProfile(ctx, "chap_radius_profile", &scm.RadiusServerProfileArgs{
-//				Name:    pulumi.String("CHAP_only_rsp_ds_1"),
-//				Folder:  pulumi.String("All"),
-//				Retries: pulumi.Int(5),
-//				Timeout: pulumi.Int(60),
-//				Protocol: &scm.RadiusServerProfileProtocolArgs{
-//					CHAP: &scm.RadiusServerProfileProtocolChapArgs{},
-//				},
-//				Servers: scm.RadiusServerProfileServerArray{
-//					&scm.RadiusServerProfileServerArgs{
-//						Name:      pulumi.String("Chap_Server_Primary"),
-//						IpAddress: pulumi.String("10.1.1.10"),
-//						Port:      pulumi.Int(1812),
-//						Secret:    pulumi.String("-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g=="),
-//					},
-//				},
-//			})
+//			singleProfileById, err := scm.LookupRadiusServerProfile(ctx, &scm.LookupRadiusServerProfileArgs{
+//				Id: "50e5f694-19a2-467b-90a8-9db168600327",
+//			}, nil)
 //			if err != nil {
 //				return err
 //			}
-//			singleProfileById := scm.LookupRadiusServerProfileOutput(ctx, scm.GetRadiusServerProfileOutputArgs{
-//				Id: chapRadiusProfile.ID(),
-//			}, nil)
-//			ctx.Export("singleRspDump", singleProfileById.ApplyT(func(singleProfileById scm.GetRadiusServerProfileResult) (*string, error) {
-//				return &singleProfileById.Name, nil
-//			}).(pulumi.StringPtrOutput))
+//			ctx.Export("singleRspDump", singleProfileById.Name)
 //			return nil
 //		})
 //	}
@@ -80,23 +61,17 @@ type LookupRadiusServerProfileArgs struct {
 type LookupRadiusServerProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the RADIUS server profile
 	Id string `pulumi:"id"`
 	// The name of the RADIUS server profile
-	Name string `pulumi:"name"`
-	// The RADIUS authentication protocol
+	Name     string                         `pulumi:"name"`
 	Protocol GetRadiusServerProfileProtocol `pulumi:"protocol"`
-	// The number of RADIUS server retries
-	Retries int `pulumi:"retries"`
-	// Server
-	Servers []GetRadiusServerProfileServer `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// The RADIUS server authentication timeout (seconds)
-	Timeout int `pulumi:"timeout"`
+	Retries  int                            `pulumi:"retries"`
+	Servers  []GetRadiusServerProfileServer `pulumi:"servers"`
+	Snippet  string                         `pulumi:"snippet"`
+	Tfid     string                         `pulumi:"tfid"`
+	Timeout  int                            `pulumi:"timeout"`
 }
 
 func LookupRadiusServerProfileOutput(ctx *pulumi.Context, args LookupRadiusServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupRadiusServerProfileResultOutput {
@@ -140,7 +115,6 @@ func (o LookupRadiusServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupRadiusServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -155,22 +129,18 @@ func (o LookupRadiusServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The RADIUS authentication protocol
 func (o LookupRadiusServerProfileResultOutput) Protocol() GetRadiusServerProfileProtocolOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) GetRadiusServerProfileProtocol { return v.Protocol }).(GetRadiusServerProfileProtocolOutput)
 }
 
-// The number of RADIUS server retries
 func (o LookupRadiusServerProfileResultOutput) Retries() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) int { return v.Retries }).(pulumi.IntOutput)
 }
 
-// Server
 func (o LookupRadiusServerProfileResultOutput) Servers() GetRadiusServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) []GetRadiusServerProfileServer { return v.Servers }).(GetRadiusServerProfileServerArrayOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupRadiusServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -179,7 +149,6 @@ func (o LookupRadiusServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The RADIUS server authentication timeout (seconds)
 func (o LookupRadiusServerProfileResultOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupRadiusServerProfileResult) int { return v.Timeout }).(pulumi.IntOutput)
 }

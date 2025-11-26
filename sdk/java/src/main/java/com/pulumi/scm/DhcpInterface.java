@@ -39,12 +39,16 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -67,12 +71,16 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     /**
      * Relay
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
+     * 
      */
     @Export(name="relay", refs={DhcpInterfaceRelay.class}, tree="[0]")
     private Output</* @Nullable */ DhcpInterfaceRelay> relay;
 
     /**
      * @return Relay
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
     public Output<Optional<DhcpInterfaceRelay>> relay() {
@@ -81,12 +89,16 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     /**
      * Server
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
+     * 
      */
     @Export(name="server", refs={DhcpInterfaceServer.class}, tree="[0]")
     private Output</* @Nullable */ DhcpInterfaceServer> server;
 
     /**
      * @return Server
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `relay` and `server`.
      * 
      */
     public Output<Optional<DhcpInterfaceServer>> server() {
@@ -95,12 +107,16 @@ public class DhcpInterface extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

@@ -72,9 +72,6 @@ class GetBgpRouteMapResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -96,17 +93,11 @@ class GetBgpRouteMapResult:
     @_builtins.property
     @pulumi.getter(name="routeMaps")
     def route_maps(self) -> Sequence['outputs.GetBgpRouteMapRouteMapResult']:
-        """
-        Route map
-        """
         return pulumi.get(self, "route_maps")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -137,6 +128,22 @@ def get_bgp_route_map(id: Optional[_builtins.str] = None,
     """
     BgpRouteMap data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up bgp route map by its ID.
+    scm_bgp_route_map_ds = scm.get_bgp_route_map(id="f2ffd626-e92d-4de6-8ac1-37742fe80fb9")
+    pulumi.export("bgpRouteMapDataSourceResults", {
+        "id": scm_bgp_route_map_ds.id,
+        "name": scm_bgp_route_map_ds.name,
+        "routeMap": scm_bgp_route_map_ds.route_maps,
+        "folder": scm_bgp_route_map_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Name
@@ -161,6 +168,22 @@ def get_bgp_route_map_output(id: Optional[pulumi.Input[_builtins.str]] = None,
                              opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBgpRouteMapResult]:
     """
     BgpRouteMap data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up bgp route map by its ID.
+    scm_bgp_route_map_ds = scm.get_bgp_route_map(id="f2ffd626-e92d-4de6-8ac1-37742fe80fb9")
+    pulumi.export("bgpRouteMapDataSourceResults", {
+        "id": scm_bgp_route_map_ds.id,
+        "name": scm_bgp_route_map_ds.name,
+        "routeMap": scm_bgp_route_map_ds.route_maps,
+        "folder": scm_bgp_route_map_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

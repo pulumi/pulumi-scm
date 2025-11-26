@@ -20,6 +20,8 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInherit {
     /**
      * @return Yes
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * 
      */
     private @Nullable LogicalRouterVrfBgpPeerGroupPeerInheritYes yes;
 
@@ -33,6 +35,8 @@ public final class LogicalRouterVrfBgpPeerGroupPeerInherit {
     }
     /**
      * @return Yes
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPeerGroupPeerInheritYes> yes() {

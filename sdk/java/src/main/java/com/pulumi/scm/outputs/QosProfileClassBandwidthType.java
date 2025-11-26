@@ -20,6 +20,8 @@ public final class QosProfileClassBandwidthType {
     /**
      * @return Percentage
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
+     * 
      */
     private @Nullable QosProfileClassBandwidthTypePercentage percentage;
 
@@ -33,6 +35,8 @@ public final class QosProfileClassBandwidthType {
     }
     /**
      * @return Percentage
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mbps` and `percentage`.
      * 
      */
     public Optional<QosProfileClassBandwidthTypePercentage> percentage() {

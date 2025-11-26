@@ -56,37 +56,19 @@ export interface GetIkeCryptoProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Dh group
-     */
     readonly dhGroups: string[];
-    /**
-     * Encryption algorithm
-     */
     readonly encryptions: string[];
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * Hash
-     */
     readonly hashes: string[];
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Ike crypto profile lifetime
-     */
     readonly lifetime: outputs.GetIkeCryptoProfileLifetime;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

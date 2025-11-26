@@ -79,13 +79,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// Format
-        /// </summary>
         public readonly Outputs.GetHttpServerProfileFormatResult Format;
         /// <summary>
         /// The UUID of the HTTP server profile
@@ -95,17 +89,8 @@ namespace Pulumi.Scm
         /// The name of the profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Server
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetHttpServerProfileServerResult> Servers;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Register tags on match
-        /// </summary>
         public readonly bool TagRegistration;
         public readonly string Tfid;
 

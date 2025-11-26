@@ -35,16 +35,13 @@ type LookupRegionResult struct {
 	// Address
 	Addresses []string `pulumi:"addresses"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
-	// Geo location
+	Device      string               `pulumi:"device"`
+	Folder      string               `pulumi:"folder"`
 	GeoLocation GetRegionGeoLocation `pulumi:"geoLocation"`
 	// The UUID of the region
 	Id string `pulumi:"id"`
 	// The name of the region
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -95,12 +92,10 @@ func (o LookupRegionResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRegionResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupRegionResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRegionResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Geo location
 func (o LookupRegionResultOutput) GeoLocation() GetRegionGeoLocationOutput {
 	return o.ApplyT(func(v LookupRegionResult) GetRegionGeoLocation { return v.GeoLocation }).(GetRegionGeoLocationOutput)
 }
@@ -115,7 +110,6 @@ func (o LookupRegionResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRegionResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupRegionResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRegionResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

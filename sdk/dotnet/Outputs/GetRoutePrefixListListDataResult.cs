@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -30,18 +30,18 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Ipv4
-        /// </summary>
-        public readonly Outputs.GetRoutePrefixListListDataIpv4Result Ipv4;
-        /// <summary>
         /// Filter prefix list name
         /// </summary>
         public readonly string Name;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
+        /// <summary>
+        /// Address Family Type
+        /// </summary>
+        public readonly Outputs.GetRoutePrefixListListDataTypeResult Type;
 
         [OutputConstructor]
         private GetRoutePrefixListListDataResult(
@@ -53,22 +53,22 @@ namespace Pulumi.Scm.Outputs
 
             string id,
 
-            Outputs.GetRoutePrefixListListDataIpv4Result ipv4,
-
             string name,
 
             string snippet,
 
-            string tfid)
+            string tfid,
+
+            Outputs.GetRoutePrefixListListDataTypeResult type)
         {
             Description = description;
             Device = device;
             Folder = folder;
             Id = id;
-            Ipv4 = ipv4;
             Name = name;
             Snippet = snippet;
             Tfid = tfid;
+            Type = type;
         }
     }
 }

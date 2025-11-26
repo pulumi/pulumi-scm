@@ -20,30 +20,18 @@ public final class GetHipProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Match
-     * 
-     */
     private String match;
     /**
      * @return The name of the HIP profile
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -62,10 +50,6 @@ public final class GetHipProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -76,10 +60,6 @@ public final class GetHipProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Match
-     * 
-     */
     public String match() {
         return this.match;
     }
@@ -90,10 +70,6 @@ public final class GetHipProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

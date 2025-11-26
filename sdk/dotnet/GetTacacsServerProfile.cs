@@ -79,9 +79,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the TACACS+ server profile
@@ -91,26 +88,11 @@ namespace Pulumi.Scm
         /// The name of the TACACS+ server profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The TACACS+ authentication protocol
-        /// </summary>
         public readonly string Protocol;
-        /// <summary>
-        /// The TACACS+ server configuration
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetTacacsServerProfileServerResult> Servers;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// The TACACS+ timeout (seconds)
-        /// </summary>
         public readonly int Timeout;
-        /// <summary>
-        /// Use a single TACACS+ connection?
-        /// </summary>
         public readonly bool UseSingleConnection;
 
         [OutputConstructor]

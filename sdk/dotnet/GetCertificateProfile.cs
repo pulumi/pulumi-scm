@@ -179,13 +179,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// User domain
-        /// </summary>
         public readonly string Domain;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the certificate profile
@@ -195,26 +189,11 @@ namespace Pulumi.Scm
         /// The name of the certificate profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// OCSP receive timeout (seconds)
-        /// </summary>
         public readonly string OcspReceiveTimeout;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// Use CRL?
-        /// </summary>
         public readonly bool UseCrl;
-        /// <summary>
-        /// Use OCSP?
-        /// </summary>
         public readonly bool UseOcsp;
-        /// <summary>
-        /// Certificate username field
-        /// </summary>
         public readonly Outputs.GetCertificateProfileUsernameFieldResult UsernameField;
 
         [OutputConstructor]

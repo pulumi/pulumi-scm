@@ -19,6 +19,8 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleAction {
     /**
      * @return Deny
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
+     * 
      */
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionDeny deny;
 
@@ -32,6 +34,8 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleAction {
     }
     /**
      * @return Deny
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpPolicyImportRuleActionDeny deny() {

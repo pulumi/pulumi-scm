@@ -33,12 +33,16 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
     /**
      * Next hop IP address
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+     * 
      */
     @Import(name="ipAddress")
     private @Nullable Output<String> ipAddress;
 
     /**
      * @return Next hop IP address
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<Output<String>> ipAddress() {
@@ -94,6 +98,8 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
         /**
          * @param ipAddress Next hop IP address
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+         * 
          * @return builder
          * 
          */
@@ -104,6 +110,8 @@ public final class PbfRuleActionForwardNexthopArgs extends com.pulumi.resources.
 
         /**
          * @param ipAddress Next hop IP address
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
          * 

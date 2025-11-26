@@ -139,14 +139,22 @@ type AggregateInterface struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Layer2
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer2 AggregateInterfaceLayer2Output `pulumi:"layer2"`
 	// Aggregate Interface Layer 3 configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer3 AggregateInterfaceLayer3Output `pulumi:"layer3"`
 	// Aggregate interface name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -188,14 +196,22 @@ type aggregateInterfaceState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Layer2
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer2 *AggregateInterfaceLayer2 `pulumi:"layer2"`
 	// Aggregate Interface Layer 3 configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer3 *AggregateInterfaceLayer3 `pulumi:"layer3"`
 	// Aggregate interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
@@ -208,14 +224,22 @@ type AggregateInterfaceState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Layer2
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer2 AggregateInterfaceLayer2PtrInput
 	// Aggregate Interface Layer 3 configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer3 AggregateInterfaceLayer3PtrInput
 	// Aggregate interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -232,14 +256,22 @@ type aggregateInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Layer2
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer2 *AggregateInterfaceLayer2 `pulumi:"layer2"`
 	// Aggregate Interface Layer 3 configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer3 *AggregateInterfaceLayer3 `pulumi:"layer3"`
 	// Aggregate interface name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -252,14 +284,22 @@ type AggregateInterfaceArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Layer2
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer2 AggregateInterfaceLayer2PtrInput
 	// Aggregate Interface Layer 3 configuration
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 	Layer3 AggregateInterfaceLayer3PtrInput
 	// Aggregate interface name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -366,16 +406,22 @@ func (o AggregateInterfaceOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AggregateInterfaceOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AggregateInterface) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // Layer2
+//
+// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 func (o AggregateInterfaceOutput) Layer2() AggregateInterfaceLayer2Output {
 	return o.ApplyT(func(v *AggregateInterface) AggregateInterfaceLayer2Output { return v.Layer2 }).(AggregateInterfaceLayer2Output)
 }
 
 // Aggregate Interface Layer 3 configuration
+//
+// > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
 func (o AggregateInterfaceOutput) Layer3() AggregateInterfaceLayer3Output {
 	return o.ApplyT(func(v *AggregateInterface) AggregateInterfaceLayer3Output { return v.Layer3 }).(AggregateInterfaceLayer3Output)
 }
@@ -386,6 +432,8 @@ func (o AggregateInterfaceOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AggregateInterfaceOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AggregateInterface) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

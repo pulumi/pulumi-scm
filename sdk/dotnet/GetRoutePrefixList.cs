@@ -83,27 +83,18 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Ipv4
-        /// </summary>
-        public readonly Outputs.GetRoutePrefixListIpv4Result Ipv4;
-        /// <summary>
         /// Filter prefix list name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
+        public readonly Outputs.GetRoutePrefixListTypeResult Type;
 
         [OutputConstructor]
         private GetRoutePrefixListResult(
@@ -115,22 +106,22 @@ namespace Pulumi.Scm
 
             string id,
 
-            Outputs.GetRoutePrefixListIpv4Result ipv4,
-
             string name,
 
             string snippet,
 
-            string tfid)
+            string tfid,
+
+            Outputs.GetRoutePrefixListTypeResult type)
         {
             Description = description;
             Device = device;
             Folder = folder;
             Id = id;
-            Ipv4 = ipv4;
             Name = name;
             Snippet = snippet;
             Tfid = tfid;
+            Type = type;
         }
     }
 }

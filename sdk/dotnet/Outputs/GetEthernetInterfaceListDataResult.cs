@@ -14,6 +14,10 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetEthernetInterfaceListDataResult
     {
         /// <summary>
+        /// Aggregate group
+        /// </summary>
+        public readonly string AggregateGroup;
+        /// <summary>
         /// Interface description
         /// </summary>
         public readonly string Comment;
@@ -22,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
-        /// The device in which the resource is defined
+        /// The device of the item.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -30,7 +34,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -39,10 +43,14 @@ namespace Pulumi.Scm.Outputs
         public readonly string Id;
         /// <summary>
         /// Layer2
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer2Result Layer2;
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer3Result Layer3;
         /// <summary>
@@ -66,17 +74,21 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataPoeResult Poe;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         /// <summary>
         /// Tap
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataTapResult Tap;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetEthernetInterfaceListDataResult(
+            string aggregateGroup,
+
             string comment,
 
             string defaultValue,
@@ -109,6 +121,7 @@ namespace Pulumi.Scm.Outputs
 
             string tfid)
         {
+            AggregateGroup = aggregateGroup;
             Comment = comment;
             DefaultValue = defaultValue;
             Device = device;

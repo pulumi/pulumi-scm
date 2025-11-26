@@ -19,13 +19,17 @@ namespace Pulumi.Scm.Inputs
         public Input<int>? Number { get; set; }
 
         /// <summary>
-        /// IPv6 type of proxy*id protocol values for TCP protocol
+        /// IPv6 type of ProxyId protocol values for TCP protocol
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Number`, `Tcp`, and `Udp`.
         /// </summary>
         [Input("tcp")]
         public Input<Inputs.IpsecTunnelAutoKeyProxyIdV6ProtocolTcpGetArgs>? Tcp { get; set; }
 
         /// <summary>
-        /// IPv6 type of proxy*id protocol values for UDP protocol
+        /// IPv6 type of ProxyId protocol values for UDP protocol
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Number`, `Tcp`, and `Udp`.
         /// </summary>
         [Input("udp")]
         public Input<Inputs.IpsecTunnelAutoKeyProxyIdV6ProtocolUdpGetArgs>? Udp { get; set; }

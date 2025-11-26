@@ -6,6 +6,24 @@ import * as utilities from "./utilities";
 
 /**
  * BgpAuthProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up BGP Auth Profile by its ID.
+ * const scmBgpAuthProfileDs = scm.getBgpAuthProfile({
+ *     id: "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+ * });
+ * export const bgpAuthProfileDataSourceResults = {
+ *     id: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.id),
+ *     name: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.name),
+ *     secret: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.secret),
+ *     folder: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.folder),
+ * };
+ * ```
  */
 export function getBgpAuthProfile(args: GetBgpAuthProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpAuthProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -37,13 +55,7 @@ export interface GetBgpAuthProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -53,18 +65,30 @@ export interface GetBgpAuthProfileResult {
      * Profile name
      */
     readonly name: string;
-    /**
-     * BGP authentication key
-     */
     readonly secret: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * BgpAuthProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up BGP Auth Profile by its ID.
+ * const scmBgpAuthProfileDs = scm.getBgpAuthProfile({
+ *     id: "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+ * });
+ * export const bgpAuthProfileDataSourceResults = {
+ *     id: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.id),
+ *     name: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.name),
+ *     secret: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.secret),
+ *     folder: scmBgpAuthProfileDs.then(scmBgpAuthProfileDs => scmBgpAuthProfileDs.folder),
+ * };
+ * ```
  */
 export function getBgpAuthProfileOutput(args: GetBgpAuthProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpAuthProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

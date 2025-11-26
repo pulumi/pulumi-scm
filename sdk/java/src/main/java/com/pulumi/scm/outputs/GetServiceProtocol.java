@@ -19,6 +19,8 @@ public final class GetServiceProtocol {
     /**
      * @return Udp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
+     * 
      */
     private GetServiceProtocolUdp udp;
 
@@ -32,6 +34,8 @@ public final class GetServiceProtocol {
     }
     /**
      * @return Udp
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public GetServiceProtocolUdp udp() {

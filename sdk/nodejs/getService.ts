@@ -61,9 +61,6 @@ export interface GetServiceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the service
@@ -73,17 +70,8 @@ export interface GetServiceResult {
      * The name of the service
      */
     readonly name: string;
-    /**
-     * Protocol
-     */
     readonly protocol: outputs.GetServiceProtocol;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Tags for service object
-     */
     readonly tags: string[];
     readonly tfid: string;
 }

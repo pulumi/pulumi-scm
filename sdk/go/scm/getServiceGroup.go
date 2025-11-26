@@ -63,19 +63,15 @@ type LookupServiceGroupArgs struct {
 type LookupServiceGroupResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the service group
-	Id string `pulumi:"id"`
-	// Members
+	Id      string   `pulumi:"id"`
 	Members []string `pulumi:"members"`
 	// The name of the service group
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Tags associated with the service group
-	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	Name    string   `pulumi:"name"`
+	Snippet string   `pulumi:"snippet"`
+	Tags    []string `pulumi:"tags"`
+	Tfid    string   `pulumi:"tfid"`
 }
 
 func LookupServiceGroupOutput(ctx *pulumi.Context, args LookupServiceGroupOutputArgs, opts ...pulumi.InvokeOption) LookupServiceGroupResultOutput {
@@ -119,7 +115,6 @@ func (o LookupServiceGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupServiceGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -129,7 +124,6 @@ func (o LookupServiceGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Members
 func (o LookupServiceGroupResultOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) []string { return v.Members }).(pulumi.StringArrayOutput)
 }
@@ -139,12 +133,10 @@ func (o LookupServiceGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupServiceGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Tags associated with the service group
 func (o LookupServiceGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

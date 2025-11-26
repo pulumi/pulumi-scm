@@ -34,7 +34,7 @@ import (
 //				Retries: pulumi.Int(5),
 //				Timeout: pulumi.Int(60),
 //				Protocol: &scm.RadiusServerProfileProtocolArgs{
-//					CHAP: &scm.RadiusServerProfileProtocolChapArgs{},
+//					Chap: &scm.RadiusServerProfileProtocolChapArgs{},
 //				},
 //				Servers: scm.RadiusServerProfileServerArray{
 //					&scm.RadiusServerProfileServerArgs{
@@ -54,7 +54,7 @@ import (
 //				Retries: pulumi.Int(5),
 //				Timeout: pulumi.Int(60),
 //				Protocol: &scm.RadiusServerProfileProtocolArgs{
-//					PAP: &scm.RadiusServerProfileProtocolPapArgs{},
+//					Pap: &scm.RadiusServerProfileProtocolPapArgs{},
 //				},
 //				Servers: scm.RadiusServerProfileServerArray{
 //					&scm.RadiusServerProfileServerArgs{
@@ -79,6 +79,8 @@ type RadiusServerProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the RADIUS server profile
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -89,6 +91,8 @@ type RadiusServerProfile struct {
 	// Server
 	Servers RadiusServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// The RADIUS server authentication timeout (seconds)
@@ -134,6 +138,8 @@ type radiusServerProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the RADIUS server profile
 	Name *string `pulumi:"name"`
@@ -144,6 +150,8 @@ type radiusServerProfileState struct {
 	// Server
 	Servers []RadiusServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// The RADIUS server authentication timeout (seconds)
@@ -154,6 +162,8 @@ type RadiusServerProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the RADIUS server profile
 	Name pulumi.StringPtrInput
@@ -164,6 +174,8 @@ type RadiusServerProfileState struct {
 	// Server
 	Servers RadiusServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// The RADIUS server authentication timeout (seconds)
@@ -178,6 +190,8 @@ type radiusServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the RADIUS server profile
 	Name *string `pulumi:"name"`
@@ -188,6 +202,8 @@ type radiusServerProfileArgs struct {
 	// Server
 	Servers []RadiusServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The RADIUS server authentication timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
@@ -198,6 +214,8 @@ type RadiusServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the RADIUS server profile
 	Name pulumi.StringPtrInput
@@ -208,6 +226,8 @@ type RadiusServerProfileArgs struct {
 	// Server
 	Servers RadiusServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The RADIUS server authentication timeout (seconds)
 	Timeout pulumi.IntPtrInput
@@ -306,6 +326,8 @@ func (o RadiusServerProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RadiusServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -331,6 +353,8 @@ func (o RadiusServerProfileOutput) Servers() RadiusServerProfileServerArrayOutpu
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RadiusServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RadiusServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

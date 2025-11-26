@@ -224,6 +224,8 @@ type AuthenticationRule struct {
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolOutput `pulumi:"disabled"`
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The source security zones
 	Froms pulumi.StringArrayOutput `pulumi:"froms"`
@@ -248,6 +250,8 @@ type AuthenticationRule struct {
 	// The destination ports
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// Snippet
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayOutput `pulumi:"sourceHips"`
@@ -326,6 +330,8 @@ type authenticationRuleState struct {
 	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zones
 	Froms []string `pulumi:"froms"`
@@ -350,6 +356,8 @@ type authenticationRuleState struct {
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
 	SourceHips []string `pulumi:"sourceHips"`
@@ -384,6 +392,8 @@ type AuthenticationRuleState struct {
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zones
 	Froms pulumi.StringArrayInput
@@ -408,6 +418,8 @@ type AuthenticationRuleState struct {
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayInput
@@ -446,6 +458,8 @@ type authenticationRuleArgs struct {
 	// Is the authentication rule disabled?
 	Disabled *bool `pulumi:"disabled"`
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The source security zones
 	Froms []string `pulumi:"froms"`
@@ -470,6 +484,8 @@ type authenticationRuleArgs struct {
 	// The destination ports
 	Services []string `pulumi:"services"`
 	// Snippet
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The source Host Integrity Profile (HIP)
 	SourceHips []string `pulumi:"sourceHips"`
@@ -504,6 +520,8 @@ type AuthenticationRuleArgs struct {
 	// Is the authentication rule disabled?
 	Disabled pulumi.BoolPtrInput
 	// Folder
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The source security zones
 	Froms pulumi.StringArrayInput
@@ -528,6 +546,8 @@ type AuthenticationRuleArgs struct {
 	// The destination ports
 	Services pulumi.StringArrayInput
 	// Snippet
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The source Host Integrity Profile (HIP)
 	SourceHips pulumi.StringArrayInput
@@ -668,6 +688,8 @@ func (o AuthenticationRuleOutput) Disabled() pulumi.BoolOutput {
 }
 
 // Folder
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -728,6 +750,8 @@ func (o AuthenticationRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // Snippet
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

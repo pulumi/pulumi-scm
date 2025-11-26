@@ -123,17 +123,11 @@ class GetLdapServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
-        """
-        Map of sensitive values returned from the API.
-        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -147,9 +141,6 @@ class GetLdapServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="ldapType")
     def ldap_type(self) -> _builtins.str:
-        """
-        The LDAP server time
-        """
         return pulumi.get(self, "ldap_type")
 
     @_builtins.property
@@ -163,33 +154,21 @@ class GetLdapServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="retryInterval")
     def retry_interval(self) -> _builtins.int:
-        """
-        The search retry interval (seconds)
-        """
         return pulumi.get(self, "retry_interval")
 
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetLdapServerProfileServerResult']:
-        """
-        The LDAP server configuration
-        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def ssl(self) -> _builtins.bool:
-        """
-        Require SSL/TLS secured connection?
-        """
         return pulumi.get(self, "ssl")
 
     @_builtins.property
@@ -200,17 +179,11 @@ class GetLdapServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def timelimit(self) -> _builtins.int:
-        """
-        The search timeout (seconds)
-        """
         return pulumi.get(self, "timelimit")
 
     @_builtins.property
     @pulumi.getter(name="verifyServerCertificate")
     def verify_server_certificate(self) -> _builtins.bool:
-        """
-        Verify server certificate for SSL sessions?
-        """
         return pulumi.get(self, "verify_server_certificate")
 
 

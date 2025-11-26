@@ -43,116 +43,36 @@ public final class GetAuthenticationRuleResult {
      * 
      */
     private String device;
-    /**
-     * @return Is the authentication rule disabled?
-     * 
-     */
     private Boolean disabled;
-    /**
-     * @return Folder
-     * 
-     */
     private String folder;
-    /**
-     * @return The source security zones
-     * 
-     */
     private List<String> froms;
-    /**
-     * @return Group tag
-     * 
-     */
     private String groupTag;
-    /**
-     * @return The source Host Integrity Profile (HIP)
-     * 
-     */
     private List<String> hipProfiles;
     /**
      * @return The UUID of the authentication rule
      * 
      */
     private String id;
-    /**
-     * @return Log authentication timeouts?
-     * 
-     */
     private Boolean logAuthenticationTimeout;
-    /**
-     * @return The log forwarding profile name
-     * 
-     */
     private String logSetting;
     /**
      * @return The name of the authentication rule
      * 
      */
     private String name;
-    /**
-     * @return Are the destination addresses negated?
-     * 
-     */
     private Boolean negateDestination;
-    /**
-     * @return Are the source addresses negated?
-     * 
-     */
     private Boolean negateSource;
-    /**
-     * @return The relative position of the rule
-     * 
-     */
     private String position;
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     private String relativePosition;
-    /**
-     * @return The destination ports
-     * 
-     */
     private List<String> services;
-    /**
-     * @return Snippet
-     * 
-     */
     private String snippet;
-    /**
-     * @return The source Host Integrity Profile (HIP)
-     * 
-     */
     private List<String> sourceHips;
-    /**
-     * @return The source users
-     * 
-     */
     private List<String> sourceUsers;
-    /**
-     * @return The source addresses
-     * 
-     */
     private List<String> sources;
-    /**
-     * @return The authentication rule tags
-     * 
-     */
     private List<String> tags;
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     private String targetRule;
     private String tfid;
-    /**
-     * @return The authentication session timeout (seconds)
-     * 
-     */
     private Integer timeout;
-    /**
-     * @return The destination security zones
-     * 
-     */
     private List<String> tos;
 
     private GetAuthenticationRuleResult() {}
@@ -198,38 +118,18 @@ public final class GetAuthenticationRuleResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Is the authentication rule disabled?
-     * 
-     */
     public Boolean disabled() {
         return this.disabled;
     }
-    /**
-     * @return Folder
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return The source security zones
-     * 
-     */
     public List<String> froms() {
         return this.froms;
     }
-    /**
-     * @return Group tag
-     * 
-     */
     public String groupTag() {
         return this.groupTag;
     }
-    /**
-     * @return The source Host Integrity Profile (HIP)
-     * 
-     */
     public List<String> hipProfiles() {
         return this.hipProfiles;
     }
@@ -240,17 +140,9 @@ public final class GetAuthenticationRuleResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Log authentication timeouts?
-     * 
-     */
     public Boolean logAuthenticationTimeout() {
         return this.logAuthenticationTimeout;
     }
-    /**
-     * @return The log forwarding profile name
-     * 
-     */
     public String logSetting() {
         return this.logSetting;
     }
@@ -261,97 +153,45 @@ public final class GetAuthenticationRuleResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Are the destination addresses negated?
-     * 
-     */
     public Boolean negateDestination() {
         return this.negateDestination;
     }
-    /**
-     * @return Are the source addresses negated?
-     * 
-     */
     public Boolean negateSource() {
         return this.negateSource;
     }
-    /**
-     * @return The relative position of the rule
-     * 
-     */
     public String position() {
         return this.position;
     }
-    /**
-     * @return Relative positioning rule. String must be one of these: `&#34;before&#34;`, `&#34;after&#34;`, `&#34;top&#34;`, `&#34;bottom&#34;`. If not specified, rule is created at the bottom of the ruleset.
-     * 
-     */
     public String relativePosition() {
         return this.relativePosition;
     }
-    /**
-     * @return The destination ports
-     * 
-     */
     public List<String> services() {
         return this.services;
     }
-    /**
-     * @return Snippet
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return The source Host Integrity Profile (HIP)
-     * 
-     */
     public List<String> sourceHips() {
         return this.sourceHips;
     }
-    /**
-     * @return The source users
-     * 
-     */
     public List<String> sourceUsers() {
         return this.sourceUsers;
     }
-    /**
-     * @return The source addresses
-     * 
-     */
     public List<String> sources() {
         return this.sources;
     }
-    /**
-     * @return The authentication rule tags
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }
-    /**
-     * @return The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `&#34;before&#34;` or `&#34;after&#34;`.
-     * 
-     */
     public String targetRule() {
         return this.targetRule;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return The authentication session timeout (seconds)
-     * 
-     */
     public Integer timeout() {
         return this.timeout;
     }
-    /**
-     * @return The destination security zones
-     * 
-     */
     public List<String> tos() {
         return this.tos;
     }

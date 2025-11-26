@@ -13,10 +13,16 @@ namespace Pulumi.Scm.Inputs
     public sealed class BgpAddressFamilyProfileIpv4Args : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Ipv4
+        /// Multicast
         /// </summary>
-        [Input("ipv4", required: true)]
-        public Input<Inputs.BgpAddressFamilyProfileIpv4Ipv4Args> Ipv4 { get; set; } = null!;
+        [Input("multicast")]
+        public Input<Inputs.BgpAddressFamilyProfileIpv4MulticastArgs>? Multicast { get; set; }
+
+        /// <summary>
+        /// Unicast
+        /// </summary>
+        [Input("unicast")]
+        public Input<Inputs.BgpAddressFamilyProfileIpv4UnicastArgs>? Unicast { get; set; }
 
         public BgpAddressFamilyProfileIpv4Args()
         {

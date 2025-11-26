@@ -64,7 +64,7 @@ import javax.annotation.Nullable;
  *         // This profile defines the encryption and authentication algorithms for the IKE Gateway.
  *         // The values are taken from the 'createTestIKECryptoProfile' helper function.
  *         var example = new IkeCryptoProfile("example", IkeCryptoProfileArgs.builder()
- *             .name("example-ike-crypto-prf-for-rn")
+ *             .name("example-ike-crypto-11")
  *             .folder("Remote Networks")
  *             .hashes("sha256")
  *             .dhGroups("group14")
@@ -75,7 +75,7 @@ import javax.annotation.Nullable;
  *         // This defines the VPN peer. It depends on the IKE Crypto Profile created above.
  *         // The values are taken from the 'createTestIKEGateway' helper function.
  *         var exampleIkeGateway = new IkeGateway("exampleIkeGateway", IkeGatewayArgs.builder()
- *             .name("example-ike-gateway-for-rn")
+ *             .name("example-ike-gateway-11")
  *             .folder("Remote Networks")
  *             .authentication(IkeGatewayAuthenticationArgs.builder()
  *                 .preSharedKey(IkeGatewayAuthenticationPreSharedKeyArgs.builder()
@@ -98,7 +98,7 @@ import javax.annotation.Nullable;
  *         // This defines the tunnel interface itself and uses the IKE Gateway.
  *         // The values are taken from the 'createTestIPsecTunnel' helper function.
  *         var exampleIpsecTunnel = new IpsecTunnel("exampleIpsecTunnel", IpsecTunnelArgs.builder()
- *             .name("example-ipsec-tunnel-for-rn")
+ *             .name("example-ipsec-tunnel-11")
  *             .folder("Remote Networks")
  *             .antiReplay(true)
  *             .copyTos(false)
@@ -117,7 +117,7 @@ import javax.annotation.Nullable;
  *         // This is the final resource, which uses the IPsec Tunnel created above.
  *         // The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
  *         var exampleRemoteNetwork = new RemoteNetwork("exampleRemoteNetwork", RemoteNetworkArgs.builder()
- *             .name("example-remote-network")
+ *             .name("example-remote-network-11")
  *             .folder("Remote Networks")
  *             .licenseType("FWAAS-AGGREGATE")
  *             .region("us-west-2")

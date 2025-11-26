@@ -16,14 +16,14 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
     public static final AuthenticationProfileLockoutArgs Empty = new AuthenticationProfileLockoutArgs();
 
     /**
-     * Failed attempts
+     * Lockout object - failedAttempts of authentication profile
      * 
      */
     @Import(name="failedAttempts")
     private @Nullable Output<Integer> failedAttempts;
 
     /**
-     * @return Failed attempts
+     * @return Lockout object - failedAttempts of authentication profile
      * 
      */
     public Optional<Output<Integer>> failedAttempts() {
@@ -31,14 +31,14 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
     }
 
     /**
-     * Lockout time
+     * Lockout object - lockout-time of authentication profile
      * 
      */
     @Import(name="lockoutTime")
     private @Nullable Output<Integer> lockoutTime;
 
     /**
-     * @return Lockout time
+     * @return Lockout object - lockout-time of authentication profile
      * 
      */
     public Optional<Output<Integer>> lockoutTime() {
@@ -71,7 +71,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param failedAttempts Failed attempts
+         * @param failedAttempts Lockout object - failedAttempts of authentication profile
          * 
          * @return builder
          * 
@@ -82,7 +82,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param failedAttempts Failed attempts
+         * @param failedAttempts Lockout object - failedAttempts of authentication profile
          * 
          * @return builder
          * 
@@ -92,7 +92,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param lockoutTime Lockout time
+         * @param lockoutTime Lockout object - lockout-time of authentication profile
          * 
          * @return builder
          * 
@@ -103,7 +103,7 @@ public final class AuthenticationProfileLockoutArgs extends com.pulumi.resources
         }
 
         /**
-         * @param lockoutTime Lockout time
+         * @param lockoutTime Lockout object - lockout-time of authentication profile
          * 
          * @return builder
          * 

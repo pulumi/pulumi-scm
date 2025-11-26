@@ -28,7 +28,7 @@ public final class GetAggregateInterfaceListData {
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -40,10 +40,14 @@ public final class GetAggregateInterfaceListData {
     /**
      * @return Layer2
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
+     * 
      */
     private GetAggregateInterfaceListDataLayer2 layer2;
     /**
      * @return Aggregate Interface Layer 3 configuration
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     private GetAggregateInterfaceListDataLayer3 layer3;
@@ -53,7 +57,7 @@ public final class GetAggregateInterfaceListData {
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -82,7 +86,7 @@ public final class GetAggregateInterfaceListData {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -98,12 +102,16 @@ public final class GetAggregateInterfaceListData {
     /**
      * @return Layer2
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
+     * 
      */
     public GetAggregateInterfaceListDataLayer2 layer2() {
         return this.layer2;
     }
     /**
      * @return Aggregate Interface Layer 3 configuration
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
      * 
      */
     public GetAggregateInterfaceListDataLayer3 layer3() {
@@ -117,7 +125,7 @@ public final class GetAggregateInterfaceListData {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

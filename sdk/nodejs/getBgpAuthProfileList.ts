@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all bgp auth profiles
+ * const allBgpAuthProfiles = scm.getBgpAuthProfileList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmBgpAuthProfileList = allBgpAuthProfiles.then(allBgpAuthProfiles => .reduce((__obj, profile) => ({ ...__obj, [profile.id]: profile })));
+ * ```
  */
 export function getBgpAuthProfileList(args?: GetBgpAuthProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpAuthProfileListResult> {
     args = args || {};
@@ -96,6 +109,19 @@ export interface GetBgpAuthProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all bgp auth profiles
+ * const allBgpAuthProfiles = scm.getBgpAuthProfileList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmBgpAuthProfileList = allBgpAuthProfiles.then(allBgpAuthProfiles => .reduce((__obj, profile) => ({ ...__obj, [profile.id]: profile })));
+ * ```
  */
 export function getBgpAuthProfileListOutput(args?: GetBgpAuthProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpAuthProfileListResult> {
     args = args || {};

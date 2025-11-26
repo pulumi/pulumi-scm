@@ -120,41 +120,26 @@ class GetApplicationFilterResult:
     @_builtins.property
     @pulumi.getter
     def evasive(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "evasive")
 
     @_builtins.property
     @pulumi.getter(name="excessiveBandwidthUse")
     def excessive_bandwidth_use(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "excessive_bandwidth_use")
 
     @_builtins.property
     @pulumi.getter
     def excludes(self) -> Sequence[_builtins.str]:
-        """
-        Exclude
-        """
         return pulumi.get(self, "excludes")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="hasKnownVulnerabilities")
     def has_known_vulnerabilities(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "has_known_vulnerabilities")
 
     @_builtins.property
@@ -168,9 +153,6 @@ class GetApplicationFilterResult:
     @_builtins.property
     @pulumi.getter(name="isSaas")
     def is_saas(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "is_saas")
 
     @_builtins.property
@@ -184,81 +166,51 @@ class GetApplicationFilterResult:
     @_builtins.property
     @pulumi.getter(name="newAppid")
     def new_appid(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "new_appid")
 
     @_builtins.property
     @pulumi.getter
     def pervasive(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "pervasive")
 
     @_builtins.property
     @pulumi.getter(name="proneToMisuse")
     def prone_to_misuse(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "prone_to_misuse")
 
     @_builtins.property
     @pulumi.getter
     def risks(self) -> Sequence[_builtins.int]:
-        """
-        Risk
-        """
         return pulumi.get(self, "risks")
 
     @_builtins.property
     @pulumi.getter(name="saasCertifications")
     def saas_certifications(self) -> Sequence[_builtins.str]:
-        """
-        Saas certifications
-        """
         return pulumi.get(self, "saas_certifications")
 
     @_builtins.property
     @pulumi.getter(name="saasRisks")
     def saas_risks(self) -> Sequence[_builtins.str]:
-        """
-        Saas risk
-        """
         return pulumi.get(self, "saas_risks")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def subcategories(self) -> Sequence[_builtins.str]:
-        """
-        Subcategory
-        """
         return pulumi.get(self, "subcategories")
 
     @_builtins.property
     @pulumi.getter
     def tagging(self) -> 'outputs.GetApplicationFilterTaggingResult':
-        """
-        Tagging
-        """
         return pulumi.get(self, "tagging")
 
     @_builtins.property
     @pulumi.getter
     def technologies(self) -> Sequence[_builtins.str]:
-        """
-        Technology
-        """
         return pulumi.get(self, "technologies")
 
     @_builtins.property
@@ -269,25 +221,16 @@ class GetApplicationFilterResult:
     @_builtins.property
     @pulumi.getter(name="transfersFiles")
     def transfers_files(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "transfers_files")
 
     @_builtins.property
     @pulumi.getter(name="tunnelsOtherApps")
     def tunnels_other_apps(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "tunnels_other_apps")
 
     @_builtins.property
     @pulumi.getter(name="usedByMalware")
     def used_by_malware(self) -> _builtins.bool:
-        """
-        only True is a valid value
-        """
         return pulumi.get(self, "used_by_malware")
 
 

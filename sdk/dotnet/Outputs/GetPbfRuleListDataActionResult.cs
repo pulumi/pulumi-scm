@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetPbfRuleListDataActionDiscardResult Discard;
         /// <summary>
         /// Forward
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         public readonly Outputs.GetPbfRuleListDataActionForwardResult Forward;
         /// <summary>
         /// No pbf
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         public readonly Outputs.GetPbfRuleListDataActionNoPbfResult NoPbf;
 

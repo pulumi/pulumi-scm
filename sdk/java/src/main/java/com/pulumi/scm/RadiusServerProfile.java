@@ -33,7 +33,9 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.RadiusServerProfile;
  * import com.pulumi.scm.RadiusServerProfileArgs;
  * import com.pulumi.scm.inputs.RadiusServerProfileProtocolArgs;
+ * import com.pulumi.scm.inputs.RadiusServerProfileProtocolChapArgs;
  * import com.pulumi.scm.inputs.RadiusServerProfileServerArgs;
+ * import com.pulumi.scm.inputs.RadiusServerProfileProtocolPapArgs;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -53,7 +55,7 @@ import javax.annotation.Nullable;
  *             .retries(5)
  *             .timeout(60)
  *             .protocol(RadiusServerProfileProtocolArgs.builder()
- *                 .cHAP(RadiusServerProfileProtocolChapArgs.builder()
+ *                 .chap(RadiusServerProfileProtocolChapArgs.builder()
  *                     .build())
  *                 .build())
  *             .servers(RadiusServerProfileServerArgs.builder()
@@ -70,7 +72,7 @@ import javax.annotation.Nullable;
  *             .retries(5)
  *             .timeout(60)
  *             .protocol(RadiusServerProfileProtocolArgs.builder()
- *                 .pAP(RadiusServerProfileProtocolPapArgs.builder()
+ *                 .pap(RadiusServerProfileProtocolPapArgs.builder()
  *                     .build())
  *                 .build())
  *             .servers(RadiusServerProfileServerArgs.builder()
@@ -106,12 +108,16 @@ public class RadiusServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -176,12 +182,16 @@ public class RadiusServerProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

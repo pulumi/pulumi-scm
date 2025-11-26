@@ -95,17 +95,11 @@ class GetQosPolicyRuleResult:
     @_builtins.property
     @pulumi.getter(name="dscpTos")
     def dscp_tos(self) -> 'outputs.GetQosPolicyRuleDscpTosResult':
-        """
-        Dscp tos
-        """
         return pulumi.get(self, "dscp_tos")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -127,41 +121,26 @@ class GetQosPolicyRuleResult:
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
-        """
-        The relative position of the rule
-        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter(name="relativePosition")
     def relative_position(self) -> _builtins.str:
-        """
-        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        """
         return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
     def schedule(self) -> _builtins.str:
-        """
-        Schedule
-        """
         return pulumi.get(self, "schedule")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
-        """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
-        """
         return pulumi.get(self, "target_rule")
 
     @_builtins.property
@@ -203,24 +182,7 @@ def get_qos_policy_rule(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    test_qos_policy_rule = scm.QosPolicyRule("test_qos_policy_rule",
-        name="data-source-qos-test",
-        description="Rule created specifically for data source testing with DSCP/TOS.",
-        folder="All",
-        position="pre",
-        schedule="non-work-hours",
-        action={
-            "class_": "1",
-        },
-        dscp_tos={
-            "codepoints": [{
-                "name": "Expedited Forwarding",
-                "type": {
-                    "ef": {},
-                },
-            }],
-        })
-    single_rule_by_id = scm.get_qos_policy_rule_output(id=test_qos_policy_rule.id)
+    single_rule_by_id = scm.get_qos_policy_rule(id="fbc3fdb2-8513-4949-be8a-f1be03b492da")
     pulumi.export("singleQosPolicyRuleDump", single_rule_by_id)
     ```
 
@@ -260,24 +222,7 @@ def get_qos_policy_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    test_qos_policy_rule = scm.QosPolicyRule("test_qos_policy_rule",
-        name="data-source-qos-test",
-        description="Rule created specifically for data source testing with DSCP/TOS.",
-        folder="All",
-        position="pre",
-        schedule="non-work-hours",
-        action={
-            "class_": "1",
-        },
-        dscp_tos={
-            "codepoints": [{
-                "name": "Expedited Forwarding",
-                "type": {
-                    "ef": {},
-                },
-            }],
-        })
-    single_rule_by_id = scm.get_qos_policy_rule_output(id=test_qos_policy_rule.id)
+    single_rule_by_id = scm.get_qos_policy_rule(id="fbc3fdb2-8513-4949-be8a-f1be03b492da")
     pulumi.export("singleQosPolicyRuleDump", single_rule_by_id)
     ```
 

@@ -43,13 +43,7 @@ export interface GetHttpHeaderProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * A list of HTTP header profile rules
-     */
     readonly httpHeaderInsertions: outputs.GetHttpHeaderProfileHttpHeaderInsertion[];
     /**
      * The UUID of the HTTP header profile
@@ -59,9 +53,6 @@ export interface GetHttpHeaderProfileResult {
      * The name of the HTTP header profile
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

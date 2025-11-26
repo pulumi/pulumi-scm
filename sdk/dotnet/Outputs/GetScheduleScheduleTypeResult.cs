@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly ImmutableArray<string> NonRecurrings;
         /// <summary>
         /// Recurring
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NonRecurring` and `Recurring`.
         /// </summary>
         public readonly Outputs.GetScheduleScheduleTypeRecurringResult Recurring;
 

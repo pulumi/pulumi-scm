@@ -164,6 +164,8 @@ export class AuthenticationRule extends pulumi.CustomResource {
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * Folder
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -212,6 +214,8 @@ export class AuthenticationRule extends pulumi.CustomResource {
     declare public readonly services: pulumi.Output<string[]>;
     /**
      * Snippet
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -370,6 +374,8 @@ export interface AuthenticationRuleState {
     disabled?: pulumi.Input<boolean>;
     /**
      * Folder
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -418,6 +424,8 @@ export interface AuthenticationRuleState {
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Snippet
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**
@@ -485,6 +493,8 @@ export interface AuthenticationRuleArgs {
     disabled?: pulumi.Input<boolean>;
     /**
      * Folder
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -533,6 +543,8 @@ export interface AuthenticationRuleArgs {
     services: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * Snippet
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

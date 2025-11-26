@@ -19,6 +19,8 @@ public final class GetDhcpInterfaceListDataServerOptionLease {
     /**
      * @return Unlimited
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
+     * 
      */
     private GetDhcpInterfaceListDataServerOptionLeaseUnlimited unlimited;
 
@@ -32,6 +34,8 @@ public final class GetDhcpInterfaceListDataServerOptionLease {
     }
     /**
      * @return Unlimited
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     public GetDhcpInterfaceListDataServerOptionLeaseUnlimited unlimited() {

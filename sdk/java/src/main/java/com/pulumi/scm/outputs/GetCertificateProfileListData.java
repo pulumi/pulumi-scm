@@ -60,7 +60,7 @@ public final class GetCertificateProfileListData {
      */
     private String domain;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -80,7 +80,7 @@ public final class GetCertificateProfileListData {
      */
     private String ocspReceiveTimeout;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -166,7 +166,7 @@ public final class GetCertificateProfileListData {
         return this.domain;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -194,7 +194,7 @@ public final class GetCertificateProfileListData {
         return this.ocspReceiveTimeout;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

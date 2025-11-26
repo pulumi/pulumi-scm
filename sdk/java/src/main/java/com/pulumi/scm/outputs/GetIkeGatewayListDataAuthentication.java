@@ -19,6 +19,8 @@ public final class GetIkeGatewayListDataAuthentication {
     /**
      * @return Pre shared key
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
+     * 
      */
     private GetIkeGatewayListDataAuthenticationPreSharedKey preSharedKey;
 
@@ -32,6 +34,8 @@ public final class GetIkeGatewayListDataAuthentication {
     }
     /**
      * @return Pre shared key
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `certificate` and `preSharedKey`.
      * 
      */
     public GetIkeGatewayListDataAuthenticationPreSharedKey preSharedKey() {

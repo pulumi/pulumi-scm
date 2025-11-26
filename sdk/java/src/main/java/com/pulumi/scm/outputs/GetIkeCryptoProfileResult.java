@@ -23,45 +23,21 @@ public final class GetIkeCryptoProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return Dh group
-     * 
-     */
     private List<String> dhGroups;
-    /**
-     * @return Encryption algorithm
-     * 
-     */
     private List<String> encryptions;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
-    /**
-     * @return Hash
-     * 
-     */
     private List<String> hashes;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Ike crypto profile lifetime
-     * 
-     */
     private GetIkeCryptoProfileLifetime lifetime;
     /**
      * @return Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -80,31 +56,15 @@ public final class GetIkeCryptoProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Dh group
-     * 
-     */
     public List<String> dhGroups() {
         return this.dhGroups;
     }
-    /**
-     * @return Encryption algorithm
-     * 
-     */
     public List<String> encryptions() {
         return this.encryptions;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Hash
-     * 
-     */
     public List<String> hashes() {
         return this.hashes;
     }
@@ -115,10 +75,6 @@ public final class GetIkeCryptoProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Ike crypto profile lifetime
-     * 
-     */
     public GetIkeCryptoProfileLifetime lifetime() {
         return this.lifetime;
     }
@@ -129,10 +85,6 @@ public final class GetIkeCryptoProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

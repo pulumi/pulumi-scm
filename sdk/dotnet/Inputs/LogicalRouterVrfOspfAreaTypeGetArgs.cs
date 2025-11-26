@@ -20,12 +20,16 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Nssa
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         [Input("nssa")]
         public Input<Inputs.LogicalRouterVrfOspfAreaTypeNssaGetArgs>? Nssa { get; set; }
 
         /// <summary>
         /// Stub
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         [Input("stub")]
         public Input<Inputs.LogicalRouterVrfOspfAreaTypeStubGetArgs>? Stub { get; set; }

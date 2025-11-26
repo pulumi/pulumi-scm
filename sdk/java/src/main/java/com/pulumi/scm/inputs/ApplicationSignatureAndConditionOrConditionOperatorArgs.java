@@ -36,12 +36,16 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
     /**
      * Greater than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     @Import(name="greaterThan")
     private @Nullable Output<ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs> greaterThan;
 
     /**
      * @return Greater than
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public Optional<Output<ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs>> greaterThan() {
@@ -51,12 +55,16 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
     /**
      * Less than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     @Import(name="lessThan")
     private @Nullable Output<ApplicationSignatureAndConditionOrConditionOperatorLessThanArgs> lessThan;
 
     /**
      * @return Less than
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public Optional<Output<ApplicationSignatureAndConditionOrConditionOperatorLessThanArgs>> lessThan() {
@@ -66,12 +74,16 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
     /**
      * Pattern match
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     @Import(name="patternMatch")
     private @Nullable Output<ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs> patternMatch;
 
     /**
      * @return Pattern match
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public Optional<Output<ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs>> patternMatch() {
@@ -129,6 +141,8 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
         /**
          * @param greaterThan Greater than
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+         * 
          * @return builder
          * 
          */
@@ -140,6 +154,8 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
         /**
          * @param greaterThan Greater than
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+         * 
          * @return builder
          * 
          */
@@ -149,6 +165,8 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param lessThan Less than
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
          * 
@@ -161,6 +179,8 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
         /**
          * @param lessThan Less than
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+         * 
          * @return builder
          * 
          */
@@ -170,6 +190,8 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param patternMatch Pattern match
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
          * 
@@ -181,6 +203,8 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param patternMatch Pattern match
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
          * 

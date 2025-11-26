@@ -19,15 +19,21 @@ public final class IpsecCryptoProfileLifesize {
     /**
      * @return specify lifesize in kilobytes(KB)
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
+     * 
      */
     private @Nullable Integer kb;
     /**
      * @return specify lifesize in megabytes(MB)
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
+     * 
      */
     private @Nullable Integer mb;
     /**
      * @return specify lifesize in terabytes(TB)
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     private @Nullable Integer tb;
@@ -43,6 +49,8 @@ public final class IpsecCryptoProfileLifesize {
     /**
      * @return specify lifesize in kilobytes(KB)
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
+     * 
      */
     public Optional<Integer> kb() {
         return Optional.ofNullable(this.kb);
@@ -50,12 +58,16 @@ public final class IpsecCryptoProfileLifesize {
     /**
      * @return specify lifesize in megabytes(MB)
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
+     * 
      */
     public Optional<Integer> mb() {
         return Optional.ofNullable(this.mb);
     }
     /**
      * @return specify lifesize in terabytes(TB)
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `gb`, `kb`, `mb`, and `tb`.
      * 
      */
     public Optional<Integer> tb() {

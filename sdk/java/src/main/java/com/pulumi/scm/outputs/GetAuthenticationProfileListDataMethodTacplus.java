@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileListDataMethodTacplus {
     /**
-     * @return Checkgroup
+     * @return method tacplus object check group of authentication profile
      * 
      */
     private Boolean checkgroup;
     /**
-     * @return Server profile
+     * @return method tacplus object check group of authentication profile
      * 
      */
     private String serverProfile;
 
     private GetAuthenticationProfileListDataMethodTacplus() {}
     /**
-     * @return Checkgroup
+     * @return method tacplus object check group of authentication profile
      * 
      */
     public Boolean checkgroup() {
         return this.checkgroup;
     }
     /**
-     * @return Server profile
+     * @return method tacplus object check group of authentication profile
      * 
      */
     public String serverProfile() {

@@ -20,30 +20,40 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// None
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         [Input("none")]
         public Input<Inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationNoneArgs>? None { get; set; }
 
         /// <summary>
         /// Sha1
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         [Input("sha1")]
         public Input<Inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha1Args>? Sha1 { get; set; }
 
         /// <summary>
         /// Sha256
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         [Input("sha256")]
         public Input<Inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha256Args>? Sha256 { get; set; }
 
         /// <summary>
         /// Sha384
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         [Input("sha384")]
         public Input<Inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha384Args>? Sha384 { get; set; }
 
         /// <summary>
         /// Sha512
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Md5`, `None`, `Sha1`, `Sha256`, `Sha384`, and `Sha512`.
         /// </summary>
         [Input("sha512")]
         public Input<Inputs.LogicalRouterVrfOspfv3AuthProfileEspAuthenticationSha512Args>? Sha512 { get; set; }

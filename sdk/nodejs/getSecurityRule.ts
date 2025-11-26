@@ -15,45 +15,13 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const standardWebAccess = new scm.SecurityRule("standard_web_access", {
- *     folder: "All",
- *     name: "Allow Standard Web Access DS1",
- *     description: "Allow outbound web traffic to any destination...",
- *     position: "pre",
- *     action: "allow",
- *     categories: ["any"],
- *     applications: [
- *         "web-browsing",
- *         "ssl",
- *     ],
- *     services: [
- *         "service-http",
- *         "service-https",
- *     ],
- *     froms: [
- *         "untrust",
- *         "trust",
- *     ],
- *     tos: ["trust"],
- *     sources: ["any"],
- *     destinations: ["any"],
- *     negateSource: false,
- *     negateDestination: false,
- *     sourceUsers: ["any"],
- *     sourceHips: ["any"],
- *     destinationHips: ["any"],
- *     logStart: true,
- *     logEnd: true,
- *     disabled: false,
- * });
- * // --- Data Source Calls to Fetch Existing Rules ---
  * // 1. Fetch by ID (Best for direct lookup)
- * const standardWebAccessById = scm.getSecurityRuleOutput({
- *     id: standardWebAccess.id,
+ * const standardWebAccessById = scm.getSecurityRule({
+ *     id: "2a550f26-3e98-47d0-984f-b51e4ff367de",
  * });
- * export const fetchedStandardWebId = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.id);
- * export const fetchedStandardWebName = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.name);
- * export const fetchedStandardWebDescription = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.description);
+ * export const fetchedStandardWebId = standardWebAccessById.then(standardWebAccessById => standardWebAccessById.id);
+ * export const fetchedStandardWebName = standardWebAccessById.then(standardWebAccessById => standardWebAccessById.name);
+ * export const fetchedStandardWebDescription = standardWebAccessById.then(standardWebAccessById => standardWebAccessById.description);
  * ```
  */
 export function getSecurityRule(args: GetSecurityRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetSecurityRuleResult> {
@@ -253,45 +221,13 @@ export interface GetSecurityRuleResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const standardWebAccess = new scm.SecurityRule("standard_web_access", {
- *     folder: "All",
- *     name: "Allow Standard Web Access DS1",
- *     description: "Allow outbound web traffic to any destination...",
- *     position: "pre",
- *     action: "allow",
- *     categories: ["any"],
- *     applications: [
- *         "web-browsing",
- *         "ssl",
- *     ],
- *     services: [
- *         "service-http",
- *         "service-https",
- *     ],
- *     froms: [
- *         "untrust",
- *         "trust",
- *     ],
- *     tos: ["trust"],
- *     sources: ["any"],
- *     destinations: ["any"],
- *     negateSource: false,
- *     negateDestination: false,
- *     sourceUsers: ["any"],
- *     sourceHips: ["any"],
- *     destinationHips: ["any"],
- *     logStart: true,
- *     logEnd: true,
- *     disabled: false,
- * });
- * // --- Data Source Calls to Fetch Existing Rules ---
  * // 1. Fetch by ID (Best for direct lookup)
- * const standardWebAccessById = scm.getSecurityRuleOutput({
- *     id: standardWebAccess.id,
+ * const standardWebAccessById = scm.getSecurityRule({
+ *     id: "2a550f26-3e98-47d0-984f-b51e4ff367de",
  * });
- * export const fetchedStandardWebId = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.id);
- * export const fetchedStandardWebName = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.name);
- * export const fetchedStandardWebDescription = standardWebAccessById.apply(standardWebAccessById => standardWebAccessById.description);
+ * export const fetchedStandardWebId = standardWebAccessById.then(standardWebAccessById => standardWebAccessById.id);
+ * export const fetchedStandardWebName = standardWebAccessById.then(standardWebAccessById => standardWebAccessById.name);
+ * export const fetchedStandardWebDescription = standardWebAccessById.then(standardWebAccessById => standardWebAccessById.description);
  * ```
  */
 export function getSecurityRuleOutput(args: GetSecurityRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSecurityRuleResult> {

@@ -5,7 +5,7 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetRoutePrefixListIpv4;
+import com.pulumi.scm.outputs.GetRoutePrefixListType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,10 +21,6 @@ public final class GetRoutePrefixListResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
@@ -32,21 +28,13 @@ public final class GetRoutePrefixListResult {
      */
     private String id;
     /**
-     * @return Ipv4
-     * 
-     */
-    private GetRoutePrefixListIpv4 ipv4;
-    /**
      * @return Filter prefix list name
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
+    private GetRoutePrefixListType type;
 
     private GetRoutePrefixListResult() {}
     /**
@@ -63,10 +51,6 @@ public final class GetRoutePrefixListResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -78,28 +62,20 @@ public final class GetRoutePrefixListResult {
         return this.id;
     }
     /**
-     * @return Ipv4
-     * 
-     */
-    public GetRoutePrefixListIpv4 ipv4() {
-        return this.ipv4;
-    }
-    /**
      * @return Filter prefix list name
      * 
      */
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
+    }
+    public GetRoutePrefixListType type() {
+        return this.type;
     }
 
     public static Builder builder() {
@@ -115,10 +91,10 @@ public final class GetRoutePrefixListResult {
         private String device;
         private String folder;
         private String id;
-        private GetRoutePrefixListIpv4 ipv4;
         private String name;
         private String snippet;
         private String tfid;
+        private GetRoutePrefixListType type;
         public Builder() {}
         public Builder(GetRoutePrefixListResult defaults) {
     	      Objects.requireNonNull(defaults);
@@ -126,10 +102,10 @@ public final class GetRoutePrefixListResult {
     	      this.device = defaults.device;
     	      this.folder = defaults.folder;
     	      this.id = defaults.id;
-    	      this.ipv4 = defaults.ipv4;
     	      this.name = defaults.name;
     	      this.snippet = defaults.snippet;
     	      this.tfid = defaults.tfid;
+    	      this.type = defaults.type;
         }
 
         @CustomType.Setter
@@ -165,14 +141,6 @@ public final class GetRoutePrefixListResult {
             return this;
         }
         @CustomType.Setter
-        public Builder ipv4(GetRoutePrefixListIpv4 ipv4) {
-            if (ipv4 == null) {
-              throw new MissingRequiredPropertyException("GetRoutePrefixListResult", "ipv4");
-            }
-            this.ipv4 = ipv4;
-            return this;
-        }
-        @CustomType.Setter
         public Builder name(String name) {
             if (name == null) {
               throw new MissingRequiredPropertyException("GetRoutePrefixListResult", "name");
@@ -196,16 +164,24 @@ public final class GetRoutePrefixListResult {
             this.tfid = tfid;
             return this;
         }
+        @CustomType.Setter
+        public Builder type(GetRoutePrefixListType type) {
+            if (type == null) {
+              throw new MissingRequiredPropertyException("GetRoutePrefixListResult", "type");
+            }
+            this.type = type;
+            return this;
+        }
         public GetRoutePrefixListResult build() {
             final var _resultValue = new GetRoutePrefixListResult();
             _resultValue.description = description;
             _resultValue.device = device;
             _resultValue.folder = folder;
             _resultValue.id = id;
-            _resultValue.ipv4 = ipv4;
             _resultValue.name = name;
             _resultValue.snippet = snippet;
             _resultValue.tfid = tfid;
+            _resultValue.type = type;
             return _resultValue;
         }
     }

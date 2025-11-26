@@ -89,17 +89,11 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="entityId")
     def entity_id(self) -> _builtins.str:
-        """
-        The identity provider ID
-        """
         return pulumi.get(self, "entity_id")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -113,9 +107,6 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="maxClockSkew")
     def max_clock_skew(self) -> _builtins.int:
-        """
-        Maxiumum clock skew
-        """
         return pulumi.get(self, "max_clock_skew")
 
     @_builtins.property
@@ -129,33 +120,21 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="sloBindings")
     def slo_bindings(self) -> _builtins.str:
-        """
-        SAML HTTP binding for SLO requests to the identity provider
-        """
         return pulumi.get(self, "slo_bindings")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="ssoBindings")
     def sso_bindings(self) -> _builtins.str:
-        """
-        SAML HTTP binding for SSO requests to the identity provider
-        """
         return pulumi.get(self, "sso_bindings")
 
     @_builtins.property
     @pulumi.getter(name="ssoUrl")
     def sso_url(self) -> _builtins.str:
-        """
-        Identity provider SSO URL
-        """
         return pulumi.get(self, "sso_url")
 
     @_builtins.property
@@ -166,17 +145,11 @@ class GetSamlServerProfileResult:
     @_builtins.property
     @pulumi.getter(name="validateIdpCertificate")
     def validate_idp_certificate(self) -> _builtins.bool:
-        """
-        Validate the identity provider certificate?
-        """
         return pulumi.get(self, "validate_idp_certificate")
 
     @_builtins.property
     @pulumi.getter(name="wantAuthRequestsSigned")
     def want_auth_requests_signed(self) -> _builtins.bool:
-        """
-        Sign SAML message to the identity provider?
-        """
         return pulumi.get(self, "want_auth_requests_signed")
 
 

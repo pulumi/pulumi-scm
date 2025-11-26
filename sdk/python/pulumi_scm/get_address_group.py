@@ -78,17 +78,11 @@ class GetAddressGroupResult:
     @_builtins.property
     @pulumi.getter
     def dynamic(self) -> 'outputs.GetAddressGroupDynamicResult':
-        """
-        Dynamic
-        """
         return pulumi.get(self, "dynamic")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -110,25 +104,16 @@ class GetAddressGroupResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def statics(self) -> Sequence[_builtins.str]:
-        """
-        Static
-        """
         return pulumi.get(self, "statics")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
-        """
-        Tags for address group object
-        """
         return pulumi.get(self, "tags")
 
     @_builtins.property

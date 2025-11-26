@@ -91,21 +91,9 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Digest for CSR
-        /// </summary>
         public readonly string Digest;
-        /// <summary>
-        /// Map of sensitive values returned from the API.
-        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
-        /// <summary>
-        /// CA certificate fingerprint
-        /// </summary>
         public readonly string Fingerprint;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the SCEP profile
@@ -115,38 +103,14 @@ namespace Pulumi.Scm
         /// The name of the SCEP profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// SCEP server CA certificate
-        /// </summary>
         public readonly string ScepCaCert;
-        /// <summary>
-        /// One Time Password challenge
-        /// </summary>
         public readonly Outputs.GetScepProfileScepChallengeResult ScepChallenge;
-        /// <summary>
-        /// SCEP client ceertificate
-        /// </summary>
         public readonly string ScepClientCert;
-        /// <summary>
-        /// SCEP server URL
-        /// </summary>
         public readonly string ScepUrl;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Subject
-        /// </summary>
         public readonly string Subject;
         public readonly string Tfid;
-        /// <summary>
-        /// Use as digital signature?
-        /// </summary>
         public readonly bool UseAsDigitalSignature;
-        /// <summary>
-        /// Use for key encipherment?
-        /// </summary>
         public readonly bool UseForKeyEncipherment;
 
         [OutputConstructor]

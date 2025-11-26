@@ -63,22 +63,16 @@ type LookupIkeCryptoProfileResult struct {
 	// IKEv2 SA reauthentication interval equals authetication-multiple * rekey-lifetime; 0 means reauthentication disabled
 	AuthenticationMultiple int `pulumi:"authenticationMultiple"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Dh group
-	DhGroups []string `pulumi:"dhGroups"`
-	// Encryption algorithm
+	Device      string   `pulumi:"device"`
+	DhGroups    []string `pulumi:"dhGroups"`
 	Encryptions []string `pulumi:"encryptions"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
-	// Hash
-	Hashes []string `pulumi:"hashes"`
+	Folder      string   `pulumi:"folder"`
+	Hashes      []string `pulumi:"hashes"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Ike crypto profile lifetime
+	Id       string                      `pulumi:"id"`
 	Lifetime GetIkeCryptoProfileLifetime `pulumi:"lifetime"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -129,22 +123,18 @@ func (o LookupIkeCryptoProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Dh group
 func (o LookupIkeCryptoProfileResultOutput) DhGroups() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.DhGroups }).(pulumi.StringArrayOutput)
 }
 
-// Encryption algorithm
 func (o LookupIkeCryptoProfileResultOutput) Encryptions() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Encryptions }).(pulumi.StringArrayOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupIkeCryptoProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Hash
 func (o LookupIkeCryptoProfileResultOutput) Hashes() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) []string { return v.Hashes }).(pulumi.StringArrayOutput)
 }
@@ -154,7 +144,6 @@ func (o LookupIkeCryptoProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Ike crypto profile lifetime
 func (o LookupIkeCryptoProfileResultOutput) Lifetime() GetIkeCryptoProfileLifetimeOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) GetIkeCryptoProfileLifetime { return v.Lifetime }).(GetIkeCryptoProfileLifetimeOutput)
 }
@@ -164,7 +153,6 @@ func (o LookupIkeCryptoProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupIkeCryptoProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIkeCryptoProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

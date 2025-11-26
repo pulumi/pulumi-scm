@@ -51,29 +51,17 @@ export interface GetServiceGroupResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the service group
      */
     readonly id: string;
-    /**
-     * Members
-     */
     readonly members: string[];
     /**
      * The name of the service group
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Tags associated with the service group
-     */
     readonly tags: string[];
     readonly tfid: string;
 }

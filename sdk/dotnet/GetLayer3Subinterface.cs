@@ -187,45 +187,21 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Layer3 sub interfaces DHCP Client Object
-        /// </summary>
         public readonly Outputs.GetLayer3SubinterfaceDhcpClientResult DhcpClient;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Interface management profile
-        /// </summary>
         public readonly string InterfaceManagementProfile;
-        /// <summary>
-        /// L3 sub-interface IP Parent
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetLayer3SubinterfaceIpResult> Ips;
-        /// <summary>
-        /// MTU
-        /// </summary>
         public readonly int Mtu;
         /// <summary>
         /// L3 sub-interface name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Parent interface
-        /// </summary>
         public readonly string ParentInterface;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// VLAN tag
-        /// </summary>
         public readonly int Tag;
         public readonly string Tfid;
 

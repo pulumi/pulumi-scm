@@ -8,6 +8,24 @@ import * as utilities from "./utilities";
 
 /**
  * BgpRedistributionProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up BGP Redistribution Profile by its ID.
+ * const scmBgpRedistributionProfileDs = scm.getBgpRedistributionProfile({
+ *     id: "491918e9-0205-4a08-955a-7e59a38d5dc4",
+ * });
+ * export const bgpRedistributionProfileDataSourceResults = {
+ *     id: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.id),
+ *     name: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.name),
+ *     ipv4: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.ipv4),
+ *     folder: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.folder),
+ * };
+ * ```
  */
 export function getBgpRedistributionProfile(args: GetBgpRedistributionProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpRedistributionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -39,30 +57,39 @@ export interface GetBgpRedistributionProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Ipv4
-     */
     readonly ipv4: outputs.GetBgpRedistributionProfileIpv4;
     /**
      * Name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * BgpRedistributionProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up BGP Redistribution Profile by its ID.
+ * const scmBgpRedistributionProfileDs = scm.getBgpRedistributionProfile({
+ *     id: "491918e9-0205-4a08-955a-7e59a38d5dc4",
+ * });
+ * export const bgpRedistributionProfileDataSourceResults = {
+ *     id: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.id),
+ *     name: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.name),
+ *     ipv4: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.ipv4),
+ *     folder: scmBgpRedistributionProfileDs.then(scmBgpRedistributionProfileDs => scmBgpRedistributionProfileDs.folder),
+ * };
+ * ```
  */
 export function getBgpRedistributionProfileOutput(args: GetBgpRedistributionProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpRedistributionProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

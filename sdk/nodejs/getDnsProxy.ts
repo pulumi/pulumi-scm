@@ -47,46 +47,22 @@ export interface GetDnsProxyResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * DNS proxy rules
-     */
     readonly domainServers: outputs.GetDnsProxyDomainServer[];
-    /**
-     * Enable DNS proxy?
-     */
     readonly enabled: boolean;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interfaces on which to enable DNS proxy service
-     */
     readonly interfaces: string[];
     /**
      * DNS proxy name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Static entries
-     */
     readonly staticEntries: outputs.GetDnsProxyStaticEntry[];
-    /**
-     * Tcp queries
-     */
     readonly tcpQueries: outputs.GetDnsProxyTcpQueries;
     readonly tfid: string;
-    /**
-     * Udp queries
-     */
     readonly udpQueries: outputs.GetDnsProxyUdpQueries;
 }
 /**

@@ -17,14 +17,14 @@ public final class AuthenticationProfileMethodRadiusArgs extends com.pulumi.reso
     public static final AuthenticationProfileMethodRadiusArgs Empty = new AuthenticationProfileMethodRadiusArgs();
 
     /**
-     * Checkgroup
+     * method radius object check group of authentication profile
      * 
      */
     @Import(name="checkgroup")
     private @Nullable Output<Boolean> checkgroup;
 
     /**
-     * @return Checkgroup
+     * @return method radius object check group of authentication profile
      * 
      */
     public Optional<Output<Boolean>> checkgroup() {
@@ -32,14 +32,14 @@ public final class AuthenticationProfileMethodRadiusArgs extends com.pulumi.reso
     }
 
     /**
-     * Server profile
+     * method radius object server profile of authentication profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return Server profile
+     * @return method radius object server profile of authentication profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -72,7 +72,7 @@ public final class AuthenticationProfileMethodRadiusArgs extends com.pulumi.reso
         }
 
         /**
-         * @param checkgroup Checkgroup
+         * @param checkgroup method radius object check group of authentication profile
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class AuthenticationProfileMethodRadiusArgs extends com.pulumi.reso
         }
 
         /**
-         * @param checkgroup Checkgroup
+         * @param checkgroup method radius object check group of authentication profile
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class AuthenticationProfileMethodRadiusArgs extends com.pulumi.reso
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method radius object server profile of authentication profile
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class AuthenticationProfileMethodRadiusArgs extends com.pulumi.reso
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method radius object server profile of authentication profile
          * 
          * @return builder
          * 

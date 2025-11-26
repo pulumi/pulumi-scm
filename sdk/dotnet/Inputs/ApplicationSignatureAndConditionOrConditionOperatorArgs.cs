@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Greater than
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         [Input("greaterThan")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorGreaterThanArgs>? GreaterThan { get; set; }
 
         /// <summary>
         /// Less than
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         [Input("lessThan")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorLessThanArgs>? LessThan { get; set; }
 
         /// <summary>
         /// Pattern match
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `EqualTo`, `GreaterThan`, `LessThan`, and `PatternMatch`.
         /// </summary>
         [Input("patternMatch")]
         public Input<Inputs.ApplicationSignatureAndConditionOrConditionOperatorPatternMatchArgs>? PatternMatch { get; set; }

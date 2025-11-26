@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Prepend
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `None`, `Prepend`, `Remove`, and `RemoveAndPrepend`.
         /// </summary>
         [Input("prepend")]
         public Input<int>? Prepend { get; set; }
 
         /// <summary>
         /// Remove
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `None`, `Prepend`, `Remove`, and `RemoveAndPrepend`.
         /// </summary>
         [Input("remove")]
         public Input<Inputs.LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateAsPathRemoveGetArgs>? Remove { get; set; }
 
         /// <summary>
         /// Remove and prepend
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `None`, `Prepend`, `Remove`, and `RemoveAndPrepend`.
         /// </summary>
         [Input("removeAndPrepend")]
         public Input<int>? RemoveAndPrepend { get; set; }

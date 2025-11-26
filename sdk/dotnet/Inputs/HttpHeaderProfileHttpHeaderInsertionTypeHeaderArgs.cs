@@ -27,8 +27,8 @@ namespace Pulumi.Scm.Inputs
         /// <summary>
         /// An auto-generated name (*This should be removed*)
         /// </summary>
-        [Input("name", required: true)]
-        public Input<string> Name { get; set; } = null!;
+        [Input("name")]
+        public Input<string>? Name { get; set; }
 
         /// <summary>
         /// The value associated with the HTTP header

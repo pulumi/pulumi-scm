@@ -19,6 +19,8 @@ public final class GetLogicalRouterVrfMulticastPimRpLocalRp {
     /**
      * @return Static rp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
+     * 
      */
     private GetLogicalRouterVrfMulticastPimRpLocalRpStaticRp staticRp;
 
@@ -32,6 +34,8 @@ public final class GetLogicalRouterVrfMulticastPimRpLocalRp {
     }
     /**
      * @return Static rp
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     public GetLogicalRouterVrfMulticastPimRpLocalRpStaticRp staticRp() {

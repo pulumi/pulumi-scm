@@ -63,17 +63,11 @@ class GetBgpAuthProfileResult:
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
-        """
-        Map of sensitive values returned from the API.
-        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -95,17 +89,11 @@ class GetBgpAuthProfileResult:
     @_builtins.property
     @pulumi.getter
     def secret(self) -> _builtins.str:
-        """
-        BGP authentication key
-        """
         return pulumi.get(self, "secret")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -136,6 +124,22 @@ def get_bgp_auth_profile(id: Optional[_builtins.str] = None,
     """
     BgpAuthProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up BGP Auth Profile by its ID.
+    scm_bgp_auth_profile_ds = scm.get_bgp_auth_profile(id="f2ffd626-e92d-4de6-8ac1-37742fe80fb9")
+    pulumi.export("bgpAuthProfileDataSourceResults", {
+        "id": scm_bgp_auth_profile_ds.id,
+        "name": scm_bgp_auth_profile_ds.name,
+        "secret": scm_bgp_auth_profile_ds.secret,
+        "folder": scm_bgp_auth_profile_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Profile name
@@ -160,6 +164,22 @@ def get_bgp_auth_profile_output(id: Optional[pulumi.Input[_builtins.str]] = None
                                 opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBgpAuthProfileResult]:
     """
     BgpAuthProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up BGP Auth Profile by its ID.
+    scm_bgp_auth_profile_ds = scm.get_bgp_auth_profile(id="f2ffd626-e92d-4de6-8ac1-37742fe80fb9")
+    pulumi.export("bgpAuthProfileDataSourceResults", {
+        "id": scm_bgp_auth_profile_ds.id,
+        "name": scm_bgp_auth_profile_ds.name,
+        "secret": scm_bgp_auth_profile_ds.secret,
+        "folder": scm_bgp_auth_profile_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

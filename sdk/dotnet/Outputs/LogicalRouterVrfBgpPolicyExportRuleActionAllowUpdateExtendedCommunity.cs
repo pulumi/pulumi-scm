@@ -19,18 +19,26 @@ namespace Pulumi.Scm.Outputs
         public readonly ImmutableArray<string> Appends;
         /// <summary>
         /// None
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityNone? None;
         /// <summary>
         /// Overwrite
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         public readonly ImmutableArray<string> Overwrites;
         /// <summary>
         /// Remove all
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfBgpPolicyExportRuleActionAllowUpdateExtendedCommunityRemoveAll? RemoveAll;
         /// <summary>
         /// Remove regex
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Append`, `None`, `Overwrite`, `RemoveAll`, and `RemoveRegex`.
         /// </summary>
         public readonly string? RemoveRegex;
 

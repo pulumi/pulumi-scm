@@ -49,7 +49,7 @@ public final class GetAuthenticationRuleListData {
      */
     private Boolean disabled;
     /**
-     * @return Folder
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -114,7 +114,7 @@ public final class GetAuthenticationRuleListData {
      */
     private List<String> services;
     /**
-     * @return Snippet
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -206,7 +206,7 @@ public final class GetAuthenticationRuleListData {
         return this.disabled;
     }
     /**
-     * @return Folder
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -297,7 +297,7 @@ public final class GetAuthenticationRuleListData {
         return this.services;
     }
     /**
-     * @return Snippet
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

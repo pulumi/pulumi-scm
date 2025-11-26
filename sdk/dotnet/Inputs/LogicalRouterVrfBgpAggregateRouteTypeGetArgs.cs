@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ipv6
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4` and `Ipv6`.
         /// </summary>
         [Input("ipv6")]
         public Input<Inputs.LogicalRouterVrfBgpAggregateRouteTypeIpv6GetArgs>? Ipv6 { get; set; }

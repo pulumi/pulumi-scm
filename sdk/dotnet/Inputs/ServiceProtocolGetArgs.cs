@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Udp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Tcp` and `Udp`.
         /// </summary>
         [Input("udp")]
         public Input<Inputs.ServiceProtocolUdpGetArgs>? Udp { get; set; }

@@ -24,30 +24,42 @@ public final class GetExternalDynamicListType {
     /**
      * @return Imei
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     private GetExternalDynamicListTypeImei imei;
     /**
      * @return Imsi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private GetExternalDynamicListTypeImsi imsi;
     /**
      * @return Ip
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     private GetExternalDynamicListTypeIp ip;
     /**
      * @return Predefined ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private GetExternalDynamicListTypePredefinedIp predefinedIp;
     /**
      * @return Predefined url
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     private GetExternalDynamicListTypePredefinedUrl predefinedUrl;
     /**
      * @return Url
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private GetExternalDynamicListTypeUrl url;
@@ -63,12 +75,16 @@ public final class GetExternalDynamicListType {
     /**
      * @return Imei
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     public GetExternalDynamicListTypeImei imei() {
         return this.imei;
     }
     /**
      * @return Imsi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public GetExternalDynamicListTypeImsi imsi() {
@@ -77,12 +93,16 @@ public final class GetExternalDynamicListType {
     /**
      * @return Ip
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     public GetExternalDynamicListTypeIp ip() {
         return this.ip;
     }
     /**
      * @return Predefined ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public GetExternalDynamicListTypePredefinedIp predefinedIp() {
@@ -91,12 +111,16 @@ public final class GetExternalDynamicListType {
     /**
      * @return Predefined url
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     public GetExternalDynamicListTypePredefinedUrl predefinedUrl() {
         return this.predefinedUrl;
     }
     /**
      * @return Url
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public GetExternalDynamicListTypeUrl url() {

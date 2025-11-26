@@ -8,6 +8,18 @@ import * as utilities from "./utilities";
 
 /**
  * Site data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const singleSiteById = scm.getSite({
+ *     id: "d037fe30-68ae-47ee-9a74-71bc63ac2c10",
+ * });
+ * export const singleSiteDetails = singleSiteById;
+ * ```
  */
 export function getSite(args: GetSiteArgs, opts?: pulumi.InvokeOptions): Promise<GetSiteResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -58,11 +70,15 @@ export interface GetSiteResult {
     /**
      * The latitude coordinate for the site
      */
-    readonly latitude: number;
+    readonly latitude: string;
+    /**
+     * The license type of the site
+     */
+    readonly licenseType: string;
     /**
      * The longitude coordinate for the site
      */
-    readonly longitude: number;
+    readonly longitude: string;
     /**
      * Members
      */
@@ -91,6 +107,18 @@ export interface GetSiteResult {
 }
 /**
  * Site data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const singleSiteById = scm.getSite({
+ *     id: "d037fe30-68ae-47ee-9a74-71bc63ac2c10",
+ * });
+ * export const singleSiteDetails = singleSiteById;
+ * ```
  */
 export function getSiteOutput(args: GetSiteOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSiteResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

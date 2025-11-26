@@ -19,6 +19,8 @@ public final class PbfRuleFrom {
     /**
      * @return Source zones
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
+     * 
      */
     private @Nullable List<String> zones;
 
@@ -32,6 +34,8 @@ public final class PbfRuleFrom {
     }
     /**
      * @return Source zones
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
     public List<String> zones() {

@@ -24,31 +24,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
-        ///     {
-        ///         Name = "CHAP_only_rsp_ds_1",
-        ///         Folder = "All",
-        ///         Retries = 5,
-        ///         Timeout = 60,
-        ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
-        ///         {
-        ///             CHAP = null,
-        ///         },
-        ///         Servers = new[]
-        ///         {
-        ///             new Scm.Inputs.RadiusServerProfileServerArgs
-        ///             {
-        ///                 Name = "Chap_Server_Primary",
-        ///                 IpAddress = "10.1.1.10",
-        ///                 Port = 1812,
-        ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     var singleProfileById = Scm.GetRadiusServerProfile.Invoke(new()
         ///     {
-        ///         Id = chapRadiusProfile.Id,
+        ///         Id = "50e5f694-19a2-467b-90a8-9db168600327",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -74,31 +52,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
-        ///     {
-        ///         Name = "CHAP_only_rsp_ds_1",
-        ///         Folder = "All",
-        ///         Retries = 5,
-        ///         Timeout = 60,
-        ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
-        ///         {
-        ///             CHAP = null,
-        ///         },
-        ///         Servers = new[]
-        ///         {
-        ///             new Scm.Inputs.RadiusServerProfileServerArgs
-        ///             {
-        ///                 Name = "Chap_Server_Primary",
-        ///                 IpAddress = "10.1.1.10",
-        ///                 Port = 1812,
-        ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     var singleProfileById = Scm.GetRadiusServerProfile.Invoke(new()
         ///     {
-        ///         Id = chapRadiusProfile.Id,
+        ///         Id = "50e5f694-19a2-467b-90a8-9db168600327",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -124,31 +80,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var chapRadiusProfile = new Scm.RadiusServerProfile("chap_radius_profile", new()
-        ///     {
-        ///         Name = "CHAP_only_rsp_ds_1",
-        ///         Folder = "All",
-        ///         Retries = 5,
-        ///         Timeout = 60,
-        ///         Protocol = new Scm.Inputs.RadiusServerProfileProtocolArgs
-        ///         {
-        ///             CHAP = null,
-        ///         },
-        ///         Servers = new[]
-        ///         {
-        ///             new Scm.Inputs.RadiusServerProfileServerArgs
-        ///             {
-        ///                 Name = "Chap_Server_Primary",
-        ///                 IpAddress = "10.1.1.10",
-        ///                 Port = 1812,
-        ///                 Secret = "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     var singleProfileById = Scm.GetRadiusServerProfile.Invoke(new()
         ///     {
-        ///         Id = chapRadiusProfile.Id,
+        ///         Id = "50e5f694-19a2-467b-90a8-9db168600327",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -211,9 +145,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the RADIUS server profile
@@ -223,26 +154,11 @@ namespace Pulumi.Scm
         /// The name of the RADIUS server profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The RADIUS authentication protocol
-        /// </summary>
         public readonly Outputs.GetRadiusServerProfileProtocolResult Protocol;
-        /// <summary>
-        /// The number of RADIUS server retries
-        /// </summary>
         public readonly int Retries;
-        /// <summary>
-        /// Server
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetRadiusServerProfileServerResult> Servers;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// The RADIUS server authentication timeout (seconds)
-        /// </summary>
         public readonly int Timeout;
 
         [OutputConstructor]

@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * AuthenticationProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const profileData = scm.getAuthenticationProfile({
+ *     id: "de491856-1987-4b53-a3f7-e4f4a52067e3",
+ * });
+ * export const scmAuthenticationProfile = profileData.then(profileData => profileData.id);
+ * export const fetchedProfile = profileData;
+ * ```
  */
 export function getAuthenticationProfile(args: GetAuthenticationProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -36,57 +49,46 @@ export interface GetAuthenticationProfileArgs {
  */
 export interface GetAuthenticationProfileResult {
     /**
-     * Allow list
+     * The allowList of the authentication profile
      */
     readonly allowLists: string[];
     /**
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the authentication profile
      */
     readonly id: string;
-    /**
-     * Lockout
-     */
     readonly lockout: outputs.GetAuthenticationProfileLockout;
-    /**
-     * Method
-     */
     readonly method: outputs.GetAuthenticationProfileMethod;
-    /**
-     * Multi factor auth
-     */
     readonly multiFactorAuth: outputs.GetAuthenticationProfileMultiFactorAuth;
     /**
      * The name of the authentication profile
      */
     readonly name: string;
-    /**
-     * Single sign on
-     */
     readonly singleSignOn: outputs.GetAuthenticationProfileSingleSignOn;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * User domain
-     */
     readonly userDomain: string;
-    /**
-     * Username modifier
-     */
     readonly usernameModifier: string;
 }
 /**
  * AuthenticationProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const profileData = scm.getAuthenticationProfile({
+ *     id: "de491856-1987-4b53-a3f7-e4f4a52067e3",
+ * });
+ * export const scmAuthenticationProfile = profileData.then(profileData => profileData.id);
+ * export const fetchedProfile = profileData;
+ * ```
  */
 export function getAuthenticationProfileOutput(args: GetAuthenticationProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

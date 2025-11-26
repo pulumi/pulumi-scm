@@ -20,10 +20,14 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIs {
     /**
      * @return Unknown
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
+     * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsUnknown unknown;
     /**
      * @return Wifi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectNetworkInfoCriteriaNetworkIsWifi wifi;
@@ -39,12 +43,16 @@ public final class GetHipObjectNetworkInfoCriteriaNetworkIs {
     /**
      * @return Unknown
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
+     * 
      */
     public GetHipObjectNetworkInfoCriteriaNetworkIsUnknown unknown() {
         return this.unknown;
     }
     /**
      * @return Wifi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `mobile`, `unknown`, and `wifi`.
      * 
      */
     public GetHipObjectNetworkInfoCriteriaNetworkIsWifi wifi() {

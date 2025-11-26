@@ -33,15 +33,7 @@ public final class GetIpsecTunnelResult {
      * 
      */
     private String device;
-    /**
-     * @return allow GRE over IPSec
-     * 
-     */
     private Boolean enableGreEncapsulation;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
@@ -53,21 +45,9 @@ public final class GetIpsecTunnelResult {
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-     * 
-     */
     private String tunnelInterface;
-    /**
-     * @return Tunnel monitor
-     * 
-     */
     private GetIpsecTunnelTunnelMonitor tunnelMonitor;
 
     private GetIpsecTunnelResult() {}
@@ -99,17 +79,9 @@ public final class GetIpsecTunnelResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return allow GRE over IPSec
-     * 
-     */
     public Boolean enableGreEncapsulation() {
         return this.enableGreEncapsulation;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -127,27 +99,15 @@ public final class GetIpsecTunnelResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-     * 
-     */
     public String tunnelInterface() {
         return this.tunnelInterface;
     }
-    /**
-     * @return Tunnel monitor
-     * 
-     */
     public GetIpsecTunnelTunnelMonitor tunnelMonitor() {
         return this.tunnelMonitor;
     }

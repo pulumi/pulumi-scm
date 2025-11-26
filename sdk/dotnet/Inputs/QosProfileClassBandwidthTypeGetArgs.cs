@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Percentage
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Mbps` and `Percentage`.
         /// </summary>
         [Input("percentage")]
         public Input<Inputs.QosProfileClassBandwidthTypePercentageGetArgs>? Percentage { get; set; }

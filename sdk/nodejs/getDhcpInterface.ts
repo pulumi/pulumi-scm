@@ -39,9 +39,6 @@ export interface GetDhcpInterfaceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -51,17 +48,8 @@ export interface GetDhcpInterfaceResult {
      * Interface name
      */
     readonly name: string;
-    /**
-     * Relay
-     */
     readonly relay: outputs.GetDhcpInterfaceRelay;
-    /**
-     * Server
-     */
     readonly server: outputs.GetDhcpInterfaceServer;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

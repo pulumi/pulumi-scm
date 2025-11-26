@@ -20,12 +20,16 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Unknown
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("unknown")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsUnknownArgs>? Unknown { get; set; }
 
         /// <summary>
         /// Wifi
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("wifi")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsWifiArgs>? Wifi { get; set; }

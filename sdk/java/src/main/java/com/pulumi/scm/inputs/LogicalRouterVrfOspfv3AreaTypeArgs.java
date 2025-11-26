@@ -35,12 +35,16 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
     /**
      * Nssa
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
+     * 
      */
     @Import(name="nssa")
     private @Nullable Output<LogicalRouterVrfOspfv3AreaTypeNssaArgs> nssa;
 
     /**
      * @return Nssa
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AreaTypeNssaArgs>> nssa() {
@@ -50,12 +54,16 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
     /**
      * Stub
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
+     * 
      */
     @Import(name="stub")
     private @Nullable Output<LogicalRouterVrfOspfv3AreaTypeStubArgs> stub;
 
     /**
      * @return Stub
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AreaTypeStubArgs>> stub() {
@@ -112,6 +120,8 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
         /**
          * @param nssa Nssa
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
+         * 
          * @return builder
          * 
          */
@@ -123,6 +133,8 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
         /**
          * @param nssa Nssa
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
+         * 
          * @return builder
          * 
          */
@@ -132,6 +144,8 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param stub Stub
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder
          * 
@@ -143,6 +157,8 @@ public final class LogicalRouterVrfOspfv3AreaTypeArgs extends com.pulumi.resourc
 
         /**
          * @param stub Stub
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
          * 
          * @return builder
          * 

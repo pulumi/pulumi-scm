@@ -36,15 +36,12 @@ type LookupSdwanErrorCorrectionProfileResult struct {
 	ActivationThreshold int `pulumi:"activationThreshold"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Mode
+	Id   string                             `pulumi:"id"`
 	Mode GetSdwanErrorCorrectionProfileMode `pulumi:"mode"`
 	// Name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -95,7 +92,6 @@ func (o LookupSdwanErrorCorrectionProfileResultOutput) Device() pulumi.StringOut
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -105,7 +101,6 @@ func (o LookupSdwanErrorCorrectionProfileResultOutput) Id() pulumi.StringOutput 
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Mode
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Mode() GetSdwanErrorCorrectionProfileModeOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) GetSdwanErrorCorrectionProfileMode { return v.Mode }).(GetSdwanErrorCorrectionProfileModeOutput)
 }
@@ -115,7 +110,6 @@ func (o LookupSdwanErrorCorrectionProfileResultOutput) Name() pulumi.StringOutpu
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupSdwanErrorCorrectionProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSdwanErrorCorrectionProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

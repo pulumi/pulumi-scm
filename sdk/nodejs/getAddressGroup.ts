@@ -62,13 +62,7 @@ export interface GetAddressGroupResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Dynamic
-     */
     readonly dynamic: outputs.GetAddressGroupDynamic;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the address group
@@ -78,17 +72,8 @@ export interface GetAddressGroupResult {
      * The name of the address group
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Static
-     */
     readonly statics: string[];
-    /**
-     * Tags for address group object
-     */
     readonly tags: string[];
     readonly tfid: string;
 }

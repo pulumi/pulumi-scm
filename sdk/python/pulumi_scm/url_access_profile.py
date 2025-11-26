@@ -51,6 +51,8 @@ class UrlAccessProfileArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
         :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
@@ -61,6 +63,8 @@ class UrlAccessProfileArgs:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if alerts is not None:
             pulumi.set(__self__, "alerts", alerts)
@@ -202,6 +206,8 @@ class UrlAccessProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -322,6 +328,8 @@ class UrlAccessProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -364,6 +372,8 @@ class _UrlAccessProfileState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
         :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
@@ -374,6 +384,8 @@ class _UrlAccessProfileState:
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if alerts is not None:
             pulumi.set(__self__, "alerts", alerts)
@@ -517,6 +529,8 @@ class _UrlAccessProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -637,6 +651,8 @@ class _UrlAccessProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -717,6 +733,8 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
         :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
@@ -727,6 +745,8 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -869,6 +889,8 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] local_inline_cat: Local inline cat
         :param pulumi.Input[_builtins.bool] log_container_page_only: Log container page only
         :param pulumi.Input[_builtins.bool] log_http_hdr_referer: Log http hdr referer
@@ -879,6 +901,8 @@ class UrlAccessProfile(pulumi.CustomResource):
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] redirects: Redirect
         :param pulumi.Input[_builtins.bool] safe_search_enforcement: Safe search enforcement
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -975,6 +999,8 @@ class UrlAccessProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1055,6 +1081,8 @@ class UrlAccessProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

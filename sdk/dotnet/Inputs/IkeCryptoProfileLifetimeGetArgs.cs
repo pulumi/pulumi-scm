@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// specify lifetime in hours
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         [Input("hours")]
         public Input<int>? Hours { get; set; }
 
         /// <summary>
         /// specify lifetime in minutes
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         [Input("minutes")]
         public Input<int>? Minutes { get; set; }
 
         /// <summary>
         /// specify lifetime in seconds
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days`, `Hours`, `Minutes`, and `Seconds`.
         /// </summary>
         [Input("seconds")]
         public Input<int>? Seconds { get; set; }

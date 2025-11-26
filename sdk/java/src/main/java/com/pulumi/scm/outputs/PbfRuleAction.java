@@ -21,10 +21,14 @@ public final class PbfRuleAction {
     /**
      * @return Forward
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+     * 
      */
     private @Nullable PbfRuleActionForward forward;
     /**
      * @return No pbf
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     private @Nullable PbfRuleActionNoPbf noPbf;
@@ -40,12 +44,16 @@ public final class PbfRuleAction {
     /**
      * @return Forward
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+     * 
      */
     public Optional<PbfRuleActionForward> forward() {
         return Optional.ofNullable(this.forward);
     }
     /**
      * @return No pbf
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     public Optional<PbfRuleActionNoPbf> noPbf() {

@@ -25,7 +25,6 @@ class VariableArgs:
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 overridden: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Variable resource.
@@ -34,9 +33,12 @@ class VariableArgs:
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
-        :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "type", type)
         pulumi.set(__self__, "value", value)
@@ -48,8 +50,6 @@ class VariableArgs:
             pulumi.set(__self__, "folder", folder)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if overridden is not None:
-            pulumi.set(__self__, "overridden", overridden)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
 
@@ -106,6 +106,8 @@ class VariableArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -127,21 +129,11 @@ class VariableArgs:
 
     @_builtins.property
     @pulumi.getter
-    def overridden(self) -> Optional[pulumi.Input[_builtins.bool]]:
-        """
-        Is the variable overridden?
-        """
-        return pulumi.get(self, "overridden")
-
-    @overridden.setter
-    def overridden(self, value: Optional[pulumi.Input[_builtins.bool]]):
-        pulumi.set(self, "overridden", value)
-
-    @_builtins.property
-    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -167,9 +159,13 @@ class _VariableState:
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
         :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] type: The variable type
         :param pulumi.Input[_builtins.str] value: The value of the variable
         """
@@ -221,6 +217,8 @@ class _VariableState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -257,6 +255,8 @@ class _VariableState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -308,7 +308,6 @@ class Variable(pulumi.CustomResource):
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 overridden: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  type: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.str]] = None,
@@ -428,9 +427,12 @@ class Variable(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
-        :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] type: The variable type
         :param pulumi.Input[_builtins.str] value: The value of the variable
         """
@@ -569,7 +571,6 @@ class Variable(pulumi.CustomResource):
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 overridden: Optional[pulumi.Input[_builtins.bool]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  type: Optional[pulumi.Input[_builtins.str]] = None,
                  value: Optional[pulumi.Input[_builtins.str]] = None,
@@ -586,7 +587,6 @@ class Variable(pulumi.CustomResource):
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
             __props__.__dict__["name"] = name
-            __props__.__dict__["overridden"] = overridden
             __props__.__dict__["snippet"] = snippet
             if type is None and not opts.urn:
                 raise TypeError("Missing required property 'type'")
@@ -594,6 +594,7 @@ class Variable(pulumi.CustomResource):
             if value is None and not opts.urn:
                 raise TypeError("Missing required property 'value'")
             __props__.__dict__["value"] = value
+            __props__.__dict__["overridden"] = None
             __props__.__dict__["tfid"] = None
         super(Variable, __self__).__init__(
             'scm:index/variable:Variable',
@@ -624,9 +625,13 @@ class Variable(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: The description of the variable
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the variable
         :param pulumi.Input[_builtins.bool] overridden: Is the variable overridden?
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] type: The variable type
         :param pulumi.Input[_builtins.str] value: The value of the variable
         """
@@ -666,6 +671,8 @@ class Variable(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -679,7 +686,7 @@ class Variable(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def overridden(self) -> pulumi.Output[Optional[_builtins.bool]]:
+    def overridden(self) -> pulumi.Output[_builtins.bool]:
         """
         Is the variable overridden?
         """
@@ -690,6 +697,8 @@ class Variable(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

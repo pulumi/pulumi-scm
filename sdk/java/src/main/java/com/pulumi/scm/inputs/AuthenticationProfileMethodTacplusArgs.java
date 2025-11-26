@@ -17,14 +17,14 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
     public static final AuthenticationProfileMethodTacplusArgs Empty = new AuthenticationProfileMethodTacplusArgs();
 
     /**
-     * Checkgroup
+     * method tacplus object check group of authentication profile
      * 
      */
     @Import(name="checkgroup")
     private @Nullable Output<Boolean> checkgroup;
 
     /**
-     * @return Checkgroup
+     * @return method tacplus object check group of authentication profile
      * 
      */
     public Optional<Output<Boolean>> checkgroup() {
@@ -32,14 +32,14 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
     }
 
     /**
-     * Server profile
+     * method tacplus object check group of authentication profile
      * 
      */
     @Import(name="serverProfile")
     private @Nullable Output<String> serverProfile;
 
     /**
-     * @return Server profile
+     * @return method tacplus object check group of authentication profile
      * 
      */
     public Optional<Output<String>> serverProfile() {
@@ -72,7 +72,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param checkgroup Checkgroup
+         * @param checkgroup method tacplus object check group of authentication profile
          * 
          * @return builder
          * 
@@ -83,7 +83,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param checkgroup Checkgroup
+         * @param checkgroup method tacplus object check group of authentication profile
          * 
          * @return builder
          * 
@@ -93,7 +93,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method tacplus object check group of authentication profile
          * 
          * @return builder
          * 
@@ -104,7 +104,7 @@ public final class AuthenticationProfileMethodTacplusArgs extends com.pulumi.res
         }
 
         /**
-         * @param serverProfile Server profile
+         * @param serverProfile method tacplus object check group of authentication profile
          * 
          * @return builder
          * 

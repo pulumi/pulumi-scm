@@ -16,6 +16,11 @@ import java.util.Objects;
 @CustomType
 public final class GetEthernetInterfaceListData {
     /**
+     * @return Aggregate group
+     * 
+     */
+    private String aggregateGroup;
+    /**
      * @return Interface description
      * 
      */
@@ -26,7 +31,7 @@ public final class GetEthernetInterfaceListData {
      */
     private String defaultValue;
     /**
-     * @return The device in which the resource is defined
+     * @return The device of the item.
      * 
      */
     private String device;
@@ -36,7 +41,7 @@ public final class GetEthernetInterfaceListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -48,10 +53,14 @@ public final class GetEthernetInterfaceListData {
     /**
      * @return Layer2
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
+     * 
      */
     private GetEthernetInterfaceListDataLayer2 layer2;
     /**
      * @return Ethernet Interface Layer 3 configuration
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     private GetEthernetInterfaceListDataLayer3 layer3;
@@ -81,18 +90,27 @@ public final class GetEthernetInterfaceListData {
      */
     private GetEthernetInterfaceListDataPoe poe;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
     /**
      * @return Tap
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
+     * 
      */
     private GetEthernetInterfaceListDataTap tap;
     private String tfid;
 
     private GetEthernetInterfaceListData() {}
+    /**
+     * @return Aggregate group
+     * 
+     */
+    public String aggregateGroup() {
+        return this.aggregateGroup;
+    }
     /**
      * @return Interface description
      * 
@@ -108,7 +126,7 @@ public final class GetEthernetInterfaceListData {
         return this.defaultValue;
     }
     /**
-     * @return The device in which the resource is defined
+     * @return The device of the item.
      * 
      */
     public String device() {
@@ -122,7 +140,7 @@ public final class GetEthernetInterfaceListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -138,12 +156,16 @@ public final class GetEthernetInterfaceListData {
     /**
      * @return Layer2
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
+     * 
      */
     public GetEthernetInterfaceListDataLayer2 layer2() {
         return this.layer2;
     }
     /**
      * @return Ethernet Interface Layer 3 configuration
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public GetEthernetInterfaceListDataLayer3 layer3() {
@@ -185,7 +207,7 @@ public final class GetEthernetInterfaceListData {
         return this.poe;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {
@@ -193,6 +215,8 @@ public final class GetEthernetInterfaceListData {
     }
     /**
      * @return Tap
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public GetEthernetInterfaceListDataTap tap() {
@@ -211,6 +235,7 @@ public final class GetEthernetInterfaceListData {
     }
     @CustomType.Builder
     public static final class Builder {
+        private String aggregateGroup;
         private String comment;
         private String defaultValue;
         private String device;
@@ -230,6 +255,7 @@ public final class GetEthernetInterfaceListData {
         public Builder() {}
         public Builder(GetEthernetInterfaceListData defaults) {
     	      Objects.requireNonNull(defaults);
+    	      this.aggregateGroup = defaults.aggregateGroup;
     	      this.comment = defaults.comment;
     	      this.defaultValue = defaults.defaultValue;
     	      this.device = defaults.device;
@@ -248,6 +274,14 @@ public final class GetEthernetInterfaceListData {
     	      this.tfid = defaults.tfid;
         }
 
+        @CustomType.Setter
+        public Builder aggregateGroup(String aggregateGroup) {
+            if (aggregateGroup == null) {
+              throw new MissingRequiredPropertyException("GetEthernetInterfaceListData", "aggregateGroup");
+            }
+            this.aggregateGroup = aggregateGroup;
+            return this;
+        }
         @CustomType.Setter
         public Builder comment(String comment) {
             if (comment == null) {
@@ -378,6 +412,7 @@ public final class GetEthernetInterfaceListData {
         }
         public GetEthernetInterfaceListData build() {
             final var _resultValue = new GetEthernetInterfaceListData();
+            _resultValue.aggregateGroup = aggregateGroup;
             _resultValue.comment = comment;
             _resultValue.defaultValue = defaultValue;
             _resultValue.device = device;

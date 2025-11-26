@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetSdwanSaasQualityProfileMonitorModeStaticIpFqdnResult Fqdn;
         /// <summary>
         /// List of IP addresses
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `IpAddress`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetSdwanSaasQualityProfileMonitorModeStaticIpIpAddressResult> IpAddresses;
 

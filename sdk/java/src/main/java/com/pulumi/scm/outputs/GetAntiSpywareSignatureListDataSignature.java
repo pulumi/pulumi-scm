@@ -20,6 +20,8 @@ public final class GetAntiSpywareSignatureListDataSignature {
     /**
      * @return Standard
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
+     * 
      */
     private List<GetAntiSpywareSignatureListDataSignatureStandard> standards;
 
@@ -33,6 +35,8 @@ public final class GetAntiSpywareSignatureListDataSignature {
     }
     /**
      * @return Standard
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     public List<GetAntiSpywareSignatureListDataSignatureStandard> standards() {

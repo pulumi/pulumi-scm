@@ -24,41 +24,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Resource: Create the Interface Management Profile
-        ///     // This block creates the profile with your specified configuration.
-        ///     var testInfMgmtProfile = new Scm.InterfaceManagementProfile("test_inf_mgmt_profile", new()
-        ///     {
-        ///         Name = "test_inf_mgmt_profile_ds_1",
-        ///         Folder = "All",
-        ///         PermittedIps = new[]
-        ///         {
-        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
-        ///             {
-        ///                 Name = "10.0.0.0/24",
-        ///             },
-        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
-        ///             {
-        ///                 Name = "10.0.0.0/32",
-        ///             },
-        ///         },
-        ///         Http = true,
-        ///         Https = false,
-        ///         Telnet = false,
-        ///         Ssh = true,
-        ///         Ping = false,
-        ///         HttpOcsp = true,
-        ///         UseridService = true,
-        ///         UseridSyslogListenerSsl = true,
-        ///         UseridSyslogListenerUdp = true,
-        ///         ResponsePages = false,
-        ///     });
-        /// 
-        ///     // --------------------------------------------------------------------------------
-        ///     // 2. Data Source: Retrieve the Interface Management Profile by ID
-        ///     // We use the resource's generated 'id' attribute to fetch the profile.
         ///     var singleProfileById = Scm.GetInterfaceManagementProfile.Invoke(new()
         ///     {
-        ///         Id = testInfMgmtProfile.Id,
+        ///         Id = "f4358615-daba-4b71-a0ea-bd3ebb412fe3",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -85,41 +53,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Resource: Create the Interface Management Profile
-        ///     // This block creates the profile with your specified configuration.
-        ///     var testInfMgmtProfile = new Scm.InterfaceManagementProfile("test_inf_mgmt_profile", new()
-        ///     {
-        ///         Name = "test_inf_mgmt_profile_ds_1",
-        ///         Folder = "All",
-        ///         PermittedIps = new[]
-        ///         {
-        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
-        ///             {
-        ///                 Name = "10.0.0.0/24",
-        ///             },
-        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
-        ///             {
-        ///                 Name = "10.0.0.0/32",
-        ///             },
-        ///         },
-        ///         Http = true,
-        ///         Https = false,
-        ///         Telnet = false,
-        ///         Ssh = true,
-        ///         Ping = false,
-        ///         HttpOcsp = true,
-        ///         UseridService = true,
-        ///         UseridSyslogListenerSsl = true,
-        ///         UseridSyslogListenerUdp = true,
-        ///         ResponsePages = false,
-        ///     });
-        /// 
-        ///     // --------------------------------------------------------------------------------
-        ///     // 2. Data Source: Retrieve the Interface Management Profile by ID
-        ///     // We use the resource's generated 'id' attribute to fetch the profile.
         ///     var singleProfileById = Scm.GetInterfaceManagementProfile.Invoke(new()
         ///     {
-        ///         Id = testInfMgmtProfile.Id,
+        ///         Id = "f4358615-daba-4b71-a0ea-bd3ebb412fe3",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -146,41 +82,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. Resource: Create the Interface Management Profile
-        ///     // This block creates the profile with your specified configuration.
-        ///     var testInfMgmtProfile = new Scm.InterfaceManagementProfile("test_inf_mgmt_profile", new()
-        ///     {
-        ///         Name = "test_inf_mgmt_profile_ds_1",
-        ///         Folder = "All",
-        ///         PermittedIps = new[]
-        ///         {
-        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
-        ///             {
-        ///                 Name = "10.0.0.0/24",
-        ///             },
-        ///             new Scm.Inputs.InterfaceManagementProfilePermittedIpArgs
-        ///             {
-        ///                 Name = "10.0.0.0/32",
-        ///             },
-        ///         },
-        ///         Http = true,
-        ///         Https = false,
-        ///         Telnet = false,
-        ///         Ssh = true,
-        ///         Ping = false,
-        ///         HttpOcsp = true,
-        ///         UseridService = true,
-        ///         UseridSyslogListenerSsl = true,
-        ///         UseridSyslogListenerUdp = true,
-        ///         ResponsePages = false,
-        ///     });
-        /// 
-        ///     // --------------------------------------------------------------------------------
-        ///     // 2. Data Source: Retrieve the Interface Management Profile by ID
-        ///     // We use the resource's generated 'id' attribute to fetch the profile.
         ///     var singleProfileById = Scm.GetInterfaceManagementProfile.Invoke(new()
         ///     {
-        ///         Id = testInfMgmtProfile.Id,
+        ///         Id = "f4358615-daba-4b71-a0ea-bd3ebb412fe3",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -244,21 +148,9 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// Allow HTTP?
-        /// </summary>
         public readonly bool Http;
-        /// <summary>
-        /// Allow HTTP OCSP?
-        /// </summary>
         public readonly bool HttpOcsp;
-        /// <summary>
-        /// Allow HTTPS?
-        /// </summary>
         public readonly bool Https;
         /// <summary>
         /// UUID of the resource
@@ -268,42 +160,15 @@ namespace Pulumi.Scm
         /// Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Allowed IP address(es)
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetInterfaceManagementProfilePermittedIpResult> PermittedIps;
-        /// <summary>
-        /// Allow ping?
-        /// </summary>
         public readonly bool Ping;
-        /// <summary>
-        /// Allow response pages?
-        /// </summary>
         public readonly bool ResponsePages;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Allow SSH?
-        /// </summary>
         public readonly bool Ssh;
-        /// <summary>
-        /// Allow telnet? Seriously, why would you do this?!?
-        /// </summary>
         public readonly bool Telnet;
         public readonly string Tfid;
-        /// <summary>
-        /// Allow User-ID?
-        /// </summary>
         public readonly bool UseridService;
-        /// <summary>
-        /// Allow User-ID syslog listener (SSL)?
-        /// </summary>
         public readonly bool UseridSyslogListenerSsl;
-        /// <summary>
-        /// Allow User-ID syslog listener (UDP)?
-        /// </summary>
         public readonly bool UseridSyslogListenerUdp;
 
         [OutputConstructor]

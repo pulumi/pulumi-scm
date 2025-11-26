@@ -34,19 +34,15 @@ type LookupDhcpInterfaceArgs struct {
 type LookupDhcpInterfaceResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Interface name
-	Name string `pulumi:"name"`
-	// Relay
-	Relay GetDhcpInterfaceRelay `pulumi:"relay"`
-	// Server
-	Server GetDhcpInterfaceServer `pulumi:"server"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Name    string                 `pulumi:"name"`
+	Relay   GetDhcpInterfaceRelay  `pulumi:"relay"`
+	Server  GetDhcpInterfaceServer `pulumi:"server"`
+	Snippet string                 `pulumi:"snippet"`
+	Tfid    string                 `pulumi:"tfid"`
 }
 
 func LookupDhcpInterfaceOutput(ctx *pulumi.Context, args LookupDhcpInterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupDhcpInterfaceResultOutput {
@@ -90,7 +86,6 @@ func (o LookupDhcpInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupDhcpInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -105,17 +100,14 @@ func (o LookupDhcpInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Relay
 func (o LookupDhcpInterfaceResultOutput) Relay() GetDhcpInterfaceRelayOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) GetDhcpInterfaceRelay { return v.Relay }).(GetDhcpInterfaceRelayOutput)
 }
 
-// Server
 func (o LookupDhcpInterfaceResultOutput) Server() GetDhcpInterfaceServerOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) GetDhcpInterfaceServer { return v.Server }).(GetDhcpInterfaceServerOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupDhcpInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupDhcpInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

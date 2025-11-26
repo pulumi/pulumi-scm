@@ -22,20 +22,28 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     /**
      * @return None
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone none;
     /**
      * @return Overwrite
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable List<String> overwrites;
     /**
      * @return Remove all
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll removeAll;
     /**
      * @return Remove regex
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private @Nullable String removeRegex;
@@ -51,12 +59,16 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     /**
      * @return None
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     public Optional<LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityNone> none() {
         return Optional.ofNullable(this.none);
     }
     /**
      * @return Overwrite
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public List<String> overwrites() {
@@ -65,12 +77,16 @@ public final class LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttr
     /**
      * @return Remove all
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     public Optional<LogicalRouterVrfBgpPolicyAggregationAddressAggregateRouteAttributesCommunityRemoveAll> removeAll() {
         return Optional.ofNullable(this.removeAll);
     }
     /**
      * @return Remove regex
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public Optional<String> removeRegex() {

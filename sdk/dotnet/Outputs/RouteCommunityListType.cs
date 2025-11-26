@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.RouteCommunityListTypeExtended? Extended;
         /// <summary>
         /// Large
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         public readonly Outputs.RouteCommunityListTypeLarge? Large;
         /// <summary>
         /// Regular
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Extended`, `Large`, and `Regular`.
         /// </summary>
         public readonly Outputs.RouteCommunityListTypeRegular? Regular;
 

@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly int Timeout;
         /// <summary>
         /// Unlimited
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Timeout` and `Unlimited`.
         /// </summary>
         public readonly Outputs.GetDhcpInterfaceServerOptionLeaseUnlimitedResult Unlimited;
 

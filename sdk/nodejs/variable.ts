@@ -163,6 +163,8 @@ export class Variable extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -172,9 +174,11 @@ export class Variable extends pulumi.CustomResource {
     /**
      * Is the variable overridden?
      */
-    declare public readonly overridden: pulumi.Output<boolean | undefined>;
+    declare public /*out*/ readonly overridden: pulumi.Output<boolean>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -221,10 +225,10 @@ export class Variable extends pulumi.CustomResource {
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
             resourceInputs["name"] = args?.name;
-            resourceInputs["overridden"] = args?.overridden;
             resourceInputs["snippet"] = args?.snippet;
             resourceInputs["type"] = args?.type;
             resourceInputs["value"] = args?.value;
+            resourceInputs["overridden"] = undefined /*out*/;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -246,6 +250,8 @@ export interface VariableState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -258,6 +264,8 @@ export interface VariableState {
     overridden?: pulumi.Input<boolean>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -285,6 +293,8 @@ export interface VariableArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -292,11 +302,9 @@ export interface VariableArgs {
      */
     name?: pulumi.Input<string>;
     /**
-     * Is the variable overridden?
-     */
-    overridden?: pulumi.Input<boolean>;
-    /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

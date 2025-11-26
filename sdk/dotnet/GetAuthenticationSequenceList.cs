@@ -13,18 +13,99 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSequences = Scm.GetAuthenticationSequenceList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedSequenceListSummary"] = 
+        ///         {
+        ///             { "countOfSequencesFetched", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total) },
+        ///             { "firstRuleName", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetAuthenticationSequenceListResult> InvokeAsync(GetAuthenticationSequenceListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationSequenceListResult>("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", args ?? new GetAuthenticationSequenceListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSequences = Scm.GetAuthenticationSequenceList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedSequenceListSummary"] = 
+        ///         {
+        ///             { "countOfSequencesFetched", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total) },
+        ///             { "firstRuleName", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationSequenceListResult> Invoke(GetAuthenticationSequenceListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceListResult>("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", args ?? new GetAuthenticationSequenceListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSequences = Scm.GetAuthenticationSequenceList.Invoke(new()
+        ///     {
+        ///         Limit = 10,
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["fetchedSequenceListSummary"] = 
+        ///         {
+        ///             { "countOfSequencesFetched", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Total) },
+        ///             { "firstRuleName", allSequences.Apply(getAuthenticationSequenceListResult =&gt; getAuthenticationSequenceListResult.Datas[0]?.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationSequenceListResult> Invoke(GetAuthenticationSequenceListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceListResult>("scm:index/getAuthenticationSequenceList:getAuthenticationSequenceList", args ?? new GetAuthenticationSequenceListInvokeArgs(), options.WithDefaults());

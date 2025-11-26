@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly string Fqdn;
         /// <summary>
         /// Next hop IP address
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Fqdn` and `IpAddress`.
         /// </summary>
         public readonly string IpAddress;
 

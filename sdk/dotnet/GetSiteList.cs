@@ -13,18 +13,99 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSites = Scm.GetSiteList.Invoke(new()
+        ///     {
+        ///         Limit = 50,
+        ///         Folder = "Remote Networks",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["listOfAllConnectionNames"] = .Select(conn =&gt; 
+        ///         {
+        ///             return conn.Name;
+        ///         }).ToList(),
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSiteListResult> InvokeAsync(GetSiteListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSiteListResult>("scm:index/getSiteList:getSiteList", args ?? new GetSiteListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSites = Scm.GetSiteList.Invoke(new()
+        ///     {
+        ///         Limit = 50,
+        ///         Folder = "Remote Networks",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["listOfAllConnectionNames"] = .Select(conn =&gt; 
+        ///         {
+        ///             return conn.Name;
+        ///         }).ToList(),
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSiteListResult> Invoke(GetSiteListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSiteListResult>("scm:index/getSiteList:getSiteList", args ?? new GetSiteListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var allSites = Scm.GetSiteList.Invoke(new()
+        ///     {
+        ///         Limit = 50,
+        ///         Folder = "Remote Networks",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["listOfAllConnectionNames"] = .Select(conn =&gt; 
+        ///         {
+        ///             return conn.Name;
+        ///         }).ToList(),
+        ///         ["totalConnectionsCount"] = allSites.Apply(getSiteListResult =&gt; getSiteListResult.Datas).Length,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSiteListResult> Invoke(GetSiteListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSiteListResult>("scm:index/getSiteList:getSiteList", args ?? new GetSiteListInvokeArgs(), options.WithDefaults());

@@ -183,6 +183,8 @@ type PbfRule struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrOutput `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// From
 	From PbfRuleFromPtrOutput `pulumi:"from"`
@@ -193,6 +195,8 @@ type PbfRule struct {
 	// Services
 	Services pulumi.StringArrayOutput `pulumi:"services"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Source users
 	SourceUsers pulumi.StringArrayOutput `pulumi:"sourceUsers"`
@@ -246,6 +250,8 @@ type pbfRuleState struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn *PbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
 	From *PbfRuleFrom `pulumi:"from"`
@@ -256,6 +262,8 @@ type pbfRuleState struct {
 	// Services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source users
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -280,6 +288,8 @@ type PbfRuleState struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
 	From PbfRuleFromPtrInput
@@ -290,6 +300,8 @@ type PbfRuleState struct {
 	// Services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source users
 	SourceUsers pulumi.StringArrayInput
@@ -318,6 +330,8 @@ type pbfRuleArgs struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn *PbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// From
 	From *PbfRuleFrom `pulumi:"from"`
@@ -328,6 +342,8 @@ type pbfRuleArgs struct {
 	// Services
 	Services []string `pulumi:"services"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Source users
 	SourceUsers []string `pulumi:"sourceUsers"`
@@ -352,6 +368,8 @@ type PbfRuleArgs struct {
 	// Enforce symmetric return
 	EnforceSymmetricReturn PbfRuleEnforceSymmetricReturnPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// From
 	From PbfRuleFromPtrInput
@@ -362,6 +380,8 @@ type PbfRuleArgs struct {
 	// Services
 	Services pulumi.StringArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Source users
 	SourceUsers pulumi.StringArrayInput
@@ -489,6 +509,8 @@ func (o PbfRuleOutput) EnforceSymmetricReturn() PbfRuleEnforceSymmetricReturnPtr
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o PbfRuleOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -514,6 +536,8 @@ func (o PbfRuleOutput) Services() pulumi.StringArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o PbfRuleOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *PbfRule) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

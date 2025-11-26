@@ -19,10 +19,14 @@ public final class HipObjectHostInfoCriteriaHostName {
     /**
      * @return Is
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+     * 
      */
     private @Nullable String is;
     /**
      * @return Is not
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     private @Nullable String isNot;
@@ -38,12 +42,16 @@ public final class HipObjectHostInfoCriteriaHostName {
     /**
      * @return Is
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+     * 
      */
     public Optional<String> is() {
         return Optional.ofNullable(this.is);
     }
     /**
      * @return Is not
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public Optional<String> isNot() {

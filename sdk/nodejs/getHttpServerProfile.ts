@@ -39,13 +39,7 @@ export interface GetHttpServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * Format
-     */
     readonly format: outputs.GetHttpServerProfileFormat;
     /**
      * The UUID of the HTTP server profile
@@ -55,17 +49,8 @@ export interface GetHttpServerProfileResult {
      * The name of the profile
      */
     readonly name: string;
-    /**
-     * Server
-     */
     readonly servers: outputs.GetHttpServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Register tags on match
-     */
     readonly tagRegistration: boolean;
     readonly tfid: string;
 }

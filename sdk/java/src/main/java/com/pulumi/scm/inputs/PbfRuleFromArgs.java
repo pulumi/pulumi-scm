@@ -34,12 +34,16 @@ public final class PbfRuleFromArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Source zones
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
+     * 
      */
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
     /**
      * @return Source zones
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
     public Optional<Output<List<String>>> zones() {
@@ -105,6 +109,8 @@ public final class PbfRuleFromArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param zones Source zones
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
+         * 
          * @return builder
          * 
          */
@@ -116,6 +122,8 @@ public final class PbfRuleFromArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param zones Source zones
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
+         * 
          * @return builder
          * 
          */
@@ -125,6 +133,8 @@ public final class PbfRuleFromArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param zones Source zones
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
          * 
          * @return builder
          * 

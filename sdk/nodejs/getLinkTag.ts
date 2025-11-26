@@ -45,9 +45,6 @@ export interface GetLinkTagResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the link tag
@@ -57,9 +54,6 @@ export interface GetLinkTagResult {
      * The name of the link tag
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

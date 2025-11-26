@@ -51,21 +51,9 @@ export interface GetScepProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Digest for CSR
-     */
     readonly digest: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * CA certificate fingerprint
-     */
     readonly fingerprint: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the SCEP profile
@@ -75,38 +63,14 @@ export interface GetScepProfileResult {
      * The name of the SCEP profile
      */
     readonly name: string;
-    /**
-     * SCEP server CA certificate
-     */
     readonly scepCaCert: string;
-    /**
-     * One Time Password challenge
-     */
     readonly scepChallenge: outputs.GetScepProfileScepChallenge;
-    /**
-     * SCEP client ceertificate
-     */
     readonly scepClientCert: string;
-    /**
-     * SCEP server URL
-     */
     readonly scepUrl: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Subject
-     */
     readonly subject: string;
     readonly tfid: string;
-    /**
-     * Use as digital signature?
-     */
     readonly useAsDigitalSignature: boolean;
-    /**
-     * Use for key encipherment?
-     */
     readonly useForKeyEncipherment: boolean;
 }
 /**
