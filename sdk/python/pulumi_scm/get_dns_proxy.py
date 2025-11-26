@@ -98,25 +98,16 @@ class GetDnsProxyResult:
     @_builtins.property
     @pulumi.getter(name="domainServers")
     def domain_servers(self) -> Sequence['outputs.GetDnsProxyDomainServerResult']:
-        """
-        DNS proxy rules
-        """
         return pulumi.get(self, "domain_servers")
 
     @_builtins.property
     @pulumi.getter
     def enabled(self) -> _builtins.bool:
-        """
-        Enable DNS proxy?
-        """
         return pulumi.get(self, "enabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -130,9 +121,6 @@ class GetDnsProxyResult:
     @_builtins.property
     @pulumi.getter
     def interfaces(self) -> Sequence[_builtins.str]:
-        """
-        Interfaces on which to enable DNS proxy service
-        """
         return pulumi.get(self, "interfaces")
 
     @_builtins.property
@@ -146,25 +134,16 @@ class GetDnsProxyResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="staticEntries")
     def static_entries(self) -> Sequence['outputs.GetDnsProxyStaticEntryResult']:
-        """
-        Static entries
-        """
         return pulumi.get(self, "static_entries")
 
     @_builtins.property
     @pulumi.getter(name="tcpQueries")
     def tcp_queries(self) -> 'outputs.GetDnsProxyTcpQueriesResult':
-        """
-        Tcp queries
-        """
         return pulumi.get(self, "tcp_queries")
 
     @_builtins.property
@@ -175,9 +154,6 @@ class GetDnsProxyResult:
     @_builtins.property
     @pulumi.getter(name="udpQueries")
     def udp_queries(self) -> 'outputs.GetDnsProxyUdpQueriesResult':
-        """
-        Udp queries
-        """
         return pulumi.get(self, "udp_queries")
 
 

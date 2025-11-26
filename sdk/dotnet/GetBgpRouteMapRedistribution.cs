@@ -79,21 +79,9 @@ namespace Pulumi.Scm
         /// Bgp
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionBgpResult Bgp;
-        /// <summary>
-        /// Connected static
-        /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionConnectedStaticResult ConnectedStatic;
-        /// <summary>
-        /// BGP Route Map Redistributions Description
-        /// </summary>
         public readonly string Description;
-        /// <summary>
-        /// The device in which the resource is defined
-        /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// BGP Route Map Redistributions UUID of the resource
@@ -103,13 +91,7 @@ namespace Pulumi.Scm
         /// BGP Route Map Redistributions Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Ospf
-        /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionOspfResult Ospf;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

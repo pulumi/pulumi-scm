@@ -167,25 +167,16 @@ class GetDecryptionRuleResult:
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
-        """
-        Is the rule disabled?
-        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
-        """
-        The source security zone
-        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
@@ -199,25 +190,16 @@ class GetDecryptionRuleResult:
     @_builtins.property
     @pulumi.getter(name="logFail")
     def log_fail(self) -> _builtins.bool:
-        """
-        Log failed decryption events?
-        """
         return pulumi.get(self, "log_fail")
 
     @_builtins.property
     @pulumi.getter(name="logSetting")
     def log_setting(self) -> _builtins.str:
-        """
-        The log settings of the decryption rule
-        """
         return pulumi.get(self, "log_setting")
 
     @_builtins.property
     @pulumi.getter(name="logSuccess")
     def log_success(self) -> _builtins.bool:
-        """
-        Log successful decryption events?
-        """
         return pulumi.get(self, "log_success")
 
     @_builtins.property
@@ -231,97 +213,61 @@ class GetDecryptionRuleResult:
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
-        """
-        Negate the destination addresses?
-        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
-        """
-        Negate the source addresses?
-        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
-        """
-        The position of a security rule
-        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter
     def profile(self) -> _builtins.str:
-        """
-        The decryption profile associated with the decryption rule
-        """
         return pulumi.get(self, "profile")
 
     @_builtins.property
     @pulumi.getter(name="relativePosition")
     def relative_position(self) -> _builtins.str:
-        """
-        Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        """
         return pulumi.get(self, "relative_position")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
-        """
-        The destination services and/or service groups
-        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceHips")
     def source_hips(self) -> Sequence[_builtins.str]:
-        """
-        Source hip
-        """
         return pulumi.get(self, "source_hips")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
-        """
-        List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
-        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
-        """
-        The source addresses
-        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
-        """
-        The tags associated with the decryption rule
-        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
     @pulumi.getter(name="targetRule")
     def target_rule(self) -> _builtins.str:
-        """
-        The name or UUID of the rule to position this rule relative to. Required when `relative_position` is `"before"` or `"after"`.
-        """
         return pulumi.get(self, "target_rule")
 
     @_builtins.property
@@ -332,17 +278,11 @@ class GetDecryptionRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
-        """
-        The destination security zone
-        """
         return pulumi.get(self, "tos")
 
     @_builtins.property
     @pulumi.getter
     def type(self) -> 'outputs.GetDecryptionRuleTypeResult':
-        """
-        The type of decryption
-        """
         return pulumi.get(self, "type")
 
 
@@ -395,25 +335,8 @@ def get_decryption_rule(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # 1. RESOURCE: Create a rule to ensure a predictable target for lookups
-    test_decryption_rule = scm.DecryptionRule("test_decryption_rule",
-        name="data-source-test-rule",
-        description="Rule created specifically for data source testing.",
-        folder="All",
-        position="pre",
-        action="decrypt",
-        froms=["trust"],
-        tos=["untrust"],
-        sources=["any"],
-        destinations=["any"],
-        services=["service-https"],
-        categories=["high-risk"],
-        source_users=["any"],
-        type={
-            "ssl_forward_proxy": {},
-        })
     # We use the ID from the resource created above.
-    single_rule_by_id = scm.get_decryption_rule_output(id=test_decryption_rule.id)
+    single_rule_by_id = scm.get_decryption_rule(id="b3544acb-fc55-4c6f-921d-4128b5a1d135")
     pulumi.export("singleDecryptionRuleName", single_rule_by_id)
     ```
 
@@ -469,25 +392,8 @@ def get_decryption_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # 1. RESOURCE: Create a rule to ensure a predictable target for lookups
-    test_decryption_rule = scm.DecryptionRule("test_decryption_rule",
-        name="data-source-test-rule",
-        description="Rule created specifically for data source testing.",
-        folder="All",
-        position="pre",
-        action="decrypt",
-        froms=["trust"],
-        tos=["untrust"],
-        sources=["any"],
-        destinations=["any"],
-        services=["service-https"],
-        categories=["high-risk"],
-        source_users=["any"],
-        type={
-            "ssl_forward_proxy": {},
-        })
     # We use the ID from the resource created above.
-    single_rule_by_id = scm.get_decryption_rule_output(id=test_decryption_rule.id)
+    single_rule_by_id = scm.get_decryption_rule(id="b3544acb-fc55-4c6f-921d-4128b5a1d135")
     pulumi.export("singleDecryptionRuleName", single_rule_by_id)
     ```
 

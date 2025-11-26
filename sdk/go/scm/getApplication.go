@@ -76,56 +76,34 @@ type LookupApplicationResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Evasive behavior
-	EvasiveBehavior bool `pulumi:"evasiveBehavior"`
-	// File type ident
-	FileTypeIdent bool `pulumi:"fileTypeIdent"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
-	// Has known vulnerability
-	HasKnownVulnerability bool `pulumi:"hasKnownVulnerability"`
+	Device                string `pulumi:"device"`
+	EvasiveBehavior       bool   `pulumi:"evasiveBehavior"`
+	FileTypeIdent         bool   `pulumi:"fileTypeIdent"`
+	Folder                string `pulumi:"folder"`
+	HasKnownVulnerability bool   `pulumi:"hasKnownVulnerability"`
 	// The UUID of the application
 	Id string `pulumi:"id"`
 	// The name of the application
-	Name string `pulumi:"name"`
-	// No appid caching
-	NoAppidCaching bool `pulumi:"noAppidCaching"`
-	// Parent app
-	ParentApp string `pulumi:"parentApp"`
-	// Pervasive use
-	PervasiveUse bool `pulumi:"pervasiveUse"`
-	// Prone to misuse
-	ProneToMisuse bool `pulumi:"proneToMisuse"`
-	// Risk
-	Risk string `pulumi:"risk"`
-	// Signature
-	Signatures []GetApplicationSignature `pulumi:"signatures"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Subcategory
-	Subcategory string `pulumi:"subcategory"`
-	// timeout for half-close session in seconds
-	TcpHalfClosedTimeout int `pulumi:"tcpHalfClosedTimeout"`
-	// timeout for session in timeWait state in seconds
-	TcpTimeWaitTimeout int `pulumi:"tcpTimeWaitTimeout"`
-	// timeout in seconds
-	TcpTimeout int `pulumi:"tcpTimeout"`
-	// Technology
-	Technology string `pulumi:"technology"`
-	Tfid       string `pulumi:"tfid"`
-	// timeout in seconds
-	Timeout int `pulumi:"timeout"`
-	// Tunnel applications
-	TunnelApplications bool `pulumi:"tunnelApplications"`
-	// Tunnel other application
-	TunnelOtherApplication bool `pulumi:"tunnelOtherApplication"`
-	// timeout in seconds
-	UdpTimeout int `pulumi:"udpTimeout"`
-	// Used by malware
-	UsedByMalware bool `pulumi:"usedByMalware"`
-	// Virus ident
-	VirusIdent bool `pulumi:"virusIdent"`
+	Name                   string                    `pulumi:"name"`
+	NoAppidCaching         bool                      `pulumi:"noAppidCaching"`
+	ParentApp              string                    `pulumi:"parentApp"`
+	PervasiveUse           bool                      `pulumi:"pervasiveUse"`
+	ProneToMisuse          bool                      `pulumi:"proneToMisuse"`
+	Risk                   string                    `pulumi:"risk"`
+	Signatures             []GetApplicationSignature `pulumi:"signatures"`
+	Snippet                string                    `pulumi:"snippet"`
+	Subcategory            string                    `pulumi:"subcategory"`
+	TcpHalfClosedTimeout   int                       `pulumi:"tcpHalfClosedTimeout"`
+	TcpTimeWaitTimeout     int                       `pulumi:"tcpTimeWaitTimeout"`
+	TcpTimeout             int                       `pulumi:"tcpTimeout"`
+	Technology             string                    `pulumi:"technology"`
+	Tfid                   string                    `pulumi:"tfid"`
+	Timeout                int                       `pulumi:"timeout"`
+	TunnelApplications     bool                      `pulumi:"tunnelApplications"`
+	TunnelOtherApplication bool                      `pulumi:"tunnelOtherApplication"`
+	UdpTimeout             int                       `pulumi:"udpTimeout"`
+	UsedByMalware          bool                      `pulumi:"usedByMalware"`
+	VirusIdent             bool                      `pulumi:"virusIdent"`
 }
 
 func LookupApplicationOutput(ctx *pulumi.Context, args LookupApplicationOutputArgs, opts ...pulumi.InvokeOption) LookupApplicationResultOutput {
@@ -204,22 +182,18 @@ func (o LookupApplicationResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Evasive behavior
 func (o LookupApplicationResultOutput) EvasiveBehavior() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.EvasiveBehavior }).(pulumi.BoolOutput)
 }
 
-// File type ident
 func (o LookupApplicationResultOutput) FileTypeIdent() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.FileTypeIdent }).(pulumi.BoolOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupApplicationResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Has known vulnerability
 func (o LookupApplicationResultOutput) HasKnownVulnerability() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.HasKnownVulnerability }).(pulumi.BoolOutput)
 }
@@ -234,62 +208,50 @@ func (o LookupApplicationResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// No appid caching
 func (o LookupApplicationResultOutput) NoAppidCaching() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.NoAppidCaching }).(pulumi.BoolOutput)
 }
 
-// Parent app
 func (o LookupApplicationResultOutput) ParentApp() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.ParentApp }).(pulumi.StringOutput)
 }
 
-// Pervasive use
 func (o LookupApplicationResultOutput) PervasiveUse() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.PervasiveUse }).(pulumi.BoolOutput)
 }
 
-// Prone to misuse
 func (o LookupApplicationResultOutput) ProneToMisuse() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.ProneToMisuse }).(pulumi.BoolOutput)
 }
 
-// Risk
 func (o LookupApplicationResultOutput) Risk() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Risk }).(pulumi.StringOutput)
 }
 
-// Signature
 func (o LookupApplicationResultOutput) Signatures() GetApplicationSignatureArrayOutput {
 	return o.ApplyT(func(v LookupApplicationResult) []GetApplicationSignature { return v.Signatures }).(GetApplicationSignatureArrayOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupApplicationResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Subcategory
 func (o LookupApplicationResultOutput) Subcategory() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Subcategory }).(pulumi.StringOutput)
 }
 
-// timeout for half-close session in seconds
 func (o LookupApplicationResultOutput) TcpHalfClosedTimeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupApplicationResult) int { return v.TcpHalfClosedTimeout }).(pulumi.IntOutput)
 }
 
-// timeout for session in timeWait state in seconds
 func (o LookupApplicationResultOutput) TcpTimeWaitTimeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupApplicationResult) int { return v.TcpTimeWaitTimeout }).(pulumi.IntOutput)
 }
 
-// timeout in seconds
 func (o LookupApplicationResultOutput) TcpTimeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupApplicationResult) int { return v.TcpTimeout }).(pulumi.IntOutput)
 }
 
-// Technology
 func (o LookupApplicationResultOutput) Technology() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Technology }).(pulumi.StringOutput)
 }
@@ -298,32 +260,26 @@ func (o LookupApplicationResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// timeout in seconds
 func (o LookupApplicationResultOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupApplicationResult) int { return v.Timeout }).(pulumi.IntOutput)
 }
 
-// Tunnel applications
 func (o LookupApplicationResultOutput) TunnelApplications() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.TunnelApplications }).(pulumi.BoolOutput)
 }
 
-// Tunnel other application
 func (o LookupApplicationResultOutput) TunnelOtherApplication() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.TunnelOtherApplication }).(pulumi.BoolOutput)
 }
 
-// timeout in seconds
 func (o LookupApplicationResultOutput) UdpTimeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupApplicationResult) int { return v.UdpTimeout }).(pulumi.IntOutput)
 }
 
-// Used by malware
 func (o LookupApplicationResultOutput) UsedByMalware() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.UsedByMalware }).(pulumi.BoolOutput)
 }
 
-// Virus ident
 func (o LookupApplicationResultOutput) VirusIdent() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupApplicationResult) bool { return v.VirusIdent }).(pulumi.BoolOutput)
 }

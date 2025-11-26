@@ -21,20 +21,28 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommun
     /**
      * @return None
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone none;
     /**
      * @return Overwrite
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private List<String> overwrites;
     /**
      * @return Remove all
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     private GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll removeAll;
     /**
      * @return Remove regex
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     private String removeRegex;
@@ -50,12 +58,16 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommun
     /**
      * @return None
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     public GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityNone none() {
         return this.none;
     }
     /**
      * @return Overwrite
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public List<String> overwrites() {
@@ -64,12 +76,16 @@ public final class GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommun
     /**
      * @return Remove all
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
+     * 
      */
     public GetLogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunityRemoveAll removeAll() {
         return this.removeAll;
     }
     /**
      * @return Remove regex
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public String removeRegex() {

@@ -61,24 +61,17 @@ type LookupIpsecCryptoProfileArgs struct {
 // A collection of values returned by getIpsecCryptoProfile.
 type LookupIpsecCryptoProfileResult struct {
 	// Ah
-	Ah GetIpsecCryptoProfileAh `pulumi:"ah"`
-	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// phase-2 DH group (PFS DH group)
-	DhGroup string `pulumi:"dhGroup"`
-	// Esp
-	Esp GetIpsecCryptoProfileEsp `pulumi:"esp"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Ah      GetIpsecCryptoProfileAh  `pulumi:"ah"`
+	Device  string                   `pulumi:"device"`
+	DhGroup string                   `pulumi:"dhGroup"`
+	Esp     GetIpsecCryptoProfileEsp `pulumi:"esp"`
+	Folder  string                   `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Lifesize
+	Id       string                        `pulumi:"id"`
 	Lifesize GetIpsecCryptoProfileLifesize `pulumi:"lifesize"`
-	// Ipsec crypto profile lifetime
 	Lifetime GetIpsecCryptoProfileLifetime `pulumi:"lifetime"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -124,22 +117,18 @@ func (o LookupIpsecCryptoProfileResultOutput) Ah() GetIpsecCryptoProfileAhOutput
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileAh { return v.Ah }).(GetIpsecCryptoProfileAhOutput)
 }
 
-// The device in which the resource is defined
 func (o LookupIpsecCryptoProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// phase-2 DH group (PFS DH group)
 func (o LookupIpsecCryptoProfileResultOutput) DhGroup() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.DhGroup }).(pulumi.StringOutput)
 }
 
-// Esp
 func (o LookupIpsecCryptoProfileResultOutput) Esp() GetIpsecCryptoProfileEspOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileEsp { return v.Esp }).(GetIpsecCryptoProfileEspOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupIpsecCryptoProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -149,12 +138,10 @@ func (o LookupIpsecCryptoProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Lifesize
 func (o LookupIpsecCryptoProfileResultOutput) Lifesize() GetIpsecCryptoProfileLifesizeOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileLifesize { return v.Lifesize }).(GetIpsecCryptoProfileLifesizeOutput)
 }
 
-// Ipsec crypto profile lifetime
 func (o LookupIpsecCryptoProfileResultOutput) Lifetime() GetIpsecCryptoProfileLifetimeOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) GetIpsecCryptoProfileLifetime { return v.Lifetime }).(GetIpsecCryptoProfileLifetimeOutput)
 }
@@ -164,7 +151,6 @@ func (o LookupIpsecCryptoProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupIpsecCryptoProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecCryptoProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -8,6 +8,40 @@ import * as utilities from "./utilities";
 
 /**
  * BgpFilteringProfile resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmBgpFilteringProfile = new scm.BgpFilteringProfile("scm_bgp_filtering_profile", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_filtering_profile",
+ *     ipv4: {},
+ * });
+ * const scmBgpFilteringProfileComplex = new scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_filtering_profile_complex",
+ *     ipv4: {
+ *         unicast: {
+ *             filterList: {
+ *                 inbound: "scm_filter_list",
+ *             },
+ *             inboundNetworkFilters: {
+ *                 prefixList: "scm_pl_inbound",
+ *             },
+ *             outboundNetworkFilters: {
+ *                 distributeList: "scm_distribute_list",
+ *             },
+ *             routeMaps: {
+ *                 inbound: "scm_rm_inbound",
+ *                 outbound: "scm_rm_outbound",
+ *             },
+ *         },
+ *     },
+ * });
+ * ```
  */
 export class BgpFilteringProfile extends pulumi.CustomResource {
     /**
@@ -47,6 +81,8 @@ export class BgpFilteringProfile extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -59,6 +95,8 @@ export class BgpFilteringProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -112,6 +150,8 @@ export interface BgpFilteringProfileState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -124,6 +164,8 @@ export interface BgpFilteringProfileState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -143,6 +185,8 @@ export interface BgpFilteringProfileArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -155,6 +199,8 @@ export interface BgpFilteringProfileArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
 }

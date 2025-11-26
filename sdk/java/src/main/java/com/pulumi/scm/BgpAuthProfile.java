@@ -19,6 +19,41 @@ import javax.annotation.Nullable;
 /**
  * BgpAuthProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.BgpAuthProfile;
+ * import com.pulumi.scm.BgpAuthProfileArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmBgpAuthProfile = new BgpAuthProfile("scmBgpAuthProfile", BgpAuthProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_auth_profile")
+ *             .secret("ExampleSecret123")
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/bgpAuthProfile:BgpAuthProfile")
 public class BgpAuthProfile extends com.pulumi.resources.CustomResource {
@@ -53,12 +88,16 @@ public class BgpAuthProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -95,12 +134,16 @@ public class BgpAuthProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

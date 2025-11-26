@@ -124,18 +124,30 @@ type Address struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Fully qualified domain name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	Fqdn pulumi.StringPtrOutput `pulumi:"fqdn"`
 	// IP address with or without CIDR notation
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpNetmask pulumi.StringPtrOutput `pulumi:"ipNetmask"`
 	// Ip range
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpRange pulumi.StringPtrOutput `pulumi:"ipRange"`
 	// IP wildcard mask
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpWildcard pulumi.StringPtrOutput `pulumi:"ipWildcard"`
 	// The name of the address object
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	// Tags assocaited with the address object
 	Tags pulumi.StringArrayOutput `pulumi:"tags"`
@@ -177,18 +189,30 @@ type addressState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Fully qualified domain name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	Fqdn *string `pulumi:"fqdn"`
 	// IP address with or without CIDR notation
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpNetmask *string `pulumi:"ipNetmask"`
 	// Ip range
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpRange *string `pulumi:"ipRange"`
 	// IP wildcard mask
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpWildcard *string `pulumi:"ipWildcard"`
 	// The name of the address object
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags assocaited with the address object
 	Tags []string `pulumi:"tags"`
@@ -201,18 +225,30 @@ type AddressState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Fully qualified domain name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	Fqdn pulumi.StringPtrInput
 	// IP address with or without CIDR notation
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpNetmask pulumi.StringPtrInput
 	// Ip range
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpRange pulumi.StringPtrInput
 	// IP wildcard mask
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpWildcard pulumi.StringPtrInput
 	// The name of the address object
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags assocaited with the address object
 	Tags pulumi.StringArrayInput
@@ -229,18 +265,30 @@ type addressArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Fully qualified domain name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	Fqdn *string `pulumi:"fqdn"`
 	// IP address with or without CIDR notation
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpNetmask *string `pulumi:"ipNetmask"`
 	// Ip range
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpRange *string `pulumi:"ipRange"`
 	// IP wildcard mask
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpWildcard *string `pulumi:"ipWildcard"`
 	// The name of the address object
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tags assocaited with the address object
 	Tags []string `pulumi:"tags"`
@@ -253,18 +301,30 @@ type AddressArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Fully qualified domain name
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	Fqdn pulumi.StringPtrInput
 	// IP address with or without CIDR notation
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpNetmask pulumi.StringPtrInput
 	// Ip range
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpRange pulumi.StringPtrInput
 	// IP wildcard mask
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 	IpWildcard pulumi.StringPtrInput
 	// The name of the address object
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tags assocaited with the address object
 	Tags pulumi.StringArrayInput
@@ -368,26 +428,36 @@ func (o AddressOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AddressOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
 // Fully qualified domain name
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o AddressOutput) Fqdn() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringPtrOutput { return v.Fqdn }).(pulumi.StringPtrOutput)
 }
 
 // IP address with or without CIDR notation
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o AddressOutput) IpNetmask() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringPtrOutput { return v.IpNetmask }).(pulumi.StringPtrOutput)
 }
 
 // Ip range
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o AddressOutput) IpRange() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringPtrOutput { return v.IpRange }).(pulumi.StringPtrOutput)
 }
 
 // IP wildcard mask
+//
+// > ℹ️ **Note:** You must specify exactly one of `fqdn`, `ipNetmask`, `ipRange`, and `ipWildcard`.
 func (o AddressOutput) IpWildcard() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringPtrOutput { return v.IpWildcard }).(pulumi.StringPtrOutput)
 }
@@ -398,6 +468,8 @@ func (o AddressOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AddressOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Address) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

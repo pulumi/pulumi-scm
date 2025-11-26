@@ -12,6 +12,34 @@ import (
 )
 
 // AuthenticationProfile data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			profileData, err := scm.LookupAuthenticationProfile(ctx, &scm.LookupAuthenticationProfileArgs{
+//				Id: "de491856-1987-4b53-a3f7-e4f4a52067e3",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmAuthenticationProfile", profileData.Id)
+//			ctx.Export("fetchedProfile", profileData)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupAuthenticationProfile(ctx *pulumi.Context, args *LookupAuthenticationProfileArgs, opts ...pulumi.InvokeOption) (*LookupAuthenticationProfileResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAuthenticationProfileResult
@@ -32,31 +60,23 @@ type LookupAuthenticationProfileArgs struct {
 
 // A collection of values returned by getAuthenticationProfile.
 type LookupAuthenticationProfileResult struct {
-	// Allow list
+	// The allowList of the authentication profile
 	AllowLists []string `pulumi:"allowLists"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the authentication profile
-	Id string `pulumi:"id"`
-	// Lockout
-	Lockout GetAuthenticationProfileLockout `pulumi:"lockout"`
-	// Method
-	Method GetAuthenticationProfileMethod `pulumi:"method"`
-	// Multi factor auth
+	Id              string                                  `pulumi:"id"`
+	Lockout         GetAuthenticationProfileLockout         `pulumi:"lockout"`
+	Method          GetAuthenticationProfileMethod          `pulumi:"method"`
 	MultiFactorAuth GetAuthenticationProfileMultiFactorAuth `pulumi:"multiFactorAuth"`
 	// The name of the authentication profile
-	Name string `pulumi:"name"`
-	// Single sign on
-	SingleSignOn GetAuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// User domain
-	UserDomain string `pulumi:"userDomain"`
-	// Username modifier
-	UsernameModifier string `pulumi:"usernameModifier"`
+	Name             string                               `pulumi:"name"`
+	SingleSignOn     GetAuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
+	Snippet          string                               `pulumi:"snippet"`
+	Tfid             string                               `pulumi:"tfid"`
+	UserDomain       string                               `pulumi:"userDomain"`
+	UsernameModifier string                               `pulumi:"usernameModifier"`
 }
 
 func LookupAuthenticationProfileOutput(ctx *pulumi.Context, args LookupAuthenticationProfileOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationProfileResultOutput {
@@ -95,7 +115,7 @@ func (o LookupAuthenticationProfileResultOutput) ToLookupAuthenticationProfileRe
 	return o
 }
 
-// Allow list
+// The allowList of the authentication profile
 func (o LookupAuthenticationProfileResultOutput) AllowLists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) []string { return v.AllowLists }).(pulumi.StringArrayOutput)
 }
@@ -105,7 +125,6 @@ func (o LookupAuthenticationProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupAuthenticationProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -115,17 +134,14 @@ func (o LookupAuthenticationProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Lockout
 func (o LookupAuthenticationProfileResultOutput) Lockout() GetAuthenticationProfileLockoutOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileLockout { return v.Lockout }).(GetAuthenticationProfileLockoutOutput)
 }
 
-// Method
 func (o LookupAuthenticationProfileResultOutput) Method() GetAuthenticationProfileMethodOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileMethod { return v.Method }).(GetAuthenticationProfileMethodOutput)
 }
 
-// Multi factor auth
 func (o LookupAuthenticationProfileResultOutput) MultiFactorAuth() GetAuthenticationProfileMultiFactorAuthOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileMultiFactorAuth {
 		return v.MultiFactorAuth
@@ -137,12 +153,10 @@ func (o LookupAuthenticationProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Single sign on
 func (o LookupAuthenticationProfileResultOutput) SingleSignOn() GetAuthenticationProfileSingleSignOnOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) GetAuthenticationProfileSingleSignOn { return v.SingleSignOn }).(GetAuthenticationProfileSingleSignOnOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupAuthenticationProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -151,12 +165,10 @@ func (o LookupAuthenticationProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// User domain
 func (o LookupAuthenticationProfileResultOutput) UserDomain() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.UserDomain }).(pulumi.StringOutput)
 }
 
-// Username modifier
 func (o LookupAuthenticationProfileResultOutput) UsernameModifier() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationProfileResult) string { return v.UsernameModifier }).(pulumi.StringOutput)
 }

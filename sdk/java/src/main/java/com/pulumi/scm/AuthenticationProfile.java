@@ -22,18 +22,92 @@ import javax.annotation.Nullable;
 /**
  * AuthenticationProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.AuthenticationProfile;
+ * import com.pulumi.scm.AuthenticationProfileArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileLockoutArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileMethodArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileMethodRadiusArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileSingleSignOnArgs;
+ * import com.pulumi.scm.inputs.AuthenticationProfileMethodLocalDatabaseArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var globalRadiusAccess = new AuthenticationProfile("globalRadiusAccess", AuthenticationProfileArgs.builder()
+ *             .name("test_auth_profile_radius_1")
+ *             .folder("All")
+ *             .userDomain("default")
+ *             .usernameModifier("%USERINPUT%")
+ *             .allowLists("all")
+ *             .lockout(AuthenticationProfileLockoutArgs.builder()
+ *                 .failedAttempts(1)
+ *                 .lockoutTime(3)
+ *                 .build())
+ *             .method(AuthenticationProfileMethodArgs.builder()
+ *                 .radius(AuthenticationProfileMethodRadiusArgs.builder()
+ *                     .checkgroup(true)
+ *                     .serverProfile("CHAP_only_rsp_1")
+ *                     .build())
+ *                 .build())
+ *             .singleSignOn(AuthenticationProfileSingleSignOnArgs.builder()
+ *                 .realm("EXAMPLE.COM")
+ *                 .build())
+ *             .build());
+ * 
+ *         var globalDbAccess = new AuthenticationProfile("globalDbAccess", AuthenticationProfileArgs.builder()
+ *             .name("test_auth_profile_db_1")
+ *             .folder("All")
+ *             .userDomain("default")
+ *             .usernameModifier("%USERINPUT%")
+ *             .allowLists("all")
+ *             .lockout(AuthenticationProfileLockoutArgs.builder()
+ *                 .failedAttempts(3)
+ *                 .lockoutTime(1)
+ *                 .build())
+ *             .method(AuthenticationProfileMethodArgs.builder()
+ *                 .localDatabase(AuthenticationProfileMethodLocalDatabaseArgs.builder()
+ *                     .build())
+ *                 .build())
+ *             .singleSignOn(AuthenticationProfileSingleSignOnArgs.builder()
+ *                 .realm("EXAMPLE.COM")
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/authenticationProfile:AuthenticationProfile")
 public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
     /**
-     * Allow list
+     * The allowList of the authentication profile
      * 
      */
     @Export(name="allowLists", refs={List.class,String.class}, tree="[0,1]")
     private Output<List<String>> allowLists;
 
     /**
-     * @return Allow list
+     * @return The allowList of the authentication profile
      * 
      */
     public Output<List<String>> allowLists() {
@@ -56,6 +130,8 @@ public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
@@ -63,33 +139,35 @@ public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
     /**
      * @return The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Lockout
+     * Lockout object of the authentication profile
      * 
      */
     @Export(name="lockout", refs={AuthenticationProfileLockout.class}, tree="[0]")
     private Output</* @Nullable */ AuthenticationProfileLockout> lockout;
 
     /**
-     * @return Lockout
+     * @return Lockout object of the authentication profile
      * 
      */
     public Output<Optional<AuthenticationProfileLockout>> lockout() {
         return Codegen.optional(this.lockout);
     }
     /**
-     * Method
+     * method object of authentication profile
      * 
      */
     @Export(name="method", refs={AuthenticationProfileMethod.class}, tree="[0]")
     private Output</* @Nullable */ AuthenticationProfileMethod> method;
 
     /**
-     * @return Method
+     * @return method object of authentication profile
      * 
      */
     public Output<Optional<AuthenticationProfileMethod>> method() {
@@ -140,12 +218,16 @@ public class AuthenticationProfile extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

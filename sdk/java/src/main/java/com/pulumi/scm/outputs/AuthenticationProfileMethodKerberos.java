@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileMethodKerberos {
     /**
-     * @return Realm
+     * @return method kerberos object realm of authentication profile
      * 
      */
     private @Nullable String realm;
     /**
-     * @return Server profile
+     * @return method kerberos object server profile of authentication profile
      * 
      */
     private @Nullable String serverProfile;
 
     private AuthenticationProfileMethodKerberos() {}
     /**
-     * @return Realm
+     * @return method kerberos object realm of authentication profile
      * 
      */
     public Optional<String> realm() {
         return Optional.ofNullable(this.realm);
     }
     /**
-     * @return Server profile
+     * @return method kerberos object server profile of authentication profile
      * 
      */
     public Optional<String> serverProfile() {

@@ -20,10 +20,6 @@ public final class GetLayer2SubinterfaceResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
@@ -35,21 +31,9 @@ public final class GetLayer2SubinterfaceResult {
      * 
      */
     private String name;
-    /**
-     * @return Parent interface
-     * 
-     */
     private String parentInterface;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return VLAN tag
-     * 
-     */
     private String vlanTag;
 
     private GetLayer2SubinterfaceResult() {}
@@ -67,10 +51,6 @@ public final class GetLayer2SubinterfaceResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -88,27 +68,15 @@ public final class GetLayer2SubinterfaceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Parent interface
-     * 
-     */
     public String parentInterface() {
         return this.parentInterface;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return VLAN tag
-     * 
-     */
     public String vlanTag() {
         return this.vlanTag;
     }

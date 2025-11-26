@@ -31,8 +31,12 @@ class TagArgs:
         :param pulumi.Input[_builtins.str] comments: The description of the tag
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the tag
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if color is not None:
             pulumi.set(__self__, "color", color)
@@ -88,6 +92,8 @@ class TagArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -112,6 +118,8 @@ class TagArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -136,8 +144,12 @@ class _TagState:
         :param pulumi.Input[_builtins.str] comments: The description of the tag
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the tag
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if color is not None:
             pulumi.set(__self__, "color", color)
@@ -195,6 +207,8 @@ class _TagState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -219,6 +233,8 @@ class _TagState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -280,8 +296,12 @@ class Tag(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] comments: The description of the tag
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the tag
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -379,8 +399,12 @@ class Tag(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] comments: The description of the tag
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the tag
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -424,6 +448,8 @@ class Tag(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -440,6 +466,8 @@ class Tag(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

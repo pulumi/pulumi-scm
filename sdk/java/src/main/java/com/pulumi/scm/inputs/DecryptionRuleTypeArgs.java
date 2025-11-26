@@ -34,12 +34,16 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
     /**
      * add the certificate name for SSL inbound inspection
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
+     * 
      */
     @Import(name="sslInboundInspection")
     private @Nullable Output<String> sslInboundInspection;
 
     /**
      * @return add the certificate name for SSL inbound inspection
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
      * 
      */
     public Optional<Output<String>> sslInboundInspection() {
@@ -95,6 +99,8 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
         /**
          * @param sslInboundInspection add the certificate name for SSL inbound inspection
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class DecryptionRuleTypeArgs extends com.pulumi.resources.ResourceA
 
         /**
          * @param sslInboundInspection add the certificate name for SSL inbound inspection
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `sslForwardProxy` and `sslInboundInspection`.
          * 
          * @return builder
          * 

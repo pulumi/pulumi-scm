@@ -5,9 +5,11 @@ package com.pulumi.scm.inputs;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.inputs.BgpFilteringProfileIpv4Ipv4Args;
+import com.pulumi.scm.inputs.BgpFilteringProfileIpv4MulticastArgs;
+import com.pulumi.scm.inputs.BgpFilteringProfileIpv4UnicastArgs;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 
 public final class BgpFilteringProfileIpv4Args extends com.pulumi.resources.ResourceArgs {
@@ -15,24 +17,40 @@ public final class BgpFilteringProfileIpv4Args extends com.pulumi.resources.Reso
     public static final BgpFilteringProfileIpv4Args Empty = new BgpFilteringProfileIpv4Args();
 
     /**
-     * Ipv4
+     * Multicast
      * 
      */
-    @Import(name="ipv4", required=true)
-    private Output<BgpFilteringProfileIpv4Ipv4Args> ipv4;
+    @Import(name="multicast")
+    private @Nullable Output<BgpFilteringProfileIpv4MulticastArgs> multicast;
 
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    public Output<BgpFilteringProfileIpv4Ipv4Args> ipv4() {
-        return this.ipv4;
+    public Optional<Output<BgpFilteringProfileIpv4MulticastArgs>> multicast() {
+        return Optional.ofNullable(this.multicast);
+    }
+
+    /**
+     * Unicast
+     * 
+     */
+    @Import(name="unicast")
+    private @Nullable Output<BgpFilteringProfileIpv4UnicastArgs> unicast;
+
+    /**
+     * @return Unicast
+     * 
+     */
+    public Optional<Output<BgpFilteringProfileIpv4UnicastArgs>> unicast() {
+        return Optional.ofNullable(this.unicast);
     }
 
     private BgpFilteringProfileIpv4Args() {}
 
     private BgpFilteringProfileIpv4Args(BgpFilteringProfileIpv4Args $) {
-        this.ipv4 = $.ipv4;
+        this.multicast = $.multicast;
+        this.unicast = $.unicast;
     }
 
     public static Builder builder() {
@@ -54,30 +72,48 @@ public final class BgpFilteringProfileIpv4Args extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ipv4 Ipv4
+         * @param multicast Multicast
          * 
          * @return builder
          * 
          */
-        public Builder ipv4(Output<BgpFilteringProfileIpv4Ipv4Args> ipv4) {
-            $.ipv4 = ipv4;
+        public Builder multicast(@Nullable Output<BgpFilteringProfileIpv4MulticastArgs> multicast) {
+            $.multicast = multicast;
             return this;
         }
 
         /**
-         * @param ipv4 Ipv4
+         * @param multicast Multicast
          * 
          * @return builder
          * 
          */
-        public Builder ipv4(BgpFilteringProfileIpv4Ipv4Args ipv4) {
-            return ipv4(Output.of(ipv4));
+        public Builder multicast(BgpFilteringProfileIpv4MulticastArgs multicast) {
+            return multicast(Output.of(multicast));
+        }
+
+        /**
+         * @param unicast Unicast
+         * 
+         * @return builder
+         * 
+         */
+        public Builder unicast(@Nullable Output<BgpFilteringProfileIpv4UnicastArgs> unicast) {
+            $.unicast = unicast;
+            return this;
+        }
+
+        /**
+         * @param unicast Unicast
+         * 
+         * @return builder
+         * 
+         */
+        public Builder unicast(BgpFilteringProfileIpv4UnicastArgs unicast) {
+            return unicast(Output.of(unicast));
         }
 
         public BgpFilteringProfileIpv4Args build() {
-            if ($.ipv4 == null) {
-                throw new MissingRequiredPropertyException("BgpFilteringProfileIpv4Args", "ipv4");
-            }
             return $;
         }
     }

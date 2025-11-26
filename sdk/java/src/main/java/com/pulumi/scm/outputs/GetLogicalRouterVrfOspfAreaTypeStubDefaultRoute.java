@@ -19,6 +19,8 @@ public final class GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     /**
      * @return Disable
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
+     * 
      */
     private GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable disable;
 
@@ -32,6 +34,8 @@ public final class GetLogicalRouterVrfOspfAreaTypeStubDefaultRoute {
     }
     /**
      * @return Disable
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `advertise` and `disable`.
      * 
      */
     public GetLogicalRouterVrfOspfAreaTypeStubDefaultRouteDisable disable() {

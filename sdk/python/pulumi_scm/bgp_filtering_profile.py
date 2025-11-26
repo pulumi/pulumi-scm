@@ -32,9 +32,13 @@ class BgpFilteringProfileArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['BgpFilteringProfileIpv4Args'] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -78,6 +82,8 @@ class BgpFilteringProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -114,6 +120,8 @@ class BgpFilteringProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -137,9 +145,13 @@ class _BgpFilteringProfileState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['BgpFilteringProfileIpv4Args'] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -185,6 +197,8 @@ class _BgpFilteringProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -221,6 +235,8 @@ class _BgpFilteringProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -254,14 +270,50 @@ class BgpFilteringProfile(pulumi.CustomResource):
         """
         BgpFilteringProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_bgp_filtering_profile = scm.BgpFilteringProfile("scm_bgp_filtering_profile",
+            folder="ngfw-shared",
+            name="scm_bgp_filtering_profile",
+            ipv4={})
+        scm_bgp_filtering_profile_complex = scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex",
+            folder="ngfw-shared",
+            name="scm_bgp_filtering_profile_complex",
+            ipv4={
+                "unicast": {
+                    "filter_list": {
+                        "inbound": "scm_filter_list",
+                    },
+                    "inbound_network_filters": {
+                        "prefix_list": "scm_pl_inbound",
+                    },
+                    "outbound_network_filters": {
+                        "distribute_list": "scm_distribute_list",
+                    },
+                    "route_maps": {
+                        "inbound": "scm_rm_inbound",
+                        "outbound": "scm_rm_outbound",
+                    },
+                },
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['BgpFilteringProfileIpv4Args', 'BgpFilteringProfileIpv4ArgsDict']] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -271,6 +323,38 @@ class BgpFilteringProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         BgpFilteringProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_bgp_filtering_profile = scm.BgpFilteringProfile("scm_bgp_filtering_profile",
+            folder="ngfw-shared",
+            name="scm_bgp_filtering_profile",
+            ipv4={})
+        scm_bgp_filtering_profile_complex = scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex",
+            folder="ngfw-shared",
+            name="scm_bgp_filtering_profile_complex",
+            ipv4={
+                "unicast": {
+                    "filter_list": {
+                        "inbound": "scm_filter_list",
+                    },
+                    "inbound_network_filters": {
+                        "prefix_list": "scm_pl_inbound",
+                    },
+                    "outbound_network_filters": {
+                        "distribute_list": "scm_distribute_list",
+                    },
+                    "route_maps": {
+                        "inbound": "scm_rm_inbound",
+                        "outbound": "scm_rm_outbound",
+                    },
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param BgpFilteringProfileArgs args: The arguments to use to populate this resource's properties.
@@ -336,9 +420,13 @@ class BgpFilteringProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['BgpFilteringProfileIpv4Args', 'BgpFilteringProfileIpv4ArgsDict']] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -374,6 +462,8 @@ class BgpFilteringProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -398,6 +488,8 @@ class BgpFilteringProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

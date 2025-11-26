@@ -17,10 +17,6 @@ public final class GetLogicalRouterResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
@@ -32,21 +28,9 @@ public final class GetLogicalRouterResult {
      * 
      */
     private String name;
-    /**
-     * @return Routing stack
-     * 
-     */
     private String routingStack;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Vrf
-     * 
-     */
     private List<GetLogicalRouterVrf> vrves;
 
     private GetLogicalRouterResult() {}
@@ -57,10 +41,6 @@ public final class GetLogicalRouterResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -78,27 +58,15 @@ public final class GetLogicalRouterResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Routing stack
-     * 
-     */
     public String routingStack() {
         return this.routingStack;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Vrf
-     * 
-     */
     public List<GetLogicalRouterVrf> vrves() {
         return this.vrves;
     }

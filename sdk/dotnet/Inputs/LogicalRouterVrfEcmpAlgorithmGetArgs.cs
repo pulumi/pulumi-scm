@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ip hash
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `BalancedRoundRobin`, `IpHash`, `IpModulo`, and `WeightedRoundRobin`.
         /// </summary>
         [Input("ipHash")]
         public Input<Inputs.LogicalRouterVrfEcmpAlgorithmIpHashGetArgs>? IpHash { get; set; }
 
         /// <summary>
         /// Ip modulo
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `BalancedRoundRobin`, `IpHash`, `IpModulo`, and `WeightedRoundRobin`.
         /// </summary>
         [Input("ipModulo")]
         public Input<Inputs.LogicalRouterVrfEcmpAlgorithmIpModuloGetArgs>? IpModulo { get; set; }
 
         /// <summary>
         /// Weighted round robin
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `BalancedRoundRobin`, `IpHash`, `IpModulo`, and `WeightedRoundRobin`.
         /// </summary>
         [Input("weightedRoundRobin")]
         public Input<Inputs.LogicalRouterVrfEcmpAlgorithmWeightedRoundRobinGetArgs>? WeightedRoundRobin { get; set; }

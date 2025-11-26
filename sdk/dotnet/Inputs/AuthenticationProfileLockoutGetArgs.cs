@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class AuthenticationProfileLockoutGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Failed attempts
+        /// Lockout object - FailedAttempts of authentication profile
         /// </summary>
         [Input("failedAttempts")]
         public Input<int>? FailedAttempts { get; set; }
 
         /// <summary>
-        /// Lockout time
+        /// Lockout object - lockout-time of authentication profile
         /// </summary>
         [Input("lockoutTime")]
         public Input<int>? LockoutTime { get; set; }

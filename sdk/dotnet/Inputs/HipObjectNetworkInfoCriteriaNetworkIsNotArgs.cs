@@ -20,18 +20,24 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Mobile
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ethernet`, `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("mobile")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsNotMobileArgs>? Mobile { get; set; }
 
         /// <summary>
         /// Unknown
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ethernet`, `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("unknown")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsNotUnknownArgs>? Unknown { get; set; }
 
         /// <summary>
         /// Wifi
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ethernet`, `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         [Input("wifi")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsNotWifiArgs>? Wifi { get; set; }

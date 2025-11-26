@@ -81,33 +81,21 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter(name="dhGroups")
     def dh_groups(self) -> Sequence[_builtins.str]:
-        """
-        Dh group
-        """
         return pulumi.get(self, "dh_groups")
 
     @_builtins.property
     @pulumi.getter
     def encryptions(self) -> Sequence[_builtins.str]:
-        """
-        Encryption algorithm
-        """
         return pulumi.get(self, "encryptions")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def hashes(self) -> Sequence[_builtins.str]:
-        """
-        Hash
-        """
         return pulumi.get(self, "hashes")
 
     @_builtins.property
@@ -121,9 +109,6 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def lifetime(self) -> 'outputs.GetIkeCryptoProfileLifetimeResult':
-        """
-        Ike crypto profile lifetime
-        """
         return pulumi.get(self, "lifetime")
 
     @_builtins.property
@@ -137,9 +122,6 @@ class GetIkeCryptoProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

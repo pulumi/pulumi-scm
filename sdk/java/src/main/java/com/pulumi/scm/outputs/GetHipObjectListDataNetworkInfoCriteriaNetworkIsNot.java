@@ -21,15 +21,21 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Mobile
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
+     * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile mobile;
     /**
      * @return Unknown
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
+     * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown unknown;
     /**
      * @return Wifi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     private GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi wifi;
@@ -45,6 +51,8 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Mobile
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
+     * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotMobile mobile() {
         return this.mobile;
@@ -52,12 +60,16 @@ public final class GetHipObjectListDataNetworkInfoCriteriaNetworkIsNot {
     /**
      * @return Unknown
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
+     * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotUnknown unknown() {
         return this.unknown;
     }
     /**
      * @return Wifi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ethernet`, `mobile`, `unknown`, and `wifi`.
      * 
      */
     public GetHipObjectListDataNetworkInfoCriteriaNetworkIsNotWifi wifi() {

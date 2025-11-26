@@ -12,18 +12,60 @@ import (
 )
 
 // BgpAddressFamilyProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewBgpAddressFamilyProfile(ctx, "scm_bgp_address_family_profile", &scm.BgpAddressFamilyProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("scm_bgp_address_family_profile"),
+//				Ipv4: &scm.BgpAddressFamilyProfileIpv4Args{
+//					Unicast: &scm.BgpAddressFamilyProfileIpv4UnicastArgs{
+//						Enable: pulumi.Bool(true),
+//						AllowasIn: &scm.BgpAddressFamilyProfileIpv4UnicastAllowasInArgs{
+//							Origin: &scm.BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs{},
+//						},
+//						NextHop: &scm.BgpAddressFamilyProfileIpv4UnicastNextHopArgs{
+//							Self: &scm.BgpAddressFamilyProfileIpv4UnicastNextHopSelfArgs{},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type BgpAddressFamilyProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Ipv4
+	// IPv4 Address Family
 	Ipv4 BgpAddressFamilyProfileIpv4PtrOutput `pulumi:"ipv4"`
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -61,12 +103,16 @@ type bgpAddressFamilyProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Ipv4
+	// IPv4 Address Family
 	Ipv4 *BgpAddressFamilyProfileIpv4 `pulumi:"ipv4"`
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
@@ -75,12 +121,16 @@ type BgpAddressFamilyProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Ipv4
+	// IPv4 Address Family
 	Ipv4 BgpAddressFamilyProfileIpv4PtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -93,12 +143,16 @@ type bgpAddressFamilyProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Ipv4
+	// IPv4 Address Family
 	Ipv4 *BgpAddressFamilyProfileIpv4 `pulumi:"ipv4"`
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -107,12 +161,16 @@ type BgpAddressFamilyProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Ipv4
+	// IPv4 Address Family
 	Ipv4 BgpAddressFamilyProfileIpv4PtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -209,11 +267,13 @@ func (o BgpAddressFamilyProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpAddressFamilyProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Ipv4
+// IPv4 Address Family
 func (o BgpAddressFamilyProfileOutput) Ipv4() BgpAddressFamilyProfileIpv4PtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfile) BgpAddressFamilyProfileIpv4PtrOutput { return v.Ipv4 }).(BgpAddressFamilyProfileIpv4PtrOutput)
 }
@@ -224,6 +284,8 @@ func (o BgpAddressFamilyProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpAddressFamilyProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpAddressFamilyProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -27,67 +27,16 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			standardWebAccess, err := scm.NewSecurityRule(ctx, "standard_web_access", &scm.SecurityRuleArgs{
-//				Folder:      pulumi.String("All"),
-//				Name:        pulumi.String("Allow Standard Web Access DS1"),
-//				Description: pulumi.String("Allow outbound web traffic to any destination..."),
-//				Position:    pulumi.String("pre"),
-//				Action:      pulumi.String("allow"),
-//				Categories: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Applications: pulumi.StringArray{
-//					pulumi.String("web-browsing"),
-//					pulumi.String("ssl"),
-//				},
-//				Services: pulumi.StringArray{
-//					pulumi.String("service-http"),
-//					pulumi.String("service-https"),
-//				},
-//				Froms: pulumi.StringArray{
-//					pulumi.String("untrust"),
-//					pulumi.String("trust"),
-//				},
-//				Tos: pulumi.StringArray{
-//					pulumi.String("trust"),
-//				},
-//				Sources: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Destinations: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				NegateSource:      pulumi.Bool(false),
-//				NegateDestination: pulumi.Bool(false),
-//				SourceUsers: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				SourceHips: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				DestinationHips: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				LogStart: pulumi.Bool(true),
-//				LogEnd:   pulumi.Bool(true),
-//				Disabled: pulumi.Bool(false),
-//			})
+//			// 1. Fetch by ID (Best for direct lookup)
+//			standardWebAccessById, err := scm.LookupSecurityRule(ctx, &scm.LookupSecurityRuleArgs{
+//				Id: "2a550f26-3e98-47d0-984f-b51e4ff367de",
+//			}, nil)
 //			if err != nil {
 //				return err
 //			}
-//			// 1. Fetch by ID (Best for direct lookup)
-//			standardWebAccessById := scm.LookupSecurityRuleOutput(ctx, scm.GetSecurityRuleOutputArgs{
-//				Id: standardWebAccess.ID(),
-//			}, nil)
-//			ctx.Export("fetchedStandardWebId", standardWebAccessById.ApplyT(func(standardWebAccessById scm.GetSecurityRuleResult) (*string, error) {
-//				return &standardWebAccessById.Id, nil
-//			}).(pulumi.StringPtrOutput))
-//			ctx.Export("fetchedStandardWebName", standardWebAccessById.ApplyT(func(standardWebAccessById scm.GetSecurityRuleResult) (*string, error) {
-//				return &standardWebAccessById.Name, nil
-//			}).(pulumi.StringPtrOutput))
-//			ctx.Export("fetchedStandardWebDescription", standardWebAccessById.ApplyT(func(standardWebAccessById scm.GetSecurityRuleResult) (*string, error) {
-//				return &standardWebAccessById.Description, nil
-//			}).(pulumi.StringPtrOutput))
+//			ctx.Export("fetchedStandardWebId", standardWebAccessById.Id)
+//			ctx.Export("fetchedStandardWebName", standardWebAccessById.Name)
+//			ctx.Export("fetchedStandardWebDescription", standardWebAccessById.Description)
 //			return nil
 //		})
 //	}

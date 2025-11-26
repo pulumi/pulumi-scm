@@ -12,6 +12,48 @@ import (
 )
 
 // RoutePrefixList resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewRoutePrefixList(ctx, "scm_route_prefix_list", &scm.RoutePrefixListArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("scm_bgp_prefix_list"),
+//				Description: pulumi.String("Managed by Pulumi"),
+//				Type: &scm.RoutePrefixListTypeArgs{
+//					Ipv4: &scm.RoutePrefixListTypeIpv4Args{
+//						Ipv4Entries: scm.RoutePrefixListTypeIpv4Ipv4EntryArray{
+//							&scm.RoutePrefixListTypeIpv4Ipv4EntryArgs{
+//								Name:   pulumi.Int(10),
+//								Action: pulumi.String("permit"),
+//								Prefix: &scm.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs{
+//									GreaterThanOrEqual: 24,
+//									Network:            pulumi.String("198.18.1.0/24"),
+//								},
+//							},
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type RoutePrefixList struct {
 	pulumi.CustomResourceState
 
@@ -20,14 +62,18 @@ type RoutePrefixList struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Ipv4
-	Ipv4 RoutePrefixListIpv4PtrOutput `pulumi:"ipv4"`
 	// Filter prefix list name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
+	// Address Family Type
+	Type RoutePrefixListTypePtrOutput `pulumi:"type"`
 }
 
 // NewRoutePrefixList registers a new resource with the given unique name, arguments, and options.
@@ -65,14 +111,18 @@ type routePrefixListState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Ipv4
-	Ipv4 *RoutePrefixListIpv4 `pulumi:"ipv4"`
 	// Filter prefix list name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
+	// Address Family Type
+	Type *RoutePrefixListType `pulumi:"type"`
 }
 
 type RoutePrefixListState struct {
@@ -81,14 +131,18 @@ type RoutePrefixListState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Ipv4
-	Ipv4 RoutePrefixListIpv4PtrInput
 	// Filter prefix list name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
+	// Address Family Type
+	Type RoutePrefixListTypePtrInput
 }
 
 func (RoutePrefixListState) ElementType() reflect.Type {
@@ -101,13 +155,17 @@ type routePrefixListArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Ipv4
-	Ipv4 *RoutePrefixListIpv4 `pulumi:"ipv4"`
 	// Filter prefix list name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
+	// Address Family Type
+	Type *RoutePrefixListType `pulumi:"type"`
 }
 
 // The set of arguments for constructing a RoutePrefixList resource.
@@ -117,13 +175,17 @@ type RoutePrefixListArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Ipv4
-	Ipv4 RoutePrefixListIpv4PtrInput
 	// Filter prefix list name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
+	// Address Family Type
+	Type RoutePrefixListTypePtrInput
 }
 
 func (RoutePrefixListArgs) ElementType() reflect.Type {
@@ -224,13 +286,10 @@ func (o RoutePrefixListOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RoutePrefixListOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RoutePrefixList) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
-}
-
-// Ipv4
-func (o RoutePrefixListOutput) Ipv4() RoutePrefixListIpv4PtrOutput {
-	return o.ApplyT(func(v *RoutePrefixList) RoutePrefixListIpv4PtrOutput { return v.Ipv4 }).(RoutePrefixListIpv4PtrOutput)
 }
 
 // Filter prefix list name
@@ -239,12 +298,19 @@ func (o RoutePrefixListOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o RoutePrefixListOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *RoutePrefixList) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }
 
 func (o RoutePrefixListOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v *RoutePrefixList) pulumi.StringOutput { return v.Tfid }).(pulumi.StringOutput)
+}
+
+// Address Family Type
+func (o RoutePrefixListOutput) Type() RoutePrefixListTypePtrOutput {
+	return o.ApplyT(func(v *RoutePrefixList) RoutePrefixListTypePtrOutput { return v.Type }).(RoutePrefixListTypePtrOutput)
 }
 
 type RoutePrefixListArrayOutput struct{ *pulumi.OutputState }

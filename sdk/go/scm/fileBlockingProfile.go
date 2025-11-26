@@ -12,6 +12,106 @@ import (
 )
 
 // FileBlockingProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewFileBlockingProfile(ctx, "scm_file_blocking_base", &scm.FileBlockingProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("base_file_blocking"),
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewFileBlockingProfile(ctx, "scm_file_blocking_profile", &scm.FileBlockingProfileArgs{
+//				Folder:      pulumi.String("ngfw-shared"),
+//				Name:        pulumi.String("file_blocking_profile_complete"),
+//				Description: pulumi.String("alert, block, and continue"),
+//				Rules: scm.FileBlockingProfileRuleArray{
+//					&scm.FileBlockingProfileRuleArgs{
+//						Name:   pulumi.String("block_rule"),
+//						Action: pulumi.String("block"),
+//						Application: []string{
+//							"any",
+//						},
+//						Direction: pulumi.String("upload"),
+//						FileType: []string{
+//							"any",
+//						},
+//					},
+//					&scm.FileBlockingProfileRuleArgs{
+//						Name:   pulumi.String("block_rule_two"),
+//						Action: pulumi.String("block"),
+//						Application: []string{
+//							"8x8",
+//						},
+//						Direction: pulumi.String("upload"),
+//						FileType: []string{
+//							"7z",
+//							"bat",
+//							"chm",
+//							"class",
+//							"cpl",
+//							"dll",
+//							"hlp",
+//							"hta",
+//							"jar",
+//							"ocx",
+//							"pif",
+//							"scr",
+//							"torrent",
+//							"vbe",
+//							"wsf",
+//						},
+//					},
+//					&scm.FileBlockingProfileRuleArgs{
+//						Name:   pulumi.String("alert_rule"),
+//						Action: pulumi.String("alert"),
+//						Application: []string{
+//							"access-grid",
+//							"adobe-update",
+//						},
+//						Direction: pulumi.String("both"),
+//						FileType: []string{
+//							"ico",
+//						},
+//					},
+//					&scm.FileBlockingProfileRuleArgs{
+//						Name:   pulumi.String("continue_rule"),
+//						Action: pulumi.String("continue"),
+//						Application: []string{
+//							"apple-appstore",
+//							"limelight",
+//						},
+//						Direction: pulumi.String("download"),
+//						FileType: []string{
+//							"doc",
+//							"bmp",
+//							"dsn",
+//							"dwf",
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type FileBlockingProfile struct {
 	pulumi.CustomResourceState
 
@@ -20,12 +120,16 @@ type FileBlockingProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the file blocking profile
 	Name pulumi.StringOutput `pulumi:"name"`
 	// A list of file blocking rules
 	Rules FileBlockingProfileRuleArrayOutput `pulumi:"rules"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -65,12 +169,16 @@ type fileBlockingProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the file blocking profile
 	Name *string `pulumi:"name"`
 	// A list of file blocking rules
 	Rules []FileBlockingProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
@@ -81,12 +189,16 @@ type FileBlockingProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the file blocking profile
 	Name pulumi.StringPtrInput
 	// A list of file blocking rules
 	Rules FileBlockingProfileRuleArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -101,12 +213,16 @@ type fileBlockingProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the file blocking profile
 	Name *string `pulumi:"name"`
 	// A list of file blocking rules
 	Rules []FileBlockingProfileRule `pulumi:"rules"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -117,12 +233,16 @@ type FileBlockingProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the file blocking profile
 	Name pulumi.StringPtrInput
 	// A list of file blocking rules
 	Rules FileBlockingProfileRuleArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -224,6 +344,8 @@ func (o FileBlockingProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o FileBlockingProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -239,6 +361,8 @@ func (o FileBlockingProfileOutput) Rules() FileBlockingProfileRuleArrayOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o FileBlockingProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *FileBlockingProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -28,7 +28,7 @@ public final class GetSamlServerProfileListData {
      */
     private String entityId;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -53,7 +53,7 @@ public final class GetSamlServerProfileListData {
      */
     private String sloBindings;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -102,7 +102,7 @@ public final class GetSamlServerProfileListData {
         return this.entityId;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -137,7 +137,7 @@ public final class GetSamlServerProfileListData {
         return this.sloBindings;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

@@ -22,20 +22,28 @@ public final class GetExternalDynamicListTypeImsiRecurring {
     /**
      * @return Five minute
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     private GetExternalDynamicListTypeImsiRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListTypeImsiRecurringHourly hourly;
     /**
      * @return Monthly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     private GetExternalDynamicListTypeImsiRecurringMonthly monthly;
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private GetExternalDynamicListTypeImsiRecurringWeekly weekly;
@@ -51,12 +59,16 @@ public final class GetExternalDynamicListTypeImsiRecurring {
     /**
      * @return Five minute
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     public GetExternalDynamicListTypeImsiRecurringFiveMinute fiveMinute() {
         return this.fiveMinute;
     }
     /**
      * @return Hourly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListTypeImsiRecurringHourly hourly() {
@@ -65,12 +77,16 @@ public final class GetExternalDynamicListTypeImsiRecurring {
     /**
      * @return Monthly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     public GetExternalDynamicListTypeImsiRecurringMonthly monthly() {
         return this.monthly;
     }
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public GetExternalDynamicListTypeImsiRecurringWeekly weekly() {

@@ -38,56 +38,20 @@ public final class GetAntiSpywareSignatureResult {
      * 
      */
     private String device;
-    /**
-     * @return Direction
-     * 
-     */
     private String direction;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Reference
-     * 
-     */
     private List<String> references;
-    /**
-     * @return Severity
-     * 
-     */
     private String severity;
-    /**
-     * @return anti spyware signature
-     * 
-     */
     private GetAntiSpywareSignatureSignature signature;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return threat id range \n\n and \n\n
-     * 
-     */
     private String threatId;
-    /**
-     * @return Threatname
-     * 
-     */
     private String threatname;
-    /**
-     * @return Vendor
-     * 
-     */
     private List<String> vendors;
 
     private GetAntiSpywareSignatureResult() {}
@@ -126,17 +90,9 @@ public final class GetAntiSpywareSignatureResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Direction
-     * 
-     */
     public String direction() {
         return this.direction;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -147,55 +103,27 @@ public final class GetAntiSpywareSignatureResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Reference
-     * 
-     */
     public List<String> references() {
         return this.references;
     }
-    /**
-     * @return Severity
-     * 
-     */
     public String severity() {
         return this.severity;
     }
-    /**
-     * @return anti spyware signature
-     * 
-     */
     public GetAntiSpywareSignatureSignature signature() {
         return this.signature;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return threat id range \n\n and \n\n
-     * 
-     */
     public String threatId() {
         return this.threatId;
     }
-    /**
-     * @return Threatname
-     * 
-     */
     public String threatname() {
         return this.threatname;
     }
-    /**
-     * @return Vendor
-     * 
-     */
     public List<String> vendors() {
         return this.vendors;
     }

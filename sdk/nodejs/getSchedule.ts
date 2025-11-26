@@ -39,9 +39,6 @@ export interface GetScheduleResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the schedule
@@ -51,13 +48,7 @@ export interface GetScheduleResult {
      * The name of the schedule
      */
     readonly name: string;
-    /**
-     * Schedule type
-     */
     readonly scheduleType: outputs.GetScheduleScheduleType;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

@@ -75,42 +75,21 @@ export interface GetVlanInterfaceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Vlan interfaces DHCP Client Object
-     */
     readonly dhcpClient: outputs.GetVlanInterfaceDhcpClient;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface management profile
-     */
     readonly interfaceManagementProfile: string;
-    /**
-     * VLAN Interface IP Parent
-     */
     readonly ips: outputs.GetVlanInterfaceIp[];
-    /**
-     * MTU
-     */
     readonly mtu: number;
     /**
      * L3 sub-interface name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * VLAN tag
-     */
     readonly vlanTag: string;
 }
 /**

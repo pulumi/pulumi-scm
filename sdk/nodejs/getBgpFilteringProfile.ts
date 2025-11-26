@@ -43,25 +43,16 @@ export interface GetBgpFilteringProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Ipv4
-     */
     readonly ipv4: outputs.GetBgpFilteringProfileIpv4;
     /**
      * Name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

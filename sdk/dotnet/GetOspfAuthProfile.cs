@@ -79,33 +79,18 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Map of sensitive values returned from the API.
-        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// MD5s
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetOspfAuthProfileMd5Result> Md5s;
         /// <summary>
         /// Profile name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Password
-        /// </summary>
         public readonly string Password;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

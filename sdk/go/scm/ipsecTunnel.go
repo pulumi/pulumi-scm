@@ -131,10 +131,14 @@ type IpsecTunnel struct {
 	// allow GRE over IPSec
 	EnableGreEncapsulation pulumi.BoolOutput `pulumi:"enableGreEncapsulation"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
@@ -187,10 +191,14 @@ type ipsecTunnelState struct {
 	// allow GRE over IPSec
 	EnableGreEncapsulation *bool `pulumi:"enableGreEncapsulation"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
@@ -211,10 +219,14 @@ type IpsecTunnelState struct {
 	// allow GRE over IPSec
 	EnableGreEncapsulation pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
@@ -239,10 +251,14 @@ type ipsecTunnelArgs struct {
 	// allow GRE over IPSec
 	EnableGreEncapsulation *bool `pulumi:"enableGreEncapsulation"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
 	TunnelInterface *string `pulumi:"tunnelInterface"`
@@ -263,10 +279,14 @@ type IpsecTunnelArgs struct {
 	// allow GRE over IPSec
 	EnableGreEncapsulation pulumi.BoolPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
 	TunnelInterface pulumi.StringPtrInput
@@ -387,6 +407,8 @@ func (o IpsecTunnelOutput) EnableGreEncapsulation() pulumi.BoolOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IpsecTunnelOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -397,6 +419,8 @@ func (o IpsecTunnelOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IpsecTunnelOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IpsecTunnel) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

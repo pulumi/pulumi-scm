@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetIkeGatewayListDataAuthenticationCertificateResult Certificate;
         /// <summary>
         /// Pre shared key
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Certificate` and `PreSharedKey`.
         /// </summary>
         public readonly Outputs.GetIkeGatewayListDataAuthenticationPreSharedKeyResult PreSharedKey;
 

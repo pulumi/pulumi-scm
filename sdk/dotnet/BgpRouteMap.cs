@@ -11,6 +11,90 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// BgpRouteMap resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     //
+    ///     // Creates various resources used for subsequent examples
+    ///     //
+    ///     var scmRoutePrefixList = new Scm.RoutePrefixList("scm_route_prefix_list", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_bgp_prefix_list",
+    ///         Description = "Managed by Pulumi",
+    ///         Type = new Scm.Inputs.RoutePrefixListTypeArgs
+    ///         {
+    ///             Ipv4 = new Scm.Inputs.RoutePrefixListTypeIpv4Args
+    ///             {
+    ///                 Ipv4Entries = new[]
+    ///                 {
+    ///                     new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryArgs
+    ///                     {
+    ///                         Name = 10,
+    ///                         Action = "permit",
+    ///                         Prefix = new Scm.Inputs.RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs
+    ///                         {
+    ///                             GreaterThanOrEqual = 24,
+    ///                             Network = "198.18.1.0/24",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates a bgp route map that sets no-export community for traffic matching prefix-list
+    ///     // Requires: scm_bgp_prefix_list
+    ///     //
+    ///     var scmBgpRouteMap = new Scm.BgpRouteMap("scm_bgp_route_map", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_bgp_route_map",
+    ///         Description = "Managed by Pulumi",
+    ///         RouteMaps = new[]
+    ///         {
+    ///             new Scm.Inputs.BgpRouteMapRouteMapArgs
+    ///             {
+    ///                 Name = 10,
+    ///                 Description = "No Export",
+    ///                 Match = new Scm.Inputs.BgpRouteMapRouteMapMatchArgs
+    ///                 {
+    ///                     Ipv4 = new Scm.Inputs.BgpRouteMapRouteMapMatchIpv4Args
+    ///                     {
+    ///                         Address = new Scm.Inputs.BgpRouteMapRouteMapMatchIpv4AddressArgs
+    ///                         {
+    ///                             PrefixList = "scm_bgp_prefix_list",
+    ///                         },
+    ///                     },
+    ///                 },
+    ///                 Set = new Scm.Inputs.BgpRouteMapRouteMapSetArgs
+    ///                 {
+    ///                     RegularCommunity = new[]
+    ///                     {
+    ///                         "no-export",
+    ///                     },
+    ///                 },
+    ///             },
+    ///         },
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmRoutePrefixList,
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/bgpRouteMap:BgpRouteMap")]
     public partial class BgpRouteMap : global::Pulumi.CustomResource
@@ -29,6 +113,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -47,6 +133,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -114,6 +202,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -138,6 +228,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -164,6 +256,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -188,6 +282,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

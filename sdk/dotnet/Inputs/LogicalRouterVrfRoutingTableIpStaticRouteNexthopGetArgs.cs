@@ -20,42 +20,56 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Fqdn
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("fqdn")]
         public Input<string>? Fqdn { get; set; }
 
         /// <summary>
         /// Ip address
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("ipAddress")]
         public Input<string>? IpAddress { get; set; }
 
         /// <summary>
         /// Ipv6 address
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("ipv6Address")]
         public Input<string>? Ipv6Address { get; set; }
 
         /// <summary>
         /// Next lr
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("nextLr")]
         public Input<string>? NextLr { get; set; }
 
         /// <summary>
         /// Next vr
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("nextVr")]
         public Input<string>? NextVr { get; set; }
 
         /// <summary>
         /// Receive
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("receive")]
         public Input<Inputs.LogicalRouterVrfRoutingTableIpStaticRouteNexthopReceiveGetArgs>? Receive { get; set; }
 
         /// <summary>
         /// Tunnel
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Fqdn`, `IpAddress`, `Ipv6Address`, `NextLr`, `NextVr`, `Receive`, and `Tunnel`.
         /// </summary>
         [Input("tunnel")]
         public Input<string>? Tunnel { get; set; }

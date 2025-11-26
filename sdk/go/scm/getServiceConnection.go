@@ -22,132 +22,27 @@ import (
 //
 //	"github.com/pulumi/pulumi-scm/sdk/go/scm"
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
-//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi/config"
 //
 // )
-// func main() {
-// pulumi.Run(func(ctx *pulumi.Context) error {
-// cfg := config.New(ctx, "")
-// // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
-// folderScope := "Service Connections";
-// if param := cfg.Get("folderScope"); param != ""{
-// folderScope = param
-// }
-// //# 1. Define the IKE Crypto Profile (IKE Phase 1)
-// // Note: The resource name is plural: "scm_ike_crypto_profile"
-// example, err := scm.NewIkeCryptoProfile(ctx, "example", &scm.IkeCryptoProfileArgs{
-// Name: pulumi.String("example-ike-crypto_data"),
-// Folder: pulumi.String(folderScope),
-// Hashes: pulumi.StringArray{
-// pulumi.String("sha256"),
-// },
-// DhGroups: pulumi.StringArray{
-// pulumi.String("group14"),
-// },
-// Encryptions: pulumi.StringArray{
-// pulumi.String("aes-256-cbc"),
-// },
-// })
-// if err != nil {
-// return err
-// }
-// //# 2. Define the IPsec Crypto Profile (IKE Phase 2)
-// // Note: The resource name is plural and nested blocks now use an equals sign (=).
-// exampleIpsecCryptoProfile, err := scm.NewIpsecCryptoProfile(ctx, "example", &scm.IpsecCryptoProfileArgs{
-// Name: pulumi.String("panw-IPSec-Crypto_data"),
-// Folder: pulumi.String(folderScope),
-// Esp: &scm.IpsecCryptoProfileEspArgs{
-// Encryptions: pulumi.StringArray{
-// pulumi.String("aes-256-gcm"),
-// },
-// Authentications: pulumi.StringArray{
-// pulumi.String("sha256"),
-// },
-// },
-// DhGroup: pulumi.String("group14"),
-// Lifetime: &scm.IpsecCryptoProfileLifetimeArgs{
-// Hours: pulumi.Int(8),
-// },
-// })
-// if err != nil {
-// return err
-// }
-// //# 3. Define the IKE Gateway
-// // Note: The resource name is plural and nested blocks now use an equals sign (=).
-// exampleIkeGateway, err := scm.NewIkeGateway(ctx, "example", &scm.IkeGatewayArgs{
-// Name: pulumi.String("example-gateway_data"),
-// Folder: pulumi.String(folderScope),
-// PeerAddress: &scm.IkeGatewayPeerAddressArgs{
-// Ip: pulumi.String("1.1.1.1"),
-// },
-// Authentication: &scm.IkeGatewayAuthenticationArgs{
-// PreSharedKey: &scm.IkeGatewayAuthenticationPreSharedKeyArgs{
-// Key: pulumi.String("secret"),
-// },
-// },
-// Protocol: &scm.IkeGatewayProtocolArgs{
-// Ikev1: &scm.IkeGatewayProtocolIkev1Args{
-// IkeCryptoProfile: example.Name,
-// },
-// },
-// })
-// if err != nil {
-// return err
-// }
-// //# 4. Define the IPsec Tunnel
-// // Note: Nested 'auto_key' block uses an equals sign (=).
-// exampleIpsecTunnel, err := scm.NewIpsecTunnel(ctx, "example", &scm.IpsecTunnelArgs{
-// Name: pulumi.String("example-tunnel_data"),
-// Folder: pulumi.String(folderScope),
-// TunnelInterface: pulumi.String("tunnel"),
-// AntiReplay: pulumi.Bool(true),
-// CopyTos: pulumi.Bool(false),
-// EnableGreEncapsulation: pulumi.Bool(false),
-// AutoKey: &scm.IpsecTunnelAutoKeyArgs{
-// IkeGateways: scm.IpsecTunnelAutoKeyIkeGatewayArray{
-// &scm.IpsecTunnelAutoKeyIkeGatewayArgs{
-// Name: exampleIkeGateway.Name,
-// },
-// },
-// IpsecCryptoProfile: exampleIpsecCryptoProfile.Name,
-// },
-// }, pulumi.DependsOn([]pulumi.Resource{
-// exampleIkeGateway,
-// }))
-// if err != nil {
-// return err
-// }
-// siteAVpnSc, err := scm.NewServiceConnection(ctx, "site_a_vpn_sc", &scm.ServiceConnectionArgs{
-// Name: pulumi.String("creating_a_service_connection_data"),
-// Region: pulumi.String("us-west-1"),
-// IpsecTunnel: exampleIpsecTunnel.Name,
-// Subnets: pulumi.StringArray{
-// pulumi.String("10.1.0.0/16"),
-// pulumi.String("172.16.0.0/24"),
-// },
-// SourceNat: pulumi.Bool(true),
-// })
-// if err != nil {
-// return err
-// }
-// //------------------------------------------------------
-// // Data Soruce
-// //------------------------------------------------------
-// createdConnLookup := scm.LookupServiceConnectionOutput(ctx, scm.GetServiceConnectionOutputArgs{
-// Id: siteAVpnSc.ID(),
-// }, nil);
-// ctx.Export("createdServiceConnectionId", createdConnLookup.ApplyT(func(createdConnLookup scm.GetServiceConnectionResult) (*string, error) {
-// return &createdConnLookup.Id, nil
-// }).(pulumi.StringPtrOutput))
-// ctx.Export("createdServiceConnectionRegion", createdConnLookup.ApplyT(func(createdConnLookup scm.GetServiceConnectionResult) (*string, error) {
-// return &createdConnLookup.Region, nil
-// }).(pulumi.StringPtrOutput))
-// ctx.Export("createdServiceConnectionSubnets", createdConnLookup.ApplyT(func(createdConnLookup scm.GetServiceConnectionResult) (interface{}, error) {
-// return createdConnLookup.Subnets, nil
-// }).(pulumi.Interface{}Output))
-// return nil
-// })
-// }
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// ------------------------------------------------------
+//			// Data Soruce
+//			// ------------------------------------------------------
+//			createdConnLookup, err := scm.LookupServiceConnection(ctx, &scm.LookupServiceConnectionArgs{
+//				Id: "3d07bda7-2cfa-4fdc-b504-cd82847b2ec3",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("createdServiceConnectionId", createdConnLookup.Id)
+//			ctx.Export("createdServiceConnectionRegion", createdConnLookup.Region)
+//			ctx.Export("createdServiceConnectionSubnets", createdConnLookup.Subnets)
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupServiceConnection(ctx *pulumi.Context, args *LookupServiceConnectionArgs, opts ...pulumi.InvokeOption) (*LookupServiceConnectionResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)

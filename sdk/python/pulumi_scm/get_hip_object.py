@@ -134,41 +134,26 @@ class GetHipObjectResult:
     @_builtins.property
     @pulumi.getter(name="diskBackup")
     def disk_backup(self) -> 'outputs.GetHipObjectDiskBackupResult':
-        """
-        Disk backup
-        """
         return pulumi.get(self, "disk_backup")
 
     @_builtins.property
     @pulumi.getter(name="diskEncryption")
     def disk_encryption(self) -> 'outputs.GetHipObjectDiskEncryptionResult':
-        """
-        Disk encryption
-        """
         return pulumi.get(self, "disk_encryption")
 
     @_builtins.property
     @pulumi.getter
     def firewall(self) -> 'outputs.GetHipObjectFirewallResult':
-        """
-        Firewall
-        """
         return pulumi.get(self, "firewall")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter(name="hostInfo")
     def host_info(self) -> 'outputs.GetHipObjectHostInfoResult':
-        """
-        Host info
-        """
         return pulumi.get(self, "host_info")
 
     @_builtins.property
@@ -182,9 +167,6 @@ class GetHipObjectResult:
     @_builtins.property
     @pulumi.getter(name="mobileDevice")
     def mobile_device(self) -> 'outputs.GetHipObjectMobileDeviceResult':
-        """
-        Mobile device
-        """
         return pulumi.get(self, "mobile_device")
 
     @_builtins.property
@@ -198,25 +180,16 @@ class GetHipObjectResult:
     @_builtins.property
     @pulumi.getter(name="networkInfo")
     def network_info(self) -> 'outputs.GetHipObjectNetworkInfoResult':
-        """
-        Network info
-        """
         return pulumi.get(self, "network_info")
 
     @_builtins.property
     @pulumi.getter(name="patchManagement")
     def patch_management(self) -> 'outputs.GetHipObjectPatchManagementResult':
-        """
-        Patch management
-        """
         return pulumi.get(self, "patch_management")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

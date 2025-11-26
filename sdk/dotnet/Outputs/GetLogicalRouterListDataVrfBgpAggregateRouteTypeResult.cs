@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv4Result Ipv4;
         /// <summary>
         /// Ipv6
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ipv4` and `Ipv6`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6Result Ipv6;
 

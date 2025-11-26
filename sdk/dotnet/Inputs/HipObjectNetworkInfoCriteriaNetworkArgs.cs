@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Is not
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
         /// </summary>
         [Input("isNot")]
         public Input<Inputs.HipObjectNetworkInfoCriteriaNetworkIsNotArgs>? IsNot { get; set; }

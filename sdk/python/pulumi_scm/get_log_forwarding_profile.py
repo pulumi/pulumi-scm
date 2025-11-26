@@ -72,9 +72,6 @@ class GetLogForwardingProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -88,9 +85,6 @@ class GetLogForwardingProfileResult:
     @_builtins.property
     @pulumi.getter(name="matchLists")
     def match_lists(self) -> Sequence['outputs.GetLogForwardingProfileMatchListResult']:
-        """
-        Match list
-        """
         return pulumi.get(self, "match_lists")
 
     @_builtins.property
@@ -104,9 +98,6 @@ class GetLogForwardingProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

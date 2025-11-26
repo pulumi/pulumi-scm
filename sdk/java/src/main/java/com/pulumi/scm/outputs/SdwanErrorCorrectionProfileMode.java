@@ -20,6 +20,8 @@ public final class SdwanErrorCorrectionProfileMode {
     /**
      * @return Packet duplication
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
+     * 
      */
     private @Nullable SdwanErrorCorrectionProfileModePacketDuplication packetDuplication;
 
@@ -33,6 +35,8 @@ public final class SdwanErrorCorrectionProfileMode {
     }
     /**
      * @return Packet duplication
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `forwardErrorCorrection` and `packetDuplication`.
      * 
      */
     public Optional<SdwanErrorCorrectionProfileModePacketDuplication> packetDuplication() {

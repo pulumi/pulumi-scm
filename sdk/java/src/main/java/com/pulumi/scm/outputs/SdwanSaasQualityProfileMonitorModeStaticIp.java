@@ -21,6 +21,8 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIp {
     /**
      * @return List of IP addresses
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+     * 
      */
     private @Nullable List<SdwanSaasQualityProfileMonitorModeStaticIpIpAddress> ipAddresses;
 
@@ -34,6 +36,8 @@ public final class SdwanSaasQualityProfileMonitorModeStaticIp {
     }
     /**
      * @return List of IP addresses
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public List<SdwanSaasQualityProfileMonitorModeStaticIpIpAddress> ipAddresses() {

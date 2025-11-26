@@ -20,36 +20,48 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Allow
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("allow")]
         public Input<Inputs.AntiSpywareProfileRuleActionAllowGetArgs>? Allow { get; set; }
 
         /// <summary>
         /// anti spyware profiles rules action block ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("blockIp")]
         public Input<Inputs.AntiSpywareProfileRuleActionBlockIpGetArgs>? BlockIp { get; set; }
 
         /// <summary>
         /// Drop
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("drop")]
         public Input<Inputs.AntiSpywareProfileRuleActionDropGetArgs>? Drop { get; set; }
 
         /// <summary>
         /// Reset both
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("resetBoth")]
         public Input<Inputs.AntiSpywareProfileRuleActionResetBothGetArgs>? ResetBoth { get; set; }
 
         /// <summary>
         /// Reset client
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("resetClient")]
         public Input<Inputs.AntiSpywareProfileRuleActionResetClientGetArgs>? ResetClient { get; set; }
 
         /// <summary>
         /// Reset server
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         [Input("resetServer")]
         public Input<Inputs.AntiSpywareProfileRuleActionResetServerGetArgs>? ResetServer { get; set; }

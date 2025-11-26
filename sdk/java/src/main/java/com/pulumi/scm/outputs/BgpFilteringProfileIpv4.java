@@ -4,25 +4,39 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.BgpFilteringProfileIpv4Ipv4;
+import com.pulumi.scm.outputs.BgpFilteringProfileIpv4Multicast;
+import com.pulumi.scm.outputs.BgpFilteringProfileIpv4Unicast;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class BgpFilteringProfileIpv4 {
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    private BgpFilteringProfileIpv4Ipv4 ipv4;
+    private @Nullable BgpFilteringProfileIpv4Multicast multicast;
+    /**
+     * @return Unicast
+     * 
+     */
+    private @Nullable BgpFilteringProfileIpv4Unicast unicast;
 
     private BgpFilteringProfileIpv4() {}
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    public BgpFilteringProfileIpv4Ipv4 ipv4() {
-        return this.ipv4;
+    public Optional<BgpFilteringProfileIpv4Multicast> multicast() {
+        return Optional.ofNullable(this.multicast);
+    }
+    /**
+     * @return Unicast
+     * 
+     */
+    public Optional<BgpFilteringProfileIpv4Unicast> unicast() {
+        return Optional.ofNullable(this.unicast);
     }
 
     public static Builder builder() {
@@ -34,24 +48,31 @@ public final class BgpFilteringProfileIpv4 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private BgpFilteringProfileIpv4Ipv4 ipv4;
+        private @Nullable BgpFilteringProfileIpv4Multicast multicast;
+        private @Nullable BgpFilteringProfileIpv4Unicast unicast;
         public Builder() {}
         public Builder(BgpFilteringProfileIpv4 defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.ipv4 = defaults.ipv4;
+    	      this.multicast = defaults.multicast;
+    	      this.unicast = defaults.unicast;
         }
 
         @CustomType.Setter
-        public Builder ipv4(BgpFilteringProfileIpv4Ipv4 ipv4) {
-            if (ipv4 == null) {
-              throw new MissingRequiredPropertyException("BgpFilteringProfileIpv4", "ipv4");
-            }
-            this.ipv4 = ipv4;
+        public Builder multicast(@Nullable BgpFilteringProfileIpv4Multicast multicast) {
+
+            this.multicast = multicast;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder unicast(@Nullable BgpFilteringProfileIpv4Unicast unicast) {
+
+            this.unicast = unicast;
             return this;
         }
         public BgpFilteringProfileIpv4 build() {
             final var _resultValue = new BgpFilteringProfileIpv4();
-            _resultValue.ipv4 = ipv4;
+            _resultValue.multicast = multicast;
+            _resultValue.unicast = unicast;
             return _resultValue;
         }
     }

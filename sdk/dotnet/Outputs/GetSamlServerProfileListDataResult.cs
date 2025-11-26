@@ -26,7 +26,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string EntityId;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -46,7 +46,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string SloBindings;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

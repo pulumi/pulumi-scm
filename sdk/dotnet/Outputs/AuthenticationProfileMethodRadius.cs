@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class AuthenticationProfileMethodRadius
     {
         /// <summary>
-        /// Checkgroup
+        /// method radius object check group of authentication profile
         /// </summary>
         public readonly bool? Checkgroup;
         /// <summary>
-        /// Server profile
+        /// method radius object server profile of authentication profile
         /// </summary>
         public readonly string? ServerProfile;
 

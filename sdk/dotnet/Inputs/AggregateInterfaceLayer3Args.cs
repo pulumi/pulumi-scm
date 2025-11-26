@@ -47,6 +47,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Aggregate Interface IP addresses
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.AggregateInterfaceLayer3IpArgs> Ips
         {

@@ -16,7 +16,7 @@ import java.util.Objects;
 @CustomType
 public final class GetAuthenticationProfileListData {
     /**
-     * @return Allow list
+     * @return The allowList of the authentication profile
      * 
      */
     private List<String> allowLists;
@@ -26,7 +26,7 @@ public final class GetAuthenticationProfileListData {
      */
     private String device;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -36,12 +36,12 @@ public final class GetAuthenticationProfileListData {
      */
     private String id;
     /**
-     * @return Lockout
+     * @return Lockout object of the authentication profile
      * 
      */
     private GetAuthenticationProfileListDataLockout lockout;
     /**
-     * @return Method
+     * @return method object of authentication profile
      * 
      */
     private GetAuthenticationProfileListDataMethod method;
@@ -61,7 +61,7 @@ public final class GetAuthenticationProfileListData {
      */
     private GetAuthenticationProfileListDataSingleSignOn singleSignOn;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -79,7 +79,7 @@ public final class GetAuthenticationProfileListData {
 
     private GetAuthenticationProfileListData() {}
     /**
-     * @return Allow list
+     * @return The allowList of the authentication profile
      * 
      */
     public List<String> allowLists() {
@@ -93,7 +93,7 @@ public final class GetAuthenticationProfileListData {
         return this.device;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -107,14 +107,14 @@ public final class GetAuthenticationProfileListData {
         return this.id;
     }
     /**
-     * @return Lockout
+     * @return Lockout object of the authentication profile
      * 
      */
     public GetAuthenticationProfileListDataLockout lockout() {
         return this.lockout;
     }
     /**
-     * @return Method
+     * @return method object of authentication profile
      * 
      */
     public GetAuthenticationProfileListDataMethod method() {
@@ -142,7 +142,7 @@ public final class GetAuthenticationProfileListData {
         return this.singleSignOn;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

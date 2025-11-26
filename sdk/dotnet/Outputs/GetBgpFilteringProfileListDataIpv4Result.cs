@@ -14,14 +14,22 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetBgpFilteringProfileListDataIpv4Result
     {
         /// <summary>
-        /// Ipv4
+        /// Multicast
         /// </summary>
-        public readonly Outputs.GetBgpFilteringProfileListDataIpv4Ipv4Result Ipv4;
+        public readonly Outputs.GetBgpFilteringProfileListDataIpv4MulticastResult Multicast;
+        /// <summary>
+        /// Unicast
+        /// </summary>
+        public readonly Outputs.GetBgpFilteringProfileListDataIpv4UnicastResult Unicast;
 
         [OutputConstructor]
-        private GetBgpFilteringProfileListDataIpv4Result(Outputs.GetBgpFilteringProfileListDataIpv4Ipv4Result ipv4)
+        private GetBgpFilteringProfileListDataIpv4Result(
+            Outputs.GetBgpFilteringProfileListDataIpv4MulticastResult multicast,
+
+            Outputs.GetBgpFilteringProfileListDataIpv4UnicastResult unicast)
         {
-            Ipv4 = ipv4;
+            Multicast = multicast;
+            Unicast = unicast;
         }
     }
 }

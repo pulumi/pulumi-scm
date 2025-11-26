@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM File Blocking Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetFileBlockingProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFileBlockingProfileAllShared"] = allShared.Apply(getFileBlockingProfileListResult =&gt; getFileBlockingProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetFileBlockingProfileListResult> InvokeAsync(GetFileBlockingProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetFileBlockingProfileListResult>("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", args ?? new GetFileBlockingProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM File Blocking Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetFileBlockingProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFileBlockingProfileAllShared"] = allShared.Apply(getFileBlockingProfileListResult =&gt; getFileBlockingProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetFileBlockingProfileListResult> Invoke(GetFileBlockingProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetFileBlockingProfileListResult>("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", args ?? new GetFileBlockingProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM File Blocking Profile objects.
+        ///     //
+        ///     // Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetFileBlockingProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmFileBlockingProfileAllShared"] = allShared.Apply(getFileBlockingProfileListResult =&gt; getFileBlockingProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetFileBlockingProfileListResult> Invoke(GetFileBlockingProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetFileBlockingProfileListResult>("scm:index/getFileBlockingProfileList:getFileBlockingProfileList", args ?? new GetFileBlockingProfileListInvokeArgs(), options.WithDefaults());

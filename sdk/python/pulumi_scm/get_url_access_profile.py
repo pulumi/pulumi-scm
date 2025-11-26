@@ -159,9 +159,6 @@ class GetUrlAccessProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -175,49 +172,31 @@ class GetUrlAccessProfileResult:
     @_builtins.property
     @pulumi.getter(name="localInlineCat")
     def local_inline_cat(self) -> _builtins.bool:
-        """
-        Local inline cat
-        """
         return pulumi.get(self, "local_inline_cat")
 
     @_builtins.property
     @pulumi.getter(name="logContainerPageOnly")
     def log_container_page_only(self) -> _builtins.bool:
-        """
-        Log container page only
-        """
         return pulumi.get(self, "log_container_page_only")
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrReferer")
     def log_http_hdr_referer(self) -> _builtins.bool:
-        """
-        Log http hdr referer
-        """
         return pulumi.get(self, "log_http_hdr_referer")
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrUserAgent")
     def log_http_hdr_user_agent(self) -> _builtins.bool:
-        """
-        Log http hdr user agent
-        """
         return pulumi.get(self, "log_http_hdr_user_agent")
 
     @_builtins.property
     @pulumi.getter(name="logHttpHdrXff")
     def log_http_hdr_xff(self) -> _builtins.bool:
-        """
-        Log http hdr xff
-        """
         return pulumi.get(self, "log_http_hdr_xff")
 
     @_builtins.property
     @pulumi.getter(name="mlavCategoryExceptions")
     def mlav_category_exceptions(self) -> Sequence[_builtins.str]:
-        """
-        Mlav category exception
-        """
         return pulumi.get(self, "mlav_category_exceptions")
 
     @_builtins.property
@@ -231,25 +210,16 @@ class GetUrlAccessProfileResult:
     @_builtins.property
     @pulumi.getter
     def redirects(self) -> Sequence[_builtins.str]:
-        """
-        Redirect
-        """
         return pulumi.get(self, "redirects")
 
     @_builtins.property
     @pulumi.getter(name="safeSearchEnforcement")
     def safe_search_enforcement(self) -> _builtins.bool:
-        """
-        Safe search enforcement
-        """
         return pulumi.get(self, "safe_search_enforcement")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

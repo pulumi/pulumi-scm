@@ -13,18 +13,64 @@ import (
 )
 
 // BgpRedistributionProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewBgpRedistributionProfile(ctx, "scm_bgp_redistribution_profile", &scm.BgpRedistributionProfileArgs{
+//				Folder: pulumi.String("ngfw-shared"),
+//				Name:   pulumi.String("scm_bgp_redistribution_profile"),
+//				Ipv4: &scm.BgpRedistributionProfileIpv4Args{
+//					Unicast: &scm.BgpRedistributionProfileIpv4UnicastArgs{
+//						Static: &scm.BgpRedistributionProfileIpv4UnicastStaticArgs{
+//							Enable: pulumi.Bool(true),
+//							Metric: pulumi.Int(10),
+//						},
+//						Connected: &scm.BgpRedistributionProfileIpv4UnicastConnectedArgs{
+//							Enable: pulumi.Bool(true),
+//							Metric: pulumi.Int(10),
+//						},
+//						Ospf: &scm.BgpRedistributionProfileIpv4UnicastOspfArgs{
+//							Enable: pulumi.Bool(false),
+//						},
+//					},
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type BgpRedistributionProfile struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Ipv4
 	Ipv4 BgpRedistributionProfileIpv4Output `pulumi:"ipv4"`
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -65,12 +111,16 @@ type bgpRedistributionProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Ipv4
 	Ipv4 *BgpRedistributionProfileIpv4 `pulumi:"ipv4"`
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
@@ -79,12 +129,16 @@ type BgpRedistributionProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Ipv4
 	Ipv4 BgpRedistributionProfileIpv4PtrInput
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -97,12 +151,16 @@ type bgpRedistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Ipv4
 	Ipv4 BgpRedistributionProfileIpv4 `pulumi:"ipv4"`
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -111,12 +169,16 @@ type BgpRedistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Ipv4
 	Ipv4 BgpRedistributionProfileIpv4Input
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -213,6 +275,8 @@ func (o BgpRedistributionProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRedistributionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRedistributionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -228,6 +292,8 @@ func (o BgpRedistributionProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o BgpRedistributionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *BgpRedistributionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

@@ -66,33 +66,18 @@ export interface GetTunnelInterfaceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface management profile
-     */
     readonly interfaceManagementProfile: string;
-    /**
-     * Tunnel Interface IP Parent
-     */
     readonly ips: outputs.GetTunnelInterfaceIp[];
-    /**
-     * MTU
-     */
     readonly mtu: number;
     /**
      * L3 sub-interface name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetQosProfileListDataClassBandwidthTypeMbpsResult Mbps;
         /// <summary>
         /// Percentage
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Mbps` and `Percentage`.
         /// </summary>
         public readonly Outputs.GetQosProfileListDataClassBandwidthTypePercentageResult Percentage;
 

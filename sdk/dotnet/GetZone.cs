@@ -178,29 +178,11 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Device acl
-        /// </summary>
         public readonly Outputs.GetZoneDeviceAclResult DeviceAcl;
-        /// <summary>
-        /// Dos log setting
-        /// </summary>
         public readonly string DosLogSetting;
-        /// <summary>
-        /// Dos profile
-        /// </summary>
         public readonly string DosProfile;
-        /// <summary>
-        /// Enable device identification
-        /// </summary>
         public readonly bool EnableDeviceIdentification;
-        /// <summary>
-        /// Enable user identification
-        /// </summary>
         public readonly bool EnableUserIdentification;
-        /// <summary>
-        /// Folder
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -210,18 +192,9 @@ namespace Pulumi.Scm
         /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Network
-        /// </summary>
         public readonly Outputs.GetZoneNetworkResult Network;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// User acl
-        /// </summary>
         public readonly Outputs.GetZoneUserAclResult UserAcl;
 
         [OutputConstructor]

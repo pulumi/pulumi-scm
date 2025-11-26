@@ -109,17 +109,11 @@ class GetLayer3SubinterfaceResult:
     @_builtins.property
     @pulumi.getter(name="dhcpClient")
     def dhcp_client(self) -> 'outputs.GetLayer3SubinterfaceDhcpClientResult':
-        """
-        Layer3 sub interfaces DHCP Client Object
-        """
         return pulumi.get(self, "dhcp_client")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -133,25 +127,16 @@ class GetLayer3SubinterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
-        """
-        Interface management profile
-        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetLayer3SubinterfaceIpResult']:
-        """
-        L3 sub-interface IP Parent
-        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
-        """
-        MTU
-        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
@@ -165,25 +150,16 @@ class GetLayer3SubinterfaceResult:
     @_builtins.property
     @pulumi.getter(name="parentInterface")
     def parent_interface(self) -> _builtins.str:
-        """
-        Parent interface
-        """
         return pulumi.get(self, "parent_interface")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tag(self) -> _builtins.int:
-        """
-        VLAN tag
-        """
         return pulumi.get(self, "tag")
 
     @_builtins.property

@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allProfiles = scm.getAuthenticationProfileList({
+ *     limit: 10,
+ *     folder: "All",
+ * });
+ * export const fetchedProfileListSummary = {
+ *     countOfRulesFetched: allProfiles.then(allProfiles => allProfiles.total),
+ *     firstRuleName: allProfiles.then(allProfiles => allProfiles.datas?.[0]?.name),
+ * };
+ * ```
  */
 export function getAuthenticationProfileList(args?: GetAuthenticationProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetAuthenticationProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allProfiles = scm.getAuthenticationProfileList({
+ *     limit: 10,
+ *     folder: "All",
+ * });
+ * export const fetchedProfileListSummary = {
+ *     countOfRulesFetched: allProfiles.then(allProfiles => allProfiles.total),
+ *     firstRuleName: allProfiles.then(allProfiles => allProfiles.datas?.[0]?.name),
+ * };
+ * ```
  */
 export function getAuthenticationProfileListOutput(args?: GetAuthenticationProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationProfileListResult> {
     args = args || {};

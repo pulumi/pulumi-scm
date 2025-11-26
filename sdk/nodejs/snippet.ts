@@ -74,7 +74,7 @@ export class Snippet extends pulumi.CustomResource {
     /**
      * The snippet type
      */
-    declare public readonly type: pulumi.Output<string | undefined>;
+    declare public /*out*/ readonly type: pulumi.Output<string>;
 
     /**
      * Create a Snippet resource with the given unique name, arguments, and options.
@@ -99,8 +99,8 @@ export class Snippet extends pulumi.CustomResource {
             resourceInputs["description"] = args?.description;
             resourceInputs["labels"] = args?.labels;
             resourceInputs["name"] = args?.name;
-            resourceInputs["type"] = args?.type;
             resourceInputs["tfid"] = undefined /*out*/;
+            resourceInputs["type"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
         super(Snippet.__pulumiType, name, resourceInputs, opts);
@@ -146,8 +146,4 @@ export interface SnippetArgs {
      * The name of the snippet
      */
     name?: pulumi.Input<string>;
-    /**
-     * The snippet type
-     */
-    type?: pulumi.Input<string>;
 }

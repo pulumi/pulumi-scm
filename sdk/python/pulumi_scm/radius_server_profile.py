@@ -35,9 +35,13 @@ class RadiusServerProfileArgs:
         :param pulumi.Input[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]] servers: Server
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the RADIUS server profile
         :param pulumi.Input[_builtins.int] retries: The number of RADIUS server retries
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timeout: The RADIUS server authentication timeout (seconds)
         """
         pulumi.set(__self__, "protocol", protocol)
@@ -96,6 +100,8 @@ class RadiusServerProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -132,6 +138,8 @@ class RadiusServerProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -168,11 +176,15 @@ class _RadiusServerProfileState:
         Input properties used for looking up and filtering RadiusServerProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the RADIUS server profile
         :param pulumi.Input['RadiusServerProfileProtocolArgs'] protocol: The RADIUS authentication protocol
         :param pulumi.Input[_builtins.int] retries: The number of RADIUS server retries
         :param pulumi.Input[Sequence[pulumi.Input['RadiusServerProfileServerArgs']]] servers: Server
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timeout: The RADIUS server authentication timeout (seconds)
         """
         if device is not None:
@@ -211,6 +223,8 @@ class _RadiusServerProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -271,6 +285,8 @@ class _RadiusServerProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -330,7 +346,7 @@ class RadiusServerProfile(pulumi.CustomResource):
             retries=5,
             timeout=60,
             protocol={
-                "c_hap": {},
+                "chap": {},
             },
             servers=[{
                 "name": "Chap_Server_Primary",
@@ -344,7 +360,7 @@ class RadiusServerProfile(pulumi.CustomResource):
             retries=5,
             timeout=60,
             protocol={
-                "p_ap": {},
+                "pap": {},
             },
             servers=[{
                 "name": "pap_Server_Primary",
@@ -358,11 +374,15 @@ class RadiusServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the RADIUS server profile
         :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']] protocol: The RADIUS authentication protocol
         :param pulumi.Input[_builtins.int] retries: The number of RADIUS server retries
         :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]] servers: Server
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timeout: The RADIUS server authentication timeout (seconds)
         """
         ...
@@ -386,7 +406,7 @@ class RadiusServerProfile(pulumi.CustomResource):
             retries=5,
             timeout=60,
             protocol={
-                "c_hap": {},
+                "chap": {},
             },
             servers=[{
                 "name": "Chap_Server_Primary",
@@ -400,7 +420,7 @@ class RadiusServerProfile(pulumi.CustomResource):
             retries=5,
             timeout=60,
             protocol={
-                "p_ap": {},
+                "pap": {},
             },
             servers=[{
                 "name": "pap_Server_Primary",
@@ -483,11 +503,15 @@ class RadiusServerProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the RADIUS server profile
         :param pulumi.Input[Union['RadiusServerProfileProtocolArgs', 'RadiusServerProfileProtocolArgsDict']] protocol: The RADIUS authentication protocol
         :param pulumi.Input[_builtins.int] retries: The number of RADIUS server retries
         :param pulumi.Input[Sequence[pulumi.Input[Union['RadiusServerProfileServerArgs', 'RadiusServerProfileServerArgsDict']]]] servers: Server
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timeout: The RADIUS server authentication timeout (seconds)
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -518,6 +542,8 @@ class RadiusServerProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -558,6 +584,8 @@ class RadiusServerProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

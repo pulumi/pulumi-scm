@@ -21,15 +21,21 @@ public final class GetLogicalRouterListDataVrfEcmpAlgorithm {
     /**
      * @return Ip hash
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
+     * 
      */
     private GetLogicalRouterListDataVrfEcmpAlgorithmIpHash ipHash;
     /**
      * @return Ip modulo
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
+     * 
      */
     private GetLogicalRouterListDataVrfEcmpAlgorithmIpModulo ipModulo;
     /**
      * @return Weighted round robin
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     private GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobin weightedRoundRobin;
@@ -45,6 +51,8 @@ public final class GetLogicalRouterListDataVrfEcmpAlgorithm {
     /**
      * @return Ip hash
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
+     * 
      */
     public GetLogicalRouterListDataVrfEcmpAlgorithmIpHash ipHash() {
         return this.ipHash;
@@ -52,12 +60,16 @@ public final class GetLogicalRouterListDataVrfEcmpAlgorithm {
     /**
      * @return Ip modulo
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
+     * 
      */
     public GetLogicalRouterListDataVrfEcmpAlgorithmIpModulo ipModulo() {
         return this.ipModulo;
     }
     /**
      * @return Weighted round robin
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `balancedRoundRobin`, `ipHash`, `ipModulo`, and `weightedRoundRobin`.
      * 
      */
     public GetLogicalRouterListDataVrfEcmpAlgorithmWeightedRoundRobin weightedRoundRobin() {

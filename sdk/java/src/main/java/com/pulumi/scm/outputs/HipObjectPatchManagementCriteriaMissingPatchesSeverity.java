@@ -19,25 +19,35 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     /**
      * @return Greater than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
+     * 
      */
     private @Nullable Integer greaterThan;
     /**
      * @return Is
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private @Nullable Integer is;
     /**
      * @return Is not
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
+     * 
      */
     private @Nullable Integer isNot;
     /**
      * @return Less equal
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
+     * 
      */
     private @Nullable Integer lessEqual;
     /**
      * @return Less than
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     private @Nullable Integer lessThan;
@@ -53,12 +63,16 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     /**
      * @return Greater than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
+     * 
      */
     public Optional<Integer> greaterThan() {
         return Optional.ofNullable(this.greaterThan);
     }
     /**
      * @return Is
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     public Optional<Integer> is() {
@@ -67,6 +81,8 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     /**
      * @return Is not
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
+     * 
      */
     public Optional<Integer> isNot() {
         return Optional.ofNullable(this.isNot);
@@ -74,12 +90,16 @@ public final class HipObjectPatchManagementCriteriaMissingPatchesSeverity {
     /**
      * @return Less equal
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
+     * 
      */
     public Optional<Integer> lessEqual() {
         return Optional.ofNullable(this.lessEqual);
     }
     /**
      * @return Less than
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `greaterEqual`, `greaterThan`, `is`, `isNot`, `lessEqual`, and `lessThan`.
      * 
      */
     public Optional<Integer> lessThan() {

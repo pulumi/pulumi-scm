@@ -166,69 +166,36 @@ namespace Pulumi.Scm
     public sealed class GetEthernetInterfaceResult
     {
         /// <summary>
-        /// Interface description
+        /// Aggregate group
         /// </summary>
+        public readonly string AggregateGroup;
         public readonly string Comment;
-        /// <summary>
-        /// Default interface assignment
-        /// </summary>
         public readonly string DefaultValue;
-        /// <summary>
-        /// The device in which the resource is defined
-        /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Map of sensitive values returned from the API.
-        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Layer2
-        /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer2Result Layer2;
-        /// <summary>
-        /// Ethernet Interface Layer 3 configuration
-        /// </summary>
         public readonly Outputs.GetEthernetInterfaceLayer3Result Layer3;
-        /// <summary>
-        /// Link duplex
-        /// </summary>
         public readonly string LinkDuplex;
-        /// <summary>
-        /// Link speed
-        /// </summary>
         public readonly string LinkSpeed;
-        /// <summary>
-        /// Link state
-        /// </summary>
         public readonly string LinkState;
         /// <summary>
         /// Interface name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Poe
-        /// </summary>
         public readonly Outputs.GetEthernetInterfacePoeResult Poe;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Tap
-        /// </summary>
         public readonly Outputs.GetEthernetInterfaceTapResult Tap;
         public readonly string Tfid;
 
         [OutputConstructor]
         private GetEthernetInterfaceResult(
+            string aggregateGroup,
+
             string comment,
 
             string defaultValue,
@@ -261,6 +228,7 @@ namespace Pulumi.Scm
 
             string tfid)
         {
+            AggregateGroup = aggregateGroup;
             Comment = comment;
             DefaultValue = defaultValue;
             Device = device;

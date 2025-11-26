@@ -39,25 +39,16 @@ export interface GetSdwanPathQualityProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Metric
-     */
     readonly metric: outputs.GetSdwanPathQualityProfileMetric;
     /**
      * Profile name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

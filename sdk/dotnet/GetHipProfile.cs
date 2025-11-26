@@ -152,25 +152,16 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Match
-        /// </summary>
         public readonly string Match;
         /// <summary>
         /// The name of the HIP profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

@@ -19,7 +19,7 @@ import * as utilities from "./utilities";
  * // This profile defines the encryption and authentication algorithms for the IKE Gateway.
  * // The values are taken from the 'createTestIKECryptoProfile' helper function.
  * const example = new scm.IkeCryptoProfile("example", {
- *     name: "example-ike-crypto-prf-for-rn",
+ *     name: "example-ike-crypto-11",
  *     folder: "Remote Networks",
  *     hashes: ["sha256"],
  *     dhGroups: ["group14"],
@@ -29,7 +29,7 @@ import * as utilities from "./utilities";
  * // This defines the VPN peer. It depends on the IKE Crypto Profile created above.
  * // The values are taken from the 'createTestIKEGateway' helper function.
  * const exampleIkeGateway = new scm.IkeGateway("example", {
- *     name: "example-ike-gateway-for-rn",
+ *     name: "example-ike-gateway-11",
  *     folder: "Remote Networks",
  *     authentication: {
  *         preSharedKey: {
@@ -51,7 +51,7 @@ import * as utilities from "./utilities";
  * // This defines the tunnel interface itself and uses the IKE Gateway.
  * // The values are taken from the 'createTestIPsecTunnel' helper function.
  * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
- *     name: "example-ipsec-tunnel-for-rn",
+ *     name: "example-ipsec-tunnel-11",
  *     folder: "Remote Networks",
  *     antiReplay: true,
  *     copyTos: false,
@@ -69,7 +69,7 @@ import * as utilities from "./utilities";
  * // This is the final resource, which uses the IPsec Tunnel created above.
  * // The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
  * const exampleRemoteNetwork = new scm.RemoteNetwork("example", {
- *     name: "example-remote-network",
+ *     name: "example-remote-network-11",
  *     folder: "Remote Networks",
  *     licenseType: "FWAAS-AGGREGATE",
  *     region: "us-west-2",

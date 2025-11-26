@@ -26,10 +26,6 @@ public final class GetDnsSecurityProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the DNS security profile
@@ -41,10 +37,6 @@ public final class GetDnsSecurityProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -70,10 +62,6 @@ public final class GetDnsSecurityProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -91,10 +79,6 @@ public final class GetDnsSecurityProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

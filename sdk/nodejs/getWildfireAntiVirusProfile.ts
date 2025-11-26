@@ -43,38 +43,20 @@ export interface GetWildfireAntiVirusProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Mlav exception
-     */
     readonly mlavExceptions: outputs.GetWildfireAntiVirusProfileMlavException[];
     /**
      * Name
      */
     readonly name: string;
-    /**
-     * Packet capture
-     */
     readonly packetCapture: boolean;
-    /**
-     * Rules
-     */
     readonly rules: outputs.GetWildfireAntiVirusProfileRule[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Threat exception
-     */
     readonly threatExceptions: outputs.GetWildfireAntiVirusProfileThreatException[];
 }
 /**

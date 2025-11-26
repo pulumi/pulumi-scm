@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// AuthenticationSequence data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var sequenceData = Scm.GetAuthenticationSequence.Invoke(new()
+        ///     {
+        ///         Id = "1ee14ac7-760c-401f-8dbc-c887db16106a",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAuthenticationSequence"] = sequenceData.Apply(getAuthenticationSequenceResult =&gt; getAuthenticationSequenceResult.Id),
+        ///         ["fetchedSequence"] = sequenceData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetAuthenticationSequenceResult> InvokeAsync(GetAuthenticationSequenceArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceArgs(), options.WithDefaults());
 
         /// <summary>
         /// AuthenticationSequence data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var sequenceData = Scm.GetAuthenticationSequence.Invoke(new()
+        ///     {
+        ///         Id = "1ee14ac7-760c-401f-8dbc-c887db16106a",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAuthenticationSequence"] = sequenceData.Apply(getAuthenticationSequenceResult =&gt; getAuthenticationSequenceResult.Id),
+        ///         ["fetchedSequence"] = sequenceData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationSequenceResult> Invoke(GetAuthenticationSequenceInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// AuthenticationSequence data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     var sequenceData = Scm.GetAuthenticationSequence.Invoke(new()
+        ///     {
+        ///         Id = "1ee14ac7-760c-401f-8dbc-c887db16106a",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmAuthenticationSequence"] = sequenceData.Apply(getAuthenticationSequenceResult =&gt; getAuthenticationSequenceResult.Id),
+        ///         ["fetchedSequence"] = sequenceData,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetAuthenticationSequenceResult> Invoke(GetAuthenticationSequenceInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetAuthenticationSequenceResult>("scm:index/getAuthenticationSequence:getAuthenticationSequence", args ?? new GetAuthenticationSequenceInvokeArgs(), options.WithDefaults());
@@ -83,9 +152,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the authentication sequence
@@ -95,14 +161,8 @@ namespace Pulumi.Scm
         /// The name of the authentication sequence
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// Use domain to determine authentication profile?
-        /// </summary>
         public readonly bool UseDomainFindProfile;
 
         [OutputConstructor]

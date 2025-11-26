@@ -40,12 +40,16 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
     /**
      * Allow
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="allow")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionAllowArgs> allow;
 
     /**
      * @return Allow
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionAllowArgs>> allow() {
@@ -55,12 +59,16 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
     /**
      * anti spyware profiles threat exception action block ip
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="blockIp")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionBlockIpArgs> blockIp;
 
     /**
      * @return anti spyware profiles threat exception action block ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionBlockIpArgs>> blockIp() {
@@ -70,12 +78,16 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
     /**
      * Default
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="default")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionDefaultArgs> default_;
 
     /**
      * @return Default
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionDefaultArgs>> default_() {
@@ -85,12 +97,16 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
     /**
      * Drop
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="drop")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionDropArgs> drop;
 
     /**
      * @return Drop
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionDropArgs>> drop() {
@@ -100,12 +116,16 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
     /**
      * Reset both
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="resetBoth")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionResetBothArgs> resetBoth;
 
     /**
      * @return Reset both
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionResetBothArgs>> resetBoth() {
@@ -115,12 +135,16 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
     /**
      * Reset client
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="resetClient")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionResetClientArgs> resetClient;
 
     /**
      * @return Reset client
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionResetClientArgs>> resetClient() {
@@ -130,12 +154,16 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
     /**
      * Reset server
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="resetServer")
     private @Nullable Output<AntiSpywareProfileThreatExceptionActionResetServerArgs> resetServer;
 
     /**
      * @return Reset server
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareProfileThreatExceptionActionResetServerArgs>> resetServer() {
@@ -197,6 +225,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
         /**
          * @param allow Allow
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -208,6 +238,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
         /**
          * @param allow Allow
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -217,6 +249,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
 
         /**
          * @param blockIp anti spyware profiles threat exception action block ip
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -229,6 +263,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
         /**
          * @param blockIp anti spyware profiles threat exception action block ip
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -238,6 +274,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
 
         /**
          * @param default_ Default
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -250,6 +288,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
         /**
          * @param default_ Default
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -259,6 +299,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
 
         /**
          * @param drop Drop
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -271,6 +313,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
         /**
          * @param drop Drop
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -280,6 +324,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
 
         /**
          * @param resetBoth Reset both
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -292,6 +338,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
         /**
          * @param resetBoth Reset both
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -301,6 +349,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
 
         /**
          * @param resetClient Reset client
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -313,6 +363,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
         /**
          * @param resetClient Reset client
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -322,6 +374,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
 
         /**
          * @param resetServer Reset server
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -333,6 +387,8 @@ public final class AntiSpywareProfileThreatExceptionActionArgs extends com.pulum
 
         /**
          * @param resetServer Reset server
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `default`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 

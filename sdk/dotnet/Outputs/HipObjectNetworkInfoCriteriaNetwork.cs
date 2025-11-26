@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.HipObjectNetworkInfoCriteriaNetworkIs? Is;
         /// <summary>
         /// Is not
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
         /// </summary>
         public readonly Outputs.HipObjectNetworkInfoCriteriaNetworkIsNot? IsNot;
 

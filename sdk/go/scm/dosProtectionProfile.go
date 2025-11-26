@@ -23,12 +23,16 @@ type DosProtectionProfile struct {
 	// Flood
 	Flood DosProtectionProfileFloodOutput `pulumi:"flood"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Profile name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// Resource
 	Resource DosProtectionProfileResourceOutput `pulumi:"resource"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// Type
@@ -75,12 +79,16 @@ type dosProtectionProfileState struct {
 	// Flood
 	Flood *DosProtectionProfileFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// Resource
 	Resource *DosProtectionProfileResource `pulumi:"resource"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// Type
@@ -95,12 +103,16 @@ type DosProtectionProfileState struct {
 	// Flood
 	Flood DosProtectionProfileFloodPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// Resource
 	Resource DosProtectionProfileResourcePtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// Type
@@ -119,12 +131,16 @@ type dosProtectionProfileArgs struct {
 	// Flood
 	Flood *DosProtectionProfileFlood `pulumi:"flood"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// Resource
 	Resource *DosProtectionProfileResource `pulumi:"resource"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Type
 	Type string `pulumi:"type"`
@@ -139,12 +155,16 @@ type DosProtectionProfileArgs struct {
 	// Flood
 	Flood DosProtectionProfileFloodPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// Resource
 	Resource DosProtectionProfileResourcePtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Type
 	Type pulumi.StringInput
@@ -253,6 +273,8 @@ func (o DosProtectionProfileOutput) Flood() DosProtectionProfileFloodOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -268,6 +290,8 @@ func (o DosProtectionProfileOutput) Resource() DosProtectionProfileResourceOutpu
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o DosProtectionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *DosProtectionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

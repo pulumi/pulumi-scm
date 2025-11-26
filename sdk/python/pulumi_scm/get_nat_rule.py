@@ -299,27 +299,8 @@ def get_nat_rule(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Define the resource (the item to be created via API POST/PUT)
-    dnat_external_web_test_create = scm.NatRule("dnat_external_web_test_create",
-        name="DNAT-External-data-src-test_1",
-        description="Translate public VIP to internal web server.",
-        froms=["zone-untrust"],
-        tos=["zone-untrust"],
-        sources=["any"],
-        destinations=["any"],
-        service="service-http",
-        folder="All",
-        nat_type="ipv4",
-        position="pre",
-        destination_translation={
-            "translated_address": "10.1.1.16",
-            "translated_port": 112,
-            "dns_rewrite": {
-                "direction": "reverse",
-            },
-        })
     # Define the data source (the item to be retrieved via API GET)
-    dnat_external_web_test_get = scm.get_nat_rule_output(id=dnat_external_web_test_create.id)
+    dnat_external_web_test_get = scm.get_nat_rule(id="574717ac-8a63-4b6f-bf77-f05a66ba6322")
     pulumi.export("retrievedIDAndName", {
         "id": dnat_external_web_test_get.id,
         "name": dnat_external_web_test_get.name,
@@ -372,27 +353,8 @@ def get_nat_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     import pulumi
     import pulumi_scm as scm
 
-    # Define the resource (the item to be created via API POST/PUT)
-    dnat_external_web_test_create = scm.NatRule("dnat_external_web_test_create",
-        name="DNAT-External-data-src-test_1",
-        description="Translate public VIP to internal web server.",
-        froms=["zone-untrust"],
-        tos=["zone-untrust"],
-        sources=["any"],
-        destinations=["any"],
-        service="service-http",
-        folder="All",
-        nat_type="ipv4",
-        position="pre",
-        destination_translation={
-            "translated_address": "10.1.1.16",
-            "translated_port": 112,
-            "dns_rewrite": {
-                "direction": "reverse",
-            },
-        })
     # Define the data source (the item to be retrieved via API GET)
-    dnat_external_web_test_get = scm.get_nat_rule_output(id=dnat_external_web_test_create.id)
+    dnat_external_web_test_get = scm.get_nat_rule(id="574717ac-8a63-4b6f-bf77-f05a66ba6322")
     pulumi.export("retrievedIDAndName", {
         "id": dnat_external_web_test_get.id,
         "name": dnat_external_web_test_get.name,

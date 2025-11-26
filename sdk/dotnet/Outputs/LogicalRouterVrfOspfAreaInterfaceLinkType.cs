@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeBroadcast? Broadcast;
         /// <summary>
         /// P2mp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp? P2mp;
         /// <summary>
         /// P2p
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Broadcast`, `P2mp`, and `P2p`.
         /// </summary>
         public readonly Outputs.LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p? P2p;
 

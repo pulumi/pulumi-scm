@@ -18,7 +18,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -31,14 +31,18 @@ namespace Pulumi.Scm.Outputs
         public readonly string Name;
         /// <summary>
         /// Relay
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         public readonly Outputs.GetDhcpInterfaceListDataRelayResult Relay;
         /// <summary>
         /// Server
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Relay` and `Server`.
         /// </summary>
         public readonly Outputs.GetDhcpInterfaceListDataServerResult Server;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;

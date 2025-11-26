@@ -61,28 +61,12 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.name);
     }
 
-    /**
-     * The snippet type
-     * 
-     */
-    @Import(name="type")
-    private @Nullable Output<String> type;
-
-    /**
-     * @return The snippet type
-     * 
-     */
-    public Optional<Output<String>> type() {
-        return Optional.ofNullable(this.type);
-    }
-
     private SnippetArgs() {}
 
     private SnippetArgs(SnippetArgs $) {
         this.description = $.description;
         this.labels = $.labels;
         this.name = $.name;
-        this.type = $.type;
     }
 
     public static Builder builder() {
@@ -174,27 +158,6 @@ public final class SnippetArgs extends com.pulumi.resources.ResourceArgs {
          */
         public Builder name(String name) {
             return name(Output.of(name));
-        }
-
-        /**
-         * @param type The snippet type
-         * 
-         * @return builder
-         * 
-         */
-        public Builder type(@Nullable Output<String> type) {
-            $.type = type;
-            return this;
-        }
-
-        /**
-         * @param type The snippet type
-         * 
-         * @return builder
-         * 
-         */
-        public Builder type(String type) {
-            return type(Output.of(type));
         }
 
         public SnippetArgs build() {

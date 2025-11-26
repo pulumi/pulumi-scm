@@ -12,6 +12,34 @@ import (
 )
 
 // AuthenticationSequence data source
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			sequenceData, err := scm.LookupAuthenticationSequence(ctx, &scm.LookupAuthenticationSequenceArgs{
+//				Id: "1ee14ac7-760c-401f-8dbc-c887db16106a",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmAuthenticationSequence", sequenceData.Id)
+//			ctx.Export("fetchedSequence", sequenceData)
+//			return nil
+//		})
+//	}
+//
+// ```
 func LookupAuthenticationSequence(ctx *pulumi.Context, args *LookupAuthenticationSequenceArgs, opts ...pulumi.InvokeOption) (*LookupAuthenticationSequenceResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv LookupAuthenticationSequenceResult
@@ -36,17 +64,14 @@ type LookupAuthenticationSequenceResult struct {
 	AuthenticationProfiles []string `pulumi:"authenticationProfiles"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the authentication sequence
 	Id string `pulumi:"id"`
 	// The name of the authentication sequence
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Use domain to determine authentication profile?
-	UseDomainFindProfile bool `pulumi:"useDomainFindProfile"`
+	Name                 string `pulumi:"name"`
+	Snippet              string `pulumi:"snippet"`
+	Tfid                 string `pulumi:"tfid"`
+	UseDomainFindProfile bool   `pulumi:"useDomainFindProfile"`
 }
 
 func LookupAuthenticationSequenceOutput(ctx *pulumi.Context, args LookupAuthenticationSequenceOutputArgs, opts ...pulumi.InvokeOption) LookupAuthenticationSequenceResultOutput {
@@ -95,7 +120,6 @@ func (o LookupAuthenticationSequenceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupAuthenticationSequenceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -110,7 +134,6 @@ func (o LookupAuthenticationSequenceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupAuthenticationSequenceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -119,7 +142,6 @@ func (o LookupAuthenticationSequenceResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Use domain to determine authentication profile?
 func (o LookupAuthenticationSequenceResultOutput) UseDomainFindProfile() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupAuthenticationSequenceResult) bool { return v.UseDomainFindProfile }).(pulumi.BoolOutput)
 }

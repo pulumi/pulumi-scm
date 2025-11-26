@@ -155,49 +155,22 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Map of sensitive values returned from the API.
-        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Local address
-        /// </summary>
         public readonly Outputs.GetIkeGatewayLocalAddressResult LocalAddress;
-        /// <summary>
-        /// Local id
-        /// </summary>
         public readonly Outputs.GetIkeGatewayLocalIdResult LocalId;
         /// <summary>
         /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Peer address
-        /// </summary>
         public readonly Outputs.GetIkeGatewayPeerAddressResult PeerAddress;
-        /// <summary>
-        /// Peer id
-        /// </summary>
         public readonly Outputs.GetIkeGatewayPeerIdResult PeerId;
-        /// <summary>
-        /// Protocol
-        /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolResult Protocol;
-        /// <summary>
-        /// Protocol common
-        /// </summary>
         public readonly Outputs.GetIkeGatewayProtocolCommonResult ProtocolCommon;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

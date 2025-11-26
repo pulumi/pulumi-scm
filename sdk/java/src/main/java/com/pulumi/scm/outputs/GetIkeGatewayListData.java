@@ -34,7 +34,7 @@ public final class GetIkeGatewayListData {
      */
     private Map<String,String> encryptedValues;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -79,7 +79,7 @@ public final class GetIkeGatewayListData {
      */
     private GetIkeGatewayListDataProtocolCommon protocolCommon;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -108,7 +108,7 @@ public final class GetIkeGatewayListData {
         return this.encryptedValues;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -171,7 +171,7 @@ public final class GetIkeGatewayListData {
         return this.protocolCommon;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

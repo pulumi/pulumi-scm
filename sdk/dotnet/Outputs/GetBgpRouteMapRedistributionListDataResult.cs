@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetBgpRouteMapRedistributionListDataBgpResult Bgp;
         /// <summary>
         /// Connected static
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticResult ConnectedStatic;
         /// <summary>
@@ -26,11 +28,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Description;
         /// <summary>
-        /// The device in which the resource is defined
+        /// The device of the item.
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -43,10 +45,12 @@ namespace Pulumi.Scm.Outputs
         public readonly string Name;
         /// <summary>
         /// Ospf
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `ConnectedStatic`, and `Ospf`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataOspfResult Ospf;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;

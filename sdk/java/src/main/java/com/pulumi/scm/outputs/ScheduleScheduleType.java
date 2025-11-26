@@ -21,6 +21,8 @@ public final class ScheduleScheduleType {
     /**
      * @return Recurring
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
+     * 
      */
     private @Nullable ScheduleScheduleTypeRecurring recurring;
 
@@ -34,6 +36,8 @@ public final class ScheduleScheduleType {
     }
     /**
      * @return Recurring
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
     public Optional<ScheduleScheduleTypeRecurring> recurring() {

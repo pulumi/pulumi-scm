@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allSequences = scm.getAuthenticationSequenceList({
+ *     limit: 10,
+ *     folder: "All",
+ * });
+ * export const fetchedSequenceListSummary = {
+ *     countOfSequencesFetched: allSequences.then(allSequences => allSequences.total),
+ *     firstRuleName: allSequences.then(allSequences => allSequences.datas?.[0]?.name),
+ * };
+ * ```
  */
 export function getAuthenticationSequenceList(args?: GetAuthenticationSequenceListArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationSequenceListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetAuthenticationSequenceListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allSequences = scm.getAuthenticationSequenceList({
+ *     limit: 10,
+ *     folder: "All",
+ * });
+ * export const fetchedSequenceListSummary = {
+ *     countOfSequencesFetched: allSequences.then(allSequences => allSequences.total),
+ *     firstRuleName: allSequences.then(allSequences => allSequences.datas?.[0]?.name),
+ * };
+ * ```
  */
 export function getAuthenticationSequenceListOutput(args?: GetAuthenticationSequenceListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationSequenceListResult> {
     args = args || {};

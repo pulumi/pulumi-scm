@@ -17,36 +17,20 @@ public final class GetSdwanTrafficDistributionProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Link-Tags for interfaces identified by defined tags
-     * 
-     */
     private List<GetSdwanTrafficDistributionProfileLinkTag> linkTags;
     /**
      * @return Profile name
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return Traffic distribution
-     * 
-     */
     private String trafficDistribution;
 
     private GetSdwanTrafficDistributionProfileResult() {}
@@ -57,10 +41,6 @@ public final class GetSdwanTrafficDistributionProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -71,10 +51,6 @@ public final class GetSdwanTrafficDistributionProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Link-Tags for interfaces identified by defined tags
-     * 
-     */
     public List<GetSdwanTrafficDistributionProfileLinkTag> linkTags() {
         return this.linkTags;
     }
@@ -85,20 +61,12 @@ public final class GetSdwanTrafficDistributionProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Traffic distribution
-     * 
-     */
     public String trafficDistribution() {
         return this.trafficDistribution;
     }

@@ -176,9 +176,6 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -188,18 +185,9 @@ namespace Pulumi.Scm
         /// L2 sub-interface name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Parent interface
-        /// </summary>
         public readonly string ParentInterface;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// VLAN tag
-        /// </summary>
         public readonly string VlanTag;
 
         [OutputConstructor]

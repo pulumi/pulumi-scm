@@ -72,49 +72,22 @@ export interface GetHipObjectResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Disk backup
-     */
     readonly diskBackup: outputs.GetHipObjectDiskBackup;
-    /**
-     * Disk encryption
-     */
     readonly diskEncryption: outputs.GetHipObjectDiskEncryption;
-    /**
-     * Firewall
-     */
     readonly firewall: outputs.GetHipObjectFirewall;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * Host info
-     */
     readonly hostInfo: outputs.GetHipObjectHostInfo;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Mobile device
-     */
     readonly mobileDevice: outputs.GetHipObjectMobileDevice;
     /**
      * The name of the HIP object
      */
     readonly name: string;
-    /**
-     * Network info
-     */
     readonly networkInfo: outputs.GetHipObjectNetworkInfo;
-    /**
-     * Patch management
-     */
     readonly patchManagement: outputs.GetHipObjectPatchManagement;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

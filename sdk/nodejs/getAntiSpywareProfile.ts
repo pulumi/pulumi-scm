@@ -66,42 +66,21 @@ export interface GetAntiSpywareProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the anti-spyware profile
      */
     readonly id: string;
-    /**
-     * Inline exception edl url
-     */
     readonly inlineExceptionEdlUrls: string[];
-    /**
-     * Inline exception ip address
-     */
     readonly inlineExceptionIpAddresses: string[];
-    /**
-     * Mica engine spyware enabled
-     */
     readonly micaEngineSpywareEnableds: outputs.GetAntiSpywareProfileMicaEngineSpywareEnabled[];
     /**
      * The name of the anti-spyware profile
      */
     readonly name: string;
-    /**
-     * Rules
-     */
     readonly rules: outputs.GetAntiSpywareProfileRule[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Threat exception
-     */
     readonly threatExceptions: outputs.GetAntiSpywareProfileThreatException[];
 }
 /**

@@ -13,29 +13,11 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const ruleToFetch = new scm.AuthenticationRule("rule_to_fetch", {
- *     name: "rule-to-be-queried-scm-105",
- *     description: "This rule is created purely to test the data source functionality.",
- *     position: "pre",
- *     folder: "All",
- *     destinations: ["any"],
- *     froms: ["any"],
- *     tos: ["any"],
- *     sources: ["any"],
- *     services: [
- *         "service-http",
- *         "service-https",
- *     ],
- *     sourceUsers: ["any"],
- *     timeout: 1200,
- *     negateSource: false,
- *     negateDestination: false,
+ * const ruleData = scm.getAuthenticationRule({
+ *     id: "1f1e08af-fe7b-4c36-882a-411101ad36d7",
  * });
- * const ruleData = scm.getAuthenticationRuleOutput({
- *     id: ruleToFetch.id,
- * });
- * export const fetchedRuleId = ruleData.apply(ruleData => ruleData.id);
- * export const fetchedRuleTimeout = ruleData.apply(ruleData => ruleData.timeout);
+ * export const fetchedRuleId = ruleData.then(ruleData => ruleData.id);
+ * export const fetchedRuleData = ruleData;
  * ```
  */
 export function getAuthenticationRule(args: GetAuthenticationRuleArgs, opts?: pulumi.InvokeOptions): Promise<GetAuthenticationRuleResult> {
@@ -88,94 +70,34 @@ export interface GetAuthenticationRuleResult {
      * Device
      */
     readonly device: string;
-    /**
-     * Is the authentication rule disabled?
-     */
     readonly disabled: boolean;
-    /**
-     * Folder
-     */
     readonly folder: string;
-    /**
-     * The source security zones
-     */
     readonly froms: string[];
-    /**
-     * Group tag
-     */
     readonly groupTag: string;
-    /**
-     * The source Host Integrity Profile (HIP)
-     */
     readonly hipProfiles: string[];
     /**
      * The UUID of the authentication rule
      */
     readonly id: string;
-    /**
-     * Log authentication timeouts?
-     */
     readonly logAuthenticationTimeout: boolean;
-    /**
-     * The log forwarding profile name
-     */
     readonly logSetting: string;
     /**
      * The name of the authentication rule
      */
     readonly name: string;
-    /**
-     * Are the destination addresses negated?
-     */
     readonly negateDestination: boolean;
-    /**
-     * Are the source addresses negated?
-     */
     readonly negateSource: boolean;
-    /**
-     * The relative position of the rule
-     */
     readonly position: string;
-    /**
-     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-     */
     readonly relativePosition: string;
-    /**
-     * The destination ports
-     */
     readonly services: string[];
-    /**
-     * Snippet
-     */
     readonly snippet: string;
-    /**
-     * The source Host Integrity Profile (HIP)
-     */
     readonly sourceHips: string[];
-    /**
-     * The source users
-     */
     readonly sourceUsers: string[];
-    /**
-     * The source addresses
-     */
     readonly sources: string[];
-    /**
-     * The authentication rule tags
-     */
     readonly tags: string[];
-    /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
-     */
     readonly targetRule: string;
     readonly tfid: string;
-    /**
-     * The authentication session timeout (seconds)
-     */
     readonly timeout: number;
-    /**
-     * The destination security zones
-     */
     readonly tos: string[];
 }
 /**
@@ -187,29 +109,11 @@ export interface GetAuthenticationRuleResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const ruleToFetch = new scm.AuthenticationRule("rule_to_fetch", {
- *     name: "rule-to-be-queried-scm-105",
- *     description: "This rule is created purely to test the data source functionality.",
- *     position: "pre",
- *     folder: "All",
- *     destinations: ["any"],
- *     froms: ["any"],
- *     tos: ["any"],
- *     sources: ["any"],
- *     services: [
- *         "service-http",
- *         "service-https",
- *     ],
- *     sourceUsers: ["any"],
- *     timeout: 1200,
- *     negateSource: false,
- *     negateDestination: false,
+ * const ruleData = scm.getAuthenticationRule({
+ *     id: "1f1e08af-fe7b-4c36-882a-411101ad36d7",
  * });
- * const ruleData = scm.getAuthenticationRuleOutput({
- *     id: ruleToFetch.id,
- * });
- * export const fetchedRuleId = ruleData.apply(ruleData => ruleData.id);
- * export const fetchedRuleTimeout = ruleData.apply(ruleData => ruleData.timeout);
+ * export const fetchedRuleId = ruleData.then(ruleData => ruleData.id);
+ * export const fetchedRuleData = ruleData;
  * ```
  */
 export function getAuthenticationRuleOutput(args: GetAuthenticationRuleOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetAuthenticationRuleResult> {

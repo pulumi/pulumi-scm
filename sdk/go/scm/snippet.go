@@ -74,7 +74,7 @@ type Snippet struct {
 	Name pulumi.StringOutput `pulumi:"name"`
 	Tfid pulumi.StringOutput `pulumi:"tfid"`
 	// The snippet type
-	Type pulumi.StringPtrOutput `pulumi:"type"`
+	Type pulumi.StringOutput `pulumi:"type"`
 }
 
 // NewSnippet registers a new resource with the given unique name, arguments, and options.
@@ -141,8 +141,6 @@ type snippetArgs struct {
 	Labels []string `pulumi:"labels"`
 	// The name of the snippet
 	Name *string `pulumi:"name"`
-	// The snippet type
-	Type *string `pulumi:"type"`
 }
 
 // The set of arguments for constructing a Snippet resource.
@@ -153,8 +151,6 @@ type SnippetArgs struct {
 	Labels pulumi.StringArrayInput
 	// The name of the snippet
 	Name pulumi.StringPtrInput
-	// The snippet type
-	Type pulumi.StringPtrInput
 }
 
 func (SnippetArgs) ElementType() reflect.Type {
@@ -264,8 +260,8 @@ func (o SnippetOutput) Tfid() pulumi.StringOutput {
 }
 
 // The snippet type
-func (o SnippetOutput) Type() pulumi.StringPtrOutput {
-	return o.ApplyT(func(v *Snippet) pulumi.StringPtrOutput { return v.Type }).(pulumi.StringPtrOutput)
+func (o SnippetOutput) Type() pulumi.StringOutput {
+	return o.ApplyT(func(v *Snippet) pulumi.StringOutput { return v.Type }).(pulumi.StringOutput)
 }
 
 type SnippetArrayOutput struct{ *pulumi.OutputState }

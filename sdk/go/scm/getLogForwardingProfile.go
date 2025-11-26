@@ -36,15 +36,12 @@ type LookupLogForwardingProfileResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the log server profile
-	Id string `pulumi:"id"`
-	// Match list
+	Id         string                             `pulumi:"id"`
 	MatchLists []GetLogForwardingProfileMatchList `pulumi:"matchLists"`
 	// The name of the log forwarding profile
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -95,7 +92,6 @@ func (o LookupLogForwardingProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupLogForwardingProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -105,7 +101,6 @@ func (o LookupLogForwardingProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Match list
 func (o LookupLogForwardingProfileResultOutput) MatchLists() GetLogForwardingProfileMatchListArrayOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) []GetLogForwardingProfileMatchList { return v.MatchLists }).(GetLogForwardingProfileMatchListArrayOutput)
 }
@@ -115,7 +110,6 @@ func (o LookupLogForwardingProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupLogForwardingProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLogForwardingProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

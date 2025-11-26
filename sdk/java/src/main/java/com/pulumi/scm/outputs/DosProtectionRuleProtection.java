@@ -20,6 +20,8 @@ public final class DosProtectionRuleProtection {
     /**
      * @return Classified
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
+     * 
      */
     private @Nullable DosProtectionRuleProtectionClassified classified;
 
@@ -33,6 +35,8 @@ public final class DosProtectionRuleProtection {
     }
     /**
      * @return Classified
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     public Optional<DosProtectionRuleProtectionClassified> classified() {

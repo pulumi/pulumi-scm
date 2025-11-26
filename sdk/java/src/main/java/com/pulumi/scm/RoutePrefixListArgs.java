@@ -5,7 +5,7 @@ package com.pulumi.scm;
 
 import com.pulumi.core.Output;
 import com.pulumi.core.annotations.Import;
-import com.pulumi.scm.inputs.RoutePrefixListIpv4Args;
+import com.pulumi.scm.inputs.RoutePrefixListTypeArgs;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -49,6 +49,8 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
@@ -56,24 +58,11 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
     /**
      * @return The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
-    }
-
-    /**
-     * Ipv4
-     * 
-     */
-    @Import(name="ipv4")
-    private @Nullable Output<RoutePrefixListIpv4Args> ipv4;
-
-    /**
-     * @return Ipv4
-     * 
-     */
-    public Optional<Output<RoutePrefixListIpv4Args>> ipv4() {
-        return Optional.ofNullable(this.ipv4);
     }
 
     /**
@@ -94,6 +83,8 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
@@ -101,9 +92,26 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
     /**
      * @return The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     public Optional<Output<String>> snippet() {
         return Optional.ofNullable(this.snippet);
+    }
+
+    /**
+     * Address Family Type
+     * 
+     */
+    @Import(name="type")
+    private @Nullable Output<RoutePrefixListTypeArgs> type;
+
+    /**
+     * @return Address Family Type
+     * 
+     */
+    public Optional<Output<RoutePrefixListTypeArgs>> type() {
+        return Optional.ofNullable(this.type);
     }
 
     private RoutePrefixListArgs() {}
@@ -112,9 +120,9 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
         this.description = $.description;
         this.device = $.device;
         this.folder = $.folder;
-        this.ipv4 = $.ipv4;
         this.name = $.name;
         this.snippet = $.snippet;
+        this.type = $.type;
     }
 
     public static Builder builder() {
@@ -180,6 +188,8 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -191,32 +201,13 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
-        }
-
-        /**
-         * @param ipv4 Ipv4
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4(@Nullable Output<RoutePrefixListIpv4Args> ipv4) {
-            $.ipv4 = ipv4;
-            return this;
-        }
-
-        /**
-         * @param ipv4 Ipv4
-         * 
-         * @return builder
-         * 
-         */
-        public Builder ipv4(RoutePrefixListIpv4Args ipv4) {
-            return ipv4(Output.of(ipv4));
         }
 
         /**
@@ -243,6 +234,8 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
         /**
          * @param snippet The snippet in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -254,11 +247,34 @@ public final class RoutePrefixListArgs extends com.pulumi.resources.ResourceArgs
         /**
          * @param snippet The snippet in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
         public Builder snippet(String snippet) {
             return snippet(Output.of(snippet));
+        }
+
+        /**
+         * @param type Address Family Type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(@Nullable Output<RoutePrefixListTypeArgs> type) {
+            $.type = type;
+            return this;
+        }
+
+        /**
+         * @param type Address Family Type
+         * 
+         * @return builder
+         * 
+         */
+        public Builder type(RoutePrefixListTypeArgs type) {
+            return type(Output.of(type));
         }
 
         public RoutePrefixListArgs build() {

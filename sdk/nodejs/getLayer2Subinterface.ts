@@ -61,9 +61,6 @@ export interface GetLayer2SubinterfaceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -73,18 +70,9 @@ export interface GetLayer2SubinterfaceResult {
      * L2 sub-interface name
      */
     readonly name: string;
-    /**
-     * Parent interface
-     */
     readonly parentInterface: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * VLAN tag
-     */
     readonly vlanTag: string;
 }
 /**

@@ -57,49 +57,22 @@ export interface GetIkeGatewayResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Local address
-     */
     readonly localAddress: outputs.GetIkeGatewayLocalAddress;
-    /**
-     * Local id
-     */
     readonly localId: outputs.GetIkeGatewayLocalId;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
-    /**
-     * Peer address
-     */
     readonly peerAddress: outputs.GetIkeGatewayPeerAddress;
-    /**
-     * Peer id
-     */
     readonly peerId: outputs.GetIkeGatewayPeerId;
-    /**
-     * Protocol
-     */
     readonly protocol: outputs.GetIkeGatewayProtocol;
-    /**
-     * Protocol common
-     */
     readonly protocolCommon: outputs.GetIkeGatewayProtocolCommon;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

@@ -27,64 +27,16 @@ import (
 //
 //	func main() {
 //		pulumi.Run(func(ctx *pulumi.Context) error {
-//			exampleTag, err := scm.NewTag(ctx, "example_tag", &scm.TagArgs{
-//				Folder: pulumi.String("All"),
-//				Name:   pulumi.String("pbf-rule-tag-ds-test-1"),
-//				Color:  pulumi.String("Red"),
-//			})
-//			if err != nil {
-//				return err
-//			}
-//			// --- PBF Rule Resource with discard action---
-//			examplePbfRule, err := scm.NewPbfRule(ctx, "example_pbf_rule", &scm.PbfRuleArgs{
-//				Name:        pulumi.String("pbf-test-ds-rule-discard"),
-//				Folder:      pulumi.String("All"),
-//				Description: pulumi.String("Data Source testing pbf rule."),
-//				From: &scm.PbfRuleFromArgs{
-//					Zones: pulumi.StringArray{
-//						pulumi.String("zone-untrust"),
-//					},
-//				},
-//				Sources: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Destinations: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Applications: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Services: pulumi.StringArray{
-//					pulumi.String("service-http"),
-//				},
-//				SourceUsers: pulumi.StringArray{
-//					pulumi.String("any"),
-//				},
-//				Action: &scm.PbfRuleActionArgs{
-//					Discard: &scm.PbfRuleActionDiscardArgs{},
-//				},
-//				Tags: pulumi.StringArray{
-//					exampleTag.Name,
-//				},
-//				EnforceSymmetricReturn: &scm.PbfRuleEnforceSymmetricReturnArgs{
-//					Enabled: pulumi.Bool(false),
-//				},
-//				Schedule: pulumi.String("non-work-hours"),
-//			})
-//			if err != nil {
-//				return err
-//			}
 //			// Define the data source (the item to be retrieved via API GET)
-//			pbfExternalWebTestGet := scm.LookupPbfRuleOutput(ctx, scm.GetPbfRuleOutputArgs{
-//				Id: examplePbfRule.ID(),
+//			pbfExternalWebTestGet, err := scm.LookupPbfRule(ctx, &scm.LookupPbfRuleArgs{
+//				Id: "044d67ad-1c36-4b97-bbf4-584445fe8a7d",
 //			}, nil)
+//			if err != nil {
+//				return err
+//			}
 //			ctx.Export("retrievedIDAndName", pulumi.StringMap{
-//				"id": pbfExternalWebTestGet.ApplyT(func(pbfExternalWebTestGet scm.GetPbfRuleResult) (*string, error) {
-//					return &pbfExternalWebTestGet.Id, nil
-//				}).(pulumi.StringPtrOutput),
-//				"name": pbfExternalWebTestGet.ApplyT(func(pbfExternalWebTestGet scm.GetPbfRuleResult) (*string, error) {
-//					return &pbfExternalWebTestGet.Name, nil
-//				}).(pulumi.StringPtrOutput),
+//				"id":   pbfExternalWebTestGet.Id,
+//				"name": pbfExternalWebTestGet.Name,
 //			})
 //			ctx.Export("recievedResponse", pbfExternalWebTestGet)
 //			return nil
@@ -121,30 +73,21 @@ type LookupPbfRuleResult struct {
 	// Destination addresses
 	Destinations []string `pulumi:"destinations"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Enforce symmetric return
+	Device                 string                           `pulumi:"device"`
 	EnforceSymmetricReturn GetPbfRuleEnforceSymmetricReturn `pulumi:"enforceSymmetricReturn"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
-	// From
-	From GetPbfRuleFrom `pulumi:"from"`
+	Folder                 string                           `pulumi:"folder"`
+	From                   GetPbfRuleFrom                   `pulumi:"from"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// PBF rule name
-	Name string `pulumi:"name"`
-	// Schedule
-	Schedule string `pulumi:"schedule"`
-	// Services
-	Services []string `pulumi:"services"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Source users
+	Name        string   `pulumi:"name"`
+	Schedule    string   `pulumi:"schedule"`
+	Services    []string `pulumi:"services"`
+	Snippet     string   `pulumi:"snippet"`
 	SourceUsers []string `pulumi:"sourceUsers"`
-	// Source addresses
-	Sources []string `pulumi:"sources"`
-	// Tags
-	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	Sources     []string `pulumi:"sources"`
+	Tags        []string `pulumi:"tags"`
+	Tfid        string   `pulumi:"tfid"`
 }
 
 func LookupPbfRuleOutput(ctx *pulumi.Context, args LookupPbfRuleOutputArgs, opts ...pulumi.InvokeOption) LookupPbfRuleResultOutput {
@@ -208,17 +151,14 @@ func (o LookupPbfRuleResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Enforce symmetric return
 func (o LookupPbfRuleResultOutput) EnforceSymmetricReturn() GetPbfRuleEnforceSymmetricReturnOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) GetPbfRuleEnforceSymmetricReturn { return v.EnforceSymmetricReturn }).(GetPbfRuleEnforceSymmetricReturnOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupPbfRuleResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// From
 func (o LookupPbfRuleResultOutput) From() GetPbfRuleFromOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) GetPbfRuleFrom { return v.From }).(GetPbfRuleFromOutput)
 }
@@ -233,32 +173,26 @@ func (o LookupPbfRuleResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Schedule
 func (o LookupPbfRuleResultOutput) Schedule() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Schedule }).(pulumi.StringOutput)
 }
 
-// Services
 func (o LookupPbfRuleResultOutput) Services() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Services }).(pulumi.StringArrayOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupPbfRuleResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Source users
 func (o LookupPbfRuleResultOutput) SourceUsers() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.SourceUsers }).(pulumi.StringArrayOutput)
 }
 
-// Source addresses
 func (o LookupPbfRuleResultOutput) Sources() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Sources }).(pulumi.StringArrayOutput)
 }
 
-// Tags
 func (o LookupPbfRuleResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupPbfRuleResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

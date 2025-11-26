@@ -81,7 +81,7 @@ namespace Pulumi.Scm
         /// The snippet type
         /// </summary>
         [Output("type")]
-        public Output<string?> Type { get; private set; } = null!;
+        public Output<string> Type { get; private set; } = null!;
 
 
         /// <summary>
@@ -152,12 +152,6 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
-
-        /// <summary>
-        /// The snippet type
-        /// </summary>
-        [Input("type")]
-        public Input<string>? Type { get; set; }
 
         public SnippetArgs()
         {

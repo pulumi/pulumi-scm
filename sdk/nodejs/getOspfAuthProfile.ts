@@ -39,33 +39,18 @@ export interface GetOspfAuthProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * MD5s
-     */
     readonly md5s: outputs.GetOspfAuthProfileMd5[];
     /**
      * Profile name
      */
     readonly name: string;
-    /**
-     * Password
-     */
     readonly password: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

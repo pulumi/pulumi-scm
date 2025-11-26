@@ -239,79 +239,10 @@ def get_service_connection(id: Optional[_builtins.str] = None,
     import pulumi
     import pulumi_scm as scm
 
-    config = pulumi.Config()
-    # The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
-    folder_scope = config.get("folderScope")
-    if folder_scope is None:
-        folder_scope = "Service Connections"
-    ## 1. Define the IKE Crypto Profile (IKE Phase 1)
-    # Note: The resource name is plural: "scm_ike_crypto_profile"
-    example = scm.IkeCryptoProfile("example",
-        name="example-ike-crypto_data",
-        folder=folder_scope,
-        hashes=["sha256"],
-        dh_groups=["group14"],
-        encryptions=["aes-256-cbc"])
-    ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
-    # Note: The resource name is plural and nested blocks now use an equals sign (=).
-    example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-        name="panw-IPSec-Crypto_data",
-        folder=folder_scope,
-        esp={
-            "encryptions": ["aes-256-gcm"],
-            "authentications": ["sha256"],
-        },
-        dh_group="group14",
-        lifetime={
-            "hours": 8,
-        })
-    ## 3. Define the IKE Gateway
-    # Note: The resource name is plural and nested blocks now use an equals sign (=).
-    example_ike_gateway = scm.IkeGateway("example",
-        name="example-gateway_data",
-        folder=folder_scope,
-        peer_address={
-            "ip": "1.1.1.1",
-        },
-        authentication={
-            "pre_shared_key": {
-                "key": "secret",
-            },
-        },
-        protocol={
-            "ikev1": {
-                "ike_crypto_profile": example.name,
-            },
-        })
-    ## 4. Define the IPsec Tunnel
-    # Note: Nested 'auto_key' block uses an equals sign (=).
-    example_ipsec_tunnel = scm.IpsecTunnel("example",
-        name="example-tunnel_data",
-        folder=folder_scope,
-        tunnel_interface="tunnel",
-        anti_replay=True,
-        copy_tos=False,
-        enable_gre_encapsulation=False,
-        auto_key={
-            "ike_gateways": [{
-                "name": example_ike_gateway.name,
-            }],
-            "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
-        },
-        opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
-    site_a_vpn_sc = scm.ServiceConnection("site_a_vpn_sc",
-        name="creating_a_service_connection_data",
-        region="us-west-1",
-        ipsec_tunnel=example_ipsec_tunnel.name,
-        subnets=[
-            "10.1.0.0/16",
-            "172.16.0.0/24",
-        ],
-        source_nat=True)
     #------------------------------------------------------
     # Data Soruce
     #------------------------------------------------------
-    created_conn_lookup = scm.get_service_connection_output(id=site_a_vpn_sc.id)
+    created_conn_lookup = scm.get_service_connection(id="3d07bda7-2cfa-4fdc-b504-cd82847b2ec3")
     pulumi.export("createdServiceConnectionId", created_conn_lookup.id)
     pulumi.export("createdServiceConnectionRegion", created_conn_lookup.region)
     pulumi.export("createdServiceConnectionSubnets", created_conn_lookup.subnets)
@@ -356,79 +287,10 @@ def get_service_connection_output(id: Optional[pulumi.Input[_builtins.str]] = No
     import pulumi
     import pulumi_scm as scm
 
-    config = pulumi.Config()
-    # The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
-    folder_scope = config.get("folderScope")
-    if folder_scope is None:
-        folder_scope = "Service Connections"
-    ## 1. Define the IKE Crypto Profile (IKE Phase 1)
-    # Note: The resource name is plural: "scm_ike_crypto_profile"
-    example = scm.IkeCryptoProfile("example",
-        name="example-ike-crypto_data",
-        folder=folder_scope,
-        hashes=["sha256"],
-        dh_groups=["group14"],
-        encryptions=["aes-256-cbc"])
-    ## 2. Define the IPsec Crypto Profile (IKE Phase 2)
-    # Note: The resource name is plural and nested blocks now use an equals sign (=).
-    example_ipsec_crypto_profile = scm.IpsecCryptoProfile("example",
-        name="panw-IPSec-Crypto_data",
-        folder=folder_scope,
-        esp={
-            "encryptions": ["aes-256-gcm"],
-            "authentications": ["sha256"],
-        },
-        dh_group="group14",
-        lifetime={
-            "hours": 8,
-        })
-    ## 3. Define the IKE Gateway
-    # Note: The resource name is plural and nested blocks now use an equals sign (=).
-    example_ike_gateway = scm.IkeGateway("example",
-        name="example-gateway_data",
-        folder=folder_scope,
-        peer_address={
-            "ip": "1.1.1.1",
-        },
-        authentication={
-            "pre_shared_key": {
-                "key": "secret",
-            },
-        },
-        protocol={
-            "ikev1": {
-                "ike_crypto_profile": example.name,
-            },
-        })
-    ## 4. Define the IPsec Tunnel
-    # Note: Nested 'auto_key' block uses an equals sign (=).
-    example_ipsec_tunnel = scm.IpsecTunnel("example",
-        name="example-tunnel_data",
-        folder=folder_scope,
-        tunnel_interface="tunnel",
-        anti_replay=True,
-        copy_tos=False,
-        enable_gre_encapsulation=False,
-        auto_key={
-            "ike_gateways": [{
-                "name": example_ike_gateway.name,
-            }],
-            "ipsec_crypto_profile": example_ipsec_crypto_profile.name,
-        },
-        opts = pulumi.ResourceOptions(depends_on=[example_ike_gateway]))
-    site_a_vpn_sc = scm.ServiceConnection("site_a_vpn_sc",
-        name="creating_a_service_connection_data",
-        region="us-west-1",
-        ipsec_tunnel=example_ipsec_tunnel.name,
-        subnets=[
-            "10.1.0.0/16",
-            "172.16.0.0/24",
-        ],
-        source_nat=True)
     #------------------------------------------------------
     # Data Soruce
     #------------------------------------------------------
-    created_conn_lookup = scm.get_service_connection_output(id=site_a_vpn_sc.id)
+    created_conn_lookup = scm.get_service_connection(id="3d07bda7-2cfa-4fdc-b504-cd82847b2ec3")
     pulumi.export("createdServiceConnectionId", created_conn_lookup.id)
     pulumi.export("createdServiceConnectionRegion", created_conn_lookup.region)
     pulumi.export("createdServiceConnectionSubnets", created_conn_lookup.subnets)

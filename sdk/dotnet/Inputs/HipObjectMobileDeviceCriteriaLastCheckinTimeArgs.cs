@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Within
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotWithin` and `Within`.
         /// </summary>
         [Input("within")]
         public Input<Inputs.HipObjectMobileDeviceCriteriaLastCheckinTimeWithinArgs>? Within { get; set; }

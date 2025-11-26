@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotAvailableResult NotAvailable;
         /// <summary>
         /// Not within
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotAvailable`, `NotWithin`, and `Within`.
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithinResult NotWithin;
         /// <summary>
         /// Within
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotAvailable`, `NotWithin`, and `Within`.
         /// </summary>
         public readonly Outputs.GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithinResult Within;
 

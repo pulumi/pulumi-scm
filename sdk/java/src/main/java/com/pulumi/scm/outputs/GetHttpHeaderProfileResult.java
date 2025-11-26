@@ -22,15 +22,7 @@ public final class GetHttpHeaderProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
-    /**
-     * @return A list of HTTP header profile rules
-     * 
-     */
     private List<GetHttpHeaderProfileHttpHeaderInsertion> httpHeaderInsertions;
     /**
      * @return The UUID of the HTTP header profile
@@ -42,10 +34,6 @@ public final class GetHttpHeaderProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -64,17 +52,9 @@ public final class GetHttpHeaderProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return A list of HTTP header profile rules
-     * 
-     */
     public List<GetHttpHeaderProfileHttpHeaderInsertion> httpHeaderInsertions() {
         return this.httpHeaderInsertions;
     }
@@ -92,10 +72,6 @@ public final class GetHttpHeaderProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

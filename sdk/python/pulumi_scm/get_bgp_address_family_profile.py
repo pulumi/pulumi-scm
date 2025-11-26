@@ -61,9 +61,6 @@ class GetBgpAddressFamilyProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -77,9 +74,6 @@ class GetBgpAddressFamilyProfileResult:
     @_builtins.property
     @pulumi.getter
     def ipv4(self) -> 'outputs.GetBgpAddressFamilyProfileIpv4Result':
-        """
-        Ipv4
-        """
         return pulumi.get(self, "ipv4")
 
     @_builtins.property
@@ -93,9 +87,6 @@ class GetBgpAddressFamilyProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -125,6 +116,22 @@ def get_bgp_address_family_profile(id: Optional[_builtins.str] = None,
     """
     BgpAddressFamilyProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up bgp address family profile by its ID.
+    scm_bgp_address_family_profile_ds = scm.get_bgp_address_family_profile(id="83ccef34-c29a-4e88-a99b-d0355440174e")
+    pulumi.export("scmBgpAddressFamilyProfileDsResults", {
+        "id": scm_bgp_address_family_profile_ds.id,
+        "name": scm_bgp_address_family_profile_ds.name,
+        "ipv4": scm_bgp_address_family_profile_ds.ipv4,
+        "folder": scm_bgp_address_family_profile_ds.folder,
+    })
+    ```
+
 
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: Name
@@ -148,6 +155,22 @@ def get_bgp_address_family_profile_output(id: Optional[pulumi.Input[_builtins.st
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetBgpAddressFamilyProfileResult]:
     """
     BgpAddressFamilyProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    # Look up bgp address family profile by its ID.
+    scm_bgp_address_family_profile_ds = scm.get_bgp_address_family_profile(id="83ccef34-c29a-4e88-a99b-d0355440174e")
+    pulumi.export("scmBgpAddressFamilyProfileDsResults", {
+        "id": scm_bgp_address_family_profile_ds.id,
+        "name": scm_bgp_address_family_profile_ds.name,
+        "ipv4": scm_bgp_address_family_profile_ds.ipv4,
+        "folder": scm_bgp_address_family_profile_ds.folder,
+    })
+    ```
 
 
     :param _builtins.str id: UUID of the resource

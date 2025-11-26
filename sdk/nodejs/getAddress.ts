@@ -76,41 +76,20 @@ export interface GetAddressResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * Fully qualified domain name
-     */
     readonly fqdn: string;
     /**
      * The UUID of the address object
      */
     readonly id: string;
-    /**
-     * IP address with or without CIDR notation
-     */
     readonly ipNetmask: string;
-    /**
-     * Ip range
-     */
     readonly ipRange: string;
-    /**
-     * IP wildcard mask
-     */
     readonly ipWildcard: string;
     /**
      * The name of the address object
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Tags assocaited with the address object
-     */
     readonly tags: string[];
     readonly tfid: string;
 }

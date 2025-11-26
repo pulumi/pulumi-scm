@@ -39,9 +39,6 @@ export interface GetTacacsServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the TACACS+ server profile
@@ -51,26 +48,11 @@ export interface GetTacacsServerProfileResult {
      * The name of the TACACS+ server profile
      */
     readonly name: string;
-    /**
-     * The TACACS+ authentication protocol
-     */
     readonly protocol: string;
-    /**
-     * The TACACS+ server configuration
-     */
     readonly servers: outputs.GetTacacsServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * The TACACS+ timeout (seconds)
-     */
     readonly timeout: number;
-    /**
-     * Use a single TACACS+ connection?
-     */
     readonly useSingleConnection: boolean;
 }
 /**

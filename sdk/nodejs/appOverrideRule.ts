@@ -146,6 +146,8 @@ export class AppOverrideRule extends pulumi.CustomResource {
     declare public readonly disabled: pulumi.Output<boolean>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -186,6 +188,8 @@ export class AppOverrideRule extends pulumi.CustomResource {
     declare public readonly relativePosition: pulumi.Output<string | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -316,6 +320,8 @@ export interface AppOverrideRuleState {
     disabled?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -356,6 +362,8 @@ export interface AppOverrideRuleState {
     relativePosition?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**
@@ -403,6 +411,8 @@ export interface AppOverrideRuleArgs {
     disabled?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -443,6 +453,8 @@ export interface AppOverrideRuleArgs {
     relativePosition?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

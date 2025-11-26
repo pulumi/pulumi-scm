@@ -21,7 +21,7 @@ import * as utilities from "./utilities";
  *     retries: 5,
  *     timeout: 60,
  *     protocol: {
- *         cHAP: {},
+ *         chap: {},
  *     },
  *     servers: [{
  *         name: "Chap_Server_Primary",
@@ -36,7 +36,7 @@ import * as utilities from "./utilities";
  *     retries: 5,
  *     timeout: 60,
  *     protocol: {
- *         pAP: {},
+ *         pap: {},
  *     },
  *     servers: [{
  *         name: "pap_Server_Primary",
@@ -81,6 +81,8 @@ export class RadiusServerProfile extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -101,6 +103,8 @@ export class RadiusServerProfile extends pulumi.CustomResource {
     declare public readonly servers: pulumi.Output<outputs.RadiusServerProfileServer[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -164,6 +168,8 @@ export interface RadiusServerProfileState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -184,6 +190,8 @@ export interface RadiusServerProfileState {
     servers?: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -203,6 +211,8 @@ export interface RadiusServerProfileArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -223,6 +233,8 @@ export interface RadiusServerProfileArgs {
     servers: pulumi.Input<pulumi.Input<inputs.RadiusServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

@@ -91,66 +91,27 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Rule disabled?
-        /// </summary>
         public readonly bool Disabled;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// List of source zones
-        /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
         /// The UUID of the DNS security profile
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Log forwarding profile name
-        /// </summary>
         public readonly string LogSetting;
         /// <summary>
         /// Rule name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Position relative to local device rules
-        /// </summary>
         public readonly string Position;
-        /// <summary>
-        /// Protection
-        /// </summary>
         public readonly Outputs.GetDosProtectionRuleProtectionResult Protection;
-        /// <summary>
-        /// Schedule on which to enforce the rule
-        /// </summary>
         public readonly string Schedule;
-        /// <summary>
-        /// List of services
-        /// </summary>
         public readonly ImmutableArray<string> Services;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
-        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
-        /// <summary>
-        /// List of source addresses
-        /// </summary>
         public readonly ImmutableArray<string> Sources;
-        /// <summary>
-        /// List of tags
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
-        /// <summary>
-        /// List of destination zones
-        /// </summary>
         public readonly ImmutableArray<string> Tos;
 
         [OutputConstructor]

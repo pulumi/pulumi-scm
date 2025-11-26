@@ -67,9 +67,6 @@ export interface GetDnsSecurityProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the DNS security profile
@@ -79,9 +76,6 @@ export interface GetDnsSecurityProfileResult {
      * The name of the DNS security profile
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

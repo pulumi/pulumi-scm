@@ -71,30 +71,21 @@ type LookupHipObjectResult struct {
 	// Description
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Disk backup
-	DiskBackup GetHipObjectDiskBackup `pulumi:"diskBackup"`
-	// Disk encryption
+	Device         string                     `pulumi:"device"`
+	DiskBackup     GetHipObjectDiskBackup     `pulumi:"diskBackup"`
 	DiskEncryption GetHipObjectDiskEncryption `pulumi:"diskEncryption"`
-	// Firewall
-	Firewall GetHipObjectFirewall `pulumi:"firewall"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
-	// Host info
-	HostInfo GetHipObjectHostInfo `pulumi:"hostInfo"`
+	Firewall       GetHipObjectFirewall       `pulumi:"firewall"`
+	Folder         string                     `pulumi:"folder"`
+	HostInfo       GetHipObjectHostInfo       `pulumi:"hostInfo"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Mobile device
+	Id           string                   `pulumi:"id"`
 	MobileDevice GetHipObjectMobileDevice `pulumi:"mobileDevice"`
 	// The name of the HIP object
-	Name string `pulumi:"name"`
-	// Network info
-	NetworkInfo GetHipObjectNetworkInfo `pulumi:"networkInfo"`
-	// Patch management
+	Name            string                      `pulumi:"name"`
+	NetworkInfo     GetHipObjectNetworkInfo     `pulumi:"networkInfo"`
 	PatchManagement GetHipObjectPatchManagement `pulumi:"patchManagement"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet         string                      `pulumi:"snippet"`
+	Tfid            string                      `pulumi:"tfid"`
 }
 
 func LookupHipObjectOutput(ctx *pulumi.Context, args LookupHipObjectOutputArgs, opts ...pulumi.InvokeOption) LookupHipObjectResultOutput {
@@ -163,27 +154,22 @@ func (o LookupHipObjectResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Disk backup
 func (o LookupHipObjectResultOutput) DiskBackup() GetHipObjectDiskBackupOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDiskBackup { return v.DiskBackup }).(GetHipObjectDiskBackupOutput)
 }
 
-// Disk encryption
 func (o LookupHipObjectResultOutput) DiskEncryption() GetHipObjectDiskEncryptionOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectDiskEncryption { return v.DiskEncryption }).(GetHipObjectDiskEncryptionOutput)
 }
 
-// Firewall
 func (o LookupHipObjectResultOutput) Firewall() GetHipObjectFirewallOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectFirewall { return v.Firewall }).(GetHipObjectFirewallOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupHipObjectResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Host info
 func (o LookupHipObjectResultOutput) HostInfo() GetHipObjectHostInfoOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectHostInfo { return v.HostInfo }).(GetHipObjectHostInfoOutput)
 }
@@ -193,7 +179,6 @@ func (o LookupHipObjectResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Mobile device
 func (o LookupHipObjectResultOutput) MobileDevice() GetHipObjectMobileDeviceOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectMobileDevice { return v.MobileDevice }).(GetHipObjectMobileDeviceOutput)
 }
@@ -203,17 +188,14 @@ func (o LookupHipObjectResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Network info
 func (o LookupHipObjectResultOutput) NetworkInfo() GetHipObjectNetworkInfoOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectNetworkInfo { return v.NetworkInfo }).(GetHipObjectNetworkInfoOutput)
 }
 
-// Patch management
 func (o LookupHipObjectResultOutput) PatchManagement() GetHipObjectPatchManagementOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) GetHipObjectPatchManagement { return v.PatchManagement }).(GetHipObjectPatchManagementOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupHipObjectResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipObjectResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

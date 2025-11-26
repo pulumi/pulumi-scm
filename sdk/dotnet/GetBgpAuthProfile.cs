@@ -13,18 +13,105 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// BgpAuthProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up BGP Auth Profile by its ID.
+        ///     var scmBgpAuthProfileDs = Scm.GetBgpAuthProfile.Invoke(new()
+        ///     {
+        ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpAuthProfileDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id) },
+        ///             { "name", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name) },
+        ///             { "secret", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret) },
+        ///             { "folder", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetBgpAuthProfileResult> InvokeAsync(GetBgpAuthProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetBgpAuthProfileResult>("scm:index/getBgpAuthProfile:getBgpAuthProfile", args ?? new GetBgpAuthProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpAuthProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up BGP Auth Profile by its ID.
+        ///     var scmBgpAuthProfileDs = Scm.GetBgpAuthProfile.Invoke(new()
+        ///     {
+        ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpAuthProfileDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id) },
+        ///             { "name", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name) },
+        ///             { "secret", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret) },
+        ///             { "folder", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpAuthProfileResult> Invoke(GetBgpAuthProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpAuthProfileResult>("scm:index/getBgpAuthProfile:getBgpAuthProfile", args ?? new GetBgpAuthProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpAuthProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up BGP Auth Profile by its ID.
+        ///     var scmBgpAuthProfileDs = Scm.GetBgpAuthProfile.Invoke(new()
+        ///     {
+        ///         Id = "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["bgpAuthProfileDataSourceResults"] = 
+        ///         {
+        ///             { "id", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Id) },
+        ///             { "name", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Name) },
+        ///             { "secret", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Secret) },
+        ///             { "folder", scmBgpAuthProfileDs.Apply(getBgpAuthProfileResult =&gt; getBgpAuthProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpAuthProfileResult> Invoke(GetBgpAuthProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpAuthProfileResult>("scm:index/getBgpAuthProfile:getBgpAuthProfile", args ?? new GetBgpAuthProfileInvokeArgs(), options.WithDefaults());
@@ -79,13 +166,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Map of sensitive values returned from the API.
-        /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -95,13 +176,7 @@ namespace Pulumi.Scm
         /// Profile name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// BGP authentication key
-        /// </summary>
         public readonly string Secret;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

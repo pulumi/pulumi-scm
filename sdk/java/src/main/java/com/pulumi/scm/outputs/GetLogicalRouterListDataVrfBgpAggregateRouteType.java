@@ -19,6 +19,8 @@ public final class GetLogicalRouterListDataVrfBgpAggregateRouteType {
     /**
      * @return Ipv6
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
+     * 
      */
     private GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6 ipv6;
 
@@ -32,6 +34,8 @@ public final class GetLogicalRouterListDataVrfBgpAggregateRouteType {
     }
     /**
      * @return Ipv6
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpAggregateRouteTypeIpv6 ipv6() {

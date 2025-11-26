@@ -81,13 +81,7 @@ export interface GetCertificateProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * User domain
-     */
     readonly domain: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the certificate profile
@@ -97,26 +91,11 @@ export interface GetCertificateProfileResult {
      * The name of the certificate profile
      */
     readonly name: string;
-    /**
-     * OCSP receive timeout (seconds)
-     */
     readonly ocspReceiveTimeout: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Use CRL?
-     */
     readonly useCrl: boolean;
-    /**
-     * Use OCSP?
-     */
     readonly useOcsp: boolean;
-    /**
-     * Certificate username field
-     */
     readonly usernameField: outputs.GetCertificateProfileUsernameField;
 }
 /**

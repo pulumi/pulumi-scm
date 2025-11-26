@@ -39,8 +39,12 @@ class IpsecTunnelArgs:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] enable_gre_encapsulation: allow GRE over IPSec
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         :param pulumi.Input['IpsecTunnelTunnelMonitorArgs'] tunnel_monitor: Tunnel monitor
         """
@@ -129,6 +133,8 @@ class IpsecTunnelArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -153,6 +159,8 @@ class IpsecTunnelArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -207,8 +215,12 @@ class _IpsecTunnelState:
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] enable_gre_encapsulation: allow GRE over IPSec
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         :param pulumi.Input['IpsecTunnelTunnelMonitorArgs'] tunnel_monitor: Tunnel monitor
         """
@@ -300,6 +312,8 @@ class _IpsecTunnelState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -324,6 +338,8 @@ class _IpsecTunnelState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -456,8 +472,12 @@ class IpsecTunnel(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] enable_gre_encapsulation: allow GRE over IPSec
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']] tunnel_monitor: Tunnel monitor
         """
@@ -614,8 +634,12 @@ class IpsecTunnel(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.bool] enable_gre_encapsulation: allow GRE over IPSec
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] tunnel_interface: Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
         :param pulumi.Input[Union['IpsecTunnelTunnelMonitorArgs', 'IpsecTunnelTunnelMonitorArgsDict']] tunnel_monitor: Tunnel monitor
         """
@@ -681,6 +705,8 @@ class IpsecTunnel(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -697,6 +723,8 @@ class IpsecTunnel(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

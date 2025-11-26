@@ -11,6 +11,40 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// BgpAddressFamilyProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmBgpAddressFamilyProfile = new Scm.BgpAddressFamilyProfile("scm_bgp_address_family_profile", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_bgp_address_family_profile",
+    ///         Ipv4 = new Scm.Inputs.BgpAddressFamilyProfileIpv4Args
+    ///         {
+    ///             Unicast = new Scm.Inputs.BgpAddressFamilyProfileIpv4UnicastArgs
+    ///             {
+    ///                 Enable = true,
+    ///                 AllowasIn = new Scm.Inputs.BgpAddressFamilyProfileIpv4UnicastAllowasInArgs
+    ///                 {
+    ///                     Origin = null,
+    ///                 },
+    ///                 NextHop = new Scm.Inputs.BgpAddressFamilyProfileIpv4UnicastNextHopArgs
+    ///                 {
+    ///                     Self = null,
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile")]
     public partial class BgpAddressFamilyProfile : global::Pulumi.CustomResource
@@ -23,12 +57,14 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
-        /// Ipv4
+        /// IPv4 Address Family
         /// </summary>
         [Output("ipv4")]
         public Output<Outputs.BgpAddressFamilyProfileIpv4?> Ipv4 { get; private set; } = null!;
@@ -41,6 +77,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -102,12 +140,14 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Ipv4
+        /// IPv4 Address Family
         /// </summary>
         [Input("ipv4")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4Args>? Ipv4 { get; set; }
@@ -120,6 +160,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -140,12 +182,14 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
-        /// Ipv4
+        /// IPv4 Address Family
         /// </summary>
         [Input("ipv4")]
         public Input<Inputs.BgpAddressFamilyProfileIpv4GetArgs>? Ipv4 { get; set; }
@@ -158,6 +202,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

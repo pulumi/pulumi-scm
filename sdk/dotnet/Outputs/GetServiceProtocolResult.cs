@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetServiceProtocolTcpResult Tcp;
         /// <summary>
         /// Udp
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Tcp` and `Udp`.
         /// </summary>
         public readonly Outputs.GetServiceProtocolUdpResult Udp;
 

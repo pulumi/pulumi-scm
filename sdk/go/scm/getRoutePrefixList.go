@@ -36,17 +36,14 @@ type LookupRoutePrefixListResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
-	// Ipv4
-	Ipv4 GetRoutePrefixListIpv4 `pulumi:"ipv4"`
 	// Filter prefix list name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Name    string                 `pulumi:"name"`
+	Snippet string                 `pulumi:"snippet"`
+	Tfid    string                 `pulumi:"tfid"`
+	Type    GetRoutePrefixListType `pulumi:"type"`
 }
 
 func LookupRoutePrefixListOutput(ctx *pulumi.Context, args LookupRoutePrefixListOutputArgs, opts ...pulumi.InvokeOption) LookupRoutePrefixListResultOutput {
@@ -95,7 +92,6 @@ func (o LookupRoutePrefixListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupRoutePrefixListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -105,23 +101,21 @@ func (o LookupRoutePrefixListResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Ipv4
-func (o LookupRoutePrefixListResultOutput) Ipv4() GetRoutePrefixListIpv4Output {
-	return o.ApplyT(func(v LookupRoutePrefixListResult) GetRoutePrefixListIpv4 { return v.Ipv4 }).(GetRoutePrefixListIpv4Output)
-}
-
 // Filter prefix list name
 func (o LookupRoutePrefixListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupRoutePrefixListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
 func (o LookupRoutePrefixListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupRoutePrefixListResult) string { return v.Tfid }).(pulumi.StringOutput)
+}
+
+func (o LookupRoutePrefixListResultOutput) Type() GetRoutePrefixListTypeOutput {
+	return o.ApplyT(func(v LookupRoutePrefixListResult) GetRoutePrefixListType { return v.Type }).(GetRoutePrefixListTypeOutput)
 }
 
 func init() {

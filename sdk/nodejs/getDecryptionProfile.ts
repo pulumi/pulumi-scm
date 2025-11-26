@@ -59,9 +59,6 @@ export interface GetDecryptionProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -71,25 +68,10 @@ export interface GetDecryptionProfileResult {
      * Must start with alphanumeric char and should contain only alphanemeric, underscore, hyphen, dot or space
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Ssl forward proxy
-     */
     readonly sslForwardProxy: outputs.GetDecryptionProfileSslForwardProxy;
-    /**
-     * Ssl inbound proxy
-     */
     readonly sslInboundProxy: outputs.GetDecryptionProfileSslInboundProxy;
-    /**
-     * Ssl no proxy
-     */
     readonly sslNoProxy: outputs.GetDecryptionProfileSslNoProxy;
-    /**
-     * Ssl protocol settings
-     */
     readonly sslProtocolSettings: outputs.GetDecryptionProfileSslProtocolSettings;
     readonly tfid: string;
 }

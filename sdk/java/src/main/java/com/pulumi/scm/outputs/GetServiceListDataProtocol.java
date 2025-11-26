@@ -19,6 +19,8 @@ public final class GetServiceListDataProtocol {
     /**
      * @return Udp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
+     * 
      */
     private GetServiceListDataProtocolUdp udp;
 
@@ -32,6 +34,8 @@ public final class GetServiceListDataProtocol {
     }
     /**
      * @return Udp
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public GetServiceListDataProtocolUdp udp() {

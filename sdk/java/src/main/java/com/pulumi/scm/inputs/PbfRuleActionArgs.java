@@ -35,12 +35,16 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * Forward
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+     * 
      */
     @Import(name="forward")
     private @Nullable Output<PbfRuleActionForwardArgs> forward;
 
     /**
      * @return Forward
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     public Optional<Output<PbfRuleActionForwardArgs>> forward() {
@@ -50,12 +54,16 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
     /**
      * No pbf
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+     * 
      */
     @Import(name="noPbf")
     private @Nullable Output<PbfRuleActionNoPbfArgs> noPbf;
 
     /**
      * @return No pbf
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     public Optional<Output<PbfRuleActionNoPbfArgs>> noPbf() {
@@ -112,6 +120,8 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param forward Forward
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+         * 
          * @return builder
          * 
          */
@@ -123,6 +133,8 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
         /**
          * @param forward Forward
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+         * 
          * @return builder
          * 
          */
@@ -132,6 +144,8 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param noPbf No pbf
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder
          * 
@@ -143,6 +157,8 @@ public final class PbfRuleActionArgs extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param noPbf No pbf
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
          * 
          * @return builder
          * 

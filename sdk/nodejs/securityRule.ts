@@ -167,6 +167,32 @@ import * as utilities from "./utilities";
  *     tags: [webTag.name],
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/securityRule:SecurityRule example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/securityRule:SecurityRule example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/securityRule:SecurityRule example ::device:id
+ * ```
  */
 export class SecurityRule extends pulumi.CustomResource {
     /**

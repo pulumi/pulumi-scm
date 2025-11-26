@@ -20,10 +20,14 @@ public final class GetPbfRuleAction {
     /**
      * @return Forward
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+     * 
      */
     private GetPbfRuleActionForward forward;
     /**
      * @return No pbf
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     private GetPbfRuleActionNoPbf noPbf;
@@ -39,12 +43,16 @@ public final class GetPbfRuleAction {
     /**
      * @return Forward
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
+     * 
      */
     public GetPbfRuleActionForward forward() {
         return this.forward;
     }
     /**
      * @return No pbf
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `discard`, `forward`, and `noPbf`.
      * 
      */
     public GetPbfRuleActionNoPbf noPbf() {

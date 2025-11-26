@@ -20,10 +20,14 @@ public final class GetHipObjectListDataDiskBackupCriteriaLastBackupTime {
     /**
      * @return Not within
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+     * 
      */
     private GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin notWithin;
     /**
      * @return Within
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     private GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin within;
@@ -39,12 +43,16 @@ public final class GetHipObjectListDataDiskBackupCriteriaLastBackupTime {
     /**
      * @return Not within
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
+     * 
      */
     public GetHipObjectListDataDiskBackupCriteriaLastBackupTimeNotWithin notWithin() {
         return this.notWithin;
     }
     /**
      * @return Within
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notAvailable`, `notWithin`, and `within`.
      * 
      */
     public GetHipObjectListDataDiskBackupCriteriaLastBackupTimeWithin within() {

@@ -34,12 +34,16 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
     /**
      * Classified
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
+     * 
      */
     @Import(name="classified")
     private @Nullable Output<DosProtectionRuleProtectionClassifiedArgs> classified;
 
     /**
      * @return Classified
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     public Optional<Output<DosProtectionRuleProtectionClassifiedArgs>> classified() {
@@ -95,6 +99,8 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
         /**
          * @param classified Classified
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class DosProtectionRuleProtectionArgs extends com.pulumi.resources.
 
         /**
          * @param classified Classified
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
          * 
          * @return builder
          * 

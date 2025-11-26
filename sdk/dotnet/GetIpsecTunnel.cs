@@ -160,13 +160,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// allow GRE over IPSec
-        /// </summary>
         public readonly bool EnableGreEncapsulation;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
@@ -176,18 +170,9 @@ namespace Pulumi.Scm
         /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
-        /// <summary>
-        /// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-        /// </summary>
         public readonly string TunnelInterface;
-        /// <summary>
-        /// Tunnel monitor
-        /// </summary>
         public readonly Outputs.GetIpsecTunnelTunnelMonitorResult TunnelMonitor;
 
         [OutputConstructor]

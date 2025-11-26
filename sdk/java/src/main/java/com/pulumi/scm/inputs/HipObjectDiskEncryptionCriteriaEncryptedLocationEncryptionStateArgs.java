@@ -33,12 +33,16 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     /**
      * Is not
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * 
      */
     @Import(name="isNot")
     private @Nullable Output<String> isNot;
 
     /**
      * @return Is not
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<Output<String>> isNot() {
@@ -94,6 +98,8 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
         /**
          * @param isNot Is not
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+         * 
          * @return builder
          * 
          */
@@ -104,6 +110,8 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
 
         /**
          * @param isNot Is not
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
          * 
          * @return builder
          * 

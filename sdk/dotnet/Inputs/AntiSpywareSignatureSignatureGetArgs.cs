@@ -23,6 +23,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Standard
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Combination` and `Standard`.
         /// </summary>
         public InputList<Inputs.AntiSpywareSignatureSignatureStandardGetArgs> Standards
         {

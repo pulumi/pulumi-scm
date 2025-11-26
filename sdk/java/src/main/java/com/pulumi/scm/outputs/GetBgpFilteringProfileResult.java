@@ -21,30 +21,18 @@ public final class GetBgpFilteringProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Ipv4
-     * 
-     */
     private GetBgpFilteringProfileIpv4 ipv4;
     /**
      * @return Name
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -63,10 +51,6 @@ public final class GetBgpFilteringProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -77,10 +61,6 @@ public final class GetBgpFilteringProfileResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Ipv4
-     * 
-     */
     public GetBgpFilteringProfileIpv4 ipv4() {
         return this.ipv4;
     }
@@ -91,10 +71,6 @@ public final class GetBgpFilteringProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

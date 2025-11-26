@@ -12,26 +12,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AuthenticationProfileLockout {
     /**
-     * @return Failed attempts
+     * @return Lockout object - failedAttempts of authentication profile
      * 
      */
     private @Nullable Integer failedAttempts;
     /**
-     * @return Lockout time
+     * @return Lockout object - lockout-time of authentication profile
      * 
      */
     private @Nullable Integer lockoutTime;
 
     private AuthenticationProfileLockout() {}
     /**
-     * @return Failed attempts
+     * @return Lockout object - failedAttempts of authentication profile
      * 
      */
     public Optional<Integer> failedAttempts() {
         return Optional.ofNullable(this.failedAttempts);
     }
     /**
-     * @return Lockout time
+     * @return Lockout object - lockout-time of authentication profile
      * 
      */
     public Optional<Integer> lockoutTime() {

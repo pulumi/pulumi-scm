@@ -177,37 +177,19 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Interface management profile
-        /// </summary>
         public readonly string InterfaceManagementProfile;
-        /// <summary>
-        /// Loopback IP Parent
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetLoopbackInterfaceIpResult> Ips;
-        /// <summary>
-        /// Loopback IPv6 Configuration
-        /// </summary>
         public readonly Outputs.GetLoopbackInterfaceIpv6Result Ipv6;
-        /// <summary>
-        /// MTU
-        /// </summary>
         public readonly int Mtu;
         /// <summary>
         /// Loopback Interface name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

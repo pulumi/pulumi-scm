@@ -38,7 +38,7 @@ public final class GetAppOverrideRuleListData {
      */
     private Boolean disabled;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -93,7 +93,7 @@ public final class GetAppOverrideRuleListData {
      */
     private String relativePosition;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -156,7 +156,7 @@ public final class GetAppOverrideRuleListData {
         return this.disabled;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -233,7 +233,7 @@ public final class GetAppOverrideRuleListData {
         return this.relativePosition;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// specify time in hours
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Days` and `Hours`.
         /// </summary>
         [Input("hours")]
         public Input<int>? Hours { get; set; }

@@ -7,7 +7,6 @@ import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
 import com.pulumi.scm.outputs.GetSiteMember;
 import com.pulumi.scm.outputs.GetSiteQos;
-import java.lang.Double;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -43,12 +42,17 @@ public final class GetSiteResult {
      * @return The latitude coordinate for the site
      * 
      */
-    private Double latitude;
+    private String latitude;
+    /**
+     * @return The license type of the site
+     * 
+     */
+    private String licenseType;
     /**
      * @return The longitude coordinate for the site
      * 
      */
-    private Double longitude;
+    private String longitude;
     /**
      * @return Members
      * 
@@ -121,14 +125,21 @@ public final class GetSiteResult {
      * @return The latitude coordinate for the site
      * 
      */
-    public Double latitude() {
+    public String latitude() {
         return this.latitude;
+    }
+    /**
+     * @return The license type of the site
+     * 
+     */
+    public String licenseType() {
+        return this.licenseType;
     }
     /**
      * @return The longitude coordinate for the site
      * 
      */
-    public Double longitude() {
+    public String longitude() {
         return this.longitude;
     }
     /**
@@ -191,8 +202,9 @@ public final class GetSiteResult {
         private String city;
         private String country;
         private String id;
-        private Double latitude;
-        private Double longitude;
+        private String latitude;
+        private String licenseType;
+        private String longitude;
         private List<GetSiteMember> members;
         private String name;
         private GetSiteQos qos;
@@ -209,6 +221,7 @@ public final class GetSiteResult {
     	      this.country = defaults.country;
     	      this.id = defaults.id;
     	      this.latitude = defaults.latitude;
+    	      this.licenseType = defaults.licenseType;
     	      this.longitude = defaults.longitude;
     	      this.members = defaults.members;
     	      this.name = defaults.name;
@@ -260,7 +273,7 @@ public final class GetSiteResult {
             return this;
         }
         @CustomType.Setter
-        public Builder latitude(Double latitude) {
+        public Builder latitude(String latitude) {
             if (latitude == null) {
               throw new MissingRequiredPropertyException("GetSiteResult", "latitude");
             }
@@ -268,7 +281,15 @@ public final class GetSiteResult {
             return this;
         }
         @CustomType.Setter
-        public Builder longitude(Double longitude) {
+        public Builder licenseType(String licenseType) {
+            if (licenseType == null) {
+              throw new MissingRequiredPropertyException("GetSiteResult", "licenseType");
+            }
+            this.licenseType = licenseType;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder longitude(String longitude) {
             if (longitude == null) {
               throw new MissingRequiredPropertyException("GetSiteResult", "longitude");
             }
@@ -342,6 +363,7 @@ public final class GetSiteResult {
             _resultValue.country = country;
             _resultValue.id = id;
             _resultValue.latitude = latitude;
+            _resultValue.licenseType = licenseType;
             _resultValue.longitude = longitude;
             _resultValue.members = members;
             _resultValue.name = name;

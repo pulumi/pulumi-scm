@@ -18,12 +18,16 @@ type SdwanTrafficDistributionProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Link-Tags for interfaces identified by defined tags
 	LinkTags SdwanTrafficDistributionProfileLinkTagArrayOutput `pulumi:"linkTags"`
 	// Profile name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// Traffic distribution
@@ -63,12 +67,16 @@ type sdwanTrafficDistributionProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Link-Tags for interfaces identified by defined tags
 	LinkTags []SdwanTrafficDistributionProfileLinkTag `pulumi:"linkTags"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// Traffic distribution
@@ -79,12 +87,16 @@ type SdwanTrafficDistributionProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Link-Tags for interfaces identified by defined tags
 	LinkTags SdwanTrafficDistributionProfileLinkTagArrayInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// Traffic distribution
@@ -99,12 +111,16 @@ type sdwanTrafficDistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Link-Tags for interfaces identified by defined tags
 	LinkTags []SdwanTrafficDistributionProfileLinkTag `pulumi:"linkTags"`
 	// Profile name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Traffic distribution
 	TrafficDistribution *string `pulumi:"trafficDistribution"`
@@ -115,12 +131,16 @@ type SdwanTrafficDistributionProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Link-Tags for interfaces identified by defined tags
 	LinkTags SdwanTrafficDistributionProfileLinkTagArrayInput
 	// Profile name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Traffic distribution
 	TrafficDistribution pulumi.StringPtrInput
@@ -219,6 +239,8 @@ func (o SdwanTrafficDistributionProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanTrafficDistributionProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -236,6 +258,8 @@ func (o SdwanTrafficDistributionProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o SdwanTrafficDistributionProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *SdwanTrafficDistributionProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

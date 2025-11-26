@@ -185,53 +185,23 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Local inline cat
-        /// </summary>
         public readonly bool LocalInlineCat;
-        /// <summary>
-        /// Log container page only
-        /// </summary>
         public readonly bool LogContainerPageOnly;
-        /// <summary>
-        /// Log http hdr referer
-        /// </summary>
         public readonly bool LogHttpHdrReferer;
-        /// <summary>
-        /// Log http hdr user agent
-        /// </summary>
         public readonly bool LogHttpHdrUserAgent;
-        /// <summary>
-        /// Log http hdr xff
-        /// </summary>
         public readonly bool LogHttpHdrXff;
-        /// <summary>
-        /// Mlav category exception
-        /// </summary>
         public readonly ImmutableArray<string> MlavCategoryExceptions;
         /// <summary>
         /// Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Redirect
-        /// </summary>
         public readonly ImmutableArray<string> Redirects;
-        /// <summary>
-        /// Safe search enforcement
-        /// </summary>
         public readonly bool SafeSearchEnforcement;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

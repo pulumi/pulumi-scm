@@ -77,25 +77,18 @@ type LookupCertificateProfileResult struct {
 	CrlReceiveTimeout string `pulumi:"crlReceiveTimeout"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// User domain
 	Domain string `pulumi:"domain"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the certificate profile
 	Id string `pulumi:"id"`
 	// The name of the certificate profile
-	Name string `pulumi:"name"`
-	// OCSP receive timeout (seconds)
-	OcspReceiveTimeout string `pulumi:"ocspReceiveTimeout"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Use CRL?
-	UseCrl bool `pulumi:"useCrl"`
-	// Use OCSP?
-	UseOcsp bool `pulumi:"useOcsp"`
-	// Certificate username field
-	UsernameField GetCertificateProfileUsernameField `pulumi:"usernameField"`
+	Name               string                             `pulumi:"name"`
+	OcspReceiveTimeout string                             `pulumi:"ocspReceiveTimeout"`
+	Snippet            string                             `pulumi:"snippet"`
+	Tfid               string                             `pulumi:"tfid"`
+	UseCrl             bool                               `pulumi:"useCrl"`
+	UseOcsp            bool                               `pulumi:"useOcsp"`
+	UsernameField      GetCertificateProfileUsernameField `pulumi:"usernameField"`
 }
 
 func LookupCertificateProfileOutput(ctx *pulumi.Context, args LookupCertificateProfileOutputArgs, opts ...pulumi.InvokeOption) LookupCertificateProfileResultOutput {
@@ -174,12 +167,10 @@ func (o LookupCertificateProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// User domain
 func (o LookupCertificateProfileResultOutput) Domain() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Domain }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupCertificateProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -194,12 +185,10 @@ func (o LookupCertificateProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// OCSP receive timeout (seconds)
 func (o LookupCertificateProfileResultOutput) OcspReceiveTimeout() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.OcspReceiveTimeout }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupCertificateProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -208,17 +197,14 @@ func (o LookupCertificateProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Use CRL?
 func (o LookupCertificateProfileResultOutput) UseCrl() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.UseCrl }).(pulumi.BoolOutput)
 }
 
-// Use OCSP?
 func (o LookupCertificateProfileResultOutput) UseOcsp() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) bool { return v.UseOcsp }).(pulumi.BoolOutput)
 }
 
-// Certificate username field
 func (o LookupCertificateProfileResultOutput) UsernameField() GetCertificateProfileUsernameFieldOutput {
 	return o.ApplyT(func(v LookupCertificateProfileResult) GetCertificateProfileUsernameField { return v.UsernameField }).(GetCertificateProfileUsernameFieldOutput)
 }

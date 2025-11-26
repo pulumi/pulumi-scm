@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationProfileListDataResult
     {
         /// <summary>
-        /// Allow list
+        /// The AllowList of the authentication profile
         /// </summary>
         public readonly ImmutableArray<string> AllowLists;
         /// <summary>
@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Device;
         /// <summary>
-        /// The folder in which the resource is defined
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -30,11 +30,11 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Id;
         /// <summary>
-        /// Lockout
+        /// Lockout object of the authentication profile
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataLockoutResult Lockout;
         /// <summary>
-        /// Method
+        /// method object of authentication profile
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataMethodResult Method;
         /// <summary>
@@ -50,7 +50,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetAuthenticationProfileListDataSingleSignOnResult SingleSignOn;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;

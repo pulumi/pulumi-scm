@@ -15,26 +15,8 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const testQosPolicyRule = new scm.QosPolicyRule("test_qos_policy_rule", {
- *     name: "data-source-qos-test",
- *     description: "Rule created specifically for data source testing with DSCP/TOS.",
- *     folder: "All",
- *     position: "pre",
- *     schedule: "non-work-hours",
- *     action: {
- *         "class": "1",
- *     },
- *     dscpTos: {
- *         codepoints: [{
- *             name: "Expedited Forwarding",
- *             type: {
- *                 ef: {},
- *             },
- *         }],
- *     },
- * });
- * const singleRuleById = scm.getQosPolicyRuleOutput({
- *     id: testQosPolicyRule.id,
+ * const singleRuleById = scm.getQosPolicyRule({
+ *     id: "fbc3fdb2-8513-4949-be8a-f1be03b492da",
  * });
  * export const singleQosPolicyRuleDump = singleRuleById;
  * ```
@@ -77,13 +59,7 @@ export interface GetQosPolicyRuleResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Dscp tos
-     */
     readonly dscpTos: outputs.GetQosPolicyRuleDscpTos;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -93,25 +69,10 @@ export interface GetQosPolicyRuleResult {
      * Name
      */
     readonly name: string;
-    /**
-     * The relative position of the rule
-     */
     readonly position: string;
-    /**
-     * Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-     */
     readonly relativePosition: string;
-    /**
-     * Schedule
-     */
     readonly schedule: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * The name or UUID of the rule to position this rule relative to. Required when `relativePosition` is `"before"` or `"after"`.
-     */
     readonly targetRule: string;
     readonly tfid: string;
 }
@@ -124,26 +85,8 @@ export interface GetQosPolicyRuleResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const testQosPolicyRule = new scm.QosPolicyRule("test_qos_policy_rule", {
- *     name: "data-source-qos-test",
- *     description: "Rule created specifically for data source testing with DSCP/TOS.",
- *     folder: "All",
- *     position: "pre",
- *     schedule: "non-work-hours",
- *     action: {
- *         "class": "1",
- *     },
- *     dscpTos: {
- *         codepoints: [{
- *             name: "Expedited Forwarding",
- *             type: {
- *                 ef: {},
- *             },
- *         }],
- *     },
- * });
- * const singleRuleById = scm.getQosPolicyRuleOutput({
- *     id: testQosPolicyRule.id,
+ * const singleRuleById = scm.getQosPolicyRule({
+ *     id: "fbc3fdb2-8513-4949-be8a-f1be03b492da",
  * });
  * export const singleQosPolicyRuleDump = singleRuleById;
  * ```

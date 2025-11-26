@@ -75,28 +75,20 @@ type LookupLayer3SubinterfaceResult struct {
 	// Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
 	DdnsConfig GetLayer3SubinterfaceDdnsConfig `pulumi:"ddnsConfig"`
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Layer3 sub interfaces DHCP Client Object
+	Device     string                          `pulumi:"device"`
 	DhcpClient GetLayer3SubinterfaceDhcpClient `pulumi:"dhcpClient"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Folder     string                          `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Interface management profile
-	InterfaceManagementProfile string `pulumi:"interfaceManagementProfile"`
-	// L3 sub-interface IP Parent
-	Ips []GetLayer3SubinterfaceIp `pulumi:"ips"`
-	// MTU
-	Mtu int `pulumi:"mtu"`
+	Id                         string                    `pulumi:"id"`
+	InterfaceManagementProfile string                    `pulumi:"interfaceManagementProfile"`
+	Ips                        []GetLayer3SubinterfaceIp `pulumi:"ips"`
+	Mtu                        int                       `pulumi:"mtu"`
 	// L3 sub-interface name
-	Name string `pulumi:"name"`
-	// Parent interface
+	Name            string `pulumi:"name"`
 	ParentInterface string `pulumi:"parentInterface"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// VLAN tag
-	Tag  int    `pulumi:"tag"`
-	Tfid string `pulumi:"tfid"`
+	Snippet         string `pulumi:"snippet"`
+	Tag             int    `pulumi:"tag"`
+	Tfid            string `pulumi:"tfid"`
 }
 
 func LookupLayer3SubinterfaceOutput(ctx *pulumi.Context, args LookupLayer3SubinterfaceOutputArgs, opts ...pulumi.InvokeOption) LookupLayer3SubinterfaceResultOutput {
@@ -155,12 +147,10 @@ func (o LookupLayer3SubinterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Layer3 sub interfaces DHCP Client Object
 func (o LookupLayer3SubinterfaceResultOutput) DhcpClient() GetLayer3SubinterfaceDhcpClientOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) GetLayer3SubinterfaceDhcpClient { return v.DhcpClient }).(GetLayer3SubinterfaceDhcpClientOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupLayer3SubinterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -170,17 +160,14 @@ func (o LookupLayer3SubinterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Interface management profile
 func (o LookupLayer3SubinterfaceResultOutput) InterfaceManagementProfile() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.InterfaceManagementProfile }).(pulumi.StringOutput)
 }
 
-// L3 sub-interface IP Parent
 func (o LookupLayer3SubinterfaceResultOutput) Ips() GetLayer3SubinterfaceIpArrayOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) []GetLayer3SubinterfaceIp { return v.Ips }).(GetLayer3SubinterfaceIpArrayOutput)
 }
 
-// MTU
 func (o LookupLayer3SubinterfaceResultOutput) Mtu() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) int { return v.Mtu }).(pulumi.IntOutput)
 }
@@ -190,17 +177,14 @@ func (o LookupLayer3SubinterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Parent interface
 func (o LookupLayer3SubinterfaceResultOutput) ParentInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.ParentInterface }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupLayer3SubinterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// VLAN tag
 func (o LookupLayer3SubinterfaceResultOutput) Tag() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLayer3SubinterfaceResult) int { return v.Tag }).(pulumi.IntOutput)
 }

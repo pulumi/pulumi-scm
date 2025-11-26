@@ -19,18 +19,26 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringDailyResult Daily;
         /// <summary>
         /// Five minute
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringFiveMinuteResult FiveMinute;
         /// <summary>
         /// Hourly
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringHourlyResult Hourly;
         /// <summary>
         /// Monthly
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringMonthlyResult Monthly;
         /// <summary>
         /// Weekly
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpRecurringWeeklyResult Weekly;
 

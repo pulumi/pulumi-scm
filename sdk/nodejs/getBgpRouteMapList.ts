@@ -8,6 +8,19 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all bgp route maps
+ * const allBgpRouteMaps = scm.getBgpRouteMapList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmBgpRouteMapList = allBgpRouteMaps.then(allBgpRouteMaps => .reduce((__obj, routeMap) => ({ ...__obj, [routeMap.id]: routeMap })));
+ * ```
  */
 export function getBgpRouteMapList(args?: GetBgpRouteMapListArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpRouteMapListResult> {
     args = args || {};
@@ -96,6 +109,19 @@ export interface GetBgpRouteMapListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Fetch a list of all bgp route maps
+ * const allBgpRouteMaps = scm.getBgpRouteMapList({
+ *     folder: "ngfw-shared",
+ * });
+ * export const scmBgpRouteMapList = allBgpRouteMaps.then(allBgpRouteMaps => .reduce((__obj, routeMap) => ({ ...__obj, [routeMap.id]: routeMap })));
+ * ```
  */
 export function getBgpRouteMapListOutput(args?: GetBgpRouteMapListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpRouteMapListResult> {
     args = args || {};

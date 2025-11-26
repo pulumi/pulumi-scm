@@ -21,10 +21,14 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkType {
     /**
      * @return P2mp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+     * 
      */
     private @Nullable LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp p2mp;
     /**
      * @return P2p
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     private @Nullable LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p p2p;
@@ -40,12 +44,16 @@ public final class LogicalRouterVrfOspfAreaInterfaceLinkType {
     /**
      * @return P2mp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
+     * 
      */
     public Optional<LogicalRouterVrfOspfAreaInterfaceLinkTypeP2mp> p2mp() {
         return Optional.ofNullable(this.p2mp);
     }
     /**
      * @return P2p
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `broadcast`, `p2mp`, and `p2p`.
      * 
      */
     public Optional<LogicalRouterVrfOspfAreaInterfaceLinkTypeP2p> p2p() {

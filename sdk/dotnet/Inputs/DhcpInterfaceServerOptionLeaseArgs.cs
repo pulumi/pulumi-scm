@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Unlimited
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Timeout` and `Unlimited`.
         /// </summary>
         [Input("unlimited")]
         public Input<Inputs.DhcpInterfaceServerOptionLeaseUnlimitedArgs>? Unlimited { get; set; }

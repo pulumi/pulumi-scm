@@ -99,12 +99,16 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     /**
      * Vlan interfaces DHCP Client Object
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     @Import(name="dhcpClient")
     private @Nullable Output<VlanInterfaceDhcpClientArgs> dhcpClient;
 
     /**
      * @return Vlan interfaces DHCP Client Object
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Optional<Output<VlanInterfaceDhcpClientArgs>> dhcpClient() {
@@ -114,12 +118,16 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -144,12 +152,16 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     /**
      * VLAN Interface IP Parent
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     @Import(name="ips")
     private @Nullable Output<List<VlanInterfaceIpArgs>> ips;
 
     /**
      * @return VLAN Interface IP Parent
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      * 
      */
     public Optional<Output<List<VlanInterfaceIpArgs>>> ips() {
@@ -189,12 +201,16 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -378,6 +394,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param dhcpClient Vlan interfaces DHCP Client Object
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+         * 
          * @return builder
          * 
          */
@@ -389,6 +407,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param dhcpClient Vlan interfaces DHCP Client Object
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+         * 
          * @return builder
          * 
          */
@@ -398,6 +418,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -409,6 +431,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -441,6 +465,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param ips VLAN Interface IP Parent
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+         * 
          * @return builder
          * 
          */
@@ -452,6 +478,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param ips VLAN Interface IP Parent
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+         * 
          * @return builder
          * 
          */
@@ -461,6 +489,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param ips VLAN Interface IP Parent
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
          * 
          * @return builder
          * 
@@ -514,6 +544,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
         /**
          * @param snippet The snippet in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -524,6 +556,8 @@ public final class VlanInterfaceState extends com.pulumi.resources.ResourceArgs 
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

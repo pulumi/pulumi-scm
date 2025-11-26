@@ -165,6 +165,18 @@ def get_site_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_sites = scm.get_site_list(limit=50,
+        folder="Remote Networks")
+    pulumi.export("listOfAllConnectionNames", [conn.name for conn in all_sites.datas])
+    pulumi.export("totalConnectionsCount", len(all_sites.datas))
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +215,18 @@ def get_site_list_output(device: Optional[pulumi.Input[Optional[_builtins.str]]]
                          opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetSiteListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_sites = scm.get_site_list(limit=50,
+        folder="Remote Networks")
+    pulumi.export("listOfAllConnectionNames", [conn.name for conn in all_sites.datas])
+    pulumi.export("totalConnectionsCount", len(all_sites.datas))
+    ```
 
 
     :param _builtins.str device: The device of the item.

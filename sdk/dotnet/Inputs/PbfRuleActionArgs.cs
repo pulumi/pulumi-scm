@@ -20,12 +20,16 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Forward
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         [Input("forward")]
         public Input<Inputs.PbfRuleActionForwardArgs>? Forward { get; set; }
 
         /// <summary>
         /// No pbf
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Discard`, `Forward`, and `NoPbf`.
         /// </summary>
         [Input("noPbf")]
         public Input<Inputs.PbfRuleActionNoPbfArgs>? NoPbf { get; set; }

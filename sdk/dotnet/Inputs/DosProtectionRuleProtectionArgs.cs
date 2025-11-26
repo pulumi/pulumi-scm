@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Classified
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Aggregate` and `Classified`.
         /// </summary>
         [Input("classified")]
         public Input<Inputs.DosProtectionRuleProtectionClassifiedArgs>? Classified { get; set; }

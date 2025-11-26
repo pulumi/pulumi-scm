@@ -18,6 +18,60 @@ import javax.annotation.Nullable;
 /**
  * BgpRedistributionProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.BgpRedistributionProfile;
+ * import com.pulumi.scm.BgpRedistributionProfileArgs;
+ * import com.pulumi.scm.inputs.BgpRedistributionProfileIpv4Args;
+ * import com.pulumi.scm.inputs.BgpRedistributionProfileIpv4UnicastArgs;
+ * import com.pulumi.scm.inputs.BgpRedistributionProfileIpv4UnicastStaticArgs;
+ * import com.pulumi.scm.inputs.BgpRedistributionProfileIpv4UnicastConnectedArgs;
+ * import com.pulumi.scm.inputs.BgpRedistributionProfileIpv4UnicastOspfArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmBgpRedistributionProfile = new BgpRedistributionProfile("scmBgpRedistributionProfile", BgpRedistributionProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_redistribution_profile")
+ *             .ipv4(BgpRedistributionProfileIpv4Args.builder()
+ *                 .unicast(BgpRedistributionProfileIpv4UnicastArgs.builder()
+ *                     .static_(BgpRedistributionProfileIpv4UnicastStaticArgs.builder()
+ *                         .enable(true)
+ *                         .metric(10)
+ *                         .build())
+ *                     .connected(BgpRedistributionProfileIpv4UnicastConnectedArgs.builder()
+ *                         .enable(true)
+ *                         .metric(10)
+ *                         .build())
+ *                     .ospf(BgpRedistributionProfileIpv4UnicastOspfArgs.builder()
+ *                         .enable(false)
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/bgpRedistributionProfile:BgpRedistributionProfile")
 public class BgpRedistributionProfile extends com.pulumi.resources.CustomResource {
@@ -38,12 +92,16 @@ public class BgpRedistributionProfile extends com.pulumi.resources.CustomResourc
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -80,12 +138,16 @@ public class BgpRedistributionProfile extends com.pulumi.resources.CustomResourc
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

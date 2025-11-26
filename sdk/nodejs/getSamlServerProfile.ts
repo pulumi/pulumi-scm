@@ -41,50 +41,23 @@ export interface GetSamlServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The identity provider ID
-     */
     readonly entityId: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the SAML server profile
      */
     readonly id: string;
-    /**
-     * Maxiumum clock skew
-     */
     readonly maxClockSkew: number;
     /**
      * The name of the SAML server profile
      */
     readonly name: string;
-    /**
-     * SAML HTTP binding for SLO requests to the identity provider
-     */
     readonly sloBindings: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * SAML HTTP binding for SSO requests to the identity provider
-     */
     readonly ssoBindings: string;
-    /**
-     * Identity provider SSO URL
-     */
     readonly ssoUrl: string;
     readonly tfid: string;
-    /**
-     * Validate the identity provider certificate?
-     */
     readonly validateIdpCertificate: boolean;
-    /**
-     * Sign SAML message to the identity provider?
-     */
     readonly wantAuthRequestsSigned: boolean;
 }
 /**

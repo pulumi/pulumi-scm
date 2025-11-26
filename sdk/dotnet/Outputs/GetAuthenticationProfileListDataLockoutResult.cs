@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetAuthenticationProfileListDataLockoutResult
     {
         /// <summary>
-        /// Failed attempts
+        /// Lockout object - FailedAttempts of authentication profile
         /// </summary>
         public readonly int FailedAttempts;
         /// <summary>
-        /// Lockout time
+        /// Lockout object - lockout-time of authentication profile
         /// </summary>
         public readonly int LockoutTime;
 

@@ -44,7 +44,7 @@ public final class GetAntiSpywareSignatureListData {
      */
     private String direction;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -69,13 +69,13 @@ public final class GetAntiSpywareSignatureListData {
      */
     private GetAntiSpywareSignatureListDataSignature signature;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
     private String tfid;
     /**
-     * @return threat id range \n\n and \n\n
+     * @return threat id range &lt;15000-18000&gt; and &lt;6900001-7000000&gt;
      * 
      */
     private String threatId;
@@ -134,7 +134,7 @@ public final class GetAntiSpywareSignatureListData {
         return this.direction;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -169,7 +169,7 @@ public final class GetAntiSpywareSignatureListData {
         return this.signature;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {
@@ -179,7 +179,7 @@ public final class GetAntiSpywareSignatureListData {
         return this.tfid;
     }
     /**
-     * @return threat id range \n\n and \n\n
+     * @return threat id range &lt;15000-18000&gt; and &lt;6900001-7000000&gt;
      * 
      */
     public String threatId() {

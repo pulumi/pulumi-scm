@@ -35,10 +35,18 @@ class AggregateInterfaceArgs:
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['AggregateInterfaceLayer2Args'] layer2: Layer2
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input['AggregateInterfaceLayer3Args'] layer3: Aggregate Interface Layer 3 configuration
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[_builtins.str] name: Aggregate interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
@@ -98,6 +106,8 @@ class AggregateInterfaceArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -110,6 +120,8 @@ class AggregateInterfaceArgs:
     def layer2(self) -> Optional[pulumi.Input['AggregateInterfaceLayer2Args']]:
         """
         Layer2
+
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         """
         return pulumi.get(self, "layer2")
 
@@ -122,6 +134,8 @@ class AggregateInterfaceArgs:
     def layer3(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3Args']]:
         """
         Aggregate Interface Layer 3 configuration
+
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         """
         return pulumi.get(self, "layer3")
 
@@ -146,6 +160,8 @@ class AggregateInterfaceArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -172,10 +188,18 @@ class _AggregateInterfaceState:
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['AggregateInterfaceLayer2Args'] layer2: Layer2
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input['AggregateInterfaceLayer3Args'] layer3: Aggregate Interface Layer 3 configuration
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[_builtins.str] name: Aggregate interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
@@ -237,6 +261,8 @@ class _AggregateInterfaceState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -249,6 +275,8 @@ class _AggregateInterfaceState:
     def layer2(self) -> Optional[pulumi.Input['AggregateInterfaceLayer2Args']]:
         """
         Layer2
+
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         """
         return pulumi.get(self, "layer2")
 
@@ -261,6 +289,8 @@ class _AggregateInterfaceState:
     def layer3(self) -> Optional[pulumi.Input['AggregateInterfaceLayer3Args']]:
         """
         Aggregate Interface Layer 3 configuration
+
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         """
         return pulumi.get(self, "layer3")
 
@@ -285,6 +315,8 @@ class _AggregateInterfaceState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -415,10 +447,18 @@ class AggregateInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']] layer2: Layer2
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']] layer3: Aggregate Interface Layer 3 configuration
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[_builtins.str] name: Aggregate interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -589,10 +629,18 @@ class AggregateInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['AggregateInterfaceLayer2Args', 'AggregateInterfaceLayer2ArgsDict']] layer2: Layer2
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[Union['AggregateInterfaceLayer3Args', 'AggregateInterfaceLayer3ArgsDict']] layer3: Aggregate Interface Layer 3 configuration
+               
+               > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         :param pulumi.Input[_builtins.str] name: Aggregate interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -638,6 +686,8 @@ class AggregateInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -646,6 +696,8 @@ class AggregateInterface(pulumi.CustomResource):
     def layer2(self) -> pulumi.Output['outputs.AggregateInterfaceLayer2']:
         """
         Layer2
+
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         """
         return pulumi.get(self, "layer2")
 
@@ -654,6 +706,8 @@ class AggregateInterface(pulumi.CustomResource):
     def layer3(self) -> pulumi.Output['outputs.AggregateInterfaceLayer3']:
         """
         Aggregate Interface Layer 3 configuration
+
+        > ℹ️ **Note:** You must specify exactly one of `layer2` and `layer3`.
         """
         return pulumi.get(self, "layer3")
 
@@ -670,6 +724,8 @@ class AggregateInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

@@ -34,6 +34,8 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
@@ -41,20 +43,22 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
     /**
      * @return The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
 
     /**
-     * Ipv4
+     * IPv4 Address Family
      * 
      */
     @Import(name="ipv4")
     private @Nullable Output<BgpAddressFamilyProfileIpv4Args> ipv4;
 
     /**
-     * @return Ipv4
+     * @return IPv4 Address Family
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4Args>> ipv4() {
@@ -79,12 +83,16 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -143,6 +151,8 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -154,6 +164,8 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -162,7 +174,7 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ipv4 Ipv4
+         * @param ipv4 IPv4 Address Family
          * 
          * @return builder
          * 
@@ -173,7 +185,7 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
         }
 
         /**
-         * @param ipv4 Ipv4
+         * @param ipv4 IPv4 Address Family
          * 
          * @return builder
          * 
@@ -206,6 +218,8 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
         /**
          * @param snippet The snippet in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -216,6 +230,8 @@ public final class BgpAddressFamilyProfileArgs extends com.pulumi.resources.Reso
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

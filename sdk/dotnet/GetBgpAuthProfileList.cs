@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp auth profiles
+        ///     var allBgpAuthProfiles = Scm.GetBgpAuthProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpAuthProfileList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetBgpAuthProfileListResult> InvokeAsync(GetBgpAuthProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetBgpAuthProfileListResult>("scm:index/getBgpAuthProfileList:getBgpAuthProfileList", args ?? new GetBgpAuthProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp auth profiles
+        ///     var allBgpAuthProfiles = Scm.GetBgpAuthProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpAuthProfileList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpAuthProfileListResult> Invoke(GetBgpAuthProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpAuthProfileListResult>("scm:index/getBgpAuthProfileList:getBgpAuthProfileList", args ?? new GetBgpAuthProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp auth profiles
+        ///     var allBgpAuthProfiles = Scm.GetBgpAuthProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpAuthProfileList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpAuthProfileListResult> Invoke(GetBgpAuthProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpAuthProfileListResult>("scm:index/getBgpAuthProfileList:getBgpAuthProfileList", args ?? new GetBgpAuthProfileListInvokeArgs(), options.WithDefaults());

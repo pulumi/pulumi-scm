@@ -152,37 +152,19 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Dh group
-        /// </summary>
         public readonly ImmutableArray<string> DhGroups;
-        /// <summary>
-        /// Encryption algorithm
-        /// </summary>
         public readonly ImmutableArray<string> Encryptions;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// Hash
-        /// </summary>
         public readonly ImmutableArray<string> Hashes;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Ike crypto profile lifetime
-        /// </summary>
         public readonly Outputs.GetIkeCryptoProfileLifetimeResult Lifetime;
         /// <summary>
         /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

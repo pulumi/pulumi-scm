@@ -67,17 +67,11 @@ class GetHttpServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def format(self) -> 'outputs.GetHttpServerProfileFormatResult':
-        """
-        Format
-        """
         return pulumi.get(self, "format")
 
     @_builtins.property
@@ -99,25 +93,16 @@ class GetHttpServerProfileResult:
     @_builtins.property
     @pulumi.getter
     def servers(self) -> Sequence['outputs.GetHttpServerProfileServerResult']:
-        """
-        Server
-        """
         return pulumi.get(self, "servers")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="tagRegistration")
     def tag_registration(self) -> _builtins.bool:
-        """
-        Register tags on match
-        """
         return pulumi.get(self, "tag_registration")
 
     @_builtins.property

@@ -66,6 +66,8 @@ class ApplicationArgs:
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
         :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
@@ -74,6 +76,8 @@ class ApplicationArgs:
         :param pulumi.Input[_builtins.bool] prone_to_misuse: Prone to misuse
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
         :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
@@ -284,6 +288,8 @@ class ApplicationArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -380,6 +386,8 @@ class ApplicationArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -568,6 +576,8 @@ class _ApplicationState:
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
         :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
@@ -577,6 +587,8 @@ class _ApplicationState:
         :param pulumi.Input[_builtins.str] risk: Risk
         :param pulumi.Input[Sequence[pulumi.Input['ApplicationSignatureArgs']]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
         :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
@@ -779,6 +791,8 @@ class _ApplicationState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -887,6 +901,8 @@ class _ApplicationState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -1158,6 +1174,8 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
         :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
@@ -1167,6 +1185,8 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] risk: Risk
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
         :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
@@ -1407,6 +1427,8 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.bool] evasive_behavior: Evasive behavior
         :param pulumi.Input[_builtins.bool] file_type_ident: File type ident
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] has_known_vulnerability: Has known vulnerability
         :param pulumi.Input[_builtins.str] name: The name of the application
         :param pulumi.Input[_builtins.bool] no_appid_caching: No appid caching
@@ -1416,6 +1438,8 @@ class Application(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] risk: Risk
         :param pulumi.Input[Sequence[pulumi.Input[Union['ApplicationSignatureArgs', 'ApplicationSignatureArgsDict']]]] signatures: Signature
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] subcategory: Subcategory
         :param pulumi.Input[_builtins.int] tcp_half_closed_timeout: timeout for half-close session in seconds
         :param pulumi.Input[_builtins.int] tcp_time_wait_timeout: timeout for session in time_wait state in seconds
@@ -1551,6 +1575,8 @@ class Application(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1623,6 +1649,8 @@ class Application(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

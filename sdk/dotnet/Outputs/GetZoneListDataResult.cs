@@ -38,7 +38,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool EnableUserIdentification;
         /// <summary>
-        /// Folder
+        /// The folder of the item. Default: Shared.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -54,7 +54,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetZoneListDataNetworkResult Network;
         /// <summary>
-        /// The snippet in which the resource is defined
+        /// The snippet of the item.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;

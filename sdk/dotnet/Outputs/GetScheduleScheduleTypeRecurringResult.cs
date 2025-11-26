@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly ImmutableArray<string> Dailies;
         /// <summary>
         /// Weekly
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily` and `Weekly`.
         /// </summary>
         public readonly Outputs.GetScheduleScheduleTypeRecurringWeeklyResult Weekly;
 

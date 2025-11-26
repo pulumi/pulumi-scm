@@ -19,6 +19,8 @@ public final class PbfRuleActionForwardNexthop {
     /**
      * @return Next hop IP address
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
+     * 
      */
     private @Nullable String ipAddress;
 
@@ -32,6 +34,8 @@ public final class PbfRuleActionForwardNexthop {
     }
     /**
      * @return Next hop IP address
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<String> ipAddress() {

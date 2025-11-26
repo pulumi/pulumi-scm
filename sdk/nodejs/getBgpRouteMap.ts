@@ -8,6 +8,24 @@ import * as utilities from "./utilities";
 
 /**
  * BgpRouteMap data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up bgp route map by its ID.
+ * const scmBgpRouteMapDs = scm.getBgpRouteMap({
+ *     id: "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+ * });
+ * export const bgpRouteMapDataSourceResults = {
+ *     id: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.id),
+ *     name: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.name),
+ *     routeMap: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.routeMaps),
+ *     folder: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.folder),
+ * };
+ * ```
  */
 export function getBgpRouteMap(args: GetBgpRouteMapArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpRouteMapResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -43,9 +61,6 @@ export interface GetBgpRouteMapResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -55,18 +70,30 @@ export interface GetBgpRouteMapResult {
      * Name
      */
     readonly name: string;
-    /**
-     * Route map
-     */
     readonly routeMaps: outputs.GetBgpRouteMapRouteMap[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * BgpRouteMap data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up bgp route map by its ID.
+ * const scmBgpRouteMapDs = scm.getBgpRouteMap({
+ *     id: "f2ffd626-e92d-4de6-8ac1-37742fe80fb9",
+ * });
+ * export const bgpRouteMapDataSourceResults = {
+ *     id: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.id),
+ *     name: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.name),
+ *     routeMap: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.routeMaps),
+ *     folder: scmBgpRouteMapDs.then(scmBgpRouteMapDs => scmBgpRouteMapDs.folder),
+ * };
+ * ```
  */
 export function getBgpRouteMapOutput(args: GetBgpRouteMapOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpRouteMapResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

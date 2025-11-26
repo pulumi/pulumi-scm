@@ -70,33 +70,21 @@ class GetBgpRouteMapRedistributionResult:
     @_builtins.property
     @pulumi.getter(name="connectedStatic")
     def connected_static(self) -> 'outputs.GetBgpRouteMapRedistributionConnectedStaticResult':
-        """
-        Connected static
-        """
         return pulumi.get(self, "connected_static")
 
     @_builtins.property
     @pulumi.getter
     def description(self) -> _builtins.str:
-        """
-        BGP Route Map Redistributions Description
-        """
         return pulumi.get(self, "description")
 
     @_builtins.property
     @pulumi.getter
     def device(self) -> _builtins.str:
-        """
-        The device in which the resource is defined
-        """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -118,17 +106,11 @@ class GetBgpRouteMapRedistributionResult:
     @_builtins.property
     @pulumi.getter
     def ospf(self) -> 'outputs.GetBgpRouteMapRedistributionOspfResult':
-        """
-        Ospf
-        """
         return pulumi.get(self, "ospf")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

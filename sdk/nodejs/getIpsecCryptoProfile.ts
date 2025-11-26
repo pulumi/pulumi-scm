@@ -52,41 +52,20 @@ export interface GetIpsecCryptoProfileResult {
      * Ah
      */
     readonly ah: outputs.GetIpsecCryptoProfileAh;
-    /**
-     * The device in which the resource is defined
-     */
     readonly device: string;
-    /**
-     * phase-2 DH group (PFS DH group)
-     */
     readonly dhGroup: string;
-    /**
-     * Esp
-     */
     readonly esp: outputs.GetIpsecCryptoProfileEsp;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Lifesize
-     */
     readonly lifesize: outputs.GetIpsecCryptoProfileLifesize;
-    /**
-     * Ipsec crypto profile lifetime
-     */
     readonly lifetime: outputs.GetIpsecCryptoProfileLifetime;
     /**
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

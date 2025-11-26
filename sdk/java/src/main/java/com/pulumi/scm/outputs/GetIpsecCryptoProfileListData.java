@@ -20,7 +20,7 @@ public final class GetIpsecCryptoProfileListData {
      */
     private GetIpsecCryptoProfileListDataAh ah;
     /**
-     * @return The device in which the resource is defined
+     * @return The device of the item.
      * 
      */
     private String device;
@@ -32,10 +32,12 @@ public final class GetIpsecCryptoProfileListData {
     /**
      * @return Esp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
+     * 
      */
     private GetIpsecCryptoProfileListDataEsp esp;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -60,7 +62,7 @@ public final class GetIpsecCryptoProfileListData {
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -75,7 +77,7 @@ public final class GetIpsecCryptoProfileListData {
         return this.ah;
     }
     /**
-     * @return The device in which the resource is defined
+     * @return The device of the item.
      * 
      */
     public String device() {
@@ -91,12 +93,14 @@ public final class GetIpsecCryptoProfileListData {
     /**
      * @return Esp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ah` and `esp`.
+     * 
      */
     public GetIpsecCryptoProfileListDataEsp esp() {
         return this.esp;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -131,7 +135,7 @@ public final class GetIpsecCryptoProfileListData {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

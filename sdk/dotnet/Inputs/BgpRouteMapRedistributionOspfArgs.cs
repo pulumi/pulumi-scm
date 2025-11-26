@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Rib
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp` and `Rib`.
         /// </summary>
         [Input("rib")]
         public Input<Inputs.BgpRouteMapRedistributionOspfRibArgs>? Rib { get; set; }

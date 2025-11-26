@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// add the certificate name for SSL inbound inspection
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `SslForwardProxy` and `SslInboundInspection`.
         /// </summary>
         [Input("sslInboundInspection")]
         public Input<string>? SslInboundInspection { get; set; }

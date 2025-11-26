@@ -59,13 +59,7 @@ export interface GetExternalDynamicListResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the external dynamic list
@@ -75,14 +69,8 @@ export interface GetExternalDynamicListResult {
      * The name of the external dynamic list
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Type
-     */
     readonly type: outputs.GetExternalDynamicListType;
 }
 /**

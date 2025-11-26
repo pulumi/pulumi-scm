@@ -33,20 +33,16 @@ type LookupSyslogServerProfileArgs struct {
 // A collection of values returned by getSyslogServerProfile.
 type LookupSyslogServerProfileResult struct {
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
-	// Format
+	Device string                       `pulumi:"device"`
+	Folder string                       `pulumi:"folder"`
 	Format GetSyslogServerProfileFormat `pulumi:"format"`
 	// The UUID of the syslog server profile
 	Id string `pulumi:"id"`
 	// The name of the syslog server profile
-	Name string `pulumi:"name"`
-	// Servers
+	Name    string                        `pulumi:"name"`
 	Servers GetSyslogServerProfileServers `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
+	Snippet string                        `pulumi:"snippet"`
+	Tfid    string                        `pulumi:"tfid"`
 }
 
 func LookupSyslogServerProfileOutput(ctx *pulumi.Context, args LookupSyslogServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupSyslogServerProfileResultOutput {
@@ -90,12 +86,10 @@ func (o LookupSyslogServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupSyslogServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
 
-// Format
 func (o LookupSyslogServerProfileResultOutput) Format() GetSyslogServerProfileFormatOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) GetSyslogServerProfileFormat { return v.Format }).(GetSyslogServerProfileFormatOutput)
 }
@@ -110,12 +104,10 @@ func (o LookupSyslogServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Servers
 func (o LookupSyslogServerProfileResultOutput) Servers() GetSyslogServerProfileServersOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) GetSyslogServerProfileServers { return v.Servers }).(GetSyslogServerProfileServersOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupSyslogServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupSyslogServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

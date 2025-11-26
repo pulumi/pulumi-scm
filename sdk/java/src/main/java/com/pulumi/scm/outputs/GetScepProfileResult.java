@@ -35,25 +35,9 @@ public final class GetScepProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return Digest for CSR
-     * 
-     */
     private String digest;
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     private Map<String,String> encryptedValues;
-    /**
-     * @return CA certificate fingerprint
-     * 
-     */
     private String fingerprint;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the SCEP profile
@@ -65,46 +49,14 @@ public final class GetScepProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return SCEP server CA certificate
-     * 
-     */
     private String scepCaCert;
-    /**
-     * @return One Time Password challenge
-     * 
-     */
     private GetScepProfileScepChallenge scepChallenge;
-    /**
-     * @return SCEP client ceertificate
-     * 
-     */
     private String scepClientCert;
-    /**
-     * @return SCEP server URL
-     * 
-     */
     private String scepUrl;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Subject
-     * 
-     */
     private String subject;
     private String tfid;
-    /**
-     * @return Use as digital signature?
-     * 
-     */
     private Boolean useAsDigitalSignature;
-    /**
-     * @return Use for key encipherment?
-     * 
-     */
     private Boolean useForKeyEncipherment;
 
     private GetScepProfileResult() {}
@@ -136,31 +88,15 @@ public final class GetScepProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Digest for CSR
-     * 
-     */
     public String digest() {
         return this.digest;
     }
-    /**
-     * @return Map of sensitive values returned from the API.
-     * 
-     */
     public Map<String,String> encryptedValues() {
         return this.encryptedValues;
     }
-    /**
-     * @return CA certificate fingerprint
-     * 
-     */
     public String fingerprint() {
         return this.fingerprint;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -178,62 +114,30 @@ public final class GetScepProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return SCEP server CA certificate
-     * 
-     */
     public String scepCaCert() {
         return this.scepCaCert;
     }
-    /**
-     * @return One Time Password challenge
-     * 
-     */
     public GetScepProfileScepChallenge scepChallenge() {
         return this.scepChallenge;
     }
-    /**
-     * @return SCEP client ceertificate
-     * 
-     */
     public String scepClientCert() {
         return this.scepClientCert;
     }
-    /**
-     * @return SCEP server URL
-     * 
-     */
     public String scepUrl() {
         return this.scepUrl;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Subject
-     * 
-     */
     public String subject() {
         return this.subject;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Use as digital signature?
-     * 
-     */
     public Boolean useAsDigitalSignature() {
         return this.useAsDigitalSignature;
     }
-    /**
-     * @return Use for key encipherment?
-     * 
-     */
     public Boolean useForKeyEncipherment() {
         return this.useForKeyEncipherment;
     }

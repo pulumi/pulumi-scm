@@ -176,13 +176,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The tag-based filter for the dynamic user group
-        /// </summary>
         public readonly string Filter;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the dynamic user group
@@ -192,13 +186,7 @@ namespace Pulumi.Scm
         /// The name of the dynamic address group
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Tags associated with the dynamic user group
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 

@@ -20,12 +20,16 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Not within
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotAvailable`, `NotWithin`, and `Within`.
         /// </summary>
         [Input("notWithin")]
         public Input<Inputs.HipObjectDiskBackupCriteriaLastBackupTimeNotWithinArgs>? NotWithin { get; set; }
 
         /// <summary>
         /// Within
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotAvailable`, `NotWithin`, and `Within`.
         /// </summary>
         [Input("within")]
         public Input<Inputs.HipObjectDiskBackupCriteriaLastBackupTimeWithinArgs>? Within { get; set; }

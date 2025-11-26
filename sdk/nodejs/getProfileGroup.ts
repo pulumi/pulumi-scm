@@ -45,17 +45,8 @@ export interface GetProfileGroupResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Dns security
-     */
     readonly dnsSecurities: string[];
-    /**
-     * File blocking
-     */
     readonly fileBlockings: string[];
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the profile group
@@ -65,30 +56,12 @@ export interface GetProfileGroupResult {
      * The name of the profile group
      */
     readonly name: string;
-    /**
-     * Saas security
-     */
     readonly saasSecurities: string[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Spyware
-     */
     readonly spywares: string[];
     readonly tfid: string;
-    /**
-     * Url filtering
-     */
     readonly urlFilterings: string[];
-    /**
-     * Virus and wildfire analysis
-     */
     readonly virusAndWildfireAnalyses: string[];
-    /**
-     * Vulnerability
-     */
     readonly vulnerabilities: string[];
 }
 /**

@@ -72,7 +72,7 @@ class GetAuthenticationProfileResult:
     @pulumi.getter(name="allowLists")
     def allow_lists(self) -> Sequence[_builtins.str]:
         """
-        Allow list
+        The allow_list of the authentication profile
         """
         return pulumi.get(self, "allow_lists")
 
@@ -87,9 +87,6 @@ class GetAuthenticationProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -103,25 +100,16 @@ class GetAuthenticationProfileResult:
     @_builtins.property
     @pulumi.getter
     def lockout(self) -> 'outputs.GetAuthenticationProfileLockoutResult':
-        """
-        Lockout
-        """
         return pulumi.get(self, "lockout")
 
     @_builtins.property
     @pulumi.getter
     def method(self) -> 'outputs.GetAuthenticationProfileMethodResult':
-        """
-        Method
-        """
         return pulumi.get(self, "method")
 
     @_builtins.property
     @pulumi.getter(name="multiFactorAuth")
     def multi_factor_auth(self) -> 'outputs.GetAuthenticationProfileMultiFactorAuthResult':
-        """
-        Multi factor auth
-        """
         return pulumi.get(self, "multi_factor_auth")
 
     @_builtins.property
@@ -135,17 +123,11 @@ class GetAuthenticationProfileResult:
     @_builtins.property
     @pulumi.getter(name="singleSignOn")
     def single_sign_on(self) -> 'outputs.GetAuthenticationProfileSingleSignOnResult':
-        """
-        Single sign on
-        """
         return pulumi.get(self, "single_sign_on")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -156,17 +138,11 @@ class GetAuthenticationProfileResult:
     @_builtins.property
     @pulumi.getter(name="userDomain")
     def user_domain(self) -> _builtins.str:
-        """
-        User domain
-        """
         return pulumi.get(self, "user_domain")
 
     @_builtins.property
     @pulumi.getter(name="usernameModifier")
     def username_modifier(self) -> _builtins.str:
-        """
-        Username modifier
-        """
         return pulumi.get(self, "username_modifier")
 
 
@@ -197,6 +173,17 @@ def get_authentication_profile(id: Optional[_builtins.str] = None,
     """
     AuthenticationProfile data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    profile_data = scm.get_authentication_profile(id="de491856-1987-4b53-a3f7-e4f4a52067e3")
+    pulumi.export("scmAuthenticationProfile", profile_data.id)
+    pulumi.export("fetchedProfile", profile_data)
+    ```
+
 
     :param _builtins.str id: The UUID of the authentication profile
     :param _builtins.str name: The name of the authentication profile
@@ -226,6 +213,17 @@ def get_authentication_profile_output(id: Optional[pulumi.Input[_builtins.str]] 
                                       opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationProfileResult]:
     """
     AuthenticationProfile data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    profile_data = scm.get_authentication_profile(id="de491856-1987-4b53-a3f7-e4f4a52067e3")
+    pulumi.export("scmAuthenticationProfile", profile_data.id)
+    pulumi.export("fetchedProfile", profile_data)
+    ```
 
 
     :param _builtins.str id: The UUID of the authentication profile

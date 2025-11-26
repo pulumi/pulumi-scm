@@ -66,37 +66,19 @@ export interface GetLoopbackInterfaceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Interface management profile
-     */
     readonly interfaceManagementProfile: string;
-    /**
-     * Loopback IP Parent
-     */
     readonly ips: outputs.GetLoopbackInterfaceIp[];
-    /**
-     * Loopback IPv6 Configuration
-     */
     readonly ipv6: outputs.GetLoopbackInterfaceIpv6;
-    /**
-     * MTU
-     */
     readonly mtu: number;
     /**
      * Loopback Interface name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

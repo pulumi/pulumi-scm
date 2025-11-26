@@ -32,9 +32,13 @@ class FileBlockingProfileArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the file blocking profile
         :param pulumi.Input[Sequence[pulumi.Input['FileBlockingProfileRuleArgs']]] rules: A list of file blocking rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -78,6 +82,8 @@ class FileBlockingProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -114,6 +120,8 @@ class FileBlockingProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -137,9 +145,13 @@ class _FileBlockingProfileState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the file blocking profile
         :param pulumi.Input[Sequence[pulumi.Input['FileBlockingProfileRuleArgs']]] rules: A list of file blocking rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -185,6 +197,8 @@ class _FileBlockingProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -221,6 +235,8 @@ class _FileBlockingProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -254,14 +270,90 @@ class FileBlockingProfile(pulumi.CustomResource):
         """
         FileBlockingProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_file_blocking_base = scm.FileBlockingProfile("scm_file_blocking_base",
+            folder="ngfw-shared",
+            name="base_file_blocking")
+        scm_file_blocking_profile = scm.FileBlockingProfile("scm_file_blocking_profile",
+            folder="ngfw-shared",
+            name="file_blocking_profile_complete",
+            description="alert, block, and continue",
+            rules=[
+                {
+                    "name": "block_rule",
+                    "action": "block",
+                    "application": ["any"],
+                    "direction": "upload",
+                    "file_type": ["any"],
+                },
+                {
+                    "name": "block_rule_two",
+                    "action": "block",
+                    "application": ["8x8"],
+                    "direction": "upload",
+                    "file_type": [
+                        "7z",
+                        "bat",
+                        "chm",
+                        "class",
+                        "cpl",
+                        "dll",
+                        "hlp",
+                        "hta",
+                        "jar",
+                        "ocx",
+                        "pif",
+                        "scr",
+                        "torrent",
+                        "vbe",
+                        "wsf",
+                    ],
+                },
+                {
+                    "name": "alert_rule",
+                    "action": "alert",
+                    "application": [
+                        "access-grid",
+                        "adobe-update",
+                    ],
+                    "direction": "both",
+                    "file_type": ["ico"],
+                },
+                {
+                    "name": "continue_rule",
+                    "action": "continue",
+                    "application": [
+                        "apple-appstore",
+                        "limelight",
+                    ],
+                    "direction": "download",
+                    "file_type": [
+                        "doc",
+                        "bmp",
+                        "dsn",
+                        "dwf",
+                    ],
+                },
+            ])
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the file blocking profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict']]]] rules: A list of file blocking rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -271,6 +363,78 @@ class FileBlockingProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         FileBlockingProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_file_blocking_base = scm.FileBlockingProfile("scm_file_blocking_base",
+            folder="ngfw-shared",
+            name="base_file_blocking")
+        scm_file_blocking_profile = scm.FileBlockingProfile("scm_file_blocking_profile",
+            folder="ngfw-shared",
+            name="file_blocking_profile_complete",
+            description="alert, block, and continue",
+            rules=[
+                {
+                    "name": "block_rule",
+                    "action": "block",
+                    "application": ["any"],
+                    "direction": "upload",
+                    "file_type": ["any"],
+                },
+                {
+                    "name": "block_rule_two",
+                    "action": "block",
+                    "application": ["8x8"],
+                    "direction": "upload",
+                    "file_type": [
+                        "7z",
+                        "bat",
+                        "chm",
+                        "class",
+                        "cpl",
+                        "dll",
+                        "hlp",
+                        "hta",
+                        "jar",
+                        "ocx",
+                        "pif",
+                        "scr",
+                        "torrent",
+                        "vbe",
+                        "wsf",
+                    ],
+                },
+                {
+                    "name": "alert_rule",
+                    "action": "alert",
+                    "application": [
+                        "access-grid",
+                        "adobe-update",
+                    ],
+                    "direction": "both",
+                    "file_type": ["ico"],
+                },
+                {
+                    "name": "continue_rule",
+                    "action": "continue",
+                    "application": [
+                        "apple-appstore",
+                        "limelight",
+                    ],
+                    "direction": "download",
+                    "file_type": [
+                        "doc",
+                        "bmp",
+                        "dsn",
+                        "dwf",
+                    ],
+                },
+            ])
+        ```
 
         :param str resource_name: The name of the resource.
         :param FileBlockingProfileArgs args: The arguments to use to populate this resource's properties.
@@ -336,9 +500,13 @@ class FileBlockingProfile(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: The name of the file blocking profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['FileBlockingProfileRuleArgs', 'FileBlockingProfileRuleArgsDict']]]] rules: A list of file blocking rules
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -374,6 +542,8 @@ class FileBlockingProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -398,6 +568,8 @@ class FileBlockingProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

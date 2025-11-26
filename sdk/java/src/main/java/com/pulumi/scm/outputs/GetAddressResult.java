@@ -21,50 +21,22 @@ public final class GetAddressResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
-    /**
-     * @return Fully qualified domain name
-     * 
-     */
     private String fqdn;
     /**
      * @return The UUID of the address object
      * 
      */
     private String id;
-    /**
-     * @return IP address with or without CIDR notation
-     * 
-     */
     private String ipNetmask;
-    /**
-     * @return Ip range
-     * 
-     */
     private String ipRange;
-    /**
-     * @return IP wildcard mask
-     * 
-     */
     private String ipWildcard;
     /**
      * @return The name of the address object
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Tags assocaited with the address object
-     * 
-     */
     private List<String> tags;
     private String tfid;
 
@@ -83,17 +55,9 @@ public final class GetAddressResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Fully qualified domain name
-     * 
-     */
     public String fqdn() {
         return this.fqdn;
     }
@@ -104,24 +68,12 @@ public final class GetAddressResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return IP address with or without CIDR notation
-     * 
-     */
     public String ipNetmask() {
         return this.ipNetmask;
     }
-    /**
-     * @return Ip range
-     * 
-     */
     public String ipRange() {
         return this.ipRange;
     }
-    /**
-     * @return IP wildcard mask
-     * 
-     */
     public String ipWildcard() {
         return this.ipWildcard;
     }
@@ -132,17 +84,9 @@ public final class GetAddressResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Tags assocaited with the address object
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }

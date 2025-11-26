@@ -27,7 +27,10 @@ class GetEthernetInterfaceResult:
     """
     A collection of values returned by getEthernetInterface.
     """
-    def __init__(__self__, comment=None, default_value=None, device=None, encrypted_values=None, folder=None, id=None, layer2=None, layer3=None, link_duplex=None, link_speed=None, link_state=None, name=None, poe=None, snippet=None, tap=None, tfid=None):
+    def __init__(__self__, aggregate_group=None, comment=None, default_value=None, device=None, encrypted_values=None, folder=None, id=None, layer2=None, layer3=None, link_duplex=None, link_speed=None, link_state=None, name=None, poe=None, snippet=None, tap=None, tfid=None):
+        if aggregate_group and not isinstance(aggregate_group, str):
+            raise TypeError("Expected argument 'aggregate_group' to be a str")
+        pulumi.set(__self__, "aggregate_group", aggregate_group)
         if comment and not isinstance(comment, str):
             raise TypeError("Expected argument 'comment' to be a str")
         pulumi.set(__self__, "comment", comment)
@@ -78,43 +81,36 @@ class GetEthernetInterfaceResult:
         pulumi.set(__self__, "tfid", tfid)
 
     @_builtins.property
+    @pulumi.getter(name="aggregateGroup")
+    def aggregate_group(self) -> _builtins.str:
+        """
+        Aggregate group
+        """
+        return pulumi.get(self, "aggregate_group")
+
+    @_builtins.property
     @pulumi.getter
     def comment(self) -> _builtins.str:
-        """
-        Interface description
-        """
         return pulumi.get(self, "comment")
 
     @_builtins.property
     @pulumi.getter(name="defaultValue")
     def default_value(self) -> _builtins.str:
-        """
-        Default interface assignment
-        """
         return pulumi.get(self, "default_value")
 
     @_builtins.property
     @pulumi.getter
     def device(self) -> _builtins.str:
-        """
-        The device in which the resource is defined
-        """
         return pulumi.get(self, "device")
 
     @_builtins.property
     @pulumi.getter(name="encryptedValues")
     def encrypted_values(self) -> Mapping[str, _builtins.str]:
-        """
-        Map of sensitive values returned from the API.
-        """
         return pulumi.get(self, "encrypted_values")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -128,41 +124,26 @@ class GetEthernetInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def layer2(self) -> 'outputs.GetEthernetInterfaceLayer2Result':
-        """
-        Layer2
-        """
         return pulumi.get(self, "layer2")
 
     @_builtins.property
     @pulumi.getter
     def layer3(self) -> 'outputs.GetEthernetInterfaceLayer3Result':
-        """
-        Ethernet Interface Layer 3 configuration
-        """
         return pulumi.get(self, "layer3")
 
     @_builtins.property
     @pulumi.getter(name="linkDuplex")
     def link_duplex(self) -> _builtins.str:
-        """
-        Link duplex
-        """
         return pulumi.get(self, "link_duplex")
 
     @_builtins.property
     @pulumi.getter(name="linkSpeed")
     def link_speed(self) -> _builtins.str:
-        """
-        Link speed
-        """
         return pulumi.get(self, "link_speed")
 
     @_builtins.property
     @pulumi.getter(name="linkState")
     def link_state(self) -> _builtins.str:
-        """
-        Link state
-        """
         return pulumi.get(self, "link_state")
 
     @_builtins.property
@@ -176,25 +157,16 @@ class GetEthernetInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def poe(self) -> 'outputs.GetEthernetInterfacePoeResult':
-        """
-        Poe
-        """
         return pulumi.get(self, "poe")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter
     def tap(self) -> 'outputs.GetEthernetInterfaceTapResult':
-        """
-        Tap
-        """
         return pulumi.get(self, "tap")
 
     @_builtins.property
@@ -209,6 +181,7 @@ class AwaitableGetEthernetInterfaceResult(GetEthernetInterfaceResult):
         if False:
             yield self
         return GetEthernetInterfaceResult(
+            aggregate_group=self.aggregate_group,
             comment=self.comment,
             default_value=self.default_value,
             device=self.device,
@@ -261,6 +234,7 @@ def get_ethernet_interface(id: Optional[_builtins.str] = None,
     __ret__ = pulumi.runtime.invoke('scm:index/getEthernetInterface:getEthernetInterface', __args__, opts=opts, typ=GetEthernetInterfaceResult).value
 
     return AwaitableGetEthernetInterfaceResult(
+        aggregate_group=pulumi.get(__ret__, 'aggregate_group'),
         comment=pulumi.get(__ret__, 'comment'),
         default_value=pulumi.get(__ret__, 'default_value'),
         device=pulumi.get(__ret__, 'device'),
@@ -310,6 +284,7 @@ def get_ethernet_interface_output(id: Optional[pulumi.Input[_builtins.str]] = No
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getEthernetInterface:getEthernetInterface', __args__, opts=opts, typ=GetEthernetInterfaceResult)
     return __ret__.apply(lambda __response__: GetEthernetInterfaceResult(
+        aggregate_group=pulumi.get(__response__, 'aggregate_group'),
         comment=pulumi.get(__response__, 'comment'),
         default_value=pulumi.get(__response__, 'default_value'),
         device=pulumi.get(__response__, 'device'),

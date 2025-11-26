@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticBgpResult Bgp;
         /// <summary>
         /// Ospf
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `Ospf`, and `Rib`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticOspfResult Ospf;
         /// <summary>
         /// Rib
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Bgp`, `Ospf`, and `Rib`.
         /// </summary>
         public readonly Outputs.GetBgpRouteMapRedistributionListDataConnectedStaticRibResult Rib;
 

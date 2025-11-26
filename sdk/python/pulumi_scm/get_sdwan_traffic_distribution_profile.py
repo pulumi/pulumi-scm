@@ -64,9 +64,6 @@ class GetSdwanTrafficDistributionProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -80,9 +77,6 @@ class GetSdwanTrafficDistributionProfileResult:
     @_builtins.property
     @pulumi.getter(name="linkTags")
     def link_tags(self) -> Sequence['outputs.GetSdwanTrafficDistributionProfileLinkTagResult']:
-        """
-        Link-Tags for interfaces identified by defined tags
-        """
         return pulumi.get(self, "link_tags")
 
     @_builtins.property
@@ -96,9 +90,6 @@ class GetSdwanTrafficDistributionProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -109,9 +100,6 @@ class GetSdwanTrafficDistributionProfileResult:
     @_builtins.property
     @pulumi.getter(name="trafficDistribution")
     def traffic_distribution(self) -> _builtins.str:
-        """
-        Traffic distribution
-        """
         return pulumi.get(self, "traffic_distribution")
 
 

@@ -20,24 +20,32 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Five minute
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("fiveMinute")]
         public Input<Inputs.ExternalDynamicListTypeDomainRecurringFiveMinuteGetArgs>? FiveMinute { get; set; }
 
         /// <summary>
         /// Hourly
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("hourly")]
         public Input<Inputs.ExternalDynamicListTypeDomainRecurringHourlyGetArgs>? Hourly { get; set; }
 
         /// <summary>
         /// Monthly
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("monthly")]
         public Input<Inputs.ExternalDynamicListTypeDomainRecurringMonthlyGetArgs>? Monthly { get; set; }
 
         /// <summary>
         /// Weekly
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Daily`, `FiveMinute`, `Hourly`, `Monthly`, and `Weekly`.
         /// </summary>
         [Input("weekly")]
         public Input<Inputs.ExternalDynamicListTypeDomainRecurringWeeklyGetArgs>? Weekly { get; set; }

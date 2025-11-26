@@ -38,13 +38,11 @@ type LookupLinkTagResult struct {
 	Comments string `pulumi:"comments"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the link tag
 	Id string `pulumi:"id"`
 	// The name of the link tag
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -100,7 +98,6 @@ func (o LookupLinkTagResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupLinkTagResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -115,7 +112,6 @@ func (o LookupLinkTagResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupLinkTagResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLinkTagResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

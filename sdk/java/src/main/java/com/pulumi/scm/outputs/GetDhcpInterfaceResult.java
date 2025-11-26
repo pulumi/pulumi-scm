@@ -17,10 +17,6 @@ public final class GetDhcpInterfaceResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the resource
@@ -32,20 +28,8 @@ public final class GetDhcpInterfaceResult {
      * 
      */
     private String name;
-    /**
-     * @return Relay
-     * 
-     */
     private GetDhcpInterfaceRelay relay;
-    /**
-     * @return Server
-     * 
-     */
     private GetDhcpInterfaceServer server;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -57,10 +41,6 @@ public final class GetDhcpInterfaceResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -78,24 +58,12 @@ public final class GetDhcpInterfaceResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Relay
-     * 
-     */
     public GetDhcpInterfaceRelay relay() {
         return this.relay;
     }
-    /**
-     * @return Server
-     * 
-     */
     public GetDhcpInterfaceServer server() {
         return this.server;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

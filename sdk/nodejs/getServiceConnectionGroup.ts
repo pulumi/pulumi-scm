@@ -13,102 +13,11 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const config = new pulumi.Config();
- * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
- * const folderScope = config.get("folderScope") || "Service Connections";
- * //# 1. IKE Crypto Profile (IKE Phase 1)
- * const example = new scm.IkeCryptoProfile("example", {
- *     name: "example-ike-crypto_sc_grp",
- *     folder: folderScope,
- *     hashes: ["sha256"],
- *     dhGroups: ["group14"],
- *     encryptions: ["aes-256-cbc"],
- * });
- * //# 2. IPsec Crypto Profile (IKE Phase 2)
- * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
- *     name: "panw-IPSec-Crypto_sc_grp",
- *     folder: folderScope,
- *     esp: {
- *         encryptions: ["aes-256-gcm"],
- *         authentications: ["sha256"],
- *     },
- *     dhGroup: "group14",
- *     lifetime: {
- *         hours: 8,
- *     },
- * });
- * //# 3. IKE Gateway
- * const exampleIkeGateway = new scm.IkeGateway("example", {
- *     name: "example-gateway_sc_grp",
- *     folder: folderScope,
- *     peerAddress: {
- *         ip: "1.1.1.1",
- *     },
- *     authentication: {
- *         preSharedKey: {
- *             key: "secret",
- *         },
- *     },
- *     protocol: {
- *         ikev1: {
- *             ikeCryptoProfile: example.name,
- *         },
- *     },
- * });
- * //# 4. IPsec Tunnel
- * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
- *     name: "example-tunnel_sc_grp",
- *     folder: folderScope,
- *     tunnelInterface: "tunnel",
- *     antiReplay: true,
- *     copyTos: false,
- *     enableGreEncapsulation: false,
- *     autoKey: {
- *         ikeGateways: [{
- *             name: exampleIkeGateway.name,
- *         }],
- *         ipsecCryptoProfile: exampleIpsecCryptoProfile.name,
- *     },
- * }, {
- *     dependsOn: [exampleIkeGateway],
- * });
- * //# 5. Service Connection (The target for the group)
- * const siteAVpnSc = new scm.ServiceConnection("site_a_vpn_sc", {
- *     name: "creating_a_service_connection_sc_grp",
- *     region: "us-west-1a",
- *     ipsecTunnel: exampleIpsecTunnel.name,
- *     subnets: [
- *         "10.1.0.0/16",
- *         "172.16.0.0/24",
- *     ],
- *     sourceNat: false,
- * });
- * //# 5. Service Connection (The target for the group)
- * const siteAVpnSc2 = new scm.ServiceConnection("site_a_vpn_sc_2", {
- *     name: "creating_a_service_connection_sc_grp_2",
- *     region: "us-west-1a",
- *     ipsecTunnel: exampleIpsecTunnel.name,
- *     subnets: [
- *         "10.1.0.0/16",
- *         "172.16.0.0/24",
- *     ],
- *     sourceNat: false,
- * });
- * //# 6. Service Connection Group (Groups the Service Connection created above)
- * const exampleGroup = new scm.ServiceConnectionGroup("example_group", {
- *     name: "service-connection-group-app_sc_grp",
- *     targets: [
- *         siteAVpnSc.name,
- *         siteAVpnSc2.name,
- *     ],
- *     disableSnat: false,
- *     pbfOnly: true,
- * });
  * // ------------------------------------------------------------------
  * // Data Source: SCM Service Connection Group (Single Lookup)
  * // ------------------------------------------------------------------
- * const groupLookup = scm.getServiceConnectionGroupOutput({
- *     id: exampleGroup.id,
+ * const groupLookup = scm.getServiceConnectionGroup({
+ *     id: "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",
  * });
  * export const lookedUpServiceConnectionGroupDetails = groupLookup;
  * ```
@@ -170,102 +79,11 @@ export interface GetServiceConnectionGroupResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const config = new pulumi.Config();
- * // The folder scope for the SCM resource (e.g., 'Shared', 'Predefined', or a specific folder name).
- * const folderScope = config.get("folderScope") || "Service Connections";
- * //# 1. IKE Crypto Profile (IKE Phase 1)
- * const example = new scm.IkeCryptoProfile("example", {
- *     name: "example-ike-crypto_sc_grp",
- *     folder: folderScope,
- *     hashes: ["sha256"],
- *     dhGroups: ["group14"],
- *     encryptions: ["aes-256-cbc"],
- * });
- * //# 2. IPsec Crypto Profile (IKE Phase 2)
- * const exampleIpsecCryptoProfile = new scm.IpsecCryptoProfile("example", {
- *     name: "panw-IPSec-Crypto_sc_grp",
- *     folder: folderScope,
- *     esp: {
- *         encryptions: ["aes-256-gcm"],
- *         authentications: ["sha256"],
- *     },
- *     dhGroup: "group14",
- *     lifetime: {
- *         hours: 8,
- *     },
- * });
- * //# 3. IKE Gateway
- * const exampleIkeGateway = new scm.IkeGateway("example", {
- *     name: "example-gateway_sc_grp",
- *     folder: folderScope,
- *     peerAddress: {
- *         ip: "1.1.1.1",
- *     },
- *     authentication: {
- *         preSharedKey: {
- *             key: "secret",
- *         },
- *     },
- *     protocol: {
- *         ikev1: {
- *             ikeCryptoProfile: example.name,
- *         },
- *     },
- * });
- * //# 4. IPsec Tunnel
- * const exampleIpsecTunnel = new scm.IpsecTunnel("example", {
- *     name: "example-tunnel_sc_grp",
- *     folder: folderScope,
- *     tunnelInterface: "tunnel",
- *     antiReplay: true,
- *     copyTos: false,
- *     enableGreEncapsulation: false,
- *     autoKey: {
- *         ikeGateways: [{
- *             name: exampleIkeGateway.name,
- *         }],
- *         ipsecCryptoProfile: exampleIpsecCryptoProfile.name,
- *     },
- * }, {
- *     dependsOn: [exampleIkeGateway],
- * });
- * //# 5. Service Connection (The target for the group)
- * const siteAVpnSc = new scm.ServiceConnection("site_a_vpn_sc", {
- *     name: "creating_a_service_connection_sc_grp",
- *     region: "us-west-1a",
- *     ipsecTunnel: exampleIpsecTunnel.name,
- *     subnets: [
- *         "10.1.0.0/16",
- *         "172.16.0.0/24",
- *     ],
- *     sourceNat: false,
- * });
- * //# 5. Service Connection (The target for the group)
- * const siteAVpnSc2 = new scm.ServiceConnection("site_a_vpn_sc_2", {
- *     name: "creating_a_service_connection_sc_grp_2",
- *     region: "us-west-1a",
- *     ipsecTunnel: exampleIpsecTunnel.name,
- *     subnets: [
- *         "10.1.0.0/16",
- *         "172.16.0.0/24",
- *     ],
- *     sourceNat: false,
- * });
- * //# 6. Service Connection Group (Groups the Service Connection created above)
- * const exampleGroup = new scm.ServiceConnectionGroup("example_group", {
- *     name: "service-connection-group-app_sc_grp",
- *     targets: [
- *         siteAVpnSc.name,
- *         siteAVpnSc2.name,
- *     ],
- *     disableSnat: false,
- *     pbfOnly: true,
- * });
  * // ------------------------------------------------------------------
  * // Data Source: SCM Service Connection Group (Single Lookup)
  * // ------------------------------------------------------------------
- * const groupLookup = scm.getServiceConnectionGroupOutput({
- *     id: exampleGroup.id,
+ * const groupLookup = scm.getServiceConnectionGroup({
+ *     id: "1480fd9d-dae7-4bf3-94f6-4945e89b59b6",
  * });
  * export const lookedUpServiceConnectionGroupDetails = groupLookup;
  * ```

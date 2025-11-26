@@ -259,6 +259,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/decryptionRule:DecryptionRule example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/decryptionRule:DecryptionRule example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/decryptionRule:DecryptionRule example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/decryptionRule:DecryptionRule")]
     public partial class DecryptionRule : global::Pulumi.CustomResource
@@ -307,6 +333,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -379,6 +407,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -536,6 +566,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -620,6 +652,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -766,6 +800,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -850,6 +886,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

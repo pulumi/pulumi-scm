@@ -23,7 +23,7 @@ public final class AuthenticationProfileMethodSamlIdp {
      */
     private @Nullable String attributeNameUsername;
     /**
-     * @return Certificate profile
+     * @return method object saml idp certificate profile of authentication profile
      * 
      */
     private @Nullable String certificateProfile;
@@ -38,7 +38,7 @@ public final class AuthenticationProfileMethodSamlIdp {
      */
     private @Nullable String requestSigningCertificate;
     /**
-     * @return Server profile
+     * @return method object saml idp server profile of authentication profile
      * 
      */
     private @Nullable String serverProfile;
@@ -59,7 +59,7 @@ public final class AuthenticationProfileMethodSamlIdp {
         return Optional.ofNullable(this.attributeNameUsername);
     }
     /**
-     * @return Certificate profile
+     * @return method object saml idp certificate profile of authentication profile
      * 
      */
     public Optional<String> certificateProfile() {
@@ -80,7 +80,7 @@ public final class AuthenticationProfileMethodSamlIdp {
         return Optional.ofNullable(this.requestSigningCertificate);
     }
     /**
-     * @return Server profile
+     * @return method object saml idp server profile of authentication profile
      * 
      */
     public Optional<String> serverProfile() {

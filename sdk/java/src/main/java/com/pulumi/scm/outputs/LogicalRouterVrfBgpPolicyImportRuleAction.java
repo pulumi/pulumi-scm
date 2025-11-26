@@ -20,6 +20,8 @@ public final class LogicalRouterVrfBgpPolicyImportRuleAction {
     /**
      * @return Deny
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
+     * 
      */
     private @Nullable LogicalRouterVrfBgpPolicyImportRuleActionDeny deny;
 
@@ -33,6 +35,8 @@ public final class LogicalRouterVrfBgpPolicyImportRuleAction {
     }
     /**
      * @return Deny
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     public Optional<LogicalRouterVrfBgpPolicyImportRuleActionDeny> deny() {

@@ -87,17 +87,8 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Dns security
-        /// </summary>
         public readonly ImmutableArray<string> DnsSecurities;
-        /// <summary>
-        /// File blocking
-        /// </summary>
         public readonly ImmutableArray<string> FileBlockings;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the profile group
@@ -107,30 +98,12 @@ namespace Pulumi.Scm
         /// The name of the profile group
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Saas security
-        /// </summary>
         public readonly ImmutableArray<string> SaasSecurities;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Spyware
-        /// </summary>
         public readonly ImmutableArray<string> Spywares;
         public readonly string Tfid;
-        /// <summary>
-        /// Url filtering
-        /// </summary>
         public readonly ImmutableArray<string> UrlFilterings;
-        /// <summary>
-        /// Virus and wildfire analysis
-        /// </summary>
         public readonly ImmutableArray<string> VirusAndWildfireAnalyses;
-        /// <summary>
-        /// Vulnerability
-        /// </summary>
         public readonly ImmutableArray<string> Vulnerabilities;
 
         [OutputConstructor]

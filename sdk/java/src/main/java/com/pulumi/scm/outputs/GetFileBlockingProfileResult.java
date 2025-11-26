@@ -22,10 +22,6 @@ public final class GetFileBlockingProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the file blocking profile
@@ -37,15 +33,7 @@ public final class GetFileBlockingProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return A list of file blocking rules
-     * 
-     */
     private List<GetFileBlockingProfileRule> rules;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -64,10 +52,6 @@ public final class GetFileBlockingProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -85,17 +69,9 @@ public final class GetFileBlockingProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return A list of file blocking rules
-     * 
-     */
     public List<GetFileBlockingProfileRule> rules() {
         return this.rules;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

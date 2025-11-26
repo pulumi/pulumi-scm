@@ -13,18 +13,105 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// BgpAddressFamilyProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up bgp address family profile by its ID.
+        ///     var scmBgpAddressFamilyProfileDs = Scm.GetBgpAddressFamilyProfile.Invoke(new()
+        ///     {
+        ///         Id = "83ccef34-c29a-4e88-a99b-d0355440174e",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpAddressFamilyProfileDsResults"] = 
+        ///         {
+        ///             { "id", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id) },
+        ///             { "name", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name) },
+        ///             { "ipv4", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4) },
+        ///             { "folder", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetBgpAddressFamilyProfileResult> InvokeAsync(GetBgpAddressFamilyProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetBgpAddressFamilyProfileResult>("scm:index/getBgpAddressFamilyProfile:getBgpAddressFamilyProfile", args ?? new GetBgpAddressFamilyProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpAddressFamilyProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up bgp address family profile by its ID.
+        ///     var scmBgpAddressFamilyProfileDs = Scm.GetBgpAddressFamilyProfile.Invoke(new()
+        ///     {
+        ///         Id = "83ccef34-c29a-4e88-a99b-d0355440174e",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpAddressFamilyProfileDsResults"] = 
+        ///         {
+        ///             { "id", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id) },
+        ///             { "name", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name) },
+        ///             { "ipv4", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4) },
+        ///             { "folder", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpAddressFamilyProfileResult> Invoke(GetBgpAddressFamilyProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpAddressFamilyProfileResult>("scm:index/getBgpAddressFamilyProfile:getBgpAddressFamilyProfile", args ?? new GetBgpAddressFamilyProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// BgpAddressFamilyProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Look up bgp address family profile by its ID.
+        ///     var scmBgpAddressFamilyProfileDs = Scm.GetBgpAddressFamilyProfile.Invoke(new()
+        ///     {
+        ///         Id = "83ccef34-c29a-4e88-a99b-d0355440174e",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpAddressFamilyProfileDsResults"] = 
+        ///         {
+        ///             { "id", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Id) },
+        ///             { "name", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Name) },
+        ///             { "ipv4", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Ipv4) },
+        ///             { "folder", scmBgpAddressFamilyProfileDs.Apply(getBgpAddressFamilyProfileResult =&gt; getBgpAddressFamilyProfileResult.Folder) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpAddressFamilyProfileResult> Invoke(GetBgpAddressFamilyProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpAddressFamilyProfileResult>("scm:index/getBgpAddressFamilyProfile:getBgpAddressFamilyProfile", args ?? new GetBgpAddressFamilyProfileInvokeArgs(), options.WithDefaults());
@@ -79,25 +166,16 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Ipv4
-        /// </summary>
         public readonly Outputs.GetBgpAddressFamilyProfileIpv4Result Ipv4;
         /// <summary>
         /// Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

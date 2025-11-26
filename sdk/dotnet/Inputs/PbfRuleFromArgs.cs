@@ -29,6 +29,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Source zones
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Interface` and `Zone`.
         /// </summary>
         public InputList<string> Zones
         {

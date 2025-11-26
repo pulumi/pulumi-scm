@@ -13,18 +13,87 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp redistribution profiles
+        ///     var allBgpRedistributionProfiles = Scm.GetBgpRedistributionProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpRedistributionProfileList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetBgpRedistributionProfileListResult> InvokeAsync(GetBgpRedistributionProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetBgpRedistributionProfileListResult>("scm:index/getBgpRedistributionProfileList:getBgpRedistributionProfileList", args ?? new GetBgpRedistributionProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp redistribution profiles
+        ///     var allBgpRedistributionProfiles = Scm.GetBgpRedistributionProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpRedistributionProfileList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRedistributionProfileListResult> Invoke(GetBgpRedistributionProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRedistributionProfileListResult>("scm:index/getBgpRedistributionProfileList:getBgpRedistributionProfileList", args ?? new GetBgpRedistributionProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     // Fetch a list of all bgp redistribution profiles
+        ///     var allBgpRedistributionProfiles = Scm.GetBgpRedistributionProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "ngfw-shared",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmBgpRedistributionProfileList"] = ,
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetBgpRedistributionProfileListResult> Invoke(GetBgpRedistributionProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetBgpRedistributionProfileListResult>("scm:index/getBgpRedistributionProfileList:getBgpRedistributionProfileList", args ?? new GetBgpRedistributionProfileListInvokeArgs(), options.WithDefaults());

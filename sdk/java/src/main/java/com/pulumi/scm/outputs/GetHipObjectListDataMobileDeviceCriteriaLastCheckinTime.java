@@ -19,6 +19,8 @@ public final class GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime {
     /**
      * @return Within
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
+     * 
      */
     private GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithin within;
 
@@ -32,6 +34,8 @@ public final class GetHipObjectListDataMobileDeviceCriteriaLastCheckinTime {
     }
     /**
      * @return Within
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
     public GetHipObjectListDataMobileDeviceCriteriaLastCheckinTimeWithin within() {

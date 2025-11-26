@@ -20,10 +20,14 @@ public final class ScepProfileScepChallenge {
     /**
      * @return Challenge to use for SCEP server on mobile clients
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
+     * 
      */
     private @Nullable String fixed;
     /**
      * @return No OTP
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     private @Nullable String none;
@@ -39,12 +43,16 @@ public final class ScepProfileScepChallenge {
     /**
      * @return Challenge to use for SCEP server on mobile clients
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
+     * 
      */
     public Optional<String> fixed() {
         return Optional.ofNullable(this.fixed);
     }
     /**
      * @return No OTP
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fixed`, and `none`.
      * 
      */
     public Optional<String> none() {

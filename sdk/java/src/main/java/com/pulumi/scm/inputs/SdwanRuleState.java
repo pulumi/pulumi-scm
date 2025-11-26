@@ -126,12 +126,16 @@ public final class SdwanRuleState extends com.pulumi.resources.ResourceArgs {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> folder() {
@@ -261,12 +265,16 @@ public final class SdwanRuleState extends com.pulumi.resources.ResourceArgs {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -555,6 +563,8 @@ public final class SdwanRuleState extends com.pulumi.resources.ResourceArgs {
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -565,6 +575,8 @@ public final class SdwanRuleState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param folder The folder in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -764,6 +776,8 @@ public final class SdwanRuleState extends com.pulumi.resources.ResourceArgs {
         /**
          * @param snippet The snippet in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -774,6 +788,8 @@ public final class SdwanRuleState extends com.pulumi.resources.ResourceArgs {
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

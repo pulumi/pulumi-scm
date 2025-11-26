@@ -39,13 +39,7 @@ export interface GetSyslogServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * Format
-     */
     readonly format: outputs.GetSyslogServerProfileFormat;
     /**
      * The UUID of the syslog server profile
@@ -55,13 +49,7 @@ export interface GetSyslogServerProfileResult {
      * The name of the syslog server profile
      */
     readonly name: string;
-    /**
-     * Servers
-     */
     readonly servers: outputs.GetSyslogServerProfileServers;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

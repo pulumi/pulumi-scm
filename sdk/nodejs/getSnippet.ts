@@ -13,21 +13,15 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const scmLabel1 = new scm.Label("scm_label_1", {name: "scm_label"});
- * const scmSnippet1 = new scm.Snippet("scm_snippet_1", {
- *     name: "scm_snippet",
- *     description: "Adding a Description from Terraform",
- *     labels: [scmLabel1.name],
- * });
  * // Look up the "scm_snippet" tag by its id
- * const scmSnippetOutputsDs = scm.getSnippetOutput({
- *     id: scmSnippet1.id,
+ * const scmSnippetOutputsDs = scm.getSnippet({
+ *     id: "b4811c43-e5f9-4b28-8316-7f18f97ba244",
  * });
  * export const snippetOutputs = {
- *     productionId: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.id),
- *     productionName: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.name),
- *     productionDescription: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.description),
- *     productionLabels: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.labels),
+ *     productionId: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.id),
+ *     productionName: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.name),
+ *     productionDescription: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.description),
+ *     productionLabels: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.labels),
  * };
  * ```
  */
@@ -88,21 +82,15 @@ export interface GetSnippetResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const scmLabel1 = new scm.Label("scm_label_1", {name: "scm_label"});
- * const scmSnippet1 = new scm.Snippet("scm_snippet_1", {
- *     name: "scm_snippet",
- *     description: "Adding a Description from Terraform",
- *     labels: [scmLabel1.name],
- * });
  * // Look up the "scm_snippet" tag by its id
- * const scmSnippetOutputsDs = scm.getSnippetOutput({
- *     id: scmSnippet1.id,
+ * const scmSnippetOutputsDs = scm.getSnippet({
+ *     id: "b4811c43-e5f9-4b28-8316-7f18f97ba244",
  * });
  * export const snippetOutputs = {
- *     productionId: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.id),
- *     productionName: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.name),
- *     productionDescription: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.description),
- *     productionLabels: scmSnippetOutputsDs.apply(scmSnippetOutputsDs => scmSnippetOutputsDs.labels),
+ *     productionId: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.id),
+ *     productionName: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.name),
+ *     productionDescription: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.description),
+ *     productionLabels: scmSnippetOutputsDs.then(scmSnippetOutputsDs => scmSnippetOutputsDs.labels),
  * };
  * ```
  */

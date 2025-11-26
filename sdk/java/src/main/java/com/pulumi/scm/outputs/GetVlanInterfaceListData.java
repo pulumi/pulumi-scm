@@ -44,10 +44,12 @@ public final class GetVlanInterfaceListData {
     /**
      * @return Vlan interfaces DHCP Client Object
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     private GetVlanInterfaceListDataDhcpClient dhcpClient;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -64,6 +66,8 @@ public final class GetVlanInterfaceListData {
     /**
      * @return VLAN Interface IP Parent
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     private List<GetVlanInterfaceListDataIp> ips;
     /**
@@ -77,7 +81,7 @@ public final class GetVlanInterfaceListData {
      */
     private String name;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -127,12 +131,14 @@ public final class GetVlanInterfaceListData {
     /**
      * @return Vlan interfaces DHCP Client Object
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     public GetVlanInterfaceListDataDhcpClient dhcpClient() {
         return this.dhcpClient;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -155,6 +161,8 @@ public final class GetVlanInterfaceListData {
     /**
      * @return VLAN Interface IP Parent
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
+     * 
      */
     public List<GetVlanInterfaceListDataIp> ips() {
         return this.ips;
@@ -174,7 +182,7 @@ public final class GetVlanInterfaceListData {
         return this.name;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

@@ -55,25 +55,16 @@ export interface GetApplicationGroupResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Members
-     */
     readonly members: string[];
     /**
      * Alphanumeric string [ 0-9a-zA-Z._-]
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

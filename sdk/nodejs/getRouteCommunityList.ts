@@ -43,9 +43,6 @@ export interface GetRouteCommunityListResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -55,14 +52,8 @@ export interface GetRouteCommunityListResult {
      * Route community list name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Type
-     */
     readonly type: outputs.GetRouteCommunityListType;
 }
 /**

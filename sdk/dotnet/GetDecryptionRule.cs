@@ -24,52 +24,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
-        ///     var testDecryptionRule = new Scm.DecryptionRule("test_decryption_rule", new()
-        ///     {
-        ///         Name = "data-source-test-rule",
-        ///         Description = "Rule created specifically for data source testing.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Action = "decrypt",
-        ///         Froms = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-https",
-        ///         },
-        ///         Categories = new[]
-        ///         {
-        ///             "high-risk",
-        ///         },
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
-        ///         {
-        ///             SslForwardProxy = null,
-        ///         },
-        ///     });
-        /// 
         ///     // We use the ID from the resource created above.
         ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
         ///     {
-        ///         Id = testDecryptionRule.Id,
+        ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -95,52 +53,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
-        ///     var testDecryptionRule = new Scm.DecryptionRule("test_decryption_rule", new()
-        ///     {
-        ///         Name = "data-source-test-rule",
-        ///         Description = "Rule created specifically for data source testing.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Action = "decrypt",
-        ///         Froms = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-https",
-        ///         },
-        ///         Categories = new[]
-        ///         {
-        ///             "high-risk",
-        ///         },
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
-        ///         {
-        ///             SslForwardProxy = null,
-        ///         },
-        ///     });
-        /// 
         ///     // We use the ID from the resource created above.
         ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
         ///     {
-        ///         Id = testDecryptionRule.Id,
+        ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -166,52 +82,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. RESOURCE: Create a rule to ensure a predictable target for lookups
-        ///     var testDecryptionRule = new Scm.DecryptionRule("test_decryption_rule", new()
-        ///     {
-        ///         Name = "data-source-test-rule",
-        ///         Description = "Rule created specifically for data source testing.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Action = "decrypt",
-        ///         Froms = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Services = new[]
-        ///         {
-        ///             "service-https",
-        ///         },
-        ///         Categories = new[]
-        ///         {
-        ///             "high-risk",
-        ///         },
-        ///         SourceUsers = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Type = new Scm.Inputs.DecryptionRuleTypeArgs
-        ///         {
-        ///             SslForwardProxy = null,
-        ///         },
-        ///     });
-        /// 
         ///     // We use the ID from the resource created above.
         ///     var singleRuleById = Scm.GetDecryptionRule.Invoke(new()
         ///     {
-        ///         Id = testDecryptionRule.Id,
+        ///         Id = "b3544acb-fc55-4c6f-921d-4128b5a1d135",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -294,94 +168,34 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Is the rule disabled?
-        /// </summary>
         public readonly bool Disabled;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// The source security zone
-        /// </summary>
         public readonly ImmutableArray<string> Froms;
         /// <summary>
         /// The UUID of the decryption rule
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Log failed decryption events?
-        /// </summary>
         public readonly bool LogFail;
-        /// <summary>
-        /// The log settings of the decryption rule
-        /// </summary>
         public readonly string LogSetting;
-        /// <summary>
-        /// Log successful decryption events?
-        /// </summary>
         public readonly bool LogSuccess;
         /// <summary>
         /// The name of the decryption rule
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Negate the destination addresses?
-        /// </summary>
         public readonly bool NegateDestination;
-        /// <summary>
-        /// Negate the source addresses?
-        /// </summary>
         public readonly bool NegateSource;
-        /// <summary>
-        /// The position of a security rule
-        /// </summary>
         public readonly string Position;
-        /// <summary>
-        /// The decryption profile associated with the decryption rule
-        /// </summary>
         public readonly string Profile;
-        /// <summary>
-        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        /// </summary>
         public readonly string RelativePosition;
-        /// <summary>
-        /// The destination services and/or service groups
-        /// </summary>
         public readonly ImmutableArray<string> Services;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Source hip
-        /// </summary>
         public readonly ImmutableArray<string> SourceHips;
-        /// <summary>
-        /// List of source users and/or groups.  Reserved words include `Any`, `pre-login`, `known-user`, and `Unknown`.
-        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
-        /// <summary>
-        /// The source addresses
-        /// </summary>
         public readonly ImmutableArray<string> Sources;
-        /// <summary>
-        /// The tags associated with the decryption rule
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
-        /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
-        /// </summary>
         public readonly string TargetRule;
         public readonly string Tfid;
-        /// <summary>
-        /// The destination security zone
-        /// </summary>
         public readonly ImmutableArray<string> Tos;
-        /// <summary>
-        /// The type of decryption
-        /// </summary>
         public readonly Outputs.GetDecryptionRuleTypeResult Type;
 
         [OutputConstructor]

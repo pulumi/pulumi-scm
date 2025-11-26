@@ -15,25 +15,10 @@ import * as utilities from "./utilities";
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const chapRadiusProfile = new scm.RadiusServerProfile("chap_radius_profile", {
- *     name: "CHAP_only_rsp_ds_1",
- *     folder: "All",
- *     retries: 5,
- *     timeout: 60,
- *     protocol: {
- *         cHAP: {},
- *     },
- *     servers: [{
- *         name: "Chap_Server_Primary",
- *         ipAddress: "10.1.1.10",
- *         port: 1812,
- *         secret: "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
- *     }],
+ * const singleProfileById = scm.getRadiusServerProfile({
+ *     id: "50e5f694-19a2-467b-90a8-9db168600327",
  * });
- * const singleProfileById = scm.getRadiusServerProfileOutput({
- *     id: chapRadiusProfile.id,
- * });
- * export const singleRspDump = singleProfileById.apply(singleProfileById => singleProfileById.name);
+ * export const singleRspDump = singleProfileById.then(singleProfileById => singleProfileById.name);
  * ```
  */
 export function getRadiusServerProfile(args: GetRadiusServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetRadiusServerProfileResult> {
@@ -66,9 +51,6 @@ export interface GetRadiusServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the RADIUS server profile
@@ -78,26 +60,11 @@ export interface GetRadiusServerProfileResult {
      * The name of the RADIUS server profile
      */
     readonly name: string;
-    /**
-     * The RADIUS authentication protocol
-     */
     readonly protocol: outputs.GetRadiusServerProfileProtocol;
-    /**
-     * The number of RADIUS server retries
-     */
     readonly retries: number;
-    /**
-     * Server
-     */
     readonly servers: outputs.GetRadiusServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * The RADIUS server authentication timeout (seconds)
-     */
     readonly timeout: number;
 }
 /**
@@ -109,25 +76,10 @@ export interface GetRadiusServerProfileResult {
  * import * as pulumi from "@pulumi/pulumi";
  * import * as scm from "@pulumi/scm";
  *
- * const chapRadiusProfile = new scm.RadiusServerProfile("chap_radius_profile", {
- *     name: "CHAP_only_rsp_ds_1",
- *     folder: "All",
- *     retries: 5,
- *     timeout: 60,
- *     protocol: {
- *         cHAP: {},
- *     },
- *     servers: [{
- *         name: "Chap_Server_Primary",
- *         ipAddress: "10.1.1.10",
- *         port: 1812,
- *         secret: "-AQ==lhyuV6U/j9Trb9JL9L0UoBecg9Y=kTOWntGhZ1KFyLD+etKQ3g==",
- *     }],
+ * const singleProfileById = scm.getRadiusServerProfile({
+ *     id: "50e5f694-19a2-467b-90a8-9db168600327",
  * });
- * const singleProfileById = scm.getRadiusServerProfileOutput({
- *     id: chapRadiusProfile.id,
- * });
- * export const singleRspDump = singleProfileById.apply(singleProfileById => singleProfileById.name);
+ * export const singleRspDump = singleProfileById.then(singleProfileById => singleProfileById.name);
  * ```
  */
 export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRadiusServerProfileResult> {

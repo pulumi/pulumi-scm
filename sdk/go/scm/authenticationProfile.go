@@ -12,18 +12,87 @@ import (
 )
 
 // AuthenticationProfile resource
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			_, err := scm.NewAuthenticationProfile(ctx, "global_radius_access", &scm.AuthenticationProfileArgs{
+//				Name:             pulumi.String("test_auth_profile_radius_1"),
+//				Folder:           pulumi.String("All"),
+//				UserDomain:       pulumi.String("default"),
+//				UsernameModifier: pulumi.String("%USERINPUT%"),
+//				AllowLists: pulumi.StringArray{
+//					pulumi.String("all"),
+//				},
+//				Lockout: &scm.AuthenticationProfileLockoutArgs{
+//					FailedAttempts: pulumi.Int(1),
+//					LockoutTime:    pulumi.Int(3),
+//				},
+//				Method: &scm.AuthenticationProfileMethodArgs{
+//					Radius: &scm.AuthenticationProfileMethodRadiusArgs{
+//						Checkgroup:    pulumi.Bool(true),
+//						ServerProfile: pulumi.String("CHAP_only_rsp_1"),
+//					},
+//				},
+//				SingleSignOn: &scm.AuthenticationProfileSingleSignOnArgs{
+//					Realm: pulumi.String("EXAMPLE.COM"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			_, err = scm.NewAuthenticationProfile(ctx, "global_db_access", &scm.AuthenticationProfileArgs{
+//				Name:             pulumi.String("test_auth_profile_db_1"),
+//				Folder:           pulumi.String("All"),
+//				UserDomain:       pulumi.String("default"),
+//				UsernameModifier: pulumi.String("%USERINPUT%"),
+//				AllowLists: pulumi.StringArray{
+//					pulumi.String("all"),
+//				},
+//				Lockout: &scm.AuthenticationProfileLockoutArgs{
+//					FailedAttempts: pulumi.Int(3),
+//					LockoutTime:    pulumi.Int(1),
+//				},
+//				Method: &scm.AuthenticationProfileMethodArgs{
+//					LocalDatabase: &scm.AuthenticationProfileMethodLocalDatabaseArgs{},
+//				},
+//				SingleSignOn: &scm.AuthenticationProfileSingleSignOnArgs{
+//					Realm: pulumi.String("EXAMPLE.COM"),
+//				},
+//			})
+//			if err != nil {
+//				return err
+//			}
+//			return nil
+//		})
+//	}
+//
+// ```
 type AuthenticationProfile struct {
 	pulumi.CustomResourceState
 
-	// Allow list
+	// The allowList of the authentication profile
 	AllowLists pulumi.StringArrayOutput `pulumi:"allowLists"`
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
-	// Lockout
+	// Lockout object of the authentication profile
 	Lockout AuthenticationProfileLockoutPtrOutput `pulumi:"lockout"`
-	// Method
+	// method object of authentication profile
 	Method AuthenticationProfileMethodPtrOutput `pulumi:"method"`
 	// Multi factor auth
 	MultiFactorAuth AuthenticationProfileMultiFactorAuthPtrOutput `pulumi:"multiFactorAuth"`
@@ -32,6 +101,8 @@ type AuthenticationProfile struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrOutput `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// User domain
@@ -70,15 +141,17 @@ func GetAuthenticationProfile(ctx *pulumi.Context,
 
 // Input properties used for looking up and filtering AuthenticationProfile resources.
 type authenticationProfileState struct {
-	// Allow list
+	// The allowList of the authentication profile
 	AllowLists []string `pulumi:"allowLists"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Lockout
+	// Lockout object of the authentication profile
 	Lockout *AuthenticationProfileLockout `pulumi:"lockout"`
-	// Method
+	// method object of authentication profile
 	Method *AuthenticationProfileMethod `pulumi:"method"`
 	// Multi factor auth
 	MultiFactorAuth *AuthenticationProfileMultiFactorAuth `pulumi:"multiFactorAuth"`
@@ -87,6 +160,8 @@ type authenticationProfileState struct {
 	// Single sign on
 	SingleSignOn *AuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// User domain
@@ -96,15 +171,17 @@ type authenticationProfileState struct {
 }
 
 type AuthenticationProfileState struct {
-	// Allow list
+	// The allowList of the authentication profile
 	AllowLists pulumi.StringArrayInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Lockout
+	// Lockout object of the authentication profile
 	Lockout AuthenticationProfileLockoutPtrInput
-	// Method
+	// method object of authentication profile
 	Method AuthenticationProfileMethodPtrInput
 	// Multi factor auth
 	MultiFactorAuth AuthenticationProfileMultiFactorAuthPtrInput
@@ -113,6 +190,8 @@ type AuthenticationProfileState struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// User domain
@@ -126,15 +205,17 @@ func (AuthenticationProfileState) ElementType() reflect.Type {
 }
 
 type authenticationProfileArgs struct {
-	// Allow list
+	// The allowList of the authentication profile
 	AllowLists []string `pulumi:"allowLists"`
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
-	// Lockout
+	// Lockout object of the authentication profile
 	Lockout *AuthenticationProfileLockout `pulumi:"lockout"`
-	// Method
+	// method object of authentication profile
 	Method *AuthenticationProfileMethod `pulumi:"method"`
 	// Multi factor auth
 	MultiFactorAuth *AuthenticationProfileMultiFactorAuth `pulumi:"multiFactorAuth"`
@@ -143,6 +224,8 @@ type authenticationProfileArgs struct {
 	// Single sign on
 	SingleSignOn *AuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// User domain
 	UserDomain *string `pulumi:"userDomain"`
@@ -152,15 +235,17 @@ type authenticationProfileArgs struct {
 
 // The set of arguments for constructing a AuthenticationProfile resource.
 type AuthenticationProfileArgs struct {
-	// Allow list
+	// The allowList of the authentication profile
 	AllowLists pulumi.StringArrayInput
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
-	// Lockout
+	// Lockout object of the authentication profile
 	Lockout AuthenticationProfileLockoutPtrInput
-	// Method
+	// method object of authentication profile
 	Method AuthenticationProfileMethodPtrInput
 	// Multi factor auth
 	MultiFactorAuth AuthenticationProfileMultiFactorAuthPtrInput
@@ -169,6 +254,8 @@ type AuthenticationProfileArgs struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// User domain
 	UserDomain pulumi.StringPtrInput
@@ -263,7 +350,7 @@ func (o AuthenticationProfileOutput) ToAuthenticationProfileOutputWithContext(ct
 	return o
 }
 
-// Allow list
+// The allowList of the authentication profile
 func (o AuthenticationProfileOutput) AllowLists() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringArrayOutput { return v.AllowLists }).(pulumi.StringArrayOutput)
 }
@@ -274,16 +361,18 @@ func (o AuthenticationProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
 
-// Lockout
+// Lockout object of the authentication profile
 func (o AuthenticationProfileOutput) Lockout() AuthenticationProfileLockoutPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) AuthenticationProfileLockoutPtrOutput { return v.Lockout }).(AuthenticationProfileLockoutPtrOutput)
 }
 
-// Method
+// method object of authentication profile
 func (o AuthenticationProfileOutput) Method() AuthenticationProfileMethodPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) AuthenticationProfileMethodPtrOutput { return v.Method }).(AuthenticationProfileMethodPtrOutput)
 }
@@ -304,6 +393,8 @@ func (o AuthenticationProfileOutput) SingleSignOn() AuthenticationProfileSingleS
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

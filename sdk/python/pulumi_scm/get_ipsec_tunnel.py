@@ -100,17 +100,11 @@ class GetIpsecTunnelResult:
     @_builtins.property
     @pulumi.getter(name="enableGreEncapsulation")
     def enable_gre_encapsulation(self) -> _builtins.bool:
-        """
-        allow GRE over IPSec
-        """
         return pulumi.get(self, "enable_gre_encapsulation")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -132,9 +126,6 @@ class GetIpsecTunnelResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -145,17 +136,11 @@ class GetIpsecTunnelResult:
     @_builtins.property
     @pulumi.getter(name="tunnelInterface")
     def tunnel_interface(self) -> _builtins.str:
-        """
-        Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-        """
         return pulumi.get(self, "tunnel_interface")
 
     @_builtins.property
     @pulumi.getter(name="tunnelMonitor")
     def tunnel_monitor(self) -> 'outputs.GetIpsecTunnelTunnelMonitorResult':
-        """
-        Tunnel monitor
-        """
         return pulumi.get(self, "tunnel_monitor")
 
 

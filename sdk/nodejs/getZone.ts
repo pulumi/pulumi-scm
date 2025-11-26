@@ -61,29 +61,11 @@ export interface GetZoneResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Device acl
-     */
     readonly deviceAcl: outputs.GetZoneDeviceAcl;
-    /**
-     * Dos log setting
-     */
     readonly dosLogSetting: string;
-    /**
-     * Dos profile
-     */
     readonly dosProfile: string;
-    /**
-     * Enable device identification
-     */
     readonly enableDeviceIdentification: boolean;
-    /**
-     * Enable user identification
-     */
     readonly enableUserIdentification: boolean;
-    /**
-     * Folder
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -93,18 +75,9 @@ export interface GetZoneResult {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
-    /**
-     * Network
-     */
     readonly network: outputs.GetZoneNetwork;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * User acl
-     */
     readonly userAcl: outputs.GetZoneUserAcl;
 }
 /**

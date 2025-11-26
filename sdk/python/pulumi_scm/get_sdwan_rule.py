@@ -141,33 +141,21 @@ class GetSdwanRuleResult:
     @_builtins.property
     @pulumi.getter
     def disabled(self) -> _builtins.bool:
-        """
-        Disable rule?
-        """
         return pulumi.get(self, "disabled")
 
     @_builtins.property
     @pulumi.getter(name="errorCorrectionProfile")
     def error_correction_profile(self) -> _builtins.str:
-        """
-        Error correction profile
-        """
         return pulumi.get(self, "error_correction_profile")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
     @pulumi.getter
     def froms(self) -> Sequence[_builtins.str]:
-        """
-        List of source zones
-        """
         return pulumi.get(self, "froms")
 
     @_builtins.property
@@ -189,81 +177,51 @@ class GetSdwanRuleResult:
     @_builtins.property
     @pulumi.getter(name="negateDestination")
     def negate_destination(self) -> _builtins.bool:
-        """
-        Negate destination address(es)?
-        """
         return pulumi.get(self, "negate_destination")
 
     @_builtins.property
     @pulumi.getter(name="negateSource")
     def negate_source(self) -> _builtins.bool:
-        """
-        Negate source address(es)?
-        """
         return pulumi.get(self, "negate_source")
 
     @_builtins.property
     @pulumi.getter(name="pathQualityProfile")
     def path_quality_profile(self) -> _builtins.str:
-        """
-        Path quality profile
-        """
         return pulumi.get(self, "path_quality_profile")
 
     @_builtins.property
     @pulumi.getter
     def position(self) -> _builtins.str:
-        """
-        Rule postion relative to device rules
-        """
         return pulumi.get(self, "position")
 
     @_builtins.property
     @pulumi.getter(name="saasQualityProfile")
     def saas_quality_profile(self) -> _builtins.str:
-        """
-        SaaS quality profile
-        """
         return pulumi.get(self, "saas_quality_profile")
 
     @_builtins.property
     @pulumi.getter
     def services(self) -> Sequence[_builtins.str]:
-        """
-        List of services
-        """
         return pulumi.get(self, "services")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
     @pulumi.getter(name="sourceUsers")
     def source_users(self) -> Sequence[_builtins.str]:
-        """
-        List of source users
-        """
         return pulumi.get(self, "source_users")
 
     @_builtins.property
     @pulumi.getter
     def sources(self) -> Sequence[_builtins.str]:
-        """
-        List of source addresses
-        """
         return pulumi.get(self, "sources")
 
     @_builtins.property
     @pulumi.getter
     def tags(self) -> Sequence[_builtins.str]:
-        """
-        List of tags
-        """
         return pulumi.get(self, "tags")
 
     @_builtins.property
@@ -274,9 +232,6 @@ class GetSdwanRuleResult:
     @_builtins.property
     @pulumi.getter
     def tos(self) -> Sequence[_builtins.str]:
-        """
-        List of destination zones
-        """
         return pulumi.get(self, "tos")
 
 

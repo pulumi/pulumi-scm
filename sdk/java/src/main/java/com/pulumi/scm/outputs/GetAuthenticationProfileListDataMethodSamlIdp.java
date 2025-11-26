@@ -22,7 +22,7 @@ public final class GetAuthenticationProfileListDataMethodSamlIdp {
      */
     private String attributeNameUsername;
     /**
-     * @return Certificate profile
+     * @return method object saml idp certificate profile of authentication profile
      * 
      */
     private String certificateProfile;
@@ -37,7 +37,7 @@ public final class GetAuthenticationProfileListDataMethodSamlIdp {
      */
     private String requestSigningCertificate;
     /**
-     * @return Server profile
+     * @return method object saml idp server profile of authentication profile
      * 
      */
     private String serverProfile;
@@ -58,7 +58,7 @@ public final class GetAuthenticationProfileListDataMethodSamlIdp {
         return this.attributeNameUsername;
     }
     /**
-     * @return Certificate profile
+     * @return method object saml idp certificate profile of authentication profile
      * 
      */
     public String certificateProfile() {
@@ -79,7 +79,7 @@ public final class GetAuthenticationProfileListDataMethodSamlIdp {
         return this.requestSigningCertificate;
     }
     /**
-     * @return Server profile
+     * @return method object saml idp server profile of authentication profile
      * 
      */
     public String serverProfile() {

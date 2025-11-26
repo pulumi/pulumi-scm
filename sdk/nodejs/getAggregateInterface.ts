@@ -66,29 +66,17 @@ export interface GetAggregateInterfaceResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Layer2
-     */
     readonly layer2: outputs.GetAggregateInterfaceLayer2;
-    /**
-     * Aggregate Interface Layer 3 configuration
-     */
     readonly layer3: outputs.GetAggregateInterfaceLayer3;
     /**
      * Aggregate interface name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

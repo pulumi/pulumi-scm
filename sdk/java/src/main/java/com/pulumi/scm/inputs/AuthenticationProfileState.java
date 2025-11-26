@@ -21,14 +21,14 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
     public static final AuthenticationProfileState Empty = new AuthenticationProfileState();
 
     /**
-     * Allow list
+     * The allowList of the authentication profile
      * 
      */
     @Import(name="allowLists")
     private @Nullable Output<List<String>> allowLists;
 
     /**
-     * @return Allow list
+     * @return The allowList of the authentication profile
      * 
      */
     public Optional<Output<List<String>>> allowLists() {
@@ -53,6 +53,8 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="folder")
     private @Nullable Output<String> folder;
@@ -60,20 +62,22 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
     /**
      * @return The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     public Optional<Output<String>> folder() {
         return Optional.ofNullable(this.folder);
     }
 
     /**
-     * Lockout
+     * Lockout object of the authentication profile
      * 
      */
     @Import(name="lockout")
     private @Nullable Output<AuthenticationProfileLockoutArgs> lockout;
 
     /**
-     * @return Lockout
+     * @return Lockout object of the authentication profile
      * 
      */
     public Optional<Output<AuthenticationProfileLockoutArgs>> lockout() {
@@ -81,14 +85,14 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
     }
 
     /**
-     * Method
+     * method object of authentication profile
      * 
      */
     @Import(name="method")
     private @Nullable Output<AuthenticationProfileMethodArgs> method;
 
     /**
-     * @return Method
+     * @return method object of authentication profile
      * 
      */
     public Optional<Output<AuthenticationProfileMethodArgs>> method() {
@@ -143,12 +147,16 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Import(name="snippet")
     private @Nullable Output<String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> snippet() {
@@ -228,7 +236,7 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param allowLists Allow list
+         * @param allowLists The allowList of the authentication profile
          * 
          * @return builder
          * 
@@ -239,7 +247,7 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param allowLists Allow list
+         * @param allowLists The allowList of the authentication profile
          * 
          * @return builder
          * 
@@ -249,7 +257,7 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param allowLists Allow list
+         * @param allowLists The allowList of the authentication profile
          * 
          * @return builder
          * 
@@ -282,6 +290,8 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -293,6 +303,8 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         /**
          * @param folder The folder in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -301,7 +313,7 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param lockout Lockout
+         * @param lockout Lockout object of the authentication profile
          * 
          * @return builder
          * 
@@ -312,7 +324,7 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param lockout Lockout
+         * @param lockout Lockout object of the authentication profile
          * 
          * @return builder
          * 
@@ -322,7 +334,7 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param method Method
+         * @param method method object of authentication profile
          * 
          * @return builder
          * 
@@ -333,7 +345,7 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         }
 
         /**
-         * @param method Method
+         * @param method method object of authentication profile
          * 
          * @return builder
          * 
@@ -408,6 +420,8 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
         /**
          * @param snippet The snippet in which the resource is defined
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+         * 
          * @return builder
          * 
          */
@@ -418,6 +432,8 @@ public final class AuthenticationProfileState extends com.pulumi.resources.Resou
 
         /**
          * @param snippet The snippet in which the resource is defined
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 

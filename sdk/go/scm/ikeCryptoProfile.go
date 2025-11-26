@@ -69,6 +69,8 @@ type IkeCryptoProfile struct {
 	// Encryption algorithm
 	Encryptions pulumi.StringArrayOutput `pulumi:"encryptions"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Hash
 	Hashes pulumi.StringArrayOutput `pulumi:"hashes"`
@@ -77,6 +79,8 @@ type IkeCryptoProfile struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 }
@@ -129,6 +133,8 @@ type ikeCryptoProfileState struct {
 	// Encryption algorithm
 	Encryptions []string `pulumi:"encryptions"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Hash
 	Hashes []string `pulumi:"hashes"`
@@ -137,6 +143,8 @@ type ikeCryptoProfileState struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 }
@@ -151,6 +159,8 @@ type IkeCryptoProfileState struct {
 	// Encryption algorithm
 	Encryptions pulumi.StringArrayInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Hash
 	Hashes pulumi.StringArrayInput
@@ -159,6 +169,8 @@ type IkeCryptoProfileState struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 }
@@ -177,6 +189,8 @@ type ikeCryptoProfileArgs struct {
 	// Encryption algorithm
 	Encryptions []string `pulumi:"encryptions"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Hash
 	Hashes []string `pulumi:"hashes"`
@@ -185,6 +199,8 @@ type ikeCryptoProfileArgs struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 }
 
@@ -199,6 +215,8 @@ type IkeCryptoProfileArgs struct {
 	// Encryption algorithm
 	Encryptions pulumi.StringArrayInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Hash
 	Hashes pulumi.StringArrayInput
@@ -207,6 +225,8 @@ type IkeCryptoProfileArgs struct {
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 }
 
@@ -318,6 +338,8 @@ func (o IkeCryptoProfileOutput) Encryptions() pulumi.StringArrayOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IkeCryptoProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -338,6 +360,8 @@ func (o IkeCryptoProfileOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o IkeCryptoProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *IkeCryptoProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

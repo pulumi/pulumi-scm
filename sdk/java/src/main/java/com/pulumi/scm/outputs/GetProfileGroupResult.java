@@ -26,20 +26,8 @@ public final class GetProfileGroupResult {
      * 
      */
     private String device;
-    /**
-     * @return Dns security
-     * 
-     */
     private List<String> dnsSecurities;
-    /**
-     * @return File blocking
-     * 
-     */
     private List<String> fileBlockings;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the profile group
@@ -51,36 +39,12 @@ public final class GetProfileGroupResult {
      * 
      */
     private String name;
-    /**
-     * @return Saas security
-     * 
-     */
     private List<String> saasSecurities;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Spyware
-     * 
-     */
     private List<String> spywares;
     private String tfid;
-    /**
-     * @return Url filtering
-     * 
-     */
     private List<String> urlFilterings;
-    /**
-     * @return Virus and wildfire analysis
-     * 
-     */
     private List<String> virusAndWildfireAnalyses;
-    /**
-     * @return Vulnerability
-     * 
-     */
     private List<String> vulnerabilities;
 
     private GetProfileGroupResult() {}
@@ -105,24 +69,12 @@ public final class GetProfileGroupResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Dns security
-     * 
-     */
     public List<String> dnsSecurities() {
         return this.dnsSecurities;
     }
-    /**
-     * @return File blocking
-     * 
-     */
     public List<String> fileBlockings() {
         return this.fileBlockings;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -140,48 +92,24 @@ public final class GetProfileGroupResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Saas security
-     * 
-     */
     public List<String> saasSecurities() {
         return this.saasSecurities;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Spyware
-     * 
-     */
     public List<String> spywares() {
         return this.spywares;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return Url filtering
-     * 
-     */
     public List<String> urlFilterings() {
         return this.urlFilterings;
     }
-    /**
-     * @return Virus and wildfire analysis
-     * 
-     */
     public List<String> virusAndWildfireAnalyses() {
         return this.virusAndWildfireAnalyses;
     }
-    /**
-     * @return Vulnerability
-     * 
-     */
     public List<String> vulnerabilities() {
         return this.vulnerabilities;
     }

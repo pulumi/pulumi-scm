@@ -19,6 +19,8 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     /**
      * @return Ip
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
+     * 
      */
     private @Nullable String ip;
 
@@ -32,6 +34,8 @@ public final class LogicalRouterVrfBgpPeerGroupPeerPeerAddress {
     }
     /**
      * @return Ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ip`.
      * 
      */
     public Optional<String> ip() {

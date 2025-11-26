@@ -60,6 +60,8 @@ class AuthenticationRuleArgs:
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
         :param pulumi.Input[_builtins.bool] log_authentication_timeout: Log authentication timeouts?
@@ -70,6 +72,8 @@ class AuthenticationRuleArgs:
         :param pulumi.Input[_builtins.str] position: The relative position of the rule
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[_builtins.str] snippet: Snippet
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] tags: The authentication rule tags
@@ -263,6 +267,8 @@ class AuthenticationRuleArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Folder
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -383,6 +389,8 @@ class AuthenticationRuleArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Snippet
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -492,6 +500,8 @@ class _AuthenticationRuleState:
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
@@ -504,6 +514,8 @@ class _AuthenticationRuleState:
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
@@ -658,6 +670,8 @@ class _AuthenticationRuleState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Folder
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -802,6 +816,8 @@ class _AuthenticationRuleState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Snippet
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -1043,6 +1059,8 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
@@ -1055,6 +1073,8 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
@@ -1307,6 +1327,8 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] device: Device
         :param pulumi.Input[_builtins.bool] disabled: Is the authentication rule disabled?
         :param pulumi.Input[_builtins.str] folder: Folder
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: The source security zones
         :param pulumi.Input[_builtins.str] group_tag: Group tag
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] hip_profiles: The source Host Integrity Profile (HIP)
@@ -1319,6 +1341,8 @@ class AuthenticationRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] relative_position: Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: The destination ports
         :param pulumi.Input[_builtins.str] snippet: Snippet
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_hips: The source Host Integrity Profile (HIP)
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: The source users
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: The source addresses
@@ -1422,6 +1446,8 @@ class AuthenticationRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Folder
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -1518,6 +1544,8 @@ class AuthenticationRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Snippet
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

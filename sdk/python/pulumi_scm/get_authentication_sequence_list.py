@@ -165,6 +165,20 @@ def get_authentication_sequence_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_sequences = scm.get_authentication_sequence_list(limit=10,
+        folder="All")
+    pulumi.export("fetchedSequenceListSummary", {
+        "countOfSequencesFetched": all_sequences.total,
+        "firstRuleName": all_sequences.datas[0].name,
+    })
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +217,20 @@ def get_authentication_sequence_list_output(device: Optional[pulumi.Input[Option
                                             opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationSequenceListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    all_sequences = scm.get_authentication_sequence_list(limit=10,
+        folder="All")
+    pulumi.export("fetchedSequenceListSummary", {
+        "countOfSequencesFetched": all_sequences.total,
+        "firstRuleName": all_sequences.datas[0].name,
+    })
+    ```
 
 
     :param _builtins.str device: The device of the item.

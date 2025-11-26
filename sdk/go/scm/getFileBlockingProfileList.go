@@ -12,6 +12,36 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
+//
+// ```go
+// package main
+//
+// import (
+//
+//	"github.com/pulumi/pulumi-scm/sdk/go/scm"
+//	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
+//
+// )
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Data source to retrieve a list of SCM File Blocking Profile objects.
+//			//
+//			// Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+//			allShared, err := scm.GetFileBlockingProfileList(ctx, &scm.GetFileBlockingProfileListArgs{
+//				Folder: pulumi.StringRef("All"),
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("scmFileBlockingProfileAllShared", allShared.Datas)
+//			return nil
+//		})
+//	}
+//
+// ```
 func GetFileBlockingProfileList(ctx *pulumi.Context, args *GetFileBlockingProfileListArgs, opts ...pulumi.InvokeOption) (*GetFileBlockingProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetFileBlockingProfileListResult

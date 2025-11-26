@@ -19,6 +19,8 @@ type TacacsServerProfile struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// The name of the TACACS+ server profile
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -27,6 +29,8 @@ type TacacsServerProfile struct {
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayOutput `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
 	// The TACACS+ timeout (seconds)
@@ -74,6 +78,8 @@ type tacacsServerProfileState struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the TACACS+ server profile
 	Name *string `pulumi:"name"`
@@ -82,6 +88,8 @@ type tacacsServerProfileState struct {
 	// The TACACS+ server configuration
 	Servers []TacacsServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
 	// The TACACS+ timeout (seconds)
@@ -94,6 +102,8 @@ type TacacsServerProfileState struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the TACACS+ server profile
 	Name pulumi.StringPtrInput
@@ -102,6 +112,8 @@ type TacacsServerProfileState struct {
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
 	// The TACACS+ timeout (seconds)
@@ -118,6 +130,8 @@ type tacacsServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// The name of the TACACS+ server profile
 	Name *string `pulumi:"name"`
@@ -126,6 +140,8 @@ type tacacsServerProfileArgs struct {
 	// The TACACS+ server configuration
 	Servers []TacacsServerProfileServer `pulumi:"servers"`
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// The TACACS+ timeout (seconds)
 	Timeout *int `pulumi:"timeout"`
@@ -138,6 +154,8 @@ type TacacsServerProfileArgs struct {
 	// The device in which the resource is defined
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// The name of the TACACS+ server profile
 	Name pulumi.StringPtrInput
@@ -146,6 +164,8 @@ type TacacsServerProfileArgs struct {
 	// The TACACS+ server configuration
 	Servers TacacsServerProfileServerArrayInput
 	// The snippet in which the resource is defined
+	//
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// The TACACS+ timeout (seconds)
 	Timeout pulumi.IntPtrInput
@@ -246,6 +266,8 @@ func (o TacacsServerProfileOutput) Device() pulumi.StringPtrOutput {
 }
 
 // The folder in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TacacsServerProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
 }
@@ -266,6 +288,8 @@ func (o TacacsServerProfileOutput) Servers() TacacsServerProfileServerArrayOutpu
 }
 
 // The snippet in which the resource is defined
+//
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o TacacsServerProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *TacacsServerProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)
 }

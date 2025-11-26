@@ -19,6 +19,8 @@ namespace Pulumi.Scm.Outputs
         public readonly bool? NoTag;
         /// <summary>
         /// Tag
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NoTag` and `Tag`.
         /// </summary>
         public readonly ImmutableArray<string> Tags;
 

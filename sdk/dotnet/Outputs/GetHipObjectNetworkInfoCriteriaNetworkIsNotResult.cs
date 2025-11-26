@@ -19,14 +19,20 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotEthernetResult Ethernet;
         /// <summary>
         /// Mobile
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ethernet`, `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotMobileResult Mobile;
         /// <summary>
         /// Unknown
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ethernet`, `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotUnknownResult Unknown;
         /// <summary>
         /// Wifi
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ethernet`, `Mobile`, `Unknown`, and `Wifi`.
         /// </summary>
         public readonly Outputs.GetHipObjectNetworkInfoCriteriaNetworkIsNotWifiResult Wifi;
 

@@ -19,6 +19,92 @@ import javax.annotation.Nullable;
 /**
  * BgpRouteMap resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.RoutePrefixList;
+ * import com.pulumi.scm.RoutePrefixListArgs;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeArgs;
+ * import com.pulumi.scm.inputs.RoutePrefixListTypeIpv4Args;
+ * import com.pulumi.scm.BgpRouteMap;
+ * import com.pulumi.scm.BgpRouteMapArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapMatchArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapMatchIpv4Args;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapMatchIpv4AddressArgs;
+ * import com.pulumi.scm.inputs.BgpRouteMapRouteMapSetArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates various resources used for subsequent examples
+ *         //
+ *         var scmRoutePrefixList = new RoutePrefixList("scmRoutePrefixList", RoutePrefixListArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_prefix_list")
+ *             .description("Managed by Pulumi")
+ *             .type(RoutePrefixListTypeArgs.builder()
+ *                 .ipv4(RoutePrefixListTypeIpv4Args.builder()
+ *                     .ipv4Entries(RoutePrefixListTypeIpv4Ipv4EntryArgs.builder()
+ *                         .name(10)
+ *                         .action("permit")
+ *                         .prefix(RoutePrefixListTypeIpv4Ipv4EntryPrefixArgs.builder()
+ *                             .greaterThanOrEqual(24)
+ *                             .network("198.18.1.0/24")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *         //
+ *         // Creates a bgp route map that sets no-export community for traffic matching prefix-list
+ *         // Requires: scm_bgp_prefix_list
+ *         //
+ *         var scmBgpRouteMap = new BgpRouteMap("scmBgpRouteMap", BgpRouteMapArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_route_map")
+ *             .description("Managed by Pulumi")
+ *             .routeMaps(BgpRouteMapRouteMapArgs.builder()
+ *                 .name(10)
+ *                 .description("No Export")
+ *                 .match(BgpRouteMapRouteMapMatchArgs.builder()
+ *                     .ipv4(BgpRouteMapRouteMapMatchIpv4Args.builder()
+ *                         .address(BgpRouteMapRouteMapMatchIpv4AddressArgs.builder()
+ *                             .prefixList("scm_bgp_prefix_list")
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .set(BgpRouteMapRouteMapSetArgs.builder()
+ *                     .regularCommunity(List.of("no-export"))
+ *                     .build())
+ *                 .build())
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmRoutePrefixList)
+ *                 .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/bgpRouteMap:BgpRouteMap")
 public class BgpRouteMap extends com.pulumi.resources.CustomResource {
@@ -53,12 +139,16 @@ public class BgpRouteMap extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -95,12 +185,16 @@ public class BgpRouteMap extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

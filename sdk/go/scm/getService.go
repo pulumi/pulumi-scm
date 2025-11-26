@@ -72,19 +72,15 @@ type LookupServiceResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the service
 	Id string `pulumi:"id"`
 	// The name of the service
-	Name string `pulumi:"name"`
-	// Protocol
+	Name     string             `pulumi:"name"`
 	Protocol GetServiceProtocol `pulumi:"protocol"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	// Tags for service object
-	Tags []string `pulumi:"tags"`
-	Tfid string   `pulumi:"tfid"`
+	Snippet  string             `pulumi:"snippet"`
+	Tags     []string           `pulumi:"tags"`
+	Tfid     string             `pulumi:"tfid"`
 }
 
 func LookupServiceOutput(ctx *pulumi.Context, args LookupServiceOutputArgs, opts ...pulumi.InvokeOption) LookupServiceResultOutput {
@@ -133,7 +129,6 @@ func (o LookupServiceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupServiceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -148,17 +143,14 @@ func (o LookupServiceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// Protocol
 func (o LookupServiceResultOutput) Protocol() GetServiceProtocolOutput {
 	return o.ApplyT(func(v LookupServiceResult) GetServiceProtocol { return v.Protocol }).(GetServiceProtocolOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupServiceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
-// Tags for service object
 func (o LookupServiceResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

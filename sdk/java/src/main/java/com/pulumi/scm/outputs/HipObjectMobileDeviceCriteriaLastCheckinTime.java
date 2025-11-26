@@ -20,6 +20,8 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTime {
     /**
      * @return Within
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
+     * 
      */
     private @Nullable HipObjectMobileDeviceCriteriaLastCheckinTimeWithin within;
 
@@ -33,6 +35,8 @@ public final class HipObjectMobileDeviceCriteriaLastCheckinTime {
     }
     /**
      * @return Within
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `notWithin` and `within`.
      * 
      */
     public Optional<HipObjectMobileDeviceCriteriaLastCheckinTimeWithin> within() {

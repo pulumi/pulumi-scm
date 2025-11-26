@@ -61,9 +61,6 @@ class GetSdwanSaasQualityProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -77,9 +74,6 @@ class GetSdwanSaasQualityProfileResult:
     @_builtins.property
     @pulumi.getter(name="monitorMode")
     def monitor_mode(self) -> 'outputs.GetSdwanSaasQualityProfileMonitorModeResult':
-        """
-        Monitor mode
-        """
         return pulumi.get(self, "monitor_mode")
 
     @_builtins.property
@@ -93,9 +87,6 @@ class GetSdwanSaasQualityProfileResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

@@ -55,50 +55,23 @@ export interface GetLdapServerProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * Map of sensitive values returned from the API.
-     */
     readonly encryptedValues: {[key: string]: string};
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the LDAP server profile
      */
     readonly id: string;
-    /**
-     * The LDAP server time
-     */
     readonly ldapType: string;
     /**
      * The name of the LDAP server profile
      */
     readonly name: string;
-    /**
-     * The search retry interval (seconds)
-     */
     readonly retryInterval: number;
-    /**
-     * The LDAP server configuration
-     */
     readonly servers: outputs.GetLdapServerProfileServer[];
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
-    /**
-     * Require SSL/TLS secured connection?
-     */
     readonly ssl: boolean;
     readonly tfid: string;
-    /**
-     * The search timeout (seconds)
-     */
     readonly timelimit: number;
-    /**
-     * Verify server certificate for SSL sessions?
-     */
     readonly verifyServerCertificate: boolean;
 }
 /**

@@ -20,10 +20,14 @@ public final class GetRouteCommunityListListDataType {
     /**
      * @return Large
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
+     * 
      */
     private GetRouteCommunityListListDataTypeLarge large;
     /**
      * @return Regular
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     private GetRouteCommunityListListDataTypeRegular regular;
@@ -39,12 +43,16 @@ public final class GetRouteCommunityListListDataType {
     /**
      * @return Large
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
+     * 
      */
     public GetRouteCommunityListListDataTypeLarge large() {
         return this.large;
     }
     /**
      * @return Regular
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `extended`, `large`, and `regular`.
      * 
      */
     public GetRouteCommunityListListDataTypeRegular regular() {

@@ -47,9 +47,6 @@ export interface GetRoutePathAccessListResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -59,9 +56,6 @@ export interface GetRoutePathAccessListResult {
      * AS path access list name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

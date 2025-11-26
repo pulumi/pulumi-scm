@@ -22,15 +22,21 @@ public final class ApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Greater than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
      * @return Less than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
      * @return Pattern match
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private @Nullable ApplicationSignatureAndConditionOrConditionOperatorPatternMatch patternMatch;
@@ -46,6 +52,8 @@ public final class ApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Greater than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorGreaterThan> greaterThan() {
         return Optional.ofNullable(this.greaterThan);
@@ -53,12 +61,16 @@ public final class ApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Less than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorLessThan> lessThan() {
         return Optional.ofNullable(this.lessThan);
     }
     /**
      * @return Pattern match
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public Optional<ApplicationSignatureAndConditionOrConditionOperatorPatternMatch> patternMatch() {

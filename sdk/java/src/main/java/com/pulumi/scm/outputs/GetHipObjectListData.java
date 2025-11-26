@@ -67,7 +67,7 @@ public final class GetHipObjectListData {
      */
     private GetHipObjectListDataFirewall firewall;
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -102,7 +102,7 @@ public final class GetHipObjectListData {
      */
     private GetHipObjectListDataPatchManagement patchManagement;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -173,7 +173,7 @@ public final class GetHipObjectListData {
         return this.firewall;
     }
     /**
-     * @return The folder in which the resource is defined
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -222,7 +222,7 @@ public final class GetHipObjectListData {
         return this.patchManagement;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

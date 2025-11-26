@@ -59,9 +59,6 @@ export interface GetVariableResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the variable
@@ -71,22 +68,10 @@ export interface GetVariableResult {
      * The name of the variable
      */
     readonly name: string;
-    /**
-     * Is the variable overridden?
-     */
     readonly overridden: boolean;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * The variable type
-     */
     readonly type: string;
-    /**
-     * The value of the variable
-     */
     readonly value: string;
 }
 /**

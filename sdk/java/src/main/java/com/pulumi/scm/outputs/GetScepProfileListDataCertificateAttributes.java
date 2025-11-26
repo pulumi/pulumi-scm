@@ -18,10 +18,14 @@ public final class GetScepProfileListDataCertificateAttributes {
     /**
      * @return Rfc822name
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
+     * 
      */
     private String rfc822name;
     /**
      * @return Uniform resource identifier
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     private String uniformResourceIdentifier;
@@ -37,12 +41,16 @@ public final class GetScepProfileListDataCertificateAttributes {
     /**
      * @return Rfc822name
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
+     * 
      */
     public String rfc822name() {
         return this.rfc822name;
     }
     /**
      * @return Uniform resource identifier
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     public String uniformResourceIdentifier() {

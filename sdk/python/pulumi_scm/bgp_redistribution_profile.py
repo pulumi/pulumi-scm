@@ -31,8 +31,12 @@ class BgpRedistributionProfileArgs:
         :param pulumi.Input['BgpRedistributionProfileIpv4Args'] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "ipv4", ipv4)
         if device is not None:
@@ -73,6 +77,8 @@ class BgpRedistributionProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -97,6 +103,8 @@ class BgpRedistributionProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -118,9 +126,13 @@ class _BgpRedistributionProfileState:
         Input properties used for looking up and filtering BgpRedistributionProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['BgpRedistributionProfileIpv4Args'] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if device is not None:
             pulumi.set(__self__, "device", device)
@@ -152,6 +164,8 @@ class _BgpRedistributionProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -188,6 +202,8 @@ class _BgpRedistributionProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -220,13 +236,43 @@ class BgpRedistributionProfile(pulumi.CustomResource):
         """
         BgpRedistributionProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_bgp_redistribution_profile = scm.BgpRedistributionProfile("scm_bgp_redistribution_profile",
+            folder="ngfw-shared",
+            name="scm_bgp_redistribution_profile",
+            ipv4={
+                "unicast": {
+                    "static": {
+                        "enable": True,
+                        "metric": 10,
+                    },
+                    "connected": {
+                        "enable": True,
+                        "metric": 10,
+                    },
+                    "ospf": {
+                        "enable": False,
+                    },
+                },
+            })
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict']] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -236,6 +282,32 @@ class BgpRedistributionProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         BgpRedistributionProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_bgp_redistribution_profile = scm.BgpRedistributionProfile("scm_bgp_redistribution_profile",
+            folder="ngfw-shared",
+            name="scm_bgp_redistribution_profile",
+            ipv4={
+                "unicast": {
+                    "static": {
+                        "enable": True,
+                        "metric": 10,
+                    },
+                    "connected": {
+                        "enable": True,
+                        "metric": 10,
+                    },
+                    "ospf": {
+                        "enable": False,
+                    },
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param BgpRedistributionProfileArgs args: The arguments to use to populate this resource's properties.
@@ -299,9 +371,13 @@ class BgpRedistributionProfile(pulumi.CustomResource):
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['BgpRedistributionProfileIpv4Args', 'BgpRedistributionProfileIpv4ArgsDict']] ipv4: Ipv4
         :param pulumi.Input[_builtins.str] name: Name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -328,6 +404,8 @@ class BgpRedistributionProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -352,6 +430,8 @@ class BgpRedistributionProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

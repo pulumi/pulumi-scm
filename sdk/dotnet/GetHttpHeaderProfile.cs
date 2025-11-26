@@ -83,13 +83,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// A list of HTTP header profile rules
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetHttpHeaderProfileHttpHeaderInsertionResult> HttpHeaderInsertions;
         /// <summary>
         /// The UUID of the HTTP header profile
@@ -99,9 +93,6 @@ namespace Pulumi.Scm
         /// The name of the HTTP header profile
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

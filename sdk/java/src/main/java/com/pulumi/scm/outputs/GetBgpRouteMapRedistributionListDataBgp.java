@@ -19,6 +19,8 @@ public final class GetBgpRouteMapRedistributionListDataBgp {
     /**
      * @return BGP Root RIB
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
+     * 
      */
     private GetBgpRouteMapRedistributionListDataBgpRib rib;
 
@@ -32,6 +34,8 @@ public final class GetBgpRouteMapRedistributionListDataBgp {
     }
     /**
      * @return BGP Root RIB
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ospf` and `rib`.
      * 
      */
     public GetBgpRouteMapRedistributionListDataBgpRib rib() {

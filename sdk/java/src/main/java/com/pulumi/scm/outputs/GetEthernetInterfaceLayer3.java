@@ -40,6 +40,8 @@ public final class GetEthernetInterfaceLayer3 {
     /**
      * @return Ethernet Interface IP addresses
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * 
      */
     private List<GetEthernetInterfaceLayer3Ip> ips;
     /**
@@ -49,6 +51,8 @@ public final class GetEthernetInterfaceLayer3 {
     private Integer mtu;
     /**
      * @return Pppoe
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
     private GetEthernetInterfaceLayer3Pppoe pppoe;
@@ -85,6 +89,8 @@ public final class GetEthernetInterfaceLayer3 {
     /**
      * @return Ethernet Interface IP addresses
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
+     * 
      */
     public List<GetEthernetInterfaceLayer3Ip> ips() {
         return this.ips;
@@ -98,6 +104,8 @@ public final class GetEthernetInterfaceLayer3 {
     }
     /**
      * @return Pppoe
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dhcpClient`, `ip`, and `pppoe`.
      * 
      */
     public GetEthernetInterfaceLayer3Pppoe pppoe() {

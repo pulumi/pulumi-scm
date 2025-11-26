@@ -18,10 +18,14 @@ public final class GetHipObjectListDataHostInfoCriteriaHostId {
     /**
      * @return Is
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+     * 
      */
     private String is;
     /**
      * @return Is not
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     private String isNot;
@@ -37,12 +41,16 @@ public final class GetHipObjectListDataHostInfoCriteriaHostId {
     /**
      * @return Is
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
+     * 
      */
     public String is() {
         return this.is;
     }
     /**
      * @return Is not
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public String isNot() {

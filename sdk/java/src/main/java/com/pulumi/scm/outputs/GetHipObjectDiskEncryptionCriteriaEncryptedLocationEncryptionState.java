@@ -18,6 +18,8 @@ public final class GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryption
     /**
      * @return Is not
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * 
      */
     private String isNot;
 
@@ -31,6 +33,8 @@ public final class GetHipObjectDiskEncryptionCriteriaEncryptedLocationEncryption
     }
     /**
      * @return Is not
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public String isNot() {

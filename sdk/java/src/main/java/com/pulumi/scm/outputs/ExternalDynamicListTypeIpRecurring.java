@@ -23,20 +23,28 @@ public final class ExternalDynamicListTypeIpRecurring {
     /**
      * @return Five minute
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     private @Nullable ExternalDynamicListTypeIpRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeIpRecurringHourly hourly;
     /**
      * @return Monthly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     private @Nullable ExternalDynamicListTypeIpRecurringMonthly monthly;
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeIpRecurringWeekly weekly;
@@ -52,12 +60,16 @@ public final class ExternalDynamicListTypeIpRecurring {
     /**
      * @return Five minute
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     public Optional<ExternalDynamicListTypeIpRecurringFiveMinute> fiveMinute() {
         return Optional.ofNullable(this.fiveMinute);
     }
     /**
      * @return Hourly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<ExternalDynamicListTypeIpRecurringHourly> hourly() {
@@ -66,12 +78,16 @@ public final class ExternalDynamicListTypeIpRecurring {
     /**
      * @return Monthly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     public Optional<ExternalDynamicListTypeIpRecurringMonthly> monthly() {
         return Optional.ofNullable(this.monthly);
     }
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<ExternalDynamicListTypeIpRecurringWeekly> weekly() {

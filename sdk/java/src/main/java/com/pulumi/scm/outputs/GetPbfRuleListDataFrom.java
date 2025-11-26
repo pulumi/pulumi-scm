@@ -19,6 +19,8 @@ public final class GetPbfRuleListDataFrom {
     /**
      * @return Source zones
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
+     * 
      */
     private List<String> zones;
 
@@ -32,6 +34,8 @@ public final class GetPbfRuleListDataFrom {
     }
     /**
      * @return Source zones
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `interface` and `zone`.
      * 
      */
     public List<String> zones() {

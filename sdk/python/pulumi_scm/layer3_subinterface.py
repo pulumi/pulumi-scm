@@ -41,13 +41,21 @@ class Layer3SubinterfaceArgs:
         :param pulumi.Input['Layer3SubinterfaceDdnsConfigArgs'] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['Layer3SubinterfaceDhcpClientArgs'] dhcp_client: Layer3 sub interfaces DHCP Client Object
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]] ips: L3 sub-interface IP Parent
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] tag: VLAN tag
         """
         if arps is not None:
@@ -130,6 +138,8 @@ class Layer3SubinterfaceArgs:
     def dhcp_client(self) -> Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']]:
         """
         Layer3 sub interfaces DHCP Client Object
+
+        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -142,6 +152,8 @@ class Layer3SubinterfaceArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -166,6 +178,8 @@ class Layer3SubinterfaceArgs:
     def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]:
         """
         L3 sub-interface IP Parent
+
+        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "ips")
 
@@ -214,6 +228,8 @@ class Layer3SubinterfaceArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -258,13 +274,21 @@ class _Layer3SubinterfaceState:
         :param pulumi.Input['Layer3SubinterfaceDdnsConfigArgs'] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input['Layer3SubinterfaceDhcpClientArgs'] dhcp_client: Layer3 sub interfaces DHCP Client Object
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]] ips: L3 sub-interface IP Parent
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] tag: VLAN tag
         """
         if arps is not None:
@@ -349,6 +373,8 @@ class _Layer3SubinterfaceState:
     def dhcp_client(self) -> Optional[pulumi.Input['Layer3SubinterfaceDhcpClientArgs']]:
         """
         Layer3 sub interfaces DHCP Client Object
+
+        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -361,6 +387,8 @@ class _Layer3SubinterfaceState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -385,6 +413,8 @@ class _Layer3SubinterfaceState:
     def ips(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['Layer3SubinterfaceIpArgs']]]]:
         """
         L3 sub-interface IP Parent
+
+        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "ips")
 
@@ -433,6 +463,8 @@ class _Layer3SubinterfaceState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -545,13 +577,21 @@ class Layer3Subinterface(pulumi.CustomResource):
         :param pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']] dhcp_client: Layer3 sub interfaces DHCP Client Object
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]] ips: L3 sub-interface IP Parent
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] tag: VLAN tag
         """
         ...
@@ -703,13 +743,21 @@ class Layer3Subinterface(pulumi.CustomResource):
         :param pulumi.Input[Union['Layer3SubinterfaceDdnsConfigArgs', 'Layer3SubinterfaceDdnsConfigArgsDict']] ddns_config: Dynamic DNS configuration specific to the Layer 3 sub Interfaces.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[Union['Layer3SubinterfaceDhcpClientArgs', 'Layer3SubinterfaceDhcpClientArgsDict']] dhcp_client: Layer3 sub interfaces DHCP Client Object
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['Layer3SubinterfaceIpArgs', 'Layer3SubinterfaceIpArgsDict']]]] ips: L3 sub-interface IP Parent
+               
+               > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: L3 sub-interface name
         :param pulumi.Input[_builtins.str] parent_interface: Parent interface
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] tag: VLAN tag
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -769,6 +817,8 @@ class Layer3Subinterface(pulumi.CustomResource):
     def dhcp_client(self) -> pulumi.Output['outputs.Layer3SubinterfaceDhcpClient']:
         """
         Layer3 sub interfaces DHCP Client Object
+
+        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "dhcp_client")
 
@@ -777,6 +827,8 @@ class Layer3Subinterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -793,6 +845,8 @@ class Layer3Subinterface(pulumi.CustomResource):
     def ips(self) -> pulumi.Output[Optional[Sequence['outputs.Layer3SubinterfaceIp']]]:
         """
         L3 sub-interface IP Parent
+
+        > ℹ️ **Note:** You must specify exactly one of `dhcp_client` and `ip`.
         """
         return pulumi.get(self, "ips")
 
@@ -825,6 +879,8 @@ class Layer3Subinterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

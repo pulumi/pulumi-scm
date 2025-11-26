@@ -21,15 +21,21 @@ public final class GetApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Greater than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan;
     /**
      * @return Less than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan;
     /**
      * @return Pattern match
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     private GetApplicationSignatureAndConditionOrConditionOperatorPatternMatch patternMatch;
@@ -45,6 +51,8 @@ public final class GetApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Greater than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorGreaterThan greaterThan() {
         return this.greaterThan;
@@ -52,12 +60,16 @@ public final class GetApplicationSignatureAndConditionOrConditionOperator {
     /**
      * @return Less than
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
+     * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorLessThan lessThan() {
         return this.lessThan;
     }
     /**
      * @return Pattern match
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public GetApplicationSignatureAndConditionOrConditionOperatorPatternMatch patternMatch() {

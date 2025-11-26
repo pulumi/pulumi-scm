@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetLogicalRouterVrfOspfAreaTypeNormalResult Normal;
         /// <summary>
         /// Nssa
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfOspfAreaTypeNssaResult Nssa;
         /// <summary>
         /// Stub
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterVrfOspfAreaTypeStubResult Stub;
 

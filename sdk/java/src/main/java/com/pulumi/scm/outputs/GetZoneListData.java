@@ -45,7 +45,7 @@ public final class GetZoneListData {
      */
     private Boolean enableUserIdentification;
     /**
-     * @return Folder
+     * @return The folder of the item. Default: Shared.
      * 
      */
     private String folder;
@@ -65,7 +65,7 @@ public final class GetZoneListData {
      */
     private GetZoneListDataNetwork network;
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     private String snippet;
@@ -120,7 +120,7 @@ public final class GetZoneListData {
         return this.enableUserIdentification;
     }
     /**
-     * @return Folder
+     * @return The folder of the item. Default: Shared.
      * 
      */
     public String folder() {
@@ -148,7 +148,7 @@ public final class GetZoneListData {
         return this.network;
     }
     /**
-     * @return The snippet in which the resource is defined
+     * @return The snippet of the item.
      * 
      */
     public String snippet() {

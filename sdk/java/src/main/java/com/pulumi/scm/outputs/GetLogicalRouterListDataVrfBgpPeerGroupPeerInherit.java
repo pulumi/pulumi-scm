@@ -19,6 +19,8 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit {
     /**
      * @return Yes
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
+     * 
      */
     private GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes yes;
 
@@ -32,6 +34,8 @@ public final class GetLogicalRouterListDataVrfBgpPeerGroupPeerInherit {
     }
     /**
      * @return Yes
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4`, `no`, and `yes`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpPeerGroupPeerInheritYes yes() {

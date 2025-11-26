@@ -34,12 +34,16 @@ public final class LogicalRouterVrfMulticastPimRpLocalRpArgs extends com.pulumi.
     /**
      * Static rp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
+     * 
      */
     @Import(name="staticRp")
     private @Nullable Output<LogicalRouterVrfMulticastPimRpLocalRpStaticRpArgs> staticRp;
 
     /**
      * @return Static rp
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     public Optional<Output<LogicalRouterVrfMulticastPimRpLocalRpStaticRpArgs>> staticRp() {
@@ -95,6 +99,8 @@ public final class LogicalRouterVrfMulticastPimRpLocalRpArgs extends com.pulumi.
         /**
          * @param staticRp Static rp
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
+         * 
          * @return builder
          * 
          */
@@ -105,6 +111,8 @@ public final class LogicalRouterVrfMulticastPimRpLocalRpArgs extends com.pulumi.
 
         /**
          * @param staticRp Static rp
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
          * 
          * @return builder
          * 

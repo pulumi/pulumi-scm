@@ -24,37 +24,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
-        ///     var testAppOverrideRule = new Scm.AppOverrideRule("test_app_override_rule", new()
-        ///     {
-        ///         Name = "data-source-app-override-test",
-        ///         Description = "Rule created specifically for data source testing.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Application = "ssl",
-        ///         Protocol = "tcp",
-        ///         Port = "8443",
-        ///         Froms = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///     });
-        /// 
         ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
         ///     {
-        ///         Id = testAppOverrideRule.Id,
+        ///         Id = "8c285335-3c95-47c9-9bbd-829105b4a15c",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -80,37 +52,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
-        ///     var testAppOverrideRule = new Scm.AppOverrideRule("test_app_override_rule", new()
-        ///     {
-        ///         Name = "data-source-app-override-test",
-        ///         Description = "Rule created specifically for data source testing.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Application = "ssl",
-        ///         Protocol = "tcp",
-        ///         Port = "8443",
-        ///         Froms = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///     });
-        /// 
         ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
         ///     {
-        ///         Id = testAppOverrideRule.Id,
+        ///         Id = "8c285335-3c95-47c9-9bbd-829105b4a15c",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -136,37 +80,9 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // 1. RESOURCE: Create an Application Override rule to ensure a predictable target for lookups
-        ///     var testAppOverrideRule = new Scm.AppOverrideRule("test_app_override_rule", new()
-        ///     {
-        ///         Name = "data-source-app-override-test",
-        ///         Description = "Rule created specifically for data source testing.",
-        ///         Folder = "All",
-        ///         Position = "pre",
-        ///         Application = "ssl",
-        ///         Protocol = "tcp",
-        ///         Port = "8443",
-        ///         Froms = new[]
-        ///         {
-        ///             "trust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///     });
-        /// 
         ///     var singleRuleById = Scm.GetAppOverrideRule.Invoke(new()
         ///     {
-        ///         Id = testAppOverrideRule.Id,
+        ///         Id = "8c285335-3c95-47c9-9bbd-829105b4a15c",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -241,21 +157,9 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Disabled
-        /// </summary>
         public readonly bool Disabled;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
-        /// <summary>
-        /// From
-        /// </summary>
         public readonly ImmutableArray<string> Froms;
-        /// <summary>
-        /// Group tag
-        /// </summary>
         public readonly string GroupTag;
         /// <summary>
         /// UUID of the resource
@@ -265,50 +169,17 @@ namespace Pulumi.Scm
         /// Name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// Negate destination
-        /// </summary>
         public readonly bool NegateDestination;
-        /// <summary>
-        /// Negate source
-        /// </summary>
         public readonly bool NegateSource;
-        /// <summary>
-        /// Port
-        /// </summary>
         public readonly string Port;
-        /// <summary>
-        /// The position of a security rule
-        /// </summary>
         public readonly string Position;
-        /// <summary>
-        /// Protocol
-        /// </summary>
         public readonly string Protocol;
-        /// <summary>
-        /// Relative positioning rule. String must be one of these: `"before"`, `"after"`, `"top"`, `"bottom"`. If not specified, rule is created at the bottom of the ruleset.
-        /// </summary>
         public readonly string RelativePosition;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Source
-        /// </summary>
         public readonly ImmutableArray<string> Sources;
-        /// <summary>
-        /// Tag
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
-        /// <summary>
-        /// The name or UUID of the rule to position this rule relative to. Required when `RelativePosition` is `"before"` or `"after"`.
-        /// </summary>
         public readonly string TargetRule;
         public readonly string Tfid;
-        /// <summary>
-        /// To
-        /// </summary>
         public readonly ImmutableArray<string> Tos;
 
         [OutputConstructor]

@@ -8,6 +8,24 @@ import * as utilities from "./utilities";
 
 /**
  * BgpAddressFamilyProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up bgp address family profile by its ID.
+ * const scmBgpAddressFamilyProfileDs = scm.getBgpAddressFamilyProfile({
+ *     id: "83ccef34-c29a-4e88-a99b-d0355440174e",
+ * });
+ * export const scmBgpAddressFamilyProfileDsResults = {
+ *     id: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.id),
+ *     name: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.name),
+ *     ipv4: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.ipv4),
+ *     folder: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.folder),
+ * };
+ * ```
  */
 export function getBgpAddressFamilyProfile(args: GetBgpAddressFamilyProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetBgpAddressFamilyProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
@@ -39,30 +57,39 @@ export interface GetBgpAddressFamilyProfileResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * Ipv4
-     */
     readonly ipv4: outputs.GetBgpAddressFamilyProfileIpv4;
     /**
      * Name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * BgpAddressFamilyProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * // Look up bgp address family profile by its ID.
+ * const scmBgpAddressFamilyProfileDs = scm.getBgpAddressFamilyProfile({
+ *     id: "83ccef34-c29a-4e88-a99b-d0355440174e",
+ * });
+ * export const scmBgpAddressFamilyProfileDsResults = {
+ *     id: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.id),
+ *     name: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.name),
+ *     ipv4: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.ipv4),
+ *     folder: scmBgpAddressFamilyProfileDs.then(scmBgpAddressFamilyProfileDs => scmBgpAddressFamilyProfileDs.folder),
+ * };
+ * ```
  */
 export function getBgpAddressFamilyProfileOutput(args: GetBgpAddressFamilyProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetBgpAddressFamilyProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});

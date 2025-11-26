@@ -32,6 +32,9 @@ import javax.annotation.Nullable;
  * import com.pulumi.Context;
  * import com.pulumi.Pulumi;
  * import com.pulumi.core.Output;
+ * import com.pulumi.scm.AggregateInterface;
+ * import com.pulumi.scm.AggregateInterfaceArgs;
+ * import com.pulumi.scm.inputs.AggregateInterfaceLayer2Args;
  * import com.pulumi.scm.EthernetInterface;
  * import com.pulumi.scm.EthernetInterfaceArgs;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer2Args;
@@ -39,6 +42,7 @@ import javax.annotation.Nullable;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3Args;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3DhcpClientArgs;
  * import com.pulumi.scm.inputs.EthernetInterfaceLayer3PppoeArgs;
+ * import com.pulumi.resources.CustomResourceOptions;
  * import java.util.List;
  * import java.util.ArrayList;
  * import java.util.Map;
@@ -52,6 +56,17 @@ import javax.annotation.Nullable;
  *     }
  * 
  *     public static void stack(Context ctx) {
+ *         //
+ *         // Creates various resources used for subsequent examples
+ *         //
+ *         var scmAeIntf = new AggregateInterface("scmAeIntf", AggregateInterfaceArgs.builder()
+ *             .name("$scm_ae_intf")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .layer2(AggregateInterfaceLayer2Args.builder()
+ *                 .build())
+ *             .build());
+ * 
  *         //
  *         // Creates a layer 2 ethernet interface without vlan configuration
  *         //
@@ -162,6 +177,36 @@ import javax.annotation.Nullable;
  *                 .build())
  *             .build());
  * 
+ *         //
+ *         // Creates an ethernet interface assigned to an AggregateEthernet Interface
+ *         //
+ *         var scmAeMember1 = new EthernetInterface("scmAeMember1", EthernetInterfaceArgs.builder()
+ *             .name("$scm_ae_member_1")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .aggregateGroup("$scm_ae_intf")
+ *             .linkSpeed("auto")
+ *             .linkDuplex("full")
+ *             .linkState("auto")
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmAeIntf)
+ *                 .build());
+ * 
+ *         //
+ *         // Creates an ethernet interface assigned to an AggregateEthernet Interface
+ *         //
+ *         var scmAeMember2 = new EthernetInterface("scmAeMember2", EthernetInterfaceArgs.builder()
+ *             .name("$scm_ae_member_2")
+ *             .comment("Managed by Pulumi")
+ *             .folder("ngfw-shared")
+ *             .aggregateGroup("$scm_ae_intf")
+ *             .linkSpeed("auto")
+ *             .linkDuplex("full")
+ *             .linkState("auto")
+ *             .build(), CustomResourceOptions.builder()
+ *                 .dependsOn(scmAeIntf)
+ *                 .build());
+ * 
  *     }
  * }
  * }
@@ -170,6 +215,20 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="scm:index/ethernetInterface:EthernetInterface")
 public class EthernetInterface extends com.pulumi.resources.CustomResource {
+    /**
+     * Aggregate group
+     * 
+     */
+    @Export(name="aggregateGroup", refs={String.class}, tree="[0]")
+    private Output</* @Nullable */ String> aggregateGroup;
+
+    /**
+     * @return Aggregate group
+     * 
+     */
+    public Output<Optional<String>> aggregateGroup() {
+        return Codegen.optional(this.aggregateGroup);
+    }
     /**
      * Interface description
      * 
@@ -201,12 +260,16 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * The device in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="device", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> device;
 
     /**
      * @return The device in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> device() {
@@ -229,12 +292,16 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -243,12 +310,16 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * Layer2
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
+     * 
      */
     @Export(name="layer2", refs={EthernetInterfaceLayer2.class}, tree="[0]")
     private Output</* @Nullable */ EthernetInterfaceLayer2> layer2;
 
     /**
      * @return Layer2
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public Output<Optional<EthernetInterfaceLayer2>> layer2() {
@@ -257,12 +328,16 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * Ethernet Interface Layer 3 configuration
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
+     * 
      */
     @Export(name="layer3", refs={EthernetInterfaceLayer3.class}, tree="[0]")
     private Output<EthernetInterfaceLayer3> layer3;
 
     /**
      * @return Ethernet Interface Layer 3 configuration
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public Output<EthernetInterfaceLayer3> layer3() {
@@ -341,12 +416,16 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {
@@ -355,12 +434,16 @@ public class EthernetInterface extends com.pulumi.resources.CustomResource {
     /**
      * Tap
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
+     * 
      */
     @Export(name="tap", refs={EthernetInterfaceTap.class}, tree="[0]")
     private Output</* @Nullable */ EthernetInterfaceTap> tap;
 
     /**
      * @return Tap
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregateGroup`, `layer2`, `layer3`, and `tap`.
      * 
      */
     public Output<Optional<EthernetInterfaceTap>> tap() {

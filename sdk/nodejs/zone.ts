@@ -134,6 +134,8 @@ export class Zone extends pulumi.CustomResource {
     declare public readonly enableUserIdentification: pulumi.Output<boolean | undefined>;
     /**
      * Folder
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -146,6 +148,8 @@ export class Zone extends pulumi.CustomResource {
     declare public readonly network: pulumi.Output<outputs.ZoneNetwork | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -229,6 +233,8 @@ export interface ZoneState {
     enableUserIdentification?: pulumi.Input<boolean>;
     /**
      * Folder
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -241,6 +247,8 @@ export interface ZoneState {
     network?: pulumi.Input<inputs.ZoneNetwork>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -280,6 +288,8 @@ export interface ZoneArgs {
     enableUserIdentification?: pulumi.Input<boolean>;
     /**
      * Folder
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -292,6 +302,8 @@ export interface ZoneArgs {
     network?: pulumi.Input<inputs.ZoneNetwork>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

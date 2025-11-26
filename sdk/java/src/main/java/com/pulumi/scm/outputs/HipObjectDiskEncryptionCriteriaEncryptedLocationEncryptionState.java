@@ -19,6 +19,8 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     /**
      * @return Is not
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
+     * 
      */
     private @Nullable String isNot;
 
@@ -32,6 +34,8 @@ public final class HipObjectDiskEncryptionCriteriaEncryptedLocationEncryptionSta
     }
     /**
      * @return Is not
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `is` and `isNot`.
      * 
      */
     public Optional<String> isNot() {

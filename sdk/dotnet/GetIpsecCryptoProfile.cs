@@ -148,41 +148,20 @@ namespace Pulumi.Scm
         /// Ah
         /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileAhResult Ah;
-        /// <summary>
-        /// The device in which the resource is defined
-        /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// phase-2 DH group (PFS DH group)
-        /// </summary>
         public readonly string DhGroup;
-        /// <summary>
-        /// Esp
-        /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileEspResult Esp;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Lifesize
-        /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileLifesizeResult Lifesize;
-        /// <summary>
-        /// Ipsec crypto profile lifetime
-        /// </summary>
         public readonly Outputs.GetIpsecCryptoProfileLifetimeResult Lifetime;
         /// <summary>
         /// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 

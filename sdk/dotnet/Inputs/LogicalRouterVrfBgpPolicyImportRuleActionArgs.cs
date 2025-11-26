@@ -20,6 +20,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Deny
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Allow` and `Deny`.
         /// </summary>
         [Input("deny")]
         public Input<Inputs.LogicalRouterVrfBgpPolicyImportRuleActionDenyArgs>? Deny { get; set; }

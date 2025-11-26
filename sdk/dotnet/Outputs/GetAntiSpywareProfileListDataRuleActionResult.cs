@@ -19,26 +19,38 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionAlertResult Alert;
         /// <summary>
         /// Allow
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionAllowResult Allow;
         /// <summary>
         /// anti spyware profiles rules action block ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionBlockIpResult BlockIp;
         /// <summary>
         /// Drop
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionDropResult Drop;
         /// <summary>
         /// Reset both
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionResetBothResult ResetBoth;
         /// <summary>
         /// Reset client
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionResetClientResult ResetClient;
         /// <summary>
         /// Reset server
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Alert`, `Allow`, `BlockIp`, `Drop`, `ResetBoth`, `ResetClient`, and `ResetServer`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareProfileListDataRuleActionResetServerResult ResetServer;
 

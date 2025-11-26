@@ -64,9 +64,6 @@ export interface GetTagResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * The UUID of the tag
@@ -76,9 +73,6 @@ export interface GetTagResult {
      * The name of the tag
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

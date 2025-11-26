@@ -171,6 +171,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/decryptionRule:DecryptionRule example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/decryptionRule:DecryptionRule example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/decryptionRule:DecryptionRule example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/decryptionRule:DecryptionRule")
 public class DecryptionRule extends com.pulumi.resources.CustomResource {
@@ -275,12 +301,16 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
 
     /**
      * @return The folder in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> folder() {
@@ -443,12 +473,16 @@ public class DecryptionRule extends com.pulumi.resources.CustomResource {
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

@@ -67,15 +67,12 @@ type LookupApplicationGroupArgs struct {
 type LookupApplicationGroupResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Members
+	Id      string   `pulumi:"id"`
 	Members []string `pulumi:"members"`
 	// Alphanumeric string [ 0-9a-zA-Z._-]
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -121,7 +118,6 @@ func (o LookupApplicationGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupApplicationGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -131,7 +127,6 @@ func (o LookupApplicationGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Members
 func (o LookupApplicationGroupResultOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) []string { return v.Members }).(pulumi.StringArrayOutput)
 }
@@ -141,7 +136,6 @@ func (o LookupApplicationGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupApplicationGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupApplicationGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

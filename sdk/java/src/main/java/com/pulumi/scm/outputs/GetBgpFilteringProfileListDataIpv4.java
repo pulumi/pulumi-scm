@@ -5,24 +5,37 @@ package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
 import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.GetBgpFilteringProfileListDataIpv4Ipv4;
+import com.pulumi.scm.outputs.GetBgpFilteringProfileListDataIpv4Multicast;
+import com.pulumi.scm.outputs.GetBgpFilteringProfileListDataIpv4Unicast;
 import java.util.Objects;
 
 @CustomType
 public final class GetBgpFilteringProfileListDataIpv4 {
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    private GetBgpFilteringProfileListDataIpv4Ipv4 ipv4;
+    private GetBgpFilteringProfileListDataIpv4Multicast multicast;
+    /**
+     * @return Unicast
+     * 
+     */
+    private GetBgpFilteringProfileListDataIpv4Unicast unicast;
 
     private GetBgpFilteringProfileListDataIpv4() {}
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    public GetBgpFilteringProfileListDataIpv4Ipv4 ipv4() {
-        return this.ipv4;
+    public GetBgpFilteringProfileListDataIpv4Multicast multicast() {
+        return this.multicast;
+    }
+    /**
+     * @return Unicast
+     * 
+     */
+    public GetBgpFilteringProfileListDataIpv4Unicast unicast() {
+        return this.unicast;
     }
 
     public static Builder builder() {
@@ -34,24 +47,35 @@ public final class GetBgpFilteringProfileListDataIpv4 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private GetBgpFilteringProfileListDataIpv4Ipv4 ipv4;
+        private GetBgpFilteringProfileListDataIpv4Multicast multicast;
+        private GetBgpFilteringProfileListDataIpv4Unicast unicast;
         public Builder() {}
         public Builder(GetBgpFilteringProfileListDataIpv4 defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.ipv4 = defaults.ipv4;
+    	      this.multicast = defaults.multicast;
+    	      this.unicast = defaults.unicast;
         }
 
         @CustomType.Setter
-        public Builder ipv4(GetBgpFilteringProfileListDataIpv4Ipv4 ipv4) {
-            if (ipv4 == null) {
-              throw new MissingRequiredPropertyException("GetBgpFilteringProfileListDataIpv4", "ipv4");
+        public Builder multicast(GetBgpFilteringProfileListDataIpv4Multicast multicast) {
+            if (multicast == null) {
+              throw new MissingRequiredPropertyException("GetBgpFilteringProfileListDataIpv4", "multicast");
             }
-            this.ipv4 = ipv4;
+            this.multicast = multicast;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder unicast(GetBgpFilteringProfileListDataIpv4Unicast unicast) {
+            if (unicast == null) {
+              throw new MissingRequiredPropertyException("GetBgpFilteringProfileListDataIpv4", "unicast");
+            }
+            this.unicast = unicast;
             return this;
         }
         public GetBgpFilteringProfileListDataIpv4 build() {
             final var _resultValue = new GetBgpFilteringProfileListDataIpv4();
-            _resultValue.ipv4 = ipv4;
+            _resultValue.multicast = multicast;
+            _resultValue.unicast = unicast;
             return _resultValue;
         }
     }

@@ -71,9 +71,6 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -95,9 +92,6 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -108,9 +102,6 @@ class GetAuthenticationSequenceResult:
     @_builtins.property
     @pulumi.getter(name="useDomainFindProfile")
     def use_domain_find_profile(self) -> _builtins.bool:
-        """
-        Use domain to determine authentication profile?
-        """
         return pulumi.get(self, "use_domain_find_profile")
 
 
@@ -136,6 +127,17 @@ def get_authentication_sequence(id: Optional[_builtins.str] = None,
     """
     AuthenticationSequence data source
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    sequence_data = scm.get_authentication_sequence(id="1ee14ac7-760c-401f-8dbc-c887db16106a")
+    pulumi.export("scmAuthenticationSequence", sequence_data.id)
+    pulumi.export("fetchedSequence", sequence_data)
+    ```
+
 
     :param _builtins.str id: The UUID of the authentication sequence
     :param _builtins.str name: The name of the authentication sequence
@@ -160,6 +162,17 @@ def get_authentication_sequence_output(id: Optional[pulumi.Input[_builtins.str]]
                                        opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetAuthenticationSequenceResult]:
     """
     AuthenticationSequence data source
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    sequence_data = scm.get_authentication_sequence(id="1ee14ac7-760c-401f-8dbc-c887db16106a")
+    pulumi.export("scmAuthenticationSequence", sequence_data.id)
+    pulumi.export("fetchedSequence", sequence_data)
+    ```
 
 
     :param _builtins.str id: The UUID of the authentication sequence

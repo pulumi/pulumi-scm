@@ -51,60 +51,24 @@ public final class GetHipObjectResult {
      * 
      */
     private String device;
-    /**
-     * @return Disk backup
-     * 
-     */
     private GetHipObjectDiskBackup diskBackup;
-    /**
-     * @return Disk encryption
-     * 
-     */
     private GetHipObjectDiskEncryption diskEncryption;
-    /**
-     * @return Firewall
-     * 
-     */
     private GetHipObjectFirewall firewall;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
-    /**
-     * @return Host info
-     * 
-     */
     private GetHipObjectHostInfo hostInfo;
     /**
      * @return UUID of the resource
      * 
      */
     private String id;
-    /**
-     * @return Mobile device
-     * 
-     */
     private GetHipObjectMobileDevice mobileDevice;
     /**
      * @return The name of the HIP object
      * 
      */
     private String name;
-    /**
-     * @return Network info
-     * 
-     */
     private GetHipObjectNetworkInfo networkInfo;
-    /**
-     * @return Patch management
-     * 
-     */
     private GetHipObjectPatchManagement patchManagement;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
 
@@ -151,38 +115,18 @@ public final class GetHipObjectResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Disk backup
-     * 
-     */
     public GetHipObjectDiskBackup diskBackup() {
         return this.diskBackup;
     }
-    /**
-     * @return Disk encryption
-     * 
-     */
     public GetHipObjectDiskEncryption diskEncryption() {
         return this.diskEncryption;
     }
-    /**
-     * @return Firewall
-     * 
-     */
     public GetHipObjectFirewall firewall() {
         return this.firewall;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Host info
-     * 
-     */
     public GetHipObjectHostInfo hostInfo() {
         return this.hostInfo;
     }
@@ -193,10 +137,6 @@ public final class GetHipObjectResult {
     public String id() {
         return this.id;
     }
-    /**
-     * @return Mobile device
-     * 
-     */
     public GetHipObjectMobileDevice mobileDevice() {
         return this.mobileDevice;
     }
@@ -207,24 +147,12 @@ public final class GetHipObjectResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Network info
-     * 
-     */
     public GetHipObjectNetworkInfo networkInfo() {
         return this.networkInfo;
     }
-    /**
-     * @return Patch management
-     * 
-     */
     public GetHipObjectPatchManagement patchManagement() {
         return this.patchManagement;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }

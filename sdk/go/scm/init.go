@@ -39,12 +39,18 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ApplicationFilter{}
 	case "scm:index/applicationGroup:ApplicationGroup":
 		r = &ApplicationGroup{}
+	case "scm:index/authenticationPortal:AuthenticationPortal":
+		r = &AuthenticationPortal{}
 	case "scm:index/authenticationProfile:AuthenticationProfile":
 		r = &AuthenticationProfile{}
 	case "scm:index/authenticationRule:AuthenticationRule":
 		r = &AuthenticationRule{}
 	case "scm:index/authenticationSequence:AuthenticationSequence":
 		r = &AuthenticationSequence{}
+	case "scm:index/autoVpnCluster:AutoVpnCluster":
+		r = &AutoVpnCluster{}
+	case "scm:index/autoVpnSetting:AutoVpnSetting":
+		r = &AutoVpnSetting{}
 	case "scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile":
 		r = &BgpAddressFamilyProfile{}
 	case "scm:index/bgpAuthProfile:BgpAuthProfile":
@@ -57,6 +63,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &BgpRouteMap{}
 	case "scm:index/bgpRouteMapRedistribution:BgpRouteMapRedistribution":
 		r = &BgpRouteMapRedistribution{}
+	case "scm:index/bgpRouting:BgpRouting":
+		r = &BgpRouting{}
 	case "scm:index/certificateProfile:CertificateProfile":
 		r = &CertificateProfile{}
 	case "scm:index/decryptionExclusion:DecryptionExclusion":
@@ -181,6 +189,8 @@ func (m *module) Construct(ctx *pulumi.Context, name, typ, urn string) (r pulumi
 		r = &ServiceConnectionGroup{}
 	case "scm:index/serviceGroup:ServiceGroup":
 		r = &ServiceGroup{}
+	case "scm:index/site:Site":
+		r = &Site{}
 	case "scm:index/snippet:Snippet":
 		r = &Snippet{}
 	case "scm:index/syslogServerProfile:SyslogServerProfile":
@@ -291,6 +301,11 @@ func init() {
 	)
 	pulumi.RegisterResourceModule(
 		"scm",
+		"index/authenticationPortal",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
 		"index/authenticationProfile",
 		&module{version},
 	)
@@ -302,6 +317,16 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/authenticationSequence",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/autoVpnCluster",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/autoVpnSetting",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -332,6 +357,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/bgpRouteMapRedistribution",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/bgpRouting",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(
@@ -642,6 +672,11 @@ func init() {
 	pulumi.RegisterResourceModule(
 		"scm",
 		"index/serviceGroup",
+		&module{version},
+	)
+	pulumi.RegisterResourceModule(
+		"scm",
+		"index/site",
 		&module{version},
 	)
 	pulumi.RegisterResourceModule(

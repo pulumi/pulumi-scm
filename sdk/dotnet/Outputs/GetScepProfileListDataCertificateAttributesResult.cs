@@ -19,10 +19,14 @@ namespace Pulumi.Scm.Outputs
         public readonly string Dnsname;
         /// <summary>
         /// Rfc822name
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dnsname`, `Rfc822name`, and `UniformResourceIdentifier`.
         /// </summary>
         public readonly string Rfc822name;
         /// <summary>
         /// Uniform resource identifier
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dnsname`, `Rfc822name`, and `UniformResourceIdentifier`.
         /// </summary>
         public readonly string UniformResourceIdentifier;
 

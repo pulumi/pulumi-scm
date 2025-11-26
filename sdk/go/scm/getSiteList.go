@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetSiteList(ctx *pulumi.Context, args *GetSiteListArgs, opts ...pulumi.InvokeOption) (*GetSiteListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetSiteListResult

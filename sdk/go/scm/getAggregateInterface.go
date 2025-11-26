@@ -72,17 +72,13 @@ type LookupAggregateInterfaceResult struct {
 	DefaultValue string `pulumi:"defaultValue"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Layer2
+	Id     string                      `pulumi:"id"`
 	Layer2 GetAggregateInterfaceLayer2 `pulumi:"layer2"`
-	// Aggregate Interface Layer 3 configuration
 	Layer3 GetAggregateInterfaceLayer3 `pulumi:"layer3"`
 	// Aggregate interface name
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -138,7 +134,6 @@ func (o LookupAggregateInterfaceResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupAggregateInterfaceResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -148,12 +143,10 @@ func (o LookupAggregateInterfaceResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Layer2
 func (o LookupAggregateInterfaceResultOutput) Layer2() GetAggregateInterfaceLayer2Output {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) GetAggregateInterfaceLayer2 { return v.Layer2 }).(GetAggregateInterfaceLayer2Output)
 }
 
-// Aggregate Interface Layer 3 configuration
 func (o LookupAggregateInterfaceResultOutput) Layer3() GetAggregateInterfaceLayer3Output {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) GetAggregateInterfaceLayer3 { return v.Layer3 }).(GetAggregateInterfaceLayer3Output)
 }
@@ -163,7 +156,6 @@ func (o LookupAggregateInterfaceResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupAggregateInterfaceResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupAggregateInterfaceResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

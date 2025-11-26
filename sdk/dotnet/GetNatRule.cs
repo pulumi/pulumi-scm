@@ -24,46 +24,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define the resource (the item to be created via API POST/PUT)
-        ///     var dnatExternalWebTestCreate = new Scm.NatRule("dnat_external_web_test_create", new()
-        ///     {
-        ///         Name = "DNAT-External-data-src-test_1",
-        ///         Description = "Translate public VIP to internal web server.",
-        ///         Froms = new[]
-        ///         {
-        ///             "zone-untrust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "zone-untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Service = "service-http",
-        ///         Folder = "All",
-        ///         NatType = "ipv4",
-        ///         Position = "pre",
-        ///         DestinationTranslation = new Scm.Inputs.NatRuleDestinationTranslationArgs
-        ///         {
-        ///             TranslatedAddress = "10.1.1.16",
-        ///             TranslatedPort = 112,
-        ///             DnsRewrite = new Scm.Inputs.NatRuleDestinationTranslationDnsRewriteArgs
-        ///             {
-        ///                 Direction = "reverse",
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     // Define the data source (the item to be retrieved via API GET)
         ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
         ///     {
-        ///         Id = dnatExternalWebTestCreate.Id,
+        ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -95,46 +59,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define the resource (the item to be created via API POST/PUT)
-        ///     var dnatExternalWebTestCreate = new Scm.NatRule("dnat_external_web_test_create", new()
-        ///     {
-        ///         Name = "DNAT-External-data-src-test_1",
-        ///         Description = "Translate public VIP to internal web server.",
-        ///         Froms = new[]
-        ///         {
-        ///             "zone-untrust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "zone-untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Service = "service-http",
-        ///         Folder = "All",
-        ///         NatType = "ipv4",
-        ///         Position = "pre",
-        ///         DestinationTranslation = new Scm.Inputs.NatRuleDestinationTranslationArgs
-        ///         {
-        ///             TranslatedAddress = "10.1.1.16",
-        ///             TranslatedPort = 112,
-        ///             DnsRewrite = new Scm.Inputs.NatRuleDestinationTranslationDnsRewriteArgs
-        ///             {
-        ///                 Direction = "reverse",
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     // Define the data source (the item to be retrieved via API GET)
         ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
         ///     {
-        ///         Id = dnatExternalWebTestCreate.Id,
+        ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -166,46 +94,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     // Define the resource (the item to be created via API POST/PUT)
-        ///     var dnatExternalWebTestCreate = new Scm.NatRule("dnat_external_web_test_create", new()
-        ///     {
-        ///         Name = "DNAT-External-data-src-test_1",
-        ///         Description = "Translate public VIP to internal web server.",
-        ///         Froms = new[]
-        ///         {
-        ///             "zone-untrust",
-        ///         },
-        ///         Tos = new[]
-        ///         {
-        ///             "zone-untrust",
-        ///         },
-        ///         Sources = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Destinations = new[]
-        ///         {
-        ///             "any",
-        ///         },
-        ///         Service = "service-http",
-        ///         Folder = "All",
-        ///         NatType = "ipv4",
-        ///         Position = "pre",
-        ///         DestinationTranslation = new Scm.Inputs.NatRuleDestinationTranslationArgs
-        ///         {
-        ///             TranslatedAddress = "10.1.1.16",
-        ///             TranslatedPort = 112,
-        ///             DnsRewrite = new Scm.Inputs.NatRuleDestinationTranslationDnsRewriteArgs
-        ///             {
-        ///                 Direction = "reverse",
-        ///             },
-        ///         },
-        ///     });
-        /// 
         ///     // Define the data source (the item to be retrieved via API GET)
         ///     var dnatExternalWebTestGet = Scm.GetNatRule.Invoke(new()
         ///     {
-        ///         Id = dnatExternalWebTestCreate.Id,
+        ///         Id = "574717ac-8a63-4b6f-bf77-f05a66ba6322",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

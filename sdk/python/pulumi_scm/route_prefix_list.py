@@ -24,17 +24,21 @@ class RoutePrefixListArgs:
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4: Optional[pulumi.Input['RoutePrefixListIpv4Args']] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 snippet: Optional[pulumi.Input[_builtins.str]] = None):
+                 snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input['RoutePrefixListTypeArgs']] = None):
         """
         The set of arguments for constructing a RoutePrefixList resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input['RoutePrefixListIpv4Args'] ipv4: Ipv4
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Filter prefix list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input['RoutePrefixListTypeArgs'] type: Address Family Type
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -42,12 +46,12 @@ class RoutePrefixListArgs:
             pulumi.set(__self__, "device", device)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
-        if ipv4 is not None:
-            pulumi.set(__self__, "ipv4", ipv4)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
+        if type is not None:
+            pulumi.set(__self__, "type", type)
 
     @_builtins.property
     @pulumi.getter
@@ -78,24 +82,14 @@ class RoutePrefixListArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
     def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def ipv4(self) -> Optional[pulumi.Input['RoutePrefixListIpv4Args']]:
-        """
-        Ipv4
-        """
-        return pulumi.get(self, "ipv4")
-
-    @ipv4.setter
-    def ipv4(self, value: Optional[pulumi.Input['RoutePrefixListIpv4Args']]):
-        pulumi.set(self, "ipv4", value)
 
     @_builtins.property
     @pulumi.getter
@@ -114,12 +108,26 @@ class RoutePrefixListArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
     @snippet.setter
     def snippet(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "snippet", value)
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> Optional[pulumi.Input['RoutePrefixListTypeArgs']]:
+        """
+        Address Family Type
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: Optional[pulumi.Input['RoutePrefixListTypeArgs']]):
+        pulumi.set(self, "type", value)
 
 
 @pulumi.input_type
@@ -128,18 +136,22 @@ class _RoutePrefixListState:
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4: Optional[pulumi.Input['RoutePrefixListIpv4Args']] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
-                 tfid: Optional[pulumi.Input[_builtins.str]] = None):
+                 tfid: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input['RoutePrefixListTypeArgs']] = None):
         """
         Input properties used for looking up and filtering RoutePrefixList resources.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input['RoutePrefixListIpv4Args'] ipv4: Ipv4
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Filter prefix list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input['RoutePrefixListTypeArgs'] type: Address Family Type
         """
         if description is not None:
             pulumi.set(__self__, "description", description)
@@ -147,14 +159,14 @@ class _RoutePrefixListState:
             pulumi.set(__self__, "device", device)
         if folder is not None:
             pulumi.set(__self__, "folder", folder)
-        if ipv4 is not None:
-            pulumi.set(__self__, "ipv4", ipv4)
         if name is not None:
             pulumi.set(__self__, "name", name)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
         if tfid is not None:
             pulumi.set(__self__, "tfid", tfid)
+        if type is not None:
+            pulumi.set(__self__, "type", type)
 
     @_builtins.property
     @pulumi.getter
@@ -185,24 +197,14 @@ class _RoutePrefixListState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
     @folder.setter
     def folder(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "folder", value)
-
-    @_builtins.property
-    @pulumi.getter
-    def ipv4(self) -> Optional[pulumi.Input['RoutePrefixListIpv4Args']]:
-        """
-        Ipv4
-        """
-        return pulumi.get(self, "ipv4")
-
-    @ipv4.setter
-    def ipv4(self, value: Optional[pulumi.Input['RoutePrefixListIpv4Args']]):
-        pulumi.set(self, "ipv4", value)
 
     @_builtins.property
     @pulumi.getter
@@ -221,6 +223,8 @@ class _RoutePrefixListState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -237,6 +241,18 @@ class _RoutePrefixListState:
     def tfid(self, value: Optional[pulumi.Input[_builtins.str]]):
         pulumi.set(self, "tfid", value)
 
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> Optional[pulumi.Input['RoutePrefixListTypeArgs']]:
+        """
+        Address Family Type
+        """
+        return pulumi.get(self, "type")
+
+    @type.setter
+    def type(self, value: Optional[pulumi.Input['RoutePrefixListTypeArgs']]):
+        pulumi.set(self, "type", value)
+
 
 @pulumi.type_token("scm:index/routePrefixList:RoutePrefixList")
 class RoutePrefixList(pulumi.CustomResource):
@@ -247,21 +263,49 @@ class RoutePrefixList(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4: Optional[pulumi.Input[Union['RoutePrefixListIpv4Args', 'RoutePrefixListIpv4ArgsDict']]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']]] = None,
                  __props__=None):
         """
         RoutePrefixList resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_route_prefix_list = scm.RoutePrefixList("scm_route_prefix_list",
+            folder="ngfw-shared",
+            name="scm_bgp_prefix_list",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "198.18.1.0/24",
+                        },
+                    }],
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[Union['RoutePrefixListIpv4Args', 'RoutePrefixListIpv4ArgsDict']] ipv4: Ipv4
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Filter prefix list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']] type: Address Family Type
         """
         ...
     @overload
@@ -271,6 +315,30 @@ class RoutePrefixList(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         RoutePrefixList resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_route_prefix_list = scm.RoutePrefixList("scm_route_prefix_list",
+            folder="ngfw-shared",
+            name="scm_bgp_prefix_list",
+            description="Managed by Pulumi",
+            type={
+                "ipv4": {
+                    "ipv4_entries": [{
+                        "name": 10,
+                        "action": "permit",
+                        "prefix": {
+                            "greater_than_or_equal": 24,
+                            "network": "198.18.1.0/24",
+                        },
+                    }],
+                },
+            })
+        ```
 
         :param str resource_name: The name of the resource.
         :param RoutePrefixListArgs args: The arguments to use to populate this resource's properties.
@@ -290,9 +358,9 @@ class RoutePrefixList(pulumi.CustomResource):
                  description: Optional[pulumi.Input[_builtins.str]] = None,
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
-                 ipv4: Optional[pulumi.Input[Union['RoutePrefixListIpv4Args', 'RoutePrefixListIpv4ArgsDict']]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
+                 type: Optional[pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
         if not isinstance(opts, pulumi.ResourceOptions):
@@ -305,9 +373,9 @@ class RoutePrefixList(pulumi.CustomResource):
             __props__.__dict__["description"] = description
             __props__.__dict__["device"] = device
             __props__.__dict__["folder"] = folder
-            __props__.__dict__["ipv4"] = ipv4
             __props__.__dict__["name"] = name
             __props__.__dict__["snippet"] = snippet
+            __props__.__dict__["type"] = type
             __props__.__dict__["tfid"] = None
         super(RoutePrefixList, __self__).__init__(
             'scm:index/routePrefixList:RoutePrefixList',
@@ -322,10 +390,10 @@ class RoutePrefixList(pulumi.CustomResource):
             description: Optional[pulumi.Input[_builtins.str]] = None,
             device: Optional[pulumi.Input[_builtins.str]] = None,
             folder: Optional[pulumi.Input[_builtins.str]] = None,
-            ipv4: Optional[pulumi.Input[Union['RoutePrefixListIpv4Args', 'RoutePrefixListIpv4ArgsDict']]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
-            tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'RoutePrefixList':
+            tfid: Optional[pulumi.Input[_builtins.str]] = None,
+            type: Optional[pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']]] = None) -> 'RoutePrefixList':
         """
         Get an existing RoutePrefixList resource's state with the given name, id, and optional extra
         properties used to qualify the lookup.
@@ -336,9 +404,13 @@ class RoutePrefixList(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-        :param pulumi.Input[Union['RoutePrefixListIpv4Args', 'RoutePrefixListIpv4ArgsDict']] ipv4: Ipv4
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Filter prefix list name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+        :param pulumi.Input[Union['RoutePrefixListTypeArgs', 'RoutePrefixListTypeArgsDict']] type: Address Family Type
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -347,10 +419,10 @@ class RoutePrefixList(pulumi.CustomResource):
         __props__.__dict__["description"] = description
         __props__.__dict__["device"] = device
         __props__.__dict__["folder"] = folder
-        __props__.__dict__["ipv4"] = ipv4
         __props__.__dict__["name"] = name
         __props__.__dict__["snippet"] = snippet
         __props__.__dict__["tfid"] = tfid
+        __props__.__dict__["type"] = type
         return RoutePrefixList(resource_name, opts=opts, __props__=__props__)
 
     @_builtins.property
@@ -374,16 +446,10 @@ class RoutePrefixList(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
-
-    @_builtins.property
-    @pulumi.getter
-    def ipv4(self) -> pulumi.Output[Optional['outputs.RoutePrefixListIpv4']]:
-        """
-        Ipv4
-        """
-        return pulumi.get(self, "ipv4")
 
     @_builtins.property
     @pulumi.getter
@@ -398,6 +464,8 @@ class RoutePrefixList(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -405,4 +473,12 @@ class RoutePrefixList(pulumi.CustomResource):
     @pulumi.getter
     def tfid(self) -> pulumi.Output[_builtins.str]:
         return pulumi.get(self, "tfid")
+
+    @_builtins.property
+    @pulumi.getter
+    def type(self) -> pulumi.Output[Optional['outputs.RoutePrefixListType']]:
+        """
+        Address Family Type
+        """
+        return pulumi.get(self, "type")
 

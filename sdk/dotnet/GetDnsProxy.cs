@@ -87,46 +87,22 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// DNS proxy rules
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetDnsProxyDomainServerResult> DomainServers;
-        /// <summary>
-        /// Enable DNS proxy?
-        /// </summary>
         public readonly bool Enabled;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
-        /// <summary>
-        /// Interfaces on which to enable DNS proxy service
-        /// </summary>
         public readonly ImmutableArray<string> Interfaces;
         /// <summary>
         /// DNS proxy name
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Static entries
-        /// </summary>
         public readonly ImmutableArray<Outputs.GetDnsProxyStaticEntryResult> StaticEntries;
-        /// <summary>
-        /// Tcp queries
-        /// </summary>
         public readonly Outputs.GetDnsProxyTcpQueriesResult TcpQueries;
         public readonly string Tfid;
-        /// <summary>
-        /// Udp queries
-        /// </summary>
         public readonly Outputs.GetDnsProxyUdpQueriesResult UdpQueries;
 
         [OutputConstructor]

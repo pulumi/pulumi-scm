@@ -120,17 +120,11 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter
     def direction(self) -> _builtins.str:
-        """
-        Direction
-        """
         return pulumi.get(self, "direction")
 
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -144,33 +138,21 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter
     def references(self) -> Sequence[_builtins.str]:
-        """
-        Reference
-        """
         return pulumi.get(self, "references")
 
     @_builtins.property
     @pulumi.getter
     def severity(self) -> _builtins.str:
-        """
-        Severity
-        """
         return pulumi.get(self, "severity")
 
     @_builtins.property
     @pulumi.getter
     def signature(self) -> 'outputs.GetAntiSpywareSignatureSignatureResult':
-        """
-        anti spyware signature
-        """
         return pulumi.get(self, "signature")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -181,25 +163,16 @@ class GetAntiSpywareSignatureResult:
     @_builtins.property
     @pulumi.getter(name="threatId")
     def threat_id(self) -> _builtins.str:
-        """
-        threat id range \\n\\n and \\n\\n
-        """
         return pulumi.get(self, "threat_id")
 
     @_builtins.property
     @pulumi.getter
     def threatname(self) -> _builtins.str:
-        """
-        Threatname
-        """
         return pulumi.get(self, "threatname")
 
     @_builtins.property
     @pulumi.getter
     def vendors(self) -> Sequence[_builtins.str]:
-        """
-        Vendor
-        """
         return pulumi.get(self, "vendors")
 
 

@@ -21,10 +21,6 @@ public final class GetVariableResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return UUID of the variable
@@ -36,26 +32,10 @@ public final class GetVariableResult {
      * 
      */
     private String name;
-    /**
-     * @return Is the variable overridden?
-     * 
-     */
     private Boolean overridden;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
     private String tfid;
-    /**
-     * @return The variable type
-     * 
-     */
     private String type;
-    /**
-     * @return The value of the variable
-     * 
-     */
     private String value;
 
     private GetVariableResult() {}
@@ -73,10 +53,6 @@ public final class GetVariableResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -94,34 +70,18 @@ public final class GetVariableResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Is the variable overridden?
-     * 
-     */
     public Boolean overridden() {
         return this.overridden;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
     public String tfid() {
         return this.tfid;
     }
-    /**
-     * @return The variable type
-     * 
-     */
     public String type() {
         return this.type;
     }
-    /**
-     * @return The value of the variable
-     * 
-     */
     public String value() {
         return this.value;
     }

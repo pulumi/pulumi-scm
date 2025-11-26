@@ -24,25 +24,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var scmLabel1 = new Scm.Label("scm_label_1", new()
-        ///     {
-        ///         Name = "scm_label",
-        ///     });
-        /// 
-        ///     var scmSnippet1 = new Scm.Snippet("scm_snippet_1", new()
-        ///     {
-        ///         Name = "scm_snippet",
-        ///         Description = "Adding a Description from Terraform",
-        ///         Labels = new[]
-        ///         {
-        ///             scmLabel1.Name,
-        ///         },
-        ///     });
-        /// 
         ///     // Look up the "scm_snippet" tag by its id
         ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
         ///     {
-        ///         Id = scmSnippet1.Id,
+        ///         Id = "b4811c43-e5f9-4b28-8316-7f18f97ba244",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -74,25 +59,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var scmLabel1 = new Scm.Label("scm_label_1", new()
-        ///     {
-        ///         Name = "scm_label",
-        ///     });
-        /// 
-        ///     var scmSnippet1 = new Scm.Snippet("scm_snippet_1", new()
-        ///     {
-        ///         Name = "scm_snippet",
-        ///         Description = "Adding a Description from Terraform",
-        ///         Labels = new[]
-        ///         {
-        ///             scmLabel1.Name,
-        ///         },
-        ///     });
-        /// 
         ///     // Look up the "scm_snippet" tag by its id
         ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
         ///     {
-        ///         Id = scmSnippet1.Id,
+        ///         Id = "b4811c43-e5f9-4b28-8316-7f18f97ba244",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;
@@ -124,25 +94,10 @@ namespace Pulumi.Scm
         /// 
         /// return await Deployment.RunAsync(() =&gt; 
         /// {
-        ///     var scmLabel1 = new Scm.Label("scm_label_1", new()
-        ///     {
-        ///         Name = "scm_label",
-        ///     });
-        /// 
-        ///     var scmSnippet1 = new Scm.Snippet("scm_snippet_1", new()
-        ///     {
-        ///         Name = "scm_snippet",
-        ///         Description = "Adding a Description from Terraform",
-        ///         Labels = new[]
-        ///         {
-        ///             scmLabel1.Name,
-        ///         },
-        ///     });
-        /// 
         ///     // Look up the "scm_snippet" tag by its id
         ///     var scmSnippetOutputsDs = Scm.GetSnippet.Invoke(new()
         ///     {
-        ///         Id = scmSnippet1.Id,
+        ///         Id = "b4811c43-e5f9-4b28-8316-7f18f97ba244",
         ///     });
         /// 
         ///     return new Dictionary&lt;string, object?&gt;

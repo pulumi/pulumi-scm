@@ -24,7 +24,7 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// An auto-generated name (*This should be removed*)
         /// </summary>
-        public readonly string Name;
+        public readonly string? Name;
         /// <summary>
         /// The value associated with the HTTP header
         /// </summary>
@@ -36,7 +36,7 @@ namespace Pulumi.Scm.Outputs
 
             bool? log,
 
-            string name,
+            string? name,
 
             string value)
         {

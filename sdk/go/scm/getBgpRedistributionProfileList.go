@@ -12,6 +12,8 @@ import (
 )
 
 // Retrieves a listing of config items.
+//
+// ## Example Usage
 func GetBgpRedistributionProfileList(ctx *pulumi.Context, args *GetBgpRedistributionProfileListArgs, opts ...pulumi.InvokeOption) (*GetBgpRedistributionProfileListResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)
 	var rv GetBgpRedistributionProfileListResult

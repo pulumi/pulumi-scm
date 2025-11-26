@@ -39,12 +39,16 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
     /**
      * Allow
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="allow")
     private @Nullable Output<AntiSpywareSignatureDefaultActionAllowArgs> allow;
 
     /**
      * @return Allow
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareSignatureDefaultActionAllowArgs>> allow() {
@@ -54,12 +58,16 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
     /**
      * anti spyware signature block ip
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="blockIp")
     private @Nullable Output<AntiSpywareSignatureDefaultActionBlockIpArgs> blockIp;
 
     /**
      * @return anti spyware signature block ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareSignatureDefaultActionBlockIpArgs>> blockIp() {
@@ -69,12 +77,16 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
     /**
      * Drop
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="drop")
     private @Nullable Output<AntiSpywareSignatureDefaultActionDropArgs> drop;
 
     /**
      * @return Drop
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareSignatureDefaultActionDropArgs>> drop() {
@@ -84,12 +96,16 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
     /**
      * Reset both
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="resetBoth")
     private @Nullable Output<AntiSpywareSignatureDefaultActionResetBothArgs> resetBoth;
 
     /**
      * @return Reset both
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareSignatureDefaultActionResetBothArgs>> resetBoth() {
@@ -99,12 +115,16 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
     /**
      * Reset client
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="resetClient")
     private @Nullable Output<AntiSpywareSignatureDefaultActionResetClientArgs> resetClient;
 
     /**
      * @return Reset client
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareSignatureDefaultActionResetClientArgs>> resetClient() {
@@ -114,12 +134,16 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
     /**
      * Reset server
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+     * 
      */
     @Import(name="resetServer")
     private @Nullable Output<AntiSpywareSignatureDefaultActionResetServerArgs> resetServer;
 
     /**
      * @return Reset server
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
      * 
      */
     public Optional<Output<AntiSpywareSignatureDefaultActionResetServerArgs>> resetServer() {
@@ -180,6 +204,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
         /**
          * @param allow Allow
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -191,6 +217,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
         /**
          * @param allow Allow
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -200,6 +228,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
 
         /**
          * @param blockIp anti spyware signature block ip
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -212,6 +242,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
         /**
          * @param blockIp anti spyware signature block ip
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -221,6 +253,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
 
         /**
          * @param drop Drop
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -233,6 +267,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
         /**
          * @param drop Drop
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -242,6 +278,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
 
         /**
          * @param resetBoth Reset both
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -254,6 +292,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
         /**
          * @param resetBoth Reset both
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -263,6 +303,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
 
         /**
          * @param resetClient Reset client
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -275,6 +317,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
         /**
          * @param resetClient Reset client
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
+         * 
          * @return builder
          * 
          */
@@ -284,6 +328,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
 
         /**
          * @param resetServer Reset server
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 
@@ -295,6 +341,8 @@ public final class AntiSpywareSignatureDefaultActionArgs extends com.pulumi.reso
 
         /**
          * @param resetServer Reset server
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `blockIp`, `drop`, `resetBoth`, `resetClient`, and `resetServer`.
          * 
          * @return builder
          * 

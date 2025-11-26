@@ -37,12 +37,16 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
     /**
      * Sha1
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     @Import(name="sha1")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileAhSha1Args> sha1;
 
     /**
      * @return Sha1
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileAhSha1Args>> sha1() {
@@ -52,12 +56,16 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
     /**
      * Sha256
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     @Import(name="sha256")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileAhSha256Args> sha256;
 
     /**
      * @return Sha256
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileAhSha256Args>> sha256() {
@@ -67,12 +75,16 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
     /**
      * Sha384
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     @Import(name="sha384")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileAhSha384Args> sha384;
 
     /**
      * @return Sha384
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileAhSha384Args>> sha384() {
@@ -82,12 +94,16 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
     /**
      * Sha512
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+     * 
      */
     @Import(name="sha512")
     private @Nullable Output<LogicalRouterVrfOspfv3AuthProfileAhSha512Args> sha512;
 
     /**
      * @return Sha512
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
      * 
      */
     public Optional<Output<LogicalRouterVrfOspfv3AuthProfileAhSha512Args>> sha512() {
@@ -146,6 +162,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
         /**
          * @param sha1 Sha1
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+         * 
          * @return builder
          * 
          */
@@ -157,6 +175,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
         /**
          * @param sha1 Sha1
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+         * 
          * @return builder
          * 
          */
@@ -166,6 +186,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
 
         /**
          * @param sha256 Sha256
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 
@@ -178,6 +200,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
         /**
          * @param sha256 Sha256
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+         * 
          * @return builder
          * 
          */
@@ -187,6 +211,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
 
         /**
          * @param sha384 Sha384
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 
@@ -199,6 +225,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
         /**
          * @param sha384 Sha384
          * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
+         * 
          * @return builder
          * 
          */
@@ -208,6 +236,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
 
         /**
          * @param sha512 Sha512
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 
@@ -219,6 +249,8 @@ public final class LogicalRouterVrfOspfv3AuthProfileAhArgs extends com.pulumi.re
 
         /**
          * @param sha512 Sha512
+         * 
+         * &gt; ℹ️ **Note:** You must specify exactly one of `md5`, `sha1`, `sha256`, `sha384`, and `sha512`.
          * 
          * @return builder
          * 

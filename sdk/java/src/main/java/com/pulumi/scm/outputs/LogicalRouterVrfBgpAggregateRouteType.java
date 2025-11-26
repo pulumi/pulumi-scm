@@ -20,6 +20,8 @@ public final class LogicalRouterVrfBgpAggregateRouteType {
     /**
      * @return Ipv6
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
+     * 
      */
     private @Nullable LogicalRouterVrfBgpAggregateRouteTypeIpv6 ipv6;
 
@@ -33,6 +35,8 @@ public final class LogicalRouterVrfBgpAggregateRouteType {
     }
     /**
      * @return Ipv6
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `ipv4` and `ipv6`.
      * 
      */
     public Optional<LogicalRouterVrfBgpAggregateRouteTypeIpv6> ipv6() {

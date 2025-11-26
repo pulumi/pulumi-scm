@@ -20,6 +20,8 @@ public final class DhcpInterfaceServerOptionLease {
     /**
      * @return Unlimited
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
+     * 
      */
     private @Nullable DhcpInterfaceServerOptionLeaseUnlimited unlimited;
 
@@ -33,6 +35,8 @@ public final class DhcpInterfaceServerOptionLease {
     }
     /**
      * @return Unlimited
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `timeout` and `unlimited`.
      * 
      */
     public Optional<DhcpInterfaceServerOptionLeaseUnlimited> unlimited() {

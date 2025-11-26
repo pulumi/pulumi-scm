@@ -19,15 +19,7 @@ public final class GetHttpServerProfileResult {
      * 
      */
     private String device;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
-    /**
-     * @return Format
-     * 
-     */
     private GetHttpServerProfileFormat format;
     /**
      * @return The UUID of the HTTP server profile
@@ -39,20 +31,8 @@ public final class GetHttpServerProfileResult {
      * 
      */
     private String name;
-    /**
-     * @return Server
-     * 
-     */
     private List<GetHttpServerProfileServer> servers;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Register tags on match
-     * 
-     */
     private Boolean tagRegistration;
     private String tfid;
 
@@ -64,17 +44,9 @@ public final class GetHttpServerProfileResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
-    /**
-     * @return Format
-     * 
-     */
     public GetHttpServerProfileFormat format() {
         return this.format;
     }
@@ -92,24 +64,12 @@ public final class GetHttpServerProfileResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return Server
-     * 
-     */
     public List<GetHttpServerProfileServer> servers() {
         return this.servers;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Register tags on match
-     * 
-     */
     public Boolean tagRegistration() {
         return this.tagRegistration;
     }

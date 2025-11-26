@@ -23,6 +23,17 @@ namespace Pulumi.Scm
     /// return await Deployment.RunAsync(() =&gt; 
     /// {
     ///     //
+    ///     // Creates various resources used for subsequent examples
+    ///     //
+    ///     var scmAeIntf = new Scm.AggregateInterface("scm_ae_intf", new()
+    ///     {
+    ///         Name = "$scm_ae_intf",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         Layer2 = null,
+    ///     });
+    /// 
+    ///     //
     ///     // Creates a layer 2 ethernet interface without vlan configuration
     ///     //
     ///     var scmL2Intf = new Scm.EthernetInterface("scm_l2_intf", new()
@@ -150,12 +161,58 @@ namespace Pulumi.Scm
     ///         },
     ///     });
     /// 
+    ///     //
+    ///     // Creates an ethernet interface assigned to an AggregateEthernet Interface
+    ///     //
+    ///     var scmAeMember1 = new Scm.EthernetInterface("scm_ae_member_1", new()
+    ///     {
+    ///         Name = "$scm_ae_member_1",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         AggregateGroup = "$scm_ae_intf",
+    ///         LinkSpeed = "auto",
+    ///         LinkDuplex = "full",
+    ///         LinkState = "auto",
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmAeIntf,
+    ///         },
+    ///     });
+    /// 
+    ///     //
+    ///     // Creates an ethernet interface assigned to an AggregateEthernet Interface
+    ///     //
+    ///     var scmAeMember2 = new Scm.EthernetInterface("scm_ae_member_2", new()
+    ///     {
+    ///         Name = "$scm_ae_member_2",
+    ///         Comment = "Managed by Pulumi",
+    ///         Folder = "ngfw-shared",
+    ///         AggregateGroup = "$scm_ae_intf",
+    ///         LinkSpeed = "auto",
+    ///         LinkDuplex = "full",
+    ///         LinkState = "auto",
+    ///     }, new CustomResourceOptions
+    ///     {
+    ///         DependsOn =
+    ///         {
+    ///             scmAeIntf,
+    ///         },
+    ///     });
+    /// 
     /// });
     /// ```
     /// </summary>
     [ScmResourceType("scm:index/ethernetInterface:EthernetInterface")]
     public partial class EthernetInterface : global::Pulumi.CustomResource
     {
+        /// <summary>
+        /// Aggregate group
+        /// </summary>
+        [Output("aggregateGroup")]
+        public Output<string?> AggregateGroup { get; private set; } = null!;
+
         /// <summary>
         /// Interface description
         /// </summary>
@@ -170,6 +227,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
@@ -182,18 +241,24 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
 
         /// <summary>
         /// Layer2
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("layer2")]
         public Output<Outputs.EthernetInterfaceLayer2?> Layer2 { get; private set; } = null!;
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("layer3")]
         public Output<Outputs.EthernetInterfaceLayer3> Layer3 { get; private set; } = null!;
@@ -230,12 +295,16 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
 
         /// <summary>
         /// Tap
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Output("tap")]
         public Output<Outputs.EthernetInterfaceTap?> Tap { get; private set; } = null!;
@@ -294,6 +363,12 @@ namespace Pulumi.Scm
     public sealed class EthernetInterfaceArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
+        /// Aggregate group
+        /// </summary>
+        [Input("aggregateGroup")]
+        public Input<string>? AggregateGroup { get; set; }
+
+        /// <summary>
         /// Interface description
         /// </summary>
         [Input("comment")]
@@ -307,24 +382,32 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
         /// Layer2
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer2")]
         public Input<Inputs.EthernetInterfaceLayer2Args>? Layer2 { get; set; }
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer3")]
         public Input<Inputs.EthernetInterfaceLayer3Args>? Layer3 { get; set; }
@@ -361,12 +444,16 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
         /// Tap
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("tap")]
         public Input<Inputs.EthernetInterfaceTapArgs>? Tap { get; set; }
@@ -379,6 +466,12 @@ namespace Pulumi.Scm
 
     public sealed class EthernetInterfaceState : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// Aggregate group
+        /// </summary>
+        [Input("aggregateGroup")]
+        public Input<string>? AggregateGroup { get; set; }
+
         /// <summary>
         /// Interface description
         /// </summary>
@@ -393,6 +486,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
@@ -415,18 +510,24 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
 
         /// <summary>
         /// Layer2
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer2")]
         public Input<Inputs.EthernetInterfaceLayer2GetArgs>? Layer2 { get; set; }
 
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("layer3")]
         public Input<Inputs.EthernetInterfaceLayer3GetArgs>? Layer3 { get; set; }
@@ -463,12 +564,16 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
 
         /// <summary>
         /// Tap
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         [Input("tap")]
         public Input<Inputs.EthernetInterfaceTapGetArgs>? Tap { get; set; }

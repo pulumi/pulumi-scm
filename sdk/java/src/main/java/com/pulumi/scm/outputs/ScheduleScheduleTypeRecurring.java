@@ -21,6 +21,8 @@ public final class ScheduleScheduleTypeRecurring {
     /**
      * @return Weekly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
+     * 
      */
     private @Nullable ScheduleScheduleTypeRecurringWeekly weekly;
 
@@ -34,6 +36,8 @@ public final class ScheduleScheduleTypeRecurring {
     }
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily` and `weekly`.
      * 
      */
     public Optional<ScheduleScheduleTypeRecurringWeekly> weekly() {

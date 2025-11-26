@@ -57,30 +57,18 @@ export interface GetUrlCategoryResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
-    /**
-     * List
-     */
     readonly lists: string[];
     /**
      * Name
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Type
-     */
     readonly type: string;
 }
 /**

@@ -165,6 +165,20 @@ def get_file_blocking_profile_list(device: Optional[_builtins.str] = None,
     """
     Retrieves a listing of config items.
 
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM File Blocking Profile objects.
+    #
+    # Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+    all_shared = scm.get_file_blocking_profile_list(folder="All")
+    pulumi.export("scmFileBlockingProfileAllShared", all_shared.datas)
+    ```
+
 
     :param _builtins.str device: The device of the item.
     :param _builtins.str folder: The folder of the item. Default: Shared.
@@ -203,6 +217,20 @@ def get_file_blocking_profile_list_output(device: Optional[pulumi.Input[Optional
                                           opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetFileBlockingProfileListResult]:
     """
     Retrieves a listing of config items.
+
+    ## Example Usage
+
+    ```python
+    import pulumi
+    import pulumi_scm as scm
+
+    #
+    # Data source to retrieve a list of SCM File Blocking Profile objects.
+    #
+    # Fetch a list of all SCM File Blocking Profile in the "Shared" folder.
+    all_shared = scm.get_file_blocking_profile_list(folder="All")
+    pulumi.export("scmFileBlockingProfileAllShared", all_shared.datas)
+    ```
 
 
     :param _builtins.str device: The device of the item.

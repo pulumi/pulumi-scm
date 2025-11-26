@@ -8,6 +8,31 @@ import * as utilities from "./utilities";
 
 /**
  * RoutePrefixList resource
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const scmRoutePrefixList = new scm.RoutePrefixList("scm_route_prefix_list", {
+ *     folder: "ngfw-shared",
+ *     name: "scm_bgp_prefix_list",
+ *     description: "Managed by Pulumi",
+ *     type: {
+ *         ipv4: {
+ *             ipv4Entries: [{
+ *                 name: 10,
+ *                 action: "permit",
+ *                 prefix: {
+ *                     greaterThanOrEqual: 24,
+ *                     network: "198.18.1.0/24",
+ *                 },
+ *             }],
+ *         },
+ *     },
+ * });
+ * ```
  */
 export class RoutePrefixList extends pulumi.CustomResource {
     /**
@@ -47,21 +72,25 @@ export class RoutePrefixList extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
-    /**
-     * Ipv4
-     */
-    declare public readonly ipv4: pulumi.Output<outputs.RoutePrefixListIpv4 | undefined>;
     /**
      * Filter prefix list name
      */
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
+    /**
+     * Address Family Type
+     */
+    declare public readonly type: pulumi.Output<outputs.RoutePrefixListType | undefined>;
 
     /**
      * Create a RoutePrefixList resource with the given unique name, arguments, and options.
@@ -79,18 +108,18 @@ export class RoutePrefixList extends pulumi.CustomResource {
             resourceInputs["description"] = state?.description;
             resourceInputs["device"] = state?.device;
             resourceInputs["folder"] = state?.folder;
-            resourceInputs["ipv4"] = state?.ipv4;
             resourceInputs["name"] = state?.name;
             resourceInputs["snippet"] = state?.snippet;
             resourceInputs["tfid"] = state?.tfid;
+            resourceInputs["type"] = state?.type;
         } else {
             const args = argsOrState as RoutePrefixListArgs | undefined;
             resourceInputs["description"] = args?.description;
             resourceInputs["device"] = args?.device;
             resourceInputs["folder"] = args?.folder;
-            resourceInputs["ipv4"] = args?.ipv4;
             resourceInputs["name"] = args?.name;
             resourceInputs["snippet"] = args?.snippet;
+            resourceInputs["type"] = args?.type;
             resourceInputs["tfid"] = undefined /*out*/;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
@@ -112,21 +141,25 @@ export interface RoutePrefixListState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
-    /**
-     * Ipv4
-     */
-    ipv4?: pulumi.Input<inputs.RoutePrefixListIpv4>;
     /**
      * Filter prefix list name
      */
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
+    /**
+     * Address Family Type
+     */
+    type?: pulumi.Input<inputs.RoutePrefixListType>;
 }
 
 /**
@@ -143,18 +176,22 @@ export interface RoutePrefixListArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
-    /**
-     * Ipv4
-     */
-    ipv4?: pulumi.Input<inputs.RoutePrefixListIpv4>;
     /**
      * Filter prefix list name
      */
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
+    /**
+     * Address Family Type
+     */
+    type?: pulumi.Input<inputs.RoutePrefixListType>;
 }

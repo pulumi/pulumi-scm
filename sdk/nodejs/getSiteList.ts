@@ -8,6 +8,20 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allSites = scm.getSiteList({
+ *     limit: 50,
+ *     folder: "Remote Networks",
+ * });
+ * export const listOfAllConnectionNames = allSites.then(allSites => .map(conn => (conn.name)));
+ * export const totalConnectionsCount = allSites.then(allSites => allSites.datas).length;
+ * ```
  */
 export function getSiteList(args?: GetSiteListArgs, opts?: pulumi.InvokeOptions): Promise<GetSiteListResult> {
     args = args || {};
@@ -96,6 +110,20 @@ export interface GetSiteListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * const allSites = scm.getSiteList({
+ *     limit: 50,
+ *     folder: "Remote Networks",
+ * });
+ * export const listOfAllConnectionNames = allSites.then(allSites => .map(conn => (conn.name)));
+ * export const totalConnectionsCount = allSites.then(allSites => allSites.datas).length;
+ * ```
  */
 export function getSiteListOutput(args?: GetSiteListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSiteListResult> {
     args = args || {};

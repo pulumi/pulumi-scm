@@ -26,6 +26,8 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Recurring
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NonRecurring` and `Recurring`.
         /// </summary>
         [Input("recurring")]
         public Input<Inputs.ScheduleScheduleTypeRecurringGetArgs>? Recurring { get; set; }

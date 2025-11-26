@@ -25,30 +25,42 @@ public final class ExternalDynamicListType {
     /**
      * @return Imei
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     private @Nullable ExternalDynamicListTypeImei imei;
     /**
      * @return Imsi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeImsi imsi;
     /**
      * @return Ip
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     private @Nullable ExternalDynamicListTypeIp ip;
     /**
      * @return Predefined ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypePredefinedIp predefinedIp;
     /**
      * @return Predefined url
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     private @Nullable ExternalDynamicListTypePredefinedUrl predefinedUrl;
     /**
      * @return Url
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     private @Nullable ExternalDynamicListTypeUrl url;
@@ -64,12 +76,16 @@ public final class ExternalDynamicListType {
     /**
      * @return Imei
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     public Optional<ExternalDynamicListTypeImei> imei() {
         return Optional.ofNullable(this.imei);
     }
     /**
      * @return Imsi
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public Optional<ExternalDynamicListTypeImsi> imsi() {
@@ -78,12 +94,16 @@ public final class ExternalDynamicListType {
     /**
      * @return Ip
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     public Optional<ExternalDynamicListTypeIp> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
      * @return Predefined ip
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public Optional<ExternalDynamicListTypePredefinedIp> predefinedIp() {
@@ -92,12 +112,16 @@ public final class ExternalDynamicListType {
     /**
      * @return Predefined url
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
+     * 
      */
     public Optional<ExternalDynamicListTypePredefinedUrl> predefinedUrl() {
         return Optional.ofNullable(this.predefinedUrl);
     }
     /**
      * @return Url
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `domain`, `imei`, `imsi`, `ip`, `predefinedIp`, `predefinedUrl`, and `url`.
      * 
      */
     public Optional<ExternalDynamicListTypeUrl> url() {

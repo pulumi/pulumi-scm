@@ -27,7 +27,7 @@ namespace Pulumi.Scm
     ///     // The values are taken from the 'createTestIKECryptoProfile' helper function.
     ///     var example = new Scm.IkeCryptoProfile("example", new()
     ///     {
-    ///         Name = "example-ike-crypto-prf-for-rn",
+    ///         Name = "example-ike-crypto-11",
     ///         Folder = "Remote Networks",
     ///         Hashes = new[]
     ///         {
@@ -48,7 +48,7 @@ namespace Pulumi.Scm
     ///     // The values are taken from the 'createTestIKEGateway' helper function.
     ///     var exampleIkeGateway = new Scm.IkeGateway("example", new()
     ///     {
-    ///         Name = "example-ike-gateway-for-rn",
+    ///         Name = "example-ike-gateway-11",
     ///         Folder = "Remote Networks",
     ///         Authentication = new Scm.Inputs.IkeGatewayAuthenticationArgs
     ///         {
@@ -81,7 +81,7 @@ namespace Pulumi.Scm
     ///     // The values are taken from the 'createTestIPsecTunnel' helper function.
     ///     var exampleIpsecTunnel = new Scm.IpsecTunnel("example", new()
     ///     {
-    ///         Name = "example-ipsec-tunnel-for-rn",
+    ///         Name = "example-ipsec-tunnel-11",
     ///         Folder = "Remote Networks",
     ///         AntiReplay = true,
     ///         CopyTos = false,
@@ -110,7 +110,7 @@ namespace Pulumi.Scm
     ///     // The values are taken directly from the 'Test_deployment_services_RemoteNetworksAPIService_Create' test.
     ///     var exampleRemoteNetwork = new Scm.RemoteNetwork("example", new()
     ///     {
-    ///         Name = "example-remote-network",
+    ///         Name = "example-remote-network-11",
     ///         Folder = "Remote Networks",
     ///         LicenseType = "FWAAS-AGGREGATE",
     ///         Region = "us-west-2",

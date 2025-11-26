@@ -173,13 +173,7 @@ namespace Pulumi.Scm
         /// The device in which the resource is defined
         /// </summary>
         public readonly string Device;
-        /// <summary>
-        /// Dynamic
-        /// </summary>
         public readonly Outputs.GetAddressGroupDynamicResult Dynamic;
-        /// <summary>
-        /// The folder in which the resource is defined
-        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// The UUID of the address group
@@ -189,17 +183,8 @@ namespace Pulumi.Scm
         /// The name of the address group
         /// </summary>
         public readonly string Name;
-        /// <summary>
-        /// The snippet in which the resource is defined
-        /// </summary>
         public readonly string Snippet;
-        /// <summary>
-        /// Static
-        /// </summary>
         public readonly ImmutableArray<string> Statics;
-        /// <summary>
-        /// Tags for address group object
-        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 

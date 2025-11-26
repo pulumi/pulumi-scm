@@ -20,6 +20,8 @@ public final class ServiceProtocol {
     /**
      * @return Udp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
+     * 
      */
     private @Nullable ServiceProtocolUdp udp;
 
@@ -33,6 +35,8 @@ public final class ServiceProtocol {
     }
     /**
      * @return Udp
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `tcp` and `udp`.
      * 
      */
     public Optional<ServiceProtocolUdp> udp() {

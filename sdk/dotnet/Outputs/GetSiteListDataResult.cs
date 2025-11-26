@@ -36,11 +36,15 @@ namespace Pulumi.Scm.Outputs
         /// <summary>
         /// The latitude coordinate for the site
         /// </summary>
-        public readonly double Latitude;
+        public readonly string Latitude;
+        /// <summary>
+        /// The license type of the site
+        /// </summary>
+        public readonly string LicenseType;
         /// <summary>
         /// The longitude coordinate for the site
         /// </summary>
-        public readonly double Longitude;
+        public readonly string Longitude;
         /// <summary>
         /// Members
         /// </summary>
@@ -79,9 +83,11 @@ namespace Pulumi.Scm.Outputs
 
             string id,
 
-            double latitude,
+            string latitude,
 
-            double longitude,
+            string licenseType,
+
+            string longitude,
 
             ImmutableArray<Outputs.GetSiteListDataMemberResult> members,
 
@@ -103,6 +109,7 @@ namespace Pulumi.Scm.Outputs
             Country = country;
             Id = id;
             Latitude = latitude;
+            LicenseType = licenseType;
             Longitude = longitude;
             Members = members;
             Name = name;

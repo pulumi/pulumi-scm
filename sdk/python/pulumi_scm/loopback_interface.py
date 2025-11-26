@@ -37,12 +37,16 @@ class LoopbackInterfaceArgs:
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpArgs']]] ips: Loopback IP Parent
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
@@ -106,6 +110,8 @@ class LoopbackInterfaceArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -178,6 +184,8 @@ class LoopbackInterfaceArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -206,12 +214,16 @@ class _LoopbackInterfaceState:
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input['LoopbackInterfaceIpArgs']]] ips: Loopback IP Parent
         :param pulumi.Input['LoopbackInterfaceIpv6Args'] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if comment is not None:
             pulumi.set(__self__, "comment", comment)
@@ -277,6 +289,8 @@ class _LoopbackInterfaceState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -349,6 +363,8 @@ class _LoopbackInterfaceState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 
@@ -421,12 +437,16 @@ class LoopbackInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]] ips: Loopback IP Parent
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
@@ -543,12 +563,16 @@ class LoopbackInterface(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] default_value: Default interface assignment
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] interface_management_profile: Interface management profile
         :param pulumi.Input[Sequence[pulumi.Input[Union['LoopbackInterfaceIpArgs', 'LoopbackInterfaceIpArgsDict']]]] ips: Loopback IP Parent
         :param pulumi.Input[Union['LoopbackInterfaceIpv6Args', 'LoopbackInterfaceIpv6ArgsDict']] ipv6: Loopback IPv6 Configuration
         :param pulumi.Input[_builtins.int] mtu: MTU
         :param pulumi.Input[_builtins.str] name: Loopback Interface name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
+               
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
 
@@ -596,6 +620,8 @@ class LoopbackInterface(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
 
@@ -644,6 +670,8 @@ class LoopbackInterface(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
+
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
 

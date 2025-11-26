@@ -19,6 +19,8 @@ public final class GetDosProtectionRuleProtection {
     /**
      * @return Classified
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
+     * 
      */
     private GetDosProtectionRuleProtectionClassified classified;
 
@@ -32,6 +34,8 @@ public final class GetDosProtectionRuleProtection {
     }
     /**
      * @return Classified
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `aggregate` and `classified`.
      * 
      */
     public GetDosProtectionRuleProtectionClassified classified() {

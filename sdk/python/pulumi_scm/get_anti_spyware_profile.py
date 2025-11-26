@@ -95,9 +95,6 @@ class GetAntiSpywareProfileResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -111,25 +108,16 @@ class GetAntiSpywareProfileResult:
     @_builtins.property
     @pulumi.getter(name="inlineExceptionEdlUrls")
     def inline_exception_edl_urls(self) -> Sequence[_builtins.str]:
-        """
-        Inline exception edl url
-        """
         return pulumi.get(self, "inline_exception_edl_urls")
 
     @_builtins.property
     @pulumi.getter(name="inlineExceptionIpAddresses")
     def inline_exception_ip_addresses(self) -> Sequence[_builtins.str]:
-        """
-        Inline exception ip address
-        """
         return pulumi.get(self, "inline_exception_ip_addresses")
 
     @_builtins.property
     @pulumi.getter(name="micaEngineSpywareEnableds")
     def mica_engine_spyware_enableds(self) -> Sequence['outputs.GetAntiSpywareProfileMicaEngineSpywareEnabledResult']:
-        """
-        Mica engine spyware enabled
-        """
         return pulumi.get(self, "mica_engine_spyware_enableds")
 
     @_builtins.property
@@ -143,17 +131,11 @@ class GetAntiSpywareProfileResult:
     @_builtins.property
     @pulumi.getter
     def rules(self) -> Sequence['outputs.GetAntiSpywareProfileRuleResult']:
-        """
-        Rules
-        """
         return pulumi.get(self, "rules")
 
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property
@@ -164,9 +146,6 @@ class GetAntiSpywareProfileResult:
     @_builtins.property
     @pulumi.getter(name="threatExceptions")
     def threat_exceptions(self) -> Sequence['outputs.GetAntiSpywareProfileThreatExceptionResult']:
-        """
-        Threat exception
-        """
         return pulumi.get(self, "threat_exceptions")
 
 

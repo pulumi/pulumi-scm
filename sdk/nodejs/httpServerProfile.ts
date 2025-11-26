@@ -43,6 +43,8 @@ export class HttpServerProfile extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -59,6 +61,8 @@ export class HttpServerProfile extends pulumi.CustomResource {
     declare public readonly servers: pulumi.Output<outputs.HttpServerProfileServer[] | undefined>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -114,6 +118,8 @@ export interface HttpServerProfileState {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -130,6 +136,8 @@ export interface HttpServerProfileState {
     servers?: pulumi.Input<pulumi.Input<inputs.HttpServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**
@@ -149,6 +157,8 @@ export interface HttpServerProfileArgs {
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -165,6 +175,8 @@ export interface HttpServerProfileArgs {
     servers?: pulumi.Input<pulumi.Input<inputs.HttpServerProfileServer>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

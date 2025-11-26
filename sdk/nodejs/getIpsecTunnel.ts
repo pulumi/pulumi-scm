@@ -64,13 +64,7 @@ export interface GetIpsecTunnelResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * allow GRE over IPSec
-     */
     readonly enableGreEncapsulation: boolean;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -80,18 +74,9 @@ export interface GetIpsecTunnelResult {
      * Alphanumeric string begin with letter: [0-9a-zA-Z._-]
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
-    /**
-     * Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
-     */
     readonly tunnelInterface: string;
-    /**
-     * Tunnel monitor
-     */
     readonly tunnelMonitor: outputs.GetIpsecTunnelTunnelMonitor;
 }
 /**

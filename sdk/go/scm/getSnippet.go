@@ -24,45 +24,26 @@ import (
 //	"github.com/pulumi/pulumi/sdk/v3/go/pulumi"
 //
 // )
-// func main() {
-// pulumi.Run(func(ctx *pulumi.Context) error {
-// scmLabel1, err := scm.NewLabel(ctx, "scm_label_1", &scm.LabelArgs{
-// Name: pulumi.String("scm_label"),
-// })
-// if err != nil {
-// return err
-// }
-// scmSnippet1, err := scm.NewSnippet(ctx, "scm_snippet_1", &scm.SnippetArgs{
-// Name: pulumi.String("scm_snippet"),
-// Description: pulumi.String("Adding a Description from Terraform"),
-// Labels: pulumi.StringArray{
-// scmLabel1.Name,
-// },
-// })
-// if err != nil {
-// return err
-// }
-// // Look up the "scm_snippet" tag by its id
-// scmSnippetOutputsDs := scm.LookupSnippetOutput(ctx, scm.GetSnippetOutputArgs{
-// Id: scmSnippet1.ID(),
-// }, nil);
-// ctx.Export("snippetOutputs", pulumi.Map{
-// "productionId": scmSnippetOutputsDs.ApplyT(func(scmSnippetOutputsDs scm.GetSnippetResult) (*string, error) {
-// return &scmSnippetOutputsDs.Id, nil
-// }).(pulumi.StringPtrOutput),
-// "productionName": scmSnippetOutputsDs.ApplyT(func(scmSnippetOutputsDs scm.GetSnippetResult) (*string, error) {
-// return &scmSnippetOutputsDs.Name, nil
-// }).(pulumi.StringPtrOutput),
-// "productionDescription": scmSnippetOutputsDs.ApplyT(func(scmSnippetOutputsDs scm.GetSnippetResult) (*string, error) {
-// return &scmSnippetOutputsDs.Description, nil
-// }).(pulumi.StringPtrOutput),
-// "productionLabels": scmSnippetOutputsDs.ApplyT(func(scmSnippetOutputsDs scm.GetSnippetResult) (interface{}, error) {
-// return scmSnippetOutputsDs.Labels, nil
-// }).(pulumi.Interface{}Output),
-// })
-// return nil
-// })
-// }
+//
+//	func main() {
+//		pulumi.Run(func(ctx *pulumi.Context) error {
+//			// Look up the "scm_snippet" tag by its id
+//			scmSnippetOutputsDs, err := scm.LookupSnippet(ctx, &scm.LookupSnippetArgs{
+//				Id: "b4811c43-e5f9-4b28-8316-7f18f97ba244",
+//			}, nil)
+//			if err != nil {
+//				return err
+//			}
+//			ctx.Export("snippetOutputs", pulumi.Map{
+//				"productionId":          scmSnippetOutputsDs.Id,
+//				"productionName":        scmSnippetOutputsDs.Name,
+//				"productionDescription": scmSnippetOutputsDs.Description,
+//				"productionLabels":      scmSnippetOutputsDs.Labels,
+//			})
+//			return nil
+//		})
+//	}
+//
 // ```
 func LookupSnippet(ctx *pulumi.Context, args *LookupSnippetArgs, opts ...pulumi.InvokeOption) (*LookupSnippetResult, error) {
 	opts = internal.PkgInvokeDefaultOpts(opts)

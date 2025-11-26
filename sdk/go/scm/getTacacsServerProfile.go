@@ -34,23 +34,17 @@ type LookupTacacsServerProfileArgs struct {
 type LookupTacacsServerProfileResult struct {
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// The UUID of the TACACS+ server profile
 	Id string `pulumi:"id"`
 	// The name of the TACACS+ server profile
-	Name string `pulumi:"name"`
-	// The TACACS+ authentication protocol
-	Protocol string `pulumi:"protocol"`
-	// The TACACS+ server configuration
-	Servers []GetTacacsServerProfileServer `pulumi:"servers"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// The TACACS+ timeout (seconds)
-	Timeout int `pulumi:"timeout"`
-	// Use a single TACACS+ connection?
-	UseSingleConnection bool `pulumi:"useSingleConnection"`
+	Name                string                         `pulumi:"name"`
+	Protocol            string                         `pulumi:"protocol"`
+	Servers             []GetTacacsServerProfileServer `pulumi:"servers"`
+	Snippet             string                         `pulumi:"snippet"`
+	Tfid                string                         `pulumi:"tfid"`
+	Timeout             int                            `pulumi:"timeout"`
+	UseSingleConnection bool                           `pulumi:"useSingleConnection"`
 }
 
 func LookupTacacsServerProfileOutput(ctx *pulumi.Context, args LookupTacacsServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupTacacsServerProfileResultOutput {
@@ -94,7 +88,6 @@ func (o LookupTacacsServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupTacacsServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -109,17 +102,14 @@ func (o LookupTacacsServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The TACACS+ authentication protocol
 func (o LookupTacacsServerProfileResultOutput) Protocol() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Protocol }).(pulumi.StringOutput)
 }
 
-// The TACACS+ server configuration
 func (o LookupTacacsServerProfileResultOutput) Servers() GetTacacsServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) []GetTacacsServerProfileServer { return v.Servers }).(GetTacacsServerProfileServerArrayOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupTacacsServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -128,12 +118,10 @@ func (o LookupTacacsServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// The TACACS+ timeout (seconds)
 func (o LookupTacacsServerProfileResultOutput) Timeout() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) int { return v.Timeout }).(pulumi.IntOutput)
 }
 
-// Use a single TACACS+ connection?
 func (o LookupTacacsServerProfileResultOutput) UseSingleConnection() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupTacacsServerProfileResult) bool { return v.UseSingleConnection }).(pulumi.BoolOutput)
 }

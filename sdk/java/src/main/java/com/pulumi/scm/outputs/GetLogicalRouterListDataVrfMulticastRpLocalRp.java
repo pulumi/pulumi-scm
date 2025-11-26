@@ -19,6 +19,8 @@ public final class GetLogicalRouterListDataVrfMulticastRpLocalRp {
     /**
      * @return Static rp
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
+     * 
      */
     private GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp staticRp;
 
@@ -32,6 +34,8 @@ public final class GetLogicalRouterListDataVrfMulticastRpLocalRp {
     }
     /**
      * @return Static rp
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     public GetLogicalRouterListDataVrfMulticastRpLocalRpStaticRp staticRp() {

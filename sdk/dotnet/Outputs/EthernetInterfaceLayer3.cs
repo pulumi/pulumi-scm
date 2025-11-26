@@ -31,6 +31,8 @@ namespace Pulumi.Scm.Outputs
         public readonly string? InterfaceManagementProfile;
         /// <summary>
         /// Ethernet Interface IP addresses
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
         /// </summary>
         public readonly ImmutableArray<Outputs.EthernetInterfaceLayer3Ip> Ips;
         /// <summary>
@@ -39,6 +41,8 @@ namespace Pulumi.Scm.Outputs
         public readonly int? Mtu;
         /// <summary>
         /// Pppoe
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient`, `Ip`, and `Pppoe`.
         /// </summary>
         public readonly Outputs.EthernetInterfaceLayer3Pppoe? Pppoe;
 

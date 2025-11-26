@@ -123,6 +123,32 @@ import * as utilities from "./utilities";
  *     },
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/decryptionRule:DecryptionRule example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/decryptionRule:DecryptionRule example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/decryptionRule:DecryptionRule example ::device:id
+ * ```
  */
 export class DecryptionRule extends pulumi.CustomResource {
     /**
@@ -182,6 +208,8 @@ export class DecryptionRule extends pulumi.CustomResource {
     declare public readonly disabled: pulumi.Output<boolean | undefined>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -230,6 +258,8 @@ export class DecryptionRule extends pulumi.CustomResource {
     declare public readonly services: pulumi.Output<string[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     /**
@@ -397,6 +427,8 @@ export interface DecryptionRuleState {
     disabled?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -445,6 +477,8 @@ export interface DecryptionRuleState {
     services?: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**
@@ -512,6 +546,8 @@ export interface DecryptionRuleArgs {
     disabled?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -560,6 +596,8 @@ export interface DecryptionRuleArgs {
     services: pulumi.Input<pulumi.Input<string>[]>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

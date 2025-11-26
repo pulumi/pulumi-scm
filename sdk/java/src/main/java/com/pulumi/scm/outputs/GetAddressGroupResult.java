@@ -22,15 +22,7 @@ public final class GetAddressGroupResult {
      * 
      */
     private String device;
-    /**
-     * @return Dynamic
-     * 
-     */
     private GetAddressGroupDynamic dynamic;
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     private String folder;
     /**
      * @return The UUID of the address group
@@ -42,20 +34,8 @@ public final class GetAddressGroupResult {
      * 
      */
     private String name;
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     private String snippet;
-    /**
-     * @return Static
-     * 
-     */
     private List<String> statics;
-    /**
-     * @return Tags for address group object
-     * 
-     */
     private List<String> tags;
     private String tfid;
 
@@ -74,17 +54,9 @@ public final class GetAddressGroupResult {
     public String device() {
         return this.device;
     }
-    /**
-     * @return Dynamic
-     * 
-     */
     public GetAddressGroupDynamic dynamic() {
         return this.dynamic;
     }
-    /**
-     * @return The folder in which the resource is defined
-     * 
-     */
     public String folder() {
         return this.folder;
     }
@@ -102,24 +74,12 @@ public final class GetAddressGroupResult {
     public String name() {
         return this.name;
     }
-    /**
-     * @return The snippet in which the resource is defined
-     * 
-     */
     public String snippet() {
         return this.snippet;
     }
-    /**
-     * @return Static
-     * 
-     */
     public List<String> statics() {
         return this.statics;
     }
-    /**
-     * @return Tags for address group object
-     * 
-     */
     public List<String> tags() {
         return this.tags;
     }

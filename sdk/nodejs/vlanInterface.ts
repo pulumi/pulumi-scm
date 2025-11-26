@@ -79,10 +79,14 @@ export class VlanInterface extends pulumi.CustomResource {
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * Vlan interfaces DHCP Client Object
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly dhcpClient: pulumi.Output<outputs.VlanInterfaceDhcpClient>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
     /**
@@ -91,6 +95,8 @@ export class VlanInterface extends pulumi.CustomResource {
     declare public readonly interfaceManagementProfile: pulumi.Output<string | undefined>;
     /**
      * VLAN Interface IP Parent
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     declare public readonly ips: pulumi.Output<outputs.VlanInterfaceIp[] | undefined>;
     /**
@@ -103,6 +109,8 @@ export class VlanInterface extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
@@ -186,10 +194,14 @@ export interface VlanInterfaceState {
     device?: pulumi.Input<string>;
     /**
      * Vlan interfaces DHCP Client Object
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.VlanInterfaceDhcpClient>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -198,6 +210,8 @@ export interface VlanInterfaceState {
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
      * VLAN Interface IP Parent
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceIp>[]>;
     /**
@@ -210,6 +224,8 @@ export interface VlanInterfaceState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     tfid?: pulumi.Input<string>;
@@ -245,10 +261,14 @@ export interface VlanInterfaceArgs {
     device?: pulumi.Input<string>;
     /**
      * Vlan interfaces DHCP Client Object
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     dhcpClient?: pulumi.Input<inputs.VlanInterfaceDhcpClient>;
     /**
      * The folder in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
     /**
@@ -257,6 +277,8 @@ export interface VlanInterfaceArgs {
     interfaceManagementProfile?: pulumi.Input<string>;
     /**
      * VLAN Interface IP Parent
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `dhcpClient` and `ip`.
      */
     ips?: pulumi.Input<pulumi.Input<inputs.VlanInterfaceIp>[]>;
     /**
@@ -269,6 +291,8 @@ export interface VlanInterfaceArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
+     *
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
     /**

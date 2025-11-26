@@ -92,9 +92,6 @@ class GetLoopbackInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def folder(self) -> _builtins.str:
-        """
-        The folder in which the resource is defined
-        """
         return pulumi.get(self, "folder")
 
     @_builtins.property
@@ -108,33 +105,21 @@ class GetLoopbackInterfaceResult:
     @_builtins.property
     @pulumi.getter(name="interfaceManagementProfile")
     def interface_management_profile(self) -> _builtins.str:
-        """
-        Interface management profile
-        """
         return pulumi.get(self, "interface_management_profile")
 
     @_builtins.property
     @pulumi.getter
     def ips(self) -> Sequence['outputs.GetLoopbackInterfaceIpResult']:
-        """
-        Loopback IP Parent
-        """
         return pulumi.get(self, "ips")
 
     @_builtins.property
     @pulumi.getter
     def ipv6(self) -> 'outputs.GetLoopbackInterfaceIpv6Result':
-        """
-        Loopback IPv6 Configuration
-        """
         return pulumi.get(self, "ipv6")
 
     @_builtins.property
     @pulumi.getter
     def mtu(self) -> _builtins.int:
-        """
-        MTU
-        """
         return pulumi.get(self, "mtu")
 
     @_builtins.property
@@ -148,9 +133,6 @@ class GetLoopbackInterfaceResult:
     @_builtins.property
     @pulumi.getter
     def snippet(self) -> _builtins.str:
-        """
-        The snippet in which the resource is defined
-        """
         return pulumi.get(self, "snippet")
 
     @_builtins.property

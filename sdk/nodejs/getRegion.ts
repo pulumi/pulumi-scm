@@ -43,13 +43,7 @@ export interface GetRegionResult {
      * The device in which the resource is defined
      */
     readonly device: string;
-    /**
-     * The folder in which the resource is defined
-     */
     readonly folder: string;
-    /**
-     * Geo location
-     */
     readonly geoLocation: outputs.GetRegionGeoLocation;
     /**
      * The UUID of the region
@@ -59,9 +53,6 @@ export interface GetRegionResult {
      * The name of the region
      */
     readonly name: string;
-    /**
-     * The snippet in which the resource is defined
-     */
     readonly snippet: string;
     readonly tfid: string;
 }

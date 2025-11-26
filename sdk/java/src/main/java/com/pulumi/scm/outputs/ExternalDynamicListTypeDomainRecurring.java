@@ -23,20 +23,28 @@ public final class ExternalDynamicListTypeDomainRecurring {
     /**
      * @return Five minute
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     private @Nullable ExternalDynamicListTypeDomainRecurringFiveMinute fiveMinute;
     /**
      * @return Hourly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeDomainRecurringHourly hourly;
     /**
      * @return Monthly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     private @Nullable ExternalDynamicListTypeDomainRecurringMonthly monthly;
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     private @Nullable ExternalDynamicListTypeDomainRecurringWeekly weekly;
@@ -52,12 +60,16 @@ public final class ExternalDynamicListTypeDomainRecurring {
     /**
      * @return Five minute
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     public Optional<ExternalDynamicListTypeDomainRecurringFiveMinute> fiveMinute() {
         return Optional.ofNullable(this.fiveMinute);
     }
     /**
      * @return Hourly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<ExternalDynamicListTypeDomainRecurringHourly> hourly() {
@@ -66,12 +78,16 @@ public final class ExternalDynamicListTypeDomainRecurring {
     /**
      * @return Monthly
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
+     * 
      */
     public Optional<ExternalDynamicListTypeDomainRecurringMonthly> monthly() {
         return Optional.ofNullable(this.monthly);
     }
     /**
      * @return Weekly
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `daily`, `fiveMinute`, `hourly`, `monthly`, and `weekly`.
      * 
      */
     public Optional<ExternalDynamicListTypeDomainRecurringWeekly> weekly() {

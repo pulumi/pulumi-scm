@@ -64,15 +64,12 @@ type LookupHipProfileResult struct {
 	Description string `pulumi:"description"`
 	// The device in which the resource is defined
 	Device string `pulumi:"device"`
-	// The folder in which the resource is defined
 	Folder string `pulumi:"folder"`
 	// UUID of the resource
-	Id string `pulumi:"id"`
-	// Match
+	Id    string `pulumi:"id"`
 	Match string `pulumi:"match"`
 	// The name of the HIP profile
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
+	Name    string `pulumi:"name"`
 	Snippet string `pulumi:"snippet"`
 	Tfid    string `pulumi:"tfid"`
 }
@@ -123,7 +120,6 @@ func (o LookupHipProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupHipProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -133,7 +129,6 @@ func (o LookupHipProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
-// Match
 func (o LookupHipProfileResultOutput) Match() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Match }).(pulumi.StringOutput)
 }
@@ -143,7 +138,6 @@ func (o LookupHipProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupHipProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupHipProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

@@ -20,10 +20,14 @@ public final class GetLogicalRouterVrfOspfAreaType {
     /**
      * @return Nssa
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
+     * 
      */
     private GetLogicalRouterVrfOspfAreaTypeNssa nssa;
     /**
      * @return Stub
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     private GetLogicalRouterVrfOspfAreaTypeStub stub;
@@ -39,12 +43,16 @@ public final class GetLogicalRouterVrfOspfAreaType {
     /**
      * @return Nssa
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
+     * 
      */
     public GetLogicalRouterVrfOspfAreaTypeNssa nssa() {
         return this.nssa;
     }
     /**
      * @return Stub
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `normal`, `nssa`, and `stub`.
      * 
      */
     public GetLogicalRouterVrfOspfAreaTypeStub stub() {

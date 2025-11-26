@@ -19,26 +19,38 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetExternalDynamicListTypeDomainResult Domain;
         /// <summary>
         /// Imei
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImeiResult Imei;
         /// <summary>
         /// Imsi
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeImsiResult Imsi;
         /// <summary>
         /// Ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeIpResult Ip;
         /// <summary>
         /// Predefined ip
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypePredefinedIpResult PredefinedIp;
         /// <summary>
         /// Predefined url
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypePredefinedUrlResult PredefinedUrl;
         /// <summary>
         /// Url
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Domain`, `Imei`, `Imsi`, `Ip`, `PredefinedIp`, `PredefinedUrl`, and `Url`.
         /// </summary>
         public readonly Outputs.GetExternalDynamicListTypeUrlResult Url;
 

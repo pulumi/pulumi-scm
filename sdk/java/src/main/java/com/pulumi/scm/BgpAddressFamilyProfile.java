@@ -18,6 +18,59 @@ import javax.annotation.Nullable;
 /**
  * BgpAddressFamilyProfile resource
  * 
+ * ## Example Usage
+ * 
+ * <pre>
+ * {@code
+ * package generated_program;
+ * 
+ * import com.pulumi.Context;
+ * import com.pulumi.Pulumi;
+ * import com.pulumi.core.Output;
+ * import com.pulumi.scm.BgpAddressFamilyProfile;
+ * import com.pulumi.scm.BgpAddressFamilyProfileArgs;
+ * import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4Args;
+ * import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4UnicastArgs;
+ * import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4UnicastAllowasInArgs;
+ * import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs;
+ * import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4UnicastNextHopArgs;
+ * import com.pulumi.scm.inputs.BgpAddressFamilyProfileIpv4UnicastNextHopSelfArgs;
+ * import java.util.List;
+ * import java.util.ArrayList;
+ * import java.util.Map;
+ * import java.io.File;
+ * import java.nio.file.Files;
+ * import java.nio.file.Paths;
+ * 
+ * public class App {
+ *     public static void main(String[] args) {
+ *         Pulumi.run(App::stack);
+ *     }
+ * 
+ *     public static void stack(Context ctx) {
+ *         var scmBgpAddressFamilyProfile = new BgpAddressFamilyProfile("scmBgpAddressFamilyProfile", BgpAddressFamilyProfileArgs.builder()
+ *             .folder("ngfw-shared")
+ *             .name("scm_bgp_address_family_profile")
+ *             .ipv4(BgpAddressFamilyProfileIpv4Args.builder()
+ *                 .unicast(BgpAddressFamilyProfileIpv4UnicastArgs.builder()
+ *                     .enable(true)
+ *                     .allowasIn(BgpAddressFamilyProfileIpv4UnicastAllowasInArgs.builder()
+ *                         .origin(BgpAddressFamilyProfileIpv4UnicastAllowasInOriginArgs.builder()
+ *                             .build())
+ *                         .build())
+ *                     .nextHop(BgpAddressFamilyProfileIpv4UnicastNextHopArgs.builder()
+ *                         .self(BgpAddressFamilyProfileIpv4UnicastNextHopSelfArgs.builder()
+ *                             .build())
+ *                         .build())
+ *                     .build())
+ *                 .build())
+ *             .build());
+ * 
+ *     }
+ * }
+ * }
+ * </pre>
+ * 
  */
 @ResourceType(type="scm:index/bgpAddressFamilyProfile:BgpAddressFamilyProfile")
 public class BgpAddressFamilyProfile extends com.pulumi.resources.CustomResource {
@@ -38,6 +91,8 @@ public class BgpAddressFamilyProfile extends com.pulumi.resources.CustomResource
     /**
      * The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="folder", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> folder;
@@ -45,19 +100,21 @@ public class BgpAddressFamilyProfile extends com.pulumi.resources.CustomResource
     /**
      * @return The folder in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     public Output<Optional<String>> folder() {
         return Codegen.optional(this.folder);
     }
     /**
-     * Ipv4
+     * IPv4 Address Family
      * 
      */
     @Export(name="ipv4", refs={BgpAddressFamilyProfileIpv4.class}, tree="[0]")
     private Output</* @Nullable */ BgpAddressFamilyProfileIpv4> ipv4;
 
     /**
-     * @return Ipv4
+     * @return IPv4 Address Family
      * 
      */
     public Output<Optional<BgpAddressFamilyProfileIpv4>> ipv4() {
@@ -80,12 +137,16 @@ public class BgpAddressFamilyProfile extends com.pulumi.resources.CustomResource
     /**
      * The snippet in which the resource is defined
      * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
      */
     @Export(name="snippet", refs={String.class}, tree="[0]")
     private Output</* @Nullable */ String> snippet;
 
     /**
      * @return The snippet in which the resource is defined
+     * 
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Output<Optional<String>> snippet() {

@@ -11,6 +11,55 @@ namespace Pulumi.Scm
 {
     /// <summary>
     /// BgpFilteringProfile resource
+    /// 
+    /// ## Example Usage
+    /// 
+    /// ```csharp
+    /// using System.Collections.Generic;
+    /// using System.Linq;
+    /// using Pulumi;
+    /// using Scm = Pulumi.Scm;
+    /// 
+    /// return await Deployment.RunAsync(() =&gt; 
+    /// {
+    ///     var scmBgpFilteringProfile = new Scm.BgpFilteringProfile("scm_bgp_filtering_profile", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_bgp_filtering_profile",
+    ///         Ipv4 = null,
+    ///     });
+    /// 
+    ///     var scmBgpFilteringProfileComplex = new Scm.BgpFilteringProfile("scm_bgp_filtering_profile_complex", new()
+    ///     {
+    ///         Folder = "ngfw-shared",
+    ///         Name = "scm_bgp_filtering_profile_complex",
+    ///         Ipv4 = new Scm.Inputs.BgpFilteringProfileIpv4Args
+    ///         {
+    ///             Unicast = new Scm.Inputs.BgpFilteringProfileIpv4UnicastArgs
+    ///             {
+    ///                 FilterList = new Scm.Inputs.BgpFilteringProfileIpv4UnicastFilterListArgs
+    ///                 {
+    ///                     Inbound = "scm_filter_list",
+    ///                 },
+    ///                 InboundNetworkFilters = new Scm.Inputs.BgpFilteringProfileIpv4UnicastInboundNetworkFiltersArgs
+    ///                 {
+    ///                     PrefixList = "scm_pl_inbound",
+    ///                 },
+    ///                 OutboundNetworkFilters = new Scm.Inputs.BgpFilteringProfileIpv4UnicastOutboundNetworkFiltersArgs
+    ///                 {
+    ///                     DistributeList = "scm_distribute_list",
+    ///                 },
+    ///                 RouteMaps = new Scm.Inputs.BgpFilteringProfileIpv4UnicastRouteMapsArgs
+    ///                 {
+    ///                     Inbound = "scm_rm_inbound",
+    ///                     Outbound = "scm_rm_outbound",
+    ///                 },
+    ///             },
+    ///         },
+    ///     });
+    /// 
+    /// });
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/bgpFilteringProfile:BgpFilteringProfile")]
     public partial class BgpFilteringProfile : global::Pulumi.CustomResource
@@ -29,6 +78,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
         public Output<string?> Folder { get; private set; } = null!;
@@ -47,6 +98,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
         public Output<string?> Snippet { get; private set; } = null!;
@@ -114,6 +167,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -132,6 +187,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }
@@ -158,6 +215,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
         public Input<string>? Folder { get; set; }
@@ -176,6 +235,8 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
+        /// 
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
         public Input<string>? Snippet { get; set; }

@@ -68,20 +68,16 @@ type LookupExternalDynamicListArgs struct {
 // A collection of values returned by getExternalDynamicList.
 type LookupExternalDynamicListResult struct {
 	// The device in which the resource is defined
-	Device string `pulumi:"device"`
-	// Map of sensitive values returned from the API.
+	Device          string            `pulumi:"device"`
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	// The folder in which the resource is defined
-	Folder string `pulumi:"folder"`
+	Folder          string            `pulumi:"folder"`
 	// The UUID of the external dynamic list
 	Id string `pulumi:"id"`
 	// The name of the external dynamic list
-	Name string `pulumi:"name"`
-	// The snippet in which the resource is defined
-	Snippet string `pulumi:"snippet"`
-	Tfid    string `pulumi:"tfid"`
-	// Type
-	Type GetExternalDynamicListType `pulumi:"type"`
+	Name    string                     `pulumi:"name"`
+	Snippet string                     `pulumi:"snippet"`
+	Tfid    string                     `pulumi:"tfid"`
+	Type    GetExternalDynamicListType `pulumi:"type"`
 }
 
 func LookupExternalDynamicListOutput(ctx *pulumi.Context, args LookupExternalDynamicListOutputArgs, opts ...pulumi.InvokeOption) LookupExternalDynamicListResultOutput {
@@ -125,12 +121,10 @@ func (o LookupExternalDynamicListResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupExternalDynamicListResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
-// Map of sensitive values returned from the API.
 func (o LookupExternalDynamicListResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupExternalDynamicListResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
-// The folder in which the resource is defined
 func (o LookupExternalDynamicListResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupExternalDynamicListResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -145,7 +139,6 @@ func (o LookupExternalDynamicListResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupExternalDynamicListResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
-// The snippet in which the resource is defined
 func (o LookupExternalDynamicListResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupExternalDynamicListResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -154,7 +147,6 @@ func (o LookupExternalDynamicListResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupExternalDynamicListResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
-// Type
 func (o LookupExternalDynamicListResultOutput) Type() GetExternalDynamicListTypeOutput {
 	return o.ApplyT(func(v LookupExternalDynamicListResult) GetExternalDynamicListType { return v.Type }).(GetExternalDynamicListTypeOutput)
 }

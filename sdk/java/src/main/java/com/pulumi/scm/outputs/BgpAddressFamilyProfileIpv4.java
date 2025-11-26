@@ -4,25 +4,39 @@
 package com.pulumi.scm.outputs;
 
 import com.pulumi.core.annotations.CustomType;
-import com.pulumi.exceptions.MissingRequiredPropertyException;
-import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Ipv4;
+import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Multicast;
+import com.pulumi.scm.outputs.BgpAddressFamilyProfileIpv4Unicast;
 import java.util.Objects;
+import java.util.Optional;
+import javax.annotation.Nullable;
 
 @CustomType
 public final class BgpAddressFamilyProfileIpv4 {
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    private BgpAddressFamilyProfileIpv4Ipv4 ipv4;
+    private @Nullable BgpAddressFamilyProfileIpv4Multicast multicast;
+    /**
+     * @return Unicast
+     * 
+     */
+    private @Nullable BgpAddressFamilyProfileIpv4Unicast unicast;
 
     private BgpAddressFamilyProfileIpv4() {}
     /**
-     * @return Ipv4
+     * @return Multicast
      * 
      */
-    public BgpAddressFamilyProfileIpv4Ipv4 ipv4() {
-        return this.ipv4;
+    public Optional<BgpAddressFamilyProfileIpv4Multicast> multicast() {
+        return Optional.ofNullable(this.multicast);
+    }
+    /**
+     * @return Unicast
+     * 
+     */
+    public Optional<BgpAddressFamilyProfileIpv4Unicast> unicast() {
+        return Optional.ofNullable(this.unicast);
     }
 
     public static Builder builder() {
@@ -34,24 +48,31 @@ public final class BgpAddressFamilyProfileIpv4 {
     }
     @CustomType.Builder
     public static final class Builder {
-        private BgpAddressFamilyProfileIpv4Ipv4 ipv4;
+        private @Nullable BgpAddressFamilyProfileIpv4Multicast multicast;
+        private @Nullable BgpAddressFamilyProfileIpv4Unicast unicast;
         public Builder() {}
         public Builder(BgpAddressFamilyProfileIpv4 defaults) {
     	      Objects.requireNonNull(defaults);
-    	      this.ipv4 = defaults.ipv4;
+    	      this.multicast = defaults.multicast;
+    	      this.unicast = defaults.unicast;
         }
 
         @CustomType.Setter
-        public Builder ipv4(BgpAddressFamilyProfileIpv4Ipv4 ipv4) {
-            if (ipv4 == null) {
-              throw new MissingRequiredPropertyException("BgpAddressFamilyProfileIpv4", "ipv4");
-            }
-            this.ipv4 = ipv4;
+        public Builder multicast(@Nullable BgpAddressFamilyProfileIpv4Multicast multicast) {
+
+            this.multicast = multicast;
+            return this;
+        }
+        @CustomType.Setter
+        public Builder unicast(@Nullable BgpAddressFamilyProfileIpv4Unicast unicast) {
+
+            this.unicast = unicast;
             return this;
         }
         public BgpAddressFamilyProfileIpv4 build() {
             final var _resultValue = new BgpAddressFamilyProfileIpv4();
-            _resultValue.ipv4 = ipv4;
+            _resultValue.multicast = multicast;
+            _resultValue.unicast = unicast;
             return _resultValue;
         }
     }
