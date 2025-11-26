@@ -285,6 +285,10 @@
                     }
                 }
             },
+            "scm_authentication_portal": {
+                "current": "scm:index/authenticationPortal:AuthenticationPortal",
+                "majorVersion": 1
+            },
             "scm_authentication_profile": {
                 "current": "scm:index/authenticationProfile:AuthenticationProfile",
                 "majorVersion": 1,
@@ -345,6 +349,47 @@
                 "majorVersion": 1,
                 "fields": {
                     "authentication_profiles": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_auto_vpn_cluster": {
+                "current": "scm:index/autoVpnCluster:AutoVpnCluster",
+                "majorVersion": 1,
+                "fields": {
+                    "branches": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "interfaces": {
+                                    "maxItemsOne": false
+                                },
+                                "private_interfaces": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "gateways": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "interfaces": {
+                                    "maxItemsOne": false
+                                },
+                                "private_interfaces": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_auto_vpn_setting": {
+                "current": "scm:index/autoVpnSetting:AutoVpnSetting",
+                "majorVersion": 1,
+                "fields": {
+                    "vpn_address_pool": {
                         "maxItemsOne": false
                     }
                 }
@@ -492,6 +537,15 @@
                                 }
                             }
                         }
+                    }
+                }
+            },
+            "scm_bgp_routing": {
+                "current": "scm:index/bgpRouting:BgpRouting",
+                "majorVersion": 1,
+                "fields": {
+                    "outbound_routes_for_services": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -2250,10 +2304,14 @@
                 "current": "scm:index/routePrefixList:RoutePrefixList",
                 "majorVersion": 1,
                 "fields": {
-                    "ipv4": {
+                    "type": {
                         "fields": {
-                            "ipv4_entry": {
-                                "maxItemsOne": false
+                            "ipv4": {
+                                "fields": {
+                                    "ipv4_entry": {
+                                        "maxItemsOne": false
+                                    }
+                                }
                             }
                         }
                     }
@@ -2512,6 +2570,15 @@
                         "maxItemsOne": false
                     },
                     "tag": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
+            "scm_site": {
+                "current": "scm:index/site:Site",
+                "majorVersion": 1,
+                "fields": {
+                    "members": {
                         "maxItemsOne": false
                     }
                 }
@@ -3640,6 +3707,86 @@
                     }
                 }
             },
+            "scm_auto_vpn_cluster": {
+                "current": "scm:index/getAutoVpnCluster:getAutoVpnCluster",
+                "majorVersion": 1,
+                "fields": {
+                    "branches": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "interfaces": {
+                                    "maxItemsOne": false
+                                },
+                                "private_interfaces": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    },
+                    "gateways": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "interfaces": {
+                                    "maxItemsOne": false
+                                },
+                                "private_interfaces": {
+                                    "maxItemsOne": false
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_auto_vpn_cluster_list": {
+                "current": "scm:index/getAutoVpnClusterList:getAutoVpnClusterList",
+                "majorVersion": 1,
+                "fields": {
+                    "data": {
+                        "maxItemsOne": false,
+                        "elem": {
+                            "fields": {
+                                "branches": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "interfaces": {
+                                                "maxItemsOne": false
+                                            },
+                                            "private_interfaces": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                },
+                                "gateways": {
+                                    "maxItemsOne": false,
+                                    "elem": {
+                                        "fields": {
+                                            "interfaces": {
+                                                "maxItemsOne": false
+                                            },
+                                            "private_interfaces": {
+                                                "maxItemsOne": false
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "scm_auto_vpn_setting": {
+                "current": "scm:index/getAutoVpnSetting:getAutoVpnSetting",
+                "majorVersion": 1,
+                "fields": {
+                    "vpn_address_pool": {
+                        "maxItemsOne": false
+                    }
+                }
+            },
             "scm_bgp_address_family_profile": {
                 "current": "scm:index/getBgpAddressFamilyProfile:getBgpAddressFamilyProfile",
                 "majorVersion": 1
@@ -3963,6 +4110,15 @@
                                 }
                             }
                         }
+                    }
+                }
+            },
+            "scm_bgp_routing": {
+                "current": "scm:index/getBgpRouting:getBgpRouting",
+                "majorVersion": 1,
+                "fields": {
+                    "outbound_routes_for_services": {
+                        "maxItemsOne": false
                     }
                 }
             },
@@ -7750,10 +7906,14 @@
                 "current": "scm:index/getRoutePrefixList:getRoutePrefixList",
                 "majorVersion": 1,
                 "fields": {
-                    "ipv4": {
+                    "type": {
                         "fields": {
-                            "ipv4_entry": {
-                                "maxItemsOne": false
+                            "ipv4": {
+                                "fields": {
+                                    "ipv4_entry": {
+                                        "maxItemsOne": false
+                                    }
+                                }
                             }
                         }
                     }
@@ -7767,10 +7927,14 @@
                         "maxItemsOne": false,
                         "elem": {
                             "fields": {
-                                "ipv4": {
+                                "type": {
                                     "fields": {
-                                        "ipv4_entry": {
-                                            "maxItemsOne": false
+                                        "ipv4": {
+                                            "fields": {
+                                                "ipv4_entry": {
+                                                    "maxItemsOne": false
+                                                }
+                                            }
                                         }
                                     }
                                 }
