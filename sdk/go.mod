@@ -4,12 +4,9 @@ go 1.24.0
 
 toolchain go1.24.1
 
-require github.com/pulumi/pulumi/sdk/v3 v3.207.0
+require github.com/pulumi/pulumi/sdk/v3 v3.209.0
 
-require (
-	github.com/BurntSushi/toml v1.2.1 // indirect
-	github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
-)
+require github.com/apparentlymart/go-textseg/v15 v15.0.0 // indirect
 
 require (
 	dario.cat/mergo v1.0.0 // indirect
