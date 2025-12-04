@@ -175,10 +175,12 @@ config:
         value: ""
 
 ```
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 
 ```
+
 {{% /choosable %}}
 {{% choosable language python %}}
 ```yaml
@@ -200,10 +202,12 @@ config:
         value: ""
 
 ```
+
 ```python
 import pulumi
 
 ```
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 ```yaml
@@ -225,6 +229,7 @@ config:
         value: ""
 
 ```
+
 ```csharp
 using System.Collections.Generic;
 using System.Linq;
@@ -235,6 +240,7 @@ return await Deployment.RunAsync(() =>
 });
 
 ```
+
 {{% /choosable %}}
 {{% choosable language go %}}
 ```yaml
@@ -256,6 +262,7 @@ config:
         value: ""
 
 ```
+
 ```go
 package main
 
@@ -269,6 +276,7 @@ func main() {
 	})
 }
 ```
+
 {{% /choosable %}}
 {{% choosable language yaml %}}
 ```yaml
@@ -290,9 +298,11 @@ config:
         value: ""
 
 ```
+
 ```yaml
 {}
 ```
+
 {{% /choosable %}}
 {{% choosable language java %}}
 ```yaml
@@ -314,6 +324,7 @@ config:
         value: ""
 
 ```
+
 ```java
 package generated_program;
 
@@ -336,6 +347,7 @@ public class App {
     }
 }
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 ## Provider Parameter Priority
