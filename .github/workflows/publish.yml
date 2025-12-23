@@ -105,6 +105,7 @@ jobs:
         body: ${{ steps.schema-summary.outputs.summary }}
         generate_release_notes: true
         files: dist/*
+        make_latest: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -161,25 +162,25 @@ jobs:
         pip install toml-cli==0.7.0
         version=$(toml get --toml-path pyproject.toml project.version)
         echo "version=${version}" >> "$GITHUB_OUTPUT"
-  create_docs_build:
-    name: create_docs_build
-    needs: publish_sdk
-    # Only run for non-prerelease, if the publish_go_sdk job was successful or skipped
-    if: inputs.isPrerelease == false
-    runs-on: ubuntu-latest
-    steps:
-      - name: Dispatch Metadata build
-        uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3
-        with:
-          token: ${{ secrets.PULUMI_BOT_TOKEN }}
-          repository: pulumi/registry
-          event-type: resource-provider
-          client-payload: |-
-            {
-              "project": "${{ github.repository }}",
-              "project-shortname": "scm",
-              "ref": "${{ github.ref_name }}"
-            }
+  # create_docs_build:
+  #   name: create_docs_build
+  #   needs: publish_sdk
+  #   # Only run for non-prerelease, if the publish_go_sdk job was successful or skipped
+  #   if: inputs.isPrerelease == false
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - name: Dispatch Metadata build
+  #       uses: peter-evans/repository-dispatch@ff45666b9427631e3450c54a1bcbee4d9ff4d7c0 # v3
+  #       with:
+  #         token: ${{ secrets.PULUMI_BOT_TOKEN }}
+  #         repository: pulumi/registry
+  #         event-type: resource-provider
+  #         client-payload: |-
+  #           {
+  #             "project": "${{ github.repository }}",
+  #             "project-shortname": "scm",
+  #             "ref": "${{ github.ref_name }}"
+  #           }
 
   clean_up_release_labels:
     name: Clean up release labels
