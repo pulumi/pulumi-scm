@@ -7,25 +7,29 @@ PROVIDER_PATH := provider
 VERSION_PATH := $(PROVIDER_PATH)/pkg/version.Version
 CODEGEN := pulumi-tfgen-$(PACK)
 PROVIDER := pulumi-resource-$(PACK)
+JAVA_GEN := pulumi-java-gen
 TESTPARALLELISM := 10
 GOTESTARGS := ""
 WORKING_DIR := $(shell pwd)
 PULUMI_PROVIDER_BUILD_PARALLELISM ?=
 PULUMI_CONVERT := 1
-PULUMI_MISSING_DOCS_ERROR := false
+PULUMI_MISSING_DOCS_ERROR := true
+
+PULUMICTL_VERSION := v0.0.46
+PULUMICTL := $(shell which pulumictl || \
+	(test ! -e $(WORKING_DIR)/bin/pulumictl && \
+		GOPATH="$(WORKING_DIR)" go install "github.com/pulumi/pulumictl/cmd/pulumictl@$(PULUMICTL_VERSION)"; \
+	echo "$(WORKING_DIR)/bin/puluimctl"))
 
 # Override during CI using `make [TARGET] PROVIDER_VERSION=""` or by setting a PROVIDER_VERSION environment variable
 # Local & branch builds will just used this fixed default version unless specified
-PROVIDER_VERSION ?= 1.0.0-alpha.0+dev
-
-# Check version doesn't start with a "v" - this is a common mistake
-ifeq ($(shell echo $(PROVIDER_VERSION) | cut -c1),v)
-$(error PROVIDER_VERSION should not start with a "v")
-endif
+PROVIDER_VERSION ?= 0.0.0-alpha.0+dev
+# Use this normalised version everywhere rather than the raw input to ensure consistency.
+VERSION_GENERIC = $(shell $(PULUMICTL) convert-version --language generic --version "$(PROVIDER_VERSION)")
 
 # Strips debug information from the provider binary to reduce its size and speed up builds
 LDFLAGS_STRIP_SYMBOLS=-s -w
-LDFLAGS_PROJ_VERSION=-X $(PROJECT)/$(VERSION_PATH)=$(PROVIDER_VERSION)
+LDFLAGS_PROJ_VERSION=-X $(PROJECT)/$(VERSION_PATH)=$(VERSION_GENERIC)
 LDFLAGS_UPSTREAM_VERSION=
 LDFLAGS_EXTRAS=
 LDFLAGS=$(LDFLAGS_PROJ_VERSION) $(LDFLAGS_UPSTREAM_VERSION) $(LDFLAGS_EXTRAS) $(LDFLAGS_STRIP_SYMBOLS)
@@ -40,36 +44,19 @@ LDFLAGS=$(LDFLAGS_PROJ_VERSION) $(LDFLAGS_UPSTREAM_VERSION) $(LDFLAGS_EXTRAS) $(
 _ := $(shell mkdir -p .make bin .pulumi/bin)
 
 # Build the provider and all SDKs and install ready for testing
-build: .make/mise_install provider build_sdks install_sdks build_registry_docs
-build: | mise_env
-
+build: install_plugins provider build_sdks install_sdks build_registry_docs
 # Keep aliases for old targets to ensure backwards compatibility
 development: build
 only_build: build
 # Prepare the workspace for building the provider and SDKs
 # Importantly this is run by CI ahead of restoring the bin directory and resuming SDK builds
-prepare_local_workspace: .make/mise_install upstream
-prepare_local_workspace: | mise_env
+prepare_local_workspace: install_plugins upstream
 # Creates all generated files which need to be committed
 generate: generate_sdks schema build_registry_docs
-generate_sdks: generate_nodejs generate_python generate_dotnet generate_go generate_java build_registry_docs
-build_sdks: build_nodejs build_python build_dotnet build_go build_java build_registry_docs
+generate_sdks: generate_nodejs generate_python generate_dotnet generate_go generate_java
+build_sdks: build_nodejs build_python build_dotnet build_go build_java
 install_sdks: install_nodejs_sdk install_python_sdk install_dotnet_sdk install_go_sdk install_java_sdk
-.PHONY: development only_build build generate generate_sdks build_sdks install_sdks mise_install mise_env
-
-# Installs all necessary tools with mise and records completion in a sentinel
-# file so dependent targets can participate in make's caching behaviour. The
-# environment is refreshed via an order-only prerequisite so it still runs on
-# every invocation without invalidating the sentinel.
-mise_install: .make/mise_install | mise_env
-
-mise_env:
-	@mise env -q  > /dev/null
-
-.make/mise_install:
-	@mise install -q
-	@touch $@
-
+.PHONY: development only_build build generate generate_sdks build_sdks install_sdks
 
 help:
 	@echo "Usage: make [target]"
@@ -96,7 +83,7 @@ help:
 	@echo ""
 	@echo "Internal Targets (automatically run as dependencies of other targets)"
 	@echo "  prepare_local_workspace  Prepare for building"
-	@echo "  mise_install             Install tools with mise"
+	@echo "  install_plugins          Install plugin dependencies"
 	@echo "  upstream                 Initialize the upstream submodule, if present"
 	@echo ""
 	@echo "Language-Specific Targets"
@@ -114,12 +101,12 @@ GEN_ENVS := PULUMI_HOME=$(GEN_PULUMI_HOME) PULUMI_CONVERT_EXAMPLES_CACHE_DIR=$(G
 
 generate_dotnet: .make/generate_dotnet
 build_dotnet: .make/build_dotnet
-.make/generate_dotnet: .make/mise_install bin/$(CODEGEN)
-.make/generate_dotnet: | mise_env
+.make/generate_dotnet: export PATH := $(WORKING_DIR)/.pulumi/bin:$(PATH)
+.make/generate_dotnet: .make/install_plugins bin/$(CODEGEN)
 	$(GEN_ENVS) $(WORKING_DIR)/bin/$(CODEGEN) dotnet --out sdk/dotnet/
 	cd sdk/dotnet/ && \
 		printf "module fake_dotnet_module // Exclude this directory from Go tools\n\ngo 1.17\n" > go.mod && \
-		echo "$(PROVIDER_VERSION)" >version.txt
+		echo "$(VERSION_GENERIC)" >version.txt
 	@touch $@
 .make/build_dotnet: .make/generate_dotnet
 	cd sdk/dotnet/ && dotnet build
@@ -128,8 +115,8 @@ build_dotnet: .make/build_dotnet
 
 generate_go: .make/generate_go
 build_go: .make/build_go
-.make/generate_go: .make/mise_install bin/$(CODEGEN)
-.make/generate_go: | mise_env
+.make/generate_go: export PATH := $(WORKING_DIR)/.pulumi/bin:$(PATH)
+.make/generate_go: .make/install_plugins bin/$(CODEGEN)
 	$(GEN_ENVS) $(WORKING_DIR)/bin/$(CODEGEN) go --out sdk/go/
 	@touch $@
 .make/build_go: .make/generate_go
@@ -139,13 +126,13 @@ build_go: .make/build_go
 
 generate_java: .make/generate_java
 build_java: .make/build_java
-.make/generate_java: PACKAGE_VERSION := $(PROVIDER_VERSION)
-.make/generate_java: .make/mise_install bin/$(CODEGEN)
-.make/generate_java: | mise_env
-	$(GEN_ENVS) $(WORKING_DIR)/bin/$(CODEGEN) java --out sdk/java/
+.make/generate_java: export PATH := $(WORKING_DIR)/.pulumi/bin:$(PATH)
+.make/generate_java: PACKAGE_VERSION := $(VERSION_GENERIC)
+.make/generate_java: .make/install_plugins bin/pulumi-java-gen .make/schema
+	PULUMI_HOME=$(GEN_PULUMI_HOME) PULUMI_CONVERT_EXAMPLES_CACHE_DIR=$(GEN_PULUMI_CONVERT_EXAMPLES_CACHE_DIR) bin/$(JAVA_GEN) generate --schema provider/cmd/$(PROVIDER)/schema.json --out sdk/java  --build gradle-nexus
 	printf "module fake_java_module // Exclude this directory from Go tools\n\ngo 1.17\n" > sdk/java/go.mod
 	@touch $@
-.make/build_java: PACKAGE_VERSION := $(PROVIDER_VERSION)
+.make/build_java: PACKAGE_VERSION := $(VERSION_GENERIC)
 .make/build_java: .make/generate_java
 	cd sdk/java/ && \
 		gradle --console=plain build && \
@@ -155,8 +142,8 @@ build_java: .make/build_java
 
 generate_nodejs: .make/generate_nodejs
 build_nodejs: .make/build_nodejs
-.make/generate_nodejs: .make/mise_install bin/$(CODEGEN)
-.make/generate_nodejs: | mise_env
+.make/generate_nodejs: export PATH := $(WORKING_DIR)/.pulumi/bin:$(PATH)
+.make/generate_nodejs: .make/install_plugins bin/$(CODEGEN)
 	$(GEN_ENVS) $(WORKING_DIR)/bin/$(CODEGEN) nodejs --out sdk/nodejs/
 	printf "module fake_nodejs_module // Exclude this directory from Go tools\n\ngo 1.17\n" > sdk/nodejs/go.mod
 	@touch $@
@@ -164,14 +151,14 @@ build_nodejs: .make/build_nodejs
 	cd sdk/nodejs/ && \
 		yarn install && \
 		yarn run tsc && \
-		cp ../../README.md ../../LICENSE package.json yarn.lock ./bin/
+		cp ../../README.md ../../LICENSE* package.json yarn.lock ./bin/
 	@touch $@
 .PHONY: generate_nodejs build_nodejs
 
 generate_python: .make/generate_python
 build_python: .make/build_python
-.make/generate_python: .make/mise_install bin/$(CODEGEN)
-.make/generate_python: | mise_env
+.make/generate_python: export PATH := $(WORKING_DIR)/.pulumi/bin:$(PATH)
+.make/generate_python: .make/install_plugins bin/$(CODEGEN)
 	$(GEN_ENVS) $(WORKING_DIR)/bin/$(CODEGEN) python --out sdk/python/
 	printf "module fake_python_module // Exclude this directory from Go tools\n\ngo 1.17\n" > sdk/python/go.mod
 	cp README.md sdk/python/
@@ -188,8 +175,7 @@ build_python: .make/build_python
 .PHONY: generate_python build_python
 # Run the bridge's registry-docs command to generated the content of the installation docs/ folder at provider repo root
 build_registry_docs: .make/build_registry_docs
-.make/build_registry_docs: .make/mise_install bin/$(CODEGEN)
-.make/build_registry_docs: | mise_env
+.make/build_registry_docs: .make/install_plugins bin/$(CODEGEN)
 	bin/$(CODEGEN) registry-docs --out $(WORKING_DIR)/docs
 	@touch $@
 .PHONY: build_registry_docs
@@ -198,7 +184,6 @@ clean:
 	rm -rf sdk/{dotnet,nodejs,go,python}
 	rm -rf bin/*
 	rm -rf .make/*
-	rm -rf "$(GEN_PULUMI_CONVERT_EXAMPLES_CACHE_DIR)"
 	if dotnet nuget list source | grep "$(WORKING_DIR)/nuget"; then \
 		dotnet nuget remove source "$(WORKING_DIR)/nuget" \
 	; fi
@@ -221,11 +206,21 @@ install_nodejs_sdk: .make/install_nodejs_sdk
 install_python_sdk:
 .PHONY: install_dotnet_sdk install_go_sdk install_java_sdk install_nodejs_sdk install_python_sdk
 
-lint_provider: upstream
+# Install Pulumi plugins required for CODEGEN to resolve references
+install_plugins: .make/install_plugins
+.make/install_plugins: export PULUMI_HOME := $(WORKING_DIR)/.pulumi
+.make/install_plugins: export PATH := $(WORKING_DIR)/.pulumi/bin:$(PATH)
+.make/install_plugins: .pulumi/bin/pulumi
+	.pulumi/bin/pulumi plugin install resource std 1.6.2
+	.pulumi/bin/pulumi plugin install converter terraform 1.0.16
+	@touch $@
+.PHONY: install_plugins
+
+lint_provider: provider
 	cd provider && golangci-lint run --path-prefix provider -c ../.golangci.yml
 # `lint_provider.fix` is a utility target meant to be run manually
 # that will run the linter and fix errors when possible.
-lint_provider.fix: upstream
+lint_provider.fix:
 	cd provider && golangci-lint run --path-prefix provider -c ../.golangci.yml --fix
 .PHONY: lint_provider lint_provider.fix
 build_provider_cmd = cd provider && GOOS=$(1) GOARCH=$(2) CGO_ENABLED=0 go build $(PULUMI_PROVIDER_BUILD_PARALLELISM) -o "$(3)" -ldflags "$(LDFLAGS)" $(PROJECT)/$(PROVIDER_PATH)/cmd/$(PROVIDER)
@@ -259,14 +254,14 @@ schema: .make/schema
 # This does actually have dependencies, but we're keeping it around for backwards compatibility for now
 tfgen_no_deps: .make/schema
 .make/schema: export PULUMI_HOME := $(WORKING_DIR)/.pulumi
+.make/schema: export PATH := $(WORKING_DIR)/.pulumi/bin:$(PATH)
 .make/schema: export PULUMI_CONVERT := $(PULUMI_CONVERT)
 .make/schema: export PULUMI_CONVERT_EXAMPLES_CACHE_DIR := $(WORKING_DIR)/.pulumi/examples-cache
 .make/schema: export PULUMI_DISABLE_AUTOMATIC_PLUGIN_ACQUISITION := $(PULUMI_CONVERT)
 .make/schema: export PULUMI_MISSING_DOCS_ERROR := $(PULUMI_MISSING_DOCS_ERROR)
-.make/schema: bin/$(CODEGEN) .make/mise_install .make/upstream
-.make/schema: | mise_env
+.make/schema: bin/$(CODEGEN) .make/install_plugins .make/upstream
 	$(WORKING_DIR)/bin/$(CODEGEN) schema --out provider/cmd/$(PROVIDER)
-	(cd provider && VERSION=$(PROVIDER_VERSION) go generate cmd/$(PROVIDER)/main.go)
+	(cd provider && VERSION=$(VERSION_GENERIC) go generate cmd/$(PROVIDER)/main.go)
 	@touch $@
 tfgen_build_only: bin/$(CODEGEN)
 bin/$(CODEGEN): provider/*.go provider/go.* .make/upstream
@@ -275,11 +270,16 @@ bin/$(CODEGEN): provider/*.go provider/go.* .make/upstream
 
 # Apply patches to the upstream submodule, if it exists
 upstream: .make/upstream
-# Re-run if the upstream commit or the patches change.
-.make/upstream: $(wildcard patches/*) $(shell ./scripts/upstream.sh file_target)
-	./scripts/upstream.sh init
+# Re-run if the upstream commit or the patches change
+.make/upstream: $(wildcard patches/*) $(shell ./upstream.sh file_target)
+ifneq ("$(wildcard upstream)","")
+	./upstream.sh init
+endif
 	@touch $@
 .PHONY: upstream
+
+bin/pulumi-java-gen: .pulumi-java-gen.version
+	$(PULUMICTL) download-binary -n pulumi-language-java -v v$(shell cat .pulumi-java-gen.version) -r pulumi/pulumi-java
 
 # To make an immediately observable change to .ci-mgmt.yaml:
 #
@@ -290,12 +290,110 @@ ci-mgmt: .ci-mgmt.yaml
 	go run github.com/pulumi/ci-mgmt/provider-ci@master generate
 .PHONY: ci-mgmt
 
+# Because some codegen depends on the version of the CLI used, we install a local CLI
+# version pinned to the same version as `provider/go.mod`.
+#
+# This logic compares the version of .pulumi/bin/pulumi already installed. If it matches
+# the desired version, we just print. Otherwise we (re)install pulumi at the desired
+# version.
+.pulumi/bin/pulumi: .pulumi/version
+	@if [ -x .pulumi/bin/pulumi ] && [ "v$$(cat .pulumi/version)" = "$$(.pulumi/bin/pulumi version)" ]; then \
+		echo "pulumi/bin/pulumi version: v$$(cat .pulumi/version)"; \
+		touch $@; \
+	else \
+		curl -fsSL https://get.pulumi.com | \
+			HOME=$(WORKING_DIR) sh -s -- --version "$$(cat .pulumi/version)"; \
+	fi
+
+# Compute the version of Pulumi to use by inspecting the Go dependencies of the provider.
+.pulumi/version: provider/go.mod
+	cd provider && go list -f "{{slice .Version 1}}" -m github.com/pulumi/pulumi/pkg/v3 | tee ../$@
+
 # Start debug server for tfgen
 debug_tfgen:
 	dlv  --listen=:2345 --headless=true --api-version=2  exec $(WORKING_DIR)/bin/$(CODEGEN) -- schema --out provider/cmd/$(PROVIDER)
 .PHONY: debug_tfgen
 
-include scripts/crossbuild.mk
+# Provider cross-platform build & packaging
+
+# Set these variables to enable signing of the windows binary
+AZURE_SIGNING_CLIENT_ID ?=
+AZURE_SIGNING_CLIENT_SECRET ?=
+AZURE_SIGNING_TENANT_ID ?=
+AZURE_SIGNING_KEY_VAULT_URI ?=
+SKIP_SIGNING ?=
+
+# These targets assume that the schema-embed.json exists - it's generated by tfgen.
+# We disable CGO to ensure that the binary is statically linked.
+bin/linux-amd64/$(PROVIDER): GOOS := linux
+bin/linux-amd64/$(PROVIDER): GOARCH := amd64
+bin/linux-arm64/$(PROVIDER): GOOS := linux
+bin/linux-arm64/$(PROVIDER): GOARCH := arm64
+bin/darwin-amd64/$(PROVIDER): GOOS := darwin
+bin/darwin-amd64/$(PROVIDER): GOARCH := amd64
+bin/darwin-arm64/$(PROVIDER): GOOS := darwin
+bin/darwin-arm64/$(PROVIDER): GOARCH := arm64
+bin/windows-amd64/$(PROVIDER).exe: GOOS := windows
+bin/windows-amd64/$(PROVIDER).exe: GOARCH := amd64
+bin/%/$(PROVIDER) bin/%/$(PROVIDER).exe: bin/jsign-6.0.jar
+	$(call build_provider_cmd,$(GOOS),$(GOARCH),$(WORKING_DIR)/$@)
+
+	@# Only sign windows binary if fully configured.
+	@# Test variables set by joining with | between and looking for || showing at least one variable is empty.
+	@# Move the binary to a temporary location and sign it there to avoid the target being up-to-date if signing fails.
+	@set -e; \
+	if [[ "${GOOS}-${GOARCH}" = "windows-amd64" && "${SKIP_SIGNING}" != "true" ]]; then \
+		if [[ "|${AZURE_SIGNING_CLIENT_ID}|${AZURE_SIGNING_CLIENT_SECRET}|${AZURE_SIGNING_TENANT_ID}|${AZURE_SIGNING_KEY_VAULT_URI}|" == *"||"* ]]; then \
+			echo "Can't sign windows binaries as required configuration not set: AZURE_SIGNING_CLIENT_ID, AZURE_SIGNING_CLIENT_SECRET, AZURE_SIGNING_TENANT_ID, AZURE_SIGNING_KEY_VAULT_URI"; \
+			echo "To rebuild with signing delete the unsigned $@ and rebuild with the fixed configuration"; \
+			if [[ "${CI}" == "true" ]]; then exit 1; fi; \
+		else \
+			mv $@ $@.unsigned; \
+			az login --service-principal \
+				--username "${AZURE_SIGNING_CLIENT_ID}" \
+				--password "${AZURE_SIGNING_CLIENT_SECRET}" \
+				--tenant "${AZURE_SIGNING_TENANT_ID}" \
+				--output none; \
+			ACCESS_TOKEN=$$(az account get-access-token --resource "https://vault.azure.net" | jq -r .accessToken); \
+			java -jar bin/jsign-6.0.jar \
+				--storetype AZUREKEYVAULT \
+				--keystore "PulumiCodeSigning" \
+				--url "${AZURE_SIGNING_KEY_VAULT_URI}" \
+				--storepass "$${ACCESS_TOKEN}" \
+				$@.unsigned; \
+			mv $@.unsigned $@; \
+			az logout; \
+		fi; \
+	fi
+
+bin/jsign-6.0.jar:
+	wget https://github.com/ebourg/jsign/releases/download/6.0/jsign-6.0.jar --output-document=bin/jsign-6.0.jar
+
+provider-linux-amd64: bin/linux-amd64/$(PROVIDER)
+provider-linux-arm64: bin/linux-arm64/$(PROVIDER)
+provider-darwin-amd64: bin/darwin-amd64/$(PROVIDER)
+provider-darwin-arm64: bin/darwin-arm64/$(PROVIDER)
+provider-windows-amd64: bin/windows-amd64/$(PROVIDER).exe
+.PHONY: provider-linux-amd64 provider-linux-arm64 provider-darwin-amd64 provider-darwin-arm64 provider-windows-amd64
+
+bin/$(PROVIDER)-v$(VERSION_GENERIC)-linux-amd64.tar.gz: bin/linux-amd64/$(PROVIDER)
+bin/$(PROVIDER)-v$(VERSION_GENERIC)-linux-arm64.tar.gz: bin/linux-arm64/$(PROVIDER)
+bin/$(PROVIDER)-v$(VERSION_GENERIC)-darwin-amd64.tar.gz: bin/darwin-amd64/$(PROVIDER)
+bin/$(PROVIDER)-v$(VERSION_GENERIC)-darwin-arm64.tar.gz: bin/darwin-arm64/$(PROVIDER)
+bin/$(PROVIDER)-v$(VERSION_GENERIC)-windows-amd64.tar.gz: bin/windows-amd64/$(PROVIDER).exe
+bin/$(PROVIDER)-v$(VERSION_GENERIC)-%.tar.gz:
+	@mkdir -p dist
+	@# $< is the last dependency (the binary path from above) e.g. bin/linux-amd64/pulumi-resource-xyz
+	@# $@ is the current target e.g. bin/pulumi-resource-xyz-v1.2.3-linux-amd64.tar.gz
+	tar --gzip -cf $@ README.md LICENSE -C $$(dirname $<) .
+
+provider_dist-linux-amd64: bin/$(PROVIDER)-v$(VERSION_GENERIC)-linux-amd64.tar.gz
+provider_dist-linux-arm64: bin/$(PROVIDER)-v$(VERSION_GENERIC)-linux-arm64.tar.gz
+provider_dist-darwin-amd64: bin/$(PROVIDER)-v$(VERSION_GENERIC)-darwin-amd64.tar.gz
+provider_dist-darwin-arm64: bin/$(PROVIDER)-v$(VERSION_GENERIC)-darwin-arm64.tar.gz
+provider_dist-windows-amd64: bin/$(PROVIDER)-v$(VERSION_GENERIC)-windows-amd64.tar.gz
+provider_dist: provider_dist-linux-amd64 provider_dist-linux-arm64 provider_dist-darwin-amd64 provider_dist-darwin-arm64 provider_dist-windows-amd64
+.PHONY: provider_dist-linux-amd64 provider_dist-linux-arm64 provider_dist-darwin-amd64 provider_dist-darwin-arm64 provider_dist-windows-amd64 provider_dist
 
 # Permit providers to extend the Makefile with provider-specific Make includes.
 include $(wildcard .mk/*.mk)

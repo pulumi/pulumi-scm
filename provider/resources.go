@@ -22,7 +22,7 @@ import (
 	// embed is used to store bridge-metadata.json in the compiled binary
 	_ "embed"
 
-	"github.com/paloaltonetworks/terraform-provider-scm/scm"
+	"github.com/PaloAltoNetworks/terraform-provider-scm/scm"
 
 	pf "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/pf/tfbridge"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"

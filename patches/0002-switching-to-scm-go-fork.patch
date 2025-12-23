@@ -1,0 +1,16 @@
+From 0000000000000000000000000000000000000000 Mon Sep 17 00:00:00 2001
+From: Jonathan Davenport <jdavenport@pulumi.com>
+Date: Mon, 22 Dec 2025 15:56:08 -0500
+Subject: [PATCH] switching to scm-go fork
+
+
+diff --git a/go.mod b/go.mod
+index cd383a9..981513b 100644
+--- a/go.mod
++++ b/go.mod
+@@ -65,3 +65,5 @@ require (
+ 	google.golang.org/grpc v1.57.0 // indirect
+ 	google.golang.org/protobuf v1.31.0 // indirect
+ )
++
++replace github.com/paloaltonetworks/scm-go => github.com/pulumi/scm-go v0.11.1
