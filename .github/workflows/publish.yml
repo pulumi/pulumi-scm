@@ -105,6 +105,7 @@ jobs:
         body: ${{ steps.schema-summary.outputs.summary }}
         generate_release_notes: true
         files: dist/*
+        # added to avoid publishing as latest per https://github.com/pulumi/platform-providers-team/blob/main/playbooks/Release%3A%20Backport.md
         make_latest: false
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -162,6 +163,8 @@ jobs:
         pip install toml-cli==0.7.0
         version=$(toml get --toml-path pyproject.toml project.version)
         echo "version=${version}" >> "$GITHUB_OUTPUT"
+  # commented out to avoid building docs
+  #
   # create_docs_build:
   #   name: create_docs_build
   #   needs: publish_sdk
@@ -182,26 +185,26 @@ jobs:
   #             "ref": "${{ github.ref_name }}"
   #           }
 
-  clean_up_release_labels:
-    name: Clean up release labels
-    # Only run for non-prerelease, if the publish_go_sdk job was successful or skipped
-    if: inputs.isPrerelease == false
-    needs: create_docs_build
+  # clean_up_release_labels:
+  #   name: Clean up release labels
+  #   # Only run for non-prerelease, if the publish_go_sdk job was successful or skipped
+  #   if: inputs.isPrerelease == false
+  #   needs: create_docs_build
     
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout Repo
-      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      with:
-        persist-credentials: false
-    - name: Clean up release labels
-      uses: pulumi/action-release-by-pr-label@main
-      with:
-        command: "clean-up-release-labels"
-        repo: ${{ github.repository }}
-        commit: ${{ github.sha }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: Checkout Repo
+  #     uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+  #     with:
+  #       persist-credentials: false
+  #   - name: Clean up release labels
+  #     uses: pulumi/action-release-by-pr-label@main
+  #     with:
+  #       command: "clean-up-release-labels"
+  #       repo: ${{ github.repository }}
+  #       commit: ${{ github.sha }}
+  #     env:
+  #       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   verify_release:
     name: verify_release
