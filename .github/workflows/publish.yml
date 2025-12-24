@@ -30,6 +30,9 @@ jobs:
   publish:
     name: publish
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
     steps:
     - name: Validate prerelease
       if: inputs.isPrerelease == false && (contains(inputs.version, '-') || contains(inputs.version, '+'))
@@ -111,6 +114,9 @@ jobs:
     name: publish_sdk
     needs: publish
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      id-token: write
     outputs:
       python_version: ${{ steps.python_version.outputs.version }}
     steps:
