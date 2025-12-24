@@ -21,21 +21,9 @@ on:
 
 env:
   IS_PRERELEASE: ${{ inputs.isPrerelease }}
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-  NUGET_PUBLISH_KEY: ${{ secrets.NUGET_PUBLISH_KEY }}
-  PUBLISH_REPO_PASSWORD: ${{ secrets.OSSRH_PASSWORD }}
-  PUBLISH_REPO_USERNAME: ${{ secrets.OSSRH_USERNAME }}
-  PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
   PULUMI_API: https://api.pulumi-staging.io
   PULUMI_GO_DEP_ROOT: ${{ github.workspace }}/..
   PULUMI_LOCAL_NUGET: ${{ github.workspace }}/nuget
-  PYPI_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
-  PYPI_USERNAME: __token__
-  SIGNING_KEY: ${{ secrets.JAVA_SIGNING_KEY }}
-  SIGNING_KEY_ID: ${{ secrets.JAVA_SIGNING_KEY_ID }}
-  SIGNING_PASSWORD: ${{ secrets.JAVA_SIGNING_PASSWORD }}
   TF_APPEND_USER_AGENT: pulumi
 
 jobs:
@@ -53,6 +41,15 @@ jobs:
       uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       with:
         persist-credentials: false
+    - env:
+        ESC_ACTION_ENVIRONMENT: imports/github-secrets
+        ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: "false"
+        ESC_ACTION_OIDC_AUTH: "true"
+        ESC_ACTION_OIDC_ORGANIZATION: pulumi
+        ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      id: esc-secrets
+      name: Fetch secrets from ESC
+      uses: pulumi/esc-action@9eb774255b1a4afb7855678ae8d4a77359da0d9b
     - name: Setup tools
       uses: ./.github/actions/setup-tools
       with:
@@ -60,13 +57,13 @@ jobs:
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@e3dd6a429d7300a6a4c196c26e071d42e0343502 # v4.0.2
       with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-access-key-id: ${{ steps.esc-secrets.outputs.AWS_ACCESS_KEY_ID }}
         aws-region: us-east-2
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-secret-access-key: ${{ steps.esc-secrets.outputs.AWS_SECRET_ACCESS_KEY }}
         role-duration-seconds: 7200
         role-external-id: upload-pulumi-release
         role-session-name: scm@githubActions
-        role-to-assume: ${{ secrets.AWS_UPLOAD_ROLE_ARN }}
+        role-to-assume: ${{ steps.esc-secrets.outputs.AWS_UPLOAD_ROLE_ARN }}
     - name: Create dist directory
       run: mkdir -p dist
     - name: Download provider assets
@@ -122,6 +119,15 @@ jobs:
       with:
         # Persist credentials so we can push back to the repo
         persist-credentials: true
+    - env:
+        ESC_ACTION_ENVIRONMENT: imports/github-secrets
+        ESC_ACTION_EXPORT_ENVIRONMENT_VARIABLES: "false"
+        ESC_ACTION_OIDC_AUTH: "true"
+        ESC_ACTION_OIDC_ORGANIZATION: pulumi
+        ESC_ACTION_OIDC_REQUESTED_TOKEN_TYPE: urn:pulumi:token-type:access_token:organization
+      id: esc-secrets
+      name: Fetch secrets from ESC
+      uses: pulumi/esc-action@9eb774255b1a4afb7855678ae8d4a77359da0d9b
     - name: Setup tools
       uses: ./.github/actions/setup-tools
       with:
@@ -129,12 +135,31 @@ jobs:
     - name: Publish SDKs
       if: inputs.skipJavaSdk == false
       uses: pulumi/pulumi-package-publisher@696a0fe98f86d86ada2a842d1859f3e8c40d6cd7 # v0.0.21
+      env:
+        NODE_AUTH_TOKEN: ${{ steps.esc-secrets.outputs.NPM_TOKEN }}
+        NPM_TOKEN: ${{ steps.esc-secrets.outputs.NPM_TOKEN }}
+        NUGET_PUBLISH_KEY: ${{ steps.esc-secrets.outputs.NUGET_PUBLISH_KEY }}
+        PUBLISH_REPO_PASSWORD: ${{ steps.esc-secrets.outputs.OSSRH_PASSWORD }}
+        PUBLISH_REPO_USERNAME: ${{ steps.esc-secrets.outputs.OSSRH_USERNAME }}
+        PYPI_PASSWORD: ${{ steps.esc-secrets.outputs.PYPI_API_TOKEN }}
+        PYPI_USERNAME: __token__
+        SIGNING_KEY: ${{ steps.esc-secrets.outputs.JAVA_SIGNING_KEY }}
+        SIGNING_KEY_ID: ${{ steps.esc-secrets.outputs.JAVA_SIGNING_KEY_ID }}
+        SIGNING_PASSWORD: ${{ steps.esc-secrets.outputs.JAVA_SIGNING_PASSWORD }}
       with:
         sdk: all
         version: ${{ inputs.version }}
     - name: Publish SDKs (except Java)
       if: inputs.skipJavaSdk == true
       uses: pulumi/pulumi-package-publisher@696a0fe98f86d86ada2a842d1859f3e8c40d6cd7 # v0.0.21
+      env:
+        NODE_AUTH_TOKEN: ${{ steps.esc-secrets.outputs.NPM_TOKEN }}
+        NPM_TOKEN: ${{ steps.esc-secrets.outputs.NPM_TOKEN }}
+        NUGET_PUBLISH_KEY: ${{ steps.esc-secrets.outputs.NUGET_PUBLISH_KEY }}
+        PUBLISH_REPO_PASSWORD: ${{ steps.esc-secrets.outputs.OSSRH_PASSWORD }}
+        PUBLISH_REPO_USERNAME: ${{ steps.esc-secrets.outputs.OSSRH_USERNAME }}
+        PYPI_PASSWORD: ${{ steps.esc-secrets.outputs.PYPI_API_TOKEN }}
+        PYPI_USERNAME: __token__
       with:
         sdk: all,!java
         version: ${{ inputs.version }}
