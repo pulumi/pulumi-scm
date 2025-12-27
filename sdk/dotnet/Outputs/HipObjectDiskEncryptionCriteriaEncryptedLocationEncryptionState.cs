@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Is
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
         /// </summary>
         public readonly string? Is;
         /// <summary>
         /// Is not
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Is` and `IsNot`.
         /// </summary>
         public readonly string? IsNot;

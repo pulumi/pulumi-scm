@@ -12,19 +12,18 @@ import java.util.Objects;
 public final class GetHipObjectListDataHostInfoCriteriaHostName {
     /**
      * @return Contains
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     private String contains;
     /**
      * @return Is
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     private String is;
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -33,6 +32,7 @@ public final class GetHipObjectListDataHostInfoCriteriaHostName {
     private GetHipObjectListDataHostInfoCriteriaHostName() {}
     /**
      * @return Contains
+     * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
     public String contains() {
@@ -40,7 +40,6 @@ public final class GetHipObjectListDataHostInfoCriteriaHostName {
     }
     /**
      * @return Is
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */
@@ -49,7 +48,6 @@ public final class GetHipObjectListDataHostInfoCriteriaHostName {
     }
     /**
      * @return Is not
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `contains`, `is`, and `isNot`.
      * 
      */

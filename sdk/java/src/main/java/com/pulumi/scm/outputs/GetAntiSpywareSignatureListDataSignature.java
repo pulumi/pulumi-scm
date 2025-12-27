@@ -14,12 +14,12 @@ import java.util.Objects;
 public final class GetAntiSpywareSignatureListDataSignature {
     /**
      * @return anti spyware signature combination
+     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     private GetAntiSpywareSignatureListDataSignatureCombination combination;
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
@@ -28,6 +28,7 @@ public final class GetAntiSpywareSignatureListDataSignature {
     private GetAntiSpywareSignatureListDataSignature() {}
     /**
      * @return anti spyware signature combination
+     * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */
     public GetAntiSpywareSignatureListDataSignatureCombination combination() {
@@ -35,7 +36,6 @@ public final class GetAntiSpywareSignatureListDataSignature {
     }
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `combination` and `standard`.
      * 
      */

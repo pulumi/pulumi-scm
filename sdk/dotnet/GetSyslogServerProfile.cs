@@ -13,18 +13,111 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// SyslogServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+        ///     var scmSyslogServerProf = Scm.GetSyslogServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "69f7ee97-7c0a-416d-a28d-d45929851f6e",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSyslogServerProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id) },
+        ///             { "folder", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder) },
+        ///             { "name", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetSyslogServerProfileResult> InvokeAsync(GetSyslogServerProfileArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetSyslogServerProfileResult>("scm:index/getSyslogServerProfile:getSyslogServerProfile", args ?? new GetSyslogServerProfileArgs(), options.WithDefaults());
 
         /// <summary>
         /// SyslogServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+        ///     var scmSyslogServerProf = Scm.GetSyslogServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "69f7ee97-7c0a-416d-a28d-d45929851f6e",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSyslogServerProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id) },
+        ///             { "folder", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder) },
+        ///             { "name", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSyslogServerProfileResult> Invoke(GetSyslogServerProfileInvokeArgs args, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetSyslogServerProfileResult>("scm:index/getSyslogServerProfile:getSyslogServerProfile", args ?? new GetSyslogServerProfileInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// SyslogServerProfile data source
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+        ///     //
+        ///     // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+        ///     var scmSyslogServerProf = Scm.GetSyslogServerProfile.Invoke(new()
+        ///     {
+        ///         Id = "69f7ee97-7c0a-416d-a28d-d45929851f6e",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmSyslogServerProfileDetails"] = 
+        ///         {
+        ///             { "profileId", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Id) },
+        ///             { "folder", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Folder) },
+        ///             { "name", scmSyslogServerProf.Apply(getSyslogServerProfileResult =&gt; getSyslogServerProfileResult.Name) },
+        ///         },
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetSyslogServerProfileResult> Invoke(GetSyslogServerProfileInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetSyslogServerProfileResult>("scm:index/getSyslogServerProfile:getSyslogServerProfile", args ?? new GetSyslogServerProfileInvokeArgs(), options.WithDefaults());
@@ -33,6 +126,20 @@ namespace Pulumi.Scm
 
     public sealed class GetSyslogServerProfileArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the syslog server profile
         /// </summary>
@@ -45,6 +152,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetSyslogServerProfileArgs()
         {
         }
@@ -53,6 +167,20 @@ namespace Pulumi.Scm
 
     public sealed class GetSyslogServerProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// The UUID of the syslog server profile
         /// </summary>
@@ -64,6 +192,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetSyslogServerProfileInvokeArgs()
         {
@@ -77,9 +212,17 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// Format
+        /// </summary>
         public readonly Outputs.GetSyslogServerProfileFormatResult Format;
         /// <summary>
         /// The UUID of the syslog server profile
@@ -89,7 +232,14 @@ namespace Pulumi.Scm
         /// The name of the syslog server profile
         /// </summary>
         public readonly string Name;
-        public readonly Outputs.GetSyslogServerProfileServersResult Servers;
+        /// <summary>
+        /// A list of syslog server configurations. At least one server is required.
+        /// </summary>
+        public readonly ImmutableArray<Outputs.GetSyslogServerProfileServerResult> Servers;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
 
@@ -105,7 +255,7 @@ namespace Pulumi.Scm
 
             string name,
 
-            Outputs.GetSyslogServerProfileServersResult servers,
+            ImmutableArray<Outputs.GetSyslogServerProfileServerResult> servers,
 
             string snippet,
 

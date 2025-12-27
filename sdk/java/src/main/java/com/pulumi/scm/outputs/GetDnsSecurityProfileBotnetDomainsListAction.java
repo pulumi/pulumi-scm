@@ -15,26 +15,24 @@ import java.util.Objects;
 public final class GetDnsSecurityProfileBotnetDomainsListAction {
     /**
      * @return Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private GetDnsSecurityProfileBotnetDomainsListActionAlert alert;
     /**
      * @return Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private GetDnsSecurityProfileBotnetDomainsListActionAllow allow;
     /**
      * @return Block
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     private GetDnsSecurityProfileBotnetDomainsListActionBlock block;
     /**
      * @return Sinkhole
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -43,6 +41,7 @@ public final class GetDnsSecurityProfileBotnetDomainsListAction {
     private GetDnsSecurityProfileBotnetDomainsListAction() {}
     /**
      * @return Alert
+     * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
     public GetDnsSecurityProfileBotnetDomainsListActionAlert alert() {
@@ -50,7 +49,6 @@ public final class GetDnsSecurityProfileBotnetDomainsListAction {
     }
     /**
      * @return Allow
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -59,7 +57,6 @@ public final class GetDnsSecurityProfileBotnetDomainsListAction {
     }
     /**
      * @return Block
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */
@@ -68,7 +65,6 @@ public final class GetDnsSecurityProfileBotnetDomainsListAction {
     }
     /**
      * @return Sinkhole
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `alert`, `allow`, `block`, and `sinkhole`.
      * 
      */

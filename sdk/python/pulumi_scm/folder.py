@@ -270,6 +270,16 @@ class Folder(pulumi.CustomResource):
             opts = pulumi.ResourceOptions(depends_on=[scm_label_example]))
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/folder:Folder example :::id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] description: The description of the folder
@@ -337,6 +347,16 @@ class Folder(pulumi.CustomResource):
             description="Managed by Pulumi",
             labels=[scm_label_example.name],
             opts = pulumi.ResourceOptions(depends_on=[scm_label_example]))
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/folder:Folder example :::id
         ```
 
         :param str resource_name: The name of the resource.

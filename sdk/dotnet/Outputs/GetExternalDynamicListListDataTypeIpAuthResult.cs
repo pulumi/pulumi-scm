@@ -14,11 +14,11 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListListDataTypeIpAuthResult
     {
         /// <summary>
-        /// Password
+        /// Password for Custom IP authentication
         /// </summary>
         public readonly string Password;
         /// <summary>
-        /// Username
+        /// Username for Custom IP authentication
         /// </summary>
         public readonly string Username;
 

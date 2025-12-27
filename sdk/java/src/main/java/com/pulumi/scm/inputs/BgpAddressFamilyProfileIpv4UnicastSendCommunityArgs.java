@@ -21,6 +21,7 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * All
+     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     @Import(name="all")
@@ -28,6 +29,7 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * @return All
+     * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
     public Optional<Output<BgpAddressFamilyProfileIpv4UnicastSendCommunityAllArgs>> all() {
@@ -36,7 +38,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * Both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -45,7 +46,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * @return Both
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -55,7 +55,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * Extended
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -64,7 +63,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * @return Extended
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -74,7 +72,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -83,7 +80,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * @return Large
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -93,7 +89,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -102,7 +97,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
     /**
      * @return Standard
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
      * 
      */
@@ -140,6 +134,7 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param all All
+         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
          * 
@@ -151,6 +146,7 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param all All
+         * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
          * 
@@ -161,7 +157,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param both Both
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
@@ -174,7 +169,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param both Both
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
@@ -186,7 +180,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param extended Extended
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
@@ -199,7 +192,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param extended Extended
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
@@ -211,7 +203,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param large Large
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
@@ -224,7 +215,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param large Large
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
@@ -236,7 +226,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param standard Standard
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder
@@ -249,7 +238,6 @@ public final class BgpAddressFamilyProfileIpv4UnicastSendCommunityArgs extends c
 
         /**
          * @param standard Standard
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `all`, `both`, `extended`, `large`, and `standard`.
          * 
          * @return builder

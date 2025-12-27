@@ -24,10 +24,19 @@ func LookupLdapServerProfile(ctx *pulumi.Context, args *LookupLdapServerProfileA
 
 // A collection of arguments for invoking getLdapServerProfile.
 type LookupLdapServerProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the LDAP server profile
 	Id string `pulumi:"id"`
 	// The name of the LDAP server profile
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getLdapServerProfile.
@@ -41,21 +50,33 @@ type LookupLdapServerProfileResult struct {
 	// The bind timeout (seconds)
 	BindTimelimit string `pulumi:"bindTimelimit"`
 	// The device in which the resource is defined
-	Device          string            `pulumi:"device"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// Map of sensitive values returned from the API.
 	EncryptedValues map[string]string `pulumi:"encryptedValues"`
-	Folder          string            `pulumi:"folder"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
 	// The UUID of the LDAP server profile
-	Id       string `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// The LDAP server time
 	LdapType string `pulumi:"ldapType"`
 	// The name of the LDAP server profile
-	Name                    string                       `pulumi:"name"`
-	RetryInterval           int                          `pulumi:"retryInterval"`
-	Servers                 []GetLdapServerProfileServer `pulumi:"servers"`
-	Snippet                 string                       `pulumi:"snippet"`
-	Ssl                     bool                         `pulumi:"ssl"`
-	Tfid                    string                       `pulumi:"tfid"`
-	Timelimit               int                          `pulumi:"timelimit"`
-	VerifyServerCertificate bool                         `pulumi:"verifyServerCertificate"`
+	Name string `pulumi:"name"`
+	// The search retry interval (seconds)
+	RetryInterval int `pulumi:"retryInterval"`
+	// The LDAP server configuration
+	Servers []GetLdapServerProfileServer `pulumi:"servers"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	// Require SSL/TLS secured connection?
+	Ssl  bool   `pulumi:"ssl"`
+	Tfid string `pulumi:"tfid"`
+	// The search timeout (seconds)
+	Timelimit int `pulumi:"timelimit"`
+	// Verify server certificate for SSL sessions?
+	VerifyServerCertificate bool `pulumi:"verifyServerCertificate"`
 }
 
 func LookupLdapServerProfileOutput(ctx *pulumi.Context, args LookupLdapServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupLdapServerProfileResultOutput {
@@ -69,10 +90,19 @@ func LookupLdapServerProfileOutput(ctx *pulumi.Context, args LookupLdapServerPro
 
 // A collection of arguments for invoking getLdapServerProfile.
 type LookupLdapServerProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the LDAP server profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the LDAP server profile
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupLdapServerProfileOutputArgs) ElementType() reflect.Type {
@@ -115,14 +145,18 @@ func (o LookupLdapServerProfileResultOutput) BindTimelimit() pulumi.StringOutput
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLdapServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// Map of sensitive values returned from the API.
 func (o LookupLdapServerProfileResultOutput) EncryptedValues() pulumi.StringMapOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) map[string]string { return v.EncryptedValues }).(pulumi.StringMapOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLdapServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -132,6 +166,7 @@ func (o LookupLdapServerProfileResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// The LDAP server time
 func (o LookupLdapServerProfileResultOutput) LdapType() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.LdapType }).(pulumi.StringOutput)
 }
@@ -141,18 +176,23 @@ func (o LookupLdapServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The search retry interval (seconds)
 func (o LookupLdapServerProfileResultOutput) RetryInterval() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) int { return v.RetryInterval }).(pulumi.IntOutput)
 }
 
+// The LDAP server configuration
 func (o LookupLdapServerProfileResultOutput) Servers() GetLdapServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) []GetLdapServerProfileServer { return v.Servers }).(GetLdapServerProfileServerArrayOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupLdapServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Require SSL/TLS secured connection?
 func (o LookupLdapServerProfileResultOutput) Ssl() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) bool { return v.Ssl }).(pulumi.BoolOutput)
 }
@@ -161,10 +201,12 @@ func (o LookupLdapServerProfileResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// The search timeout (seconds)
 func (o LookupLdapServerProfileResultOutput) Timelimit() pulumi.IntOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) int { return v.Timelimit }).(pulumi.IntOutput)
 }
 
+// Verify server certificate for SSL sessions?
 func (o LookupLdapServerProfileResultOutput) VerifyServerCertificate() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupLdapServerProfileResult) bool { return v.VerifyServerCertificate }).(pulumi.BoolOutput)
 }

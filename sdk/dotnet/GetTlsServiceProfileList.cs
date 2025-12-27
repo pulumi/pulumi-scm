@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM TLS Service Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetTlsServiceProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTlsServiceProfileListAllShared"] = allShared.Apply(getTlsServiceProfileListResult =&gt; getTlsServiceProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetTlsServiceProfileListResult> InvokeAsync(GetTlsServiceProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetTlsServiceProfileListResult>("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", args ?? new GetTlsServiceProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM TLS Service Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetTlsServiceProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTlsServiceProfileListAllShared"] = allShared.Apply(getTlsServiceProfileListResult =&gt; getTlsServiceProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTlsServiceProfileListResult> Invoke(GetTlsServiceProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetTlsServiceProfileListResult>("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", args ?? new GetTlsServiceProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM TLS Service Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetTlsServiceProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmTlsServiceProfileListAllShared"] = allShared.Apply(getTlsServiceProfileListResult =&gt; getTlsServiceProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetTlsServiceProfileListResult> Invoke(GetTlsServiceProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetTlsServiceProfileListResult>("scm:index/getTlsServiceProfileList:getTlsServiceProfileList", args ?? new GetTlsServiceProfileListInvokeArgs(), options.WithDefaults());

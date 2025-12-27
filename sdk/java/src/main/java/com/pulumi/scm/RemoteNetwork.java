@@ -144,6 +144,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/remoteNetwork:RemoteNetwork example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/remoteNetwork:RemoteNetwork example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/remoteNetwork:RemoteNetwork example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/remoteNetwork:RemoteNetwork")
 public class RemoteNetwork extends com.pulumi.resources.CustomResource {

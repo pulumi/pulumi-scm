@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM TLS Service Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+ * const allShared = scm.getTlsServiceProfileList({
+ *     folder: "All",
+ * });
+ * export const scmTlsServiceProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getTlsServiceProfileList(args?: GetTlsServiceProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetTlsServiceProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetTlsServiceProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM TLS Service Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM TLS Service Profile in the "Shared" folder.
+ * const allShared = scm.getTlsServiceProfileList({
+ *     folder: "All",
+ * });
+ * export const scmTlsServiceProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getTlsServiceProfileListOutput(args?: GetTlsServiceProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetTlsServiceProfileListResult> {
     args = args || {};

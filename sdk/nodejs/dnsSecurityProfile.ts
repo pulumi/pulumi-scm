@@ -134,6 +134,32 @@ import * as utilities from "./utilities";
  *     },
  * });
  * ```
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/dnsSecurityProfile:DnsSecurityProfile example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/dnsSecurityProfile:DnsSecurityProfile example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/dnsSecurityProfile:DnsSecurityProfile example ::device:id
+ * ```
  */
 export class DnsSecurityProfile extends pulumi.CustomResource {
     /**
@@ -173,11 +199,11 @@ export class DnsSecurityProfile extends pulumi.CustomResource {
     declare public readonly description: pulumi.Output<string | undefined>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -187,7 +213,6 @@ export class DnsSecurityProfile extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -242,11 +267,11 @@ export interface DnsSecurityProfileState {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -256,7 +281,6 @@ export interface DnsSecurityProfileState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -277,11 +301,11 @@ export interface DnsSecurityProfileArgs {
     description?: pulumi.Input<string>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -291,7 +315,6 @@ export interface DnsSecurityProfileArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

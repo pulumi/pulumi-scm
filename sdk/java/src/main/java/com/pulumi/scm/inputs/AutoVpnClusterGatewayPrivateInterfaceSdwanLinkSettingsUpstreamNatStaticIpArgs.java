@@ -17,6 +17,7 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
     /**
      * FQDN
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     @Import(name="fqdn")
@@ -24,6 +25,7 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
     /**
      * @return FQDN
+     * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
     public Optional<Output<String>> fqdn() {
@@ -32,7 +34,6 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
     /**
      * IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -41,7 +42,6 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
     /**
      * @return IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
      * 
      */
@@ -76,6 +76,7 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
         /**
          * @param fqdn FQDN
+         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
          * 
@@ -87,6 +88,7 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
         /**
          * @param fqdn FQDN
+         * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
          * 
@@ -97,7 +99,6 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
         /**
          * @param ipAddress IP address
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder
@@ -110,7 +111,6 @@ public final class AutoVpnClusterGatewayPrivateInterfaceSdwanLinkSettingsUpstrea
 
         /**
          * @param ipAddress IP address
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `fqdn` and `ipAddress`.
          * 
          * @return builder

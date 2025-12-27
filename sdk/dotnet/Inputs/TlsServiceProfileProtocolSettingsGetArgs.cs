@@ -31,12 +31,6 @@ namespace Pulumi.Scm.Inputs
         public Input<bool>? AuthAlgoSha384 { get; set; }
 
         /// <summary>
-        /// Allow 3DES algorithm?
-        /// </summary>
-        [Input("encAlgo3des")]
-        public Input<bool>? EncAlgo3des { get; set; }
-
-        /// <summary>
         /// Allow AES-128-CBC algorithm?
         /// </summary>
         [Input("encAlgoAes128Cbc")]
@@ -59,12 +53,6 @@ namespace Pulumi.Scm.Inputs
         /// </summary>
         [Input("encAlgoAes256Gcm")]
         public Input<bool>? EncAlgoAes256Gcm { get; set; }
-
-        /// <summary>
-        /// Allow RC4 algorithm?
-        /// </summary>
-        [Input("encAlgoRc4")]
-        public Input<bool>? EncAlgoRc4 { get; set; }
 
         /// <summary>
         /// Allow DHE algorithm?

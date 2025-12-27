@@ -18,6 +18,7 @@ import * as utilities from "./utilities";
  * // Fetch a list of all clusters from the "All" folder.
  * const allClusters = scm.getAutoVpnClusterList({
  *     folder: "All",
+ *     limit: 10,
  * });
  * export const autoVpnClustersList = allClusters;
  * ```
@@ -119,6 +120,7 @@ export interface GetAutoVpnClusterListResult {
  * // Fetch a list of all clusters from the "All" folder.
  * const allClusters = scm.getAutoVpnClusterList({
  *     folder: "All",
+ *     limit: 10,
  * });
  * export const autoVpnClustersList = allClusters;
  * ```

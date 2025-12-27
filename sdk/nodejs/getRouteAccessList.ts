@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getRouteAccessList(args: GetRouteAccessListArgs, opts?: pulumi.InvokeOptions): Promise<GetRouteAccessListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRouteAccessList:getRouteAccessList", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getRouteAccessList(args: GetRouteAccessListArgs, opts?: pulumi.I
  */
 export interface GetRouteAccessListArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetRouteAccessListArgs {
      * Route access list name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -41,8 +59,13 @@ export interface GetRouteAccessListResult {
     readonly description: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
@@ -52,8 +75,15 @@ export interface GetRouteAccessListResult {
      * Route access list name
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Type
+     */
     readonly type: outputs.GetRouteAccessListType;
 }
 /**
@@ -62,8 +92,11 @@ export interface GetRouteAccessListResult {
 export function getRouteAccessListOutput(args: GetRouteAccessListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRouteAccessListResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRouteAccessList:getRouteAccessList", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -72,6 +105,16 @@ export function getRouteAccessListOutput(args: GetRouteAccessListOutputArgs, opt
  */
 export interface GetRouteAccessListOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -79,4 +122,9 @@ export interface GetRouteAccessListOutputArgs {
      * Route access list name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

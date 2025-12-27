@@ -15,7 +15,7 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeDomain {
     /**
-     * @return Auth
+     * @return Authentication settings for Custom Domain type
      * 
      */
     private GetExternalDynamicListListDataTypeDomainAuth auth;
@@ -30,7 +30,7 @@ public final class GetExternalDynamicListListDataTypeDomain {
      */
     private String description;
     /**
-     * @return Exception list
+     * @return Domain Exception List for Custom Domain type
      * 
      */
     private List<String> exceptionLists;
@@ -40,19 +40,19 @@ public final class GetExternalDynamicListListDataTypeDomain {
      */
     private Boolean expandDomain;
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom Domain type
      * 
      */
     private GetExternalDynamicListListDataTypeDomainRecurring recurring;
     /**
-     * @return Url
+     * @return External URL for Custom Domain type
      * 
      */
     private String url;
 
     private GetExternalDynamicListListDataTypeDomain() {}
     /**
-     * @return Auth
+     * @return Authentication settings for Custom Domain type
      * 
      */
     public GetExternalDynamicListListDataTypeDomainAuth auth() {
@@ -73,7 +73,7 @@ public final class GetExternalDynamicListListDataTypeDomain {
         return this.description;
     }
     /**
-     * @return Exception list
+     * @return Domain Exception List for Custom Domain type
      * 
      */
     public List<String> exceptionLists() {
@@ -87,14 +87,14 @@ public final class GetExternalDynamicListListDataTypeDomain {
         return this.expandDomain;
     }
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom Domain type
      * 
      */
     public GetExternalDynamicListListDataTypeDomainRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return External URL for Custom Domain type
      * 
      */
     public String url() {

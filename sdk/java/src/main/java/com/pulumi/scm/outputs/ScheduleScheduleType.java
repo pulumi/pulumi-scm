@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 public final class ScheduleScheduleType {
     /**
      * @return Non recurring
+     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
     private @Nullable List<String> nonRecurrings;
     /**
      * @return Recurring
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
@@ -29,6 +29,7 @@ public final class ScheduleScheduleType {
     private ScheduleScheduleType() {}
     /**
      * @return Non recurring
+     * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */
     public List<String> nonRecurrings() {
@@ -36,7 +37,6 @@ public final class ScheduleScheduleType {
     }
     /**
      * @return Recurring
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `nonRecurring` and `recurring`.
      * 
      */

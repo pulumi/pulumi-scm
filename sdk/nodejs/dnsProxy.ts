@@ -8,6 +8,32 @@ import * as utilities from "./utilities";
 
 /**
  * DnsProxy resource
+ *
+ * ## Import
+ *
+ * The following command can be used to import a resource not managed by Terraform:
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/dnsProxy:DnsProxy example folder:::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/dnsProxy:DnsProxy example :snippet::id
+ * ```
+ *
+ * or
+ *
+ * bash
+ *
+ * ```sh
+ * $ pulumi import scm:index/dnsProxy:DnsProxy example ::device:id
+ * ```
  */
 export class DnsProxy extends pulumi.CustomResource {
     /**
@@ -40,13 +66,14 @@ export class DnsProxy extends pulumi.CustomResource {
     /**
      * Cache
      */
-    declare public readonly cache: pulumi.Output<outputs.DnsProxyCache>;
+    declare public readonly cache: pulumi.Output<outputs.DnsProxyCache | undefined>;
     /**
      * Default
      */
     declare public readonly default: pulumi.Output<outputs.DnsProxyDefault>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly device: pulumi.Output<string | undefined>;
     /**
@@ -59,7 +86,6 @@ export class DnsProxy extends pulumi.CustomResource {
     declare public readonly enabled: pulumi.Output<boolean | undefined>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly folder: pulumi.Output<string | undefined>;
@@ -73,7 +99,6 @@ export class DnsProxy extends pulumi.CustomResource {
     declare public readonly name: pulumi.Output<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     declare public readonly snippet: pulumi.Output<string | undefined>;
@@ -84,12 +109,12 @@ export class DnsProxy extends pulumi.CustomResource {
     /**
      * Tcp queries
      */
-    declare public readonly tcpQueries: pulumi.Output<outputs.DnsProxyTcpQueries>;
+    declare public readonly tcpQueries: pulumi.Output<outputs.DnsProxyTcpQueries | undefined>;
     declare public /*out*/ readonly tfid: pulumi.Output<string>;
     /**
      * Udp queries
      */
-    declare public readonly udpQueries: pulumi.Output<outputs.DnsProxyUdpQueries>;
+    declare public readonly udpQueries: pulumi.Output<outputs.DnsProxyUdpQueries | undefined>;
 
     /**
      * Create a DnsProxy resource with the given unique name, arguments, and options.
@@ -155,6 +180,7 @@ export interface DnsProxyState {
     default?: pulumi.Input<inputs.DnsProxyDefault>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -167,7 +193,6 @@ export interface DnsProxyState {
     enabled?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -181,7 +206,6 @@ export interface DnsProxyState {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;
@@ -214,6 +238,7 @@ export interface DnsProxyArgs {
     default: pulumi.Input<inputs.DnsProxyDefault>;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     device?: pulumi.Input<string>;
     /**
@@ -226,7 +251,6 @@ export interface DnsProxyArgs {
     enabled?: pulumi.Input<boolean>;
     /**
      * The folder in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     folder?: pulumi.Input<string>;
@@ -240,7 +264,6 @@ export interface DnsProxyArgs {
     name?: pulumi.Input<string>;
     /**
      * The snippet in which the resource is defined
-     *
      * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     snippet?: pulumi.Input<string>;

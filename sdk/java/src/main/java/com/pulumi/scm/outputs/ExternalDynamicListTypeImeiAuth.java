@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class ExternalDynamicListTypeImeiAuth {
     /**
-     * @return Password
+     * @return IMEI Auth Password for Custom IMEI type
      * 
      */
     private String password;
     /**
-     * @return Username
+     * @return IMEI Auth username for Custom IMEI type
      * 
      */
     private String username;
 
     private ExternalDynamicListTypeImeiAuth() {}
     /**
-     * @return Password
+     * @return IMEI Auth Password for Custom IMEI type
      * 
      */
     public String password() {
         return this.password;
     }
     /**
-     * @return Username
+     * @return IMEI Auth username for Custom IMEI type
      * 
      */
     public String username() {

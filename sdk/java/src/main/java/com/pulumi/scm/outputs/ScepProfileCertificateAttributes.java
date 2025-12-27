@@ -13,19 +13,18 @@ import javax.annotation.Nullable;
 public final class ScepProfileCertificateAttributes {
     /**
      * @return Dnsname
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     private @Nullable String dnsname;
     /**
      * @return Rfc822name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     private @Nullable String rfc822name;
     /**
      * @return Uniform resource identifier
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
@@ -34,6 +33,7 @@ public final class ScepProfileCertificateAttributes {
     private ScepProfileCertificateAttributes() {}
     /**
      * @return Dnsname
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
     public Optional<String> dnsname() {
@@ -41,7 +41,6 @@ public final class ScepProfileCertificateAttributes {
     }
     /**
      * @return Rfc822name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */
@@ -50,7 +49,6 @@ public final class ScepProfileCertificateAttributes {
     }
     /**
      * @return Uniform resource identifier
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dnsname`, `rfc822name`, and `uniformResourceIdentifier`.
      * 
      */

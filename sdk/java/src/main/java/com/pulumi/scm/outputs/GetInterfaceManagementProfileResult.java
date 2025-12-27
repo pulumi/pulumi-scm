@@ -15,12 +15,30 @@ import java.util.Objects;
 public final class GetInterfaceManagementProfileResult {
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     private String device;
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String folder;
+    /**
+     * @return Allow HTTP?
+     * 
+     */
     private Boolean http;
+    /**
+     * @return Allow HTTP OCSP?
+     * 
+     */
     private Boolean httpOcsp;
+    /**
+     * @return Allow HTTPS?
+     * 
+     */
     private Boolean https;
     /**
      * @return UUID of the resource
@@ -32,34 +50,89 @@ public final class GetInterfaceManagementProfileResult {
      * 
      */
     private String name;
+    /**
+     * @return Allowed IP address(es)
+     * 
+     */
     private List<GetInterfaceManagementProfilePermittedIp> permittedIps;
+    /**
+     * @return Allow ping?
+     * 
+     */
     private Boolean ping;
+    /**
+     * @return Allow response pages?
+     * 
+     */
     private Boolean responsePages;
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     private String snippet;
+    /**
+     * @return Allow SSH?
+     * 
+     */
     private Boolean ssh;
+    /**
+     * @return Allow telnet? Seriously, why would you do this?!?
+     * 
+     */
     private Boolean telnet;
     private String tfid;
+    /**
+     * @return Allow User-ID?
+     * 
+     */
     private Boolean useridService;
+    /**
+     * @return Allow User-ID syslog listener (SSL)?
+     * 
+     */
     private Boolean useridSyslogListenerSsl;
+    /**
+     * @return Allow User-ID syslog listener (UDP)?
+     * 
+     */
     private Boolean useridSyslogListenerUdp;
 
     private GetInterfaceManagementProfileResult() {}
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public String device() {
         return this.device;
     }
+    /**
+     * @return The folder in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String folder() {
         return this.folder;
     }
+    /**
+     * @return Allow HTTP?
+     * 
+     */
     public Boolean http() {
         return this.http;
     }
+    /**
+     * @return Allow HTTP OCSP?
+     * 
+     */
     public Boolean httpOcsp() {
         return this.httpOcsp;
     }
+    /**
+     * @return Allow HTTPS?
+     * 
+     */
     public Boolean https() {
         return this.https;
     }
@@ -77,33 +150,70 @@ public final class GetInterfaceManagementProfileResult {
     public String name() {
         return this.name;
     }
+    /**
+     * @return Allowed IP address(es)
+     * 
+     */
     public List<GetInterfaceManagementProfilePermittedIp> permittedIps() {
         return this.permittedIps;
     }
+    /**
+     * @return Allow ping?
+     * 
+     */
     public Boolean ping() {
         return this.ping;
     }
+    /**
+     * @return Allow response pages?
+     * 
+     */
     public Boolean responsePages() {
         return this.responsePages;
     }
+    /**
+     * @return The snippet in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     * 
+     */
     public String snippet() {
         return this.snippet;
     }
+    /**
+     * @return Allow SSH?
+     * 
+     */
     public Boolean ssh() {
         return this.ssh;
     }
+    /**
+     * @return Allow telnet? Seriously, why would you do this?!?
+     * 
+     */
     public Boolean telnet() {
         return this.telnet;
     }
     public String tfid() {
         return this.tfid;
     }
+    /**
+     * @return Allow User-ID?
+     * 
+     */
     public Boolean useridService() {
         return this.useridService;
     }
+    /**
+     * @return Allow User-ID syslog listener (SSL)?
+     * 
+     */
     public Boolean useridSyslogListenerSsl() {
         return this.useridSyslogListenerSsl;
     }
+    /**
+     * @return Allow User-ID syslog listener (UDP)?
+     * 
+     */
     public Boolean useridSyslogListenerUdp() {
         return this.useridSyslogListenerUdp;
     }

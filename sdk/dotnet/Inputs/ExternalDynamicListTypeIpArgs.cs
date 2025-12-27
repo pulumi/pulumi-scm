@@ -13,7 +13,7 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeIpArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Auth
+        /// Authentication settings for Custom IP type
         /// </summary>
         [Input("auth")]
         public Input<Inputs.ExternalDynamicListTypeIpAuthArgs>? Auth { get; set; }
@@ -34,7 +34,7 @@ namespace Pulumi.Scm.Inputs
         private InputList<string>? _exceptionLists;
 
         /// <summary>
-        /// Exception list
+        /// IP Exception List for Custom IP type
         /// </summary>
         public InputList<string> ExceptionLists
         {
@@ -43,13 +43,13 @@ namespace Pulumi.Scm.Inputs
         }
 
         /// <summary>
-        /// Recurring
+        /// Update Schedule for Custom IP type
         /// </summary>
         [Input("recurring", required: true)]
         public Input<Inputs.ExternalDynamicListTypeIpRecurringArgs> Recurring { get; set; } = null!;
 
         /// <summary>
-        /// Url
+        /// External URL for Custom IP type
         /// </summary>
         [Input("url", required: true)]
         public Input<string> Url { get; set; } = null!;

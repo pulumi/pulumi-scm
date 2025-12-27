@@ -21,6 +21,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -28,6 +29,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -36,7 +38,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -45,7 +46,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -70,7 +70,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -79,7 +78,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -180,6 +178,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -191,6 +190,7 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -201,7 +201,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -214,7 +213,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -247,7 +245,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -260,7 +257,6 @@ public final class DecryptionProfileArgs extends com.pulumi.resources.ResourceAr
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

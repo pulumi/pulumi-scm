@@ -15,23 +15,21 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Ebgp
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpResult Ebgp;
         /// <summary>
         /// Ebgp confed
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeEbgpConfedResult EbgpConfed;
         /// <summary>
         /// Ibgp
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpResult Ibgp;
         /// <summary>
         /// Ibgp confed
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         public readonly Outputs.GetLogicalRouterListDataVrfBgpPeerGroupTypeIbgpConfedResult IbgpConfed;

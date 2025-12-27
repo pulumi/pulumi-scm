@@ -15,6 +15,7 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Aggregate group
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly string AggregateGroup;
         /// <summary>
@@ -26,7 +27,8 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string DefaultValue;
         /// <summary>
-        /// The device of the item.
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -34,7 +36,8 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -43,13 +46,11 @@ namespace Pulumi.Scm.Outputs
         public readonly string Id;
         /// <summary>
         /// Layer2
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer2Result Layer2;
         /// <summary>
         /// Ethernet Interface Layer 3 configuration
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataLayer3Result Layer3;
@@ -74,12 +75,12 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataPoeResult Poe;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Snippet;
         /// <summary>
         /// Tap
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `AggregateGroup`, `Layer2`, `Layer3`, and `Tap`.
         /// </summary>
         public readonly Outputs.GetEthernetInterfaceListDataTapResult Tap;

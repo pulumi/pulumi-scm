@@ -24,24 +24,39 @@ func LookupKerberosServerProfile(ctx *pulumi.Context, args *LookupKerberosServer
 
 // A collection of arguments for invoking getKerberosServerProfile.
 type LookupKerberosServerProfileArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
 	Id string `pulumi:"id"`
 	// The name of the Kerberos server profile
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getKerberosServerProfile.
 type LookupKerberosServerProfileResult struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
 	Id string `pulumi:"id"`
 	// The name of the Kerberos server profile
-	Name    string                           `pulumi:"name"`
+	Name string `pulumi:"name"`
+	// The Kerberos server configuration
 	Servers []GetKerberosServerProfileServer `pulumi:"servers"`
-	Snippet string                           `pulumi:"snippet"`
-	Tfid    string                           `pulumi:"tfid"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
 }
 
 func LookupKerberosServerProfileOutput(ctx *pulumi.Context, args LookupKerberosServerProfileOutputArgs, opts ...pulumi.InvokeOption) LookupKerberosServerProfileResultOutput {
@@ -55,10 +70,19 @@ func LookupKerberosServerProfileOutput(ctx *pulumi.Context, args LookupKerberosS
 
 // A collection of arguments for invoking getKerberosServerProfile.
 type LookupKerberosServerProfileOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the Kerberos server profile
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the Kerberos server profile
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupKerberosServerProfileOutputArgs) ElementType() reflect.Type {
@@ -81,10 +105,13 @@ func (o LookupKerberosServerProfileResultOutput) ToLookupKerberosServerProfileRe
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupKerberosServerProfileResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupKerberosServerProfileResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -99,10 +126,13 @@ func (o LookupKerberosServerProfileResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The Kerberos server configuration
 func (o LookupKerberosServerProfileResultOutput) Servers() GetKerberosServerProfileServerArrayOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) []GetKerberosServerProfileServer { return v.Servers }).(GetKerberosServerProfileServerArrayOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupKerberosServerProfileResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupKerberosServerProfileResult) string { return v.Snippet }).(pulumi.StringOutput)
 }

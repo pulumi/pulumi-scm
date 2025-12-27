@@ -15,17 +15,16 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Contains
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Contains`, `Is`, and `IsNot`.
         /// </summary>
         public readonly string? Contains;
         /// <summary>
         /// Is
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Contains`, `Is`, and `IsNot`.
         /// </summary>
         public readonly string? Is;
         /// <summary>
         /// Is not
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Contains`, `Is`, and `IsNot`.
         /// </summary>
         public readonly string? IsNot;

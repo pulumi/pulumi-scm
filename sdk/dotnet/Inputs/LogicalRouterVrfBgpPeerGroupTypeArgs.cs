@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Ebgp
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         [Input("ebgp")]
         public Input<Inputs.LogicalRouterVrfBgpPeerGroupTypeEbgpArgs>? Ebgp { get; set; }
 
         /// <summary>
         /// Ebgp confed
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         [Input("ebgpConfed")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ibgp
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         [Input("ibgp")]
@@ -36,7 +35,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Ibgp confed
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Ebgp`, `EbgpConfed`, `Ibgp`, and `IbgpConfed`.
         /// </summary>
         [Input("ibgpConfed")]

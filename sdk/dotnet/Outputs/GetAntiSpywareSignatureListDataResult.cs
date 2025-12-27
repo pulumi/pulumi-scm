@@ -31,6 +31,7 @@ namespace Pulumi.Scm.Outputs
         public readonly Outputs.GetAntiSpywareSignatureListDataDefaultActionResult DefaultAction;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -38,7 +39,8 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly string Direction;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -58,12 +60,13 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureListDataSignatureResult Signature;
         /// <summary>
-        /// The snippet of the item.
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
         /// <summary>
-        /// threat id range &lt;15000-18000&gt; and &lt;6900001-7000000&gt;
+        /// threat id range \n\n and \n\n
         /// </summary>
         public readonly string ThreatId;
         /// <summary>

@@ -45,9 +45,9 @@ class DosProtectionRuleArgs:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
@@ -57,7 +57,6 @@ class DosProtectionRuleArgs:
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -142,6 +141,7 @@ class DosProtectionRuleArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -166,7 +166,6 @@ class DosProtectionRuleArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -264,7 +263,6 @@ class DosProtectionRuleArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -350,9 +348,9 @@ class _DosProtectionRuleState:
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
@@ -362,7 +360,6 @@ class _DosProtectionRuleState:
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -449,6 +446,7 @@ class _DosProtectionRuleState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -473,7 +471,6 @@ class _DosProtectionRuleState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -571,7 +568,6 @@ class _DosProtectionRuleState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -666,15 +662,41 @@ class DosProtectionRule(pulumi.CustomResource):
         """
         DosProtectionRule resource
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Union['DosProtectionRuleActionArgs', 'DosProtectionRuleActionArgsDict']] action: The action to take on rule match
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
@@ -684,7 +706,6 @@ class DosProtectionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -699,6 +720,32 @@ class DosProtectionRule(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         DosProtectionRule resource
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/dosProtectionRule:DosProtectionRule example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param DosProtectionRuleArgs args: The arguments to use to populate this resource's properties.
@@ -801,9 +848,9 @@ class DosProtectionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] description: Description
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] destinations: List of destination addresses
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.bool] disabled: Rule disabled?
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] froms: List of source zones
         :param pulumi.Input[_builtins.str] log_setting: Log forwarding profile name
@@ -813,7 +860,6 @@ class DosProtectionRule(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] schedule: Schedule on which to enforce the rule
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] services: List of services
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] source_users: List of source users and/or groups.  Reserved words include `any`, `pre-login`, `known-user`, and `unknown`.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] sources: List of source addresses
@@ -874,6 +920,7 @@ class DosProtectionRule(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -890,7 +937,6 @@ class DosProtectionRule(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -956,7 +1002,6 @@ class DosProtectionRule(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

@@ -53,25 +53,41 @@ func LookupServiceGroup(ctx *pulumi.Context, args *LookupServiceGroupArgs, opts 
 
 // A collection of arguments for invoking getServiceGroup.
 type LookupServiceGroupArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// The UUID of the service group
 	Id string `pulumi:"id"`
 	// The name of the service group
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getServiceGroup.
 type LookupServiceGroupResult struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder string `pulumi:"folder"`
 	// The UUID of the service group
-	Id      string   `pulumi:"id"`
+	Id string `pulumi:"id"`
+	// Members
 	Members []string `pulumi:"members"`
 	// The name of the service group
-	Name    string   `pulumi:"name"`
-	Snippet string   `pulumi:"snippet"`
-	Tags    []string `pulumi:"tags"`
-	Tfid    string   `pulumi:"tfid"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	// Tags associated with the service group
+	Tags []string `pulumi:"tags"`
+	Tfid string   `pulumi:"tfid"`
 }
 
 func LookupServiceGroupOutput(ctx *pulumi.Context, args LookupServiceGroupOutputArgs, opts ...pulumi.InvokeOption) LookupServiceGroupResultOutput {
@@ -85,10 +101,19 @@ func LookupServiceGroupOutput(ctx *pulumi.Context, args LookupServiceGroupOutput
 
 // A collection of arguments for invoking getServiceGroup.
 type LookupServiceGroupOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the service group
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the service group
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupServiceGroupOutputArgs) ElementType() reflect.Type {
@@ -111,10 +136,13 @@ func (o LookupServiceGroupResultOutput) ToLookupServiceGroupResultOutputWithCont
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceGroupResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceGroupResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -124,6 +152,7 @@ func (o LookupServiceGroupResultOutput) Id() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Id }).(pulumi.StringOutput)
 }
 
+// Members
 func (o LookupServiceGroupResultOutput) Members() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) []string { return v.Members }).(pulumi.StringArrayOutput)
 }
@@ -133,10 +162,13 @@ func (o LookupServiceGroupResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupServiceGroupResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
 
+// Tags associated with the service group
 func (o LookupServiceGroupResultOutput) Tags() pulumi.StringArrayOutput {
 	return o.ApplyT(func(v LookupServiceGroupResult) []string { return v.Tags }).(pulumi.StringArrayOutput)
 }

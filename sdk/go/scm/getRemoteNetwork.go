@@ -55,6 +55,8 @@ func LookupRemoteNetwork(ctx *pulumi.Context, args *LookupRemoteNetworkArgs, opt
 
 // A collection of arguments for invoking getRemoteNetwork.
 type LookupRemoteNetworkArgs struct {
+	// The folder that contains the remote network
+	Folder *string `pulumi:"folder"`
 	// The UUID of the remote network
 	Id string `pulumi:"id"`
 	// The name of the remote network
@@ -103,6 +105,8 @@ func LookupRemoteNetworkOutput(ctx *pulumi.Context, args LookupRemoteNetworkOutp
 
 // A collection of arguments for invoking getRemoteNetwork.
 type LookupRemoteNetworkOutputArgs struct {
+	// The folder that contains the remote network
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the remote network
 	Id pulumi.StringInput `pulumi:"id"`
 	// The name of the remote network

@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Normal
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         [Input("normal")]
         public Input<Inputs.LogicalRouterVrfOspfAreaTypeNormalGetArgs>? Normal { get; set; }
 
         /// <summary>
         /// Nssa
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         [Input("nssa")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// Stub
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Normal`, `Nssa`, and `Stub`.
         /// </summary>
         [Input("stub")]

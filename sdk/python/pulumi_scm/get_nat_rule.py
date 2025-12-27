@@ -287,8 +287,11 @@ class AwaitableGetNatRuleResult(GetNatRuleResult):
             tos=self.tos)
 
 
-def get_nat_rule(id: Optional[_builtins.str] = None,
+def get_nat_rule(device: Optional[_builtins.str] = None,
+                 folder: Optional[_builtins.str] = None,
+                 id: Optional[_builtins.str] = None,
                  name: Optional[_builtins.str] = None,
+                 snippet: Optional[_builtins.str] = None,
                  opts: Optional[pulumi.InvokeOptions] = None) -> AwaitableGetNatRuleResult:
     """
     NatRule data source
@@ -310,12 +313,18 @@ def get_nat_rule(id: Optional[_builtins.str] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: NAT rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke('scm:index/getNatRule:getNatRule', __args__, opts=opts, typ=GetNatRuleResult).value
 
@@ -341,8 +350,11 @@ def get_nat_rule(id: Optional[_builtins.str] = None,
         tfid=pulumi.get(__ret__, 'tfid'),
         to_interface=pulumi.get(__ret__, 'to_interface'),
         tos=pulumi.get(__ret__, 'tos'))
-def get_nat_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
+def get_nat_rule_output(device: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                        folder: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                        id: Optional[pulumi.Input[_builtins.str]] = None,
                         name: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
+                        snippet: Optional[pulumi.Input[Optional[_builtins.str]]] = None,
                         opts: Optional[Union[pulumi.InvokeOptions, pulumi.InvokeOutputOptions]] = None) -> pulumi.Output[GetNatRuleResult]:
     """
     NatRule data source
@@ -364,12 +376,18 @@ def get_nat_rule_output(id: Optional[pulumi.Input[_builtins.str]] = None,
     ```
 
 
+    :param _builtins.str device: The device in which the resource is defined
+    :param _builtins.str folder: The folder in which the resource is defined
     :param _builtins.str id: UUID of the resource
     :param _builtins.str name: NAT rule name
+    :param _builtins.str snippet: The snippet in which the resource is defined
     """
     __args__ = dict()
+    __args__['device'] = device
+    __args__['folder'] = folder
     __args__['id'] = id
     __args__['name'] = name
+    __args__['snippet'] = snippet
     opts = pulumi.InvokeOutputOptions.merge(_utilities.get_invoke_opts_defaults(), opts)
     __ret__ = pulumi.runtime.invoke_output('scm:index/getNatRule:getNatRule', __args__, opts=opts, typ=GetNatRuleResult)
     return __ret__.apply(lambda __response__: GetNatRuleResult(

@@ -79,15 +79,41 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/authenticationProfile:AuthenticationProfile example ::device:id
+// ```
 type AuthenticationProfile struct {
 	pulumi.CustomResourceState
 
 	// The allowList of the authentication profile
 	AllowLists pulumi.StringArrayOutput `pulumi:"allowLists"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Lockout object of the authentication profile
@@ -101,7 +127,6 @@ type AuthenticationProfile struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrOutput `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -144,9 +169,9 @@ type authenticationProfileState struct {
 	// The allowList of the authentication profile
 	AllowLists []string `pulumi:"allowLists"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Lockout object of the authentication profile
@@ -160,7 +185,6 @@ type authenticationProfileState struct {
 	// Single sign on
 	SingleSignOn *AuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -174,9 +198,9 @@ type AuthenticationProfileState struct {
 	// The allowList of the authentication profile
 	AllowLists pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Lockout object of the authentication profile
@@ -190,7 +214,6 @@ type AuthenticationProfileState struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -208,9 +231,9 @@ type authenticationProfileArgs struct {
 	// The allowList of the authentication profile
 	AllowLists []string `pulumi:"allowLists"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Lockout object of the authentication profile
@@ -224,7 +247,6 @@ type authenticationProfileArgs struct {
 	// Single sign on
 	SingleSignOn *AuthenticationProfileSingleSignOn `pulumi:"singleSignOn"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// User domain
@@ -238,9 +260,9 @@ type AuthenticationProfileArgs struct {
 	// The allowList of the authentication profile
 	AllowLists pulumi.StringArrayInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Lockout object of the authentication profile
@@ -254,7 +276,6 @@ type AuthenticationProfileArgs struct {
 	// Single sign on
 	SingleSignOn AuthenticationProfileSingleSignOnPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// User domain
@@ -356,12 +377,12 @@ func (o AuthenticationProfileOutput) AllowLists() pulumi.StringArrayOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationProfileOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationProfileOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -393,7 +414,6 @@ func (o AuthenticationProfileOutput) SingleSignOn() AuthenticationProfileSingleS
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o AuthenticationProfileOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *AuthenticationProfile) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

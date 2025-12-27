@@ -18,6 +18,7 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -25,6 +26,7 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -33,7 +35,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -42,7 +43,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -82,7 +82,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -91,7 +90,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -137,6 +135,7 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -148,6 +147,7 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -158,7 +158,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -171,7 +170,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -225,7 +223,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -238,7 +235,6 @@ public final class SdwanPathQualityProfileState extends com.pulumi.resources.Res
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder

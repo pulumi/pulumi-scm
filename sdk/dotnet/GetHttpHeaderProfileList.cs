@@ -13,18 +13,96 @@ namespace Pulumi.Scm
     {
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM HTTP Header Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetHttpHeaderProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmHttpHeaderProfileListAllShared"] = allShared.Apply(getHttpHeaderProfileListResult =&gt; getHttpHeaderProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Task<GetHttpHeaderProfileListResult> InvokeAsync(GetHttpHeaderProfileListArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.InvokeAsync<GetHttpHeaderProfileListResult>("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", args ?? new GetHttpHeaderProfileListArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM HTTP Header Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetHttpHeaderProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmHttpHeaderProfileListAllShared"] = allShared.Apply(getHttpHeaderProfileListResult =&gt; getHttpHeaderProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetHttpHeaderProfileListResult> Invoke(GetHttpHeaderProfileListInvokeArgs? args = null, InvokeOptions? options = null)
             => global::Pulumi.Deployment.Instance.Invoke<GetHttpHeaderProfileListResult>("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", args ?? new GetHttpHeaderProfileListInvokeArgs(), options.WithDefaults());
 
         /// <summary>
         /// Retrieves a listing of config items.
+        /// 
+        /// ## Example Usage
+        /// 
+        /// ```csharp
+        /// using System.Collections.Generic;
+        /// using System.Linq;
+        /// using Pulumi;
+        /// using Scm = Pulumi.Scm;
+        /// 
+        /// return await Deployment.RunAsync(() =&gt; 
+        /// {
+        ///     //
+        ///     // Data source to retrieve a list of SCM HTTP Header Profile objects.
+        ///     //
+        ///     // Example 1: Fetch a list of all SCM HTTP Header Profile in the "Shared" folder.
+        ///     var allShared = Scm.GetHttpHeaderProfileList.Invoke(new()
+        ///     {
+        ///         Folder = "All",
+        ///     });
+        /// 
+        ///     return new Dictionary&lt;string, object?&gt;
+        ///     {
+        ///         ["scmHttpHeaderProfileListAllShared"] = allShared.Apply(getHttpHeaderProfileListResult =&gt; getHttpHeaderProfileListResult.Datas),
+        ///     };
+        /// });
+        /// ```
         /// </summary>
         public static Output<GetHttpHeaderProfileListResult> Invoke(GetHttpHeaderProfileListInvokeArgs args, InvokeOutputOptions options)
             => global::Pulumi.Deployment.Instance.Invoke<GetHttpHeaderProfileListResult>("scm:index/getHttpHeaderProfileList:getHttpHeaderProfileList", args ?? new GetHttpHeaderProfileListInvokeArgs(), options.WithDefaults());

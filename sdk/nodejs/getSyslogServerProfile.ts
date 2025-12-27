@@ -8,12 +8,35 @@ import * as utilities from "./utilities";
 
 /**
  * SyslogServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+ * const scmSyslogServerProf = scm.getSyslogServerProfile({
+ *     id: "69f7ee97-7c0a-416d-a28d-d45929851f6e",
+ * });
+ * export const scmSyslogServerProfileDetails = {
+ *     profileId: scmSyslogServerProf.then(scmSyslogServerProf => scmSyslogServerProf.id),
+ *     folder: scmSyslogServerProf.then(scmSyslogServerProf => scmSyslogServerProf.folder),
+ *     name: scmSyslogServerProf.then(scmSyslogServerProf => scmSyslogServerProf.name),
+ * };
+ * ```
  */
 export function getSyslogServerProfile(args: GetSyslogServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetSyslogServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getSyslogServerProfile:getSyslogServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +45,16 @@ export function getSyslogServerProfile(args: GetSyslogServerProfileArgs, opts?: 
  */
 export interface GetSyslogServerProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the syslog server profile
      */
     id: string;
@@ -29,6 +62,11 @@ export interface GetSyslogServerProfileArgs {
      * The name of the syslog server profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -37,9 +75,17 @@ export interface GetSyslogServerProfileArgs {
 export interface GetSyslogServerProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
+    /**
+     * Format
+     */
     readonly format: outputs.GetSyslogServerProfileFormat;
     /**
      * The UUID of the syslog server profile
@@ -49,18 +95,48 @@ export interface GetSyslogServerProfileResult {
      * The name of the syslog server profile
      */
     readonly name: string;
-    readonly servers: outputs.GetSyslogServerProfileServers;
+    /**
+     * A list of syslog server configurations. At least one server is required.
+     */
+    readonly servers: outputs.GetSyslogServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
 }
 /**
  * SyslogServerProfile data source
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a single SCM Syslog Server Profile object by its ID.
+ * //
+ * // Replace the ID with the UUID of the SCM Syslog Server Profile you want to find.
+ * const scmSyslogServerProf = scm.getSyslogServerProfile({
+ *     id: "69f7ee97-7c0a-416d-a28d-d45929851f6e",
+ * });
+ * export const scmSyslogServerProfileDetails = {
+ *     profileId: scmSyslogServerProf.then(scmSyslogServerProf => scmSyslogServerProf.id),
+ *     folder: scmSyslogServerProf.then(scmSyslogServerProf => scmSyslogServerProf.folder),
+ *     name: scmSyslogServerProf.then(scmSyslogServerProf => scmSyslogServerProf.name),
+ * };
+ * ```
  */
 export function getSyslogServerProfileOutput(args: GetSyslogServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSyslogServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getSyslogServerProfile:getSyslogServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -69,6 +145,16 @@ export function getSyslogServerProfileOutput(args: GetSyslogServerProfileOutputA
  */
 export interface GetSyslogServerProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the syslog server profile
      */
     id: pulumi.Input<string>;
@@ -76,4 +162,9 @@ export interface GetSyslogServerProfileOutputArgs {
      * The name of the syslog server profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

@@ -21,25 +21,25 @@ __all__ = ['SyslogServerProfileArgs', 'SyslogServerProfile']
 @pulumi.input_type
 class SyslogServerProfileArgs:
     def __init__(__self__, *,
+                 servers: pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]],
                  device: Optional[pulumi.Input[_builtins.str]] = None,
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  format: Optional[pulumi.Input['SyslogServerProfileFormatArgs']] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input['SyslogServerProfileServersArgs']] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a SyslogServerProfile resource.
+        :param pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]] servers: A list of syslog server configurations. At least one server is required.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['SyslogServerProfileFormatArgs'] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the syslog server profile
-        :param pulumi.Input['SyslogServerProfileServersArgs'] servers: Servers
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
+        pulumi.set(__self__, "servers", servers)
         if device is not None:
             pulumi.set(__self__, "device", device)
         if folder is not None:
@@ -48,16 +48,27 @@ class SyslogServerProfileArgs:
             pulumi.set(__self__, "format", format)
         if name is not None:
             pulumi.set(__self__, "name", name)
-        if servers is not None:
-            pulumi.set(__self__, "servers", servers)
         if snippet is not None:
             pulumi.set(__self__, "snippet", snippet)
+
+    @_builtins.property
+    @pulumi.getter
+    def servers(self) -> pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]]:
+        """
+        A list of syslog server configurations. At least one server is required.
+        """
+        return pulumi.get(self, "servers")
+
+    @servers.setter
+    def servers(self, value: pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]]):
+        pulumi.set(self, "servers", value)
 
     @_builtins.property
     @pulumi.getter
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -70,7 +81,6 @@ class SyslogServerProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -105,22 +115,9 @@ class SyslogServerProfileArgs:
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input['SyslogServerProfileServersArgs']]:
-        """
-        Servers
-        """
-        return pulumi.get(self, "servers")
-
-    @servers.setter
-    def servers(self, value: Optional[pulumi.Input['SyslogServerProfileServersArgs']]):
-        pulumi.set(self, "servers", value)
-
-    @_builtins.property
-    @pulumi.getter
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -137,20 +134,19 @@ class _SyslogServerProfileState:
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  format: Optional[pulumi.Input['SyslogServerProfileFormatArgs']] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input['SyslogServerProfileServersArgs']] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  tfid: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering SyslogServerProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['SyslogServerProfileFormatArgs'] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the syslog server profile
-        :param pulumi.Input['SyslogServerProfileServersArgs'] servers: Servers
+        :param pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]] servers: A list of syslog server configurations. At least one server is required.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if device is not None:
@@ -173,6 +169,7 @@ class _SyslogServerProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -185,7 +182,6 @@ class _SyslogServerProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -220,14 +216,14 @@ class _SyslogServerProfileState:
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> Optional[pulumi.Input['SyslogServerProfileServersArgs']]:
+    def servers(self) -> Optional[pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]]]:
         """
-        Servers
+        A list of syslog server configurations. At least one server is required.
         """
         return pulumi.get(self, "servers")
 
     @servers.setter
-    def servers(self, value: Optional[pulumi.Input['SyslogServerProfileServersArgs']]):
+    def servers(self, value: Optional[pulumi.Input[Sequence[pulumi.Input['SyslogServerProfileServerArgs']]]]):
         pulumi.set(self, "servers", value)
 
     @_builtins.property
@@ -235,7 +231,6 @@ class _SyslogServerProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -264,33 +259,250 @@ class SyslogServerProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  format: Optional[pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Union['SyslogServerProfileServersArgs', 'SyslogServerProfileServersArgsDict']]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         """
         SyslogServerProfile resource
 
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_syslog_server_prof1 = scm.SyslogServerProfile("scm_syslog_server_prof_1",
+            folder="All",
+            name="syslog-server-prof-base",
+            servers=[{
+                "name": "Server-Primary",
+                "server": "192.168.1.10",
+            }])
+        scm_syslog_server_prof2 = scm.SyslogServerProfile("scm_syslog_server_prof_2",
+            folder="All",
+            name="syslog-server-prof-mixed",
+            servers=[{
+                "name": "Server-Mixed",
+                "server": "10.0.0.50",
+                "transport": "TCP",
+                "port": 601,
+                "format": "IETF",
+                "facility": "LOG_LOCAL4",
+            }],
+            format={
+                "traffic": "$bytes",
+                "threat": "$app",
+                "globalprotect": "$cloud",
+            })
+        scm_syslog_server_prof3 = scm.SyslogServerProfile("scm_syslog_server_prof_3",
+            folder="All",
+            name="syslog-server-prof-complete",
+            servers=[
+                {
+                    "name": "Server-A",
+                    "server": "172.16.10.1",
+                    "transport": "UDP",
+                    "port": 514,
+                    "format": "BSD",
+                    "facility": "LOG_LOCAL7",
+                },
+                {
+                    "name": "Server-B",
+                    "server": "172.16.10.2",
+                    "transport": "TCP",
+                    "port": 6514,
+                    "format": "IETF",
+                    "facility": "LOG_LOCAL3",
+                },
+                {
+                    "name": "Server-C",
+                    "server": "192.168.1.10",
+                    "transport": "UDP",
+                    "port": 514,
+                    "format": "BSD",
+                    "facility": "LOG_USER",
+                },
+            ],
+            format={
+                "escaping": {
+                    "escape_character": "*",
+                    "escaped_characters": "&\\\\#",
+                },
+                "traffic": "$actionflags",
+                "threat": "$error + $errorcode",
+                "wildfire": "$client_os",
+                "url": "$type",
+                "data": "$srcregion",
+                "gtp": "$time_generated",
+                "sctp": "$device_name and $contenttype",
+                "tunnel": "$tunnel_type",
+                "auth": "$hostid + $portal",
+                "userid": "$hostid and $location",
+                "iptag": "dg_hier_level_1",
+                "decryption": "dg_hier_level_2",
+                "config": "dg_hier_level_3",
+                "system": "$vsys_name + $status",
+                "globalprotect": "default",
+                "hip_match": "custom",
+                "correlation": "custom",
+            })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the syslog server profile
-        :param pulumi.Input[Union['SyslogServerProfileServersArgs', 'SyslogServerProfileServersArgsDict']] servers: Servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]] servers: A list of syslog server configurations. At least one server is required.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
     @overload
     def __init__(__self__,
                  resource_name: str,
-                 args: Optional[SyslogServerProfileArgs] = None,
+                 args: SyslogServerProfileArgs,
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         SyslogServerProfile resource
+
+        ## Example Usage
+
+        ```python
+        import pulumi
+        import pulumi_scm as scm
+
+        scm_syslog_server_prof1 = scm.SyslogServerProfile("scm_syslog_server_prof_1",
+            folder="All",
+            name="syslog-server-prof-base",
+            servers=[{
+                "name": "Server-Primary",
+                "server": "192.168.1.10",
+            }])
+        scm_syslog_server_prof2 = scm.SyslogServerProfile("scm_syslog_server_prof_2",
+            folder="All",
+            name="syslog-server-prof-mixed",
+            servers=[{
+                "name": "Server-Mixed",
+                "server": "10.0.0.50",
+                "transport": "TCP",
+                "port": 601,
+                "format": "IETF",
+                "facility": "LOG_LOCAL4",
+            }],
+            format={
+                "traffic": "$bytes",
+                "threat": "$app",
+                "globalprotect": "$cloud",
+            })
+        scm_syslog_server_prof3 = scm.SyslogServerProfile("scm_syslog_server_prof_3",
+            folder="All",
+            name="syslog-server-prof-complete",
+            servers=[
+                {
+                    "name": "Server-A",
+                    "server": "172.16.10.1",
+                    "transport": "UDP",
+                    "port": 514,
+                    "format": "BSD",
+                    "facility": "LOG_LOCAL7",
+                },
+                {
+                    "name": "Server-B",
+                    "server": "172.16.10.2",
+                    "transport": "TCP",
+                    "port": 6514,
+                    "format": "IETF",
+                    "facility": "LOG_LOCAL3",
+                },
+                {
+                    "name": "Server-C",
+                    "server": "192.168.1.10",
+                    "transport": "UDP",
+                    "port": 514,
+                    "format": "BSD",
+                    "facility": "LOG_USER",
+                },
+            ],
+            format={
+                "escaping": {
+                    "escape_character": "*",
+                    "escaped_characters": "&\\\\#",
+                },
+                "traffic": "$actionflags",
+                "threat": "$error + $errorcode",
+                "wildfire": "$client_os",
+                "url": "$type",
+                "data": "$srcregion",
+                "gtp": "$time_generated",
+                "sctp": "$device_name and $contenttype",
+                "tunnel": "$tunnel_type",
+                "auth": "$hostid + $portal",
+                "userid": "$hostid and $location",
+                "iptag": "dg_hier_level_1",
+                "decryption": "dg_hier_level_2",
+                "config": "dg_hier_level_3",
+                "system": "$vsys_name + $status",
+                "globalprotect": "default",
+                "hip_match": "custom",
+                "correlation": "custom",
+            })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/syslogServerProfile:SyslogServerProfile example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param SyslogServerProfileArgs args: The arguments to use to populate this resource's properties.
@@ -311,7 +523,7 @@ class SyslogServerProfile(pulumi.CustomResource):
                  folder: Optional[pulumi.Input[_builtins.str]] = None,
                  format: Optional[pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']]] = None,
                  name: Optional[pulumi.Input[_builtins.str]] = None,
-                 servers: Optional[pulumi.Input[Union['SyslogServerProfileServersArgs', 'SyslogServerProfileServersArgsDict']]] = None,
+                 servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]]] = None,
                  snippet: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
         opts = pulumi.ResourceOptions.merge(_utilities.get_resource_opts_defaults(), opts)
@@ -326,6 +538,8 @@ class SyslogServerProfile(pulumi.CustomResource):
             __props__.__dict__["folder"] = folder
             __props__.__dict__["format"] = format
             __props__.__dict__["name"] = name
+            if servers is None and not opts.urn:
+                raise TypeError("Missing required property 'servers'")
             __props__.__dict__["servers"] = servers
             __props__.__dict__["snippet"] = snippet
             __props__.__dict__["tfid"] = None
@@ -343,7 +557,7 @@ class SyslogServerProfile(pulumi.CustomResource):
             folder: Optional[pulumi.Input[_builtins.str]] = None,
             format: Optional[pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']]] = None,
             name: Optional[pulumi.Input[_builtins.str]] = None,
-            servers: Optional[pulumi.Input[Union['SyslogServerProfileServersArgs', 'SyslogServerProfileServersArgsDict']]] = None,
+            servers: Optional[pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]]] = None,
             snippet: Optional[pulumi.Input[_builtins.str]] = None,
             tfid: Optional[pulumi.Input[_builtins.str]] = None) -> 'SyslogServerProfile':
         """
@@ -354,14 +568,13 @@ class SyslogServerProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['SyslogServerProfileFormatArgs', 'SyslogServerProfileFormatArgsDict']] format: Format
         :param pulumi.Input[_builtins.str] name: The name of the syslog server profile
-        :param pulumi.Input[Union['SyslogServerProfileServersArgs', 'SyslogServerProfileServersArgsDict']] servers: Servers
+        :param pulumi.Input[Sequence[pulumi.Input[Union['SyslogServerProfileServerArgs', 'SyslogServerProfileServerArgsDict']]]] servers: A list of syslog server configurations. At least one server is required.
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -382,6 +595,7 @@ class SyslogServerProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -390,7 +604,6 @@ class SyslogServerProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -413,9 +626,9 @@ class SyslogServerProfile(pulumi.CustomResource):
 
     @_builtins.property
     @pulumi.getter
-    def servers(self) -> pulumi.Output[Optional['outputs.SyslogServerProfileServers']]:
+    def servers(self) -> pulumi.Output[Sequence['outputs.SyslogServerProfileServer']]:
         """
-        Servers
+        A list of syslog server configurations. At least one server is required.
         """
         return pulumi.get(self, "servers")
 
@@ -424,7 +637,6 @@ class SyslogServerProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

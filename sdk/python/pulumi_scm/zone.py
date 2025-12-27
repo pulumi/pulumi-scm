@@ -35,18 +35,17 @@ class ZoneArgs:
         """
         The set of arguments for constructing a Zone resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['ZoneDeviceAclArgs'] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
         :param pulumi.Input[_builtins.str] dos_profile: Dos profile
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input['ZoneNetworkArgs'] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['ZoneUserAclArgs'] user_acl: User acl
         """
@@ -78,6 +77,7 @@ class ZoneArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -150,7 +150,6 @@ class ZoneArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Folder
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -188,7 +187,6 @@ class ZoneArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -228,18 +226,17 @@ class _ZoneState:
         """
         Input properties used for looking up and filtering Zone resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['ZoneDeviceAclArgs'] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
         :param pulumi.Input[_builtins.str] dos_profile: Dos profile
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input['ZoneNetworkArgs'] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['ZoneUserAclArgs'] user_acl: User acl
         """
@@ -273,6 +270,7 @@ class _ZoneState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -345,7 +343,6 @@ class _ZoneState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         Folder
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -383,7 +380,6 @@ class _ZoneState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -501,21 +497,46 @@ class Zone(pulumi.CustomResource):
             })
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
         :param pulumi.Input[_builtins.str] dos_profile: Dos profile
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']] user_acl: User acl
         """
@@ -592,6 +613,32 @@ class Zone(pulumi.CustomResource):
                 "include_lists": ["198.18.3.0/24"],
                 "exclude_lists": ["198.18.4.0/24"],
             })
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/zone:Zone example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -671,18 +718,17 @@ class Zone(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['ZoneDeviceAclArgs', 'ZoneDeviceAclArgsDict']] device_acl: Device acl
         :param pulumi.Input[_builtins.str] dos_log_setting: Dos log setting
         :param pulumi.Input[_builtins.str] dos_profile: Dos profile
         :param pulumi.Input[_builtins.bool] enable_device_identification: Enable device identification
         :param pulumi.Input[_builtins.bool] enable_user_identification: Enable user identification
         :param pulumi.Input[_builtins.str] folder: Folder
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Alphanumeric string begin with letter: [0-9a-zA-Z._-]
         :param pulumi.Input[Union['ZoneNetworkArgs', 'ZoneNetworkArgsDict']] network: Network
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['ZoneUserAclArgs', 'ZoneUserAclArgsDict']] user_acl: User acl
         """
@@ -709,6 +755,7 @@ class Zone(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -757,7 +804,6 @@ class Zone(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         Folder
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -783,7 +829,6 @@ class Zone(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

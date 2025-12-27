@@ -22,7 +22,7 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<Outputs.HttpHeaderProfileHttpHeaderInsertionTypeHeader> Headers;
         /// <summary>
-        /// The HTTP header insertion type (*This is a predefined list in the UI*)
+        /// The HTTP header insertion type
         /// </summary>
         public readonly string Name;
 

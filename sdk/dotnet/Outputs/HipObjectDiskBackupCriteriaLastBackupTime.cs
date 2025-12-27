@@ -15,17 +15,16 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// Not available
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `NotAvailable`, `NotWithin`, and `Within`.
         /// </summary>
         public readonly Outputs.HipObjectDiskBackupCriteriaLastBackupTimeNotAvailable? NotAvailable;
         /// <summary>
         /// Not within
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `NotAvailable`, `NotWithin`, and `Within`.
         /// </summary>
         public readonly Outputs.HipObjectDiskBackupCriteriaLastBackupTimeNotWithin? NotWithin;
         /// <summary>
         /// Within
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `NotAvailable`, `NotWithin`, and `Within`.
         /// </summary>
         public readonly Outputs.HipObjectDiskBackupCriteriaLastBackupTimeWithin? Within;

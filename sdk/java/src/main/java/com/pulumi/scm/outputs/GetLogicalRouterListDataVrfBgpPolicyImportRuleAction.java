@@ -13,12 +13,12 @@ import java.util.Objects;
 public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleAction {
     /**
      * @return Allow
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllow allow;
     /**
      * @return Deny
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
@@ -27,6 +27,7 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleAction {
     private GetLogicalRouterListDataVrfBgpPolicyImportRuleAction() {}
     /**
      * @return Allow
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     public GetLogicalRouterListDataVrfBgpPolicyImportRuleActionAllow allow() {
@@ -34,7 +35,6 @@ public final class GetLogicalRouterListDataVrfBgpPolicyImportRuleAction {
     }
     /**
      * @return Deny
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */

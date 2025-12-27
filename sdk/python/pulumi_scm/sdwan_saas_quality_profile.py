@@ -30,12 +30,11 @@ class SdwanSaasQualityProfileArgs:
         The set of arguments for constructing a SdwanSaasQualityProfile resource.
         :param pulumi.Input['SdwanSaasQualityProfileMonitorModeArgs'] monitor_mode: Monitor mode
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         pulumi.set(__self__, "monitor_mode", monitor_mode)
@@ -65,6 +64,7 @@ class SdwanSaasQualityProfileArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -77,7 +77,6 @@ class SdwanSaasQualityProfileArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -103,7 +102,6 @@ class SdwanSaasQualityProfileArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -125,13 +123,12 @@ class _SdwanSaasQualityProfileState:
         """
         Input properties used for looking up and filtering SdwanSaasQualityProfile resources.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input['SdwanSaasQualityProfileMonitorModeArgs'] monitor_mode: Monitor mode
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         if device is not None:
@@ -152,6 +149,7 @@ class _SdwanSaasQualityProfileState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -164,7 +162,6 @@ class _SdwanSaasQualityProfileState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -202,7 +199,6 @@ class _SdwanSaasQualityProfileState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -236,16 +232,41 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
         """
         SdwanSaasQualityProfile resource
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict']] monitor_mode: Monitor mode
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         ...
@@ -256,6 +277,32 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         SdwanSaasQualityProfile resource
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/sdwanSaasQualityProfile:SdwanSaasQualityProfile example ::device:id
+        ```
 
         :param str resource_name: The name of the resource.
         :param SdwanSaasQualityProfileArgs args: The arguments to use to populate this resource's properties.
@@ -318,13 +365,12 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[Union['SdwanSaasQualityProfileMonitorModeArgs', 'SdwanSaasQualityProfileMonitorModeArgsDict']] monitor_mode: Monitor mode
         :param pulumi.Input[_builtins.str] name: Profile name
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         opts = pulumi.ResourceOptions.merge(opts, pulumi.ResourceOptions(id=id))
@@ -344,6 +390,7 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -352,7 +399,6 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -378,7 +424,6 @@ class SdwanSaasQualityProfile(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
