@@ -173,6 +173,32 @@ import javax.annotation.Nullable;
  * }
  * </pre>
  * 
+ * ## Import
+ * 
+ * The following command can be used to import a resource not managed by Terraform:
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/natRule:NatRule example folder:::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/natRule:NatRule example :snippet::id
+ * ```
+ * 
+ * or
+ * 
+ * bash
+ * 
+ * ```sh
+ * $ pulumi import scm:index/natRule:NatRule example ::device:id
+ * ```
+ * 
  */
 @ResourceType(type="scm:index/natRule:NatRule")
 public class NatRule extends com.pulumi.resources.CustomResource {

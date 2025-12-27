@@ -10,8 +10,11 @@ import * as utilities from "./utilities";
 export function getLocalUserGroup(args: GetLocalUserGroupArgs, opts?: pulumi.InvokeOptions): Promise<GetLocalUserGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getLocalUserGroup:getLocalUserGroup", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -20,6 +23,16 @@ export function getLocalUserGroup(args: GetLocalUserGroupArgs, opts?: pulumi.Inv
  */
 export interface GetLocalUserGroupArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the local user group
      */
     id: string;
@@ -27,6 +40,11 @@ export interface GetLocalUserGroupArgs {
      * The name of the local user group
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -35,8 +53,13 @@ export interface GetLocalUserGroupArgs {
 export interface GetLocalUserGroupResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the local user group
@@ -46,8 +69,15 @@ export interface GetLocalUserGroupResult {
      * The name of the local user group
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * The local user group users
+     */
     readonly users: string[];
 }
 /**
@@ -56,8 +86,11 @@ export interface GetLocalUserGroupResult {
 export function getLocalUserGroupOutput(args: GetLocalUserGroupOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetLocalUserGroupResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getLocalUserGroup:getLocalUserGroup", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -66,6 +99,16 @@ export function getLocalUserGroupOutput(args: GetLocalUserGroupOutputArgs, opts?
  */
 export interface GetLocalUserGroupOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the local user group
      */
     id: pulumi.Input<string>;
@@ -73,4 +116,9 @@ export interface GetLocalUserGroupOutputArgs {
      * The name of the local user group
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

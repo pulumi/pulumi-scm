@@ -20,6 +20,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * Append
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     @Import(name="appends")
@@ -27,6 +28,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * @return Append
+     * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
     public Optional<Output<List<String>>> appends() {
@@ -35,7 +37,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * None
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -44,7 +45,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * @return None
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -54,7 +54,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * Overwrite
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -63,7 +62,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * @return Overwrite
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -73,7 +71,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * Remove all
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -82,7 +79,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * @return Remove all
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -92,7 +88,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * Remove regex
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -101,7 +96,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
     /**
      * @return Remove regex
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
      * 
      */
@@ -139,6 +133,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param appends Append
+         * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
          * 
@@ -150,6 +145,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param appends Append
+         * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
          * 
@@ -160,6 +156,7 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param appends Append
+         * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
          * 
@@ -170,7 +167,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param none None
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -183,7 +179,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param none None
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -195,7 +190,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param overwrites Overwrite
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -208,7 +202,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param overwrites Overwrite
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -220,7 +213,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param overwrites Overwrite
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -232,7 +224,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param removeAll Remove all
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -245,7 +236,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param removeAll Remove all
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -257,7 +247,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param removeRegex Remove regex
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder
@@ -270,7 +259,6 @@ public final class LogicalRouterVrfBgpPolicyImportRuleActionAllowUpdateCommunity
 
         /**
          * @param removeRegex Remove regex
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `append`, `none`, `overwrite`, `removeAll`, and `removeRegex`.
          * 
          * @return builder

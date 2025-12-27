@@ -335,6 +335,32 @@ class AutoVpnCluster(pulumi.CustomResource):
             }])
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[Union['AutoVpnClusterBranchArgs', 'AutoVpnClusterBranchArgsDict']]]] branches: Branches
@@ -400,6 +426,32 @@ class AutoVpnCluster(pulumi.CustomResource):
                     },
                 }],
             }])
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/autoVpnCluster:AutoVpnCluster example ::device:id
         ```
 
         :param str resource_name: The name of the resource.

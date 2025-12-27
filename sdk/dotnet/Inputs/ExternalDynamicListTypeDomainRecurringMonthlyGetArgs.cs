@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeDomainRecurringMonthlyGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Monthly Time specification hh (e.g. 20) for domain
         /// </summary>
         [Input("at", required: true)]
         public Input<string> At { get; set; } = null!;
 
         /// <summary>
-        /// Day of month
+        /// Day setting for monthly Domain updates
         /// </summary>
         [Input("dayOfMonth", required: true)]
         public Input<int> DayOfMonth { get; set; } = null!;

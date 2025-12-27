@@ -46,15 +46,41 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/urlCategory:UrlCategory example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/urlCategory:UrlCategory example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/urlCategory:UrlCategory example ::device:id
+// ```
 type UrlCategory struct {
 	pulumi.CustomResourceState
 
 	// Description
 	Description pulumi.StringPtrOutput `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// List
@@ -62,7 +88,6 @@ type UrlCategory struct {
 	// Name
 	Name pulumi.StringOutput `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -103,9 +128,9 @@ type urlCategoryState struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List
@@ -113,7 +138,6 @@ type urlCategoryState struct {
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -125,9 +149,9 @@ type UrlCategoryState struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List
@@ -135,7 +159,6 @@ type UrlCategoryState struct {
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -151,9 +174,9 @@ type urlCategoryArgs struct {
 	// Description
 	Description *string `pulumi:"description"`
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// List
@@ -161,7 +184,6 @@ type urlCategoryArgs struct {
 	// Name
 	Name *string `pulumi:"name"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Type
@@ -173,9 +195,9 @@ type UrlCategoryArgs struct {
 	// Description
 	Description pulumi.StringPtrInput
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// List
@@ -183,7 +205,6 @@ type UrlCategoryArgs struct {
 	// Name
 	Name pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Type
@@ -283,12 +304,12 @@ func (o UrlCategoryOutput) Description() pulumi.StringPtrOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o UrlCategoryOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o UrlCategoryOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -305,7 +326,6 @@ func (o UrlCategoryOutput) Name() pulumi.StringOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o UrlCategoryOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *UrlCategory) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

@@ -34,6 +34,20 @@ namespace Pulumi.Scm
     public sealed class GetWildfireAntiVirusProfileArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
@@ -45,6 +59,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetWildfireAntiVirusProfileArgs()
         {
         }
@@ -53,6 +74,20 @@ namespace Pulumi.Scm
 
     public sealed class GetWildfireAntiVirusProfileInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// UUID of the resource
         /// </summary>
@@ -64,6 +99,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetWildfireAntiVirusProfileInvokeArgs()
         {
@@ -81,22 +123,43 @@ namespace Pulumi.Scm
         public readonly string Description;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
         /// <summary>
         /// UUID of the resource
         /// </summary>
         public readonly string Id;
+        /// <summary>
+        /// Mlav exception
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileMlavExceptionResult> MlavExceptions;
         /// <summary>
         /// Name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Packet capture
+        /// </summary>
         public readonly bool PacketCapture;
+        /// <summary>
+        /// Rules
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileRuleResult> Rules;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
         public readonly string Tfid;
+        /// <summary>
+        /// Threat exception
+        /// </summary>
         public readonly ImmutableArray<Outputs.GetWildfireAntiVirusProfileThreatExceptionResult> ThreatExceptions;
 
         [OutputConstructor]

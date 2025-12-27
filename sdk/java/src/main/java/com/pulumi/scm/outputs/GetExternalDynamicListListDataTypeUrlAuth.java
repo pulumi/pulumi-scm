@@ -11,26 +11,26 @@ import java.util.Objects;
 @CustomType
 public final class GetExternalDynamicListListDataTypeUrlAuth {
     /**
-     * @return Password
+     * @return Password for Custom URL authentication
      * 
      */
     private String password;
     /**
-     * @return Username
+     * @return Username for Custom URL authentication
      * 
      */
     private String username;
 
     private GetExternalDynamicListListDataTypeUrlAuth() {}
     /**
-     * @return Password
+     * @return Password for Custom URL authentication
      * 
      */
     public String password() {
         return this.password;
     }
     /**
-     * @return Username
+     * @return Username for Custom URL authentication
      * 
      */
     public String username() {

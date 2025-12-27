@@ -13,13 +13,13 @@ namespace Pulumi.Scm.Inputs
     public sealed class ExternalDynamicListTypeImsiRecurringMonthlyGetArgs : global::Pulumi.ResourceArgs
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Monthly Time specification hh (e.g. 20) for IMSI
         /// </summary>
         [Input("at", required: true)]
         public Input<string> At { get; set; } = null!;
 
         /// <summary>
-        /// Day of month
+        /// Day of the month for monthly IMSI updates
         /// </summary>
         [Input("dayOfMonth", required: true)]
         public Input<int> DayOfMonth { get; set; } = null!;

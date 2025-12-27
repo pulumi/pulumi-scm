@@ -12,8 +12,11 @@ import * as utilities from "./utilities";
 export function getDnsProxy(args: GetDnsProxyArgs, opts?: pulumi.InvokeOptions): Promise<GetDnsProxyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getDnsProxy:getDnsProxy", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -22,6 +25,16 @@ export function getDnsProxy(args: GetDnsProxyArgs, opts?: pulumi.InvokeOptions):
  */
 export interface GetDnsProxyArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * UUID of the resource
      */
     id: string;
@@ -29,6 +42,11 @@ export interface GetDnsProxyArgs {
      * DNS proxy name
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -45,24 +63,51 @@ export interface GetDnsProxyResult {
     readonly default: outputs.GetDnsProxyDefault;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * DNS proxy rules
+     */
     readonly domainServers: outputs.GetDnsProxyDomainServer[];
+    /**
+     * Enable DNS proxy?
+     */
     readonly enabled: boolean;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * UUID of the resource
      */
     readonly id: string;
+    /**
+     * Interfaces on which to enable DNS proxy service
+     */
     readonly interfaces: string[];
     /**
      * DNS proxy name
      */
     readonly name: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
+    /**
+     * Static entries
+     */
     readonly staticEntries: outputs.GetDnsProxyStaticEntry[];
+    /**
+     * Tcp queries
+     */
     readonly tcpQueries: outputs.GetDnsProxyTcpQueries;
     readonly tfid: string;
+    /**
+     * Udp queries
+     */
     readonly udpQueries: outputs.GetDnsProxyUdpQueries;
 }
 /**
@@ -71,8 +116,11 @@ export interface GetDnsProxyResult {
 export function getDnsProxyOutput(args: GetDnsProxyOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetDnsProxyResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getDnsProxy:getDnsProxy", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -81,6 +129,16 @@ export function getDnsProxyOutput(args: GetDnsProxyOutputArgs, opts?: pulumi.Inv
  */
 export interface GetDnsProxyOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * UUID of the resource
      */
     id: pulumi.Input<string>;
@@ -88,4 +146,9 @@ export interface GetDnsProxyOutputArgs {
      * DNS proxy name
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

@@ -12,26 +12,26 @@ import java.util.Objects;
 @CustomType
 public final class ExternalDynamicListTypeImsiRecurringMonthly {
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for IMSI
      * 
      */
     private String at;
     /**
-     * @return Day of month
+     * @return Day of the month for monthly IMSI updates
      * 
      */
     private Integer dayOfMonth;
 
     private ExternalDynamicListTypeImsiRecurringMonthly() {}
     /**
-     * @return Time specification hh (e.g. 20)
+     * @return Monthly Time specification hh (e.g. 20) for IMSI
      * 
      */
     public String at() {
         return this.at;
     }
     /**
-     * @return Day of month
+     * @return Day of the month for monthly IMSI updates
      * 
      */
     public Integer dayOfMonth() {

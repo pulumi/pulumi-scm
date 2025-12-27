@@ -8,6 +8,22 @@ import * as utilities from "./utilities";
 
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM Syslog Server Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+ * const allShared = scm.getSyslogServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmSyslogServerProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getSyslogServerProfileList(args?: GetSyslogServerProfileListArgs, opts?: pulumi.InvokeOptions): Promise<GetSyslogServerProfileListResult> {
     args = args || {};
@@ -96,6 +112,22 @@ export interface GetSyslogServerProfileListResult {
 }
 /**
  * Retrieves a listing of config items.
+ *
+ * ## Example Usage
+ *
+ * ```typescript
+ * import * as pulumi from "@pulumi/pulumi";
+ * import * as scm from "@pulumi/scm";
+ *
+ * //
+ * // Data source to retrieve a list of SCM Syslog Server Profile objects.
+ * //
+ * // Example 1: Fetch a list of all SCM Syslog Server Profile in the "Shared" folder.
+ * const allShared = scm.getSyslogServerProfileList({
+ *     folder: "All",
+ * });
+ * export const scmSyslogServerProfileListAllShared = allShared.then(allShared => allShared.datas);
+ * ```
  */
 export function getSyslogServerProfileListOutput(args?: GetSyslogServerProfileListOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetSyslogServerProfileListResult> {
     args = args || {};

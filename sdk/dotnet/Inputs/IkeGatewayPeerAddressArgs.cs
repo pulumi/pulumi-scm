@@ -14,13 +14,13 @@ namespace Pulumi.Scm.Inputs
     {
         /// <summary>
         /// Dynamic
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fqdn`, and `Ip`.
         /// </summary>
         [Input("dynamic")]
         public Input<Inputs.IkeGatewayPeerAddressDynamicArgs>? Dynamic { get; set; }
 
         /// <summary>
         /// peer gateway FQDN name
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fqdn`, and `Ip`.
         /// </summary>
         [Input("fqdn")]
@@ -28,7 +28,6 @@ namespace Pulumi.Scm.Inputs
 
         /// <summary>
         /// peer gateway has static IP address
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Dynamic`, `Fqdn`, and `Ip`.
         /// </summary>
         [Input("ip")]

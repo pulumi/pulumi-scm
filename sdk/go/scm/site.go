@@ -157,6 +157,16 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/site:Site example :::id
+// ```
 type Site struct {
 	pulumi.CustomResourceState
 
@@ -168,6 +178,8 @@ type Site struct {
 	City pulumi.StringPtrOutput `pulumi:"city"`
 	// The country in which the site exists
 	Country pulumi.StringPtrOutput `pulumi:"country"`
+	// The folder in which the resource is defined
+	Folder pulumi.StringOutput `pulumi:"folder"`
 	// The latitude coordinate for the site
 	Latitude pulumi.StringPtrOutput `pulumi:"latitude"`
 	// The license type of the site
@@ -227,6 +239,8 @@ type siteState struct {
 	City *string `pulumi:"city"`
 	// The country in which the site exists
 	Country *string `pulumi:"country"`
+	// The folder in which the resource is defined
+	Folder *string `pulumi:"folder"`
 	// The latitude coordinate for the site
 	Latitude *string `pulumi:"latitude"`
 	// The license type of the site
@@ -257,6 +271,8 @@ type SiteState struct {
 	City pulumi.StringPtrInput
 	// The country in which the site exists
 	Country pulumi.StringPtrInput
+	// The folder in which the resource is defined
+	Folder pulumi.StringPtrInput
 	// The latitude coordinate for the site
 	Latitude pulumi.StringPtrInput
 	// The license type of the site
@@ -446,6 +462,11 @@ func (o SiteOutput) City() pulumi.StringPtrOutput {
 // The country in which the site exists
 func (o SiteOutput) Country() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Site) pulumi.StringPtrOutput { return v.Country }).(pulumi.StringPtrOutput)
+}
+
+// The folder in which the resource is defined
+func (o SiteOutput) Folder() pulumi.StringOutput {
+	return o.ApplyT(func(v *Site) pulumi.StringOutput { return v.Folder }).(pulumi.StringOutput)
 }
 
 // The latitude coordinate for the site

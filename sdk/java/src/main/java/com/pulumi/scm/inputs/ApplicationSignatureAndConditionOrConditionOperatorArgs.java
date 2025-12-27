@@ -20,6 +20,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * Equal to
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     @Import(name="equalTo")
@@ -27,6 +28,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * @return Equal to
+     * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
     public Optional<Output<ApplicationSignatureAndConditionOrConditionOperatorEqualToArgs>> equalTo() {
@@ -35,7 +37,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -44,7 +45,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * @return Greater than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -54,7 +54,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -63,7 +62,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * @return Less than
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -73,7 +71,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * Pattern match
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -82,7 +79,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
     /**
      * @return Pattern match
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
      * 
      */
@@ -119,6 +115,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param equalTo Equal to
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
          * 
@@ -130,6 +127,7 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param equalTo Equal to
+         * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
          * 
@@ -140,7 +138,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param greaterThan Greater than
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
@@ -153,7 +150,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param greaterThan Greater than
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
@@ -165,7 +161,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param lessThan Less than
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
@@ -178,7 +173,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param lessThan Less than
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
@@ -190,7 +184,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param patternMatch Pattern match
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder
@@ -203,7 +196,6 @@ public final class ApplicationSignatureAndConditionOrConditionOperatorArgs exten
 
         /**
          * @param patternMatch Pattern match
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `equalTo`, `greaterThan`, `lessThan`, and `patternMatch`.
          * 
          * @return builder

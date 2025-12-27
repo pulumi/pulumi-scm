@@ -26,8 +26,11 @@ import * as utilities from "./utilities";
 export function getCertificateProfile(args: GetCertificateProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetCertificateProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getCertificateProfile:getCertificateProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -36,6 +39,16 @@ export function getCertificateProfile(args: GetCertificateProfileArgs, opts?: pu
  */
 export interface GetCertificateProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the certificate profile
      */
     id: string;
@@ -43,6 +56,11 @@ export interface GetCertificateProfileArgs {
      * The name of the certificate profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -79,9 +97,17 @@ export interface GetCertificateProfileResult {
     readonly crlReceiveTimeout: string;
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * User domain
+     */
     readonly domain: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the certificate profile
@@ -91,11 +117,27 @@ export interface GetCertificateProfileResult {
      * The name of the certificate profile
      */
     readonly name: string;
+    /**
+     * OCSP receive timeout (seconds)
+     */
     readonly ocspReceiveTimeout: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * Use CRL?
+     */
     readonly useCrl: boolean;
+    /**
+     * Use OCSP?
+     */
     readonly useOcsp: boolean;
+    /**
+     * Certificate username field
+     */
     readonly usernameField: outputs.GetCertificateProfileUsernameField;
 }
 /**
@@ -118,8 +160,11 @@ export interface GetCertificateProfileResult {
 export function getCertificateProfileOutput(args: GetCertificateProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetCertificateProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getCertificateProfile:getCertificateProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -128,6 +173,16 @@ export function getCertificateProfileOutput(args: GetCertificateProfileOutputArg
  */
 export interface GetCertificateProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the certificate profile
      */
     id: pulumi.Input<string>;
@@ -135,4 +190,9 @@ export interface GetCertificateProfileOutputArgs {
      * The name of the certificate profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

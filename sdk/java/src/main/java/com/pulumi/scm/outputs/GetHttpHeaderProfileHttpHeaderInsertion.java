@@ -18,7 +18,7 @@ public final class GetHttpHeaderProfileHttpHeaderInsertion {
      */
     private String name;
     /**
-     * @return A list of HTTP header insertion definitions (*This should be an object rather than an array*)
+     * @return A list of HTTP header insertion definitions
      * 
      */
     private List<GetHttpHeaderProfileHttpHeaderInsertionType> types;
@@ -32,7 +32,7 @@ public final class GetHttpHeaderProfileHttpHeaderInsertion {
         return this.name;
     }
     /**
-     * @return A list of HTTP header insertion definitions (*This should be an object rather than an array*)
+     * @return A list of HTTP header insertion definitions
      * 
      */
     public List<GetHttpHeaderProfileHttpHeaderInsertionType> types() {

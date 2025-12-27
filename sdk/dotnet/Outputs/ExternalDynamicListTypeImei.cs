@@ -14,27 +14,27 @@ namespace Pulumi.Scm.Outputs
     public sealed class ExternalDynamicListTypeImei
     {
         /// <summary>
-        /// Auth
+        /// IMEI Auth Cnfig for Custom IMEI type
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImeiAuth? Auth;
         /// <summary>
-        /// Profile for authenticating client certificates
+        /// IMEI Certificate Profile for Custom IMEI type
         /// </summary>
         public readonly string? CertificateProfile;
         /// <summary>
-        /// Description
+        /// IMEI Description for Custom IMEI type
         /// </summary>
         public readonly string? Description;
         /// <summary>
-        /// Exception list
+        /// IMEI Exception List for Custom IMEI type
         /// </summary>
         public readonly ImmutableArray<string> ExceptionLists;
         /// <summary>
-        /// Recurring
+        /// Recurring interval for IMEI updates
         /// </summary>
         public readonly Outputs.ExternalDynamicListTypeImeiRecurring Recurring;
         /// <summary>
-        /// Url
+        /// IMEI URL for Custom IMEI type
         /// </summary>
         public readonly string Url;
 

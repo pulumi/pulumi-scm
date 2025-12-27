@@ -26,6 +26,10 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableDictionary<string, string> EncryptedValues;
         /// <summary>
+        /// The folder in which the resource is defined
+        /// </summary>
+        public readonly string Folder;
+        /// <summary>
         /// The UUID of the service connection
         /// </summary>
         public readonly string Id;
@@ -83,6 +87,8 @@ namespace Pulumi.Scm.Outputs
 
             ImmutableDictionary<string, string> encryptedValues,
 
+            string folder,
+
             string id,
 
             string ipsecTunnel,
@@ -112,6 +118,7 @@ namespace Pulumi.Scm.Outputs
             BackupSc = backupSc;
             BgpPeer = bgpPeer;
             EncryptedValues = encryptedValues;
+            Folder = folder;
             Id = id;
             IpsecTunnel = ipsecTunnel;
             Name = name;

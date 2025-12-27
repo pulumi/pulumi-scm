@@ -201,13 +201,39 @@ import (
 //	}
 //
 // ```
+//
+// ## Import
+//
+// The following command can be used to import a resource not managed by Terraform:
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/logicalRouter:LogicalRouter example folder:::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/logicalRouter:LogicalRouter example :snippet::id
+// ```
+//
+// or
+//
+// bash
+//
+// ```sh
+// $ pulumi import scm:index/logicalRouter:LogicalRouter example ::device:id
+// ```
 type LogicalRouter struct {
 	pulumi.CustomResourceState
 
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrOutput `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrOutput `pulumi:"folder"`
 	// Name
@@ -215,7 +241,6 @@ type LogicalRouter struct {
 	// Routing stack
 	RoutingStack pulumi.StringPtrOutput `pulumi:"routingStack"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrOutput `pulumi:"snippet"`
 	Tfid    pulumi.StringOutput    `pulumi:"tfid"`
@@ -254,9 +279,9 @@ func GetLogicalRouter(ctx *pulumi.Context,
 // Input properties used for looking up and filtering LogicalRouter resources.
 type logicalRouterState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
@@ -264,7 +289,6 @@ type logicalRouterState struct {
 	// Routing stack
 	RoutingStack *string `pulumi:"routingStack"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	Tfid    *string `pulumi:"tfid"`
@@ -274,9 +298,9 @@ type logicalRouterState struct {
 
 type LogicalRouterState struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
@@ -284,7 +308,6 @@ type LogicalRouterState struct {
 	// Routing stack
 	RoutingStack pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	Tfid    pulumi.StringPtrInput
@@ -298,9 +321,9 @@ func (LogicalRouterState) ElementType() reflect.Type {
 
 type logicalRouterArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device *string `pulumi:"device"`
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder *string `pulumi:"folder"`
 	// Name
@@ -308,7 +331,6 @@ type logicalRouterArgs struct {
 	// Routing stack
 	RoutingStack *string `pulumi:"routingStack"`
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet *string `pulumi:"snippet"`
 	// Vrf
@@ -318,9 +340,9 @@ type logicalRouterArgs struct {
 // The set of arguments for constructing a LogicalRouter resource.
 type LogicalRouterArgs struct {
 	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Device pulumi.StringPtrInput
 	// The folder in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Folder pulumi.StringPtrInput
 	// Name
@@ -328,7 +350,6 @@ type LogicalRouterArgs struct {
 	// Routing stack
 	RoutingStack pulumi.StringPtrInput
 	// The snippet in which the resource is defined
-	//
 	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 	Snippet pulumi.StringPtrInput
 	// Vrf
@@ -423,12 +444,12 @@ func (o LogicalRouterOutput) ToLogicalRouterOutputWithContext(ctx context.Contex
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LogicalRouterOutput) Device() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouter) pulumi.StringPtrOutput { return v.Device }).(pulumi.StringPtrOutput)
 }
 
 // The folder in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LogicalRouterOutput) Folder() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouter) pulumi.StringPtrOutput { return v.Folder }).(pulumi.StringPtrOutput)
@@ -445,7 +466,6 @@ func (o LogicalRouterOutput) RoutingStack() pulumi.StringPtrOutput {
 }
 
 // The snippet in which the resource is defined
-//
 // > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LogicalRouterOutput) Snippet() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *LogicalRouter) pulumi.StringPtrOutput { return v.Snippet }).(pulumi.StringPtrOutput)

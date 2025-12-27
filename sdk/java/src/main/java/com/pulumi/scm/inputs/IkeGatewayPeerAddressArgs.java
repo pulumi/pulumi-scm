@@ -18,6 +18,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
     /**
      * Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     @Import(name="dynamic")
@@ -25,6 +26,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
     /**
      * @return Dynamic
+     * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
     public Optional<Output<IkeGatewayPeerAddressDynamicArgs>> dynamic() {
@@ -33,7 +35,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
     /**
      * peer gateway FQDN name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -42,7 +43,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
     /**
      * @return peer gateway FQDN name
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -52,7 +52,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
     /**
      * peer gateway has static IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -61,7 +60,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
     /**
      * @return peer gateway has static IP address
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
      * 
      */
@@ -97,6 +95,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
         /**
          * @param dynamic Dynamic
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
          * 
          * @return builder
          * 
@@ -108,6 +107,7 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
         /**
          * @param dynamic Dynamic
+         * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
          * 
          * @return builder
          * 
@@ -118,7 +118,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
         /**
          * @param fqdn peer gateway FQDN name
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
          * 
          * @return builder
@@ -131,7 +130,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
         /**
          * @param fqdn peer gateway FQDN name
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
          * 
          * @return builder
@@ -143,7 +141,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
         /**
          * @param ip peer gateway has static IP address
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
          * 
          * @return builder
@@ -156,7 +153,6 @@ public final class IkeGatewayPeerAddressArgs extends com.pulumi.resources.Resour
 
         /**
          * @param ip peer gateway has static IP address
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `dynamic`, `fqdn`, and `ip`.
          * 
          * @return builder

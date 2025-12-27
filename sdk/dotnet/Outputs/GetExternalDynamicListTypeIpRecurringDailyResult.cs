@@ -14,7 +14,7 @@ namespace Pulumi.Scm.Outputs
     public sealed class GetExternalDynamicListTypeIpRecurringDailyResult
     {
         /// <summary>
-        /// Time specification hh (e.g. 20)
+        /// Daily Time specification hh (e.g. 20) for IP
         /// </summary>
         public readonly string At;
 

@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 public final class LogicalRouterVrfMulticastRpLocalRp {
     /**
      * @return Candidate rp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     private @Nullable LogicalRouterVrfMulticastRpLocalRpCandidateRp candidateRp;
     /**
      * @return Static rp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
@@ -28,6 +28,7 @@ public final class LogicalRouterVrfMulticastRpLocalRp {
     private LogicalRouterVrfMulticastRpLocalRp() {}
     /**
      * @return Candidate rp
+     * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */
     public Optional<LogicalRouterVrfMulticastRpLocalRpCandidateRp> candidateRp() {
@@ -35,7 +36,6 @@ public final class LogicalRouterVrfMulticastRpLocalRp {
     }
     /**
      * @return Static rp
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `candidateRp` and `staticRp`.
      * 
      */

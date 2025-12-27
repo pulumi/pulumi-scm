@@ -24,6 +24,8 @@ func LookupTrafficSteeringRule(ctx *pulumi.Context, args *LookupTrafficSteeringR
 
 // A collection of arguments for invoking getTrafficSteeringRule.
 type LookupTrafficSteeringRuleArgs struct {
+	// The folder containing the traffic steering rule
+	Folder *string `pulumi:"folder"`
 	// The UUID of the traffic steering rule
 	Id string `pulumi:"id"`
 	// Name
@@ -64,6 +66,8 @@ func LookupTrafficSteeringRuleOutput(ctx *pulumi.Context, args LookupTrafficStee
 
 // A collection of arguments for invoking getTrafficSteeringRule.
 type LookupTrafficSteeringRuleOutputArgs struct {
+	// The folder containing the traffic steering rule
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// The UUID of the traffic steering rule
 	Id pulumi.StringInput `pulumi:"id"`
 	// Name

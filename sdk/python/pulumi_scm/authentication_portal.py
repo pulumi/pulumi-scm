@@ -35,13 +35,12 @@ class AuthenticationPortalArgs:
         :param pulumi.Input[_builtins.str] authentication_profile: The authentication profile
         :param pulumi.Input[_builtins.str] certificate_profile: The certificate profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] gp_udp_port: The UDP port for inbound authentication prompts
         :param pulumi.Input[_builtins.int] idle_timer: The idle timeout value (minutes)
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timer: Timer
         :param pulumi.Input[_builtins.str] tls_service_profile: The SSL/TLS service profile
@@ -107,6 +106,7 @@ class AuthenticationPortalArgs:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -119,7 +119,6 @@ class AuthenticationPortalArgs:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -157,7 +156,6 @@ class AuthenticationPortalArgs:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -210,14 +208,13 @@ class _AuthenticationPortalState:
         :param pulumi.Input[_builtins.str] authentication_profile: The authentication profile
         :param pulumi.Input[_builtins.str] certificate_profile: The certificate profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] gp_udp_port: The UDP port for inbound authentication prompts
         :param pulumi.Input[_builtins.int] idle_timer: The idle timeout value (minutes)
         :param pulumi.Input[_builtins.str] redirect_host: The authentication portal IP address or hostname
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timer: Timer
         :param pulumi.Input[_builtins.str] tls_service_profile: The SSL/TLS service profile
@@ -274,6 +271,7 @@ class _AuthenticationPortalState:
     def device(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -286,7 +284,6 @@ class _AuthenticationPortalState:
     def folder(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -336,7 +333,6 @@ class _AuthenticationPortalState:
     def snippet(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")
@@ -416,19 +412,44 @@ class AuthenticationPortal(pulumi.CustomResource):
             timer=10)
         ```
 
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example ::device:id
+        ```
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] authentication_profile: The authentication profile
         :param pulumi.Input[_builtins.str] certificate_profile: The certificate profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] gp_udp_port: The UDP port for inbound authentication prompts
         :param pulumi.Input[_builtins.int] idle_timer: The idle timeout value (minutes)
         :param pulumi.Input[_builtins.str] redirect_host: The authentication portal IP address or hostname
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timer: Timer
         :param pulumi.Input[_builtins.str] tls_service_profile: The SSL/TLS service profile
@@ -457,6 +478,32 @@ class AuthenticationPortal(pulumi.CustomResource):
             gp_udp_port=12,
             idle_timer=12,
             timer=10)
+        ```
+
+        ## Import
+
+        The following command can be used to import a resource not managed by Terraform:
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example folder:::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example :snippet::id
+        ```
+
+        or
+
+        bash
+
+        ```sh
+        $ pulumi import scm:index/authenticationPortal:AuthenticationPortal example ::device:id
         ```
 
         :param str resource_name: The name of the resource.
@@ -537,14 +584,13 @@ class AuthenticationPortal(pulumi.CustomResource):
         :param pulumi.Input[_builtins.str] authentication_profile: The authentication profile
         :param pulumi.Input[_builtins.str] certificate_profile: The certificate profile
         :param pulumi.Input[_builtins.str] device: The device in which the resource is defined
+               > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.str] folder: The folder in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] gp_udp_port: The UDP port for inbound authentication prompts
         :param pulumi.Input[_builtins.int] idle_timer: The idle timeout value (minutes)
         :param pulumi.Input[_builtins.str] redirect_host: The authentication portal IP address or hostname
         :param pulumi.Input[_builtins.str] snippet: The snippet in which the resource is defined
-               
                > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         :param pulumi.Input[_builtins.int] timer: Timer
         :param pulumi.Input[_builtins.str] tls_service_profile: The SSL/TLS service profile
@@ -587,6 +633,7 @@ class AuthenticationPortal(pulumi.CustomResource):
     def device(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The device in which the resource is defined
+        > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "device")
 
@@ -595,7 +642,6 @@ class AuthenticationPortal(pulumi.CustomResource):
     def folder(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The folder in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "folder")
@@ -629,7 +675,6 @@ class AuthenticationPortal(pulumi.CustomResource):
     def snippet(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
         The snippet in which the resource is defined
-
         > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
         """
         return pulumi.get(self, "snippet")

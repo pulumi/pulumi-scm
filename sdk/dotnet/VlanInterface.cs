@@ -42,6 +42,32 @@ namespace Pulumi.Scm
     /// 
     /// });
     /// ```
+    /// 
+    /// ## Import
+    /// 
+    /// The following command can be used to import a resource not managed by Terraform:
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/vlanInterface:VlanInterface example folder:::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/vlanInterface:VlanInterface example :snippet::id
+    /// ```
+    /// 
+    /// or
+    /// 
+    /// bash
+    /// 
+    /// ```sh
+    /// $ pulumi import scm:index/vlanInterface:VlanInterface example ::device:id
+    /// ```
     /// </summary>
     [ScmResourceType("scm:index/vlanInterface:VlanInterface")]
     public partial class VlanInterface : global::Pulumi.CustomResource
@@ -62,7 +88,7 @@ namespace Pulumi.Scm
         /// Dynamic DNS configuration specific to the Vlan Interfaces.
         /// </summary>
         [Output("ddnsConfig")]
-        public Output<Outputs.VlanInterfaceDdnsConfig> DdnsConfig { get; private set; } = null!;
+        public Output<Outputs.VlanInterfaceDdnsConfig?> DdnsConfig { get; private set; } = null!;
 
         /// <summary>
         /// Default interface assignment
@@ -72,21 +98,20 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("device")]
         public Output<string?> Device { get; private set; } = null!;
 
         /// <summary>
         /// Vlan interfaces DHCP Client Object
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("dhcpClient")]
-        public Output<Outputs.VlanInterfaceDhcpClient> DhcpClient { get; private set; } = null!;
+        public Output<Outputs.VlanInterfaceDhcpClient?> DhcpClient { get; private set; } = null!;
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("folder")]
@@ -100,7 +125,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// VLAN Interface IP Parent
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Output("ips")]
@@ -120,7 +144,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Output("snippet")]
@@ -213,13 +236,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// Vlan interfaces DHCP Client Object
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
@@ -227,7 +250,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -244,7 +266,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// VLAN Interface IP Parent
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.VlanInterfaceIpArgs> Ips
@@ -267,7 +288,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]
@@ -319,13 +339,13 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("device")]
         public Input<string>? Device { get; set; }
 
         /// <summary>
         /// Vlan interfaces DHCP Client Object
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         [Input("dhcpClient")]
@@ -333,7 +353,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The folder in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("folder")]
@@ -350,7 +369,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// VLAN Interface IP Parent
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `DhcpClient` and `Ip`.
         /// </summary>
         public InputList<Inputs.VlanInterfaceIpGetArgs> Ips
@@ -373,7 +391,6 @@ namespace Pulumi.Scm
 
         /// <summary>
         /// The snippet in which the resource is defined
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         [Input("snippet")]

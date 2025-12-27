@@ -52,10 +52,19 @@ func LookupIpsecTunnel(ctx *pulumi.Context, args *LookupIpsecTunnelArgs, opts ..
 
 // A collection of arguments for invoking getIpsecTunnel.
 type LookupIpsecTunnelArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device *string `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder *string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name *string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet *string `pulumi:"snippet"`
 }
 
 // A collection of values returned by getIpsecTunnel.
@@ -67,17 +76,25 @@ type LookupIpsecTunnelResult struct {
 	// Copy IP TOS bits from inner packet to IPSec packet (not recommended)
 	CopyTos bool `pulumi:"copyTos"`
 	// The device in which the resource is defined
-	Device                 string `pulumi:"device"`
-	EnableGreEncapsulation bool   `pulumi:"enableGreEncapsulation"`
-	Folder                 string `pulumi:"folder"`
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device string `pulumi:"device"`
+	// allow GRE over IPSec
+	EnableGreEncapsulation bool `pulumi:"enableGreEncapsulation"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder string `pulumi:"folder"`
 	// UUID of the resource
 	Id string `pulumi:"id"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
-	Name            string                      `pulumi:"name"`
-	Snippet         string                      `pulumi:"snippet"`
-	Tfid            string                      `pulumi:"tfid"`
-	TunnelInterface string                      `pulumi:"tunnelInterface"`
-	TunnelMonitor   GetIpsecTunnelTunnelMonitor `pulumi:"tunnelMonitor"`
+	Name string `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet string `pulumi:"snippet"`
+	Tfid    string `pulumi:"tfid"`
+	// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
+	TunnelInterface string `pulumi:"tunnelInterface"`
+	// Tunnel monitor
+	TunnelMonitor GetIpsecTunnelTunnelMonitor `pulumi:"tunnelMonitor"`
 }
 
 func LookupIpsecTunnelOutput(ctx *pulumi.Context, args LookupIpsecTunnelOutputArgs, opts ...pulumi.InvokeOption) LookupIpsecTunnelResultOutput {
@@ -91,10 +108,19 @@ func LookupIpsecTunnelOutput(ctx *pulumi.Context, args LookupIpsecTunnelOutputAr
 
 // A collection of arguments for invoking getIpsecTunnel.
 type LookupIpsecTunnelOutputArgs struct {
+	// The device in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Device pulumi.StringPtrInput `pulumi:"device"`
+	// The folder in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Folder pulumi.StringPtrInput `pulumi:"folder"`
 	// UUID of the resource
 	Id pulumi.StringInput `pulumi:"id"`
 	// Alphanumeric string begin with letter: [0-9a-zA-Z._-]
 	Name pulumi.StringPtrInput `pulumi:"name"`
+	// The snippet in which the resource is defined
+	// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+	Snippet pulumi.StringPtrInput `pulumi:"snippet"`
 }
 
 func (LookupIpsecTunnelOutputArgs) ElementType() reflect.Type {
@@ -132,14 +158,18 @@ func (o LookupIpsecTunnelResultOutput) CopyTos() pulumi.BoolOutput {
 }
 
 // The device in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupIpsecTunnelResultOutput) Device() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) string { return v.Device }).(pulumi.StringOutput)
 }
 
+// allow GRE over IPSec
 func (o LookupIpsecTunnelResultOutput) EnableGreEncapsulation() pulumi.BoolOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) bool { return v.EnableGreEncapsulation }).(pulumi.BoolOutput)
 }
 
+// The folder in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupIpsecTunnelResultOutput) Folder() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) string { return v.Folder }).(pulumi.StringOutput)
 }
@@ -154,6 +184,8 @@ func (o LookupIpsecTunnelResultOutput) Name() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) string { return v.Name }).(pulumi.StringOutput)
 }
 
+// The snippet in which the resource is defined
+// > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
 func (o LookupIpsecTunnelResultOutput) Snippet() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) string { return v.Snippet }).(pulumi.StringOutput)
 }
@@ -162,10 +194,12 @@ func (o LookupIpsecTunnelResultOutput) Tfid() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) string { return v.Tfid }).(pulumi.StringOutput)
 }
 
+// Tunnel interface variable or hardcoded tunnel. Default will be tunnels.
 func (o LookupIpsecTunnelResultOutput) TunnelInterface() pulumi.StringOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) string { return v.TunnelInterface }).(pulumi.StringOutput)
 }
 
+// Tunnel monitor
 func (o LookupIpsecTunnelResultOutput) TunnelMonitor() GetIpsecTunnelTunnelMonitorOutput {
 	return o.ApplyT(func(v LookupIpsecTunnelResult) GetIpsecTunnelTunnelMonitor { return v.TunnelMonitor }).(GetIpsecTunnelTunnelMonitorOutput)
 }

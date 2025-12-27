@@ -16,6 +16,36 @@ public final class GetNatRulePlainArgs extends com.pulumi.resources.InvokeArgs {
     public static final GetNatRulePlainArgs Empty = new GetNatRulePlainArgs();
 
     /**
+     * The device in which the resource is defined
+     * 
+     */
+    @Import(name="device")
+    private @Nullable String device;
+
+    /**
+     * @return The device in which the resource is defined
+     * 
+     */
+    public Optional<String> device() {
+        return Optional.ofNullable(this.device);
+    }
+
+    /**
+     * The folder in which the resource is defined
+     * 
+     */
+    @Import(name="folder")
+    private @Nullable String folder;
+
+    /**
+     * @return The folder in which the resource is defined
+     * 
+     */
+    public Optional<String> folder() {
+        return Optional.ofNullable(this.folder);
+    }
+
+    /**
      * UUID of the resource
      * 
      */
@@ -45,11 +75,29 @@ public final class GetNatRulePlainArgs extends com.pulumi.resources.InvokeArgs {
         return Optional.ofNullable(this.name);
     }
 
+    /**
+     * The snippet in which the resource is defined
+     * 
+     */
+    @Import(name="snippet")
+    private @Nullable String snippet;
+
+    /**
+     * @return The snippet in which the resource is defined
+     * 
+     */
+    public Optional<String> snippet() {
+        return Optional.ofNullable(this.snippet);
+    }
+
     private GetNatRulePlainArgs() {}
 
     private GetNatRulePlainArgs(GetNatRulePlainArgs $) {
+        this.device = $.device;
+        this.folder = $.folder;
         this.id = $.id;
         this.name = $.name;
+        this.snippet = $.snippet;
     }
 
     public static Builder builder() {
@@ -71,6 +119,28 @@ public final class GetNatRulePlainArgs extends com.pulumi.resources.InvokeArgs {
         }
 
         /**
+         * @param device The device in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder device(@Nullable String device) {
+            $.device = device;
+            return this;
+        }
+
+        /**
+         * @param folder The folder in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder folder(@Nullable String folder) {
+            $.folder = folder;
+            return this;
+        }
+
+        /**
          * @param id UUID of the resource
          * 
          * @return builder
@@ -89,6 +159,17 @@ public final class GetNatRulePlainArgs extends com.pulumi.resources.InvokeArgs {
          */
         public Builder name(@Nullable String name) {
             $.name = name;
+            return this;
+        }
+
+        /**
+         * @param snippet The snippet in which the resource is defined
+         * 
+         * @return builder
+         * 
+         */
+        public Builder snippet(@Nullable String snippet) {
+            $.snippet = snippet;
             return this;
         }
 

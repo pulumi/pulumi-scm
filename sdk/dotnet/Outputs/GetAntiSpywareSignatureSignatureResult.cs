@@ -15,11 +15,11 @@ namespace Pulumi.Scm.Outputs
     {
         /// <summary>
         /// anti spyware signature combination
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Combination` and `Standard`.
         /// </summary>
         public readonly Outputs.GetAntiSpywareSignatureSignatureCombinationResult Combination;
         /// <summary>
         /// Standard
-        /// 
         /// &gt; ℹ️ **Note:** You must specify exactly one of `Combination` and `Standard`.
         /// </summary>
         public readonly ImmutableArray<Outputs.GetAntiSpywareSignatureSignatureStandardResult> Standards;

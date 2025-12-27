@@ -118,6 +118,20 @@ namespace Pulumi.Scm
     public sealed class GetPbfRuleArgs : global::Pulumi.InvokeArgs
     {
         /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public string? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public string? Folder { get; set; }
+
+        /// <summary>
         /// UUID of the resource
         /// </summary>
         [Input("id", required: true)]
@@ -129,6 +143,13 @@ namespace Pulumi.Scm
         [Input("name")]
         public string? Name { get; set; }
 
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public string? Snippet { get; set; }
+
         public GetPbfRuleArgs()
         {
         }
@@ -137,6 +158,20 @@ namespace Pulumi.Scm
 
     public sealed class GetPbfRuleInvokeArgs : global::Pulumi.InvokeArgs
     {
+        /// <summary>
+        /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("device")]
+        public Input<string>? Device { get; set; }
+
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("folder")]
+        public Input<string>? Folder { get; set; }
+
         /// <summary>
         /// UUID of the resource
         /// </summary>
@@ -148,6 +183,13 @@ namespace Pulumi.Scm
         /// </summary>
         [Input("name")]
         public Input<string>? Name { get; set; }
+
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
+        [Input("snippet")]
+        public Input<string>? Snippet { get; set; }
 
         public GetPbfRuleInvokeArgs()
         {
@@ -177,10 +219,21 @@ namespace Pulumi.Scm
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// The device in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
+        /// <summary>
+        /// Enforce symmetric return
+        /// </summary>
         public readonly Outputs.GetPbfRuleEnforceSymmetricReturnResult EnforceSymmetricReturn;
+        /// <summary>
+        /// The folder in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Folder;
+        /// <summary>
+        /// From
+        /// </summary>
         public readonly Outputs.GetPbfRuleFromResult From;
         /// <summary>
         /// UUID of the resource
@@ -190,11 +243,30 @@ namespace Pulumi.Scm
         /// PBF rule name
         /// </summary>
         public readonly string Name;
+        /// <summary>
+        /// Schedule
+        /// </summary>
         public readonly string Schedule;
+        /// <summary>
+        /// Services
+        /// </summary>
         public readonly ImmutableArray<string> Services;
+        /// <summary>
+        /// The snippet in which the resource is defined
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
+        /// </summary>
         public readonly string Snippet;
+        /// <summary>
+        /// Source users
+        /// </summary>
         public readonly ImmutableArray<string> SourceUsers;
+        /// <summary>
+        /// Source addresses
+        /// </summary>
         public readonly ImmutableArray<string> Sources;
+        /// <summary>
+        /// Tags
+        /// </summary>
         public readonly ImmutableArray<string> Tags;
         public readonly string Tfid;
 

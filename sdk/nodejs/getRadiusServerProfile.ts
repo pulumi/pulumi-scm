@@ -24,8 +24,11 @@ import * as utilities from "./utilities";
 export function getRadiusServerProfile(args: GetRadiusServerProfileArgs, opts?: pulumi.InvokeOptions): Promise<GetRadiusServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invoke("scm:index/getRadiusServerProfile:getRadiusServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -34,6 +37,16 @@ export function getRadiusServerProfile(args: GetRadiusServerProfileArgs, opts?: 
  */
 export interface GetRadiusServerProfileArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: string;
+    /**
      * The UUID of the RADIUS server profile
      */
     id: string;
@@ -41,6 +54,11 @@ export interface GetRadiusServerProfileArgs {
      * The name of the RADIUS server profile
      */
     name?: string;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: string;
 }
 
 /**
@@ -49,8 +67,13 @@ export interface GetRadiusServerProfileArgs {
 export interface GetRadiusServerProfileResult {
     /**
      * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      */
     readonly device: string;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly folder: string;
     /**
      * The UUID of the RADIUS server profile
@@ -60,11 +83,27 @@ export interface GetRadiusServerProfileResult {
      * The name of the RADIUS server profile
      */
     readonly name: string;
+    /**
+     * The RADIUS authentication protocol
+     */
     readonly protocol: outputs.GetRadiusServerProfileProtocol;
+    /**
+     * The number of RADIUS server retries
+     */
     readonly retries: number;
+    /**
+     * Server
+     */
     readonly servers: outputs.GetRadiusServerProfileServer[];
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
     readonly snippet: string;
     readonly tfid: string;
+    /**
+     * The RADIUS server authentication timeout (seconds)
+     */
     readonly timeout: number;
 }
 /**
@@ -85,8 +124,11 @@ export interface GetRadiusServerProfileResult {
 export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputArgs, opts?: pulumi.InvokeOutputOptions): pulumi.Output<GetRadiusServerProfileResult> {
     opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts || {});
     return pulumi.runtime.invokeOutput("scm:index/getRadiusServerProfile:getRadiusServerProfile", {
+        "device": args.device,
+        "folder": args.folder,
         "id": args.id,
         "name": args.name,
+        "snippet": args.snippet,
     }, opts);
 }
 
@@ -95,6 +137,16 @@ export function getRadiusServerProfileOutput(args: GetRadiusServerProfileOutputA
  */
 export interface GetRadiusServerProfileOutputArgs {
     /**
+     * The device in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    device?: pulumi.Input<string>;
+    /**
+     * The folder in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    folder?: pulumi.Input<string>;
+    /**
      * The UUID of the RADIUS server profile
      */
     id: pulumi.Input<string>;
@@ -102,4 +154,9 @@ export interface GetRadiusServerProfileOutputArgs {
      * The name of the RADIUS server profile
      */
     name?: pulumi.Input<string>;
+    /**
+     * The snippet in which the resource is defined
+     * > ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
+     */
+    snippet?: pulumi.Input<string>;
 }

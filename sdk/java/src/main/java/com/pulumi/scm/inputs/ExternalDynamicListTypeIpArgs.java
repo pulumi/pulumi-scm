@@ -20,14 +20,14 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
     public static final ExternalDynamicListTypeIpArgs Empty = new ExternalDynamicListTypeIpArgs();
 
     /**
-     * Auth
+     * Authentication settings for Custom IP type
      * 
      */
     @Import(name="auth")
     private @Nullable Output<ExternalDynamicListTypeIpAuthArgs> auth;
 
     /**
-     * @return Auth
+     * @return Authentication settings for Custom IP type
      * 
      */
     public Optional<Output<ExternalDynamicListTypeIpAuthArgs>> auth() {
@@ -65,14 +65,14 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Exception list
+     * IP Exception List for Custom IP type
      * 
      */
     @Import(name="exceptionLists")
     private @Nullable Output<List<String>> exceptionLists;
 
     /**
-     * @return Exception list
+     * @return IP Exception List for Custom IP type
      * 
      */
     public Optional<Output<List<String>>> exceptionLists() {
@@ -80,14 +80,14 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Recurring
+     * Update Schedule for Custom IP type
      * 
      */
     @Import(name="recurring", required=true)
     private Output<ExternalDynamicListTypeIpRecurringArgs> recurring;
 
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom IP type
      * 
      */
     public Output<ExternalDynamicListTypeIpRecurringArgs> recurring() {
@@ -95,14 +95,14 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
     }
 
     /**
-     * Url
+     * External URL for Custom IP type
      * 
      */
     @Import(name="url", required=true)
     private Output<String> url;
 
     /**
-     * @return Url
+     * @return External URL for Custom IP type
      * 
      */
     public Output<String> url() {
@@ -139,7 +139,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param auth Auth
+         * @param auth Authentication settings for Custom IP type
          * 
          * @return builder
          * 
@@ -150,7 +150,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param auth Auth
+         * @param auth Authentication settings for Custom IP type
          * 
          * @return builder
          * 
@@ -202,7 +202,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IP Exception List for Custom IP type
          * 
          * @return builder
          * 
@@ -213,7 +213,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IP Exception List for Custom IP type
          * 
          * @return builder
          * 
@@ -223,7 +223,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param exceptionLists Exception list
+         * @param exceptionLists IP Exception List for Custom IP type
          * 
          * @return builder
          * 
@@ -233,7 +233,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Update Schedule for Custom IP type
          * 
          * @return builder
          * 
@@ -244,7 +244,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param recurring Recurring
+         * @param recurring Update Schedule for Custom IP type
          * 
          * @return builder
          * 
@@ -254,7 +254,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param url Url
+         * @param url External URL for Custom IP type
          * 
          * @return builder
          * 
@@ -265,7 +265,7 @@ public final class ExternalDynamicListTypeIpArgs extends com.pulumi.resources.Re
         }
 
         /**
-         * @param url Url
+         * @param url External URL for Custom IP type
          * 
          * @return builder
          * 

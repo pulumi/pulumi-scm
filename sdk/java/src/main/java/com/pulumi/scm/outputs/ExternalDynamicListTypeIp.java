@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExternalDynamicListTypeIp {
     /**
-     * @return Auth
+     * @return Authentication settings for Custom IP type
      * 
      */
     private @Nullable ExternalDynamicListTypeIpAuth auth;
@@ -31,24 +31,24 @@ public final class ExternalDynamicListTypeIp {
      */
     private @Nullable String description;
     /**
-     * @return Exception list
+     * @return IP Exception List for Custom IP type
      * 
      */
     private @Nullable List<String> exceptionLists;
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom IP type
      * 
      */
     private ExternalDynamicListTypeIpRecurring recurring;
     /**
-     * @return Url
+     * @return External URL for Custom IP type
      * 
      */
     private String url;
 
     private ExternalDynamicListTypeIp() {}
     /**
-     * @return Auth
+     * @return Authentication settings for Custom IP type
      * 
      */
     public Optional<ExternalDynamicListTypeIpAuth> auth() {
@@ -69,21 +69,21 @@ public final class ExternalDynamicListTypeIp {
         return Optional.ofNullable(this.description);
     }
     /**
-     * @return Exception list
+     * @return IP Exception List for Custom IP type
      * 
      */
     public List<String> exceptionLists() {
         return this.exceptionLists == null ? List.of() : this.exceptionLists;
     }
     /**
-     * @return Recurring
+     * @return Update Schedule for Custom IP type
      * 
      */
     public ExternalDynamicListTypeIpRecurring recurring() {
         return this.recurring;
     }
     /**
-     * @return Url
+     * @return External URL for Custom IP type
      * 
      */
     public String url() {

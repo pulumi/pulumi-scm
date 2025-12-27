@@ -18,6 +18,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
     /**
      * Allow
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     @Import(name="allow")
@@ -25,6 +26,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
     /**
      * @return Allow
+     * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
     public Optional<Output<LogicalRouterVrfBgpPolicyExportRuleActionAllowArgs>> allow() {
@@ -33,7 +35,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
     /**
      * Deny
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
@@ -42,7 +43,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
     /**
      * @return Deny
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
      * 
      */
@@ -77,6 +77,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
         /**
          * @param allow Allow
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
          * 
          * @return builder
          * 
@@ -88,6 +89,7 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
         /**
          * @param allow Allow
+         * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
          * 
          * @return builder
          * 
@@ -98,7 +100,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
         /**
          * @param deny Deny
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
          * 
          * @return builder
@@ -111,7 +112,6 @@ public final class LogicalRouterVrfBgpPolicyExportRuleActionArgs extends com.pul
 
         /**
          * @param deny Deny
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `allow` and `deny`.
          * 
          * @return builder

@@ -35,6 +35,7 @@ namespace Pulumi.Scm.Outputs
         public readonly ImmutableArray<string> Destinations;
         /// <summary>
         /// Device
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Device;
         /// <summary>
@@ -42,7 +43,8 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly bool Disabled;
         /// <summary>
-        /// The folder of the item. Default: Shared.
+        /// Folder
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Folder;
         /// <summary>
@@ -94,7 +96,8 @@ namespace Pulumi.Scm.Outputs
         /// </summary>
         public readonly ImmutableArray<string> Services;
         /// <summary>
-        /// The snippet of the item.
+        /// Snippet
+        /// &gt; ℹ️ **Note:** You must specify exactly one of `Device`, `Folder`, and `Snippet`.
         /// </summary>
         public readonly string Snippet;
         /// <summary>

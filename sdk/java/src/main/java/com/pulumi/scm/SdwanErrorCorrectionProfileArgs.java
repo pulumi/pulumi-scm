@@ -35,6 +35,7 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
     /**
      * The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     @Import(name="device")
@@ -42,6 +43,7 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
     /**
      * @return The device in which the resource is defined
+     * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
     public Optional<Output<String>> device() {
@@ -50,7 +52,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
     /**
      * The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -59,7 +60,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
     /**
      * @return The folder in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -99,7 +99,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
     /**
      * The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -108,7 +107,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
     /**
      * @return The snippet in which the resource is defined
-     * 
      * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
      * 
      */
@@ -168,6 +166,7 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -179,6 +178,7 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
         /**
          * @param device The device in which the resource is defined
+         * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
          * 
@@ -189,7 +189,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -202,7 +201,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
         /**
          * @param folder The folder in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -256,7 +254,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
@@ -269,7 +266,6 @@ public final class SdwanErrorCorrectionProfileArgs extends com.pulumi.resources.
 
         /**
          * @param snippet The snippet in which the resource is defined
-         * 
          * &gt; ℹ️ **Note:** You must specify exactly one of `device`, `folder`, and `snippet`.
          * 
          * @return builder
